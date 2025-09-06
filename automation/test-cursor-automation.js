@@ -4,6 +4,24 @@
  * Test Script for Cursor Chat Automation
  * This script tests the automation system without starting full automation
  */
+const CursorInterfaceAutomation = // // require('./cursor-interface-automation');
+  async function runTests() {
+        // Test session creation
+        const testSession = await automation.createSession('test-session', {
+            name: 'Test Session',
+            interval: 10000,
+            commands: ['proceed', 'test']
+        });
+        }
+        // Test text input (this will actually try to send text)
+        try {
+            await automation.sendText('test');
+            totalSessions: stats.totalSessions,
+            activeSessions: stats.activeSessions,
+            platform: stats.platform
+        });
+        // Test session termination
+        automation.terminateSession('test-session');
 
 const CursorInterfaceAutomation = // // require('./cursor-interface-automation');
   async function runTests() {
@@ -136,6 +154,9 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
   };
 
 
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 const CursorInterfaceAutomation = require('./cursor-interface-automation');
 async function runTests() {
   console.log('🧪 Testing Cursor Chat Automation System...\n');
@@ -206,8 +227,6 @@ async function runTests() {
 }
 // Run tests if this script is executed directly
 if (require.main === module) {
-    runTests();
-
   runTests();
 }
 module.exports = { runTests };

@@ -205,3 +205,6 @@ cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 };
 module.exports = CICDAutomation;
+module.exports = CICDAutomation;
+module.exports = CICDAutomation;
+module.exports = CICDAutomation;

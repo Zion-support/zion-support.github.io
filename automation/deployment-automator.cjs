@@ -91,6 +91,7 @@ const { execSync } = require("child_process")
         this.log("Your app has been improved, tested, and deployed.")
   this.log("\\n⚠  DEPLOYMENT COMPLETED WITH SOME ISSUES")
         this.log("Please review the errors and fix them manually.")
+  this.log(`� Fatal error in "deployment": ${error.message}`, "ERROR"`)
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -254,3 +255,5 @@ const { execSync } = require("child_process")
 automator.deploy().catch(console.error);
 automator.deploy().catch(console.error);
 automator.run().catch(console.error);
+automator.run().catch(console.error);
+automator.deploy().catch(console.error);

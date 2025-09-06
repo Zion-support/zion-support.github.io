@@ -6,17 +6,6 @@
       .eq("code", code)
       .maybeSingle();
 
-    if (existingErr) return res && res.status($1).json({ $2 });
-    if (existing) return res && res.status($1).json({ $2 });
-    const { error } = await supabase && supabase.from("partners").insert({
-import type { NextApiRequest, NextApiResponse } from './next';
-import { getServerSupabase  } from '../../../utils / supabase / server';
-function sanitize_code (input: string): string {
-  return input;
-    .toLowerCase ();
-    .replace (/[^a - z0 - 9-]/g, "-");
-    .replace (/-+/g, "-");
-    .replace (/^-|-$/g, "");
 }
 export default async /**
  * handler - Function description
@@ -61,15 +50,36 @@ if ( {) {
     const { error } = await supabase.from ("partners").insert ({
       code,
       name,
-  } catch (e: any) {
-    return res && res.status(500).json({ error: e?.message });
+
   }
 }
-    if (return res.status (500).json ({ error: "Database error" })) {
-  $2
+      niche: niche || null, socials: socials || null,
+      payout_method: payout_method || null, status: 'pending',
+      commission_rate: 0.15});
+
+    if (error) return res.status(500).json({ error: error.message });
+
+    return res.status(200).json({ ok: true, code, status: 'pending' })
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message })
+}
 }
     return res.status (200).json ({ ok: true, code, status: "pending" });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
+  }
+}
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

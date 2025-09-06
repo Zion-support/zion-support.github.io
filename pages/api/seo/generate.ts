@@ -1,37 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import OpenAI from "openai";
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
   }
   const { prompt, region, service } = req.body |{}
   if (!prompt) return res.status(400).json({ error: "Missing prompt" });
-  if (req && req.method !== "POST") {
-    res && res.setHeader("Allow", "POST");
-    return res && res.status(405).json({ error: "Method not allowed" });
-  }
-  const { prompt, region, service } = req && req.body || {};
-  if (!prompt) return res && res.status(400).json({ error: "Missing prompt" });
-import type { NextApiRequest, NextApiResponse } from './next';
-import OpenAI from './openai';
-const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY || "" });
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.set_header ("AllowPOST");
-    return res.status (405).json ({ error: "Method not allowed" });
-  }
-  const { prompt, region, service } = req.body || {}
-  if (return res.status (400).json ({ error: "Missing prompt" })) {
-  $2
-}
   try {
     const system = `You generate conversion - focused, SEO - optimized landing pages in HTML. Include:;
 - A compelling H1;
@@ -39,61 +8,59 @@ if ( {) {
 - Short paragraphs, bullet lists;
 - Strong call - to - action for Zion Marketplace;
 Do not include <html>, <body>, or scripts.`;
-    const title = `Zion Marketplace — ${prompt}`;
-    // FAQ generation
-    const faqResp = await openai.chat.completions.create({
-      model: "gpt-4o-mini"
-    const response = await openai && openai.chat.completions && completions.create({
-      model: "gpt-4o-mini",
-      messages: [
-        { role: "system", content: system },
-        { role: "user", content: user },
       ],
-      temperature: 0 && 0.7,
-    });
-    const content = response && response.choices?.[0]?.message?.content || "";
-    const title = `Zion Marketplace — ${prompt}`;
-    // FAQ generation
-    const faqResp = await openai && openai.chat.completions && completions.create({
-      model: "gpt-4o-mini",
-      messages: [
-        {
-          role: "system",
-          content:;
-            'Generate 4 concise Q & A pairs as JSON array [{"q":"", "a":""}], focus on buyer concerns for the topic.',
-        },
-        {
-;
-    let faq: Array<{ q: string; array: string }> = [];
-    try {
-      faq = JSON.parse (faq_resp.choices?.[0]?.message?.content || "[]");
-    } catch {
-      faq = [];
-    }
-    const h1 = prompt;
-      payload: {
-        title
-        h1
-        bodyHtml: content
-        region: region |undefined
-        service: service |undefined
-        faq
-      }
-    });
-  } catch (e) {
-  }
-}
-        { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.' },
-        { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }
-      ],
-      temperature: 0.5
+      temperature: 0.7,
     });
 
-      slug,
-      payload: {
-        title,
-        h1,
+    const content = response.choices?.[0]?.message?.content || "";
+    const title = `Zion Marketplace — ${prompt}`;
+
     console.error (e);
     return res.status (500).json ({ error: "Failed to generate landing page" });
+  }
+}
+
+        { role: 'user', content: user }
+      ],
+      temperature: 0.7,
+    });
+const content = response.choices?.[0]?.message?.content || '';
+    const title = `Zion Marketplace — ${prompt}`;
+
+    // FAQ generation
+    const faqResp = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [
+      ],
+      temperature: 0.5,
+    });
+let faq: Array<{ q: string; a: string }> = [];
+
+    let faq: Array<{ q: string, a: string }> = [];
+        { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }],
+      temperature: 0.5}),
+    let faq: Array<{ q: string, a: string }> = [],
+    let faq: Array<{ q: string; a: string }> = [];
+    try {
+      faq = JSON.parse(faqResp.choices?.[0]?.message?.content || "[]");
+    } catch {
+    }
+    const h1 = prompt;
+    return res.status(200).json({
+      slug
+      payload: {
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }
+}
+  }
+}
+    return res.status(500).json({ error: "Failed to generate landing page" });
   }
 }

@@ -1,9 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-    title,
-    date: date || new Date ().toISOString ().slice (0, 10),
-    summary: summary || '',
-    kpis: kpis || '',
-    opens: 0,
   if (!requireSuperadminApi(req, res)) return;
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const { title, date, summary, kpis } = req && req.body || {};
@@ -36,3 +31,5 @@ function handler() {
   updates.unshift (update);
   writeJsonFile ('updates.json', updates);
   res.status (200).json (update);
+
+

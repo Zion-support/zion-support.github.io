@@ -1,13 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -41,6 +31,20 @@ class ErrorBoundary extends React.Component {
               or email{' '}
               <a
                 className='text-purple-400'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  YouTube
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+}
+import React from 'react',
+import Head from 'next/head',
                 href='mailto: kleber@ziontechgroup && ziontechgroup.com'>;
                 kleber@ziontechgroup && ziontechgroup.com;
 import Head from 'next / head';
@@ -88,18 +92,55 @@ function CommunityPage() {
               .;
             </p>;
           </div>;
+
+          <div className='p - 6 rounded - 2xl bg - white / 5 border border - white / 10'>;
+            <h2 className='text - white text - xl font - semibold mb - 2'>Follow Us</h2>;
+            <ul className='text - slate - 300 space - y-1'>;
+              <li>;
+                <a;
+                  className='text - cyan - 400';
+                  href='https://linkedin.com / company / ziontechgroup';
+                  target='_blank';
+                  rel='noopener noreferrer';
+                >;
+
                   LinkedIn;
                 </a>;
               </li>;
               <li>;
+
+                <a;
+                  className='text - cyan - 400';
+                  href='https://github.com / Zion - Holdings';
+                  target='_blank';
+                  rel='noopener noreferrer';
+                >;
+
                   GitHub;
                 </a>;
               </li>;
               <li>;
+
+                <a;
+                  className='text - cyan - 400';
+                  href='https://instagram.com / ziontechgroup';
+                  target='_blank';
+                  rel='noopener noreferrer';
+                >;
+
                   Instagram;
                 </a>;
               </li>;
               <li>;
+
+                  rel='noopener noreferrer'>;
+                <a;
+                  className='text - cyan - 400';
+                  href='https://youtube.com/@ziontechgroup';
+                  target='_blank';
+                  rel='noopener noreferrer';
+                >;
+
                   YouTube;
                 </a>;
               </li>;
@@ -107,6 +148,8 @@ function CommunityPage() {
           </div>;
         </div>;
       </div>;
+
+
 export default function CommunityPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -127,16 +170,13 @@ export default function CommunityPage() {
 					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">
 						<h2 className="text-white text-xl font-semibold mb-2">Follow Us</h2>
 						<ul className="text-slate-300 space-y-1">
-							<li><a className="text-cyan-400" href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-							<li><a className="text-cyan-400" href="https://github.com/Zion-Holdings" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-							<li><a className="text-cyan-400" href="https://instagram.com/ziontechgroup" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-							<li><a className="text-cyan-400" href="https://youtube.com/@ziontechgroup" target="_blank" rel="noopener noreferrer">YouTube</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
-	)
-}
-    </div>);
+
+
 ;
+
+

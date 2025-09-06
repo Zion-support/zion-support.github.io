@@ -1,5 +1,49 @@
-import React, { useState } from 'react'
-            className={`transition-transform ${readOnly ? 'cursor-default' : any
-              fill={active ? 'gold' : any
-              stroke={active ? 'gold' : any
-              className={`drop-shadow ${active ? 'animate-pulse-slow' : any
+import React, { useState } from 'react',
+
+type Props = {
+  value: number,
+  onChange: (val: number) => void,
+  size?: number,
+  readOnly?: boolean
+},
+
+export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
+  const [hovered, setHovered] = useState<number | null>(null),
+
+  const stars = [1, 2, 3, 4, 5],
+
+  return (
+    <div className=&quot;flex items-center gap-1&quot;>
+      {stars.map((star) => {
+        const active = (hovered ?? value) >= star,
+        return (
+          <button
+            key={star}
+            type=&quot;button&quot;
+            className={`transition-transform ${readOnly ? 'cursor-default' : 'hover:scale-110'}`}
+            onMouseEnter={() => !readOnly && setHovered(star)}
+            onMouseLeave={() => !readOnly && setHovered(null)}
+            onClick={() => !readOnly && onChange(star)}
+            aria-label={`${star} star`}
+          >
+            <svg
+              xmlns=&quot;http://www.w3.org/2000/svg&quot;
+              width={size}
+              height={size}
+              viewBox=&quot;0 0 24 24&quot;
+              fill={active ? 'gold' : 'none'}
+              stroke={active ? 'gold' : 'currentColor'}
+              strokeWidth=&quot;2&quot;
+              strokeLinecap=&quot;round&quot;
+              strokeLinejoin=&quot;round&quot;
+              className={`drop-shadow ${active ? 'animate-pulse-slow' : ''}`}            >
+              <polygon points=&quot;12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2&quot; />
+            </svg>
+          </button>
+        )
+      })}
+    </div>
+  )
+},
+
+export default StarRating,

@@ -1,9 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
   id: string;
   name: string;
   tagline: string;
@@ -43,19 +37,6 @@ class ErrorBoundary extends React.Component {
 }
 const contact = {
   mobile: '+1 302 464 0950';
-export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
-  // AI & Machine Learning Services
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com';
-}
-;
-export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [;
-  // AI & Machine Learning Services;
-  {
-    id: 'ai - content - generation - platform';
-    name: 'AI Content Generation Platform';
-    tagline: 'Create high - quality content at scale with AI';
-    price: '$299';
     targetAudience: 'Marketing teams, Content creators, Agencies, E-commerce businesses';
     trialDays: 14;
     setupTime: '1-2 days';
@@ -222,16 +203,12 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     benefits: [;
       '80% latency reduction45% operational efficiency_real - time processing_local intelligence_cost optimization';
     ];
-  {
-    id: 'ai - medical - imaging - analysis';
-    name: 'AI Medical Imaging Analysis';
     description: 'Revolutionary AI platform for medical imaging analysis that provides accurate diagnosis, early detection, and treatment recommendations for various medical conditions.';
     features: [;
       'Multi - modality image analysisAI - powered diagnosis_early detection algorithms_treatment recommendations_radiologist assistance tools_clinical decision support_patient outcome prediction_research and analytics';
       'HIPAA compliance_integration with PACS systems';
     ];
     popular: true;
-    icon: '🏥';
     targetAudience: 'Hospitals, Imaging centers, Radiologists, Research institutions';
     trialDays: 30;
     setupTime: '4-6 weeks';
@@ -268,9 +245,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     benefits: [;
       '25% diagnostic accuracy improvement60% reading time reduction_early detection capabilities_treatment optimization_research support';
     ];
-  {
-    id: 'ai - financial - risk - management';
-    name: 'AI Financial Risk Management';
     targetAudience: 'Banks, Investment firms, Insurance companies, Fintech startups';
     trialDays: 21;
     setupTime: '3-4 weeks';
@@ -297,7 +271,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
       'Mobile learning support_integration with LMS systems';
     ];
     popular: false;
-    icon: '🎓';
     targetAudience: 'Schools, Universities, Corporate training, Online education platforms';
     trialDays: 30;
     setupTime: '2-3 weeks';
@@ -320,9 +293,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     benefits: [;
       '35% learning outcome improvement50% dropout rate reduction_personalized learning_adaptive content_progress tracking';
     ];
-  {
-    id: 'ai - supply - chain - optimization';
-    name: 'AI Supply Chain Optimization';
     targetAudience: 'Manufacturing companies, Retail chains, Logistics providers, E-commerce businesses';
     trialDays: 30;
     setupTime: '3-4 weeks';
@@ -345,9 +315,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     benefits: [;
       '30% inventory cost reduction40% delivery time improvement_demand forecasting_route optimization_real - time visibility';
     ];
-  {
-    id: 'ai - energy - optimization - platform';
-    name: 'AI Energy Optimization Platform';
     targetAudience: 'Utility companies, Energy providers, Manufacturing companies, Smart cities';
     trialDays: 30;
     setupTime: '4-6 weeks';
@@ -400,6 +367,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     market_advantage: 'Advanced AI energy platform with comprehensive sustainability features';
   }
 ];
+export default comprehensiveInnovativeServices;
 ;
 export default comprehensiveInnovativeServices;
 ;

@@ -1,8 +1,6 @@
 interface SEOHeadProps {
-=======
 
 interface SEOHeadProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title?: string;
   description?: string;
   keywords?: string;
@@ -36,7 +34,6 @@ interface SEOHeadProps {;
         rel="preconnect"
         href="https://fonts && fonts.gstatic.com"
         crossOrigin="anonymous"
-=======
 ;
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -118,22 +115,18 @@ interface SEOHeadProps {;
         cross_origin="anonymous";
       />;
       <link rel="preconnect" href="https://www.google - analytics.com" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Structured Data */}
       <script;
         type="application / ld + json";
         dangerouslySetInnerHTML={{
-=======
           __html: JSON.stringify (structured_data || defaultStructuredData),
         }}
       />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Additional SEO Scripts */}
       <script;
         type="application / ld + json";
         dangerouslySetInnerHTML={{
             },
           }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         }}
       />;

@@ -1,17 +1,20 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-
-);
-const RSS_PATH = path && path.join(process && process.cwd(), 'public', 'podcast && podcast.xml');
-=======
-const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
-const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml');
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 function ensureStorage() {
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
+}
+
+
+function ensureStorage() {
+
+  const dir = path.dirname(EPISODES_PATH);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+
+  const siteUrl = process && process.env.SITE_URL || 'http://localhost:3000';
+  const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 function ensureStorage() {
   const dir = path && path.dirname(EPISODES_PATH);
   if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
@@ -22,10 +25,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res && res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
   const items = episodes
-    .filter(e => e && e.audio?.mp3Url)
-    .map(e => {      const pubDate = new Date(e && e.createdAt).toUTCString();    .filter((e) => e && e.audio?.mp3Url)
+    .filter(e => e.audio?.mp3Url)
+    .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3Url)
     .map((e) => {
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       return `
     <item>
       <pubDate>${pubDate}</pubDate>
@@ -48,14 +50,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
 }
 
-=======
 
   fs.writeFileSync(RSS_PATH, xml, 'utf8');
   return res.status(200).json({ ok: true, path: '/podcast.xml' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 const EPISODES_PATH = path.join (
   process.cwd (),
@@ -142,4 +140,10 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8');
   items;
 }</channel> </rss>`;  return res.status (200).json ({ ok: true, path: '/podcast.xml' });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+  items 
+}</channel> </rss>`;
+
+  items 
+}</channel> </rss>`;
+

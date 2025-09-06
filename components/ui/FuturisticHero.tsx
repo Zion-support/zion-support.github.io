@@ -1,6 +1,6 @@
-import Link from 'next / link';
-import AnimatedBackground from './AnimatedBackground';
+export default function FuturisticHero() {
 
+export default function FuturisticHero() {
   return (
     <section className='relative py-20 sm:py-28'>;
       <AnimatedBackground />;
@@ -41,6 +41,13 @@ function FuturisticHero() {
             </a>;
           </Link>;
         </div>;
+          <p className="text-sm text-gray-700 dark:text-gray-300">
+            Talent marketplace • Project accelerators • Secure contracts • Integrated AI toolchain
+          </p>
+        </div>
+      </div>
+  );
+
         <div className='mt - 10 mx - auto max - w-3xl p - 6 rounded - 2xl bg - white / 70 dark:bg - black / 40 backdrop - blur border border - gray - 200 dark:border - gray - 800 shadow'>;
           <p className='text - sm text - gray - 700 dark:text - gray - 300'>;
             Talent marketplace • Project accelerators • Secure contracts •;

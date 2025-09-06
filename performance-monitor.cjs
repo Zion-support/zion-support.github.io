@@ -14,7 +14,7 @@ class PerformanceMonitor {
 
   async measureBundleSize() {
     try {
-      const buildDir = path.join(process.cwd(), '.next');
+      const buildDir = path.join(process.cwd(), 'dist');
       if (fs.existsSync(buildDir)) {
         const stats = fs.statSync(buildDir);
         this.metrics.bundleSize = stats.size;

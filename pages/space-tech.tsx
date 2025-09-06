@@ -1,3 +1,4 @@
+
 import React from "react";
 import Head from "next/head";
 import Layout from "../components/layout/Layout";
@@ -19,15 +20,13 @@ return (
             href="/space-technology"
             className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">;
             <Globe2 className="w-4 h-4" />{" "}
-          </a>;
-        </section>;
-      </div>;
-    </div>;
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { Satellite, CheckCircle, Globe2 } from 'lucide-react';
-
+            <span>Explore detailed Space Technology offerings</span>
+          </a>
+        </section>
+      </div>
+    </div>
+  </Layout>
+);
       <Head>
         <title>Space Technology | Zion Tech Group</title>
         <meta name="description" content="Space mission control, satellite operations, and secure communications consulting." />
@@ -42,8 +41,6 @@ import { Satellite, CheckCircle, Globe2 } from 'lucide-react';
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Space Technology</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Secure, reliable operations for space and earth observation missions.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="/contact" className="px-8 py-4">Discuss a Mission</a>
-              <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Capabilities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -51,11 +48,6 @@ import { Satellite, CheckCircle, Globe2 } from 'lucide-react';
                 <div key={f} className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
-                </div>
-              ))}
-            </div>
-          </section>
-
           <section className="text-center">
             <a href="/space-technology" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
               <Globe2 className="w-4 h-4" />
@@ -64,7 +56,20 @@ import { Satellite, CheckCircle, Globe2 } from 'lucide-react';
         </div>
       </div>
     </Layout>
-  )
+            </div>;
+          </section>;
+          <section className="text-center">;
+            <a href="/space-technology" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">;
+              <Globe2 className="w-4 h-4" />;
+              <span>Explore detailed Space Technology offerings</span>;
+            </a>;
+          </section>;
+        </div>;
+      </div>;
+    </Layout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-  </Layout>);
-;

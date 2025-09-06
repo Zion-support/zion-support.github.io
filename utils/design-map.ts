@@ -1,38 +1,24 @@
 export interface TokenSet {
-  colors: Record < string, string>;
-  typography: Record < string, any>;
-  spacing: Record < string, number>;
+
+export interface TokenSet {;
+  colors: Record<string, string>;
+  typography: Record<string, any>;
+  spacing: Record<string, number>;
 }
 export interface UIKit {
-  components: Record < string, any>;
+
+export interface UIKit {;
+  components: Record<string, any>;
   tokens: TokenSet;
 }
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
+export async function buildTokenSet(fileId: string): Promise<TokenSet> {
+  // Placeholder implementation
+  return {
     }
     
     return this.props.children;
   }
 }
-// Mock design map utility
-export function getDesignMap() {
-  return {
     components: [],
     pages: [],
     styles: []
@@ -109,7 +95,6 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     return (await res && res.json()) as Partial<TokenSet>;
   } catch {
     return null;
-=======
 // Design mapping utilities
 export interface DesignElement {
   id: string;
@@ -171,25 +156,10 @@ export interface FigmaNode {
   };
 }
 
-export class DesignMapManager {
-  private designSystems: Map<string, DesignSystem> = new Map();
-  private figmaNodes: Map<string, FigmaNode> = new Map();
-
-  // Design System methods
-  createDesignSystem(id: string, name: string, version: string = '1.0.0'): DesignSystem {
-    const designSystem: DesignSystem = {
-      id,
-      name,
-      version,
-      components: [],
-      tokens: {},
-      assets: [],
-      lastUpdated: new Date()
+  const tokens = await buildTokenSet(fileId);
     };
-    
-    this.designSystems.set(id, designSystem);
-    return designSystem;
-  }
+  };
+}
 
   getDesignSystem(id: string): DesignSystem | null {
     return this.designSystems.get(id) || null;
@@ -371,12 +341,10 @@ export class DesignMapManager {
   clearAll(): void {
     this.designSystems.clear();
     this.figmaNodes.clear();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
 }
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
   const tokens = await buildTokenSet(fileId);
-=======
 export async function buildTokenSet (file_id: string): Promise < TokenSet> {
   // Placeholder implementation;
   return {
@@ -404,16 +372,16 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
 export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < UIKit> {
   const tokens = await buildTokenSet (file_id);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
-=======
           background_color: tokens.colors.primary,
           padding: tokens.spacing.md;
         }
       }
+}
+  };
+
+}
     },
     tokens;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

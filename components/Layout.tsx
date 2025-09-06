@@ -1,8 +1,28 @@
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
-
 interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
@@ -57,15 +77,49 @@ const Layout: React.FC < LayoutProps> = ({
         <meta name="description" content={description} />;
         <meta name="keywords" content={keywords} />;
         {canonical && <link rel="canonical" href={canonical} />}
+        <meta
+          property="og:description"
+          content={ogDescription || description}
+        />;
+        <meta property="og:image" content={ogImage} />;
+        <meta property="og:url" content={canonical} />;
+        <meta property="og:type" content="website" />;
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />;
+        <meta name="twitter:title" content={ogTitle || title} />;
+        <meta
+          name="twitter:description"
+          content={ogDescription || description}
+        />;
+        <meta name="twitter:image" content={ogImage} />;
+        {/* JSON-LD */}
+        <script
+          type="application/ld+json"
+      <Header />;
+      <main>{children}</main>;
+      <Footer />;
+    </div>;
+  );
+};
 
+interface LayoutProps {
+  children: ReactNode,
+}
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <main className="min-h-screen">
       {children}
     </main>
-  );
-}
-export default Layout;
+import React, { ReactNode } from "react";
+interface LayoutProps {
+  children: ReactNode;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
         {no_index && <meta name="robots" content="noindex, nofollow" />}
         {/* Open Graph */}
         <meta property="og:title" content={og_title || title} />;
@@ -95,3 +149,28 @@ export default Layout;
       <Footer />;
     </div>);
 }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <main className="min-h-screen">
+      {children  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </main>
+  );
+};
+export default Layout;

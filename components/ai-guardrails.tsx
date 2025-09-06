@@ -1,6 +1,54 @@
+  Check,
+  Shield,
+  ShieldAlert,
+  Lock,
+  Phone,
+  Mail,
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+
+export default function AIGuardrailsPage() {
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',;
+  };
+
+  const features = [
+    'Prompt/output policy engine with allow/deny lists'
+    'Jailbreak and prompt injection detection'
+    'PII/PHI detection and redaction'
+    'Toxicity, bias and safety classifiers'
+    'Human handoff flows and escalation policies'
+    'Audit logs, alerting and exportable evidence'
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Head from 'next/head';
+
 
   ];
   return (
@@ -18,6 +66,29 @@ import Button from '../components/ui/Button';
               strong guarantees.;
             </p>;
           </div>;
+                      className='flex items - start gap - 2 text - gray - 200';
+                    >;
+                      <Check className='w - 5 h - 5 text - emerald - 400 mt - 0.5' />{' '}
+                      <span>{f}</span>;
+                    </li>))}
+                </ul>;
+              </div>;
+            </Card>;
+            <Card className='bg - black / 30 border border - rose - 500 / 30'>;
+              <div className='p - 6'>;
+                <div className='text - 3xl font - bold text - white'>;
+                  Starting at $199;
+                  <span className='text - base text - gray - 400'>/month</span>;
+                </div>;
+                <div className='text - sm text - gray - 400 mt - 1'>;
+                  14 - day trial • Setup: 30 minutes;
+                </div>;
+                <div className='mt - 4'>;
+                  <Button;
+                    href='/contact';
+                    className='w - full bg - gradient - to - r from - rose - 500 to - orange - 600 text - white';
+                  >;
+
                     Request Demo;
                   </Button>;
                 </div>;
@@ -29,11 +100,9 @@ import Button from '../components/ui/Button';
               </p>;
             </Card>;
           </div>;
-              </Button>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+	);
+}
+	);
     </UltraAdvancedFuturisticBackground>);					<div className="bg - black / 20 border border - rose - 500 / 30 rounded - 2xl p - 6">;
       <h3 className="text - xl font - semibold text - white mb - 4 text - center">Contact</h3>;
       <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - sm">;

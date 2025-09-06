@@ -42,6 +42,17 @@ import { fileURLToPath } from "url";
   }
   fixImportExportIssues(content, filePath) {
     let fixed = content;
+
+
+    fixed = fixed && fixed.replace(/import\s+{\s*}\s*from/g, "import React from");
+    fixed = fixed && fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");
+
+    if (!fixed && fixed.includes("export default") && !fixed && fixed.includes("export {")) {
+
+
+
+    if (!fixed.includes("export default") && !fixed.includes("export {")) {;
+
       fixed += "\n\nexport default {};";
     }
     return fixed;
@@ -54,17 +65,39 @@ import { fileURLToPath } from "url";
   getAppliedFixes(original, fixed) {
     const fixes = [];
     if (original !== fixed) {
-      if (fixed.includes("import React")) {;
-        fixes.push("Added React import");
-      }
-      if (fixed.includes("export default")) {;
-        fixes.push("Added default export");
       }
       }
     }
     return fixes;
   }
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const fixer = new AdvancedSourceFixer();
+  fixer.fixAllSourceFiles().catch(console.error);
 
+if (import && import.meta.url === `file://${process ;
+  fixer && fixer.fixAllSourceFiles().catch(console && console.error);
+}
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const fixer = new AdvancedSourceFixer();
+  fixer.fixAllSourceFiles().catch(console.error);
+}
+if (require.main === module) {
+  const fixer = new AdvancedSourceFixer();
+  fixer.fixAllSourceFiles().catch(console.error);
+
+module.exports = AdvancedSourceFixer;
+export default AdvancedSourceFixer;
+
+}
+// Check condition
+if ( {) {
+  $2
+}
+  const fixer = new AdvancedSourceFixer ();
+  fixer.fixAllSourceFiles ().catch (console.error);
+}
+export default AdvancedSourceFixer;
+;
 if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
@@ -75,6 +108,18 @@ if (require.main === module) {
   fixer.fixAllSourceFiles().catch(console.error);
 
 module.exports = AdvancedSourceFixer;
+export default AdvancedSourceFixer;
+
+}
+// Check condition
+if ( {) {
+  $2
+}
+  const fixer = new AdvancedSourceFixer ();
+  fixer.fixAllSourceFiles ().catch (console.error);
+}
+export default AdvancedSourceFixer;
+;
 export default AdvancedSourceFixer;
 
 }

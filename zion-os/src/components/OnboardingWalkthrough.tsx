@@ -54,12 +54,17 @@
       {/* Highlight Target Element */}
       {currentStepData.target && (
         <div;
+            bottom: 0}}
+        >;
+          <div;
+            className="absolute border-2 border-blue-500 rounded-lg shadow-lg bg-blue-500/10";
               width: "300px";
               height: "200px"}}
           />;
         </div>)}
     </>);
 }
+    "data-walkthrough-target": id;
 // Hook to add data attributes for walkthrough targeting;
     id}
 }

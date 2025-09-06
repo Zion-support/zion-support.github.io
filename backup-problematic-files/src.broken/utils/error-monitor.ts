@@ -1,3 +1,4 @@
- Utility functions for error-monitor,;
+// Utility functions for error-monitor,;
 export const error-monitor = {,;
-  //
+  // TODO:Implement utility functions;
+},

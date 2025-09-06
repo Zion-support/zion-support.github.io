@@ -1,4 +1,42 @@
+        }
+        return match;
+      },
+    );
+
+          modified = true;
+          return match + ";";
+        }
+        return match;
+      },
+    );
+
+});
+
+console.log(`\nTotal files fixed: ${totalFixed}`);
+  }
 }},
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+,
+// Run all fixes,
+fixFooter();
+fixAccessibility();
+fixAiServices();
+fixApiDocs();
+fixCareers();
+,
+console.log('🎉 Syntax error fixes completed');
+// Run all fixes,
+fixFooter(),
+fixAccessibility(),
+fixAiServices(),
+fixApiDocs(),
+fixCareers(),
+// // // console.log('🎉 Syntax error fixes completed'),
+}},;
+// Run all fixes,;
+fixFooter(),;
+fixAccessibility(),;
+fixAiServices(),;
+fixApiDocs(),;
+fixCareers(),;
+// // // console.log('🎉 Syntax error fixes completed'),;
+}},

@@ -1,1 +1,0 @@
-export default function LocalHome(){return (<main className="min-h-screen bg-black text-zinc-100 p-8">

@@ -1,4 +1,28 @@
 
+export type ModerationModalProps = {
+  flag: any | null;
+
+  onAction: (;
+    action: 'approve' | 'remove' | 'warn' | 'ban',;
+    adminNotes?: string;
+  ) => Promise<void>;
+export default function ModerationModal(): any ({;
+  flag,;
+  onClose,;
+  onAction,;
+}: ModerationModalProps) {;
+
+
+  flag,
+  onClose,
+  onAction,
+}: ModerationModalProps) {;
+
+  flag,
+  onClose,
+  onAction,
+}: ModerationModalProps) {;
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -71,26 +95,16 @@ export type ModerationModalProps = {;
       </div>;
     </div>;
   );
+  );
+}        <div className="p-4 border-t flex items-center justify-end gap-2">
           <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
           <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
           <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
           <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
-}        <div className="p-4 border-t flex items-center justify-end gap-2">;
-          <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>;
-          <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>;
-          <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>;
-          <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>;
-      </div>;
-    </div>;
-=======
-        </div>
       </div>
     </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  );
+);
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   on_close: () => void;
   on_action: (
     action: 'approve' | 'remove' | 'warn' | 'ban',
@@ -209,4 +223,3 @@ if (return null) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

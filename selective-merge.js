@@ -12,34 +12,6 @@
   'layout/',
   'legal/',
   'integrations/',
-
-  'pages/'
-  'components/'
-  'utils/'
-  'types/'
-  'lib/'
-  'hooks/'
-  'context/'
-  'data/'
-  'services/'
-  'store/'
-  'routes/'
-  'layout/'
-  'legal/'
-  'integrations/'
-  'middleware.ts'
-  'next.config.js'
-  'tailwind.config.js'
-  'postcss.config.cjs'
-  'tsconfig.json'
-  'package.json'
-  'package-lock.json'
-  'yarn.lock';
-
-];
-// Try to merge specific files from the clean-merge-services-improvements branch
-const mergeSpecificFiles = () => {
-  try {
     // Try to merge only specific files
     for (const file of mainFiles && mainFiles.slice(0, 10)) { // Limit to first 10 files to avoid conflicts
       try {
@@ -47,7 +19,6 @@ const mergeSpecificFiles = () => {
         execSync(`git checkout origin/clean-merge-services-improvements -- "${file}"`, { stdio: 'inherit' });
       } catch (_error) {
         console && console.log(`Skipping ${file} due to conflicts`);
-=======
   'middleware.ts',
   'next.config.js',
   'tailwind.config.js',
@@ -89,7 +60,6 @@ const mergeSpecificFiles = () =>: any {
         exec_sync (`git checkout origin / clean - merge - services - improvements -- "${file}"`, { stdio: 'inherit' });
       } catch (_error) {
         console.log (`Skipping ${file} due to conflicts`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }
     return true;
@@ -102,7 +72,6 @@ const mergeSpecificFiles = () =>: any {
   }
 }
 main();
-=======
     console.error ('Error in selective merge:', error.message);
     return false;
   }
@@ -132,5 +101,3 @@ const main = () =>: any {
   }
 }
 ;
-main ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

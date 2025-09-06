@@ -1,54 +1,4 @@
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [formData, setFormData] = useState({
-    firstName: ""
-    lastName: ""
-    email: ""
-    password: ""
-    confirmPassword: ""
-    company: ""
-    agreeToTerms: false
-    subscribeNewsletter: false
-  });
-  const [passwordRequirements, setPasswordRequirements] = useState({
-    length: false
-    uppercase: false
-    lowercase: false
-    number: false
-    special: false
-  });
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle registration logic here
-  }
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
-      ...prev
-      [name]: type === "checkbox" ? checked : value
-    }));
-    // Check password requirements
-    if (name === "password") {
-      setPasswordRequirements({
-        length: value.length >= 8
-        uppercase: /[A-Z]/.test(value)
-        lowercase: /[a-z]/.test(value)
-        number: /\d/.test(value)
-        special: /[!@#$%^&*(),.?":{}|<>]/.test(value)
-      });
-    }
-  }
-  const isPasswordValid = Object.values(passwordRequirements).every(Boolean);
-  const isFormValid =
-    formData.firstName &&
-    formData.lastName &&
-    formData.email &&
-    formData.password &&
-    formData.confirmPassword &&
-    formData.password === formData.confirmPassword &&
-    isPasswordValid &&
-    formData.agreeToTerms;
-=======
+
 
 export default function RegisterPage() {;
   const [showPassword, setShowPassword] = useState(false);
@@ -106,8 +56,6 @@ export default function RegisterPage() {;
     formData && formData.password === formData && formData.confirmPassword &&;
     isPasswordValid &&;
     formData && formData.agreeToTerms;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Layout
       title="Register - Zion Tech Group"
@@ -231,7 +179,6 @@ export default function RegisterPage() {;
                           className={
                             isValid ? "text-green-400" : "text-gray-400"
                           }>;
-=======
 import React, { useState } from './react';
 import Link from './next / link';
 import { motion  } from './framer-motion';
@@ -461,7 +408,6 @@ if ( {) {
                             is_valid ? "text - green - 400" : "text - gray - 400";
                           }
                         >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           {key === "length" && "At least 8 characters"}
                           {key === "uppercase" && "One uppercase letter"}
                           {key === "lowercase" && "One lowercase letter"}
@@ -530,25 +476,10 @@ if ( {) {
                     </Link>;
                   </label>;
                 </div>;
-                  <input
-                    id="subscribeNewsletter"
-                    name="subscribeNewsletter"
-                    type="checkbox"
-                    checked={formData && formData.subscribeNewsletter}
-                    onChange={handleChange}
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-600 rounded bg-white/10"
-                  />;
-                  <label
-                    htmlFor="subscribeNewsletter"
                   </span>;
                   Create account;
                 </button>;
               </div>;
-                  Already have an account?{" "}
-                  <Link
-                    href="/login"
-                    className="font-medium text-blue-400 hover:text-blue-300 transition-colors">;
-=======
               <div className="text - center">;
                 <p className="text - sm text - gray - 300">;
                   Already have an account?{" "}
@@ -556,7 +487,6 @@ if ( {) {
                     href="/login";
                     className="font - medium text - blue - 400 hover:text - blue - 300 transition - colors";
                   >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     Sign in here;
                   </Link>;
                 </p>;

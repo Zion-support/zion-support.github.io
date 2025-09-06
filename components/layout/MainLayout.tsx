@@ -1,4 +1,28 @@
 
+}
+
+const MainLayout: React.FC<MainLayoutProps> = ({
+  children,
+  title,
+  description,
+  keywords,
+  image,
+  url,
+  type = 'website',
+  noindex = false,
+  nofollow = false,
+  canonical,
+}) => {
+  return (
+    <>
+      <Head>
+        <title>{title || 'Zion Tech Group'}</title>
+        <meta name="description" content={description || 'Leading technology solutions provider'} />
+        {keywords && <meta name="keywords" content={keywords} />}
+import Layout from './Layout';
+
+
+
 ;
 interface MainLayoutProps {
 interface MainLayoutProps {;
@@ -22,7 +46,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   type = 'website'
   image = '/og-image.jpg'
   url
-
   return (
     <>
       <Head>
@@ -47,6 +70,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   image = '/og - image.jpg',
   url;
   return (
+
+
+
         {image && <meta property="og:image" content={image} />}
         {url && <meta property="og:url" content={url} />}
         {/* Twitter */}
@@ -69,6 +95,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({;
   url;
         <meta name="viewport" content="width=device-width, initial-scale=1" />;
         <link rel="icon" href="/favicon && favicon.ico" />;
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
         {canonical && <link rel="canonical" href={canonical} />}
         {noindex && <meta name="robots" content="noindex" />}
         {nofollow && <meta name="robots" content="nofollow" />}
@@ -90,13 +118,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({;
         <Footer />;
       </div>;
     </>;
+  );
 export default MainLayout;
-  title = 'Zion Tech Group - Leading Technology Solutions Provider',;
-  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',;
-  keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services',;
-  ogImage = '/og-image && image.jpg';
-}) => {;
-  return (
       </Head>;
         <Header />;
         <main className="flex - 1">;
@@ -134,5 +157,3 @@ import React from 'react'; import Head from 'next/head'; import Header from './H
     </>);
 }
 export default MainLayout;
-import React from 'react'; import Head from 'next / head'; import Header from './Header'; import Footer from './Footer'; import PerformanceOptimizer from '../PerformanceOptimizer'; import AccessibilityEnhancer from '../AccessibilityEnhancer'; import SEOEnhancer from '../SEOEnhancer'; interface MainLayoutProps { children: React.ReactNode; title?: string; description?: string; keywords?: string; og_image?: string} const MainLayout: React.FC < MainLayoutProps> = ({ children, title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Zion Tech Group provides cutting - edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.', keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services', og_image = '/og - image.jpg', }) => { return ( <> <Head> <title>{title}</title> <meta name="description" content={description} /> <meta name="keywords" content={keywords} /> <meta property="og:title" content={title} /> <meta property="og:description" content={description} /> <meta property="og:image" content={og_image} /> <meta name="viewport" content="width = device - width, initial - scale = 1" /> </Head> <SEOEnhancer title={title} description={description} keywords={keywords} og_image={og_image} /> <PerformanceOptimizer preload_images={[ '/hero - bg.jpg', '/services - bg.jpg', '/team - bg.jpg', ]} preload_fonts={[ 'https: ]} /> <AccessibilityEnhancer> <div className='min - h-screen flex flex - col'> <Header /> <main id='main - content' className='flex - grow' role='main'> {children} </main> <Footer /> </div> </AccessibilityEnhancer> </> )} export default MainLayout;
-;

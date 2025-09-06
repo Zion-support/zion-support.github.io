@@ -1,5 +1,62 @@
-
-  "general"
-    "app_name": any
-    "language_changed": "    {language}"
-    "switch_to_detected": "  {language}"
+{
+  "general": {
+    "app_name": "   ",
+    "loading": " ...",
+    "search": "",
+    "select_language": " ",
+    "save": "",
+    "cancel": "",
+    "submit": "",
+    "yes": "",
+    "no": "",
+    "success": "",
+    "error": ""
+  },
+  "nav": {
+    "home": "",
+    "marketplace": "",
+    "categories": "",
+    "talent": "",
+    "equipment": "",
+    "dashboard": " ",
+    "messages": "",
+    "post_job": " "
+  },
+  "auth": {
+    "login": " ",
+    "signup": " ",
+    "logout": " ",
+    "email": " ",
+    "password": " ",
+    "forgot_password": "  ",
+    "remember_me": "",
+    "login_success": "   ",
+    "logout_success": "   "
+  },
+  "home": {
+    "hero_title": "    ",
+    "hero_subtitle": "       ",
+    "browse_marketplace": " ",
+    "create_profile": "  ",
+    "explore_tools": " ",
+    "tools_description": "        "
+  },
+  "jobs": {
+    "post_job_title": " ",
+    "post_job_description": "        ",
+    "job_title": " ",
+    "job_description": " ",
+    "skills_required": " ",
+    "budget": "",
+    "deadline": " ",
+    "job_posted": "   "
+  },
+  "language": {
+    "en": "English",
+    "es": "Espaol",
+    "pt": "Portugus",
+    "ar": "",
+    "language_changed": "    {{language}}",
+    "switch_to_detected": "  {{language}}"
+  }
+}

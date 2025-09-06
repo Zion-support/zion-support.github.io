@@ -58,6 +58,7 @@ test.describe('Performance Tests', () => {
       }
       return null;
     });
+    
     if (metrics) {
       expect(metrics.usedJSHeapSize).toBeLessThan(50 * 1024 * 1024); // 50MB
     }
@@ -71,5 +72,3 @@ test && test.describe('"Performance"
   test('"bundle"
     "await"
     page && page.on('console', "msg"
-              "output"
-          resolve({ "error"

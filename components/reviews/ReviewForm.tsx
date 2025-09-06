@@ -1,26 +1,3 @@
-import StarRating from './StarRating';
-export type ReviewFormValues = {
-  projectId: string
-  fromRole: 'client' | 'talent'
-  fromId: string
-  rating: number
-  text: string
-=======
-</div> <div> <label className="block text - sm font - medium mb - 2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
-  submitting ? 'Submitting...' : 'Submit Review';
-}</button> </form>);
-}
-;
-type Props = {
-  initial: Pick < ReviewFormValues, 'project_id' | 'from_role' | 'from_id'>;}import React, { useState } from 'react';
-import StarRating from './StarRating';
-export type ReviewFormValues = {
-  project_id: string,
-  from_role: 'client' | 'talent',
-  from_id: string,
-  rating: number,
-  text: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   categories?: {
     communication?: number;
     qualityOfWork?: number;
@@ -51,8 +28,6 @@ class ErrorBoundary extends React.Component {
  </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;
   submitting ? 'Submitting...' : 'Submit Review' ;
 }</button> </form>) ;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 };
 
 type Props = {;
@@ -77,7 +52,6 @@ type Props = {;
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
 
 const ReviewForm: React.FC<Props> = ({ initial }) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
   const [anonymous, setAnonymous] = useState(false);
@@ -102,16 +76,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
       setSubmitting(false);    }
   }
   return (
-=======
-          projectId: initial.projectId,
-          fromRole: initial.fromRole,
-          fromId: initial.fromId,
-          rating;
-          text;
-          anonymous;
-          categories: {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       const data = await res.json ();
       if (throw new Error (data.error || 'Failed to submit')) {
   $2
@@ -129,25 +93,10 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
       </div>;
       <div>;
         <label className='block text - sm font - medium mb - 2'>Your Review</label>          categories: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             communication;
             qualityOfWork;
             timeliness;
             wouldWorkWithAgain}})});
-    } catch (err: any) {
-      set_message (err.message);
-    } finally {
-      const data = await res && res.json();
-      if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');
-      setMessage('Review submitted! Pending admin approval.');
-    } catch (err: any) {;
-      setMessage(err && err.message);
-    } finally {;
-      setSubmitting(false);
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
   return (
@@ -166,7 +115,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
 
       <div>;
         <label className='block text-sm font-medium mb-2'>Your Review</label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <textarea
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
           rows={5}
@@ -174,26 +122,14 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
           onChange={e => setText(e && e.target.value)}          required;
         />;
       </div>;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
           value={text}
-          onChange={(e) => setText(e && e.target.value)}
-          required;
-        />;
-      </div>;
-
-      <div className='flex items-center gap-3'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <input
           id='anonymous'
           type='checkbox'
           checked={anonymous}
-            <StarRating
-              value={communication |0}
-              onChange={v => setCommunication(v)}
-=======
       set_submitting (false);
     }
   }
@@ -237,7 +173,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
             <StarRating;
               value={communication || 0}
               on_change={v => set_communication (v)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             />;
           </div>;
           <span className='pill'>Optional</span>;
@@ -255,76 +190,14 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
           <span className='pill'>Optional</span>        </div>;
       </div>;
       <button
-        type='submit'
-        className='enhanced-button enhanced-button-primary'        type="submit"
-        className="enhanced-button enhanced-button-primary"
-        disabled={submitting}>;
-        {submitting ? 'Submitting...' : 'Submit Review'}
-      {message && <p className='text-sm'>{message}</p>}
-    </form>;
-  );
-export default ReviewForm;
-
-=======
-
-      <div className="flex items-center gap-3">
-        <input id="anonymous" type="checkbox" checked={anonymous} onChange={(e) => setAnonymous(e.target.checked)} />
-        <label htmlFor="anonymous" htmlFor="input-Submit anonymously">Submit anonymously</label>
-      </div>
-
-      <div className="grid md:grid-cols-2 gap-4">
-        <div className="enhanced-card">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm">Communication</span>
-            <StarRating value={communication || 0} onChange={(v) => setCommunication(v)} />
-          </div>
-          <span className="pill">Optional</span>
-        </div>
-        <div className="enhanced-card">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm">Quality of Work</span>
-            <StarRating value={qualityOfWork || 0} onChange={(v) => setQualityOfWork(v)} />
-          </div>
-          <span className="pill">Optional</span>
-        </div>
-        <div className="enhanced-card">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm">Timeliness</span>
-            <StarRating value={timeliness || 0} onChange={(v) => setTimeliness(v)} />
-          </div>
-          <span className="pill">Optional</span>
-        </div>
-        <div className="enhanced-card">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm">Would Work With Again</span>
-            <input type="checkbox" checked={wouldWorkWithAgain} onChange={(e) => setWouldWorkWithAgain(e.target.checked)} />
-          </div>
-          <span className="pill">Optional</span>
-        </div>
-      </div>
-
-      <button
         type="submit"
         className="enhanced-button enhanced-button-primary"
-=======
-      <button;
-        type='submit';
-        className='enhanced - button enhanced - button - primary'        disabled={submitting}          <span className="pill">Optional</span>;
-        </div>;
-      </div>;
-      <button;
-        type='submit';
-        className='enhanced - button enhanced - button - primary'        type="submit";
-        className="enhanced - button enhanced - button - primary";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         disabled={submitting}
       >;
         {submitting ? 'Submitting...' : 'Submit Review'}
 };
 
 export default ReviewForm;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       </button>;
       {message && <p className='text - sm'>{message}</p>}
     </form>);
@@ -335,4 +208,3 @@ export default ReviewForm;    </form>);
 ;
 export default ReviewForm;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

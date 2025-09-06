@@ -1,15 +1,21 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { validateKycSubmission } from '[^']*';
+import { getAmlProvider } from '[^']*';
+import fs from 'fs';
+import path from 'path';
 
+const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
 
 function load(): Record<string, KycProfile> {
   try {
+
+    const raw = fs.readFileSync(FILE, 'utf8');
   } catch {
     return {}
   }
 function save(db: Record<string, KycProfile>) {
-  fs && fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs && fs.writeFileSync(FILE, JSON && JSON.stringify(db, null, 2));
-}
+
+
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });  const { userId } = req && req.body as { userId?: string };
   if (!userId) return res && res.status(400).json({ error: 'Missing userId' });
@@ -28,8 +34,6 @@ function save(db: Record<string, KycProfile>) {
     .split(',')[0]
     .trim();
   if (ip) {
-    // naive duplicate IP heuristic: more than 2 submissions from same IP → flag
-
   // Compute simple risk score
   let riskScore = 10; // base low risk
   if (flags && flags.has('aml_alert')) riskScore += 50;
@@ -40,7 +44,8 @@ function save(db: Record<string, KycProfile>) {
   profile && profile.riskScore = riskScore;
   profile && profile.status = 'submitted';
   const now = new Date().toISOString();
-}
+
+
 import type { KycProfile } from '../../../utils / kyc';
 import {validateKycSubmission} from '../../../utils / kyc';
 import {getAmlProvider} from '../../../utils / aml';
@@ -156,6 +161,16 @@ if ( {) {
   profile.status = 'submitted';
   const now = new Date ().toISOString ();
   profile.lastUpdatedAt = now;
+  profile.auditTrail.push({ at: now, by: userId, action: 'kyc_submitted', details: { aml: amlResult, ip } });
+  db[userId] = profile;
+  save(db);
+  res.status(200).json({ ok: true, profile, aml: amlResult })
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   profile.audit_trail.push ({
     at: now,
     by: user_id,
@@ -167,3 +182,6 @@ if ( {) {
 ;
 res.status (200).json ({ ok: true, profile, aml: aml_result });
 }
+  profile.lastUpdatedAt = now;
+
+

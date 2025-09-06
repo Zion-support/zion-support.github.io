@@ -1,9 +1,14 @@
-export default function KnowledgeGraph({ report }: Props) {
 };
-) ) ;
-}</ul> </section> <section>) ) ;
-}</ul> </section> </div>) ;
-export default function KnowledgeGraph(): any ({ report }: Props) {;
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>)
+export default function KnowledgeGraph({ report }: Props) {;
+ 
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>) 
+export default function KnowledgeGraph({ report }: Props) {
   if (!report) return <div>No knowledge graph yet.</div>;
 
   return (

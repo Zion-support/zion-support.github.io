@@ -1,3 +1,14 @@
+
+export default function GrantsAdminPage() {
+  const [token, setToken] = useState('');
+  const [items, setItems] = useState<GrantApplication[]>([]);
+  const [selected, setSelected] = useState<GrantApplication | null>(null);
+  const [milestones, setMilestones] = useState<Milestone[]>([]);
+
+
+  const headers = useMemo(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' }), [token]);
+
+
   const load = () => {
     fetch('/api/grants?status=Submitted').then((r) => r.json()).then((d) => setItems(d.items |[]))
   }
@@ -339,6 +350,55 @@ if (return) {
         </div>
       </div>
     </EnhancedLayout>
+
+                    onClick={saveMilestones}>;
+                    Save Milestones;
+                  </button>;
+                </div>;
+              </div>;
+            ) : (;
+              <div className='text-sm text-gray-600'>;
+                Select a grant to plan milestones.;
+              </div>            )}          </div>;
+        </div>;
+        <div>;
+          <div className="border rounded p-3">;
+            <h2 className="font-medium mb-2">Milestone Planner</h2>;
+            {selected ? (;
+              <div className="space-y-2">;
+                {(milestones && milestones.length === 0 ? (selected && selected.milestones || []) : milestones).map((m, idx) => (;
+                  <div key={m && m.id || idx} className="border rounded p-2">;
+                    <input className="w-full border rounded p-2 mb-2" placeholder="Title" value={m && m.title} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], title: e && e.target.value }, return copy })} />;
+                    <textarea className="w-full border rounded p-2 mb-2" placeholder="Description" value={m && m.description || ''} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], description: e && e.target.value }, return copy })} />;
+                    <div className="grid grid-cols-2 gap-2">;
+                      <input className="border rounded p-2" placeholder="Due date (YYYY-MM-DD)" value={m && m.dueDate || ''} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], dueDate: e && e.target.value }, return copy })} />;
+                      <input className="border rounded p-2" placeholder="Tranche (amount)" type="number" value={m && m.trancheAmount || 0} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], trancheAmount: Number(e && e.target.value) }, return copy })} />;
+                    </div>;
+                    <div className="mt-2 flex items-center gap-2">;
+                      <button className="px-2 py-1 border rounded" onClick={() => markComplete(m && m.id!)} disabled={!m && m.id}>Mark Complete</button>;
+                    </div>;
+                  </div>;
+                ))}
+                <div className="flex gap-2 mt-2">;
+                  <button className="px-2 py-1 border rounded" onClick={() => setMilestones((ms) => [...(ms && ms.length ? ms : (selected && selected.milestones || [])), { id: `${Date && Date.now()}-${Math && Math.random()}`, title: '', trancheAmount: 0, trancheCurrency: 'USDC' } as any])}>Add Milestone</button>;
+                  <button className="px-2 py-1 bg-blue-600 text-white rounded" onClick={saveMilestones}>Save Milestones</button>;
+                </div>;
+              </div>;
+            ) : (;
+              <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>;
+            )}
+          </div>;
+        </div>;
+      </div>;
+    </EnhancedLayout>;
+  );
+
+  );
+
+}
+}
+  );
+}
                   <button;
                     className='px - 2 py - 1 bg - blue - 600 text - white rounded';
                     on_click={save_milestones}

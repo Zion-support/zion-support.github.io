@@ -1,3 +1,6 @@
+  return (;
+    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
+      <div className="max-w-7xl mx-auto">;
         {/* Header */}
         <div className="text - center mb - 12">;
           <h1 className="text - 4xl font - bold mb - 4">📊 Manage Your Instances</h1>;
@@ -62,6 +65,9 @@
                     <div className="flex items - center gap - 2 text - sm text - white / 70">;
                       <span className="w - 4 h - 4">📍</span>;
                       <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
+                  <div className="flex items-center gap-2 text-sm text-white/70">;
+                    <span className="w-4 h-4">🔧</span>;
+                    <span>Token: {getTokenSystemLabel(inst.tokenSystem)}</span>;
                   </div>;
                 </div>;
                 <div className="flex items - center justify - between text - xs text - white / 60">;
@@ -76,10 +82,12 @@
                 <div className="mt - 4 pt - 4 border - t border - white / 10">;
                   <div className="flex gap - 2">;
                     <a;
+                      className="flex-1 text-center py-2 px-3 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors";
                     >;
                       Manage;
                     </a>;
                     <a;
+                      className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";
                     >;
                       Deployments;
                     </a>;
@@ -141,6 +149,10 @@
           {instances.map ((inst) => (
             <div key={inst.id} className="card card - hover">;
               {/* Instance Header */}
+                      inst.vertical === 'HEALTH' ? 'bg-green-500/20 text-green-400' :;
+                      inst.vertical === 'EDUCATION' ? 'bg-purple-500/20 text-purple-400' :;
+                      inst.vertical === 'LAW' ? 'bg-yellow-500/20 text-yellow-400' :;
+                      'bg-gray-500/20 text-gray-400';
                     }`}>;
                       {inst.vertical}
                     </span>;
@@ -157,7 +169,6 @@
               {/* Instance Details */}
               <div className="space - y-3 mb - 4">;
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;
-                  <span>🌐</span>;
                 </div>;
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;
                   <span>🏛️</span>;
@@ -167,6 +178,7 @@
                   <div className="flex items - center space - x-2 text - sm text - white / 70">;
                     <span>📍</span>;
                     <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
+                <div className="flex items-center space-x-2 text-sm text-white/70">;
                   <span>💎</span>;
                   <span > Token: {inst.token_system}</span>;
                 </div>;
@@ -185,10 +197,12 @@
               {/* Actions */}
               <div className="flex space - x-2">;
                 <a;
+                  className="flex-1 btn-secondary text-center text-sm py-2";
                 >;
                   Manage;
                 </a>;
                 <a;
+                  className="flex-1 btn-secondary text-center text-sm py-2";
                 >;
                   Deployments;
                 </a>;

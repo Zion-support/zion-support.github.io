@@ -1,4 +1,24 @@
-} from 'lucide-react';import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+
+import Button from '../components/ui/Button';
+
+import {
+
+  Code,
+  CheckCircle,
+  AlertTriangle,
+  Zap,
+  BarChart3,
+  ArrowRight,
+  Play,
+  Shield,
+  Clock,;
+  TrendingUp,;
+export default function CodeQualityCheckerPage() {;
+} from 'lucide-react';
+
 
 export default function CodeQualityCheckerPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -16,38 +36,6 @@ export default function CodeQualityCheckerPage() {;
       period: '/month'
       description: 'Perfect for individual developers and small projects'
       features: [
-  const features = [;
-    {;
-      icon: <Code className='w-8 h-8 text-white' />,;
-      description:;
-        'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.',;
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',;
-      gradient: 'from-teal-400 to-cyan-500',;
-    },;
-    {;
-      icon: <CheckCircle className='w-8 h-8 text-white' />,;
-      title: 'Code Quality Metrics',;
-      description:;
-        'Comprehensive analysis including complexity, maintainability, test coverage, and security vulnerabilities.',;
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',;
-      gradient: 'from-green-400 to-emerald-500',;
-    },;
-    {;
-      icon: <Zap className='w-8 h-8 text-white' />,;
-      title: 'Real-Time Analysis',;
-      description:;
-        'Instant code quality feedback with detailed explanations and improvement suggestions.',;
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',;
-      gradient: 'from-orange-400 to-red-500',;
-    },;
-    {;
-      icon: <Shield className='w-8 h-8 text-white' />,;
-      title: 'Security Scanning',;
-      description:;
-        'Automated detection of security vulnerabilities, dependency issues, and best practice violations.',;
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',;
-      gradient: 'from-purple-400 to-indigo-500',;
-    },;
         '100 code analyses/monthBasic quality metrics5 programming languagesEmail supportBasic reportingCommunity rules'
       ];
       popular: false
@@ -87,10 +75,6 @@ export default function CodeQualityCheckerPage() {;
         language: 'JavaScript'
         qualityScore: 85
         issues: [
-          { type: 'warning', message: 'Consider using const instead of let for variables that are not reassigned', line: 5, severity: 'medium' },
-          { type: 'info', message: 'Function is quite long (25 lines). Consider breaking it into smaller functions', line: 12, severity: 'low' },
-          { type: 'error', message: 'Missing semicolon at end of statement', line: 18, severity: 'high' }
-        ];
         recommendations: [
           'Use const for immutable variables to improve code clarity'
           'Break down large functions into smaller, more focused functions'
@@ -146,8 +130,6 @@ export default function CodeQualityCheckerPage() {;
     }, 3000);  };      setIsAnalyzing(false);
     }, 3000);
   };
-
-  return (
     <>;
       <Head>;
         <title>;
@@ -247,24 +229,50 @@ export default function CodeQualityCheckerPage() {;
               <Card
                 key={index}
                 className="card-hover group border-gradient-teal"
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
-                <div className="flex items-start space-x-6">;
-                  <div className="relative">;
-                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature && feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
-                      {feature && feature.icon}
-                    </div>;
-                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature && feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />;
-                  </div>;
-                  <div className="flex-1">;
-                    <h3 className="text-2xl font-bold mb-4 text-white">;
-                      {feature && feature.title}
-                    </h3>;
-                    <p className="text-gray-400 leading-relaxed">;
-                      {feature && feature.description}
-                    </p>;
-                  </div>;
-                </div>;
-              </Card>;
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+
+
+
+
+
+      {/* Supported Languages Section */}
+
+
+
+
+
+              Multi-Language Support
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              We support a wide range of programming languages with
+              language-specific analysis rules and best practices.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {supportedLanguages.map((language, index) => (
+          </div>;
+        </div>;
+      </section>;
+
+      {/* Supported Languages Section */}
+      <section className='section-padding bg-gradient-cursor'>;
+        <div className='container-cursor'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
+              Multi-Language Support;
+            </h2>;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+              We support a wide range of programming languages with;
+              language-specific analysis rules and best practices.;
+            </p>;
+          </div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
+            {supportedLanguages && supportedLanguages.map((language, index) => (;
                       {feature.icon}
                     </div>;
                     <div className={`absolute -inset - 2 bg - gradient - to - r from - transparent via-${feature.gradient} to - transparent rounded - 2xl opacity - 0 group - hover:opacity - 20 transition - opacity duration - 300 blur - sm`} />;
@@ -317,11 +325,107 @@ export default function CodeQualityCheckerPage() {;
                     <li key={featureIndex} className="flex items-center text-gray-300 text-sm">;
                       <CheckCircle className="w-4 h-4 text-teal-400 mr-3 flex-shrink-0" />;
                       {feature}
-                    </li>;
+                    </li>
                   ))}
-                </ul>;
-              </Card>;
+                </ul>
+              </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Demo Analysis Results */}
+      {analysisResults && (
+
+          </div>;
+        </div>;
+      </section>;
+
+      {/* Demo Analysis Results */}
+      {analysisResults && (;
+        <section className='section-padding bg-gradient-cursor-accent'>;
+          <div className='container-cursor'>;
+            <div className='text-center mb-12'>;
+              <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
+                Code Quality Analysis Results;
+              </h2>;
+              <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+                    </p>;
+                  </div>;
+                </div>;
+              </Card>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Supported Languages Section */}
+      <section className='section - padding bg - gradient - cursor'>;
+        <div className='container - cursor'>;
+          <div className='text - center mb - 20'>;
+            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
+              Multi - Language Support;
+            </h2>;
+            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+              We support a wide range of programming languages with;
+              language - specific analysis rules and best practices.;
+            </p>;
+          </div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
+            {supported_languages.map ((language, index) => (
+              <Card;
+                key={index}
+                className='card - hover border - gradient - teal';
+                style={{ animation_delay: `${index * 0.1}s` }}
+              >;
+                <div className='text - center mb - 4'>;
+                  <div className='text - 4xl mb - 3'>{language.icon}</div>;
+                  <h3 className='text - xl font - bold text - white mb - 3'>;
+                    {language.name}
+                  </h3>;
+                </div>;
+                <ul className='space - y-2'>;
+                  {language.features.map ((feature, feature_index) => (
+                    <li;
+                      key={feature_index}
+                      className='flex items - center text - gray - 300 text - sm';
+                    >;
+                      <CheckCircle className='w - 4 h - 4 text - teal - 400 mr - 3 flex - shrink - 0' />                      {feature}              Multi - Language Support;
+            </h2>;
+            <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
+              We support a wide range of programming languages with language - specific analysis rules and best practices.;
+            </p>;
+          </div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+            {supported_languages.map ((language, index) => (
+              <Card;
+                key={index}
+                className="card - hover border - gradient - teal";
+                style={{ animation_delay: `${index * 0.1}s` }}
+              >;
+                <div className="text - center mb - 4">;
+                  <div className="text - 4xl mb - 3">{language.icon}</div>;
+                  <h3 className="text - xl font - bold text - white mb - 3">{language.name}</h3>;
+                </div>;
+                <ul className="space - y-2">;
+                  {language.features.map ((feature, feature_index) => (
+                    <li key={feature_index} className="flex items - center text - gray - 300 text - sm">;
+                      <CheckCircle className="w - 4 h - 4 text - teal - 400 mr - 3 flex - shrink - 0" />;
+                      {feature}
+                    </li>))}
+                </ul>;
+              </Card>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Demo Analysis Results */}
+      {analysis_results && (
+        <section className='section - padding bg - gradient - cursor - accent'>;
+          <div className='container - cursor'>;
+            <div className='text - center mb - 12'>;
+              <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
+                Code Quality Analysis Results;
+              </h2>;
+              <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+
                 Here's a sample code quality analysis. Get comprehensive;
                 insights for your own code.;
               </p>;
@@ -383,7 +487,47 @@ export default function CodeQualityCheckerPage() {;
                       ) : (;
                         <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />;
                       )}
-                  ))}
+
+
+
+
+              {/* Quality Metrics */}
+              <Card className='border-gradient-teal'>
+                <h3 className='text-2xl font-bold mb-6 text-white'>
+                  Quality Metrics
+                </h3>
+                <div className='space-y-4'>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-gray-400'>Complexity</span>
+                    <span className='text-orange-400 font-bold'>
+                      {analysisResults.metrics.complexity}
+                    </span>
+
+                  </div>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-gray-400'>Maintainability</span>
+                    <span className='text-green-400 font-bold'>
+                      {analysisResults.metrics.maintainability}
+                    </span>
+                  </div>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-gray-400'>Test Coverage</span>
+                    <span className='text-blue-400 font-bold'>
+                      {analysisResults.metrics.testCoverage}
+                    </span>
+                  </div>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-gray-400'>Security Score</span>
+                    <span className='text-green-400 font-bold'>
+                      {analysisResults.metrics.securityScore}
+                    </span>                  </div>                  </div>
+              <Card className="border-gradient-teal">
+                <h3 className="text-2xl font-bold mb-6 text-white">Quality Metrics</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-400">Complexity</span>
+                    <span className="text-orange-400 font-bold">{analysisResults.metrics.complexity}</span>
+                  </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-400">Maintainability</span>
                     <span className="text-green-400 font-bold">{analysisResults.metrics.maintainability}</span>
@@ -399,8 +543,18 @@ export default function CodeQualityCheckerPage() {;
                 </div>
               </Card>
             </div>
+            <Card className='border-gradient-teal'>
+              <h3 className='text-2xl font-bold mb-6 text-white'>
+                Improvement Recommendations
+              </h3>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                {analysisResults.recommendations.map((rec, index) => (
+                  <div key={index} className='flex items-start space-x-3'>
+                    <CheckCircle className='w-5 h-5 text-teal-400 mt-1 flex-shrink-0' />
+                    <span className='text-gray-300'>{rec}</span>                  </div>
 
-            {/* Recommendations */}
+                  </div>
+
             <Card className='border-gradient-teal'>;
               <h3 className='text-2xl font-bold mb-6 text-white'>;
                 Improvement Recommendations;
@@ -422,6 +576,9 @@ export default function CodeQualityCheckerPage() {;
           </div>;
         </section>;
       )}
+
+
+              Simple Pricing
       {/* Pricing Section */}
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -607,11 +764,30 @@ export default function CodeQualityCheckerPage() {;
                     <span className='text - 4xl font - bold text - white'>;
                       {plan.price}
                       {feature}
-                    </li>;
+                    </li>
                   ))}
                 <Button
                   href='/contact'
                   size='lg'
+                      {feature}
+
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+              </Card>
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>;
                   Get Started;
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact";
@@ -623,6 +799,17 @@ export default function CodeQualityCheckerPage() {;
               </Card>;
             ))}
       {/* CTA Section */}
+      {/* CTA Section */}
+      <section className='section-padding bg-gradient-to-r from-teal-600 to-cyan-700 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
+        <div className='container-cursor text-center relative z-10'>
+          <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
+          </h2>
+          <p className='text-responsive-md text-teal-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
+            Join thousands of developers using our code quality checker to write
+            better, safer, and more maintainable code.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
       <section className='section-padding bg-gradient-to-r from-teal-600 to-cyan-700 relative overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
         <div className='container-cursor text-center relative z-10'>;
@@ -636,10 +823,6 @@ export default function CodeQualityCheckerPage() {;
             <Button
               href='/contact'
               size='lg'
-              className='bg-white text-teal-600 hover:bg-gray-100 shadow-2xl'>;
-              Start Free Trial;
-              <ArrowRight className='w-5 h-5 ml-2' />;
-            </Button>;
             <Button
               href='/contact'
               variant='outline'

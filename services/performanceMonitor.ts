@@ -1,13 +1,20 @@
 export interface PerformanceMetrics {
+export interface PerformanceMetrics {;
   url: string;
   timestamp: Date;
-  load_time: number;
+  loadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
   timeToInteractive: number;
   totalBlockingTime: number;
+
+  speed_index: number;
+  performance_score: number;
+  accessibility_score: number;
+  bestPracticesScore: number,
+  seo_score: number;
 }
 export interface PerformanceAlert {
   id: string;
@@ -16,31 +23,147 @@ export interface PerformanceAlert {
   message: string;
   metric: string;
   threshold: number;
-}
-export interface MonitoringConfig {
   urls: string[];
   frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily';
   thresholds: {
     load_time: number;
     firstContentfulPaint: number;
+export class PerformanceMonitorService {
+
+  private apiKey: string;
+
+  private baseUrl: string
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
+    this.apiKey = apiKey
+    this.baseUrl = baseUrl
   }
   async monitorWebsite(url: string): Promise<PerformanceMetrics> {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
+export interface PerformanceMetrics {;
+  url: string,;
+  timestamp: Date,;
+  loadTime: number,;
+  firstContentfulPaint: number,;
+  largestContentfulPaint: number,;
+  cumulativeLayoutShift: number,;
+  firstInputDelay: number,;
+  timeToInteractive: number,;
+  totalBlockingTime: number,;
+  speedIndex: number,;
+  performanceScore: number,;
+  accessibilityScore: number,;
+  bestPracticesScore: number,;
+  seoScore: number;
+}
+;
+export interface PerformanceAlert {;
+  id: string,;
+  url: string,;
+  type: 'critical' | 'warning' | 'info',;
+  message: string,;
+  metric: string,;
+  threshold: number,;
+  currentValue: number,;
+  timestamp: Date,;
+  resolved: boolean;
+}
+;
+export interface MonitoringConfig {;
+  urls: string[],;
+  frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily',;
+  thresholds: {;
+    loadTime: number,;
+    firstContentfulPaint: number,;
+    largestContentfulPaint: number,;
+    cumulativeLayoutShift: number;
+  },;
+  notifications: {;
+    email: boolean,;
+    slack: boolean,;
+    webhook: boolean;
+  }
+}
+;
+export class PerformanceMonitorService {;
+  private apiKey: string,;
+  private baseUrl: string,;
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {;
+    this.apiKey = apiKey,;
+    this.baseUrl = baseUrl;
+  }
+;
+  async monitorWebsite(url: string): Promise<PerformanceMetrics> {;
+    try {;
+      // In a real implementation, this would use Lighthouse, WebPageTest, or similar;
+      const response = await fetch(`${this.baseUrl}/performance/monitor`, {;
+        method: 'POST',;
+        headers: {;
+          'Authorization': `Bearer ${this.apiKey}`,;
+          'Content-Type': 'application/json'},;
+        body: JSON.stringify({ url })}),;
+      if (!response.ok) {;
+        throw new Error(`Performance monitoring failed: ${response.statusText}`);
+
+
+export interface PerformanceMetrics {;
+
+
+      }
+      return await response.json()
+      const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${this && this.apiKey}`;
+          'Content-Type': 'application/json'};
+        body: JSON && JSON.stringify({ url })});
+
+      if (!response && response.ok) {
+        throw new Error(`Performance monitoring failed: ${response && response.statusText}`)
+      }
+
+      return await response && response.json()
     } catch (error) {
       // Fallback to mock data for demo purposes
       return this && this.generateMockMetrics(url)
     }
   }
+
+
+
+
+
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
         headers: {
+;
+  async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {;
+    try {;
+      const response = await fetch(`${this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {;
+        headers: {;
+          'Authorization': `Bearer ${this.apiKey}`}}),;
+      if (!response.ok) {;
+        throw new Error(`Failed to fetch historical data: ${response.statusText}`);
+      }
+      return await response.json()
+          'Authorization': `Bearer ${this && this.apiKey}`}});
+
+      if (!response && response.ok) {
+        throw new Error(`Failed to fetch historical data: ${response && response.statusText}`)
+      }
+
+      return await response && response.json()
     } catch (error) {
       // Generate mock historical data
       return this && this.generateMockHistoricalData(url, days)
     }
   }
+
+
+
+
+
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
     try {
       }
@@ -52,13 +175,51 @@ export interface MonitoringConfig {
   async getAlerts(url?: string): Promise<PerformanceAlert[]> {
     try {
       const params = url ? `?url=${encodeURIComponent(url)}` : '';
-      const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
-        headers: {
+;
+  async setMonitoringConfig(config: MonitoringConfig): Promise<void> {;
+    try {;
+      const response = await fetch(`${this.baseUrl}/performance/config`, {;
+        method: 'POST',;
+        headers: {;
+          'Authorization': `Bearer ${this.apiKey}`,;
+          'Content-Type': 'application/json'},;
+        body: JSON.stringify(config)}),;
+      if (!response.ok) {;
+        throw new Error(`Failed to set monitoring config: ${response.statusText}`);
+      }
+    } catch (error) {;
+      console.error('Failed to set monitoring config:', error),;
+      throw error;
+    }
+  }
+;
+  async getAlerts(url?: string): Promise<PerformanceAlert[]> {;
+    try {;
+      const params = url ? `?url=${encodeURIComponent(url)}` : '',;
+      const response = await fetch(`${this.baseUrl}/performance/alerts${params}`, {;
+        headers: {;
+          'Authorization': `Bearer ${this.apiKey}`}}),;
+      if (!response.ok) {;
+        throw new Error(`Failed to fetch alerts: ${response.statusText}`);
+      }
+      return await response.json()
+          'Authorization': `Bearer ${this && this.apiKey}`}});
+
+      if (!response && response.ok) {
+        throw new Error(`Failed to fetch alerts: ${response && response.statusText}`)
+      }
+
+      return await response && response.json()
     } catch (error) {
       // Generate mock alerts
       return this && this.generateMockAlerts(url)
     }
   }
+
+
+
+
+
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
     summary: {
       averageLoadTime: number;
@@ -94,13 +255,17 @@ export interface MonitoringConfig {
     const now = new Date()
     for (let i = days - 1, i >= 0, i--) {
       const date = new Date(now);
-      })
+    }
+    return data
+  }
+
+
+
     }
     return data
   }
   private generateMockAlerts(url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [
-=======
     largestContentfulPaint: number,
     cumulativeLayoutShift: number;
   }
@@ -279,24 +444,23 @@ if ( {) {
   }
   private generateMockAlerts (url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
         id: '1';
         type: 'warning';
         message: 'Load time exceeded threshold';
         metric: 'load_time';
         threshold: 2000;
-      }
-      {
-        id: '2';
         type: 'info';
         message: 'Performance score improved';
         metric: 'performance_score';
         threshold: 80;
+
+
+    return url ? alerts && alerts.filter(a => a && a.url === url) : alerts
+
   }
 }
 // Pricing tiers for the Performance Monitor
-=======
         current_value: 85;
         timestamp: new Date (),
         resolved: true;
@@ -307,7 +471,6 @@ if ( {) {
   }
 }
 // Pricing tiers for the Performance Monitor;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
     name: 'Starter';
@@ -321,3 +484,67 @@ export const PERFORMANCE_MONITOR_PRICING = {
     name: 'Enterprise';
     price: 149;
     period: '/month';
+;
+  private generateMockAlerts(url?: string): PerformanceAlert[] {;
+    const alerts: PerformanceAlert[] = [;
+      {;
+        id: '1',;
+        url: url || 'https://example.com',;
+        type: 'warning',;
+        message: 'Load time exceeded threshold',;
+        metric: 'loadTime',;
+        threshold: 2000,;
+        currentValue: 2500,;
+        timestamp: new Date(),;
+        resolved: false;
+      },;
+      {;
+        id: '2',;
+        url: url || 'https://example.com',;
+        type: 'info',;
+        message: 'Performance score improved',;
+        metric: 'performanceScore',;
+        threshold: 80,;
+        currentValue: 85,;
+        timestamp: new Date(),;
+        resolved: true;
+      }
+    ],;
+    return url ? alerts.filter(a => a.url === url) : alerts;
+  }
+}
+;
+// Pricing tiers for the Performance Monitor;
+export const PERFORMANCE_MONITOR_PRICING = {;
+  starter: {;
+    name: 'Starter',;
+    price: 19,;
+    period: '/month',;
+    features: [;
+      'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting';
+    ];
+  },;
+  professional: {;
+    name: 'Professional',;
+    price: 49,;
+    period: '/month',;
+    features: [;
+      'Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access';
+    ];
+  },;
+  enterprise: {;
+    name: 'Enterprise',;
+    price: 149,;
+    period: '/month',;
+    features: [;
+      'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support',;
+      'SLA guarantee';
+
+    ];
+
+
+
+    ];
+  }
+}
+

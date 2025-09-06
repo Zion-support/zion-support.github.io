@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 >>>>>>> origin/fix-website-loading-errors-final
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Footer: React.FC = () => {
   return (
@@ -113,3 +114,8 @@ const Footer: React.FC = () => {
 >>>>>>> origin/fix-website-loading-errors-final
         </div>
       </div>
+    </motion.footer>
+  );
+};
+
+export default Footer;

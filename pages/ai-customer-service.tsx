@@ -1,11 +1,3 @@
-=======
-import React from 'react',
-import Head from 'next / head',
-export default /**
- * AICustomerService - Function description
- */
-function AICustomerService() {
-  return (
     <>;
       <Head>;
         <title > AI Customer Service | Zion Tech Group</title>;
@@ -20,5 +12,9 @@ function AICustomerService() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+;
+;
+
+
+

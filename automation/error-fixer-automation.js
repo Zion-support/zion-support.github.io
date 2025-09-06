@@ -17,7 +17,6 @@ class ErrorFixerAutomation {
     this.startTime = Date.now();
   }
   async run() {
-    console.log('🚀 Starting Error Fixer Automation...');
     try {
       await this.checkAndFixTypeScriptErrors();
       await this.checkAndFixESLintErrors();
@@ -27,11 +26,6 @@ class ErrorFixerAutomation {
       await this.generateReport();
       const duration = Date.now() - this.startTime;
       this.errorReport.duration = duration;
-      console.log(`✅ Error fixing completed in ${duration}ms`);
-      console.log(`📊 Applied ${this.errorReport.fixesApplied.length} fixes`);
-      console.log(`⚠️  Found ${this.errorReport.errorsFound.length} remaining errors`);
-    } catch (error) {
-      console.error('❌ Error in automation:', error);
       this.errorReport.errorsFound.push({
         type: 'automation_error',
         message: error.message,
@@ -40,7 +34,6 @@ class ErrorFixerAutomation {
     }
   }
   async checkAndFixTypeScriptErrors() {
-    console.log('🔍 Checking TypeScript errors...');
     try {
       const result = execSync('npx tsc --noEmit --pretty false', { 
         encoding: 'utf8', 
@@ -854,6 +847,8 @@ export default function ${componentName}() {
     console.log(`📄 Report saved to: ${reportPath}`);
   }
 }
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 
   )}
 `;

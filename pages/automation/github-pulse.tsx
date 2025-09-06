@@ -1,3 +1,17 @@
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore
+import data from '../../data/github-pulse.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore
+import data from '../../data/github-pulse.json',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/github-pulse.json',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/github-pulse.json',
+
+
 export default function GithubPulsePage() {
 
   const repo = data?.repo |{}
@@ -23,8 +37,15 @@ function Metric({ label, value }: { label: string, value: any }) {
   return (
     <div className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
       <div className="text-xs text-gray-500 dark:text-gray-400">{label}</div>
-      <div className="text-lg font-semibold">{value ?? '—'}</div>
-    </div>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+}
+
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 // @ts - ignore;
 import data from '../../data / github - pulse.json',
@@ -59,3 +80,6 @@ function Metric() {
       <div className="text - xs text - gray - 500 dark:text - gray - 400">{label}</div>;
       <div className="text - lg font - semibold">{value ?? '—'}</div>;
     </div>);
+}
+
+

@@ -9,9 +9,6 @@ function helpText(): string {
 });
 function helpText(): string {
   return [
-      });
-      const data = (await res && res.json()) as any;
-      await respond({
         response_type: 'ephemeral',
         text: `Here is a draft job post for *${role}*:\n\n${data && data.description}`,
       });
@@ -48,10 +45,6 @@ function helpText(): string {
     await respond({ response_type: 'ephemeral', text: helpText() });
   } catch (err: any) {
     await respond({
-    });  }      });
-      return
-    }
-    if (sub === 'suggest-talent') {
       const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name)}/track`, {
         headers: { 'x-user-id': userId }
       });
@@ -60,7 +53,6 @@ function helpText(): string {
         await respond({ response_type: 'ephemeral', text: 'Project not found.' });
         return
       }
-      await respond({ response_type: 'ephemeral', text: `*${data && data.project.name}* – status: ${data && data.project.status}\nMilestones: ${JSON && JSON.stringify(data && data.project.milestones)}` });
       return
     }
     await respond({ response_type: 'ephemeral', text: helpText() })
@@ -70,7 +62,9 @@ function helpText(): string {
 (async () => {
 })();
 
-  console.log(`⚡️ Zion Slack bot running on port ${port}`)
+  console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();
+  console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
       const data = (await res.json ()) as any;
       await respond ({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` });
@@ -121,4 +115,3 @@ if ( {) {
 console.log (`⚡️ Zion Slack bot running on port ${port}`);
 })();  console.log (`⚡️ Zion Slack bot running on port ${port}`);
 })();
-;

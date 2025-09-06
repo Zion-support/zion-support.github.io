@@ -21,6 +21,9 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+export default function InvestorsPage() {
+
+export default function InvestorsPage() {
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -55,11 +58,6 @@ import React from 'react';
         </div>;
         <div className='pt-4 text-slate-300'>;
           Contact IR:{' '}
-          <a className='text-cyan-400' href='mailto:kleber@ziontechgroup && ziontechgroup.com'>;
-            kleber@ziontechgroup && ziontechgroup.com;
-          </a>;
-        </div>;
-      </div>;
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">
 			<Head>
 				<title>Investors | Zion Tech Group</title>

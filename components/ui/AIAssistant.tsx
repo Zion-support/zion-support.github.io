@@ -15,22 +15,27 @@ class ErrorBoundary extends React.Component {
   systemPrompt?: string;
   onAccept: (markdown: string) => void;
   authorizationToken?: string;
+  buttonLabel = "Generate with AI"
+  title = "AI Writing Assistant"
+  defaultPrompt
+  systemPrompt
+  onAccept
+  authorizationToken
+}: AIAssistantProps) {
+
+  buttonLabel = "Generate with AI",
+  title = "AI Writing Assistant",
+  defaultPrompt,
+  systemPrompt,
+  onAccept,
+  authorizationToken,
+}: AIAssistantProps) {;
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [error, setError] = useState<string | null>(null);
-    } catch {}
-  }, [output]);
-
-  const onOpen = useCallback(() => {;
-    setIsOpen(true);
-    setOutput("");
-    setIsEditing(false);
-  }, []);
-  const onClose = useCallback(() => setIsOpen(false), []);
-
   return (
     <>;
       <button
@@ -53,9 +58,6 @@ class ErrorBoundary extends React.Component {
                 className="text-sm opacity-70 hover:opacity-100">;
                 Close;
               </button>{" "}
-                <label
-                  className="block text-xs font-medium mb-1"
-                  htmlFor="input-Operator prompt">;
                   Operator prompt;
                 </label>;
                 <textarea
@@ -95,12 +97,10 @@ class ErrorBoundary extends React.Component {
                   Accept;
                 </button>;
               </div>;
-
               {error && <div className="text-red-600 text-sm">{error}</div>}
               <div>;
                 <label
                   className="block text-xs font-medium mb-1"
-                  htmlFor="input-Output (markdown)">;
                   Output (markdown);
                 </label>;
                 {isEditing ? (;
@@ -125,28 +125,3 @@ class ErrorBoundary extends React.Component {
         </div>
       )}
     </>
-  );
-              {error && <div className="text - red - 600 text - sm">{error}</div>}
-              <div>;
-                <label;
-                  className="block text - xs font - medium mb - 1";
-                  html_for="input - Output (markdown)";
-                >;
-                  Output (markdown);
-                </label>;
-                {is_editing ? (
-                  <textarea;
-                    value={output}
-                    on_change={(e) => set_output (e.target.value)}
-                    rows={12}
-                    className="w - full rounded - md border border - gray - 300 dark:border - gray - 700 bg - white dark:bg - gray - 900 p - 2 text - sm";
-                  />) : (
-                  <pre className="w - full rounded - md border border - gray - 200 dark:border - gray - 800 bg - gray - 50 dark:bg - gray - 900 p - 3 text - sm whitespace - pre - wrap">;
-                    {output || "No content yet. Click Generate."}
-                  </pre>)}
-              </div>;
-            </div>;
-          </div>;
-        </div>)}
-    </>);
-}

@@ -1,3 +1,107 @@
+  Calendar,
+  Clock,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Video,
+  MessageSquare,
+  Building,;
+} from "lucide-react";
+const timeSlots = [
+  { time: "9:00 AM", available: true, type: "Video Call" }
+  { time: "9:30 AM", available: true, type: "Phone Call" }
+  { time: "10:00 AM", available: false, type: "Video Call" }
+  { time: "10:30 AM", available: true, type: "In-Person" }
+  { time: "11:00 AM", available: true, type: "Video Call" }
+  { time: "11:30 AM", available: true, type: "Phone Call" }
+  { time: "1:00 PM", available: true, type: "Video Call" }
+  { time: "1:30 PM", available: false, type: "In-Person" }
+  { time: "2:00 PM", available: true, type: "Video Call" }
+  { time: "2:30 PM", available: true, type: "Phone Call" }
+  { time: "3:00 PM", available: true, type: "In-Person" }
+  { time: "3:30 PM", available: true, type: "Video Call" }
+  { time: "4:00 PM", available: false, type: "Phone Call" }
+  { time: "4:30 PM", available: true, type: "Video Call" }
+  { time: "5:00 PM", available: true, type: "Phone Call" }
+];
+const consultationTypes = [
+  {
+    title: "Free Discovery Call"
+    duration: "30 minutes"
+    description:
+      "Discuss your project requirements and explore how we can help"
+    price: "Free"
+    icon: MessageSquare
+    features: [
+      "Project assessment"
+      "Solution recommendations"
+      "Timeline discussion"
+      "Budget estimation"
+    ]
+  }
+  {
+    title: "Technical Consultation"
+    duration: "60 minutes"
+    description:
+      "Deep dive into technical requirements and architecture planning"
+    price: "$200"
+    icon: Building
+    features: [
+      "Technical architecture review"
+      "Technology stack recommendations"
+      "Implementation planning"
+      "Risk assessment"
+    ]
+  }
+  {
+    title: "Strategy Session"
+    duration: "90 minutes"
+    description:
+      "Comprehensive business strategy and digital transformation planning"
+    price: "$500"
+    icon: Users
+    features: [
+      "Business analysis"
+      "Digital strategy planning"
+      "ROI projections"
+      "Implementation roadmap"
+    ]
+  }
+];
+const teamMembers = [
+  {
+    name: "Sarah Johnson"
+    role: "CEO & Founder"
+    expertise: "Strategic Planning, AI Strategy"
+    image: "/images/team/sarah-johnson.jpg"
+    available: true
+  }
+  {
+    name: "Michael Chen"
+    role: "CTO"
+    expertise: "Cloud Architecture, Quantum Computing"
+    image: "/images/team/michael-chen.jpg"
+    available: true
+  }
+  {
+    name: "Dr. Emily Rodriguez"
+    role: "Head of AI Research"
+    expertise: "Machine Learning, AI Research"
+    image: "/images/team/emily-rodriguez.jpg"
+    available: false
+  }
+  {
+    name: "David Kim"
+    role: "Head of Cybersecurity"
+    expertise: "Cybersecurity, Risk Management"
+    image: "/images/team/david-kim.jpg"
+    available: true
+  }
+];
+export default function CalendarPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;
       <Head>;
@@ -512,6 +616,16 @@ function CalendarPage() {
                   </div>;
                 </div>;
               </div>;
+                  <div>;
+                    <div className="font - semibold">Business Hours</div>;
+                    <div className="text - blue - 100">;
+                      Mon - Fri: 9:00 AM - 6:00 PM PST;
+                    </div>;
+                  </div>;
+                </div>;
+                <div className="flex items - center">;
+                  <Video className="w - 6 h - 6 mr - 4" />;
+                  <div>;
                       Zoom, Teams, or Google Meet;
                     </div>;
                   </div>;
@@ -543,13 +657,8 @@ function CalendarPage() {
               </Link>;
               <Link
                 href="/about"
-                className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors">;
-                Learn About Us;
-              </Link>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
+    </div>;
+  );
               <div className="mt - 8">;
                 <Link;
                   href="/contact";

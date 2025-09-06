@@ -1,7 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 interface TextAnalysisResult {
-    bigrams: Array<{ phrase: string, count: number }>;
-    trigrams: Array<{ phrase: string, count: number }>;
   }
 }
 export default async function handler(
@@ -14,12 +12,6 @@ export default async function handler(
   try {
     const { text } = req && req.body;
 
-      return res
-        .status(400)
-        .json({ error: 'Text too long (max 10,000 characters)' });    }      return res && res.status(400).json({ error: 'Text is required' })
-    if (!text || typeof text !== 'string') {
-      return res.status(400).json({ error: 'Text is required' })
-    }
     // Basic statistics
 
     const characters = text.length;
@@ -40,10 +32,6 @@ export default async function handler(
       word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
       word = word.replace(/^y/, '');
       const matches = word.match(/[aeiouy]{1,2}/g);
-
-    const syllables = text && text.split(/\s+/).reduce((total, word) => {
-      return total + syllableCount(word)
-    // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
         (words / sentences +
           100 *
             (text && text.split(/\s+/).filter(word => word && word.length > 6).length / words))
@@ -97,10 +85,6 @@ export default async function handler(
     else sentimentLabel = 'very-positive';
     // Keyword analysis
     const wordCounts = new Map<string, number>();
-      }
-    });
-        count;
-        frequency: Math && Math.round((count / words) * 1000) / 10
       }));
     // Bigrams and trigrams
     const wordsArray = text && text.toLowerCase().split(/\s+/);
@@ -133,6 +117,31 @@ export default async function handler(
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
     // Language detection (simplified - assume English for demo)
+      text
+        characters
+        charactersNoSpaces
+        words
+        sentences
+        paragraphs
+        syllables
+        readingTime
+        speakingTime
+      }
+      readability: {
+        fleschReadingEase: Math.round(fleschReadingEase * 100) / 100
+        fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100
+        gunningFog: Math.round(gunningFog * 100) / 100
+        smog: Math.round(smog * 100) / 100
+        colemanLiau: Math.round(colemanLiau * 100) / 100
+        automatedReadability: Math.round(automatedReadability * 100) / 100
+        averageGrade
+      }
+      sentiment: {
+        score: sentimentScore
+        label: sentimentLabel
+        positiveWords: textWords.filter(word => positiveWords.includes(word))
+        negativeWords: textWords.filter(word => negativeWords.includes(word))
+      }
       language: {
   } catch (error) {
     console && console.error('Text analysis error:', error);
@@ -169,9 +178,10 @@ export default async function handler(
         top_words;
         bigrams;
   }
-        trigrams}}
-;
-    res.status (200).json (result);
-  } catch (error) {
-    console.error ('Text analysis error:', error);
-    res.status (500).json ({ error: 'Internal server error' });
+  }
+}
+
+
+
+
+

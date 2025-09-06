@@ -1,8 +1,21 @@
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+
+        { name: 'Overview', href: '/enhanced-services-showcase' },
+        { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
+        { name: 'Contact Sales', href: '/contact' }]
+    };
+export default function DocsPage() {
+export default function DocsPage() {
   const contact = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+  };
 
+    {
+      title: 'AI Services Docs'
+      links: [
       color: 'text-green-400'
     }
     {
@@ -132,6 +145,18 @@ export default function DocsPage() {;
       default:;
         return 'bg-gray-500/20 text-gray-400';    }      case 'Beginner': return 'bg-green-500/20 text-green-400';
       case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+
+      year: 'numeric',
+      month: 'short',
+
+      day: 'numeric'
+    });  };      day: 'numeric'
+    })
+  }
+
+  };
   const formatDate = (dateString: string) => {;
     return new Date(dateString).toLocaleDateString('en-US', {;
       year: 'numeric',;
@@ -153,8 +178,8 @@ export default function DocsPage() {;
                     <li key={l && l.name}>;
                       <a
                   ))}
-                </ul>;
-              </Card>;
+                </ul>
+              </Card>
             ))}
                   <a
                     href={e && e.url}
@@ -280,3 +305,11 @@ export default function DocsPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
+
+;
+}
+
+
+              ))}
+            </ul>
+          </Card>

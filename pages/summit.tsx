@@ -1,25 +1,147 @@
+const partners: Partner[] = [ {
+  name: 'Gov Partner'
+}
+{
+  name: 'Venture Partner'
+}
+{
+  name: 'University Partner'
+}];
+const onSubmit = async (e: React.FormEvent) => {
+  e.preventDefault ();
+setSubmitting (true);
+setResult (null);
+try {
+  const res = await fetch ('/api/summit/register', {
+
 
   method: 'POST';
+});
+const data = await res && res.json ();
+if (!res && res.ok) throw new Error (data?.error || 'Failed');
+setResult ({;
+  ok: true ;
+});
+
+
+
+export default function SummitPage() {;
+  const [platform, setPlatform] = React && React.useState<;
+    'youtube' | 'twitch' | 'twitter';
   >('youtube');
   const [embedId, setEmbedId] = React && React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } =;
     useCountdown(EVENT_START_ISO);
+    name: '',
+    email: '',
+    role: '',
+    country: '',
   });
   const [submitting, setSubmitting] = React && React.useState(false);
   const [result, setResult] = React && React.useState<{;
     ok?: boolean;
     error?: string;
   } | null>(null);
-      twitter: 'https://twitter.com',
-      linkedin: 'https://www.linkedin.com',
-      highlight: true},
+  ];
+
+  const partners: Partner[] = [;
+    { name: 'Gov Partner' },;
+    { name: 'Venture Partner' },;
+    { name: 'University Partner' },;
+
+  ];
+  const onSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+
+import Head from 'next/head';
+import React from 'react';
+type Speaker = {
+  name: string,
+  title: string,
+  avatarUrl: string,
+  bio: string,
+  twitter?: string;
+  linkedin?: string;
+  highlight?: boolean
+};
+
+type Partner = {
+  name: string,
+  logoUrl?: string
+};
+
+const EVENT_START_ISO = '2025-11-12T16: 00:00Z',
+
+function useCountdown(targetIso: string) {
+  const [remainingMs, setRemainingMs] = React.useState<number>(() => {
+    return new Date(targetIso).getTime() - Date.now()
+  });
+
+  React.useEffect(() => {
+    const id = setInterval(() => {
+      setRemainingMs(new Date(targetIso).getTime() - Date.now())
+    }, 1000);
+    return () => clearInterval(id)
+  }, [targetIso]);
+
+  const isPast = remainingMs <= 0;
+  const totalSec = Math.max(0, Math.floor(remainingMs / 1000));
+  const days = Math.floor(totalSec / 86400);
+  const hours = Math.floor((totalSec % 86400) / 3600);
+  const minutes = Math.floor((totalSec % 3600) / 60);
+  const seconds = totalSec % 60;
+
+  return { isPast, days, hours, minutes, seconds }
+}
+
+export default function SummitPage() {
+  const [platform, setPlatform] = React.useState<'youtube' | 'twitch' | 'twitter'>('youtube');
+  const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
+  const { isPast, days, hours, minutes, seconds } = useCountdown(EVENT_START_ISO);
+  const [form, setForm] = React.useState({ name: '', email: '', role: '', country: '' }),
+  const speakers: Speaker[] = [
     {
-      name: 'Alex Rivera',
-      title: 'Head of Protocol Engineering',
-      name: 'Jordan Lee',
-      title: 'Zion Alumni | AI Fellow',
-      avatar_url: '/favicon.svg',
-      bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
+      name: 'Featured Speaker: Your Name',
+      title: 'Founder, Zion',
+    avatarUrl: '/favicon.svg',
+      bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
+  'Content - Type': 'application / json';
+}
+body: JSON.stringify ({
+  ...form, source: 'summit - page';
+});
+});
+const data = await res.json ();
+if (throw new Error (data?.error || 'Failed')) {
+  $2
+}
+set_result ({
+  ok: true;
+});
+set_form ({
+  name: '', email: '', role: '', country: '';
+});
+}catch (err: any) {
+  set_result ({
+  error: err?.message || 'Unexpected error';
+});
+}finally {
+  set_submitting (false);
+export default /**
+ * SummitPage - Function description
+ */
+function SummitPage() {
+  const [platform, set_platform] = React.useState<;
+    'youtube' | 'twitch' | 'twitter';
+  >('youtube');
+  const [embed_id, setEmbedId] = React.useState < string>('dQw4w9WgXcQ');
+  const { is_past, days, hours, minutes, seconds } =;
+    use_countdown (EVENT_START_ISO);
+  const [form, set_form] = React.useState ({
+    name: '',
+    email: '',
+    role: '',
+    country: '',
     setResult(null),;
     try {;
       const res = await fetch('/api/summit/register', {;
@@ -35,46 +157,23 @@
       setResult({ error: err?.message || 'Unexpected error' });
     } finally {;
       setSubmitting(false);    }
-  };
-
   const livestreamEmbed = () => {;
     if (platform === 'youtube') {;
 
-        />;
-      );
-    }
-    if (platform === 'twitch') {;
-
-        />;
-      );
-    }
-
-      />;
-    );  };
-
-  return (
-    <>;
-      <Head>;
-        <title>Zion Global Summit 2025 — AI, Talent, Trust</title>;
-        <meta
-          name='description'
-          content='Zion Global Summit: AI, Talent, Trust — Globalized'
-        />;
-      </Head>;
-
-      <section className='relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue'>;
-        <div className='max-w-4xl'>;
-          <p className='uppercase tracking-widest text-neon-blue'>;
-            Zion Global Summit 2025;
-          </p>;
-          <h1 className='mt-2 text-3xl md:text-5xl font-extrabold'>;
-            AI, Talent, Trust — Globalized;
-          </h1>;
-          <p className='mt-4 text-white/80'>;
-            Date: Nov 12, 2025 • Time: 16:00 UTC • Location: Hybrid (Virtual +;
-            In‑Person);
-          </p>;
-          <div className='mt-6 flex flex-wrap gap-3'>;
+  const livestreamEmbed = () => {
+    if (platform === 'youtube') {
+      return (
+        <iframe
+          className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
+      </Head>
+      <section className='relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue'>
+        <div className='max-w-4xl'>
+          <p className='uppercase tracking-widest text-neon-blue'>
+            Zion Global Summit 2025
+          </p>
+          <h1 className='mt-2 text-3xl md:text-5xl font-extrabold'>
+          </p>
+          <div className='mt-6 flex flex-wrap gap-3'>
             <a
               href='#register'
               className='inline-flex items-center px-4 py-2 rounded-md bg-neon-blue text-black font-semibold shadow-neon-blue'>;
@@ -93,98 +192,16 @@
             <li>Featured Speaker — Founder</li>
           </ol>
         </section>
-      twitter: 'https://twitter.com',
-    },
-  ];
-;
-  const partners: Partner[] = [;
-    { name: 'Gov Partner' },
-    { name: 'Venture Partner' },
-    { name: 'University Partner' },
-  ];
-  const on_submit = async (e: React.FormEvent) => {
-    e.prevent_default ();
-    set_submitting (true);
-    set_result (null),
-    try {
-      const res = await fetch ('/api / summit / register', {
-        method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({ ...form, source: 'summit - page' }),
-      });
-      const data = await res.json ();
-      if (throw new Error (data?.error || 'Failed')) {
-  $2
-}
-      set_result ({ ok: true });
-      set_form ({ name: '', email: '', role: '', country: '' });
-    } catch (err: any) {
-      set_result ({ error: err?.message || 'Unexpected error' });
-    } finally {
-      set_submitting (false);    }
-  }
-;
-  const livestream_embed = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-        />);
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-        />);
-    }
-      />);  }
-;
-  return (
-    <>;
-      <Head>;
-        <title > Zion Global Summit 2025 — AI, Talent, Trust</title>;
-        <meta;
-          name='description';
-          content='Zion Global Summit: AI, Talent, Trust — Globalized';
-        />;
-      </Head>;
-      <section className='relative overflow - hidden rounded - xl bg - gradient - to - br from - cyber - dark to - cyber - blue text - white p - 8 md:p - 12 shadow - neon - blue'>;
-        <div className='max - w-4xl'>;
-          <p className='uppercase tracking - widest text - neon - blue'>;
-            Zion Global Summit 2025;
-          </p>;
-          <h1 className='mt - 2 text - 3xl md:text - 5xl font - extrabold'>;
-            AI, Talent, Trust — Globalized;
-          </h1>;
-          <p className='mt - 4 text - white / 80'>;
-            Date: Nov 12, 2025 • Time: 16:00 UTC • Location: Hybrid (Virtual +;
-            In‑Person);
-          </p>;
-          <div className='mt - 6 flex flex - wrap gap - 3'>;
-            <a;
-              href='#register';
-              className='inline - flex items - center px - 4 py - 2 rounded - md bg - neon - blue text - black font - semibold shadow - neon - blue';
-            >;
-              Register;
-            </a>;
-            <a;
-              href='#livestream';
-              className='inline - flex items - center px - 4 py - 2 rounded - md border border - white / 40 hover:bg - white / 10';
-            >;
-              Livestream;
-            </a>;
-            <a;
-              href='#agenda';
-              className='inline - flex items - center px - 4 py - 2 rounded - md border border - white / 40 hover:bg - white / 10';
-            >;
-              Agenda;
-            </a>          </div>;
-        </div>;
-      </section>;
-              Globalized;
-            </li>          </ul>;
-        </section>;
-      </div>;
+          <h2 className="text-2xl font-bold mb-4">Event Info</h2>
+          <ul className="space-y-2">
+            <li><span className="font-medium">Date:</span> Nov 12, 2025</li>
+            <li><span className="font-medium">Time:</span> 16:00 UTC</li>
+            <li><span className="font-medium">Location:</span> Hybrid (Virtual + In‑Person)</li>
+            <li><span className="font-medium">Tagline:</span> AI, Talent, Trust — Globalized</li>
+          </ul>
+
+        </section>
+      </div>
       <section
         id='speakers'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
@@ -199,34 +216,12 @@ if ( {) {
                   src={s && s.avatarUrl}
                   alt={s && s.name}
                   className='w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800'
-                />;
-                <div>;
-                  <div className='font-semibold'>{s && s.name}</div>;
-                  <div className='text-sm opacity-70'>{s && s.title}</div>;
-                </div>;
-              </div>;
-              <p className='mt-3 text-sm'>{s && s.bio}</p>;
-              <div className='mt-3 flex gap-3 text-sm'>;
-                {s && s.twitter && (;
-                  <a
-                    className='underline'
-                    href={s && s.twitter}
-                    target='_blank'
-                    rel='noreferrer'>;
-                    Twitter;
-                  </a>;
-                )}
-                {s && s.linkedin && (;
-                  <a
-                    className='underline'
-                    href={s && s.linkedin}
-                    target='_blank'
-                    rel='noreferrer'>;
-                    LinkedIn;
-                  </a>;
-                )}              </div>;
-            </div>;
-          ))}
+                <div>
+                  <div className="font-semibold">{s.name}</div>
+                  <div className="text-sm opacity-70">{s.title}</div>
+                </div>
+              </div>
+              <p className="mt-3 text-sm">{s.bio}</p>
       <section
         id='partners'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
@@ -234,32 +229,16 @@ if ( {) {
           <h2 className='text-2xl font-bold'>Partners</h2>;
           <a
             href='#register'
-            className='px-4 py-2 rounded-md bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800'>;
-            Become a Sponsor;
-          </a>;
-        </div>;
-        <div className='mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4'>;
-          {partners && partners.map(p => (;
-            <div
-              key={p && p.name}
-              className='h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70'>;
-              {p && p.logoUrl ? (;
-                <img src={p && p.logoUrl} alt={p && p.name} className='max-h-12' />;
-              ) : (;
-                p && p.name;
-              )}            </div>;
-          ))}
-      <section
-        id='livestream'
-        className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
-        <div className='flex flex-col md:flex-row md:items-center md:justify-between gap-4'>;
-          <h2 className='text-2xl font-bold'>Livestream</h2>;
-          <div className='flex flex-wrap items-center gap-2'>;
-            <select
-              aria-label='Platform'
-              className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
-              value={platform}
-              onChange={e => setPlatform(e && e.target.value as any)}
+        </div>
+        <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+          {partners.map((p) => (
+            <div key={p.name} className="h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70">
+              {p.logoUrl ? <img src={p.logoUrl} alt={p.name} className="max-h-12" /> : p.name}
+            </div>
+      <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <h2 className="text-2xl font-bold">Livestream</h2>
+          <div className="flex flex-wrap items-center gap-2">
       <section;
         id='speakers';
         className='mt - 8 p - 6 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - black';
@@ -360,6 +339,8 @@ if ( {) {
         <form onSubmit={onSubmit} className='grid md:grid-cols-2 gap-4'>;
           <div>;
             <label className='block text-sm mb-1'>Name</label>;
+          <div>
+            <label className="block text-sm mb-1">Name</label>
             <input
               required
               className='w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
@@ -429,6 +410,7 @@ if ( {) {
               onChange={(e) => setEmbedId(e.target.value)}
             />
             {isPast ? (
+              <span className="px-3 py-2 rounded bg-green-600 text-white">Watch Replay</span>
             ) : (
               <span className="px-3 py-2 rounded bg-blue-600 text-white">Live in {days}d {hours}h {minutes}m {seconds}s</span>
             )}
@@ -451,6 +433,7 @@ if ( {) {
             />
           </div>
           <div>
+            <label className="block text-sm mb-1">Email</label>
             <input
               type="email"
               required
@@ -460,6 +443,7 @@ if ( {) {
             />
           </div>
           <div>
+            <label className="block text-sm mb-1">Role</label>
             <input
               required
               className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
@@ -468,6 +452,7 @@ if ( {) {
             />
           </div>
           <div>
+            <label className="block text-sm mb-1">Country</label>
             <input
               required
               className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
@@ -475,6 +460,7 @@ if ( {) {
               onChange={(e) => setForm({ ...form, country: e.target.value })}
             />
           </div>
+          <div className="md:col-span-2 flex items-center gap-3">
             <button
               type="submit"
               disabled={submitting}
@@ -487,6 +473,10 @@ if ( {) {
           </div>
         </form>
       </section>
+
+}
+}
+}
       <section className="mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black">
         <h2 className="text-xl font-semibold">AI Session Summaries (Optional)</h2>
         <p className="text-sm opacity-70 mt-2">Auto-generated summaries and ZionGPT moderation prompts coming soon.</p>

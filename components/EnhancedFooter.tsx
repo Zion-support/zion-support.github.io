@@ -1,3 +1,128 @@
+  Brain,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
+import React from 'react';
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Link from 'next/link';
+import {;
+  Brain,;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Globe,;
+  Github,;
+  Linkedin,;
+  Twitter,;
+} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
+import React from 'react';
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Link from 'next/link';
+import {;
+  Brain,;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Globe,;
+  Github,;
+  Linkedin,;
+  Twitter,;
+} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
+
+const EnhancedFooter: React.FC = () => {;
+  const currentYear = new Date().getFullYear(),;
+
+  const footerSections = [;
+    {;
+      title: 'Services',;
+      links: [;
+        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },;
+        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },;
+        { name: 'Edge Computing', href: '/edge-computing-orchestration' },;
+        { name: 'Space Technology', href: '/space-technology' },;
+        {;
+          name: 'View All Services',;
+          href: '/comprehensive-2025-services-showcase',;
+        },;
+      ],;
+    },    {        { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+    {
+      name: 'LinkedIn'
+      href: 'https://linkedin.com/company/ziontechgroup'
+      icon: Linkedin
+    }
+    {
+
+
+  const socialLinks = [;
+    { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },;
+    {;
+      name: 'LinkedIn',;
+      href: 'https://linkedin && linkedin.com/company/ziontechgroup',;
+      icon: Linkedin,;
+    },;
+    {;
+      name: 'Twitter',;
+      href: 'https://twitter && twitter.com/ziontechgroup',;
+      icon: Twitter,;
+    },;
+
+
+
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+
   return (
     <footer className='bg-slate-950 border-t border-white/10'>;
       <div className='max-w-7xl mx-auto px-6 py-16'>;
@@ -18,17 +143,15 @@
                 <Phone className='w-4 h-4' />;
                 <a
                   href='tel:+13024640950'
-                  className='hover:text-white transition-colors'>;
-                  +1 (302) 464-0950;
-                </a>;
-              </div>;
-              <div className='flex items-center space-x-3 text-white/70'>;
-                <MapPin className='w-4 h-4' />                <span>Global Operations</span>              <div className="flex items-center space-x-3 text-white/70">;
-                <MapPin className="w-4 h-4" />;
-                <span>Global Operations</span>;
-              </div>;
-            </div>;
-          </div>;
+import Link from 'next/link';
+
+import {
+  Brain,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Github,
 
                       href={link.href}
                       className="text - white / 70 hover: text - white transition - colors duration - 200";
@@ -47,13 +170,22 @@
               {socialLinks && socialLinks.map(social => (        <div className="pt-8 border-t border-white/10">;
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">;
             {/* Copyright */}
-};
 
-export default EnhancedFooter;
-import React from "react";
-  FileText,;
-  HelpCircle} from "lucide-react";
-export default function EnhancedFooter() {;
+            <div className="text-white/60 text-sm">;
+            </div>;
+
+
+            {/* Social Links */}
+
+};export default EnhancedFooter;  );
+
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
 
   const scrollToTop = () => {";
     window && window.scrollTo({ top: 0, behavior: "smooth" });
@@ -294,7 +426,6 @@ company updates.;
             </form>;
           </div>;
         {/* comment */}";
-              © {currentYear} Zion Tech Group. All rights reserved.;
             </div>";
             <div className="flex items-center space-x-6">";
               <div className="flex items-center space-x-4">;
@@ -314,6 +445,11 @@ company updates.;
         className="fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50
         aria-label="Scroll to top">";
         <ArrowUp className="w-5 h-5"  />;
+
+      </button>,;
+    </footer>,;
+  )}"';
+
         <div className="border - t border - gray - 800 pt - 8">";
           <div className="flex flex - col md: flex - row justify - between items - center">";
             <div className="text - gray - 400 text - sm mb - 4 md:mb - 0">,
@@ -339,3 +475,9 @@ company updates.;
       </button>,
     </footer>,
   )}"';
+  );
+};export default EnhancedFooter;  )
+
+};
+
+
