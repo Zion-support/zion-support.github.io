@@ -4,12 +4,8 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
-<<<<<<< HEAD
-    './src/**/*.{js,ts,jsx,tsx}'
-=======
     './src/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx}',
->>>>>>> 7f75898722d8fd84372e93f8a34999dbfb36e377
   ],
   theme: {
     extend: {
@@ -22,13 +18,10 @@ module.exports = {
           400: '#60a5fa',
           500: '#3b82f6',
           600: '#2563eb',
-<<<<<<< HEAD
-=======
           700: '#1d4ed8',
           800: '#1e40af',
           900: '#1e3a8a',
           950: '#172554',
->>>>>>> 7f75898722d8fd84372e93f8a34999dbfb36e377
         },
         gray: {
           50: '#f9fafb',
@@ -40,16 +33,18 @@ module.exports = {
           600: '#4b5563',
           700: '#374151',
           800: '#1f2937',
+        },
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
+    },
   },
-<<<<<<< HEAD
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-=======
-  plugins: [],
+  ],
 }
->>>>>>> 7f75898722d8fd84372e93f8a34999dbfb36e377
