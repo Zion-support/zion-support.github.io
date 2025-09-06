@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  const SpaceTechnologyPage: React.FC = () => {
   const spaceServices = [ {
   return (<Layout> <SEO <motion.div initial= {
   {
   opacity: 0, y: 20 
-=======
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -20,7 +17,7 @@ import {
   Music, Film, BookOpenCheck, Building, MessageCircle, 
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
 } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 const SpaceTechnologyPage: React.FC = () => {
   const spaceServices = [
@@ -313,8 +310,6 @@ const SpaceTechnologyPage: React.FC = () => {
 };
 
 export default SpaceTechnologyPage;
-<<<<<<< HEAD
-=======
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -622,7 +617,4 @@ const SpaceTechnologyPage: React.FC = () => {
 
 export default SpaceTechnologyPage;
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

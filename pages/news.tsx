@@ -1,10 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next/link';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 import { motion } from 'framer-motion';
 import { 
   Newspaper;
@@ -214,12 +211,10 @@ export default function NewsPage() {
         </Head>
 
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-=======
 import { motion } from 'framer-motion';
 import { 
   Newspaper;
@@ -429,27 +424,20 @@ export default function NewsPage() {
         </Head>
 
         {/* Hero Section */}
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.h1 
               className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
               initial={{ opacity: 0, y: 30 }}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
               <h1 className="text-4xl md:text-6xl font-bold mb-6">News & Updates</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Stay informed about our latest developments, product launches, and industry insights.
-=======
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 Latest News & Updates
               </div>
@@ -459,7 +447,7 @@ export default function NewsPage() {
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                 Stay updated with the latest developments, breakthroughs, and innovations 
                 from Zion Tech Group and the technology industry.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </p>
             </motion.div>
 
@@ -809,10 +797,8 @@ export default function NewsPage() {
                   transition={{ duration: 0.6, delay: 0.1 * index }}
                   className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
-<<<<<<< HEAD
                   {category.name} ({category.count})
                 </motion.button>
-=======
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 Latest News & Updates
               </div>
@@ -1171,8 +1157,7 @@ export default function NewsPage() {
                   transition={{ duration: 0.6, delay: 0.1 * index }}
                   className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <div className="flex items-center gap-4 mb-4">
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm font-medium rounded-full border border-cyan-500/30">
                       {article.category}
@@ -1195,17 +1180,12 @@ export default function NewsPage() {
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </motion.article>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Featured Article */}
         {featuredArticle && (
           <section className="py-16 bg-white">
@@ -1244,7 +1224,6 @@ export default function NewsPage() {
             </div>
           </section>
         )}
-=======
         {/* Newsletter Signup */}
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Stay Updated
@@ -1273,7 +1252,7 @@ export default function NewsPage() {
                 </button>
               </div>
             </motion.div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pressReleases.map((release, index) => (
@@ -1395,7 +1374,6 @@ export default function NewsPage() {
                       <User className="w-4 h-4 text-gray-400" />
                       <span className="text-gray-400 text-sm">{news.author}</span>
                     </div>
-<<<<<<< HEAD
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-500">{article.readTime}</span>
                       <Link
@@ -1405,7 +1383,6 @@ export default function NewsPage() {
                         Read More
                         <ArrowRight className="ml-1 w-4 h-4" />
                       </Link>
-=======
         {/* Newsletter Signup */}
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Stay Updated
@@ -1558,12 +1535,10 @@ export default function NewsPage() {
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4 text-gray-400" />
                       <span className="text-gray-400 text-sm">{news.date}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4 text-gray-400" />
                       <span className="text-gray-400 text-sm">{news.date}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     </div>
                   </div>
                 </motion.article>
@@ -1572,16 +1547,13 @@ export default function NewsPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
-=======
         {/* Media Contact */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1607,10 +1579,8 @@ export default function NewsPage() {
                   href="/press"
                   className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
                 >
-<<<<<<< HEAD
                   Learn More
                 </Link>
-=======
         {/* Media Contact */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -1641,23 +1611,17 @@ export default function NewsPage() {
                 >
                   Press Kit
                 </a>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   Press Kit
                 </a>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </>
   );
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -1962,7 +1926,4 @@ export default function NewsPage() {
     </div>
   )
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

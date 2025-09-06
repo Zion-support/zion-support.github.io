@@ -2,8 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function ITAssetDiscoveryAgentPage() {
   return (
@@ -84,11 +82,9 @@ export default function ITAssetDiscoveryAgentPage() {
       </div>
     </UltraFuturisticBackground>
   );
-=======
 export default function ITAssetDiscoveryAgentPage() {
-=======
 export default function ITAssetDiscoveryAgentPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<UltraFuturisticBackground variant="space" intensity="high">
 			<Head>
@@ -124,7 +120,4 @@ export default function ITAssetDiscoveryAgentPage() {
 	)
 }
 
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

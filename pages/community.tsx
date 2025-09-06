@@ -1,7 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function CommunityPage() {
   return (
@@ -93,11 +91,9 @@ export default function CommunityPage() {
       </div>
     </div>
   );
-=======
 export default function CommunityPage() {
-=======
 export default function CommunityPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
@@ -128,7 +124,4 @@ export default function CommunityPage() {
 		</div>
 	)
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

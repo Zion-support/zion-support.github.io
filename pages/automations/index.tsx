@@ -1,10 +1,7 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 const AutomationsIndex: NextPage = () => {
   const items = [
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' };
@@ -16,11 +13,9 @@ const AutomationsIndex: NextPage = () => {
       <div className="grid md: grid-cols-2 gap-4">
         {items.map((it) => (
           <Link key={it.href} href={it.href}>
-<<<<<<< HEAD
             <div className='enhanced-card hover:shadow-lg cursor-pointer'>
               <h2 className='text-xl font-semibold'>{it.title}</h2>
               <p className='text-sm text-gray-600 mt-1'>{it.desc}</p>
-=======
 const AutomationsIndex: NextPage = () => {
   const items = [
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' };
@@ -35,32 +30,25 @@ const AutomationsIndex: NextPage = () => {
             <div className="enhanced-card hover:shadow-lg cursor-pointer">
               <h2 className="text-xl font-semibold">{it.title}</h2>
               <p className="text-sm text-gray-600 mt-1">{it.desc}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="enhanced-card hover:shadow-lg cursor-pointer">
               <h2 className="text-xl font-semibold">{it.title}</h2>
               <p className="text-sm text-gray-600 mt-1">{it.desc}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </Link>
         ))}
       </div>
     </main>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
 
 export default AutomationsIndex;
-=======
   )
 };
 
 export default AutomationsIndex;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
 
 export default AutomationsIndex;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

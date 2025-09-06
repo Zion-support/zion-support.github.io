@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  </Head> <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8" > <div className="max-w-5xl mx-auto space-y-8" > <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" >Market Pricing & References</h1> <p className="text-slate-300" >Below are easy-to-verify vendor references and typical pricing ranges to help you benchmark our offerings.</p> </ul> <div className="text-sm text-slate-400 mt-3" >Typical SMB budgets: $100–$2, 000/month depending on traffic and model choice.</div> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical SMB budgets: $200–$5, 000/month based on scale and compliance scope.</div> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical SMB budgets: $100–$3, 000/month depending on storage, queries, and concurrency.</div> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical SMB budgets: $200–$10, 000/month depending on traffic and workloads.</div> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical SMB budgets: $50–$1, 000/month based on dimensions, throughput, and replicas.</div> </ul> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical SMB budgets: $100–$1, 500/month depending on MAUs and features.</div> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical SMB budgets: $50–$1, 000/month depending on index size and QPS.</div> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical SMB budgets: $100–$2, 000/month based on traffic and protections.</div> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical SMB budgets: $100–$2, 000/month by data volume and systems.</div> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical SMB budgets: $100–$1, 500/month depending on MAUs and features.</div> </div> </div> </div> </div> </Layout>) 
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -139,7 +135,4 @@ export default function MarketPricingPage() {
   )
 }
 
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

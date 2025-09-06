@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import {
@@ -109,73 +107,58 @@ import {
   Bot as BotIcon,
   ChevronRight as ChevronRightIcon,;
 } from 'lucide-react';
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   enhancedRealMicroSaasServices,
   getServicesByCategory,
   getPopularServices,;
 } from '../data/enhanced-real-micro-saas-services';
-=======
 import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
 export default function PricingPage() {
-<<<<<<< HEAD
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
     'monthly'
   );
-=======
 import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
 export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com',
-=======
     website: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const popularServices = getPopularServices();
   
   // Combine all services for comprehensive pricing
   const allServices = [
-<<<<<<< HEAD
     ...enhancedRealMicroSaasServices,
     ...nextGenerationAIServices,
     ...cuttingEdgeITServices,
     ...innovativeMicroSaasV2Services,
-=======
     website: 'https://ziontechgroup.com'
   };
 
@@ -183,16 +166,12 @@ export default function PricingPage() {
   
   // Combine all services for comprehensive pricing
   const allServices = [
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     ...enhancedRealMicroSaasServices;
     ...nextGenerationAIServices;
     ...cuttingEdgeITServices;
     ...innovativeMicroSaasV2Services
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   // Enhanced service categories with pricing
@@ -200,8 +179,6 @@ export default function PricingPage() {
     {
       name: 'Next-Generation AI',
       description: 'Revolutionary AI platforms',
-<<<<<<< HEAD
-<<<<<<< HEAD
       services: [
         'AI Multimodal Fusion',
         'AI Autonomous Decision Engine',
@@ -210,12 +187,11 @@ export default function PricingPage() {
       avgPrice: '$3,199/month',
       savings: 'Save 60-80% vs. competitors',
     },
-=======
       services: ['AI Multimodal FusionAI Autonomous Decision EngineAI Emotional Intelligence'],
       avgPrice: '$3,199/month';
       savings: 'Save 60-80% vs. competitors'
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     {
       name: 'Cutting-Edge IT Infrastructure',
       description: 'Advanced infrastructure solutions',
@@ -240,12 +216,10 @@ export default function PricingPage() {
     {
       name: 'Enterprise IT Services',
       description: 'Comprehensive enterprise solutions',
-<<<<<<< HEAD
       services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
       avgPrice: '$2,999/month',
       savings: 'Save 45-65% vs. competitors',
     },
-=======
       services: ['AI Multimodal FusionAI Autonomous Decision EngineAI Emotional Intelligence'],
       avgPrice: '$3,199/month',
     savings: 'Save 60-80% vs. competitors'
@@ -278,13 +252,11 @@ export default function PricingPage() {
       avgPrice: '$2,999/month',
     savings: 'Save 45-65% vs. competitors'
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       services: ['Cloud MigrationDevOps AutomationSecurity Hardening'],
       avgPrice: '$2,999/month';
       savings: 'Save 45-65% vs. competitors'
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   // Enhanced pricing tiers with more realistic and comprehensive offerings
@@ -296,8 +268,6 @@ export default function PricingPage() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
         'Access to 50+ Core Services',
         'Basic AI Integration',
         'Standard Support (24/7)',
@@ -313,7 +283,6 @@ export default function PricingPage() {
       cta: 'Start Free Trial',
       ctaVariant: 'secondary' as const,
     },
-=======
         'Access to 50+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
       ];
       icon: <Sparkles className="w-8 h-8" />,
@@ -322,8 +291,6 @@ export default function PricingPage() {
       cta: 'Start Free Trial',
       ctaVariant: 'secondary' as const
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         'Access to 50+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
       ];
       icon: <Sparkles className="w-8 h-8" />,
@@ -332,7 +299,7 @@ export default function PricingPage() {
       cta: 'Start Free Trial',
       ctaVariant: 'secondary' as const
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
@@ -340,8 +307,6 @@ export default function PricingPage() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
         'Access to 200+ Premium Services',
         'Advanced AI & Quantum Computing',
         'Priority Support (24/7)',
@@ -361,7 +326,6 @@ export default function PricingPage() {
       cta: 'Start Free Trial',
       ctaVariant: 'primary' as const,
     },
-=======
         'Access to 200+ Premium ServicesAdvanced AI & Quantum ComputingPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security & Compliance';
         'Custom IntegrationsTeam Collaboration ToolsAPI AccessWhite-label Options'
       ];
@@ -371,8 +335,6 @@ export default function PricingPage() {
       cta: 'Start Free Trial',
       ctaVariant: 'primary' as const
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         'Access to 200+ Premium ServicesAdvanced AI & Quantum ComputingPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security & Compliance';
         'Custom IntegrationsTeam Collaboration ToolsAPI AccessWhite-label Options'
       ];
@@ -382,7 +344,7 @@ export default function PricingPage() {
       cta: 'Start Free Trial',
       ctaVariant: 'primary' as const
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     {
       name: 'Enterprise',
       description: 'For large organizations and enterprises',
@@ -390,8 +352,6 @@ export default function PricingPage() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
         'Access to ALL 500+ Services',
         'Full Quantum AI & Autonomous Systems',
         'Dedicated Support Team (24/7)',
@@ -415,7 +375,6 @@ export default function PricingPage() {
       cta: 'Contact Sales',
       ctaVariant: 'primary' as const,
     },
-=======
         'Access to ALL 500+ ServicesFull Quantum AI & Autonomous SystemsDedicated Support Team (24/7)90-Day Free TrialEnterprise Analytics & AI InsightsDedicated Account Manager99.99% Uptime SLAEnterprise Security & Compliance';
         'Custom Development ServicesAdvanced Team ManagementFull API & SDK AccessCustom Branding & White-labelOn-premise Deployment OptionsAdvanced AI Training & CustomizationPriority Feature DevelopmentGlobal Infrastructure Access'
       ];
@@ -425,8 +384,6 @@ export default function PricingPage() {
       cta: 'Contact Sales',
       ctaVariant: 'primary' as const
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         'Access to ALL 500+ ServicesFull Quantum AI & Autonomous SystemsDedicated Support Team (24/7)90-Day Free TrialEnterprise Analytics & AI InsightsDedicated Account Manager99.99% Uptime SLAEnterprise Security & Compliance';
         'Custom Development ServicesAdvanced Team ManagementFull API & SDK AccessCustom Branding & White-labelOn-premise Deployment OptionsAdvanced AI Training & CustomizationPriority Feature DevelopmentGlobal Infrastructure Access'
       ];
@@ -436,23 +393,20 @@ export default function PricingPage() {
       cta: 'Contact Sales',
       ctaVariant: 'primary' as const
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   // Service category pricing examples
   const serviceCategoryPricing = [
     {
       category: 'Quantum AI & Computing',
-<<<<<<< HEAD
-<<<<<<< HEAD
       services: [
         'Quantum AI Platform',
         'Neural Network Training',
         'Quantum Optimization',
       ],
-=======
       services: ['Quantum AI PlatformNeural Network TrainingQuantum Optimization'],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       startingPrice: '$99/month',
       icon: <Brain className="w-6 h-6" />
     };
@@ -484,10 +438,8 @@ export default function PricingPage() {
       category: 'Space Technology',
       services: ['Satellite ManagementSpace Data AnalyticsMission Planning AI'],
       startingPrice: '$299/month',
-<<<<<<< HEAD
       icon: <Rocket className='w-6 h-6' />,
     },
-=======
       services: ['Quantum AI PlatformNeural Network TrainingQuantum Optimization'],
       startingPrice: '$99/month',
       icon: <Brain className="w-6 h-6" />
@@ -522,11 +474,9 @@ export default function PricingPage() {
       startingPrice: '$299/month',
       icon: <Rocket className="w-6 h-6" />
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       icon: <Rocket className="w-6 h-6" />
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   // Value propositions
@@ -534,12 +484,9 @@ export default function PricingPage() {
     {
       title: 'Unprecedented ROI',
       description: 'Average 300% ROI within 6 months',
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: <TrendingUp className='w-8 h-8' />,
-=======
       icon: <TrendingUp className="w-8 h-8" />,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       metric: '300%',
       detail: 'Average ROI'
     };
@@ -613,10 +560,8 @@ export default function PricingPage() {
               size="lg"
               className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/30"
             >
-<<<<<<< HEAD
               <span className='flex items-center'>
                 <Rocket className='mr-3 w-6 h-6' />
-=======
       icon: <TrendingUp className="w-8 h-8" />,
       metric: '300%',
       detail: 'Average ROI'
@@ -693,35 +638,27 @@ export default function PricingPage() {
             >
               <span className="flex items-center">
                 <Rocket className="mr-3 w-6 h-6" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <span className="flex items-center">
                 <Rocket className="mr-3 w-6 h-6" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 View 2026 Comprehensive Pricing
               </span>
             </Button>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-          
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           {/* Billing Toggle */}
           <div className="flex items-center justify-center gap-4 mb-8">
             <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
               Monthly
             </span>
             <button
-<<<<<<< HEAD
               onClick={() =>
                 setBillingCycle(
                   billingCycle === 'monthly' ? 'yearly' : 'monthly'
                 )
               }
               className='relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50'
-=======
           
           {/* Billing Toggle */}
           <div className="flex items-center justify-center gap-4 mb-8">
@@ -731,11 +668,9 @@ export default function PricingPage() {
             <button
               onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
               className="relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
               className="relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             >
               <span
                 className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-transform ${
@@ -743,40 +678,30 @@ export default function PricingPage() {
                 }`}
               />
             </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <span
               className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}
             >
               Yearly
               <span className='ml-2 text-sm text-green-400'>Save 20%</span>
-=======
             <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
               Yearly
               <span className="ml-2 text-sm text-green-400">Save 20%</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
               Yearly
               <span className="ml-2 text-sm text-green-400">Save 20%</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </span>
           </div>
         </div>
 
         {/* Pricing Tiers */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className='mb-20'>
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>
-=======
         <div className="mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <div className="mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {pricingTiers.map((tier, index) => (
               <UltraFuturisticCard
                 key={tier.name}
@@ -786,35 +711,27 @@ export default function PricingPage() {
                 className={`relative h-full ${tier.popular ? 'scale-105' : ''}`}
               >
                 {tier.popular && (
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                     <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold flex items-center'>
                       <Star className='w-4 h-4 mr-2' />
-=======
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold flex items-center">
                       <Star className="w-4 h-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold flex items-center">
                       <Star className="w-4 h-4 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       Most Popular
                     </span>
                   </div>
                 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 <div className='text-center p-8'>
                   <div className='inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-6'>
-=======
                 
                 <div className="text-center p-8">
                   <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     {tier.icon}
                   </div>
                   
@@ -847,9 +764,7 @@ export default function PricingPage() {
                     className="w-full"
                   >
                     {tier.cta}
-<<<<<<< HEAD
                     <ArrowRight className='ml-2 w-5 h-5' />
-=======
                 
                 <div className="text-center p-8">
                   <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-6">
@@ -886,10 +801,8 @@ export default function PricingPage() {
                   >
                     {tier.cta}
                     <ArrowRight className="ml-2 w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <ArrowRight className="ml-2 w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   </Button>
                 </div>
               </UltraFuturisticCard>
@@ -898,39 +811,30 @@ export default function PricingPage() {
         </div>
 
         {/* Value Propositions */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className='mb-20'>
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
             Why Choose Zion Tech Group?
           </h2>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-=======
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {valuePropositions.map((proposition, index) => (
               <UltraFuturisticCard
                 key={index}
                 variant={index % 2 === 0 ? 'quantum' : 'holographic'}
                 interactive={true}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='text-center p-6'
-=======
                 className="text-center p-6"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-4">
                   {proposition.icon}
                 </div>
-<<<<<<< HEAD
                 <h3 className='text-xl font-bold text-white mb-2'>
                   {proposition.title}
                 </h3>
@@ -943,40 +847,32 @@ export default function PricingPage() {
                 <div className='text-sm text-gray-400'>
                   {proposition.detail}
                 </div>
-=======
                 className="text-center p-6"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-4">
                   {proposition.icon}
                 </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <h3 className="text-xl font-bold text-white mb-2">{proposition.title}</h3>
                 <p className="text-gray-300 text-sm mb-4">{proposition.description}</p>
                 <div className="text-3xl font-bold text-cyan-400 mb-2">{proposition.metric}</div>
                 <div className="text-sm text-gray-400">{proposition.detail}</div>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </UltraFuturisticCard>
             ))}
           </div>
         </div>
 
         {/* Service Category Pricing Examples */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className='mb-20'>
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
             Service Category Pricing
           </h2>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-=======
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Category Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {serviceCategoryPricing.map((category, index) => (
               <UltraFuturisticCard
                 key={index}
@@ -996,13 +892,11 @@ export default function PricingPage() {
                 
                 <ul className="space-y-2 mb-4">
                   {category.services.map((service, idx) => (
-<<<<<<< HEAD
                     <li
                       key={idx}
                       className='text-sm text-gray-300 flex items-center'
                     >
                       <Check className='w-4 h-4 text-green-400 mr-2' />
-=======
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Category Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1027,21 +921,15 @@ export default function PricingPage() {
                   {category.services.map((service, idx) => (
                     <li key={idx} className="text-sm text-gray-300 flex items-center">
                       <Check className="w-4 h-4 text-green-400 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <li key={idx} className="text-sm text-gray-300 flex items-center">
                       <Check className="w-4 h-4 text-green-400 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       {service}
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-                
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <Button
                   href="/services"
                   variant="secondary"
@@ -1049,9 +937,7 @@ export default function PricingPage() {
                   className="w-full"
                 >
                   Explore Services
-<<<<<<< HEAD
                   <ChevronRight className='ml-2 w-4 h-4' />
-=======
                 
                 <Button
                   href="/services"
@@ -1061,10 +947,8 @@ export default function PricingPage() {
                 >
                   Explore Services
                   <ChevronRight className="ml-2 w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <ChevronRight className="ml-2 w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </Button>
               </UltraFuturisticCard>
             ))}
@@ -1072,34 +956,26 @@ export default function PricingPage() {
         </div>
 
         {/* Popular Services Pricing */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className='mb-20'>
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
             Popular Services Pricing
           </h2>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-=======
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Popular Services Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Popular Services Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {popularServices.slice(0, 6).map((service, index) => (
               <UltraFuturisticCard
                 key={service.id}
                 variant={service.variant as any}
                 interactive={true}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='p-6'
-=======
                 className="p-6"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className="text-center mb-4">
                   <div className="text-3xl mb-3">{service.icon}</div>
@@ -1112,10 +988,8 @@ export default function PricingPage() {
                   <div className="text-xs text-gray-400 mb-2">Key Features:</div>
                   <ul className="text-xs text-gray-300 space-y-1">
                     {service.features.slice(0, 3).map((feature, idx) => (
-<<<<<<< HEAD
                       <li key={idx} className='flex items-center'>
                         <Check className='w-3 h-3 text-green-400 mr-2' />
-=======
                 className="p-6"
               >
                 <div className="text-center mb-4">
@@ -1131,22 +1005,16 @@ export default function PricingPage() {
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <li key={idx} className="flex items-center">
                         <Check className="w-3 h-3 text-green-400 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <li key={idx} className="flex items-center">
                         <Check className="w-3 h-3 text-green-400 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-                
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <Button
                   href={service.link}
                   variant="primary"
@@ -1154,9 +1022,7 @@ export default function PricingPage() {
                   className="w-full"
                 >
                   Learn More
-<<<<<<< HEAD
                   <ExternalLink className='ml-2 w-4 h-4' />
-=======
                 
                 <Button
                   href={service.link}
@@ -1166,10 +1032,8 @@ export default function PricingPage() {
                 >
                   Learn More
                   <ExternalLink className="ml-2 w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <ExternalLink className="ml-2 w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </Button>
               </UltraFuturisticCard>
             ))}
@@ -1177,8 +1041,6 @@ export default function PricingPage() {
         </div>
 
         {/* FAQ Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className='mb-20'>
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
             Frequently Asked Questions
@@ -1193,14 +1055,13 @@ export default function PricingPage() {
                 to the selected services. No credit card required to start your
                 trial.
               </p>
-=======
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>
           <div className="max-w-4xl mx-auto space-y-4">
             <UltraFuturisticCard variant="quantum" className="p-6">
               <h3 className="text-lg font-bold text-white mb-3">What's included in the free trial?</h3>
               <p className="text-gray-300">All plans include a generous free trial period with full access to the selected services. No credit card required to start your trial.</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </UltraFuturisticCard>
             
             <UltraFuturisticCard variant="holographic" className="p-6">
@@ -1212,7 +1073,6 @@ export default function PricingPage() {
               <h3 className="text-lg font-bold text-white mb-3">What support is included?</h3>
               <p className="text-gray-300">All plans include 24/7 support. Professional and Enterprise plans include priority support with dedicated account managers.</p>
             </UltraFuturisticCard>
-<<<<<<< HEAD
 
             <UltraFuturisticCard variant='quantum' className='p-6'>
               <h3 className='text-lg font-bold text-white mb-3'>
@@ -1222,7 +1082,6 @@ export default function PricingPage() {
                 No setup fees for any plan. All services are designed for
                 instant deployment with our AI-powered setup wizards.
               </p>
-=======
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>
           <div className="max-w-4xl mx-auto space-y-4">
@@ -1240,23 +1099,17 @@ export default function PricingPage() {
               <h3 className="text-lg font-bold text-white mb-3">What support is included?</h3>
               <p className="text-gray-300">All plans include 24/7 support. Professional and Enterprise plans include priority support with dedicated account managers.</p>
             </UltraFuturisticCard>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             
             <UltraFuturisticCard variant="quantum" className="p-6">
               <h3 className="text-lg font-bold text-white mb-3">Is there a setup fee?</h3>
               <p className="text-gray-300">No setup fees for any plan. All services are designed for instant deployment with our AI-powered setup wizards.</p>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </UltraFuturisticCard>
           </div>
         </div>
 
         {/* Contact Information */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className='mb-16'>
           <h2 className='text-3xl font-bold text-white mb-8 text-center'>
             Get In Touch
@@ -1269,7 +1122,6 @@ export default function PricingPage() {
                 {contactInfo.mobile}
               </p>
               <p className='text-gray-400 text-sm mt-2'>Available 24/7</p>
-=======
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Get In Touch</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -1278,7 +1130,7 @@ export default function PricingPage() {
               <h3 className="text-xl font-bold text-white mb-3">Phone</h3>
               <p className="text-cyan-400 text-lg font-semibold">{contactInfo.mobile}</p>
               <p className="text-gray-400 text-sm mt-2">Available 24/7</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </UltraFuturisticCard>
 
             <UltraFuturisticCard variant="holographic" className="text-center p-6">
@@ -1288,7 +1140,6 @@ export default function PricingPage() {
               <p className="text-gray-400 text-sm mt-2">Quick response guaranteed</p>
             </UltraFuturisticCard>
 
-<<<<<<< HEAD
             <UltraFuturisticCard variant='neural' className='text-center p-6'>
               <MapPin className='w-12 h-12 text-green-400 mx-auto mb-4' />
               <h3 className='text-xl font-bold text-white mb-3'>Address</h3>
@@ -1296,7 +1147,6 @@ export default function PricingPage() {
                 {contactInfo.address}
               </p>
               <p className='text-gray-400 text-sm mt-2'>Global operations</p>
-=======
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Get In Touch</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -1314,35 +1164,28 @@ export default function PricingPage() {
               <p className="text-gray-400 text-sm mt-2">Quick response guaranteed</p>
             </UltraFuturisticCard>
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <UltraFuturisticCard variant="neural" className="text-center p-6">
               <MapPin className="w-12 h-12 text-green-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-3">Address</h3>
               <p className="text-green-400 text-sm font-semibold leading-relaxed">{contactInfo.address}</p>
               <p className="text-gray-400 text-sm mt-2">Global operations</p>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </UltraFuturisticCard>
           </div>
         </div>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className='text-center'>
           <UltraFuturisticCard
             variant='quantum-holographic-advanced'
             className='p-12'
           >
             <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-=======
         <div className="text-center">
           <UltraFuturisticCard variant="quantum-holographic-advanced" className="p-12">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -1370,7 +1213,6 @@ export default function PricingPage() {
                 <MessageSquare className="ml-2 w-5 h-5" />
               </Button>
             </div>
-<<<<<<< HEAD
 
             <div className='text-sm text-gray-400'>
               <p>
@@ -1380,7 +1222,6 @@ export default function PricingPage() {
               <p className='mt-2'>
                 ✓ 24/7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure
               </p>
-=======
         <div className="text-center">
           <UltraFuturisticCard variant="quantum-holographic-advanced" className="p-12">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -1411,32 +1252,23 @@ export default function PricingPage() {
                 <MessageSquare className="ml-2 w-5 h-5" />
               </Button>
             </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             
             <div className="text-sm text-gray-400">
               <p>✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant Setup</p>
               <p className="mt-2">✓ 24/7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure</p>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </UltraFuturisticCard>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </Layout>
   );
 
-=======
     </UltraFuturisticBackground>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     </UltraFuturisticBackground>
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

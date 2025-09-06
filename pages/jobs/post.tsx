@@ -2,13 +2,8 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useState } from 'react';
 import EnhancedButton from '../../components/ui/EnhancedButton';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 const PostJob: NextPage = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -16,25 +11,17 @@ const PostJob: NextPage = () => {
   const [preview, setPreview] = useState(false);
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className='space-y-6 pb-20'>
-=======
     <div className="space-y-6 pb-20">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     <div className="space-y-6 pb-20">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       <Head>
         <title>Post a Job - Zion</title>
       </Head>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       <h1 className='text-2xl font-semibold'>Post a Job</h1>
-=======
       <h1 className="text-2xl font-semibold">Post a Job</h1>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
       <div className="grid md:grid-cols-2 gap-6">
         <form className="space-y-4">
@@ -76,11 +63,9 @@ const PostJob: NextPage = () => {
               </div>
             </div>
           ) : (
-<<<<<<< HEAD
             <p className='text-sm opacity-80'>
               Click Preview to see how your job will appear to talent.
             </p>
-=======
       <h1 className="text-2xl font-semibold">Post a Job</h1>
 
       <div className="grid md:grid-cols-2 gap-6">
@@ -124,29 +109,22 @@ const PostJob: NextPage = () => {
             </div>
           ) : (
             <p className="text-sm opacity-80">Click Preview to see how your job will appear to talent.</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <p className="text-sm opacity-80">Click Preview to see how your job will appear to talent.</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           )}
         </aside>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
 
 export default PostJob;
-=======
   )
 };
 
 export default PostJob;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
 
 export default PostJob;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

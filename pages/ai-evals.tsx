@@ -1,7 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 
 const AIEvals: React.FC = () => {
@@ -28,10 +26,9 @@ const AIEvals: React.FC = () => {
             </a>
           </div>
         </div>
-=======
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 export default function AIEvalsPage() {
 	const contactInfo = {
@@ -95,7 +92,6 @@ export default function AIEvalsPage() {
 					</div>
 				</div>
 
-<<<<<<< HEAD
         <div className='max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6'>
           <div className='bg-black/20 border border-gray-700/50 rounded-2xl p-6'>
             <div className='text-gray-400 text-sm mb-2'>Key Metric</div>
@@ -156,7 +152,6 @@ export default function AIEvalsPage() {
       </div>
     </QuantumHolographicMatrixBackground>
   );
-=======
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
 
@@ -222,8 +217,7 @@ export default function AIEvalsPage() {
 					</div>
 				</div>
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 				<div className="max-w-3xl mx-auto mt-16 bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
 						<div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
@@ -237,9 +231,6 @@ export default function AIEvalsPage() {
 			</div>
 		</QuantumHolographicMatrixBackground>
 	)
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

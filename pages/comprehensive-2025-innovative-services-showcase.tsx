@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   ArrowRight,
   CheckCircle,
@@ -14,45 +12,32 @@ import {
   Phone,
   Mail,
   MapPin,;
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 import { 
   ArrowRight, CheckCircle, Globe;
   Search, Grid, List, Star as StarIcon;
   Phone, Mail, MapPin
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion';
 import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function Comprehensive2025InnovativeServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [sortBy, setSortBy] = useState<
     'popularity' | 'price' | 'rating' | 'newest'
   >('popularity');
   const [priceRange, setPriceRange] = useState<
     'all' | 'budget' | 'mid' | 'enterprise'
   >('all');
-=======
   const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity');
   const [priceRange, setPriceRange] = useState<'all' | 'budget' | 'mid' | 'enterprise'>('all');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
   // Combine all services
   const allServices = [...comprehensiveInnovativeServices, ...specializedEnterpriseServices];
@@ -80,9 +65,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
     const numPrice = parseFloat(price.replace('$', '').replace(, ''));
     if (numPrice < 1000) return 'budget';
     if (numPrice < 5000) return 'mid';
-<<<<<<< HEAD
     return 'enterprise';
-=======
   const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity');
   const [priceRange, setPriceRange] = useState<'all' | 'budget' | 'mid' | 'enterprise'>('all');
 
@@ -113,16 +96,12 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
     if (numPrice < 1000) return 'budget';
     if (numPrice < 5000) return 'mid';
     return 'enterprise'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     return 'enterprise'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const filteredServices = allServices
     .filter(service => {
-<<<<<<< HEAD
-<<<<<<< HEAD
       const matchesSearch =
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -133,27 +112,20 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       const matchesPrice =
         priceRange === 'all' || getPriceRange(service.price) === priceRange;
       return matchesSearch && matchesCategory && matchesPrice;
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
       const matchesPrice = priceRange === 'all' || getPriceRange(service.price) === priceRange;
       return matchesSearch && matchesCategory && matchesPrice
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
         case 'price':
-<<<<<<< HEAD
-<<<<<<< HEAD
           return (
             parseFloat(a.price.replace('$', '').replace(',', '')) -
             parseFloat(b.price.replace('$', '').replace(',', ''))
@@ -166,22 +138,19 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
           );
         default:
           return 0;
-=======
           return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
         case 'rating':
           return b.rating - a.rating;
         case 'newest':
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
         default: return 0
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
         case 'rating':
           return b.rating - a.rating;
         case 'newest':
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
         default: return 0
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       }
     });
 
@@ -190,21 +159,16 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
     visible: {
       opacity: 1,
       transition: {
-<<<<<<< HEAD
-<<<<<<< HEAD
         staggerChildren: 0.1,
       },
     },
-=======
         staggerChildren: 0.1
       }
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         staggerChildren: 0.1
       }
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const itemVariants = {
@@ -213,39 +177,30 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       opacity: 1,
       y: 0,
       transition: {
-<<<<<<< HEAD
-<<<<<<< HEAD
         duration: 0.5,
       },
     },
-=======
         duration: 0.5
       }
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         duration: 0.5
       }
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com',
-=======
     website: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
-<<<<<<< HEAD
         <title>
           Comprehensive 2025 Innovative Services Showcase — Zion Tech Group
         </title>
@@ -269,53 +224,40 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
           rel='canonical'
           href='https://ziontechgroup.com/comprehensive-2025-services-showcase'
         />
-=======
     website: 'https://ziontechgroup.com'
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         <title>Comprehensive 2025 Innovative Services Showcase — Zion Tech Group</title>
         <meta name="description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transform your business with Zion Tech Group." />
         <meta property="og:title" content="Comprehensive 2025 Innovative Services Showcase — Zion Tech Group" />
         <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />
         <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" />
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
 
       <EnhancedNavigation />
 
       {/* Hero Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='relative py-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>
-=======
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-<<<<<<< HEAD
-<<<<<<< HEAD
             <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent'>
-=======
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               2025 Comprehensive Services Showcase
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
@@ -333,10 +275,8 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                 <Mail className="w-5 h-5" />
                 <span>{contactInfo.email}</span>
               </div>
-<<<<<<< HEAD
               <div className='flex items-center gap-2'>
                 <MapPin className='w-5 h-5' />
-=======
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
               2025 Comprehensive Services Showcase
             </h1>
@@ -357,30 +297,25 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="flex items-center gap-2">
                 <MapPin className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <span>{contactInfo.address}</span>
               </div>
             </div>
 
             {/* Stats */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>
               <div className='text-center'>
                 <div className='text-3xl font-bold text-cyan-400'>
                   {allServices.length}+
                 </div>
                 <div className='text-white/60'>Services Available</div>
-=======
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400">{allServices.length}+</div>
                 <div className="text-white/60">Services Available</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-purple-400">{allServices.filter(s => s.popular).length}</div>
@@ -390,13 +325,11 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                 <div className="text-3xl font-bold text-green-400">{allServices.filter(s => s.realService).length}</div>
                 <div className="text-white/60">Real Services</div>
               </div>
-<<<<<<< HEAD
               <div className='text-center'>
                 <div className='text-3xl font-bold text-orange-400'>
                   {allServices.filter(s => s.rating >= 4.5).length}
                 </div>
                 <div className='text-white/60'>Top Rated</div>
-=======
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400">{allServices.length}+</div>
@@ -413,12 +346,10 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
               <div className="text-center">
                 <div className="text-3xl font-bold text-orange-400">{allServices.filter(s => s.rating >= 4.5).length}</div>
                 <div className="text-white/60">Top Rated</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="text-center">
                 <div className="text-3xl font-bold text-orange-400">{allServices.filter(s => s.rating >= 4.5).length}</div>
                 <div className="text-white/60">Top Rated</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </div>
           </motion.div>
@@ -426,28 +357,20 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       </section>
 
       {/* Search and Filters */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='px-6 pb-12'>
         <div className='max-w-7xl mx-auto'>
-=======
       <section className="px-6 pb-12">
         <div className="max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="px-6 pb-12">
         <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10'
-=======
             className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             {/* Search Bar */}
             <div className="mb-6">
@@ -457,10 +380,8 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                   type="text"
                   placeholder="Search services by name, description, or features..."
                   value={searchTerm}
-<<<<<<< HEAD
                   onChange={e => setSearchTerm(e.target.value)}
                   className='w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all duration-300'
-=======
             className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10"
           >
             {/* Search Bar */}
@@ -473,22 +394,17 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all duration-300"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 />
               </div>
             </div>
 
             {/* Filters */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
-=======
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               {/* Category Filter */}
               <div>
                 <label className="block text-sm font-medium text-white/70 mb-2">Category</label>
@@ -497,9 +413,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
-<<<<<<< HEAD
                   {categories.map(category => (
-=======
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {/* Category Filter */}
               <div>
@@ -510,10 +424,8 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
                   {categories.map((category) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   {categories.map((category) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
@@ -523,96 +435,75 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 
               {/* Price Range Filter */}
               <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <label className='block text-sm font-medium text-white/70 mb-2'>
                   Price Range
                 </label>
-=======
                 <label className="block text-sm font-medium text-white/70 mb-2">Price Range</label>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <select
                   value={priceRange}
                   onChange={(e) => setPriceRange(e.target.value as any)}
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
-<<<<<<< HEAD
                   <option value='all'>All Prices</option>
                   <option value='budget'>Budget ($0 - $999)</option>
                   <option value='mid'>Mid-Range ($1,000 - $4,999)</option>
                   <option value='enterprise'>Enterprise ($5,000+)</option>
-=======
                 <label className="block text-sm font-medium text-white/70 mb-2">Price Range</label>
                 <select
                   value={priceRange}
                   onChange={(e) => setPriceRange(e.target.value as any)}
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <option value="all">All Prices</option>
                   <option value="budget">Budget ($0 - $999)</option>
                   <option value="mid">Mid-Range ($1,000 - $4,999)</option>
                   <option value="enterprise">Enterprise ($5,000+)</option>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </select>
               </div>
 
               {/* Sort By */}
               <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <label className='block text-sm font-medium text-white/70 mb-2'>
                   Sort By
                 </label>
-=======
                 <label className="block text-sm font-medium text-white/70 mb-2">Sort By</label>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
-<<<<<<< HEAD
                   <option value='popularity'>Popularity</option>
                   <option value='price'>Price (Low to High)</option>
                   <option value='rating'>Rating</option>
                   <option value='newest'>Newest</option>
-=======
                 <label className="block text-sm font-medium text-white/70 mb-2">Sort By</label>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <option value="popularity">Popularity</option>
                   <option value="price">Price (Low to High)</option>
                   <option value="rating">Rating</option>
                   <option value="newest">Newest</option>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </select>
               </div>
 
               {/* View Mode */}
               <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <label className='block text-sm font-medium text-white/70 mb-2'>
                   View Mode
                 </label>
                 <div className='flex gap-2'>
-=======
                 <label className="block text-sm font-medium text-white/70 mb-2">View Mode</label>
                 <div className="flex gap-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`px-3 py-2 rounded-lg transition-all duration-300 ${
@@ -621,9 +512,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                         : 'bg-white/10 text-white/70 hover:bg-white/20'
                     }`}
                   >
-<<<<<<< HEAD
                     <Grid className='w-4 h-4' />
-=======
                 <label className="block text-sm font-medium text-white/70 mb-2">View Mode</label>
                 <div className="flex gap-2">
                   <button
@@ -635,38 +524,31 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                     }`}
                   >
                     <Grid className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <Grid className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   </button>
                   <button
                     onClick={() => setViewMode('list')}
                     className={`px-3 py-2 rounded-lg transition-all duration-300 ${
-<<<<<<< HEAD
-<<<<<<< HEAD
                       viewMode === 'list'
                         ? 'bg-cyan-500 text-white'
                         : 'bg-white/10 text-white/70 hover:bg-white/20'
                     }`}
                   >
                     <List className='w-4 h-4' />
-=======
                       viewMode === 'list' 
                         ? 'bg-cyan-500 text-white' 
                         : 'bg-white/10 text-white/70 hover:bg-white/20'
                     }`}
                   >
                     <List className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       viewMode === 'list' 
                         ? 'bg-cyan-500 text-white' 
                         : 'bg-white/10 text-white/70 hover:bg-white/20'
                     }`}
                   >
                     <List className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   </button>
                 </div>
               </div>
@@ -676,14 +558,11 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       </section>
 
       {/* Services Grid */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='px-6 pb-20'>
         <div className='max-w-7xl mx-auto'>
-=======
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -694,14 +573,12 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
               <h2 className="text-3xl font-bold text-white mb-2">
                 {filteredServices.length} Services Found
               </h2>
-<<<<<<< HEAD
               <p className='text-white/60'>
                 Showing results for &quot;{searchTerm || 'all services'}&quot;
                 in{' '}
                 {selectedCategory === 'all'
                   ? 'all categories'
                   : selectedCategory}
-=======
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -716,17 +593,13 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
               </h2>
               <p className="text-white/60">
                 Showing results for &quot,{searchTerm || 'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <p className="text-white/60">
                 Showing results for &quot,{searchTerm || 'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </p>
             </div>
 
             {filteredServices.length === 0 ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='text-center py-20'>
                 <div className='text-6xl mb-4'>🔍</div>
                 <h3 className='text-2xl font-bold text-white mb-2'>
@@ -735,43 +608,31 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                 <p className='text-white/60 mb-6'>
                   Try adjusting your search criteria or filters
                 </p>
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <div className="text-center py-20">
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-white/60 mb-6">Try adjusting your search criteria or filters</p>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <button
                   onClick={() => {
                     setSearchTerm('');
                     setSelectedCategory('all');
-<<<<<<< HEAD
-<<<<<<< HEAD
                     setPriceRange('all');
                   }}
                   className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300'
-=======
                     setPriceRange('all')
                   }}
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     setPriceRange('all')
                   }}
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 >
                   Clear Filters
                 </button>
               </div>
             ) : (
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div
                 className={
                   viewMode === 'grid'
@@ -779,17 +640,12 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                     : 'space-y-6'
                 }
               >
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <div className={viewMode === 'grid' 
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                 : 'space-y-6'
               }>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 {filteredServices.map((service, index) => (
                   <motion.div
                     key={service.id}
@@ -799,14 +655,11 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                     }`}
                   >
                     {/* Service Card Content */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <div
                       className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}
                     >
-=======
                     <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       {/* Header */}
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex items-center gap-3">
@@ -821,9 +674,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                           </div>
                         </div>
                         {service.popular && (
-<<<<<<< HEAD
                           <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full'>
-=======
                     <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>
                       {/* Header */}
                       <div className="flex items-start justify-between mb-4">
@@ -840,31 +691,22 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                         </div>
                         {service.popular && (
                           <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                           <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                             Popular
                           </div>
                         )}
                       </div>
 
                       {/* Description */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <p className='text-white/80 text-sm mb-4 line-clamp-3'>
-=======
                       <p className="text-white/80 text-sm mb-4 line-clamp-3">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <p className="text-white/80 text-sm mb-4 line-clamp-3">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         {service.description}
                       </p>
 
                       {/* Features */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <div className='mb-4'>
                         <h4 className='text-sm font-semibold text-white/70 mb-2'>
                           Key Features:
@@ -876,35 +718,27 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                               className='flex items-center gap-2 text-xs text-white/60'
                             >
                               <CheckCircle className='w-3 h-3 text-green-400' />
-=======
                       <div className="mb-4">
                         <h4 className="text-sm font-semibold text-white/70 mb-2">Key Features:</h4>
                         <div className="grid grid-cols-1 gap-1">
                           {service.features.slice(0, 3).map((feature, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-xs text-white/60">
                               <CheckCircle className="w-3 h-3 text-green-400" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <div className="mb-4">
                         <h4 className="text-sm font-semibold text-white/70 mb-2">Key Features:</h4>
                         <div className="grid grid-cols-1 gap-1">
                           {service.features.slice(0, 3).map((feature, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-xs text-white/60">
                               <CheckCircle className="w-3 h-3 text-green-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                               {feature}
                             </div>
                           ))}
                           {service.features.length > 3 && (
-<<<<<<< HEAD
-<<<<<<< HEAD
                             <div className='text-xs text-white/40'>
-=======
                             <div className="text-xs text-white/40">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                             <div className="text-xs text-white/40">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                               +{service.features.length - 3} more features
                             </div>
                           )}
@@ -912,18 +746,14 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                       </div>
 
                       {/* Price and Rating */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <div className='flex items-center justify-between mb-4'>
                         <div className='text-2xl font-bold text-cyan-400'>
-=======
                       <div className="flex items-center justify-between mb-4">
                         <div className="text-2xl font-bold text-cyan-400">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           {service.price}
                           <span className="text-sm text-white/60">{service.period}</span>
                         </div>
-<<<<<<< HEAD
                         <div className='flex items-center gap-1'>
                           <StarIcon className='w-4 h-4 text-yellow-400 fill-current' />
                           <span className='text-sm text-white/70'>
@@ -932,78 +762,60 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                           <span className='text-xs text-white/50'>
                             ({service.reviews})
                           </span>
-=======
                       <div className="flex items-center justify-between mb-4">
                         <div className="text-2xl font-bold text-cyan-400">
                           {service.price}
                           <span className="text-sm text-white/60">{service.period}</span>
                         </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         <div className="flex items-center gap-1">
                           <StarIcon className="w-4 h-4 text-yellow-400 fill-current" />
                           <span className="text-sm text-white/70">{service.rating}</span>
                           <span className="text-xs text-white/50">({service.reviews})</span>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         </div>
                       </div>
 
                       {/* Action Buttons */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <div className='flex gap-2'>
                         <a
                           href={service.link}
                           target='_blank'
                           rel='noopener noreferrer'
                           className='flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105'
-=======
                       <div className="flex gap-2">
                         <a
                           href={service.link}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <div className="flex gap-2">
                         <a
                           href={service.link}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         >
                           Learn More
                         </a>
                         <a
                           href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-<<<<<<< HEAD
-<<<<<<< HEAD
                           className='px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10'
-=======
                           className="px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                           className="px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         >
                           Contact
                         </a>
                       </div>
 
                       {/* Additional Info */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <div className='mt-4 pt-4 border-t border-white/10'>
                         <div className='grid grid-cols-2 gap-4 text-xs text-white/50'>
-=======
                       <div className="mt-4 pt-4 border-t border-white/10">
                         <div className="grid grid-cols-2 gap-4 text-xs text-white/50">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           <div>
                             <span className="block text-white/70">Setup Time:</span>
                             {service.setupTime}
@@ -1017,12 +829,10 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                             {service.customers}+
                           </div>
                           <div>
-<<<<<<< HEAD
                             <span className='block text-white/70'>ROI:</span>
                             <span className='text-green-400'>
                               {service.roi.split(' ').slice(0, 3).join(' ')}...
                             </span>
-=======
                       <div className="mt-4 pt-4 border-t border-white/10">
                         <div className="grid grid-cols-2 gap-4 text-xs text-white/50">
                           <div>
@@ -1040,11 +850,9 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                           <div>
                             <span className="block text-white/70">ROI:</span>
                             <span className="text-green-400">{service.roi.split(' ').slice(0, 3).join(' ')}...</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                             <span className="block text-white/70">ROI:</span>
                             <span className="text-green-400">{service.roi.split(' ').slice(0, 3).join(' ')}...</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           </div>
                         </div>
                       </div>
@@ -1058,29 +866,21 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       </section>
 
       {/* Contact CTA */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='px-6 pb-20'>
         <div className='max-w-4xl mx-auto text-center'>
-=======
       <section className="px-6 pb-20">
         <div className="max-w-4xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="px-6 pb-20">
         <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-xl rounded-3xl p-12 border border-cyan-400/20'
-=======
             className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-xl rounded-3xl p-12 border border-cyan-400/20"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -1107,9 +907,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
             </div>
             <div className="mt-8 text-white/60">
               <p>Contact us directly:</p>
-<<<<<<< HEAD
               <div className='flex flex-wrap justify-center gap-6 mt-4'>
-=======
             className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-xl rounded-3xl p-12 border border-cyan-400/20"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -1138,10 +936,8 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
             <div className="mt-8 text-white/60">
               <p>Contact us directly:</p>
               <div className="flex flex-wrap justify-center gap-6 mt-4">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="flex flex-wrap justify-center gap-6 mt-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <span>{contactInfo.mobile}</span>
                 <span>{contactInfo.email}</span>
                 <span>{contactInfo.address}</span>
@@ -1153,14 +949,9 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

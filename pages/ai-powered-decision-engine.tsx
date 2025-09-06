@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
@@ -8,13 +6,11 @@ export default function AiPoweredDecisionEngine() {
   
     />
   );
-=======
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AiPoweredDecisionEngine() {
-=======
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AiPoweredDecisionEngine() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<ServiceLanding
 			title="AI-Powered Decision Engine"
@@ -37,9 +33,6 @@ export default function AiPoweredDecisionEngine() {
 			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
 		/>
 	)
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

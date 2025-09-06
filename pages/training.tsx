@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   GraduationCap,
   Users,
@@ -35,19 +33,14 @@ import {
   Building,
   Globe,
   Server,;
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 import { 
   GraduationCap, Users, Clock, Award, BookOpen, Video, 
   Headphones, Code, Brain, Atom, Rocket, Shield, Zap;
   Star, CheckCircle, ArrowRight, ChevronDown, ChevronUp;
   Play, Download, ExternalLink, Calendar, MapPin, DollarSign;
   TrendingUp, Target, Lightbulb, Building, Globe, Server
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 } from 'lucide-react';
 
 export default function TrainingPage() {
@@ -59,40 +52,29 @@ export default function TrainingPage() {
     { id: 'ai-consciousness', name: 'AI Consciousness', count: 8 },
     { id: 'quantum-computing', name: 'Quantum Computing', count: 6 },
     { id: 'autonomous-ops', name: 'Autonomous Operations', count: 5 },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { id: 'enterprise-it', name: 'Enterprise IT', count: 5 },
-=======
     { id: 'enterprise-it', name: 'Enterprise IT', count: 5 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     { id: 'enterprise-it', name: 'Enterprise IT', count: 5 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const featuredPrograms = [
     {
       id: 1,
       title: 'AI Consciousness Developer Certification',
-<<<<<<< HEAD
-<<<<<<< HEAD
       description:
         'Master the fundamentals of AI consciousness development and earn industry-recognized certification.',
-=======
       description: 'Master the fundamentals of AI consciousness development and earn industry-recognized certification.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       category: 'ai-consciousness',
       duration: '12 weeks',
       level: 'Intermediate to Advanced',
       price: '$2,999',
-<<<<<<< HEAD
-=======
       description: 'Master the fundamentals of AI consciousness development and earn industry-recognized certification.',
       category: 'ai-consciousness',
       duration: '12 weeks',
       level: 'Intermediate to Advanced',
       price: '$2,999';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       rating: 4.9,
       students: '1,247';
       featured: true,
@@ -104,10 +86,8 @@ export default function TrainingPage() {
     {
       id: 2,
       title: 'Quantum Computing Implementation Specialist',
-<<<<<<< HEAD
       description:
         'Learn to implement quantum computing solutions in enterprise environments with practical applications.',
-=======
     rating: 4.9,
       students: '1,247',
     featured: true,
@@ -120,19 +100,16 @@ export default function TrainingPage() {
       id: 2,
       title: 'Quantum Computing Implementation Specialist',
       description: 'Learn to implement quantum computing solutions in enterprise environments with practical applications.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       category: 'quantum-computing',
       duration: '16 weeks',
       level: 'Advanced',
       price: '$3,499',
-<<<<<<< HEAD
-=======
       description: 'Learn to implement quantum computing solutions in enterprise environments with practical applications.',
       category: 'quantum-computing',
       duration: '16 weeks',
       level: 'Advanced',
       price: '$3,499';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       rating: 4.8,
       students: '892',
       featured: true,
@@ -144,10 +121,8 @@ export default function TrainingPage() {
     {
       id: 3,
       title: 'Autonomous Business Operations Master',
-<<<<<<< HEAD
       description:
         'Transform your organization with fully autonomous business operations and AI-driven automation.',
-=======
     rating: 4.8,
       students: '892',
       featured: true,
@@ -160,25 +135,21 @@ export default function TrainingPage() {
       id: 3,
       title: 'Autonomous Business Operations Master',
       description: 'Transform your organization with fully autonomous business operations and AI-driven automation.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       category: 'autonomous-ops',
       duration: '10 weeks',
       level: 'Intermediate',
       price: '$2,499',
-<<<<<<< HEAD
-=======
       description: 'Transform your organization with fully autonomous business operations and AI-driven automation.',
       category: 'autonomous-ops',
       duration: '10 weeks',
       level: 'Intermediate',
       price: '$2,499';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       rating: 4.9,
       students: '1,156';
       featured: true,
       icon: <Rocket className="w-12 h-12" />,
       highlights: [
-<<<<<<< HEAD
         'Business process automation design',
         'AI-powered decision making systems',
         'Change management strategies',
@@ -186,7 +157,6 @@ export default function TrainingPage() {
         'Industry best practices and case studies',
       ],
     },
-=======
     rating: 4.9,
       students: '1,156',
     featured: true,
@@ -195,12 +165,10 @@ export default function TrainingPage() {
         'Business process automation designAI-powered decision making systemsChange management strategiesROI measurement and optimizationIndustry best practices and case studies'
       ]
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         'Business process automation designAI-powered decision making systemsChange management strategiesROI measurement and optimizationIndustry best practices and case studies'
       ]
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const allPrograms = [
@@ -208,25 +176,19 @@ export default function TrainingPage() {
     {
       id: 4,
       title: 'AI Consciousness Fundamentals',
-<<<<<<< HEAD
-<<<<<<< HEAD
       description:
         'Introduction to artificial consciousness concepts and basic implementation.',
-=======
       description: 'Introduction to artificial consciousness concepts and basic implementation.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       category: 'ai-consciousness',
       duration: '6 weeks',
       level: 'Beginner',
       price: '$1,299',
-<<<<<<< HEAD
-=======
       description: 'Introduction to artificial consciousness concepts and basic implementation.',
       category: 'ai-consciousness',
       duration: '6 weeks',
       level: 'Beginner',
       price: '$1,299';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       rating: 4.7,
       students: '2,341';
       icon: <Brain className="w-8 h-8" />
@@ -234,10 +196,8 @@ export default function TrainingPage() {
     {
       id: 5,
       title: 'Advanced AI Consciousness Architecture',
-<<<<<<< HEAD
       description:
         'Deep dive into complex AI consciousness system design and optimization.',
-=======
     rating: 4.7,
       students: '2,341',
     icon: <Brain className="w-8 h-8" />
@@ -246,19 +206,16 @@ export default function TrainingPage() {
       id: 5,
       title: 'Advanced AI Consciousness Architecture',
       description: 'Deep dive into complex AI consciousness system design and optimization.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       category: 'ai-consciousness',
       duration: '14 weeks',
       level: 'Advanced',
       price: '$3,999',
-<<<<<<< HEAD
-=======
       description: 'Deep dive into complex AI consciousness system design and optimization.',
       category: 'ai-consciousness',
       duration: '14 weeks',
       level: 'Advanced',
       price: '$3,999';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       rating: 4.9,
       students: '567',
       icon: <Brain className="w-8 h-8" />
@@ -266,10 +223,8 @@ export default function TrainingPage() {
     {
       id: 6,
       title: 'AI Ethics and Governance',
-<<<<<<< HEAD
       description:
         'Learn responsible AI development practices and governance frameworks.',
-=======
     rating: 4.9,
       students: '567',
       icon: <Brain className="w-8 h-8" />
@@ -278,19 +233,16 @@ export default function TrainingPage() {
       id: 6,
       title: 'AI Ethics and Governance',
       description: 'Learn responsible AI development practices and governance frameworks.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       category: 'ai-consciousness',
       duration: '8 weeks',
       level: 'Intermediate',
       price: '$1,899',
-<<<<<<< HEAD
-=======
       description: 'Learn responsible AI development practices and governance frameworks.',
       category: 'ai-consciousness',
       duration: '8 weeks',
       level: 'Intermediate',
       price: '$1,899';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       rating: 4.8,
       students: '1,023';
       icon: <Shield className="w-8 h-8" />
@@ -298,10 +250,8 @@ export default function TrainingPage() {
     {
       id: 7,
       title: 'AI Consciousness API Development',
-<<<<<<< HEAD
       description:
         'Build robust APIs for AI consciousness applications and services.',
-=======
     rating: 4.8,
       students: '1,023',
     icon: <Shield className="w-8 h-8" />
@@ -310,23 +260,18 @@ export default function TrainingPage() {
       id: 7,
       title: 'AI Consciousness API Development',
       description: 'Build robust APIs for AI consciousness applications and services.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       category: 'ai-consciousness',
       duration: '10 weeks',
       level: 'Intermediate',
       price: '$2,199',
-<<<<<<< HEAD
       rating: 4.7,
       students: '789',
       icon: <Code className='w-8 h-8' />,
     },
-=======
     rating: 4.7,
       students: '789',
       icon: <Code className="w-8 h-8" />
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'Build robust APIs for AI consciousness applications and services.',
       category: 'ai-consciousness',
       duration: '10 weeks',
@@ -336,31 +281,25 @@ export default function TrainingPage() {
       students: '789',
       icon: <Code className="w-8 h-8" />
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
     // Quantum Computing Programs
     {
       id: 8,
       title: 'Quantum Computing Basics',
-<<<<<<< HEAD
-<<<<<<< HEAD
       description:
         'Foundation course covering quantum mechanics and computing principles.',
-=======
       description: 'Foundation course covering quantum mechanics and computing principles.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       category: 'quantum-computing',
       duration: '8 weeks',
       level: 'Beginner',
       price: '$1,599',
-<<<<<<< HEAD
-=======
       description: 'Foundation course covering quantum mechanics and computing principles.',
       category: 'quantum-computing',
       duration: '8 weeks',
       level: 'Beginner',
       price: '$1,599';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       rating: 4.6,
       students: '1,456';
       icon: <Atom className="w-8 h-8" />
@@ -368,10 +307,8 @@ export default function TrainingPage() {
     {
       id: 9,
       title: 'Quantum Machine Learning',
-<<<<<<< HEAD
       description:
         'Combine quantum computing with machine learning for breakthrough applications.',
-=======
     rating: 4.6,
       students: '1,456',
     icon: <Atom className="w-8 h-8" />
@@ -380,19 +317,16 @@ export default function TrainingPage() {
       id: 9,
       title: 'Quantum Machine Learning',
       description: 'Combine quantum computing with machine learning for breakthrough applications.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       category: 'quantum-computing',
       duration: '12 weeks',
       level: 'Advanced',
       price: '$3,299',
-<<<<<<< HEAD
-=======
       description: 'Combine quantum computing with machine learning for breakthrough applications.',
       category: 'quantum-computing',
       duration: '12 weeks',
       level: 'Advanced',
       price: '$3,299';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       rating: 4.8,
       students: '423',
       icon: <Atom className="w-8 h-8" />
@@ -400,10 +334,8 @@ export default function TrainingPage() {
     {
       id: 10,
       title: 'Quantum Security and Cryptography',
-<<<<<<< HEAD
       description:
         'Implement quantum-resistant security solutions and cryptographic protocols.',
-=======
     rating: 4.8,
       students: '423',
       icon: <Atom className="w-8 h-8" />
@@ -412,23 +344,18 @@ export default function TrainingPage() {
       id: 10,
       title: 'Quantum Security and Cryptography',
       description: 'Implement quantum-resistant security solutions and cryptographic protocols.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       category: 'quantum-computing',
       duration: '10 weeks',
       level: 'Intermediate',
       price: '$2,399',
-<<<<<<< HEAD
       rating: 4.7,
       students: '678',
       icon: <Shield className='w-8 h-8' />,
     },
-=======
     rating: 4.7,
       students: '678',
       icon: <Shield className="w-8 h-8" />
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'Implement quantum-resistant security solutions and cryptographic protocols.',
       category: 'quantum-computing',
       duration: '10 weeks',
@@ -438,31 +365,25 @@ export default function TrainingPage() {
       students: '678',
       icon: <Shield className="w-8 h-8" />
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
     // Autonomous Operations Programs
     {
       id: 11,
       title: 'Business Process Automation',
-<<<<<<< HEAD
-<<<<<<< HEAD
       description:
         'Learn to automate complex business processes with AI and robotics.',
-=======
       description: 'Learn to automate complex business processes with AI and robotics.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       category: 'autonomous-ops',
       duration: '8 weeks',
       level: 'Intermediate',
       price: '$1,999',
-<<<<<<< HEAD
-=======
       description: 'Learn to automate complex business processes with AI and robotics.',
       category: 'autonomous-ops',
       duration: '8 weeks',
       level: 'Intermediate',
       price: '$1,999';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       rating: 4.8,
       students: '945',
       icon: <Zap className="w-8 h-8" />
@@ -470,10 +391,8 @@ export default function TrainingPage() {
     {
       id: 12,
       title: 'Autonomous Decision Systems',
-<<<<<<< HEAD
       description:
         'Design and implement AI-powered autonomous decision-making systems.',
-=======
     rating: 4.8,
       students: '945',
       icon: <Zap className="w-8 h-8" />
@@ -482,23 +401,18 @@ export default function TrainingPage() {
       id: 12,
       title: 'Autonomous Decision Systems',
       description: 'Design and implement AI-powered autonomous decision-making systems.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       category: 'autonomous-ops',
       duration: '12 weeks',
       level: 'Advanced',
       price: '$2,999',
-<<<<<<< HEAD
       rating: 4.9,
       students: '567',
       icon: <Target className='w-8 h-8' />,
     },
-=======
     rating: 4.9,
       students: '567',
       icon: <Target className="w-8 h-8" />
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'Design and implement AI-powered autonomous decision-making systems.',
       category: 'autonomous-ops',
       duration: '12 weeks',
@@ -508,31 +422,25 @@ export default function TrainingPage() {
       students: '567',
       icon: <Target className="w-8 h-8" />
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
     // Enterprise IT Programs
     {
       id: 13,
       title: 'Enterprise AI Integration',
-<<<<<<< HEAD
-<<<<<<< HEAD
       description:
         'Integrate AI solutions into existing enterprise infrastructure and systems.',
-=======
       description: 'Integrate AI solutions into existing enterprise infrastructure and systems.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       category: 'enterprise-it',
       duration: '10 weeks',
       level: 'Intermediate',
       price: '$2,299',
-<<<<<<< HEAD
-=======
       description: 'Integrate AI solutions into existing enterprise infrastructure and systems.',
       category: 'enterprise-it',
       duration: '10 weeks',
       level: 'Intermediate',
       price: '$2,299';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       rating: 4.7,
       students: '823',
       icon: <Building className="w-8 h-8" />
@@ -540,10 +448,8 @@ export default function TrainingPage() {
     {
       id: 14,
       title: 'Cloud-Native AI Development',
-<<<<<<< HEAD
       description:
         'Build and deploy AI applications using cloud-native technologies and practices.',
-=======
     rating: 4.7,
       students: '823',
       icon: <Building className="w-8 h-8" />
@@ -552,19 +458,16 @@ export default function TrainingPage() {
       id: 14,
       title: 'Cloud-Native AI Development',
       description: 'Build and deploy AI applications using cloud-native technologies and practices.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       category: 'enterprise-it',
       duration: '8 weeks',
       level: 'Intermediate',
       price: '$1,899',
-<<<<<<< HEAD
-=======
       description: 'Build and deploy AI applications using cloud-native technologies and practices.',
       category: 'enterprise-it',
       duration: '8 weeks',
       level: 'Intermediate',
       price: '$1,899';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       rating: 4.6,
       students: '1,134';
       icon: <Server className="w-8 h-8" />
@@ -572,10 +475,8 @@ export default function TrainingPage() {
     {
       id: 15,
       title: 'DevOps for AI Systems',
-<<<<<<< HEAD
       description:
         'Implement DevOps practices specifically for AI and machine learning systems.',
-=======
     rating: 4.6,
       students: '1,134',
     icon: <Server className="w-8 h-8" />
@@ -584,30 +485,25 @@ export default function TrainingPage() {
       id: 15,
       title: 'DevOps for AI Systems',
       description: 'Implement DevOps practices specifically for AI and machine learning systems.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       category: 'enterprise-it',
       duration: '6 weeks',
       level: 'Intermediate',
       price: '$1,599',
-<<<<<<< HEAD
-=======
       description: 'Implement DevOps practices specifically for AI and machine learning systems.',
       category: 'enterprise-it',
       duration: '6 weeks',
       level: 'Intermediate',
       price: '$1,599';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       rating: 4.8,
       students: '756',
       icon: <Zap className="w-8 h-8" />
     }
   ];
 
-<<<<<<< HEAD
   const filteredPrograms = allPrograms.filter(
     program =>
       selectedCategory === 'all' || program.category === selectedCategory
-=======
     rating: 4.8,
       students: '756',
       icon: <Zap className="w-8 h-8" />
@@ -616,17 +512,13 @@ export default function TrainingPage() {
 
   const filteredPrograms = allPrograms.filter(program => 
     selectedCategory === 'all' || program.category === selectedCategory
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const filteredPrograms = allPrograms.filter(program => 
     selectedCategory === 'all' || program.category === selectedCategory
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   );
 
   const getCategoryIcon = (category: string) => {
     const icons = {
-<<<<<<< HEAD
-<<<<<<< HEAD
       'ai-consciousness': <Brain className='w-6 h-6' />,
       'quantum-computing': <Atom className='w-6 h-6' />,
       'autonomous-ops': <Rocket className='w-6 h-6' />,
@@ -637,43 +529,35 @@ export default function TrainingPage() {
         <GraduationCap className='w-6 h-6' />
       )
     );
-=======
       'ai-consciousness': <Brain className="w-6 h-6" />;
       'quantum-computing': <Atom className="w-6 h-6" />;
       'autonomous-ops': <Rocket className="w-6 h-6" />;
       'enterprise-it': <Building className="w-6 h-6" />
     };
     return icons[category as keyof typeof icons] || <GraduationCap className="w-6 h-6" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       'ai-consciousness': <Brain className="w-6 h-6" />;
       'quantum-computing': <Atom className="w-6 h-6" />;
       'autonomous-ops': <Rocket className="w-6 h-6" />;
       'enterprise-it': <Building className="w-6 h-6" />
     };
     return icons[category as keyof typeof icons] || <GraduationCap className="w-6 h-6" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const getCategoryColor = (category: string) => {
     const colors = {
-<<<<<<< HEAD
-<<<<<<< HEAD
       'ai-consciousness': 'cyan',
       'quantum-computing': 'purple',
       'autonomous-ops': 'green',
       'enterprise-it': 'blue',
-=======
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     };
     return colors[category as keyof typeof colors] || 'gray'
   };
 
   const toggleProgram = (id: number) => {
-<<<<<<< HEAD
     setExpandedProgram(expandedProgram === id ? null : id);
-=======
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
     };
     return colors[category as keyof typeof colors] || 'gray'
@@ -681,33 +565,26 @@ export default function TrainingPage() {
 
   const toggleProgram = (id: number) => {
     setExpandedProgram(expandedProgram === id ? null : id)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     setExpandedProgram(expandedProgram === id ? null : id)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
     <Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <SEO
         title='Training & Certification - Zion Tech Group'
         description='Master AI consciousness, quantum computing, and autonomous operations with our comprehensive training programs. Earn industry-recognized certifications and advance your career.'
-=======
       <SEO 
         title="Training & Certification - Zion Tech Group"
         description="Master AI consciousness, quantum computing, and autonomous operations with our comprehensive training programs. Earn industry-recognized certifications and advance your career."
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       />
       
       <div className="min-h-screen">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className='relative py-20 lg:py-32 overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10' />
           <div className='relative z-10 container mx-auto px-4 text-center'>
-=======
       <SEO 
         title="Training & Certification - Zion Tech Group"
         description="Master AI consciousness, quantum computing, and autonomous operations with our comprehensive training programs. Earn industry-recognized certifications and advance your career."
@@ -718,23 +595,18 @@ export default function TrainingPage() {
         <section className="relative py-20 lg:py-32 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
           <div className="relative z-10 container mx-auto px-4 text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="relative py-20 lg:py-32 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
           <div className="relative z-10 container mx-auto px-4 text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
               <h1 className='text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>
-=======
               <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 Training & Certification
               </h1>
               <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
@@ -749,10 +621,8 @@ export default function TrainingPage() {
                   <Award className="w-5 h-5" />
                   <span>Industry Certifications</span>
                 </div>
-<<<<<<< HEAD
                 <div className='flex items-center gap-2'>
                   <Users className='w-5 h-5' />
-=======
               <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 Training & Certification
               </h1>
@@ -770,11 +640,9 @@ export default function TrainingPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Users className="w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className="flex items-center gap-2">
                   <Users className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <span>Global Community</span>
                 </div>
               </div>
@@ -783,23 +651,16 @@ export default function TrainingPage() {
         </section>
 
         {/* Category Filters */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-10'>
           <div className='container mx-auto px-4'>
             <div className='flex flex-wrap justify-center gap-3'>
               {trainingCategories.map(category => (
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         <section className="py-10">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center gap-3">
               {trainingCategories.map((category) => (
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
@@ -817,29 +678,21 @@ export default function TrainingPage() {
         </section>
 
         {/* Featured Programs */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20'>
           <div className='container mx-auto px-4'>
-=======
         <section className="py-20">
           <div className="container mx-auto px-4">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-20">
           <div className="container mx-auto px-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className='text-center mb-16'
-=======
               className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             >
               <h2 className="text-4xl font-bold text-white mb-4">
                 Featured Programs
@@ -848,10 +701,8 @@ export default function TrainingPage() {
                 Our most popular and comprehensive training programs
               </p>
             </motion.div>
-<<<<<<< HEAD
 
             <div className='grid lg:grid-cols-3 gap-8 mb-16'>
-=======
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -863,11 +714,9 @@ export default function TrainingPage() {
             </motion.div>
             
             <div className="grid lg:grid-cols-3 gap-8 mb-16">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             
             <div className="grid lg:grid-cols-3 gap-8 mb-16">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               {featuredPrograms.map((program, index) => (
                 <motion.div
                   key={program.id}
@@ -875,12 +724,9 @@ export default function TrainingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden'
-=======
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 >
                   <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
                     {program.icon}
@@ -934,9 +780,7 @@ export default function TrainingPage() {
                       className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
                     >
                       Enroll Now
-<<<<<<< HEAD
                       <ArrowRight className='w-4 h-4' />
-=======
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
                 >
                   <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
@@ -992,10 +836,8 @@ export default function TrainingPage() {
                     >
                       Enroll Now
                       <ArrowRight className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <ArrowRight className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     </a>
                   </div>
                 </motion.div>
@@ -1005,29 +847,21 @@ export default function TrainingPage() {
         </section>
 
         {/* All Programs */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 bg-black/50'>
           <div className='container mx-auto px-4'>
-=======
         <section className="py-20 bg-black/50">
           <div className="container mx-auto px-4">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-20 bg-black/50">
           <div className="container mx-auto px-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className='text-center mb-16'
-=======
               className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             >
               <h2 className="text-4xl font-bold text-white mb-4">
                 All Training Programs
@@ -1036,10 +870,8 @@ export default function TrainingPage() {
                 Comprehensive collection of training programs across all technology domains
               </p>
             </motion.div>
-<<<<<<< HEAD
 
             <div className='space-y-4'>
-=======
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -1051,11 +883,9 @@ export default function TrainingPage() {
             </motion.div>
             
             <div className="space-y-4">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             
             <div className="space-y-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               {filteredPrograms.map((program, index) => (
                 <motion.div
                   key={program.id}
@@ -1063,12 +893,9 @@ export default function TrainingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden'
-=======
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 >
                   <div className="p-6">
                     <div className="flex items-start gap-4">
@@ -1102,10 +929,8 @@ export default function TrainingPage() {
                             <Users className="w-3 h-3" />
                             <span>{program.students} students</span>
                           </div>
-<<<<<<< HEAD
                           <div className='flex items-center gap-1'>
                             <Star className='w-3 h-3 text-yellow-400 fill-current' />
-=======
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
                 >
                   <div className="p-6">
@@ -1142,82 +967,58 @@ export default function TrainingPage() {
                           </div>
                           <div className="flex items-center gap-1">
                             <Star className="w-3 h-3 text-yellow-400 fill-current" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                           <div className="flex items-center gap-1">
                             <Star className="w-3 h-3 text-yellow-400 fill-current" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                             <span>{program.rating}</span>
                           </div>
                         </div>
                       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                       <div className='text-right flex-shrink-0'>
                         <div className='text-2xl font-bold text-cyan-400 mb-2'>
-=======
                       
                       <div className="text-right flex-shrink-0">
                         <div className="text-2xl font-bold text-cyan-400 mb-2">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       
                       <div className="text-right flex-shrink-0">
                         <div className="text-2xl font-bold text-cyan-400 mb-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           {program.price}
                         </div>
                         <button
                           onClick={() => toggleProgram(program.id)}
-<<<<<<< HEAD
-<<<<<<< HEAD
                           className='text-gray-400 hover:text-white transition-colors duration-300'
-=======
                           className="text-gray-400 hover:text-white transition-colors duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         >
                           {expandedProgram === program.id ? (
                             <ChevronUp className="w-5 h-5" />
                           ) : (
-<<<<<<< HEAD
                             <ChevronDown className='w-5 h-5' />
-=======
                           className="text-gray-400 hover:text-white transition-colors duration-300"
                         >
                           {expandedProgram === program.id ? (
                             <ChevronUp className="w-5 h-5" />
                           ) : (
                             <ChevronDown className="w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                             <ChevronDown className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           )}
                         </button>
                       </div>
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-                    
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                    
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     {expandedProgram === program.id && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         className='mt-4 pt-4 border-t border-gray-700'
-=======
                         className="mt-4 pt-4 border-t border-gray-700"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       >
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
@@ -1235,10 +1036,8 @@ export default function TrainingPage() {
                                 <CheckCircle className="w-4 h-4 text-green-400" />
                                 <span>Real-world project implementation</span>
                               </li>
-<<<<<<< HEAD
                               <li className='flex items-center gap-2'>
                                 <CheckCircle className='w-4 h-4 text-green-400' />
-=======
                         className="mt-4 pt-4 border-t border-gray-700"
                       >
                         <div className="grid md:grid-cols-2 gap-6">
@@ -1259,21 +1058,15 @@ export default function TrainingPage() {
                               </li>
                               <li className="flex items-center gap-2">
                                 <CheckCircle className="w-4 h-4 text-green-400" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                               <li className="flex items-center gap-2">
                                 <CheckCircle className="w-4 h-4 text-green-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                                 <span>Industry best practices</span>
                               </li>
                             </ul>
                           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-                          
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           <div>
                             <h4 className="text-white font-semibold mb-3">Program Details</h4>
                             <div className="space-y-2 text-sm text-gray-300">
@@ -1291,11 +1084,9 @@ export default function TrainingPage() {
                               </div>
                               <div className="flex justify-between">
                                 <span>Support:</span>
-<<<<<<< HEAD
                                 <span className='text-white'>
                                   24/7 Community + Mentors
                                 </span>
-=======
                           
                           <div>
                             <h4 className="text-white font-semibold mb-3">Program Details</h4>
@@ -1315,22 +1106,17 @@ export default function TrainingPage() {
                               <div className="flex justify-between">
                                 <span>Support:</span>
                                 <span className="text-white">24/7 Community + Mentors</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                                 <span className="text-white">24/7 Community + Mentors</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                               </div>
                             </div>
                           </div>
                         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                         <div className='mt-6 flex gap-3'>
-=======
                         
                         <div className="mt-6 flex gap-3">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           <a
                             href="#"
                             className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
@@ -1339,10 +1125,8 @@ export default function TrainingPage() {
                             <ArrowRight className="w-4 h-4" />
                           </a>
                           <a
-<<<<<<< HEAD
                             href='#'
                             className='inline-flex items-center justify-center gap-2 border-2 border-cyan-500 text-cyan-400 font-bold py-3 px-6 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300'
-=======
                         
                         <div className="mt-6 flex gap-3">
                           <a
@@ -1355,11 +1139,9 @@ export default function TrainingPage() {
                           <a
                             href="#"
                             className="inline-flex items-center justify-center gap-2 border-2 border-cyan-500 text-cyan-400 font-bold py-3 px-6 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                             href="#"
                             className="inline-flex items-center justify-center gap-2 border-2 border-cyan-500 text-cyan-400 font-bold py-3 px-6 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           >
                             Learn More
                           </a>
@@ -1374,29 +1156,21 @@ export default function TrainingPage() {
         </section>
 
         {/* Learning Paths */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20'>
           <div className='container mx-auto px-4'>
-=======
         <section className="py-20">
           <div className="container mx-auto px-4">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-20">
           <div className="container mx-auto px-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className='text-center mb-16'
-=======
               className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             >
               <h2 className="text-4xl font-bold text-white mb-4">
                 Learning Paths
@@ -1441,7 +1215,6 @@ export default function TrainingPage() {
                   icon: <Rocket className="w-12 h-12" />,
                   color: 'green',
                   path: [
-<<<<<<< HEAD
                     'Business Process Analysis',
                     'Automation Strategy',
                     'System Implementation',
@@ -1449,7 +1222,6 @@ export default function TrainingPage() {
                     'Performance Optimization',
                   ],
                 },
-=======
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -1498,12 +1270,10 @@ export default function TrainingPage() {
                     'Business Process AnalysisAutomation StrategySystem ImplementationChange ManagementPerformance Optimization'
                   ]
                 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     'Business Process AnalysisAutomation StrategySystem ImplementationChange ManagementPerformance Optimization'
                   ]
                 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               ].map((path, index) => (
                 <motion.div
                   key={path.title}
@@ -1511,12 +1281,9 @@ export default function TrainingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className='p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300'
-=======
                   className="p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 >
                   <div className="text-center mb-6">
                     <div className={`w-20 h-20 bg-${path.color}-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4`}>
@@ -1533,10 +1300,8 @@ export default function TrainingPage() {
                         <Clock className="w-4 h-4" />
                         <span>{path.duration}</span>
                       </div>
-<<<<<<< HEAD
                       <div className='flex items-center gap-1'>
                         <BookOpen className='w-4 h-4' />
-=======
                   className="p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="text-center mb-6">
@@ -1556,23 +1321,18 @@ export default function TrainingPage() {
                       </div>
                       <div className="flex items-center gap-1">
                         <BookOpen className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <div className="flex items-center gap-1">
                         <BookOpen className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         <span>{path.courses} courses</span>
                       </div>
                     </div>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   <div className='space-y-3 mb-6'>
-=======
                   
                   <div className="space-y-3 mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     {path.path.map((step, stepIndex) => (
                       <div key={stepIndex} className="flex items-center gap-3 text-sm">
                         <div className="w-6 h-6 bg-cyan-500/20 text-cyan-400 rounded-full flex items-center justify-center text-xs font-bold">
@@ -1588,9 +1348,7 @@ export default function TrainingPage() {
                     className={`w-full inline-flex items-center justify-center gap-2 bg-${path.color}-500/20 text-${path.color}-400 font-bold py-3 px-6 rounded-xl border border-${path.color}-500/30 hover:bg-${path.color}-500 hover:text-white transition-all duration-300`}
                   >
                     Start Learning Path
-<<<<<<< HEAD
                     <ArrowRight className='w-4 h-4' />
-=======
                   
                   <div className="space-y-3 mb-6">
                     {path.path.map((step, stepIndex) => (
@@ -1609,10 +1367,8 @@ export default function TrainingPage() {
                   >
                     Start Learning Path
                     <ArrowRight className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <ArrowRight className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   </a>
                 </motion.div>
               ))}
@@ -1621,30 +1377,22 @@ export default function TrainingPage() {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10'>
           <div className='container mx-auto px-4 text-center'>
-=======
         <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="container mx-auto px-4 text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="container mx-auto px-4 text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
               <h2 className='text-4xl font-bold text-white mb-6'>
-=======
               <h2 className="text-4xl font-bold text-white mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 Ready to Transform Your Career?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -1652,10 +1400,8 @@ export default function TrainingPage() {
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
-<<<<<<< HEAD
                   href='/contact'
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105'
-=======
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Career?
               </h2>
@@ -1666,27 +1412,20 @@ export default function TrainingPage() {
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 >
                   Get Personalized Guidance
                 </a>
                 <a
-<<<<<<< HEAD
-<<<<<<< HEAD
                   href='/resources'
                   className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300'
-=======
                   href="/resources"
                   className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   href="/resources"
                   className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 >
                   Explore Free Resources
                 </a>
@@ -1696,8 +1435,6 @@ export default function TrainingPage() {
         </section>
       </div>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 
   {
@@ -1750,14 +1487,11 @@ export default function TrainingPage() {
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Career? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Get Personalized Guidance </Link> <a href="/resources" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Explore Free Resources </Link> </div> </motion.div> </div> </section> </div> </Layout>) 
 };
-=======
   )
 };
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default Training;

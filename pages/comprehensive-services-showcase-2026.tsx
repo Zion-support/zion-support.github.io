@@ -3,8 +3,6 @@ import { motion } from 'framer-motion';
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
 import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
 import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   Search,
   Filter,
@@ -21,12 +19,11 @@ import {
   Robot,
   Cube,
   Sparkles,;
-=======
 import { 
   Search, Filter, Star, Users, TrendingUp, 
   Clock, Zap, Shield, Cloud, Brain, 
   Database, Globe, Robot, Cube, Sparkles
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 } from 'lucide-react';
 
 interface Service {
@@ -61,14 +58,12 @@ interface Service {
     address: string,
     website: string
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
-=======
 import { 
   Search, Filter, Star, Users, TrendingUp, 
   Clock, Zap, Shield, Cloud, Brain, 
@@ -110,19 +105,15 @@ interface Service {
   
     },
     realImplementation: boolean,
-=======
   realImplementation: boolean,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
   reviews: number
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 const ComprehensiveServicesShowcase2026: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -131,8 +122,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
   const [sortBy, setSortBy] = useState('popularity');
 
   const allServices = [
-<<<<<<< HEAD
-<<<<<<< HEAD
     ...innovativeMicroSaasServices2026,
     ...specializedITSolutions2026,
     ...emergingTechServices2026,
@@ -164,29 +153,24 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     'AR/VR & Immersive Technology',
     'Robotics & Automation',
     'Digital Twin & Simulation',
-=======
     ...innovativeMicroSaasServices2026;
     ...specializedITSolutions2026;
     ...emergingTechServices2026
   ];
 
   const categories = [
-=======
     ...innovativeMicroSaasServices2026;
     ...specializedITSolutions2026;
     ...emergingTechServices2026
   ];
 
   const categories = [
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     'allBusiness Intelligence & AnalyticsContent Creation & MarketingCustomer Service & SupportE-commerce & RetailHR & RecruitmentFinancial ManagementProject Management';
     'Education & TrainingHealthcare & MedicalCloud Infrastructure & DevOpsCybersecurity & Threat IntelligenceData Engineering & AnalyticsAPI Management & IntegrationNetwork Monitoring & ManagementDatabase Management & Optimization';
     'IT Service ManagementBackup & Disaster RecoveryQuantum Computing & AIBlockchain & Web3Internet of Things (IoT)Edge Computing & 5GAR/VR & Immersive TechnologyRobotics & Automation';
     'Digital Twin & Simulation'
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const priceRanges = [
@@ -195,8 +179,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     { value: '100-200', label: '$100 - $200' },
     { value: '200-400', label: '$200 - $400' },
     { value: '400-600', label: '$400 - $600' },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { value: '600+', label: '$600+' },
   ];
 
@@ -230,17 +212,15 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       })();
 
     return matchesSearch && matchesCategory && matchesPrice;
-=======
     { value: '600+', label: '$600+' }
   ];
 
   const filteredServices = allServices.filter(service => {
-=======
     { value: '600+', label: '$600+' }
   ];
 
   const filteredServices = allServices.filter(service => {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
@@ -260,10 +240,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     })();
     
     return matchesSearch && matchesCategory && matchesPrice
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -271,8 +248,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       case 'popularity':
         return b.popular ? 1 : -1;
       case 'price-low':
-<<<<<<< HEAD
-<<<<<<< HEAD
         return (
           parseInt(a.price.replace('$', '')) -
           parseInt(b.price.replace('$', ''))
@@ -282,37 +257,27 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           parseInt(b.price.replace('$', '')) -
           parseInt(a.price.replace('$', ''))
         );
-=======
         return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''));
       case 'price-high':
         return parseInt(b.price.replace('$', '')) - parseInt(a.price.replace('$', ''));
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''));
       case 'price-high':
         return parseInt(b.price.replace('$', '')) - parseInt(a.price.replace('$', ''));
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       case 'rating':
         return b.rating - a.rating;
       case 'customers':
         return b.customers - a.customers;
-<<<<<<< HEAD
-<<<<<<< HEAD
       default:
         return 0;
-=======
       default: return 0
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       default: return 0
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
   });
 
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
-<<<<<<< HEAD
-<<<<<<< HEAD
       'Business Intelligence & Analytics': <Database className='w-5 h-5' />,
       'Content Creation & Marketing': <Sparkles className='w-5 h-5' />,
       'Customer Service & Support': <Users className='w-5 h-5' />,
@@ -337,7 +302,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       'AR/VR & Immersive Technology': <Cube className='w-5 h-5' />,
       'Robotics & Automation': <Robot className='w-5 h-5' />,
       'Digital Twin & Simulation': <Cube className='w-5 h-5' />,
-=======
       'Business Intelligence & Analytics': <Database className="w-5 h-5" />;
       'Content Creation & Marketing': <Sparkles className="w-5 h-5" />;
       'Customer Service & Support': <Users className="w-5 h-5" />;
@@ -362,7 +326,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       'AR/VR & Immersive Technology': <Cube className="w-5 h-5" />;
       'Robotics & Automation': <Robot className="w-5 h-5" />;
       'Digital Twin & Simulation': <Cube className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     };
     return iconMap[category] || <Sparkles className="w-5 h-5" />
   };
@@ -490,7 +454,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
               >
-<<<<<<< HEAD
                 Email Us
               </a>
               <a
@@ -499,7 +462,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
               >
                 Call Us
               </a>
-=======
       'Business Intelligence & Analytics': <Database className="w-5 h-5" />;
       'Content Creation & Marketing': <Sparkles className="w-5 h-5" />;
       'Customer Service & Support': <Users className="w-5 h-5" />;
@@ -651,8 +613,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
               >
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 {/* Service Header */}
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-3">
@@ -790,16 +751,11 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                   Call Us
                 </a>
               </div>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </div>
   );
 };
@@ -819,15 +775,12 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
 }</div> </div> <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30"> <div className="text-center"> <h2 className="text-3xl font-bold text-white mb-4"> text-xl text-gray-300 mb-8 max-w-2xl mx-auto"> Get in touch with our team to discuss how our innovative services can help you achieve your goals. </p> <div className=" grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"> <div className=" text-center"> <div className=" w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Users className=" w-8 h-8 text-cyan-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">Expert Team</h3> <p className=" text-gray-300 text-sm">Dedicated professionals ready to help</p> </div> <div className=" text-center"> <div className=" w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Zap className=" w-8 h-8 text-blue-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">Fast Implementation</h3> <p className=" text-gray-300 text-sm">Quick setup and deployment</p> </div> <div className=" text-center"> <div className=" w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Shield className=" w-8 h-8 text-purple-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">24/7 Support</h3> <p className=" text-gray-300 text-sm">Round-the-clock assistance</p> </div> </div> <div className=" flex flex-col sm:flex-row gap-4 justify-center items-center"> <a href=" mailto:kleber@ziontechgroup.com"className=" bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"> Email Us </Link> <a href=" tel:+13024640950"className=" bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300" > Call Us </Link> </div> </div> </div> </div> </div>) 
 };
 export default ComprehensiveServicesShowcase2026;
-=======
   )
 };
 
 export default ComprehensiveServicesShowcase2026;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
 
 export default ComprehensiveServicesShowcase2026;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

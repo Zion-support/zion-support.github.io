@@ -3,8 +3,6 @@ import { useRouter } from 'next/router';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   Mail,
   AlertCircle,
@@ -14,9 +12,8 @@ import {
   ArrowLeft,
   Eye,;
 } from 'lucide-react';
-=======
 import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 import { AuthLayout } from '@/layout';
 import { supabase } from '@/integrations/supabase/client', // Import Supabase client
 import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
@@ -25,10 +22,8 @@ import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 export default function VerifyStatus() {
 
   const router = useRouter();
-<<<<<<< HEAD
   const { user: authUser, isLoading: authLoading } = useAuth(); // Get user from AuthContext
   const { email: emailParam } = router.query;
-=======
 import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react'
 import { AuthLayout } from '@/layout';
 import { supabase } from '@/integrations/supabase/client', // Import Supabase client
@@ -40,11 +35,9 @@ export default function VerifyStatus() {
   const router = useRouter();
   const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
   const { email: emailParam } = router.query,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
   const { email: emailParam } = router.query,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
@@ -55,34 +48,24 @@ export default function VerifyStatus() {
 
   useEffect(() => {
     if (typeof emailParam === 'string') {
-<<<<<<< HEAD
-<<<<<<< HEAD
       setEmail(emailParam);
-=======
       setEmail(emailParam)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       setEmail(emailParam)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
   }, [emailParam]);
 
   // Countdown timer for resend button
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
     let interval: NodeJS.Timeout;
-=======
     let interval: NodeJS.Timeout,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     if (countdown > 0) {
       interval = setInterval(() => {
         setCountdown(prev => prev - 1)
       }, 1000)
     }
-<<<<<<< HEAD
     return () => clearInterval(interval);
-=======
     let interval: NodeJS.Timeout,
     if (countdown > 0) {
       interval = setInterval(() => {
@@ -90,24 +73,17 @@ export default function VerifyStatus() {
       }, 1000)
     }
     return () => clearInterval(interval)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     return () => clearInterval(interval)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }, [countdown]);
 
   const handleResendEmail = async () => {
     if (!email) {
       setError('Please enter your email address');
-<<<<<<< HEAD
-<<<<<<< HEAD
       return;
-=======
       return
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       return
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
 
     setIsResending(true);
@@ -118,28 +94,20 @@ export default function VerifyStatus() {
       const response = await fetch('/api/resend-verification-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-<<<<<<< HEAD
         body: JSON.stringify({ email }),
-=======
         body: JSON.stringify({ email })
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         body: JSON.stringify({ email })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       });
 
       const data = await response.json();
 
       if (response.ok) {
-<<<<<<< HEAD
-<<<<<<< HEAD
         setMessage(
           'Verification email sent successfully! Please check your inbox.'
         );
-=======
         setMessage('Verification email sent successfully! Please check your inbox.');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         setLastSentTime(new Date());
         setCountdown(60), // 60 second cooldown
       } else {
@@ -148,9 +116,7 @@ export default function VerifyStatus() {
     } catch (err) {
       setError('Network error. Please try again.')
     } finally {
-<<<<<<< HEAD
       setIsResending(false);
-=======
         setMessage('Verification email sent successfully! Please check your inbox.');
         setLastSentTime(new Date());
         setCountdown(60), // 60 second cooldown
@@ -161,25 +127,18 @@ export default function VerifyStatus() {
       setError('Network error. Please try again.')
     } finally {
       setIsResending(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       setIsResending(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
   };
 
   const handleCheckStatus = async () => {
     if (!email) {
       setError('Please enter your email address');
-<<<<<<< HEAD
-<<<<<<< HEAD
       return;
-=======
       return
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       return
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
 
     setIsCheckingStatus(true);
@@ -188,13 +147,10 @@ export default function VerifyStatus() {
 
     try {
       // Attempt to refresh the session to get the latest user status
-<<<<<<< HEAD
-<<<<<<< HEAD
       const { error: refreshError } = await supabase.auth.refreshSession();
 
-=======
       const { error: refreshError } = await supabase.auth.refreshSession(),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       if (refreshError) {
         // Don't treat all refresh errors as critical for this check;
         // as user might not have a session yet or it might be invalid.
@@ -206,9 +162,7 @@ export default function VerifyStatus() {
       if (getUserError) {
         setError(`Failed to get user status: ${getUserError.message}. Please try logging in directly.`),
         setIsCheckingStatus(false);
-<<<<<<< HEAD
         return;
-=======
       const { error: refreshError } = await supabase.auth.refreshSession(),
       if (refreshError) {
         // Don't treat all refresh errors as critical for this check;
@@ -222,10 +176,8 @@ export default function VerifyStatus() {
         setError(`Failed to get user status: ${getUserError.message}. Please try logging in directly.`),
         setIsCheckingStatus(false);
         return
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         return
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       }
 
       if (user && user.email_confirmed_at) {
@@ -233,14 +185,11 @@ export default function VerifyStatus() {
         // The onAuthStateChange listener in AuthProvider should ideally handle redirection.
         // But we can also push them to login page directly.
         setTimeout(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
           router.push(`/auth/login?email=${encodeURIComponent(email)}`);
         }, 2000);
-=======
           router.push(`/auth/login?email=${encodeURIComponent(email)}`)
         }, 2000)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       } else if (user) {
         setMessage('Email is not yet verified. Please check your inbox for the verification link and click it. If you have already clicked it, try logging in.');
         setMessage('Email is not yet verified. Please check your inbox for the verification link. If you have just clicked it, please wait a few moments and try again, or attempt to log in.');
@@ -255,9 +204,7 @@ export default function VerifyStatus() {
       logErrorToProduction('Error checking verification status:', { data: err }),
       setError('An unexpected error occurred while checking status. Please try again.')
     } finally {
-<<<<<<< HEAD
       setIsCheckingStatus(false);
-=======
           router.push(`/auth/login?email=${encodeURIComponent(email)}`)
         }, 2000)
       } else if (user) {
@@ -275,58 +222,46 @@ export default function VerifyStatus() {
       setError('An unexpected error occurred while checking status. Please try again.')
     } finally {
       setIsCheckingStatus(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       setIsCheckingStatus(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
   };
 
   const handleTryLogin = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
     router.push(`/auth/login?email=${encodeURIComponent(email)}`);
   };
 
   const handleGoBack = () => {
     router.back();
-=======
     router.push(`/auth/login?email=${encodeURIComponent(email)}`)
   };
 
   const handleGoBack = () => {
     router.back()
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     router.push(`/auth/login?email=${encodeURIComponent(email)}`)
   };
 
   const handleGoBack = () => {
     router.back()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
     <AuthLayout>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className='flex min-h-screen items-center justify-center p-4'>
         <div className='w-full max-w-md space-y-6'>
-=======
       <div className="flex min-h-screen items-center justify-center p-4">
         <div className="w-full max-w-md space-y-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           {/* Header */}
           <div className="text-center">
             <div className="mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
               <Mail className="h-6 w-6 text-blue-600" />
             </div>
-<<<<<<< HEAD
             <h1 className='text-2xl font-bold text-gray-900'>
               Email Verification
             </h1>
             <p className='text-sm text-gray-600 mt-2'>
-=======
       <div className="flex min-h-screen items-center justify-center p-4">
         <div className="w-full max-w-md space-y-6">
           {/* Header */}
@@ -336,63 +271,48 @@ export default function VerifyStatus() {
             </div>
             <h1 className="text-2xl font-bold text-gray-900">Email Verification</h1>
             <p className="text-sm text-gray-600 mt-2">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <h1 className="text-2xl font-bold text-gray-900">Email Verification</h1>
             <p className="text-sm text-gray-600 mt-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               Check and manage your email verification status
             </p>
           </div>
 
           {/* Success Message */}
           {message && (
-<<<<<<< HEAD
-<<<<<<< HEAD
             <Alert className='border-green-500 bg-green-50 text-green-900'>
               <CheckCircle className='h-4 w-4' />
-=======
             <Alert className="border-green-500 bg-green-50 text-green-900">
               <CheckCircle className="h-4 w-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <Alert className="border-green-500 bg-green-50 text-green-900">
               <CheckCircle className="h-4 w-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <AlertDescription>{message}</AlertDescription>
             </Alert>
           )}
 
           {/* Error Message */}
           {error && (
-<<<<<<< HEAD
-<<<<<<< HEAD
             <Alert variant='destructive'>
               <AlertCircle className='h-4 w-4' />
-=======
             <Alert variant="destructive">
               <AlertCircle className="h-4 w-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <Alert variant="destructive">
               <AlertCircle className="h-4 w-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <AlertDescription>{error}</AlertDescription>
             </Alert>
           )}
 
           {/* Email Input */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className='space-y-2'>
             <label
               htmlFor='email'
               className='block text-sm font-medium text-gray-700'
             >
-=======
           <div className="space-y-2">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               Email Address
             </label>
             <Input
@@ -404,9 +324,7 @@ export default function VerifyStatus() {
               className="w-full"
             />
             {email && (
-<<<<<<< HEAD
               <p className='text-xs text-gray-500'>
-=======
           <div className="space-y-2">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Email Address
@@ -421,10 +339,8 @@ export default function VerifyStatus() {
             />
             {email && (
               <p className="text-xs text-gray-500">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <p className="text-xs text-gray-500">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 We'll check the verification status for this email address
               </p>
             )}
@@ -432,40 +348,30 @@ export default function VerifyStatus() {
 
           {/* Status Info */}
           {email && (
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4'>
               <h3 className='text-sm font-medium text-slate-900 dark:text-slate-100 mb-2'>
                 Verification Status
               </h3>
               <div className='text-sm text-slate-700 dark:text-slate-300 space-y-1'>
-=======
             <div className="bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4">
               <h3 className="text-sm font-medium text-slate-900 dark:text-slate-100 mb-2">Verification Status</h3>
               <div className="text-sm text-slate-700 dark:text-slate-300 space-y-1">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4">
               <h3 className="text-sm font-medium text-slate-900 dark:text-slate-100 mb-2">Verification Status</h3>
               <div className="text-sm text-slate-700 dark:text-slate-300 space-y-1">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <p>• Check your email inbox for a verification link</p>
                 <p>• Click the link in the email to verify your account</p>
                 <p>• Return here or try logging in after verification</p>
               </div>
               {lastSentTime && (
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <p className='text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center'>
                   <Clock className='h-3 w-3 mr-1' />
-=======
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center">
                   <Clock className="h-3 w-3 mr-1" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center">
                   <Clock className="h-3 w-3 mr-1" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   Last email sent: {lastSentTime.toLocaleTimeString()}
                 </p>
               )}
@@ -473,56 +379,41 @@ export default function VerifyStatus() {
           )}
 
           {/* Action Buttons */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className='space-y-3'>
-=======
           <div className="space-y-3">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="space-y-3">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {/* Check Status Button */}
             <Button
               onClick={handleCheckStatus}
               disabled={!email || isCheckingStatus}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className='w-full'
               variant='outline'
             >
               {isCheckingStatus ? (
                 <>
                   <RefreshCw className='h-4 w-4 mr-2 animate-spin' />
-=======
               className="w-full"
               variant="outline"
             >
               {isCheckingStatus ? (
                 <>
                   <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               className="w-full"
               variant="outline"
             >
               {isCheckingStatus ? (
                 <>
                   <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   Checking Status...
                 </>
               ) : (
                 <>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <Eye className='h-4 w-4 mr-2' />
-=======
                   <Eye className="h-4 w-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <Eye className="h-4 w-4 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   Check Verification Status
                 </>
               )}
@@ -532,56 +423,41 @@ export default function VerifyStatus() {
             <Button
               onClick={handleResendEmail}
               disabled={!email || isResending || countdown > 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className='w-full'
               variant='secondary'
             >
               {isResending ? (
                 <>
                   <RefreshCw className='h-4 w-4 mr-2 animate-spin' />
-=======
               className="w-full"
               variant="secondary"
             >
               {isResending ? (
                 <>
                   <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               className="w-full"
               variant="secondary"
             >
               {isResending ? (
                 <>
                   <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   Sending Email...
                 </>
               ) : countdown > 0 ? (
                 <>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <Clock className='h-4 w-4 mr-2' />
-=======
                   <Clock className="h-4 w-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <Clock className="h-4 w-4 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   Resend in {countdown}s
                 </>
               ) : (
                 <>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <Mail className='h-4 w-4 mr-2' />
-=======
                   <Mail className="h-4 w-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <Mail className="h-4 w-4 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   Resend Verification Email
                 </>
               )}
@@ -591,27 +467,19 @@ export default function VerifyStatus() {
             <Button
               onClick={handleTryLogin}
               disabled={!email}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className='w-full'
-=======
               className="w-full"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               className="w-full"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             >
               Try Login
             </Button>
           </div>
 
           {/* Help Text */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className='text-center text-sm text-gray-500 space-y-2'>
-=======
           <div className="text-center text-sm text-gray-500 space-y-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <p>
               Can't find the verification email? Check your spam folder or try a different email address.
             </p>
@@ -621,9 +489,7 @@ export default function VerifyStatus() {
               size="sm"
               className="text-blue-600 hover:text-blue-500"
             >
-<<<<<<< HEAD
               <ArrowLeft className='h-4 w-4 mr-1' />
-=======
           <div className="text-center text-sm text-gray-500 space-y-2">
             <p>
               Can't find the verification email? Check your spam folder or try a different email address.
@@ -635,53 +501,41 @@ export default function VerifyStatus() {
               className="text-blue-600 hover:text-blue-500"
             >
               <ArrowLeft className="h-4 w-4 mr-1" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <ArrowLeft className="h-4 w-4 mr-1" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               Go Back
             </Button>
           </div>
 
           {/* Additional Options */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className='border-t pt-4 space-y-2'>
             <Button
               onClick={() => router.push('/signup')}
               variant='ghost'
               className='w-full text-sm'
-=======
           <div className="border-t pt-4 space-y-2">
             <Button
               onClick={() => router.push('/signup')}
               variant="ghost"
               className="w-full text-sm"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="border-t pt-4 space-y-2">
             <Button
               onClick={() => router.push('/signup')}
               variant="ghost"
               className="w-full text-sm"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             >
               Use Different Email Address
             </Button>
             <Button
               onClick={() => router.push('/contact')}
-<<<<<<< HEAD
-<<<<<<< HEAD
               variant='ghost'
               className='w-full text-sm'
-=======
               variant="ghost"
               className="w-full text-sm"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               variant="ghost"
               className="w-full text-sm"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             >
               Contact Support
             </Button>
@@ -689,14 +543,9 @@ export default function VerifyStatus() {
         </div>
       </div>
     </AuthLayout>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

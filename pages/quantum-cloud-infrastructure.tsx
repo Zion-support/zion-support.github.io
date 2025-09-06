@@ -1,20 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function QuantumCloudInfrastructurePage() {
   return (
     <Layout>
       <Head>
         <title>Quantum Cloud Infrastructure | Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Quantum-enhanced cloud infrastructure with superior performance, security, and efficiency.'
@@ -23,10 +16,9 @@ export default function QuantumCloudInfrastructurePage() {
           rel='canonical'
           href='https://ziontechgroup.com/quantum-cloud-infrastructure'
         />
-=======
         <meta name="description" content="Quantum-enhanced cloud infrastructure with superior performance, security, and efficiency." />
         <link rel="canonical" href="https://ziontechgroup.com/quantum-cloud-infrastructure" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-8">
@@ -39,7 +31,6 @@ export default function QuantumCloudInfrastructurePage() {
               <h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
               <p className="text-slate-300">Quantum compute accelerators, advanced security protocols, real-time monitoring, cost optimization, DR, and compliance—delivered as managed foundations.</p>
             </div>
-<<<<<<< HEAD
             <div className='p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm'>
               <div className='text-3xl font-bold text-white text-base font-medium text-gray-400'>
                 Starting at $28,999<span>/month</span>
@@ -60,7 +51,6 @@ export default function QuantumCloudInfrastructurePage() {
                 >
                   Explore Services
                 </a>
-=======
         <meta name="description" content="Quantum-enhanced cloud infrastructure with superior performance, security, and efficiency." />
         <link rel="canonical" href="https://ziontechgroup.com/quantum-cloud-infrastructure" />
       </Head>
@@ -75,34 +65,25 @@ export default function QuantumCloudInfrastructurePage() {
               <h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
               <p className="text-slate-300">Quantum compute accelerators, advanced security protocols, real-time monitoring, cost optimization, DR, and compliance—delivered as managed foundations.</p>
             </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <div className="p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
               <div className="text-3xl font-bold text-white text-base font-medium text-gray-400">Starting at $28,999<span >/month</span></div>
               <div className="text-sm text-gray-400 mt-2">Trial: 30 days • Setup: 1–2 weeks</div>
               <div className="mt-6 flex gap-3">
                 <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</a>
                 <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</a>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </div>
           </div>
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

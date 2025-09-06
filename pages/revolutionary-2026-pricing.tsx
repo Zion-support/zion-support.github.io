@@ -2,8 +2,6 @@ import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   CheckCircle,
   Star,
@@ -32,30 +30,20 @@ import {
   Filter,
   Grid,
   List,;
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 import { 
   CheckCircle, Star, TrendingUp, DollarSign, Clock, Users, 
   ArrowRight, Rocket, Brain, Zap, Shield, Atom, Sparkles, 
   Target, Satellite, Globe, Cpu, Lock, Palette, Layers;
   Phone, Mail, MapPin, ExternalLink, Filter, Grid, List
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 } from 'lucide-react';
 import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
 import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-v2';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function Revolutionary2026Pricing() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
@@ -63,18 +51,13 @@ export default function Revolutionary2026Pricing() {
 
   // Combine all 2026 services
   const all2026Services = [
-<<<<<<< HEAD
-<<<<<<< HEAD
     ...innovative2026MicroSaasServicesV2,
     ...emergingTech2026ServicesV2,
-=======
     ...innovative2026MicroSaasServicesV2;
     ...emergingTech2026ServicesV2
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     ...innovative2026MicroSaasServicesV2;
     ...emergingTech2026ServicesV2
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   // Filter services based on category and price
@@ -85,15 +68,12 @@ export default function Revolutionary2026Pricing() {
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
         if (selectedCategory === 'ai') {
-<<<<<<< HEAD
-<<<<<<< HEAD
           return (
             service.category.includes('AI') ||
             service.category.includes('Machine Learning')
           );
-=======
           return service.category.includes('AI') || service.category.includes('Machine Learning')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         } else if (selectedCategory === 'quantum') {
           return service.category.includes('Quantum') || service.category.includes('Space')
         } else if (selectedCategory === 'emerging') {
@@ -101,10 +81,8 @@ export default function Revolutionary2026Pricing() {
         } else if (selectedCategory === 'enterprise') {
           return service.category.includes('Enterprise') || service.category.includes('Business')
         }
-<<<<<<< HEAD
         return true;
       });
-=======
           return service.category.includes('AI') || service.category.includes('Machine Learning')
         } else if (selectedCategory === 'quantum') {
           return service.category.includes('Quantum') || service.category.includes('Space')
@@ -115,11 +93,9 @@ export default function Revolutionary2026Pricing() {
         }
         return true
       })
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         return true
       })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
 
     // Price filter
@@ -127,8 +103,6 @@ export default function Revolutionary2026Pricing() {
       filtered = filtered.filter(service => {
         const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
         if (selectedPriceRange === 'low') return price < 1000;
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (selectedPriceRange === 'medium')
           return price >= 1000 && price < 5000;
         if (selectedPriceRange === 'high')
@@ -136,20 +110,17 @@ export default function Revolutionary2026Pricing() {
         if (selectedPriceRange === 'premium') return price >= 20000;
         return true;
       });
-=======
         if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000;
         if (selectedPriceRange === 'high') return price >= 5000 && price < 20000;
         if (selectedPriceRange === 'premium') return price >= 20000;
         return true
       })
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000;
         if (selectedPriceRange === 'high') return price >= 5000 && price < 20000;
         if (selectedPriceRange === 'premium') return price >= 20000;
         return true
       })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
 
     // Sort services
@@ -157,45 +128,31 @@ export default function Revolutionary2026Pricing() {
       if (sortBy === 'price-low') {
         const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0;
         const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
         return priceA - priceB;
-=======
         return priceA - priceB
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         return priceA - priceB
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       }
       if (sortBy === 'price-high') {
         const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0;
         const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
         return priceB - priceA;
-=======
         return priceB - priceA
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         return priceB - priceA
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       }
       if (sortBy === 'rating') return b.rating - a.rating;
       if (sortBy === 'popularity') return b.customers - a.customers;
       if (sortBy === 'name') return a.name.localeCompare(b.name);
-<<<<<<< HEAD
-<<<<<<< HEAD
       return 0;
-=======
       return 0
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     });
 
     return filtered
   }, [selectedCategory, selectedPriceRange, sortBy, all2026Services]);
 
   const categories = [
-<<<<<<< HEAD
     {
       id: 'all',
       name: 'All Services',
@@ -234,7 +191,6 @@ export default function Revolutionary2026Pricing() {
           s.category.includes('Enterprise') || s.category.includes('Business')
       ).length,
     },
-=======
       return 0
     });
 
@@ -242,17 +198,13 @@ export default function Revolutionary2026Pricing() {
   }, [selectedCategory, selectedPriceRange, sortBy, all2026Services]);
 
   const categories = [
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     { id: 'all', name: 'All Services', icon: '🚀', count: all2026Services.length },
     { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all2026Services.filter(s => s.category.includes('AI')).length },
     { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: all2026Services.filter(s => s.category.includes('Quantum') || s.category.includes('Space')).length },
     { id: 'emerging', name: 'Emerging Technologies', icon: '✨', count: all2026Services.filter(s => s.category.includes('Emerging') || s.category.includes('Technology')).length },
     { id: 'enterprise', name: 'Enterprise Solutions', icon: '🏢', count: all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('Business')).length }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const priceRanges = [
@@ -260,15 +212,10 @@ export default function Revolutionary2026Pricing() {
     { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
     { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
     { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { id: 'premium', name: '$20K+/month', range: '$20K+' },
-=======
     { id: 'premium', name: '$20K+/month', range: '$20K+' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     { id: 'premium', name: '$20K+/month', range: '$20K+' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const sortOptions = [
@@ -276,37 +223,25 @@ export default function Revolutionary2026Pricing() {
     { id: 'price-high', name: 'Price High to Low' },
     { id: 'rating', name: 'Highest Rated' },
     { id: 'popularity', name: 'Most Popular' },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { id: 'name', name: 'Name A-Z' },
-=======
     { id: 'name', name: 'Name A-Z' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     { id: 'name', name: 'Name A-Z' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com',
-=======
     website: 'https://ziontechgroup.com'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     website: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   // Calculate pricing statistics
   const pricingStats = {
     totalServices: all2026Services.length,
-<<<<<<< HEAD
-<<<<<<< HEAD
     averagePrice:
       all2026Services.reduce((acc, service) => {
         const price = parseFloat(service.price.replace(/[^0-9.]/g, '')) || 0;
@@ -323,7 +258,6 @@ export default function Revolutionary2026Pricing() {
       )
     ),
     popularServices: all2026Services.filter(s => s.popular).length,
-=======
     averagePrice: all2026Services.reduce((acc, service) => {
       const price = parseFloat(service.price.replace(/[^0-9.]/g, '')) || 0;
       return acc + price
@@ -331,7 +265,7 @@ export default function Revolutionary2026Pricing() {
     lowestPrice: Math.min(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')) || 0));
     highestPrice: Math.max(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')) || 0));
     popularServices: all2026Services.filter(s => s.popular).length
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
@@ -346,7 +280,6 @@ export default function Revolutionary2026Pricing() {
     >
       <div className="min-h-screen">
         <Head>
-<<<<<<< HEAD
           <title>
             Revolutionary 2026 Pricing - Zion Tech Group | Competitive AI,
             Quantum & Emerging Tech Pricing
@@ -377,7 +310,6 @@ export default function Revolutionary2026Pricing() {
             rel='canonical'
             href='https://ziontechgroup.com/revolutionary-2026-pricing'
           />
-=======
     averagePrice: all2026Services.reduce((acc, service) => {
       const price = parseFloat(service.price.replace(/[^0-9.]/g, '')) || 0;
       return acc + price
@@ -399,8 +331,7 @@ export default function Revolutionary2026Pricing() {
     >
       <div className="min-h-screen">
         <Head>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <title>Revolutionary 2026 Pricing - Zion Tech Group | Competitive AI, Quantum & Emerging Tech Pricing</title>
           <meta name="description" content="Discover competitive pricing for Zion Tech Group's revolutionary 2026 services: AI, quantum computing, emerging technologies, and enterprise solutions. Contact: +1 302 464 0950" />
           <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, emerging technologies pricing, enterprise solutions pricing, Zion Tech Group" />
@@ -410,42 +341,31 @@ export default function Revolutionary2026Pricing() {
           <meta property="og:url" content="https://ziontechgroup.com/revolutionary-2026-pricing" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2026-pricing" />
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         </Head>
 
         {/* Enhanced Navigation */}
         <EnhancedNavigation2026 />
 
         {/* Hero Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-cyan-900/20'></div>
           <div className='max-w-7xl mx-auto relative z-10'>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-cyan-900/20"></div>
           <div className="max-w-7xl mx-auto relative z-10">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-cyan-900/20"></div>
           <div className="max-w-7xl mx-auto relative z-10">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className='text-center mb-16'
-=======
               className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
@@ -471,13 +391,11 @@ export default function Revolutionary2026Pricing() {
                   <div className="text-2xl font-bold text-blue-400">${pricingStats.lowestPrice}</div>
                   <div className="text-gray-400 text-sm">Starting Price</div>
                 </div>
-<<<<<<< HEAD
                 <div className='bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-xl p-4'>
                   <div className='text-2xl font-bold text-yellow-400'>
                     {pricingStats.popularServices}
                   </div>
                   <div className='text-gray-400 text-sm'>Popular Services</div>
-=======
               className="text-center mb-16"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -507,12 +425,10 @@ export default function Revolutionary2026Pricing() {
                 <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-xl p-4">
                   <div className="text-2xl font-bold text-yellow-400">{pricingStats.popularServices}</div>
                   <div className="text-gray-400 text-sm">Popular Services</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-xl p-4">
                   <div className="text-2xl font-bold text-yellow-400">{pricingStats.popularServices}</div>
                   <div className="text-gray-400 text-sm">Popular Services</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               </div>
             </motion.div>
@@ -523,12 +439,9 @@ export default function Revolutionary2026Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className='bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6 max-w-2xl mx-auto'
-=======
               className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6 max-w-2xl mx-auto"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             >
               <h3 className="text-xl font-bold text-white mb-4 text-center">Need Custom Pricing?</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
@@ -540,13 +453,11 @@ export default function Revolutionary2026Pricing() {
                   <Mail className="w-5 h-5 text-purple-400" />
                   <span className="text-sm text-gray-300">{contactInfo.email}</span>
                 </div>
-<<<<<<< HEAD
                 <div className='flex flex-col items-center space-y-2'>
                   <MapPin className='w-5 h-5 text-purple-400' />
                   <span className='text-sm text-gray-300'>
                     {contactInfo.address}
                   </span>
-=======
               className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6 max-w-2xl mx-auto"
             >
               <h3 className="text-xl font-bold text-white mb-4 text-center">Need Custom Pricing?</h3>
@@ -562,12 +473,10 @@ export default function Revolutionary2026Pricing() {
                 <div className="flex flex-col items-center space-y-2">
                   <MapPin className="w-5 h-5 text-purple-400" />
                   <span className="text-sm text-gray-300">{contactInfo.address}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className="flex flex-col items-center space-y-2">
                   <MapPin className="w-5 h-5 text-purple-400" />
                   <span className="text-sm text-gray-300">{contactInfo.address}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               </div>
             </motion.div>
@@ -575,8 +484,6 @@ export default function Revolutionary2026Pricing() {
         </section>
 
         {/* Filters */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-8 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <div className='bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6'>
@@ -584,7 +491,6 @@ export default function Revolutionary2026Pricing() {
                 {/* Category Filter */}
                 <div className='flex flex-wrap gap-2'>
                   {categories.map(category => (
-=======
         <section className="py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6">
@@ -592,8 +498,6 @@ export default function Revolutionary2026Pricing() {
                 {/* Category Filter */}
                 <div className="flex flex-wrap gap-2">
                   {categories.map((category) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6">
@@ -601,7 +505,7 @@ export default function Revolutionary2026Pricing() {
                 {/* Category Filter */}
                 <div className="flex flex-wrap gap-2">
                   {categories.map((category) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     <button
                       key={category.id}
                       onClick={() => setSelectedCategory(category.id)}
@@ -617,18 +521,13 @@ export default function Revolutionary2026Pricing() {
                 </div>
 
                 {/* Price Range Filter */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className='flex flex-wrap gap-2'>
                   {priceRanges.map(range => (
-=======
                 <div className="flex flex-wrap gap-2">
                   {priceRanges.map((range) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className="flex flex-wrap gap-2">
                   {priceRanges.map((range) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     <button
                       key={range.id}
                       onClick={() => setSelectedPriceRange(range.id)}
@@ -644,20 +543,15 @@ export default function Revolutionary2026Pricing() {
                 </div>
 
                 {/* Sort Options */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className='flex items-center space-x-4'>
-=======
                 <div className="flex items-center space-x-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
                     className="px-3 py-2 bg-black/60 border border-purple-500/30 rounded-lg text-white text-sm focus:outline-none focus:border-purple-500/60"
                   >
-<<<<<<< HEAD
                     {sortOptions.map(option => (
-=======
                 <div className="flex items-center space-x-4">
                   <select
                     value={sortBy}
@@ -665,10 +559,8 @@ export default function Revolutionary2026Pricing() {
                     className="px-3 py-2 bg-black/60 border border-purple-500/30 rounded-lg text-white text-sm focus:outline-none focus:border-purple-500/60"
                   >
                     {sortOptions.map((option) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     {sortOptions.map((option) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       <option key={option.id} value={option.id}>
                         {option.name}
                       </option>
@@ -681,18 +573,15 @@ export default function Revolutionary2026Pricing() {
         </section>
 
         {/* Services Pricing Grid */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-12 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <div className='mb-8'>
               <h2 className='text-3xl font-bold text-white mb-2'>
-=======
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-white mb-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 {filteredServices.length} Services Available
               </h2>
               <p className="text-gray-400">
@@ -700,9 +589,7 @@ export default function Revolutionary2026Pricing() {
               </p>
             </div>
 
-<<<<<<< HEAD
             <AnimatePresence mode='wait'>
-=======
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="mb-8">
@@ -715,30 +602,23 @@ export default function Revolutionary2026Pricing() {
             </div>
 
             <AnimatePresence mode="wait">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <AnimatePresence mode="wait">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               {filteredServices.length === 0 ? (
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className='text-center py-20'
                 >
                   <div className='text-gray-400 text-xl'>
-=======
                   className="text-center py-20"
                 >
                   <div className="text-gray-400 text-xl">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   className="text-center py-20"
                 >
                   <div className="text-gray-400 text-xl">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     No services found matching your criteria.
                     <br />
                     Try adjusting your filters.
@@ -749,15 +629,10 @@ export default function Revolutionary2026Pricing() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
-=======
                   className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 >
                   {filteredServices.map((service, index) => (
                     <motion.div
@@ -765,12 +640,9 @@ export default function Revolutionary2026Pricing() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                       className='group relative'
-=======
                       className="group relative"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                       <div className="relative bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6 hover:border-purple-500/40 transition-all duration-300">
@@ -790,12 +662,10 @@ export default function Revolutionary2026Pricing() {
                               {service.price}
                               <span className="text-lg text-gray-400">{service.period}</span>
                             </div>
-<<<<<<< HEAD
                             <div className='text-gray-400 text-sm'>
                               {service.trialDays > 0
                                 ? `${service.trialDays}-day free trial`
                                 : 'No trial available'}
-=======
                       className="group relative"
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
@@ -818,18 +688,14 @@ export default function Revolutionary2026Pricing() {
                             </div>
                             <div className="text-gray-400 text-sm">
                               {service.trialDays > 0 ? `${service.trialDays}-day free trial` : 'No trial available'}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                             <div className="text-gray-400 text-sm">
                               {service.trialDays > 0 ? `${service.trialDays}-day free trial` : 'No trial available'}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                             </div>
                           </div>
                         </div>
 
                         {/* Features */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <div className='mb-6'>
                           <h4 className='text-white font-semibold mb-3 flex items-center'>
                             <Sparkles className='w-4 h-4 mr-2 text-purple-400' />
@@ -847,19 +713,17 @@ export default function Revolutionary2026Pricing() {
                                   <span>{feature}</span>
                                 </li>
                               ))}
-=======
                         <div className="mb-6">
                           <h4 className="text-white font-semibold mb-3 flex items-center">
                             <Sparkles className="w-4 h-4 mr-2 text-purple-400" />
                             Key Features
                           </h4>
-=======
                         <div className="mb-6">
                           <h4 className="text-white font-semibold mb-3 flex items-center">
                             <Sparkles className="w-4 h-4 mr-2 text-purple-400" />
                             Key Features
                           </h4>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           <ul className="space-y-2">
                             {service.features.slice(0, 6).map((feature, idx) => (
                               <li key={idx} className="flex items-start space-x-2 text-sm text-gray-300">
@@ -867,30 +731,22 @@ export default function Revolutionary2026Pricing() {
                                 <span>{feature}</span>
                               </li>
                             ))}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           </ul>
                         </div>
 
                         {/* Service Info */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <div className='grid grid-cols-2 gap-4 text-sm mb-6'>
-=======
                         <div className="grid grid-cols-2 gap-4 text-sm mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           <div>
                             <span className="text-gray-400">Category:</span>
                             <div className="text-white">{service.category}</div>
                           </div>
                           <div>
-<<<<<<< HEAD
                             <span className='text-gray-400'>Rating:</span>
                             <div className='flex items-center text-white'>
                               <Star className='w-4 h-4 text-yellow-400 mr-1' />
-=======
                         <div className="grid grid-cols-2 gap-4 text-sm mb-6">
                           <div>
                             <span className="text-gray-400">Category:</span>
@@ -900,18 +756,14 @@ export default function Revolutionary2026Pricing() {
                             <span className="text-gray-400">Rating:</span>
                             <div className="flex items-center text-white">
                               <Star className="w-4 h-4 text-yellow-400 mr-1" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                             <span className="text-gray-400">Rating:</span>
                             <div className="flex items-center text-white">
                               <Star className="w-4 h-4 text-yellow-400 mr-1" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                               {service.rating}/5
                             </div>
                           </div>
                           <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                             <span className='text-gray-400'>Customers:</span>
                             <div className='text-white'>
                               {service.customers.toLocaleString()}+
@@ -922,28 +774,23 @@ export default function Revolutionary2026Pricing() {
                             <div className='text-white'>
                               {service.setupTime}
                             </div>
-=======
                             <span className="text-gray-400">Customers:</span>
                             <div className="text-white">{service.customers.toLocaleString()}+</div>
                           </div>
                           <div>
                             <span className="text-gray-400">Setup:</span>
                             <div className="text-white">{service.setupTime}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                             <span className="text-gray-400">Customers:</span>
                             <div className="text-white">{service.customers.toLocaleString()}+</div>
                           </div>
                           <div>
                             <span className="text-gray-400">Setup:</span>
                             <div className="text-white">{service.setupTime}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           </div>
                         </div>
 
                         {/* ROI and Market Info */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <div className='mb-6 p-3 bg-purple-900/20 rounded-lg'>
                           <div className='text-sm text-purple-300 mb-2'>
                             <strong>ROI:</strong> {service.roi}
@@ -951,32 +798,26 @@ export default function Revolutionary2026Pricing() {
                           <div className='text-xs text-gray-400'>
                             <strong>Market:</strong> {service.marketSize} |{' '}
                             <strong>Growth:</strong> {service.growthRate}
-=======
                         <div className="mb-6 p-3 bg-purple-900/20 rounded-lg">
                           <div className="text-sm text-purple-300 mb-2">
                             <strong>ROI:</strong> {service.roi}
                           </div>
                           <div className="text-xs text-gray-400">
                             <strong>Market:</strong> {service.marketSize} | <strong>Growth:</strong> {service.growthRate}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         <div className="mb-6 p-3 bg-purple-900/20 rounded-lg">
                           <div className="text-sm text-purple-300 mb-2">
                             <strong>ROI:</strong> {service.roi}
                           </div>
                           <div className="text-xs text-gray-400">
                             <strong>Market:</strong> {service.marketSize} | <strong>Growth:</strong> {service.growthRate}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           </div>
                         </div>
 
                         {/* Action Buttons */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <div className='flex flex-col gap-3'>
-=======
                         <div className="flex flex-col gap-3">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           <Link
                             href={service.link}
                             className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center justify-center group-hover:scale-105"
@@ -988,9 +829,7 @@ export default function Revolutionary2026Pricing() {
                             href={`tel:${contactInfo.mobile}`}
                             className="bg-black/40 hover:bg-black/60 text-white font-semibold py-3 px-6 rounded-xl border border-purple-500/30 hover:border-purple-500/60 transition-all duration-200 flex items-center justify-center"
                           >
-<<<<<<< HEAD
                             <Phone className='w-4 h-4 mr-2' />
-=======
                         <div className="flex flex-col gap-3">
                           <Link
                             href={service.link}
@@ -1004,43 +843,31 @@ export default function Revolutionary2026Pricing() {
                             className="bg-black/40 hover:bg-black/60 text-white font-semibold py-3 px-6 rounded-xl border border-purple-500/30 hover:border-purple-500/60 transition-all duration-200 flex items-center justify-center"
                           >
                             <Phone className="w-4 h-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                             <Phone className="w-4 h-4 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                             Contact Sales
                           </a>
                         </div>
 
                         {/* Badges */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <div className='absolute top-4 right-4 flex flex-col gap-2'>
                           {service.popular && (
                             <div className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full'>
-=======
                         <div className="absolute top-4 right-4 flex flex-col gap-2">
                           {service.popular && (
                             <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         <div className="absolute top-4 right-4 flex flex-col gap-2">
                           {service.popular && (
                             <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                               POPULAR
                             </div>
                           )}
                           {service.price.includes('Custom') && (
-<<<<<<< HEAD
-<<<<<<< HEAD
                             <div className='bg-gradient-to-r from-purple-400 to-pink-400 text-white text-xs font-bold px-3 py-1 rounded-full'>
-=======
                             <div className="bg-gradient-to-r from-purple-400 to-pink-400 text-white text-xs font-bold px-3 py-1 rounded-full">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                             <div className="bg-gradient-to-r from-purple-400 to-pink-400 text-white text-xs font-bold px-3 py-1 rounded-full">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                               CUSTOM
                             </div>
                           )}
@@ -1055,29 +882,21 @@ export default function Revolutionary2026Pricing() {
         </section>
 
         {/* Pricing Comparison */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-6xl mx-auto'>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className='text-center mb-16'
-=======
               className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Why Choose Zion Tech Group?
@@ -1087,9 +906,7 @@ export default function Revolutionary2026Pricing() {
               </p>
             </motion.div>
 
-<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-=======
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -1101,27 +918,21 @@ export default function Revolutionary2026Pricing() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               {/* Value Proposition */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='text-center'
-=======
                 className="text-center"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <DollarSign className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
                 <h3 className='text-xl font-bold text-white mb-4'>
                   Unmatched Value
                 </h3>
@@ -1129,22 +940,17 @@ export default function Revolutionary2026Pricing() {
                   Get enterprise-grade technology at competitive prices. Our
                   services deliver 1000%+ ROI, making them the smartest
                   investment for your business.
-=======
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <DollarSign className="w-8 h-8 text-white" />
                 </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <h3 className="text-xl font-bold text-white mb-4">Unmatched Value</h3>
                 <p className="text-gray-300">
                   Get enterprise-grade technology at competitive prices. Our services deliver 1000%+ ROI,
                   making them the smartest investment for your business.
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </p>
               </motion.div>
 
@@ -1154,17 +960,13 @@ export default function Revolutionary2026Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='text-center'
-=======
                 className="text-center"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Rocket className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
                 <h3 className='text-xl font-bold text-white mb-4'>
                   Cutting-Edge Technology
                 </h3>
@@ -1172,22 +974,17 @@ export default function Revolutionary2026Pricing() {
                   Access the latest AI, quantum computing, and emerging
                   technologies before they become mainstream. Stay ahead of the
                   competition with our innovative solutions.
-=======
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Rocket className="w-8 h-8 text-white" />
                 </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <h3 className="text-xl font-bold text-white mb-4">Cutting-Edge Technology</h3>
                 <p className="text-gray-300">
                   Access the latest AI, quantum computing, and emerging technologies before they become mainstream. 
                   Stay ahead of the competition with our innovative solutions.
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </p>
               </motion.div>
 
@@ -1197,17 +994,13 @@ export default function Revolutionary2026Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='text-center'
-=======
                 className="text-center"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Users className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
                 <h3 className='text-xl font-bold text-white mb-4'>
                   Expert Support
                 </h3>
@@ -1215,22 +1008,17 @@ export default function Revolutionary2026Pricing() {
                   Get dedicated support from our team of experts. We're here to
                   ensure your success with implementation, training, and ongoing
                   optimization.
-=======
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Users className="w-8 h-8 text-white" />
                 </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <h3 className="text-xl font-bold text-white mb-4">Expert Support</h3>
                 <p className="text-gray-300">
                   Get dedicated support from our team of experts. We're here to ensure your success 
                   with implementation, training, and ongoing optimization.
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </p>
               </motion.div>
             </div>
@@ -1238,29 +1026,21 @@ export default function Revolutionary2026Pricing() {
         </section>
 
         {/* Call to Action */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className='bg-gradient-to-r from-purple-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-12'
-=======
               className="bg-gradient-to-r from-purple-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-12"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -1274,9 +1054,7 @@ export default function Revolutionary2026Pricing() {
                   href={`tel:${contactInfo.mobile}`}
                   className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 flex items-center justify-center"
                 >
-<<<<<<< HEAD
                   <Phone className='w-5 h-5 mr-2' />
-=======
               className="bg-gradient-to-r from-purple-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-12"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -1292,26 +1070,20 @@ export default function Revolutionary2026Pricing() {
                   className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 flex items-center justify-center"
                 >
                   <Phone className="w-5 h-5 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <Phone className="w-5 h-5 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   Call {contactInfo.mobile}
                 </a>
                 <a
                   href={`mailto:${contactInfo.email}`}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className='bg-black/40 hover:bg-black/60 text-white font-semibold py-4 px-8 rounded-xl border border-purple-500/30 hover:border-purple-500/60 transition-all duration-200 flex items-center justify-center'
-=======
                   className="bg-black/40 hover:bg-black/60 text-white font-semibold py-4 px-8 rounded-xl border border-purple-500/30 hover:border-purple-500/60 transition-all duration-200 flex items-center justify-center"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Get Custom Quote
                 </a>
               </div>
-<<<<<<< HEAD
               <div className='mt-8 text-gray-400 text-sm'>
                 <p>
                   Visit us at:{' '}
@@ -1323,7 +1095,6 @@ export default function Revolutionary2026Pricing() {
                   </a>
                 </p>
                 <p className='mt-2'>{contactInfo.address}</p>
-=======
                   className="bg-black/40 hover:bg-black/60 text-white font-semibold py-4 px-8 rounded-xl border border-purple-500/30 hover:border-purple-500/60 transition-all duration-200 flex items-center justify-center"
                 >
                   <Mail className="w-5 h-5 mr-2" />
@@ -1333,26 +1104,19 @@ export default function Revolutionary2026Pricing() {
               <div className="mt-8 text-gray-400 text-sm">
                 <p>Visit us at: <a href={contactInfo.website} className="text-purple-400 hover:text-purple-300">{contactInfo.website}</a></p>
                 <p className="mt-2">{contactInfo.address}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="mt-8 text-gray-400 text-sm">
                 <p>Visit us at: <a href={contactInfo.website} className="text-purple-400 hover:text-purple-300">{contactInfo.website}</a></p>
                 <p className="mt-2">{contactInfo.address}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

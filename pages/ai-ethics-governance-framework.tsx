@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
@@ -8,13 +6,11 @@ export default function AIEthicsGovernanceFramework() {
   
     />
   );
-=======
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIEthicsGovernanceFramework() {
-=======
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIEthicsGovernanceFramework() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<ServiceLanding
 			title="AI Ethics & Governance Framework"
@@ -36,9 +32,6 @@ export default function AIEthicsGovernanceFramework() {
 			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework"
 		/>
 	)
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

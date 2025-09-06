@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import ServicePage, {
   getStaticProps as getSlugStaticProps,;
 } from './services/[slug]';
@@ -8,15 +6,13 @@ export default function AICustomerSuccessPlatform() {
   
     />
   );
-=======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 
 export default function AICustomerSuccessPlatform() {
-=======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 
 export default function AICustomerSuccessPlatform() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<ServiceLanding
 			title="AI Customer Success Platform"
@@ -38,9 +34,6 @@ export default function AICustomerSuccessPlatform() {
 			canonical="https: //ziontechgroup.com/ai-customer-success-platform"
 		/>
 	)
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

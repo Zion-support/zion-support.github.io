@@ -1,20 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function AwsCostAnomalyMonitorPage() {
   return (
     <Layout>
       <Head>
         <title>AWS Cost Anomaly Monitor | Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Real-time AWS cost anomaly alerts with Slack notifications, budgets, and remediation playbooks.'
@@ -23,10 +16,9 @@ export default function AwsCostAnomalyMonitorPage() {
           rel='canonical'
           href='https://ziontechgroup.com/aws-cost-anomaly-monitor'
         />
-=======
         <meta name="description" content="Real-time AWS cost anomaly alerts with Slack notifications, budgets, and remediation playbooks." />
         <link rel="canonical" href="https://ziontechgroup.com/aws-cost-anomaly-monitor" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-6">
@@ -37,7 +29,6 @@ export default function AwsCostAnomalyMonitorPage() {
               <div key={f} className="p-4 rounded-xl bg-black/40 border border-cyan-500/30 text-slate-200">{f}</div>
             ))}
           </div>
-<<<<<<< HEAD
           <div className='flex gap-3'>
             <a
               href='/contact'
@@ -51,7 +42,6 @@ export default function AwsCostAnomalyMonitorPage() {
             >
               See market pricing
             </a>
-=======
         <meta name="description" content="Real-time AWS cost anomaly alerts with Slack notifications, budgets, and remediation playbooks." />
         <link rel="canonical" href="https://ziontechgroup.com/aws-cost-anomaly-monitor" />
       </Head>
@@ -67,26 +57,19 @@ export default function AwsCostAnomalyMonitorPage() {
           <div className="flex gap-3">
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Start from $199/mo</a>
             <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</a>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="flex gap-3">
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Start from $199/mo</a>
             <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</a>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           </div>
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

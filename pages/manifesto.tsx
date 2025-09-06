@@ -1,26 +1,18 @@
 import Head from 'next/head';
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function ManifestoPage(): JSX.Element {
   return (
     <>
       <Head>
         <title>Zion Manifesto</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Zion Manifesto: Our purpose, philosophy, and decentralized future.'
         />
-=======
         <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       <main className="min-h-screen bg-gray-50 text-gray-900">
         <div className="mx-auto w-full max-w-5xl px-6 py-12">
@@ -62,7 +54,6 @@ export default function ManifestoPage(): JSX.Element {
 
             <h2 id="our-decentralized-future">Our Decentralized Future</h2>
             <p>
-<<<<<<< HEAD
               Zion evolves from a product into a protocol: identity, reputation,
               escrow, and discovery as shared public goods. Governance
               transitions gradually, guided by real usage and contributor
@@ -70,7 +61,6 @@ export default function ManifestoPage(): JSX.Element {
               where anyone can build clients, services, and markets atop a
               common trust layer—talent-first, globally accessible, and credibly
               neutral.
-=======
         <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
       </Head>
       <main className="min-h-screen bg-gray-50 text-gray-900">
@@ -113,29 +103,20 @@ export default function ManifestoPage(): JSX.Element {
 
             <h2 id="our-decentralized-future">Our Decentralized Future</h2>
             <p>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               Zion evolves from a product into a protocol: identity, reputation, escrow, and discovery as shared public goods. Governance
               transitions gradually, guided by real usage and contributor ownership. The end-state is a resilient, permissionless network
               where anyone can build clients, services, and markets atop a common trust layer—talent-first, globally accessible, and
               credibly neutral.
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </p>
           </section>
         </div>
       </main>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

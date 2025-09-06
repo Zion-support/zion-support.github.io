@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-=======
 import React, { useEffect, useState } from 'react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 import Head from 'next/head';
 export default function AdminWeb3Page() {
   const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([]);
@@ -14,11 +11,9 @@ export default function AdminWeb3Page() {
   }, []);
 
   const save = (list: any) => {
-<<<<<<< HEAD
     if (typeof window !== 'undefined')
       window.localStorage.setItem('zion-web3-users', JSON.stringify(list));
     setUsers(list);
-=======
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 export default function AdminWeb3Page() {
@@ -32,11 +27,9 @@ export default function AdminWeb3Page() {
   const save = (list: any) => {
     if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-users', JSON.stringify(list));
     setUsers(list)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-users', JSON.stringify(list));
     setUsers(list)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const metrics = {
@@ -44,14 +37,11 @@ export default function AdminWeb3Page() {
     evm: users.filter(u => u.chain === 'evm').length,
     sol: users.filter(u => u.chain === 'sol').length,
     enabled: users.filter(u => u.enabled).length,
-<<<<<<< HEAD
-<<<<<<< HEAD
     disabled: users.filter(u => !u.enabled).length,
   };
 
-=======
     disabled: users.filter(u => !u.enabled).length},
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   return (
     <>
       <Head><title>Admin — Web3</title></Head>
@@ -80,9 +70,7 @@ export default function AdminWeb3Page() {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   );
-=======
     disabled: users.filter(u => !u.enabled).length},
   return (
     <>
@@ -114,8 +102,6 @@ export default function AdminWeb3Page() {
     </>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

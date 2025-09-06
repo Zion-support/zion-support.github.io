@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function BlogPage() {
   return (
@@ -21,11 +19,9 @@ export default function BlogPage() {
       </section>
     </Layout>
   );
-=======
 export default function BlogPage() {
-=======
 export default function BlogPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<Layout>
 			<Head>
@@ -39,7 +35,4 @@ export default function BlogPage() {
 		</Layout>
 	)
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

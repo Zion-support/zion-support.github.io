@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-=======
 import { useEffect, useMemo, useState } from 'react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 function getRefCode(): string {
   if (typeof window === 'undefined') return '';
@@ -19,14 +16,12 @@ export default function AffiliateDashboard() {
   const [msg, setMsg] = useState<string>('');
 
   useEffect(() => {
-<<<<<<< HEAD
     // Simulate loading data
     setTimeout(() => {
       setStats(mockStats);
       setReferrals(mockReferrals);
       setLoading(false);
     }, 1000);
-=======
 import { useEffect, useMemo, useState } from 'react';
 
 function getRefCode(): string {
@@ -43,40 +38,31 @@ export default function AffiliateDashboard() {
   useEffect(() => {
     const c = getRefCode();
     setCode(c)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     const c = getRefCode();
     setCode(c)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }, []);
 
   useEffect(() => {
     if (!code) return;
     (async () => {
       try {
-<<<<<<< HEAD
-<<<<<<< HEAD
         const res = await fetch(
           `/api/partners/metrics?code=${encodeURIComponent(code)}`
         );
-=======
         const res = await fetch(`/api/partners/metrics?code=${encodeURIComponent(code)}`);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         const json = await res.json();
         setMetrics(json)
       } catch {}
-<<<<<<< HEAD
     })();
-=======
         const res = await fetch(`/api/partners/metrics?code=${encodeURIComponent(code)}`);
         const json = await res.json();
         setMetrics(json)
       } catch {}
     })()
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     })()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }, [code]);
 
   async function requestPayout() {
@@ -85,16 +71,13 @@ export default function AffiliateDashboard() {
       const res = await fetch('/api/partners/request-payout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-<<<<<<< HEAD
         body: JSON.stringify({
           code,
           amount: amount ? Number(amount) : undefined,
         }),
       });
-=======
         body: JSON.stringify({ code, amount: amount ? Number(amount) : undefined })}),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       const json = await res.json();
       if (!res.ok) throw new Error(json.error || 'Failed');
       setMsg('Payout requested')
@@ -147,9 +130,7 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
       <div className="text-2xl font-semibold">{value}</div>
     </div>
-<<<<<<< HEAD
   );
-=======
         body: JSON.stringify({ code, amount: amount ? Number(amount) : undefined })}),
       const json = await res.json();
       if (!res.ok) throw new Error(json.error || 'Failed');
@@ -205,8 +186,6 @@ function Stat({ label, value }: { label: string, value: number | string }) {
     </div>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

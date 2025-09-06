@@ -2,16 +2,13 @@ import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
 
 type RoadmapInputs = {
-<<<<<<< HEAD
-<<<<<<< HEAD
   milestones: string;
   keywords: string;
   priorities: string;
-=======
   milestones: string,
   keywords: string,
   priorities: string
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 };
 
 type Stage = {
@@ -26,9 +23,7 @@ type Stage = {
 function generateStages({ milestones, keywords, priorities }: RoadmapInputs): Stage[] {
   const keywordList = keywords
     .split(/,|\n/)
-<<<<<<< HEAD
     .map(s => s.trim())
-=======
   milestones: string,
   keywords: string,
   priorities: string
@@ -47,16 +42,12 @@ function generateStages({ milestones, keywords, priorities }: RoadmapInputs): St
   const keywordList = keywords
     .split(/,|\n/)
     .map((s) => s.trim())
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     .map((s) => s.trim())
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     .filter(Boolean);
 
   const priorityList = priorities
     .split(/,|\n/)
-<<<<<<< HEAD
-<<<<<<< HEAD
     .map(s => s.trim())
     .filter(Boolean);
 
@@ -71,36 +62,30 @@ function generateStages({ milestones, keywords, priorities }: RoadmapInputs): St
     'Open Protocol Interfaces',
     'Governance & Ownership',
     'Global Scale',
-=======
     .map((s) => s.trim())
     .filter(Boolean);
 
   const baseThemes = [
     'FoundationsTrust LayerAI-Native MatchingReputation & IdentityPayments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces',
     'Governance & OwnershipGlobal Scale'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   ];
-=======
     .map((s) => s.trim())
     .filter(Boolean);
 
   const baseThemes = [
     'FoundationsTrust LayerAI-Native MatchingReputation & IdentityPayments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces';
     'Governance & OwnershipGlobal Scale'];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
   return baseThemes.map((theme, index) => {
     const id = index + 1;
     const name = `Zion v${id}`;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     const objective = `Advance ${theme.toLowerCase()} informed by: ${keywordList.join(', ') || 'core principles'}; focus: ${
       priorityList.join(', ') || 'execution and learning'
-=======
     const objective = `Advance ${theme.toLowerCase()} informed by: ${keywordList.join() || 'core principles'}, focus: ${
       priorityList.join() || 'execution and learning'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }.`;
 
     const highlights: string[] = [
@@ -120,10 +105,8 @@ function generateStages({ milestones, keywords, priorities }: RoadmapInputs): St
     const metrics: string[] = [
       'Weekly active contributorsVerified engagements (intros, briefs, scopes)On-chain/escrow settlement volumeTime-to-hire and time-to-payRetention and NPS'];
 
-<<<<<<< HEAD
     return { id, name, theme, objective, highlights, metrics };
   });
-=======
     const objective = `Advance ${theme.toLowerCase()} informed by: ${keywordList.join() || 'core principles'}, focus: ${
       priorityList.join() || 'execution and learning'
     }.`;
@@ -148,12 +131,10 @@ function generateStages({ milestones, keywords, priorities }: RoadmapInputs): St
     return { id, name, theme, objective, highlights, metrics }
   })
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     return { id, name, theme, objective, highlights, metrics }
   })
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 function defaultOperatorPrompt(): string {
   return `You are Zion's Product Operator.
@@ -181,13 +162,10 @@ Risks:
 - ...
 Validation:
 - ...
-<<<<<<< HEAD
-<<<<<<< HEAD
 `;
-=======
 `
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 export default function RoadmapPage(): JSX.Element {
   const [milestones, setMilestones] = useState('MVP live, First 50 users, First 10 paid engagements');
@@ -196,9 +174,7 @@ export default function RoadmapPage(): JSX.Element {
   const [copied, setCopied] = useState(false);
 
   const stages = useMemo(
-<<<<<<< HEAD
     () => generateStages({ milestones, keywords, priorities }),
-=======
 `
 }
 
@@ -210,10 +186,8 @@ export default function RoadmapPage(): JSX.Element {
 
   const stages = useMemo(
     () => generateStages({ milestones, keywords, priorities });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     () => generateStages({ milestones, keywords, priorities });
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     [milestones, keywords, priorities]
   );
 
@@ -223,21 +197,16 @@ export default function RoadmapPage(): JSX.Element {
     try {
       await navigator.clipboard.writeText(operatorPrompt);
       setCopied(true);
-<<<<<<< HEAD
-<<<<<<< HEAD
       setTimeout(() => setCopied(false), 1500);
     } catch {
       setCopied(false);
-=======
       setTimeout(() => setCopied(false), 1500)
     } catch {
       setCopied(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       setTimeout(() => setCopied(false), 1500)
     } catch {
       setCopied(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
   };
 
@@ -245,15 +214,12 @@ export default function RoadmapPage(): JSX.Element {
     <>
       <Head>
         <title>Zion Roadmap</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Zion 10-stage product evolution and roadmap generator.'
         />
-=======
         <meta name="description" content="Zion 10-stage product evolution and roadmap generator." />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       <main className="min-h-screen bg-white text-gray-900">
         <div className="mx-auto w-full max-w-6xl px-6 py-12">
@@ -291,11 +257,9 @@ export default function RoadmapPage(): JSX.Element {
                 <label className="block text-sm font-medium text-gray-700">Upcoming priorities</label>
                 <input
                   value={priorities}
-<<<<<<< HEAD
                   onChange={e => setPriorities(e.target.value)}
                   className='mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none'
                   placeholder='e.g., governance, scale, regional expansion'
-=======
         <meta name="description" content="Zion 10-stage product evolution and roadmap generator." />
       </Head>
       <main className="min-h-screen bg-white text-gray-900">
@@ -337,47 +301,38 @@ export default function RoadmapPage(): JSX.Element {
                   onChange={(e) => setPriorities(e.target.value)}
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   onChange={(e) => setPriorities(e.target.value)}
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 />
               </div>
             </div>
           </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
           <section className='mb-12'>
             <div className='mb-3 flex items-center justify-between gap-3'>
               <h2 className='text-xl font-semibold'>Operator Prompt</h2>
               <button
                 onClick={copyPrompt}
                 className='rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900'
-=======
           <section className="mb-12">
             <div className="mb-3 flex items-center justify-between gap-3">
               <h2 className="text-xl font-semibold">Operator Prompt</h2>
               <button
                 onClick={copyPrompt}
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <section className="mb-12">
             <div className="mb-3 flex items-center justify-between gap-3">
               <h2 className="text-xl font-semibold">Operator Prompt</h2>
               <button
                 onClick={copyPrompt}
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 {copied ? 'Copied' : 'Copy'}
               </button>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <pre className='whitespace-pre-wrap rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm text-gray-800'>
               {operatorPrompt}
             </pre>
@@ -401,17 +356,15 @@ export default function RoadmapPage(): JSX.Element {
                   <div className='mt-3'>
                     <p className='font-semibold'>Highlights</p>
                     <ul className='mt-1 list-disc space-y-1 pl-5 text-gray-800'>
-=======
             <pre className="whitespace-pre-wrap rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm text-gray-800">{operatorPrompt}</pre>
           </section>
 
           <section>
-=======
             <pre className="whitespace-pre-wrap rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm text-gray-800">{operatorPrompt}</pre>
           </section>
 
           <section>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <h2 className="mb-4 text-xl font-semibold">Zion v1 → v10</h2>
             <div className="grid gap-6 md:grid-cols-2">
               {stages.map((stage) => (
@@ -421,58 +374,41 @@ export default function RoadmapPage(): JSX.Element {
                   <div className="mt-3">
                     <p className="font-semibold">Highlights</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       {stage.highlights.map((h, i) => (
                         <li key={i}>{h}</li>
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className='mt-3'>
                     <p className='font-semibold'>Metrics</p>
                     <ul className='mt-1 list-disc space-y-1 pl-5 text-gray-800'>
-=======
                   <div className="mt-3">
                     <p className="font-semibold">Metrics</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <div className="mt-3">
                     <p className="font-semibold">Metrics</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       {stage.metrics.map((m, i) => (
                         <li key={i}>{m}</li>
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className='mt-3'>
                     <p className='font-semibold'>Risks</p>
                     <ul className='mt-1 list-disc space-y-1 pl-5 text-gray-800'>
                       <li>Scope creep; unclear ownership</li>
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <div className="mt-3">
                     <p className="font-semibold">Risks</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
                       <li>Scope creep, unclear ownership</li>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       <li>Model hallucinations or bias affecting matches</li>
                       <li>Regulatory and payment-compliance variability</li>
                     </ul>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className='mt-3'>
                     <p className='font-semibold'>Validation</p>
                     <ul className='mt-1 list-disc space-y-1 pl-5 text-gray-800'>
@@ -483,22 +419,19 @@ export default function RoadmapPage(): JSX.Element {
                       <li>
                         Positive contributor NPS and dispute resolution rates
                       </li>
-=======
                   <div className="mt-3">
                     <p className="font-semibold">Validation</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
                       <li>Leading indicator movement on activation and retention</li>
                       <li>Faster time-to-hire and time-to-pay</li>
                       <li>Positive contributor NPS and dispute resolution rates</li>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <div className="mt-3">
                     <p className="font-semibold">Validation</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
                       <li>Leading indicator movement on activation and retention</li>
                       <li>Faster time-to-hire and time-to-pay</li>
                       <li>Positive contributor NPS and dispute resolution rates</li>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     </ul>
                   </div>
                 </article>
@@ -508,14 +441,9 @@ export default function RoadmapPage(): JSX.Element {
         </div>
       </main>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

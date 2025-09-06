@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { useState, useEffect, Suspense } from 'react';
 import { ContactInfo, AnimationState } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -266,7 +265,6 @@ import { Button } from '../src/components/ui/button';
         <meta name="keywords" content="AI services, cybersecurity, cloud infrastructure, digital transformation, IT consulting, machine learning, data analytics" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-=======
 import { motion } from 'framer-motion';
 import { 
   ArrowRight, 
@@ -348,7 +346,7 @@ const Home: React.FC = () => {
         <meta name="keywords" content="AI services, cybersecurity, cloud infrastructure, digital transformation, IT consulting, machine learning, data analytics" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       
       <AnimatedBackground />
       

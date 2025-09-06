@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
-=======
 import React, { useCallback, useMemo, useState } from 'react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { GetServerSideProps } from 'next';
@@ -48,7 +45,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 };
 
 export default function PitchGenerator() {
-<<<<<<< HEAD
   const [builder, setBuilder] = useState<BuilderState>({
     mission: '',
     fundingStage: '',
@@ -57,7 +53,6 @@ export default function PitchGenerator() {
     targetRaise: '',
     assets: [],
   });
-=======
 import React, { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -104,46 +99,32 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
 export default function PitchGenerator() {
   const [builder, setBuilder] = useState<BuilderState>({ mission: '', fundingStage: '', vision: '', roundType: '', targetRaise: '', assets: [] }),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const [builder, setBuilder] = useState<BuilderState>({ mission: '', fundingStage: '', vision: '', roundType: '', targetRaise: '', assets: [] }),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   const [slides, setSlides] = useState<Slide[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [versionTag, setVersionTag] = useState<string | null>(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [history, setHistory] = useState<
     { id: string; createdAt: string; version: string }[]
   >([]);
-=======
   const [history, setHistory] = useState<{ id: string, createdAt: string, version: string }[]>([]),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const [history, setHistory] = useState<{ id: string, createdAt: string, version: string }[]>([]),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
   const activeSlide = slides[activeIndex];
 
   const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     const files = Array.from(e.dataTransfer.files || []);
-<<<<<<< HEAD
-<<<<<<< HEAD
     setBuilder(b => ({ ...b, assets: [...b.assets, ...files] }));
-=======
     setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }, []);
 
   const prevent = (e: React.DragEvent) => {
     e.preventDefault();
-<<<<<<< HEAD
-<<<<<<< HEAD
     e.stopPropagation();
   };
 
@@ -152,45 +133,35 @@ export default function PitchGenerator() {
       `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`,
     []
   );
-=======
     e.stopPropagation()
   };
 
   const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     e.stopPropagation()
   };
 
   const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
   const autoFetchMetrics = useCallback(async () => {
     setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/metrics');
       const data = await res.json();
-<<<<<<< HEAD
-<<<<<<< HEAD
       return data;
-=======
       return data
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     } catch (e) {
       return {}
     } finally {
-<<<<<<< HEAD
       setLoading(false);
-=======
       return data
     } catch (e) {
       return {}
     } finally {
       setLoading(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       setLoading(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
   }, []);
 
@@ -202,40 +173,30 @@ export default function PitchGenerator() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-<<<<<<< HEAD
-<<<<<<< HEAD
           operatorPrompt,
-=======
           operatorPrompt;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           inputs: builder,
           metrics})});
       const json = await res.json();
-<<<<<<< HEAD
       const newSlides: Slide[] = json.slides || [];
-=======
           operatorPrompt;
           inputs: builder,
           metrics})});
       const json = await res.json();
       const newSlides: Slide[] = json.slides || [],
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       const newSlides: Slide[] = json.slides || [],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       setSlides(newSlides);
       setActiveIndex(0);
       const v = json.version || `v${new Date().toISOString()}`;
       setVersionTag(v);
-<<<<<<< HEAD
-<<<<<<< HEAD
       setHistory(h => [
         { id: uid(), createdAt: new Date().toISOString(), version: v },
         ...h,
       ]);
-=======
       setHistory((h) => [{ id: uid(), createdAt: new Date().toISOString(), version: v }, ...h])
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     } catch (e) {
       // noop
     } finally {
@@ -243,7 +204,6 @@ export default function PitchGenerator() {
     }
   }, [autoFetchMetrics, builder, operatorPrompt]);
 
-<<<<<<< HEAD
   const rephraseSlide = useCallback(
     async (idx: number) => {
       if (!slides[idx]) return;
@@ -273,7 +233,6 @@ export default function PitchGenerator() {
     },
     [slides]
   );
-=======
       setHistory((h) => [{ id: uid(), createdAt: new Date().toISOString(), version: v }, ...h])
     } catch (e) {
       // noop
@@ -282,8 +241,7 @@ export default function PitchGenerator() {
     }
   }, [autoFetchMetrics, builder, operatorPrompt]);
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   const rephraseSlide = useCallback(async (idx: number) => {
     if (!slides[idx]) return;
     setLoading(true);
@@ -299,28 +257,20 @@ export default function PitchGenerator() {
       setLoading(false)
     }
   }, [slides]);
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
   const addSlide = useCallback(async () => {
     setLoading(true);
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
-=======
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' }),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       const json = await res.json();
       setSlides((arr) => [...arr, { id: uid(), title: json.title || 'New Slide', content: json.content || '' }]),
       setActiveIndex(slides.length)
     } catch (e) {
     } finally {
-<<<<<<< HEAD
       setLoading(false);
-=======
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' }),
       const json = await res.json();
       setSlides((arr) => [...arr, { id: uid(), title: json.title || 'New Slide', content: json.content || '' }]),
@@ -328,61 +278,47 @@ export default function PitchGenerator() {
     } catch (e) {
     } finally {
       setLoading(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       setLoading(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
   }, [slides.length]);
 
   const exportPdf = useCallback(async () => {
     setLoading(true);
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
       const res = await fetch('/api/admin/pitch/export', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ slides, format: 'pdf', version: versionTag }),
       });
-=======
       const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'pdf', version: versionTag }) }),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'pdf', version: versionTag }) }),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
       a.download = `pitch-deck-${versionTag || 'draft'}.pdf`;
       a.click();
-<<<<<<< HEAD
-<<<<<<< HEAD
       URL.revokeObjectURL(url);
     } catch (e) {
     } finally {
       setLoading(false);
-=======
       URL.revokeObjectURL(url)
     } catch (e) {
     } finally {
       setLoading(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       URL.revokeObjectURL(url)
     } catch (e) {
     } finally {
       setLoading(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
   }, [slides, versionTag]);
 
   const exportGoogleSlides = useCallback(async () => {
     setLoading(true);
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
       const res = await fetch('/api/admin/pitch/export', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -392,18 +328,15 @@ export default function PitchGenerator() {
           version: versionTag,
         }),
       });
-=======
       const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'gslides', version: versionTag }) }),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       const json = await res.json();
       if (json && json.url) {
         window.open(json.url, '_blank')
       }
     } catch (e) {
     } finally {
-<<<<<<< HEAD
       setLoading(false);
-=======
       const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'gslides', version: versionTag }) }),
       const json = await res.json();
       if (json && json.url) {
@@ -412,33 +345,24 @@ export default function PitchGenerator() {
     } catch (e) {
     } finally {
       setLoading(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       setLoading(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
   }, [slides, versionTag]);
 
   const updateActiveSlide = (updates: Partial<Slide>) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
     setSlides(arr =>
       arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s))
     );
-=======
     setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)))
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const renderChartPreview = (slide: Slide) => {
     if (!slide.chart) return null;
     const { type, data } = slide.chart;
     return (
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className='mt-3'>
         <div className='text-xs text-gray-500 dark:text-gray-400'>
           Chart preview: {type}
@@ -453,19 +377,17 @@ export default function PitchGenerator() {
                 title={`${d.label}: ${d.value}`}
               />
             ))}
-=======
       <div className="mt-3">
         <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
         <div className="flex gap-2 items-end h-24 mt-2">
           {type === 'bar' && data.map((d) => (
             <div key={d.label} className="bg-blue-500 w-6" style={{ height: `${Math.max(4, d.value)}px` }} title={`${d.label}: ${d.value}`} />
           ))}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           {type === 'funnel' && (
             <div className="w-full">
               <div className="flex flex-col gap-1">
                 {data.map((d, idx) => (
-<<<<<<< HEAD
                   <div
                     key={d.label}
                     className='bg-purple-500 text-white text-xs px-2 py-1'
@@ -473,7 +395,6 @@ export default function PitchGenerator() {
                   >
                     {d.label}: {d.value}
                   </div>
-=======
       <div className="mt-3">
         <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
         <div className="flex gap-2 items-end h-24 mt-2">
@@ -485,32 +406,23 @@ export default function PitchGenerator() {
               <div className="flex flex-col gap-1">
                 {data.map((d, idx) => (
                   <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 ))}
               </div>
             </div>
           )}
           {type === 'timeline' && (
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='text-xs grid grid-cols-4 gap-2 w-full'>
               {data.map(d => (
                 <div key={d.label} className='border p-1 rounded'>
                   <div className='font-medium'>{d.label}</div>
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <div className="text-xs grid grid-cols-4 gap-2 w-full">
               {data.map((d) => (
                 <div key={d.label} className="border p-1 rounded">
                   <div className="font-medium">{d.label}</div>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <div>{d.value}</div>
                 </div>
               ))}
@@ -518,12 +430,9 @@ export default function PitchGenerator() {
           )}
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     );
-=======
     )
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
@@ -541,7 +450,6 @@ export default function PitchGenerator() {
           </div>
         </div>
 
-<<<<<<< HEAD
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
           <div className='lg:col-span-1 space-y-4'>
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
@@ -582,7 +490,6 @@ export default function PitchGenerator() {
                 className='w-full border rounded px-2 py-1 bg-transparent'
               >
                 <option value=''>Select</option>
-=======
     )
   };
 
@@ -601,8 +508,7 @@ export default function PitchGenerator() {
           </div>
         </div>
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-1 space-y-4">
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
@@ -616,16 +522,11 @@ export default function PitchGenerator() {
               <label className="block text-sm mt-3 mb-1">Round type</label>
               <select value={builder.roundType} onChange={(e) => setBuilder({ ...builder, roundType: e.target.value as any })} className="w-full border rounded px-2 py-1 bg-transparent">
                 <option value="">Select</option>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <option>Seed</option>
                 <option>Series A</option>
                 <option>Token Sale</option>
               </select>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <label className='block text-sm mt-3 mb-1'>
                 Target raise amount
               </label>
@@ -636,10 +537,9 @@ export default function PitchGenerator() {
                 }
                 className='w-full border rounded px-2 py-1 bg-transparent'
               />
-=======
               <label className="block text-sm mt-3 mb-1">Target raise amount</label>
               <input value={builder.targetRaise} onChange={(e) => setBuilder({ ...builder, targetRaise: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
               <div onDrop={onAssetDrop} onDragOver={prevent} onDragEnter={prevent} className="mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400">
                 Drag & drop logos, photos here
@@ -647,7 +547,6 @@ export default function PitchGenerator() {
               </div>
             </div>
 
-<<<<<<< HEAD
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='font-medium mb-2'>Auto Data</div>
               <button
@@ -657,7 +556,6 @@ export default function PitchGenerator() {
                 Refresh
               </button>
               <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>
-=======
               <label className="block text-sm mt-3 mb-1">Target raise amount</label>
               <input value={builder.targetRaise} onChange={(e) => setBuilder({ ...builder, targetRaise: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
 
@@ -667,16 +565,12 @@ export default function PitchGenerator() {
               </div>
             </div>
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">Auto Data</div>
               <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>
               <ul className="text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300">
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <li>Active users (30d)</li>
                 <li>GMV, MRR, YoY growth</li>
                 <li>Total completed projects</li>
@@ -686,8 +580,6 @@ export default function PitchGenerator() {
               </ul>
             </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='font-medium mb-2'>History</div>
               <div className='text-xs text-gray-500 dark:text-gray-400'>
@@ -703,7 +595,6 @@ export default function PitchGenerator() {
                     <span className='text-gray-500 dark:text-gray-400'>
                       {new Date(h.createdAt).toLocaleString()}
                     </span>
-=======
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">History</div>
               <div className="text-xs text-gray-500 dark:text-gray-400">Version: {versionTag || '—'}</div>
@@ -712,8 +603,6 @@ export default function PitchGenerator() {
                   <li key={h.id} className="flex justify-between border rounded px-2 py-1">
                     <span>{h.version}</span>
                     <span className="text-gray-500 dark:text-gray-400">{new Date(h.createdAt).toLocaleString()}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">History</div>
               <div className="text-xs text-gray-500 dark:text-gray-400">Version: {versionTag || '—'}</div>
@@ -722,15 +611,13 @@ export default function PitchGenerator() {
                   <li key={h.id} className="flex justify-between border rounded px-2 py-1">
                     <span>{h.version}</span>
                     <span className="text-gray-500 dark:text-gray-400">{new Date(h.createdAt).toLocaleString()}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   </li>
                 ))}
               </ul>
             </div>
           </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className='lg:col-span-2 space-y-4'>
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='flex items-center justify-between'>
@@ -738,13 +625,12 @@ export default function PitchGenerator() {
                 <div className='text-sm text-gray-500 dark:text-gray-400'>
                   {slides.length} total
                 </div>
-=======
           <div className="lg:col-span-2 space-y-4">
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="flex items-center justify-between">
                 <div className="font-medium">Slides</div>
                 <div className="text-sm text-gray-500 dark:text-gray-400">{slides.length} total</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </div>
               <div className="mt-3 flex gap-3 overflow-x-auto py-2">
                 {slides.map((s, i) => (
@@ -769,8 +655,6 @@ export default function PitchGenerator() {
                   <button onClick={() => updateActiveSlide({ chart: { type: 'funnel', data: [{ label: 'Visitors', value: 100 }, { label: 'Signups', value: 40 }, { label: 'Projects', value: 15 }] } })} className="border rounded px-2 py-1">Funnel</button>
                   <button onClick={() => updateActiveSlide({ chart: { type: 'timeline', data: [{ label: 'MVP', value: 2023 }, { label: 'Seed', value: 2024 }, { label: 'Series A', value: 2025 }] } })} className="border rounded px-2 py-1">Timeline</button>
                 </div>
-<<<<<<< HEAD
-=======
           <div className="lg:col-span-2 space-y-4">
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="flex items-center justify-between">
@@ -802,29 +686,22 @@ export default function PitchGenerator() {
                 </div>
 
                 {renderChartPreview(activeSlide)}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 
                 {renderChartPreview(activeSlide)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </div>
             )}
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
       </main>
     </>
   );
-=======
       </div>
     </EnhancedLayout>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       </div>
     </EnhancedLayout>
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

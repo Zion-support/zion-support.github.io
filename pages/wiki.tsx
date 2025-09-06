@@ -1,20 +1,17 @@
 import React, { useMemo, useState } from 'react';
 import {
-<<<<<<< HEAD
-<<<<<<< HEAD
   generateZionWiki,
   buildMarkdownFromWiki,
   buildWikitextFromWiki,
   operatorPrompt,
   slugify,;
 } from '../utils/data/zionContent';
-=======
   generateZionWiki;
   buildMarkdownFromWiki;
   buildWikitextFromWiki;
   operatorPrompt;
   slugify} from '../utils/data/zionContent';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 function CopyButton({ text, label }: { text: string, label: string }) {
   const [copied, setCopied] = useState(false);
@@ -29,9 +26,7 @@ function CopyButton({ text, label }: { text: string, label: string }) {
     >
       {copied ? 'Copied' : label}
     </button>
-<<<<<<< HEAD
   );
-=======
   generateZionWiki;
   buildMarkdownFromWiki;
   buildWikitextFromWiki;
@@ -53,11 +48,9 @@ function CopyButton({ text, label }: { text: string, label: string }) {
     </button>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), []);
@@ -65,8 +58,6 @@ export default function WikiPage() {
   const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]);
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className='grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8'>
       <aside className='sticky top-20 self-start hidden lg:block'>
         <div className='text-sm font-semibold mb-2'>Table of contents</div>
@@ -77,7 +68,6 @@ export default function WikiPage() {
                 href={`#${slugify(s.title)}`}
                 className='opacity-80 hover:opacity-100'
               >
-=======
     <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8">
       <aside className="sticky top-20 self-start hidden lg:block">
         <div className="text-sm font-semibold mb-2">Table of contents</div>
@@ -85,8 +75,6 @@ export default function WikiPage() {
           {wiki.sections.map((s) => (
             <li key={s.id}>
               <a href={`#${slugify(s.title)}`} className="opacity-80 hover:opacity-100">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8">
       <aside className="sticky top-20 self-start hidden lg:block">
         <div className="text-sm font-semibold mb-2">Table of contents</div>
@@ -94,29 +82,22 @@ export default function WikiPage() {
           {wiki.sections.map((s) => (
             <li key={s.id}>
               <a href={`#${slugify(s.title)}`} className="opacity-80 hover:opacity-100">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 {s.title}
               </a>
             </li>
           ))}
           <li>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <a href='#references' className='opacity-80 hover:opacity-100'>
               References
             </a>
-=======
             <a href="#references" className="opacity-80 hover:opacity-100">References</a>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <a href="#references" className="opacity-80 hover:opacity-100">References</a>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           </li>
         </ul>
       </aside>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       <article className='prose dark:prose-invert max-w-none'>
         <h1>{wiki.title}</h1>
         <div className='not-prose border rounded p-4 bg-white/60 dark:bg-black/20 mb-4'>
@@ -129,36 +110,26 @@ export default function WikiPage() {
             <div>{wiki.infobox.token}</div>
             <div className='font-semibold'>Protocol Type</div>
             <div>{wiki.infobox.protocolType}</div>
-=======
       <article className="prose dark:prose-invert max-w-none">
         <h1>{wiki.title}</h1>
-=======
       <article className="prose dark:prose-invert max-w-none">
         <h1>{wiki.title}</h1>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         <div className="not-prose border rounded p-4 bg-white/60 dark:bg-black/20 mb-4">
           <div className="grid grid-cols-2 gap-x-6 gap-y-1 text-sm">
             <div className="font-semibold">Founder</div><div>{wiki.infobox.founder}</div>
             <div className="font-semibold">Launch Year</div><div>{wiki.infobox.launchYear}</div>
             <div className="font-semibold">Token</div><div>{wiki.infobox.token}</div>
             <div className="font-semibold">Protocol Type</div><div>{wiki.infobox.protocolType}</div>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           </div>
         </div>
         <p>{wiki.intro}</p>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {wiki.sections.map(s => (
-=======
         {wiki.sections.map((s) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         {wiki.sections.map((s) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <section key={s.id} id={slugify(s.title)}>
             <h2>{s.title}</h2>
             {s.paragraphs.map((p, i) => (
@@ -167,37 +138,29 @@ export default function WikiPage() {
           </section>
         ))}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         <h2 id='references'>References</h2>
-=======
         <h2 id="references">References</h2>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <h2 id="references">References</h2>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         <ol>
           {wiki.references.map((r, i) => (
             <li key={i}>{r}</li>
           ))}
         </ol>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className='not-prose mt-10 p-4 border rounded bg-white/60 dark:bg-black/20'>
           <div className='flex items-center justify-between mb-2'>
             <div className='font-semibold'>Export</div>
             <div className='flex gap-2'>
               <CopyButton text={md} label='Copy Markdown' />
               <CopyButton text={wikitext} label='Copy Wikitext' />
-=======
         <div className="not-prose mt-10 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="flex items-center justify-between mb-2">
             <div className="font-semibold">Export</div>
             <div className="flex gap-2">
               <CopyButton text={md} label="Copy Markdown" />
               <CopyButton text={wikitext} label="Copy Wikitext" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">
@@ -211,9 +174,7 @@ export default function WikiPage() {
         </div>
       </article>
     </div>
-<<<<<<< HEAD
   );
-=======
         <div className="not-prose mt-10 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="flex items-center justify-between mb-2">
             <div className="font-semibold">Export</div>
@@ -235,8 +196,6 @@ export default function WikiPage() {
     </div>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

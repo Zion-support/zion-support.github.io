@@ -6,23 +6,15 @@ import { AuthButtons } from '@/components/AuthButtons';
 import { fireEvent } from '@/lib/analytics';
 import { logInfo } from '@/utils/productionLogger';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 const RegisterPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
     fireEvent('signup_page_view');
-=======
     fireEvent('signup_page_view')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }, []);
 
   const handleSuccess = ({ email, emailVerificationRequired }: {
@@ -32,9 +24,7 @@ const RegisterPage = () => {
     if (emailVerificationRequired) {
       router.push(`/verify-status?email=${encodeURIComponent(email)}`)
     } else {
-<<<<<<< HEAD
       router.push('/auth/login?registrationSuccess=true');
-=======
     fireEvent('signup_page_view')
   }, []);
 
@@ -46,10 +36,8 @@ const RegisterPage = () => {
       router.push(`/verify-status?email=${encodeURIComponent(email)}`)
     } else {
       router.push('/auth/login?registrationSuccess=true')
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       router.push('/auth/login?registrationSuccess=true')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
   };
 
@@ -57,15 +45,12 @@ const RegisterPage = () => {
     <>
       <Head>
         <title>Create Account - Zion Tech Marketplace</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Create your Zion Tech Marketplace account'
         />
-=======
         <meta name="description" content="Create your Zion Tech Marketplace account" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
 
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8">
@@ -88,10 +73,8 @@ const RegisterPage = () => {
             <p className="mt-2 text-center text-sm text-gray-600">
               Or{' '}
               <Link
-<<<<<<< HEAD
                 href='/auth/login'
                 className='font-medium text-blue-600 hover:text-blue-500 underline'
-=======
         <meta name="description" content="Create your Zion Tech Marketplace account" />
       </Head>
 
@@ -117,11 +100,9 @@ const RegisterPage = () => {
               <Link
                 href="/auth/login"
                 className="font-medium text-blue-600 hover:text-blue-500 underline"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 href="/auth/login"
                 className="font-medium text-blue-600 hover:text-blue-500 underline"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 sign in if you already have an account
               </Link>
@@ -131,18 +112,15 @@ const RegisterPage = () => {
           <SignupForm onSuccess={handleSuccess} />
 
           {/* Social signup options */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className='mt-6'>
             <div className='relative'>
               <div className='absolute inset-0 flex items-center'>
                 <div className='w-full border-t border-gray-300' />
-=======
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gray-300" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </div>
               <div className="relative flex justify-center text-sm">
                 <span className="px-2 bg-gray-50 text-gray-500">Or continue with</span>
@@ -158,12 +136,10 @@ const RegisterPage = () => {
                 Terms of Service
               </Link>{' '}
               and{' '}
-<<<<<<< HEAD
               <Link
                 href='/legal/privacy'
                 className='text-blue-600 hover:text-blue-500'
               >
-=======
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
@@ -184,10 +160,8 @@ const RegisterPage = () => {
               </Link>{' '}
               and{' '}
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 Privacy Policy
               </Link>
             </p>
@@ -195,18 +169,13 @@ const RegisterPage = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
-=======
   )
 };
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default RegisterPage;

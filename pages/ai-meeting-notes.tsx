@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
@@ -39,13 +37,11 @@ export default function AIMeetingNotesPage() {
       </section>
     </>
   );
-=======
 import SEO from '../components/SEO';
 export default function AIMeetingNotesPage() {
-=======
 import SEO from '../components/SEO';
 export default function AIMeetingNotesPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<>
 			<SEO title="AI Meeting Notes" description="Automatic meeting transcription, summaries, and action items." canonical="/ai-meeting-notes" />
@@ -61,9 +57,6 @@ export default function AIMeetingNotesPage() {
 			</section>
 		</>
 	)
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

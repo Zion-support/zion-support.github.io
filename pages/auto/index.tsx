@@ -1,27 +1,19 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 const AutoIndex: NextPage = () => {
   return (
     <div>
       <Head>
         <title>Autonomous Cloud Agents - Zion</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Autonomous agents that run in the cloud, no human needed.'
         />
-=======
         <meta name="description" content="Autonomous agents that run in the cloud, no human needed." />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       <main className="space-y-6">
         <h1 className="text-2xl font-bold">Autonomous Cloud Agents</h1>
@@ -35,7 +27,6 @@ const AutoIndex: NextPage = () => {
             <h2 className="font-semibold text-lg"><Link href="/auto/market-signals">AI Market Signals Agent</Link></h2>
             <p className="text-sm text-gray-600">Collects relevant AI/tech signals and saves curated insights daily.</p>
           </li>
-<<<<<<< HEAD
           <li className='border rounded p-4'>
             <h2 className='font-semibold text-lg'>
               <Link href='/auto/seo-audit'>Autonomous SEO Auditor</Link>
@@ -43,7 +34,6 @@ const AutoIndex: NextPage = () => {
             <p className='text-sm text-gray-600'>
               Scans pages for SEO gaps and commits a report for fixes.
             </p>
-=======
         <meta name="description" content="Autonomous agents that run in the cloud, no human needed." />
       </Head>
       <main className="space-y-6">
@@ -61,31 +51,24 @@ const AutoIndex: NextPage = () => {
           <li className="border rounded p-4">
             <h2 className="font-semibold text-lg"><Link href="/auto/seo-audit">Autonomous SEO Auditor</Link></h2>
             <p className="text-sm text-gray-600">Scans pages for SEO gaps and commits a report for fixes.</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <li className="border rounded p-4">
             <h2 className="font-semibold text-lg"><Link href="/auto/seo-audit">Autonomous SEO Auditor</Link></h2>
             <p className="text-sm text-gray-600">Scans pages for SEO gaps and commits a report for fixes.</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           </li>
         </ul>
       </main>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
 
 export default AutoIndex;
-=======
   )
 };
 
 export default AutoIndex;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
 
 export default AutoIndex;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

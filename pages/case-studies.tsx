@@ -1,7 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next/link';
 import Layout from '../components/Layout';
 
@@ -28,13 +26,11 @@ export default function CaseStudiesPage() {
   );
 
  </Head> </section> </Layout> 
-=======
 import Layout from '../components/layout/Layout';
 export default function CaseStudiesPage() {
-=======
 import Layout from '../components/layout/Layout';
 export default function CaseStudiesPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<Layout>
 			<Head>
@@ -49,7 +45,4 @@ export default function CaseStudiesPage() {
 		</Layout>
 	)
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

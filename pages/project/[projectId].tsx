@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  export default function ProjectPage () {
   const router = useRouter ();
 const {
@@ -11,14 +9,13 @@ const [project, setProject] = useState<any | null> (null);
 const [loading, setLoading] = useState (true);
 const [error, setError] = useState<string | null> (null);
 const [note, setNote] = useState ("");
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 useEffect ( () => {
+/cursor/fix-lint-push-and-merge-to-main-4fa7 useEffect ( () => {
   async function load () {
   if (!projectId) return;
 }catch (e: any) {
   setError (e.message) 
 }finally {
   setLoading (false) 
-=======
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import FeedbackModal from "../../components/ui/FeedbackModal";
@@ -29,7 +26,7 @@ export default function ProjectPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [note, setNote] = useState("");
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
   const headers = {
     "x-demo-user-role": "client";
@@ -83,11 +80,9 @@ export default function ProjectPage() {
     }
   }
 
-<<<<<<< HEAD
 }userHeaders= {
   headers 
 }/> </div>) 
-=======
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import FeedbackModal from "../../components/ui/FeedbackModal";
@@ -155,8 +150,7 @@ export default function ProjectPage() {
     }
   }
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
       {loading && <div>Loading…</div>}
@@ -253,9 +247,6 @@ export default function ProjectPage() {
       />
     </div>
   )
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

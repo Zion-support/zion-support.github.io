@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  <motion.div initial= {
   {
   opacity: 0, y: 20 
-=======
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -83,7 +80,7 @@ const Solutions: NextPage = () => {
       icon: <BookOpenCheck className="w-8 h-8" />
     }
   ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
   const solutionCapabilities = [
     {
@@ -366,8 +363,6 @@ const Solutions: NextPage = () => {
     </UltraAdvancedFuturisticBackground>
   )
 };
-<<<<<<< HEAD
-=======
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -730,8 +725,5 @@ const Solutions: NextPage = () => {
   )
 };
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default Solutions;

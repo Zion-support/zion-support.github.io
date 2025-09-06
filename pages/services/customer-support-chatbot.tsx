@@ -2,24 +2,16 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import UseTokensButton from '../../components/tokens/UseTokensButton';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 const CustomerSupportChatbot: NextPage = () => {
   return (
     <div>
       <Head>
         <title>CustomerSupportChatbot - Zion Tech Solutions</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta name='description' content='CustomerSupportChatbot service' />
-=======
         <meta name="description" content="CustomerSupportChatbot service" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       
       <main className="space-y-4">
@@ -32,9 +24,7 @@ const CustomerSupportChatbot: NextPage = () => {
   )
 };
 
-<<<<<<< HEAD
 export default CustomerSupportChatbot;
-=======
         <meta name="description" content="CustomerSupportChatbot service" />
       </Head>
       
@@ -49,7 +39,5 @@ export default CustomerSupportChatbot;
 };
 
 export default CustomerSupportChatbot;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default CustomerSupportChatbot;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

@@ -1,29 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
 const AutomationStatus: React.FC = () => {
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 const AutomationStatus: NextPage = () => {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 const AutomationStatus: NextPage = () => {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   return (
     <div>
       <Head>
         <title>AutomationStatus - Zion Tech Solutions</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta name='description' content='AutomationStatus page' />
-=======
         <meta name="description" content="AutomationStatus page" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       
       <main>
@@ -34,9 +26,7 @@ const AutomationStatus: NextPage = () => {
   )
 };
 
-<<<<<<< HEAD
 export default AutomationStatus;
-=======
         <meta name="description" content="AutomationStatus page" />
       </Head>
       
@@ -49,7 +39,5 @@ export default AutomationStatus;
 };
 
 export default AutomationStatus;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default AutomationStatus;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

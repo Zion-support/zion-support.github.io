@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 ] 
 };
 const termsSections = [ {
@@ -41,7 +39,6 @@ type: 'info'
 content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services due to factors beyond our control.';
 type: 'info' 
 }];
-=======
       ]
     };
     {
@@ -63,7 +60,7 @@ import {
   FileText, Shield, AlertTriangle, CheckCircle, 
   User, Lock, Globe, Scale, Clock, Mail
 } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 const TermsPage: React.FC = () => {
   const lastUpdated = 'January 17, 2025';
@@ -1441,8 +1438,6 @@ export default Terms;
     </ErrorBoundary>
   )
 };
-<<<<<<< HEAD
-=======
       ]
     };
     {
@@ -2842,8 +2837,5 @@ export default Terms;
   )
 };
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default TermsPage;

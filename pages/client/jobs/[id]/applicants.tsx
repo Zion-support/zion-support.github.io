@@ -2,8 +2,6 @@ import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { TALENT_PROFILES } from '../../../../data/talent';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 
@@ -14,40 +12,34 @@ export default function JobApplicantsPage() {
     id ? `/api/applications?jobId=${id}` : null,
     fetcher
   );
-=======
 const fetcher = (url: string) => fetch(url).then((r) => r.json()),
 export default function JobApplicantsPage() {
   const router = useRouter();
   const { id } = router.query;
   const { data: appsData } = useSWR(id ? `/api/applications?jobId=${id}` : null, fetcher);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 const fetcher = (url: string) => fetch(url).then((r) => r.json()),
 export default function JobApplicantsPage() {
   const router = useRouter();
   const { id } = router.query;
   const { data: appsData } = useSWR(id ? `/api/applications?jobId=${id}` : null, fetcher);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
 
   const job = jobData?.job;
   const applications = (appsData?.applications as any[]) || [];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className='space-y-4'>
       <div className='flex items-center justify-between'>
         <h1 className='text-2xl font-semibold'>Applicants</h1>
         <Link href='/client/dashboard'>
           <a className='text-sm underline'>Back to Dashboard</a>
         </Link>
-=======
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Applicants</h1>
         <Link href="/client/dashboard"><a className="text-sm underline">Back to Dashboard</a></Link>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </div>
       {job && <p className="text-sm text-gray-600">For job: {job.title}</p>}
       <div className="grid gap-3">
@@ -68,9 +60,7 @@ export default function JobApplicantsPage() {
         })}
       </div>
     </div>
-<<<<<<< HEAD
   );
-=======
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Applicants</h1>
@@ -97,8 +87,6 @@ export default function JobApplicantsPage() {
     </div>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

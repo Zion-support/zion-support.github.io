@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  export default function ServicesIndexPage () {
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (return (<UltraAdvancedFuturisticBackground> <Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) ) 
 }</div> </div> </section> />) ) 
@@ -36,7 +34,6 @@
 }</div> </section> <motion.div initial= {
   {
   opacity: 0, y: 20 
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
@@ -74,7 +71,7 @@ interface Service {
   launchDate?: string;
   [key: string]: unknown, // Allow additional properties
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 // Define a unified service interface
 interface Service {
@@ -145,7 +142,6 @@ const sampleServices: Service[] = [
   }
 ];
 
-<<<<<<< HEAD
 }> <h2 className="text-4xl font-bold text-white mb-6" >Ready to Get Started?</h2> <p className="text-xl text-gray-300 mb-8" > Contact us today to discuss how our services can transform your business. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Contact Sales </Link> <a href="/get-started" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300" > Get Started </Link> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) 
 }<QuoteRequestModal open= {
   modalOpen 
@@ -156,7 +152,6 @@ const sampleServices: Service[] = [
 }onSubmit= {
   handleSubmit 
 }/> </div>) 
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
@@ -264,8 +259,7 @@ const sampleServices: Service[] = [
   }
 ];
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
     .concat(
@@ -292,10 +286,6 @@ export default function ServicesIndexPage() {
     );
     return acc
   }, {} as Record<string, Service[]>);
-
-
-
-
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -668,7 +658,4 @@ export default function ServicesIndexPage() {
     </div>
   )
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

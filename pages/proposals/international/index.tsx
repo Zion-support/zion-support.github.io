@@ -9,14 +9,11 @@ export default function InternationalProposals() {
       const res = await fetch('/api/proposals/list');
       const data = await res.json();
       setItems(data.proposals || []);
-<<<<<<< HEAD
-<<<<<<< HEAD
       setLoading(false);
     })();
-=======
       setLoading(false)
     })()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }, []);
 
   async function updateStatus(id: string, status: string) {
@@ -59,9 +56,7 @@ export default function InternationalProposals() {
         </div>
       )}
     </div>
-<<<<<<< HEAD
   );
-=======
       setLoading(false)
     })()
   }, []);
@@ -108,8 +103,6 @@ export default function InternationalProposals() {
     </div>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 );
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 {
+/cursor/fix-lint-push-and-merge-to-main-4fa7 {
   /* New: Core micro SaaS and AI additions */ 
 }<section className="space-y-6" > <h2 className="text-2xl font-semibold text-white" >AI Social Media Manager</h2> <p className="text-slate-300" >Generate, schedule, and optimize multi-platform posts with best-time recommendations and analytics.</p> <ul className="list-disc list-inside text-slate-300 space-y-1" > <li>Typical SMB budget: $20–$80/mo</li> </ul> </section> const pricingRefs = [ {
   title: 'AI Platforms', links: [ {
@@ -238,19 +236,17 @@ note: 'SMB budgets: $50–$2, 000/mo.'
 }</div> <div className="text-center mt-6" > <Button href="/market-pricing" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white" >More Market References</Button> </div> </section> <section>) ) 
 }</div> </section> <section> </div> </section> <section>) ) 
 }</div> </section> </div> </div> </UltraAdvancedFuturisticBackground>) 
-=======
 import React from 'react';
 import SEO from '../components/SEO';
 const ext = (url: string) => (
 	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>
 );
-=======
 import React from 'react';
 import SEO from '../components/SEO';
 const ext = (url: string) => (
 	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>
 );
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 export default function ServicesAdvertisingPage() {
 	return (
@@ -662,7 +658,4 @@ export default function ServicesAdvertisingPage() {
     </UltraAdvancedFuturisticBackground>
   )
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

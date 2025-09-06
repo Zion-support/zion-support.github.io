@@ -2,8 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   Home,
   Search,
@@ -17,11 +15,10 @@ import {
   ChevronRight,
   Globe,
   Building,;
-=======
 import { 
   Home, Search, Rocket, FileText, Users, Mail, Map, 
   ArrowRight, ExternalLink, ChevronRight, Globe, Building
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 } from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
@@ -66,7 +63,6 @@ export default function SitemapPage() {
   ];
 
   const externalLinks = [
-<<<<<<< HEAD
     {
       href: 'https://github.com/ai-factory',
       label: 'GitHub',
@@ -82,7 +78,6 @@ export default function SitemapPage() {
       label: 'System Status',
       description: 'Real-time system status and uptime',
     },
-=======
 import { 
   Home, Search, Rocket, FileText, Users, Mail, Map, 
   ArrowRight, ExternalLink, ChevronRight, Globe, Building
@@ -133,18 +128,14 @@ export default function SitemapPage() {
     { href: 'https://github.com/ai-factory', label: 'GitHub', description: 'Open source projects and code examples' },
     { href: 'https://docs.ziontechgroup.com', label: 'Documentation', description: 'Technical documentation and guides' },
     { href: 'https://status.ziontechgroup.com', label: 'System Status', description: 'Real-time system status and uptime' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     { href: 'https://github.com/ai-factory', label: 'GitHub', description: 'Open source projects and code examples' },
     { href: 'https://docs.ziontechgroup.com', label: 'Documentation', description: 'Technical documentation and guides' },
     { href: 'https://status.ziontechgroup.com', label: 'System Status', description: 'Real-time system status and uptime' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const contactInfo = [
     { type: 'Phone', value: '+1 (302) 464-0950', action: 'tel:+13024640950' },
-<<<<<<< HEAD
-<<<<<<< HEAD
     {
       type: 'Email',
       value: 'kleber@ziontechgroup.com',
@@ -155,17 +146,15 @@ export default function SitemapPage() {
       value: 'Middletown, DE',
       action: 'https://maps.google.com/?q=Middletown,DE',
     },
-=======
     { type: 'Email', value: 'kleber@ziontechgroup.com', action: 'mailto:kleber@ziontechgroup.com' },
     { type: 'Address', value: 'Middletown, DE', action: 'https://maps.google.com/?q=Middletown,DE' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Sitemap | Zion Tech Group</title>
-<<<<<<< HEAD
         <meta
           name='description'
           content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category."
@@ -176,7 +165,6 @@ export default function SitemapPage() {
           content='Complete website sitemap and navigation guide.'
         />
         <link rel='canonical' href='https://ziontechgroup.com/sitemap' />
-=======
     { type: 'Email', value: 'kleber@ziontechgroup.com', action: 'mailto:kleber@ziontechgroup.com' },
     { type: 'Address', value: 'Middletown, DE', action: 'https://maps.google.com/?q=Middletown,DE' }
   ];
@@ -185,44 +173,32 @@ export default function SitemapPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Sitemap | Zion Tech Group</title>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         <meta name="description" content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category." />
         <meta property="og:title" content="Sitemap | Zion Tech Group" />
         <meta property="og:description" content="Complete website sitemap and navigation guide." />
         <link rel="canonical" href="https://ziontechgroup.com/sitemap" />
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
 
       <SmartHeader />
 
       {/* Hero Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>
-=======
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-<<<<<<< HEAD
-<<<<<<< HEAD
             <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
-=======
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               Site Map
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
@@ -242,9 +218,7 @@ export default function SitemapPage() {
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
                 Search Site
-<<<<<<< HEAD
                 <Search className='w-5 h-5 ml-2' />
-=======
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Site Map
             </h1>
@@ -266,10 +240,8 @@ export default function SitemapPage() {
               >
                 Search Site
                 <Search className="w-5 h-5 ml-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <Search className="w-5 h-5 ml-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </a>
             </div>
           </motion.div>
@@ -277,29 +249,21 @@ export default function SitemapPage() {
       </section>
 
       {/* Main Pages */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section id='main-pages' className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>
-=======
       <section id="main-pages" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section id="main-pages" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='mb-16'
-=======
             className="mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-3xl font-bold text-white mb-4 text-center">
               Main Pages
@@ -309,9 +273,7 @@ export default function SitemapPage() {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-=======
             className="mb-16"
           >
             <h2 className="text-3xl font-bold text-white mb-4 text-center">
@@ -323,10 +285,8 @@ export default function SitemapPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {mainPages.map((page, index) => (
               <motion.div
                 key={page.href}
@@ -334,12 +294,9 @@ export default function SitemapPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='group'
-=======
                 className="group"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <Link
                   href={page.href}
@@ -351,11 +308,9 @@ export default function SitemapPage() {
                     </h3>
                     <ChevronRight className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />
                   </div>
-<<<<<<< HEAD
                   <p className='text-white/70 text-sm leading-relaxed'>
                     {page.description}
                   </p>
-=======
                 className="group"
               >
                 <Link
@@ -369,10 +324,8 @@ export default function SitemapPage() {
                     <ChevronRight className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />
                   </div>
                   <p className="text-white/70 text-sm leading-relaxed">{page.description}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <p className="text-white/70 text-sm leading-relaxed">{page.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </Link>
               </motion.div>
             ))}
@@ -381,29 +334,21 @@ export default function SitemapPage() {
       </section>
 
       {/* Service Categories */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>
-=======
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='mb-16'
-=======
             className="mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-3xl font-bold text-white mb-4 text-center">
               Service Categories
@@ -413,9 +358,7 @@ export default function SitemapPage() {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-=======
             className="mb-16"
           >
             <h2 className="text-3xl font-bold text-white mb-4 text-center">
@@ -427,10 +370,8 @@ export default function SitemapPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.href}
@@ -438,12 +379,9 @@ export default function SitemapPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='group'
-=======
                 className="group"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <Link
                   href={category.href}
@@ -455,11 +393,9 @@ export default function SitemapPage() {
                     </h3>
                     <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />
                   </div>
-<<<<<<< HEAD
                   <p className='text-white/70 text-sm leading-relaxed'>
                     {category.description}
                   </p>
-=======
                 className="group"
               >
                 <Link
@@ -473,10 +409,8 @@ export default function SitemapPage() {
                     <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />
                   </div>
                   <p className="text-white/70 text-sm leading-relaxed">{category.description}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <p className="text-white/70 text-sm leading-relaxed">{category.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </Link>
               </motion.div>
             ))}
@@ -485,59 +419,42 @@ export default function SitemapPage() {
       </section>
 
       {/* Featured Services */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>
-=======
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='mb-16'
-=======
             className="mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-3xl font-bold text-white mb-4 text-center">
               Featured Services
             </h2>
-<<<<<<< HEAD
             <p className='text-white/60 text-center max-w-2xl mx-auto'>
-=======
             className="mb-16"
           >
             <h2 className="text-3xl font-bold text-white mb-4 text-center">
               Featured Services
             </h2>
             <p className="text-white/60 text-center max-w-2xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <p className="text-white/60 text-center max-w-2xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               Our most popular and innovative technology solutions
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {featuredServices.map((service, index) => (
               <motion.div
                 key={service.href}
@@ -545,12 +462,9 @@ export default function SitemapPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='group'
-=======
                 className="group"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <Link
                   href={service.href}
@@ -562,9 +476,7 @@ export default function SitemapPage() {
                     </h3>
                     <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0" />
                   </div>
-<<<<<<< HEAD
                   <p className='text-white/60 text-xs'>{service.category}</p>
-=======
                 className="group"
               >
                 <Link
@@ -578,10 +490,8 @@ export default function SitemapPage() {
                     <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0" />
                   </div>
                   <p className="text-white/60 text-xs">{service.category}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <p className="text-white/60 text-xs">{service.category}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </Link>
               </motion.div>
             ))}
@@ -590,59 +500,42 @@ export default function SitemapPage() {
       </section>
 
       {/* Resources & Tools */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>
-=======
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='mb-16'
-=======
             className="mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-3xl font-bold text-white mb-4 text-center">
               Resources & Tools
             </h2>
-<<<<<<< HEAD
             <p className='text-white/60 text-center max-w-2xl mx-auto'>
-=======
             className="mb-16"
           >
             <h2 className="text-3xl font-bold text-white mb-4 text-center">
               Resources & Tools
             </h2>
             <p className="text-white/60 text-center max-w-2xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <p className="text-white/60 text-center max-w-2xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               Additional resources, tools, and information to help you succeed
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {resources.map((resource, index) => (
               <motion.div
                 key={resource.href}
@@ -650,12 +543,9 @@ export default function SitemapPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='group'
-=======
                 className="group"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <Link
                   href={resource.href}
@@ -667,11 +557,9 @@ export default function SitemapPage() {
                     </h3>
                     <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />
                   </div>
-<<<<<<< HEAD
                   <p className='text-white/60 text-xs leading-relaxed'>
                     {resource.description}
                   </p>
-=======
                 className="group"
               >
                 <Link
@@ -685,10 +573,8 @@ export default function SitemapPage() {
                     <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />
                   </div>
                   <p className="text-white/60 text-xs leading-relaxed">{resource.description}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <p className="text-white/60 text-xs leading-relaxed">{resource.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </Link>
               </motion.div>
             ))}
@@ -697,59 +583,42 @@ export default function SitemapPage() {
       </section>
 
       {/* External Resources */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>
-=======
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='mb-16'
-=======
             className="mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-3xl font-bold text-white mb-4 text-center">
               External Resources
             </h2>
-<<<<<<< HEAD
             <p className='text-white/60 text-center max-w-2xl mx-auto'>
-=======
             className="mb-16"
           >
             <h2 className="text-3xl font-bold text-white mb-4 text-center">
               External Resources
             </h2>
             <p className="text-white/60 text-center max-w-2xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <p className="text-white/60 text-center max-w-2xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               Additional resources and tools hosted on external platforms
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {externalLinks.map((link, index) => (
               <motion.div
                 key={link.href}
@@ -757,12 +626,9 @@ export default function SitemapPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='group'
-=======
                 className="group"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <a
                   href={link.href}
@@ -776,11 +642,9 @@ export default function SitemapPage() {
                     </h3>
                     <ExternalLink className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />
                   </div>
-<<<<<<< HEAD
                   <p className='text-white/70 text-sm leading-relaxed'>
                     {link.description}
                   </p>
-=======
                 className="group"
               >
                 <a
@@ -796,10 +660,8 @@ export default function SitemapPage() {
                     <ExternalLink className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />
                   </div>
                   <p className="text-white/70 text-sm leading-relaxed">{link.description}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <p className="text-white/70 text-sm leading-relaxed">{link.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </a>
               </motion.div>
             ))}
@@ -808,29 +670,21 @@ export default function SitemapPage() {
       </section>
 
       {/* Contact Information */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-4xl mx-auto'>
-=======
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-4xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-4xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='mb-16'
-=======
             className="mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-3xl font-bold text-white mb-4 text-center">
               Contact Information
@@ -840,9 +694,7 @@ export default function SitemapPage() {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-=======
             className="mb-16"
           >
             <h2 className="text-3xl font-bold text-white mb-4 text-center">
@@ -854,10 +706,8 @@ export default function SitemapPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {contactInfo.map((contact, index) => (
               <motion.div
                 key={contact.type}
@@ -865,17 +715,13 @@ export default function SitemapPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl'
-=======
                 className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <h3 className="text-lg font-bold text-white mb-3">{contact.type}</h3>
                 <a
                   href={contact.action}
-<<<<<<< HEAD
                   target={
                     contact.action.startsWith('http') ? '_blank' : '_self'
                   }
@@ -885,7 +731,6 @@ export default function SitemapPage() {
                       : ''
                   }
                   className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium'
-=======
                 className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
               >
                 <h3 className="text-lg font-bold text-white mb-3">{contact.type}</h3>
@@ -894,12 +739,10 @@ export default function SitemapPage() {
                   target={contact.action.startsWith('http') ? '_blank' : '_self'}
                   rel={contact.action.startsWith('http') ? 'noopener noreferrer' : ''}
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   target={contact.action.startsWith('http') ? '_blank' : '_self'}
                   rel={contact.action.startsWith('http') ? 'noopener noreferrer' : ''}
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 >
                   {contact.value}
                 </a>
@@ -910,30 +753,22 @@ export default function SitemapPage() {
       </section>
 
       {/* Quick Navigation */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
-=======
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
-<<<<<<< HEAD
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
-=======
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               Need Help Finding Something?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
@@ -952,9 +787,7 @@ export default function SitemapPage() {
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
                 Contact Support
-<<<<<<< HEAD
                 <Mail className='w-5 h-5 ml-2' />
-=======
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Need Help Finding Something?
             </h2>
@@ -975,10 +808,8 @@ export default function SitemapPage() {
               >
                 Contact Support
                 <Mail className="w-5 h-5 ml-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <Mail className="w-5 h-5 ml-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </Link>
             </div>
           </motion.div>
@@ -987,8 +818,6 @@ export default function SitemapPage() {
 
       <SmartFooter />
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 
 }animate= {
@@ -1022,11 +851,8 @@ export default function SitemapPage() {
   once: true 
 
 }> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>) 
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 import { getZionDesignMap } from '../utils/design-map';
-=======
 import React, { useMemo, useState } from 'react'
 import Head from 'next/head'
 import { getZionDesignMap } from '../utils/design-map'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 export default function DesignMapPage() {
   const designMap = useMemo(() => getZionDesignMap(), [])
@@ -17,11 +14,9 @@ export default function DesignMapPage() {
   const [isLoading, setIsLoading] = useState(false)
 
   async function requestWireframe() {
-<<<<<<< HEAD
     if (!screenName) return;
     setIsLoading(true);
     setSuggestion(null);
-=======
 import React, { useMemo, useState } from 'react'
 import Head from 'next/head'
 import { getZionDesignMap } from '../utils/design-map'
@@ -37,33 +32,26 @@ export default function DesignMapPage() {
     if (!screenName) return
     setIsLoading(true)
     setSuggestion(null)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     if (!screenName) return
     setIsLoading(true)
     setSuggestion(null)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     try {
       const res = await fetch('/api/figma/wireframe-suggest', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-<<<<<<< HEAD
         body: JSON.stringify({ screenName, role }),
       });
       const json = await res.json();
       setSuggestion(json?.suggestion || 'No suggestion received');
-=======
         body: JSON.stringify({ screenName, role })})
       const json = await res.json()
       setSuggestion(json?.suggestion || 'No suggestion received')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     } catch (e: any) {
       setSuggestion(e?.message || 'Failed to fetch suggestion')
     } finally {
-<<<<<<< HEAD
       setIsLoading(false);
-=======
         body: JSON.stringify({ screenName, role })})
       const json = await res.json()
       setSuggestion(json?.suggestion || 'No suggestion received')
@@ -71,10 +59,8 @@ export default function DesignMapPage() {
       setSuggestion(e?.message || 'Failed to fetch suggestion')
     } finally {
       setIsLoading(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       setIsLoading(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
   }
 
@@ -83,8 +69,6 @@ export default function DesignMapPage() {
       <Head>
         <title>Zion OS Design Map</title>
       </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='space-y-6'>
         <div className='flex items-center justify-between'>
           <h1 className='text-2xl font-semibold'>Zion OS Design Map</h1>
@@ -113,7 +97,6 @@ export default function DesignMapPage() {
             >
               Export React
             </a>
-=======
       <section className="space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Zion OS Design Map</h1>
@@ -122,7 +105,7 @@ export default function DesignMapPage() {
             <a href="/api/figma/export?kit=tailwind" className="px-3 py-2 rounded bg-neon-blue text-black text-sm">Export Tailwind</a>
             <a href="/api/figma/export?kit=chakra" className="px-3 py-2 rounded bg-neon-purple text-white text-sm">Export Chakra</a>
             <a href="/api/figma/export?kit=react" className="px-3 py-2 rounded bg-neon-green text-black text-sm">Export React</a>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           </div>
         </div>
 
@@ -144,14 +127,12 @@ export default function DesignMapPage() {
               <input value={screenName} onChange={e => setScreenName(e.target.value)} className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-black/40" placeholder="e.g., Talent Dashboard - Insights" />
             </div>
             <div>
-<<<<<<< HEAD
               <label className='block text-xs text-gray-500 mb-1'>Role</label>
               <select
                 value={role}
                 onChange={e => setRole(e.target.value)}
                 className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-black/40'
               >
-=======
       <section className="space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Zion OS Design Map</h1>
@@ -183,11 +164,9 @@ export default function DesignMapPage() {
             <div>
               <label className="block text-xs text-gray-500 mb-1">Role</label>
               <select value={role} onChange={e => setRole(e.target.value)} className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-black/40">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <label className="block text-xs text-gray-500 mb-1">Role</label>
               <select value={role} onChange={e => setRole(e.target.value)} className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-black/40">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <option>Talent</option>
                 <option>Client</option>
                 <option>Admin</option>
@@ -196,49 +175,35 @@ export default function DesignMapPage() {
                 <option>Mobile</option>
               </select>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <button
               onClick={requestWireframe}
               className='px-3 py-2 rounded bg-gray-900 text-white text-sm disabled:opacity-60'
               disabled={isLoading || !screenName}
             >
-=======
             <button onClick={requestWireframe} className="px-3 py-2 rounded bg-gray-900 text-white text-sm disabled:opacity-60" disabled={isLoading || !screenName}>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <button onClick={requestWireframe} className="px-3 py-2 rounded bg-gray-900 text-white text-sm disabled:opacity-60" disabled={isLoading || !screenName}>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               {isLoading ? 'Generating…' : 'GPT Wireframe Suggestion'}
             </button>
           </div>
           {suggestion && (
-<<<<<<< HEAD
-<<<<<<< HEAD
             <pre className='mt-4 text-xs whitespace-pre-wrap p-3 rounded bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800'>
               {suggestion}
             </pre>
-=======
             <pre className="mt-4 text-xs whitespace-pre-wrap p-3 rounded bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800">{suggestion}</pre>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <pre className="mt-4 text-xs whitespace-pre-wrap p-3 rounded bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800">{suggestion}</pre>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           )}
         </div>
       </section>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 function MapColumn({ title, sections }: { title: string, sections: { id: string, title: string, items: { id: string, title: string }[] }[] }) {
   return (
-<<<<<<< HEAD
     <div className='space-y-3'>
       <h3 className='text-lg font-semibold'>{title}</h3>
       <div className='grid gap-3'>
@@ -254,14 +219,12 @@ function MapColumn({ title, sections }: { title: string, sections: { id: string,
                   key={i.id}
                   className='text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800'
                 >
-=======
   )
 }
 
 function MapColumn({ title, sections }: { title: string, sections: { id: string, title: string, items: { id: string, title: string }[] }[] }) {
   return (
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     <div className="space-y-3">
       <h3 className="text-lg font-semibold">{title}</h3>
       <div className="grid gap-3">
@@ -271,10 +234,7 @@ function MapColumn({ title, sections }: { title: string, sections: { id: string,
             <div className="flex flex-wrap gap-2">
               {s.items.map((i) => (
                 <span key={i.id} className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800">
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   {i.title}
                 </span>
               ))}
@@ -283,14 +243,9 @@ function MapColumn({ title, sections }: { title: string, sections: { id: string,
         ))}
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

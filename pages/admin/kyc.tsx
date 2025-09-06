@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-=======
 import React, { useEffect, useState } from 'react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
 export default function AdminKycPage() {
@@ -26,9 +23,7 @@ export default function AdminKycPage() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, action, reason: reason || undefined })}),
     const data = await res.json();
-<<<<<<< HEAD
     if (data.ok) load();
-=======
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
@@ -53,27 +48,22 @@ export default function AdminKycPage() {
       body: JSON.stringify({ userId, action, reason: reason || undefined })}),
     const data = await res.json();
     if (data.ok) load()
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     if (data.ok) load()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }
 
   return (
     <>
       <Head>
         <title>Admin KYC Queue - Zion</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Review and approve or reject KYC submissions'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-=======
         <meta name="description" content="Review and approve or reject KYC submissions" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       <main className="max-w-5xl mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold mb-4">KYC Review Queue</h1>
@@ -107,11 +97,9 @@ export default function AdminKycPage() {
                     <div key={d.id} className="border rounded p-2 text-xs">
                       <div>Kind: {d.kind}</div>
                       <div>Filename: {d.filename}</div>
-<<<<<<< HEAD
                       <div>
                         Uploaded: {new Date(d.uploadedAt).toLocaleString()}
                       </div>
-=======
         <meta name="description" content="Review and approve or reject KYC submissions" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -148,10 +136,8 @@ export default function AdminKycPage() {
                       <div>Kind: {d.kind}</div>
                       <div>Filename: {d.filename}</div>
                       <div>Uploaded: {new Date(d.uploadedAt).toLocaleString()}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <div>Uploaded: {new Date(d.uploadedAt).toLocaleString()}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     </div>
                   ))}
                 </div>
@@ -161,14 +147,9 @@ export default function AdminKycPage() {
         </div>
       </main>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

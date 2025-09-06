@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-=======
 import React, { useState } from 'react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 import { motion } from 'framer-motion';
 import { 
   HelpCircle, MessageCircle, Phone, Mail, Clock, 
@@ -210,7 +207,6 @@ export default function Support() {
         </div>
       </section>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -226,7 +222,6 @@ export default function Support() {
                 We're here to help you succeed with comprehensive support options.
               </p>
             </motion.div>
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -432,8 +427,7 @@ export default function Support() {
         </div>
       </section>
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       {/* Quick Actions */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -550,22 +544,16 @@ export default function Support() {
                 </div>
               </motion.div>
             ))}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           </div>
         </section>
 
         {/* Support Channels */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-=======
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-6xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -592,12 +580,10 @@ export default function Support() {
                   <div className="flex justify-center mb-4">
                     {channel.icon}
                   </div>
-<<<<<<< HEAD
                   <h3 className="text-xl font-semibold mb-2">{channel.title}</h3>
                   <p className="text-gray-600 mb-4">{channel.description}</p>
                   <div className="text-sm text-blue-600 font-medium">
                     {channel.availability}
-=======
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -626,8 +612,7 @@ export default function Support() {
                   <div className="flex justify-center mb-4">
                     {channel.icon}
                   </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <h3 className="text-xl font-bold text-white mb-3">{channel.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{channel.description}</p>
                   <div className="space-y-2 text-sm">
@@ -643,10 +628,7 @@ export default function Support() {
                       <span className="text-gray-400">Priority:</span>
                       <span className="text-purple-400">{channel.priority}</span>
                     </div>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                 </motion.div>
               ))}
@@ -654,8 +636,6 @@ export default function Support() {
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Contact Info */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
@@ -681,7 +661,6 @@ export default function Support() {
                   <Users className="w-8 h-8 text-blue-600 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold mb-2">Address</h3>
                   <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
-=======
         {/* Search and Filter */}
         <section className="py-12 px-4">
           <div className="max-w-6xl mx-auto">
@@ -697,7 +676,7 @@ export default function Support() {
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               </div>
 
@@ -1062,10 +1041,8 @@ export default Support;
                   href="tel:+13024640950"
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center"
                 >
-<<<<<<< HEAD
                   Help Center
                 </Link>
-=======
         {/* Search and Filter */}
         <section className="py-12 px-4">
           <div className="max-w-6xl mx-auto">
@@ -1445,8 +1422,7 @@ export default Support;
                   href="tel:+13024640950"
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center"
                 >
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
                 </a>
@@ -1457,29 +1433,19 @@ export default Support;
                   For critical issues affecting production systems, contact our emergency support line: </p>
                 <div className="text-2xl font-bold text-cyan-400">+1 (302) 464-0950</div>
                 <p className="text-sm text-gray-400 mt-2">Available 24/7 for enterprise clients</p>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
       </div>
     </>
   );
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </main>
     </Layout>
   )
 };
 
 export default SupportPage;
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

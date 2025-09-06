@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function FacebookRedirect() {
   useEffect(() => {
@@ -30,11 +28,9 @@ export default function FacebookRedirect() {
       </div>
     </>
   );
-=======
 export default function FacebookRedirect() {
-=======
 export default function FacebookRedirect() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
 			window.location.replace('https: //facebook.com/ziontechgroup')
@@ -55,9 +51,6 @@ export default function FacebookRedirect() {
 			</div>
 		</>
 	)
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

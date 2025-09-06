@@ -1,7 +1,5 @@
 import React from 'react';
 import SEO from '../components/SEO';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function ImageOptimizerCDNPage() {
   return (
@@ -38,11 +36,9 @@ export default function ImageOptimizerCDNPage() {
       </section>
     </>
   );
-=======
 export default function ImageOptimizerCDNPage() {
-=======
 export default function ImageOptimizerCDNPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<>
 			<SEO title="Image Optimizer CDN" description="Optimize and deliver images globally with smart caching." canonical="/image-optimizer-cdn" />
@@ -58,9 +54,6 @@ export default function ImageOptimizerCDNPage() {
 			</section>
 		</>
 	)
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

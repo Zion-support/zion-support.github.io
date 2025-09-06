@@ -1,19 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
-=======
 import React, { useEffect, useState } from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function AdminTokens() {
   const [transactions, setTransactions] = useState<any[]>([]);
   const [userId, setUserId] = useState("");
   const [amount, setAmount] = useState(100);
-<<<<<<< HEAD
   const [reason, setReason] = useState('admin_action');
-=======
 import React, { useEffect, useState } from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
 export default function AdminTokens() {
@@ -21,23 +16,18 @@ export default function AdminTokens() {
   const [userId, setUserId] = useState("");
   const [amount, setAmount] = useState(100);
   const [reason, setReason] = useState("admin_action");
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const [reason, setReason] = useState("admin_action");
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   const [config, setConfig] = useState<any>(null);
 
   async function load() {
     const [txRes, cfgRes] = await Promise.all([
-<<<<<<< HEAD
-<<<<<<< HEAD
       fetch('/api/admin/tokens').then(r => r.json()),
       fetch('/api/admin/tokens/config').then(r => r.json()),
     ]);
-=======
       fetch("/api/admin/tokens").then((r) => r.json());
       fetch("/api/admin/tokens/config").then((r) => r.json())]);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     setTransactions(txRes.transactions || []);
     setConfig(cfgRes)
   }
@@ -76,7 +66,6 @@ export default function AdminTokens() {
   }
 
   return (
-<<<<<<< HEAD
     <EnhancedLayout title='Admin: ZION$'>
       <div className='max-w-4xl mx-auto space-y-6'>
         <div className='p-4 border rounded bg-white dark:bg-zinc-900'>
@@ -108,7 +97,6 @@ export default function AdminTokens() {
               <button className='px-3 py-1 rounded border' onClick={revoke}>
                 Revoke
               </button>
-=======
       fetch("/api/admin/tokens").then((r) => r.json());
       fetch("/api/admin/tokens/config").then((r) => r.json())]);
     setTransactions(txRes.transactions || []);
@@ -149,8 +137,7 @@ export default function AdminTokens() {
   }
 
   return (
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     <EnhancedLayout title="Admin: ZION$">
       <div className="max-w-4xl mx-auto space-y-6">
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
@@ -162,22 +149,16 @@ export default function AdminTokens() {
             <div className="flex gap-2">
               <button className="px-3 py-1 rounded border" onClick={issue}>Issue</button>
               <button className="px-3 py-1 rounded border" onClick={revoke}>Revoke</button>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className='p-4 border rounded bg-white dark:bg-zinc-900'>
           <h2 className='font-medium mb-3'>Conversion & Rules</h2>
-=======
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
           <h2 className="font-medium mb-3">Conversion & Rules</h2>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           {config && (
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-2">
@@ -185,8 +166,6 @@ export default function AdminTokens() {
                 <input type="number" step="0.01" className="border rounded px-2 py-1" value={config.usdPerToken} onChange={(e) => setConfig({ ...config, usdPerToken: parseFloat(e.target.value || "0") })} />
                 <button className="px-3 py-1 rounded border" onClick={saveConfig}>Save</button>
               </div>
-<<<<<<< HEAD
-=======
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
           <h2 className="font-medium mb-3">Conversion & Rules</h2>
           {config && (
@@ -197,16 +176,12 @@ export default function AdminTokens() {
                 <button className="px-3 py-1 rounded border" onClick={saveConfig}>Save</button>
               </div>
               <div className="text-xs text-gray-500">Example: 0.05 means 100 ZION$ = $5 credit.</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="text-xs text-gray-500">Example: 0.05 means 100 ZION$ = $5 credit.</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </div>
           )}
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className='p-4 border rounded bg-white dark:bg-zinc-900'>
           <h2 className='font-medium mb-3'>Transactions</h2>
           <div className='space-y-2 text-sm max-h-96 overflow-auto'>
@@ -229,7 +204,6 @@ export default function AdminTokens() {
                 <div className='font-medium'>
                   {t.type === 'earn' || t.type === 'issue' ? '+' : '-'}
                   {t.amount} ZION$
-=======
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
           <h2 className="font-medium mb-3">Transactions</h2>
           <div className="space-y-2 text-sm max-h-96 overflow-auto">
@@ -239,7 +213,7 @@ export default function AdminTokens() {
                   <span className={`px-2 py-0.5 rounded text-xs ${["earn","issue"].includes(t.type) ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>{t.type}</span>
                   <span className="text-gray-600">{t.userId}</span>
                   <span className="text-gray-500">{t.reason.replaceAll("_"," ")}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </div>
                 <div className="font-medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>
               </div>
@@ -247,11 +221,9 @@ export default function AdminTokens() {
             {transactions.length === 0 && <div className="text-gray-500">No transactions.</div>}
           </div>
         </div>
-<<<<<<< HEAD
       </main>
     </>
   );
-=======
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
           <h2 className="font-medium mb-3">Transactions</h2>
           <div className="space-y-2 text-sm max-h-96 overflow-auto">
@@ -272,10 +244,8 @@ export default function AdminTokens() {
     </EnhancedLayout>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       </div>
     </EnhancedLayout>
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

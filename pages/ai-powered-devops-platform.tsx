@@ -1,7 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 
 export default function AIPoweredDevOpsPlatformPage() {
@@ -38,13 +36,11 @@ export default function AIPoweredDevOpsPlatformPage() {
       />
     </>
   );
-=======
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPoweredDevOpsPlatformPage() {
-=======
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPoweredDevOpsPlatformPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<>
 			<Head>
@@ -72,9 +68,6 @@ export default function AIPoweredDevOpsPlatformPage() {
 			/>
 		</>
 	)
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

@@ -1,21 +1,14 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function Page() {
-=======
 import Head from 'next/head';
 export default function TransportationLogisticsSolutions() {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 import Head from 'next/head';
 export default function TransportationLogisticsSolutions() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   return (
     <>
       <Head>
         <title>Transportation & Logistics Solutions | Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='AI and optimization solutions for transportation and logistics: routing, supply chain, and real-time visibility.'
@@ -24,10 +17,9 @@ export default function TransportationLogisticsSolutions() {
           rel='canonical'
           href='https://ziontechgroup.com/transportation-logistics-solutions'
         />
-=======
         <meta name="description" content="AI and optimization solutions for transportation and logistics: routing, supply chain, and real-time visibility." />
         <link rel="canonical" href="https://ziontechgroup.com/transportation-logistics-solutions" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       <div className="min-h-screen bg-black text-white">
         <section className="container mx-auto px-4 py-20">
@@ -36,9 +28,7 @@ export default function TransportationLogisticsSolutions() {
         </section>
       </div>
     </>
-<<<<<<< HEAD
   );
-=======
         <meta name="description" content="AI and optimization solutions for transportation and logistics: routing, supply chain, and real-time visibility." />
         <link rel="canonical" href="https://ziontechgroup.com/transportation-logistics-solutions" />
       </Head>
@@ -51,8 +41,6 @@ export default function TransportationLogisticsSolutions() {
     </>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

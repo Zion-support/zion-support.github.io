@@ -2,8 +2,6 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
 import AIAssistant from '../../components/ui/AIAssistant';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const ResumeBuilder: NextPage = () => {
   const [role, setRole] = useState('Data Scientist');
@@ -11,18 +9,15 @@ const ResumeBuilder: NextPage = () => {
   const [skills, setSkills] = useState(
     'Python, Machine Learning, Cloud Systems'
   );
-=======
 const ResumeBuilder: NextPage = () => {
   const [role, setRole] = useState('Data Scientist');
   const [experienceYears, setExperienceYears] = useState(5);
   const [skills, setSkills] = useState('Python, Machine Learning, Cloud Systems');
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 const ResumeBuilder: NextPage = () => {
   const [role, setRole] = useState('Data Scientist');
   const [experienceYears, setExperienceYears] = useState(5);
   const [skills, setSkills] = useState('Python, Machine Learning, Cloud Systems');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   const [tone, setTone] = useState('clear and concise');
 
   const [summary, setSummary] = useState('');
@@ -31,8 +26,6 @@ const ResumeBuilder: NextPage = () => {
 
   const operatorToken = process.env.NEXT_PUBLIC_OPERATOR_TOKEN;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const generateSummaryPrompt = useMemo(
     () =>
       `Create a professional resume summary for a ${role.toLowerCase()} with ${experienceYears} years of experience in ${skills}. Tone: ${tone}.\n\nReturn markdown only.`,
@@ -41,7 +34,6 @@ const ResumeBuilder: NextPage = () => {
 
   const improveSectionPrompt = (sectionName: string, content: string) =>
     `Improve the following resume ${sectionName} to be professional, concise, and results-focused. Keep markdown formatting.\n\n${content}`;
-=======
   const generateSummaryPrompt = useMemo(() => (
     `Create a professional resume summary for a ${role.toLowerCase()} with ${experienceYears} years of experience in ${skills}. Tone: ${tone}.\n\nReturn markdown only.`
   ), [role, experienceYears, skills, tone]);
@@ -49,8 +41,6 @@ const ResumeBuilder: NextPage = () => {
   const improveSectionPrompt = (sectionName: string, content: string) => (
     `Improve the following resume ${sectionName} to be professional, concise, and results-focused. Keep markdown formatting.\n\n${content}`
   );
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const generateSummaryPrompt = useMemo(() => (
     `Create a professional resume summary for a ${role.toLowerCase()} with ${experienceYears} years of experience in ${skills}. Tone: ${tone}.\n\nReturn markdown only.`
   ), [role, experienceYears, skills, tone]);
@@ -58,7 +48,7 @@ const ResumeBuilder: NextPage = () => {
   const improveSectionPrompt = (sectionName: string, content: string) => (
     `Improve the following resume ${sectionName} to be professional, concise, and results-focused. Keep markdown formatting.\n\n${content}`
   );
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
   return (
     <div>
@@ -66,12 +56,9 @@ const ResumeBuilder: NextPage = () => {
         <title>Resume Builder - Zion AI Marketplace</title>
       </Head>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       <h1 className='text-2xl font-semibold mb-4'>Resume Builder</h1>
-=======
       <h1 className="text-2xl font-semibold mb-4">Resume Builder</h1>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
       <section className="mb-8">
         <h2 className="text-lg font-semibold mb-2">Profile</h2>
@@ -85,7 +72,6 @@ const ResumeBuilder: NextPage = () => {
           <label className="text-sm sm:col-span-2">Key Skills
             <input value={skills} onChange={e => setSkills(e.target.value)} className="mt-1 w-full rounded-md border p-2" />
           </label>
-<<<<<<< HEAD
           <label className='text-sm sm:col-span-2'>
             Tone
             <input
@@ -93,7 +79,6 @@ const ResumeBuilder: NextPage = () => {
               onChange={e => setTone(e.target.value)}
               className='mt-1 w-full rounded-md border p-2'
             />
-=======
       <h1 className="text-2xl font-semibold mb-4">Resume Builder</h1>
 
       <section className="mb-8">
@@ -110,17 +95,13 @@ const ResumeBuilder: NextPage = () => {
           </label>
           <label className="text-sm sm:col-span-2">Tone
             <input value={tone} onChange={e => setTone(e.target.value)} className="mt-1 w-full rounded-md border p-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <label className="text-sm sm:col-span-2">Tone
             <input value={tone} onChange={e => setTone(e.target.value)} className="mt-1 w-full rounded-md border p-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           </label>
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='mb-8'>
         <div className='flex items-center justify-between mb-2'>
           <h2 className='text-lg font-semibold'>Summary</h2>
@@ -128,7 +109,6 @@ const ResumeBuilder: NextPage = () => {
             <AIAssistant
               buttonLabel='Generate with AI'
               title='Generate Resume Summary'
-=======
       <section className="mb-8">
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-lg font-semibold">Summary</h2>
@@ -136,8 +116,6 @@ const ResumeBuilder: NextPage = () => {
             <AIAssistant
               buttonLabel="Generate with AI"
               title="Generate Resume Summary"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="mb-8">
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-lg font-semibold">Summary</h2>
@@ -145,14 +123,12 @@ const ResumeBuilder: NextPage = () => {
             <AIAssistant
               buttonLabel="Generate with AI"
               title="Generate Resume Summary"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               defaultPrompt={generateSummaryPrompt}
               onAccept={setSummary}
               authorizationToken={operatorToken}
             />
             <AIAssistant
-<<<<<<< HEAD
-<<<<<<< HEAD
               buttonLabel='Improve with AI'
               title='Improve Resume Summary'
               defaultPrompt={improveSectionPrompt(
@@ -160,46 +136,38 @@ const ResumeBuilder: NextPage = () => {
                 summary ||
                   'No content provided. Generate a summary based on role, years, and skills.'
               )}
-=======
               buttonLabel="Improve with AI"
               title="Improve Resume Summary"
               defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               buttonLabel="Improve with AI"
               title="Improve Resume Summary"
               defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               onAccept={setSummary}
               authorizationToken={operatorToken}
             />
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <textarea
           value={summary}
           onChange={e => setSummary(e.target.value)}
           rows={6}
           className='w-full rounded-md border p-3'
         />
-=======
         <textarea value={summary} onChange={e => setSummary(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </section>
 
       <section className="mb-8">
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-lg font-semibold">Experience</h2>
           <AIAssistant
-<<<<<<< HEAD
             buttonLabel='Improve with AI'
             title='Improve Experience'
             defaultPrompt={improveSectionPrompt(
               'experience section',
               experience || 'Add experience details to improve.'
             )}
-=======
         <textarea value={summary} onChange={e => setSummary(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
       </section>
 
@@ -210,34 +178,28 @@ const ResumeBuilder: NextPage = () => {
             buttonLabel="Improve with AI"
             title="Improve Experience"
             defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             buttonLabel="Improve with AI"
             title="Improve Experience"
             defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             onAccept={setExperience}
             authorizationToken={operatorToken}
           />
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <textarea
           value={experience}
           onChange={e => setExperience(e.target.value)}
           rows={10}
           className='w-full rounded-md border p-3'
         />
-=======
         <textarea value={experience} onChange={e => setExperience(e.target.value)} rows={10} className="w-full rounded-md border p-3" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </section>
 
       <section className="mb-8">
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-lg font-semibold">Skills</h2>
           <AIAssistant
-<<<<<<< HEAD
             buttonLabel='Improve with AI'
             title='Improve Skills'
             defaultPrompt={improveSectionPrompt(
@@ -245,7 +207,6 @@ const ResumeBuilder: NextPage = () => {
               skillsText ||
                 `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`
             )}
-=======
         <textarea value={experience} onChange={e => setExperience(e.target.value)} rows={10} className="w-full rounded-md border p-3" />
       </section>
 
@@ -256,35 +217,28 @@ const ResumeBuilder: NextPage = () => {
             buttonLabel="Improve with AI"
             title="Improve Skills"
             defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             buttonLabel="Improve with AI"
             title="Improve Skills"
             defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             onAccept={setSkillsText}
             authorizationToken={operatorToken}
           />
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <textarea
           value={skillsText}
           onChange={e => setSkillsText(e.target.value)}
           rows={6}
           className='w-full rounded-md border p-3'
         />
-=======
         <textarea value={skillsText} onChange={e => setSkillsText(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </section>
     </div>
   )
 };
 
-<<<<<<< HEAD
 export default ResumeBuilder;
-=======
         <textarea value={skillsText} onChange={e => setSkillsText(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
       </section>
     </div>
@@ -292,7 +246,5 @@ export default ResumeBuilder;
 };
 
 export default ResumeBuilder;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default ResumeBuilder;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

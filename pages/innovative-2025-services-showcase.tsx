@@ -1,16 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  const filteredServices = allInnovativeServices.filter (service => {
   const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase () .includes (selectedCategory) || (selectedCategory === 'ai' && (service.category.includes ('AI') || service.category.includes ('Machine Learning') ) ) || (selectedCategory === 'it' && (service.category.includes ('IT') || service.category.includes ('Infrastructure') ) ) || (selectedCategory === 'cybersecurity' && service.category.includes ('Security') ) || (selectedCategory === 'cloud' && (service.category.includes ('Cloud') || service.category.includes ('FinOps') ) ) || (selectedCategory === 'developer' && service.category.includes ('Developer') );
 const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || (service as any) .tagline?.toLowerCase () .includes (searchTerm.toLowerCase () );
 ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
+/cursor/fix-lint-push-and-merge-to-main-4fa7 
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const staggerContainer = {
+/cursor/fix-lint-push-and-merge-to-main-4fa7 const staggerContainer = {
   animate: {
   transition: {
   staggerChildren: 0.1 
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -18,7 +15,7 @@ import {
   TrendingUp, Users, Star, Zap, Lock, Target;
   ArrowRight, Phone, Mail, MapPin, ExternalLink
 } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 // Import our new innovative services
 import { innovativeMicroSaasExpansionV32025 } from '../data/2025-innovative-micro-saas-expansion-v3';
@@ -424,7 +421,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
   )
 };
 
-<<<<<<< HEAD
 }%`;
 top: `$ {
   Math.random () * 100 
@@ -463,7 +459,6 @@ autonomous systems, and innovative micro SAAS services that are transforming ind
   /* Footer */ 
 }<motion.footer > <div> <div className="flex items-center space-x-2 mb-4" > <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center" > <Zap className="w-5 h-5 text-white" /> </div> <span className="text-lg font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" > Zion Tech Group </span> </div> <p className="text-gray-400 text-sm" > Transforming businesses with innovative technology solutions for the future. </p> </div> <div> <h3 className="text-white font-semibold mb-4" >Services</h3> <ul className="space-y-2 text-sm text-gray-400" > <li><Link href="/services" className="hover:text-white transition-colors" >AI Services</Link></li> <li><Link href="/services" className="hover:text-white transition-colors" >IT Infrastructure</Link></li> <li><Link href="/services" className="hover:text-white transition-colors" >Micro SAAS</Link></li> <li><Link href="/services" className="hover:text-white transition-colors" >Cybersecurity</Link></li> </ul> </div> <div> <h3 className="text-white font-semibold mb-4" >Company</h3> <ul className="space-y-2 text-sm text-gray-400" > <li><Link href="/about" className="hover:text-white transition-colors" >About Us</Link></li> <li><Link href="/team" className="hover:text-white transition-colors" >Our Team</Link></li> <li><Link href="/careers" className="hover:text-white transition-colors" >Careers</Link></li> <li><Link href="/news" className="hover:text-white transition-colors" >News</Link></li> </ul> </div> <div> <h3 className="text-white font-semibold mb-4" >Connect</h3> <ul className="space-y-2 text-sm text-gray-400" > <li><Link href="/contact" className="hover:text-white transition-colors" >Contact</Link></li> <li><Link href="/support" className="hover:text-white transition-colors" >Support</Link></li> <li><Link href="/blog" className="hover:text-white transition-colors" >Blog</Link></li> <li><Link href="/resources" className="hover:text-white transition-colors" >Resources</Link></li> </ul> </div> </div> <div className="mt-12 pt-8 border-t border-gray-800 text-center" > <p className="text-gray-400 text-sm" > © 2025 Zion Tech Group. All rights reserved. | <Link href="/privacy" className="hover:text-white transition-colors ml-2" >Privacy Policy</Link> | <Link href="/terms" className="hover:text-white transition-colors ml-2" >Terms of Service</Link> </p> </div> </div> </motion.footer> </div> </div> </>) 
 };
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -876,7 +871,5 @@ const Innovative2025ServicesShowcase: React.FC = () => {
   )
 };
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default Innovative2025ServicesShowcase;

@@ -2,8 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   CheckCircle,
   ArrowRight,
@@ -48,7 +46,6 @@ import {
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
-=======
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, 
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, 
@@ -59,8 +56,6 @@ import {
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, 
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, 
@@ -71,13 +66,11 @@ import {
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
   website: 'https://ziontechgroup.com',
 };
 
@@ -102,39 +95,31 @@ const heroStats = [
     value: '500%',
     icon: <TrendingUp className='w-5 h-5' />,
   },
-=======
   website: 'https://ziontechgroup.com'
 };
 
 const heroStats = [
-=======
   website: 'https://ziontechgroup.com'
 };
 
 const heroStats = [
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   { label: 'AI Services Delivered', value: '200+', icon: <Brain className="w-5 h-5" /> },
   { label: 'Happy AI Clients', value: '500+', icon: <Users className="w-5 h-5" /> },
   { label: 'AI Success Rate', value: '99.8%', icon: <Award className="w-5 h-5" /> },
   { label: 'AI ROI Average', value: '500%', icon: <TrendingUp className="w-5 h-5" /> }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 ];
 
 const serviceCategories = [
   {
     title: 'AI Development Tools',
     description: 'Advanced AI-powered development and testing automation',
-<<<<<<< HEAD
-<<<<<<< HEAD
     services: advancedAIAutomationServices2025.filter(
       s => s.category === 'AI Development Tools'
     ),
-=======
     services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Development Tools'),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     icon: Code,
     color: 'from-emerald-500 to-teal-600',
     features: ['Code Review AutomationAI TestingDevOps Intelligence']
@@ -169,14 +154,12 @@ const serviceCategories = [
     services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Data Management'),
     icon: Database,
     color: 'from-cyan-500 to-blue-600',
-<<<<<<< HEAD
     features: [
       'Pipeline Management',
       'Quality Assurance',
       'Governance Automation',
     ],
   },
-=======
     services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Development Tools'),
     icon: Code,
     color: 'from-emerald-500 to-teal-600',
@@ -214,23 +197,18 @@ const serviceCategories = [
     color: 'from-cyan-500 to-blue-600',
     features: ['Pipeline ManagementQuality AssuranceGovernance Automation']
   }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     features: ['Pipeline ManagementQuality AssuranceGovernance Automation']
   }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 ];
 
 const heroFeatures = [
   {
     title: 'AI-Powered Automation',
-<<<<<<< HEAD
-<<<<<<< HEAD
     description:
       'Advanced AI algorithms that automate complex development, testing, and operations tasks.',
-=======
     description: 'Advanced AI algorithms that automate complex development, testing, and operations tasks.';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     icon: Brain,
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
   };
@@ -250,10 +228,8 @@ const heroFeatures = [
     title: 'Predictive Analytics',
     description: 'AI-powered insights that predict issues before they occur and optimize performance.',
     icon: BarChart3,
-<<<<<<< HEAD
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600',
   },
-=======
     description: 'Advanced AI algorithms that automate complex development, testing, and operations tasks.',
     icon: Brain,
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
@@ -276,11 +252,9 @@ const heroFeatures = [
     icon: BarChart3,
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600'
   }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600'
   }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 ];
 
 const testimonials = [
@@ -288,71 +262,56 @@ const testimonials = [
     name: 'Dr. Michael Chen',
     role: 'CTO, TechFlow Solutions';
     company: 'TechFlow Solutions',
-<<<<<<< HEAD
-<<<<<<< HEAD
     content:
       "Zion Tech Group's AI automation platform has revolutionized our development process. We've reduced testing time by 90% and improved code quality significantly.",
     rating: 5,
     avatar: '👨‍💻',
   },
-=======
     content: 'Zion Tech Group\'s AI automation platform has revolutionized our development process. We\'ve reduced testing time by 90% and improved code quality significantly.',
     rating: 5,
     avatar: '👨‍💻'
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     content: 'Zion Tech Group\'s AI automation platform has revolutionized our development process. We\'ve reduced testing time by 90% and improved code quality significantly.',
     rating: 5,
     avatar: '👨‍💻'
   };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   {
     name: 'Sarah Rodriguez',
     role: 'DevOps Director, CloudScale Inc.';
     company: 'CloudScale Inc.',
-<<<<<<< HEAD
-<<<<<<< HEAD
     content:
       'The autonomous DevOps platform has transformed our infrastructure management. We now have 99.9% uptime with 60% lower operational costs.',
     rating: 5,
     avatar: '👩‍💼',
   },
-=======
     content: 'The autonomous DevOps platform has transformed our infrastructure management. We now have 99.9% uptime with 60% lower operational costs.',
     rating: 5,
     avatar: '👩‍💼'
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     content: 'The autonomous DevOps platform has transformed our infrastructure management. We now have 99.9% uptime with 60% lower operational costs.',
     rating: 5,
     avatar: '👩‍💼'
   };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   {
     name: 'David Kim',
     role: 'Security Manager, SecureNet Corp.';
     company: 'SecureNet Corp.',
-<<<<<<< HEAD
-<<<<<<< HEAD
     content:
       'Their AI security platform provides proactive threat detection that has prevented multiple security incidents. The ROI has been incredible.',
     rating: 5,
     avatar: '👨‍🔒',
   },
-=======
     content: 'Their AI security platform provides proactive threat detection that has prevented multiple security incidents. The ROI has been incredible.',
     rating: 5,
     avatar: '👨‍🔒'
   }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     content: 'Their AI security platform provides proactive threat detection that has prevented multiple security incidents. The ROI has been incredible.',
     rating: 5,
     avatar: '👨‍🔒'
   }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 ];
 
 export default function AdvancedAIAutomationServices() {
@@ -360,8 +319,6 @@ export default function AdvancedAIAutomationServices() {
     <Layout>
       <Head>
         <title>Advanced AI Automation Services - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Revolutionary AI automation services for development, testing, DevOps, security, and data management. Transform your operations with intelligent automation.'
@@ -393,7 +350,6 @@ export default function AdvancedAIAutomationServices() {
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20'></div>
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-=======
         <meta name="description" content="Revolutionary AI automation services for development, testing, DevOps, security, and data management. Transform your operations with intelligent automation." />
         <meta name="keywords" content="AI automation, development automation, testing automation, DevOps automation, security automation, data automation" />
         <meta property="og:title" content="Advanced AI Automation Services - Zion Tech Group" />
@@ -407,8 +363,6 @@ export default function AdvancedAIAutomationServices() {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <meta name="description" content="Revolutionary AI automation services for development, testing, DevOps, security, and data management. Transform your operations with intelligent automation." />
         <meta name="keywords" content="AI automation, development automation, testing automation, DevOps automation, security automation, data automation" />
         <meta property="og:title" content="Advanced AI Automation Services - Zion Tech Group" />
@@ -422,26 +376,21 @@ export default function AdvancedAIAutomationServices() {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-<<<<<<< HEAD
-<<<<<<< HEAD
             <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>
-=======
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               Advanced AI Automation Services
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your development, testing, DevOps, and security operations with revolutionary AI automation that works 24/7
             </p>
-<<<<<<< HEAD
             <div className='flex flex-wrap justify-center gap-4 mb-12'>
-=======
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               Advanced AI Automation Services
             </h1>
@@ -449,22 +398,17 @@ export default function AdvancedAIAutomationServices() {
               Transform your development, testing, DevOps, and security operations with revolutionary AI automation that works 24/7
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="flex flex-wrap justify-center gap-4 mb-12">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               {heroStats.map((stat, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-cyan-500/30'
-=======
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-cyan-500/30"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 >
                   {stat.icon}
                   <span className="text-cyan-400 font-semibold">{stat.value}</span>
@@ -477,13 +421,11 @@ export default function AdvancedAIAutomationServices() {
                 Explore Services
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-<<<<<<< HEAD
               <Link
                 href={`tel:${contactInfo.mobile}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300'
               >
                 <Phone className='mr-2 w-5 h-5' />
-=======
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-cyan-500/30"
                 >
                   {stat.icon}
@@ -499,47 +441,37 @@ export default function AdvancedAIAutomationServices() {
               </Link>
               <Link href={`tel:${contactInfo.mobile}`} className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300">
                 <Phone className="mr-2 w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <Link href={`tel:${contactInfo.mobile}`} className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300">
                 <Phone className="mr-2 w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 Get Started
               </Link>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-=======
       </section>
 
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       </section>
 
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='text-center mb-16'
-=======
             className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our AI Automation Services?
@@ -548,10 +480,8 @@ export default function AdvancedAIAutomationServices() {
               Our AI automation services provide unprecedented efficiency, accuracy, and cost savings across all aspects of technology operations
             </p>
           </motion.div>
-<<<<<<< HEAD
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-=======
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -563,11 +493,9 @@ export default function AdvancedAIAutomationServices() {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {heroFeatures.map((feature, index) => (
               <motion.div
                 key={index}
@@ -575,12 +503,9 @@ export default function AdvancedAIAutomationServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='relative group'
-=======
                 className="relative group"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -588,12 +513,10 @@ export default function AdvancedAIAutomationServices() {
                       <div className={`${feature.gradient} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
                         <feature.icon className="w-8 h-8 text-white" />
                       </div>
-<<<<<<< HEAD
                       <h3 className='text-xl font-semibold text-white mb-3'>
                         {feature.title}
                       </h3>
                       <p className='text-gray-300'>{feature.description}</p>
-=======
                 className="relative group"
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
@@ -604,11 +527,9 @@ export default function AdvancedAIAutomationServices() {
                       </div>
                       <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                       <p className="text-gray-300">{feature.description}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                       <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     </div>
                   </div>
                 </div>
@@ -616,37 +537,29 @@ export default function AdvancedAIAutomationServices() {
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-=======
       </section>
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       </section>
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='text-center mb-16'
-=======
             className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               AI Automation Service Categories
@@ -656,9 +569,7 @@ export default function AdvancedAIAutomationServices() {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className='space-y-16'>
-=======
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -670,10 +581,8 @@ export default function AdvancedAIAutomationServices() {
           </motion.div>
 
           <div className="space-y-16">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="space-y-16">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {serviceCategories.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
@@ -681,12 +590,9 @@ export default function AdvancedAIAutomationServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='relative'
-=======
                 className="relative"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -696,9 +602,7 @@ export default function AdvancedAIAutomationServices() {
                   <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
 
-<<<<<<< HEAD
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
-=======
                 className="relative"
               >
                 <div className="text-center mb-12">
@@ -710,10 +614,8 @@ export default function AdvancedAIAutomationServices() {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={service.id}
@@ -721,21 +623,16 @@ export default function AdvancedAIAutomationServices() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                       className='relative group'
-=======
                       className="relative group"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
                           <div className="flex items-center justify-between mb-4">
                             <span className="text-3xl">{service.icon}</span>
                             {service.popular && (
-<<<<<<< HEAD
                               <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full'>
-=======
                       className="relative group"
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
@@ -744,16 +641,12 @@ export default function AdvancedAIAutomationServices() {
                             <span className="text-3xl">{service.icon}</span>
                             {service.popular && (
                               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                                 Popular
                               </span>
                             )}
                           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                           <h4 className='text-xl font-semibold text-white mb-2'>
                             {service.name}
                           </h4>
@@ -767,13 +660,12 @@ export default function AdvancedAIAutomationServices() {
                             <span className='text-gray-400'>
                               {service.period}
                             </span>
-=======
                           <h4 className="text-xl font-semibold text-white mb-2">{service.name}</h4>
                           <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
                           <div className="flex items-center justify-between mb-4">
                             <span className="text-2xl font-bold text-white">{service.price}</span>
                             <span className="text-gray-400">{service.period}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           </div>
                           <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                           <div className="space-y-2 mb-6">
@@ -794,9 +686,7 @@ export default function AdvancedAIAutomationServices() {
                             </Link>
                             <Link
                               href={`tel:${contactInfo.mobile}`}
-<<<<<<< HEAD
                               className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'
-=======
                           <h4 className="text-xl font-semibold text-white mb-2">{service.name}</h4>
                           <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
                           <div className="flex items-center justify-between mb-4">
@@ -823,10 +713,8 @@ export default function AdvancedAIAutomationServices() {
                             <Link
                               href={`tel:${contactInfo.mobile}`}
                               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                             >
                               Get Started
                             </Link>
@@ -843,29 +731,21 @@ export default function AdvancedAIAutomationServices() {
       </section>
 
       {/* Testimonials Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-=======
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='text-center mb-16'
-=======
             className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -875,9 +755,7 @@ export default function AdvancedAIAutomationServices() {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -889,10 +767,8 @@ export default function AdvancedAIAutomationServices() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -900,12 +776,9 @@ export default function AdvancedAIAutomationServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20'
-=======
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -919,9 +792,7 @@ export default function AdvancedAIAutomationServices() {
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
-<<<<<<< HEAD
                       <Star key={i} className='w-4 h-4 fill-current' />
-=======
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20"
               >
                 <div className="flex items-center mb-4">
@@ -937,10 +808,8 @@ export default function AdvancedAIAutomationServices() {
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-current" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <Star key={i} className="w-4 h-4 fill-current" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     ))}
                   </div>
                 </div>
@@ -951,30 +820,22 @@ export default function AdvancedAIAutomationServices() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-=======
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
-<<<<<<< HEAD
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
-=======
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               Ready to Transform Your Operations with AI Automation?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -985,9 +846,7 @@ export default function AdvancedAIAutomationServices() {
                 href={`tel:${contactInfo.mobile}`}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
               >
-<<<<<<< HEAD
                 <Phone className='mr-2 w-5 h-5' />
-=======
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Operations with AI Automation?
             </h2>
@@ -1000,30 +859,23 @@ export default function AdvancedAIAutomationServices() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
               >
                 <Phone className="mr-2 w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <Phone className="mr-2 w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 Call Now: {contactInfo.mobile}
               </Link>
               <Link
                 href={`mailto:${contactInfo.email}`}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300'
-=======
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
               </Link>
             </div>
-<<<<<<< HEAD
             <div className='mt-8 text-center'>
               <p className='text-gray-300 mb-2'>📍 {contactInfo.address}</p>
               <p className='text-gray-300'>🌐 {contactInfo.website}</p>
-=======
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300"
               >
                 <Mail className="mr-2 w-5 h-5" />
@@ -1033,25 +885,18 @@ export default function AdvancedAIAutomationServices() {
             <div className="mt-8 text-center">
               <p className="text-gray-300 mb-2">📍 {contactInfo.address}</p>
               <p className="text-gray-300">🌐 {contactInfo.website}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="mt-8 text-center">
               <p className="text-gray-300 mb-2">📍 {contactInfo.address}</p>
               <p className="text-gray-300">🌐 {contactInfo.website}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </motion.div>
         </div>
       </section>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

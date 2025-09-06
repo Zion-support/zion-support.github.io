@@ -2,8 +2,6 @@ import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   Search,
   Star,
@@ -21,24 +19,16 @@ import {
   Phone,
   Mail,;
 } from 'lucide-react';
-=======
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail } from 'lucide-react';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
 import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function Innovative2026ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -46,8 +36,6 @@ export default function Innovative2026ServicesShowcase() {
   const [sortBy, setSortBy] = useState<string>('name');
 
   const allServices = [
-<<<<<<< HEAD
-<<<<<<< HEAD
     ...innovative2026MicroSaasServicesV4,
     ...emergingTech2026ServicesV4,
     ...enterpriseIT2026ServicesV4,
@@ -72,37 +60,30 @@ export default function Innovative2026ServicesShowcase() {
       service.category?.includes('Neuromorphic') ||
       service.category?.includes('Synthetic')
   ).length;
-=======
     ...innovative2026MicroSaasServicesV4;
     ...emergingTech2026ServicesV4;
     ...enterpriseIT2026ServicesV4
   ];
 
   // Dynamic category counts
-=======
     ...innovative2026MicroSaasServicesV4;
     ...emergingTech2026ServicesV4;
     ...enterpriseIT2026ServicesV4
   ];
 
   // Dynamic category counts
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   const aiCount = allServices.filter(service => service.category?.includes('AI')).length;
   const quantumCount = allServices.filter(service => service.category?.includes('Quantum')).length;
   const enterpriseCount = allServices.filter(service => service.category?.includes('Enterprise')).length;
   const microSaasCount = allServices.filter(service => service.category?.includes('Micro SaaS')).length;
   const emergingTechCount = allServices.filter(service => service.category?.includes('Emerging') || service.category?.includes('Neuromorphic') || service.category?.includes('Synthetic')).length;
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
     { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount },
     { id: 'quantum', name: 'Quantum Tech', icon: '⚛️', count: quantumCount },
-<<<<<<< HEAD
-<<<<<<< HEAD
     {
       id: 'enterprise',
       name: 'Enterprise IT',
@@ -116,48 +97,35 @@ export default function Innovative2026ServicesShowcase() {
       icon: '🔬',
       count: emergingTechCount,
     },
-=======
     { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
     { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },
     { id: 'emerging', name: 'Emerging Tech', icon: '🔬', count: emergingTechCount }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
     { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },
     { id: 'emerging', name: 'Emerging Tech', icon: '🔬', count: emergingTechCount }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'low', name: 'Under $500', range: 'Under $500' },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { id: 'medium', name: '$500 - $1,000', range: '$500 - $1,000' },
     { id: 'high', name: 'Over $1,000', range: 'Over $1,000' },
-=======
     { id: 'medium', name: '$500 - $1,000', range: '$500 - $1,000' };
     { id: 'high', name: 'Over $1,000', range: 'Over $1,000' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     { id: 'medium', name: '$500 - $1,000', range: '$500 - $1,000' };
     { id: 'high', name: 'Over $1,000', range: 'Over $1,000' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const sortOptions = [
     { id: 'name', name: 'Name' },
     { id: 'price', name: 'Price' },
     { id: 'rating', name: 'Rating' },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { id: 'popularity', name: 'Popularity' },
-=======
     { id: 'popularity', name: 'Popularity' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     { id: 'popularity', name: 'Popularity' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   // Filter and sort services
@@ -177,8 +145,6 @@ export default function Innovative2026ServicesShowcase() {
           case 'micro-saas':
             return service.category?.includes('Micro SaaS');
           case 'emerging':
-<<<<<<< HEAD
-<<<<<<< HEAD
             return (
               service.category?.includes('Emerging') ||
               service.category?.includes('Neuromorphic') ||
@@ -188,18 +154,15 @@ export default function Innovative2026ServicesShowcase() {
             return true;
         }
       });
-=======
             return service.category?.includes('Emerging') || service.category?.includes('Neuromorphic') || service.category?.includes('Synthetic');
           default: return true
         }
       })
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             return service.category?.includes('Emerging') || service.category?.includes('Neuromorphic') || service.category?.includes('Synthetic');
           default: return true
         }
       })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
 
     // Price range filter
@@ -213,28 +176,21 @@ export default function Innovative2026ServicesShowcase() {
             return price >= 500 && price <= 1000;
           case 'high':
             return price > 1000;
-<<<<<<< HEAD
-<<<<<<< HEAD
           default:
             return true;
         }
       });
-=======
           default: return true
         }
       })
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           default: return true
         }
       })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
 
     // Search filter
     if (searchTerm) {
-<<<<<<< HEAD
-<<<<<<< HEAD
       filtered = filtered.filter(
         service =>
           service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -243,18 +199,13 @@ export default function Innovative2026ServicesShowcase() {
             .includes(searchTerm.toLowerCase()) ||
           service.category.toLowerCase().includes(searchTerm.toLowerCase())
       );
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       filtered = filtered.filter(service =>
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
       )
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
 
     // Sort
@@ -268,28 +219,23 @@ export default function Innovative2026ServicesShowcase() {
           return b.rating - a.rating;
         case 'popularity':
           return b.customers - a.customers;
-<<<<<<< HEAD
-<<<<<<< HEAD
         default:
           return a.name.localeCompare(b.name);
       }
     });
 
     return filtered;
-=======
         default: return a.name.localeCompare(b.name)
       }
     });
 
     return filtered
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         default: return a.name.localeCompare(b.name)
       }
     });
 
     return filtered
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]);
 
   const containerVariants = {
@@ -297,21 +243,16 @@ export default function Innovative2026ServicesShowcase() {
     visible: {
       opacity: 1,
       transition: {
-<<<<<<< HEAD
-<<<<<<< HEAD
         staggerChildren: 0.1,
       },
     },
-=======
         staggerChildren: 0.1
       }
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         staggerChildren: 0.1
       }
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const itemVariants = {
@@ -320,29 +261,22 @@ export default function Innovative2026ServicesShowcase() {
       y: 0,
       opacity: 1,
       transition: {
-<<<<<<< HEAD
-<<<<<<< HEAD
         duration: 0.5,
       },
     },
-=======
         duration: 0.5
       }
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         duration: 0.5
       }
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
     <>
       <Head>
         <title>2026 Innovative Services Showcase - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Discover cutting-edge 2026 innovative services including AI, Quantum Computing, Emerging Technologies, and Enterprise IT solutions. Transform your business with next-generation technology.'
@@ -373,7 +307,6 @@ export default function Innovative2026ServicesShowcase() {
       <UltraAdvancedFuturisticBackground2026
         intensity='extreme'
         colorScheme='neural-network'
-=======
         <meta name="description" content="Discover cutting-edge 2026 innovative services including AI, Quantum Computing, Emerging Technologies, and Enterprise IT solutions. Transform your business with next-generation technology." />
         <meta name="keywords" content="2026 services, innovative technology, AI services, quantum computing, emerging tech, enterprise IT, micro SaaS, Zion Tech Group" />
         <meta property="og:title" content="2026 Innovative Services Showcase - Zion Tech Group" />
@@ -386,8 +319,6 @@ export default function Innovative2026ServicesShowcase() {
       <UltraAdvancedFuturisticBackground2026 
         intensity="extreme" 
         colorScheme="neural-network"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <meta name="description" content="Discover cutting-edge 2026 innovative services including AI, Quantum Computing, Emerging Technologies, and Enterprise IT solutions. Transform your business with next-generation technology." />
         <meta name="keywords" content="2026 services, innovative technology, AI services, quantum computing, emerging tech, enterprise IT, micro SaaS, Zion Tech Group" />
         <meta property="og:title" content="2026 Innovative Services Showcase - Zion Tech Group" />
@@ -400,7 +331,7 @@ export default function Innovative2026ServicesShowcase() {
       <UltraAdvancedFuturisticBackground2026 
         intensity="extreme" 
         colorScheme="neural-network"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         particleCount={800}
         animationSpeed={3.0}
         enableHolographic={true}
@@ -411,60 +342,46 @@ export default function Innovative2026ServicesShowcase() {
 
       <UltraAdvancedNavigation2026 />
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className='min-h-screen relative z-10'>
         {/* Hero Section */}
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>
-=======
       <div className="min-h-screen relative z-10">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <div className="min-h-screen relative z-10">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className='mb-8'
-=======
               className="mb-8"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 2026 Innovative Services
               </h1>
-<<<<<<< HEAD
               <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
                 Discover the future of technology with our cutting-edge 2026
                 services. From AI-powered solutions to quantum computing and
                 emerging technologies, transform your business with
                 next-generation innovation.
-=======
               className="mb-8"
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 2026 Innovative Services
               </h1>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                 Discover the future of technology with our cutting-edge 2026 services. 
                 From AI-powered solutions to quantum computing and emerging technologies,
                 transform your business with next-generation innovation.
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </p>
             </motion.div>
 
@@ -472,12 +389,9 @@ export default function Innovative2026ServicesShowcase() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className='flex flex-wrap justify-center gap-4 mb-12'
-=======
               className="flex flex-wrap justify-center gap-4 mb-12"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             >
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-full px-6 py-3">
                 <span className="text-blue-400 font-semibold">{allServices.length}+ Services</span>
@@ -488,12 +402,10 @@ export default function Innovative2026ServicesShowcase() {
               <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm border border-green-500/30 rounded-full px-6 py-3">
                 <span className="text-green-400 font-semibold">Quantum Ready</span>
               </div>
-<<<<<<< HEAD
               <div className='bg-gradient-to-r from-orange-600/20 to-red-600/20 backdrop-blur-sm border border-orange-500/30 rounded-full px-6 py-3'>
                 <span className='text-orange-400 font-semibold'>
                   Future-Proof
                 </span>
-=======
               className="flex flex-wrap justify-center gap-4 mb-12"
             >
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-full px-6 py-3">
@@ -507,11 +419,9 @@ export default function Innovative2026ServicesShowcase() {
               </div>
               <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 backdrop-blur-sm border border-orange-500/30 rounded-full px-6 py-3">
                 <span className="text-orange-400 font-semibold">Future-Proof</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 backdrop-blur-sm border border-orange-500/30 rounded-full px-6 py-3">
                 <span className="text-orange-400 font-semibold">Future-Proof</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </motion.div>
 
@@ -520,12 +430,9 @@ export default function Innovative2026ServicesShowcase() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className='max-w-4xl mx-auto'
-=======
               className="max-w-4xl mx-auto"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             >
               <div className="relative mb-8">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -538,10 +445,8 @@ export default function Innovative2026ServicesShowcase() {
                 />
               </div>
 
-<<<<<<< HEAD
               <div className='flex flex-wrap gap-4 justify-center mb-8'>
                 {categories.map(category => (
-=======
               className="max-w-4xl mx-auto"
             >
               <div className="relative mb-8">
@@ -557,11 +462,9 @@ export default function Innovative2026ServicesShowcase() {
 
               <div className="flex flex-wrap gap-4 justify-center mb-8">
                 {categories.map((category) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="flex flex-wrap gap-4 justify-center mb-8">
                 {categories.map((category) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <button
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
@@ -571,32 +474,22 @@ export default function Innovative2026ServicesShowcase() {
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50'
                     }`}
                   >
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <span className='mr-2'>{category.icon}</span>
-=======
                     <span className="mr-2">{category.icon}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <span className="mr-2">{category.icon}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     {category.name} ({category.count})
                   </button>
                 ))}
               </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='flex flex-wrap gap-4 justify-center'>
                 {priceRanges.map(range => (
-=======
               <div className="flex flex-wrap gap-4 justify-center">
                 {priceRanges.map((range) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="flex flex-wrap gap-4 justify-center">
                 {priceRanges.map((range) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <button
                     key={range.id}
                     onClick={() => setSelectedPriceRange(range.id)}
@@ -615,14 +508,11 @@ export default function Innovative2026ServicesShowcase() {
         </section>
 
         {/* Services Grid */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               variants={containerVariants}
               initial="hidden"
@@ -641,9 +531,7 @@ export default function Innovative2026ServicesShowcase() {
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-4xl">{service.icon}</span>
                         {service.popular && (
-<<<<<<< HEAD
                           <span className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full'>
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -665,24 +553,19 @@ export default function Innovative2026ServicesShowcase() {
                         <span className="text-4xl">{service.icon}</span>
                         {service.popular && (
                           <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                           <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                             POPULAR
                           </span>
                         )}
                       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <h3 className='text-xl font-bold text-white mb-2'>
                         {service.name}
                       </h3>
                       <p className='text-gray-300 text-sm'>{service.tagline}</p>
-=======
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <p className="text-gray-300 text-sm">{service.tagline}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     </div>
 
                     {/* Service Content */}
@@ -711,13 +594,11 @@ export default function Innovative2026ServicesShowcase() {
                           <Clock className="w-4 h-4 text-green-400" />
                           <span className="text-gray-300 text-sm">{service.setupTime}</span>
                         </div>
-<<<<<<< HEAD
                         <div className='flex items-center space-x-2'>
                           <Zap className='w-4 h-4 text-yellow-400' />
                           <span className='text-gray-300 text-sm'>
                             {service.trialDays} days trial
                           </span>
-=======
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <p className="text-gray-300 text-sm">{service.tagline}</p>
                     </div>
@@ -751,18 +632,14 @@ export default function Innovative2026ServicesShowcase() {
                         <div className="flex items-center space-x-2">
                           <Zap className="w-4 h-4 text-yellow-400" />
                           <span className="text-gray-300 text-sm">{service.trialDays} days trial</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         <div className="flex items-center space-x-2">
                           <Zap className="w-4 h-4 text-yellow-400" />
                           <span className="text-gray-300 text-sm">{service.trialDays} days trial</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         </div>
                       </div>
 
                       {/* Features Preview */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <div className='mb-4'>
                         <h4 className='text-white font-semibold mb-2'>
                           Key Features:
@@ -785,7 +662,6 @@ export default function Innovative2026ServicesShowcase() {
                             <span className='text-gray-500 text-xs'>
                               +{service.features.length - 3} more features
                             </span>
-=======
                       <div className="mb-4">
                         <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                         <div className="space-y-1">
@@ -797,8 +673,6 @@ export default function Innovative2026ServicesShowcase() {
                           ))}
                           {service.features.length > 3 && (
                             <span className="text-gray-500 text-xs">+{service.features.length - 3} more features</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <div className="mb-4">
                         <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                         <div className="space-y-1">
@@ -810,65 +684,50 @@ export default function Innovative2026ServicesShowcase() {
                           ))}
                           {service.features.length > 3 && (
                             <span className="text-gray-500 text-xs">+{service.features.length - 3} more features</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           )}
                         </div>
                       </div>
 
                       {/* Category Badge */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <div className='mb-4'>
                         <span
                           className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service.textColor} bg-opacity-20`}
                         >
-=======
                       <div className="mb-4">
                         <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service.textColor} bg-opacity-20`}>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <div className="mb-4">
                         <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service.textColor} bg-opacity-20`}>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           {service.category}
                         </span>
                       </div>
 
                       {/* CTA Button */}
                       <Link href={service.link}>
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <button className='w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>
                           <span className='flex items-center justify-center space-x-2'>
                             <span>Learn More</span>
                             <ArrowRight className='w-4 h-4' />
-=======
                         <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
                           <span className="flex items-center justify-center space-x-2">
                             <span>Learn More</span>
                             <ArrowRight className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
                           <span className="flex items-center justify-center space-x-2">
                             <span>Learn More</span>
                             <ArrowRight className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           </span>
                         </button>
                       </Link>
                     </div>
 
                     {/* Hover Effect Overlay */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
-=======
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                 </motion.div>
               ))}
@@ -878,42 +737,32 @@ export default function Innovative2026ServicesShowcase() {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='text-center py-16'
               >
                 <div className='text-gray-400 text-xl mb-4'>
                   No services found matching your criteria
                 </div>
-=======
                 className="text-center py-16"
               >
                 <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 className="text-center py-16"
               >
                 <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <button
                   onClick={() => {
                     setSearchTerm('');
                     setSelectedCategory('all');
-<<<<<<< HEAD
-<<<<<<< HEAD
                     setSelectedPriceRange('all');
                   }}
                   className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300'
-=======
                     setSelectedPriceRange('all')
                   }}
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     setSelectedPriceRange('all')
                   }}
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 >
                   Clear Filters
                 </button>
@@ -923,30 +772,22 @@ export default function Innovative2026ServicesShowcase() {
         </section>
 
         {/* Contact Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-=======
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -971,10 +812,8 @@ export default function Innovative2026ServicesShowcase() {
                 </div>
               </div>
 
-<<<<<<< HEAD
               <Link href='/contact'>
                 <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>
-=======
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
@@ -1002,11 +841,9 @@ export default function Innovative2026ServicesShowcase() {
 
               <Link href="/contact">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <Link href="/contact">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   Get Started Today
                 </button>
               </Link>
@@ -1015,14 +852,9 @@ export default function Innovative2026ServicesShowcase() {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

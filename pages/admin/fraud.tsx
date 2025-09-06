@@ -1,8 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 
 interface FraudItem {
-<<<<<<< HEAD
-<<<<<<< HEAD
   id: string;
   userId: string | null;
   source: string;
@@ -10,9 +8,7 @@ interface FraudItem {
   heuristic: { reasons: string[]; severity: string };
   gpt?: { label: string; reason: string; confidence: number };
   status: string;
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   id: string,
   userId: string | null,
   source: string,
@@ -21,10 +17,7 @@ interface FraudItem {
   gpt?: { label: string, reason: string, confidence: number },
   status: string
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 export default function FraudAdminPage() {
   const [items, setItems] = useState<FraudItem[]>([]);
@@ -34,38 +27,28 @@ export default function FraudAdminPage() {
 
   useEffect(() => {
     const saved = localStorage.getItem('admin-token') || '';
-<<<<<<< HEAD
-<<<<<<< HEAD
     setAdminToken(saved);
-=======
     setAdminToken(saved)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     setAdminToken(saved)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }, []);
 
   const fetchItems = async () => {
     setLoading(true);
     setError(null);
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
       const res = await fetch('/api/fraud/admin/list', {
         headers: adminToken ? { 'x-admin-token': adminToken } : {},
       });
-=======
       const res = await fetch('/api/fraud/admin/list', { headers: adminToken ? { 'x-admin-token': adminToken } : {} }),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       const json = await res.json();
       if (!res.ok) throw new Error(json.error || 'Failed to load');
       setItems(json.items || [])
     } catch (e: any) {
       setError(e.message || 'Failed to load')
     } finally {
-<<<<<<< HEAD
       setLoading(false);
-=======
       const res = await fetch('/api/fraud/admin/list', { headers: adminToken ? { 'x-admin-token': adminToken } : {} }),
       const json = await res.json();
       if (!res.ok) throw new Error(json.error || 'Failed to load');
@@ -74,10 +57,8 @@ export default function FraudAdminPage() {
       setError(e.message || 'Failed to load')
     } finally {
       setLoading(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       setLoading(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
   };
 
@@ -88,12 +69,9 @@ export default function FraudAdminPage() {
 
   const onSaveToken = () => {
     localStorage.setItem('admin-token', adminToken);
-<<<<<<< HEAD
-<<<<<<< HEAD
     fetchItems();
-=======
     fetchItems()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
@@ -158,7 +136,6 @@ export default function FraudAdminPage() {
                     <div className="text-gray-700">{it.gpt?.reason}</div>
                   </div>
                 </td>
-<<<<<<< HEAD
                 <td className='p-2 border'>{it.status}</td>
                 <td className='p-2 border'>
                   <div className='flex gap-2'>
@@ -180,7 +157,6 @@ export default function FraudAdminPage() {
                     >
                       Ignore
                     </button>
-=======
     fetchItems()
   };
 
@@ -246,18 +222,14 @@ export default function FraudAdminPage() {
                     <div className="text-gray-700">{it.gpt?.reason}</div>
                   </div>
                 </td>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <td className="p-2 border">{it.status}</td>
                 <td className="p-2 border">
                   <div className="flex gap-2">
                     <button className="px-2 py-1 text-xs bg-yellow-500 text-white rounded" onClick={() => takeAction(it.id, 'WARN')}>Warn</button>
                     <button className="px-2 py-1 text-xs bg-red-600 text-white rounded" onClick={() => takeAction(it.id, 'SUSPEND')}>Suspend</button>
                     <button className="px-2 py-1 text-xs bg-gray-300 rounded" onClick={() => takeAction(it.id, 'IGNORE')}>Ignore</button>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                 </td>
               </tr>
@@ -266,14 +238,9 @@ export default function FraudAdminPage() {
         </table>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

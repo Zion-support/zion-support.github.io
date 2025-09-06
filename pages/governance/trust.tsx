@@ -1,26 +1,18 @@
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function GovernanceTrustPage() {
   return (
     <>
       <Head>
         <title>Zion Governance & Trust</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Governance, legal registry options, and public trust commitments for the Zion Protocol.'
         />
-=======
         <meta name="description" content="Governance, legal registry options, and public trust commitments for the Zion Protocol." />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       <div className="space-y-12">
         <section className="space-y-3">
@@ -29,7 +21,6 @@ export default function GovernanceTrustPage() {
           <Link href="/foundation"><a className="underline text-sm">Back to Foundation Portal</a></Link>
         </section>
 
-<<<<<<< HEAD
         <section className='space-y-4'>
           <h2 className='text-2xl font-semibold'>Registry & Legal Structure</h2>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
@@ -59,7 +50,6 @@ export default function GovernanceTrustPage() {
                 <div className='text-sm text-gray-600 dark:text-gray-400'>
                   {opt.desc}
                 </div>
-=======
         <meta name="description" content="Governance, legal registry options, and public trust commitments for the Zion Protocol." />
       </Head>
       <div className="space-y-12">
@@ -69,8 +59,7 @@ export default function GovernanceTrustPage() {
           <Link href="/foundation"><a className="underline text-sm">Back to Foundation Portal</a></Link>
         </section>
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Registry & Legal Structure</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">
@@ -90,17 +79,12 @@ export default function GovernanceTrustPage() {
               <div key={opt.title} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
                 <div className="font-medium">{opt.title}</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">{opt.desc}</div>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </div>
             ))}
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='space-y-4'>
           <h2 className='text-2xl font-semibold'>Governance</h2>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
@@ -110,14 +94,13 @@ export default function GovernanceTrustPage() {
                 Appointed via DAO ratification; accountable to publish roadmaps,
                 risk registers, and post-mortems.
               </div>
-=======
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Governance</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <div className="font-medium mb-1">Core Stewards</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">Appointed via DAO ratification, accountable to publish roadmaps, risk registers, and post-mortems.</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </div>
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <div className="font-medium mb-1">Delegated Voting</div>
@@ -127,14 +110,12 @@ export default function GovernanceTrustPage() {
               <div className="font-medium mb-1">Quarterly Reports</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">Financials, grants, impact metrics, and execution status are published within 30 days of quarter-end.</div>
             </div>
-<<<<<<< HEAD
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <div className='font-medium mb-1'>Public Archives</div>
               <div className='text-sm text-gray-600 dark:text-gray-400'>
                 Charter versions, MOUs, audits, and on-chain dashboards are
                 publicly accessible and time-stamped.
               </div>
-=======
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Governance</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
@@ -153,18 +134,14 @@ export default function GovernanceTrustPage() {
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <div className="font-medium mb-1">Public Archives</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">Charter versions, MOUs, audits, and on-chain dashboards are publicly accessible and time-stamped.</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <div className="font-medium mb-1">Public Archives</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">Charter versions, MOUs, audits, and on-chain dashboards are publicly accessible and time-stamped.</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='space-y-2'>
           <h2 className='text-2xl font-semibold'>Operator Prompt</h2>
           <p className='text-sm text-gray-600 dark:text-gray-400'>
@@ -179,7 +156,6 @@ export default function GovernanceTrustPage() {
       </div>
     </>
   );
-=======
         <section className="space-y-2">
           <h2 className="text-2xl font-semibold">Operator Prompt</h2>
           <p className="text-sm text-gray-600 dark:text-gray-400">Write a legal-neutral foundation charter for a decentralized AI protocol committed to sovereignty, open knowledge, and trust. Include DAO integration and multiverse grant rights.</p>
@@ -189,8 +165,6 @@ export default function GovernanceTrustPage() {
     </>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="space-y-2">
           <h2 className="text-2xl font-semibold">Operator Prompt</h2>
           <p className="text-sm text-gray-600 dark:text-gray-400">Write a legal-neutral foundation charter for a decentralized AI protocol committed to sovereignty, open knowledge, and trust. Include DAO integration and multiverse grant rights.</p>
@@ -200,4 +174,4 @@ export default function GovernanceTrustPage() {
     </>
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

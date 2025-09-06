@@ -9,23 +9,18 @@ const TalentProfile: NextPage = () => {
   const router = useRouter();
   const { slug } = router.query;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [responseLog, setResponseLog] = useState<
     Array<{ action: 'Accept' | 'Decline' | 'Negotiate'; at: string }>
   >([]);
 
-=======
   const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>>([]),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
     setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }])
   };
 
   return (
-<<<<<<< HEAD
     <div className='space-y-6 pb-20'>
-=======
   const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>>([]),
   const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
     setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }])
@@ -33,20 +28,15 @@ const TalentProfile: NextPage = () => {
 
   return (
     <div className="space-y-6 pb-20">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     <div className="space-y-6 pb-20">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       <Head>
         <title>{slug} - Talent - Zion</title>
       </Head>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       <header className='flex items-start justify-between gap-4'>
-=======
       <header className="flex items-start justify-between gap-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         <div>
           <h1 className="text-2xl font-semibold">{slug}</h1>
           <div className="text-sm opacity-80">Full-Stack Developer</div>
@@ -83,11 +73,9 @@ const TalentProfile: NextPage = () => {
               {responseLog.map((r, idx) => (
                 <li key={idx} className="flex items-center justify-between">
                   <span>{r.action}</span>
-<<<<<<< HEAD
                   <span className='opacity-70'>
                     {new Date(r.at).toLocaleString()}
                   </span>
-=======
       <header className="flex items-start justify-between gap-4">
         <div>
           <h1 className="text-2xl font-semibold">{slug}</h1>
@@ -126,10 +114,8 @@ const TalentProfile: NextPage = () => {
                 <li key={idx} className="flex items-center justify-between">
                   <span>{r.action}</span>
                   <span className="opacity-70">{new Date(r.at).toLocaleString()}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <span className="opacity-70">{new Date(r.at).toLocaleString()}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </li>
               ))}
             </ul>
@@ -137,21 +123,16 @@ const TalentProfile: NextPage = () => {
         </aside>
       </section>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
 
 export default TalentProfile;
-=======
   )
 };
 
 export default TalentProfile;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
 
 export default TalentProfile;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

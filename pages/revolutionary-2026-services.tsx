@@ -10,8 +10,6 @@ export default function Revolutionary2026ServicesPage() {
     <>
       <Head>
         <title>Revolutionary 2026 Services - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions.'
@@ -22,12 +20,11 @@ export default function Revolutionary2026ServicesPage() {
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
 
-=======
         <meta name="description" content="Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions." />
         <meta name="keywords" content="AI services, quantum computing, emerging technology, healthcare biotech, fintech blockchain, 2026 technology, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         {/* Open Graph */}
         <meta property="og:title" content="Revolutionary 2026 Services - Zion Tech Group" />
         <meta property="og:description" content="Experience the future with our cutting-edge AI, quantum computing, and emerging technology services." />
@@ -53,7 +50,6 @@ export default function Revolutionary2026ServicesPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-<<<<<<< HEAD
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'Zion Tech Group',
@@ -77,7 +73,6 @@ export default function Revolutionary2026ServicesPage() {
               },
               sameAs: ['https://github.com/Zion-Holdings'],
             }),
-=======
         <meta name="description" content="Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions." />
         <meta name="keywords" content="AI services, quantum computing, emerging technology, healthcare biotech, fintech blockchain, 2026 technology, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -110,13 +105,12 @@ export default function Revolutionary2026ServicesPage() {
               "@context": "https: //schema.org", "@type": "Organization",
               "name": "Zion Tech Group";
               "url": "https: //ziontechgroup.com", "logo": "https://ziontechgroup.com/logo.png",
-=======
               "@context": "https://schema.org";
               "@type": "Organization";
               "name": "Zion Tech Group";
               "url": "https://ziontechgroup.com";
               "logo": "https://ziontechgroup.com/logo.png";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               "description": "Revolutionary AI, quantum computing, and emerging technology services for 2026";
               "address": {
                 "@type": "PostalAddress";
@@ -136,20 +130,14 @@ export default function Revolutionary2026ServicesPage() {
                 "https://github.com/Zion-Holdings"
               ]
             })
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           }}
         />
       </Head>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       <main className='min-h-screen bg-gray-900'>
-=======
       <main className="min-h-screen bg-gray-900">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         {/* Navigation */}
         <Revolutionary2026UltimateNavigation />
         
@@ -171,12 +159,10 @@ export default function Revolutionary2026ServicesPage() {
                   Why Choose Zion Tech Group?
                 </span>
               </h2>
-<<<<<<< HEAD
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 We're not just another technology company. We're pioneers in the
                 future of AI, quantum computing, and emerging technologies,
                 delivering revolutionary solutions that transform industries.
-=======
       <main className="min-h-screen bg-gray-900">
         {/* Navigation */}
         <Revolutionary2026UltimateNavigation />
@@ -202,40 +188,30 @@ export default function Revolutionary2026ServicesPage() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We're not just another technology company. We're pioneers in the future of AI, quantum computing;
                 and emerging technologies, delivering revolutionary solutions that transform industries.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We're not just another technology company. We're pioneers in the future of AI, quantum computing;
                 and emerging technologies, delivering revolutionary solutions that transform industries.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </p>
             </div>
 
             {/* Features Grid */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
-=======
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               {[
                 {
                   icon: '🧠',
                   title: 'AI Consciousness',
-<<<<<<< HEAD
-<<<<<<< HEAD
                   description:
                     'First-to-market AI consciousness orchestration and autonomous intelligence systems.',
                   color: 'from-purple-500 to-pink-500',
                 },
-=======
                   description: 'First-to-market AI consciousness orchestration and autonomous intelligence systems.',
                   color: 'from-purple-500 to-pink-500'
                 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 {
                   icon: '⚛️',
                   title: 'Quantum Technology',
@@ -272,14 +248,12 @@ export default function Revolutionary2026ServicesPage() {
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform`}>
                       {feature.icon}
                     </div>
-<<<<<<< HEAD
                     <h3 className='text-xl font-bold text-white mb-4'>
                       {feature.title}
                     </h3>
                     <p className='text-gray-400 leading-relaxed'>
                       {feature.description}
                     </p>
-=======
                   description: 'First-to-market AI consciousness orchestration and autonomous intelligence systems.',
                   color: 'from-purple-500 to-pink-500'
                 };
@@ -321,27 +295,22 @@ export default function Revolutionary2026ServicesPage() {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                     <p className="text-gray-400 leading-relaxed">{feature.description}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                     <p className="text-gray-400 leading-relaxed">{feature.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                 </div>
               ))}
             </div>
 
             {/* Call to Action */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='text-center'>
               <div className='bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20'>
                 <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-=======
             <div className="text-center">
               <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">
                 <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   Ready to Experience the Future?
                 </h3>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -360,9 +329,7 @@ export default function Revolutionary2026ServicesPage() {
                     href="mailto:kleber@ziontechgroup.com"
                     className="border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                   >
-<<<<<<< HEAD
                     <Mail className='w-5 h-5' />
-=======
             <div className="text-center">
               <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">
                 <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
@@ -385,10 +352,8 @@ export default function Revolutionary2026ServicesPage() {
                     className="border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     <Mail className="w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <Mail className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     Email Us
                   </a>
                 </div>
@@ -398,14 +363,9 @@ export default function Revolutionary2026ServicesPage() {
         </section>
       </main>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

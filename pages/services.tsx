@@ -1,24 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
     icon: Brain,
 
-=======
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { ContactInfo } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function Services() {
   const [isLoaded, setIsLoaded] = useState(false);
   
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100);
-<<<<<<< HEAD
     return () => clearTimeout(timer);
-=======
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -31,22 +26,17 @@ export default function Services() {
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     return () => clearTimeout(timer)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }, []);
 
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
     site: 'https://ziontechgroup.com',
-=======
     site: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const serviceCategories = [
@@ -76,7 +66,6 @@ export default function Services() {
       count: '100+',
       color: 'green',
       services: [
-<<<<<<< HEAD
         'Quantum Computing Consulting',
         'Blockchain & Web3 Solutions',
         'DevSecOps & Security Automation',
@@ -88,7 +77,6 @@ export default function Services() {
       ],
       href: '/it-services',
     },
-=======
     site: 'https://ziontechgroup.com'
   };
 
@@ -119,91 +107,67 @@ export default function Services() {
       count: '100+',
       color: 'green',
       services: [
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         'Quantum Computing ConsultingBlockchain & Web3 SolutionsDevSecOps & Security AutomationEnterprise Data PlatformHigh-Performance ComputingCloud Migration ServicesInfrastructure as CodeDisaster Recovery Solutions'
       ];
       href: '/it-services'
     }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const getColorClasses = (color: string) => {
     const colors = {
       blue: {
-<<<<<<< HEAD
-=======
       
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         bg: 'bg-blue-600',
         hover: 'hover:bg-blue-700',
         text: 'text-blue-400',
         border: 'border-blue-500/40',
-<<<<<<< HEAD
-<<<<<<< HEAD
         ring: 'focus:ring-blue-500',
       },
-=======
         ring: 'focus:ring-blue-500'
       };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       purple: {
-=======
         ring: 'focus:ring-blue-500'
       
     },
     purple: {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         bg: 'bg-purple-600',
         hover: 'hover:bg-purple-700',
         text: 'text-purple-400',
         border: 'border-purple-500/40',
-<<<<<<< HEAD
-<<<<<<< HEAD
         ring: 'focus:ring-purple-500',
       },
-=======
         ring: 'focus:ring-purple-500'
       };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         ring: 'focus:ring-purple-500'
       };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       green: {
         bg: 'bg-green-600',
         hover: 'hover:bg-green-700',
         text: 'text-green-400',
         border: 'border-green-500/40',
-<<<<<<< HEAD
-<<<<<<< HEAD
         ring: 'focus:ring-green-500',
       },
     };
     return colors[color as keyof typeof colors] || colors.blue;
-=======
         ring: 'focus:ring-green-500'
       }
     };
     return colors[color as keyof typeof colors] || colors.blue
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         ring: 'focus:ring-green-500'
       }
     };
     return colors[color as keyof typeof colors] || colors.blue
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
     <>
       <Head>
         <title>Our Services - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Explore our comprehensive range of micro SaaS products, AI services, and IT solutions. 350+ innovative services to transform your business.'
@@ -215,13 +179,12 @@ export default function Services() {
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <meta name='robots' content='index, follow' />
         <link rel='canonical' href={`${contact.site}/services`} />
-=======
         <meta name="description" content="Explore our comprehensive range of micro SaaS products, AI services, and IT solutions. 350+ innovative services to transform your business." />
         <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`${contact.site}/services`} />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       
       <ErrorBoundary level="page">
@@ -237,14 +200,12 @@ export default function Services() {
               <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 350+ Innovative Solutions for Modern Businesses
               </p>
-<<<<<<< HEAD
               <p
                 className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
                 From cutting-edge AI services to comprehensive IT solutions and
                 specialized micro SaaS products, we provide everything your
                 business needs to thrive in the digital age.
-=======
         <meta name="description" content="Explore our comprehensive range of micro SaaS products, AI services, and IT solutions. 350+ innovative services to transform your business." />
         <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -268,27 +229,22 @@ export default function Services() {
               <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 From cutting-edge AI services to comprehensive IT solutions and specialized micro SaaS products,
                 we provide everything your business needs to thrive in the digital age.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 From cutting-edge AI services to comprehensive IT solutions and specialized micro SaaS products,
                 we provide everything your business needs to thrive in the digital age.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </p>
             </div>
           </section>
 
           {/* Service Categories */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <section className='py-16 px-4' role='main'>
             <div className='max-w-7xl mx-auto'>
               <div className='grid lg:grid-cols-3 gap-8'>
-=======
           <section className="py-16 px-4" role="main">
             <div className="max-w-7xl mx-auto">
               <div className="grid lg:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 {serviceCategories.map((category, index) => {
                   const colors = getColorClasses(category.color);
                   return (
@@ -297,9 +253,7 @@ export default function Services() {
                       className={`p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-${category.color}-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                       style={{ transitionDelay: `${index * 200}ms` }}
                     >
-<<<<<<< HEAD
                       <div className='flex items-center justify-between mb-6'>
-=======
           <section className="py-16 px-4" role="main">
             <div className="max-w-7xl mx-auto">
               <div className="grid lg:grid-cols-3 gap-8">
@@ -312,10 +266,8 @@ export default function Services() {
                       style={{ transitionDelay: `${index * 200}ms` }}
                     >
                       <div className="flex items-center justify-between mb-6">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <div className="flex items-center justify-between mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         <h3 className={`text-2xl font-bold ${colors.text}`}>
                           {category.title}
                         </h3>
@@ -323,23 +275,18 @@ export default function Services() {
                           {category.count}
                         </span>
                       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                       <p className='text-slate-300 mb-6'>
-=======
                       
                       <p className="text-slate-300 mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         {category.description}
                       </p>
                       
                       <ul className="text-slate-400 space-y-2 mb-8">
                         {category.services.map((service, serviceIndex) => (
-<<<<<<< HEAD
                           <li key={serviceIndex} className='flex items-center'>
                             <span className='w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0'></span>
-=======
                       
                       <p className="text-slate-300 mb-6">
                         {category.description}
@@ -349,33 +296,24 @@ export default function Services() {
                         {category.services.map((service, serviceIndex) => (
                           <li key={serviceIndex} className="flex items-center">
                             <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0"></span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                           <li key={serviceIndex} className="flex items-center">
                             <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0"></span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                             {service}
                           </li>
                         ))}
                       </ul>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                       <Link
-=======
                       
                       <Link 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       
                       <Link 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         href={category.href}
                         className={`inline-flex items-center px-6 py-3 ${colors.bg} ${colors.hover} rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 ${colors.ring} focus:ring-offset-2 focus:ring-offset-slate-900`}
                       >
                         View All {category.title}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <svg
                           className='ml-2 w-4 h-4'
                           fill='none'
@@ -388,10 +326,9 @@ export default function Services() {
                             strokeWidth={2}
                             d='M9 5l7 7-7 7'
                           />
-=======
                         <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         </svg>
                       </Link>
                     </div>
@@ -445,12 +382,10 @@ export default function Services() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z" />
                     </svg>
                   </div>
-<<<<<<< HEAD
                   <h3 className='text-xl font-bold mb-2'>24/7 Support</h3>
                   <p className='text-slate-400'>
                     Round-the-clock technical support and maintenance
                   </p>
-=======
                         <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -508,27 +443,22 @@ export default function Services() {
                   </div>
                   <h3 className="text-xl font-bold mb-2">24/7 Support</h3>
                   <p className="text-slate-400">Round-the-clock technical support and maintenance</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <h3 className="text-xl font-bold mb-2">24/7 Support</h3>
                   <p className="text-slate-400">Round-the-clock technical support and maintenance</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               </div>
             </div>
           </section>
 
           {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <section className='py-16 px-4'>
             <div className='max-w-4xl mx-auto text-center'>
               <h2 className='text-3xl md:text-4xl font-bold mb-8'>
-=======
           <section className="py-16 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 Ready to Get Started?
               </h2>
               <p className="text-lg text-slate-300 mb-8">
@@ -549,11 +479,9 @@ export default function Services() {
                 >
                   Call {contact.phone}
                 </a>
-<<<<<<< HEAD
                 <a
                   href={`mailto:${contact.email}`}
                   className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'
-=======
           <section className="py-16 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -580,18 +508,14 @@ export default function Services() {
                 <a 
                   href={`mailto:${contact.email}`} 
                   className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <a 
                   href={`mailto:${contact.email}`} 
                   className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 >
                   Email Us
                 </a>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
             </motion.div>
           </div>
         </section>
@@ -614,16 +538,13 @@ export default function Services() {
               <Link href="/contact" className="btn-secondary">
                 Schedule Consultation
               </Link>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </section>
         </main>
       </ErrorBoundary>
     </>
-<<<<<<< HEAD
   );
-=======
             </div>
           </section>
         </main>
@@ -631,8 +552,6 @@ export default function Services() {
     </>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

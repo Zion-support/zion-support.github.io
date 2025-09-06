@@ -10,8 +10,6 @@ export default function Reports() {
 
   useEffect(() => {
     Promise.all([
-<<<<<<< HEAD
-<<<<<<< HEAD
       fetch('/api/reports/uptime')
         .then(r => r.json())
         .then(setUptime),
@@ -31,9 +29,7 @@ export default function Reports() {
         .then(r => r.json())
         .then(setPagespeed),
     ]).catch(() => {});
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime);
       fetch('/api/reports/seo').then((r) => r.json()).then(setSeo);
       fetch('/api/reports/links').then((r) => r.json()).then(setLinks);
@@ -41,21 +37,15 @@ export default function Reports() {
       fetch('/api/reports/changelog').then((r) => r.json()).then(setChangelog);
       fetch('/api/reports/pagespeed').then((r) => r.json()).then(setPagespeed)
     ]).catch(() => {})
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }, []);
 
   const lastUptime = uptime[uptime.length - 1];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className='space-y-6'>
-=======
     <div className="space-y-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       <div>
         <h1 className="text-2xl font-semibold">Automation Reports</h1>
         <div className="text-sm text-gray-500">Autonomously generated and synced</div>
@@ -97,9 +87,7 @@ export default function Reports() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
-=======
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-semibold">Automation Reports</h1>
@@ -144,8 +132,6 @@ export default function Reports() {
     </div>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

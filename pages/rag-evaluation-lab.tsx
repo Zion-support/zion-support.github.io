@@ -1,8 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function RAGEvaluationLabPage() {
   return (
@@ -80,11 +78,9 @@ export default function RAGEvaluationLabPage() {
       </section>
     </>
   );
-=======
 export default function RAGEvaluationLabPage() {
-=======
 export default function RAGEvaluationLabPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<>
 			<SEO title="RAG Evaluation Lab" description="Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates." />
@@ -124,7 +120,4 @@ export default function RAGEvaluationLabPage() {
 		</>
 	)
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
