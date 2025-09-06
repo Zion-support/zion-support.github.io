@@ -4,7 +4,7 @@ const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
+    company: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -15,12 +15,6 @@ const Contact: React.FC = () => {
       ...prev,
       [name]: value
     }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
     
@@ -34,10 +28,6 @@ const Contact: React.FC = () => {
       message: ''
     });
     setIsSubmitting(false);
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -156,10 +146,6 @@ const Contact: React.FC = () => {
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
                       <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                    </div>
                     <div>
                       <h4 className="text-lg font-semibold text-gray-900">Address</h4>
                       <p className="text-gray-600">364 E Main St STE 1008<br />Middletown, DE 19709</p>
@@ -196,11 +182,6 @@ const Contact: React.FC = () => {
                     Proven track record of success
                   </li>
                 </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* CTA Section */}
       <div className="py-20 bg-white">
@@ -225,8 +206,3 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-
-export default Contact;

@@ -3,26 +3,6 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react'
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
-import { toast } from "sonner";
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-
-import { log_info, logErrorToProduction } from '@/utils / production_logger';
-interface ExportPanelProps {
-  platform: AppPlatform,
-  metadata: AppMetadataValues;
-}
-export const ExportPanel: React.FC < ExportPanelProps> = ({ platform, metadata }, ) => {
-  const handle_export = (format: 'json' | 'csv', ) =>: any {
-    try {
-      let content: string,
-      let file_name: string,
-      // Check condition
-if ( {) {
-  $2
-}
-        content = JSON.stringify (metadata, null, 2);
-        file_name = `zion - app - metadata-${platform}-${metadata.version}.json`;
-
       } else {
         // Convert object to CSV format;
         const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];

@@ -126,11 +126,3 @@ const Services: React.FC = () => {
               </div>
               <h3 className="text-lg font-semibold">Government</h3>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Services;

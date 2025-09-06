@@ -1,8 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import {
+  Home,
+  Users,
+  Settings,
+  DollarSign,
+  Phone,
+  Menu
+} from 'lucide-react'
 
-const Sidebar: React.FC = () => {;
-  return (
+
     <div className="fixed left-0 top-0 h-full w-80 bg-white shadow-lg z-40 lg:block hidden">;
       <div className="p-6">;
         <h2 className="text-xl font-bold text-gray-900 mb-6">Navigation</h2>;
