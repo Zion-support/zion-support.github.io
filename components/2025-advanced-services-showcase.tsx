@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
   website: 'https://ziontechgroup.com'
@@ -8,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const allServices = [
   ...advancedEnterpriseServices2025
   ...innovativeMicroSaasExpansion2025
-  ...cuttingEdgeITInfrastructureServices,];  website: 'https://ziontechgroup.com'
+  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com'
 }
 const allServices = [
   ...advancedEnterpriseServices2025;
@@ -51,8 +48,6 @@ const allServices = [
     color: 'from-violet-500 to-indigo-500'
     description: 'Quantum computing solutions'
   }
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import React, { useState, useEffect } from 'react';
 import SEO from './seo/Seo';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -128,80 +123,19 @@ const getServiceCategory = (service: any) => {
   return 'Other';
 };
 
-<<<<<<< HEAD
-=======
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-  website: 'https://ziontechgroup.com'
-}
-const allServices = [
-  ...advancedEnterpriseServices2025
-  ...innovativeMicroSaasExpansion2025
-  ...cuttingEdgeITInfrastructureServices,];  website: 'https://ziontechgroup.com'
-}
-const allServices = [
-  ...advancedEnterpriseServices2025;
-      ...innovativeMicroSaasExpansion2025;
-  ...cuttingEdgeITInfrastructureServices
-    description: 'Complete portfolio of advanced services'
-  }
-  {
-    id: 'enterprise'
-    name: 'Enterprise Solutions'
-    icon: <Building className="w-6 h-6" />
-    color: 'from-blue-500 to-purple-500'
-    description: 'Enterprise-grade AI and IT solutions'
-  }
-  {
-    id: 'micro-saas'
-    name: 'Micro SAAS'
-    icon: <Globe className="w-6 h-6" />
-    color: 'from-green-500 to-emerald-500'
-    description: 'Innovative micro SAAS solutions'
-  }
-  {
-    id: 'infrastructure'
-    name: 'IT Infrastructure'
-    icon: <Shield className="w-6 h-6" />
-    color: 'from-orange-500 to-red-500'
-    description: 'Cutting-edge infrastructure services'
-  }
-  {
-    id: 'ai-ml'
-    name: 'AI & Machine Learning'
-    icon: <Brain className="w-6 h-6" />
-    color: 'from-purple-500 to-pink-500'
-    description: 'Advanced AI and ML platforms'
-  }
-  {
-    id: 'quantum'
-    name: 'Quantum Computing'
-    icon: <Atom className="w-6 h-6" />
-    color: 'from-violet-500 to-indigo-500'
-    description: 'Quantum computing solutions'
-  }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 const allServices = [;
   ...advancedEnterpriseServices2025,;
   ...innovativeMicroSaasExpansion2025,;
-  ...cuttingEdgeITInfrastructureServices,];  website: 'https://ziontechgroup && ziontechgroup.com';
+  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
 };
 const allServices = [;
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices;
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   return 'Contact for pricing';
 };
 
@@ -214,28 +148,10 @@ const getServiceFeatures = (service: any) => {
 
 
 export default function AdvancedServicesShowcase() {
-<<<<<<< HEAD
-=======
-const allServices = [;
-  ...advancedEnterpriseServices2025,;
-  ...innovativeMicroSaasExpansion2025,;
-  ...cuttingEdgeITInfrastructureServices,];  website: 'https://ziontechgroup && ziontechgroup.com';
-};
-const allServices = [;
-  ...advancedEnterpriseServices2025;
-      ...innovativeMicroSaasExpansion2025;
-  ...cuttingEdgeITInfrastructureServices;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [filteredServices, setFilteredServices] = useState(allServices);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   }, [selectedCategory, searchTerm]);
 
   const ServiceCard = ({ service }: { service: any }) => (;
@@ -244,10 +160,6 @@ const allServices = [;
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0 && 0.5 }}
       className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
-          </p>
-        </div>
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
   useEffect(() => {
     let filtered = allServices;
@@ -363,38 +275,14 @@ const allServices = [;
           </p>
         </div>
         
-<<<<<<< HEAD
-=======
-  }, [selectedCategory, searchTerm]);
-
-  const ServiceCard = ({ service }: { service: any }) => (;
-    <motion&& motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0 && 0.5 }}
-      className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
-          </p>
-        </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
           <p className="text-sm text-gray-600 dark:text-gray-400">
             {service.marketPosition}
           </p>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
         
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
         <div className="flex items-center justify-between">
           <a
             href={service.link}
@@ -403,16 +291,8 @@ const allServices = [;
             Learn More
             <ArrowRight className="w-4 h-4" />
           </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
           
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
           
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
@@ -422,8 +302,6 @@ const allServices = [;
         </div>
       </div>
     </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 
   const ServiceList = ({ service }: { service: any }) => (
@@ -667,9 +545,6 @@ const allServices = [;
                   }`}
                 >
                   <List className="w-5 h-5" />
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   )
   const ServiceList = ({ service }: { service: any }) => (
     <motion.div
@@ -733,8 +608,7 @@ import { motion, AnimatePresence  } from './framer-motion';
   Award,
   Phone,
   Mail,
-  MapPin,
-} from 'lucide-react';
+  MapPin} from 'lucide-react';
 ;
 // Mock service data;
 const advancedEnterpriseServices2025 = [;
@@ -747,9 +621,7 @@ const advancedEnterpriseServices2025 = [;
     rating: 4.9,
     tags: ["AI", "Machine Learning", "Enterprise"],
     color: "from - blue - 500 to - purple - 500",
-    icon: "🤖",
-  },
-];
+    icon: "🤖"}];
 ;
 const innovativeMicroSaasExpansion2025 = [;
   {
@@ -761,9 +633,7 @@ const innovativeMicroSaasExpansion2025 = [;
     rating: 4.7,
     tags: ["SaaS", "Micro Services", "Cloud"],
     color: "from - green - 500 to - teal - 500",
-    icon: "⚡",
-  },
-];
+    icon: "⚡"}];
 ;
 const cuttingEdgeITInfrastructureServices = [;
   {
@@ -775,22 +645,19 @@ const cuttingEdgeITInfrastructureServices = [;
     rating: 4.8,
     tags: ["Cloud", "Infrastructure", "DevOps"],
     color: "from - orange - 500 to - red - 500",
-    icon: "☁️",
-  },
-];// Import our new service data;
+    icon: "☁️"}];// Import our new service data;
 import { advancedEnterpriseServices2025 } from '../data / 2025 - advanced - enterprise - services - expansion';
 import { innovativeMicroSaasExpansion2025 } from '../data / 2025 - innovative - micro - saas - expansion';
 import { cuttingEdgeITInfrastructureServices } from '../data / 2025 - cutting - edge - it - infrastructure';
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-}
+  website: 'https://ziontechgroup.com'}
 ;
 const all_services = [;
   ...advancedEnterpriseServices2025,
   ...innovativeMicroSaasExpansion2025,
-  ...cuttingEdgeITInfrastructureServices, ];  website: 'https://ziontechgroup.com';
+  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com';
 }
 ;
 const all_services = [;
@@ -839,43 +706,37 @@ const categories = [;
     name: 'Quantum Computing',
     icon: <Atom className="w - 6 h - 6" />,
     color: 'from - violet - 500 to - indigo - 500',
-    description: 'Quantum computing solutions',
-  },
+    description: 'Quantum computing solutions'},
   {
     id: 'enterprise',
     name: 'Enterprise Solutions',
     icon: <Building className='w - 6 h - 6' />,
     color: 'from - blue - 500 to - purple - 500',
-    description: 'Enterprise - grade AI and IT solutions',
-  },
+    description: 'Enterprise - grade AI and IT solutions'},
   {
     id: 'micro - saas',
     name: 'Micro SAAS',
     icon: <Globe className='w - 6 h - 6' />,
     color: 'from - green - 500 to - emerald - 500',
-    description: 'Innovative micro SAAS solutions',
-  },
+    description: 'Innovative micro SAAS solutions'},
   {
     id: 'infrastructure',
     name: 'IT Infrastructure',
     icon: <Shield className='w - 6 h - 6' />,
     color: 'from - orange - 500 to - red - 500',
-    description: 'Cutting - edge infrastructure services',
-  },
+    description: 'Cutting - edge infrastructure services'},
   {
     id: 'ai - ml',
     name: 'AI & Machine Learning',
     icon: <Brain className='w - 6 h - 6' />,
     color: 'from - purple - 500 to - pink - 500',
-    description: 'Advanced AI and ML platforms',
-  },
+    description: 'Advanced AI and ML platforms'},
   {
     id: 'quantum',
     name: 'Quantum Computing',
     icon: <Atom className='w - 6 h - 6' />,
     color: 'from - violet - 500 to - indigo - 500',
-    description: 'Quantum computing solutions',
-  }, ];
+    description: 'Quantum computing solutions'}];
 ;
 const getServiceCategory = (service: any) =>: any {
   // Check condition
@@ -1238,62 +1099,6 @@ if ( {) {
           </div>;
         </div>;
       </div>;
-              <a
-                href={`mailto:${contactInfo && contactInfo.email}?subject=Services Inquiry`}
-                className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300">;
-                Get Quote;
-                <ArrowRight className="w-4 h-4" />;
-              </a>;
-              <a
-                href={contactInfo && contactInfo.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                Visit Website;
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-                <button
-                  onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-lg transition-all duration-300 ${;
-                    viewMode === 'grid';
-                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400';
-                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600';
-                  }`}
-                >;
-                  <Grid className='w-5 h-5' />                </button>                <button
-                  onClick={() => setViewMode('list')}
-                  }`}
-                >;
-                  <Grid className="w-5 h-5" />;
-                </button>;
-                <button
-                  onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-lg transition-all duration-300 ${;
-                    viewMode === 'list';
-                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400';
-                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600';
-                  }`}
-          {/* Category Filters */}
-          <div className="mt-6">;
-            <div className="flex flex-wrap gap-3">;
-              {categories && categories.map((category) => (;
-                  key={category && category.id}
-                  onClick={() => setSelectedCategory(category && category.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${;
-                    selectedCategory === category && category.id;
-                      ? 'bg-gradient-to-r text-white shadow-lg';
-                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700';
-                  } ${category && category.color}`}
-                >;
-                  {category && category.icon}
-                  {category && category.name}
-                </button>;
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
   );
 
   const ServiceList = ({ service }: { service: any }) => (
@@ -1489,35 +1294,12 @@ if ( {) {
                 href={contactInfo.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
-              >
-                Visit Website
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Filters and Search */}
-        <div className="mb-8">
-          <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
-            <div className="flex-1">
-              <div className="relative max-w-md">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
-            </div>
-            
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2">
+                Visit Website;
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
@@ -1525,9 +1307,13 @@ if ( {) {
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
-                >
-                  <LayoutGrid className="w-5 h-5" />
-                </button>
+                >;
+                  <Grid className='w-5 h-5' />                </button>                <button
+                  onClick={() => setViewMode('list')}
+                  }`}
+                >;
+                  <Grid className="w-5 h-5" />;
+                </button>;
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
@@ -1535,17 +1321,25 @@ if ( {) {
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
-                >
-                  <List className="w-5 h-5" />
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+          {/* Category Filters */}
+          <div className="mt-6">;
+            <div className="flex flex-wrap gap-3">;
+              {categories && categories.map((category) => (;
+                  key={category && category.id}
+                  onClick={() => setSelectedCategory(category && category.id)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${;
+                    selectedCategory === category && category.id;
+                      ? 'bg-gradient-to-r text-white shadow-lg';
+                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700';
+                  } ${category && category.color}`}
+                >;
+                  {category && category.icon}
+                  {category && category.name}
+                </button>;
                 </button>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
@@ -1569,8 +1363,6 @@ if ( {) {
                   {selectedCategory !== 'all' &&;
                     `Filtered by: ${categories && categories.find(c => c && c.id === selectedCategory)?.name}`}
                   {searchTerm && ` • Search: "${searchTerm}"`}
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
           
           {/* Category Filters */}
           <div className="mt-6">
@@ -1598,35 +1390,6 @@ if ( {) {
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
               <div>
-<<<<<<< HEAD
-=======
-                  key={category.id}
-                  on_click={() => setSelectedCategory (category.id)}
-                  className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
-                    selected_category === category.id;
-                      ? 'bg - gradient - to - r text - white shadow - lg';
-                      : 'bg - white dark:bg - gray - 800 text - gray - 700 dark:text - gray - 300 border border - gray - 200 dark:border - gray - 600 hover:bg - gray - 50 dark:hover:bg - gray - 700';
-                  } ${category.color}`}
-                >;
-                  {category.icon}
-                  {category.name}
-              ))}
-        {/* Results Summary */}
-        <div className='mb-8'>;
-          <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>;
-            <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-4'>;
-              <div>;
-                <h2 className='text-2xl font-bold text-gray-900 dark:text-white mb-2'>;
-                  {filteredServices && filteredServices.length} Services Found;
-                </h2>;
-                <p className='text-gray-600 dark:text-gray-400'>;
-                  {selectedCategory !== 'all' &&;
-                    `Filtered by: ${categories && categories.find(c => c && c.id === selectedCategory)?.name}`}
-                  {searchTerm && ` • Search: "${searchTerm}"`}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                   {filteredServices.length} Services Found
                 </h2>
@@ -1635,16 +1398,8 @@ if ( {) {
                   {searchTerm && ` • Search: "${searchTerm}"`}
                 </p>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
               
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
               
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2">
                   <TrendingUp className="w-4 h-4 text-green-500" />
@@ -1658,8 +1413,6 @@ if ( {) {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         {/* Services Grid/List */}
         <div className="space-y-6">
@@ -1700,9 +1453,6 @@ if ( {) {
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these cutting-edge solutions. 
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
                 </p>;
               </div>;
 
@@ -1800,13 +1550,6 @@ if ( {) {
                 <ArrowRight className='w-5 h-5' />;
               </a>;
               <a
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Our team of experts is ready to help you implement these cutting-edge solutions.
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
 
         {/* Services Grid/List */}
         <div className="space-y-6">
@@ -1847,14 +1590,10 @@ if ( {) {
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these cutting-edge solutions. 
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
               Get in touch today to discuss your specific needs and discover how we can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-<<<<<<< HEAD
-<<<<<<< HEAD
                 href={`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}
                 className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
@@ -1875,9 +1614,6 @@ if ( {) {
     </div>
   )
 }
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
                 href={`mailto:${contactInfo && contactInfo.email}?subject=Business Transformation Consultation`}
                 className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">;
                 Start Your Transformation;
@@ -1918,10 +1654,6 @@ if ( {) {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
                 href={`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}
                 className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
@@ -1942,5 +1674,3 @@ if ( {) {
     </div>
   )
 }
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

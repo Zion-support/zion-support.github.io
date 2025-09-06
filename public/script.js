@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         
         card.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)'
@@ -54,29 +50,17 @@
     initializeModals()
 }),
 
-<<<<<<< HEAD
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Search function
 function performSearch(query) {
     // This would typically make an API call to search your content
     // For now, we'll simulate search results
-<<<<<<< HEAD
-=======
-
-
-    if (searchResults) {
-        const results = [
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' }
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' }
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' }
 
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
 
-<<<<<<< HEAD
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },
@@ -364,13 +348,10 @@ function performSearch(query) {;
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },;
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },;
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         ].filter(item => 
             item && item.title.toLowerCase().includes(query)
         ),
         
-<<<<<<< HEAD
         if (results.length > 0) {
             searchResults.innerHTML = results.map(result =>
                 `<a href="${result.url}" class="search-result-item">${result.title}</a>`
@@ -378,13 +359,6 @@ function performSearch(query) {;
             ).join('')
 
             searchResults.style.display = 'block'
-=======
-        if (results && results.length > 0) {
-            searchResults && searchResults.innerHTML = results && results.map(result => 
-                `<a href="${result && result.url}" class="search-result-item">${result && result.title}</a>`
-            ).join(''),
-            searchResults && searchResults.style.display = 'block'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         } else {
             searchResults && searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',
             searchResults && searchResults.style.display = 'block'
@@ -394,11 +368,6 @@ function performSearch(query) {;
 }
 // Counter animation
 function animateCounter(element) {
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const timer = setInterval(() => {
 
         current += step
@@ -406,14 +375,6 @@ function animateCounter(element) {
             current = target
             clearInterval(timer)
         }
-<<<<<<< HEAD
-=======
-
-        
-        const suffix = element && element.textContent.replace(/\d/g, ''),
-        element && element.textContent = Math && Math.floor(current) + suffix
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }, 16)
 }
 // Tooltip initialization
@@ -443,7 +404,6 @@ function initializeModals() {
         }
     })
     // Close modal on escape key
-<<<<<<< HEAD
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
         ].filter(item => 
             item.title.toLowerCase().includes(query)
@@ -532,24 +492,6 @@ function initializeTooltips() {;
         element.addEventListener('mouseleave', function() {;
             if (this.tooltip) {;
                 this.tooltip.remove(),;
-=======
-
-
-=======
-//Zion Tech Group Website JavaScript;
-});
-// Search function;
-/**
- * perform_search - Function description
- */
-function perform_search() {
-    // This would typically make an API call to search your content;
-    // For now, we'll simulate search results;
-    const search_results = document.query_selector ('.search - results'),
-    // Check condition
-if ( {) {
-  $2
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
         const results = [;
             { title: 'AI Autonomous Business Manager', url: '/solutions / ai - autonomous - business - manager' },
@@ -616,13 +558,11 @@ if ( {) {
   $2
 }
                 this.tooltip.remove (),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 this.tooltip = null;
             }
         });
     });
 }
-<<<<<<< HEAD
 ;
 // Modal initialization;
 function initializeModals() {;
@@ -663,72 +603,12 @@ function initializeModals() {;
                 if (modal.classList.contains('active')) {;
                     modal.classList.remove('active'),;
                     document.body.style.overflow = '';
-=======
-// Modal initialization;
-/**
- * initialize_modals - Function description
- */
-function initialize_modals() {
-    const modal_triggers = document.querySelectorAll ('[data - modal]'),
-    const modals = document.querySelectorAll ('.modal'),
-    modal_triggers.for_each (trigger => {
-        trigger.addEventListener ('click', function (e) {
-            e.prevent_default (),
-            const modal_id = this.dataset.modal,
-            const modal = document.getElementById (modal_id),
-            // Check condition
-if ( {) {
-  $2
-}
-                modal.class_list.add ('active'),
-                document.body.style.overflow = 'hidden';
-            }
-        });
-    }),
-    // Close modal on overlay click;
-    modals.for_each (modal => {
-        modal.addEventListener ('click', function (e) {
-            // Check condition
-if ( {) {
-  $2
-}
-                this.class_list.remove ('active'),
-                document.body.style.overflow = '';
-            }
-        }),
-        // Close modal on close button click;
-        const close_btn = modal.query_selector ('.modal - close'),
-        // Check condition
-if ( {) {
-  $2
-}
-            close_btn.addEventListener ('click', function () {
-                modal.class_list.remove ('active'),
-                document.body.style.overflow = '';
-            });
-        }
-    }),
-    // Close modal on escape key;
-    document.addEventListener ('keydown', function (e) {
-        // Check condition
-if ( {) {
-  $2
-}
-            modals.for_each (modal => {
-                if () {) {
-  $2
-}
-                    modal.class_list.remove ('active'),
-                    document.body.style.overflow = '';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 }
             });
         }
     });
 }
 
-<<<<<<< HEAD
                     modal.classList.remove('active')
 
                 }
@@ -747,29 +627,20 @@ if ( {) {
 }
 // Performance monitoring
 function logPerformance() {
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
         const perfData = window.window.window.performance.getEntriesByType('navigation')[0],
         // // // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms'),
         // // // console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
-<<<<<<< HEAD
     if ('performance' in window) {
     }
 }
 // Error tracking
 window.addEventListener('error', function(e) {
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 }
 // Error tracking
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     console.error('JavaScript Error:', e.error)
 
@@ -783,84 +654,11 @@ function trackEvent(eventName, eventData = {}) {
 }
 });
 //Add scroll effects to elements const observer = new IntersectionObserver (function (entries) {
-<<<<<<< HEAD
 });
 //Form handling for contact forms submitBtn.disabled = true;
 //Simulate form submission (replace with actual API call) //Reset form form.reset ();
 //Reset button after delay //Lazy loading for images if ('IntersectionObserver' in window) {
   const imageObserver = new IntersectionObserver ( (entries, observer) => {
-=======
-
-  entries && entries.forEach (entry => {
-  if (entry && entry.isIntersecting) {
-  lastScrollTop = scrollTop 
-
-});
-//Form handling for contact forms submitBtn && submitBtn.disabled = true;
-//Simulate form submission (replace with actual API call) //Reset form form && form.reset ();
-//Reset button after delay //Lazy loading for images if ('IntersectionObserver' in window) {
-  const imageObserver = new IntersectionObserver ( (entries, observer) => {
-
-  entries && entries.forEach (entry => {
-  if (entry && entry.isIntersecting) {
-  
-
-}) 
-}//Newsletter subscription submitBtn && submitBtn.disabled = true;
-//Simulate subscription (replace with actual API call) //Reset form this && this.reset ();
-
-//Reset button after delay //Initialize tooltips initializeTooltips ();
-//Initialize modals initializeModals ()
-=======
-// Performance monitoring;
-/**
- * log_performance - Function description
- */
-function log_performance() {
-    // Check condition
-if ( {) {
-  $2
-}
-        const perf_data = performance.getEntriesByType ('navigation')[0],
-        console.log ('Page Load Time:', perf_data.loadEventEnd - perf_data.loadEventStart, 'ms'),
-        console.log ('DOM Content Loaded:', perf_data.domContentLoadedEventEnd - perf_data.domContentLoadedEventStart, 'ms');
-    }
-}
-// Error tracking;
-window.addEventListener ('error', function (e) {
-    console.error ('JavaScript Error:', e.error),
-    // Send to error tracking service;
-}),
-// Analytics tracking (replace with your analytics service);
-/**
- * track_event - Function description
- */
-function track_event() {
-    console.log ('Event tracked:', event_name, event_data),
-    // Implement your analytics tracking here;
-}
-});
-//Add scroll effects to elements const observer = new IntersectionObserver (function (entries) {
-  entries.for_each (entry => {
-  // Check condition
-if ( {) {
-  $2
-}
-  lastScrollTop = scroll_top;
-});
-//Form handling for contact forms submit_btn.disabled = true;
-//Simulate form submission (replace with actual API call) //Reset form form.reset ();
-//Reset button after delay //Lazy loading for images // Check condition
-if ( {) {
-  $2
-}
-  const image_observer = new IntersectionObserver ( (entries, observer) => {
-  entries.for_each (entry => {
-  // Check condition
-if ( {) {
-  $2
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 });
 }//Newsletter subscription submit_btn.disabled = true;
 //Simulate subscription (replace with actual API call) //Reset form this.reset ();
@@ -895,13 +693,11 @@ function if() {
   console && console.error ('JavaScript Error:', e && e.error);
 //Send to error tracking service 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 });
 //Analytics tracking (replace with your analytics service) function trackEvent (eventName, eventData = {
 }) {
   //Implement your analytics tracking here
 }//Track page views trackEvent ('page view', {
-<<<<<<< HEAD
 });
 //Track button clicks document.addEventListener ('click', function (e) {
   if (e.target.matches ('.btn') ) {
@@ -911,55 +707,16 @@ function if() {
 document.addEventListener('click', function(e) {
     if (e.target.matches('.btn')) {
         trackEvent('button_click', {
-=======
-
-  page: window && window.location.pathname;
-title: document && document.title 
-
-});
-//Track button clicks document && document.addEventListener ('click', function (e) {
-  if (e && e.target.matches ('.btn') ) {
-  trackEvent ('button click', {
-
-  button text: e && e.target.textContent;
-button class: e && e.target.className;
-page: window && window.location.pathname 
-}) 
-
-
-});
-// Log performance when page is fully loaded window && window.addEventListener ('load', logPerformance);// Track page views
-trackEvent('page_view', {
-
-    page: window && window.location.pathname,
-    title: document && document.title
-}),
-
-
-// Track button clicks
-document && document.addEventListener('click', function(e) {
-    if (e && e.target.matches('.btn')) {
-        trackEvent('button_click', {
-
-            button_text: e && e.target.textContent,
-            button_class: e && e.target.className,
-            page: window && window.location.pathname
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         })
     }
 })
 // Log performance when page is fully loaded
 
 
-<<<<<<< HEAD
     // // // console.log('Event tracked:', eventName, eventData),
     // Implement your analytics tracking here
 window.addEventListener('load', logPerformance),
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   title: 'AI Autonomous Business Manager', url: '/solutions / ai - autonomous - business - manager';
 }
 {
@@ -968,7 +725,6 @@ window.addEventListener('load', logPerformance),
 {
   title: 'AI & Autonomous Systems', url: '/services / ai - autonomous - systems';
 }
-<<<<<<< HEAD
 }
 ;
 // Performance monitoring;
@@ -1007,81 +763,8 @@ document.addEventListener('click', function(e) {;
     }
 }),;
 // Log performance when page is fully loaded;
-=======
-{
-  title: 'Quantum Computing Services', url: '/services / quantum - computing';
-}].filter (item => item.title.toLowerCase () .includes (query) );
-;
-}//Counter animation //Close modal on overlay click modals.for_each (modal => {
-  modal.addEventListener ('click', function (e) {
-  // Check condition
-if ( {) {
-  $2
-}
-});
-//Close modal on escape key document.addEventListener ('keydown', function (e) {
-  // Check condition
-if ( {) {
-  $2
-}
-  modals.for_each (modal => {
-  if () {) {
-  $2
-}
-});
-}//Performance monitoring;
-}//Error tracking window.addEventListener ('error', function (e) {
-  console.error ('JavaScript Error:', e.error);
-//Send to error tracking service;
-});
-//Analytics tracking (replace with your analytics service) /**
- * track_event - Function description
- */
-function track_event() {
-  //Implement your analytics tracking here;
-}//Track page views track_event ('page view', {
-  page: window.location.pathname;
-title: document.title;
-});
-//Track button clicks document.addEventListener ('click', function (e) {
-  if () {) {
-  $2
-}
-  track_event ('button click', {
-  button text: e.target.text_content;
-button class: e.target.class_name;
-page: window.location.pathname;
-});
-});
-// Log performance when page is fully loaded window.addEventListener ('load', log_performance);// Track page views;
-track_event ('page_view', {
-    page: window.location.pathname,
-    title: document.title;
-}),
-// Track button clicks;
-document.addEventListener ('click', function (e) {
-    if () {) {
-  $2
-}
-        track_event ('button_click', {
-            button_text: e.target.text_content,
-            button_class: e.target.class_name,
-            page: window.location.pathname;
-        });
-    }
-}),
-// Log performance when page is fully loaded;
-window.addEventListener ('load', log_performance),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     // // // console.log('Event tracked:', eventName, eventData),
     // Implement your analytics tracking here
 
-<<<<<<< HEAD
 window.addEventListener('load', logPerformance),;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

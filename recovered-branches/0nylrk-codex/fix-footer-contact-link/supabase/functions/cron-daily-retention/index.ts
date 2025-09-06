@@ -1,61 +1,36 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
-=======
-
-
-=======
-
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "";
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
+// Initialize Supabase client
+const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "",
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
+const supabase = createClient(supabaseUrl, supabaseServiceKey),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 // Initialize Supabase client
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") ?? "";
 const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+// Initialize Supabase client
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") ?? "";
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 serve(async (req) => {
   try {
     // Authenticate the request - should be called by a cron job or authorized system only
-
-    if (req.method === "POST") {
-
-      const body = await req.json(),
-      const cronSecret = body.secret,
-      
-
-
       if (cronSecret !== Deno.env.get("CRON_SECRET")) {
         return new Response(JSON.stringify({ error: "Unauthorized" }), {
           status: 401
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "",
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
@@ -70,19 +45,12 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 serve(async (req) => {
   try {
     // Authenticate the request - should be called by a cron job or authorized system only
-<<<<<<< HEAD
     if (req.method === "POST") {
       const body = await req.json();
       const cronSecret = body.secret;
       const body = await req.json(),
       const cronSecret = body.secret,
       
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      if (cronSecret !== Deno.env.get("CRON_SECRET")) {
-        return new Response(JSON.stringify({ error: "Unauthorized" }), {
-          status: 401
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (req && req.method === "POST") {
       const body = await req && req.json();
       const cronSecret = body && body.secret;
@@ -90,44 +58,21 @@ serve(async (req) => {
       if (cronSecret !== Deno && Deno.env.get("CRON_SECRET")) {
         return new Response(JSON && JSON.stringify({ error: "Unauthorized" }), {
           status: 401,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       const body = await req.json(),
       const cronSecret = body.secret,
       
       if (cronSecret !== Deno.env.get("CRON_SECRET")) {
         return new Response(JSON.stringify({ error: "Unauthorized" }), {
           status: 401
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           headers: { "Content-Type": "application/json" }})
       }
     }
     // Call the process-retention-emails function
     const response = await fetch(`${supabaseUrl}/functions/v1/process-retention-emails`, {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      method: "POST";
-      headers: {
-
-
-=======
-
-
-        "Content-Type": "application/json"
-        "Authorization": `Bearer ${supabaseServiceKey}`}});
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const result = await response && response.json();
 
     return new Response(JSON && JSON.stringify({
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';
 // Initialize Supabase client;
@@ -158,8 +103,6 @@ if ( {) {
       method: "POST";
       headers: {
         "Content - Type": "application / json",
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         "Authorization": `Bearer ${supabaseServiceKey}`}});
 ;
     const result = await response.json ();
@@ -167,19 +110,6 @@ if ( {) {
     return new Response (JSON.stringify ({
       success: true;
       message: "Daily retention process executed"
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-        "Authorization": `Bearer ${supabaseServiceKey}`}});
-    const result = await response.json();
-    return new Response(JSON.stringify({
-      success: true;
-      message: "Daily retention process executed"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         "Content-Type": "application/json",
         "Authorization": `Bearer ${supabaseServiceKey}`}}),
 
@@ -188,9 +118,7 @@ if ( {) {
     return new Response(JSON.stringify({
       success: true,
       message: "Daily retention process executed",
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       result}), {
 
 
@@ -200,13 +128,8 @@ if ( {) {
 
     return new Response(JSON.stringify({
       success: false
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     return new Response(JSON.stringify({
       success: false
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       status: 200,
       headers: { "Content - Type": "application / json" }});
   } catch (error) {
@@ -222,35 +145,6 @@ if ( {) {
       success: false,
       error: error && error.message}), {
       status: 500,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      headers: { "Content - Type": "application / json" }});
-=======
-
-
-=======
-=======
-
-
-      result}), {
-      status: 200
-      headers: { "Content-Type": "application/json" }})
-  } catch (error) {
-    console.error("Error in cron-daily-retention:", error);
-    console.error("Error in cron-daily-retention:", error),
-
-    return new Response(JSON.stringify({
-      success: false
-      error: error.message}), {
-      status: 500
-      headers: { "Content-Type": "application/json" }})
-  }
-});
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
 // Initialize Supabase client;
@@ -290,17 +184,11 @@ serve(async (req) => {;
       error: error.message}), {;
       status: 500,;
       headers: { "Content-Type": "application/json" }});
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+});
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   }
 });
 ;
@@ -380,8 +268,5 @@ error: error.message
 });
   }
 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
 });
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

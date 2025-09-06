@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,6 +45,11 @@ function resolveMergeConflicts(filePath) {
 =======
 // Function to fix merge conflicts in a file
 >>>>>>> main
+=======
+const fs = require('fs');
+const path = require('path');
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
 function fixMergeConflicts(filePath) {
   try {
 <<<<<<< HEAD
@@ -59,11 +64,15 @@ function fixMergeConflicts(filePath) {
     console.log(`Fixing merge conflicts in: ${filePath}`);
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Remove merge conflict markers and keep the second version (after =======)
 =======
 <<<<<<< HEAD
     // Remove merge conflict markers and keep the content after the last =======
 >>>>>>> main
+=======
+    // Remove merge conflict markers and keep the second version (after =======)
+>>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
     const lines = content.split('\n');
     const fixedLines = [];
     let inConflict = false;
@@ -74,6 +83,9 @@ function fixMergeConflicts(filePath) {
       const line = lines[i];
       
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
       if (line.includes('<<<<<<< HEAD')) {
         inConflict = true;
         keepVersion = false;
@@ -101,6 +113,7 @@ function fixMergeConflicts(filePath) {
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+<<<<<<< HEAD
 =======
 =======
     // Remove merge conflict markers and keep the HEAD version
@@ -121,10 +134,13 @@ function fixMergeConflicts(filePath) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
     return false;
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 function findAndFixConflicts(dir) {
   const files = fs.readdirSync(dir);
@@ -426,6 +442,12 @@ function findAndFixConflicts(dir) {
   let fixedCount = 0;
   
 >>>>>>> main
+=======
+function findAndFixConflicts(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+>>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
@@ -436,15 +458,19 @@ function findAndFixConflicts(dir) {
       if (fixMergeConflicts(filePath)) {
         fixedCount++;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
       }
     }
   }
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -495,6 +521,8 @@ console.log('🎉 Merge conflict resolution complete!');
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 =======
 >>>>>>> main
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
   return fixedCount;
 }
 
@@ -519,6 +547,7 @@ for (const dir of otherDirs) {
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 console.log('Merge conflict fixing completed!');
 =======
@@ -611,3 +640,6 @@ console.log('🎉 Merge conflict resolution complete!');
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+=======
+console.log('Merge conflict fixing completed!');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-9d47

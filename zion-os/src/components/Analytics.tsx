@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 "use client",
 import { useEffect  } from './react';,
 interface FirstInputEntry extends PerformanceEntry {
@@ -20,23 +12,7 @@ export /**
 function Analytics() {
   useEffect (() => {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
-"use client";
-import { useEffect } from "react";
-interface FirstInputEntry extends PerformanceEntry {processingStart: number;
-  processingEnd: number;
-  target?: Element;
-}
-export function Analytics() {useEffect(() => {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 "use client",;
 import { useEffect } from "react",;
 interface FirstInputEntry extends PerformanceEntry {;
@@ -47,18 +23,8 @@ interface FirstInputEntry extends PerformanceEntry {;
 ;
 export function Analytics() {;
   useEffect(() => {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     // Performance monitoring;
     // Check condition
 if ( {) {
@@ -73,108 +39,29 @@ if ( {) {
 }
             // // // console.log ("LCP:", entry.start_time);
           }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           // Check condition
 if ( {) {
   $2
 }
             const firstInputEntry = entry as FirstInputEntry,
             // // // console.log ("FID:", firstInputEntry.processing_start - firstInputEntry.start_time);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
           if (entry.entryType === "first-input") {;
             const firstInputEntry = entry as FirstInputEntry,;
             // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
 
-<<<<<<< HEAD
-=======
-          if (entry.entryType === "first-input") {const firstInputEntry = entry as FirstInputEntry;
-            // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           }
         }
       });
       observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"] });
       // Cumulative Layout Shift monitoring;
-<<<<<<< HEAD
-      let cls = 0,
-      const observer2 = new PerformanceObserver ((list) => {
-        for (const entry of list.get_entries ()) {
-          // Check condition
-if ( {) {
-  $2
-}
-            const layoutShiftEntry = entry as any,
-            cls += layoutShiftEntry.value;
-          }
-        }
-      }),
-      observer2.observe ({ entry_types: ["layout - shift"] }),
-      // Report metrics on page unload;
-      window.addEventListener ("beforeunload", () => {
-        // // // console.log ("CLS:", cls);
-      }),
-      // Cleanup;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       return () => {;
         observer.disconnect();
 
         observer2.disconnect();
 
-<<<<<<< HEAD
-=======
-      return () => {observer.disconnect();
-          if (entry.entryType === "first-input") {;
-            const firstInputEntry = entry as FirstInputEntry,;
-            // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
-          }
-        }
-      }),;
-      observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"] }),;
-      // Cumulative Layout Shift monitoring;
-      let cls = 0,;
-      const observer2 = new PerformanceObserver((list) => {;
-        for (const entry of list.getEntries()) {;
-          if (entry.entryType === "layout-shift") {;
-            const layoutShiftEntry = entry as any,;
-            cls += layoutShiftEntry.value;
-          }
-        }
-      }),;
-      observer2.observe({ entryTypes: ["layout-shift"] }),;
-      // Report metrics on page unload;
-      window.addEventListener("beforeunload", () => {;
-        // // // console.log("CLS:", cls);
-      }),;
-      // Cleanup;
-      return () => {;
-        observer.disconnect();
-        observer2.disconnect();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       }
     }
   }, []);

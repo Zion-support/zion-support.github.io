@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {AddMilestoneForm} from '../AddMilestoneForm';
-interface MilestoneCreatorProps {;
-  onSubmit: (data: any) => Promise<void>,;
-  isSubmitting: boolean,;
-  onCancel: () => void,;
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   projectScope?: string;
   projectStartDate?: string;
   projectEndDate?: string | null;
@@ -16,26 +5,11 @@ interface MilestoneCreatorProps {;
 }
 
 
-<<<<<<< HEAD
 export function MilestoneCreator(): any ({;
 
-=======
-
-=======
-  projectScope?: string;
-  projectStartDate?: string;
-  projectEndDate?: string | null;
-  projectType?: string;
-}
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 export function MilestoneCreator({;
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export function MilestoneCreator(): any ({;
 
 import React from 'react';
@@ -54,40 +28,18 @@ interface MilestoneCreatorProps {
 export function MilestoneCreator({
 
 export function MilestoneCreator({;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 export function MilestoneCreator({;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onSubmit;
   isSubmitting;
   onCancel;
   projectScope;
   projectStartDate;
   projectEndDate;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <AddMilestoneForm 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   projectType
 }: MilestoneCreatorProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    <AddMilestoneForm 
-
-=======
-=======
-    <AddMilestoneForm
-    <AddMilestoneForm 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',;
 import { AddMilestoneForm } from '../AddMilestoneForm',;
 interface MilestoneCreatorProps {;
@@ -109,17 +61,11 @@ export function MilestoneCreator({;
   projectEndDate;
   projectType;
 }: MilestoneCreatorProps) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (;
     <AddMilestoneForm;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   return (
@@ -151,14 +97,10 @@ export function MilestoneCreator({;
     <AddMilestoneForm ;
   return (;
     <AddMilestoneForm;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   projectType;
 }: MilestoneCreatorProps) {;
   return (
     <AddMilestoneForm
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       onSubmit={onSubmit}
       isSubmitting={isSubmitting}
       onCancel={onCancel}
@@ -166,19 +108,6 @@ export function MilestoneCreator({;
       projectStartDate={projectStartDate}
       projectEndDate={projectEndDate}
       projectType={projectType}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    />;
-  );
-}
-
-=======
-=======
-    />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   on_submit: (data: any) => Promise < void>,
   is_submitting: boolean,
   on_cancel: () => void,
@@ -202,10 +131,6 @@ function MilestoneCreator() {
       project_type={project_type}
     />);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;}
  export function MilestoneCreator ({
   onSubmit, isSubmitting, onCancel, projectScope, projectStartDate, projectEndDate, projectType 
@@ -229,6 +154,3 @@ function MilestoneCreator() {
     />
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

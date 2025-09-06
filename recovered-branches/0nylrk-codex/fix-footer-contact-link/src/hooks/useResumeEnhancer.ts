@@ -1,34 +1,12 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-export function useResumeEnhancer() {;
-
-
-=======
-export function useResumeEnhancer() {;
-
-
-
-import {useState} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
-export function useResumeEnhancer() {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
 
 export function useResumeEnhancer() {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 export function useResumeEnhancer() {;
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const enhanceContent = async (
@@ -39,54 +17,15 @@ export function useResumeEnhancer() {;
     setIsEnhancing(true);
     setError(null)
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      const { data, error } = await supabase && supabase.functions.invoke('resume-enhancer', {
-        body: { 
-          content, 
-          enhancementType: type,
-
-=======
-const { data, error } = await supabase && supabase.functions.invoke('resume-enhancer', {
-        body: { 
-          content, 
-          enhancementType: type,
-      const { data, error } = await supabase.functions.invoke('resume-enhancer', {
-        body: {
-          content
-          enhancementType: type
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           context
         }
       });
       if (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        throw new Error(error && error.message)
-      }
-
-      
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       return data && data.enhancedContent
     } catch (err: any) {
       setError(err && err.message || 'Failed to enhance content'),
       console && console.error('Enhancement error:', err);
-<<<<<<< HEAD
 
-=======
-        throw new Error(error.message)
-      }
-      return data.enhancedContent
-    } catch (err: any) {
-      setError(err.message |'Failed to enhance content')
-      console.error('Enhancement error:', err);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return null
     } finally {
       setIsEnhancing(false)
@@ -97,29 +36,6 @@ const { data, error } = await supabase && supabase.functions.invoke('resume-enha
     isEnhancing;
 
     error
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-import { useState } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general',;
-export function useResumeEnhancer() {;
-  const [isEnhancing, setIsEnhancing] = useState(false),;
-  const [error, setError] = useState<string | null>(null),;
-  const enhanceContent = async (;
-    content: string,;
-    type: EnhancementType = 'general',;
-    context?: string;
-  ): Promise<string | null> => {;
-    setIsEnhancing(true),;
-    setError(null),;
-    try {;
-      const { data, error } = await supabase.functions.invoke('resume-enhancer', {;
-        body: {;
-          content,;
-          enhancementType: type,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 type EnhancementType = 'summary' | 'work - description' | 'skill - categorization' | 'general';
@@ -142,8 +58,6 @@ function useResumeEnhancer() {
         body: {
           content,
           enhancement_type: type,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           context;
         }
       });
@@ -171,16 +85,10 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
-=======
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 
@@ -257,7 +165,3 @@ try {
     error;
   }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

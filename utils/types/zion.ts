@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-export interface Branding {;
-
-=======
-
-export interface Branding {;
-
-  logoUrl?: string,;
-  primaryColor?: string,;
-  secondaryColor?: string,;
-export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface Branding {logoUrl?: string;
   primaryColor?: string;
   secondaryColor?: string;
@@ -28,49 +9,20 @@ export interface Branding {;
   primaryColor?: string;
   secondaryColor?: string;
   subdomain?: string;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
 
 export interface Branding {;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   logoUrl?: string,;
   primaryColor?: string,;
   secondaryColor?: string,;
   subdomain?: string;
-<<<<<<< HEAD
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 ;
 export interface DeployModules {;
   marketplace: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -82,19 +34,7 @@ export interface DeployModules {;
   apiDocsWiki: boolean;
   zionBrain: boolean;
   // Bonus;
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   globalMap?: boolean,;
   franchiseOnboarding?: boolean,;
   referralAmbassadors?: boolean,;
@@ -106,19 +46,6 @@ export interface DeployModules {;
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  globalMap?: boolean;
-  franchiseOnboarding?: boolean;
-  referralAmbassadors?: boolean;
-  grantPortal?: boolean;
-  trailer?: boolean;
-  bookStore?: boolean;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export interface DeployInput {instanceName: string;
   defaultLanguage: string;
@@ -138,7 +65,6 @@ export interface GeneratedAsset {kind: "file" | "page" | "config" | "job" | "eve
   path: string;
   description?: string;
 }
-<<<<<<< HEAD
 export interface DeployResult {success: boolean;
   globalMap?: boolean,;
   franchiseOnboarding?: boolean,;
@@ -150,8 +76,6 @@ export interface DeployResult {success: boolean;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 ;
 export interface DeployInput {;
@@ -159,31 +83,8 @@ export interface DeployInput {;
   defaultLanguage: string;
   deploymentRegion: string;
   tokenActivation: boolean;
-<<<<<<< HEAD
 
 
-=======
-  governanceMode: GovernanceMode;
-  branding: Branding;
-  modules: DeployModules;
-  requestedRoutes?: string[];
-}
-;
-export interface DeployLogEntry {;
-  timestamp: string;
-  level: "info" | "warn" | "error";
-  action: string;
-  details?: Record<string unknown> | string;
-}
-;
-export interface GeneratedAsset {;
-  kind: "file" | "page" | "config" | "job" | "event";
-  path: string;
-  description?: string;
-=======
-}
-;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   governanceMode: GovernanceMode,;
   branding: Branding,;
   modules: DeployModules,;
@@ -213,57 +114,30 @@ export interface GeneratedAsset {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 export interface DeployResult {;
   success: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 ;
 export interface DeployResult {;
   success: boolean;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
   logs: DeployLogEntry[];
   summary: string;
   version: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid",
 export interface Branding {
   logo_url?: string,
   primary_color?: string,
   secondary_color?: string,
   subdomain?: string;
-=======
 
 
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -271,7 +145,6 @@ export interface Branding {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export interface DeployModules {
   marketplace: boolean,
@@ -325,43 +198,17 @@ export interface DeployResult {
 }
 export interface AccessControlConfig {
   allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   adminKeyConfigured: boolean;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-}
-export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
-  adminKeyConfigured: boolean;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-;
-export interface AccessControlConfig {;
-  allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
-  adminKeyConfigured: boolean;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
 
@@ -369,6 +216,3 @@ export interface AccessControlConfig {;
 
   adminKeyConfigured: boolean;
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

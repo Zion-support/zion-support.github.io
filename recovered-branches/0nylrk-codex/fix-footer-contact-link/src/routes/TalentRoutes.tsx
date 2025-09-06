@@ -1,15 +1,17 @@
-import { Route, Routes } from "react-router-dom";
-import { ProtectedRoute } from "../components/ProtectedRoute";
-import TalentDirectory from "../pages/TalentDirectory";
-import TalentsPage from "../pages/TalentsPage";
-import TalentProfilePage from "../pages/TalentProfilePage";
-import SavedTalentsPage from "../pages/SavedTalentsPage";
+import { Route, Routes } from "react-router-dom",
+import { ProtectedRoute } from "../components/ProtectedRoute",
+import TalentDirectory from "../pages/TalentDirectory",
+import TalentsPage from "../pages/TalentsPage",
+import TalentProfilePage from "../pages/TalentProfilePage",
+import SavedTalentsPage from "../pages/SavedTalentsPage",
 import CreateTalentProfile from "../pages/CreateTalentProfile";
 import ProfilePage from "../pages/ProfilePage";
+
+import CreateTalentProfile from "../pages/CreateTalentProfile",
+import ProfilePage from "../pages/ProfilePage",
 const TalentRoutes = () => {
-=======
-const TalentRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+    <Routes>
   return (
     <Routes>;
       {/* Talent Routes */}
@@ -38,12 +40,14 @@ const TalentRoutes = () => {;
 };
 
 
-=======
-=======
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+const TalentRoutes = () => {
+const TalentRoutes = () => {;
+  return (
+    <Routes>;
+      {/* Talent Routes */}
+
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '../components / ProtectedRoute';
 import TalentDirectory from "../pages / TalentDirectory";
@@ -80,11 +84,6 @@ const TalentRoutes = () =>: any {
 }
 ;
 export default TalentRoutes;
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;
 },;
 ;export default TalentRoutes,
@@ -106,6 +105,3 @@ export default TalentRoutes;
   );
 },;
 export default TalentRoutes;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

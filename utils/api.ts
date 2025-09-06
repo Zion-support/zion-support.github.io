@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 interface File extends Blob {
   name: string;
   lastModified: number;
@@ -29,34 +27,6 @@ interface URLSearchParams {
   toString(): string;
 }
 type BodyInit = string | Blob | ArrayBuffer | FormData | URLSearchParams;
-type RequestCache =
-  | "default"
-  | "no-store"
-  | "reload"
-  | "no-cache"
-  | "force-cache"
-  | "only-if-cached";
-type RequestCredentials = "omit" | "same-origin" | "include";
-interface Headers {
-  append(name: string, value: string): void;
-  delete(name: string): void;
-  get(name: string): string | null;
-  has(name: string): boolean;
-  set(name: string, value: string): void;
-}
-type HeadersInit = Headers | string[][] | Record<string, string>;
-type RequestMode = "navigate" | "same-origin" | "no-cors" | "cors";
-type RequestRedirect = "follow" | "error" | "manual";
-type ReferrerPolicy =
-  | "no-referrer"
-  | "no-referrer-when-downgrade"
-  | "origin"
-  | "origin-when-cross-origin"
-  | "same-origin"
-  | "strict-origin"
-  | "strict-origin-when-cross-origin"
-  | "unsafe-url";
-
 interface RequestInit {
   body?: BodyInit | null;
   cache?: RequestCache;
@@ -140,61 +110,18 @@ export class ApiClient {
 interface AbortSignal extends EventTarget {
   aborted: boolean;
   onabort: ((this: AbortSignal, ev: Event) => any) | null;
->>>>>>> main
 
-export interface ApiResponse<T = any> {
-  data: T;
-  message?: string;
+}
+};
+export const apiClient = new ApiClient();
+export type { ApiResponse, RequestOptions };
+;
+interface ApiResponse<T = unknown> {
+  data?: T;
+  error?: string;
   success: boolean;
 }
-<<<<<<< HEAD
-=======
-interface RequestOptions extends RequestInit {
-  timeout?: number;
-}
-declare global {
-  interface RequestInit {
-    timeout?: number;
-  }
-}
-class ApiClient {
-  private baseURL: string;
-
-  constructor(baseURL: string = "", defaultHeaders: HeadersInit = {}) {
-    this.baseURL = baseURL;
-    this.default_headers = default_headers;
-  }
-  async request < T = unknown>(
-    endpoint: string,
-    options: RequestOptions = {},
-  ): Promise<ApiResponse<T>> {
-    const url = `${this.baseURL}${endpoint}`;
-    const controller = new AbortController();
-
-    // Set timeout if provided
-    if (options.timeout) {
-      setTimeout(() => controller.abort(), options.timeout);
-    }
-
-    }
-    try {
-
-        ...options,
-        signal: controller && controller.signal,
-        headers: {
-          ...this && this.defaultHeaders,
-          ...options && options.headers,
-        },
-      });
-
-      if (!response && response.ok) {
-        throw new Error(`HTTP error! status: ${response && response.status}`);
-      }
-
-      const data = await response && response.json();
-
       return {
->>>>>>> main
 
 export interface RequestOptions {
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
@@ -230,13 +157,6 @@ class ApiClient {
       };
     } catch (error) {
       return {
-<<<<<<< HEAD
-        data: null as any,
-        success: false,
-        message: error instanceof Error ? error.message : 'Unknown error'
-      };
-    }
-=======
 
 
 
@@ -298,12 +218,7 @@ export type { ApiResponse, RequestOptions };
     options?: RequestOptions,
   ): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, { ...options, method: "DELETE" });
->>>>>>> main
   }
 }
 
 export const apiClient = new ApiClient();
-<<<<<<< HEAD
-=======
-export type { ApiResponse, RequestOptions };
->>>>>>> main

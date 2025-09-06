@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 export interface ExtraService {
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   name: string;
   tagline: string;
@@ -24,52 +19,12 @@ export interface ExtraService {
   }
 export const extraServices: ExtraService[] = [
   {
-<<<<<<< HEAD
-=======
-
-=======
-    address: string;
-  }
-;
-export const extra_services: ExtraService[] = [;
-  {
-    id: 'cloud - migration - expert',
-    name: 'Cloud Migration Expert',
-    tagline: 'Seamless cloud migration and optimization',
-    price: '$99 / hour',
-    description:;
-      'Professional cloud migration services for businesses looking to modernize their infrastructure.',
-    features: [;
-      'AWS / Azure / GCP migration',
-      'Performance optimization',
-      'Cost analysis',
-      'Security implementation',
-      '24 / 7 support',
-    ],
-    link: '/services / cloud - migration - expert',
-    category: 'Cloud Services',
-    real_implementation: true,
-    contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
   {
-<<<<<<< HEAD
-=======
-  id: string, name: string,
-  tagline: string, price: string,
-  description: string, features: string[],
-  link: string, category: string,
-  realImplementation: boolean,
-  contactInfo: {
-    mobile: string, email: string,
-    address: string
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   id: string;
   name: string;
   tagline: string;
@@ -82,19 +37,6 @@ export const extra_services: ExtraService[] = [;
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-=======
-    address: string;
-  };
-<<<<<<< HEAD
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
     address: string;
   }
@@ -102,40 +44,12 @@ export const extraServices: ExtraService[] = [
   {
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
-<<<<<<< HEAD
-=======
-
-
-=======
-
-    id: "cloud-migration-expert",
-    name: "Cloud Migration Expert",
-    tagline: "Seamless cloud migration and optimization",
-    price: "$99/hour",
-    description: "Professional cloud migration services for businesses looking to modernize their infrastructure.",
-    features: [
-      "AWS/Azure/GCP migration",
-      "Performance optimization",
-      "Cost analysis",
-      "Security implementation",
-      "24/7 support"
-    ],
-    link: "/services/cloud-migration-expert",
-    category: "Cloud Services",
-    realImplementation: true,
-    contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
   },
   {
@@ -155,45 +69,12 @@ export const extraServices: ExtraService[] = [
     category: "Security",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       address: "364 E Main St STE 1008 Middletown DE 19709"
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 
-<<<<<<< HEAD
-=======
-];
-
-=======
-;
-=======
-=======
-    id: "cloud-migration-expert",
-    name: "Cloud Migration Expert",
-    tagline: "Seamless cloud migration and optimization",
-    price: "$99/hour",
-    description: "Professional cloud migration services for businesses looking to modernize their infrastructure.",
-    features: [
-      "AWS/Azure/GCP migration",
-      "Performance optimization",
-      "Cost analysis",
-      "Security implementation",
-      "24/7 support"
-    ],
-    link: "/services/cloud-migration-expert",
-    category: "Cloud Services",
-    realImplementation: true,
-    contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   },
@@ -214,27 +95,9 @@ export const extraServices: ExtraService[] = [
     category: "Security",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-=======
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },;
-];      mobile: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
-=======
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

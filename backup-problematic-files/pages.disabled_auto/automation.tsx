@@ -1,0 +1,4 @@
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }

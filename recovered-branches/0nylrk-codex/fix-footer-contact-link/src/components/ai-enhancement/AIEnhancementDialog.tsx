@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle } from '@/components/ui/dialog';
-import { AIEnhancementPanel  } from './AIEnhancementPanel';
-import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
-interface AIEnhancementDialogProps {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   title: string,
   isOpen: boolean,
   onClose: () => void,
@@ -30,14 +13,6 @@ import React from 'react';
   onClose;
   onApply;
   defaultOptions;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',;
 import {;
   Dialog,;
@@ -55,14 +30,6 @@ interface AIEnhancementDialogProps {;
   initialContent?: string;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   title: string
   isOpen: boolean
   onClose: () => void
@@ -72,30 +39,12 @@ interface AIEnhancementDialogProps {;
   initialContent?: string
 }
 export function AIEnhancementDialog({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components/ui/dialog';
-import {AIEnhancementPanel} from './AIEnhancementPanel';
-import {AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
-interface AIEnhancementDialogProps {;
-  title: string,;
-  isOpen: boolean,;
-  onClose: () => void,;
-  onApply: (content: string) => void,;
-  defaultOptions: AIEnhancementOptions,;
-  initialContent?: string;
-}
-
-export function AIEnhancementDialog(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title;
   isOpen;
   onClose;
   onApply;
   defaultOptions;
 
-=======
   title,
   isOpen,
   onClose,
@@ -107,106 +56,27 @@ export function AIEnhancementDialog(): any ({;
   const handleApply = (content: string) => {
     onApply(content)
     onClose()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   initialContent;
 }: AIEnhancementDialogProps) {;
   const handleApply = (content: string) => {;
     onApply(content),;
     onClose();
   };
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   },
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-import React from 'react',;
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogHeader,;
-  DialogTitle} from '@/components/ui/dialog',;
-import { AIEnhancementPanel } from './AIEnhancementPanel',;
-import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
-;
-interface AIEnhancementDialogProps {;
-  title:string,;
-  isOpen:boolean,;
-  onClose:() => void,;
-  onApply:(content:string) => void,;
-  defaultOptions:AIEnhancementOptions,;
-  initialContent?:string;
-}
-;
-export function AIEnhancementDialog({;
-  title,;
-  isOpen,;
-  onClose,;
-  onApply,;
-  defaultOptions,;
-  initialContent;
-} AIEnhancementDialogProps) {;
-  const handleApply = (content:string) => {;
-    onApply(content),;
-    onClose();
-  },;
-;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Dialog open={isOpen} onOpenChange={() => onClose()}>;
       <DialogContent className="max-w-3xl">;
         <DialogHeader>;
           <DialogTitle>{title}</DialogTitle>;
         </DialogHeader>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        <AIEnhancementPanel;
-  }
-  },
-
-  return (
-    <Dialog open={isOpen} onOpenChange={() => onClose()}>
-      <DialogContent className="max-w-3xl">
-        <DialogHeader>
-          <DialogTitle>{title}</DialogTitle>
-        </DialogHeader>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <AIEnhancementPanel
           title={title}
           defaultOptions={defaultOptions}
           onApply={handleApply}
           initialContent={initialContent}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        />;
-      </DialogContent>;
-    </Dialog>;
-  );
-}
-
-=======
-=======
-        />;
-      </DialogContent>;
-    </Dialog>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components / ui / dialog';
 import {AIEnhancementPanel} from './AIEnhancementPanel';
 import {AIEnhancementOptions} from '@/hooks / useAIContentEnhancer';
@@ -242,10 +112,6 @@ function AIEnhancementDialog() {
       </DialogContent>;
     </Dialog>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;}
  <DialogHeader> <DialogTitle> {
   title 
@@ -264,6 +130,3 @@ function AIEnhancementDialog() {
     </Dialog>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

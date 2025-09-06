@@ -2,6 +2,8 @@ User-agent: *
 Allow: /
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
@@ -11,6 +13,7 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 <<<<<<< HEAD
 <<<<<<< HEAD
 # Sitemaps
@@ -111,6 +114,8 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> origin/main
+<<<<<<< HEAD
+=======
 =======
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
@@ -153,3 +158,4 @@ Allow: /guides/
 Crawl-delay: 1
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

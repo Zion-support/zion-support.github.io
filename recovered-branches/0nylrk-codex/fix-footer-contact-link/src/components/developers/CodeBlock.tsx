@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { useState  } from 'react';
-import { Check, Copy  } from 'lucide-react';
-import { cn } from "@/lib/utils";
-interface CodeBlockProps {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   code: string
 import {useState} from 'react';
@@ -18,51 +10,16 @@ interface CodeBlockProps {;
   showLineNumbers?: boolean;
   className?: string;
 }
-<<<<<<< HEAD
-
-
-export function CodeBlock(): any ({ ;
-
-=======
-  language?: string;
-  showLineNumbers?: boolean;
-  className?: string;
-}
-export function CodeBlock(): any ({ ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   code;
   language = 'bash';
   showLineNumbers = false;
   className;
 }: CodeBlockProps) {;
   const [copied, setCopied] = useState(false);
-import { useState } from 'react',
-import { Check, Copy } from 'lucide-react',
-import { cn } from "@/lib/utils",
-
-
-
-<<<<<<< HEAD
-
-import { useState  } from 'react';
-import { Check, Copy  } from 'lucide-react';
-import { cn } from "@/lib/utils";
-interface CodeBlockProps {
-
-  code: string
-
-  language?: string;
-  showLineNumbers?: boolean;
-  className?: string
-}
-export function CodeBlock({
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   code;
 
   language = 'bash';
   showLineNumbers = false;
-<<<<<<< HEAD
   className;
 }: CodeBlockProps) {;
   const [copied, setCopied] = useState(false);
@@ -73,14 +30,12 @@ import {useState} from 'react';
 import {Check, Copy} from 'lucide-react';
 import {cn} from "@/lib/utils";
 
-=======
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react',
 import { cn } from "@/lib/utils",
 
 
 
-=======
   className
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false);
@@ -90,9 +45,6 @@ import {cn} from "@/lib/utils";
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react',
 import { cn } from "@/lib/utils",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface CodeBlockProps {
   code: string,
   language?: string,
@@ -100,45 +52,20 @@ interface CodeBlockProps {
   className?: string
 }
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-export function CodeBlock({ ;
-  code;
-  language = 'bash';
-  showLineNumbers = false;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function CodeBlock({ 
   code,
   language = 'bash',
   showLineNumbers = false,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   className
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code);
     setCopied(true);
     setTimeout(() => {
       setCopied(false)
     }, 2000)
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code);
     setCopied(true);
@@ -148,20 +75,11 @@ export function CodeBlock({
     setTimeout(() => {
       setCopied(false)
     }, 2000)
-<<<<<<< HEAD
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
   },
 
 
-<<<<<<< HEAD
-=======
-  }
-  },
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className={cn(
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto",
@@ -175,10 +93,7 @@ export function CodeBlock({
           <div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500">
             {code.split('\n').map((_, i) => (
               <div key={i} className="h-6 leading-6">
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState } from 'react',;
 import { Check, Copy } from 'lucide-react',;
 import { cn } from "@/lib/utils",;
@@ -196,10 +111,7 @@ export function CodeBlock({;
   className;
 }: CodeBlockProps) {;
   const [copied, setCopied] = useState(false),;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const handleCopyClick = async () => {;
     await navigator && navigator.clipboard.writeText(code);
     setCopied(true);
@@ -208,9 +120,6 @@ export function CodeBlock({;
     }, 2000);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <divclassName={cn(
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto"
@@ -225,10 +134,6 @@ export function CodeBlock({;
             {code && code.split('\n').map((_, i) => (;
               <div key={i} className="h-6 leading-6">;
                 {i + 1}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
             ))}
           </div>;
@@ -240,56 +145,6 @@ export function CodeBlock({;
         onClick={handleCopyClick}
         aria-label="Copy code">;
         {copied ? <Check size={16} /> : <Copy size={16} />}
-<<<<<<< HEAD
-=======
-
-import { useState } from 'react',;
-import { Check, Copy } from 'lucide-react',;
-import { cn } from "@/lib/utils",;
-;
-interface CodeBlockProps {;
-  code:string,;
-  language?:string,;
-  showLineNumbers?:boolean,;
-  className?:string;
-}
-;
-export function CodeBlock({ ;
-  code,;
-  language = 'bash',;
-  showLineNumbers = false,;
-  className;
-} CodeBlockProps) {;
-  const [copied, setCopied] = useState(false),;
-;
-  const handleCopyClick = async () => {;
-    await navigator.clipboard.writeText(code),;
-    setCopied(true),;
-    setTimeout(() => {;
-      setCopied(false);
-    }, 2000);
-  },;
-  return (;
-    <div className={cn(;
-      "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto",;
-      className;
-    )}>;
-      <pre className={cn(;
-        "p-4 overflow-auto";
-        showLineNumbers && "pl-12 relative";
-      )}>;
-        {showLineNumbers && (;
-          <div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500">;
-            {code.split('\n').map((_, i) => (;
-      <button;
-        className="absolute top-2 right-2 p-2 rounded-md hover:bg-zinc-800 transition-colors";
-        onClick={handleCopyClick}
-        aria-label="Copy code";
-      >;
-        {copied ? <Check size={16} /> :<Copy size={16} />}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </button>;
       {language && (;
         <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">;
@@ -297,16 +152,10 @@ export function CodeBlock({ ;
         </div>;
       )}
     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   );
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -331,11 +180,6 @@ function CodeBlock() {
   const [copied, set_copied] = useState (false);
 ;
 export default CodeBlock;
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;}
 ;
 export default CodeBlock,;
@@ -412,6 +256,3 @@ export default CodeBlock;
 
 ;
 export default CodeBlock;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

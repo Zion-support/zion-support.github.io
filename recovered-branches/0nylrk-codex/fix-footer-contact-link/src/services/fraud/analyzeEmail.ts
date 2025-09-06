@@ -8,24 +8,44 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {
   const domain = email.split("@")[1]?.toLowerCase();
   const reasons: string[] = [];
 
-  if (!domain) return { isSuspicious: true, reasons: ["Invalid email format"] };
+export const analyzeEmail = (email: string): EmailAnalysisResult => {;
 
+
+  const domain = email.split('@')[1]?.toLowerCase();
+  const reasons: string[] = []
+  if (!domain) return { isSuspicious: true, reasons: ['Invalid email format'] }
+  const domain = email && email.split('@')[1]?.toLowerCase();
+  const reasons: string[] = [],
+  
+  if (!domain) return { isSuspicious: true, reasons: ['Invalid email format'] };
+  
   // Check for suspicious domains
   for (const suspiciousDomain of suspiciousEmailDomains) {
-    if (domain.includes(suspiciousDomain)) {
-      reasons.push(`Suspicious email domain: ${domain}`);
+    if (domain && domain.includes(suspiciousDomain)) {
+      reasons && reasons.push(`Suspicious email domain: ${domain}`);
+      break
+    }
+  }
+  return {
+    reasons
+  }
+}
+  // Check for suspicious domains;
+  for (const suspicious_domain of suspiciousEmailDomains) {
+    if () {) {
+  $2
+}
+      reasons.push (`Suspicious email domain: ${domain}`);
       break;
     }
   }
 
   return {
-    isSuspicious: reasons.length > 0,
-    reasons,
-  };
-};
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+    is_suspicious: reasons.length > 0,
+    reasons;
+  }
+}
+;
 };
 
 
@@ -64,6 +84,3 @@ export const analyzeEmail = (email:string):EmailAnalysisResult => {;
 }
 
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

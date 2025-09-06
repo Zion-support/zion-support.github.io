@@ -1,29 +1,5 @@
-<<<<<<< HEAD
-=======
-
-
-export default function BlockchainServicesPage() {;
-  return (;
-
-
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
-=======
-export default /**
- * BlockchainServicesPage - Function description
- */
-function BlockchainServicesPage() {
-  return (
-    <div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text - white">;
-=======
-<<<<<<< HEAD
-export default function BlockchainServicesPage() {return (;
-=======
-export default function BlockchainServicesPage() {;
-  return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Hero Section */}
       <div className="bg - gradient - to - r from - orange - 600 to - red - 600 py - 20">;
         <div className="container mx - auto px - 6 text - center">;
@@ -55,21 +31,6 @@ export default function BlockchainServicesPage() {;
         <div className="container mx - auto px - 6">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12">;
             {/* DeFi Platform Development */}
-<<<<<<< HEAD
-=======
-
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
-              <div className="text - 4xl mb - 6">💰</div>;
-              <h2 className="text - 3xl font - bold mb - 4">DeFi Platform Development</h2>;
-              <p className="text - zinc - 300 mb - 6 text - lg">;
-                Build next - generation decentralized finance platforms with lending, borrowing,
-
-=======
-
-                Build next-generation decentralized finance platforms with lending, borrowing,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 yield farming, and automated market making capabilities.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -108,21 +69,6 @@ export default function BlockchainServicesPage() {;
               </a>;
             </div>;
             {/* NFT Marketplace */}
-<<<<<<< HEAD
-=======
-
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
-              <div className="text - 4xl mb - 6">🎨</div>;
-              <h2 className="text - 3xl font - bold mb - 4">NFT Marketplace Development</h2>;
-              <p className="text - zinc - 300 mb - 6 text - lg">;
-                Create cutting - edge NFT marketplaces with advanced features, multi - chain support,
-
-=======
-
-                Create cutting-edge NFT marketplaces with advanced features, multi-chain support,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 and innovative monetization strategies for digital assets.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -161,21 +107,6 @@ export default function BlockchainServicesPage() {;
               </a>;
             </div>;
             {/* Smart Contract Development */}
-<<<<<<< HEAD
-=======
-
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
-              <div className="text - 4xl mb - 6">📜</div>;
-              <h2 className="text - 3xl font - bold mb - 4">Smart Contract Development</h2>;
-              <p className="text - zinc - 300 mb - 6 text - lg">;
-                Secure, audited smart contracts for any blockchain use case with comprehensive testing,
-
-=======
-
-                Secure, audited smart contracts for any blockchain use case with comprehensive testing,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 security analysis, and deployment support.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -214,21 +145,6 @@ export default function BlockchainServicesPage() {;
               </a>;
             </div>;
             {/* Web3 Infrastructure */}
-<<<<<<< HEAD
-=======
-
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
-              <div className="text - 4xl mb - 6">🌐</div>;
-              <h2 className="text - 3xl font - bold mb - 4">Web3 Infrastructure</h2>;
-              <p className="text - zinc - 300 mb - 6 text - lg">;
-                Build robust Web3 infrastructure with node management, API gateways,
-
-=======
-
-                Build robust Web3 infrastructure with node management, API gateways,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 indexing services, and decentralized storage solutions.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -267,21 +183,6 @@ export default function BlockchainServicesPage() {;
               </a>;
             </div>;
             {/* DAO Development */}
-<<<<<<< HEAD
-=======
-
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
-              <div className="text - 4xl mb - 6">🏛️</div>;
-              <h2 className="text - 3xl font - bold mb - 4">DAO Development</h2>;
-              <p className="text - zinc - 300 mb - 6 text - lg">;
-                Create sophisticated decentralized autonomous organizations with advanced governance,
-
-=======
-
-                Create sophisticated decentralized autonomous organizations with advanced governance,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 treasury management, and community engagement tools.;
               </p>;
               <div className="space - y-4 mb - 8">;

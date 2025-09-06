@@ -11,8 +11,6 @@ interface OptimizedImageProps {
   quality?: number;
   sizes?: string;
 }
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width,
@@ -22,18 +20,34 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   quality = 75,
   sizes = "100vw",
 }) => {
-  return (
-    <Image
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <Image;
+        src={src}
+        alt={alt}
+        fill;
+        className={class_name}
+        priority={priority}
+        sizes={sizes}
+        quality={quality}
+        style={style}
       src={src}
       alt={alt}
       width={width}
       height={height}
       className={className}
       priority={priority}
-      quality={quality}
       sizes={sizes}
-    />
   );
-};
-
+}
 export default OptimizedImage;
+      quality={quality}
+      style={style}
+
+quality={quality}
+      style={style}
+  );
+}

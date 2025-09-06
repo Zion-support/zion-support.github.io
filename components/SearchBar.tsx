@@ -1,43 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useRef, useEffect } from 'react';
-import Link from 'next/link';
-
 interface SearchResult {
   title: string;
   description: string;
   url: string;
   type: 'service' | 'page' | 'category';
 }
-
 const SearchBar: React.FC = () => {
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [isOpen, setIsOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const searchRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  // Mock search data - in a real app, this would come from an API
-  const searchData: SearchResult[] = [
-    {
-      title: 'Micro SaaS Products',
-      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
-      url: '/micro-saas',
-      type: 'category',
-    },
-    {
-      title: 'AI Services',
-      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
-      url: '/ai-services',
-      type: 'category',
-    },
-    {
-      title: 'IT Services',
-      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
-      url: '/it-services',
-      type: 'category',
-    },
+interface SearchResult {;
+  title: string, description: string,;
+  url: string, type: 'service' | 'page' | 'category',;
+}
     {
       title: 'Cloud Cost Guard',
       description: 'FinOps Assistant for anomaly detection and cost optimization',
@@ -186,11 +157,9 @@ const SearchBar: React.FC = () => {
 };
 
 export default SearchBar;
-=======
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
-=======
 import React, { useState } from 'react';
 import { Search, X } from 'lucide-react';
 
@@ -198,7 +167,6 @@ interface SearchBarProps {
   onSearch?: (query: string) => void;
   placeholder?: string;
   className?: string;
->>>>>>> main
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({
@@ -213,7 +181,6 @@ const SearchBar: React.FC<SearchBarProps> = ({
     if (onSearch && query.trim()) {
       onSearch(query.trim());
     }
-<<<<<<< HEAD
     {
       title: 'Contact Us'
       description: 'Get in touch with our experts for consultation and quotes'
@@ -231,8 +198,6 @@ const SearchBar: React.FC<SearchBarProps> = ({
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
-=======
   };
 
   const handleClear = () => {
@@ -268,4 +233,3 @@ const SearchBar: React.FC<SearchBarProps> = ({
 };
 
 export default SearchBar;
->>>>>>> main

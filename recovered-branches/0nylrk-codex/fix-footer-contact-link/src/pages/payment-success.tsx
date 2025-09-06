@@ -1,10 +1,28 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
-import { CheckCircle2 } from "lucide-react";
+import { Button  } from '@/components/ui/button';
+import { useNavigate  } from 'react-router-dom';
+import { CheckCircle2 } from 'lucide-react';
 export default function PaymentSuccess() {
+
+
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+import {CheckCircle2} from 'lucide-react';
+export default function PaymentSuccess() {;
   const navigate = useNavigate();
 
+
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+import {CheckCircle2} from 'lucide-react';
+export default function PaymentSuccess() {;
+  const navigate = useNavigate();
+
+import React from 'react',
+import { Button } from '@/components/ui/button',
+import { useNavigate } from 'react-router-dom',
+import { CheckCircle2 } from 'lucide-react',
+export default function PaymentSuccess() {
+  const navigate = useNavigate(),
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -39,14 +57,40 @@ export default function PaymentSuccess() {
         </div>
       </div>
     </div>
-  );
+  )
+
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+import {CheckCircle2} from 'lucide-react';
+import React from 'react',;
+import { Button } from '@/components/ui/button',;
+import { useNavigate } from 'react-router-dom',;
+import { CheckCircle2 } from 'lucide-react',;
+    <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">;
+      <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">;
+        <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">;
+          <CheckCircle2 className="h-6 w-6 text-green-600" />;
+        </div>;
+            onClick={() => navigate('/dashboard')}
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white";
+          >;
+            Go to Dashboard;
+          </Button>;
+          >;
+            Return to Home;
+          </Button>;
+        </div>;
+      </div>;
+
+
+
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+    </div>);
+}
 }
     </div>);
 }
@@ -62,10 +106,7 @@ export default function PaymentSuccess() {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 ;
     </div>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

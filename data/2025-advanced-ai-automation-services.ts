@@ -1,38 +1,9 @@
-<<<<<<< HEAD
   contactInfo: {
-=======
-
-import { ServiceVariant } from '../types / service - variants';
-
-export interface AdvancedAIAutomationService {
-
-  {
-
-=======
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string[],
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: string,
-  contactInfo: {
-    mobile: string, email: string,
-    address: string,
-    website: string
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
@@ -46,16 +17,8 @@ export interface AdvancedAIAutomationService {
     customers: 89;
     rating: 4.8,
     reviews: 38;
-<<<<<<< HEAD
   }
-=======
-
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
-=======
     realImplementation: true
     implementationDetails:
       'Enterprise-grade DevOps automation platform with AI-powered optimization, multi-cloud support, and advanced monitoring capabilities.'
@@ -240,22 +203,6 @@ export interface AdvancedAIAutomationService {
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      'AI-powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.'
-    launchDate: '2024-10-01'
-    customers: 89
-    rating: 4.8
-    reviews: 38
-=======
-      'AI-powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.',
-    launchDate: '2024-10-01',
-    customers: 89,
-    rating: 4.8,
-    reviews: 38,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   },];
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
@@ -269,15 +216,6 @@ export interface AdvancedAIAutomationService {
     rating: 4.8
 
     reviews: 38
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedAIAutomationService {;
   id: string,;
@@ -540,15 +478,6 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     customers: 89,;
     rating: 4.8;
     reviews: 38;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
-<<<<<<< HEAD
 ;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

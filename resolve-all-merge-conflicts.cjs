@@ -184,6 +184,8 @@ function resolveModifyDeleteConflicts() {
   }
 }
 
+<<<<<<< HEAD
+=======
 // Function to resolve content conflicts by choosing main branch version
 function resolveContentConflicts() {
   console.log('📝 Resolving content conflicts...');
@@ -375,3 +377,4 @@ main();
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

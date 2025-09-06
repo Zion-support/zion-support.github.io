@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -6,10 +8,13 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
+=======
 class AccessibilityChecker {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
@@ -142,6 +147,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 class AccessibilityChecker {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
@@ -306,6 +312,8 @@ if (require.main === module) {
     });
 }
 #!/usr/bin/env node
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 console.log('♿ Running accessibility check...');
@@ -448,6 +456,7 @@ if (!fs.existsSync(reportsDir)) {
 
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -581,6 +590,8 @@ if (require.main === module) {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/main
 =======
 <<<<<<< HEAD
@@ -595,6 +606,7 @@ if (require.main === module) {
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const reportFile = path.join(
   reportsDir,
   `accessibility-report-${Date.now()}.json`
@@ -606,6 +618,8 @@ fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 =======
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -633,6 +647,7 @@ fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -675,6 +690,8 @@ module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 <<<<<<< HEAD
@@ -691,3 +708,4 @@ module.exports = AccessibilityChecker;
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

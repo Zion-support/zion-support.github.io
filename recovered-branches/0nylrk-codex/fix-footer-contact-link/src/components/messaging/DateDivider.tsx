@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import React from "react";
 import { format } from "date-fns";
@@ -16,30 +11,13 @@ import { format } from 'date-fns';
 
 }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react";
 import { format } from "date-fns";
 interface DateDividerProps {;
   date: Date;
 }
 
-<<<<<<< HEAD
 
-=======
-export function DateDivider(): any ({ date }: DateDividerProps) {;
-  return (
-    <div className="flex items-center my-4">;
-      <div className="flex-1 border-t border-zion-purple/20"></div>;
-      <div className="px-3 text-xs text-zion-slate">;
-        {format(date, "MMM d, yyyy")}
-      </div>;
-      <div className="flex-1 border-t border-zion-purple/20"></div>;
-    </div>;
-  );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from './react';
 import { format  } from './date - fns';
 interface DateDividerProps {
@@ -60,36 +38,7 @@ function DateDivider() {
       </div>;
       <div className="flex - 1 border - t border - zion - purple / 20"></div>;
     </div>);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-=======
-}
-
-import React from 'react',;
-import { format } from 'date-fns',;
-;
-interface DateDividerProps {;
-  date:Date;
-}
-;
-export function DateDivider({ date } DateDividerProps) {;
-  return (;
-    <div className="flex items-center my-4">;
-      <div className="flex-1 border-t border-zion-purple/20"></div>;
-      <div className="px-3 text-xs text-zion-slate">;
-        {format(date, 'MMM d, yyyy')}
-      </div>;
-      <div className="flex-1 border-t border-zion-purple/20"></div>;
-    </div>;
-  ),;}
- </div> <div className="flex-1 border-t border-zion-purple/20" ></div> </div>) 
-}
-import React from "react";
-import { format } from "date-fns";
-interface DateDividerProps {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   date: Date;
 }
 
@@ -125,7 +74,3 @@ interface DateDividerProps {
   date: Date;
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
