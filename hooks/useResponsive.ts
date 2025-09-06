@@ -1,8 +1,20 @@
+<<<<<<< HEAD
         "isDesktop":width >= 1024})}
     updateDimensions();
     window.addEventListener(;
   'resize', updateDimensions);
     return () => window.removeEventListener(;
+=======
+        "isDesktop":width >= 1024})},;
+
+    updateDimensions(),;
+    window && window.addEventListener(;
+  'resize', updateDimensions),;
+    return () => window && window.removeEventListener(;
+  'resize', updateDimensions)}, []),;
+  return state},;
+export default useResponsive,;import { useState, useEffect } from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   'resize', updateDimensions)}, []);
   return state}
@@ -24,9 +36,13 @@ const defaultBreakpoints: Breakpoints = {
 export default useResponsive;
 
     updateDimensions();
+<<<<<<< HEAD
     window.addEventListener(,
+=======
+    window && window.addEventListener(;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   'resize', updateDimensions);
-    return () => window.removeEventListener(;
+    return () => window && window.removeEventListener(;
   'resize', updateDimensions)}, []);
 <<<<<<< HEAD
   return state};
@@ -39,6 +55,7 @@ import { useState,useEffect } from 'react'; interface ResponsiveState { screenWi
 >>>>>>> origin/automation-improvements-final
 <<<<<<< HEAD
 ,
+<<<<<<< HEAD
 import { useState,useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape" | "portrait"; isMobile: boolean; isTablet: boolean; isDesktop: boolean} const useResponsive = (): ResponsiveState => { const [state,setState] = useState<ResponsiveState>({ screenWidth: 1920,screenHeight: 1080,orientation: "landscape",isMobile: false,isTablet: false,isDesktop: true,}); useEffect(() => { const updateDimensions = () => { const width = window.innerWidth; const height = window.innerHeight; setState({ screenWidth: width,screenHeight: height,orientation: width > height ? "landscape" : "portrait",isMobile: width < 768,isTablet: width >= 768 && width < 1024,isDesktop: width >= 1024,})}; updateDimensions(); window.addEventListener( 'resize',updateDimensions); return () => window.removeEventListener( 'resize',updateDimensions)},[]); return state}; export default useResponsive;
 =======
 <<<<<<< HEAD
@@ -58,3 +75,6 @@ export default useResponsive
 import { useState,useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape" | "portrait"; isMobile: boolean; isTablet: boolean; isDesktop: boolean} const useResponsive = (): ResponsiveState => { const [state,setState] = useState<ResponsiveState>({ screenWidth: 1920,screenHeight: 1080,orientation: "landscape",isMobile: false,isTablet: false,isDesktop: true,}); useEffect(() => { const updateDimensions = () => { const width = window.innerWidth; const height = window.innerHeight; setState({ screenWidth: width,screenHeight: height,orientation: width > height ? "landscape" : "portrait",isMobile: width < 768,isTablet: width >= 768 && width < 1024,isDesktop: width >= 1024,})}; updateDimensions(); window.addEventListener( 'resize',updateDimensions); return () => window.removeEventListener( 'resize',updateDimensions)},[]); return state}; export default useResponsive;
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+import { useState,useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape" | "portrait"; isMobile: boolean; isTablet: boolean; isDesktop: boolean} const useResponsive = (): ResponsiveState => { const [state,setState] = useState<ResponsiveState>({ screenWidth: 1920,screenHeight: 1080,orientation: "landscape",isMobile: false,isTablet: false,isDesktop: true,}); useEffect(() => { const updateDimensions = () => { const width = window && window.innerWidth; const height = window && window.innerHeight; setState({ screenWidth: width,screenHeight: height,orientation: width > height ? "landscape" : "portrait",isMobile: width < 768,isTablet: width >= 768 && width < 1024,isDesktop: width >= 1024,})}; updateDimensions(); window && window.addEventListener( 'resize',updateDimensions); return () => window && window.removeEventListener( 'resize',updateDimensions)},[]); return state}; export default useResponsive;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

@@ -1,6 +1,7 @@
 // Jest setup file for testing environment
 import '@testing-library/jest-dom';
 // Mock global objects that might not be available in test environment
+<<<<<<< HEAD
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn()
   unobserve: jest.fn()
@@ -18,37 +19,82 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: jest.fn()
     dispatchEvent: jest.fn()
   }))
+=======
+global && global.ResizeObserver = jest && jest.fn().mockImplementation(() => ({
+  observe: jest && jest.fn(),
+  unobserve: jest && jest.fn(),
+  disconnect: jest && jest.fn(),}));}));
+
+// Mock window && window.matchMedia
+Object && Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest && jest.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest && jest.fn(), // deprecated
+    removeListener: jest && jest.fn(), // deprecated
+    addEventListener: jest && jest.fn(),
+    removeEventListener: jest && jest.fn(),
+    dispatchEvent: jest && jest.fn(),
+  })),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 });
 // Mock IntersectionObserver
+<<<<<<< HEAD
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn()
   unobserve: jest.fn()
   disconnect: jest.fn()
+=======
+global && global.IntersectionObserver = jest && jest.fn().mockImplementation(() => ({
+  observe: jest && jest.fn(),
+  unobserve: jest && jest.fn(),
+  disconnect: jest && jest.fn(),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }));
 // Mock console methods to reduce noise in tests
+<<<<<<< HEAD
 const originalConsoleError = console.error;
 const originalConsoleWarn = console.warn;
+=======
+const originalConsoleError = console && console.error;
+const originalConsoleWarn = console && console.warn;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 beforeAll(() => {
-  console.error = (...args: any[]) => {
+  console && console.error = (...args: any[]) => {
     if (
       typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM.render is no longer supported')
+      args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported')
     ) {
       return;
     }
+<<<<<<< HEAD
     originalConsoleError.call(console, ...args);
   }
   console.warn = (...args: any[]) => {
+=======
+    originalConsoleError && originalConsoleError.call(console, ...args);
+  };
+  
+  console && console.warn = (...args: any[]) => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (
       typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM.render is no longer supported')
+      args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported')
     ) {
       return;
     }
+<<<<<<< HEAD
     originalConsoleWarn.call(console, ...args);
   }
+=======
+    originalConsoleWarn && originalConsoleWarn.call(console, ...args);
+  };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 });
 afterAll(() => {
-  console.error = originalConsoleError;
-  console.warn = originalConsoleWarn;
+  console && console.error = originalConsoleError;
+  console && console.warn = originalConsoleWarn;
 });

@@ -18,7 +18,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       if (error) throw error;
       setNotifications(data |[])
     } catch (err) {
-      console.error('Error fetching notifications:', err)
+      console && console.error('Error fetching notifications:', err)
     } finally {
       setLoading(false)
     }
@@ -34,7 +34,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       if (error) throw error;
       await fetchNotifications()
     } catch (err) {
-      console.error('Error marking notification as read:', err)
+      console && console.error('Error marking notification as read:', err)
     }
   }, [userId, fetchNotifications]);
   const markAllAsRead = useCallback(async () => {
@@ -48,7 +48,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       if (error) throw error;
       await fetchNotifications()
     } catch (err) {
-      console.error('Error marking all notifications as read:', err)
+      console && console.error('Error marking all notifications as read:', err)
     }
   }, [userId, fetchNotifications]);
   const dismissNotification = useCallback(async (id: string) => {
@@ -62,23 +62,34 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       if (error) throw error;
       await fetchNotifications()
     } catch (err) {
-      console.error('Error dismissing notification:', err)
+      console && console.error('Error dismissing notification:', err)
     }
   }, [userId, fetchNotifications]);
+<<<<<<< HEAD
   const filteredNotifications = notifications.filter(notification => {
+=======
+
+  const filteredNotifications = notifications && notifications.filter(notification => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     switch (filter) {
       case 'unread':
-        return !notification.read;
+        return !notification && notification.read;
       case 'messages':
-        return notification.type === 'message';
+        return notification && notification.type === 'message';
       case 'onboarding':
-        return notification.type === 'onboarding';
+        return notification && notification.type === 'onboarding';
       case 'system':
-        return notification.type === 'system';
+        return notification && notification.type === 'system';
       default: return true
     }
   });
+<<<<<<< HEAD
   const unreadCount = notifications.filter(n => !n.read).length;
+=======
+
+  const unreadCount = notifications && notifications.filter(n => !n && n.read).length;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return {
     notifications;
     filteredNotifications;

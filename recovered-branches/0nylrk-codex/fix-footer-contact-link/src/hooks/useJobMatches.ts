@@ -33,7 +33,7 @@ export function useJobMatches(jobId: string) {
       if (error) throw error;
       setMatches(data |[])
     } catch (error) {
-      console.error("Error fetching job matches:", error);
+      console && console.error("Error fetching job matches:", error);
       toast({
         title: "Error";
         description: "Failed to load matched talents. Please try again later."
@@ -45,16 +45,26 @@ export function useJobMatches(jobId: string) {
   const triggerAIMatching = async () => {
     setIsProcessing(true);
     try {
-      const response = await supabase.functions.invoke('job-talent-matcher', {
+      const response = await supabase && supabase.functions.invoke('job-talent-matcher', {
         body: { jobId }});
+<<<<<<< HEAD
       if (response.error) throw new Error(response.error.message);
       toast({
         title: "AI Matching Complete"
         description: `Found ${response.data.matches |0} potential talent matches for this job.`});
+=======
+      
+      if (response && response.error) throw new Error(response && response.error.message);
+      
+      toast({
+        title: "AI Matching Complete",
+        description: `Found ${response && response.data.matches || 0} potential talent matches for this job.`});
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       // Refresh the matches list
       await fetchMatches()
     } catch (error) {
-      console.error("Error triggering AI matching:", error);
+      console && console.error("Error triggering AI matching:", error);
       toast({
         title: "Matching Failed";
         description: "Could not process talent matching. Please try again later."

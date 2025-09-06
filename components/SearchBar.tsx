@@ -1,16 +1,50 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
 }
 const SearchBar: React.FC = () => {
+=======
+
+interface SearchResult {;
+  title: string, description: string,;
+  url: string, type: 'service' | 'page' | 'category',;
+}
+
+const SearchBar: React.FC = () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+<<<<<<< HEAD
   // Mock search data - in a real app, this would come from an API
   const searchData: SearchResult[] = [
     {
@@ -55,17 +89,76 @@ const SearchBar: React.FC = () => {
       setResults([]);
       setIsOpen(false);
       return
+=======
+
+  // Mock search data - in a real app, this would come from an API;
+  const searchData: SearchResult[] = [;
+    {;
+      title: 'Micro SaaS Products',;
+      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',;
+      url: '/micro-saas',;
+      type: 'category',;
+    },;
+    {;
+      title: 'AI Services',;
+      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',;
+      url: '/ai-services',;
+      type: 'category',;
+    },;
+    {;
+      title: 'IT Services',;
+      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',;
+      url: '/it-services',;
+      type: 'category',;
+    },;
+    {;
+      title: 'Cloud Cost Guard',;
+      description: 'FinOps Assistant for anomaly detection and cost optimization',;
+      url: '/services',;
+      type: 'service',;
+    },;
+    {;
+      title: 'Contact Us',;
+      description: 'Get in touch with our experts for consultation and quotes',;
+      url: '/contact',;
+      type: 'page',;
+    },;
+    {;
+      title: 'Pricing',;
+      description: 'View our transparent pricing for all services',;
+      url: '/pricing',;
+      type: 'page',;
+    },;
+  ];
+
+  const handleSearch = async (searchQuery: string) => {;
+    if (!searchQuery && searchQuery.trim()) {;
+      setResults([]);
+      setIsOpen(false);
+      return,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     setIsLoading(true);
+<<<<<<< HEAD
     // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 300));
     const filteredResults = searchData.filter(item =>
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) |
       item.description.toLowerCase().includes(searchQuery.toLowerCase())
+=======
+
+    // Simulate API delay;
+    await new Promise(resolve => setTimeout(resolve, 300));
+
+    const filteredResults = searchData && searchData.filter(item =>;
+      item && item.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+      item && item.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
+<<<<<<< HEAD
   }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -92,10 +185,43 @@ const SearchBar: React.FC = () => {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     }
+=======
+  };
+
+  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+    const value = e && e.target.value;
+    setQuery(value);
+    handleSearch(value),;
+  };
+
+  const handleResultClick = () => {;
+    setIsOpen(false),;
+    setQuery('');
+  };
+
+  const handleKeyDown = (e: React && React.KeyboardEvent) => {;
+    if (e && e.key === 'Escape') {;
+    setIsOpen(false),;
+    inputRef && inputRef.current?.blur();
+  }
+  };
+
+  useEffect(() => {;
+    const handleClickOutside = (event: MouseEvent) => {;
+      if (searchRef && searchRef.current && !searchRef && searchRef.current.contains(event && event.target as Node)) {;
+        setIsOpen(false),;
+      }
+    };
+
+    document && document.addEventListener('mousedown', handleClickOutside);
+    return () => {;
+      document && document.removeEventListener('mousedown', handleClickOutside);
+    };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }, []);
   return (
-    <div ref={searchRef} className="relative w-full max-w-md">
-      <div className="relative">
+    <div ref={searchRef} className="relative w-full max-w-md">;
+      <div className="relative">;
         <input
           ref={inputRef}
           type="text"
@@ -103,68 +229,71 @@ const SearchBar: React.FC = () => {
           value={query}
           onChange={handleInputChange}
           onFocus={() => query && setIsOpen(true)}
-          className="w-full px-4 py-2 pl-10 pr-4 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-        />
-        <div className="absolute inset-y-0 left-0 flex items-center pl-3">
+          className="w-full px-4 py-2 pl-10 pr-4 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
+        />;
+        <div className="absolute inset-y-0 left-0 flex items-center pl-3">;
           <svg
             className="w-5 h-5 text-gray-400"
             fill="none"
             stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
+            viewBox="0 0 24 24">;
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-        </div>
-        {isLoading && (
-          <div className="absolute inset-y-0 right-0 flex items-center pr-3">
-            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-500"></div>
-          </div>
+            />;
+          </svg>;
+        </div>;
+        {isLoading && (;
+          <div className="absolute inset-y-0 right-0 flex items-center pr-3">;
+            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-500"></div>;
+          </div>;
         )}
+<<<<<<< HEAD
       </div>
+=======
+      </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Search Results Dropdown */}
-      {isOpen && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">
-          {results.length > 0 ? (
-            <div className="py-2">
-              {results.map((result, index) => (
+      {isOpen && (;
+        <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">;
+          {results && results.length > 0 ? (;
+            <div className="py-2">;
+              {results && results.map((result, index) => (;
                 <Link
                   key={index}
-                  href={result.url}
+                  href={result && result.url}
                   onClick={handleResultClick}
-                  className="block px-4 py-3 hover:bg-gray-50 transition-colors"
-                >
-                  <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0">
-                      <div className={`w-2 h-2 rounded-full mt-2 ${
-                        result.type === 'service' ? 'bg-blue-500' :
-                        result.type === 'page' ? 'bg-green-500' : 'bg-purple-500'
-                      }`}></div>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-gray-900 truncate">
-                        {result.title}
-                      </p>
-                      <p className="text-sm text-gray-500 truncate">
-                        {result.description}
-                      </p>
-                    </div>
-                  </div>
-                </Link>
+                  className="block px-4 py-3 hover:bg-gray-50 transition-colors">;
+                  <div className="flex items-start space-x-3">;
+                    <div className="flex-shrink-0">;
+                      <divclassName={`w-2 h-2 rounded-full mt-2 ${
+                        result && result.type === 'service' ? 'bg-blue-500' :
+                        result && result.type === 'page' ? 'bg-green-500' : 'bg-purple-500'
+                      }`}></div>;
+                    </div>;
+                    <div className="flex-1 min-w-0">;
+                      <p className="text-sm font-medium text-gray-900 truncate">;
+                        {result && result.title}
+                      </p>;
+                      <p className="text-sm text-gray-500 truncate">;
+                        {result && result.description}
+                      </p>;
+                    </div>;
+                  </div>;
+                </Link>;
               ))}
-            </div>
-          ) : query && !isLoading ? (
-            <div className="px-4 py-3 text-sm text-gray-500">
+            </div>;
+          ) : query && !isLoading ? (;
+            <div className="px-4 py-3 text-sm text-gray-500">;
               No results found for &quot;{query}&quot;
-            </div>
+            </div>;
           ) : null}
-        </div>
+        </div>;
       )}
-    </div>
+    </div>;
   );
 }
 export default SearchBar;

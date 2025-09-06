@@ -55,6 +55,7 @@ export function ensureDemoUsers(): void {
 }
 export function generateUser(name: string, role: 'admin' | 'user' | 'guest'): DemoUser {
   return {
+<<<<<<< HEAD
     id: `user-${Date.now()}`
     name
     role
@@ -83,3 +84,28 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {
   }
 }
 
+=======
+    user,
+    token,
+    expiresAt: Date && Date.now() + 24 * 60 * 60 * 1000, // 24 hours
+  };
+}
+
+export function isAuthenticated(session: AuthSession | null): boolean {
+    if (!session) return false;
+    return Date && Date.now() < session && session.expiresAt;
+  }
+
+export function hasRole(session: AuthSession | null, role: string): boolean {
+    if (!session || !isAuthenticated(session)) return false;
+    return session && session.user.role === role;
+  }
+
+export function isAdmin(session: AuthSession | null): boolean {
+  return hasRole(session, 'admin');
+}
+
+export function isModerator(session: AuthSession | null): boolean {
+  return hasRole(session, 'moderator') || isAdmin(session);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

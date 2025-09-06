@@ -22,6 +22,7 @@ export const real2026Q2Additions = [
       'Vendor model risk management'
     ]
     integrations: [
+<<<<<<< HEAD
       'Jira'
       'ServiceNow'
       'Slack'
@@ -39,6 +40,25 @@ export const real2026Q2Additions = [
     roi: 'Reduce audit prep by 60% and non-compliance risk by 40%'
     link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub'
   }
+=======
+      'Jira',
+      'ServiceNow',
+      'Slack',
+      'GitHub',
+      'Azure OpenAI',
+      'Vertex AI',
+      'Datadog',
+    ],
+    competitors: ['Monitaur', 'CalypsoAI', 'Credo AI'],
+    price: '$2,500',
+    period: '/month',
+    trialDays: 14,
+    setupTime: 'Fast',
+    marketPosition: 'Strong enterprise traction with compliance-led buyers',
+    roi: 'Reduce audit prep by 60% and non-compliance risk by 40%',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-governance-compliance-hub',
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'ai-synthetic-data-factory'
     name: 'AI Synthetic Data Factory'
@@ -56,6 +76,7 @@ export const real2026Q2Additions = [
       'SDKs for Python/JS and API access'
     ]
     useCases: [
+<<<<<<< HEAD
       'Training data augmentation'
       'Privacy-preserving analytics'
       'Test data generation'
@@ -70,6 +91,22 @@ export const real2026Q2Additions = [
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%'
     link: 'https://ziontechgroup.com/services/ai-synthetic-data-factory'
   }
+=======
+      'Training data augmentation',
+      'Privacy-preserving analytics',
+      'Test data generation',
+    ],
+    integrations: ['S3', 'BigQuery', 'Snowflake', 'Databricks'],
+    competitors: ['Mostly AI', 'Gretel', 'YData'],
+    price: '$1,200',
+    period: '/month',
+    trialDays: 14,
+    setupTime: 'Fast',
+    marketPosition: 'Growing demand driven by privacy regulations',
+    roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-synthetic-data-factory',
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'ecommerce-returns-orchestrator'
     name: 'E‑commerce Returns Orchestrator'
@@ -86,6 +123,7 @@ export const real2026Q2Additions = [
       'Analytics: reasons, preventable returns, CX scores'
     ]
     useCases: [
+<<<<<<< HEAD
       'DTC brands returns automation'
       'Marketplace return SLAs'
       'Reduce WISMO support'
@@ -100,6 +138,22 @@ export const real2026Q2Additions = [
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%'
     link: 'https://ziontechgroup.com/services/ecommerce-returns-orchestrator'
   }
+=======
+      'DTC brands returns automation',
+      'Marketplace return SLAs',
+      'Reduce WISMO support',
+    ],
+    integrations: ['Shopify', 'BigCommerce', 'Magento', 'Stripe', 'Shippo'],
+    competitors: ['Loop Returns', 'Returnly'],
+    price: '$399',
+    period: '/month',
+    trialDays: 14,
+    setupTime: 'Fast',
+    marketPosition: 'Ideal for mid-market brands and marketplaces',
+    roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ecommerce-returns-orchestrator',
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'ai-analytics-observability-kit'
     name: 'AI Analytics Observability Kit'
@@ -122,6 +176,7 @@ export const real2026Q2Additions = [
       'Cost governance'
     ]
     integrations: [
+<<<<<<< HEAD
       'OpenAI'
       'Azure OpenAI'
       'Vertex AI'
@@ -138,6 +193,24 @@ export const real2026Q2Additions = [
     roi: 'Cut token spend by 25% and improve response quality by 12%'
     link: 'https://ziontechgroup.com/services/ai-analytics-observability-kit'
   }
+=======
+      'OpenAI',
+      'Azure OpenAI',
+      'Vertex AI',
+      'LangChain',
+      'Vercel',
+      'Datadog',
+    ],
+    competitors: ['Humanloop', 'Arize', 'Langfuse'],
+    price: '$490',
+    period: '/month',
+    trialDays: 14,
+    setupTime: 'Fast',
+    marketPosition: 'Hot category with fast adoption in AI apps',
+    roi: 'Cut token spend by 25% and improve response quality by 12%',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-analytics-observability-kit',
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'cloud-cost-anomaly-guard'
     name: 'Cloud Cost Anomaly Guard'
@@ -154,6 +227,7 @@ export const real2026Q2Additions = [
       'Tag hygiene and unused resource cleanup'
     ]
     useCases: [
+<<<<<<< HEAD
       'FinOps guardrails'
       'Cost regression prevention'
       'Unit economics tracking'
@@ -168,6 +242,22 @@ export const real2026Q2Additions = [
     roi: 'Reduce cloud waste by 30% within 60 days'
     link: 'https://ziontechgroup.com/services/cloud-cost-anomaly-guard'
   }
+=======
+      'FinOps guardrails',
+      'Cost regression prevention',
+      'Unit economics tracking',
+    ],
+    integrations: ['AWS', 'GCP', 'Azure', 'Kubernetes', 'Slack', 'PagerDuty'],
+    competitors: ['CloudZero', 'Kubecost'],
+    price: '$690',
+    period: '/month',
+    trialDays: 14,
+    setupTime: 'Fast',
+    marketPosition: 'Proven ROI for cloud-native teams',
+    roi: 'Reduce cloud waste by 30% within 60 days',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/cloud-cost-anomaly-guard',
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'secure-pdf-signing-api'
     name: 'Secure PDF Signing API'
@@ -183,6 +273,7 @@ export const real2026Q2Additions = [
       'LTV and certificate validation'
     ]
     useCases: [
+<<<<<<< HEAD
       'Contract workflows'
       'Internal approvals'
       'Customer onboarding'
@@ -197,6 +288,22 @@ export const real2026Q2Additions = [
     roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%'
     link: 'https://ziontechgroup.com/services/secure-pdf-signing-api'
   }
+=======
+      'Contract workflows',
+      'Internal approvals',
+      'Customer onboarding',
+    ],
+    integrations: ['Zapier', 'Make && Make.com', 'Salesforce', 'HubSpot'],
+    competitors: ['DocuSign API', 'HelloSign API'],
+    price: '$149',
+    period: '/month',
+    trialDays: 14,
+    setupTime: 'Fast',
+    marketPosition: 'SMB to mid-market developer teams',
+    roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/secure-pdf-signing-api',
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'status-slo-plus'
     name: 'Status Pages + SLO Pro'
@@ -213,6 +320,7 @@ export const real2026Q2Additions = [
       'Custom domains and branding'
     ]
     useCases: [
+<<<<<<< HEAD
       'Public trust for SaaS'
       'B2B vendor requirements'
       'Platform reliability communications'
@@ -227,6 +335,22 @@ export const real2026Q2Additions = [
     roi: 'Improve uptime communications and reduce churn risk'
     link: 'https://ziontechgroup.com/services/status-slo-plus'
   }
+=======
+      'Public trust for SaaS',
+      'B2B vendor requirements',
+      'Platform reliability communications',
+    ],
+    integrations: ['AWS CloudWatch', 'Datadog', 'New Relic', 'PagerDuty'],
+    competitors: ['Statuspage', 'Better Uptime'],
+    price: '$79',
+    period: '/month',
+    trialDays: 14,
+    setupTime: 'Fast',
+    marketPosition: 'Great value with SLO-first approach',
+    roi: 'Improve uptime communications and reduce churn risk',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/status-slo-plus',
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'vendor-risk-automation-pro'
     name: 'Vendor Risk Automation Pro'
@@ -243,6 +367,7 @@ export const real2026Q2Additions = [
       'Board-ready risk reports'
     ]
     useCases: [
+<<<<<<< HEAD
       'Third-party risk programs'
       'Sales security reviews'
       'Procurement diligence'
@@ -257,6 +382,22 @@ export const real2026Q2Additions = [
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure'
     link: 'https://ziontechgroup.com/services/vendor-risk-automation-pro'
   }
+=======
+      'Third-party risk programs',
+      'Sales security reviews',
+      'Procurement diligence',
+    ],
+    integrations: ['SecurityScorecard', 'BitSight', 'OneTrust', 'Jira'],
+    competitors: ['Whistic', 'Vanta', 'ZenGRC'],
+    price: '$890',
+    period: '/month',
+    trialDays: 14,
+    setupTime: 'Fast',
+    marketPosition: 'Sales-assisted and security-led adoption',
+    roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/vendor-risk-automation-pro',
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'ai-docs-search-answers'
     name: 'AI Docs Search & Answers'
@@ -272,6 +413,7 @@ export const real2026Q2Additions = [
       'Multi-tenant and SSO support'
     ]
     useCases: [
+<<<<<<< HEAD
       'Developer portals'
       'Internal knowledge bases'
       'Customer docs'
@@ -286,6 +428,22 @@ export const real2026Q2Additions = [
     roi: 'Reduce tickets by 30% and improve time-to-answer'
     link: 'https://ziontechgroup.com/services/ai-docs-search-answers'
   }
+=======
+      'Developer portals',
+      'Internal knowledge bases',
+      'Customer docs',
+    ],
+    integrations: ['GitHub', 'Confluence', 'Notion', 'Zendesk'],
+    competitors: ['Algolia Answers', 'Vectara'],
+    price: '$249',
+    period: '/month',
+    trialDays: 14,
+    setupTime: 'Fast',
+    marketPosition: 'High adoption for self-serve docs',
+    roi: 'Reduce tickets by 30% and improve time-to-answer',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-docs-search-answers',
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'msp-remote-device-ops'
     name: 'MSP Remote Device Ops'
@@ -302,6 +460,7 @@ export const real2026Q2Additions = [
       'Ticketing and customer portals'
     ]
     useCases: [
+<<<<<<< HEAD
       'MSPs and IT providers'
       'Internal IT for SMBs'
       'BYOD governance'
@@ -316,6 +475,21 @@ export const real2026Q2Additions = [
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
   }
+=======
+      'MSPs and IT providers',
+      'Internal IT for SMBs',
+      'BYOD governance',
+    ],
+    integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
+    competitors: ['Atera', 'NinjaOne'],
+    price: '$4',
+    period: '/device/month',
+    trialDays: 14,
+    setupTime: 'Fast',
+    marketPosition: 'Cost-effective RMM for partners and IT teams',
+    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
+    link: 'https://ziontechgroup ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
     ];
     useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance'];
@@ -326,8 +500,13 @@ export const real2026Q2Additions = [
     trialDays: 14;
     setupTime: 'Fast';
     marketPosition: 'Cost-effective RMM for partners and IT teams';
+<<<<<<< HEAD
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
+=======
+    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/msp-remote-device-ops'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 ];
 

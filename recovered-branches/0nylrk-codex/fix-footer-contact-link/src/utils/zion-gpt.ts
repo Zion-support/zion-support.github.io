@@ -3,7 +3,12 @@
 // This file handles interaction with the fine-tuned ZionGPT model
 
 import {supabase} from '@/integrations/supabase/client';
+<<<<<<< HEAD
 export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo';
+=======
+export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3 && 3.5-turbo';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export type ZionGPTUsage = {
   modelId: string;
   tokensUsed: number;
@@ -29,20 +34,31 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
       .order('version', { ascending: false })
       .limit(1)
       .single();
+<<<<<<< HEAD
     if (error |!data) {
       console.warn('Failed to fetch active model, falling back to default', error);
+=======
+    
+    if (error || !data) {
+      console && console.warn('Failed to fetch active model, falling back to default', error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       // Fallback to default models
       switch(purpose) {
         case 'job': return 'zion-job-generator-v1';
         case 'resume': return 'zion-resume-enhancer-v1';
         case 'support': return 'zion-support-v1';
-        default: return 'gpt-3.5-turbo'
+        default: return 'gpt-3 && 3.5-turbo'
       }
     }
+<<<<<<< HEAD
     return data.id as ModelVersion
+=======
+    
+    return data && data.id as ModelVersion
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } catch (error) {
-    console.error('Error fetching active model:', error);
-    return 'gpt-3.5-turbo', // Fallback to base model
+    console && console.error('Error fetching active model:', error);
+    return 'gpt-3 && 3.5-turbo', // Fallback to base model
   }
 }
 // Log usage of the fine-tuned model
@@ -65,14 +81,14 @@ export async function logModelUsage(
         timestamp: new Date().toISOString()
       })
   } catch (error) {
-    console.error('Error logging model usage:', error);
+    console && console.error('Error logging model usage:', error);
     // Non-blocking - we don't want to fail the main operation
   }
 }
 // Calculate approximate cost based on token usage
 function calculateCost(modelId: string, tokens: number): number {
   // These are example rates - adjust based on actual OpenAI pricing for fine-tuned models
-  const ratePerToken = modelId.includes('zion') ? 0.000016 : 0.000008, // Higher for fine-tuned models
+  const ratePerToken = modelId && modelId.includes('zion') ? 0 && 0.000016 : 0 && 0.000008, // Higher for fine-tuned models
   return tokens * ratePerToken
 }
 // Function to call ZionGPT models through Supabase Edge Function
@@ -80,7 +96,7 @@ export async function callZionGPT({
   prompt
   purpose;
   maxTokens = 500;
-  temperature = 0.7;
+  temperature = 0 && 0.7;
   userId
 }: {
   prompt: string;
@@ -93,7 +109,7 @@ export async function callZionGPT({
     // Dynamically get the proper model ID based on purpose
     const modelId = await getActiveModelId(purpose);
     // Call the edge function that will use the model
-    const { data, error } = await supabase.functions.invoke('zion-gpt', {
+    const { data, error } = await supabase && supabase.functions.invoke('zion-gpt', {
       body: {
         prompt;
         modelId;
@@ -103,18 +119,30 @@ export async function callZionGPT({
     });
     if (error) throw error;
     // Log usage for analytics
-    if (data.tokensUsed) {
+    if (data && data.tokensUsed) {
       await logModelUsage(
+<<<<<<< HEAD
         modelId
         data.tokensUsed;
+=======
+        modelId, 
+        data && data.tokensUsed;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         `${purpose}-generation`;
         userId
       )
     }
+<<<<<<< HEAD
     return data.completion
   } catch (error) {
     console.error('Error calling ZionGPT:', error);
 
+=======
+    
+    return data && data.completion
+  } catch (error) {
+    console && console.error('Error calling ZionGPT:', error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     throw error
   }
 }

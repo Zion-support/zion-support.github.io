@@ -1,15 +1,50 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React from 'react';
 import Image from 'next/image';
+<<<<<<< HEAD
 interface OptimizedImageProps {
   src: string
   alt: string
+=======
+
+interface OptimizedImageProps {;
+  src: string,;
+  alt: string,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   width?: number;
   height?: number;
   className?: string;
   priority?: boolean;
   quality?: number;
 }
+<<<<<<< HEAD
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
+=======
+
+const OptimizedImage: React.FC<OptimizedImageProps> = ({;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   src;
   alt;
 
@@ -17,9 +52,14 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   height = 600;
   className = '';
   priority = false;
+<<<<<<< HEAD
   quality = 75
 
 }) => {
+=======
+  quality = 75,;
+}) => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Image
       src={src}

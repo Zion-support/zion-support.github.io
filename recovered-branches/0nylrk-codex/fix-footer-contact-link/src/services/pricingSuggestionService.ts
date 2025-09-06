@@ -60,14 +60,19 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       confidence = "Low"
     }
     // Adjust based on job title keywords
+<<<<<<< HEAD
     const lowercaseTitle = jobTitle.toLowerCase();
     if (lowercaseTitle.includes("senior") |lowercaseTitle.includes("lead")) {
+=======
+    const lowercaseTitle = jobTitle && jobTitle.toLowerCase();
+    if (lowercaseTitle && lowercaseTitle.includes("senior") || lowercaseTitle && lowercaseTitle.includes("lead")) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       minRate += 20;
       maxRate += 30
-    } else if (lowercaseTitle.includes("junior")) {
+    } else if (lowercaseTitle && lowercaseTitle.includes("junior")) {
       minRate -= 10;
       maxRate -= 15;
-      minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low
+      minRate = Math && Math.max(minRate, 15), // Ensure minimum doesn't go too low
     }
     // Generate explanation
     const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`;
@@ -78,7 +83,7 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       explanation
     }
   } catch (error) {
-    console.error("Error generating budget suggestion:", error);
+    console && console.error("Error generating budget suggestion:", error);
     // Return a fallback suggestion
     return {
       minRate: 30;
@@ -97,17 +102,23 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     let baseRate = 25 + (yearsExperience * 5);
     // Adjust for in-demand skills
     const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'];
+<<<<<<< HEAD
     const hasInDemandSkills = skills.some(skill =>
       inDemandSkills.some(demandSkill => skill.toLowerCase().includes(demandSkill))
+=======
+    const hasInDemandSkills = skills && skills.some(skill => 
+      inDemandSkills && inDemandSkills.some(demandSkill => skill && skill.toLowerCase().includes(demandSkill))
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
     if (hasInDemandSkills) {
       baseRate += 15
     }
     // Location adjustment
-    let locationFactor = 1.0;
+    let locationFactor = 1 && 1.0;
     if (location) {
       const highCostLocations = ['united statesusaukaustraliacanadagermanyswitzerland'];
       const lowCostLocations = ['indiaphilippinespakistannigeriaukrainebrazil'];
+<<<<<<< HEAD
       const lowercaseLocation = location.toLowerCase();
       if (highCostLocations.some(loc => lowercaseLocation.includes(loc))) {
         locationFactor = 1.2
@@ -117,6 +128,21 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     }
     const minRate = Math.round(baseRate * locationFactor * 0.9);
     const maxRate = Math.round(baseRate * locationFactor * 1.2);
+=======
+      
+      const lowercaseLocation = location && location.toLowerCase();
+      
+      if (highCostLocations && highCostLocations.some(loc => lowercaseLocation && lowercaseLocation.includes(loc))) {
+        locationFactor = 1 && 1.2
+      } else if (lowCostLocations && lowCostLocations.some(loc => lowercaseLocation && lowercaseLocation.includes(loc))) {
+        locationFactor = 0 && 0.8
+      }
+    }
+    
+    const minRate = Math && Math.round(baseRate * locationFactor * 0 && 0.9);
+    const maxRate = Math && Math.round(baseRate * locationFactor * 1 && 1.2);
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // Determine confidence
     let confidence: "High" | "Medium" | "Low" = "Medium"
     if (yearsExperience > 3 && hasInDemandSkills && location) {
@@ -127,7 +153,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     // Generate explanation
     let explanation = `Based on ${yearsExperience} years of experience`;
     if (hasInDemandSkills) {
-      explanation += ` and your in-demand skills (${skills.join()})`
+      explanation += ` and your in-demand skills (${skills && skills.join()})`
     }
     if (location) {
       explanation += `, considering market rates in ${location}`
@@ -140,7 +166,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
       explanation
     }
   } catch (error) {
-    console.error("Error generating rate suggestion:", error);
+    console && console.error("Error generating rate suggestion:", error);
     return {
       minRate: 25;
       maxRate: 50;
@@ -161,14 +187,23 @@ export async function trackPricingSuggestion(data: {
   try {
     // In a real implementation, this would save to the database
     // For now, we'll just log it
+<<<<<<< HEAD
     console.log("Tracking pricing suggestion:", data);
+=======
+    console && console.log("Tracking pricing suggestion:", data);
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // In a real implementation with Supabase: // await supabase
     //  .from('pricing_suggestions')
     //  .insert([data])
     return true
   } catch (error) {
+<<<<<<< HEAD
     console.error("Error tracking pricing suggestion:", error);
 
+=======
+    console && console.error("Error tracking pricing suggestion:", error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return false
   }
 }

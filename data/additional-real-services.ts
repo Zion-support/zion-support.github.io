@@ -33,11 +33,19 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     category: 'AI & Automation'
     realImplementation: true
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'data-warehouse-solution'
     name: 'Data Warehouse Solution'
@@ -56,6 +64,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     category: 'Data & Analytics'
     realImplementation: true
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -64,6 +73,15 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
 ];      mobile: "+1 302 464 0950";
 
       email: "kleber@ziontechgroup.com";
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },
+];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup && ziontechgroup.com";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

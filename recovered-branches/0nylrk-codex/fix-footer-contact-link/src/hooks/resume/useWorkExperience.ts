@@ -21,6 +21,7 @@ export function useWorkExperience() {
         .from('work_history')
         .insert({
           resume_id: resumeId;
+<<<<<<< HEAD
           company_name: work.company_name;
           role_title: work.role_title;
           start_date: formatDateForDB(work.start_date);
@@ -29,6 +30,16 @@ export function useWorkExperience() {
           description: work.description;
           company_logo_url: work.company_logo_url
           location: work.location
+=======
+          company_name: work && work.company_name;
+          role_title: work && work.role_title;
+          start_date: formatDateForDB(work && work.start_date);
+          end_date: work && work.is_current ? null : formatDateForDB(work && work.end_date);
+          is_current: work && work.is_current;
+          description: work && work.description;
+          company_logo_url: work && work.company_logo_url,
+          location: work && work.location
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         });
       if (error) throw error;
       return showSuccessToast("Work experience added", "Your work experience has been added to your resume")
@@ -49,6 +60,7 @@ export function useWorkExperience() {
       const { error } = await supabase
         .from('work_history')
         .update({
+<<<<<<< HEAD
           company_name: work.company_name;
           role_title: work.role_title;
           start_date: formatDateForDB(work.start_date);
@@ -57,6 +69,16 @@ export function useWorkExperience() {
           description: work.description;
           company_logo_url: work.company_logo_url
           location: work.location
+=======
+          company_name: work && work.company_name;
+          role_title: work && work.role_title;
+          start_date: formatDateForDB(work && work.start_date);
+          end_date: work && work.is_current ? null : formatDateForDB(work && work.end_date);
+          is_current: work && work.is_current;
+          description: work && work.description;
+          company_logo_url: work && work.company_logo_url,
+          location: work && work.location
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         })
         .eq('id', workId);
       if (error) throw error;

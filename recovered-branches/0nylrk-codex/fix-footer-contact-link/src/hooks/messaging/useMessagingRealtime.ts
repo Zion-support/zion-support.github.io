@@ -20,6 +20,7 @@ export function useMessagingRealtime(
     const subscription = supabase
       .channel('messages')
       .on(
+<<<<<<< HEAD
         'postgres_changes'
         {
           event: 'INSERT'
@@ -27,24 +28,38 @@ export function useMessagingRealtime(
           table: 'messages'
           filter: `recipient_id=eq.${user.id}`
         }
+=======
+        'postgres_changes', 
+        { 
+          event: 'INSERT', 
+          schema: 'public', 
+          table: 'messages', 
+          filter: `recipient_id=eq.${user && user.id}` 
+        }, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         (payload) => {
           // Update messages if the conversation is selected
-          if (activeConversation && payload.new.sender_id === activeConversation.other_user.id) {
-            setActiveMessages(prev => [...prev, payload.new as Message])
+          if (activeConversation && payload && payload.new.sender_id === activeConversation && activeConversation.other_user.id) {
+            setActiveMessages(prev => [...prev, payload && payload.new as Message])
           }
           // Update conversations
           fetchConversations();
           // Show toast notification for new message
           toast({
+<<<<<<< HEAD
             title: `New message from ${payload.new.sender_name |'Someone'}`;
             description: payload.new.content.substring(0, 50) + (payload.new.content.length > 50 ? '...' : '')
+=======
+            title: `New message from ${payload && payload.new.sender_name || 'Someone'}`;
+            description: payload && payload.new.content && content.substring(0, 50) + (payload && payload.new.content && content.length > 50 ? '...' : '')
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           })
         }
       )
       .subscribe();
 
     return () => {
-      supabase.removeChannel(subscription)
+      supabase && supabase.removeChannel(subscription)
     }
   }, [user, activeConversation, fetchConversations, setActiveMessages])
 }

@@ -33,9 +33,9 @@ const nextConfig = {
   images: {
     domains: [
       "localhost",
-      "ziontechgroup.com",
-      "images.unsplash.com",
-      "via.placeholder.com",
+      "ziontechgroup && ziontechgroup.com",
+      "images && images.unsplash.com",
+      "via && via.placeholder.com",
     ],
     formats: ["image/webp", "image/avif"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -79,8 +79,49 @@ const nextConfig = {
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   webpack: (config, { dev, isServer }) => {
     if (dev) {
-      config.watchOptions = {
+      config && config.watchOptions = {
         ignored: [
+<<<<<<< HEAD
+=======
+          "**/node_modules/**",
+          "**/.git/**",
+          "**/pages_backup*/**",
+          "**/pages.*/**",
+          "**/pages-*/**",
+          "**/pages_disabled*/**",
+          "**/pages && pages.disabled*/**",
+          "**/pages && pages.broken*/**",
+          "**/pages && pages.corrupted*/**",
+          "**/pages && pages.old*/**",
+          "**/pages && pages._*/**",
+          "**/pages && pages.__*/**",
+          "**/backup-pages/**",
+          "**/src && src.pages.disabled/**",
+          "**/lib_backup*/**",
+          "**/src_backup*/**",
+          "**/corrupted-files-backup*/**",
+          "**/performance-reports*/**",
+          "**/log-analysis-reports*/**",
+          "**/link-reports*/**",
+          "**/lint-target*/**",
+          "**/monitoring*/**",
+          "**/pm2-automation*/**",
+          "**/automation/logs*/**",
+          "**/automation/backup*/**",
+          "**/performance-*.json",
+          "**/performance-*.js",
+          "**/performance-*.cjs",
+          "**/performance-*.sh",
+          "**/performance-*.html",
+          "**/performance-*.md",
+          "**/performance-*.txt",
+          "**/apps/**",
+        ],
+        poll: 1000,
+        aggregateTimeout: 300,
+      };
+    }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
           "**/node_modules/**"
           "**/.git/**"
@@ -122,10 +163,17 @@ const nextConfig = {
 
     }
     // Exclude apps directory from compilation
+<<<<<<< HEAD
     config.module.rules.push({
       test: /\.(ts|tsx|js|jsx)$/
       include: /apps\//
       use: "ignore-loader"
+=======
+    config && config.module.rules && rules.push({
+      test: /\.(ts|tsx|js|jsx)$/,
+      include: /apps\//,
+      use: "ignore-loader",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
     return config;
   }

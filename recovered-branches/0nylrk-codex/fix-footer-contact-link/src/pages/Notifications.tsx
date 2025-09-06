@@ -1,4 +1,29 @@
 
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
@@ -14,36 +39,45 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {SEO} from "@/components/SEO";
 import {useNavigate} from "react-router-dom";
 import {cn} from "@/lib/utils";
-const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
-  switch (type) {
-    case 'message':
+const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {;
+  switch (type) {;
+    case 'message':;
       return <MessageCircle className={cn(className, "text-blue-500")} />;
-    case 'quote_request':
+    case 'quote_request':;
       return <Briefcase className={cn(className, "text-purple-500")} />;
-    case 'booking_confirmation':
+    case 'booking_confirmation':;
       return <CheckCircle className={cn(className, "text-green-500")} />;
-    case 'hire_request':
+    case 'hire_request':;
       return <UserCheck className={cn(className, "text-zion-purple")} />;
-    case 'onboarding':
+    case 'onboarding':;
       return <Settings className={cn(className, "text-zion-cyan")} />;
-    case 'system':
+    case 'system':;
       return <AlertCircle className={cn(className, "text-yellow-500")} />;
-    default:
-      return <Bell className={cn(className, "text-gray-500")} />
+    default:;
+      return <Bell className={cn(className, "text-gray-500")} />;
   }
+<<<<<<< HEAD
 }
 const getNotificationTypeBadge = (type: NotificationType) => {
   switch (type) {
     case 'message':
+=======
+};
+
+const getNotificationTypeBadge = (type: NotificationType) => {;
+  switch (type) {;
+    case 'message':;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return <Badge className="bg-blue-500">Message</Badge>;
-    case 'quote_request':
+    case 'quote_request':;
       return <Badge className="bg-purple-500">Quote Request</Badge>;
-    case 'booking_confirmation':
+    case 'booking_confirmation':;
       return <Badge className="bg-green-500">Booking</Badge>;
-    case 'hire_request':
+    case 'hire_request':;
       return <Badge className="bg-zion-purple">Hire Request</Badge>;
-    case 'onboarding':
+    case 'onboarding':;
       return <Badge className="bg-zion-cyan">Onboarding</Badge>;
+<<<<<<< HEAD
     case 'system':
       return <Badge className="bg-yellow-500">System</Badge>
     default:
@@ -73,45 +107,89 @@ const NotificationCard: React.FC<{
       navigate(notification.action_url)
     }
   }
+=======
+    case 'system':;
+      return <Badge className="bg-yellow-500">System</Badge>,;
+    default:;
+      return <Badge variant="outline">Notification</Badge>;
+  }
+};
+
+const NotificationCard: React.FC<{;
+  notification: {;
+    id: string,;
+    title: string,;
+    message: string,;
+    type: NotificationType,;
+    read: boolean,;
+    created_at: string,;
+    action_url?: string;
+    action_text?: string;
+  };
+  onMarkAsRead: (id: string) => Promise<void>,;
+  onDismiss: (id: string) => Promise<void>;
+}> = ({ notification, onMarkAsRead, onDismiss }) => {;
+  const navigate = useNavigate();
+
+  const handleAction = () => {;
+    if (!notification && notification.read) {;
+      onMarkAsRead(notification && notification.id);
+    }
+
+    if (notification && notification.action_url) {;
+      navigate(notification && notification.action_url);
+    }
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-    <div className={cn(
-      "border rounded-lg shadow-sm p-4 mb-3 group transition-colors";
-      notification.read ? "border-zion-blue-light bg-zion-blue-dark/10" : "border-zion-cyan bg-zion-blue-dark/30"
-    )}>
-      <div className="flex items-start gap-4">
-        <div className="mt-1">
-          {getNotificationIcon(notification.type, "h-6 w-6")}
-        </div>
-        <div className="flex-1">
-          <div className="flex justify-between">
-            <div className="flex flex-col">
-              <h3 className="font-medium text-white">{notification.title}</h3>
-              <div className="flex items-center gap-2 mb-2">
-                {getNotificationTypeBadge(notification.type)}
-                <span className="text-xs text-zion-slate-light">
-                  {formatDistanceToNow(new Date(notification.created_at), { addSuffix: true })}
-                </span>
-                {!notification.read && (
-                  <Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs">New</Badge>
+    <divclassName={cn(
+      "border rounded-lg shadow-sm p-4 mb-3 group transition-colors"
+      notification && notification.read ? "border-zion-blue-light bg-zion-blue-dark/10" : "border-zion-cyan bg-zion-blue-dark/30"
+    )}>;
+      <div className="flex items-start gap-4">;
+        <div className="mt-1">;
+          {getNotificationIcon(notification && notification.type, "h-6 w-6")}
+        </div>;
+        <div className="flex-1">;
+          <div className="flex justify-between">;
+            <div className="flex flex-col">;
+              <h3 className="font-medium text-white">{notification && notification.title}</h3>;
+              <div className="flex items-center gap-2 mb-2">;
+                {getNotificationTypeBadge(notification && notification.type)}
+                <span className="text-xs text-zion-slate-light">;
+                  {formatDistanceToNow(new Date(notification && notification.created_at), { addSuffix: true })}
+                </span>;
+                {!notification && notification.read && (;
+                  <Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs">New</Badge>;
                 )}
+<<<<<<< HEAD
               </div>
             </div>
             <div className="flex items-center gap-2">
               {!notification.read && (
+=======
+              </div>;
+            </div>;
+
+            <div className="flex items-center gap-2">;
+              {!notification && notification.read && (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Button
                   variant="ghost"
                   size="sm"
                   className="h-8 w-8 p-0"
-                  onClick={() => onMarkAsRead(notification.id)}
-                >
-                  <Check className="h-4 w-4 text-green-400" />
-                  <span className="sr-only">Mark as read</span>
-                </Button>
+                  onClick={() => onMarkAsRead(notification && notification.id)}
+                >;
+                  <Check className="h-4 w-4 text-green-400" />;
+                  <span className="sr-only">Mark as read</span>;
+                </Button>;
               )}
               <Button
                 variant="ghost"
                 size="sm"
                 className="h-8 w-8 p-0"
+<<<<<<< HEAD
                 onClick={() => onDismiss(notification.id)}
               >
                 <Trash2 className="h-4 w-4 text-red-400" />
@@ -121,16 +199,29 @@ const NotificationCard: React.FC<{
           </div>
           <p className="text-zion-slate-light mb-3">{notification.message}</p>
           {notification.action_url && notification.action_text && (
+=======
+                onClick={() => onDismiss(notification && notification.id)}
+              >;
+                <Trash2 className="h-4 w-4 text-red-400" />;
+                <span className="sr-only">Dismiss</span>;
+              </Button>;
+            </div>;
+          </div>;
+
+          <p className="text-zion-slate-light mb-3">{notification && notification.message}</p>;
+
+          {notification && notification.action_url && notification && notification.action_text && (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Button
               variant="outline"
               size="sm"
               className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black"
-              onClick={handleAction}
-            >
-              {notification.action_text}
-              <ChevronRight className="ml-1 h-4 w-4" />
-            </Button>
+              onClick={handleAction}>;
+              {notification && notification.action_text}
+              <ChevronRight className="ml-1 h-4 w-4" />;
+            </Button>;
           )}
+<<<<<<< HEAD
         </div>
       </div>
     </div>
@@ -138,6 +229,16 @@ const NotificationCard: React.FC<{
 }
 export default function NotificationsPage() {
   const {
+=======
+        </div>;
+      </div>;
+    </div>;
+  );
+};
+
+export default function NotificationsPage() {;
+  const {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     filteredNotifications;
     unreadCount;
     markAsRead;
@@ -145,10 +246,11 @@ export default function NotificationsPage() {
     dismissNotification;
     loading;
     filter;
-    setFilter
+    setFilter;
   } = useNotifications() as NotificationContextType;
 
   return (
+<<<<<<< HEAD
     <>
       <SEO
         title="Notifications | Zion AI Marketplace"
@@ -167,14 +269,36 @@ export default function NotificationsPage() {
             <p className="text-muted-foreground">Stay updated with the latest activities and reminders</p>
           </div>
           {unreadCount > 0 && (
+=======
+    <>;
+      <SEO
+        title="Notifications | Zion AI Marketplace" 
+        description="View and manage your notifications on the Zion AI Marketplace." 
+      />;
+      <AppHeader />;
+      <main className="container mx-auto px-4 py-8 min-h-screen">;
+        <div className="flex justify-between items-center mb-6">;
+          <div>;
+            <h1 className="text-3xl font-bold flex items-center">;
+              <Bell className="mr-3 h-7 w-7" /> Notifications;
+              {unreadCount > 0 && (;
+                <Badge className="ml-3 bg-zion-cyan">{unreadCount} unread</Badge>;
+              )}
+            </h1>;
+            <p className="text-muted-foreground">Stay updated with the latest activities and reminders</p>;
+          </div>;
+
+          {unreadCount > 0 && (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Button
               variant="outline"
               onClick={() => markAllAsRead()}
-            >
-              <Check className="mr-2 h-4 w-4" />
-              Mark all as read
-            </Button>
+            >;
+              <Check className="mr-2 h-4 w-4" />;
+              Mark all as read;
+            </Button>;
           )}
+<<<<<<< HEAD
         </div>
         <div className="mb-8">
           <Tabs defaultValue={filter} onValueChange={(value) => setFilter(value as any)}>
@@ -197,21 +321,47 @@ export default function NotificationsPage() {
                   <Bell className="mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30" />
                   <h3 className="text-xl font-medium">No notifications found</h3>
                   <p className="text-muted-foreground mt-1">
+=======
+        </div>;
+
+        <div className="mb-8">;
+          <Tabs defaultValue={filter} onValueChange={(value) => setFilter(value as any)}>;
+            <TabsList className="grid w-full max-w-md grid-cols-5">;
+              <TabsTrigger value="all">All</TabsTrigger>;
+              <TabsTrigger value="unread">Unread</TabsTrigger>;
+              <TabsTrigger value="onboarding">Onboarding</TabsTrigger>;
+              <TabsTrigger value="messages">Messages</TabsTrigger>;
+              <TabsTrigger value="system">System</TabsTrigger>;
+            </TabsList>;
+            <TabsContent value={filter} className="mt-6">;
+              {loading ? (;
+                <div className="space-y-4">;
+                  <Skeleton className="h-24 w-full rounded-lg" />;
+                  <Skeleton className="h-24 w-full rounded-lg" />;
+                  <Skeleton className="h-24 w-full rounded-lg" />;
+                </div>;
+              ) : filteredNotifications && filteredNotifications.length === 0 ? (;
+                <div className="text-center py-12 bg-muted rounded-lg">;
+                  <Bell className="mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30" />;
+                  <h3 className="text-xl font-medium">No notifications found</h3>;
+                  <p className="text-muted-foreground mt-1">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {filter === 'all' ? "You don't have any notifications yet" : `You don't have any ${filter} notifications`}
-                  </p>
-                </div>
-              ) : (
-                <div>
-                  {filteredNotifications.map(notification => (
+                  </p>;
+                </div>;
+              ) : (;
+                <div>;
+                  {filteredNotifications && filteredNotifications.map(notification => (;
                     <NotificationCard
-                      key={notification.id}
+                      key={notification && notification.id}
                       notification={notification}
                       onMarkAsRead={markAsRead}
                       onDismiss={dismissNotification}
-                    />
+                    />;
                   ))}
-                </div>
+                </div>;
               )}
+<<<<<<< HEAD
             </TabsContent>
           </Tabs>
         </div>
@@ -220,3 +370,13 @@ export default function NotificationsPage() {
     </>
   )
 }
+=======
+            </TabsContent>;
+          </Tabs>;
+        </div>;
+      </main>;
+      <Footer />;
+    </>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

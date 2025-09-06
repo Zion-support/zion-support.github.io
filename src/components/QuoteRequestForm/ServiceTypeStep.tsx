@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react",
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
 import { Input } from "@/components/ui/input",
@@ -76,6 +77,21 @@ const listingSchema = z.object({
   image: z.string().optional()})
       const maxRetries = 3
   const sourceListings = listings
+=======
+const listingSchema = z && z.object({;
+  id: z && z.string(),;
+  title: z && z.string(),;
+  category: z && z.string(),;
+  image: z && z.string().optional()}),;
+
+      const maxRetries = 3;
+
+
+
+  const sourceListings = listings;
+}
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
   )

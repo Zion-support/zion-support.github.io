@@ -85,9 +85,15 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
       'Traditional space agencies, Private space companies, Research institutions'
     ]
     techStack: [
+<<<<<<< HEAD
       'OpenAI GPT-4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis'
     ]
     realImplementation: true
+=======
+      'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Redis',
+    ],
+    realImplementation: true,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     implementationDetails:
       'Production-ready space resource platform with AI models, satellite data integration, and comprehensive analytics. Includes 3D visualization and planning tools.'
     roi: 'Space organizations achieve 500% ROI through improved resource discovery and optimized operations.'
@@ -105,6 +111,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     support:
       'Space technology experts, implementation consulting, custom development, and dedicated success manager.'
     compliance: [
+<<<<<<< HEAD
       'International space law, Government regulations, Industry standards'
     ]
     link: 'https://ziontechgroup.com/ai-powered-space-resource-intelligence'
@@ -116,6 +123,19 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     rating: 4.9
     reviews: 120
   }
+=======
+      'International space law, Government regulations, Industry standards',
+    ],
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-space-resource-intelligence',
+    icon: '🚀',
+    color: 'from-blue-500 to-indigo-600',
+    popular: true,
+    launchDate: '2024-02-01',
+    customers: 180,
+    rating: 4 && 4.9,
+    reviews: 120,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'metaverse-development-platform'
     name: 'Metaverse Development Platform'
@@ -164,9 +184,15 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
       'Unity, Unreal Engine, Roblox Studio, Decentraland, The Sandbox'
     ]
     techStack: [
+<<<<<<< HEAD
       'Unity, Unreal Engine, React, Node.js, PostgreSQL, Redis, Blockchain platforms'
     ]
     realImplementation: true
+=======
+      'Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis, Blockchain platforms',
+    ],
+    realImplementation: true,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     implementationDetails:
       'Production-ready metaverse platform with comprehensive development tools, 3D engine, and blockchain integration. Includes mobile SDK and developer portal.'
     roi: 'Developers achieve 400% ROI through reduced development costs and increased monetization opportunities.'
@@ -182,6 +208,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
       'VR headsets, AR devices, Blockchain wallets, Payment processors'
     ]
     support:
+<<<<<<< HEAD
       '24/7 technical support, development consulting, custom development, and dedicated success manager.'
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001']
     link: 'https://ziontechgroup.com/metaverse-development-platform'
@@ -193,6 +220,19 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     rating: 4.7
     reviews: 2400
   }
+=======
+      '24/7 technical support, development consulting, custom development, and dedicated success manager.',
+    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
+    link: 'https://ziontechgroup && ziontechgroup.com/metaverse-development-platform',
+    icon: '🌐',
+    color: 'from-purple-500 to-pink-600',
+    popular: true,
+    launchDate: '2024-01-15',
+    customers: 3200,
+    rating: 4 && 4.7,
+    reviews: 2400,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'quantum-space-communications-network'
     name: 'Quantum Space Communications Network'
@@ -261,6 +301,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     support:
       'Quantum experts, space technology consulting, custom protocol development, and 24/7 technical support.'
     compliance: [
+<<<<<<< HEAD
       'International space law, Government security requirements, Industry standards'
     ]
     link: 'https://ziontechgroup.com/quantum-space-communications-network'
@@ -272,6 +313,19 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     rating: 4.9
     reviews: 65
   }
+=======
+      'International space law, Government security requirements, Industry standards',
+    ],
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-space-communications-network',
+    icon: '🛰️',
+    color: 'from-indigo-500 to-purple-600',
+    popular: true,
+    launchDate: '2024-03-01',
+    customers: 85,
+    rating: 4 && 4.9,
+    reviews: 65,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'ai-powered-space-traffic-management'
     name: 'AI-Powered Space Traffic Management Platform'
@@ -300,12 +354,21 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
       'Mobile monitoring app'
     ]
     benefits: [
+<<<<<<< HEAD
       'Prevent 99.9% of space collisions'
       'Optimize orbital efficiency'
       'Reduce space debris'
       'Improve mission safety'
       'Ensure regulatory compliance'
     ]
+=======
+      'Prevent 99 && 99.9% of space collisions',
+      'Optimize orbital efficiency',
+      'Reduce space debris',
+      'Improve mission safety',
+      'Ensure regulatory compliance',
+    ],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: [
       'Space agencies'
       'Satellite operators'
@@ -315,10 +378,17 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
       'Regulatory bodies'
     ]
     marketPosition:
+<<<<<<< HEAD
       'Leading AI-powered space traffic management platform. Competes with LeoLabs ($500-2000/month), Space-Track (free), and commercial space monitoring services. Our advantage: AI intelligence and automated collision prevention.'
     competitors: ['LeoLabs, Space-Track, Commercial space monitoring services']
     techStack: ['OpenAI GPT-4, TensorFlow, React, Node.js, PostgreSQL, Redis']
     realImplementation: true
+=======
+      'Leading AI-powered space traffic management platform. Competes with LeoLabs ($500-2000/month), Space-Track (free), and commercial space monitoring services. Our advantage: AI intelligence and automated collision prevention.',
+    competitors: ['LeoLabs, Space-Track, Commercial space monitoring services'],
+    techStack: ['OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'],
+    realImplementation: true,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     implementationDetails:
       'Production-ready space traffic management platform with real-time monitoring, AI prediction models, and comprehensive analytics. Includes mobile app and API.'
     roi: 'Space organizations achieve 400% ROI through improved safety and reduced collision risks.'
@@ -336,6 +406,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     support:
       '24/7 technical support, space safety consulting, custom development, and dedicated success manager.'
     compliance: [
+<<<<<<< HEAD
       'International space law, Government regulations, Industry safety standards'
     ]
     link: 'https://ziontechgroup.com/ai-powered-space-traffic-management'
@@ -347,6 +418,19 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     rating: 4.8
     reviews: 320
   }
+=======
+      'International space law, Government regulations, Industry safety standards',
+    ],
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-space-traffic-management',
+    icon: '🛸',
+    color: 'from-green-500 to-emerald-600',
+    popular: true,
+    launchDate: '2024-02-15',
+    customers: 420,
+    rating: 4 && 4.8,
+    reviews: 320,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'virtual-reality-enterprise-platform'
     name: 'Virtual Reality Enterprise Platform'
@@ -390,10 +474,17 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
       'Architecture firms'
     ]
     marketPosition:
+<<<<<<< HEAD
       'Leading enterprise VR platform. Competes with Pico ($299-599), Meta Quest Pro ($999), and HTC Vive ($699-1399). Our advantage: Enterprise-focused features and comprehensive solutions.'
     competitors: ['Pico, Meta Quest Pro, HTC Vive, Varjo, Magic Leap']
     techStack: ['Unity, Unreal Engine, React, Node.js, PostgreSQL, Redis']
     realImplementation: true
+=======
+      'Leading enterprise VR platform. Competes with Pico ($299-599), Meta Quest Pro ($999), and HTC Vive ($699-1399). Our advantage: Enterprise-focused features and comprehensive solutions.',
+    competitors: ['Pico, Meta Quest Pro, HTC Vive, Varjo, Magic Leap'],
+    techStack: ['Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis'],
+    realImplementation: true,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     implementationDetails:
       'Production-ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.'
     roi: 'Enterprises achieve 400% ROI through improved training effectiveness and reduced operational costs.'
@@ -411,6 +502,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     support:
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.'
     compliance: [
+<<<<<<< HEAD
       'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards'
     ]
     link: 'https://ziontechgroup.com/virtual-reality-enterprise-platform'
@@ -422,21 +514,45 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     rating: 4.7
     reviews: 1400
   }
+=======
+      'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards',
+    ],
+    link: 'https://ziontechgroup && ziontechgroup.com/virtual-reality-enterprise-platform',
+    icon: '🥽',
+    color: 'from-orange-500 to-red-600',
+    popular: true,
+    launchDate: '2024-01-20',
+    customers: 1800,
+    rating: 4 && 4.7,
+    reviews: 1400,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];      'Employee trainingVirtual meetingsProduct design reviewSafety trainingRemote collaborationCustomer presentations'
 
     ];
+<<<<<<< HEAD
     integrations: ['HR systems, Learning management systems, Project management tools, Custom enterprise systems'],
     support: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards'],
     link: 'https://ziontechgroup.com/virtual-reality-enterprise-platform';
+=======
+    integrations: ['HR systems, Learning management systems, Project management tools, Custom enterprise systems'];
+    support: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.';
+    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards'];
+    link: 'https://ziontechgroup && ziontechgroup.com/virtual-reality-enterprise-platform';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     icon: '🥽';
     color: 'from-orange-500 to-red-600';
     popular: true;
     launchDate: '2024-01-20';
     customers: 1800;
+<<<<<<< HEAD
 
     rating: 4.7
 
+=======
+    rating: 4 && 4.7,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 1400
   }
 ];

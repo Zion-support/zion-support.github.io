@@ -3,6 +3,7 @@ import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton',
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
 import { useToast } from '../../components/ui/NotificationSystem';
+<<<<<<< HEAD
 export default function NewJobPage() {
   const { notify } = useToast();
   const [loading, setLoading] = useState(false);
@@ -24,3 +25,10 @@ export default function NewJobPage() {
       </EnhancedCard>
     </div>
 );
+=======
+          </form>;
+        )}
+      </EnhancedCard>;
+    </div>;
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

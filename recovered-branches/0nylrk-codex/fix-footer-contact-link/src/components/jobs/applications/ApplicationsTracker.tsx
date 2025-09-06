@@ -7,16 +7,22 @@ import { EmptyState } from "./EmptyState",
 import { ErrorState } from "./ErrorState",
 import { Button } from "@/components/ui/button";
 import { ApplicationStatus } from "@/types/jobs";
-export function ApplicationsTracker() {
+export function ApplicationsTracker() {;
   const { applications, isLoading, error } = useJobApplications();
+<<<<<<< HEAD
 
   const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(
     "all"
+=======
+  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(;
+    "all",;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 
-  if (isLoading) {
+  if (isLoading) {;
     return <LoadingState />;
   }
+<<<<<<< HEAD
   if (error) {
 
     return <ErrorState error={error} />;
@@ -28,56 +34,72 @@ export function ApplicationsTracker() {
     statusFilter === "all"
       ? applications
       : applications.filter((app) => app.status === statusFilter);
+=======
+
+  if (error) {;
+    return <ErrorState error={error} />;
+  }
+
+  if (applications && applications.length === 0) {;
+    return <EmptyState />;
+  }
+
+  const filteredApplications =;
+    statusFilter === "all";
+      ? applications;
+      : applications && applications.filter((app) => app && app.status === statusFilter);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
-    <div className="space-y-6">
-      <div className="flex flex-wrap gap-2">
+    <div className="space-y-6">;
+      <div className="flex flex-wrap gap-2">;
         <Button
           size="sm"
           variant={statusFilter === "all" ? "default" : "outline"}
           onClick={() => setStatusFilter("all")}
-        >
-          All
-        </Button>
+        >;
+          All;
+        </Button>;
         <Button
           size="sm"
           variant={statusFilter === "new" ? "default" : "outline"}
           onClick={() => setStatusFilter("new")}
-        >
-          Submitted
-        </Button>
+        >;
+          Submitted;
+        </Button>;
         <Button
           size="sm"
           variant={statusFilter === "viewed" ? "default" : "outline"}
           onClick={() => setStatusFilter("viewed")}
-        >
-          Viewed
-        </Button>
+        >;
+          Viewed;
+        </Button>;
         <Button
           size="sm"
           variant={statusFilter === "shortlisted" ? "default" : "outline"}
           onClick={() => setStatusFilter("shortlisted")}
-        >
-          Shortlisted
-        </Button>
+        >;
+          Shortlisted;
+        </Button>;
         <Button
           size="sm"
           variant={statusFilter === "interview" ? "default" : "outline"}
           onClick={() => setStatusFilter("interview")}
-        >
-          Interview
-        </Button>
+        >;
+          Interview;
+        </Button>;
         <Button
           size="sm"
           variant={statusFilter === "hired" ? "default" : "outline"}
           onClick={() => setStatusFilter("hired")}
-        >
-          Hired
-        </Button>
+        >;
+          Hired;
+        </Button>;
         <Button
           size="sm"
           variant={statusFilter === "rejected" ? "default" : "outline"}
           onClick={() => setStatusFilter("rejected")}
+<<<<<<< HEAD
         >
           Not Selected
         </Button>
@@ -93,7 +115,26 @@ export function ApplicationsTracker() {
             No applications with this status.
           </p>
         </div>
+=======
+        >;
+          Not Selected;
+        </Button>;
+      </div>;
+
+      <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">;
+        {filteredApplications && filteredApplications.map((application) => (;
+          <ApplicationCard key={application && application.id} application={application} />;
+        ))}
+      </div>;
+
+      {filteredApplications && filteredApplications.length === 0 && (;
+        <div className="text-center p-8">;
+          <p className="text-muted-foreground">;
+            No applications with this status.;
+          </p>;
+        </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       )}
-    </div>
+    </div>;
   );
 }

@@ -1,7 +1,12 @@
 describe("talent detail page", () => {
   it("loads profile from API", () => {
+<<<<<<< HEAD
     cy.intercept("GET", "/api/talent/t-123", {
       statusCode: 200
+=======
+    cy && cy.intercept("GET", "/api/talent/t-123", {
+      statusCode: 200,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       body: {
         id: "t-123"
         full_name: "Cypress Talent"
@@ -9,15 +14,20 @@ describe("talent detail page", () => {
         skills: ["Cypress"]
       }
     }).as("getTalent");
-    cy.visit("/talent/t-123");
-    cy.wait("@getTalent");
-    cy.get('[data-testid="talent-name"]').should("contain", "Cypress Talent");
+    cy && cy.visit("/talent/t-123");
+    cy && cy.wait("@getTalent");
+    cy && cy.get('[data-testid="talent-name"]').should("contain", "Cypress Talent");
   });
 });
 describe("talent detail page", () => {
   it("loads profile from API", () => {
+<<<<<<< HEAD
     cy.intercept("GET", "/api/talent/t-123", {
       statusCode: "200"
+=======
+    cy && cy.intercept("GET", "/api/talent/t-123", {
+      statusCode: "200",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       body: {
         id: "t-123"
         full_name: "Cypress Talent"
@@ -25,15 +35,20 @@ describe("talent detail page", () => {
         skills: ["Cypress"]
       }
     }).as("getTalent");
-    cy.visit("/talent/t-123");
-    cy.wait("@getTalent");
-    cy.get('[data-testid="talent-name"]').should("contain", "Cypress Talent");
+    cy && cy.visit("/talent/t-123");
+    cy && cy.wait("@getTalent");
+    cy && cy.get('[data-testid="talent-name"]').should("contain", "Cypress Talent");
   });
 });
 describe("talent detail page", () => {
   it("loads profile from API", () => {
+<<<<<<< HEAD
     cy.intercept("GET", "/api/talent/t-123", {
       statusCode: 200
+=======
+    cy && cy.intercept("GET", "/api/talent/t-123", {
+      statusCode: 200,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       body: {
         id: "t-123"
         full_name: "Cypress Talent"
@@ -41,15 +56,20 @@ describe("talent detail page", () => {
         skills: ["Cypress"]
       }
     }).as("getTalent");
-    cy.visit("/talent/t-123");
-    cy.wait("@getTalent");
-    cy.get('[data-testid="talent-name"]').should("contain", "Cypress Talent");
+    cy && cy.visit("/talent/t-123");
+    cy && cy.wait("@getTalent");
+    cy && cy.get('[data-testid="talent-name"]').should("contain", "Cypress Talent");
   });
 });
 describe("talent detail page", () => {
   it("loads profile from API", () => {
+<<<<<<< HEAD
     cy.intercept("GET", "/api/talent/t-123", {
       statusCode: 200
+=======
+    cy && cy.intercept("GET", "/api/talent/t-123", {
+      statusCode: 200,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       body: {
         id: "t-123"
         full_name: "Cypress Talent"
@@ -57,9 +77,9 @@ describe("talent detail page", () => {
         skills: ["Cypress"]
       }
     }).as("getTalent");
-    cy.visit("/talent/t-123");
-    cy.wait("@getTalent");
-    cy.get('[data-testid="talent-name"]').should("contain", "Cypress Talent");
+    cy && cy.visit("/talent/t-123");
+    cy && cy.wait("@getTalent");
+    cy && cy.get('[data-testid="talent-name"]').should("contain", "Cypress Talent");
   });
 <<<<<<< HEAD
 });

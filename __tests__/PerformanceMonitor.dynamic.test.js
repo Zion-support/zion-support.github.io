@@ -13,12 +13,16 @@ describe('PerformanceMonitor', () => {
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import PerformanceMonitordynamic from '../components/PerformanceMonitor.dynamic'
+import PerformanceMonitordynamic from '../components/PerformanceMonitor && PerformanceMonitor.dynamic'
 describe('PerformanceMonitordynamic'
   test('renders without crashing'
+<<<<<<< HEAD
       screen.getByTestId('performancemonitor.dynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import PerformanceMonitordynamic from "./components/PerformanceMonitor.dynamic"; describe('PerformanceMonitordynamic', () => { test("renders without crashing",() => { render(<PerformanceMonitordynamic />); expect( screen.getByTestId("performancemonitor.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<PerformanceMonitordynamic />)}); test("handles user interactions",() => { render(<PerformanceMonitordynamic />)}); test("applies correct styling"
 >>>>>>> origin/automation-improvements-final
+=======
+      screen && screen.getByTestId('performancemonitor ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import PerformanceMonitordynamic from "./components/PerformanceMonitor ; describe('PerformanceMonitordynamic', () => { test("renders without crashing",() => { render(<PerformanceMonitordynamic />); expect( screen && screen.getByTestId("performancemonitor && performancemonitor.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<PerformanceMonitordynamic />)}); test("handles user interactions",() => { render(<PerformanceMonitordynamic />)}); test("applies correct styling"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

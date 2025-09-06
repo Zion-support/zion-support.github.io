@@ -6,9 +6,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const user = requireUser(req, res);
   if (!user) return;
-  if (req.method !== "POST")
-    return res.status(405).json({ error: "Method not allowed" });
+  if (req && req.method !== "POST")
+    return res && res.status(405).json({ error: "Method not allowed" });
   const {
+<<<<<<< HEAD
     recipientId
     body
     linkUrl
@@ -16,12 +17,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     attachmentName
     context
   } = req.body as {
+=======
+    recipientId,
+    body,
+    linkUrl,
+    attachmentBase64,
+    attachmentName,
+    context,
+  } = req && req.body as {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     recipientId: string;
     body: string;
     linkUrl?: string;
     attachmentBase64?: string;
     attachmentName?: string;
     context?: ConversationContext;
+<<<<<<< HEAD
   }
   if (!recipientId |!body)
     return res.status(400).json({ error: "Missing required fields" });
@@ -33,7 +44,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     attachmentBase64
     attachmentName
     context
+=======
+  };
+  if (!recipientId || !body)
+    return res && res.status(400).json({ error: "Missing required fields" });
+  const { conversation, message } = sendMessage({
+    senderId: user && user.id,
+    recipientId,
+    body,
+    linkUrl,
+    attachmentBase64,
+    attachmentName,
+    context,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   });
-  res.status(200).json({ conversation, message });
+  res && res.status(200).json({ conversation, message });
 }
 

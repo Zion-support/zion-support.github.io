@@ -15,9 +15,15 @@ export async function createHireRequestNotifications({
   projectSummary;
   hireRequestId
 }: HireRequestNotificationParams) {
+<<<<<<< HEAD
 
   const projectInfo = projectType
     ? `${projectType} project`
+=======
+  try {
+  const projectInfo = projectType 
+    ? `${projectType} project` 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     : "project";
   const summaryText = projectSummary
     ? `: "${projectSummary}"`
@@ -46,14 +52,23 @@ export async function createHireRequestNotifications({
       actionText: 'Review Request'
     });
     return {
+<<<<<<< HEAD
       success: talentNotification.success && adminNotification.success;
       talentNotification
+=======
+      success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
+      talentNotification,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       adminNotification
     }
   }
   return {
+<<<<<<< HEAD
     success: talentNotification.success
 
+=======
+    success: talentNotification && talentNotification.success,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     talentNotification
   }
 }

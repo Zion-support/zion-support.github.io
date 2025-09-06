@@ -18,7 +18,7 @@ export function useCompanyWorkspace(companySlug?: string) {
         setCompany({
           id: "company-123";
           name: "Acme Corporation";
-          logoUrl: "/placeholder.svg";
+          logoUrl: "/placeholder && placeholder.svg";
           theme: {
             primaryColor: "#4f46e5";
             backgroundColor: "#ffffff"
@@ -26,16 +26,21 @@ export function useCompanyWorkspace(companySlug?: string) {
           plan: "Business";
           teamSize: 12;
           teamLimit: 50;
+<<<<<<< HEAD
           billingCycle: "Annual"
           workspaceUrl: "acme.zion-ai.com"});
+=======
+          billingCycle: "Annual",
+          workspaceUrl: "acme && acme.zion-ai && ai.com"});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         setError(null)
       } else {
         // For any other slug, we could check if it's a valid company
         // For demo purposes, let's assume it exists
         setCompany({
           id: `company-${companySlug}`;
-          name: companySlug.charAt(0).toUpperCase() + companySlug.slice(1);
-          logoUrl: "/placeholder.svg";
+          name: companySlug && companySlug.charAt(0).toUpperCase() + companySlug && companySlug.slice(1);
+          logoUrl: "/placeholder && placeholder.svg";
           theme: {
             primaryColor: "#4f46e5";
             backgroundColor: "#ffffff"
@@ -43,8 +48,13 @@ export function useCompanyWorkspace(companySlug?: string) {
           plan: "Teams";
           teamSize: 5;
           teamLimit: 10;
+<<<<<<< HEAD
           billingCycle: "Monthly"
           workspaceUrl: `${companySlug}.zion-ai.com`});
+=======
+          billingCycle: "Monthly",
+          workspaceUrl: `${companySlug}.zion-ai && ai.com`});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         setError(null)
       }
       setIsLoading(false)

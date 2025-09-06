@@ -34,17 +34,28 @@ export const useLoadMilestones = (projectId?: string) => {
             *;
             created_by_profile:profiles!user_id(display_name, avatar_url)
           `)
-          .eq('milestone_id', milestone.id)
+          .eq('milestone_id', milestone && milestone.id)
           .order('created_at', { ascending: false });
         if (activitiesError) throw activitiesError;
+<<<<<<< HEAD
         activitiesMap[milestone.id] = activitiesData |[]
+=======
+        
+        activitiesMap[milestone && milestone.id] = activitiesData || []
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
       setActivities(activitiesMap);
       setError(null)
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error fetching milestones:", err);
       setError("Failed to fetch milestones: " + err.message)
       toast.error("Failed to fetch milestones")
+=======
+      console && console.error("Error fetching milestones:", err);
+      setError("Failed to fetch milestones: " + err && err.message),
+      toast && toast.error("Failed to fetch milestones")
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } finally {
       setIsLoading(false)
     }

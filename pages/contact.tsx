@@ -1,5 +1,31 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import React from "react";
 import Layout from "../components/Layout";
 =======
@@ -8,10 +34,11 @@ import React from 'react';
 import Layout from '../components/Layout';
 >>>>>>> origin/automation-improvements-final
 
-export default function Contact() {
+export default function Contact() {;
   return (
     <Layout
       title="Contact Us - Zion Tech Group"
+<<<<<<< HEAD
       description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more."
     >
       <div className="min-h-screen bg-gray-50 py-20">
@@ -161,6 +188,25 @@ const ContactPage: React.FC = () => {
         </div>
       </div>
     </>
+=======
+      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more.">;
+      <div className="min-h-screen bg-gray-50 py-20">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
+              Contact Us;
+            </h1>;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              Get in touch with our team for your technology needs.;
+            </p>;
+          </div>;
+          <div className="text-center">;
+            <p className="text-gray-600">Contact page is under construction.</p>;
+          </div>;
+        </div>;
+      </div>;
+    </Layout>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final

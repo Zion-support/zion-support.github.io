@@ -47,6 +47,7 @@ export const advancedITServices2025 = [
     }
     category: 'Cloud Infrastructure'
     tags: [
+<<<<<<< HEAD
       'Quantum Computing'
       'Cloud Infrastructure'
       'Security'
@@ -58,6 +59,19 @@ export const advancedITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$178.9B'
+=======
+      'Quantum Computing',
+      'Cloud Infrastructure',
+      'Security',
+      'Scalability',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-cloud-infrastructure',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$178 && 178.9B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Enterprise businesses, cloud providers, research institutions, government agencies'
     competitiveAdvantage:
@@ -102,6 +116,7 @@ export const advancedITServices2025 = [
         price: 1499
         period: 'month'
         features: [
+<<<<<<< HEAD
           'Unlimited edge nodes'
           'Custom AI training'
           'White-label solution'
@@ -117,6 +132,23 @@ export const advancedITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$43.4B'
+=======
+          'Unlimited edge nodes',
+          'Custom AI training',
+          'White-label solution',
+          'Dedicated support',
+        ],
+      },
+    },
+    category: 'Edge Computing',
+    tags: ['AI', 'Edge Computing', 'IoT', 'Distributed Computing'],
+    website: 'https://ziontechgroup && ziontechgroup.com/edge-computing-ai',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$43 && 43.4B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'IoT companies, telecommunications, manufacturing, smart cities'
     competitiveAdvantage:
@@ -170,6 +202,7 @@ export const advancedITServices2025 = [
     }
     category: 'Cybersecurity'
     tags: [
+<<<<<<< HEAD
       'Zero Trust'
       'Cybersecurity'
       'Identity Management'
@@ -181,6 +214,19 @@ export const advancedITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$173.5B'
+=======
+      'Zero Trust',
+      'Cybersecurity',
+      'Identity Management',
+      'Threat Detection',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/zero-trust-security-pro',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$173 && 173.5B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'IT security teams, cybersecurity firms, enterprise businesses, government agencies'
     competitiveAdvantage:
@@ -225,6 +271,7 @@ export const advancedITServices2025 = [
         price: 1499
         period: 'month'
         features: [
+<<<<<<< HEAD
           'Unlimited transactions'
           'Custom blockchain'
           'White-label solution'
@@ -240,6 +287,23 @@ export const advancedITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$19.9B'
+=======
+          'Unlimited transactions',
+          'Custom blockchain',
+          'White-label solution',
+          'Dedicated support',
+        ],
+      },
+    },
+    category: 'Blockchain',
+    tags: ['Blockchain', 'Smart Contracts', 'Enterprise', 'Compliance'],
+    website: 'https://ziontechgroup && ziontechgroup.com/enterprise-blockchain-pro',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$19 && 19.9B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Financial institutions, supply chain companies, healthcare providers, government agencies'
     competitiveAdvantage:
@@ -284,6 +348,7 @@ export const advancedITServices2025 = [
         price: 799
         period: 'month'
         features: [
+<<<<<<< HEAD
           'Unlimited developers'
           'Custom AI training'
           'White-label solution'
@@ -299,6 +364,23 @@ export const advancedITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$8.2B'
+=======
+          'Unlimited developers',
+          'Custom AI training',
+          'White-label solution',
+          'Dedicated support',
+        ],
+      },
+    },
+    category: 'DevOps',
+    tags: ['AI', 'DevOps', 'CI/CD', 'Automation'],
+    website: 'https://ziontechgroup && ziontechgroup.com/devops-ai-pro',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$8 && 8.2B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Development teams, DevOps engineers, software companies, enterprise businesses'
     competitiveAdvantage:
@@ -348,6 +430,7 @@ export const advancedITServices2025 = [
     }
     category: 'Quantum Networking'
     tags: [
+<<<<<<< HEAD
       'Quantum Computing'
       'Networking'
       'Security'
@@ -359,6 +442,19 @@ export const advancedITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$12.8B'
+=======
+      'Quantum Computing',
+      'Networking',
+      'Security',
+      'High-Speed Communication',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-net-pro',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$12 && 12.8B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Telecommunications, financial institutions, government agencies, research institutions'
     competitiveAdvantage:
@@ -412,6 +508,7 @@ export const advancedITServices2025 = [
     }
     category: 'IT Operations'
     tags: [
+<<<<<<< HEAD
       'AI'
       'Autonomous Operations'
       'Infrastructure Management'
@@ -423,6 +520,19 @@ export const advancedITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$28.7B'
+=======
+      'AI',
+      'Autonomous Operations',
+      'Infrastructure Management',
+      'Automation',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/autonomous-it-pro',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$28 && 28.7B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'IT operations teams, system administrators, enterprise businesses, managed service providers'
     competitiveAdvantage:
@@ -476,6 +586,7 @@ export const advancedITServices2025 = [
     }
     category: 'Data Center'
     tags: [
+<<<<<<< HEAD
       'Quantum Computing'
       'Data Center'
       'Infrastructure'
@@ -487,6 +598,19 @@ export const advancedITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$89.3B'
+=======
+      'Quantum Computing',
+      'Data Center',
+      'Infrastructure',
+      'Energy Efficiency',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-data-center-pro',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$89 && 89.3B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Data center operators, cloud providers, enterprise businesses, government agencies'
     competitiveAdvantage:
@@ -540,6 +664,7 @@ export const advancedITServices2025 = [
     }
     category: 'Quantum Cybersecurity'
     tags: [
+<<<<<<< HEAD
       'Quantum Computing'
       'Cybersecurity'
       'Encryption'
@@ -551,6 +676,19 @@ export const advancedITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$173.5B'
+=======
+      'Quantum Computing',
+      'Cybersecurity',
+      'Encryption',
+      'Threat Detection',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-cyber-pro',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$173 && 173.5B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'IT security teams, cybersecurity firms, government agencies, financial institutions'
     competitiveAdvantage:
@@ -595,6 +733,7 @@ export const advancedITServices2025 = [
         price: 1499
         period: 'month'
         features: [
+<<<<<<< HEAD
           'Unlimited workloads'
           'Custom quantum solutions'
           'White-label platform'
@@ -610,15 +749,38 @@ export const advancedITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$15.7B'
+=======
+          'Unlimited workloads',
+          'Custom quantum solutions',
+          'White-label platform',
+          'Dedicated support',
+        ],
+      },
+    },
+    category: 'Cloud Migration',
+    tags: ['Quantum Computing', 'Cloud Migration', 'AI', 'Zero Downtime'],
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-migration-pro',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$15 && 15.7B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
     competitiveAdvantage:
       'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
 ];      phone: '+1 302 464 0950';
+<<<<<<< HEAD
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$15.7B'
+=======
+      email: 'kleber@ziontechgroup && ziontechgroup.com'
+    };
+    marketSize: '$15 && 15.7B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }

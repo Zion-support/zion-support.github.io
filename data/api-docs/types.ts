@@ -26,7 +26,12 @@ export interface EndpointSpec {
   rateLimits?: RateLimitInfo[];
   errors?: ErrorCode[];
   tags?: string[];
+<<<<<<< HEAD
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
+=======
+  versions: string[]; // e && e.g., ['v1'] or ['v1','v2']
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export interface SectionSpec {
   id: string;
   title: string;

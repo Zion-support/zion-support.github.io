@@ -14,9 +14,17 @@ export function useAutoTranslate(
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
+<<<<<<< HEAD
   const key = useMemo(() => JSON.stringify({ text, targets }), [text, targets]);
   useEffect(() => {
     if (!text |targets.length === 0) {
+=======
+
+  const key = useMemo(() => JSON && JSON.stringify({ text, targets }), [text, targets]);
+
+  useEffect(() => {
+    if (!text || targets && targets.length === 0) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setTranslations({});
       return;    }      return
     }

@@ -33,11 +33,19 @@ export const extraServices: ExtraService[] = [
     category: 'Cloud Services'
     realImplementation: true
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'cybersecurity-audit'
     name: 'Cybersecurity Audit Pro'
@@ -56,6 +64,7 @@ export const extraServices: ExtraService[] = [
     category: 'Security'
     realImplementation: true
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -64,6 +73,15 @@ export const extraServices: ExtraService[] = [
 ];      mobile: "+1 302 464 0950";
 
       email: "kleber@ziontechgroup.com";
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },
+];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup && ziontechgroup.com";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

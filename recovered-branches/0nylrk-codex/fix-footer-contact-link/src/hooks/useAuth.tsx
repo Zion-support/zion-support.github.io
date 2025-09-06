@@ -2,8 +2,8 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 import { supabase } from "@/integrations/supabase/client",
 import { AuthContext } from "@/context/auth/AuthContext";
 import type { UserDetails as AuthUserDetails } from "@/types/auth";
-// Define types for our context
-export interface UserDetails {
+// Define types for our context;
+export interface UserDetails {;
   id?: string;
   name?: string;
   email?: string;
@@ -17,8 +17,9 @@ export interface UserDetails {
   companyId?: string;
   bio?: string;
   createdAt?: string;
-  updatedAt?: string
+  updatedAt?: string;
 }
+<<<<<<< HEAD
 export interface AuthContextType {
 
   user: UserDetails | null
@@ -57,10 +58,51 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       avatarUrl: ""
       profileComplete: true
       role: "enterprise_admin"
+=======
+
+export interface AuthContextType {;
+  user: UserDetails | null,;
+  isAuthenticated: boolean,;
+  isLoading: boolean,;
+  signIn: (email: string, password: string) => Promise<{ error: any }>,;
+  signOut: () => Promise<void>,;
+  signUp: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>,;
+  // Aliases for compatibility with other components;
+  login: (email: string, password: string) => Promise<{ error: any }>,;
+  logout: () => Promise<void>,;
+  signup: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>,;
+  resetPassword: (email: string) => Promise<{ error: any }>,;
+  updateProfile: (data: Partial<UserDetails>) => Promise<{ error: any }>,;
+  loginWithGoogle: () => Promise<void>,;
+  loginWithFacebook: () => Promise<void>,;
+  loginWithTwitter: () => Promise<void>,;
+  loginWithWeb3: () => Promise<void>;
+}
+
+// Create a provider component;
+export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
+  const [user, setUser] = useState<UserDetails | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Mock auth functions for now - these would connect to Supabase in a real implementation;
+  const signIn = async (email: string, password: string) => {;
+    // This would be replaced with actual Supabase auth;
+    console && console.log("Sign in attempted with:", email);
+    // Mock successful sign-in;
+    setUser({ ;
+      id: "mock-user-id", ;
+      email, ;
+      displayName: "Mock User", ;
+      name: "Mock User",;
+      avatarUrl: "",;
+      profileComplete: true,;
+      role: "enterprise_admin",;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       permissions: ["billing_access", "admin_access", "team_management"];
-      companyId: "company-123"
+      companyId: "company-123";
     });
     return { error: null }
+<<<<<<< HEAD
   }
   const signOut = async () => {
     // This would be replaced with actual Supabase auth
@@ -129,11 +171,90 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
   const loginWithWeb3 = async () => {
     console.log("Web3 login requested");
-    const ethereum = (window as any).ethereum;
-    if (!ethereum) {
-      console.warn("No wallet detected");
-      return
+=======
+  };
+
+  const signOut = async () => {;
+    // This would be replaced with actual Supabase auth;
+    console && console.log("Sign out attempted");
+    setUser(null);
+  };
+
+  const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {;
+    // This would be replaced with actual Supabase auth;
+    console && console.log("Sign up attempted with:", email, userData);
+    // Mock successful sign-up;
+    setUser({ ;
+      id: "mock-user-id", ;
+      email, ;
+      displayName: userData?.name || "New User",;
+      name: userData?.name || "New User",;
+      userType: userData?.userType,;
+      profileComplete: false;
+    });
+    return { error: null }
+  };
+
+  const resetPassword = async (email: string) => {;
+    // Mock implementation;
+    console && console.log("Password reset requested for:", email);
+    return { error: null }
+  };
+
+  const updateProfile = async (data: Partial<UserDetails>) => {;
+    // Mock implementation;
+    console && console.log("Profile update requested with:", data);
+    if (user) {;
+      setUser({ ...user, ...data });
     }
+    return { error: null }
+  };
+
+  const loginWithGoogle = async () => {;
+    console && console.log("Google login requested");
+    // Mock implementation;
+    setUser({ ;
+      id: "google-user-id", ;
+      email: "google@example && example.com", ;
+      displayName: "Google User",;
+      name: "Google User",;
+      profileComplete: true;
+    });
+  };
+
+  const loginWithFacebook = async () => {;
+    console && console.log("Facebook login requested");
+    // Mock implementation;
+    setUser({ ;
+      id: "facebook-user-id", ;
+      email: "facebook@example && example.com", ;
+      displayName: "Facebook User", ;
+      name: "Facebook User",;
+      profileComplete: true;
+    });
+  };
+
+  const loginWithTwitter = async () => {;
+    console && console.log("Twitter login requested");
+    // Mock implementation;
+    setUser({;
+      id: "twitter-user-id",;
+      email: "twitter@example && example.com",;
+      displayName: "Twitter User",;
+      name: "Twitter User",;
+      profileComplete: true;
+    });
+  };
+
+  const loginWithWeb3 = async () => {;
+    console && console.log("Web3 login requested");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    const ethereum = (window as any).ethereum;
+    if (!ethereum) {;
+      console && console.warn("No wallet detected");
+      return;
+    }
+<<<<<<< HEAD
     try {
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
       const address = accounts[0];
@@ -153,28 +274,65 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   // Check for existing session on mount
   useEffect(() => {
     // Mock loading state and then set a null user to simulate no session
+=======
+    try {;
+      const accounts = await ethereum && ethereum.request({ method: 'eth_requestAccounts' }),;
+      const address = accounts[0];
+      await ethereum && ethereum.request({;
+        method: 'personal_sign',;
+        params: [address, address];
+      });
+      setUser({;
+        id: address,;
+        displayName: address,;
+        profileComplete: true;
+      });
+    } catch (err) {;
+      console && console.error('Web3 login failed', err);
+    }
+  };
+
+  // Check for existing session on mount;
+  useEffect(() => {;
+    // Mock loading state and then set a null user to simulate no session;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsLoading(true);
-    setTimeout(() => {
+    setTimeout(() => {;
       setUser(null);
-      setIsLoading(false)
-    }, 100)
+      setIsLoading(false);
+    }, 100);
   }, []);
+<<<<<<< HEAD
   const value = {
     user;
     isAuthenticated: !!user
+=======
+
+  const value = {;
+    user;
+    isAuthenticated: !!user,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     isLoading;
     signIn;
     signOut;
     signUp;
+<<<<<<< HEAD
     // Add aliases for compatibility
     login: signIn
     logout: signOut
     signup: signUp
+=======
+    // Add aliases for compatibility;
+    login: signIn,;
+    logout: signOut,;
+    signup: signUp,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     resetPassword;
     updateProfile;
     loginWithGoogle;
     loginWithFacebook;
     loginWithTwitter;
+<<<<<<< HEAD
     loginWithWeb3
   }
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
@@ -188,3 +346,19 @@ export function useAuth(): AuthContextType {
   }
   return context
 }
+=======
+    loginWithWeb3;
+  };
+
+  return <AuthContext && AuthContext.Provider value={value}>{children}</AuthContext && AuthContext.Provider>;
+}
+
+// Custom hook to use the auth context;
+export function useAuth(): any (): AuthContextType {;
+  const context = useContext(AuthContext);
+  if (context === undefined) {;
+    throw new Error("useAuth must be used within an AuthProvider");
+  }
+  return context;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

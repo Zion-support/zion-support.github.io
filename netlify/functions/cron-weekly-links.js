@@ -1,34 +1,48 @@
 const { upsertFile } = require('./_lib/github');
 async function fetchHtml(url) {
   const resp = await fetch(url);
+<<<<<<< HEAD
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+=======
+  if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
+  return resp && resp.text();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return resp.text();
 function extractLinks(html, base) {
-  const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map(
+  const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map(
     m => m[1]
   );
   const links = aTags
-    .filter(h => h && !h.startsWith('mailto:') && !h.startsWith('tel:'))
+    .filter(h => h && !h && h.startsWith('mailto:') && !h && h.startsWith('tel:'))
     .map(h =>
-      h.startsWith('http') ? h : `${base}${h.startsWith('/') ? h : `/${h}`}`
+      h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`
     );
+<<<<<<< HEAD
   return Array.from(new Set(links));
 exports.handler = async function () {
   try {
     const base = process.env.URL |process.env.DEPLOY_URL |'';
+=======
+  return Array && Array.from(new Set(links));
+
+exports && exports.handler = async function () {
+  try {
+    const base = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const checked = [];
     const broken = [];
     ${p}`);
         const links = extractLinks(html, base);
-        for (const l of links.slice(0, 50)) {
+        for (const l of links && links.slice(0, 50)) {
           try {
             const resp = await fetch(l, { method: 'HEAD' });
-            checked.push({ url: l, status: resp.status });
-            if (resp.status >= 400)
-              broken.push({ url: l, status: resp.status });
+            checked && checked.push({ url: l, status: resp && resp.status });
+            if (resp && resp.status >= 400)
+              broken && broken.push({ url: l, status: resp && resp.status });
           } catch (e) {
+<<<<<<< HEAD
             broken.push({ url: l, status: 0, error: String(e.message |e) });
           }
         }
@@ -52,9 +66,38 @@ exports.handler = async function () {
         content: JSON.stringify(report, null, 2)
         message: 'chore(automation): weekly link check'
         token
+=======
+            broken && broken.push({ url: l, status: 0, error: String(e && e.message || e) });
+          }
+        }
+      } catch (e) {
+        broken && broken.push({
+          url: `${base}${p}`,
+          status: 0,
+          error: String(e && e.message || e),
+        });
+      }
+    }
+
+    const report = { updatedAt: Date && Date.now(), checked: checked && checked.length, broken };
+
+    const owner = process && process.env.GITHUB_OWNER;
+    const repo = process && process.env.GITHUB_REPO;
+    const token = process && process.env.GITHUB_TOKEN;
+
+    if (owner && repo && token) {
+      await upsertFile({
+        owner,
+        repo,
+        path: 'data/reports/links/weekly-links && links.json',
+        content: JSON && JSON.stringify(report, null, 2),
+        message: 'chore(automation): weekly link check',
+        token,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     return {
+<<<<<<< HEAD
       statusCode: 200
       body: JSON.stringify({ ok: true, broken: broken.length })
     }
@@ -66,8 +109,21 @@ exports.handler = async function () {
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
 
   return resp.text()
+=======
+      statusCode: 200,
+      body: JSON && JSON.stringify({ ok: true, broken: broken && broken.length }),
+    };
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };
+  }
+};async function fetchHtml(url) {
+  const resp = await fetch(url),
+  if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`),
+  return resp && resp.text()
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 function extractLinks(html, base) {
+<<<<<<< HEAD
   const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1])
   const links = aTags
     .filter((h) => h && !h.startsWith('mailto:') && !h.startsWith('tel:'))
@@ -76,6 +132,21 @@ function extractLinks(html, base) {
 }
 exports.handler = async function() {
   try {
+=======
+  const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]),
+  const links = aTags
+    .filter((h) => h && !h && h.startsWith('mailto:') && !h && h.startsWith('tel:'))
+    .map((h) => (h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`)),
+  return Array && Array.from(new Set(links))
+}
+
+exports && exports.handler = async function() {
+  try {
+    const base = process && process.env.URL || process && process.env.DEPLOY_URL || '',
+    const pages = ['//learn/dao/certifications'],
+    const checked = [],
+    const broken = [],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
     const base = process.env.URL |process.env.DEPLOY_URL |''
     const pages = ['//learn/dao/certifications']
@@ -83,6 +154,7 @@ exports.handler = async function() {
     const broken = []
     for (const p of pages) {
       try {
+<<<<<<< HEAD
         const html = await fetchHtml(`${base}${p}`)
         const links = extractLinks(html, base)
         for (const l of links.slice(0, 50)) {
@@ -104,13 +176,41 @@ exports.handler = async function() {
     const owner = process.env.GITHUB_OWNER
     const repo = process.env.GITHUB_REPO
     const token = process.env.GITHUB_TOKEN
+=======
+        const html = await fetchHtml(`${base}${p}`),
+        const links = extractLinks(html, base),
+        for (const l of links && links.slice(0, 50)) {
+          try {
+            const resp = await fetch(l, { method: 'HEAD' }),
+            checked && checked.push({ url: l, status: resp && resp.status }),
+            if (resp && resp.status >= 400) broken && broken.push({ url: l, status: resp && resp.status })
+          } catch (e) {
+            broken && broken.push({ url: l, status: 0, error: String(e && e.message || e) })
+          }
+        }
+      } catch (e) {
+        broken && broken.push({ url: `${base}${p}`, status: 0, error: String(e && e.message || e) })
+      }
+    }
+
+    const report = { updatedAt: Date && Date.now(), checked: checked && checked.length, broken },
+
+    const owner = process && process.env.GITHUB_OWNER,
+    const repo = process && process.env.GITHUB_REPO,
+    const token = process && process.env.GITHUB_TOKEN,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
     if (owner && repo && token) {
-      await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
+      await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links && links.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
     }
+<<<<<<< HEAD
     return { statusCode: 200, body: JSON.stringify({ ok: true, broken: broken.length }) }
+=======
+
+    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, broken: broken && broken.length }) }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 
 }

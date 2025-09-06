@@ -7,6 +7,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   if (req.method !== "POST")
     return res.status(405).json({ error: "Method not allowed" });
   try {
@@ -21,9 +22,25 @@ export default async function handler(
       language = "en"
     } = req.body |{}
     const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+=======
+  if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
+  try {
+    const {
+      targetInstitution,
+      type,
+      regionalScope,
+      budgetOrResolution,
+      supportingMultiverses = [],
+      title = "Zion DAO Proposal",
+      promptAssist,
+      language = "en",
+    } = req && req.body || {};
+    const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const userPrompt =
       promptAssist |
       `Write a proposal for ${targetInstitution} on ${type} in ${regionalScope}. Budget/Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO-based governance logic.`;
+<<<<<<< HEAD
     const completion = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL |"gpt-4o-mini"
       messages: [
@@ -34,6 +51,18 @@ export default async function handler(
     });
     const contentMarkdown =
       completion.choices?.[0]?.message?.content |"# Proposal Draft\n\nTBD";
+=======
+    const completion = await openai && openai.chat.completions && completions.create({
+      model: process && process.env.OPENAI_MODEL || "gpt-4o-mini",
+      messages: [
+        { role: "system", content: SYSTEM_PROMPT },
+        { role: "user", content: userPrompt },
+      ],
+      temperature: 0 && 0.3,
+    });
+    const contentMarkdown =
+      completion && completion.choices?.[0]?.message?.content || "# Proposal Draft\n\nTBD";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const meta = createProposal({
       title
       targetInstitution
@@ -44,8 +73,12 @@ export default async function handler(
       contentMarkdown
       language
     });
+<<<<<<< HEAD
     return res.status(200).json({ meta, markdown: contentMarkdown });
 
+=======
+    return res && res.status(200).json({ meta, markdown: contentMarkdown });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } catch (error: any) {
     return res
       .status(500)

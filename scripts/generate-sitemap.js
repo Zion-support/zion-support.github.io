@@ -291,6 +291,7 @@ generateSitemap();
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node
+<<<<<<< HEAD
 console.log('🗺️  Generating sitemap...');
 console.log('✅ Sitemap generation completed');
 >>>>>>> 4b819355ccb44a5b24eeefb1407608395a1110cb
@@ -309,3 +310,7 @@ generateSitemap(),
 >>>>>>> origin/automation-improvements-final
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+console && console.log('🗺️  Generating sitemap...');
+console && console.log('✅ Sitemap generation completed');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

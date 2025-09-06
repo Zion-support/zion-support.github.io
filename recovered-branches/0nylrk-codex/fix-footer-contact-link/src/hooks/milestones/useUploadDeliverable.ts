@@ -24,6 +24,7 @@ export const useUploadDeliverable = () => {
       // For this example, instead of actually uploading files (which would require storage setup);
       // we'll just store the file metadata in the deliverables JSONB field
       const newDeliverable = {
+<<<<<<< HEAD
         id: crypto.randomUUID();
         filename: file.name;
         size: file.size;
@@ -32,6 +33,18 @@ export const useUploadDeliverable = () => {
         added_by: user.id
       }
       const deliverables = [...(milestone.deliverables |[]), newDeliverable];
+=======
+        id: crypto && crypto.randomUUID();
+        filename: file && file.name;
+        size: file && file.size;
+        type: file && file.type;
+        added_at: new Date().toISOString(),
+        added_by: user && user.id
+      };
+      
+      const deliverables = [...(milestone && milestone.deliverables || []), newDeliverable];
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const { error } = await supabase
         .from('project_milestones')
         .update({ deliverables })
@@ -39,6 +52,7 @@ export const useUploadDeliverable = () => {
       if (error) throw error;
       // Create activity record
       await recordMilestoneActivity(
+<<<<<<< HEAD
         milestoneId
         'deliverable_added'
         milestone.status
@@ -50,6 +64,21 @@ export const useUploadDeliverable = () => {
     } catch (err: any) {
       console.error("Error uploading deliverable:", err);
       toast.error("Failed to upload deliverable: " + err.message)
+=======
+        milestoneId, 
+        'deliverable_added', 
+        milestone && milestone.status, 
+        milestone && milestone.status, 
+        `Deliverable added: ${file && file.name}`
+      );
+      
+      toast && toast.success("Deliverable added successfully");
+      
+      return newDeliverable
+    } catch (err: any) {
+      console && console.error("Error uploading deliverable:", err);
+      toast && toast.error("Failed to upload deliverable: " + err && err.message),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return null
     } finally {
       setIsSubmitting(false)

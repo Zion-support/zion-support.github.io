@@ -72,6 +72,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       'Long-term security investment'
     ]
     useCases: [
+<<<<<<< HEAD
       'Government communications'
       'Financial institutions'
       'Healthcare data protection'
@@ -81,6 +82,17 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     ]
     marketSize: '$28.5B by 2029'
     competitors: ['Cisco', 'Juniper', 'Palo Alto Networks', 'Fortinet']
+=======
+      'Government communications',
+      'Financial institutions',
+      'Healthcare data protection',
+      'Military communications',
+      'Critical infrastructure',
+      'Research institutions',
+    ],
+    marketSize: '$28 && 28.5B by 2029',
+    competitors: ['Cisco', 'Juniper', 'Palo Alto Networks', 'Fortinet'],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     technology: [
       'Quantum Computing'
       'Post-Quantum Cryptography'
@@ -112,6 +124,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     funding: 'Series C funding, $300M valuation'
     exit: 'IPO or security acquisition'
     contact: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       website: 'https://ziontechgroup.com'
@@ -120,6 +133,16 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
   }
     id: 'biotech-dna-computing-platform'
     name: 'Biotech DNA Computing Platform'
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },
+    id: 'biotech-dna-computing-platform',
+    name: 'Biotech DNA Computing Platform',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     description:
       'Revolutionary DNA-based computing platform that uses biological molecules for data storage and computation, offering unprecedented storage density and parallel processing capabilities.'
     category: [
@@ -149,6 +172,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       'Revolutionary computing paradigm'
     ]
     useCases: [
+<<<<<<< HEAD
       'Long-term data archiving'
       'Scientific research computing'
       'Medical data storage'
@@ -158,6 +182,17 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     ]
     marketSize: '$15.8B by 2029'
     competitors: ['Microsoft', 'Illumina', 'Twist Bioscience', 'DNA Script']
+=======
+      'Long-term data archiving',
+      'Scientific research computing',
+      'Medical data storage',
+      'Environmental monitoring',
+      'Space exploration data',
+      'Biological research',
+    ],
+    marketSize: '$15 && 15.8B by 2029',
+    competitors: ['Microsoft', 'Illumina', 'Twist Bioscience', 'DNA Script'],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     technology: [
       'DNA Synthesis'
       'Molecular Biology'
@@ -185,6 +220,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     funding: 'Series B funding, $150M valuation'
     exit: 'IPO or biotech acquisition'
     contact: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       website: 'https://ziontechgroup.com'
@@ -193,6 +229,16 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
   }
     id: 'quantum-financial-trading-platform'
     name: 'Quantum Financial Trading Platform'
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },
+    id: 'quantum-financial-trading-platform',
+    name: 'Quantum Financial Trading Platform',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     description:
       'Advanced quantum-powered financial trading platform that uses quantum algorithms to analyze market data, predict trends, and execute trades with unprecedented speed and accuracy.'
     category: [
@@ -222,6 +268,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       'Competitive trading advantage'
     ]
     useCases: [
+<<<<<<< HEAD
       'Institutional trading'
       'Hedge fund operations'
       'Algorithmic trading'
@@ -231,6 +278,17 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     ]
     marketSize: '$42.3B by 2029'
     competitors: ['Bloomberg', 'Thomson Reuters', 'FactSet', 'Refinitiv']
+=======
+      'Institutional trading',
+      'Hedge fund operations',
+      'Algorithmic trading',
+      'Risk management',
+      'Portfolio optimization',
+      'Market analysis',
+    ],
+    marketSize: '$42 && 42.3B by 2029',
+    competitors: ['Bloomberg', 'Thomson Reuters', 'FactSet', 'Refinitiv'],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     technology: [
       'Quantum Computing'
       'Machine Learning'
@@ -260,6 +318,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     funding: 'Series C funding, $500M valuation'
     exit: 'IPO or financial acquisition'
     contact: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       website: 'https://ziontechgroup.com'
@@ -268,6 +327,16 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
   }
     id: 'quantum-creativity-studio'
     name: 'Quantum Creativity Studio'
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },
+    id: 'quantum-creativity-studio',
+    name: 'Quantum Creativity Studio',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     description:
       'Innovative quantum-enhanced creativity platform that uses quantum algorithms to generate unique artistic content, design solutions, and creative concepts that push the boundaries of human imagination.'
     category: ['Creativity', 'Quantum Computing', 'AI', 'Design', 'Art']
@@ -291,6 +360,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       'Reduce creative blocks'
     ]
     useCases: [
+<<<<<<< HEAD
       'Graphic design'
       'Content creation'
       'Product design'
@@ -300,6 +370,17 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     ]
     marketSize: '$18.9B by 2029'
     competitors: ['Adobe Creative Suite', 'Canva', 'Figma', 'Sketch']
+=======
+      'Graphic design',
+      'Content creation',
+      'Product design',
+      'Marketing materials',
+      'Creative agencies',
+      'Individual artists',
+    ],
+    marketSize: '$18 && 18.9B by 2029',
+    competitors: ['Adobe Creative Suite', 'Canva', 'Figma', 'Sketch'],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     technology: [
       'Quantum Computing'
       'AI/ML'
@@ -325,16 +406,25 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     funding: 'Series A funding, $80M valuation'
     exit: 'Acquisition by major creative platform'
     contact: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       website: 'https://ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];      'Graphic designContent creationProduct designMarketing materialsCreative agenciesIndividual artists'
 
     ];
-    marketSize: '$18.9B by 2029';
+    marketSize: '$18 && 18.9B by 2029';
     competitors: ['Adobe Creative SuiteCanvaFigmaSketch'];
     technology: ['Quantum ComputingAI/MLComputer GraphicsDesign Tools'];
     integration: ['Design toolsCreative platformsAsset libraries'];
@@ -363,10 +453,15 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     exit: 'Acquisition by major creative platform';
     contact: {
       mobile: '+1 302 464 0950';
+<<<<<<< HEAD
       email: 'kleber@ziontechgroup.com';
 
       website: 'https://ziontechgroup.com'
 
+=======
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
+      website: 'https://ziontechgroup && ziontechgroup.com',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }

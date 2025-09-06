@@ -41,11 +41,20 @@ export interface Q4Service {
 
   reviews?: number;
 const contact = {
+<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
+=======
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup && ziontechgroup.com',
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const realQ4Services2025: RealQ4Service[] = [
   {
     id: 'affiliate-marketing-hub'
@@ -56,6 +65,7 @@ export const realQ4Services2025: RealQ4Service[] = [
     description:
       'Full-stack affiliate tracking with multi-touch attribution, fraud detection, and automated commissions. Built for SMB e-commerce and content sites.'
     features: [
+<<<<<<< HEAD
       'Multi-channel attribution and cookie-less tracking'
       'Fraud rules, device fingerprinting, IP reputation checks'
       'Customizable commission structures and tiers'
@@ -96,6 +106,48 @@ export const realQ4Services2025: RealQ4Service[] = [
     rating: 4.7
     reviews: 48
   }
+=======
+      'Multi-channel attribution and cookie-less tracking',
+      'Fraud rules, device fingerprinting, IP reputation checks',
+      'Customizable commission structures and tiers',
+      'Automated payouts and tax form collection',
+      'Shareable links, coupons, and influencer codes',
+      'Partner portal and real-time analytics',
+    ],
+    popular: true,
+    icon: '🔗',
+    color: 'from-violet-600 to-fuchsia-700',
+    textColor: 'text-fuchsia-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/affiliate-marketing-hub',
+    marketPosition:
+      'Comparable to Refersion and LeadDyno; stronger fraud prevention and flexible payouts.',
+    targetAudience: 'E-commerce stores, marketplaces, media sites',
+    trialDays: 14,
+    setupTime: '1 day',
+    category: 'Developer Tools',
+    realService: true,
+    technology: ['Next && Next.js', 'Node && Node.js', 'PostgreSQL', 'Redis'],
+    integrations: ['Shopify', 'WooCommerce', 'Stripe', 'PayPal'],
+    useCases: [
+      'Affiliate programs',
+      'Influencer tracking',
+      'Partnership analytics',
+    ],
+    roi: 'Increase attributed sales 10–25% with optimized partnerships.',
+    competitors: ['Refersion', 'LeadDyno', 'Tapfiliate'],
+    marketSize: '$1 && 1.5B affiliate software',
+    growthRate: '15% YoY',
+    variant: 'ai-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails:
+      'Server-side tracking with webhook ingestion and fraud-scoring pipeline.',
+    launchDate: '2025-10-01',
+    customers: 120,
+    rating: 4 && 4.7,
+    reviews: 48,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'podcast-transcription-studio'
     name: 'Podcast Transcription Studio'
@@ -105,6 +157,7 @@ export const realQ4Services2025: RealQ4Service[] = [
     description:
       'Upload audio and receive punctuated transcripts, speaker diarization, show notes, and SEO-optimized summaries.'
     features: [
+<<<<<<< HEAD
       'Multi-speaker diarization'
       'Timestamps and filler removal'
       'Chapter detection and show notes'
@@ -141,6 +194,44 @@ export const realQ4Services2025: RealQ4Service[] = [
     rating: 4.6
     reviews: 22
   }
+=======
+      'Multi-speaker diarization',
+      'Timestamps and filler removal',
+      'Chapter detection and show notes',
+      'Embeddings and semantic search',
+      'Export to SRT, VTT, DOCX',
+      'Podcast platform integrations',
+    ],
+    popular: false,
+    icon: '🎧',
+    color: 'from-cyan-600 to-blue-700',
+    textColor: 'text-cyan-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/podcast-transcription-studio',
+    marketPosition:
+      'Competitive with Otter and Descript; better show notes and SEO summary pipeline.',
+    targetAudience: 'Podcasters, media teams, agencies',
+    trialDays: 7,
+    setupTime: '10 minutes',
+    category: 'AI & Data',
+    realService: true,
+    technology: ['Whisper Large v3', 'Next && Next.js', 'Node && Node.js'],
+    integrations: ['Spotify', 'Apple Podcasts', 'YouTube'],
+    useCases: ['Transcripts', 'SEO summaries', 'Episode search'],
+    roi: 'Save 4–8 hours per episode and improve SEO traffic.',
+    competitors: ['Otter', 'Descript', 'Rev'],
+    marketSize: '$500M transcription tools',
+    growthRate: '20% YoY',
+    variant: 'ai-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails:
+      'Batch transcription queue with GPU support; diarization and summarization pipeline.',
+    launchDate: '2025-09-15',
+    customers: 60,
+    rating: 4 && 4.6,
+    reviews: 22,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'micro-crm-local-business'
     name: 'Micro CRM for Local Business'
@@ -150,6 +241,7 @@ export const realQ4Services2025: RealQ4Service[] = [
     description:
       'Lightweight, mobile-first CRM with contacts, tasks, deals, and SMS/email reminders. Built for solo and small teams.'
     features: [
+<<<<<<< HEAD
       'Contact management and segmentation'
       'Pipelines and kanban views'
       'Calendar with SMS/email reminders'
@@ -186,6 +278,44 @@ export const realQ4Services2025: RealQ4Service[] = [
     rating: 4.5
     reviews: 77
   }
+=======
+      'Contact management and segmentation',
+      'Pipelines and kanban views',
+      'Calendar with SMS/email reminders',
+      'Import/export CSV and simple API',
+      'Mobile-friendly PWA',
+      'Basic reporting',
+    ],
+    popular: true,
+    icon: '📇',
+    color: 'from-emerald-600 to-teal-700',
+    textColor: 'text-emerald-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/micro-crm-local-business',
+    marketPosition:
+      'Simpler than HubSpot/Zoho; fast and focused for local SMBs.',
+    targetAudience: 'Local businesses, consultants, freelancers',
+    trialDays: 14,
+    setupTime: '15 minutes',
+    category: 'Developer Tools',
+    realService: true,
+    technology: ['Next && Next.js', 'SQLite/Postgres', 'Twilio'],
+    integrations: ['Gmail', 'Outlook', 'Stripe'],
+    useCases: ['Leads', 'Follow-ups', 'Deal tracking'],
+    roi: 'Increase follow-through and close rates 10–20% via reminders.',
+    competitors: ['HubSpot Starter', 'Zoho CRM', 'Pipedrive'],
+    marketSize: '$5B SMB CRM',
+    growthRate: '12% YoY',
+    variant: 'ai-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails:
+      'PWA with offline storage, task reminders, and webhook-based integrations.',
+    launchDate: '2025-10-20',
+    customers: 210,
+    rating: 4 && 4.5,
+    reviews: 77,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'returns-automation-saas'
     name: 'E‑commerce Returns Automation'
@@ -195,6 +325,7 @@ export const realQ4Services2025: RealQ4Service[] = [
     description:
       'Plug-and-play returns workflows with label generation, RMA approvals, and status tracking for Shopify/WooCommerce.'
     features: [
+<<<<<<< HEAD
       'Customer returns portal'
       'Prepaid label generation'
       'RMA approval rules'
@@ -230,6 +361,43 @@ export const realQ4Services2025: RealQ4Service[] = [
     rating: 4.6
     reviews: 35
   }
+=======
+      'Customer returns portal',
+      'Prepaid label generation',
+      'RMA approval rules',
+      'Inventory and refund sync',
+      'Email/SMS notifications',
+      'Analytics on reasons and cost',
+    ],
+    popular: false,
+    icon: '📦',
+    color: 'from-amber-600 to-orange-700',
+    textColor: 'text-amber-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/returns-automation-saas',
+    marketPosition: 'Competes with Returnly/Loop; quick setup for SMBs.',
+    targetAudience: 'DTC brands, Shopify/WooCommerce stores',
+    trialDays: 14,
+    setupTime: '2 hours',
+    category: 'Developer Tools',
+    realService: true,
+    technology: ['Next && Next.js', 'Node && Node.js', 'Stripe', 'Shippo'],
+    integrations: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],
+    useCases: ['Returns portal', 'Exchange workflows', 'Refund automation'],
+    roi: 'Reduce support tickets ~30% and speed refunds.',
+    competitors: ['Loop Returns', 'Returnly'],
+    marketSize: '$800M returns software',
+    growthRate: '18% YoY',
+    variant: 'ai-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails:
+      'Webhook-driven order sync; label/provider adapters.',
+    launchDate: '2025-10-05',
+    customers: 95,
+    rating: 4 && 4.6,
+    reviews: 35,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'it-helpdesk-for-msps'
     name: 'IT Helpdesk for MSPs'
@@ -239,6 +407,7 @@ export const realQ4Services2025: RealQ4Service[] = [
     description:
       'Email/portal/API ticketing, SLA rules, KBs, and RMM/network integrations with client-facing reporting.'
     features: [
+<<<<<<< HEAD
       'Inbox and portal ticket intake'
       'Auto-routing, SLAs, and escalations'
       'Public/private knowledge base'
@@ -275,6 +444,44 @@ export const realQ4Services2025: RealQ4Service[] = [
     rating: 4.5
     reviews: 28
   }
+=======
+      'Inbox and portal ticket intake',
+      'Auto-routing, SLAs, and escalations',
+      'Public/private knowledge base',
+      'Client portal with reports',
+      'RMM and network tool integrations',
+      'Billing export and time tracking',
+    ],
+    popular: true,
+    icon: '🛠️',
+    color: 'from-blue-600 to-indigo-700',
+    textColor: 'text-indigo-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/it-helpdesk-for-msps',
+    marketPosition:
+      'Simpler than Zendesk/Freshdesk; MSP-first workflows and pricing.',
+    targetAudience: 'Managed service providers, internal IT teams',
+    trialDays: 14,
+    setupTime: '1 day',
+    category: 'Quality & Monitoring',
+    realService: true,
+    technology: ['Next && Next.js', 'Node && Node.js', 'PostgreSQL'],
+    integrations: ['Zendesk', 'Freshdesk', 'Datadog', 'Grafana'],
+    useCases: ['IT support', 'SLA management', 'Client reporting'],
+    roi: 'Faster resolution, less toil; better client satisfaction.',
+    competitors: ['Zendesk', 'Freshdesk', 'HaloPSA'],
+    marketSize: '$10B helpdesk software',
+    growthRate: '10% YoY',
+    variant: 'ai-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails:
+      'Email ingestion, rules engine, and portal with RBAC.',
+    launchDate: '2025-09-28',
+    customers: 70,
+    rating: 4 && 4.5,
+    reviews: 28,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 export const real2025Q4Additions = [
   {
@@ -286,6 +493,7 @@ export const real2025Q4Additions = [
     description:
       'Production-ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high-stakes workflows.'
     features: [
+<<<<<<< HEAD
       'Document sync and chunking pipelines'
       'Metadata and policy guardrails'
       'Evals and drift tracking'
@@ -298,6 +506,20 @@ export const real2025Q4Additions = [
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-300'
     link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`
+=======
+      'Document sync and chunking pipelines',
+      'Metadata and policy guardrails',
+      'Evals and drift tracking',
+      'Human-in-the-loop approvals',
+      'Observability and cost caps',
+      'SDKs for Node/Python',
+    ],
+    popular: true,
+    icon: '🧠',
+    color: 'from-cyan-600 to-blue-700',
+    textColor: 'text-cyan-300',
+    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Safer alternative to DIY RAG; comparable to Guardrails/Evals + vector DB stacks.'
     targetAudience: 'Platform, data, and compliance teams'
@@ -316,12 +538,21 @@ export const real2025Q4Additions = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
       'Pipelines, policies, eval harness, cost and latency budgets.'
     launchDate: '2025-03-01'
     customers: 18
     rating: 4.8
     reviews: 11
   }
+=======
+      'Pipelines, policies, eval harness, cost and latency budgets.',
+    launchDate: '2025-03-01',
+    customers: 18,
+    rating: 4 && 4.8,
+    reviews: 11,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'edge-personalization-engine'
     name: 'Edge Personalization Engine'
@@ -331,6 +562,7 @@ export const real2025Q4Additions = [
     description:
       'Low-latency personalization rules and ML scoring at the edge with audience definitions, A/B tests, and analytics.'
     features: [
+<<<<<<< HEAD
       'Audience builder and traits'
       'Edge functions and KV cache'
       'A/B and holdout tests'
@@ -366,6 +598,43 @@ export const real2025Q4Additions = [
     rating: 4.6
     reviews: 23
   }
+=======
+      'Audience builder and traits',
+      'Edge functions and KV cache',
+      'A/B and holdout tests',
+      'Privacy-first scoring',
+      'Dashboards and exports',
+    ],
+    popular: true,
+    icon: '⚡',
+    color: 'from-emerald-600 to-teal-700',
+    textColor: 'text-emerald-300',
+    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,
+    marketPosition:
+      'Simpler alternative to enterprise CDPs for SMBs; edge-native.',
+    targetAudience: 'Growth and eCommerce teams',
+    trialDays: 7,
+    setupTime: 'Same day',
+    category: 'Micro SaaS',
+    realService: true,
+    technology: ['Edge runtime, KV/Redis, Next && Next.js'],
+    integrations: ['Shopify, Stripe, Segment'],
+    useCases: ['Homepage variants, Pricing tests, Onsite promos'],
+    roi: 'Lift conversion by 5–15% via real-time variants.',
+    competitors: ['Uniform, Optimizely, Cloudflare Workers + DIY'],
+    marketSize: '$5B experimentation',
+    growthRate: '12% YoY',
+    variant: 'edge-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails:
+      'Rules engine, audience traits, edge execution and analytics.',
+    launchDate: '2025-03-10',
+    customers: 42,
+    rating: 4 && 4.6,
+    reviews: 23,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'devx-preview-environments'
     name: 'DevX Preview Environments'
@@ -375,6 +644,7 @@ export const real2025Q4Additions = [
     description:
       'Spin up ephemeral environments per PR with seed data, smoke tests, screenshots, and teardown policies.'
     features: [
+<<<<<<< HEAD
       'One-PR one-env automation'
       'Seed data and fixtures'
       'Smoke tests and screenshots'
@@ -408,6 +678,41 @@ export const real2025Q4Additions = [
     rating: 4.7
     reviews: 16
   }
+=======
+      'One-PR one-env automation',
+      'Seed data and fixtures',
+      'Smoke tests and screenshots',
+      'Secrets and policies as code',
+      'Cost and TTL controls',
+    ],
+    icon: '🚀',
+    color: 'from-blue-600 to-indigo-700',
+    textColor: 'text-blue-300',
+    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,
+    marketPosition:
+      'Faster than DIY scripts; comparable to Uffizzi/Gitpod previews.',
+    targetAudience: 'Platform and app teams',
+    trialDays: 14,
+    setupTime: '1–3 days',
+    category: 'Developer Tools',
+    realService: true,
+    technology: ['Docker, K8s, IaC'],
+    integrations: ['GitHub, GitLab, Slack'],
+    useCases: ['Product review, QA signoff, Demos'],
+    roi: 'Cut review cycle time by 30–50%.',
+    competitors: ['Uffizzi, Okteto, GitHub Codespaces'],
+    marketSize: '$4B DevEx',
+    growthRate: '18% YoY',
+    variant: 'dev-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Templates, runners, seeders, TTL and cleanup jobs.',
+    launchDate: '2025-03-05',
+    customers: 27,
+    rating: 4 && 4.7,
+    reviews: 16,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'real-time-log-anomaly-guard'
     name: 'Real-time Log Anomaly Guard'
@@ -417,6 +722,7 @@ export const real2025Q4Additions = [
     description:
       'Stream logs to detect anomalies, regressions, and hotspots with LLM summaries and remediation hints.'
     features: [
+<<<<<<< HEAD
       'Streaming ingestion and rules'
       'Anomaly detection and drift'
       'LLM summaries and hints'
@@ -450,6 +756,41 @@ export const real2025Q4Additions = [
     rating: 4.5
     reviews: 19
   }
+=======
+      'Streaming ingestion and rules',
+      'Anomaly detection and drift',
+      'LLM summaries and hints',
+      'Slack/Email alerts and tickets',
+      'Dashboards and exports',
+    ],
+    icon: '📈',
+    color: 'from-rose-600 to-red-700',
+    textColor: 'text-rose-300',
+    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,
+    marketPosition:
+      'Adds AI summaries to classic log alerts; vendor-agnostic ingestion.',
+    targetAudience: 'SREs and platform teams',
+    trialDays: 7,
+    setupTime: 'Same day',
+    category: 'Observability',
+    realService: true,
+    technology: ['Loki/Elastic, OpenTelemetry, LLMs'],
+    integrations: ['Grafana, Datadog, PagerDuty'],
+    useCases: ['Incident detection, Regression spotting, Postmortems'],
+    roi: 'Reduce MTTR by 25–40%.',
+    competitors: ['Datadog Logs, Elastic ML, Axiom'],
+    marketSize: '$10B log analytics',
+    growthRate: '20% YoY',
+    variant: 'monitoring-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Ingestion adapters, anomaly models, runbooks.',
+    launchDate: '2025-03-08',
+    customers: 33,
+    rating: 4 && 4.5,
+    reviews: 19,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'governed-feature-flags'
     name: 'Governed Feature Flags'
@@ -459,6 +800,7 @@ export const real2025Q4Additions = [
     description:
       'Lightweight feature flags with policy checks, approvals, change logs, and automatic rollbacks based on SLOs.'
     features: [
+<<<<<<< HEAD
       'Policies and approvals'
       'Change logs and RBAC'
       'SLO-based rollbacks'
@@ -491,6 +833,40 @@ export const real2025Q4Additions = [
     rating: 4.6
     reviews: 12
   }
+=======
+      'Policies and approvals',
+      'Change logs and RBAC',
+      'SLO-based rollbacks',
+      'SDKs and edge eval',
+      'Experiments and cohorts',
+    ],
+    icon: '🏳️',
+    color: 'from-amber-600 to-orange-700',
+    textColor: 'text-amber-300',
+    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('governed-feature-flags')}`,
+    marketPosition: 'Policy-focused alternative to generic toggle tools.',
+    targetAudience: 'Product and platform teams',
+    trialDays: 14,
+    setupTime: '1 day',
+    category: 'Developer Tools',
+    realService: true,
+    technology: ['Edge, SDKs, Audit logs'],
+    integrations: ['GitHub, Jira, Slack'],
+    useCases: ['Safe launches, Change control, Experiments'],
+    roi: 'Reduce incident risk and speed delivery.',
+    competitors: ['LaunchDarkly, Flagsmith, Unleash'],
+    marketSize: '$2B feature management',
+    growthRate: '16% YoY',
+    variant: 'dev-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Audit trails, policy engine, SLO hooks.',
+    launchDate: '2025-03-02',
+    customers: 21,
+    rating: 4 && 4.6,
+    reviews: 12,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'email-sequence-copilot'
     name: 'Email Sequence Copilot'
@@ -500,6 +876,7 @@ export const real2025Q4Additions = [
     description:
       'Compose, schedule, and monitor outbound sequences with domain warm-up, safety guardrails, and reply intent scoring.'
     features: [
+<<<<<<< HEAD
       'Sequence composer and AI draft'
       'Warm-up and safety checks'
       'Reply intent and routing'
@@ -532,6 +909,40 @@ export const real2025Q4Additions = [
     rating: 4.5
     reviews: 20
   }
+=======
+      'Sequence composer and AI draft',
+      'Warm-up and safety checks',
+      'Reply intent and routing',
+      'Blacklist monitoring',
+      'CRM sync',
+    ],
+    icon: '✉️',
+    color: 'from-fuchsia-600 to-pink-700',
+    textColor: 'text-fuchsia-300',
+    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,
+    marketPosition: 'Safer than generic sequencers; deliverability-first.',
+    targetAudience: 'Sales and growth teams',
+    trialDays: 7,
+    setupTime: 'Same day',
+    category: 'Growth & Marketing',
+    realService: true,
+    technology: ['Postmaster, LLMs, ESP APIs'],
+    integrations: ['HubSpot, Salesforce, SendGrid/Mailgun'],
+    useCases: ['Outbound, Nurture, Follow-ups'],
+    roi: 'Increase positive replies by 10–20%.',
+    competitors: ['Apollo, Instantly, Yesware'],
+    marketSize: '$6B sales engagement',
+    growthRate: '9% YoY',
+    variant: 'growth-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Deliverability checks, AI drafts, safety policies.',
+    launchDate: '2025-03-12',
+    customers: 38,
+    rating: 4 && 4.5,
+    reviews: 20,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'data-contracts-guardrails'
     name: 'Data Contracts Guardrails'
@@ -541,6 +952,7 @@ export const real2025Q4Additions = [
     description:
       'Define and enforce data contracts with compatibility checks, lineage, owners, and alerting integrated with CI/CD.'
     features: [
+<<<<<<< HEAD
       'Schema registry and versioning'
       'Back/forward compatibility checks'
       'Lineage and ownership'
@@ -573,6 +985,40 @@ export const real2025Q4Additions = [
     rating: 4.6
     reviews: 9
   }
+=======
+      'Schema registry and versioning',
+      'Back/forward compatibility checks',
+      'Lineage and ownership',
+      'Alerts and SLOs',
+      'CI/CD integrations',
+    ],
+    icon: '🧮',
+    color: 'from-sky-600 to-indigo-700',
+    textColor: 'text-sky-300',
+    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`,
+    marketPosition: 'Practical contracts vs. building from scratch.',
+    targetAudience: 'Data engineering teams',
+    trialDays: 14,
+    setupTime: '3–5 days',
+    category: 'Data & Analytics',
+    realService: true,
+    technology: ['dbt, Kafka, OpenLineage'],
+    integrations: ['Snowflake, BigQuery, Databricks'],
+    useCases: ['Stability, SLA enforcement, Incident reduction'],
+    roi: 'Reduce data incidents by 30–50%.',
+    competitors: ['Monte Carlo, open-source stacks'],
+    marketSize: '$5B data quality',
+    growthRate: '18% YoY',
+    variant: 'quantum-matrix',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Registries, CI checks, alerts, lineage.',
+    launchDate: '2025-03-03',
+    customers: 12,
+    rating: 4 && 4.6,
+    reviews: 9,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'managed-sso-fast-track'
     name: 'Managed SSO Fast Track'
@@ -582,6 +1028,7 @@ export const real2025Q4Additions = [
     description:
       'Done-with-you SSO rollout for SaaS teams, including IdP app, mappings, SCIM, test plans, and enterprise-ready documentation.'
     features: [
+<<<<<<< HEAD
       'Okta/Entra app configs'
       'SAML/OIDC + SCIM'
       'Security test plans'
@@ -613,6 +1060,39 @@ export const real2025Q4Additions = [
     rating: 4.7
     reviews: 7
   }
+=======
+      'Okta/Entra app configs',
+      'SAML/OIDC + SCIM',
+      'Security test plans',
+      'Customer enablement kit',
+    ],
+    icon: '🔐',
+    color: 'from-slate-600 to-gray-700',
+    textColor: 'text-slate-300',
+    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`,
+    marketPosition: 'Accelerates enterprise deals vs. open-ended projects.',
+    targetAudience: 'B2B SaaS product teams',
+    trialDays: 0,
+    setupTime: '1 week',
+    category: 'Enterprise IT',
+    realService: true,
+    technology: ['Okta, Entra, Auth0, SCIM'],
+    integrations: ['WorkOS, Frontegg'],
+    useCases: ['Enterprise SSO, Security posture'],
+    roi: 'Shorten security review cycles by 2–4 weeks.',
+    competitors: ['WorkOS PS, consultancies'],
+    marketSize: '$6B identity services',
+    growthRate: '13% CAGR',
+    variant: 'enterprise-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'IdP configs, SP metadata, SCIM schema and guides.',
+    launchDate: '2025-03-06',
+    customers: 9,
+    rating: 4 && 4.7,
+    reviews: 7,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'ai-sales-pipeline-insights'
     name: 'AI Sales Pipeline Insights'
@@ -622,6 +1102,7 @@ export const real2025Q4Additions = [
     description:
       'Connect CRM to compute forecast hygiene, risk scores, and next-best actions with weekly reports and alerts.'
     features: [
+<<<<<<< HEAD
       'Risk scoring and hygiene checks'
       'Stage SLAs and alerts'
       'Next-best action copilot'
@@ -653,6 +1134,39 @@ export const real2025Q4Additions = [
     rating: 4.5
     reviews: 10
   }
+=======
+      'Risk scoring and hygiene checks',
+      'Stage SLAs and alerts',
+      'Next-best action copilot',
+      'Reporting and dashboards',
+    ],
+    icon: '📊',
+    color: 'from-amber-600 to-orange-700',
+    textColor: 'text-amber-300',
+    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`,
+    marketPosition: 'Lightweight RevOps insights without heavy BI projects.',
+    targetAudience: 'Sales and RevOps leaders',
+    trialDays: 7,
+    setupTime: '2–3 days',
+    category: 'Business Automation',
+    realService: true,
+    technology: ['CRM APIs, LLMs, Dashboards'],
+    integrations: ['Salesforce, HubSpot'],
+    useCases: ['Forecast accuracy, Pipeline velocity'],
+    roi: 'Increase forecast accuracy and win rates.',
+    competitors: ['People && People.ai, Clari (lightweight alt)'],
+    marketSize: '$12B RevOps',
+    growthRate: '10% CAGR',
+    variant: 'holographic-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Data sync, scoring, weekly reviews.',
+    launchDate: '2025-03-04',
+    customers: 14,
+    rating: 4 && 4.5,
+    reviews: 10,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'secure-webhook-relay'
     name: 'Secure Webhook Relay'
@@ -662,6 +1176,7 @@ export const real2025Q4Additions = [
     description:
       'Reliably receive, verify, replay, and audit webhooks with DLQs, retries, and fan-out to multiple services.'
     features: [
+<<<<<<< HEAD
       'Signature verification and secrets'
       'Replay and DLQs'
       'Retries and backoff'
@@ -694,6 +1209,40 @@ export const real2025Q4Additions = [
     rating: 4.6
     reviews: 18
   }
+=======
+      'Signature verification and secrets',
+      'Replay and DLQs',
+      'Retries and backoff',
+      'Fan-out and transformations',
+      'Audit logs and RBAC',
+    ],
+    icon: '🔁',
+    color: 'from-cyan-600 to-blue-700',
+    textColor: 'text-cyan-300',
+    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`,
+    marketPosition: 'Production-ready relay alternative to building in-house.',
+    targetAudience: 'Developers and platform teams',
+    trialDays: 14,
+    setupTime: 'Same day',
+    category: 'Developer Tools',
+    realService: true,
+    technology: ['Queues, HMAC, Workers'],
+    integrations: ['Stripe, Shopify, GitHub'],
+    useCases: ['Reliable webhooks, Auditing, Fan-out'],
+    roi: 'Reduce failures and save engineering time.',
+    competitors: ['Svix, Hookdeck'],
+    marketSize: '$1B+ integration tooling',
+    growthRate: '14% YoY',
+    variant: 'dev-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Relay service, verification, replay UI.',
+    launchDate: '2025-03-09',
+    customers: 31,
+    rating: 4 && 4.6,
+    reviews: 18,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'managed-postgres-ha-lite'
     name: 'Managed Postgres HA Lite'
@@ -703,6 +1252,7 @@ export const real2025Q4Additions = [
     description:
       'Hands-off Postgres ops: backups, PITR, failover drills, index maintenance, and baseline dashboards.'
     features: [
+<<<<<<< HEAD
       'Automated backups and PITR'
       'Failover drills and runbooks'
       'Index and bloat maintenance'
@@ -734,12 +1284,50 @@ export const real2025Q4Additions = [
     rating: 4.6
     reviews: 9
   }
+=======
+      'Automated backups and PITR',
+      'Failover drills and runbooks',
+      'Index and bloat maintenance',
+      'Performance dashboards',
+    ],
+    icon: '🗄️',
+    color: 'from-emerald-600 to-teal-700',
+    textColor: 'text-emerald-300',
+    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`,
+    marketPosition: 'Practical alternative to DBAs for small teams.',
+    targetAudience: 'SMBs and startups',
+    trialDays: 7,
+    setupTime: '3–5 days',
+    category: 'Enterprise IT',
+    realService: true,
+    technology: ['Postgres, Patroni/Cloud-native HA'],
+    integrations: ['Grafana, Prometheus'],
+    useCases: ['Reliability, Backups, Performance'],
+    roi: 'Reduce incidents and toil for DB ops.',
+    competitors: ['Aiven, Crunchy Bridge (managed services)'],
+    marketSize: '$3B DB ops services',
+    growthRate: '11% YoY',
+    variant: 'enterprise-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Backup policies, failover drills, dashboards.',
+    launchDate: '2025-03-11',
+    customers: 17,
+    rating: 4 && 4.6,
+    reviews: 9,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];      'Automated backups and PITRFailover drills and runbooksIndex and bloat maintenancePerformance dashboards'
     ];
     icon: '🗄️';
     color: 'from-emerald-600 to-teal-700';
+<<<<<<< HEAD
     textColor: 'text-emerald-300'
     link: `https://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;
+=======
+    textColor: 'text-emerald-300',
+    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition: 'Practical alternative to DBAs for small teams.';
     targetAudience: 'SMBs and startups';
     trialDays: 7;
@@ -759,7 +1347,11 @@ export const real2025Q4Additions = [
     implementationDetails: 'Backup policies, failover drills, dashboards.';
     launchDate: '2025-03-11';
     customers: 17;
+<<<<<<< HEAD
     rating: 4.6
+=======
+    rating: 4 && 4.6,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 9
   }
 ];

@@ -1,32 +1,43 @@
 import { defineConfig } from 'cypress';
 export default defineConfig({
   e2e: {
+<<<<<<< HEAD
     baseUrl: 'http://localhost:3000', // Standard Next.js port
 
     supportFile: 'cypress/support/e2e.ts'
+=======
+    baseUrl: 'http://localhost:3000', // Standard Next && Next.js port
+    supportFile: 'cypress/support/e2e && e2e.ts',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
-        if (browser.family === 'chromium') {
-          launchOptions.args.push('--disable-ipv6');
+        if (browser && browser.family === 'chromium') {
+          launchOptions && launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
       });export default defineConfig({
   e2e: {
+<<<<<<< HEAD
     baseUrl: 'http://localhost:3000', // Standard Next.js port
 
     supportFile: 'cypress/support/e2e.ts';
+=======
+    baseUrl: 'http://localhost:3000', // Standard Next && Next.js port
+    supportFile: 'cypress/support/e2e && e2e.ts';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
 
       on('before:browser:launch', (browser = {}, launchOptions) => {
-        if (browser.family === 'chromium') {
-          launchOptions.args.push('--disable-ipv6');        }
+        if (browser && browser.family === 'chromium') {
+          launchOptions && launchOptions.args.push('--disable-ipv6');        }
         return launchOptions
       })
     }
     env: {
+<<<<<<< HEAD
       CYPRESS_TEST_USER_EMAIL: process.env.CYPRESS_TEST_USER_EMAIL |'localtest@example.com';
       CYPRESS_TEST_USER_PASSWORD: process.env.CYPRESS_TEST_USER_PASSWORD |'localpassword123';
       CYPRESS_TEST_USER_DISPLAY_NAME: process.env.CYPRESS_TEST_USER_DISPLAY_NAME |'Local Test User';
@@ -34,6 +45,15 @@ export default defineConfig({
       EXISTING_USER_PASSWORD: process.env.EXISTING_USER_PASSWORD |'password123';
       TEST_USER_NAME: process.env.TEST_USER_NAME |'Test User'
       STRIPE_TEST_CARD: process.env.STRIPE_TEST_CARD |'4242424242424242'}
+=======
+      CYPRESS_TEST_USER_EMAIL: process && process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example && example.com';
+      CYPRESS_TEST_USER_PASSWORD: process && process.env.CYPRESS_TEST_USER_PASSWORD || 'localpassword123';
+      CYPRESS_TEST_USER_DISPLAY_NAME: process && process.env.CYPRESS_TEST_USER_DISPLAY_NAME || 'Local Test User';
+      EXISTING_USER_EMAIL: process && process.env.EXISTING_USER_EMAIL || 'existing@test && test.com';
+      EXISTING_USER_PASSWORD: process && process.env.EXISTING_USER_PASSWORD || 'password123';
+      TEST_USER_NAME: process && process.env.TEST_USER_NAME || 'Test User',
+      STRIPE_TEST_CARD: process && process.env.STRIPE_TEST_CARD || '4242424242424242'};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     defaultCommandTimeout: 10000
   }
   reporter: 'junit'
@@ -44,6 +64,7 @@ export default defineConfig({
     }
     env: {
       CYPRESS_TEST_USER_EMAIL:
+<<<<<<< HEAD
         process.env.CYPRESS_TEST_USER_EMAIL |'localtest@example.com'
       CYPRESS_TEST_USER_PASSWORD:
         process.env.CYPRESS_TEST_USER_PASSWORD |'localpassword123'
@@ -59,6 +80,23 @@ export default defineConfig({
     defaultCommandTimeout: 10000
   }
   reporter: 'junit'
+=======
+        process && process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example && example.com',
+      CYPRESS_TEST_USER_PASSWORD:
+        process && process.env.CYPRESS_TEST_USER_PASSWORD || 'localpassword123',
+      CYPRESS_TEST_USER_DISPLAY_NAME:
+        process && process.env.CYPRESS_TEST_USER_DISPLAY_NAME || 'Local Test User',
+      EXISTING_USER_EMAIL:
+        process && process.env.EXISTING_USER_EMAIL || 'existing@test && test.com',
+      EXISTING_USER_PASSWORD:
+        process && process.env.EXISTING_USER_PASSWORD || 'password123',
+      TEST_USER_NAME: process && process.env.TEST_USER_NAME || 'Test User',
+      STRIPE_TEST_CARD: process && process.env.STRIPE_TEST_CARD || '4242424242424242',
+    },
+    defaultCommandTimeout: 10000,
+  },
+  reporter: 'junit',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   reporterOptions: {
     mochaFile: 'cypress/results/junit-[hash].xml'
     toConsole: true

@@ -21,10 +21,15 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
           .eq("project_id", projectId);
         // If milestone ID is provided, filter by that too
         if (milestoneId) {
-          query = query.eq("milestone_id", milestoneId)
+          query = query && query.eq("milestone_id", milestoneId)
         }
         // Order by status priority: open, under_review, resolved, closed
+<<<<<<< HEAD
         query = query.order("status", { ascending: true });
+=======
+        query = query && query.order("status", { ascending: true });
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         const { data, error } = await query;
         if (error) throw error;
         if (data && data.length > 0) {
@@ -38,7 +43,7 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
           setDisputeId(null)
         }
       } catch (err) {
-        console.error("Error checking dispute status:", err);
+        console && console.error("Error checking dispute status:", err);
         setIsUnderDispute(false);
         setDisputeStatus(null);
         setDisputeId(null)

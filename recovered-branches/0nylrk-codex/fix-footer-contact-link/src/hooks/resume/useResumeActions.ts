@@ -20,16 +20,28 @@ export function useResumeActions() {
       const { data, error } = await supabase
         .from('talent_resumes')
         .insert({
+<<<<<<< HEAD
           user_id: user.id;
           title: basicInfo.title;
           headline: basicInfo.headline
           summary: basicInfo.summary
+=======
+          user_id: user && user.id;
+          title: basicInfo && basicInfo.title;
+          headline: basicInfo && basicInfo.headline,
+          summary: basicInfo && basicInfo.summary
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         })
         .select('id')
         .single();
       if (error) throw error;
       showSuccessToast("Resume created", "Your resume has been created successfully");
+<<<<<<< HEAD
       return data.id
+=======
+      
+      return data && data.id
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (e: any) {
       return handleResumeError(e, 'Could not create resume') ? null : null
     } finally {
@@ -47,12 +59,22 @@ export function useResumeActions() {
       const { error } = await supabase
         .from('talent_resumes')
         .update({
+<<<<<<< HEAD
           title: basicInfo.title;
           headline: basicInfo.headline
           summary: basicInfo.summary
         })
         .eq('id', resumeId)
         .eq('user_id', user.id);
+=======
+          title: basicInfo && basicInfo.title;
+          headline: basicInfo && basicInfo.headline,
+          summary: basicInfo && basicInfo.summary
+        })
+        .eq('id', resumeId)
+        .eq('user_id', user && user.id);
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (error) throw error;
       return showSuccessToast("Resume updated", "Your resume information has been updated")
     } catch (e: any) {
@@ -73,14 +95,24 @@ export function useResumeActions() {
       const { error: resetError } = await supabase
         .from('talent_resumes')
         .update({ is_active: false })
+<<<<<<< HEAD
         .eq('user_id', user.id);
+=======
+        .eq('user_id', user && user.id);
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (resetError) throw resetError;
       // Then, set the selected resume as active
       const { error } = await supabase
         .from('talent_resumes')
         .update({ is_active: true })
         .eq('id', resumeId)
+<<<<<<< HEAD
         .eq('user_id', user.id);
+=======
+        .eq('user_id', user && user.id);
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (error) throw error;
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
     } catch (e: any) {

@@ -16,10 +16,18 @@ export const quoteRequestService = {
       .order('created_at', { ascending: false });
     if (error) throw error;
     // Format the data to include talent_name
+<<<<<<< HEAD
     return data.map((item: any) => ({
       ...item
       talent_name: item.talent?.display_name |'Unknown Talent'})) as QuoteRequest[]
   }
+=======
+    return data && data.map((item: any) => ({
+      ...item,
+      talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
+  };
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Get quote requests for a specific talent
   getByTalentId: async (talentId: string) => {
     const { data, error } = await supabase
@@ -45,14 +53,20 @@ export const quoteRequestService = {
     if (error) throw error;
     return {
       ...data;
+<<<<<<< HEAD
       talent_name: data.talent?.display_name |'Unknown Talent'} as QuoteRequest
   }
+=======
+      talent_name: data && data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
+  };
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
     const updates: any = { status }
     // If marking as responded, set replied_at
     if (status === 'responded') {
-      updates.replied_at = new Date().toISOString()
+      updates && updates.replied_at = new Date().toISOString()
     }
     // If marking as in_review and viewed_at is null, set viewed_at
     if (status === 'in_review') {
@@ -61,8 +75,14 @@ export const quoteRequestService = {
         .select('viewed_at')
         .eq('id', id)
         .single();
+<<<<<<< HEAD
       if (!data.viewed_at) {
         updates.viewed_at = new Date().toISOString()
+=======
+      
+      if (!data && data.viewed_at) {
+        updates && updates.viewed_at = new Date().toISOString()
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
     const { data, error } = await supabase

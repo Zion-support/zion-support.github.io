@@ -44,27 +44,49 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   // Function to create/update jobs that will be implemented by parent component
   const submitJob = async (values: JobSchemaType) => {
     if (!user) {
+<<<<<<< HEAD
       toast.error("You must be logged in to post a job");
       navigate("/login")
+=======
+      toast && toast.error("You must be logged in to post a job");
+      navigate("/login"),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return
     }
     setIsLoading(true);
     try {
+<<<<<<< HEAD
       const publishedDate = startDate ? startDate.toString() : '';
       const expiryDate = endDate ? endDate.toString() : '';
+=======
+      const publishedDate = startDate ? startDate && startDate.toString() : '';
+      const expiryDate = endDate ? endDate && endDate.toString() : '';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const jobData = {
         ...values;
         published_date: publishedDate;
         expiry_date: expiryDate;
+<<<<<<< HEAD
         is_remote: isRemote
         user_id: user.id}
+=======
+        is_remote: isRemote,
+        user_id: user && user.id};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (onSuccess) {
         onSuccess()
       }
       return jobData
     } catch (error: any) {
+<<<<<<< HEAD
       console.error("Error in job form submission:", error);
       toast.error(error.message |"Failed to process form");
+=======
+      console && console.error("Error in job form submission:", error);
+      toast && toast.error(error && error.message || "Failed to process form");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       throw error
     } finally {
       setIsLoading(false)

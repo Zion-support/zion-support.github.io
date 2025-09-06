@@ -6,8 +6,13 @@ import type { DefaultSeoProps } from 'next-seo';
   openGraph: {
     type: 'website';
     locale: 'en_US';
+<<<<<<< HEAD
     url: 'https://ziontechgroup.netlify.app'
     siteName: 'Zion Tech Solutions'}
+=======
+    url: 'https://ziontechgroup && ziontechgroup.netlify.app',
+    siteName: 'Zion Tech Solutions'};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   twitter: {
     handle: '@ziontech';
     site: '@ziontech'

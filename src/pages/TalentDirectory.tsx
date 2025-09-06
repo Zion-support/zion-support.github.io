@@ -35,6 +35,7 @@ export default function TalentDirectory() {
             </ErrorBoundary>
           </div>
 
+<<<<<<< HEAD
           {/* Mobile filter sidebar */}
           {isMobileFilterOpen && (
             <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">
@@ -81,3 +82,10 @@ export default function TalentDirectory() {
 }
   )
 }
+=======
+  const pageKey = `talent-directory-${routeKey}-${router && router.asPath}`;
+  );
+}
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

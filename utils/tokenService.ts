@@ -9,7 +9,12 @@ export function issueTokens(userId: string, amount: number, reason: string) {
 }
 export function revokeTokens(userId: string, amount: number, reason: string) {
   const currentBalance = getUserBalance(userId);
+<<<<<<< HEAD
   const actualAmount = Math.min(amount, currentBalance);
+=======
+  const actualAmount = Math && Math.min(amount, currentBalance);
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return addTransaction({
     userId
     type: 'spend'

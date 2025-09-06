@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,59 +15,109 @@
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 #!/usr/bin/env node
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+<<<<<<< HEAD
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+=======
+
+const __filename = fileURLToPath(import && import.meta.url);
+const __dirname = path && path.dirname(__filename);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 class AdvancedSourceFixer {
   constructor() {
-    this.fixes = [];
-    this.errors = [];
-    this.reportFile = path.join(__dirname, "advanced-source-fix-report.json");
+    this && this.fixes = [];
+    this && this.errors = [];
+    this && this.reportFile = path && path.join(__dirname, "advanced-source-fix-report && report.json");
   }
   log(message, level = "INFO") {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`);
+    console && console.log(`[${timestamp}] [${level}] ${message}`);
   }
   async fixAllSourceFiles() {
-    this.log("🔧 Starting advanced source file fixing...");
-    await this.fixDirectory(path.join(__dirname, "src"));
-    await this.fixDirectory(path.join(__dirname, "pages"));
-    this.log(`✅ Fixed ${this.fixes.length} files`);
-    if (this.errors.length > 0) {
-      this.log(`❌ ${this.errors.length} errors encountered`);
+    this && this.log("🔧 Starting advanced source file fixing...");
+    await this && this.fixDirectory(path && path.join(__dirname, "src"));
+    await this && this.fixDirectory(path && path.join(__dirname, "pages"));
+    this && this.log(`✅ Fixed ${this && this.fixes.length} files`);
+    if (this && this.errors.length > 0) {
+      this && this.log(`❌ ${this && this.errors.length} errors encountered`);
     }
-    await this.generateReport();
+    await this && this.generateReport();
   }
   async fixDirectory(dir) {
+<<<<<<< HEAD
     if (!fs.existsSync(dir)) return;
     const items = fs.readdirSync(dir);
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
+=======
+    if (!fs && fs.existsSync(dir)) return;
+
+    const items = fs && fs.readdirSync(dir);
+    for (const item of items) {
+      const fullPath = path && path.join(dir, item);
+      const stat = fs && fs.statSync(fullPath);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (
-        stat.isDirectory() &&
-        !item.startsWith(".") &&
+        stat && stat.isDirectory() &&
+        !item && item.startsWith(".") &&
         item !== "node_modules"
       ) {
-        await this.fixDirectory(fullPath);
+        await this && this.fixDirectory(fullPath);
       } else if (
+<<<<<<< HEAD
         item.endsWith(".ts") |
         item.endsWith(".tsx") |
         item.endsWith(".js") |
         item.endsWith(".jsx")
+=======
+        item && item.endsWith(".ts") ||
+        item && item.endsWith(".tsx") ||
+        item && item.endsWith(".js") ||
+        item && item.endsWith(".jsx")
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ) {
-        await this.fixFile(fullPath);
+        await this && this.fixFile(fullPath);
       }
     }
   }
   async fixFile(filePath) {
     try {
-      const content = fs.readFileSync(filePath, "utf8");
+      const content = fs && fs.readFileSync(filePath, "utf8");
       let fixedContent = content;
       let wasFixed = false;
+<<<<<<< HEAD
       if (this.hasParsingErrors(content)) {
         fixedContent = this.fixParsingErrors(content, filePath);
         wasFixed = true;
@@ -77,24 +128,54 @@ class AdvancedSourceFixer {
       }
       if (this.hasSyntaxIssues(content)) {
         fixedContent = this.fixSyntaxIssues(fixedContent, filePath);
+=======
+
+      if (this && this.hasParsingErrors(content)) {
+        fixedContent = this && this.fixParsingErrors(content, filePath);
+        wasFixed = true;
+      }
+
+      if (this && this.hasImportExportIssues(content)) {
+        fixedContent = this && this.fixImportExportIssues(fixedContent, filePath);
+        wasFixed = true;
+      }
+
+      if (this && this.hasSyntaxIssues(content)) {
+        fixedContent = this && this.fixSyntaxIssues(fixedContent, filePath);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         wasFixed = true;
       }
       if (wasFixed) {
+<<<<<<< HEAD
         fs.writeFileSync(filePath, fixedContent);
         this.fixes.push({
           file: filePath
           timestamp: new Date().toISOString()
           fixes: this.getAppliedFixes(content, fixedContent)
+=======
+        fs && fs.writeFileSync(filePath, fixedContent);
+        this && this.fixes.push({
+          file: filePath,
+          timestamp: new Date().toISOString(),
+          fixes: this && this.getAppliedFixes(content, fixedContent),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         });
-        this.log(`Fixed: ${filePath}`);
+        this && this.log(`Fixed: ${filePath}`);
       }
     } catch (error) {
+<<<<<<< HEAD
       this.errors.push({
         file: filePath
         error: error.message
         timestamp: new Date().toISOString()
+=======
+      this && this.errors.push({
+        file: filePath,
+        error: error && error.message,
+        timestamp: new Date().toISOString(),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
-      this.log(`Error fixing ${filePath}: ${error.message}`, "ERROR");
+      this && this.log(`Error fixing ${filePath}: ${error && error.message}`, "ERROR");
     }
   }
   hasParsingErrors(content) {
@@ -112,13 +193,13 @@ class AdvancedSourceFixer {
       /'\)' expected/
       /'\}' expected/
     ];
-    return errorPatterns.some((pattern) => pattern.test(content));
+    return errorPatterns && errorPatterns.some((pattern) => pattern && pattern.test(content));
   }
   hasImportExportIssues(content) {
     return (
-      content.includes("from") &&
-      !content.includes("import") &&
-      !content.includes("export")
+      content && content.includes("from") &&
+      !content && content.includes("import") &&
+      !content && content.includes("export")
     );
   }
   hasSyntaxIssues(content) {
@@ -129,11 +210,12 @@ class AdvancedSourceFixer {
       /const.*const.*const/
       /let.*let.*let/
     ];
-    return syntaxIssues.some((pattern) => pattern.test(content));
+    return syntaxIssues && syntaxIssues.some((pattern) => pattern && pattern.test(content));
   }
   fixParsingErrors(content, filePath) {
     let fixed = content;
     // Fix unterminated strings
+<<<<<<< HEAD
     fixed = fixed.replace(/"[^"]*$/gm, '"');
     fixed = fixed.replace(/'[^']*$/gm, "'");
     // Fix duplicate keywords
@@ -147,21 +229,51 @@ class AdvancedSourceFixer {
     // Fix JSX tags
     fixed = fixed.replace(/<([^>]*)\s*>/g, "<$1>");
     fixed = fixed.replace(/<\/([^>]*)\s*>/g, "</$1>");
+=======
+    fixed = fixed && fixed.replace(/"[^"]*$/gm, '"');
+    fixed = fixed && fixed.replace(/'[^']*$/gm, "'");
+
+    // Fix duplicate keywords
+    fixed = fixed && fixed.replace(/import\s+from\s+from/g, "import React from");
+    fixed = fixed && fixed.replace(/export\s+from\s+from/g, "export default");
+    fixed = fixed && fixed.replace(/function\s+function/g, "function");
+    fixed = fixed && fixed.replace(/const\s+const/g, "const");
+    fixed = fixed && fixed.replace(/let\s+let/g, "let");
+
+    // Add missing semicolons
+    fixed = fixed && fixed.replace(/([^}])\n/g, "$1;\n");
+
+    // Fix JSX tags
+    fixed = fixed && fixed.replace(/<([^>]*)\s*>/g, "<$1>");
+    fixed = fixed && fixed.replace(/<\/([^>]*)\s*>/g, "</$1>");
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return fixed;
   }
   fixImportExportIssues(content, filePath) {
     let fixed = content;
+<<<<<<< HEAD
     if (filePath.endsWith(".tsx") |filePath.endsWith(".jsx")) {
+=======
+
+    if (filePath && filePath.endsWith(".tsx") || filePath && filePath.endsWith(".jsx")) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (
-        !fixed.includes("import React") &&
-        !fixed.includes("import * as React")
-      ) {
-        fixed = "import React from 'react';\n" + fixed;
+        !fixed && fixed.includes("import React") &&
+        !fixed ;\n" + fixed;
       }
     }
+<<<<<<< HEAD
     fixed = fixed.replace(/import\s+{\s*}\s*from/g, "import React from");
     fixed = fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");
     if (!fixed.includes("export default") && !fixed.includes("export {")) {
+=======
+
+    fixed = fixed && fixed.replace(/import\s+{\s*}\s*from/g, "import React from");
+    fixed = fixed && fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");
+
+    if (!fixed && fixed.includes("export default") && !fixed && fixed.includes("export {")) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       fixed += "\n\nexport default {};";
     }
     return fixed;
@@ -169,6 +281,7 @@ class AdvancedSourceFixer {
   fixSyntaxIssues(content, filePath) {
     let fixed = content;
     // Fix duplicate keywords
+<<<<<<< HEAD
     fixed = fixed.replace(/\bconst\s+const\b/g, "const");
     fixed = fixed.replace(/\blet\s+let\b/g, "let");
     fixed = fixed.replace(/\bvar\s+var\b/g, "var");
@@ -180,28 +293,44 @@ class AdvancedSourceFixer {
     fixed = fixed.replace(/\[\s*,\s*/g, "[");
     fixed = fixed.replace(/\(\s*,\s*\)/g, "()");
     fixed = fixed.replace(/\(\s*,\s*/g, "(");
+=======
+    fixed = fixed && fixed.replace(/\bconst\s+const\b/g, "const");
+    fixed = fixed && fixed.replace(/\blet\s+let\b/g, "let");
+    fixed = fixed && fixed.replace(/\bvar\s+var\b/g, "var");
+    fixed = fixed && fixed.replace(/\bfunction\s+function\b/g, "function");
+
+    // Fix trailing commas
+    fixed = fixed && fixed.replace(/\{\s*,\s*\}/g, "{}");
+    fixed = fixed && fixed.replace(/\{\s*,\s*/g, "{");
+    fixed = fixed && fixed.replace(/\[\s*,\s*\]/g, "[]");
+    fixed = fixed && fixed.replace(/\[\s*,\s*/g, "[");
+    fixed = fixed && fixed.replace(/\(\s*,\s*\)/g, "()");
+    fixed = fixed && fixed.replace(/\(\s*,\s*/g, "(");
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return fixed;
   }
   getAppliedFixes(original, fixed) {
     const fixes = [];
     if (original !== fixed) {
-      if (original.length !== fixed.length) {
-        fixes.push("Content length changed");
+      if (original && original.length !== fixed && fixed.length) {
+        fixes && fixes.push("Content length changed");
       }
-      if (fixed.includes("import React")) {
-        fixes.push("Added React import");
+      if (fixed && fixed.includes("import React")) {
+        fixes ;
       }
-      if (fixed.includes("export default")) {
-        fixes.push("Added default export");
+      if (fixed && fixed.includes("export default")) {
+        fixes && fixes.push("Added default export");
       }
-      if (fixed.includes(";")) {
-        fixes.push("Added semicolons");
+      if (fixed && fixed.includes(";")) {
+        fixes && fixes.push("Added semicolons");
       }
     }
     return fixes;
   }
   async generateReport() {
     const report = {
+<<<<<<< HEAD
       timestamp: new Date().toISOString()
       totalFilesFixed: this.fixes.length
       totalErrors: this.errors.length
@@ -210,12 +339,29 @@ class AdvancedSourceFixer {
     }
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${this.reportFile}`);
+=======
+      timestamp: new Date().toISOString(),
+      totalFilesFixed: this && this.fixes.length,
+      totalErrors: this && this.errors.length,
+      fixes: this && this.fixes,
+      errors: this && this.errors,
+    };
+
+    fs && fs.writeFileSync(this && this.reportFile, JSON && JSON.stringify(report, null, 2));
+    this && this.log(`Report generated: ${this && this.reportFile}`);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
+=======
+
+if (import && import.meta.url === `file://${process ;
+  fixer && fixer.fixAllSourceFiles().catch(console && console.error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 <<<<<<< HEAD
 

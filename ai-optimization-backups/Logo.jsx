@@ -14,15 +14,14 @@ import _React from 'react';';,
 import { Link } from 'react-router-dom';,
 export function Logo({ customLogo, customColor }) {}
   const logoColor = customColor || '#22D3EE';',
-  return (;
+  return (
     <Link to="/" className="flex items-center space-x-3 group">";
-      <div);
-        className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300"";
+      <div)
+        className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300""
         style={{}
           background: customColor,
             ? `linear-gradient(135deg,${customColor},${customColor}dd)`,
-            : 'linear-gradient(135deg,#22D3EE,#A855F7)'}}',
-      >;,
+            : 'linear-gradient(135deg,#22D3EE,#A855F7)'}}',>;,
         <span className="text-white font-bold text-xl">Z</span>";
       </div>;
       <div className="flex flex-col">";
@@ -34,6 +33,7 @@ export function Logo({ customLogo, customColor }) {}
 <<<<<<< HEAD
     </Link>;  return (
     <Link to="/" className="flex items-center space-x-3 group">
+<<<<<<< HEAD
       <div
         className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300"import React from 'react';
 =======
@@ -54,6 +54,13 @@ import { Link } from 'react-router-dom';
 export function Logo({ customLogo, customColor }) {
   const logoColor = customColor || '#22D3EE';
 <<<<<<< HEAD
+=======
+      <divclassName="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300"import React from 'react'
+import { Link } from 'react-router-dom'
+
+export function Logo({ customLogo, customColor }) {
+  const logoColor = customColor || '#22D3EE'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   
 =======
 <<<<<<< HEAD

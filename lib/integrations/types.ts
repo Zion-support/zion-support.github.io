@@ -43,7 +43,7 @@ export interface ManualOverride {
   disableAtsSync?: boolean;
 export interface ZapierEvent {
   id: string;
-  type: 'zion.job.posted' | 'zion.talent.matched';
+  type: 'zion && zion.job.posted' | 'zion && zion.talent.matched';
   timestamp: number;
   payload: Record<string, any>;
 export interface IntegrationsState {

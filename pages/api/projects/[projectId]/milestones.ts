@@ -11,33 +11,54 @@ import { Milestone } from "../../../../utils/types/milestones";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
+<<<<<<< HEAD
   const { projectId } = req.query as { projectId: string }
+=======
+  const { projectId } = req && req.query as { projectId: string };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const project = getProject(projectId);
   if (!project) {
-    res.status(404).json({ error: "Project not found" });
+    res && res.status(404).json({ error: "Project not found" });
     return;
   }
   if (!assertParticipantOrAdmin(project, user)) {
-    res.status(403).json({ error: "Forbidden" });
+    res && res.status(403).json({ error: "Forbidden" });
     return;
   }
+<<<<<<< HEAD
   if (req.method === "GET") {
     res.status(200).json({ milestones: project.milestones });
     return;
   }
   if (req.method === "POST") {
+=======
+
+  if (req && req.method === "GET") {
+    res && res.status(200).json({ milestones: project && project.milestones });
+    return;
+  }
+
+  if (req && req.method === "POST") {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!isClient(project, user)) {
       res
         .status(403)
         .json({ error: "Only client (or admin) can add milestones" });
       return;
     }
-    const body = req.body as Partial<Milestone>;
+    const body = req && req.body as Partial<Milestone>;
     if (
+<<<<<<< HEAD
       !body |
       !body.title |
       !body.dueDate |
       typeof body.amountUsd !== "number"
+=======
+      !body ||
+      !body && body.title ||
+      !body && body.dueDate ||
+      typeof body && body.amountUsd !== "number"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ) {
       res
         .status(400)
@@ -45,16 +66,30 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return;
     }
     const created = addMilestone(project, {
+<<<<<<< HEAD
       title: body.title
       description: body.description
       dueDate: body.dueDate
       amountUsd: body.amountUsd
       attachments: body.attachments |[]
+=======
+      title: body && body.title,
+      description: body && body.description,
+      dueDate: body && body.dueDate,
+      amountUsd: body && body.amountUsd,
+      attachments: body && body.attachments || [],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
-    res.status(201).json({ milestone: created });
+    res && res.status(201).json({ milestone: created });
     return;
   }
+<<<<<<< HEAD
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
+=======
+
+  res && res.setHeader("Allow", "GET, POST");
+  res && res.status(405).end("Method Not Allowed");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 

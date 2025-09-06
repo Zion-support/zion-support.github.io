@@ -34,21 +34,32 @@ export function useDisputes() {
         .order("created_at", { ascending: false });
       if (fetchError) throw fetchError;
       // Transform data if needed
-      const transformedData = data.map((dispute: any) => ({
+      const transformedData = data && data.map((dispute: any) => ({
         ...dispute;
-        client_profile: dispute.client_profile?.client_profile;
-        talent_profile: dispute.talent_profile?.talent_profile;
+        client_profile: dispute && dispute.client_profile?.client_profile;
+        talent_profile: dispute && dispute.talent_profile?.talent_profile;
         project: {
+<<<<<<< HEAD
           ...dispute.project
           title: dispute.project?.job?.title |'Untitled Project'
+=======
+          ...dispute && dispute.project,
+          title: dispute && dispute.project?.job?.title || 'Untitled Project'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         }
       }));
       setDisputes(transformedData as Dispute[]);
       setError(null)
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error fetching disputes:", err);
       setError("Failed to fetch disputes: " + err.message)
       toast.error("Failed to fetch disputes")
+=======
+      console && console.error("Error fetching disputes:", err);
+      setError("Failed to fetch disputes: " + err && err.message),
+      toast && toast.error("Failed to fetch disputes")
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } finally {
       setIsLoading(false)
     }
@@ -74,16 +85,21 @@ export function useDisputes() {
       if (error) throw error;
       return {
         ...data;
-        client_profile: data.client_profile?.client_profile;
-        talent_profile: data.talent_profile?.talent_profile;
+        client_profile: data && data.client_profile?.client_profile;
+        talent_profile: data && data.talent_profile?.talent_profile;
         project: {
+<<<<<<< HEAD
           ...data.project
           title: data.project?.job?.title |'Untitled Project'
+=======
+          ...data && data.project,
+          title: data && data.project?.job?.title || 'Untitled Project'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         }
       } as Dispute
     } catch (err: any) {
-      console.error("Error fetching dispute:", err);
-      toast.error("Failed to fetch dispute details");
+      console && console.error("Error fetching dispute:", err);
+      toast && toast.error("Failed to fetch dispute details");
       return null
     }
   }
@@ -94,7 +110,7 @@ export function useDisputes() {
     description: string
   }): Promise<Dispute | null> => {
     if (!user) {
-      toast.error("You must be logged in to create a dispute");
+      toast && toast.error("You must be logged in to create a dispute");
       return null
     }
     try {
@@ -102,17 +118,22 @@ export function useDisputes() {
         .from("disputes")
         .insert({
           ...disputeData;
-          raised_by: user.id
+          raised_by: user && user.id
         })
         .select()
         .single();
       if (error) throw error;
+<<<<<<< HEAD
       toast.success("Dispute submitted successfully");
+=======
+      
+      toast && toast.success("Dispute submitted successfully");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       fetchDisputes(), // Refresh the list
       return data as Dispute
     } catch (err: any) {
-      console.error("Error creating dispute:", err);
-      toast.error("Failed to submit dispute");
+      console && console.error("Error creating dispute:", err);
+      toast && toast.error("Failed to submit dispute");
       return null
     }
   }
@@ -124,16 +145,26 @@ export function useDisputes() {
         .eq("id", disputeId);
       if (error) throw error;
       // Update local state
+<<<<<<< HEAD
       setDisputes(prevDisputes =>
         prevDisputes.map(dispute =>
           dispute.id === disputeId ? { ...dispute, status } : dispute
         )
       );
       toast.success(`Dispute status updated to ${status}`);
+=======
+      setDisputes(prevDisputes => 
+        prevDisputes && prevDisputes.map(dispute => 
+          dispute && dispute.id === disputeId ? { ...dispute, status } : dispute
+        )
+      );
+      
+      toast && toast.success(`Dispute status updated to ${status}`);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return true
     } catch (err: any) {
-      console.error("Error updating dispute status:", err);
-      toast.error("Failed to update dispute status");
+      console && console.error("Error updating dispute status:", err);
+      toast && toast.error("Failed to update dispute status");
       return false
     }
   }
@@ -147,12 +178,18 @@ export function useDisputes() {
         .update({
           status: 'resolved';
           resolved_at: new Date().toISOString();
+<<<<<<< HEAD
           resolution_summary: resolution.summary
           resolution_type: resolution.resolution_type
+=======
+          resolution_summary: resolution && resolution.summary,
+          resolution_type: resolution && resolution.resolution_type
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         })
         .eq("id", disputeId);
       if (error) throw error;
       // Update local state
+<<<<<<< HEAD
       setDisputes(prevDisputes =>
         prevDisputes.map(dispute =>
           dispute.id === disputeId
@@ -167,10 +204,27 @@ export function useDisputes() {
         )
       );
       toast.success("Dispute resolved successfully");
+=======
+      setDisputes(prevDisputes => 
+        prevDisputes && prevDisputes.map(dispute => 
+          dispute && dispute.id === disputeId 
+            ? { 
+                ...dispute, 
+                status: 'resolved', 
+                resolved_at: new Date().toISOString();
+                resolution_summary: resolution && resolution.summary,
+                resolution_type: resolution && resolution.resolution_type as any
+              } 
+            : dispute
+        )
+      );
+      
+      toast && toast.success("Dispute resolved successfully");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return true
     } catch (err: any) {
-      console.error("Error resolving dispute:", err);
-      toast.error("Failed to resolve dispute");
+      console && console.error("Error resolving dispute:", err);
+      toast && toast.error("Failed to resolve dispute");
       return false
     }
   }
@@ -187,14 +241,14 @@ export function useDisputes() {
       if (error) throw error;
       return data as DisputeMessage[]
     } catch (err: any) {
-      console.error("Error fetching dispute messages:", err);
-      toast.error("Failed to fetch messages");
+      console && console.error("Error fetching dispute messages:", err);
+      toast && toast.error("Failed to fetch messages");
       return []
     }
   }
   const addDisputeMessage = async (disputeId: string, message: string, isAdminNote = false): Promise<boolean> => {
     if (!user) {
-      toast.error("You must be logged in to send a message");
+      toast && toast.error("You must be logged in to send a message");
       return false
     }
     try {
@@ -202,16 +256,26 @@ export function useDisputes() {
         .from("dispute_messages")
         .insert({
           dispute_id: disputeId;
+<<<<<<< HEAD
           user_id: user.id;
           message
+=======
+          user_id: user && user.id;
+          message,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           is_admin_note: isAdminNote
         });
       if (error) throw error;
+<<<<<<< HEAD
       toast.success("Message sent successfully");
+=======
+      
+      toast && toast.success("Message sent successfully");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return true
     } catch (err: any) {
-      console.error("Error sending message:", err);
-      toast.error("Failed to send message");
+      console && console.error("Error sending message:", err);
+      toast && toast.error("Failed to send message");
       return false
     }
   }

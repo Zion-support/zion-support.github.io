@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { TalentProfile } from "@/types/talent",
 import { ActiveFilters } from "@/components/talent/ActiveFilters",
@@ -20,15 +21,42 @@ interface TalentResultsProps {
     toggleAvailability: (availability: string) => void
     selectedRegions: string[]
     toggleRegion: (region: string) => void
+=======
+import React from "react";
+import {TalentProfile} from "@/types/talent";
+import {ActiveFilters} from "@/components/talent/ActiveFilters";
+import {ResultsHeader} from "@/components/talent/ResultsHeader";
+import {TalentGrid} from "@/components/talent/TalentGrid";
+interface TalentResultsProps {;
+  filteredTalents: TalentProfile[],;
+  isLoading: boolean,;
+  viewProfile: (id: string) => void,;
+  handleRequestHire: (talent: TalentProfile) => void,;
+  savedTalents: string[],;
+  handleToggleSave: (id: string, isSaved: boolean) => void,;
+  isAuthenticated: boolean,;
+  activeFiltersProps: {;
+    selectedSkills: string[],;
+    toggleSkill: (skill: string) => void,;
+    selectedAvailability: string[],;
+    toggleAvailability: (availability: string) => void,;
+    selectedRegions: string[],;
+    toggleRegion: (region: string) => void,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     priceRange: [number, number];
 
     setPriceRange: (range: [number, number]) => void;
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void;
-    clearFilters: () => void
+    clearFilters: () => void;
   }
 }
+<<<<<<< HEAD
 export function TalentResults({
+=======
+
+export function TalentResults(): any ({;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   filteredTalents;
   isLoading;
   viewProfile;
@@ -36,17 +64,28 @@ export function TalentResults({
   savedTalents;
   handleToggleSave;
   isAuthenticated;
-  activeFiltersProps
-}: TalentResultsProps) {
+  activeFiltersProps;
+}: TalentResultsProps) {;
   return (
-    <div className="flex-1">
+    <div className="flex-1">;
       {/* Active filters */}
+<<<<<<< HEAD
       <ActiveFilters {...activeFiltersProps} />
       {/* Results count */}
       <ResultsHeader
         isLoading={isLoading}
         resultCount={filteredTalents.length}
       />
+=======
+      <ActiveFilters {...activeFiltersProps} />;
+
+      {/* Results count */}
+      <ResultsHeader
+        isLoading={isLoading} 
+        resultCount={filteredTalents && filteredTalents.length} 
+      />;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Talents grid */}
       <TalentGrid
         talents={filteredTalents}
@@ -57,8 +96,16 @@ export function TalentResults({
         savedTalentIds={savedTalents}
         onToggleSave={handleToggleSave}
         isAuthenticated={isAuthenticated}
+<<<<<<< HEAD
         clearFilters={activeFiltersProps.clearFilters}
       />
     </div>
   )
 }
+=======
+        clearFilters={activeFiltersProps && activeFiltersProps.clearFilters}
+      />;
+    </div>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

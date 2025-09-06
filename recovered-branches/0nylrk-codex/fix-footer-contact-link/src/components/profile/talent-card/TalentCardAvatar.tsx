@@ -1,10 +1,17 @@
 
 import React from "react";
+<<<<<<< HEAD
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 interface TalentCardAvatarProps {
+=======
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+
+interface TalentCardAvatarProps {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   profilePicture?: string;
-  fullName: string
+  fullName: string;
 }
+<<<<<<< HEAD
 export function TalentCardAvatar({
   profilePicture
   fullName
@@ -28,3 +35,28 @@ export function TalentCardAvatar({
     </Avatar>
   );
 }
+=======
+
+export function TalentCardAvatar(): any ({ profilePicture, fullName }: TalentCardAvatarProps) {;
+  // Get initials for avatar fallback;
+  const getInitials = (name: string) => {;
+    return name;
+      .split(' ');
+      .map(part => part[0]);
+      .join('');
+      .toUpperCase();
+  };
+
+  return (
+    <Avatar className="w-14 h-14 border-2 border-zion-blue-light">;
+      <AvatarImage
+        src={profilePicture || undefined} 
+        alt={fullName} 
+      />;
+      <AvatarFallback className="bg-zion-purple/20 text-zion-purple">;
+        {getInitials(fullName)}
+      </AvatarFallback>;
+    </Avatar>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

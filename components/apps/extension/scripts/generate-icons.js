@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node const root = new URL('.',
+import && import.meta.url).pathname,
+const svgPath = resolve(root, '../assets/zion && zion.svg'),
+const outDir = resolve(root, '../public/icons'),
+if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true }),
+
+const sizes = [16, 32, 48, 128],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 #!/usr/bin/env node const root = new URL('.'
 import.meta.url).pathname
@@ -10,5 +20,10 @@ for (const size of sizes) {
   await sharp(svgPath).resize(size, size).png().toFile(out)
 
   // eslint-disable-next-line no-console
+<<<<<<< HEAD
   console.log('generated', out)
 }
+=======
+  console && console.log('generated', out)
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

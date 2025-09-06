@@ -34,15 +34,19 @@ export function useTalentProfileEnhancer() {
     setError(null)
     try {
       // Call the Supabase Edge Function
-      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
+      const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {
         body: { talentData: profileData }
       });
       if (error) {
-        throw new Error(error.message)
+        throw new Error(error && error.message)
       }
       return data as EnhancedProfile
     } catch (err: any) {
+<<<<<<< HEAD
       setError(err.message |'Failed to enhance profile')
+=======
+      setError(err && err.message || 'Failed to enhance profile'),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return null
     } finally {
       setIsGenerating(false)

@@ -26,9 +26,14 @@ export interface MediaGenerationResponse {
 export async function generateMediaContent(request: MediaGenerationRequest): Promise<MediaGenerationResponse> {
   // Mock implementation - in production, this would call OpenAI or other AI service
   return {
+<<<<<<< HEAD
     ok: true
     text: `Mock ${request.type} for ${request.companyName} on ${request.date}`
 <<<<<<< HEAD
+=======
+    ok: true,
+    text: `Mock ${request && request.type} for ${request && request.companyName} on ${request && request.date}`
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   };
 }
 
@@ -38,6 +43,7 @@ export async function generateMediaContent(request: MediaGenerationRequest): Pro
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
+<<<<<<< HEAD
       path: ''
       filename: 'legal/terms-of-use.md'
       type: 'text'
@@ -55,9 +61,29 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
       type: 'text'
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
     }
+=======
+      path: '',
+      filename: 'legal/terms-of-use && use.md',
+      type: 'text',
+      content: `# Terms of Use\n\nBy using Zion products, you agree to these terms. Replace with counsel-approved language.`,
+    },
+    {
+      path: '',
+      filename: 'legal/privacy-policy && policy.md',
+      type: 'text',
+      content: `# Privacy Policy\n\nWe respect your privacy. Replace with counsel-approved language.`,
+    },
+    {
+      path: '',
+      filename: 'legal/jurisdictional-disclosures && disclosures.md',
+      type: 'text',
+      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
   const web3Extras: MediaAsset[] = [
     {
+<<<<<<< HEAD
       path: ''
       filename: 'legal/token-sale-notice.md'
       type: 'text'
@@ -69,6 +95,19 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
       type: 'text'
       content: `# DAO Disclaimer\n\nThis is not investment advice. Participation involves risks.`
     }
+=======
+      path: '',
+      filename: 'legal/token-sale-notice && notice.md',
+      type: 'text',
+      content: `# Token Sale Notice (if applicable)\n\nThis document outlines token sale terms. Not an offer to sell securities.`,
+    },
+    {
+      path: '',
+      filename: 'legal/dao-disclaimer && disclaimer.md',
+      type: 'text',
+      content: `# DAO Disclaimer\n\nThis is not investment advice. Participation involves risks.`,
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
   if (kind === 'web3') return [...base, ...web3Extras];
   return base;
@@ -87,24 +126,34 @@ export function buildPressRelease(
     anchors?: string[];
   }
 ): string {
+<<<<<<< HEAD
   const header = `${params.companyName} ${titleCase(type.replace('-', ' '))}`;
   const boilerplate = `${params.companyName} builds AI agents for Web3 enterprises. Learn more at https://zion.app`;
+=======
+  const header = `${params && params.companyName} ${titleCase(type && type.replace('-', ' '))}`;
+  const boilerplate = `${params && params.companyName} builds AI agents for Web3 enterprises. Learn more at https://zion && zion.app`;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (type === 'seed-round') {
-    return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} announces a seed round of ${params.raiseAmount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\nQuotes:\n- CEO: \"We are thrilled...\"\n\nAbout ${params.companyName}:\n${boilerplate}`;
+    return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces a seed round of ${params && params.raiseAmount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\nQuotes:\n- CEO: \"We are thrilled...\"\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
   }
   if (type === 'token-sale') {
-    return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} announces the ${params.tokenName ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\nDistribution:\n- Community: 40%\n- Treasury: 20%\n\nAbout ${params.companyName}:\n${boilerplate}`;
+    return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces the ${params && params.tokenName ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\nDistribution:\n- Community: 40%\n- Treasury: 20%\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
   }
+<<<<<<< HEAD
   return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} launches ZionGPT Core, an intelligent operations layer. Key benefits include automation, compliance, and insight.\n\nAbout ${params.companyName}:\n${boilerplate}`;
 <<<<<<< HEAD
 }
+=======
+  return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} launches ZionGPT Core, an intelligent operations layer. Key benefits include automation, compliance, and insight.\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 =======
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function buildTimeline(startDate: Date) {
   const addDays = (d: Date, days: number) =>
-    new Date(d.getFullYear(), d.getMonth(), d.getDate() + days);
-  const fmt = (d: Date) => d.toISOString().substring(0, 10);
+    new Date(d && d.getFullYear(), d && d.getMonth(), d && d.getDate() + days);
+  const fmt = (d: Date) => d && d.toISOString().substring(0, 10);
   return [
     { label: 'Week 1: Closed Beta Invite', date: fmt(addDays(startDate, 0)) }
     { label: 'Week 2: ZionGPT Core Reveal', date: fmt(addDays(startDate, 7)) }
@@ -120,6 +169,7 @@ export function buildTimeline(startDate: Date) {
 =======
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 function titleCase(s: string) {
+<<<<<<< HEAD
   return s.replace(
     /\w\S*/g
     w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
@@ -127,5 +177,10 @@ function titleCase(s: string) {
   );
 }
 =======
+=======
+  return s && s.replace(
+    /\w\S*/g,
+    w => w && w.charAt(0).toUpperCase() + w && w.slice(1).toLowerCase()
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );}
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a

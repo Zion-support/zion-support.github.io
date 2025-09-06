@@ -21,6 +21,7 @@ export function useEducation() {
         .from('education')
         .insert({
           resume_id: resumeId;
+<<<<<<< HEAD
           institution: education.institution;
           degree: education.degree;
           field_of_study: education.field_of_study;
@@ -30,6 +31,17 @@ export function useEducation() {
           description: education.description;
           institution_logo_url: education.institution_logo_url
           location: education.location
+=======
+          institution: education && education.institution;
+          degree: education && education.degree;
+          field_of_study: education && education.field_of_study;
+          start_date: formatDateForDB(education && education.start_date);
+          end_date: education && education.is_current ? null : formatDateForDB(education && education.end_date);
+          is_current: education && education.is_current;
+          description: education && education.description;
+          institution_logo_url: education && education.institution_logo_url,
+          location: education && education.location
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         });
       if (error) throw error;
       return showSuccessToast("Education added", "Your education has been added to your resume")
@@ -50,6 +62,7 @@ export function useEducation() {
       const { error } = await supabase
         .from('education')
         .update({
+<<<<<<< HEAD
           institution: education.institution;
           degree: education.degree;
           field_of_study: education.field_of_study;
@@ -59,6 +72,17 @@ export function useEducation() {
           description: education.description;
           institution_logo_url: education.institution_logo_url
           location: education.location
+=======
+          institution: education && education.institution;
+          degree: education && education.degree;
+          field_of_study: education && education.field_of_study;
+          start_date: formatDateForDB(education && education.start_date);
+          end_date: education && education.is_current ? null : formatDateForDB(education && education.end_date);
+          is_current: education && education.is_current;
+          description: education && education.description;
+          institution_logo_url: education && education.institution_logo_url,
+          location: education && education.location
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         })
         .eq('id', eduId);
       if (error) throw error;

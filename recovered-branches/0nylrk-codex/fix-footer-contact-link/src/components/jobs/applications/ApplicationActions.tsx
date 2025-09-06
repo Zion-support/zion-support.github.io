@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { 
@@ -19,12 +20,30 @@ interface ApplicationActionsProps {
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
 export function ApplicationActions({
+=======
+import {useState} from "react";
+import {Link} from "react-router-dom";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import {Button} from "@/components/ui/button";
+import {Eye, ChevronDown, Loader2} from "lucide-react";
+import {JobApplication, ApplicationStatus} from "@/types/jobs";
+
+interface ApplicationActionsProps {;
+  application: JobApplication,;
+  processingId: string | null,;
+  onViewApplication: (applicationId: string) => Promise<void>,;
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
+}
+
+export function ApplicationActions(): any ({;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   application;
   processingId;
   onViewApplication;
-  onStatusChange
-}: ApplicationActionsProps) {
+  onStatusChange;
+}: ApplicationActionsProps) {;
   return (
+<<<<<<< HEAD
     <div className="flex items-center justify-end gap-2">
       <Button
         variant="outline"
@@ -38,14 +57,30 @@ export function ApplicationActions({
         <DropdownMenuTrigger asChild>
           <Button
             variant="outline"
+=======
+    <div className="flex items-center justify-end gap-2">;
+      <Button
+        variant="outline" 
+        size="sm" 
+        onClick={() => onViewApplication(application && application.id)}
+        disabled={!!application && application.viewed_at}
+      >;
+        <Eye className="h-4 w-4" />;
+      </Button>;
+
+      <DropdownMenu>;
+        <DropdownMenuTrigger asChild>;
+          <Button
+            variant="outline" 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             size="sm"
-            disabled={processingId === application.id}
-          >
-            {processingId === application.id ? (
-              <Loader2 className="h-4 w-4 animate-spin" />
-            ) : (
-              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>
+            disabled={processingId === application && application.id}>;
+            {processingId === application && application.id ? (;
+              <Loader2 className="h-4 w-4 animate-spin" />;
+            ) : (;
+              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
             )}
+<<<<<<< HEAD
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
@@ -84,3 +119,43 @@ export function ApplicationActions({
     </div>
   )
 }
+=======
+          </Button>;
+        </DropdownMenuTrigger>;
+        <DropdownMenuContent align="end">;
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application && application.id, "shortlisted")}
+          >;
+            Shortlist;
+          </DropdownMenuItem>;
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application && application.id, "interview")}
+          >;
+            Schedule Interview;
+          </DropdownMenuItem>;
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application && application.id, "hired")}
+          >;
+            Hire;
+          </DropdownMenuItem>;
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application && application.id, "rejected")}
+            className="text-red-600";
+          >;
+            Reject;
+          </DropdownMenuItem>;
+        </DropdownMenuContent>;
+      </DropdownMenu>;
+
+      <Button
+        variant="default" 
+        size="sm"
+        asChild>;
+        <Link to={`/messages?talentId=${application && application.talent_id}`}>;
+          Contact;
+        </Link>;
+      </Button>;
+    </div>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

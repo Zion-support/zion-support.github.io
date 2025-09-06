@@ -12,6 +12,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { InterviewResponseForm } from "./InterviewResponseForm";
+<<<<<<< HEAD
 interface InterviewCardProps {
 
   interview: Interview
@@ -33,6 +34,31 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
         return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>
       default:
         return <Badge>{interview.status}</Badge>
+=======
+interface InterviewCardProps {;
+  interview: Interview,;
+  onRefresh: () => Promise<void>;
+}
+
+export function InterviewCard(): any ({ interview, onRefresh }: InterviewCardProps) {;
+  const { user } = useAuth();
+  const { respondToInterview, cancelInterview } = useInterviews();
+  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const isClient = user?.id === interview && interview.client_id;
+  const isTalent = user?.id === interview && interview.talent_id;
+
+  const formattedEndTime = format(endTime, 'h: mm a'),;
+
+  const isInterviewPending = interview && interview.status === 'requested';
+  const isInterviewConfirmed = interview && interview.status === 'confirmed';
+  const isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate && interviewDate.getTime() - 5 * 60000)), // 5 minutes before;
+
+        return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>;
+      default:;
+        return <Badge>{interview && interview.status}</Badge>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
   )

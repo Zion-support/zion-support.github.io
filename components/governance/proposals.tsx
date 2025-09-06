@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 export async function getStaticProps() {
   try {
     const p = path.join(process.cwd(), 'data', 'governance', 'proposals.json');
@@ -26,31 +27,66 @@ export default function Proposals({
             <div className='text-sm opacity-70'>
               by {p.author} · {new Date(p.created_at).toLocaleString()}
             </div>
+=======
+
+export async function getStaticProps() {;
+  try {;
+    const p = path && path.join(process && process.cwd(), 'data', 'governance', 'proposals && proposals.json');
+    const raw = fs && fs.readFileSync(p, 'utf8');
+    return { props: { data: JSON && JSON.parse(raw) } };
+  } catch {;
+    return { props: { data: { updatedAt: null, proposals: [] } } };
+  }
+
+export default function Proposals(): any ({;
+  data,;
+}: {;
+  data: { updatedAt: string | null; proposals: any[] };
+}) {;
+  return (
+    <div className='max-w-3xl mx-auto p-6 space-y-4'>;
+      <h1 className='text-2xl font-semibold'>DAO Proposals</h1>;
+      <div className='text-sm opacity-70'>Updated: {data && data.updatedAt || '—'}</div>;
+      <ul className='space-y-3'>;
+        {data && data.proposals?.map((p: any) => (;
+          <li key={p && p.id} className='border rounded p-3'>;
+            <div className='font-medium'>;
+              #{p && p.id} {p && p.title}
+            </div>;
+            <div className='text-sm opacity-70'>;
+              by {p && p.author} · {new Date(p && p.created_at).toLocaleString()}
+            </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <a
               className='text-blue-600 underline'
-              href={p.url}
+              href={p && p.url}
               target='_blank'
-              rel='noreferrer'
-            >
-              View
-            </a>
-          </li>
+              rel='noreferrer'>;
+              View;
+            </a>;
+          </li>;
         ))}
+<<<<<<< HEAD
         {(!data.proposals |data.proposals.length === 0) && (
           <li className='opacity-70'>No open proposals</li>
+=======
+        {(!data && data.proposals || data && data.proposals.length === 0) && (;
+          <li className='opacity-70'>No open proposals</li>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         )}
-      </ul>
-    </div>
+      </ul>;
+    </div>;
   );
-export async function getStaticProps(){
-  try{
-    const p = path.join(process.cwd(),'datagovernanceproposals.json')
-    const raw = fs.readFileSync(p,'utf8')
-    return { props: { data: JSON.parse(raw) } }
-  }catch{
+export async function getStaticProps() {;
+  try{;
+    const p = path && path.join(process && process.cwd(),'datagovernanceproposals && datagovernanceproposals.json');
+    const raw = fs && fs.readFileSync(p,'utf8');
+    return { props: { data: JSON && JSON.parse(raw) } }
+  }catch{;
     return { props: { data: { updatedAt: null, proposals: [] } } }
   }
 }
+<<<<<<< HEAD
 export default function Proposals({ data }: { data: { updatedAt: string|null, proposals: any[] } }){
   return (
     <div className="max-w-3xl mx-auto p-6 space-y-4">
@@ -69,3 +105,24 @@ export default function Proposals({ data }: { data: { updatedAt: string|null, pr
     </div>
 );
 }
+=======
+
+export default function Proposals(): any ({ data }: { data: { updatedAt: string|null, proposals: any[] } }){;
+  return (
+    <div className="max-w-3xl mx-auto p-6 space-y-4">;
+      <h1 className="text-2xl font-semibold">DAO Proposals</h1>;
+      <div className="text-sm opacity-70">Updated: {data && data.updatedAt || '—'}</div>;
+      <ul className="space-y-3">;
+        {data && data.proposals?.map((p:any)=> (;
+          <li key={p && p.id} className="border rounded p-3">;
+            <div className="font-medium">#{p && p.id} {p && p.title}</div>;
+            <div className="text-sm opacity-70">by {p && p.author} · {new Date(p && p.created_at).toLocaleString()}</div>;
+            <a className="text-blue-600 underline" href={p && p.url} target="_blank" rel="noreferrer">View</a>;
+          </li>;
+        ))}
+        {(!data && data.proposals || data && data.proposals.length===0) && <li className="opacity-70">No open proposals</li>}
+      </ul>;
+    </div>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

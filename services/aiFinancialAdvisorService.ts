@@ -186,28 +186,46 @@ export interface FinancialResponse {
 export class AIFinancialAdvisorService {
   private apiKey: string;
 
+<<<<<<< HEAD
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
+=======
+  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
+    this && this.apiKey = apiKey,
+    this && this.baseUrl = baseUrl
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async analyzePortfolio(portfolioId: string): Promise<InvestmentPortfolio> {
     try {
-      const response = await fetch(`${this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {
+      const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {
         headers: {
+<<<<<<< HEAD
           'Authorization': `Bearer ${this.apiKey}`}});
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
       const data = await response.json();
       return data.portfolio
+=======
+          'Authorization': `Bearer ${this && this.apiKey}`}});
+
+      if (!response && response.ok) {
+        throw new Error(`HTTP error! status: ${response && response.status}`)
+      }
+
+      const data = await response && response.json();
+      return data && data.portfolio
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
-      console.error('Error analyzing portfolio:', error);
+      console && console.error('Error analyzing portfolio:', error);
       throw error
     }
   }
   async getInvestmentRecommendations(userId: string, riskTolerance: string, investmentHorizon: number): Promise<InvestmentRecommendation[]> {
     try {
+<<<<<<< HEAD
       const response = await fetch(`${this.baseUrl}/api/financial/recommendations`, {
         method: 'POST'
         headers: {
@@ -219,13 +237,29 @@ export class AIFinancialAdvisorService {
       }
       const data = await response.json();
       return data.recommendations |[]
+=======
+      const response = await fetch(`${this && this.baseUrl}/api/financial/recommendations`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${this && this.apiKey}`;
+          'Content-Type': 'application/json'};
+        body: JSON && JSON.stringify({ userId, riskTolerance, investmentHorizon })});
+
+      if (!response && response.ok) {
+        throw new Error(`HTTP error! status: ${response && response.status}`)
+      }
+
+      const data = await response && response.json();
+      return data && data.recommendations || []
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
-      console.error('Error getting investment recommendations:', error);
+      console && console.error('Error getting investment recommendations:', error);
       throw error
     }
   }
   async createFinancialPlan(request: FinancialRequest): Promise<FinancialPlan> {
     try {
+<<<<<<< HEAD
       const response = await fetch(`${this.baseUrl}/api/financial/plan`, {
         method: 'POST'
         headers: {
@@ -237,38 +271,75 @@ export class AIFinancialAdvisorService {
       }
       const data = await response.json();
       return data.plan
+=======
+      const response = await fetch(`${this && this.baseUrl}/api/financial/plan`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${this && this.apiKey}`;
+          'Content-Type': 'application/json'};
+        body: JSON && JSON.stringify(request)});
+
+      if (!response && response.ok) {
+        throw new Error(`HTTP error! status: ${response && response.status}`)
+      }
+
+      const data = await response && response.json();
+      return data && data.plan
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
-      console.error('Error creating financial plan:', error);
+      console && console.error('Error creating financial plan:', error);
       throw error
     }
   }
   async trackFinancialGoals(userId: string): Promise<FinancialGoal[]> {
     try {
-      const response = await fetch(`${this.baseUrl}/api/financial/goals/${userId}`, {
+      const response = await fetch(`${this && this.baseUrl}/api/financial/goals/${userId}`, {
         headers: {
+<<<<<<< HEAD
           'Authorization': `Bearer ${this.apiKey}`}});
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
       const data = await response.json();
       return data.goals |[]
+=======
+          'Authorization': `Bearer ${this && this.apiKey}`}});
+
+      if (!response && response.ok) {
+        throw new Error(`HTTP error! status: ${response && response.status}`)
+      }
+
+      const data = await response && response.json();
+      return data && data.goals || []
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
-      console.error('Error tracking financial goals:', error);
+      console && console.error('Error tracking financial goals:', error);
       throw error
     }
   }
   async getMarketAnalysis(market: string): Promise<MarketAnalysis> {
     try {
-      const response = await fetch(`${this.baseUrl}/api/financial/market-analysis/${market}`, {
+      const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {
         headers: {
+<<<<<<< HEAD
           'Authorization': `Bearer ${this.apiKey}`}});
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
       const data = await response.json();
       return data.analysis
+=======
+          'Authorization': `Bearer ${this && this.apiKey}`}});
+
+      if (!response && response.ok) {
+        throw new Error(`HTTP error! status: ${response && response.status}`)
+      }
+
+      const data = await response && response.json();
+      return data && data.analysis
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
-      console.error('Error getting market analysis:', error);
+      console && console.error('Error getting market analysis:', error);
       throw error
     }
   }
@@ -285,6 +356,7 @@ export class AIFinancialAdvisorService {
     expectedImpact: string
   }> {
     try {
+<<<<<<< HEAD
       const response = await fetch(`${this.baseUrl}/api/financial/portfolio/${portfolioId}/rebalance`, {
         method: 'POST'
         headers: {
@@ -296,8 +368,23 @@ export class AIFinancialAdvisorService {
       }
       const data = await response.json();
       return data.rebalancing
+=======
+      const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/rebalance`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${this && this.apiKey}`;
+          'Content-Type': 'application/json'};
+        body: JSON && JSON.stringify({ targetAllocation })});
+
+      if (!response && response.ok) {
+        throw new Error(`HTTP error! status: ${response && response.status}`)
+      }
+
+      const data = await response && response.json();
+      return data && data.rebalancing
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
-      console.error('Error rebalancing portfolio:', error);
+      console && console.error('Error rebalancing portfolio:', error);
       throw error
     }
   }
@@ -309,6 +396,7 @@ export class AIFinancialAdvisorService {
     recommendations: string[]
   }> {
     try {
+<<<<<<< HEAD
       const response = await fetch(`${this.baseUrl}/api/financial/retirement-calculator`, {
         method: 'POST'
         headers: {
@@ -320,8 +408,23 @@ export class AIFinancialAdvisorService {
       }
       const data = await response.json();
       return data.calculation
+=======
+      const response = await fetch(`${this && this.baseUrl}/api/financial/retirement-calculator`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${this && this.apiKey}`;
+          'Content-Type': 'application/json'};
+        body: JSON && JSON.stringify({ userId, targetAge, desiredIncome })});
+
+      if (!response && response.ok) {
+        throw new Error(`HTTP error! status: ${response && response.status}`)
+      }
+
+      const data = await response && response.json();
+      return data && data.calculation
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
-      console.error('Error calculating retirement needs:', error);
+      console && console.error('Error calculating retirement needs:', error);
       throw error
     }
   }
@@ -333,6 +436,7 @@ export class AIFinancialAdvisorService {
     deadlines: Record<string, Date>
   }> {
     try {
+<<<<<<< HEAD
       const response = await fetch(`${this.baseUrl}/api/financial/tax-optimization`, {
         method: 'POST'
         headers: {
@@ -344,8 +448,23 @@ export class AIFinancialAdvisorService {
       }
       const data = await response.json();
       return data.optimization
+=======
+      const response = await fetch(`${this && this.baseUrl}/api/financial/tax-optimization`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${this && this.apiKey}`;
+          'Content-Type': 'application/json'};
+        body: JSON && JSON.stringify({ userId, taxYear })});
+
+      if (!response && response.ok) {
+        throw new Error(`HTTP error! status: ${response && response.status}`)
+      }
+
+      const data = await response && response.json();
+      return data && data.optimization
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
-      console.error('Error getting tax optimization strategies:', error);
+      console && console.error('Error getting tax optimization strategies:', error);
       throw error
     }
   }
@@ -358,6 +477,7 @@ export class AIFinancialAdvisorService {
     nextSteps: string[]
   }> {
     try {
+<<<<<<< HEAD
       const response = await fetch(`${this.baseUrl}/api/financial/report`, {
         method: 'POST'
         headers: {
@@ -369,11 +489,30 @@ export class AIFinancialAdvisorService {
       }
       const data = await response.json();
       return data.report
+=======
+      const response = await fetch(`${this && this.baseUrl}/api/financial/report`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${this && this.apiKey}`;
+          'Content-Type': 'application/json'};
+        body: JSON && JSON.stringify({ userId, reportType })});
+
+      if (!response && response.ok) {
+        throw new Error(`HTTP error! status: ${response && response.status}`)
+      }
+
+      const data = await response && response.json();
+      return data && data.report
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
-      console.error('Error generating financial report:', error);
+      console && console.error('Error generating financial report:', error);
       throw error
     }
   }
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY |'demo-key');
 
+<<<<<<< HEAD
+=======
+export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process && process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

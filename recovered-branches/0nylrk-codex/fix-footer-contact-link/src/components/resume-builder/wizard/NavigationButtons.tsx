@@ -3,27 +3,38 @@
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {NavigationButtonsProps} from "./types";
-export const NavigationButtons = ({
+export const NavigationButtons = ({;
   onBack;
   onNext;
   isNextDisabled = false;
   backLabel = "Back";
   nextLabel = "Next";
-  isLoading = false}: NavigationButtonsProps) => {
+  isLoading = false}: NavigationButtonsProps) => {;
   return (
-    <div className="flex justify-between">
-      {onBack && (
-        <Button variant="outline" onClick={onBack}>
+    <div className="flex justify-between">;
+      {onBack && (;
+        <Button variant="outline" onClick={onBack}>;
           {backLabel}
-        </Button>
+        </Button>;
       )}
+<<<<<<< HEAD
       {onNext && (
         <Button onClick={onNext} disabled={isNextDisabled |isLoading}>
+=======
+      {onNext && (;
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           {nextLabel}
-        </Button>
+        </Button>;
       )}
+<<<<<<< HEAD
     </div>
   )
 }
 
+=======
+    </div>;
+  );
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

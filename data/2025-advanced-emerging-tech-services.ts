@@ -47,6 +47,7 @@ export const advancedEmergingTechServices2025 = [
     }
     category: 'Space Technology'
     tags: [
+<<<<<<< HEAD
       'Space Mining'
       'Asteroid Mining'
       'Lunar Resources'
@@ -58,6 +59,19 @@ export const advancedEmergingTechServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$3.8B'
+=======
+      'Space Mining',
+      'Asteroid Mining',
+      'Lunar Resources',
+      'Space Operations',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/space-mining-operations',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$3 && 3.8B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Space agencies, mining companies, aerospace firms, government agencies'
     competitiveAdvantage:
@@ -111,6 +125,7 @@ export const advancedEmergingTechServices2025 = [
     }
     category: 'Quantum Bio-Computing'
     tags: [
+<<<<<<< HEAD
       'Quantum Computing'
       'Biological Computing'
       'DNA Computing'
@@ -122,6 +137,19 @@ export const advancedEmergingTechServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$2.1B'
+=======
+      'Quantum Computing',
+      'Biological Computing',
+      'DNA Computing',
+      'Hybrid Processing',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-bio-computing',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$2 && 2.1B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Research institutions, pharmaceutical companies, biotechnology firms, government agencies'
     competitiveAdvantage:
@@ -175,6 +203,7 @@ export const advancedEmergingTechServices2025 = [
     }
     category: 'Brain-Computer Interface'
     tags: [
+<<<<<<< HEAD
       'Neural Interface'
       'Cognitive Enhancement'
       'Neurological Research'
@@ -186,6 +215,19 @@ export const advancedEmergingTechServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$1.9B'
+=======
+      'Neural Interface',
+      'Cognitive Enhancement',
+      'Neurological Research',
+      'Medical Technology',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/brain-interface-pro',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$1 && 1.9B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Medical research institutions, healthcare providers, neuroscience labs, government agencies'
     competitiveAdvantage:
@@ -239,6 +281,7 @@ export const advancedEmergingTechServices2025 = [
     }
     category: 'Quantum Energy'
     tags: [
+<<<<<<< HEAD
       'Fusion Power'
       'Quantum Energy'
       'Sustainable Energy'
@@ -250,6 +293,19 @@ export const advancedEmergingTechServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$4.7B'
+=======
+      'Fusion Power',
+      'Quantum Energy',
+      'Sustainable Energy',
+      'Energy Optimization',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-energy-fusion',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$4 && 4.7B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Energy companies, power utilities, research institutions, government agencies'
     competitiveAdvantage:
@@ -303,6 +359,7 @@ export const advancedEmergingTechServices2025 = [
     }
     category: 'Autonomous Vehicles'
     tags: [
+<<<<<<< HEAD
       'Autonomous Vehicles'
       'AI Navigation'
       'Fleet Management'
@@ -314,11 +371,29 @@ export const advancedEmergingTechServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$54.2B'
+=======
+      'Autonomous Vehicles',
+      'AI Navigation',
+      'Fleet Management',
+      'Transportation',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/autonomous-vehicle-ai',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$54 && 54.2B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Automotive companies, transportation firms, logistics companies, government agencies'
     competitiveAdvantage:
+<<<<<<< HEAD
       'Advanced AI navigation with 99.8% accuracy, comprehensive safety systems, and extensive vehicle system integration'
   }
+=======
+      'Advanced AI navigation with 99 && 99.8% accuracy, comprehensive safety systems, and extensive vehicle system integration',
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'quantum-materials-discovery-platform'
     name: 'QuantumMaterials Discovery'
@@ -367,6 +442,7 @@ export const advancedEmergingTechServices2025 = [
     }
     category: 'Quantum Materials'
     tags: [
+<<<<<<< HEAD
       'Quantum Computing'
       'Materials Science'
       'AI Discovery'
@@ -378,6 +454,19 @@ export const advancedEmergingTechServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$2.8B'
+=======
+      'Quantum Computing',
+      'Materials Science',
+      'AI Discovery',
+      'Research Platform',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-materials-discovery',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$2 && 2.8B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Materials science companies, research institutions, manufacturing firms, government agencies'
     competitiveAdvantage:
@@ -431,6 +520,7 @@ export const advancedEmergingTechServices2025 = [
     }
     category: 'Quantum Robotics'
     tags: [
+<<<<<<< HEAD
       'Quantum Computing'
       'Robotics'
       'Automation'
@@ -442,6 +532,19 @@ export const advancedEmergingTechServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$3.2B'
+=======
+      'Quantum Computing',
+      'Robotics',
+      'Automation',
+      'Intelligent Systems',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-robotics-pro',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$3 && 3.2B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Robotics companies, manufacturing firms, automation specialists, research institutions'
     competitiveAdvantage:
@@ -495,6 +598,7 @@ export const advancedEmergingTechServices2025 = [
     }
     category: 'Quantum Internet Security'
     tags: [
+<<<<<<< HEAD
       'Quantum Internet'
       'Cybersecurity'
       'Encryption'
@@ -506,6 +610,19 @@ export const advancedEmergingTechServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$8.9B'
+=======
+      'Quantum Internet',
+      'Cybersecurity',
+      'Encryption',
+      'Secure Communication',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-internet-security',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$8 && 8.9B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Internet service providers, telecommunications companies, government agencies, cybersecurity firms'
     competitiveAdvantage:
@@ -559,6 +676,7 @@ export const advancedEmergingTechServices2025 = [
     }
     category: 'Quantum Logistics'
     tags: [
+<<<<<<< HEAD
       'Quantum Computing'
       'Logistics'
       'Supply Chain'
@@ -570,6 +688,19 @@ export const advancedEmergingTechServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$12.4B'
+=======
+      'Quantum Computing',
+      'Logistics',
+      'Supply Chain',
+      'Route Optimization',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-logistics-pro',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$12 && 12.4B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Logistics companies, supply chain managers, transportation firms, e-commerce businesses'
     competitiveAdvantage:
@@ -614,6 +745,7 @@ export const advancedEmergingTechServices2025 = [
         price: 2499
         period: 'month'
         features: [
+<<<<<<< HEAD
           'Full metaverse platform'
           'Custom solutions'
           'White-label platform'
@@ -629,15 +761,38 @@ export const advancedEmergingTechServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$6.8B'
+=======
+          'Full metaverse platform',
+          'Custom solutions',
+          'White-label platform',
+          'Dedicated support team',
+        ],
+      },
+    },
+    category: 'Quantum Metaverse',
+    tags: ['Quantum Computing', 'Metaverse', 'Virtual Reality', 'AI Graphics'],
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-metaverse-pro',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$6 && 6.8B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Gaming companies, virtual reality firms, entertainment companies, technology startups'
     competitiveAdvantage:
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
   }
 ];      phone: '+1 302 464 0950';
+<<<<<<< HEAD
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$6.8B'
+=======
+      email: 'kleber@ziontechgroup && ziontechgroup.com'
+    };
+    marketSize: '$6 && 6.8B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
   }

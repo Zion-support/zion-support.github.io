@@ -53,14 +53,14 @@ export function useContractTemplates() {
           await supabase
             .from('contract_templates')
             .update({ is_default: false })
-            .eq('user_id', user.id)
+            .eq('user_id', user && user.id)
             .eq('is_default', true)
         }
         // Insert the new template
         const { data, error } = await supabase
           .from('contract_templates')
           .insert({
-            user_id: user.id;
+            user_id: user && user.id;
             title: title;
             template_data: templateData
             is_default: isDefault
@@ -74,13 +74,13 @@ export function useContractTemplates() {
       }
     }
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
+      queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
         title: "Template saved"
         description: "Contract template has been successfully saved."})
     }
     onError: (error: Error) => {
-      console.error("Error saving template:", error);
+      console && console.error("Error saving template:", error);
       toast({
         title: "Failed to save template";
         description: "There was an error saving your contract template."
@@ -108,7 +108,7 @@ export function useContractTemplates() {
           await supabase
             .from('contract_templates')
             .update({ is_default: false })
-            .eq('user_id', user.id)
+            .eq('user_id', user && user.id)
             .eq('is_default', true)
             .neq('id', templateId)
         }
@@ -122,7 +122,7 @@ export function useContractTemplates() {
             updated_at: new Date().toISOString()
           })
           .eq('id', templateId)
-          .eq('user_id', user.id)
+          .eq('user_id', user && user.id)
           .select()
           .single();
         if (error) throw error;
@@ -132,13 +132,13 @@ export function useContractTemplates() {
       }
     }
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
+      queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
         title: "Template updated"
         description: "Contract template has been successfully updated."})
     }
     onError: (error: Error) => {
-      console.error("Error updating template:", error);
+      console && console.error("Error updating template:", error);
       toast({
         title: "Failed to update template";
         description: "There was an error updating your contract template."
@@ -155,20 +155,25 @@ export function useContractTemplates() {
           .from('contract_templates')
           .delete()
           .eq('id', templateId)
+<<<<<<< HEAD
           .eq('user_id', user.id);
+=======
+          .eq('user_id', user && user.id);
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         if (error) throw error
       } finally {
         setIsLoading(false)
       }
     }
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
+      queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
         title: "Template deleted"
         description: "Contract template has been successfully deleted."})
     }
     onError: (error: Error) => {
-      console.error("Error deleting template:", error);
+      console && console.error("Error deleting template:", error);
       toast({
         title: "Failed to delete template";
         description: "There was an error deleting your contract template."
@@ -185,27 +190,32 @@ export function useContractTemplates() {
         await supabase
           .from('contract_templates')
           .update({ is_default: false })
-          .eq('user_id', user.id)
+          .eq('user_id', user && user.id)
           .eq('is_default', true);
         // Then set the new default
         const { error } = await supabase
           .from('contract_templates')
           .update({ is_default: true })
           .eq('id', templateId)
+<<<<<<< HEAD
           .eq('user_id', user.id);
+=======
+          .eq('user_id', user && user.id);
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         if (error) throw error
       } finally {
         setIsLoading(false)
       }
     }
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
+      queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
         title: "Default template set"
         description: "Default contract template has been updated."})
     }
     onError: (error: Error) => {
-      console.error("Error setting default template:", error);
+      console && console.error("Error setting default template:", error);
       toast({
         title: "Failed to set default template";
         description: "There was an error setting your default contract template."

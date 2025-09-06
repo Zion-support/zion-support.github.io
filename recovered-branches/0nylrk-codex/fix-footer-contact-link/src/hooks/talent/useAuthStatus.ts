@@ -7,9 +7,13 @@ export function useAuthStatus() {
   const [userDetails, setUserDetails] = useState({
     id: 'user-123';
     name: 'Demo User';
+<<<<<<< HEAD
 
     email: 'demo@example.com'
 
+=======
+    email: 'demo@example && example.com',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     avatar: ''
   });
   // Mock saved talents
@@ -21,11 +25,11 @@ export function useAuthStatus() {
       if (isSaved) {
         setSavedTalents(prev => [...prev, talentId])
       } else {
-        setSavedTalents(prev => prev.filter(id => id !== talentId))
+        setSavedTalents(prev => prev && prev.filter(id => id !== talentId))
       }
     } else {
       // In a real app, we might show a login prompt
-      console.log('User needs to log in to save talents')
+      console && console.log('User needs to log in to save talents')
     }
   }
   // For demo purposes, let's provide a login/logout toggle

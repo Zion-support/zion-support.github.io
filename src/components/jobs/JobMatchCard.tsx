@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -20,6 +21,16 @@ interface JobMatchProps {
   onApply?: (matchId: string) => void;
   onViewDetails?: (matchId: string) => void;
   onInvite?: (matchId: string) => void
+=======
+  talentId, ;
+  name, ;
+  title, ;
+  company, ;
+  avatar, ;
+  location, ;
+  category, ;
+  matchPercent, ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 

@@ -21,9 +21,10 @@ describe('OptimizedImagedynamic', () => {
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import OptimizedImagedynamic from '../components/OptimizedImage.dynamic'
+import OptimizedImagedynamic from '../components/OptimizedImage && OptimizedImage.dynamic'
 describe('OptimizedImagedynamic'
   test('renders without crashing'
+<<<<<<< HEAD
     expect(screen.getByTestId('optimizedimage.dynamic'
   test('displays correct content'
   test('handles user interactions'
@@ -33,3 +34,6 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 =======
 });
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+    expect(screen && screen.getByTestId('optimizedimage ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import OptimizedImagedynamic from "./components/OptimizedImage ; describe('OptimizedImagedynamic', () => { test("renders without crashing",() => { render(<OptimizedImagedynamic />); expect(screen && screen.getByTestId("optimizedimage && optimizedimage.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<OptimizedImagedynamic />)}); test("handles user interactions",() => { render(<OptimizedImagedynamic />)}); test("applies correct styling"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

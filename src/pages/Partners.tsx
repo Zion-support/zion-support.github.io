@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
 import {
 <<<<<<< HEAD
   Card,
@@ -13,6 +14,14 @@ import {
   CardHeader
   CardTitle
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardHeader,;
+  CardTitle,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
@@ -28,17 +37,21 @@ import { useRouter } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 
-export default function Partners() {
+export default function Partners() {;
   logInfo('PartnersPage rendering');
   const [activeTab, setActiveTab] = useState('overview');
   const { t } = useTranslation();
   const { user, isAuthenticated } = useAuth();
   const router = useRouter();
   const [authServiceAvailable, setAuthServiceAvailable] = useState(true);
+<<<<<<< HEAD
 
   useEffect(() => {
 <<<<<<< HEAD
 =======
+=======
+  useEffect(() => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -55,8 +68,9 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter  } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-export default function Partners() {
+export default function Partners() {;
 
+<<<<<<< HEAD
   logInfo('PartnersPage rendering')
   const [activeTab, setActiveTab] = useState("overview")
   const { t } = useTranslation()
@@ -72,10 +86,27 @@ export default function Partners() {
       } catch (err) {
         logErrorToProduction('Partner login auth health check failed', {
           data: err
+=======
+  logInfo('PartnersPage rendering'),;
+  const [activeTab, setActiveTab] = useState("overview"),;
+  const { t } = useTranslation(),;
+  const { user, isAuthenticated } = useAuth(),;
+  const router = useRouter(),;
+  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),;
+
+  useEffect((,) => {;
+    async function checkHealth() {;
+      try {;
+        const res = await fetch('/api/auth/health');
+        setAuthServiceAvailable(res && res.ok);
+        logErrorToProduction('Partner login auth health check failed', {;
+          data: err,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         });
         setAuthServiceAvailable(false);
       }
     }
+<<<<<<< HEAD
     checkHealth();
   }, []);
   // If not authenticated, display partner program info and signup CTA
@@ -258,18 +289,228 @@ export default function Partners() {
           </div>
         </div>
         <div className='flex justify-center gap-4'>
+=======
+    checkHealth();  }, []);    checkHealth();
+  }, []);
+
+  // If not authenticated, display partner program info and signup CTA;
+  if (!isAuthenticated) {;
+    logInfo('PartnersPage rendering Unauthenticated View');
+    return (
+      <div className='container max-w-6xl py-10'>;
+        <div className='text-center mb-8'>;
+          <h1 className='text-4xl font-bold tracking-tight text-white mb-2'>;
+            {t('partner && partner.title')}
+          </h1>;
+          <p className='text-xl text-zion-slate-light'>;
+            {t('partner && partner.subtitle')}
+          </p>;
+        </div>;
+
+        <div className='grid md:grid-cols-2 gap-8 mb-12'>;
+          <Card className='bg-zion-blue-dark border-zion-blue-light'>;
+            <CardHeader>;
+              <CardTitle className='text-white'>;
+                {t('partner && partner.influencers.title')}
+              </CardTitle>;
+              <CardDescription>{t('partner && partner.influencers.desc')}</CardDescription>;
+            </CardHeader>;
+            <CardContent className='space-y-4'>;
+              <div className='flex items-start gap-3'>;
+                <CheckCircle className='h-5 w-5 text-zion-cyan mt-0 && 0.5' />;
+                <div>;
+                  <p className='font-medium text-white'>;
+                    {t('partner && partner.influencers.points && points.audience')}
+                  </p>;
+                  <p className='text-sm text-zion-slate-light'>;
+                    {t('partner && partner.influencers.points && points.audience_desc')}
+                  </p>;
+                </div>;
+              </div>;
+              <div className='flex items-start gap-3'>;
+                <CheckCircle className='h-5 w-5 text-zion-cyan mt-0 && 0.5' />;
+                <div>;
+                  <p className='font-medium text-white'>;
+                    {t('partner && partner.influencers.points && points.insights')}
+                  </p>;
+                  <p className='text-sm text-zion-slate-light'>;
+                    {t('partner && partner.influencers.points && points.insights_desc')}
+                  </p>;
+                </div>;
+              </div>;
+              <div className='flex items-start gap-3'>;
+                <CheckCircle className='h-5 w-5 text-zion-cyan mt-0 && 0.5' />;
+                <div>;
+                  <p className='font-medium text-white'>;
+                    {t('partner && partner.influencers.points && points.resources')}
+                  </p>;
+                  <p className='text-sm text-zion-slate-light'>;
+                    {t('partner && partner.influencers.points && points.resources_desc')}
+                  </p>                </div>        </div>;
+
+        <div className="grid md:grid-cols-2 gap-8 mb-12">;
+          <Card className="bg-zion-blue-dark border-zion-blue-light">;
+            <CardHeader>;
+              <CardTitle className="text-white">{t('partner && partner.influencers.title')}</CardTitle>;
+              <CardDescription>{t('partner && partner.influencers.desc')}</CardDescription>;
+            </CardHeader>;
+            <CardContent className="space-y-4">;
+              <div className="flex items-start gap-3">;
+                <CheckCircle className="h-5 w-5 text-zion-cyan mt-0 && 0.5" />;
+                <div>;
+                  <p className="font-medium text-white">{t('partner && partner.influencers.points && points.audience')}</p>;
+                  <p className="text-sm text-zion-slate-light">{t('partner && partner.influencers.points && points.audience_desc')}</p>;
+                </div>;
+              </div>;
+              <div className="flex items-start gap-3">;
+                <CheckCircle className="h-5 w-5 text-zion-cyan mt-0 && 0.5" />;
+                <div>;
+                  <p className="font-medium text-white">{t('partner && partner.influencers.points && points.insights')}</p>;
+                  <p className="text-sm text-zion-slate-light">{t('partner && partner.influencers.points && points.insights_desc')}</p>;
+                </div>;
+              </div>;
+              <div className="flex items-start gap-3">;
+                <CheckCircle className="h-5 w-5 text-zion-cyan mt-0 && 0.5" />;
+                <div>;
+                  <p className="font-medium text-white">{t('partner && partner.influencers.points && points.resources')}</p>;
+                  <p className="text-sm text-zion-slate-light">{t('partner && partner.influencers.points && points.resources_desc')}</p>;
+                </div>;
+              </div>;
+            </CardContent>;
+          </Card>;
+
+          <Card className='bg-zion-blue-dark border-zion-blue-light'>;
+            <CardHeader>;
+              <CardTitle className='text-white'>;
+                {t('partner && partner.organizations.title')}
+              </CardTitle>;
+              <CardDescription>;
+                {t('partner && partner.organizations.desc')}
+              </CardDescription>;
+            </CardHeader>;
+            <CardContent className='space-y-4'>;
+              <div className='flex items-start gap-3'>;
+                <CheckCircle className='h-5 w-5 text-zion-purple mt-0 && 0.5' />;
+                <div>;
+                  <p className='font-medium text-white'>;
+                    {t('partner && partner.organizations.points && points.ecosystem')}
+                  </p>;
+                  <p className='text-sm text-zion-slate-light'>;
+                    {t('partner && partner.organizations.points && points.ecosystem_desc')}
+                  </p>;
+                </div>;
+              </div>;
+              <div className='flex items-start gap-3'>;
+                <CheckCircle className='h-5 w-5 text-zion-purple mt-0 && 0.5' />;
+                <div>;
+                  <p className='font-medium text-white'>;
+                    {t('partner && partner.organizations.points && points.co_brand')}
+                  </p>;
+                  <p className='text-sm text-zion-slate-light'>;
+                    {t('partner && partner.organizations.points && points.co_brand_desc')}
+                  </p>;
+                </div>;
+              </div>;
+              <div className='flex items-start gap-3'>;
+                <CheckCircle className='h-5 w-5 text-zion-purple mt-0 && 0.5' />;
+                <div>;
+                  <p className='font-medium text-white'>;
+                    {t('partner && partner.organizations.points && points.tracking')}
+                  </p>;
+                  <p className='text-sm text-zion-slate-light'>;
+                    {t('partner && partner.organizations.points && points.tracking_desc')}
+                  </p>                </div>            <CardHeader>;
+              <CardTitle className="text-white">{t('partner && partner.organizations.title')}</CardTitle>;
+              <CardDescription>{t('partner && partner.organizations.desc')}</CardDescription>;
+            </CardHeader>;
+            <CardContent className="space-y-4">;
+              <div className="flex items-start gap-3">;
+                <CheckCircle className="h-5 w-5 text-zion-purple mt-0 && 0.5" />;
+                <div>;
+                  <p className="font-medium text-white">{t('partner && partner.organizations.points && points.ecosystem')}</p>;
+                  <p className="text-sm text-zion-slate-light">{t('partner && partner.organizations.points && points.ecosystem_desc')}</p>;
+                </div>;
+              </div>;
+              <div className="flex items-start gap-3">;
+                <CheckCircle className="h-5 w-5 text-zion-purple mt-0 && 0.5" />;
+                <div>;
+                  <p className="font-medium text-white">{t('partner && partner.organizations.points && points.co_brand')}</p>;
+                  <p className="text-sm text-zion-slate-light">{t('partner && partner.organizations.points && points.co_brand_desc')}</p>;
+                </div>;
+              </div>;
+              <div className="flex items-start gap-3">;
+                <CheckCircle className="h-5 w-5 text-zion-purple mt-0 && 0.5" />;
+                <div>;
+                  <p className="font-medium text-white">{t('partner && partner.organizations.points && points.tracking')}</p>;
+                  <p className="text-sm text-zion-slate-light">{t('partner && partner.organizations.points && points.tracking_desc')}</p>;
+                </div>;
+              </div>;
+            </CardContent>;
+          </Card>;
+        </div>;
+
+        <div className='text-center mb-12'>;
+          <h2 className='text-2xl font-bold text-white mb-4'>;
+            {t('partner && partner.how_it_works')}
+          </h2>;
+          <div className='grid md:grid-cols-3 gap-6'>;
+            <Card className='bg-zion-blue-dark border-zion-blue-light'>;
+              <CardHeader className='text-center pb-2'>;
+                <div className='mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4'>;
+                  <Users className='h-6 w-6 text-zion-cyan' />;
+                </div>;
+                <CardTitle className='text-lg text-white'>;
+                  {t('partner && partner.steps.join_title')}
+                </CardTitle>;
+              </CardHeader>;
+              <CardContent className='text-center text-sm text-zion-slate-light'>                <p>{t('partner && partner.steps.join_desc')}</p>;
+              </CardContent>;
+            </Card>;
+
+            <Card className='bg-zion-blue-dark border-zion-blue-light'>;
+              <CardHeader className='text-center pb-2'>;
+                <div className='mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4'>;
+                  <FileText className='h-6 w-6 text-zion-cyan' />;
+                </div>;
+                <CardTitle className='text-lg text-white'>;
+                  {t('partner && partner.steps.share_title')}
+                </CardTitle>;
+              </CardHeader>;
+              <CardContent className='text-center text-sm text-zion-slate-light'>;
+                <p>{t('partner && partner.steps.share_desc')}</p>;
+              </CardContent>;
+            </Card>;
+
+            <Card className='bg-zion-blue-dark border-zion-blue-light'>;
+              <CardHeader className='text-center pb-2'>;
+                <div className='mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4'>;
+                  <PieChart className='h-6 w-6 text-zion-cyan' />;
+                </div>;
+                <CardTitle className='text-lg text-white'>;
+                  {t('partner && partner.steps.earn_title')}
+                </CardTitle>;
+              </CardHeader>;
+              <CardContent className='text-center text-sm text-zion-slate-light'>                <p>{t('partner && partner.steps.earn_desc')}</p>              <CardContent className="text-center text-sm text-zion-slate-light">;
+                <p>{t('partner && partner.steps.earn_desc')}</p>;
+              </CardContent>;
+            </Card>;
+          </div>;
+        </div>;
+
+        <div className='flex justify-center gap-4'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Button
             size='lg'
             className='bg-zion-purple hover:bg-zion-purple-dark text-white'
-            asChild
-          >
-            <Link href='/signup?type=partner&source=partner-program'>
-              {t('partner.apply')}
-            </Link>
-          </Button>
+            asChild>;
+            <Link href='/signup?type=partner&source=partner-program'>;
+              {t('partner && partner.apply')}
+            </Link>;
+          </Button>;
           <Button
             size='lg'
             variant='outline'
+<<<<<<< HEAD
             className='text-zion-cyan border-zion-cyan'
             disabled={!authServiceAvailable}
             onClick={() => router.push('/login')}
@@ -280,28 +521,57 @@ export default function Partners() {
             <p className='text-red-500 text-sm mt-2'>
               {t('partner.login_unavailable')}
             </p>
+=======
+            className='text-zion-cyan border-zion-cyan'            disabled={!authServiceAvailable}          <Button
+            size="lg"
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+            asChild>;
+            <Link href="/signup?type=partner&source=partner-program">{t('partner && partner.apply')}</Link>;
+          </Button>;
+          <Button
+            size="lg"
+            variant="outline"
+            className="text-zion-cyan border-zion-cyan"
+            disabled={!authServiceAvailable}
+            onClick={() => router && router.push('/login')}
+            disabled = {!authServiceAvailable,}
+            onClick = {() => router && router.push('/login'),}
+          >;
+            {t('partner && partner.login')}
+          </Button>;
+          {!authServiceAvailable && (;
+            <p className='text-red-500 text-sm mt-2'>;
+              {t('partner && partner.login_unavailable')}
+            </p>          )}            <p className="text-red-500 text-sm mt-2">{t('partner && partner.login_unavailable')}</p>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           )}
-        </div>
-      </div>
+        </div>;
+      </div>;
     );
   }
+<<<<<<< HEAD
   // Authenticated user view - Partner Dashboard
+=======
+
+  // Authenticated user view - Partner Dashboard;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   logInfo('PartnersPage rendering Authenticated View. User:', { data: user });
 
   return (
-    <div className='container max-w-7xl py-10'>
-      <h1>DEBUG: Partners Page - Authenticated View</h1>
-      <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>
-        <div>
-          <h1 className='text-3xl font-bold tracking-tight text-white'>
-            {t('partner.dashboard_title')}
-          </h1>
-          <p className='text-zion-slate-light'>{t('partner.dashboard_desc')}</p>
-        </div>
-        <div className='flex gap-2'>
+    <div className='container max-w-7xl py-10'>;
+      <h1>DEBUG: Partners Page - Authenticated View</h1>;
+      <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>;
+        <div>;
+          <h1 className='text-3xl font-bold tracking-tight text-white'>;
+            {t('partner && partner.dashboard_title')}
+          </h1>;
+          <p className='text-zion-slate-light'>{t('partner && partner.dashboard_desc')}</p>;
+        </div>;
+        <div className='flex gap-2'>;
           <Button
             variant='outline'
             className='flex items-center gap-2'
+<<<<<<< HEAD
             onClick={() => window.print()}
           >
             <FileDown className='h-4 w-4' />
@@ -395,12 +665,109 @@ export default function Partners() {
   async function checkHealth () {try {}checkHealth () ;
 }, []);
 //If not authenticated, display partner program info and signup CTA </div> <div className="grid md:grid-cols-2 gap-8 mb-12" > <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> </CardContent> </Card> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <FileText className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <PieChart className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> </div> </div> <div className="flex justify-center gap-4" > <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white" asChild > > {t ('partner.login') ;
+=======
+            onClick={() => window && window.print()}
+          >;
+            <FileDown className='h-4 w-4' />            {t('partner && partner.export_csv')}      <h1>DEBUG: Partners Page - Authenticated View</h1>;
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">;
+        <div>;
+          <h1 className="text-3xl font-bold tracking-tight text-white">{t('partner && partner.dashboard_title')}</h1>;
+          <p className="text-zion-slate-light">{t('partner && partner.dashboard_desc')}</p>;
+        </div>;
+        <div className="flex gap-2">;
+          <Button variant="outline" className="flex items-center gap-2" onClick={() => window && window.print()}>;
+            <FileDown className="h-4 w-4" />;
+            {t('partner && partner.export_csv')}
+          </Button>;
+        </div>;
+      </div>;
+
+      <Tabs
+        value={activeTab}
+        onValueChange={setActiveTab}
+        className='space-y-4'>;
+        <TabsList className='grid grid-cols-2 md:grid-cols-5 mb-4'>;
+          <TabsTrigger value='overview'>;
+            {t('partner && partner.tabs.overview')}
+          </TabsTrigger>;
+          <TabsTrigger value='referrals'>;
+            {t('partner && partner.tabs.referrals')}
+          </TabsTrigger>;
+          <TabsTrigger value='earnings'>;
+            {t('partner && partner.tabs.earnings')}
+          </TabsTrigger>;
+          <TabsTrigger value='leaderboard'>;
+            {t('partner && partner.tabs.leaderboard')}
+          </TabsTrigger>;
+          <TabsTrigger value='resources'>;
+            {t('partner && partner.tabs.resources')}
+          </TabsTrigger>;
+        </TabsList>        </TabsList>;
+
+        <TabsContent value="overview" className="space-y-4">;
+          <PartnerDashboard />;
+        </TabsContent>;
+
+        <TabsContent value="referrals" className="space-y-4">;
+          <PartnerReferralLinks />;
+        </TabsContent>;
+
+        <TabsContent value='overview' className='space-y-4'>;
+          <PartnerDashboard />;
+        </TabsContent>;
+
+        <TabsContent value='referrals' className='space-y-4'>;
+          <PartnerReferralLinks />;
+        </TabsContent>;
+
+        <TabsContent value='earnings' className='space-y-4'>          <Card>        ;
+        <TabsContent value="earnings" className="space-y-4">;
+          <Card>;
+            <CardHeader>;
+              <CardTitle>{t('partner && partner.earnings_title')}</CardTitle>;
+              <CardDescription>{t('partner && partner.earnings_desc')}</CardDescription>;
+            </CardHeader>;
+            <CardContent>;
+              {/* This will be implemented later */}
+              <p className='text-zion-slate-light'>;
+                {t('partner && partner.earnings_placeholder')}
+              </p>;
+            </CardContent>;
+          </Card>;
+        </TabsContent>            </CardContent>;
+          </Card>;
+        </TabsContent>;
+
+        <TabsContent value="leaderboard" className="space-y-4">;
+          <PartnerLeaderboard />;
+        </TabsContent>;
+
+        <TabsContent value='leaderboard' className='space-y-4'>;
+          <PartnerLeaderboard />;
+        </TabsContent>;
+
+        <TabsContent value='resources' className='space-y-4'>          <PartnerResources />        ;
+        <TabsContent value="resources" className="space-y-4">;
+          <PartnerResources />;
+        </TabsContent>;
+      </Tabs>;
+    </div>;
+  );
+  async function checkHealth() {;
+  try {;
+
+
+}checkHealth () ;
+}, []);
+//If not authenticated, display partner program info and signup CTA </div> <div className="grid md:grid-cols-2 gap-8 mb-12" > <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0 && 0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0 && 0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0 && 0.5" /> <div> </div> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0 && 0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0 && 0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0 && 0.5" /> <div> </div> </div> </CardContent> </Card> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <FileText className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <PieChart className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> </div> </div> <div className="flex justify-center gap-4" > <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white" asChild > > {;
+  t ('partner && partner.login') ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }</Button>) ;
 }</div> </div>) ";
 }//Authenticated user view - Partner Dashboard return (<div className="container max-w-7xl py-10" > <h1>DEBUG: Partners Page - Authenticated View</h1> <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8" > <div> </Button> </div> </div> </TabsList> <TabsContent value="overview" className="space-y-4" > <PartnerDashboard /> </TabsContent> <TabsContent value="referrals" className="space-y-4" > <PartnerReferralLinks /> </TabsContent> <TabsContent value="earnings" className="space-y-4" > <Card> <CardHeader> <CardTitle> {';
-  t ('partner.earnings title') ;
+  t ('partner && partner.earnings title') ;
 }</CardTitle> <CardDescription> {';
-  t ('partner.earnings desc') ";
+  t ('partner && partner.earnings desc') ";
 }</CardDescription> </CardHeader> <CardContent> </CardContent> </Card> </TabsContent> <TabsContent value="leaderboard" className="space-y-4" > <PartnerLeaderboard /> </TabsContent> <TabsContent value="resources" className="space-y-4" > <PartnerResources /> </TabsContent> </Tabs> </div>) ;
 }'"}
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a

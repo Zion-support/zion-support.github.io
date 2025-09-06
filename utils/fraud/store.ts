@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface FraudRecord {
   id: string;
   type: string;
@@ -60,3 +61,16 @@ class FraudStore {
 }
 export const fraudStore = new FraudStore();
 export const getFraudStore = () => fraudStore;
+=======
+// Mock fraud store utility
+export function getFraudStore() {
+  return {
+    id,
+    userId: partial && partial.userId ?? null,
+    source: partial && partial.source,
+    content: partial && partial.content ?? null,
+    metadata: partial && partial.metadata ?? null,
+    ipAddress: partial && partial.ipAddress ?? null,
+    createdAt: partial && partial.createdAt ?? new Date().toISOString(),
+  };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

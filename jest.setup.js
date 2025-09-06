@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require("@testing-library/jest-dom");
 // Mock Next.js router
 jest.mock("next/router", () => ({
@@ -25,14 +26,58 @@ jest.mock("next/router", () => ({
 // Mock Next.js Image component
 jest.mock("next/image", () => {
   return function MockImage({ src, alt, ...props }) {
+=======
+import "@testing-library/jest-dom";
+
+// Mock Next && Next.js router
+jest && jest.mock("next/router", () => ({
+  useRouter() {
+    return {
+      route: "/",
+      pathname: "/",
+      query: {},
+      asPath: "/",
+      push: jest && jest.fn(),
+      pop: jest && jest.fn(),
+      reload: jest && jest.fn(),
+      back: jest && jest.fn(),
+      prefetch: jest && jest.fn().mockResolvedValue(undefined),
+      beforePopState: jest && jest.fn(),
+      events: {
+        on: jest && jest.fn(),
+        off: jest && jest.fn(),
+        emit: jest && jest.fn(),
+      },
+      isFallback: false,
+    };
+  },
+}));
+
+// Mock Next && Next.js Image component
+jest && jest.mock("next/image", () => {
+  return function MockedImage({ src, alt, ...props }) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return <img src={src} alt={alt} {...props} />;
   }
 });
+<<<<<<< HEAD
 // Mock Next.js Link component
 jest.mock("next/link", () => {
   return function MockLink({ children, href, ...props }) {
     return <a href={href} {...props}>{children}</a>;
   }
+=======
+
+// Mock Next && Next.js Link component
+jest && jest.mock("next/link", () => {
+  return function MockedLink({ children, href, ...props }) {
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
+  };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 });
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {

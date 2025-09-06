@@ -40,19 +40,20 @@ import { test,expect } from '@playwright/test';; test('homepage: loads correctly
 import { test, expect } from '@playwright/test,';
 >>>>>>> origin/automation-improvements-final
 import { test, expect } from '@playwright/test',
-import { test,expect } from @playwright/test', test('homepage: loads correctly,async ({ page }) => {', await: page.goto('/)', await: expect(page).toHaveTitle(/Zion Tech Group/), await: expect(page.locator('h1)).toBeVisible()})', test('navigation: works,async ({ page }) => {', await: page.goto('/)', await: page.click('text=Services)', await: expect(page).toHaveURL(/.*services/)}) test('contact form works,async ({ page }) => {', await: page.goto('/contact)', await: page.fill('input[name="name]Test User)', await: page.fill('input[name="email"]test@example.com)', await: page.fill('textarea[name=message"]Test message)', await: page.click('button[type="submit])', await: expect(page.locator('.success-message)).toBeVisible()})', await expect(page.locator('.success-message)).toBeVisible()})',
+import { test,expect } from @playwright/test', test('homepage: loads correctly,async ({ page }) => {', await: page && page.goto('/)', await: expect(page).toHaveTitle(/Zion Tech Group/), await: expect(page && page.locator('h1)).toBeVisible()})', test('navigation: works,async ({ page }) => {', await: page && page.goto('/)', await: page && page.click('text=Services)', await: expect(page).toHaveURL(/.*services/)}) test('contact form works,async ({ page }) => {', await: page && page.goto('/contact)', await: page && page.fill('input[name="name]Test User)', await: page && page.fill('input[name="email"]test@example && example.com)', await: page && page.fill('textarea[name=message"]Test message)', await: page && page.click('button[type="submit])', await: expect(page && page.locator('.success-message)).toBeVisible()})', await expect(page && page.locator('.success-message)).toBeVisible()})',
 ,
 test('homepage: loads correctly, async ({ page }) => {',
-  await: page.goto('/)',
+  await: page && page.goto('/)',
 test('"homepage": loads correctly, async ({ page }) => {',
-  await": page.goto('/)',
+  await": page && page.goto('/)',
   await: expect(page).toHaveTitle(/Zion Tech Group/),
-  await: expect(page.locator('h1)).toBeVisible()})',
+  await: expect(page && page.locator('h1)).toBeVisible()})',
 test('"navigation: works, async ({ page }) => {',
-  "await": page.goto('/)',
-  await: page.click('text=Services)',
+  "await": page && page.goto('/)',
+  await: page && page.click('text=Services)',
   await: expect(page).toHaveURL(/.*services/)}),
 test('contact form works, async ({ page }) => {',
+<<<<<<< HEAD
   await": page.goto('/contact)',
   await: page.fill('input[name="name]Test User)',
   "await": page.fill('input[name=email"]test@example.com)',
@@ -117,3 +118,13 @@ import { test,expect } from '@playwright/test'; test('homepage: loads correctly'
 import { test,expect } from '@playwright/test'; test('homepage: loads correctly',async ({ page }) => {'; await: page.goto('/')'; await: expect(page).toHaveTitle(/Zion Tech Group/); await: expect(page.locator('h1')).toBeVisible()})'; test('navigation: works',async ({ page }) => {'; await: page.goto('/')'; await: page.click('text=Services')'; await: expect(page).toHaveURL(/.*services/)}) test('contact form works',async ({ page }) => {'; await: page.goto('/contact')'; await: page.fill('input[name="name"]','Test User')'; await: page.fill('input[name="email"]','test@example.com')'; await: page.fill('textarea[name="message"]','Test message')'; await: page.click('button[type="submit"]')'; await: expect(page.locator('.success-message')).toBeVisible()})'; await expect(page.locator('.success-message')).toBeVisible()})';
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+  await": page && page.goto('/contact)',
+  await: page && page.fill('input[name="name]Test User)',
+  "await": page && page.fill('input[name=email"]test@example && example.com)',
+  "await: page && page.fill('textarea[name="message"]Test message)',
+  await": page && page.click('button[type="submit"])',
+  await: expect(page && page.locator('.success-message)).toBeVisible()})',
+  await expect(page ;; test('homepage: loads correctly',async ({ page }) => {'; await: page && page.goto('/')';; await: expect(page).toHaveTitle(/Zion Tech Group/); await: expect(page && page.locator('h1')).toBeVisible()})'; test('navigation: works',async ({ page }) => {'; await: page && page.goto('/')';; await: page && page.click('text=Services')';; await: expect(page).toHaveURL(/.*services/)}) test('contact form works',async ({ page }) => {'; await: page && page.goto('/contact')';; await: page && page.fill('input[name="name"]','Test User')';; await: page && page.fill('input[name="email"]','test@example && example.com')';; await: page && page.fill('textarea[name="message"]','Test message')';; await: page && page.click('button[type="submit"]')';; await: expect(page && page.locator('.success-message')).toBeVisible()})'; await expect(page && page.locator('.success-message')).toBeVisible()})';
+import { test,expect } from '@playwright/test';; test('homepage: loads correctly',async ({ page }) => {'; await: page && page.goto('/')';; await: expect(page).toHaveTitle(/Zion Tech Group/); await: expect(page && page.locator('h1')).toBeVisible()})'; test('navigation: works',async ({ page }) => {'; await: page && page.goto('/')';; await: page && page.click('text=Services')';; await: expect(page).toHaveURL(/.*services/)}) test('contact form works',async ({ page }) => {'; await: page && page.goto('/contact')';; await: page && page.fill('input[name="name"]','Test User')';; await: page && page.fill('input[name="email"]','test@example && example.com')';; await: page && page.fill('textarea[name="message"]','Test message')';; await: page && page.click('button[type="submit"]')';; await: expect(page && page.locator('.success-message')).toBeVisible()})'; await expect(page && page.locator('.success-message')).toBeVisible()})';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

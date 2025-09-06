@@ -1,20 +1,30 @@
 
 import React from "react";
+<<<<<<< HEAD
 import {
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle
+=======
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardHeader,;
+  CardTitle,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from "@/components/ui/card";
 
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
-interface ConversionAnalysisProps {
+interface ConversionAnalysisProps {;
   data: Array<Record<string, any>>;
   timeRange: string;
   onTimeRangeChange: (range: string) => void
 }
 
+<<<<<<< HEAD
 export function ConversionAnalysisChart({
   data
   timeRange
@@ -23,19 +33,29 @@ export function ConversionAnalysisChart({
   const dataKeys =
     data && data.length > 0
       ? Object.keys(data[0]).filter((key) => key !== "date")
+=======
+export function ConversionAnalysisChart(): any ({;
+  data,;
+  timeRange,;
+  onTimeRangeChange,;
+}: ConversionAnalysisProps) {;
+  const dataKeys =;
+    data && data.length > 0;
+      ? Object && Object.keys(data[0]).filter((key) => key !== "date");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       : [];
 
   return (
-    <Card className="bg-zion-blue-dark border-zion-blue-light">
-      <CardHeader>
-        <CardTitle className="text-white text-lg">
-          Conversion Analysis
-        </CardTitle>
-        <CardDescription className="text-zion-slate-light">
-          Track different conversion types
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
+    <Card className="bg-zion-blue-dark border-zion-blue-light">;
+      <CardHeader>;
+        <CardTitle className="text-white text-lg">;
+          Conversion Analysis;
+        </CardTitle>;
+        <CardDescription className="text-zion-slate-light">;
+          Track different conversion types;
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent>;
         <AnalyticsChart
           title=""
           data={data |[]}
@@ -43,8 +63,8 @@ export function ConversionAnalysisChart({
           type="bar"
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
-        />
-      </CardContent>
-    </Card>
+        />;
+      </CardContent>;
+    </Card>;
   );
 }

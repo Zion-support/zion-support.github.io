@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -27,6 +28,9 @@ export function TenantsList() {
 
 
         .order('created_at', { ascending: false })
+=======
+        .order('created_at', { ascending: false }),;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 }
 }

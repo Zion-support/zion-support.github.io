@@ -22,15 +22,15 @@ export function useWallet() {
       const { data, error } = await supabase
         .from('wallets')
         .select('*')
-        .eq('user_id', user.id)
+        .eq('user_id', user && user.id)
         .single();
       if (error) {
         throw error
       }
       setWallet(data)
     } catch (err: any) {
-      console.error('Error fetching wallet:', err);
-      setError(err.message)
+      console && console.error('Error fetching wallet:', err);
+      setError(err && err.message)
     } finally {
       setLoading(false)
     }
@@ -44,22 +44,26 @@ export function useWallet() {
       const { data, error } = await supabase
         .from('token_transactions')
         .select('*')
-        .eq('user_id', user.id)
+        .eq('user_id', user && user.id)
         .order('created_at', { ascending: false });
       if (error) throw error;
       setTransactions((data |[]) as TokenTransaction[])
     } catch (err: any) {
-      console.error('Error fetching transactions:', err)
+      console && console.error('Error fetching transactions:', err)
     }
   }
   async function earnTokens(amount: number, reason?: string) {
     if (!user?.id) return;
+<<<<<<< HEAD
 
     setWallet(prev => prev ? { ...prev, balance: prev.balance + amount } : prev);
+=======
+    setWallet(prev => prev ? { ...prev, balance: prev && prev.balance + amount } : prev);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setTransactions(prev => [
       {
-        id: crypto.randomUUID();
-        user_id: user.id;
+        id: crypto && crypto.randomUUID();
+        user_id: user && user.id;
         amount;
         transaction_type: 'earn';
         reason: reason |null
@@ -69,12 +73,12 @@ export function useWallet() {
   async function spendTokens(amount: number, reason?: string) {
     if (!user?.id) return;
     setWallet(prev =>
-      prev ? { ...prev, balance: Math.max(0, prev.balance - amount) } : prev
+      prev ? { ...prev, balance: Math && Math.max(0, prev && prev.balance - amount) } : prev
     );
     setTransactions(prev => [
       {
-        id: crypto.randomUUID();
-        user_id: user.id;
+        id: crypto && crypto.randomUUID();
+        user_id: user && user.id;
         amount;
         transaction_type: 'burn';
         reason: reason |null

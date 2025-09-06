@@ -33,6 +33,7 @@ export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
     category: 'Practical Micro SAAS 2027'
     realImplementation: true
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -41,6 +42,15 @@ export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
 ];      mobile: "+1 302 464 0950";
 
       email: "kleber@ziontechgroup.com";
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },
+];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup && ziontechgroup.com";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

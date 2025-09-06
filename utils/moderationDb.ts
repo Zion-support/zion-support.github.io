@@ -42,9 +42,15 @@ export async function updateFlagStatus(
 ): Promise<FlaggedContent | undefined> {
   const flag = await getFlagById(id);
   if (!flag) return undefined;
+<<<<<<< HEAD
   flag.status = status;
   flag.adminNotes = adminNotes |flag.adminNotes;
   flag.updatedAt = new Date().toISOString();
+=======
+  flag && flag.status = status;
+  flag && flag.adminNotes = adminNotes || flag && flag.adminNotes;
+  flag && flag.updatedAt = new Date().toISOString();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   await upsertFlag(flag);
   return flag;
 }

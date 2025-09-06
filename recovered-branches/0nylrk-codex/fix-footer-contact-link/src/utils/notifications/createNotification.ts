@@ -19,7 +19,7 @@ export async function createNotification({
   void actionText;
   try {
     // Call the create_notification database function
-    const { data, error } = await supabase.rpc('create_notification', {
+    const { data, error } = await supabase && supabase.rpc('create_notification', {
       _user_id: userId;
       _title: title;
       _message: message;
@@ -30,14 +30,18 @@ export async function createNotification({
     // If sendEmail is true, call the edge function to send an email
     if (sendEmail && data) {
       const notificationId = data;
-      await supabase.functions.invoke('send-notification-email', {
+      await supabase && supabase.functions.invoke('send-notification-email', {
         body: { user_id: userId, notification_id: notificationId }
       })
     }
     return { success: true, notificationId: data }
   } catch (error) {
+<<<<<<< HEAD
     console.error('Error creating notification:', error);
 
+=======
+    console && console.error('Error creating notification:', error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return { success: false, error }
   }
 }

@@ -6,14 +6,23 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 const LoadingSpinner = () =>
+<<<<<<< HEAD
   React.createElement(
     'div'
     { className: 'flex items-center justify-center p-8' }
     React.createElement('div', {
       className: 'animate-spin rounded-full h-8 w-8 border-b-2 border-primary'
+=======
+  React && React.createElement(
+    'div',
+    { className: 'flex items-center justify-center p-8' },
+    React && React.createElement('div', {
+      className: 'animate-spin rounded-full h-8 w-8 border-b-2 border-primary',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     })
   )
 const LoadingSkeleton = () =>
+<<<<<<< HEAD
   React.createElement(
     'div'
     { className: 'animate-pulse space-y-4' }
@@ -21,6 +30,16 @@ const LoadingSkeleton = () =>
     React.createElement('div', { className: 'h-4 bg-gray-200 rounded w-1/2' })
     React.createElement('div', { className: 'h-32 bg-gray-200 rounded' })
   )
+=======
+  React && React.createElement(
+    'div',
+    { className: 'animate-pulse space-y-4' },
+    React && React.createElement('div', { className: 'h-4 bg-gray-200 rounded w-3/4' }),
+    React && React.createElement('div', { className: 'h-4 bg-gray-200 rounded w-1/2' }),
+    React && React.createElement('div', { className: 'h-32 bg-gray-200 rounded' })
+  );
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 // Chart components (heavy - only load when needed)
 // TODO: Uncomment when Chart component is available
 // export const DynamicChart = dynamic(
@@ -30,15 +49,27 @@ const LoadingSkeleton = () =>
 //   }
 // )
 export const DynamicPieChart = dynamic(
+<<<<<<< HEAD
   () => import('recharts').then(mod => ({ default: mod.PieChart }))
   {    loading: LoadingSkeleton
     ssr: false
+=======
+  () => import('recharts').then(mod => ({ default: mod && mod.PieChart })),
+  {    loading: LoadingSkeleton,
+    ssr: false,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 )
 export const DynamicBarChart = dynamic(
+<<<<<<< HEAD
   () => import('recharts').then(mod => ({ default: mod.BarChart }))
   {    loading: LoadingSkeleton
     ssr: false
+=======
+  () => import('recharts').then(mod => ({ default: mod && mod.BarChart })),
+  {    loading: LoadingSkeleton,
+    ssr: false,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 )
 // TODO: Uncomment when these components are available
@@ -68,9 +99,15 @@ export const DynamicBarChart = dynamic(
 // )
 // Virtual list for large datasets
 export const DynamicVirtualList = dynamic(
+<<<<<<< HEAD
   () => import('react-window').then(mod => ({ default: mod.FixedSizeList }))
   {    loading: LoadingSkeleton
     ssr: false
+=======
+  () => import('react-window').then(mod => ({ default: mod && mod.FixedSizeList })),
+  {    loading: LoadingSkeleton,
+    ssr: false,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 )
 // Usage examples:

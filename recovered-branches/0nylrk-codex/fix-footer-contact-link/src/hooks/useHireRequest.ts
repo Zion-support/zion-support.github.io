@@ -37,12 +37,13 @@ export function useHireRequest() {
     setError(null)
     try {
       // Call the edge function to process the hire request
-      const { data: response, error } = await supabase.functions.invoke('process-hire-request', {
+      const { data: response, error } = await supabase && supabase.functions.invoke('process-hire-request', {
         body: requestData
       });
       if (error) throw error;
       // Show success message
       toast({
+<<<<<<< HEAD
         title: "Request Submitted"
         description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
       return { success: true, requestId: response?.request_id }
@@ -50,6 +51,17 @@ export function useHireRequest() {
       console.error("Error submitting hire request:", error);
       const errorMessage = error instanceof Error
         ? error.message
+=======
+        title: "Request Submitted",
+        description: `Your request to hire ${requestData && requestData.talent.full_name} has been sent successfully.`});
+      
+      return { success: true, requestId: response?.request_id }
+    } catch (error) {
+      console && console.error("Error submitting hire request:", error);
+      
+      const errorMessage = error instanceof Error 
+        ? error && error.message 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         : "There was a problem submitting your request. Please try again.";
       setError(errorMessage);
       toast({

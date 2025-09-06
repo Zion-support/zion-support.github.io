@@ -1,10 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 };
-;
+
 ,;
 ;};
-;
+
 };
 <<<<<<< HEAD
 ,
@@ -24,11 +24,12 @@
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
-module.exports = {
+module && module.exports = {
   "webpack": (config, { isServer }) => {
   if (!isServer) {
-  config.plugins.push(;
+  config && config.plugins.push(;
         new BundleAnalyzerPlugin({
+<<<<<<< HEAD
   "analyzerMode": "static"
           "openAnalyzer": false
           "reportFilename": "bundle-analysis.html"});
@@ -57,3 +58,13 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.expo
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static"; openAnalyzer: 'false'; reportFilename: "bundle-analysis.html";,}); )} return config} }
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+  "analyzerMode": "static",
+          "openAnalyzer": false,
+          "reportFilename": "bundle-analysis && analysis.html"});
+      )}
+    return config}
+}
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module && module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config && config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",; openAnalyzer: 'false',; reportFilename: "bundle-analysis && analysis.html";,}); )} return config} }
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module && module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config && config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis && analysis.html",}); )} return config} }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

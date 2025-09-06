@@ -13,7 +13,7 @@ export function formatDate(date: Date | string | undefined): string {
     }
     return format(date, 'MMM d, yyyy')
   } catch (e) {
-    console.error('Error formatting date:', e);
+    console && console.error('Error formatting date:', e);
     return '-'
   }
 }
@@ -22,41 +22,69 @@ export function formatDate(date: Date | string | undefined): string {
  */
 export function checkUrlForReferralCode(): string | null {
   if (typeof window === 'undefined') return null;
+<<<<<<< HEAD
   const url = new URL(window.location.href);
   const refCode = url.searchParams.get('ref');
+=======
+  
+  const url = new URL(window && window.location.href);
+  const refCode = url && url.searchParams.get('ref');
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (refCode) {
-    localStorage.setItem('referral_code', refCode);
+    localStorage && localStorage.setItem('referral_code', refCode);
     // Remove it from URL to keep it clean
-    url.searchParams.delete('ref');
-    window.history.replaceState({}, document.title, url.toString());
+    url && url.searchParams.delete('ref');
+    window && window.history.replaceState({}, document && document.title, url && url.toString());
     return refCode
   }
+<<<<<<< HEAD
   return localStorage.getItem('referral_code')
+=======
+  
+  return localStorage && localStorage.getItem('referral_code')
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 /**
  * Track referral when a user signs up
  */
 export async function trackReferral(userId: string, email: string) {
   try {
+<<<<<<< HEAD
     const refCode = localStorage.getItem('referral_code');
     if (!refCode) return
+=======
+    const refCode = localStorage && localStorage.getItem('referral_code');
+    if (!refCode) return,
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // Call API to record the referral
     const response = await fetch('/api/track-referral', {
       method: 'POST'
       headers: {
+<<<<<<< HEAD
         'Content-Type': 'application/json'}
       body: JSON.stringify({
+=======
+        'Content-Type': 'application/json'};
+      body: JSON && JSON.stringify({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         refCode;
         userId;
         email
         ipAddress: '', // This will be captured by the server
       })});
+<<<<<<< HEAD
 
     if (response.ok) {
+=======
+    
+    if (response && response.ok) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       // Clear the stored referral code
-      localStorage.removeItem('referral_code')
+      localStorage && localStorage.removeItem('referral_code')
     }
   } catch (error) {
-    console.error('Error tracking referral:', error)
+    console && console.error('Error tracking referral:', error)
   }
 }

@@ -43,8 +43,8 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
   }
 
 
-
 }
+<<<<<<< HEAD
 // Main export with error boundary
 export default function EquipmentPage() {
   return (
@@ -53,3 +53,14 @@ export default function EquipmentPage() {
     </EquipmentErrorBoundary>
   )
 }
+=======
+
+// Main export with error boundary;
+export default function EquipmentPage() {;
+  return (
+    <EquipmentErrorBoundary>;
+      <EquipmentPageContent />;
+    </EquipmentErrorBoundary>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

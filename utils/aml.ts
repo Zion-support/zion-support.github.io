@@ -18,17 +18,29 @@ export interface AmlProvider {
 class MockAmlProvider implements AmlProvider {
   async checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult> {
     // Mock implementation - in production, this would call a real AML service
+<<<<<<< HEAD
     const name = params.fullLegalName.toLowerCase();
     if (name.includes('test') |name.includes('demo')) {
       return { status: 'match', details: { reason: 'Test name detected' } }
+=======
+    const name = params && params.fullLegalName.toLowerCase();
+    if (name && name.includes('test') || name && name.includes('demo')) {
+      return { status: 'match', details: { reason: 'Test name detected' } };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     return { status: 'clear' }
   }
   async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult> {
     // Mock implementation - in production, this would call a real AML service
+<<<<<<< HEAD
     const name = params.businessName.toLowerCase();
     if (name.includes('test') |name.includes('demo')) {
       return { status: 'match', details: { reason: 'Test business name detected' } }
+=======
+    const name = params && params.businessName.toLowerCase();
+    if (name && name.includes('test') || name && name.includes('demo')) {
+      return { status: 'match', details: { reason: 'Test business name detected' } };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     return { status: 'clear' }
   }

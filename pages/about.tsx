@@ -1,5 +1,31 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import React from "react";
 import Layout from "../components/Layout";
 =======
@@ -33,6 +59,7 @@ import {
   TrendingUp;
 } from 'lucide-react';
 
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 const AboutPage: React.FC = () => {
@@ -194,6 +221,9 @@ import React from "react";
 import Layout from "../components/Layout";
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function About() {
+=======
+export default function About() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 <<<<<<< HEAD
 =======
@@ -201,6 +231,7 @@ export default function About() {
 >>>>>>> origin/automation-improvements-final
     <Layout
       title="About Us - Zion Tech Group"
+<<<<<<< HEAD
       description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting-edge technology solutions."
     >
       <div className="min-h-screen bg-gray-50 py-20">
@@ -226,6 +257,26 @@ export default function About() {
         </div>
       </div>
     </Layout>
+=======
+      description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting-edge technology solutions.">;
+      <div className="min-h-screen bg-gray-50 py-20">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
+              About Zion Tech Group;
+            </h1>;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              Leading technology solutions provider specializing in AI,;
+              cybersecurity, and digital transformation.;
+            </p>;
+          </div>;
+          <div className="text-center">;
+            <p className="text-gray-600">About page is under construction.</p>;
+          </div>;
+        </div>;
+      </div>;
+    </Layout>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 <<<<<<< HEAD

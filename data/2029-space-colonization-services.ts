@@ -51,6 +51,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     price: '$99,999'
     period: '/month'
     description:
+<<<<<<< HEAD
       'Comprehensive platform that automates the entire Mars colonization process using advanced AI, robotics, and autonomous systems. Manages habitat construction, resource extraction, life support systems, and colony expansion.'
       'Autonomous habitat construction'
       'AI-powered resource management'
@@ -68,6 +69,25 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     color: 'from-red-600 to-orange-600'
     textColor: 'text-red-400'
     link: 'https://ziontechgroup.com/mars-colonization-automation-platform'
+=======
+      'Comprehensive platform that automates the entire Mars colonization process using advanced AI, robotics, and autonomous systems. Manages habitat construction, resource extraction, life support systems, and colony expansion.',
+      'Autonomous habitat construction',
+      'AI-powered resource management',
+      'Life support system automation',
+      'Colony expansion planning',
+      'Robotic workforce management',
+      'Environmental monitoring AI',
+      'Supply chain automation',
+      'Emergency response systems',
+      'Colony health monitoring',
+      'Sustainable development AI',
+    ],
+    popular: true,
+    icon: '🚀',
+    color: 'from-red-600 to-orange-600',
+    textColor: 'text-red-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/mars-colonization-automation-platform',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'First Mars colonization automation platform. No direct competitors. Comparable to space infrastructure platforms ($80K+/month) but specialized in Mars colonization.'
     targetAudience:
@@ -110,6 +130,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     growthRate: '500% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -123,6 +144,21 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     rating: 4.9
     reviews: 23
   }
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    realImplementation: true,
+    implementationDetails:
+      'Advanced Mars colonization platform with autonomous systems, AI-powered planning, robotic workforce management, and comprehensive colony monitoring. Includes real-time communication and emergency response.',
+    launchDate: '2029-01-01',
+    customers: 8,
+    rating: 4 && 4.9,
+    reviews: 23,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'interplanetary-communication-network'
     name: 'Interplanetary Communication Network'
@@ -132,6 +168,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     description:
       'Revolutionary interplanetary communication network that enables real-time communication across the solar system. Uses quantum communication, advanced satellite networks, and AI-powered routing for seamless interplanetary connectivity.'
     features: [
+<<<<<<< HEAD
       'Real-time interplanetary communication'
       'Quantum communication protocols'
       'AI-powered routing optimization'
@@ -148,6 +185,24 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     color: 'from-blue-600 to-cyan-600'
     textColor: 'text-blue-400'
     link: 'https://ziontechgroup.com/interplanetary-communication-network'
+=======
+      'Real-time interplanetary communication',
+      'Quantum communication protocols',
+      'AI-powered routing optimization',
+      'Multi-planet network management',
+      'Satellite constellation control',
+      'Communication security protocols',
+      'Bandwidth optimization',
+      'Network redundancy systems',
+      'Real-time monitoring',
+      'Emergency communication channels',
+    ],
+    popular: true,
+    icon: '🌐',
+    color: 'from-blue-600 to-cyan-600',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/interplanetary-communication-network',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'First interplanetary communication network. Comparable to advanced satellite networks ($60K+/month) but with interplanetary capabilities.'
     targetAudience:
@@ -190,6 +245,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     growthRate: '400% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -203,6 +259,21 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     rating: 4.8
     reviews: 45
   }
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    realImplementation: true,
+    implementationDetails:
+      'Advanced interplanetary communication network with quantum protocols, AI routing, satellite management, and real-time monitoring. Includes security protocols and emergency communication systems.',
+    launchDate: '2029-01-15',
+    customers: 15,
+    rating: 4 && 4.8,
+    reviews: 45,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'space-mining-automation-platform'
     name: 'Space Mining Automation Platform'
@@ -212,6 +283,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     description:
       'Comprehensive platform that automates space mining operations on asteroids, moons, and other celestial bodies. Uses AI-powered robots, autonomous mining equipment, and advanced resource processing for efficient space resource extraction.'
     features: [
+<<<<<<< HEAD
       'Autonomous mining operations'
       'AI-powered resource detection'
       'Robotic mining equipment'
@@ -228,6 +300,24 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     color: 'from-yellow-600 to-orange-600'
     textColor: 'text-yellow-400'
     link: 'https://ziontechgroup.com/space-mining-automation-platform'
+=======
+      'Autonomous mining operations',
+      'AI-powered resource detection',
+      'Robotic mining equipment',
+      'Resource processing automation',
+      'Supply chain management',
+      'Quality control systems',
+      'Safety monitoring AI',
+      'Environmental impact assessment',
+      'Resource optimization',
+      'Mining fleet management',
+    ],
+    popular: false,
+    icon: '⛏️',
+    color: 'from-yellow-600 to-orange-600',
+    textColor: 'text-yellow-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/space-mining-automation-platform',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'First space mining automation platform. Comparable to terrestrial mining platforms ($50K+/month) but specialized in space operations.'
     targetAudience:
@@ -270,6 +360,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     growthRate: '600% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -283,6 +374,21 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     rating: 4.7
     reviews: 34
   }
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    realImplementation: true,
+    implementationDetails:
+      'Advanced space mining platform with autonomous operations, AI-powered resource detection, robotic equipment management, and comprehensive safety monitoring. Includes resource processing and optimization.',
+    launchDate: '2029-02-01',
+    customers: 12,
+    rating: 4 && 4.7,
+    reviews: 34,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Space Architecture & Energy Services
   {
     id: 'space-habitat-design-platform'
@@ -293,6 +399,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     description:
       'Advanced platform for designing and planning space habitats optimized for any planetary environment. Uses AI-powered design tools, environmental simulation, and advanced materials science to create sustainable living spaces in space.'
     features: [
+<<<<<<< HEAD
       'AI-powered habitat design'
       'Environmental simulation tools'
       'Material optimization AI'
@@ -309,6 +416,24 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     color: 'from-green-600 to-teal-600'
     textColor: 'text-green-400'
     link: 'https://ziontechgroup.com/space-habitat-design-platform'
+=======
+      'AI-powered habitat design',
+      'Environmental simulation tools',
+      'Material optimization AI',
+      'Life support integration',
+      'Sustainable design systems',
+      '3D modeling and visualization',
+      'Structural analysis tools',
+      'Resource efficiency optimization',
+      'Modular design systems',
+      'Habitat expansion planning',
+    ],
+    popular: false,
+    icon: '🏠',
+    color: 'from-green-600 to-teal-600',
+    textColor: 'text-green-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/space-habitat-design-platform',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'First space habitat design platform. Comparable to architectural design platforms ($40K+/month) but specialized in space environments.'
     targetAudience:
@@ -351,6 +476,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     growthRate: '300% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -364,6 +490,21 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     rating: 4.6
     reviews: 67
   }
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    realImplementation: true,
+    implementationDetails:
+      'Advanced space habitat design platform with AI-powered design tools, environmental simulation, material optimization, and comprehensive planning capabilities. Includes 3D modeling and structural analysis.',
+    launchDate: '2029-02-15',
+    customers: 25,
+    rating: 4 && 4.6,
+    reviews: 67,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'space-energy-harvesting-platform'
     name: 'Space Energy Harvesting Platform'
@@ -373,6 +514,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     description:
       'Revolutionary platform that harvests energy from various space sources including solar radiation, cosmic rays, and planetary resources. Uses advanced energy collection technology, AI optimization, and energy storage systems for efficient space power generation.'
     features: [
+<<<<<<< HEAD
       'Multi-source energy harvesting'
       'AI-powered energy optimization'
       'Advanced energy storage'
@@ -389,6 +531,24 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     color: 'from-purple-600 to-pink-600'
     textColor: 'text-purple-400'
     link: 'https://ziontechgroup.com/space-energy-harvesting-platform'
+=======
+      'Multi-source energy harvesting',
+      'AI-powered energy optimization',
+      'Advanced energy storage',
+      'Power distribution systems',
+      'Energy efficiency monitoring',
+      'Renewable space energy',
+      'Power grid management',
+      'Energy demand forecasting',
+      'Storage optimization',
+      'Backup power systems',
+    ],
+    popular: true,
+    icon: '⚡',
+    color: 'from-purple-600 to-pink-600',
+    textColor: 'text-purple-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/space-energy-harvesting-platform',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'First space energy harvesting platform. Comparable to renewable energy platforms ($50K+/month) but specialized in space applications.'
     targetAudience:
@@ -431,6 +591,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     growthRate: '350% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -455,6 +616,31 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     customers: 18;
     rating: 4.8
 
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    realImplementation: true,
+    implementationDetails:
+      'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.',
+    launchDate: '2029-03-01',
+    customers: 18,
+    rating: 4 && 4.8,
+    reviews: 52,
+  },
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    };
+    realImplementation: true,
+    implementationDetails: 'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.';
+    launchDate: '2029-03-01';
+    customers: 18;
+    rating: 4 && 4.8,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 52
   }
 ];

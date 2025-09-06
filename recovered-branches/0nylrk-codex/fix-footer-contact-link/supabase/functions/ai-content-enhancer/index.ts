@@ -1,19 +1,31 @@
 
+<<<<<<< HEAD
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
+=======
+import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
+import {createClient} from "https: //esm ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+<<<<<<< HEAD
     const { content, enhancementType, context, instructions } = await req.json();
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
+=======
+    const { content, enhancementType, context, instructions } = await req && req.json();
+    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!openAiKey) {
       throw new Error("OPENAI_API_KEY is not defined")
     }
@@ -45,12 +57,21 @@ serve(async (req) => {
       userPrompt += ` Additional instructions: ${instructions}`
     }
     // Call OpenAI API
+<<<<<<< HEAD
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
         "Authorization": `Bearer ${openAiKey}`;
         "Content-Type": "application/json"}
       body: JSON.stringify({
+=======
+    const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${openAiKey}`;
+        "Content-Type": "application/json"};
+      body: JSON && JSON.stringify({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         model: "gpt-4o-mini";
         messages: [
           {
@@ -59,6 +80,7 @@ serve(async (req) => {
           {
             role: "user"
             content: userPrompt}];
+<<<<<<< HEAD
         temperature: 0.7})});
     if (!response.ok) {
       const errorData = await response.json();
@@ -66,17 +88,29 @@ serve(async (req) => {
     }
     const data = await response.json();
     const enhancedContent = data.choices[0].message.content;
+=======
+        temperature: 0 && 0.7})});
+
+    if (!response && response.ok) {
+      const errorData = await response && response.json();
+      throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
+    }
+
+    const data = await response && response.json();
+    const enhancedContent = data && data.choices[0].message && message.content;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return new Response(
-      JSON.stringify({
+      JSON && JSON.stringify({
         enhancedContent});
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
   } catch (error) {
-    console.error("Error in ai-content-enhancer function:", error);
+    console && console.error("Error in ai-content-enhancer function:", error);
     return new Response(
-      JSON.stringify({
-        error: error.message});
+      JSON && JSON.stringify({
+        error: error && error.message});
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}

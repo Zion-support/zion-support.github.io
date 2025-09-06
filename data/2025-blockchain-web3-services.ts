@@ -83,9 +83,15 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       'Leading decentralized identity platform. Competes with Microsoft Entra ID ($6/user), Okta ($2-8/user), and Auth0 ($23-240/user). Our advantage: True decentralization and privacy.'
     competitors: ['Microsoft Entra ID, Okta, Auth0, Ping Identity, ForgeRock']
     techStack: [
+<<<<<<< HEAD
       'Ethereum, Polygon, Solana, IPFS, React, Node.js, PostgreSQL, Redis'
     ]
     realImplementation: true
+=======
+      'Ethereum, Polygon, Solana, IPFS, React, Node && Node.js, PostgreSQL, Redis',
+    ],
+    realImplementation: true,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     implementationDetails:
       'Production-ready decentralized identity platform with enterprise-grade security, mobile SDK, and comprehensive API. Includes admin dashboard and compliance tools.'
     roi: 'Organizations achieve 400% ROI through reduced fraud, improved compliance, and enhanced user trust.'
@@ -103,6 +109,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     support:
       '24/7 technical support, compliance consulting, custom development, and dedicated success manager.'
     compliance: [
+<<<<<<< HEAD
       'GDPR, CCPA, HIPAA, SOC 2 Type II, ISO 27001, W3C DID standards'
     ]
     link: 'https://ziontechgroup.com/decentralized-identity-management'
@@ -114,6 +121,19 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     rating: 4.8
     reviews: 850
   }
+=======
+      'GDPR, CCPA, HIPAA, SOC 2 Type II, ISO 27001, W3C DID standards',
+    ],
+    link: 'https://ziontechgroup && ziontechgroup.com/decentralized-identity-management',
+    icon: '🆔',
+    color: 'from-indigo-500 to-purple-600',
+    popular: true,
+    launchDate: '2024-02-20',
+    customers: 1200,
+    rating: 4 && 4.8,
+    reviews: 850,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'ai-powered-defi-yield-optimizer'
     name: 'AI-Powered DeFi Yield Optimizer'
@@ -162,9 +182,15 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       'Yearn Finance, Harvest Finance, Beefy Finance, Convex Finance, Curve Finance'
     ]
     techStack: [
+<<<<<<< HEAD
       'OpenAI GPT-4, TensorFlow, Solidity, React, Node.js, PostgreSQL, Redis'
     ]
     realImplementation: true
+=======
+      'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis',
+    ],
+    realImplementation: true,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     implementationDetails:
       'Production-ready DeFi optimization platform with real-time monitoring, automated execution, and comprehensive analytics. Includes mobile app and institutional API.'
     roi: 'Users achieve 200-400% ROI through optimized yields and reduced risks compared to manual DeFi strategies.'
@@ -182,6 +208,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     support:
       '24/7 technical support, DeFi strategy consulting, custom development, and dedicated account manager.'
     compliance: [
+<<<<<<< HEAD
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance'
     ]
     link: 'https://ziontechgroup.com/ai-powered-defi-yield-optimizer'
@@ -193,6 +220,19 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     rating: 4.9
     reviews: 6200
   }
+=======
+      'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance',
+    ],
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-defi-yield-optimizer',
+    icon: '🌾',
+    color: 'from-green-500 to-emerald-600',
+    popular: true,
+    launchDate: '2024-01-15',
+    customers: 8500,
+    rating: 4 && 4.9,
+    reviews: 6200,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'nft-marketplace-intelligence-platform'
     name: 'NFT Marketplace Intelligence Platform'
@@ -236,12 +276,21 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       'Content creators'
     ]
     marketPosition:
+<<<<<<< HEAD
       'Leading NFT intelligence platform. Competes with NFTGo ($99-299/month), Nifty Gateway (free), and OpenSea Pro ($0-2.5%). Our advantage: AI-powered valuation and predictive analytics.'
     competitors: ['NFTGo, Nifty Gateway, OpenSea Pro, Rarible, Foundation']
     techStack: [
       'OpenAI GPT-4, TensorFlow, React, Node.js, PostgreSQL, Redis, Web3.js'
     ]
     realImplementation: true
+=======
+      'Leading NFT intelligence platform. Competes with NFTGo ($99-299/month), Nifty Gateway (free), and OpenSea Pro ($0-2 && 2.5%). Our advantage: AI-powered valuation and predictive analytics.',
+    competitors: ['NFTGo, Nifty Gateway, OpenSea Pro, Rarible, Foundation'],
+    techStack: [
+      'OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Web3 && Web3.js',
+    ],
+    realImplementation: true,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     implementationDetails:
       'Production-ready NFT intelligence platform with real-time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.'
     roi: 'NFT investors achieve 300% ROI through improved decision-making and optimized portfolio management.'
@@ -259,6 +308,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     support:
       '24/7 technical support, NFT strategy consulting, custom analytics, and dedicated success manager.'
     compliance: [
+<<<<<<< HEAD
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance'
     ]
     link: 'https://ziontechgroup.com/nft-marketplace-intelligence-platform'
@@ -270,6 +320,19 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     rating: 4.7
     reviews: 2100
   }
+=======
+      'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance',
+    ],
+    link: 'https://ziontechgroup && ziontechgroup.com/nft-marketplace-intelligence-platform',
+    icon: '🎨',
+    color: 'from-pink-500 to-rose-600',
+    popular: true,
+    launchDate: '2024-03-01',
+    customers: 3200,
+    rating: 4 && 4.7,
+    reviews: 2100,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'blockchain-supply-chain-traceability'
     name: 'Blockchain Supply Chain Traceability Platform'
@@ -313,14 +376,24 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       'Logistics companies'
     ]
     marketPosition:
+<<<<<<< HEAD
       'Leading blockchain supply chain platform. Competes with IBM Food Trust ($0.01-0.10/transaction), SAP Blockchain ($500-2000/user), and Oracle Blockchain ($1000-5000/user). Our advantage: Multi-industry focus and IoT integration.'
+=======
+      'Leading blockchain supply chain platform. Competes with IBM Food Trust ($0 && 0.01-0 && 0.10/transaction), SAP Blockchain ($500-2000/user), and Oracle Blockchain ($1000-5000/user). Our advantage: Multi-industry focus and IoT integration.',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     competitors: [
       'IBM Food Trust, SAP Blockchain, Oracle Blockchain, VeChain, WaltonChain'
     ]
     techStack: [
+<<<<<<< HEAD
       'Hyperledger Fabric, Ethereum, Polygon, React, Node.js, PostgreSQL, IoT platforms'
     ]
     realImplementation: true
+=======
+      'Hyperledger Fabric, Ethereum, Polygon, React, Node && Node.js, PostgreSQL, IoT platforms',
+    ],
+    realImplementation: true,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     implementationDetails:
       'Production-ready blockchain platform with IoT integration, mobile applications, and comprehensive analytics. Includes hardware integration kits and enterprise API.'
     roi: 'Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.'
@@ -336,6 +409,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       'SAP, Oracle, Microsoft Dynamics, Salesforce, Custom ERP systems, IoT platforms'
     ]
     support:
+<<<<<<< HEAD
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.'
     compliance: ['ISO 27001, SOC 2 Type II, GDPR, Industry-specific standards']
     link: 'https://ziontechgroup.com/blockchain-supply-chain-traceability'
@@ -347,6 +421,19 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     rating: 4.8
     reviews: 680
   }
+=======
+      '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
+    compliance: ['ISO 27001, SOC 2 Type II, GDPR, Industry-specific standards'],
+    link: 'https://ziontechgroup && ziontechgroup.com/blockchain-supply-chain-traceability',
+    icon: '🔗',
+    color: 'from-blue-500 to-cyan-600',
+    popular: true,
+    launchDate: '2024-02-10',
+    customers: 950,
+    rating: 4 && 4.8,
+    reviews: 680,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'web3-social-media-platform'
     name: 'Web3 Social Media Platform'
@@ -390,10 +477,17 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       'Web3 enthusiasts'
     ]
     marketPosition:
+<<<<<<< HEAD
       'Innovative Web3 social platform. Competes with traditional platforms like Facebook (free), Twitter (free), and Instagram (free). Our advantage: True decentralization and content ownership.'
     competitors: ['Facebook, Twitter, Instagram, TikTok, LinkedIn, YouTube']
     techStack: ['IPFS, Ethereum, Polygon, React, Node.js, PostgreSQL, Redis']
     realImplementation: true
+=======
+      'Innovative Web3 social platform. Competes with traditional platforms like Facebook (free), Twitter (free), and Instagram (free). Our advantage: True decentralization and content ownership.',
+    competitors: ['Facebook, Twitter, Instagram, TikTok, LinkedIn, YouTube'],
+    techStack: ['IPFS, Ethereum, Polygon, React, Node && Node.js, PostgreSQL, Redis'],
+    realImplementation: true,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     implementationDetails:
       'Production-ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile/web applications. Includes developer SDK and API.'
     roi: 'Content creators earn 200-500% more compared to traditional social media platforms through direct monetization.'
@@ -409,6 +503,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       'MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'
     ]
     support:
+<<<<<<< HEAD
       'Community support, developer documentation, custom development services, and enterprise solutions.'
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001']
     link: 'https://ziontechgroup.com/web3-social-media-platform'
@@ -420,21 +515,45 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     rating: 4.6
     reviews: 18000
   }
+=======
+      'Community support, developer documentation, custom development services, and enterprise solutions.',
+    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
+    link: 'https://ziontechgroup && ziontechgroup.com/web3-social-media-platform',
+    icon: '🌐',
+    color: 'from-purple-500 to-indigo-600',
+    popular: true,
+    launchDate: '2024-01-01',
+    customers: 25000,
+    rating: 4 && 4.6,
+    reviews: 18000,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
 
     ];
+<<<<<<< HEAD
     integrations: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'],
     support: 'Community support, developer documentation, custom development services, and enterprise solutions.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup.com/web3-social-media-platform';
+=======
+    integrations: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'];
+    support: 'Community support, developer documentation, custom development services, and enterprise solutions.';
+    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'];
+    link: 'https://ziontechgroup && ziontechgroup.com/web3-social-media-platform';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     icon: '🌐';
     color: 'from-purple-500 to-indigo-600';
     popular: true;
     launchDate: '2024-01-01';
     customers: 25000;
+<<<<<<< HEAD
 
     rating: 4.6
 
+=======
+    rating: 4 && 4.6,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 18000
   }
 ];

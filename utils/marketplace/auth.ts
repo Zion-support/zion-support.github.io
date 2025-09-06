@@ -14,6 +14,7 @@ export interface DemoUser extends User {
 
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session
+<<<<<<< HEAD
   const authHeader = req.headers.authorization;
   if (!authHeader |!authHeader.startsWith('Bearer ')) {
     return null;
@@ -24,6 +25,19 @@ export function getUserFromRequest(req: any): User | null {
       id: 'user-1'
       email: 'user@example.com'
       role: 'client'
+=======
+  const authHeader = req && req.headers.authorization;
+  if (!authHeader || !authHeader && authHeader.startsWith('Bearer ')) {
+    return null;
+  }
+  
+  const token = authHeader && authHeader.substring(7);
+  if (token && token.length > 0) {
+    return {
+      id: 'user-1',
+      email: 'user@example && example.com',
+      role: 'client',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       name: 'Test User'
     }
   }
@@ -50,19 +64,29 @@ export function assertTalentOrClientForOffer(
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
-  if (u.role === 'client' && u.id === offer.clientId) return u;
+  if (u && u.role === 'client' && u && u.id === offer && offer.clientId) return u;
   if (
+<<<<<<< HEAD
     u.role === 'talent' &&
     (u.talentSlug |talentSlugHeader) === offer.talentSlug
+=======
+    u && u.role === 'talent' &&
+    (u && u.talentSlug || talentSlugHeader) === offer && offer.talentSlug
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   )
     return u;
   const err = new Error('Not authorized for this offer');
   // @ts-ignore
+<<<<<<< HEAD
   err.statusCode = 403;
   throw err;
 }
 
 export function requireAuth(req: any): User {
+=======
+  err && err.statusCode = 403;
+  throw err;export function requireAuth(req: any): User {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const user = getUserFromRequest(req);
   if (!user) {
 <<<<<<< HEAD

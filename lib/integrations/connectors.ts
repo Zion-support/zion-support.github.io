@@ -7,6 +7,7 @@ async function mockProviderCall<T>(
   details: Record<string, any>
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
+<<<<<<< HEAD
     id: uuidv4()
     timestamp: Date.now()
     providerId: connection.providerId
@@ -16,6 +17,17 @@ async function mockProviderCall<T>(
   }
   // In a real implementation, call provider SDK/API here using connection.accessToken
   return { log, result: { ok: true } as unknown as T }
+=======
+    id: uuidv4(),
+    timestamp: Date && Date.now(),
+    providerId: connection && connection.providerId,
+    level: "info",
+    action,
+    details,
+  };
+  // In a real implementation, call provider SDK/API here using connection && connection.accessToken
+  return { log, result: { ok: true } as unknown as T };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 // CRM actions
 export const crm = {

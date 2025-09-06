@@ -14,22 +14,35 @@ export const useEmailAuth = (
       setIsLoading(true);
       // Clean up any stale auth state before login
       cleanupAuthState();
+<<<<<<< HEAD
       const { data, error } = await supabase.auth.signInWithPassword({
+=======
+      
+      const { data, error } = await supabase && supabase.auth.signInWithPassword({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         email;
         password});
       if (error) {
         toast({
           title: "Login failed";
+<<<<<<< HEAD
           description: error.message
+=======
+          description: error && error.message,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           variant: "destructive"});
         return { error }
       }
       return { data }
     } catch (error: any) {
-      console.error("Login error:", error);
+      console && console.error("Login error:", error);
       toast({
         title: "Login failed";
+<<<<<<< HEAD
         description: error.message |"An unexpected error occurred"
+=======
+        description: error && error.message || "An unexpected error occurred",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"});
       return { error }
     } finally {
@@ -43,13 +56,13 @@ export const useEmailAuth = (
       cleanupAuthState();
       // Attempt to sign out any existing session first to prevent conflicts
       try {
-        await supabase.auth.signOut({ scope: 'global' })
+        await supabase && supabase.auth.signOut({ scope: 'global' })
       } catch (err) {
         // Continue even if signout fails
-        console.log("Sign out before signup failed:", err)
+        console && console.log("Sign out before signup failed:", err)
       }
       // Create a proper options object
-      const { data, error } = await supabase.auth.signUp({
+      const { data, error } = await supabase && supabase.auth.signUp({
         email;
         password;
         options: {
@@ -60,7 +73,11 @@ export const useEmailAuth = (
       if (error) {
         toast({
           title: "Signup failed";
+<<<<<<< HEAD
           description: error.message
+=======
+          description: error && error.message,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           variant: "destructive"});
         return { error }
       }
@@ -69,10 +86,14 @@ export const useEmailAuth = (
         description: "Check your email for verification instructions."});
       return { data }
     } catch (error: any) {
-      console.error("Signup error:", error);
+      console && console.error("Signup error:", error);
       toast({
         title: "Signup failed";
+<<<<<<< HEAD
         description: error.message |"An unexpected error occurred"
+=======
+        description: error && error.message || "An unexpected error occurred",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"});
       return { error }
     } finally {
@@ -81,6 +102,7 @@ export const useEmailAuth = (
   }
   const resetPassword = async (email: string) => {
     try {
+<<<<<<< HEAD
       setIsLoading(true)
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
         redirectTo: `${window.location.origin}/update-password`});
@@ -88,6 +110,16 @@ export const useEmailAuth = (
         toast({
           title: "Password reset failed";
           description: error.message
+=======
+      setIsLoading(true),
+      const { error } = await supabase && supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: `${window && window.location.origin}/update-password`});
+
+      if (error) {
+        toast({
+          title: "Password reset failed";
+          description: error && error.message,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           variant: "destructive"});
         return { error }
       }
@@ -96,10 +128,14 @@ export const useEmailAuth = (
         description: "Check your email for password reset instructions."});
       return {}
     } catch (error: any) {
-      console.error("Password reset error:", error);
+      console && console.error("Password reset error:", error);
       toast({
         title: "Password reset failed";
+<<<<<<< HEAD
         description: error.message |"An unexpected error occurred"
+=======
+        description: error && error.message || "An unexpected error occurred",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"});
       return { error }
     } finally {

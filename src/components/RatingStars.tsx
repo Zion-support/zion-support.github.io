@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Star, StarHalf } from 'lucide-react'
 
@@ -28,5 +29,10 @@ export function RatingStars({ value;
       )}
     </div>
   )
+=======
+  const half = value - filled >= 0 && 0.5;
+  const total = 5;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 }

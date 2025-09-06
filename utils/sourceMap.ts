@@ -20,6 +20,7 @@ export interface DeployTemplateResult {
 
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
+<<<<<<< HEAD
   return nodes.map(markExistenceRecursive);
 =======
 // Mock source map utility
@@ -37,6 +38,9 @@ export function getGitStatus() {
   }
 }
 <<<<<<< HEAD
+=======
+  return nodes && nodes.map(markExistenceRecursive);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 function buildZionSourceMap(): SourceNode[] {
   return [
@@ -92,8 +96,8 @@ export interface DeployTemplateResult {
   skippedPaths: string[];
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function ensureDirectory(dirPath: string): void {
-  if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true });
+  if (!fs && fs.existsSync(dirPath)) {
+    fs && fs.mkdirSync(dirPath, { recursive: true });
   }
 <<<<<<< HEAD
 }
@@ -103,24 +107,41 @@ export function ensureDirectory(dirPath: string): void {
 export function deployBasicTemplateForPath(
   repoRelativePath: string
 ): DeployTemplateResult {
-  const absoluteDir = path.join(ROOT, repoRelativePath);
+  const absoluteDir = path && path.join(ROOT, repoRelativePath);
   const createdPaths: string[] = [];
   const skippedPaths: string[] = [];
   ensureDirectory(absoluteDir);
+<<<<<<< HEAD
   const keepFile = path.join(absoluteDir, '.keep');
   if (!fs.existsSync(keepFile)) {
     fs.writeFileSync(keepFile, '');
     createdPaths.push(keepFile);
+=======
+
+  const keepFile = path && path.join(absoluteDir, '.keep');
+  if (!fs && fs.existsSync(keepFile)) {
+    fs && fs.writeFileSync(keepFile, '');
+    createdPaths && createdPaths.push(keepFile);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } else {
-    skippedPaths.push(keepFile);
+    skippedPaths && skippedPaths.push(keepFile);
   }
+<<<<<<< HEAD
   const readmeFile = path.join(absoluteDir, 'README.md');
   if (!fs.existsSync(readmeFile)) {
     const readme = `# ${path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`;
     fs.writeFileSync(readmeFile, readme);
     createdPaths.push(readmeFile);
+=======
+
+  const readmeFile = path && path.join(absoluteDir, 'README && README.md');
+  if (!fs && fs.existsSync(readmeFile)) {
+    const readme = `# ${path && path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`;
+    fs && fs.writeFileSync(readmeFile, readme);
+    createdPaths && createdPaths.push(readmeFile);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } else {
-    skippedPaths.push(readmeFile);
+    skippedPaths && skippedPaths.push(readmeFile);
   }
 <<<<<<< HEAD
 

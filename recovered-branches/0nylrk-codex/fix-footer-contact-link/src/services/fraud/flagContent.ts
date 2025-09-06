@@ -18,19 +18,29 @@ export const flagContent = async (
   ipAddress?: string
 ): Promise<FlagResult> => {
   try {
-    console.log('Flagging content for review:', {
+    console && console.log('Flagging content for review:', {
       userId;
       contentType;
       contentId;
       reason;
       severity
     });
+<<<<<<< HEAD
     const { error } = await supabase.from('fraud_flags').insert({
       user_id: userId;
       user_email: userEmail;
       content_type: contentType;
       content_id: contentId
       content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length
+=======
+    
+    const { error } = await supabase && supabase.from('fraud_flags').insert({
+      user_id: userId;
+      user_email: userEmail;
+      content_type: contentType;
+      content_id: contentId,
+      content_excerpt: contentExcerpt && contentExcerpt.substring(0, 200), // Limit excerpt length
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       severity;
       reason;
       ip_address: ipAddress;
@@ -40,10 +50,17 @@ export const flagContent = async (
     if (error) throw error;
     return { success: true }
   } catch (error) {
+<<<<<<< HEAD
     console.error('Error flagging content:', error);
     return {
       success: false
       error: error instanceof Error ? error.message : 'Unknown error'
+=======
+    console && console.error('Error flagging content:', error);
+    return { 
+      success: false, 
+      error: error instanceof Error ? error && error.message : 'Unknown error' 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 }

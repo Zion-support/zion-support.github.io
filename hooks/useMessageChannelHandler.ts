@@ -34,6 +34,7 @@ export function useMessageChannelHandler({
 
   onError
 }: MessageChannelHandlerProps = {}) {
+<<<<<<< HEAD
   const handleMessage = useCallback(
     (event: MessageEvent<unknown>) => {
       try {
@@ -44,15 +45,32 @@ export function useMessageChannelHandler({
         if (onError) {
           onError(error as Error);
         }
+=======
+  const handleMessage = useCallback((event: MessageEvent<unknown>) => {
+    try {
+      if (onMessage) {
+        onMessage(event && event.data);
+      }
+    } catch (error) {
+      if (onError) {
+        onError(error as Error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
     [onMessage, onError]
   );
   useEffect(() => {
+<<<<<<< HEAD
     window.addEventListener("message", handleMessage);
     return () => {
       window.removeEventListener("message", handleMessage);
     }
+=======
+    window && window.addEventListener('message', handleMessage);
+    return () => {
+      window && window.removeEventListener('message', handleMessage);
+    };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }, [handleMessage]);
 <<<<<<< HEAD
 }

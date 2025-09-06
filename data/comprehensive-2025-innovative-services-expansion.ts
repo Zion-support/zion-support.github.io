@@ -1,3 +1,26 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveInnovativeService {
   id: string;
@@ -47,10 +70,18 @@ export interface ComprehensiveInnovativeService {
 }
 const contact = {
   mobile: '+1 302 464 0950';
+<<<<<<< HEAD
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
+=======
+  email: 'kleber@ziontechgroup && ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup && ziontechgroup.com'
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
   // AI & Machine Learning Services
   {
@@ -68,18 +99,32 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     icon: '✍️';
     color: 'from-blue-600 to-indigo-600';
     textColor: 'text-blue-400';
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-content-generation';
     marketPosition: 'Leading AI content generation platform with enterprise features'
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-content-generation';
+    marketPosition: 'Leading AI content generation platform with enterprise features',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'Marketing teams, Content creators, Agencies, E-commerce businesses';
     trialDays: 14;
     setupTime: '1-2 days';
     category: 'AI & Machine Learning';
+<<<<<<< HEAD
     realService: true
     technology: ['OpenAI GPT-4, Claude, Python, React, Node.js, PostgreSQL'];
     integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms'];
     useCases: ['Blog writing, Social media content, Marketing copy, Product descriptions'];
     roi: 'Reduce content creation time by 80% and increase engagement by 40%'
     competitors: ['Jasper, Copy.ai, Writesonic, ContentBot'];
+=======
+    realService: true,
+    technology: ['OpenAI GPT-4, Claude, Python, React, Node && Node.js, PostgreSQL'];
+    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms'];
+    useCases: ['Blog writing, Social media content, Marketing copy, Product descriptions'];
+    roi: 'Reduce content creation time by 80% and increase engagement by 40%',
+    competitors: ['Jasper, Copy && Copy.ai, Writesonic, ContentBot'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketSize: '$8B+ content marketing market';
     growthRate: '180% YoY';
     variant: 'ai-futuristic';
@@ -88,7 +133,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     implementationDetails: 'Cloud-native SaaS platform with enterprise SSO and custom integrations';
     launchDate: '2024-08-01';
     customers: 342;
-    rating: 4.8;
+    rating: 4 && 4.8;
     reviews: 267;
     benefits: [
       '80% faster content creation40% increase in engagementSEO optimization built-inMulti-language supportBrand voice consistency'
@@ -114,14 +159,24 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     icon: '🔐';
     color: 'from-red-600 to-pink-600';
     textColor: 'text-red-400';
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/zero-trust-security';
     marketPosition: 'Advanced zero-trust security platform for modern enterprises'
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-security';
+    marketPosition: 'Advanced zero-trust security platform for modern enterprises',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'Enterprise security teams, Government agencies, Financial institutions';
     trialDays: 30;
     setupTime: '2-3 weeks';
     category: 'Cybersecurity';
+<<<<<<< HEAD
     realService: true
     technology: ['Python, Kubernetes, Redis, Elasticsearch, React, Node.js'];
+=======
+    realService: true,
+    technology: ['Python, Kubernetes, Redis, Elasticsearch, React, Node && Node.js'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: ['Active Directory, Okta, Azure AD, AWS IAM, Google Workspace'];
     useCases: ['Enterprise security, Government compliance, Financial security, Healthcare security'];
     roi: 'Reduce security incidents by 90% and compliance costs by 60%'
@@ -134,7 +189,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     implementationDetails: 'Enterprise-grade zero-trust platform with custom integrations and 24/7 support';
     launchDate: '2024-07-01';
     customers: 156;
-    rating: 4.9;
+    rating: 4 && 4.9;
     reviews: 134;
     benefits: [
       '90% reduction in security incidents60% lower compliance costsContinuous verificationLeast-privilege accessReal-time threat detection'
@@ -160,8 +215,13 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     icon: '⚙️';
     color: 'from-green-600 to-teal-600';
     textColor: 'text-green-400';
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-devops-automation';
     marketPosition: 'Leading AI-powered DevOps automation platform'
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-devops-automation';
+    marketPosition: 'Leading AI-powered DevOps automation platform',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'DevOps teams, Software companies, IT departments, Cloud-native businesses';
     trialDays: 21;
     setupTime: '1-2 weeks';
@@ -180,7 +240,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     implementationDetails: 'Cloud-native DevOps platform with enterprise integrations and AI-powered optimization';
     launchDate: '2024-06-01';
     customers: 234;
-    rating: 4.7;
+    rating: 4 && 4.7;
     reviews: 189;
     benefits: [
       '70% faster deployments50% team productivity increaseAI-powered optimizationAutomated testingCost optimization'
@@ -206,8 +266,13 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     icon: '🌐';
     color: 'from-purple-600 to-blue-600';
     textColor: 'text-purple-400';
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/iot-edge-intelligence';
     marketPosition: 'Advanced IoT edge computing platform for industrial applications'
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/iot-edge-intelligence';
+    marketPosition: 'Advanced IoT edge computing platform for industrial applications',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'Manufacturing companies, Smart cities, Industrial IoT, Energy companies';
     trialDays: 30;
     setupTime: '2-4 weeks';
@@ -226,7 +291,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     implementationDetails: 'Industrial-grade edge computing platform with custom hardware support';
     launchDate: '2024-05-01';
     customers: 89;
-    rating: 4.6;
+    rating: 4 && 4.6;
     reviews: 67;
     benefits: [
       '80% latency reduction45% operational efficiencyReal-time processingLocal intelligenceCost optimization'
@@ -252,8 +317,13 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     icon: '🏥';
     color: 'from-emerald-600 to-green-600';
     textColor: 'text-emerald-400';
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-medical-imaging';
     marketPosition: 'Leading AI medical imaging platform with FDA clearance'
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-medical-imaging';
+    marketPosition: 'Leading AI medical imaging platform with FDA clearance',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'Hospitals, Imaging centers, Radiologists, Research institutions';
     trialDays: 30;
     setupTime: '4-6 weeks';
@@ -272,7 +342,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     implementationDetails: 'FDA-cleared medical imaging platform with enterprise integrations';
     launchDate: '2024-04-01';
     customers: 67;
-    rating: 4.9;
+    rating: 4 && 4.9;
     reviews: 52;
     benefits: [
       '25% diagnostic accuracy improvement60% reading time reductionEarly detection capabilitiesTreatment optimizationResearch support'
@@ -298,14 +368,24 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     icon: '💰';
     color: 'from-yellow-600 to-orange-600';
     textColor: 'text-yellow-400';
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-financial-risk';
     marketPosition: 'Leading AI financial risk management platform'
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-financial-risk';
+    marketPosition: 'Leading AI financial risk management platform',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'Banks, Investment firms, Insurance companies, Fintech startups';
     trialDays: 21;
     setupTime: '3-4 weeks';
     category: 'Financial Technology';
+<<<<<<< HEAD
     realService: true
     technology: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node.js'];
+=======
+    realService: true,
+    technology: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node && Node.js'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: ['Bloomberg, Reuters, Banking systems, Trading platforms, Compliance tools'];
     useCases: ['Risk assessment, Fraud detection, Compliance monitoring, Portfolio management'];
     roi: 'Reduce risk losses by 40% and compliance costs by 50%'
@@ -318,7 +398,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     implementationDetails: 'Enterprise-grade risk management platform with real-time data feeds';
     launchDate: '2024-03-01';
     customers: 134;
-    rating: 4.8;
+    rating: 4 && 4.8;
     reviews: 98;
     benefits: [
       '40% risk loss reduction50% compliance cost savingsReal-time monitoringAI-powered detectionRegulatory compliance'
@@ -344,14 +424,24 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     icon: '🎓';
     color: 'from-indigo-600 to-purple-600';
     textColor: 'text-indigo-400';
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-personalized-learning';
     marketPosition: 'Advanced AI-powered personalized learning platform'
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-personalized-learning';
+    marketPosition: 'Advanced AI-powered personalized learning platform',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'Schools, Universities, Corporate training, Online education platforms';
     trialDays: 30;
     setupTime: '2-3 weeks';
     category: 'Education Technology';
+<<<<<<< HEAD
     realService: true
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'];
+=======
+    realService: true,
+    technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: ['Canvas, Blackboard, Moodle, Google Classroom, Microsoft Teams'];
     useCases: ['K-12 education, Higher education, Corporate training, Skills development'];
     roi: 'Improve learning outcomes by 35% and reduce dropout rates by 50%'
@@ -364,7 +454,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     implementationDetails: 'Cloud-native learning platform with AI-powered personalization';
     launchDate: '2024-02-01';
     customers: 156;
-    rating: 4.7;
+    rating: 4 && 4.7;
     reviews: 123;
     benefits: [
       '35% learning outcome improvement50% dropout rate reductionPersonalized learningAdaptive contentProgress tracking'
@@ -390,14 +480,24 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     icon: '📦';
     color: 'from-teal-600 to-cyan-600';
     textColor: 'text-teal-400';
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-supply-chain';
     marketPosition: 'Leading AI supply chain optimization platform'
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-supply-chain';
+    marketPosition: 'Leading AI supply chain optimization platform',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'Manufacturing companies, Retail chains, Logistics providers, E-commerce businesses';
     trialDays: 30;
     setupTime: '3-4 weeks';
     category: 'Supply Chain & Logistics';
+<<<<<<< HEAD
     realService: true
     technology: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node.js'];
+=======
+    realService: true,
+    technology: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node && Node.js'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: ['SAP, Oracle, Salesforce, Shopify, Shipping carriers'];
     useCases: ['Inventory management, Demand forecasting, Logistics optimization, Supplier management'];
     roi: 'Reduce inventory costs by 30% and improve delivery times by 40%'
@@ -410,7 +510,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     implementationDetails: 'Enterprise supply chain platform with AI optimization and real-time tracking';
     launchDate: '2024-01-01';
     customers: 189;
-    rating: 4.8;
+    rating: 4 && 4.8;
     reviews: 145;
     benefits: [
       '30% inventory cost reduction40% delivery time improvementDemand forecastingRoute optimizationReal-time visibility'
@@ -436,8 +536,13 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     icon: '⚡';
     color: 'from-green-600 to-emerald-600';
     textColor: 'text-green-400';
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-energy-optimization';
     marketPosition: 'Advanced AI energy optimization platform for sustainability'
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-energy-optimization';
+    marketPosition: 'Advanced AI energy optimization platform for sustainability',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'Utility companies, Energy providers, Manufacturing companies, Smart cities';
     trialDays: 30;
     setupTime: '4-6 weeks';
@@ -456,7 +561,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     implementationDetails: 'Industrial energy management platform with AI optimization and IoT integration';
     launchDate: '2023-12-01';
     customers: 78;
-    rating: 4.6;
+    rating: 4 && 4.6;
     reviews: 56;
     benefits: [
       '25% energy cost reduction40% sustainability improvementRenewable integrationGrid optimizationCarbon tracking'

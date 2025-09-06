@@ -30,6 +30,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     category: 'AI Emotional Intelligence'
     pricing: { starter: '$99/mo' }
     features: [
+<<<<<<< HEAD
       'CBT-guided prompts'
       'Mood tracking'
       'Crisis escalation'
@@ -40,6 +41,18 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     link: 'https://ziontechgroup.com/services/ai-emotional-support-agent'
     realService: true
   }
+=======
+      'CBT-guided prompts',
+      'Mood tracking',
+      'Crisis escalation',
+      'HIPAA-friendly modes',
+    ],
+    integrations: ['Twilio', 'Slack'],
+    useCases: ['Employee wellness', '24/7 support'],
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-emotional-support-agent',
+    realService: true,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'ai-product-spec-writer'
     name: 'AI Product Spec Writer'
@@ -48,6 +61,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     category: 'AI Business Management'
     pricing: { starter: '$79/mo' }
     features: [
+<<<<<<< HEAD
       'PRD templates'
       'Story generation'
       'Acceptance criteria'
@@ -58,6 +72,18 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     link: 'https://ziontechgroup.com/services/ai-product-spec-writer'
     realService: true
   }
+=======
+      'PRD templates',
+      'Story generation',
+      'Acceptance criteria',
+      'Analytics alignment',
+    ],
+    integrations: ['Jira', 'Linear'],
+    useCases: ['Faster planning', 'Better alignment'],
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-product-spec-writer',
+    realService: true,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'ai-creative-studio'
     name: 'AI Creative Studio'
@@ -66,6 +92,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     category: 'AI Creativity'
     pricing: { starter: '$149/mo' }
     features: [
+<<<<<<< HEAD
       'Brand kit'
       'Image & video gen'
       'Review & approvals'
@@ -76,6 +103,18 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     link: 'https://ziontechgroup.com/services/ai-creative-studio'
     realService: true
   }
+=======
+      'Brand kit',
+      'Image & video gen',
+      'Review & approvals',
+      'Rights management',
+    ],
+    integrations: ['Canva', 'Figma'],
+    useCases: ['Marketing velocity', 'Cost savings'],
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-creative-studio',
+    realService: true,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];	id: string;
 	name: string;
 	description: string;
@@ -107,7 +146,11 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes'];
 		integrations: ['TwilioSlack'];
 		useCases: ['Employee wellness24/7 support'];
+<<<<<<< HEAD
 		link: 'https://ziontechgroup.com/services/ai-emotional-support-agent'
+=======
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-emotional-support-agent',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 		realService: true
 	}
 	{
@@ -119,7 +162,11 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment'];
 		integrations: ['JiraLinear'];
 		useCases: ['Faster planningBetter alignment'];
+<<<<<<< HEAD
 		link: 'https://ziontechgroup.com/services/ai-product-spec-writer'
+=======
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-product-spec-writer',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 		realService: true
 	}
 	{
@@ -131,7 +178,11 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		features: ['Brand kitImage & video genReview & approvalsRights management'];
 		integrations: ['CanvaFigma'];
 		useCases: ['Marketing velocityCost savings'];
+<<<<<<< HEAD
 		link: 'https://ziontechgroup.com/services/ai-creative-studio'
+=======
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-creative-studio',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 		realService: true
 	}
 ];

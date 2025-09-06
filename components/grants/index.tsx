@@ -1,6 +1,7 @@
 import { useEffect, useState  } from 'react';
 import Link from 'next/link',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
 
 import type {
   GrantApplication
@@ -19,16 +20,37 @@ const statuses: GrantStatus[] = [
   'Under Review'
   'Approved'
   'Rejected'
+=======
+import type {;
+  GrantApplication,;
+  GrantCategory,;
+  GrantStatus,;
+} from '../../types/grants';
+
+const categories: GrantCategory[] = [;
+  'Ecosystem Tools',;
+  'Talent Development',;
+  'Regional Expansion',;
+  'Research Grants',;
+];
+const statuses: GrantStatus[] = [;
+  'Draft',;
+  'Submitted',;
+  'Under Review',;
+  'Approved',;
+  'Rejected',;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 
-export default function GrantsPage() {
+export default function GrantsPage() {;
   const [items, setItems] = useState<GrantApplication[]>([]);
-  const [filters, setFilters] = useState<{
+  const [filters, setFilters] = useState<{;
     sector?: string;
     status?: string;
     region?: string;
     program?: string;
   }>({});
+<<<<<<< HEAD
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected']
 export default function GrantsPage() {
@@ -44,8 +66,26 @@ export default function GrantsPage() {
     fetch(`/api/grants?${params.toString()}`)
       .then(r => r.json())
       .then(d => setItems(d.items |[]))
+=======
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
+const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],;
+export default function GrantsPage() {;
+  const [items, setItems] = useState<GrantApplication[]>([]);
+  const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
+
+  useEffect(() => {;
+    const params = new URLSearchParams();
+    if (filters && filters.sector) params && params.set('sector', filters && filters.sector);
+    if (filters && filters.status) params && params.set('status', filters && filters.status);
+    if (filters && filters.region) params && params.set('region', filters && filters.region);
+    if (filters && filters.program) params && params.set('program', filters && filters.program);
+    fetch(`/api/grants?${params && params.toString()}`);
+      .then(r => r && r.json());
+      .then(d => setItems(d && d.items || []));
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       .catch(() => setItems([]));  }, [filters]);
   return (
+<<<<<<< HEAD
     <EnhancedLayout>      .then((r) => r.json())
       .then((d) => setItems(d.items |[]))
       .catch(() => setItems([]))
@@ -71,39 +111,80 @@ export default function GrantsPage() {
           value={filters.sector |''}
           onChange={e =>
             setFilters(f => ({ ...f, sector: e.target.value |undefined }))
-          }
-        >
-          <option value=''>All Sectors</option>
-          {categories.map(c => (
-            <option key={c} value={c}>
-              {c}
-            </option>
-          ))}
-        </select>
+=======
+    <EnhancedLayout>      .then((r) => r && r.json());
+      .then((d) => setItems(d && d.items || []));
+      .catch(() => setItems([]));
+  }, [filters]);
+
+  return (
+    <EnhancedLayout>;
+      <div className='flex items-center justify-between mb-6'>;
+        <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>;
+        <div className='flex gap-2'>;
+          <Link href='/grants/apply'>;
+            <a className='px-3 py-2 bg-blue-600 text-white rounded'>Apply</a>;
+          </Link>;
+          <Link href='/incubator'>;
+            <a className='px-3 py-2 bg-purple-600 text-white rounded'>;
+              Incubator;
+            </a>;
+          </Link>;
+      </div>;
+
+      <div className='grid md:grid-cols-4 gap-4 mb-6'>;
         <select
           className='border rounded p-2'
+          value={filters && filters.sector || ''}
+          onChange={e =>;
+            setFilters(f => ({ ...f, sector: e && e.target.value || undefined }));
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+          }
+        >;
+          <option value=''>All Sectors</option>;
+          {categories && categories.map(c => (;
+            <option key={c} value={c}>;
+              {c}
+            </option>;
+          ))}
+        </select>;
+        <select
+          className='border rounded p-2'
+<<<<<<< HEAD
           value={filters.status |''}
           onChange={e =>
             setFilters(f => ({ ...f, status: e.target.value |undefined }))
+=======
+          value={filters && filters.status || ''}
+          onChange={e =>;
+            setFilters(f => ({ ...f, status: e && e.target.value || undefined }));
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }
-        >
-          <option value=''>All Stages</option>
-          {statuses.map(s => (
-            <option key={s} value={s}>
+        >;
+          <option value=''>All Stages</option>;
+          {statuses && statuses.map(s => (;
+            <option key={s} value={s}>;
               {s}
-            </option>
+            </option>;
           ))}
-        </select>
+        </select>;
         <input
           className='border rounded p-2'
           placeholder='Region'
+<<<<<<< HEAD
           value={filters.region |''}
           onChange={e =>
             setFilters(f => ({ ...f, region: e.target.value |undefined }))
+=======
+          value={filters && filters.region || ''}
+          onChange={e =>;
+            setFilters(f => ({ ...f, region: e && e.target.value || undefined }));
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }
-        />
+        />;
         <select
           className='border rounded p-2'
+<<<<<<< HEAD
           value={filters.program |''}
           onChange={e =>
             setFilters(f => ({ ...f, program: e.target.value |undefined }))
@@ -137,29 +218,71 @@ export default function GrantsPage() {
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
                     Incubated by Zion
                   </span>
+=======
+          value={filters && filters.program || ''}
+          onChange={e =>;
+            setFilters(f => ({ ...f, program: e && e.target.value || undefined }));
+          }
+        >;
+          <option value=''>All Programs</option>;
+          <option value='grant'>Grant</option>;
+          <option value='incubator'>Incubator</option>;
+        </select>;
+      </div>;
+
+      <div className='grid gap-4'>;
+        {items && items.map(g => (;
+          <div
+            key={g && g.id}
+            className='border rounded p-4 bg-white/70 dark:bg-black/40'>;
+            <div className='flex items-center justify-between'>;
+              <div>;
+                <h3 className='text-lg font-medium'>;
+                  <Link href={`/grants/${g && g.id}`}>;
+                    <a>{g && g.projectName}</a>;
+                  </Link>;
+                </h3>;
+                <div className='text-xs text-gray-600 dark:text-gray-400'>;
+                  {g && g.sector || 'General'} • {g && g.region || 'Global'} •{' '}
+                  {g && g.program === 'incubator' ? 'Incubator' : 'Grant'}
+                </div>;
+              </div>;
+              <div className='flex gap-2 items-center'>;
+                {g && g.program === 'incubator' && (;
+                  <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>;
+                    Incubated by Zion;
+                  </span>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
-                {g.status === 'Approved' && (
-                  <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>
-                    Grant Winner
-                  </span>
+                {g && g.status === 'Approved' && (;
+                  <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
+                    Grant Winner;
+                  </span>;
                 )}
-                <span className='px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800'>
-                  {g.status}
-                </span>
-              </div>
-            </div>
-            <p className='mt-2 text-sm text-gray-700 dark:text-gray-300 line-clamp-3'>
-              {g.proposalSummary}
-            </p>
-            <div className='mt-3 text-sm text-gray-600 dark:text-gray-400'>
-              Budget: {g.budgetAmount} {g.budgetCurrency}
-            </div>
-          </div>
+                <span className='px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800'>;
+                  {g && g.status}
+                </span>;
+              </div>;
+            </div>;
+            <p className='mt-2 text-sm text-gray-700 dark:text-gray-300 line-clamp-3'>;
+              {g && g.proposalSummary}
+            </p>;
+            <div className='mt-3 text-sm text-gray-600 dark:text-gray-400'>;
+              Budget: {g && g.budgetAmount} {g && g.budgetCurrency}
+            </div>;
+          </div>;
         ))}
-        {items.length === 0 && (
-          <div className='text-sm text-gray-600'>No grants found.</div>
+        {items && items.length === 0 && (;
+          <div className='text-sm text-gray-600'>No grants found.</div>;
         )}
+<<<<<<< HEAD
       </div>
     </EnhancedLayout>
 );
 }
+=======
+      </div>;
+    </EnhancedLayout>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

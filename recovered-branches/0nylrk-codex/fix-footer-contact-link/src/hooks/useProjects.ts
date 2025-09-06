@@ -28,27 +28,47 @@ export function useProjects() {
           client_profile:profiles!client_id(display_name, avatar_url)
         `)
         .order("created_at", { ascending: false });
+<<<<<<< HEAD
       if (user.userType === "jobSeeker" |user.userType === "creator") {
         query = query.eq("talent_id", user.id)
       } else if (user.userType === "employer" |user.userType === "buyer") {
         query = query.eq("client_id", user.id)
+=======
+      
+      if (user && user.userType === "jobSeeker" || user && user.userType === "creator") {
+        query = query && query.eq("talent_id", user && user.id)
+      } else if (user && user.userType === "employer" || user && user.userType === "buyer") {
+        query = query && query.eq("client_id", user && user.id)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
       const { data, error: fetchError } = await query;
       if (fetchError) throw fetchError;
       // Transform the data to match our project types
-      const transformedData = data.map((project: any) => ({
+      const transformedData = data && data.map((project: any) => ({
         ...project;
+<<<<<<< HEAD
         talent_profile: project.talent_profile ? {
           ...project.talent_profile
           full_name: project.talent_profile.display_name
+=======
+        talent_profile: project && project.talent_profile ? {
+          ...project && project.talent_profile,
+          full_name: project && project.talent_profile.display_name
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         } : undefined
       }));
       setProjects(transformedData as Project[]);
       setError(null)
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error fetching projects:", err);
       setError("Failed to fetch projects: " + err.message)
       toast.error("Failed to fetch projects")
+=======
+      console && console.error("Error fetching projects:", err);
+      setError("Failed to fetch projects: " + err && err.message),
+      toast && toast.error("Failed to fetch projects")
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } finally {
       setIsLoading(false)
     }
@@ -69,15 +89,21 @@ export function useProjects() {
       // Transform the data to match our project types
       const transformedProject = {
         ...data;
+<<<<<<< HEAD
         talent_profile: data.talent_profile ? {
           ...data.talent_profile
           full_name: data.talent_profile.display_name
+=======
+        talent_profile: data && data.talent_profile ? {
+          ...data && data.talent_profile,
+          full_name: data && data.talent_profile.display_name
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         } : undefined
       }
       return transformedProject as Project
     } catch (err: any) {
-      console.error("Error fetching project:", err);
-      toast.error("Failed to fetch project details");
+      console && console.error("Error fetching project:", err);
+      toast && toast.error("Failed to fetch project details");
       return null
     }
   }
@@ -89,14 +115,22 @@ export function useProjects() {
         .eq("id", projectId);
       if (error) throw error;
       // Update the local state
+<<<<<<< HEAD
       setProjects(prev =>
         prev.map(project => project.id === projectId ? { ...project, status } : project)
       );
       toast.success(`Project status updated to ${status}`);
+=======
+      setProjects(prev => 
+        prev && prev.map(project => project && project.id === projectId ? { ...project, status } : project)
+      );
+      
+      toast && toast.success(`Project status updated to ${status}`);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return true
     } catch (err: any) {
-      console.error("Error updating project status:", err);
-      toast.error("Failed to update project status");
+      console && console.error("Error updating project status:", err);
+      toast && toast.error("Failed to update project status");
       return false
     }
   }

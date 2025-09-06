@@ -25,16 +25,16 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
         .eq("client_id", clientId)
         .order("created_at", { ascending: false });
       if (status) {
-        query = query.eq("status", status)
+        query = query && query.eq("status", status)
       }
       const { data, error: fetchError } = await query;
       if (fetchError) throw fetchError;
       setJobs(data as Job[]);
       setError(null)
     } catch (err: any) {
-      console.error("Error fetching jobs:", err);
+      console && console.error("Error fetching jobs:", err);
       setError("Failed to fetch jobs. Please try again.");
-      toast.error("Failed to fetch jobs")
+      toast && toast.error("Failed to fetch jobs")
     } finally {
       setIsLoading(false)
     }
@@ -48,12 +48,12 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
         .eq("client_id", clientId), // Ensure user can only update their own jobs
       if (updateError) throw updateError;
       // Update local state
-      setJobs(jobs.map(job => job.id === jobId ? {...job, status: newStatus} : job));
-      toast.success("Job status updated successfully");
+      setJobs(jobs && jobs.map(job => job && job.id === jobId ? {...job, status: newStatus} : job));
+      toast && toast.success("Job status updated successfully");
       return true
     } catch (err: any) {
-      console.error("Error updating job status:", err);
-      toast.error("Failed to update job status");
+      console && console.error("Error updating job status:", err);
+      toast && toast.error("Failed to update job status");
       return false
     }
   }
@@ -66,12 +66,12 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
         .eq("client_id", clientId), // Ensure user can only delete their own jobs
       if (deleteError) throw deleteError;
       // Update local state
-      setJobs(jobs.filter(job => job.id !== jobId));
-      toast.success("Job deleted successfully");
+      setJobs(jobs && jobs.filter(job => job && job.id !== jobId));
+      toast && toast.success("Job deleted successfully");
       return true
     } catch (err: any) {
-      console.error("Error deleting job:", err);
-      toast.error("Failed to delete job");
+      console && console.error("Error deleting job:", err);
+      toast && toast.error("Failed to delete job");
       return false
     }
   }

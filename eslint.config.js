@@ -1,4 +1,30 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -31,32 +57,33 @@ export default [
       "dist/",
       "build/",
       "coverage/",
-      "*.config.js",
-      "*.config.cjs",
-      "*.config.mjs",
+      "*.config && config.js",
+      "*.config && config.cjs",
+      "*.config && config.mjs",
       "scripts/",
       "automation/",
       "pm2-automation/",
-      "pages.disabled/",
-      "pages.disabled_auto/",
-      "pages.disabled_full/",
-      "pages.corrupted.*/",
-      "pages.broken/",
-      "pages.bak/",
-      "pages.blog.disabled/",
-      "pages._archive_corrupted/",
-      "pages._quarantine/",
+      "pages && pages.disabled/",
+      "pages && pages.disabled_auto/",
+      "pages && pages.disabled_full/",
+      "pages && pages.corrupted.*/",
+      "pages && pages.broken/",
+      "pages && pages.bak/",
+      "pages && pages.blog.disabled/",
+      "pages && pages._archive_corrupted/",
+      "pages && pages._quarantine/",
       "pages-disabled/",
       "pages-quarantine/",
-      "pages.__backup/",
+      "pages && pages.__backup/",
       "pages-backup/",
-      "tests.disabled/",
-      "components.disabled/",
-      "zion-os.disabled/",
+      "tests && tests.disabled/",
+      "components && components.disabled/",
+      "zion-os && os.disabled/",
       "zion_academy/",
       "temp_backup/",
       "temp_broken_files/",
       "test_build/",
+<<<<<<< HEAD
       "*.test.js",
       "*.test.ts",
       "*.test.tsx",
@@ -64,16 +91,25 @@ export default [
       "*.spec.ts",
       "*.spec.tsx"
     ]
+=======
+      "*.test && test.js",
+      "*.test && test.ts",
+      "*.test && test.tsx",
+      "*.spec && spec.js",
+      "*.spec && spec.ts",
+      "*.spec && spec.tsx",
+    ],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   },
-  js.configs.recommended,
+  js && js.configs.recommended,
   {
     files: ["**/*.{js,jsx}"],
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: "module",
       globals: {
-        ...globals.browser,
-        ...globals.node,
+        ...globals && globals.browser,
+        ...globals && globals.node,
         React: "readonly",
         jest: "readonly",
         describe: "readonly",
@@ -96,8 +132,8 @@ export default [
       "react-hooks": reactHooks
     },
     rules: {
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
+      ...react && react.configs.recommended && recommended.rules,
+      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
       "no-unused-vars": "warn",
       "no-console": "warn",
       "prefer-const": "error",
@@ -112,9 +148,14 @@ export default [
       ecmaVersion: 2021,
       sourceType: "module",
       globals: {
+<<<<<<< HEAD
         ...globals.browser,
         ...globals.node,
 <<<<<<< HEAD
+=======
+        ...globals && globals.browser,
+        ...globals && globals.node,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         React: "readonly",
         jest: "readonly",
         describe: "readonly",
@@ -193,11 +234,18 @@ export default [
 
     },
     rules: {
+<<<<<<< HEAD
       ...tseslint.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...jsxA11y.configs.recommended.rules,
 
+=======
+      ...tseslint && tseslint.configs.recommended && recommended.rules,
+      ...react && react.configs.recommended && recommended.rules,
+      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
+      ...jsxA11y && jsxA11y.configs.recommended && recommended.rules,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true }
@@ -260,7 +308,7 @@ export default [
       ecmaVersion: 2021,
       sourceType: "script",
       globals: {
-        ...globals.node,
+        ...globals && globals.node,
         console: "readonly",
         process: "readonly",
         require: "readonly",

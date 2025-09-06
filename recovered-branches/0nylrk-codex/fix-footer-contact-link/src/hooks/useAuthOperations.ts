@@ -6,10 +6,15 @@ import { toast } from "@/hooks/use-toast";
 import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils";
 import { cleanupAuthState } from "@/utils/authUtils";
 export function useAuthOperations(
+<<<<<<< HEAD
 
   setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>
 
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
+=======
+  setUser: React && React.Dispatch<React && React.SetStateAction<UserProfile | null>>,
+  setIsLoading: React && React.Dispatch<React && React.SetStateAction<boolean>>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ) {
   // Check for referral code in URL when the hook is first used
   useEffect(() => {
@@ -21,15 +26,26 @@ export function useAuthOperations(
     try {
       // Clean up any stale auth state before login
       cleanupAuthState();
+<<<<<<< HEAD
       const { data, error } = await supabase.auth.signInWithPassword({
+=======
+      
+      const { data, error } = await supabase && supabase.auth.signInWithPassword({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         email;
         password});
       if (error) {
         toast({
           variant: "destructive";
+<<<<<<< HEAD
           title: "Oh no! Something went wrong."
           description: error.message});
         return { data: null, error: error.message }
+=======
+          title: "Oh no! Something went wrong.",
+          description: error && error.message});
+        return { data: null, error: error && error.message }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
       toast({
         title: "Login successful!"
@@ -48,7 +64,7 @@ export function useAuthOperations(
   const signup = async ({ email, password, display_name }) => {
     setIsLoading(true);
     try {
-      const { data, error } = await supabase.auth.signUp({
+      const { data, error } = await supabase && supabase.auth.signUp({
         email;
         password;
         options: {
@@ -57,14 +73,20 @@ export function useAuthOperations(
       if (error) {
         toast({
           variant: "destructive";
+<<<<<<< HEAD
           title: "Error during signup"
           description: error.message});
         return { data: null, error: error.message }
+=======
+          title: "Error during signup",
+          description: error && error.message});
+        return { data: null, error: error && error.message }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
       // Add this after successful signup
       if (data?.user) {
         // Track referral if there was a referral code
-        await trackReferral(data.user.id, email)
+        await trackReferral(data && data.user.id, email)
       }
       toast({
         title: "Signup successful!"
@@ -83,12 +105,22 @@ export function useAuthOperations(
   const logout = async () => {
     setIsLoading(true);
     try {
+<<<<<<< HEAD
       const { error } = await supabase.auth.signOut();
       if (error) {
         toast({
           variant: "destructive";
           title: "Oh no! Something went wrong."
           description: error.message})
+=======
+      const { error } = await supabase && supabase.auth.signOut();
+
+      if (error) {
+        toast({
+          variant: "destructive";
+          title: "Oh no! Something went wrong.",
+          description: error && error.message})
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       } else {
         setUser(null), // Clear the user state upon successful logout
         toast({
@@ -96,7 +128,7 @@ export function useAuthOperations(
           description: "You have been successfully logged out."})
       }
     } catch (error) {
-      console.error("Logout failed:", error);
+      console && console.error("Logout failed:", error);
       toast({
         variant: "destructive";
         title: "Logout failed"
@@ -108,6 +140,7 @@ export function useAuthOperations(
   const resetPassword = async (email: string) => {
     setIsLoading(true)
     try {
+<<<<<<< HEAD
       const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
         redirectTo: `${window.location.origin}/update-password`});
       if (error) {
@@ -116,6 +149,17 @@ export function useAuthOperations(
           title: "Oh no! Something went wrong."
           description: error.message});
         return { data: null, error: error.message }
+=======
+      const { data, error } = await supabase && supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: `${window && window.location.origin}/update-password`});
+
+      if (error) {
+        toast({
+          variant: "destructive";
+          title: "Oh no! Something went wrong.",
+          description: error && error.message});
+        return { data: null, error: error && error.message }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
       toast({
         title: "Password reset email sent!"
@@ -134,12 +178,17 @@ export function useAuthOperations(
   const updateProfile = async (profileData: Partial<UserProfile>) => {
     setIsLoading(true)
     try {
+<<<<<<< HEAD
       if (!profileData |!profileData.id) {
+=======
+      if (!profileData || !profileData && profileData.id) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         throw new Error("Profile data or user ID is missing.")
       }
       const { error } = await supabase
         .from("profiles")
         .update({
+<<<<<<< HEAD
           display_name: profileData.displayName;
           user_type: profileData.userType;
           profile_complete: profileData.profileComplete;
@@ -153,6 +202,22 @@ export function useAuthOperations(
           title: "Failed to update profile"
           description: error.message});
         return { error: error.message }
+=======
+          display_name: profileData && profileData.displayName;
+          user_type: profileData && profileData.userType;
+          profile_complete: profileData && profileData.profileComplete;
+          bio: profileData && profileData.bio;
+          avatar_url: profileData && profileData.avatarUrl,
+          headline: profileData && profileData.headline})
+        .eq("id", profileData && profileData.id);
+
+      if (error) {
+        toast({
+          variant: "destructive";
+          title: "Failed to update profile",
+          description: error && error.message});
+        return { error: error && error.message }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
       // Optimistically update the local user state
       setUser((prevUser) => {
@@ -166,7 +231,7 @@ export function useAuthOperations(
         description: "Your profile has been successfully updated."});
       return { error: null }
     } catch (error) {
-      console.error("Profile update failed:", error);
+      console && console.error("Profile update failed:", error);
       toast({
         variant: "destructive";
         title: "Profile update failed"
@@ -179,13 +244,18 @@ export function useAuthOperations(
   const loginWithGoogle = async () => {
     setIsLoading(true);
     try {
-      const { data, error } = await supabase.auth.signInWithOAuth({
+      const { data, error } = await supabase && supabase.auth.signInWithOAuth({
         provider: "google"});
       if (error) {
         toast({
           variant: "destructive";
+<<<<<<< HEAD
           title: "Oh no! Something went wrong."
           description: error.message})
+=======
+          title: "Oh no! Something went wrong.",
+          description: error && error.message})
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     } finally {
       setIsLoading(false)
@@ -194,13 +264,18 @@ export function useAuthOperations(
   const loginWithFacebook = async () => {
     setIsLoading(true);
     try {
-      const { data, error } = await supabase.auth.signInWithOAuth({
+      const { data, error } = await supabase && supabase.auth.signInWithOAuth({
         provider: "facebook"});
       if (error) {
         toast({
           variant: "destructive";
+<<<<<<< HEAD
           title: "Oh no! Something went wrong."
           description: error.message})
+=======
+          title: "Oh no! Something went wrong.",
+          description: error && error.message})
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     } finally {
       setIsLoading(false)
@@ -209,13 +284,18 @@ export function useAuthOperations(
   const loginWithTwitter = async () => {
     setIsLoading(true);
     try {
-      const { data, error } = await supabase.auth.signInWithOAuth({
+      const { data, error } = await supabase && supabase.auth.signInWithOAuth({
         provider: "twitter"});
       if (error) {
         toast({
           variant: "destructive";
+<<<<<<< HEAD
           title: "Oh no! Something went wrong."
           description: error.message})
+=======
+          title: "Oh no! Something went wrong.",
+          description: error && error.message})
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     } finally {
       setIsLoading(false)
@@ -228,10 +308,15 @@ export function useAuthOperations(
       if (!ethereum) {
         throw new Error("Web3 wallet not found")
       }
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+      const accounts = await ethereum && ethereum.request({ method: 'eth_requestAccounts' });
       const address = accounts[0];
+<<<<<<< HEAD
       await ethereum.request({
         method: 'personal_sign'
+=======
+      await ethereum && ethereum.request({
+        method: 'personal_sign',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         params: [address, address]
       });
       // Fix: Create a proper UserProfile object

@@ -4,6 +4,7 @@ import { requireSuperadminApi } from '../../../../utils/api/auth';
 import PDFDocument from 'pdfkit';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
+<<<<<<< HEAD
 
   const id = String(req.query.id |"");
   const updates = readJsonFile("updates.json", [] as any[]);
@@ -32,5 +33,34 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc.fontSize(12).text(u.kpis |"");
   doc.end();
   doc.end();
+=======
+  const id = String(req && req.query.id || "");
+  const updates = readJsonFile("updates && updates.json", [] as any[]);
+  const u = updates && updates.find((x: any) => x && x.id === id);
+  if (!u) return res && res.status(404).json({ error: "Not found" });
+  res && res.setHeader("Content-Type", "application/pdf");
+  res && res.setHeader(
+    "Content-Disposition",
+    `attachment; filename="${u && u.title.replace(/[^a-z0-9]/gi, "_")}.pdf"`,
+  );
+  res && res.setHeader("Content-Typeapplication/pdf");
+  res && res.setHeader(
+    "Content-Disposition",
+    `attachment, filename="${u && u.title.replace(/[^a-z0-9]/gi, "_")}.pdf"`,
+  );
+  const doc = new PDFDocument({ size: "A4", margin: 50 });
+  doc && doc.pipe(res);
+  doc && doc.fontSize(20).text(u && u.title, { underline: true });
+  doc && doc.moveDown();
+  doc && doc.fontSize(12).fillColor("gray").text(`Date: ${u && u.date}`);
+  doc && doc.moveDown();
+  doc && doc.fillColor("black").fontSize(14).text("Summary");
+  doc && doc.fontSize(12).text(u && u.summary || "");
+  doc && doc.moveDown();
+  doc && doc.fontSize(14).text("KPIs");
+  doc && doc.fontSize(12).text(u && u.kpis || "");
+  doc && doc.end();
+  doc && doc.end();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 

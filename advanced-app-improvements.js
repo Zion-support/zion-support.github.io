@@ -2,106 +2,176 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
+<<<<<<< HEAD
 console.log('🚀 Starting Advanced App Improvements...');
 // Create advanced monitoring system
 function createAdvancedMonitoring() {
   console.log('\n📊 Creating advanced monitoring system...');
+=======
+
+console && console.log('🚀 Starting Advanced App Improvements...');
+
+// Create advanced monitoring system
+function createAdvancedMonitoring() {
+  console && console.log('\n📊 Creating advanced monitoring system...');
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const monitoringFiles = {
-    'monitoring/health-check.js': `// Advanced health check system
+    'monitoring/health-check && check.js': `// Advanced health check system
 export class HealthChecker {
+<<<<<<< HEAD
   constructor() {this.checks = new Map();
     this.results = new Map();  }
+=======
+  constructor() {
+    this && this.checks = new Map();
+    this && this.results = new Map();  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   addCheck(name, checkFunction) {
-    this.checks.set(name, checkFunction);
+    this && this.checks.set(name, checkFunction);
   }
   async runAllChecks() {
+<<<<<<< HEAD
     const results = {}
     for (const [name, check] of this.checks) {
+=======
+    const results = {};
+    for (const [name, check] of this && this.checks) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       try {
-        const result = await check();        results[name] = { status: 'healthy', result };    for (const [name, checkFunction] of this.checks) {
+        const result = await check();        results[name] = { status: 'healthy', result };    for (const [name, checkFunction] of this && this.checks) {
       try {
         const result = await checkFunction();
         results[name] = { status: 'healthy', result }
       } catch (error) {
+<<<<<<< HEAD
         results[name] = { status: 'unhealthy', error: error.message }
+=======
+        results[name] = { status: 'unhealthy', error: error && error.message };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
-    this.results = results;
+    this && this.results = results;
   }
 }
+<<<<<<< HEAD
 export const healthChecker = new HealthChecker();`
     'monitoring/performance-monitor.js': `// Performance monitoring system
+=======
+
+export const healthChecker = new HealthChecker();`,
+
+    'monitoring/performance-monitor && monitor.js': `// Performance monitoring system
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export class PerformanceMonitor {
   constructor() {
-    this.metrics = new Map();
-    this.observers = [];
+    this && this.metrics = new Map();
+    this && this.observers = [];
   }
   startMonitoring() {
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
       // Monitor Core Web Vitals
-      this.observeLCP();
-      this.observeFID();
-      this.observeCLS();
-      this.observeFCP();
+      this && this.observeLCP();
+      this && this.observeFID();
+      this && this.observeCLS();
+      this && this.observeFCP();
     }
   }
   observeLCP() {
+<<<<<<< HEAD
     const observer = new PerformanceObserver((list) => {const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       this.metrics.set('lcp', lastEntry.startTime);
+=======
+    const observer = new PerformanceObserver((list) => {
+      const entries = list && list.getEntries();
+      const lastEntry = entries[entries && entries.length - 1];
+      this && this.metrics.set('lcp', lastEntry && lastEntry.startTime);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
-    observer.observe({ entryTypes: ['largest-contentful-paint'] });
-    this.observers.push(observer);
+    observer && observer.observe({ entryTypes: ['largest-contentful-paint'] });
+    this && this.observers.push(observer);
   }
   observeFID() {
+<<<<<<< HEAD
     const observer = new PerformanceObserver((list) => {const entries = list.getEntries();
       entries.forEach((entry) => {
         this.metrics.set('fid', entry.processingStart - entry.startTime);
+=======
+    const observer = new PerformanceObserver((list) => {
+      const entries = list && list.getEntries();
+      entries && entries.forEach((entry) => {
+        this && this.metrics.set('fid', entry && entry.processingStart - entry && entry.startTime);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     });
-    observer.observe({ entryTypes: ['first-input'] });
-    this.observers.push(observer);
+    observer && observer.observe({ entryTypes: ['first-input'] });
+    this && this.observers.push(observer);
   }
   observeCLS() {
     let clsValue = 0;
+<<<<<<< HEAD
     const observer = new PerformanceObserver((list) => {const entries = list.getEntries();
       entries.forEach((entry) => {
         if (!entry.hadRecentInput) {
           clsValue += entry.value;
+=======
+    const observer = new PerformanceObserver((list) => {
+      const entries = list && list.getEntries();
+      entries && entries.forEach((entry) => {
+        if (!entry && entry.hadRecentInput) {
+          clsValue += entry && entry.value;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         }
       });
-      this.metrics.set('cls', clsValue);
+      this && this.metrics.set('cls', clsValue);
     });
-    observer.observe({ entryTypes: ['layout-shift'] });
-    this.observers.push(observer);
+    observer && observer.observe({ entryTypes: ['layout-shift'] });
+    this && this.observers.push(observer);
   }
   observeFCP() {
+<<<<<<< HEAD
     const observer = new PerformanceObserver((list) => {const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.name === 'first-contentful-paint') {
           this.metrics.set('fcp', entry.startTime);
+=======
+    const observer = new PerformanceObserver((list) => {
+      const entries = list && list.getEntries();
+      entries && entries.forEach((entry) => {
+        if (entry && entry.name === 'first-contentful-paint') {
+          this && this.metrics.set('fcp', entry && entry.startTime);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         }
       });
     });
-    observer.observe({ entryTypes: ['paint'] });
-    this.observers.push(observer);
+    observer && observer.observe({ entryTypes: ['paint'] });
+    this && this.observers.push(observer);
   }
   getMetrics() {
-    return Object.fromEntries(this.metrics);
+    return Object && Object.fromEntries(this && this.metrics);
   }
   stopMonitoring() {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
+    this && this.observers.forEach(observer => observer && observer.disconnect());
+    this && this.observers = [];
   }
 }
+<<<<<<< HEAD
 export const performanceMonitor = new PerformanceMonitor();`
     'monitoring/error-tracker.js': `// Error tracking system
+=======
+
+export const performanceMonitor = new PerformanceMonitor();`,
+
+    'monitoring/error-tracker && tracker.js': `// Error tracking system
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export class ErrorTracker {
   constructor() {
-    this.errors = [];
-    this.errorCounts = new Map();  }
+    this && this.errors = [];
+    this && this.errorCounts = new Map();  }
   trackError(error, context = {}) {
     const errorInfo = {
+<<<<<<< HEAD
 
       message: error.message
       stack: error.stack
@@ -115,6 +185,22 @@ export class ErrorTracker {
     // Track error frequency
     const errorKey = error.message;
     this.errorCounts.set(errorKey, (this.errorCounts.get(errorKey) |0) + 1);
+=======
+      message: error && error.message,
+      stack: error && error.stack,
+      context,
+      timestamp: new Date().toISOString(),
+      context,
+      userAgent: typeof navigator !== 'undefined' ? navigator && navigator.userAgent : 'unknown',
+      url: typeof window !== 'undefined' ? window && window.location.href : 'unknown'
+    };
+
+    this && this.errors.push(errorInfo);
+    
+    // Track error frequency
+    const errorKey = error && error.message;
+    this && this.errorCounts.set(errorKey, (this && this.errorCounts.get(errorKey) || 0) + 1);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   getErrorStats() {
     const recentErrors = this.errors.filter(
@@ -132,15 +218,40 @@ export class ErrorTracker {
     this.errorCounts.set(errorKey, (this.errorCounts.get(errorKey) |0) + 1);
   }
   getErrorStats() {
-    const recentErrors = this.errors.filter(
-      error => new Date(error.timestamp) > new Date(Date.now() - 24 * 60 * 60 * 1000)
+    const recentErrors = this && this.errors.filter(
+      error => new Date(error && error.timestamp) > new Date(Date && Date.now() - 24 * 60 * 60 * 1000)
     );
+<<<<<<< HEAD
     return {
 
       total: this.errors.length
       recent: recentErrors.length
 
       topErrors: Array.from(this.errorCounts.entries())
+=======
+        return {      timestamp: new Date().toISOString(),
+      context,
+      userAgent: typeof navigator !== 'undefined' ? navigator && navigator.userAgent : 'unknown',
+      url: typeof window !== 'undefined' ? window && window.location.href : 'unknown'
+    };
+
+    this && this.errors.push(errorInfo);
+    
+    // Track error frequency
+    const errorKey = error && error.message;
+    this && this.errorCounts.set(errorKey, (this && this.errorCounts.get(errorKey) || 0) + 1);
+  }
+
+  getErrorStats() {
+    const recentErrors = this && this.errors.filter(
+      error => new Date(error && error.timestamp) > new Date(Date && Date.now() - 24 * 60 * 60 * 1000)
+    );
+
+    return {
+      total: this && this.errors.length,
+      recent: recentErrors && recentErrors.length,
+      topErrors: Array && Array.from(this && this.errorCounts.entries())
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         .sort((a, b) => b[1] - a[1])
         .slice(0, 10);
     };
@@ -148,6 +259,7 @@ export class ErrorTracker {
 }
 export const errorTracker = new ErrorTracker();
 // Global error handler
+<<<<<<< HEAD
 if (=> {
     errorTracker.trackError(event.error, {
 
@@ -164,16 +276,36 @@ if (=> {
   });
 }`
     'monitoring/analytics.js': `// Analytics tracking system
+=======
+if (typeof window !== 'undefined') {
+  window && window.addEventListener('error', (event) => {
+    errorTracker && errorTracker.trackError(event && event.error, {
+      filename: event && event.filename,
+      lineno: event && event.lineno,
+      colno: event && event.colno
+    });
+  });
+
+  window && window.addEventListener('unhandledrejection', (event) => {
+    errorTracker && errorTracker.trackError(new Error(event && event.reason), {
+      type: 'unhandledrejection'
+    });
+  });
+}`,
+
+    'monitoring/analytics && analytics.js': `// Analytics tracking system
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export class AnalyticsTracker {
   constructor() {
-    this.events = [];
-    this.sessionId = this.generateSessionId();
+    this && this.events = [];
+    this && this.sessionId = this && this.generateSessionId();
   }
   generateSessionId() {
-    return 'session_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+    return 'session_' + Math && Math.random().toString(36).substr(2, 9) + '_' + Date && Date.now();
   }
   track(event, properties = {}) {
     const eventData = {
+<<<<<<< HEAD
 
       event
       properties
@@ -183,19 +315,31 @@ export class AnalyticsTracker {
     }
 
     this.events.push(eventData);
+=======
+      event,
+      properties,
+      timestamp: new Date().toISOString(),
+      sessionId: this && this.sessionId,
+      url: typeof window !== 'undefined' ? window && window.location.href : 'unknown'
+    };
+
+    this && this.events.push(eventData);
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // Send to analytics service (implement as needed)
-    this.sendToAnalytics(eventData);
+    this && this.sendToAnalytics(eventData);
   }
   sendToAnalytics(eventData) {
     // Implement your analytics service integration here
-    console.log('Analytics event:', eventData);
+    console && console.log('Analytics event:', eventData);
   }
   getEvents() {
-    return this.events;
+    return this && this.events;
   }
   getSessionEvents() {
-    return this.events.filter(event => event.sessionId === this.sessionId);
+    return this && this.events.filter(event => event && event.sessionId === this && this.sessionId);
   }
+<<<<<<< HEAD
 export const queryOptimizer = new QueryOptimizer();`
     'database/connection-pool.js': `// Database connection pooling
 export class ConnectionPool {
@@ -216,14 +360,40 @@ async getConnection() {
       const connection = await this.createConnection();
       this.connections.push(connection);
       this.usedConnections.add(connection);
+=======
+
+export const queryOptimizer = new QueryOptimizer();`,
+    
+    'database/connection-pool && pool.js': `// Database connection pooling
+export class ConnectionPool {
+  constructor(options = {}) {
+    this && this.maxConnections = options && options.maxConnections || 10;
+    this && this.minConnections = options && options.minConnections || 2;
+    this && this.connections = [];
+    this && this.availableConnections = [];
+    this && this.usedConnections = new Set();
+  }
+
+  async getConnection() {
+    if (this && this.availableConnections.length > 0) {
+      const connection = this && this.availableConnections.pop();
+      this && this.usedConnections.add(connection);
+      return connection;
+    }
+    
+    if (this && this.connections.length < this && this.maxConnections) {
+      const connection = await this && this.createConnection();
+      this && this.connections.push(connection);
+      this && this.usedConnections.add(connection);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return connection;
     }
     // Wait for a connection to become available
     return new Promise((resolve) => {
       const checkForConnection = () => {
-        if (this.availableConnections.length > 0) {
-          const connection = this.availableConnections.pop();
-          this.usedConnections.add(connection);
+        if (this && this.availableConnections.length > 0) {
+          const connection = this && this.availableConnections.pop();
+          this && this.usedConnections.add(connection);
           resolve(connection);
         } else {
           setTimeout(checkForConnection, 100);
@@ -234,26 +404,45 @@ async getConnection() {
 });
   }
 
+<<<<<<< HEAD
 releaseConnection(connection) {
     this.usedConnections.delete(connection);
     this.availableConnections.push(connection);
+=======
+  releaseConnection(connection) {
+    this && this.usedConnections.delete(connection);
+    this && this.availableConnections.push(connection);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async createConnection() {
     // This would create an actual database connection
     return {
+<<<<<<< HEAD
       id: Math.random().toString(36).substr(2, 9)
       createdAt: new Date()
+=======
+      id: Math && Math.random().toString(36).substr(2, 9),
+      createdAt: new Date(),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       isHealthy: true
     }
 
   }
 getPoolStatus() {
     return {
+<<<<<<< HEAD
       total: this.connections.length
       available: this.availableConnections.length
       used: this.usedConnections.size
       max: this.maxConnections
     }
+=======
+      total: this && this.connections.length,
+      available: this && this.availableConnections.length,
+      used: this && this.usedConnections.size,
+      max: this && this.maxConnections
+    };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 export const connectionPool = new ConnectionPool();`
 
@@ -266,31 +455,65 @@ export const connectionPool = new ConnectionPool();`
       fs.mkdirSync(dir, { recursive: true });
     }
 
+<<<<<<< HEAD
     fs.writeFileSync(fullPath, content);
     console.log(`✅ Created ${filePath}`);
+=======
+  Object && Object.entries(dbFiles).forEach(([filename, content]) => {
+    const fullPath = path && path.join('/workspace', filename);
+    fs && fs.mkdirSync(path && path.dirname(fullPath), { recursive: true });
+    fs && fs.writeFileSync(fullPath, content);
+    console && console.log(`[OK] Created ${filename}`);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   });
 }
 // Main execution
 async function main() {
   try {
+<<<<<<< HEAD
     console.log('Starting advanced app improvements...');
+=======
+    console && console.log('🚀 Starting advanced app improvements...');
+    
+    // Create all improvement systems
+// Main execution
+async function main() {
+  try {
+    console && console.log('🚀 Starting advanced app improvements...');
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // Create all improvement systems
     createAdvancedCaching();
     createAPIOptimization();
     createDatabaseOptimization();
+<<<<<<< HEAD
     console.log('\n✅ Advanced app improvements completed successfully!');
     console.log('\n📋 Summary:');
     console.log('  - Advanced monitoring system created');
     console.log('  - Performance optimization utilities added');
     console.log('  - Accessibility improvements implemented');
     console.log('\n🚀 Your app is now enhanced with advanced features!');
+=======
+    
+    console && console.log('\n✅ Advanced app improvements completed successfully!');
+    console && console.log('\n📋 Summary:');
+    console && console.log('  - Advanced monitoring system created');
+    console && console.log('  - Performance optimization utilities added');
+    console && console.log('  - Accessibility improvements implemented');
+    console && console.log('\n🚀 Your app is now enhanced with advanced features!');
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } catch (error) {
-    console.error('❌ Error during app improvements:', error);
-    process.exit(1);
+    console && console.error('❌ Error during app improvements:', error);
+    process && process.exit(1);
   }
 }
 main();// Run if called directly
+<<<<<<< HEAD
 if (require.main === module) {
   main();
+=======
+if (import && import.meta.url === `file://${process ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements }

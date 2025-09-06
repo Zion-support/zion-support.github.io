@@ -2,10 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ziontechgroup.com/</loc>
-    <lastmod>2025-09-06T01:33:17.163Z</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-06T10:22:45.943Z</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+<<<<<<< HEAD
   <url>
     <loc>https://ziontechgroup.com/about</loc>
 <<<<<<< HEAD
@@ -68,4 +69,6 @@
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 </urlset>

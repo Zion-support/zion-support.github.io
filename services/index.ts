@@ -99,7 +99,11 @@ export const SERVICES_METADATA = {
     features: [
       'Multiple file formatsBatch conversionQuality settingsMetadata preservationCloud processing'
     ];
+<<<<<<< HEAD
     pricing: 'Free (Basic) / $9.99/month (Pro)'
+=======
+    pricing: 'Free (Basic) / $9 && 9.99/month (Pro)',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     apiEndpoint: '/api/file-converter'
   }
   textAnalysis: {
@@ -110,18 +114,30 @@ export const SERVICES_METADATA = {
     features: [
       'Readability metricsSentiment analysisKeyword extractionEntity recognitionLanguage detection'
     ];
+<<<<<<< HEAD
     pricing: 'Free (Basic) / $19.99/month (Pro)'
+=======
+    pricing: 'Free (Basic) / $19 && 19.99/month (Pro)',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     apiEndpoint: '/api/text-analysis'
   }
 } as const;
 // Service availability and status
 export const getServiceStatus = () => {
   return {
+<<<<<<< HEAD
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
+=======
+    urlShortener: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
+    passwordGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
+    qrCodeGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
+    fileConverter: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
+    textAnalysis: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 }
 // Service usage statistics

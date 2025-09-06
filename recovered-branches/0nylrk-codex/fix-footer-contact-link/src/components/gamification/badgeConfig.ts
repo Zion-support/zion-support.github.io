@@ -67,5 +67,9 @@ export const badgeList: BadgeMeta[] = [
     bg: "#F2FCE2",    // Soft Green
   }];
 export const getBadgeMeta = (key: BadgeKey) =>
+<<<<<<< HEAD
   badgeList.find((b) => b.key === key);
+=======
+  badgeList && badgeList.find((b) => b && b.key === key),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 

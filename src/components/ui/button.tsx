@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react"
 import Link from "next/link"
 interface ButtonProps {
@@ -35,11 +36,85 @@ const Button: React.FC<ButtonProps> = ({
   const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`
   const content = <>{children}</>
   if (href) {
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from "react";
+import Link from "next/link";
+
+interface ButtonProps {;
+  children: React && React.ReactNode, href?: string,;
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset";
+  variant?: "primary" | "secondary" | "outline";
+  size?: "sm" | "md" | "lg";
+  className?: string;
+  disabled?: boolean;
+  style?: React && React.CSSProperties;
+}
+
+const Button: React.FC<ButtonProps> = ({;
+  children,;
+  href,;
+  onClick,;
+  type = "button",;
+  variant = "primary",;
+  size = "md",;
+  className = "",;
+  disabled = false,;
+  style,;
+}) => {;
+  const baseClasses = "px-4 py-2 rounded-md font-medium transition-colors duration-200";
+
+  const sizeClasses = {;
+    sm: "px-3 py-1 && 1.5 text-sm",;
+    md: "px-4 py-2 text-base",;
+    lg: "px-6 py-3 text-lg",;
+  };
+
+  const variantClasses = {;
+    primary: "bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-400",;
+    secondary: "bg-gray-600 text-white hover:bg-gray-700 disabled:bg-gray-400",;
+    outline: "border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:bg-gray-100",;
+  };
+
+  const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
+
+  const content = <>{children}</>;
+
+  if (href) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
-      <Link href={href} className={classes} style={style}>
+      <Link href={href} className={classes} style={style}>;
         {content}
+<<<<<<< HEAD
       </Link>
     )
+=======
+      </Link>;
+    );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
     <button
@@ -47,11 +122,19 @@ const Button: React.FC<ButtonProps> = ({
       className={classes}
       onClick={onClick}
       disabled={disabled}
-      style={style}
-    >
+      style={style}>;
       {content}
+<<<<<<< HEAD
     </button>
   )
 }
 export { Button }
 export default Button
+=======
+    </button>;
+  );
+};
+
+export { Button };
+export default Button;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

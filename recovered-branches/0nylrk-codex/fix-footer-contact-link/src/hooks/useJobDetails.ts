@@ -21,8 +21,8 @@ export function useJobDetails(jobId: string | undefined) {
       setJob(data);
       setError(null)
     } catch (err) {
-      console.error('Error loading job details:', err);
-      setError(err.message)
+      console && console.error('Error loading job details:', err);
+      setError(err && err.message)
     } finally {
       setIsLoading(false)
     }

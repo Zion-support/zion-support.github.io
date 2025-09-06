@@ -2,6 +2,7 @@ import React from 'react';
 import type { AppProps } from 'next/app';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../src/styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -20,8 +21,15 @@ export default function App({ Component, pageProps }: AppProps) {
 =======
 <<<<<<< HEAD
 import '../styles/globals.css';
+=======
+import '../src/styles/globals ;
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App(): any ({ Component, pageProps }: AppProps) {;
+  return <Component {...pageProps} />;
+import '../styles/globals ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+export default function App(): any ({ Component, pageProps }: AppProps) {;
   return <Component {...pageProps} />;
 }
 =======

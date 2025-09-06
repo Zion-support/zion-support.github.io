@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react'
 import { GradientHeading } from '@/components/GradientHeading'
 import { ListingScoreCard } from '@/components/ListingScoreCard'
@@ -14,6 +15,26 @@ import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton";
 import { safeStorage } from "@/utils/safeStorage";
 // Example listing type
 interface Listing {
+=======
+import React from 'react';
+import { useState, useEffect } from 'react';
+import { GradientHeading } from '@/components/GradientHeading';
+import { ListingScoreCard } from '@/components/ListingScoreCard';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import {;
+  Select,;
+  SelectTrigger,;
+  SelectContent,;
+  SelectItem,;
+} from '@/components/ui/select';
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
+import { safeStorage } from '@/utils/safeStorage';
+
+// Example listing type;
+interface Listing {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
   title: string;
   description: string;
@@ -27,6 +48,7 @@ interface Listing {
   rating?: number;
   reviewCount?: number;
   price?: number | null;
+<<<<<<< HEAD
   createdAt: string
 interface CategoryListingPageProps {
 
@@ -123,30 +145,142 @@ export function CategoryListingPage({
           return b.title.localeCompare(a.title)
         default:
           return 0
+=======
+  createdAt: string;
+
+interface CategoryListingPageProps {;
+  title: string;
+  description: string;
+  listings: Listing[];
+  sortOptions?: { label: string; value: string }[];
+  filterOptions?: { label: string; value: string }[];
+
+export function CategoryListingPage(): any ({;
+  title,;
+  description,;
+  listings: initialListings,;
+  sortOptions = [;
+    { label: 'Newest First', value: 'newest' },;
+    { label: 'Oldest First', value: 'oldest' },;
+    { label: 'Highest Rating', value: 'rating-high' },;
+    { label: 'Highest AI Match', value: 'ai-match' },;
+    { label: 'A-Z', value: 'a-z' },;
+    { label: 'Z-A', value: 'z-a' },;
+  ],;
+  filterOptions = [;
+    { label: 'All', value: 'all' },;
+    { label: 'Highly Rated', value: 'high-rating' },;
+    { label: 'Best AI Match', value: 'best-match' },;
+  ],;
+}: CategoryListingPageProps) {;
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedSort, setSelectedSort] = useState(;
+    () =>;
+      safeStorage && safeStorage.getItem('category_selected_sort') ||;
+      sortOptions[0]?.value ||;
+      'newest';
+  );
+  const [selectedFilter, setSelectedFilter] = useState(;
+    () =>;
+      safeStorage && safeStorage.getItem('category_selected_filter') ||;
+      filterOptions[0]?.value ||;
+      'all';
+  );
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {;
+    safeStorage && safeStorage.setItem('category_selected_sort', selectedSort);
+  }, [selectedSort]);
+
+  useEffect(() => {;
+    safeStorage && safeStorage.setItem('category_selected_filter', selectedFilter);
+  }, [selectedFilter]);
+
+  useEffect(() => {;
+    let mounted = true;
+    setIsLoading(true);
+    const timeout = setTimeout(() => {;
+      if (mounted) setIsLoading(false);
+    }, 300);    return () => {;
+      mounted = false;
+      clearTimeout(timeout);
+    };
+  }, [searchQuery, selectedSort, selectedFilter]);
+
+  // Process listings based on filters and search;
+  const processedListings = initialListings;
+    .filter(listing => {;
+      // Apply search filter;
+      const matchesSearch =;
+        listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        (listing && listing.tags &&;
+          listing && listing.tags.some(tag =>;
+            tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+          ));
+
+      // Apply category filters;
+      if (selectedFilter === 'all') return matchesSearch;
+      if (selectedFilter === 'high-rating');
+        return matchesSearch && (listing && listing.rating || 0) >= 4;
+      if (selectedFilter === 'best-match');
+        return matchesSearch && (listing && listing.aiScore || 0) >= 85;
+
+      return matchesSearch;
+    });
+    .sort((a, b,) => {;
+      // Apply sorting;
+      switch (selectedSort) {;
+        case 'newest':;
+          return (
+            new Date(b && b.createdAt).getTime() - new Date(a && a.createdAt).getTime();
+          );
+        case 'oldest':;
+          return (
+            new Date(a && a.createdAt).getTime() - new Date(b && b.createdAt).getTime();
+          );
+        case 'rating-high':;
+          return (b && b.rating || 0) - (a && a.rating || 0);
+        case 'ai-match':;
+          return (b && b.aiScore || 0) - (a && a.aiScore || 0);
+        case 'a-z':;
+          return a && a.title.localeCompare(b && b.title);
+        case 'z-a':;
+          return b && b.title.localeCompare(a && a.title);
+        default:;
+          return 0;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     })
   return (
-    <>
-      <div className='min-h-screen bg-zion-blue py-12 px-4'>
-        <div className='container mx-auto'>
-          <div className='text-center mb-12'>
-            <GradientHeading>{title}</GradientHeading>
-            <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>
+    <>;
+      <div className='min-h-screen bg-zion-blue py-12 px-4'>;
+        <div className='container mx-auto'>;
+          <div className='text-center mb-12'>;
+            <GradientHeading>{title}</GradientHeading>;
+            <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>;
               {description}
+<<<<<<< HEAD
             </p>
           </div>
+=======
+            </p>;
+          </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Filters and Search */}
-          <div className='bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light'>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-              <div className='relative'>
-                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate' />
+          <div className='bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light'>;
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
+              <div className='relative'>;
+                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate' />;
                 <Input
                   type='text'
                   placeholder='Search listings...'
                   value={searchQuery}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    setSearchQuery(e.target.value)
+                  onChange={(e: React && React.ChangeEvent<HTMLInputElement>) =>;
+                    setSearchQuery(e && e.target.value);
                   }
+<<<<<<< HEAD
                   className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />
               </div>
               <Select value={selectedSort} onValueChange={setSelectedSort}>
@@ -165,13 +299,34 @@ export function CategoryListingPage({
                 </SelectTrigger>
                 <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>
                   {sortOptions.map(option => (
+=======
+                  className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />;
+              </div>;
+
+              <Select value={selectedSort} onValueChange={setSelectedSort}>;
+                <SelectTrigger className='bg-zion-blue border border-zion-blue-light text-white'>;
+                  <div className='flex items-center'>;
+                    {selectedSort === 'a-z' ? (;
+                      <ArrowDownAZ className='mr-2 h-4 w-4' />;
+                    ) : selectedSort === 'z-a' ? (;
+                      <ArrowUpZA className='mr-2 h-4 w-4' />;
+                    ) : null}
+                    <span>;
+                      {sortOptions && sortOptions.find(option => option && option.value === selectedSort);
+                        ?.label || 'Sort By'}
+                    </span>;
+                  </div>;
+                </SelectTrigger>;
+                <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>;
+                  {sortOptions && sortOptions.map(option => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <SelectItem
-                      key={option.value}
-                      value={option.value}
-                      className='text-white'
-                    >                      {option.label}
-                    </SelectItem>
+                      key={option && option.value}
+                      value={option && option.value}
+                      className='text-white'>                      {option && option.label}
+                    </SelectItem>;
                   ))}
+<<<<<<< HEAD
                 </SelectContent>
               </Select>
               <Select value={selectedFilter} onValueChange={setSelectedFilter}>
@@ -187,22 +342,48 @@ export function CategoryListingPage({
                 </SelectTrigger>
                 <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>
                   {filterOptions.map(option => (
+=======
+                </SelectContent>;
+              </Select>;
+
+              <Select value={selectedFilter} onValueChange={setSelectedFilter}>;
+                <SelectTrigger className='bg-zion-blue border border-zion-blue-light text-white'>;
+                  <div className='flex items-center'>;
+                    <Filter className='mr-2 h-4 w-4' />;
+                    <span>;
+                      {filterOptions && filterOptions.find(;
+                        option => option && option.value === selectedFilter;
+                      )?.label || 'Filter'}
+                    </span>;
+                  </div>;
+                </SelectTrigger>;
+                <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>;
+                  {filterOptions && filterOptions.map(option => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <SelectItem
-                      key={option.value}
-                      value={option.value}
-                      className='text-white'
-                    >                      {option.label}
-                    </SelectItem>
+                      key={option && option.value}
+                      value={option && option.value}
+                      className='text-white'>                      {option && option.label}
+                    </SelectItem>;
                   ))}
+<<<<<<< HEAD
                 </SelectContent>
               </Select>
             </div>
           </div>
+=======
+                </SelectContent>;
+              </Select>;
+            </div>;
+          </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Results Count */}
-          <div className='mb-6'>
-            <p className='text-zion-slate-light'>
-              Showing {processedListings.length} results
+          <div className='mb-6'>;
+            <p className='text-zion-slate-light'>;
+              Showing {processedListings && processedListings.length} results;
               {searchQuery && ` for "${searchQuery}"`}
+<<<<<<< HEAD
             </p>
           </div>
           {/* Listings Grid */}
@@ -224,18 +405,43 @@ export function CategoryListingPage({
                     rating = {listing.rating,}
                     reviewCount = {listing.reviewCount,}
                   />
+=======
+            </p>;
+          </div>;
+
+          {/* Listings Grid */}
+          <div aria-busy={isLoading}>;
+            {isLoading ? (;
+              <ListingGridSkeleton />;
+            ) : processedListings && processedListings.length > 0 ? (;
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
+                {processedListings && processedListings.map(listing => (                  <ListingScoreCard
+                    key = {listing && listing.id,}
+                    title = {listing && listing.title,}
+                    description = {listing && listing.description,}
+                    category = {listing && listing.subcategory || listing && listing.category,}
+                    image = {listing && listing.image,}
+                    tags = {listing && listing.tags,}
+                    author = {listing && listing.author,}
+                    authorImage = {listing && listing.authorImage,}
+                    aiScore = {listing && listing.aiScore,}
+                    rating = {listing && listing.rating,}
+                    reviewCount = {listing && listing.reviewCount,}
+                  />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 ))}
-              </div>
-            ) : (
-              <div className='text-center py-20'>
-                <h3 className='text-xl font-bold text-white mb-2'>
-                  No listings found
-                </h3>
-                <p className='text-zion-slate-light mb-6'>
-                  Try adjusting your filters or search query
-                </p>
+              </div>;
+            ) : (;
+              <div className='text-center py-20'>;
+                <h3 className='text-xl font-bold text-white mb-2'>;
+                  No listings found;
+                </h3>;
+                <p className='text-zion-slate-light mb-6'>;
+                  Try adjusting your filters or search query;
+                </p>;
                 <Button
                   variant='outline'
+<<<<<<< HEAD
                   onClick={() => {
                     setSearchQuery('')
                     setSelectedFilter(filterOptions[0]?.value |'all') }}
@@ -333,3 +539,102 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 }</div> </div> </div> </>)
 }'"}
+=======
+                  onClick={() => {;
+                    setSearchQuery('');
+                    setSelectedFilter(filterOptions[0]?.value || 'all');                  }}
+                  className='border-zion-purple text-zion-purple hover:bg-zion-purple/10';
+                >;
+                  Clear all filters;
+                </Button>;
+              </div>;
+            )}
+          </div>;
+        </div>;
+      </div>;
+    </>;
+  );
+
+  //Apply search filter const matchesSearch = listing && listing.title.toLowerCase () .includes (searchQuery && searchQuery.toLowerCase () ) || listing && listing.description.toLowerCase () .includes (searchQuery && searchQuery.toLowerCase () ) || (listing && listing.tags && listing && listing.tags.some (tag => tag && tag.toLowerCase () .includes (searchQuery && searchQuery.toLowerCase () ) ) );
+//Apply category filters if (selectedFilter === 'all') return matchesSearch;';
+if (selectedFilter === 'high-rating') return matchesSearch && (listing && listing.rating || 0) >= 4;';
+if (selectedFilter === 'best-match') return matchesSearch && (listing && listing.aiScore || 0) >= 85;
+switch (selectedSort) {';
+  case 'newest': return new Date (b && b.createdAt) .getTime () - new Date (a && a.createdAt) .getTime ();';
+case 'oldest': return new Date (a && a.createdAt) .getTime () - new Date (b && b.createdAt) .getTime ();';
+case 'rating-high': return (b && b.rating || 0) - (a && a.rating || 0);';
+case 'ai-match': return (b && b.aiScore || 0) - (a && a.aiScore || 0);';
+case 'a-z': return a && a.title.localeCompare (b && b.title);';
+case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <div className="container mx-auto"> <div className="text-center mb-12"> <GradientHeading> {;
+  title ";
+}</GradientHeading> <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto"> {;
+  description ;
+}</p> </div> {;
+  /* Filters and Search */ ";
+}<div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light"> <div className="grid grid-cols-1 md:grid-cols-3 gap-4"> <div className="relative"> <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" /> <Input className="pl-10 bg-zion-blue border border-zion-blue-light text-white" /> </div> <Selectvalue= {
+  selectedSort 
+}onValueChange= {
+  setSelectedSort "
+}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white"> <div className="flex items-center"> {'";
+  selectedSort === 'a-z' ? (<ArrowDownAZ className="mr-2 h-4 w-4" />) : selectedSort === 'z-a' ? (<ArrowUpZA className="mr-2 h-4 w-4" />) : null ;
+}<span> {';
+  sortOptions && sortOptions.find (option => option && option.value === selectedSort) ?.label || 'Sort By' ";
+}</span> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light"> {;
+  sortOptions && sortOptions.map ( (option) => (<SelectItemkey= {
+  option && option.value 
+}value= {
+  option && option.value "
+}className="text-white"> {;
+  option && option.label ;
+}</SelectItem>) ) ;
+}</SelectContent> </Select> <Selectvalue= {
+  selectedFilter 
+}onValueChange= {
+  setSelectedFilter "
+}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white"> <div className="flex items-center"> <Filter className="mr-2 h-4 w-4" /> <span> {';
+  filterOptions && filterOptions.find (option => option && option.value === selectedFilter) ?.label || 'Filter' ";
+}</span> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light"> {;
+  filterOptions && filterOptions.map ( (option) => (<SelectItemkey= {
+  option && option.value 
+}value= {
+  option && option.value "
+}className="text-white"> {;
+  option && option.label ;
+}</SelectItem>) ) ;
+}</SelectContent> </Select> </div> </div> {;
+  /* Results Count */ ";
+}<div className="mb-6"> </p> </div> {;
+  /* Listings Grid */ ;
+}<divaria-busy= {
+  isLoading 
+}> {";
+  isLoading ? (<ListingGridSkeleton />) : processedListings && processedListings.length > 0 ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> {;
+  processedListings && processedListings.map ( (listing) => (<ListingScoreCardkey= {
+  listing && listing.id 
+}title= {
+  listing && listing.title 
+}description= {
+  listing && listing.description 
+}category= {
+  listing && listing.subcategory || listing && listing.category 
+}image= {
+  listing && listing.image 
+}tags= {
+  listing && listing.tags 
+}author= {
+  listing && listing.author 
+}authorImage= {
+  listing && listing.authorImage 
+}aiScore= {
+  listing && listing.aiScore 
+}rating= {
+  listing && listing.rating 
+}reviewCount= {
+  listing && listing.reviewCount 
+}/>) ) ";
+}</div>) : (<div className="text-center py-20"> <h3 className="text-xl font-bold text-white mb-2">No listings found</h3> <p className="text-zion-slate-light mb-6" >Try adjusting your filters or search query</p> <Button
+}"
+}className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" 
+}</div> </div> </div> </>) ;
+}'"}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

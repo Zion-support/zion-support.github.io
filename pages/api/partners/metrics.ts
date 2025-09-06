@@ -5,9 +5,10 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  const code = (req.query.code as string)?.toLowerCase();
-  if (!code) return res.status($1).json({ $2 });
+  const code = (req && req.query.code as string)?.toLowerCase();
+  if (!code) return res && res.status($1).json({ $2 });
   const usingPlaceholder =
+<<<<<<< HEAD
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
       "placeholder-key";
@@ -21,6 +22,21 @@ export default async function handler(
         conversion_rate: 7 / 12
         payout_amount: 210
         currency: "USD"
+=======
+    (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
+    (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
+      "placeholder-key";
+  try {
+    if (usingPlaceholder) {
+      return res && res.status(200).json({
+        total_signups: 12,
+        total_visits: 180,
+        total_profile_completions: 7,
+        total_job_creations: 5,
+        conversion_rate: 7 / 12,
+        payout_amount: 210,
+        currency: "USD",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     const supabase = getServerSupabase();
@@ -32,8 +48,13 @@ export default async function handler(
         .select("*", { count: "exact", head: true })
         .eq("partner_code", code)
         .eq("event", ev);
+<<<<<<< HEAD
       if (error) return res.status($1).json({ $2 });
       counts[ev] = count |0;
+=======
+      if (error) return res && res.status($1).json({ $2 });
+      counts[ev] = count || 0;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     const total_signups = counts["signup"] |0;
     const total_visits = counts["visit"] |0;
@@ -41,11 +62,19 @@ export default async function handler(
     const total_job_creations = counts["job_created"] |0;
     const payout_amount =
       total_profile_completions * 30 + total_job_creations * 50;
+<<<<<<< HEAD
     return res.status(200).json({
       total_signups
       total_visits
       total_profile_completions
       total_job_creations
+=======
+    return res && res.status(200).json({
+      total_signups,
+      total_visits,
+      total_profile_completions,
+      total_job_creations,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       conversion_rate: total_signups
         ? total_profile_completions / total_signups
         : 0
@@ -54,6 +83,6 @@ export default async function handler(
     });
 
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message });
+    return res && res.status(500).json({ error: e?.message });
   }
 }

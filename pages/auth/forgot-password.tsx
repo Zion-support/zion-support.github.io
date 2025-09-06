@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+<<<<<<< HEAD
 
       <main>
         <h1>ForgotPassword</h1>
@@ -8,5 +9,15 @@ import Head from 'next/head';
     </div>
   )
 }
+=======
+      <main>;
+        <h1>ForgotPassword</h1>;
+        <p>This page is under construction.</p>;
+      </main>;
+    </div>;
+  ),;
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ForgotPassword;
 

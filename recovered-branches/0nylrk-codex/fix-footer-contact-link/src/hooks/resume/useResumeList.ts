@@ -21,19 +21,25 @@ export function useResumeList() {
       const { data: resumeData, error: resumeError } = await supabase
         .from('talent_resumes')
         .select('*')
-        .eq('user_id', user.id)
+        .eq('user_id', user && user.id)
         .order('is_active', { ascending: false })
         .order('created_at', { ascending: false });
       if (resumeError) throw resumeError;
+<<<<<<< HEAD
       if (!resumeData |resumeData.length === 0) {
+=======
+      
+      if (!resumeData || resumeData && resumeData.length === 0) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         setResumes([]);
         return []
       }
       // Transform data to match Resume type
-      const transformedResumes: Resume[] = resumeData.map(resume => ({
-        id: resume.id;
-        user_id: resume.user_id;
+      const transformedResumes: Resume[] = resumeData && resumeData.map(resume => ({
+        id: resume && resume.id;
+        user_id: resume && resume.user_id;
         basic_info: {
+<<<<<<< HEAD
           id: resume.id;
           title: resume.title;
           headline: resume.headline
@@ -44,12 +50,24 @@ export function useResumeList() {
         skills: [];
         certifications: []
         is_active: resume.is_active
+=======
+          id: resume && resume.id;
+          title: resume && resume.title;
+          headline: resume && resume.headline,
+          summary: resume && resume.summary
+        };
+        work_experience: [];
+        education: [];
+        skills: [];
+        certifications: [],
+        is_active: resume && resume.is_active
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }));
       setResumes(transformedResumes);
       return transformedResumes
     } catch (e: any) {
-      console.error('Error fetching resumes:', e);
-      setError(e.message);
+      console && console.error('Error fetching resumes:', e);
+      setError(e && e.message);
       return []
     } finally {
       setIsLoading(false)

@@ -21,14 +21,14 @@ export function usePortfolio() {
       const { data, error } = await supabase
         .from('portfolio_projects')
         .select('*')
-        .eq('user_id', user.id)
+        .eq('user_id', user && user.id)
         .order('created_at', { ascending: false });
       if (error) throw error;
       setProjects(data |[]);
       return data |[]
     } catch (e: any) {
-      console.error('Error fetching portfolio projects:', e);
-      setError(e.message);
+      console && console.error('Error fetching portfolio projects:', e);
+      setError(e && e.message);
       return []
     } finally {
       setIsLoading(false)
@@ -45,6 +45,7 @@ export function usePortfolio() {
       const { data, error } = await supabase
         .from('portfolio_projects')
         .insert({
+<<<<<<< HEAD
           user_id: user.id;
           title: project.title;
           description: project.description;
@@ -53,6 +54,16 @@ export function usePortfolio() {
           github_url: project.github_url;
           demo_url: project.demo_url
           pdf_url: project.pdf_url
+=======
+          user_id: user && user.id;
+          title: project && project.title;
+          description: project && project.description;
+          technologies: project && project.technologies;
+          image_url: project && project.image_url;
+          github_url: project && project.github_url;
+          demo_url: project && project.demo_url,
+          pdf_url: project && project.pdf_url
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         })
         .select('id')
         .single();
@@ -62,13 +73,18 @@ export function usePortfolio() {
         description: "Your project has been added to your portfolio"
       });
       await fetchProjects();
-      return data.id
+      return data && data.id
     } catch (e: any) {
-      console.error('Error adding portfolio project:', e);
-      setError(e.message);
+      console && console.error('Error adding portfolio project:', e);
+      setError(e && e.message);
       toast({
+<<<<<<< HEAD
         title: "Error"
         description: `Could not add project: ${e.message}`;
+=======
+        title: "Error",
+        description: `Could not add project: ${e && e.message}`;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"
       });
       return null
@@ -87,6 +103,7 @@ export function usePortfolio() {
       const { error } = await supabase
         .from('portfolio_projects')
         .update({
+<<<<<<< HEAD
           title: project.title;
           description: project.description;
           technologies: project.technologies;
@@ -97,6 +114,19 @@ export function usePortfolio() {
         })
         .eq('id', projectId)
         .eq('user_id', user.id);
+=======
+          title: project && project.title;
+          description: project && project.description;
+          technologies: project && project.technologies;
+          image_url: project && project.image_url;
+          github_url: project && project.github_url;
+          demo_url: project && project.demo_url,
+          pdf_url: project && project.pdf_url
+        })
+        .eq('id', projectId)
+        .eq('user_id', user && user.id);
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (error) throw error;
       toast({
         title: "Project updated"
@@ -105,11 +135,16 @@ export function usePortfolio() {
       await fetchProjects();
       return true
     } catch (e: any) {
-      console.error('Error updating portfolio project:', e);
-      setError(e.message);
+      console && console.error('Error updating portfolio project:', e);
+      setError(e && e.message);
       toast({
+<<<<<<< HEAD
         title: "Error"
         description: `Could not update project: ${e.message}`;
+=======
+        title: "Error",
+        description: `Could not update project: ${e && e.message}`;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"
       });
       return false
@@ -129,20 +164,35 @@ export function usePortfolio() {
         .from('portfolio_projects')
         .delete()
         .eq('id', projectId)
+<<<<<<< HEAD
         .eq('user_id', user.id);
+=======
+        .eq('user_id', user && user.id);
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (error) throw error;
       toast({
         title: "Project deleted"
         description: "Your portfolio project has been deleted"
       });
+<<<<<<< HEAD
       setProjects(projects.filter(p => p.id !== projectId));
+=======
+      
+      setProjects(projects && projects.filter(p => p && p.id !== projectId));
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return true
     } catch (e: any) {
-      console.error('Error deleting portfolio project:', e);
-      setError(e.message);
+      console && console.error('Error deleting portfolio project:', e);
+      setError(e && e.message);
       toast({
+<<<<<<< HEAD
         title: "Error"
         description: `Could not delete project: ${e.message}`;
+=======
+        title: "Error",
+        description: `Could not delete project: ${e && e.message}`;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"
       });
       return false

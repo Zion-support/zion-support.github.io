@@ -1,21 +1,52 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function QuantumCloudInfrastructurePlatformPage() {
 
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Head from 'next/head';
+import ServiceLanding from '../components/sections/ServiceLanding';
+
+export default function QuantumCloudInfrastructurePlatformPage() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-    <>
-      <Head>
-        <title>Quantum Cloud Infrastructure Platform | Zion Tech Group</title>
+    <>;
+      <Head>;
+        <title>Quantum Cloud Infrastructure Platform | Zion Tech Group</title>;
         <meta
           name='description'
           content='Quantum-enhanced cloud infrastructure with superior performance, security, and efficiency.'
-        />
+        />;
         <link
           rel='canonical'
-          href='https://ziontechgroup.com/quantum-cloud-infrastructure-platform'
-        />
-      </Head>
+          href='https://ziontechgroup && ziontechgroup.com/quantum-cloud-infrastructure-platform'
+        />;
+      </Head>;
       <ServiceLanding
         title='Quantum Cloud Infrastructure Platform'
         description='Quantum compute accelerators, advanced security protocols, real-time monitoring, cost optimization, DR, and compliance—delivered as managed foundations.'
@@ -38,8 +69,8 @@ export default function QuantumCloudInfrastructurePlatformPage() {
           'Energy'
           'Media'
         ]}
-        canonical='https: //ziontechgroup.com/quantum-cloud-infrastructure-platform'
-      />
-    </>
+        canonical='https: //ziontechgroup && ziontechgroup.com/quantum-cloud-infrastructure-platform'
+      />;
+    </>;
   );
 

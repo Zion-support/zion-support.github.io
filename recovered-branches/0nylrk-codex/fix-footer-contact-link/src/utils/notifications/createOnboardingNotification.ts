@@ -9,7 +9,11 @@ export async function createOnboardingNotification({
   missingMilestone;
   userRole
 }: OnboardingNotificationParams) {
+<<<<<<< HEAD
 
+=======
+  try {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   let title = '';
   let message = '';
   let actionUrl = '';

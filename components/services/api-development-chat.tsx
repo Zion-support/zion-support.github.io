@@ -2,12 +2,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-const ApiDevelopmentChat: NextPage = () => {
+const ApiDevelopmentChat: NextPage = () => {;
   return (
-    <div>
-      <Head>
-        <title>ApiDevelopmentChat - Zion Tech Solutions</title>
+    <div>;
+      <Head>;
+        <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
         <meta name="description" content="ApiDevelopmentChat service" />{" "}
+<<<<<<< HEAD
       </Head>
       <main>
         <h1>ApiDevelopmentChat</h1>
@@ -15,6 +16,16 @@ const ApiDevelopmentChat: NextPage = () => {
         <a href="/services">Back to Services</a>
       </main>
     </div>
+=======
+      </Head>;
+
+      <main>;
+        <h1>ApiDevelopmentChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default ApiDevelopmentChat;

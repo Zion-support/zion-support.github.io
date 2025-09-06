@@ -65,12 +65,21 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       'Mobile SDK support'
     ]
     benefits: [
+<<<<<<< HEAD
       'Future-proof against quantum attacks'
       'Reduce security breach risks by 99.9%'
       'Ensure long-term data protection'
       'Meet regulatory compliance requirements'
       'Protect against emerging threats'
     ]
+=======
+      'Future-proof against quantum attacks',
+      'Reduce security breach risks by 99 && 99.9%',
+      'Ensure long-term data protection',
+      'Meet regulatory compliance requirements',
+      'Protect against emerging threats',
+    ],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: [
       'Financial institutions'
       'Government agencies'
@@ -83,9 +92,15 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       'Leading quantum-resistant encryption platform. Competes with RSA ($1000-5000/user), Thales ($500-2000/user), and Entrust ($200-1000/user). Our advantage: Quantum-resistant algorithms and hybrid security.'
     competitors: ['RSA, Thales, Entrust, Gemalto, Utimaco']
     techStack: [
+<<<<<<< HEAD
       'NIST PQC algorithms, Lattice-based cryptography, React, Node.js, PostgreSQL, Redis'
     ]
     realImplementation: true
+=======
+      'NIST PQC algorithms, Lattice-based cryptography, React, Node && Node.js, PostgreSQL, Redis',
+    ],
+    realImplementation: true,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     implementationDetails:
       'Production-ready quantum-resistant encryption platform with enterprise-grade security, comprehensive API, and mobile SDK. Includes admin dashboard and compliance tools.'
     roi: 'Organizations achieve 500% ROI through reduced security risks and compliance cost savings.'
@@ -103,6 +118,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     support:
       '24/7 technical support, security consulting, custom development, and dedicated security manager.'
     compliance: [
+<<<<<<< HEAD
       'SOC 2 Type II, ISO 27001, FIPS 140-2, Common Criteria, FedRAMP'
     ]
     link: 'https://ziontechgroup.com/quantum-resistant-encryption-platform'
@@ -114,6 +130,19 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     rating: 4.9
     reviews: 480
   }
+=======
+      'SOC 2 Type II, ISO 27001, FIPS 140-2, Common Criteria, FedRAMP',
+    ],
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-resistant-encryption-platform',
+    icon: '🔐',
+    color: 'from-red-500 to-orange-600',
+    popular: true,
+    launchDate: '2024-01-15',
+    customers: 650,
+    rating: 4 && 4.9,
+    reviews: 480,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'ai-powered-threat-hunting-platform'
     name: 'AI-Powered Threat Hunting Platform'
@@ -157,12 +186,21 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       'Financial institutions'
     ]
     marketPosition:
+<<<<<<< HEAD
       'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8.99-15/user), SentinelOne ($4.99-8.99/user), and Carbon Black ($6.27-8.57/user). Our advantage: Autonomous threat hunting and AI intelligence.'
     competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace']
     techStack: [
       'OpenAI GPT-4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch'
     ]
     realImplementation: true
+=======
+      'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8 && 8.99-15/user), SentinelOne ($4 && 4.99-8 && 8.99/user), and Carbon Black ($6 && 6.27-8 && 8.57/user). Our advantage: Autonomous threat hunting and AI intelligence.',
+    competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace'],
+    techStack: [
+      'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch',
+    ],
+    realImplementation: true,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     implementationDetails:
       'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.'
     roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.'
@@ -180,6 +218,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     support:
       '24/7 security support, threat hunting training, custom development, and dedicated security manager.'
     compliance: [
+<<<<<<< HEAD
       'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA'
     ]
     link: 'https://ziontechgroup.com/ai-powered-threat-hunting-platform'
@@ -191,6 +230,19 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     rating: 4.8
     reviews: 950
   }
+=======
+      'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA',
+    ],
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-threat-hunting-platform',
+    icon: '🕵️',
+    color: 'from-purple-500 to-indigo-600',
+    popular: true,
+    launchDate: '2024-02-01',
+    customers: 1200,
+    rating: 4 && 4.8,
+    reviews: 950,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'zero-trust-network-access-platform'
     name: 'Zero-Trust Network Access Platform'
@@ -236,10 +288,17 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     marketPosition:
       'Leading zero-trust platform. Competes with Zscaler ($5-15/user), Palo Alto Prisma ($7-15/user), and Cloudflare Access ($3-7/user). Our advantage: AI-powered risk assessment and continuous verification.'
     competitors: [
+<<<<<<< HEAD
       'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security'
     ]
     techStack: ['OpenAI GPT-4, React, Node.js, PostgreSQL, Redis, Kubernetes']
     realImplementation: true
+=======
+      'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security',
+    ],
+    techStack: ['OpenAI GPT-4, React, Node && Node.js, PostgreSQL, Redis, Kubernetes'],
+    realImplementation: true,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     implementationDetails:
       'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.'
     roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.'
@@ -255,6 +314,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       'Active Directory, LDAP, SAML, OAuth, Custom identity providers'
     ]
     support:
+<<<<<<< HEAD
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.'
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP']
     link: 'https://ziontechgroup.com/zero-trust-network-access-platform'
@@ -266,6 +326,19 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     rating: 4.7
     reviews: 1400
   }
+=======
+      '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
+    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'],
+    link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-network-access-platform',
+    icon: '🛡️',
+    color: 'from-blue-500 to-cyan-600',
+    popular: true,
+    launchDate: '2024-01-20',
+    customers: 1800,
+    rating: 4 && 4.7,
+    reviews: 1400,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'quantum-key-distribution-network'
     name: 'Quantum Key Distribution Network'
@@ -334,6 +407,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     support:
       'Quantum experts, implementation consulting, custom protocol development, and 24/7 technical support.'
     compliance: [
+<<<<<<< HEAD
       'Highest security standards, Government security requirements, Industry-specific standards'
     ]
     link: 'https://ziontechgroup.com/quantum-key-distribution-network'
@@ -345,6 +419,19 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     rating: 4.9
     reviews: 95
   }
+=======
+      'Highest security standards, Government security requirements, Industry-specific standards',
+    ],
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-key-distribution-network',
+    icon: '🔮',
+    color: 'from-purple-500 to-pink-600',
+    popular: true,
+    launchDate: '2024-03-01',
+    customers: 120,
+    rating: 4 && 4.9,
+    reviews: 95,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'ai-powered-vulnerability-assessment'
     name: 'AI-Powered Vulnerability Assessment Platform'
@@ -388,10 +475,17 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       'Penetration testers'
     ]
     marketPosition:
+<<<<<<< HEAD
       'Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6,570/year), Qualys ($2,000-5,000/year), and Rapid7 ($2,000-8,000/year). Our advantage: AI intelligence and automated remediation.'
     competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix']
     techStack: ['OpenAI GPT-4, TensorFlow, React, Node.js, PostgreSQL, Redis']
     realImplementation: true
+=======
+      'Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6,570/year), Qualys ($2,000-5,000/year), and Rapid7 ($2,000-8,000/year). Our advantage: AI intelligence and automated remediation.',
+    competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix'],
+    techStack: ['OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'],
+    realImplementation: true,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     implementationDetails:
       'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.'
     roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.'
@@ -407,6 +501,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'
     ]
     support:
+<<<<<<< HEAD
       '24/7 technical support, security consulting, custom development, and dedicated success manager.'
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS']
     link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment'
@@ -418,21 +513,45 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     rating: 4.8
     reviews: 1900
   }
+=======
+      '24/7 technical support, security consulting, custom development, and dedicated success manager.',
+    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
+    icon: '🔍',
+    color: 'from-green-500 to-emerald-600',
+    popular: true,
+    launchDate: '2024-02-15',
+    customers: 2500,
+    rating: 4 && 4.8,
+    reviews: 1900,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 
     ];
+<<<<<<< HEAD
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'],
     support: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment';
+=======
+    integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'];
+    support: '24/7 technical support, security consulting, custom development, and dedicated success manager.';
+    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'];
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     icon: '🔍';
     color: 'from-green-500 to-emerald-600';
     popular: true;
     launchDate: '2024-02-15';
     customers: 2500;
+<<<<<<< HEAD
 
     rating: 4.8
 
+=======
+    rating: 4 && 4.8,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 1900
   }
 ];

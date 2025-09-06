@@ -49,6 +49,7 @@ export const cuttingEdgeITServices2025 = [
     }
     category: 'Quantum IT'
     tags: [
+<<<<<<< HEAD
       'Quantum Computing'
       'Cloud Infrastructure'
       'Security'
@@ -61,6 +62,20 @@ export const cuttingEdgeITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$22.1B'
+=======
+      'Quantum Computing',
+      'Cloud Infrastructure',
+      'Security',
+      'Performance',
+      'Scalability',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-cloud-infrastructure-platform',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$22 && 22.1B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Cloud providers, enterprises, financial institutions, government agencies, research institutions'
     competitiveAdvantage:
@@ -132,6 +147,7 @@ export const cuttingEdgeITServices2025 = [
     }
     category: 'Edge Computing'
     tags: [
+<<<<<<< HEAD
       'Edge Computing'
       'Orchestration'
       'Real-time Processing'
@@ -144,6 +160,20 @@ export const cuttingEdgeITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$18.7B'
+=======
+      'Edge Computing',
+      'Orchestration',
+      'Real-time Processing',
+      'AI Deployment',
+      'Low Latency',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/edge-computing-orchestration-platform',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$18 && 18.7B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'IoT companies, telecommunications providers, manufacturing companies, smart city developers'
     competitiveAdvantage:
@@ -218,6 +248,7 @@ export const cuttingEdgeITServices2025 = [
     }
     category: 'Cybersecurity'
     tags: [
+<<<<<<< HEAD
       'Zero Trust'
       'Security'
       'Authentication'
@@ -230,6 +261,20 @@ export const cuttingEdgeITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$31.2B'
+=======
+      'Zero Trust',
+      'Security',
+      'Authentication',
+      'IAM',
+      'Threat Detection',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/zero-trust-security-platform',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$31 && 31.2B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Enterprises, government agencies, financial institutions, healthcare organizations, educational institutions'
     competitiveAdvantage:
@@ -301,6 +346,7 @@ export const cuttingEdgeITServices2025 = [
     }
     category: 'Blockchain'
     tags: [
+<<<<<<< HEAD
       'Blockchain'
       'Smart Contracts'
       'Distributed Ledger'
@@ -313,6 +359,20 @@ export const cuttingEdgeITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$19.9B'
+=======
+      'Blockchain',
+      'Smart Contracts',
+      'Distributed Ledger',
+      'Enterprise',
+      'Automation',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/blockchain-enterprise-platform',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$19 && 19.9B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Financial institutions, supply chain companies, healthcare organizations, government agencies, manufacturing companies'
     competitiveAdvantage:
@@ -378,6 +438,7 @@ export const cuttingEdgeITServices2025 = [
         price: 2499
         period: 'month'
         features: [
+<<<<<<< HEAD
           'Full AI DevOps platform'
           'Custom development'
           'Dedicated specialists'
@@ -393,6 +454,23 @@ export const cuttingEdgeITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$25.6B'
+=======
+          'Full AI DevOps platform',
+          'Custom development',
+          'Dedicated specialists',
+          '24/7 support',
+        ],
+      },
+    },
+    category: 'DevOps',
+    tags: ['AI DevOps', 'Automation', 'CI/CD', 'Monitoring', 'Performance'],
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-powered-devops-platform',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$25 && 25.6B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies'
     competitiveAdvantage:

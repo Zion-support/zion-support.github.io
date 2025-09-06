@@ -60,14 +60,25 @@ export function getOptionalDocuments(role: KycRole): string[] {
 }
 export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
   const missing: string[] = [];
+<<<<<<< HEAD
   if (!profile.fullLegalName && !profile.businessName) {
     missing.push('name');
   }
   if (!profile.country) {
     missing.push('country');
+=======
+  
+  if (!profile && profile.fullLegalName && !profile && profile.businessName) {
+    missing && missing.push('name'),
+  }
+  
+  if (!profile && profile.country) {
+    missing && missing.push('country');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 <<<<<<< HEAD
   
+<<<<<<< HEAD
   if (profile.role === 'client' && !profile.dateOfBirth) {
     missing.push('dateOfBirth');
   }
@@ -79,9 +90,21 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
     missing.push('businessRegistrationNumber');
+=======
+  if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
+    missing && missing.push('dateOfBirth');
+  }
+  return { ok: missing && missing.length === 0, missing };  
+  if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
+    missing && missing.push('businessRegistrationNumber');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return {
+<<<<<<< HEAD
     ok: missing.length === 0
+=======
+    ok: missing && missing.length === 0,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     missing
 <<<<<<< HEAD
   };

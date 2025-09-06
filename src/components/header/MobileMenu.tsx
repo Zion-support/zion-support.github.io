@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react'
@@ -39,3 +40,9 @@ const protectedRoutes = null;
     </div>
   )
 }
+=======
+    name: item && item.key === 'explore' ? t('general && general.explore') : t(`nav.${item && item.key}`)})),  );
+}
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

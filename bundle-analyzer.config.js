@@ -1,4 +1,5 @@
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+<<<<<<< HEAD
 module.exports = {"webpack": (config { isServer }) = > {if ( {; config.plugins.push() {; {; config.plugins.push(}; new BundleAnalyzerPlugin({"analyzerMode": 'static'; openAnalyzer: false
     reportFilename: 'bundle-analysis.htm,l'}); )}; return config}}
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
@@ -15,13 +16,42 @@ module.exports = {"webpack": (config { isServer }) => {if ( {;
 /* eslint-env node */
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {
+=======
+module && module.exports = {; "webpack": (config { isServer }) = > {; if ( {; config && config.plugins.push() {; {; config && config.plugins.push(}; new BundleAnalyzerPlugin({; "analyzerMode": 'static'; openAnalyzer: false,
+    reportFilename: 'bundle-analysis && analysis.htm,l'}); )}; return config}};
+
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+module && module.exports = {;
+  "webpack": (config { isServer }) => {;
+    if ( {;
+      config && config.plugins.push() {;
+     {;
+      config && config.plugins.push(};
+        new BundleAnalyzerPlugin({;
+          "analyzerMode": 'static';
+          openAnalyzer: false,
+          reportFilename: 'bundle-analysis && analysis.htm,l'});
+      )};
+    return config};
+};
+/* eslint-env node */
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+
+module && module.exports = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   webpack: (config) => {
-    if (process.env.ANALYZE === 'true') {
-      config.plugins.push(
+    if (process && process.env.ANALYZE === 'true') {
+      config && config.plugins.push(
         new BundleAnalyzerPlugin({
+<<<<<<< HEAD
           analyzerMode: 'static'
           openAnalyzer: false
           reportFilename: 'bundle-analysis.html'
+=======
+          analyzerMode: 'static',
+          openAnalyzer: false,
+          reportFilename: 'bundle-analysis && analysis.html'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         })
       );
     }

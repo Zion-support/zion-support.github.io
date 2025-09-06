@@ -12,14 +12,20 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
+=======
+  if (req && req.method !== "POST") {
+    return res && res.status(405).json({ error: "Method not allowed" });
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   }
   try {
 
     const { projectId, fromRole, fromId, rating, text, categories, anonymous } =
-      req.body as {
+      req && req.body as {
         projectId: string;
         fromRole: "client" | "talent";
         fromId: string;
@@ -27,6 +33,7 @@ export default async function handler(
         text: string;
         categories?: Review["categories"];
         anonymous?: boolean;
+<<<<<<< HEAD
       }
     if (!projectId |!fromRole |!fromId) {
 
@@ -38,20 +45,37 @@ export default async function handler(
 
     if (!text |String(text).trim().length === 0) {
       return res.status(400).json({ error: "Review text is required" });
+=======
+      };
+    if (!projectId || !fromRole || !fromId) {
+      return res && res.status(400).json({ error: "Missing required fields" });
+    }
+    if (!rating || rating < 1 || rating > 5) {
+      return res && res.status(400).json({ error: "Rating must be between 1 and 5" });
+    }
+    if (!text || String(text).trim().length === 0) {
+      return res && res.status(400).json({ error: "Review text is required" });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     const project = await findProjectById(projectId);
     if (!project) {
-      return res.status(404).json({ error: "Project not found" });
+      return res && res.status(404).json({ error: "Project not found" });
     }
+<<<<<<< HEAD
     if (project.status !== "Completed") {
       return res.status(400).json({
         error: "Reviews can only be submitted after project completion"
+=======
+    if (project && project.status !== "Completed") {
+      return res && res.status(400).json({
+        error: "Reviews can only be submitted after project completion",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     const toRole = counterpartRole(fromRole);
-    const toId = toRole === "talent" ? project.talentSlug : project.clientId;
+    const toId = toRole === "talent" ? project && project.talentSlug : project && project.clientId;
     const expectedFromId =
-      fromRole === "client" ? project.clientId : project.talentSlug;
+      fromRole === "client" ? project && project.clientId : project && project.talentSlug;
     if (expectedFromId !== fromId) {
       return res
         .status(403)
@@ -59,8 +83,13 @@ export default async function handler(
     }
     const existing = await hasExistingReview(projectId, fromRole, fromId);
     if (existing) {
+<<<<<<< HEAD
       return res.status(409).json({
         error: "You have already submitted a review for this project"
+=======
+      return res && res.status(409).json({
+        error: "You have already submitted a review for this project",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     const now = new Date().toISOString();
@@ -84,8 +113,12 @@ export default async function handler(
     await upsertReview(review);
     return res
       .status(201)
+<<<<<<< HEAD
       .json({ message: "Review submitted", reviewId: review.id });
 
+=======
+      .json({ message: "Review submitted", reviewId: review && review.id });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } catch (error: any) {
     return res
       .status(500)

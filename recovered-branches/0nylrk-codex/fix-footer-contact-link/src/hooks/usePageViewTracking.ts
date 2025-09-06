@@ -11,19 +11,34 @@ export function usePageViewTracking() {
   useEffect(() => {
     const handleRouteChange = () => {
       // Track page view
+<<<<<<< HEAD
       console.log('Page view:', window.location.pathname)
     }
     // Listen for route changes
     window.addEventListener('popstate', handleRouteChange);
+=======
+      console && console.log('Page view:', window && window.location.pathname)
+    };
+    
+    // Listen for route changes
+    window && window.addEventListener('popstate', handleRouteChange);
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // Initial page load
     handleRouteChange();
     return () => {
-      window.removeEventListener('popstate', handleRouteChange)
+      window && window.removeEventListener('popstate', handleRouteChange)
     }
   }, []);
 
   // Also track when location changes directly via React Router
   useEffect(() => {
+<<<<<<< HEAD
     console.log('Page view:', location.pathname)
   }, [location.pathname])
 }
+=======
+    console && console.log('Page view:', location && location.pathname)
+  }, [location && location.pathname])
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

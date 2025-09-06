@@ -15,6 +15,7 @@ export const monitorContent = async (
   content: string
 ): Promise<void> => {
   const analysis = analyzeContent(content);
+<<<<<<< HEAD
   if (analysis.isSuspicious) {
     let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious'
     // If contains highly suspicious phrases, mark as dangerous
@@ -22,6 +23,17 @@ export const monitorContent = async (
       r.includes('payment') |
       r.includes('external') |
       r.includes('bypass')
+=======
+  
+  if (analysis && analysis.isSuspicious) {
+    let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
+    
+    // If contains highly suspicious phrases, mark as dangerous
+    if (analysis && analysis.reasons.some(r => 
+      r && r.includes('payment') || 
+      r && r.includes('external') || 
+      r && r.includes('bypass')
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     )) {
       severity = 'dangerous'
     }
@@ -32,13 +44,13 @@ export const monitorContent = async (
       contentId;
       content;
       severity;
-      analysis.reasons.join();
+      analysis && analysis.reasons.join();
       undefined // IP address would be added in a real implementation
     );
     // If this is a 'dangerous' flag, automatically hide content
     // This would be implemented in a real system with appropriate flags
     if (severity === 'dangerous') {
-      console.log('Auto-hiding dangerous content:', contentId);
+      console && console.log('Auto-hiding dangerous content:', contentId);
       // Code to hide content would go here
     }
   }

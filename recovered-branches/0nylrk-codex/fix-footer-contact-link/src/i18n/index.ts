@@ -1,11 +1,43 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
 import i18n from 'i18next';
+<<<<<<< HEAD
 import { initReactI18next  } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector',
 import enTranslation from './locales/en/translation.json',
 import esTranslation from './locales/es/translation.json',
 import ptTranslation from './locales/pt/translation.json',
 import arTranslation from './locales/ar/translation.json',
+=======
+import {initReactI18next} from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+import enTranslation from './locales/en/translation ;
+import esTranslation from './locales/es/translation ;
+import ptTranslation from './locales/pt/translation ;
+import arTranslation from './locales/ar/translation ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 // Initialize i18next
 i18n
   .use(LanguageDetector) // Detect user language
@@ -26,8 +58,12 @@ i18n
       }
     }
     fallbackLng: 'en', // Default language
+<<<<<<< HEAD
 
     debug: process.env.NODE_ENV === 'development'
+=======
+    debug: process && process.env.NODE_ENV === 'development',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     interpolation: {
       escapeValue: false, // React already escapes by default
     }
@@ -37,12 +73,24 @@ i18n
       caches: ['localStorage']
     }});
 // For RTL language support
+<<<<<<< HEAD
 document.documentElement.dir = i18n.dir();
 // Listen for language changes to update RTL/LTR direction
 i18n.on('languageChanged', (lng) => {
   document.documentElement.dir = i18n.dir();
   // Save language preference to localStorage
   localStorage.setItem('zion_language', lng);
+=======
+document && document.documentElement.dir = i18n && i18n.dir();
+
+// Listen for language changes to update RTL/LTR direction
+i18n && i18n.on('languageChanged', (lng) => {
+  document && document.documentElement.dir = i18n && i18n.dir();
+  
+  // Save language preference to localStorage
+  localStorage && localStorage.setItem('zion_language', lng);
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // If user is authenticated, save language preference to profile
   // This will be implemented in the LanguageContext
 });

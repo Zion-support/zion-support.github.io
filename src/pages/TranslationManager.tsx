@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -19,5 +20,14 @@ export default function TranslationManager() {
     let sourceText = ''
     for (const lang of supportedLanguages.map(l => l.code)) {
 
+=======
+
+
+    let sourceText = '';    ;
+    for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
+
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 }

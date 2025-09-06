@@ -67,22 +67,39 @@ export async function findMatches(
     // Filter by type if provided
     let filteredItems = sampleData;
     if (type && type !== "all") {
+<<<<<<< HEAD
       filteredItems = sampleData.filter(item =>
         item.category.toLowerCase().includes(type.toLowerCase())
+=======
+      filteredItems = sampleData && sampleData.filter(item => 
+        item && item.category.toLowerCase().includes(type && type.toLowerCase())
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       )
     }
     // Sort by simulated relevance (random for now)
+<<<<<<< HEAD
     const matches: MatchResult[] = filteredItems.map(item => ({
       item
       score: Math.floor(Math.random() * 40) + 60, // Random score between 60 and 99
       matchedSkills: item.skills?.slice(0, 2) |[];
       reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
+=======
+    const matches: MatchResult[] = filteredItems && filteredItems.map(item => ({
+      item,
+      score: Math && Math.floor(Math && Math.random() * 40) + 60, // Random score between 60 and 99
+      matchedSkills: item && item.skills?.slice(0, 2) || [];
+      reason: `This ${item && item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }));
     // Sort by score
-    return matches.sort((a, b) => b.score - a.score).slice(0, limit)
+    return matches && matches.sort((a, b) => b && b.score - a && a.score).slice(0, limit)
   } catch (error) {
+<<<<<<< HEAD
     console.error("Error in matchmaking:", error);
 
+=======
+    console && console.error("Error in matchmaking:", error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return []
   }
 }

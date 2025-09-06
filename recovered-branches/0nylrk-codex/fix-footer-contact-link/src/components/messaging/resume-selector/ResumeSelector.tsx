@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
@@ -18,27 +19,43 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   >("recent");
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(
     null
+=======
+export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps) {;
+  const [selectedOption, setSelectedOption] = useState<;
+    "recent" | "select" | "upload";
+  >("recent");
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(;
+    null,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
   const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
 
   const [customFile, setCustomFile] = useState<File | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const { resume, fetchResume } = useResume();
+<<<<<<< HEAD
   // Fetch resume data when component mounts
   useEffect(() => {
 
     const loadResumes = async () => {
+=======
+
+  // Fetch resume data when component mounts;
+  useEffect(() => {;
+    const loadResumes = async () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setIsLoading(true);
-      try {
+      try {;
         await fetchResume();
-      } catch (error) {
-        console.error("Error loading resumes:", error);
-      } finally {
+      } catch (error) {;
+        console && console.error("Error loading resumes:", error);
+      } finally {;
         setIsLoading(false);
       }
     }
     loadResumes();
   }, [fetchResume]);
+<<<<<<< HEAD
   // Update resume options when resume data changes
   useEffect(() => {
     if (resume) {
@@ -49,26 +66,55 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
           type: "ai_resume"
           resume: resume
         }
+=======
+
+  // Update resume options when resume data changes;
+  useEffect(() => {;
+    if (resume) {;
+      const options: ResumeOption[] = [;
+        {;
+          id: resume && resume.id || "current",;
+          title: resume && resume.basic_info.title,;
+          type: "ai_resume",;
+          resume: resume,;
+        },;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ];
       setResumeOptions(options);
+<<<<<<< HEAD
       // Pre-select the most recent resume
       if (options.length > 0 && selectedOption === "recent") {
+=======
+
+      // Pre-select the most recent resume;
+      if (options && options.length > 0 && selectedOption === "recent") {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         setSelectedResume(options[0]);
         onResumeSelected(options[0]);
       }
     }
   }, [resume, selectedOption, onResumeSelected]);
+<<<<<<< HEAD
   // Handle radio option change
   const handleOptionChange = (value: "recent" | "select" | "upload") => {
     setSelectedOption(value);
     if (value === "recent" && resumeOptions.length > 0) {
+=======
+
+  // Handle radio option change;
+  const handleOptionChange = (value: "recent" | "select" | "upload") => {;
+    setSelectedOption(value);
+
+    if (value === "recent" && resumeOptions && resumeOptions.length > 0) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       (setSelectedResume(resumeOptions[0]), onResumeSelected(resumeOptions[0]));
-    } else if (value === "select") {
-      // Reset selection until user chooses
+    } else if (value === "select") {;
+      // Reset selection until user chooses;
       setSelectedResume(null);
-    } else if (value === "upload") {
+    } else if (value === "upload") {;
       setSelectedResume(null);
     }
+<<<<<<< HEAD
   }
   // Handle resume selection change
   const handleResumeSelect = (resumeId: string) => {
@@ -97,10 +143,46 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         type: "custom_upload"
         file: file
       }
+=======
+  };
+
+  // Handle resume selection change;
+  const handleResumeSelect = (resumeId: string) => {;
+    const selected = resumeOptions && resumeOptions.find((opt) => opt && opt.id === resumeId);
+    if (selected) {;
+      (setSelectedResume(selected), onResumeSelected(selected));
+    }
+  };
+
+  // Handle custom file upload;
+  const handleFileUpload = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+    if (e && e.target.files && e && e.target.files[0]) {;
+      const file = e && e.target.files[0];
+
+      // Check if it's a PDF file;
+      if (file && file.type !== "application/pdf") {;
+        toast({;
+          title: "Invalid file type",;
+          description: "Please upload a PDF file",;
+          variant: "destructive",;
+        });
+        return;
+      }
+
+      // Create a custom resume option;
+      const customOption: ResumeOption = {;
+        id: "custom-upload",;
+        title: file && file.name,;
+        type: "custom_upload",;
+        file: file,;
+      };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setCustomFile(file);
       setSelectedResume(customOption);
       onResumeSelected(customOption);
     }
+<<<<<<< HEAD
   }
   // Handle resume download
   const handleDownloadResume = async () => {
@@ -134,10 +216,51 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         title: "Download failed"
         description: "There was an error downloading your resume."
         variant: "destructive"
+=======
+  };
+
+  // Handle resume download;
+  const handleDownloadResume = async () => {;
+    if (;
+      !selectedResume ||;
+      selectedResume && selectedResume.type !== "ai_resume" ||;
+      !selectedResume && selectedResume.resume;
+    ) {;
+      return;
+    }
+
+    try {;
+      setIsLoading(true);
+      const pdfBlob = await exportResumeToPDF(selectedResume && selectedResume.resume);
+
+      // Create download link;
+      const url = URL && URL.createObjectURL(pdfBlob);
+      const link = document && document.createElement("a");
+      link && link.href = url;
+      link && link.download = `${selectedResume && selectedResume.title || "Resume"}.pdf`;
+      document && document.body.appendChild(link);
+      link && link.click();
+
+      // Clean up;
+      document && document.body.removeChild(link);
+      URL && URL.revokeObjectURL(url);
+
+      toast({;
+        title: "Success!",;
+        description: "Your resume has been downloaded.",;
       });
-    } finally {
+    } catch (error) {;
+      console && console.error("Error downloading PDF:", error);
+      toast({;
+        title: "Download failed",;
+        description: "There was an error downloading your resume.",;
+        variant: "destructive",;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      });
+    } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
   }
   // Handle "Generate Resume Now" button
   const handleGenerateResume = () => {
@@ -147,11 +270,25 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   return (
     <div className="space-y-4">
       <h3 className="text-lg font-medium text-white">Attach Resume</h3>
+=======
+  };
+
+  // Handle "Generate Resume Now" button;
+  const handleGenerateResume = () => {;
+    window && window.open("/dashboard/talent/portfolio_blank");
+  };
+
+  return (
+    <div className="space-y-4">;
+      <h3 className="text-lg font-medium text-white">Attach Resume</h3>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <RadioGroup
         value={selectedOption}
-        onValueChange={(value) =>
-          handleOptionChange(value as "recent" | "select" | "upload")
+        onValueChange={(value) =>;
+          handleOptionChange(value as "recent" | "select" | "upload");
         }
+<<<<<<< HEAD
         className="space-y-3"
       >
         <div className="flex items-center space-x-2">
@@ -173,40 +310,75 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
           </Label>
         </div>
       </RadioGroup>
+=======
+        className="space-y-3";
+      >;
+        <div className="flex items-center space-x-2">;
+          <RadioGroupItem value="recent" id="recent" />;
+          <Label htmlFor="recent" className="text-white">;
+            Use most recent AI Resume;
+          </Label>;
+        </div>;
+
+        <div className="flex items-center space-x-2">;
+          <RadioGroupItem value="select" id="select" />;
+          <Label htmlFor="select" className="text-white">;
+            Select from saved versions;
+          </Label>;
+        </div>;
+
+        <div className="flex items-center space-x-2">;
+          <RadioGroupItem value="upload" id="upload" />;
+          <Label htmlFor="upload" className="text-white">;
+            Upload a custom resume (PDF);
+          </Label>;
+        </div>;
+      </RadioGroup>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Resume selection options based on radio selection */}
-      {selectedOption === "recent" && resume && (
+      {selectedOption === "recent" && resume && (;
         <ResumePreviewCard
           resume={resume}
           onDownload={handleDownloadResume}
           isLoading={isLoading}
-        />
+        />;
       )}
+<<<<<<< HEAD
       {selectedOption === "select" && (
+=======
+
+      {selectedOption === "select" && (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <SelectResumeSection
           resumeOptions={resumeOptions}
           selectedResume={selectedResume}
           handleResumeSelect={handleResumeSelect}
           handleDownloadResume={handleDownloadResume}
           isLoading={isLoading}
-        />
+        />;
       )}
+<<<<<<< HEAD
       {selectedOption === "upload" && (
+=======
+
+      {selectedOption === "upload" && (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <UploadSection
           customFile={customFile}
           onFileUpload={handleFileUpload}
-        />
+        />;
       )}
       {/* Generate Resume Now button */}
-      <div className="flex justify-between items-center pt-2">
+      <div className="flex justify-between items-center pt-2">;
         <Button
           variant="outline"
           onClick={handleGenerateResume}
-          className="text-zion-purple border-zion-purple/20"
-        >
-          <Plus className="h-4 w-4 mr-2" />
-          Generate Resume Now
-        </Button>
-      </div>
-    </div>
+          className="text-zion-purple border-zion-purple/20">;
+          <Plus className="h-4 w-4 mr-2" />;
+          Generate Resume Now;
+        </Button>;
+      </div>;
+    </div>;
   );
 }

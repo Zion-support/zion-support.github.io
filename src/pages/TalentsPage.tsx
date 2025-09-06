@@ -35,8 +35,13 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
     )
   }
 
+<<<<<<< HEAD
 
     let filteredTalents = allTalents
+=======
+    let filteredTalents = allTalents;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 }
 

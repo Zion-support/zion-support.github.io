@@ -46,6 +46,7 @@ export const emergingTech2027Services: Service[] = [
       'Cryptographic analysis'
     ]
     targetAudience: [
+<<<<<<< HEAD
       'Research institutions'
       'Pharmaceutical companies'
       'Financial institutions'
@@ -58,6 +59,20 @@ export const emergingTech2027Services: Service[] = [
     implementationTime: '6-8 weeks'
     roi: '1200% within 18 months'
     link: 'https://ziontechgroup.com/services/quantum-machine-learning'
+=======
+      'Research institutions',
+      'Pharmaceutical companies',
+      'Financial institutions',
+      'Government agencies',
+      'Tech companies',
+    ],
+    marketSize: '$18 && 18.7B by 2027',
+    competitiveAdvantage:
+      'First quantum machine learning platform with hybrid algorithms',
+    implementationTime: '6-8 weeks',
+    roi: '1200% within 18 months',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-machine-learning',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     tags: [
       'Quantum Computing'
       'Machine Learning'
@@ -96,6 +111,7 @@ export const emergingTech2027Services: Service[] = [
       'Sensor networks'
     ]
     targetAudience: [
+<<<<<<< HEAD
       'IoT companies'
       'Robotics manufacturers'
       'Edge computing providers'
@@ -109,6 +125,21 @@ export const emergingTech2027Services: Service[] = [
     link: 'https://ziontechgroup.com/services/neuromorphic-computing'
     tags: ['Neuromorphic Computing', 'AI', 'Edge Computing', 'IoT', 'Robotics']
   }
+=======
+      'IoT companies',
+      'Robotics manufacturers',
+      'Edge computing providers',
+      'Sensor manufacturers',
+      'Autonomous vehicle companies',
+    ],
+    marketSize: '$14 && 14.2B by 2027',
+    competitiveAdvantage: 'Most advanced neuromorphic computing platform',
+    implementationTime: '4-6 weeks',
+    roi: '800% within 12 months',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/neuromorphic-computing',
+    tags: ['Neuromorphic Computing', 'AI', 'Edge Computing', 'IoT', 'Robotics'],
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'synthetic-biology-platform'
     name: 'Synthetic Biology Platform'
@@ -139,6 +170,7 @@ export const emergingTech2027Services: Service[] = [
       'Biofuel production'
     ]
     targetAudience: [
+<<<<<<< HEAD
       'Pharmaceutical companies'
       'Agricultural companies'
       'Industrial biotech firms'
@@ -151,6 +183,20 @@ export const emergingTech2027Services: Service[] = [
     implementationTime: '8-12 weeks'
     roi: '1500% within 24 months'
     link: 'https://ziontechgroup.com/services/synthetic-biology-platform'
+=======
+      'Pharmaceutical companies',
+      'Agricultural companies',
+      'Industrial biotech firms',
+      'Research institutions',
+      'Environmental companies',
+    ],
+    marketSize: '$22 && 22.8B by 2027',
+    competitiveAdvantage:
+      'Most comprehensive synthetic biology platform with AI integration',
+    implementationTime: '8-12 weeks',
+    roi: '1500% within 24 months',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/synthetic-biology-platform',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     tags: [
       'Synthetic Biology'
       'Biotechnology'
@@ -189,6 +235,7 @@ export const emergingTech2027Services: Service[] = [
       'Industrial inspection'
     ]
     targetAudience: [
+<<<<<<< HEAD
       'Medical device companies'
       'Environmental monitoring firms'
       'Navigation companies'
@@ -201,6 +248,20 @@ export const emergingTech2027Services: Service[] = [
     implementationTime: '6-8 weeks'
     roi: '900% within 15 months'
     link: 'https://ziontechgroup.com/services/quantum-sensors-network'
+=======
+      'Medical device companies',
+      'Environmental monitoring firms',
+      'Navigation companies',
+      'Research institutions',
+      'Industrial companies',
+    ],
+    marketSize: '$16 && 16.5B by 2027',
+    competitiveAdvantage:
+      'Only quantum sensors network with multi-application support',
+    implementationTime: '6-8 weeks',
+    roi: '900% within 15 months',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-sensors-network',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     tags: [
       'Quantum Technology'
       'Sensors'
@@ -239,6 +300,7 @@ export const emergingTech2027Services: Service[] = [
       'Communication aids'
     ]
     targetAudience: [
+<<<<<<< HEAD
       'Medical device companies'
       'Research institutions'
       'Assistive technology firms'
@@ -250,6 +312,19 @@ export const emergingTech2027Services: Service[] = [
     implementationTime: '10-12 weeks'
     roi: '2000% within 30 months'
     link: 'https://ziontechgroup.com/services/brain-computer-interface'
+=======
+      'Medical device companies',
+      'Research institutions',
+      'Assistive technology firms',
+      'Gaming companies',
+      'Healthcare providers',
+    ],
+    marketSize: '$28 && 28.9B by 2027',
+    competitiveAdvantage: 'Most advanced brain-computer interface platform',
+    implementationTime: '10-12 weeks',
+    roi: '2000% within 30 months',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/brain-computer-interface',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     tags: [
       'Brain-Computer Interface'
       'Neural Technology'
@@ -288,6 +363,7 @@ export const emergingTech2027Services: Service[] = [
       'Critical infrastructure'
     ]
     targetAudience: [
+<<<<<<< HEAD
       'Government agencies'
       'Financial institutions'
       'Healthcare organizations'
@@ -300,6 +376,20 @@ export const emergingTech2027Services: Service[] = [
     implementationTime: '4-6 weeks'
     roi: '1000% within 18 months'
     link: 'https://ziontechgroup.com/services/quantum-internet-security'
+=======
+      'Government agencies',
+      'Financial institutions',
+      'Healthcare organizations',
+      'Military organizations',
+      'Critical infrastructure',
+    ],
+    marketSize: '$25 && 25.4B by 2027',
+    competitiveAdvantage:
+      'Only quantum internet security platform with global coverage',
+    implementationTime: '4-6 weeks',
+    roi: '1000% within 18 months',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-internet-security',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     tags: [
       'Quantum Security'
       'Cybersecurity'
@@ -338,6 +428,7 @@ export const emergingTech2027Services: Service[] = [
       'Exploration robots'
     ]
     targetAudience: [
+<<<<<<< HEAD
       'Manufacturing companies'
       'Logistics companies'
       'Agricultural companies'
@@ -352,6 +443,22 @@ export const emergingTech2027Services: Service[] = [
     link: 'https://ziontechgroup.com/services/autonomous-robotics-platform'
     tags: ['Robotics', 'AI', 'Automation', 'Manufacturing', 'Logistics']
   }
+=======
+      'Manufacturing companies',
+      'Logistics companies',
+      'Agricultural companies',
+      'Service providers',
+      'Research institutions',
+    ],
+    marketSize: '$19 && 19.8B by 2027',
+    competitiveAdvantage:
+      'Most advanced autonomous robotics platform with AI learning',
+    implementationTime: '5-7 weeks',
+    roi: '700% within 12 months',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/autonomous-robotics-platform',
+    tags: ['Robotics', 'AI', 'Automation', 'Manufacturing', 'Logistics'],
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'quantum-materials-discovery'
     name: 'Quantum Materials Discovery Platform'
@@ -382,6 +489,7 @@ export const emergingTech2027Services: Service[] = [
       'Energy storage'
     ]
     targetAudience: [
+<<<<<<< HEAD
       'Semiconductor companies'
       'Battery manufacturers'
       'Aerospace companies'
@@ -394,6 +502,20 @@ export const emergingTech2027Services: Service[] = [
     implementationTime: '8-10 weeks'
     roi: '1100% within 20 months'
     link: 'https://ziontechgroup.com/services/quantum-materials-discovery'
+=======
+      'Semiconductor companies',
+      'Battery manufacturers',
+      'Aerospace companies',
+      'Medical device companies',
+      'Energy companies',
+    ],
+    marketSize: '$21 && 21.3B by 2027',
+    competitiveAdvantage:
+      'Only quantum materials discovery platform with AI integration',
+    implementationTime: '8-10 weeks',
+    roi: '1100% within 20 months',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-materials-discovery',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     tags: [
       'Materials Science'
       'Quantum Computing'
@@ -432,6 +554,7 @@ export const emergingTech2027Services: Service[] = [
       'Regulatory reporting'
     ]
     targetAudience: [
+<<<<<<< HEAD
       'Investment banks'
       'Hedge funds'
       'Asset managers'
@@ -444,6 +567,20 @@ export const emergingTech2027Services: Service[] = [
     implementationTime: '6-8 weeks'
     roi: '900% within 16 months'
     link: 'https://ziontechgroup.com/services/quantum-financial-modeling'
+=======
+      'Investment banks',
+      'Hedge funds',
+      'Asset managers',
+      'Insurance companies',
+      'Regulatory bodies',
+    ],
+    marketSize: '$18 && 18.9B by 2027',
+    competitiveAdvantage:
+      'Only quantum financial modeling platform with real-time analysis',
+    implementationTime: '6-8 weeks',
+    roi: '900% within 16 months',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-financial-modeling',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     tags: [
       'Financial Technology'
       'Quantum Computing'
@@ -482,6 +619,7 @@ export const emergingTech2027Services: Service[] = [
       'Disaster preparedness'
     ]
     targetAudience: [
+<<<<<<< HEAD
       'Government agencies'
       'Research institutions'
       'Environmental organizations'
@@ -494,6 +632,20 @@ export const emergingTech2027Services: Service[] = [
     implementationTime: '7-9 weeks'
     roi: '800% within 18 months'
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling'
+=======
+      'Government agencies',
+      'Research institutions',
+      'Environmental organizations',
+      'Insurance companies',
+      'Energy companies',
+    ],
+    marketSize: '$17 && 17.6B by 2027',
+    competitiveAdvantage:
+      'Only quantum climate modeling platform with real-time predictions',
+    implementationTime: '7-9 weeks',
+    roi: '800% within 18 months',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-climate-modeling',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     tags: [
       'Climate Modeling'
       'Quantum Computing'
@@ -505,13 +657,17 @@ export const emergingTech2027Services: Service[] = [
 ];      'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies'
 
     ];
-    marketSize: '$17.6B by 2027';
+    marketSize: '$17 && 17.6B by 2027';
     competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions';
     implementationTime: '7-9 weeks';
     roi: '800% within 18 months';
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling'
 
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-climate-modeling',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']
   }
 ];

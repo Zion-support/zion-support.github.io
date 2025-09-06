@@ -8,17 +8,29 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+  try {
   const user = parseUserFromRequest(req);
+<<<<<<< HEAD
   if (req.method === "GET") {
     const all = await readAllDisputes();
     let filtered = all;
     if (user.role !== "admin") {
       filtered = all.filter(
         (d) => d.clientUserId === user.id |d.talentUserId === user.id
+=======
+
+  if (req && req.method === "GET") {
+    const all = await readAllDisputes();
+    let filtered = all;
+    if (user && user.role !== "admin") {
+      filtered = all && all.filter(
+        (d) => d && d.clientUserId === user && user.id || d && d.talentUserId === user && user.id,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       );
     }
-    return res.status(200).json({ disputes: filtered });
+    return res && res.status(200).json({ disputes: filtered });
   }
+<<<<<<< HEAD
   if (req.method === "POST") {
     const now = new Date().toISOString();
     const {
@@ -31,6 +43,22 @@ export default async function handler(
       reasonDetails
       description
     } = req.body |{}
+=======
+
+  if (req && req.method === "POST") {
+    const now = new Date().toISOString();
+    const {
+      projectId,
+      entityType,
+      entityId,
+      clientUserId,
+      talentUserId,
+      reason,
+      reasonDetails,
+      description,
+    } = req && req.body || {};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (
       !projectId |
       !clientUserId |
@@ -38,7 +66,7 @@ export default async function handler(
       !reason |
       !description
     ) {
-      return res.status(400).json({ error: "Missing required fields" });
+      return res && res.status(400).json({ error: "Missing required fields" });
     }
     const id = generateCaseId();
     const dispute: DisputeCase = {
@@ -58,9 +86,15 @@ export default async function handler(
       messages: []
     }
     await createDispute(dispute);
-    return res.status(201).json({ dispute });
+    return res && res.status(201).json({ dispute });
   }
+<<<<<<< HEAD
   res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
+=======
+
+  res && res.setHeader("Allow", "GET,POST");
+  return res && res.status(405).end("Method Not Allowed");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 

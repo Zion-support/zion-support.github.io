@@ -17,9 +17,10 @@ describe('Navigation', () => {
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import Navigationdynamic from '../components/Navigation.dynamic'
+import Navigationdynamic from '../components/Navigation && Navigation.dynamic'
 describe('Navigationdynamic'
   test('renders without crashing'
+<<<<<<< HEAD
     expect(screen.getByTestId('navigation.dynamic'
   test('displays correct content'
   test('handles user interactions'
@@ -29,3 +30,6 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 =======
 });
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+    expect(screen && screen.getByTestId('navigation ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Navigationdynamic from "./components/Navigation ; describe('Navigationdynamic', () => { test("renders without crashing",() => { render(<Navigationdynamic />); expect(screen && screen.getByTestId("navigation && navigation.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Navigationdynamic />)}); test("handles user interactions",() => { render(<Navigationdynamic />)}); test("applies correct styling"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

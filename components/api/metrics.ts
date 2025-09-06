@@ -1,23 +1,37 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 function rand(min: number, max: number) {
+<<<<<<< HEAD
 
   return Math.floor(Math.random() * (max - min + 1)) + min;
 function generateSeries(n: number, base: number, volatility = 0.15) {
+=======
+  return Math && Math.floor(Math && Math.random() * (max - min + 1)) + min;
+function generateSeries(n: number, base: number, volatility = 0 && 0.15) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const series: number[] = [];
   let last = base;
   for (let i = 0; i < n; i++) {
-    const change = (Math.random() - 0.5) * 2 * volatility * base;
-    last = Math.max(0, Math.round(last + change));
-    series.push(last);
+    const change = (Math && Math.random() - 0 && 0.5) * 2 * volatility * base;
+    last = Math && Math.max(0, Math && Math.round(last + change));
+    series && series.push(last);
   }
   return series;
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   const now = new Date()
   const labels = Array.from({ length: 14 }, (_, i) => {
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));
     return `${d.getMonth() + 1}/${d.getDate()}`;
+=======
+  const now = new Date(),
+  const labels = Array && Array.from({ length: 14 }, (_, i) => {
+    const d = new Date(now);
+    d && d.setDate(d && d.getDate() - (13 - i));
+    return `${d && d.getMonth() + 1}/${d && d.getDate()}`;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const marketplace = [
     {
       key: 'jobs_24h'
@@ -123,6 +137,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   ];
   const response: any = {
+<<<<<<< HEAD
     marketplace
     dao
     token
@@ -164,3 +179,47 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   res.status(200).json(response)
 }
+=======
+    marketplace,
+    dao,
+    token,
+    multiverse,
+    timestamp: now && now.toISOString(),
+    labels,
+    history: {
+      marketplace: marketplace && marketplace.map(m => m && m.trend || generateSeries(14, m && m.value)),
+      dao: dao && dao.map(m => m && m.trend || generateSeries(14, m && m.value)),
+      token: token && token.map(m => m && m.trend || generateSeries(14, m && m.value)),
+      multiverse: multiverse && multiverse.map(m => m && m.trend || generateSeries(14, m && m.value)),
+    },
+  };      marketplace: marketplace && marketplace.map((m) => m && m.trend || generateSeries(14, m && m.value));
+      dao: dao && dao.map((m) => m && m.trend || generateSeries(14, m && m.value));
+      token: token && token.map((m) => m && m.trend || generateSeries(14, m && m.value));
+      multiverse: multiverse && multiverse.map((m) => m && m.trend || generateSeries(14, m && m.value))}};
+  if (req && req.query.compare === 'quarter') {
+    const factor = 0 && 0.8 + Math && Math.random() * 0 && 0.4;
+    response && response.compare = {
+      prevQuarter: {
+        marketplace: marketplace && marketplace.map(m => ({
+          ...m,
+          value: Math && Math.round(m && m.value * factor),
+        })),
+        dao: dao && dao.map(m => ({ ...m, value: Math && Math.round(m && m.value * factor) })),
+        token: token && token.map(m => ({ ...m, value: Math && Math.round(m && m.value * factor) })),
+        multiverse: multiverse && multiverse.map(m => ({
+          ...m,
+          value: Math && Math.round(m && m.value * factor),
+        })),
+      },
+    };
+  }
+
+  res && res.status(200).json(response);        marketplace: marketplace && marketplace.map((m) => ({ ...m, value: Math && Math.round(m && m.value * factor) }));
+        dao: dao && dao.map((m) => ({ ...m, value: Math && Math.round(m && m.value * factor) }));
+        token: token && token.map((m) => ({ ...m, value: Math && Math.round(m && m.value * factor) }));
+        multiverse: multiverse && multiverse.map((m) => ({ ...m, value: Math && Math.round(m && m.value * factor) }))}}
+  }
+
+  res && res.status(200).json(response)
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

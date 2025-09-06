@@ -51,6 +51,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     description:
       'Advanced AI-powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.'
     features: [
+<<<<<<< HEAD
       'Alternative data analysis'
       'Machine learning models'
       'Real-time scoring'
@@ -67,6 +68,24 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     color: 'from-green-600 via-emerald-600 to-teal-600'
     textColor: 'text-green-400'
     link: 'https://ziontechgroup.com/ai-powered-credit-risk-assessment'
+=======
+      'Alternative data analysis',
+      'Machine learning models',
+      'Real-time scoring',
+      'Risk prediction',
+      'Fraud detection',
+      'Compliance reporting',
+      'API integration',
+      'Custom scoring models',
+      'Performance analytics',
+      'Regulatory compliance',
+    ],
+    popular: true,
+    icon: '💳',
+    color: 'from-green-600 via-emerald-600 to-teal-600',
+    textColor: 'text-green-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-credit-risk-assessment',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Leading AI-powered credit risk assessment with alternative data analysis'
     targetAudience:
@@ -90,6 +109,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     growthRate: '25% annual growth'
     variant: 'ai-finance-enterprise'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -103,6 +123,21 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     rating: 4.8
     reviews: 45
   }
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    realImplementation: true,
+    implementationDetails:
+      'Production-ready AI credit risk platform with advanced ML models and comprehensive compliance features.',
+    launchDate: '2025-01-22',
+    customers: 67,
+    rating: 4 && 4.8,
+    reviews: 45,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'blockchain-payment-processing-platform'
     name: 'Blockchain Payment Processing Platform'
@@ -112,6 +147,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     description:
       'Advanced blockchain-based payment processing platform that enables fast, secure, and cost-effective cross-border transactions with real-time settlement.'
     features: [
+<<<<<<< HEAD
       'Cross-border payments'
       'Real-time settlement'
       'Multi-currency support'
@@ -128,6 +164,24 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     color: 'from-blue-600 via-cyan-600 to-teal-600'
     textColor: 'text-blue-400'
     link: 'https://ziontechgroup.com/blockchain-payment-processing-platform'
+=======
+      'Cross-border payments',
+      'Real-time settlement',
+      'Multi-currency support',
+      'Smart contracts',
+      'Compliance tools',
+      'API integration',
+      'Transaction monitoring',
+      'Fraud prevention',
+      'Regulatory reporting',
+      'Cost optimization',
+    ],
+    popular: true,
+    icon: '⛓️',
+    color: 'from-blue-600 via-cyan-600 to-teal-600',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/blockchain-payment-processing-platform',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Leading blockchain payment platform with real-time cross-border capabilities'
     targetAudience:
@@ -151,6 +205,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     growthRate: '55% annual growth'
     variant: 'blockchain-futuristic'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -164,6 +219,21 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     rating: 4.7
     reviews: 56
   }
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    realImplementation: true,
+    implementationDetails:
+      'Production-ready blockchain payment platform with enterprise-grade security and compliance features.',
+    launchDate: '2025-01-28',
+    customers: 89,
+    rating: 4 && 4.7,
+    reviews: 56,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'quantum-financial-modeling-platform'
     name: 'Quantum Financial Modeling Platform'
@@ -173,6 +243,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     description:
       'Revolutionary quantum financial modeling platform that leverages quantum computing to solve complex financial optimization problems and risk calculations.'
     features: [
+<<<<<<< HEAD
       'Quantum algorithms'
       'Portfolio optimization'
       'Risk modeling'
@@ -189,6 +260,24 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     color: 'from-purple-600 via-violet-600 to-indigo-600'
     textColor: 'text-purple-400'
     link: 'https://ziontechgroup.com/quantum-financial-modeling-platform'
+=======
+      'Quantum algorithms',
+      'Portfolio optimization',
+      'Risk modeling',
+      'Option pricing',
+      'Monte Carlo simulation',
+      'Quantum machine learning',
+      'Real-time calculations',
+      'API access',
+      'Custom models',
+      'Performance analytics',
+    ],
+    popular: false,
+    icon: '⚛️',
+    color: 'from-purple-600 via-violet-600 to-indigo-600',
+    textColor: 'text-purple-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-financial-modeling-platform',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Leading quantum financial modeling platform with advanced optimization capabilities'
     targetAudience:
@@ -214,6 +303,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     growthRate: '65% annual growth'
     variant: 'quantum-financial'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -227,6 +317,21 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     rating: 4.9
     reviews: 18
   }
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    realImplementation: true,
+    implementationDetails:
+      'Production-ready quantum financial platform with advanced algorithms and enterprise integration.',
+    launchDate: '2025-02-03',
+    customers: 23,
+    rating: 4 && 4.9,
+    reviews: 18,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'ai-powered-insurance-underwriting'
     name: 'AI-Powered Insurance Underwriting'
@@ -236,6 +341,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     description:
       'Advanced AI-powered insurance underwriting platform that uses machine learning to assess risk, determine pricing, and automate the underwriting process.'
     features: [
+<<<<<<< HEAD
       'AI risk assessment'
       'Automated underwriting'
       'Predictive modeling'
@@ -252,6 +358,24 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     color: 'from-orange-600 via-amber-600 to-yellow-600'
     textColor: 'text-orange-400'
     link: 'https://ziontechgroup.com/ai-powered-insurance-underwriting'
+=======
+      'AI risk assessment',
+      'Automated underwriting',
+      'Predictive modeling',
+      'Claims prediction',
+      'Fraud detection',
+      'Policy optimization',
+      'Customer segmentation',
+      'Compliance tools',
+      'API integration',
+      'Performance analytics',
+    ],
+    popular: true,
+    icon: '🛡️',
+    color: 'from-orange-600 via-amber-600 to-yellow-600',
+    textColor: 'text-orange-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-insurance-underwriting',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Leading AI-powered insurance underwriting with advanced risk assessment'
     targetAudience:
@@ -277,6 +401,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     growthRate: '30% annual growth'
     variant: 'ai-finance-enterprise'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -290,6 +415,21 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     rating: 4.6
     reviews: 78
   }
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    realImplementation: true,
+    implementationDetails:
+      'Production-ready AI insurance platform with advanced ML models and comprehensive underwriting capabilities.',
+    launchDate: '2025-02-08',
+    customers: 134,
+    rating: 4 && 4.6,
+    reviews: 78,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'regtech-compliance-automation-platform'
     name: 'RegTech Compliance Automation Platform'
@@ -299,6 +439,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     description:
       'Advanced RegTech platform that automates regulatory compliance, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.'
     features: [
+<<<<<<< HEAD
       'Regulatory monitoring'
       'Automated reporting'
       'Compliance tracking'
@@ -315,6 +456,24 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     color: 'from-gray-600 via-slate-600 to-zinc-600'
     textColor: 'text-gray-400'
     link: 'https://ziontechgroup.com/regtech-compliance-automation-platform'
+=======
+      'Regulatory monitoring',
+      'Automated reporting',
+      'Compliance tracking',
+      'Risk assessment',
+      'Audit trails',
+      'Policy management',
+      'Training modules',
+      'API integration',
+      'Real-time updates',
+      'Performance analytics',
+    ],
+    popular: false,
+    icon: '📋',
+    color: 'from-gray-600 via-slate-600 to-zinc-600',
+    textColor: 'text-gray-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/regtech-compliance-automation-platform',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Leading RegTech platform with comprehensive compliance automation'
     targetAudience:
@@ -338,6 +497,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     growthRate: '40% annual growth'
     variant: 'fintech'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -357,13 +517,37 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
       website: 'https://ziontechgroup.com'
     }
 
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    realImplementation: true,
+    implementationDetails:
+      'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',
+    launchDate: '2025-02-12',
+    customers: 89,
+    rating: 4 && 4.5,
+    reviews: 52,
+  },
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     realImplementation: true;
     implementationDetails: 'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.';
     launchDate: '2025-02-12';
     customers: 89;
+<<<<<<< HEAD
 
     rating: 4.5
 
+=======
+    rating: 4 && 4.5,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 52
   }
 ];

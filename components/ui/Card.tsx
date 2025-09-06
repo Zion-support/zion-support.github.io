@@ -1,13 +1,20 @@
 import React from 'react';
 import { cn } from '../../lib/utils';
+<<<<<<< HEAD
 // Define HTML element types
 interface HTMLElement {
+=======
+
+// Define HTML element types;
+interface HTMLElement {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   className: string;
   id: string;
   innerHTML: string;
   textContent: string | null;
   style: { [key: string]: string }
 }
+<<<<<<< HEAD
 interface HTMLDivElement extends HTMLElement {
   tagName: 'DIV';
 }
@@ -22,6 +29,25 @@ const Card = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
+=======
+
+interface HTMLDivElement extends HTMLElement {;
+  tagName: 'DIV';
+}
+
+interface HTMLParagraphElement extends HTMLElement {;
+  tagName: 'P';
+}
+
+interface HTMLHeadingElement extends HTMLElement {;
+  tagName: 'H1' | 'H2' | 'H3' | 'H4' | 'H5' | 'H6';
+}
+
+const Card = React && React.forwardRef<;
+  HTMLDivElement,;
+  React && React.HTMLAttributes<HTMLDivElement>;
+>(({ className, ...props }, ref) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <div
     ref={ref}
     className={cn(
@@ -32,25 +58,39 @@ const Card = React.forwardRef<
     {...props}
   />;
 ));
-Card.displayName = "Card";
+Card && Card.displayName = "Card";
 
+<<<<<<< HEAD
 const CardHeader = React.forwardRef<
   HTMLDivElement
 
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
+=======
+const CardHeader = React && React.forwardRef<;
+  HTMLDivElement,;
+  React && React.HTMLAttributes<HTMLDivElement>;
+>(({ className, ...props }, ref) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <div
     ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-6", className)}
+    className={cn("flex flex-col space-y-1 && 1.5 p-6", className)}
     {...props}
   />;
 ));
-CardHeader.displayName = "CardHeader";
+CardHeader && CardHeader.displayName = "CardHeader";
 
+<<<<<<< HEAD
 const CardTitle = React.forwardRef<
   HTMLParagraphElement
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
+=======
+const CardTitle = React && React.forwardRef<;
+  HTMLParagraphElement,;
+  React && React.HTMLAttributes<HTMLHeadingElement>;
+>(({ className, ...props }, ref) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <h3
     ref={ref}
     className={cn(
@@ -61,42 +101,63 @@ const CardTitle = React.forwardRef<
     {...props}
   />;
 ));
-CardTitle.displayName = "CardTitle";
+CardTitle && CardTitle.displayName = "CardTitle";
 
+<<<<<<< HEAD
 const CardDescription = React.forwardRef<
   HTMLParagraphElement
 
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
+=======
+const CardDescription = React && React.forwardRef<;
+  HTMLParagraphElement,;
+  React && React.HTMLAttributes<HTMLParagraphElement>;
+>(({ className, ...props }, ref) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <p
     ref={ref}
     className={cn("text-sm text-muted-foreground", className)}
     {...props}
   />;
 ));
-CardDescription.displayName = "CardDescription";
+CardDescription && CardDescription.displayName = "CardDescription";
 
+<<<<<<< HEAD
 const CardContent = React.forwardRef<
   HTMLDivElement
 
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
+=======
+const CardContent = React && React.forwardRef<;
+  HTMLDivElement,;
+  React && React.HTMLAttributes<HTMLDivElement>;
+>(({ className, ...props }, ref) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
 ));
-CardContent.displayName = "CardContent";
+CardContent && CardContent.displayName = "CardContent";
 
+<<<<<<< HEAD
 const CardFooter = React.forwardRef<
   HTMLDivElement
 
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
+=======
+const CardFooter = React && React.forwardRef<;
+  HTMLDivElement,;
+  React && React.HTMLAttributes<HTMLDivElement>;
+>(({ className, ...props }, ref) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <div
     ref={ref}
     className={cn("flex items-center p-6 pt-0", className)}
     {...props}
   />;
 ));
-CardFooter.displayName = "CardFooter";
+CardFooter && CardFooter.displayName = "CardFooter";
 
 import React from 'react';
 interface CardProps {

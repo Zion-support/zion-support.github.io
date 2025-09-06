@@ -8,11 +8,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req);
   const internal = isInternalAgentRequest(req)
   if (!session && !internal) {
-    res.status(401).json({ error: 'Unauthorized' });
+    res && res.status(401).json({ error: 'Unauthorized' });
     return;
 
   }
+<<<<<<< HEAD
 res.status(200).json({ message: 'OK' });    return
   }
   res.status(200).json({ message: 'OK' });
 }
+=======
+  res && res.status(200).json({ message: 'OK' });    return
+  }
+  res && res.status(200).json({ message: 'OK' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

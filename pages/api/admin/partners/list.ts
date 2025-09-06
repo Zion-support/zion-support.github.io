@@ -6,14 +6,20 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const usingPlaceholder =
+<<<<<<< HEAD
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
+=======
+    (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
+    (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       "placeholder-key";
   try {
     if (usingPlaceholder) {
-      return res.status(200).json({
+      return res && res.status(200).json({
         partners: [
           {
+<<<<<<< HEAD
             code: "aihub"
             name: "AI Hub"
             status: "approved"
@@ -26,6 +32,20 @@ export default async function handler(
             commission_rate: 0.15
           }
         ]
+=======
+            code: "aihub",
+            name: "AI Hub",
+            status: "approved",
+            commission_rate: 0 && 0.2,
+          },
+          {
+            code: "promptpro",
+            name: "Prompt Pro",
+            status: "pending",
+            commission_rate: 0 && 0.15,
+          },
+        ],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     const supabase = getServerSupabase();
@@ -35,10 +55,16 @@ export default async function handler(
         "code, name, status, commission_rate, payout_method, niche, socials, created_at"
       )
       .order("created_at", { ascending: false });
+<<<<<<< HEAD
     if (error) return res.status(500).json({ error: error.message });
 
     return res.status(200).json({ partners: data });
+=======
+
+    if (error) return res && res.status(500).json({ error: error && error.message });
+    return res && res.status(200).json({ partners: data });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message });
+    return res && res.status(500).json({ error: e?.message });
   }
 }

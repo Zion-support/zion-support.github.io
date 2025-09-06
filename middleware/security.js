@@ -14,30 +14,50 @@
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
 export function securityMiddleware(request) {
+<<<<<<< HEAD
   const response = NextResponse.next();
+=======
+  const response = NextResponse && NextResponse.next();
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Add security headers
   const headers = getSecurityHeaders();
-  headers.forEach(({ key, value }) => {
-    response.headers.set(key, value);
+  headers && headers.forEach(({ key, value }) => {
+    response && response.headers.set(key, value);
   });
   // Add HSTS header for HTTPS
+<<<<<<< HEAD
   if (request.nextUrl.protocol === 'https:') {
     response.headers.set(
       'Strict-Transport-Security'
+=======
+  if (request && request.nextUrl.protocol === 'https:') {
+    response && response.headers.set(
+      'Strict-Transport-Security',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       'max-age=31536000; includeSubDomains; preload'
     );
   }
   return response;// Security headers middleware
 export function securityHeaders(req, res, next) {
+<<<<<<< HEAD
   Object.entries({
     'X-Content-Type-Options': 'nosniff'
     'X-Frame-Options': 'DENY'
     'X-XSS-Protection': '1; mode=block'
     'Referrer-Policy': 'strict-origin-when-cross-origin'
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
+=======
+  Object && Object.entries({
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',
+    'X-XSS-Protection': '1; mode=block',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
   }).forEach(([key, value]) => {
-    res.setHeader(key, value);
+    res && res.setHeader(key, value);
   });
   next();
 <<<<<<< HEAD

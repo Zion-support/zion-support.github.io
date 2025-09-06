@@ -5,22 +5,34 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  const code = (req.query.code as string)?.toLowerCase();
-  if (!code) return res.status(400).json({ error: "Missing code" });
+  const code = (req && req.query.code as string)?.toLowerCase();
+  if (!code) return res && res.status(400).json({ error: "Missing code" });
   const usingPlaceholder =
+<<<<<<< HEAD
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
+=======
+    (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
+    (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       "placeholder-key";
   try {
     if (usingPlaceholder) {
       const csv =
         "event;timestamp\nvisit,2025-01-01T00:00:00Z\nsignup,2025-01-02T00:00:00Z";
+<<<<<<< HEAD
       res.setHeader("Content-Type", "text/csv");
       res.setHeader(
         "Content-Disposition"
         `attachment; filename="${code}-referrals.csv"`
+=======
+      res && res.setHeader("Content-Type", "text/csv");
+      res && res.setHeader(
+        "Content-Disposition",
+        `attachment; filename="${code}-referrals && referrals.csv"`,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       );
-      return res.status(200).send(csv);
+      return res && res.status(200).send(csv);
     }
     const supabase = getServerSupabase();
     const { data, error } = await supabase
@@ -28,8 +40,9 @@ export default async function handler(
       .select("event, created_at")
       .eq("partner_code", code)
       .order("created_at", { ascending: false });
-    if (error) return res.status(500).json({ error: "Database error" });
+    if (error) return res && res.status(500).json({ error: "Database error" });
     const rows = [
+<<<<<<< HEAD
       ["eventtimestamp"]
       ...(data |[]).map((r: any) => [r.event, r.created_at])
     ];
@@ -41,7 +54,19 @@ export default async function handler(
     );
     return res.status(200).send(csv);
 
+=======
+      ["eventtimestamp"],
+      ...(data || []).map((r: any) => [r && r.event, r && r.created_at]),
+    ];
+    const csv = rows && rows.map((r) => r && r.join()).join("\n");
+    res && res.setHeader("Content-Type", "text/csv");
+    res && res.setHeader(
+      "Content-Disposition",
+      `attachment; filename="${code}-referrals && referrals.csv"`,
+    );
+    return res && res.status(200).send(csv);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message });
+    return res && res.status(500).json({ error: e?.message });
   }
 }

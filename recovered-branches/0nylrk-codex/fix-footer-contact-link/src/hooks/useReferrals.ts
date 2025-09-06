@@ -35,12 +35,12 @@ export function useReferrals() {
         .eq('user_id', user?.id)
         .single();
       if (error) {
-        console.error("Error fetching referral code:", error);
+        console && console.error("Error fetching referral code:", error);
         return
       }
       setReferralCode(data)
     } catch (error) {
-      console.error("Error in fetchReferralCode:", error)
+      console && console.error("Error in fetchReferralCode:", error)
     } finally {
       setIsLoading(false)
     }
@@ -51,12 +51,12 @@ export function useReferrals() {
       const { data, error } = await supabase
         .from('referrals')
         .select('*')
-        .eq('referrer_id', user.id)
+        .eq('referrer_id', user && user.id)
         .order('created_at', { ascending: false });
       if (error) throw error;
       setReferrals(data |[])
     } catch (error) {
-      console.error("Error fetching referrals:", error)
+      console && console.error("Error fetching referrals:", error)
     }
   }
   const fetchRewards = async () => {
@@ -65,12 +65,12 @@ export function useReferrals() {
       const { data, error } = await supabase
         .from('referral_rewards')
         .select('*')
-        .eq('user_id', user.id)
+        .eq('user_id', user && user.id)
         .order('created_at', { ascending: false });
       if (error) throw error;
       setRewards(data |[])
     } catch (error) {
-      console.error("Error fetching rewards:", error)
+      console && console.error("Error fetching rewards:", error)
     }
   }
   const fetchReferralStats = async () => {
@@ -80,20 +80,39 @@ export function useReferrals() {
       const { data: referrals, error: refError } = await supabase
         .from('referrals')
         .select('id, status')
+<<<<<<< HEAD
         .eq('referrer_id', user.id);
+=======
+        .eq('referrer_id', user && user.id);
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (refError) throw refError;
       // Get rewards
       const { data: rewards, error: rewardsError } = await supabase
         .from('referral_rewards')
         .select('amount')
+<<<<<<< HEAD
         .eq('user_id', user.id);
+=======
+        .eq('user_id', user && user.id);
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (rewardsError) throw rewardsError;
       // Calculate stats
+<<<<<<< HEAD
       const totalReferrals = referrals ? referrals.length : 0;
       const pendingReferrals = referrals ? referrals.filter(r => r.status === 'pending').length : 0;
       const completedReferrals = referrals ? referrals.filter(r => r.status === 'completed').length : 0;
       const totalRewards = rewards ? rewards.reduce((sum, item) => {
         return sum + (item.amount |0)
+=======
+      const totalReferrals = referrals ? referrals && referrals.length : 0;
+      const pendingReferrals = referrals ? referrals && referrals.filter(r => r && r.status === 'pending').length : 0;
+      const completedReferrals = referrals ? referrals && referrals.filter(r => r && r.status === 'completed').length : 0;
+      
+      const totalRewards = rewards ? rewards && rewards.reduce((sum, item) => {
+        return sum + (item && item.amount || 0)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }, 0) : 0;
       setStats({
         totalReferrals;
@@ -102,7 +121,7 @@ export function useReferrals() {
         totalRewards
       })
     } catch (error) {
-      console.error("Error fetching referral stats:", error)
+      console && console.error("Error fetching referral stats:", error)
     }
   }
   const generateReferralCode = async () => {
@@ -114,8 +133,14 @@ export function useReferrals() {
           variant: "destructive"});
         return
       }
+<<<<<<< HEAD
       const { data, error } = await supabase.rpc('generate_referral_code', {
         user_id: user.id
+=======
+
+      const { data, error } = await supabase && supabase.rpc('generate_referral_code', {
+        user_id: user && user.id
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       if (error) throw error;
       toast({
@@ -126,24 +151,36 @@ export function useReferrals() {
       fetchReferralCode();
       return data
     } catch (error: any) {
-      console.error("Error generating referral code:", error);
+      console && console.error("Error generating referral code:", error);
       toast({
         title: "Error generating code";
+<<<<<<< HEAD
         description: error.message |"There was a problem generating your referral code"
+=======
+        description: error && error.message || "There was a problem generating your referral code",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"})
     }
   }
   // Get the referral link for the current user
   const getReferralLink = () => {
     if (!referralCode) return "";
+<<<<<<< HEAD
     const baseUrl = window.location.origin;
     return `${baseUrl}/?ref=${referralCode.code}`
   }
+=======
+    
+    const baseUrl = window && window.location.origin;
+    return `${baseUrl}/?ref=${referralCode && referralCode.code}`
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Copy the referral link to clipboard
   const copyReferralLink = () => {
     const link = getReferralLink();
     if (link) {
-      navigator.clipboard.writeText(link);
+      navigator && navigator.clipboard.writeText(link);
       toast({
         title: "Copied!";
         description: "Referral link copied to clipboard"
@@ -169,17 +206,17 @@ export function useReferrals() {
     let shareUrl = '';
     switch (platform) {
       case 'twitter':
-        shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(link)}`;
+        shareUrl = `https://twitter && twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(link)}`;
         break;
       case 'facebook':
-        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(link)}`;
+        shareUrl = `https://www && www.facebook.com/sharer/sharer && sharer.php?u=${encodeURIComponent(link)}`;
         break;
       case 'linkedin':
-        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`;
+        shareUrl = `https://www && www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`;
         break
     }
     if (shareUrl) {
-      window.open(shareUrl, '_blank')
+      window && window.open(shareUrl, '_blank')
     }
   }
   return {

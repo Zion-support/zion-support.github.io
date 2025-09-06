@@ -4,6 +4,7 @@ export const defaultSEO = {
   description: 'Transform your business with our comprehensive suite of AI-powered solutions, cloud platforms, cybersecurity, and micro SaaS services.'
   keywords: 'AI, artificial intelligence, cloud computing, cybersecurity, micro SaaS, business automation, Zion Tech Group'
   openGraph: {
+<<<<<<< HEAD
     type: 'website'
     locale: 'en_US'
     url: 'https://ziontechgroup.com'
@@ -19,6 +20,23 @@ export const defaultSEO = {
       }
     ]
   }
+=======
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://ziontechgroup && ziontechgroup.com',
+    siteName: 'Zion Tech Group',
+    title: 'Zion Tech Group - AI-Powered Business Solutions',
+    description: 'Transform your business with our comprehensive suite of AI-powered solutions.',
+    images: [
+      {
+        url: 'https://ziontechgroup && ziontechgroup.com/og-image && image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group - AI-Powered Business Solutions',
+      },
+    ],
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   twitter: {
     handle: '@ziontechgroup'
     site: '@ziontechgroup'

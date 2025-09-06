@@ -1,19 +1,33 @@
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 serve(async (req) => {
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
-    const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
+    const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
     if (!openAIApiKey) {
       throw new Error("OpenAI API key is not set in environment variables")
     }
+<<<<<<< HEAD
     const { modelId, jobId } = await req.json();
+=======
+
+    const { modelId, jobId } = await req && req.json();
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!modelId && !jobId) {
       throw new Error("Either modelId or jobId is required")
     }
@@ -27,22 +41,33 @@ serve(async (req) => {
       // 1. Query your database to find the job ID associated with this model ID
       // 2. Then use that job ID to check status with OpenAI
       // Mock response for demonstration (in real code, fetch from DB)
-      finetuneJobId = `ft-job-${modelId}-${Date.now()}`
+      finetuneJobId = `ft-job-${modelId}-${Date && Date.now()}`
     }
     // Check the status from OpenAI API
+<<<<<<< HEAD
     const response = await fetch(`https://api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`, {
       method: "GET"
       headers: {
         "Authorization": `Bearer ${openAIApiKey}`;
         "Content-Type": "application/json"}});
     if (!response.ok) {
+=======
+    const response = await fetch(`https://api && api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`, {
+      method: "GET",
+      headers: {
+        "Authorization": `Bearer ${openAIApiKey}`;
+        "Content-Type": "application/json"}});
+
+    if (!response && response.ok) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       // If 404, the job doesn't exist or is deleted
-      if (response.status === 404) {
+      if (response && response.status === 404) {
         return new Response(
-          JSON.stringify({ status: "unknown", error: "Fine-tuning job not found" });
+          JSON && JSON.stringify({ status: "unknown", error: "Fine-tuning job not found" });
           { headers: { ...corsHeaders, "Content-Type": "application/json" } }
         )
       }
+<<<<<<< HEAD
       const errorData = await response.json();
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
@@ -51,11 +76,29 @@ serve(async (req) => {
     let status;
     let error = null;
     switch(data.status) {
+=======
+      
+      const errorData = await response && response.json();
+      throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
+    }
+
+    const data = await response && response.json();
+    
+    // Map OpenAI status to our internal status names
+    let status;
+    let error = null;
+    
+    switch(data && data.status) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       case "succeeded": status = "succeeded";
         break;
       case "failed":
         status = "failed";
+<<<<<<< HEAD
         error = data.error?.message |"Unknown error occurred during training";
+=======
+        error = data && data.error?.message || "Unknown error occurred during training";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         break;
       case "cancelled":
         status = "failed";
@@ -68,19 +111,33 @@ serve(async (req) => {
         status = "queued"
     }
     return new Response(
+<<<<<<< HEAD
       JSON.stringify({
         status
         error;
         progress: data.trained_tokens ? {
           trainedTokens: data.trained_tokens
           trainingFiles: data.training_file} : null
+=======
+      JSON && JSON.stringify({ 
+        status, 
+        error;
+        progress: data && data.trained_tokens ? {
+          trainedTokens: data && data.trained_tokens,
+          trainingFiles: data && data.training_file} : null
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   } catch (error) {
+<<<<<<< HEAD
     console.error("Error in check-training-status function:", error);
+=======
+    console && console.error("Error in check-training-status function:", error);
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return new Response(
-      JSON.stringify({ error: error.message });
+      JSON && JSON.stringify({ error: error && error.message });
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}

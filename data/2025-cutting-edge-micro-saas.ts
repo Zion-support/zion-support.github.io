@@ -49,6 +49,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
     }
     category: 'Customer Success'
     tags: [
+<<<<<<< HEAD
       'Customer Success'
       'AI'
       'Churn Prediction'
@@ -61,6 +62,20 @@ export const cuttingEdgeMicroSaasServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$11.8B'
+=======
+      'Customer Success',
+      'AI',
+      'Churn Prediction',
+      'Engagement',
+      'Analytics',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/customer-success-ai-pro',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$11 && 11.8B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'SaaS companies, subscription businesses, customer success teams, growth companies'
     competitiveAdvantage:
@@ -132,6 +147,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
     }
     category: 'Supply Chain'
     tags: [
+<<<<<<< HEAD
       'Supply Chain'
       'Quantum Computing'
       'Logistics'
@@ -144,6 +160,20 @@ export const cuttingEdgeMicroSaasServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$15.4B'
+=======
+      'Supply Chain',
+      'Quantum Computing',
+      'Logistics',
+      'Optimization',
+      'Analytics',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-supply-chain-optimizer',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$15 && 15.4B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Manufacturing companies, logistics providers, retail chains, e-commerce companies, distribution networks'
     competitiveAdvantage:
@@ -218,6 +248,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
     }
     category: 'Identity Verification'
     tags: [
+<<<<<<< HEAD
       'Identity Verification'
       'Blockchain'
       'Biometrics'
@@ -230,6 +261,20 @@ export const cuttingEdgeMicroSaasServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$13.7B'
+=======
+      'Identity Verification',
+      'Blockchain',
+      'Biometrics',
+      'Security',
+      'Compliance',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/blockid-verify-pro',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$13 && 13.7B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Financial institutions, healthcare organizations, government agencies, e-commerce companies, fintech startups'
     competitiveAdvantage:
@@ -306,6 +351,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
     }
     category: 'HR Analytics'
     tags: [
+<<<<<<< HEAD
       'HR Analytics'
       'AI'
       'Performance Management'
@@ -318,6 +364,20 @@ export const cuttingEdgeMicroSaasServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$9.8B'
+=======
+      'HR Analytics',
+      'AI',
+      'Performance Management',
+      'Employee Engagement',
+      'Predictive Analytics',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/hr-analytics-ai-suite',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$9 && 9.8B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'HR departments, enterprises, consulting firms, recruitment agencies, talent management companies'
     competitiveAdvantage:
@@ -393,6 +453,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
     }
     category: 'Financial Risk Management'
     tags: [
+<<<<<<< HEAD
       'Risk Management'
       'Quantum Computing'
       'Financial Analytics'
@@ -405,6 +466,20 @@ export const cuttingEdgeMicroSaasServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$28.9B'
+=======
+      'Risk Management',
+      'Quantum Computing',
+      'Financial Analytics',
+      'Portfolio Optimization',
+      'Compliance',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-risk-financial-manager',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$28 && 28.9B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Investment firms, banks, hedge funds, asset management companies, financial institutions'
     competitiveAdvantage:

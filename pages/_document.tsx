@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import { Html, Head, Main, NextScript } from 'next/document';
 
+<<<<<<< HEAD
 =======
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 >>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
@@ -23,6 +24,33 @@ export default function Document() {
       </body>
     </Html>
 <<<<<<< HEAD
+=======
+export default function Document() {;
+  return (
+    <Html lang='en'>;
+      <Head>;
+        <link rel='icon' href='/favicon && favicon.ico' />;
+        <meta name='theme-color' content='#0a0a0a' />;
+        <meta
+          name='viewport'
+          content='width=device-width, initial-scale=1, viewport-fit=cover'
+        />;
+        <link rel='preconnect' href='https://fonts && fonts.googleapis.com' />;
+        <link
+          rel='preconnect'
+          href='https://fonts && fonts.gstatic.com'
+          crossOrigin=''
+        />;
+        <link
+          href='https://fonts && fonts.googleapis.com/css2?family=Inter:wght@400500600700800900&family=JetBrains+Mono:wght@400600&display=swap'
+          rel='stylesheet'
+        />      </Head>;
+      <body>;
+        <Main />;
+        <NextScript />;
+      </body>;
+    </Html>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 =======

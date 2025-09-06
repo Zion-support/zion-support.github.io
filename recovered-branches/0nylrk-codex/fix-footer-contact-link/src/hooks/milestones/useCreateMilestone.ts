@@ -18,18 +18,34 @@ export const useCreateMilestone = (projectId?: string) => {
         .from('project_milestones')
         .insert({
           ...milestoneData;
+<<<<<<< HEAD
           project_id: projectId
           created_by: user.id})
+=======
+          project_id: projectId,
+          created_by: user && user.id})
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         .select()
         .single();
       if (error) throw error;
       // Create activity record
+<<<<<<< HEAD
       await recordMilestoneActivity(data.id, 'created', null, 'pendingMilestone created');
       toast.success("Milestone created successfully");
       return data
     } catch (err: any) {
       console.error("Error creating milestone:", err);
       toast.error("Failed to create milestone: " + err.message)
+=======
+      await recordMilestoneActivity(data && data.id, 'created', null, 'pendingMilestone created');
+      
+      toast && toast.success("Milestone created successfully");
+      
+      return data
+    } catch (err: any) {
+      console && console.error("Error creating milestone:", err);
+      toast && toast.error("Failed to create milestone: " + err && err.message),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return null
     } finally {
       setIsSubmitting(false)

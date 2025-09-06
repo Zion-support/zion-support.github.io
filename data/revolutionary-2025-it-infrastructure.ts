@@ -54,6 +54,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     description:
       'Revolutionary cybersecurity platform that combines quantum encryption, AI threat detection, and zero-trust architecture to provide unhackable security for enterprises and governments.'
     features: [
+<<<<<<< HEAD
       'Quantum encryption algorithms'
       'AI-powered threat detection'
       'Zero-trust architecture'
@@ -68,6 +69,22 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     color: 'from-red-600 to-pink-700'
     textColor: 'text-red-400'
     link: 'https://ziontechgroup.com/quantum-cybersecurity-platform'
+=======
+      'Quantum encryption algorithms',
+      'AI-powered threat detection',
+      'Zero-trust architecture',
+      'Real-time threat response',
+      'Quantum key distribution',
+      'Advanced malware protection',
+      'Compliance automation',
+      'Security orchestration',
+    ],
+    popular: true,
+    icon: '🔒',
+    color: 'from-red-600 to-pink-700',
+    textColor: 'text-red-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-cybersecurity-platform',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Most advanced cybersecurity platform. Traditional security solutions are vulnerable to quantum attacks and lack AI integration.'
     targetAudience:
@@ -107,9 +124,14 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     icon: '🔒';
     color: 'from-red-600 to-pink-700';
     textColor: 'text-red-400';
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/quantum-cybersecurity-platform';
 
     marketPosition: 'Most advanced cybersecurity platform. Traditional security solutions are vulnerable to quantum attacks and lack AI integration.'
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-cybersecurity-platform';
+    marketPosition: 'Most advanced cybersecurity platform. Traditional security solutions are vulnerable to quantum attacks and lack AI integration.',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors';
 
     trialDays: 30;
@@ -125,6 +147,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     growthRate: '800% annual growth';
     contactInfo: {
       mobile: '+1 302 464 0950';
+<<<<<<< HEAD
       email: 'kleber@ziontechgroup.com';
 
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -135,6 +158,17 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     launchDate: '2025-03-05';
     customers: 180;
     rating: 4.9
+=======
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    };
+    realImplementation: true,
+    implementationDetails: 'Fully functional quantum cybersecurity platform with quantum encryption, AI threat detection, and zero-trust architecture.';
+    launchDate: '2025-03-05';
+    customers: 180;
+    rating: 4 && 4.9,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 145
   }
 
@@ -155,9 +189,14 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     icon: '☁️';
     color: 'from-blue-600 to-cyan-700';
     textColor: 'text-blue-400';
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/quantum-cloud-infrastructure';
 
     marketPosition: 'First quantum-enhanced cloud platform. Traditional cloud providers lack quantum computing integration.'
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-cloud-infrastructure';
+    marketPosition: 'First quantum-enhanced cloud platform. Traditional cloud providers lack quantum computing integration.',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'Enterprises, Research institutions, AI companies, Financial institutions, Healthcare organizations';
 
     trialDays: 30;
@@ -173,6 +212,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     growthRate: '1000% annual growth';
     contactInfo: {
       mobile: '+1 302 464 0950';
+<<<<<<< HEAD
       email: 'kleber@ziontechgroup.com';
 
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -183,6 +223,17 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     launchDate: '2025-03-10';
     customers: 95;
     rating: 4.8
+=======
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    };
+    realImplementation: true,
+    implementationDetails: 'Fully functional quantum cloud platform with quantum computing integration, hybrid workloads, and quantum application development.';
+    launchDate: '2025-03-10';
+    customers: 95;
+    rating: 4 && 4.8,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 78
   }
 
@@ -203,9 +254,14 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     icon: '🚀';
     color: 'from-purple-600 to-indigo-700';
     textColor: 'text-purple-400';
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/autonomous-devops-platform';
 
     marketPosition: 'Most autonomous DevOps platform. Traditional DevOps requires constant human intervention and manual management.'
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-devops-platform';
+    marketPosition: 'Most autonomous DevOps platform. Traditional DevOps requires constant human intervention and manual management.',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'Enterprises, DevOps teams, Cloud-native companies, SaaS companies, IT operations';
 
     trialDays: 30;
@@ -221,6 +277,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     growthRate: '600% annual growth';
     contactInfo: {
       mobile: '+1 302 464 0950';
+<<<<<<< HEAD
       email: 'kleber@ziontechgroup.com';
 
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -231,6 +288,17 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     launchDate: '2025-03-15';
     customers: 250;
     rating: 4.9
+=======
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    };
+    realImplementation: true,
+    implementationDetails: 'Fully functional autonomous DevOps platform with self-healing infrastructure, AI incident response, and automated operations.';
+    launchDate: '2025-03-15';
+    customers: 250;
+    rating: 4 && 4.9,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 198
   }
 
@@ -251,9 +319,14 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     icon: '🧠';
     color: 'from-green-600 to-emerald-700';
     textColor: 'text-green-400';
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-data-management-platform';
 
     marketPosition: 'Most intelligent data management platform. Traditional data management has 15-20% data quality issues and data loss.'
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-data-management-platform';
+    marketPosition: 'Most intelligent data management platform. Traditional data management has 15-20% data quality issues and data loss.',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'Enterprises, Data teams, Analytics companies, Financial institutions, Healthcare organizations';
 
     trialDays: 30;
@@ -269,6 +342,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     growthRate: '500% annual growth';
     contactInfo: {
       mobile: '+1 302 464 0950';
+<<<<<<< HEAD
       email: 'kleber@ziontechgroup.com';
 
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -279,6 +353,17 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     launchDate: '2025-03-20';
     customers: 180;
     rating: 4.8
+=======
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    };
+    realImplementation: true,
+    implementationDetails: 'Fully functional AI data management platform with data quality assurance, zero data loss, and intelligent governance.';
+    launchDate: '2025-03-20';
+    customers: 180;
+    rating: 4 && 4.8,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 145
   }
 
@@ -299,9 +384,14 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     icon: '🌐';
     color: 'from-orange-600 to-red-700';
     textColor: 'text-orange-400';
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/edge-computing-orchestrator';
 
     marketPosition: 'Most advanced edge computing platform. Traditional edge solutions have latency issues and limited scalability.'
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/edge-computing-orchestrator';
+    marketPosition: 'Most advanced edge computing platform. Traditional edge solutions have latency issues and limited scalability.',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'IoT companies, Edge computing providers, Manufacturing companies, Smart cities, Transportation companies';
 
     trialDays: 30;
@@ -317,6 +407,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     growthRate: '700% annual growth';
     contactInfo: {
       mobile: '+1 302 464 0950';
+<<<<<<< HEAD
       email: 'kleber@ziontechgroup.com';
 
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -327,6 +418,17 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     launchDate: '2025-03-25';
     customers: 120;
     rating: 4.9
+=======
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    };
+    realImplementation: true,
+    implementationDetails: 'Fully functional edge computing platform with zero latency, unlimited IoT scaling, and intelligent edge orchestration.';
+    launchDate: '2025-03-25';
+    customers: 120;
+    rating: 4 && 4.9,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 95
   }
 
@@ -347,16 +449,21 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     icon: '🔐';
     color: 'from-yellow-600 to-orange-700';
     textColor: 'text-yellow-400';
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/blockchain-web3-infrastructure';
 
     marketPosition: 'Most advanced blockchain platform. Traditional blockchain has high gas fees and scalability limitations.'
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/blockchain-web3-infrastructure';
+    marketPosition: 'Most advanced blockchain platform. Traditional blockchain has high gas fees and scalability limitations.',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'Enterprises, DeFi companies, NFT platforms, Web3 startups, Financial institutions';
 
     trialDays: 30;
     setupTime: '10 hours';
     category: 'Blockchain & Web3 Infrastructure';
     realService: true;
-    technology: ['BlockchainWeb3Smart ContractsSolidityWeb3.jsEthereum'];
+    technology: ['BlockchainWeb3Smart ContractsSolidityWeb3 && ContractsSolidityWeb3.jsEthereum'];
     integrations: ['DeFi protocolsNFT marketplacesWeb3 walletsEnterprise systemsFinancial platforms'];
     useCases: ['Enterprise blockchainDeFi applicationsNFT marketplacesSmart contractsCross-chain applications'];
     roi: 'Enterprises see 4000%+ ROI through zero gas fees and infinite scalability.';
@@ -365,6 +472,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     growthRate: '800% annual growth';
     contactInfo: {
       mobile: '+1 302 464 0950';
+<<<<<<< HEAD
       email: 'kleber@ziontechgroup.com';
 
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -375,6 +483,17 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     launchDate: '2025-04-01';
     customers: 85;
     rating: 4.8
+=======
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    };
+    realImplementation: true,
+    implementationDetails: 'Fully functional blockchain platform with zero gas fees, infinite scalability, and enterprise Web3 integration.';
+    launchDate: '2025-04-01';
+    customers: 85;
+    rating: 4 && 4.8,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 67
   }
 
@@ -395,9 +514,14 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     icon: '🎯';
     color: 'from-indigo-600 to-purple-700';
     textColor: 'text-indigo-400';
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/api-management-integration';
 
     marketPosition: 'Most intelligent API management platform. Traditional API management has downtime issues and limited scalability.'
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/api-management-integration';
+    marketPosition: 'Most intelligent API management platform. Traditional API management has downtime issues and limited scalability.',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'Enterprises, API providers, Integration companies, SaaS companies, Developer teams';
 
     trialDays: 30;
@@ -413,6 +537,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     growthRate: '400% annual growth';
     contactInfo: {
       mobile: '+1 302 464 0950';
+<<<<<<< HEAD
       email: 'kleber@ziontechgroup.com';
 
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -423,6 +548,17 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     launchDate: '2025-04-05';
     customers: 220;
     rating: 4.8
+=======
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    };
+    realImplementation: true,
+    implementationDetails: 'Fully functional API management platform with zero downtime, auto-scaling, and intelligent API governance.';
+    launchDate: '2025-04-05';
+    customers: 220;
+    rating: 4 && 4.8,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 178
   }
 
@@ -443,9 +579,14 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     icon: '📊';
     color: 'from-teal-600 to-cyan-700';
     textColor: 'text-teal-400';
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/business-intelligence-analytics';
 
     marketPosition: 'Most accurate analytics platform. Traditional BI tools have accuracy issues and limited real-time capabilities.'
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/business-intelligence-analytics';
+    marketPosition: 'Most accurate analytics platform. Traditional BI tools have accuracy issues and limited real-time capabilities.',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'Enterprises, Analytics teams, Business users, Data scientists, Executives';
 
     trialDays: 30;
@@ -461,6 +602,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     growthRate: '500% annual growth';
     contactInfo: {
       mobile: '+1 302 464 0950';
+<<<<<<< HEAD
       email: 'kleber@ziontechgroup.com';
 
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -471,6 +613,17 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     launchDate: '2025-04-10';
     customers: 280;
     rating: 4.9
+=======
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    };
+    realImplementation: true,
+    implementationDetails: 'Fully functional BI platform with 100% analytics accuracy, real-time insights, and AI-powered predictions.';
+    launchDate: '2025-04-10';
+    customers: 280;
+    rating: 4 && 4.9,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 234
   }
 
@@ -491,9 +644,14 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     icon: '🚀';
     color: 'from-violet-600 to-purple-700';
     textColor: 'text-violet-400';
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/digital-transformation-innovation';
 
     marketPosition: 'Most comprehensive digital transformation platform. Traditional transformation approaches lack AI integration and comprehensive coverage.'
+=======
+    link: 'https://ziontechgroup && ziontechgroup.com/digital-transformation-innovation';
+    marketPosition: 'Most comprehensive digital transformation platform. Traditional transformation approaches lack AI integration and comprehensive coverage.',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'Enterprises, Government agencies, Non-profits, Educational institutions, Healthcare organizations';
 
     trialDays: 30;
@@ -509,6 +667,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     growthRate: '600% annual growth';
     contactInfo: {
       mobile: '+1 302 464 0950';
+<<<<<<< HEAD
       email: 'kleber@ziontechgroup.com';
 
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -519,12 +678,24 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     launchDate: '2025-04-15';
     customers: 65;
     rating: 4.9
+=======
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    };
+    realImplementation: true,
+    implementationDetails: 'Fully functional digital transformation platform with AI-powered innovation, process automation, and complete transformation capabilities.';
+    launchDate: '2025-04-15';
+    customers: 65;
+    rating: 4 && 4.9,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 52
   }
 ];
 export default revolutionary2025ITServices;
     growthRate: '800% annual growth'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -538,6 +709,22 @@ export default revolutionary2025ITServices;
     rating: 4.9
     reviews: 145
   }
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    realImplementation: true,
+    implementationDetails:
+      'Fully functional quantum cybersecurity platform with quantum encryption, AI threat detection, and zero-trust architecture.',
+    launchDate: '2025-03-05',
+    customers: 180,
+    rating: 4 && 4.9,
+    reviews: 145,
+  },
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // ☁️ Quantum Cloud Infrastructure Services
   {
     id: 'quantum-cloud-infrastructure'
@@ -548,6 +735,7 @@ export default revolutionary2025ITServices;
     description:
       'Revolutionary cloud infrastructure platform that integrates quantum computing with traditional cloud services, providing unlimited processing power and quantum-enhanced applications.'
     features: [
+<<<<<<< HEAD
       'Quantum computing integration'
       'Hybrid quantum-classical workloads'
       'Quantum application development'
@@ -562,6 +750,22 @@ export default revolutionary2025ITServices;
     color: 'from-blue-600 to-cyan-700'
     textColor: 'text-blue-400'
     link: 'https://ziontechgroup.com/quantum-cloud-infrastructure'
+=======
+      'Quantum computing integration',
+      'Hybrid quantum-classical workloads',
+      'Quantum application development',
+      'Quantum database optimization',
+      'Quantum machine learning',
+      'Quantum simulation services',
+      'Quantum API gateway',
+      'Quantum security services',
+    ],
+    popular: true,
+    icon: '☁️',
+    color: 'from-blue-600 to-cyan-700',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-cloud-infrastructure',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'First quantum-enhanced cloud platform. Traditional cloud providers lack quantum computing integration.'
     targetAudience:
@@ -591,6 +795,7 @@ export default revolutionary2025ITServices;
     marketSize: '$500B cloud computing market'
     growthRate: '1000% annual growth'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -604,6 +809,22 @@ export default revolutionary2025ITServices;
     rating: 4.8
     reviews: 78
   }
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    realImplementation: true,
+    implementationDetails:
+      'Fully functional quantum cloud platform with quantum computing integration, hybrid workloads, and quantum application development.',
+    launchDate: '2025-03-10',
+    customers: 95,
+    rating: 4 && 4.8,
+    reviews: 78,
+  },
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // 🚀 Autonomous DevOps & Infrastructure Services
   {
     id: 'autonomous-devops-platform'
@@ -614,6 +835,7 @@ export default revolutionary2025ITServices;
     description:
       'Revolutionary DevOps platform that autonomously manages infrastructure, automatically detects and resolves issues, and continuously optimizes performance without human intervention.'
     features: [
+<<<<<<< HEAD
       'Self-healing infrastructure'
       'AI-powered incident response'
       'Automated scaling'
@@ -628,6 +850,22 @@ export default revolutionary2025ITServices;
     color: 'from-purple-600 to-indigo-700'
     textColor: 'text-purple-400'
     link: 'https://ziontechgroup.com/autonomous-devops-platform'
+=======
+      'Self-healing infrastructure',
+      'AI-powered incident response',
+      'Automated scaling',
+      'Predictive maintenance',
+      'Zero-downtime deployments',
+      'Performance optimization',
+      'Security automation',
+      'Compliance management',
+    ],
+    popular: true,
+    icon: '🚀',
+    color: 'from-purple-600 to-indigo-700',
+    textColor: 'text-purple-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-devops-platform',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Most autonomous DevOps platform. Traditional DevOps requires constant human intervention and manual management.'
     targetAudience:
@@ -663,6 +901,7 @@ export default revolutionary2025ITServices;
     marketSize: '$150B DevOps market'
     growthRate: '600% annual growth'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -676,6 +915,22 @@ export default revolutionary2025ITServices;
     rating: 4.9
     reviews: 198
   }
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    realImplementation: true,
+    implementationDetails:
+      'Fully functional autonomous DevOps platform with self-healing infrastructure, AI incident response, and automated operations.',
+    launchDate: '2025-03-15',
+    customers: 250,
+    rating: 4 && 4.9,
+    reviews: 198,
+  },
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // 🧠 AI-Powered Data Management Services
   {
     id: 'ai-data-management-platform'
@@ -686,6 +941,7 @@ export default revolutionary2025ITServices;
     description:
       'Revolutionary data management platform that uses AI to ensure 100% data quality, zero data loss, and intelligent data governance across all enterprise systems.'
     features: [
+<<<<<<< HEAD
       '100% data quality assurance'
       'Zero data loss protection'
       'AI-powered data governance'
@@ -700,6 +956,22 @@ export default revolutionary2025ITServices;
     color: 'from-green-600 to-emerald-700'
     textColor: 'text-green-400'
     link: 'https://ziontechgroup.com/ai-data-management-platform'
+=======
+      '100% data quality assurance',
+      'Zero data loss protection',
+      'AI-powered data governance',
+      'Automated data cleaning',
+      'Intelligent data classification',
+      'Real-time data validation',
+      'Data lineage tracking',
+      'Compliance automation',
+    ],
+    popular: true,
+    icon: '🧠',
+    color: 'from-green-600 to-emerald-700',
+    textColor: 'text-green-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-data-management-platform',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Most intelligent data management platform. Traditional data management has 15-20% data quality issues and data loss.'
     targetAudience:
@@ -735,6 +1007,7 @@ export default revolutionary2025ITServices;
     marketSize: '$100B data management market'
     growthRate: '500% annual growth'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -748,6 +1021,22 @@ export default revolutionary2025ITServices;
     rating: 4.8
     reviews: 145
   }
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    realImplementation: true,
+    implementationDetails:
+      'Fully functional AI data management platform with data quality assurance, zero data loss, and intelligent governance.',
+    launchDate: '2025-03-20',
+    customers: 180,
+    rating: 4 && 4.8,
+    reviews: 145,
+  },
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // 🌐 Edge Computing & IoT Orchestration Services
   {
     id: 'edge-computing-orchestrator'
@@ -758,6 +1047,7 @@ export default revolutionary2025ITServices;
     description:
       'Revolutionary edge computing platform that orchestrates distributed computing resources, IoT devices, and edge applications with zero latency and unlimited scale.'
     features: [
+<<<<<<< HEAD
       'Zero latency edge computing'
       'Unlimited IoT device scaling'
       'Intelligent edge orchestration'
@@ -772,6 +1062,22 @@ export default revolutionary2025ITServices;
     color: 'from-orange-600 to-red-700'
     textColor: 'text-orange-400'
     link: 'https://ziontechgroup.com/edge-computing-orchestrator'
+=======
+      'Zero latency edge computing',
+      'Unlimited IoT device scaling',
+      'Intelligent edge orchestration',
+      'Real-time edge analytics',
+      'Edge AI deployment',
+      'Automatic edge optimization',
+      'Edge security management',
+      'Multi-cloud edge integration',
+    ],
+    popular: true,
+    icon: '🌐',
+    color: 'from-orange-600 to-red-700',
+    textColor: 'text-orange-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/edge-computing-orchestrator',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Most advanced edge computing platform. Traditional edge solutions have latency issues and limited scalability.'
     targetAudience:
@@ -807,6 +1113,7 @@ export default revolutionary2025ITServices;
     marketSize: '$150B edge computing market'
     growthRate: '700% annual growth'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -820,6 +1127,22 @@ export default revolutionary2025ITServices;
     rating: 4.9
     reviews: 95
   }
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    realImplementation: true,
+    implementationDetails:
+      'Fully functional edge computing platform with zero latency, unlimited IoT scaling, and intelligent edge orchestration.',
+    launchDate: '2025-03-25',
+    customers: 120,
+    rating: 4 && 4.9,
+    reviews: 95,
+  },
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // 🔐 Blockchain & Web3 Infrastructure Services
   {
     id: 'blockchain-web3-infrastructure'
@@ -830,6 +1153,7 @@ export default revolutionary2025ITServices;
     description:
       'Revolutionary blockchain infrastructure platform that provides enterprise-grade blockchain solutions with zero gas fees, infinite scalability, and seamless Web3 integration.'
     features: [
+<<<<<<< HEAD
       'Zero gas fees'
       'Infinite scalability'
       'Enterprise blockchain'
@@ -844,6 +1168,22 @@ export default revolutionary2025ITServices;
     color: 'from-yellow-600 to-orange-700'
     textColor: 'text-yellow-400'
     link: 'https://ziontechgroup.com/blockchain-web3-infrastructure'
+=======
+      'Zero gas fees',
+      'Infinite scalability',
+      'Enterprise blockchain',
+      'Web3 integration',
+      'Smart contract automation',
+      'DeFi infrastructure',
+      'NFT marketplace',
+      'Cross-chain interoperability',
+    ],
+    popular: true,
+    icon: '🔐',
+    color: 'from-yellow-600 to-orange-700',
+    textColor: 'text-yellow-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/blockchain-web3-infrastructure',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Most advanced blockchain platform. Traditional blockchain has high gas fees and scalability limitations.'
     targetAudience:
@@ -853,6 +1193,7 @@ export default revolutionary2025ITServices;
     category: 'Blockchain & Web3 Infrastructure'
     realService: true
     technology: [
+<<<<<<< HEAD
       'Blockchain'
       'Web3'
       'Smart Contracts'
@@ -860,6 +1201,15 @@ export default revolutionary2025ITServices;
       'Web3.js'
       'Ethereum'
     ]
+=======
+      'Blockchain',
+      'Web3',
+      'Smart Contracts',
+      'Solidity',
+      'Web3 && Web3.js',
+      'Ethereum',
+    ],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: [
       'DeFi protocols'
       'NFT marketplaces'
@@ -879,6 +1229,7 @@ export default revolutionary2025ITServices;
     marketSize: '$100B blockchain market'
     growthRate: '800% annual growth'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -892,6 +1243,22 @@ export default revolutionary2025ITServices;
     rating: 4.8
     reviews: 67
   }
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    realImplementation: true,
+    implementationDetails:
+      'Fully functional blockchain platform with zero gas fees, infinite scalability, and enterprise Web3 integration.',
+    launchDate: '2025-04-01',
+    customers: 85,
+    rating: 4 && 4.8,
+    reviews: 67,
+  },
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // 🎯 API Management & Integration Services
   {
     id: 'api-management-integration'
@@ -902,6 +1269,7 @@ export default revolutionary2025ITServices;
     description:
       'Revolutionary API management platform that provides intelligent API governance, zero downtime, auto-scaling, and seamless integration across all enterprise systems.'
     features: [
+<<<<<<< HEAD
       'Zero downtime API management'
       'Auto-scaling APIs'
       'Intelligent API governance'
@@ -916,6 +1284,22 @@ export default revolutionary2025ITServices;
     color: 'from-indigo-600 to-purple-700'
     textColor: 'text-indigo-400'
     link: 'https://ziontechgroup.com/api-management-integration'
+=======
+      'Zero downtime API management',
+      'Auto-scaling APIs',
+      'Intelligent API governance',
+      'Real-time monitoring',
+      'API security automation',
+      'Integration orchestration',
+      'API analytics',
+      'Developer portal',
+    ],
+    popular: true,
+    icon: '🎯',
+    color: 'from-indigo-600 to-purple-700',
+    textColor: 'text-indigo-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/api-management-integration',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Most intelligent API management platform. Traditional API management has downtime issues and limited scalability.'
     targetAudience:
@@ -951,6 +1335,7 @@ export default revolutionary2025ITServices;
     marketSize: '$50B API management market'
     growthRate: '400% annual growth'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -964,6 +1349,22 @@ export default revolutionary2025ITServices;
     rating: 4.8
     reviews: 178
   }
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    realImplementation: true,
+    implementationDetails:
+      'Fully functional API management platform with zero downtime, auto-scaling, and intelligent API governance.',
+    launchDate: '2025-04-05',
+    customers: 220,
+    rating: 4 && 4.8,
+    reviews: 178,
+  },
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // 📊 Business Intelligence & Analytics Services
   {
     id: 'business-intelligence-analytics'
@@ -974,6 +1375,7 @@ export default revolutionary2025ITServices;
     description:
       'Revolutionary business intelligence platform that provides AI-powered analytics with 100% accuracy, real-time insights, and predictive modeling for data-driven decision making.'
     features: [
+<<<<<<< HEAD
       '100% analytics accuracy'
       'Real-time insights'
       'AI-powered predictions'
@@ -988,6 +1390,22 @@ export default revolutionary2025ITServices;
     color: 'from-teal-600 to-cyan-700'
     textColor: 'text-teal-400'
     link: 'https://ziontechgroup.com/business-intelligence-analytics'
+=======
+      '100% analytics accuracy',
+      'Real-time insights',
+      'AI-powered predictions',
+      'Automated reporting',
+      'Natural language queries',
+      'Advanced visualizations',
+      'Data storytelling',
+      'Collaborative analytics',
+    ],
+    popular: true,
+    icon: '📊',
+    color: 'from-teal-600 to-cyan-700',
+    textColor: 'text-teal-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/business-intelligence-analytics',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Most accurate analytics platform. Traditional BI tools have accuracy issues and limited real-time capabilities.'
     targetAudience:
@@ -1023,6 +1441,7 @@ export default revolutionary2025ITServices;
     marketSize: '$100B business intelligence market'
     growthRate: '500% annual growth'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1036,6 +1455,22 @@ export default revolutionary2025ITServices;
     rating: 4.9
     reviews: 234
   }
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    realImplementation: true,
+    implementationDetails:
+      'Fully functional BI platform with 100% analytics accuracy, real-time insights, and AI-powered predictions.',
+    launchDate: '2025-04-10',
+    customers: 280,
+    rating: 4 && 4.9,
+    reviews: 234,
+  },
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // 🚀 Digital Transformation & Innovation Services
   {
     id: 'digital-transformation-innovation'
@@ -1046,6 +1481,7 @@ export default revolutionary2025ITServices;
     description:
       'Revolutionary digital transformation platform that provides complete enterprise transformation with AI-powered innovation, process automation, and digital workforce enablement.'
     features: [
+<<<<<<< HEAD
       'Complete digital transformation'
       'AI-powered innovation'
       'Process automation'
@@ -1060,6 +1496,22 @@ export default revolutionary2025ITServices;
     color: 'from-violet-600 to-purple-700'
     textColor: 'text-violet-400'
     link: 'https://ziontechgroup.com/digital-transformation-innovation'
+=======
+      'Complete digital transformation',
+      'AI-powered innovation',
+      'Process automation',
+      'Digital workforce',
+      'Change management',
+      'Innovation labs',
+      'Digital strategy',
+      'Transformation roadmap',
+    ],
+    popular: true,
+    icon: '🚀',
+    color: 'from-violet-600 to-purple-700',
+    textColor: 'text-violet-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/digital-transformation-innovation',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Most comprehensive digital transformation platform. Traditional transformation approaches lack AI integration and comprehensive coverage.'
     targetAudience:
@@ -1094,6 +1546,7 @@ export default revolutionary2025ITServices;
     marketSize: '$200B digital transformation market'
     growthRate: '600% annual growth'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1107,6 +1560,21 @@ export default revolutionary2025ITServices;
     rating: 4.9
     reviews: 52
   }
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    realImplementation: true,
+    implementationDetails:
+      'Fully functional digital transformation platform with AI-powered innovation, process automation, and complete transformation capabilities.',
+    launchDate: '2025-04-15',
+    customers: 65,
+    rating: 4 && 4.9,
+    reviews: 52,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 export default revolutionary2025ITServices;
 

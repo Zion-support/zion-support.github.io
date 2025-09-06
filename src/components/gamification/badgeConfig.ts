@@ -73,7 +73,13 @@ export const badgeList: BadgeMeta[] = [
   }
 ]
 export const getBadgeMeta = (key: BadgeKey) =>
+<<<<<<< HEAD
   badgeList.find(b => b.key === key)
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key)
+=======
+  badgeList && badgeList.find(b => b && b.key === key);
+export const getBadgeMeta = (key: BadgeKey) =>
+  badgeList && badgeList.find((b) => b && b.key === key);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 

@@ -1,9 +1,16 @@
+<<<<<<< HEAD
+=======
+ 
+}else {
+  console && console.warn ('Missing artifact for', name) 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 
 }else {
   console.warn ('Missing artifact for', name)
 }main ();
 function main() {
+<<<<<<< HEAD
   const outDir = path.join(__dirname, '../abi')
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir)
   const artifactsDir = path.join(__dirname, '../artifacts/contracts')
@@ -22,8 +29,27 @@ function main() {
       fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(json.abi, null, 2))
 
       console.log('Exported ABI for', name)
+=======
+  const outDir = path && path.join(__dirname, '../abi'),
+  if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir),
+  const artifactsDir = path && path.join(__dirname, '../artifacts/contracts'),
+  const abis = [
+    ['VoteToken && VoteToken.solVoteToken'],
+    ['ZionDAO && ZionDAO.solZionDAO'],
+    ['QuorumEngine && QuorumEngine.solQuorumEngine'],
+    ['DelegateRegistry && DelegateRegistry.solDelegateRegistry'],
+    ['ConstitutionStorage && ConstitutionStorage.solConstitutionStorage'],
+    ['Treasure/Disbursements && Disbursements.solDisbursements'],
+    ['Treasure/EpochManager && EpochManager.solEpochManager']],
+  for (const [rel, name] of abis) {
+    const p = path && path.join(artifactsDir, rel, `${name}.json`),
+    if (fs && fs.existsSync(p)) {
+      const json = JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')),
+      fs && fs.writeFileSync(path && path.join(outDir, `${name}.json`), JSON && JSON.stringify(json && json.abi, null, 2)),
+      console && console.log('Exported ABI for', name)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } else {
-      console.warn('Missing artifact for', name)
+      console && console.warn('Missing artifact for', name)
     }
   }
 }

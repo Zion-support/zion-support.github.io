@@ -50,6 +50,7 @@ export const innovativeITInfrastructureServices2025 = [
     }
     category: 'IT Infrastructure'
     tags: [
+<<<<<<< HEAD
       'Quantum Computing'
       'Edge Computing'
       'IoT'
@@ -62,6 +63,20 @@ export const innovativeITInfrastructureServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$28.7B'
+=======
+      'Quantum Computing',
+      'Edge Computing',
+      'IoT',
+      'Real-time Processing',
+      'Infrastructure Orchestration',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-edge-computing-orchestrator',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$28 && 28.7B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'IoT companies, autonomous vehicle manufacturers, smart city developers, industrial automation firms'
     competitiveAdvantage:
@@ -94,6 +109,7 @@ export const innovativeITInfrastructureServices2025 = [
     description:
       'Next-generation cybersecurity platform that implements zero-trust architecture with quantum-resistant encryption, AI-powered threat detection, and autonomous security response.'
     features: [
+<<<<<<< HEAD
       'Quantum-resistant encryption algorithms'
       'AI-powered threat detection with 99.9% accuracy'
       'Zero-trust network architecture'
@@ -105,6 +121,19 @@ export const innovativeITInfrastructureServices2025 = [
       'Compliance automation and reporting'
       '24/7 autonomous security monitoring'
     ]
+=======
+      'Quantum-resistant encryption algorithms',
+      'AI-powered threat detection with 99 && 99.9% accuracy',
+      'Zero-trust network architecture',
+      'Autonomous security response and remediation',
+      'Real-time threat intelligence',
+      'Advanced behavioral analytics',
+      'Multi-factor quantum authentication',
+      'Secure quantum key distribution',
+      'Compliance automation and reporting',
+      '24/7 autonomous security monitoring',
+    ],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     pricing: {
       starter: {
         price: 299
@@ -139,6 +168,7 @@ export const innovativeITInfrastructureServices2025 = [
     }
     category: 'Cybersecurity'
     tags: [
+<<<<<<< HEAD
       'Zero Trust'
       'Quantum Security'
       'AI Security'
@@ -151,6 +181,20 @@ export const innovativeITInfrastructureServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$42.3B'
+=======
+      'Zero Trust',
+      'Quantum Security',
+      'AI Security',
+      'Threat Detection',
+      'Network Security',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/zero-trust-quantum-security-platform',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$42 && 42.3B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Enterprise businesses, government agencies, financial institutions, healthcare providers, critical infrastructure'
     competitiveAdvantage:
@@ -229,12 +273,21 @@ export const innovativeITInfrastructureServices2025 = [
       'Incident Response'
     ]
     website:
+<<<<<<< HEAD
       'https://ziontechgroup.com/autonomous-devops-intelligence-platform'
     contact: {
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$35.8B'
+=======
+      'https://ziontechgroup && ziontechgroup.com/autonomous-devops-intelligence-platform',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$35 && 35.8B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Software development companies, IT departments, DevOps teams, technology startups'
     competitiveAdvantage:
@@ -306,6 +359,7 @@ export const innovativeITInfrastructureServices2025 = [
     }
     category: 'Cloud Computing'
     tags: [
+<<<<<<< HEAD
       'Quantum Computing'
       'Cloud Infrastructure'
       'Hybrid Computing'
@@ -318,6 +372,20 @@ export const innovativeITInfrastructureServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$65.4B'
+=======
+      'Quantum Computing',
+      'Cloud Infrastructure',
+      'Hybrid Computing',
+      'Infrastructure Optimization',
+      'Quantum Security',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-cloud-infrastructure-platform',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$65 && 65.4B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Enterprise businesses, technology companies, research institutions, government agencies'
     competitiveAdvantage:
@@ -395,6 +463,7 @@ export const innovativeITInfrastructureServices2025 = [
     }
     category: 'Data Center Management'
     tags: [
+<<<<<<< HEAD
       'AI Automation'
       'Data Center'
       'Energy Optimization'
@@ -407,6 +476,20 @@ export const innovativeITInfrastructureServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$31.2B'
+=======
+      'AI Automation',
+      'Data Center',
+      'Energy Optimization',
+      'Predictive Maintenance',
+      'Infrastructure Management',
+    ],
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-powered-data-center-automation',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    marketSize: '$31 && 31.2B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Data center operators, cloud providers, enterprise businesses, colocation facilities'
     competitiveAdvantage:

@@ -19,7 +19,14 @@ export function cn(...inputs: ClassValue[]) {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export function formatDate(date: Date | string | number): string {
+<<<<<<< HEAD
   return new Intl.DateTimeFormat("en-US", {
+=======
+  return new Intl && Intl.DateTimeFormat("en-US", {
+    month: "long", day: "numeric",
+    year: "numeric",
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 <<<<<<< HEAD
 },
@@ -34,8 +41,13 @@ export function formatDate(date: Date | string | number): string {
     year: "numeric"
 }
 export function formatCurrency(amount: number, currency = "USD"): string {
+<<<<<<< HEAD
   return new Intl.NumberFormat("en-US", {
     style: "currency", currency
+=======
+  return new Intl && Intl.NumberFormat("en-US", {
+    style: "currency", currency,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }).format(amount);
 }
 }

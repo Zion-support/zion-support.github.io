@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import Header from '../components/Header';
 import { SEO } from '../components/SEO';
@@ -257,5 +258,42 @@ export default function Contact() {
       
       <ChatAssistant />
     </div>
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+const Contact: React.FC = () => {;
+  return (
+    <div className="min-h-screen bg-gray-50">;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Contact Us</h1>;
+        <p className="text-lg text-gray-600">;
+          Get in touch with us for any questions or inquiries.;
+        </p>;
+      </div>;
+    </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }

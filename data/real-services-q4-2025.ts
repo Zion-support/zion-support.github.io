@@ -1,10 +1,19 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
+<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
+=======
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup && ziontechgroup.com',
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
   {
     id: 'ai-email-responder-pro'
@@ -16,6 +25,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     description:
       'LLM-powered email assistant that drafts context-aware replies, routes by intent, summarizes threads, and syncs with your CRM. SOC 2-ready with redaction.'
     features: [
+<<<<<<< HEAD
       'LLM reply drafts with tone controls'
       'Intent routing and SLA prediction'
       'Smart summaries and action extraction'
@@ -51,6 +61,43 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     rating: 4.8
     reviews: 17
   }
+=======
+      'LLM reply drafts with tone controls',
+      'Intent routing and SLA prediction',
+      'Smart summaries and action extraction',
+      'CRM and ticket sync (Salesforce, HubSpot, Zendesk)',
+      'PII redaction and governance',
+      'Dashboard with analytics and coaching',
+    ],
+    popular: true,
+    icon: '📧',
+    color: 'from-cyan-600 to-blue-700',
+    textColor: 'text-cyan-300',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-email-responder-pro',
+    marketPosition:
+      'Alternative to Front/Superhuman add-ons with deeper AI and governance.',
+    targetAudience: 'Sales, Success, Support, Ops',
+    trialDays: 14,
+    setupTime: '2 hours',
+    category: 'AI & Data',
+    realService: true,
+    technology: ['Gmail/O365 APIs', 'OpenAI/Groq', 'Next && Next.js'],
+    integrations: ['Gmail', 'Outlook', 'Salesforce', 'HubSpot', 'Zendesk'],
+    useCases: ['Inbound triage', 'Follow-ups', 'NPS outreach'],
+    roi: 'Reduce first response time by 60% and improve CSAT by 20%+',
+    competitors: ['Superhuman AI', 'Front Workflows'],
+    marketSize: '$10B+ communications AI',
+    growthRate: '25% CAGR',
+    variant: 'ai-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'OAuth, vector memory, policy guardrails',
+    launchDate: '2025-10-15',
+    customers: 24,
+    rating: 4 && 4.8,
+    reviews: 17,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'affiliate-analytics-hub'
     name: 'Affiliate Analytics Hub'
@@ -60,6 +107,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     description:
       'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross-device attribution.'
     features: [
+<<<<<<< HEAD
       'Link shortener and branded domains'
       'UTM builder and traffic quality scoring'
       'Multi-touch attribution and deduplication'
@@ -95,6 +143,43 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     rating: 4.6
     reviews: 21
   }
+=======
+      'Link shortener and branded domains',
+      'UTM builder and traffic quality scoring',
+      'Multi-touch attribution and deduplication',
+      'Automated payouts and tax forms',
+      'Fraud and bot detection',
+      'Partner portal and reports',
+    ],
+    popular: true,
+    icon: '🔗',
+    color: 'from-emerald-600 to-teal-700',
+    textColor: 'text-emerald-300',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/affiliate-analytics-hub',
+    marketPosition:
+      'Easier than enterprise suites; purpose-built for small teams.',
+    targetAudience: 'E-commerce, SaaS, Media',
+    trialDays: 14,
+    setupTime: '1 day',
+    category: 'Developer Tools',
+    realService: true,
+    technology: ['Next && Next.js', 'PostgreSQL', 'Workers/Edge'],
+    integrations: ['Stripe', 'Shopify', 'WooCommerce'],
+    useCases: ['Partner programs', 'Influencer payouts'],
+    roi: 'Grow partner-attributed revenue by 10–30%',
+    competitors: ['Impact && Impact.com (complex)', 'Tune (enterprise)'],
+    marketSize: '$15B+ affiliate tech',
+    growthRate: '12% CAGR',
+    variant: 'network-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Webhook ingestion, cookie-less heuristics',
+    launchDate: '2025-11-01',
+    customers: 35,
+    rating: 4 && 4.6,
+    reviews: 21,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'return-management-saas'
     name: 'Return Management SaaS'
@@ -105,6 +190,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     description:
       'Branded returns portal with label generation, disposition workflows, warehouse updates, and refund/exchange automations.'
     features: [
+<<<<<<< HEAD
       'Portal and RMA workflows'
       'Label generation and tracking'
       'Warehousing and disposition updates'
@@ -140,6 +226,43 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     rating: 4.5
     reviews: 9
   }
+=======
+      'Portal and RMA workflows',
+      'Label generation and tracking',
+      'Warehousing and disposition updates',
+      'Refunds and exchanges automation',
+      'Fraud checks and abuse controls',
+      'Analytics and cohort reports',
+    ],
+    popular: false,
+    icon: '📦',
+    color: 'from-orange-600 to-red-600',
+    textColor: 'text-orange-200',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/return-management-saas',
+    marketPosition:
+      '90% of SMBs lack streamlined returns; fast ROI with fewer tickets.',
+    targetAudience: 'DTC brands, Marketplaces',
+    trialDays: 14,
+    setupTime: '1 day',
+    category: 'Developer Tools',
+    realService: true,
+    technology: ['Next && Next.js', 'Stripe', 'Shippo'],
+    integrations: ['Shopify', 'Klaviyo', 'Gorgias'],
+    useCases: ['Returns and exchanges', 'Warehouse ops'],
+    roi: 'Cut support tickets by 35% and improve retention',
+    competitors: ['Loop Returns', 'Returnly'],
+    marketSize: '$8B returns tech',
+    growthRate: '10% CAGR',
+    variant: 'ai-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Carrier APIs and automation rules',
+    launchDate: '2025-11-20',
+    customers: 12,
+    rating: 4 && 4.5,
+    reviews: 9,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'survey-studio-mobile'
     name: 'Survey Studio Mobile'
@@ -149,6 +272,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     description:
       'Create beautiful mobile surveys with skip logic, A/B paths, and an embeddable SDK. Export to Sheets, BI tools, or your data warehouse.'
     features: [
+<<<<<<< HEAD
       'Branching logic designer'
       'Embeddable SDK and JS snippet'
       'Real-time analytics and funnels'
@@ -184,6 +308,43 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     rating: 4.6
     reviews: 10
   }
+=======
+      'Branching logic designer',
+      'Embeddable SDK and JS snippet',
+      'Real-time analytics and funnels',
+      'Webhook exports and CSV',
+      'Email/SMS invite campaigns',
+      'Consent and PII redaction',
+    ],
+    popular: false,
+    icon: '📱',
+    color: 'from-purple-600 to-pink-600',
+    textColor: 'text-purple-300',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/survey-studio-mobile',
+    marketPosition:
+      'Faster to deploy than Qualtrics/Typeform for mobile CX teams.',
+    targetAudience: 'CX, Product, Research',
+    trialDays: 7,
+    setupTime: '1 hour',
+    category: 'Developer Tools',
+    realService: true,
+    technology: ['Next && Next.js', 'Twilio', 'PostgreSQL'],
+    integrations: ['Segment', 'HubSpot', 'Slack'],
+    useCases: ['NPS/CSAT', 'In-app feedback', 'Research studies'],
+    roi: 'Improve survey completion by 2-3x on mobile',
+    competitors: ['Typeform', 'Survicate'],
+    marketSize: '$5B survey tech',
+    growthRate: '11% CAGR',
+    variant: 'network-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Client SDK + webhooks',
+    launchDate: '2025-10-28',
+    customers: 16,
+    rating: 4 && 4.6,
+    reviews: 10,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: 'website-analytics-lite'
     name: 'Website Analytics Lite'
@@ -193,6 +354,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     description:
       'No-cookie analytics with funnel views, events, and attribution—built for SMBs and agencies. Export raw data easily.'
     features: [
+<<<<<<< HEAD
       'Pageviews, sessions, and cohorts'
       'Events and conversions'
       'Source/medium attribution'
@@ -228,6 +390,43 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     rating: 4.5
     reviews: 6
   }
+=======
+      'Pageviews, sessions, and cohorts',
+      'Events and conversions',
+      'Source/medium attribution',
+      'Funnel and retention views',
+      'Custom dashboards',
+      'CSV and webhook export',
+    ],
+    popular: false,
+    icon: '📊',
+    color: 'from-indigo-600 to-blue-700',
+    textColor: 'text-indigo-300',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/website-analytics-lite',
+    marketPosition:
+      'Simple alternative to GA4; easy client reporting for agencies.',
+    targetAudience: 'Agencies, SMBs, Creators',
+    trialDays: 7,
+    setupTime: '30 minutes',
+    category: 'Developer Tools',
+    realService: true,
+    technology: ['Next && Next.js', 'PostgreSQL', 'ClickHouse (optional)'],
+    integrations: ['Shopify', 'WordPress', 'Webflow'],
+    useCases: ['Funnel analysis', 'Campaign attribution'],
+    roi: 'Faster insights with low overhead',
+    competitors: ['Plausible', 'Fathom'],
+    marketSize: '$3B lightweight analytics',
+    growthRate: '9% CAGR',
+    variant: 'ai-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Lightweight script & edge collection',
+    launchDate: '2025-12-05',
+    customers: 9,
+    rating: 4 && 4.5,
+    reviews: 6,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];	{
 		id: 'ai-email-responder-pro';
 		name: 'AI Email Responder Pro'
@@ -242,14 +441,19 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		icon: '📧';
 		color: 'from-cyan-600 to-blue-700';
 		textColor: 'text-cyan-300';
+<<<<<<< HEAD
 		link: 'https://ziontechgroup.com/services/ai-email-responder-pro';
 		marketPosition: 'Alternative to Front/Superhuman add-ons with deeper AI and governance.'
+=======
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-email-responder-pro';
+		marketPosition: 'Alternative to Front/Superhuman add-ons with deeper AI and governance.',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 		targetAudience: 'Sales, Success, Support, Ops';
 		trialDays: 14;
 		setupTime: '2 hours';
 		category: 'AI & Data';
 		realService: true;
-		technology: ['Gmail/O365 APIsOpenAI/GroqNext.js'];
+		technology: ['Gmail/O365 APIsOpenAI/GroqNext && GroqNext.js'];
 		integrations: ['GmailOutlookSalesforceHubSpotZendesk'];
 		useCases: ['Inbound triageFollow-upsNPS outreach'];
 		roi: 'Reduce first response time by 60% and improve CSAT by 20%+';
@@ -262,7 +466,11 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'OAuth, vector memory, policy guardrails';
 		launchDate: '2025-10-15';
 		customers: 24;
+<<<<<<< HEAD
 		rating: 4.8
+=======
+		rating: 4 && 4.8,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 		reviews: 17
 	}
 	{
@@ -279,18 +487,22 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		icon: '🔗';
 		color: 'from-emerald-600 to-teal-700';
 		textColor: 'text-emerald-300';
+<<<<<<< HEAD
 		link: 'https://ziontechgroup.com/services/affiliate-analytics-hub'
+=======
+		link: 'https://ziontechgroup && ziontechgroup.com/services/affiliate-analytics-hub',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 		marketPosition: 'Easier than enterprise suites, purpose-built for small teams.';
 		targetAudience: 'E-commerce, SaaS, Media';
 		trialDays: 14;
 		setupTime: '1 day';
 		category: 'Developer Tools';
 		realService: true;
-		technology: ['Next.jsPostgreSQLWorkers/Edge'];
+		technology: ['Next && Next.jsPostgreSQLWorkers/Edge'];
 		integrations: ['StripeShopifyWooCommerce'];
 		useCases: ['Partner programsInfluencer payouts'];
 		roi: 'Grow partner-attributed revenue by 10–30%';
-		competitors: ['Impact.com (complex)Tune (enterprise)'];
+		competitors: ['Impact && Impact.com (complex)Tune (enterprise)'];
 		marketSize: '$15B+ affiliate tech';
 		growthRate: '12% CAGR';
 		variant: 'network-futuristic';
@@ -299,7 +511,11 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Webhook ingestion, cookie-less heuristics';
 		launchDate: '2025-11-01';
 		customers: 35;
+<<<<<<< HEAD
 		rating: 4.6
+=======
+		rating: 4 && 4.6,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 		reviews: 21
 	}
 	{
@@ -316,14 +532,18 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		icon: '📦';
 		color: 'from-orange-600 to-red-600';
 		textColor: 'text-orange-200';
+<<<<<<< HEAD
 		link: 'https://ziontechgroup.com/services/return-management-saas'
+=======
+		link: 'https://ziontechgroup && ziontechgroup.com/services/return-management-saas',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 		marketPosition: '90% of SMBs lack streamlined returns, fast ROI with fewer tickets.';
 		targetAudience: 'DTC brands, Marketplaces';
 		trialDays: 14;
 		setupTime: '1 day';
 		category: 'Developer Tools';
 		realService: true;
-		technology: ['Next.jsStripeShippo'];
+		technology: ['Next && Next.jsStripeShippo'];
 		integrations: ['ShopifyKlaviyoGorgias'];
 		useCases: ['Returns and exchangesWarehouse ops'];
 		roi: 'Cut support tickets by 35% and improve retention';
@@ -336,7 +556,11 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Carrier APIs and automation rules';
 		launchDate: '2025-11-20';
 		customers: 12;
+<<<<<<< HEAD
 		rating: 4.5
+=======
+		rating: 4 && 4.5,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 		reviews: 9
 	}
 	{
@@ -353,14 +577,19 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		icon: '📱';
 		color: 'from-purple-600 to-pink-600';
 		textColor: 'text-purple-300';
+<<<<<<< HEAD
 		link: 'https://ziontechgroup.com/services/survey-studio-mobile';
 		marketPosition: 'Faster to deploy than Qualtrics/Typeform for mobile CX teams.'
+=======
+		link: 'https://ziontechgroup && ziontechgroup.com/services/survey-studio-mobile';
+		marketPosition: 'Faster to deploy than Qualtrics/Typeform for mobile CX teams.',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 		targetAudience: 'CX, Product, Research';
 		trialDays: 7;
 		setupTime: '1 hour';
 		category: 'Developer Tools';
 		realService: true;
-		technology: ['Next.jsTwilioPostgreSQL'];
+		technology: ['Next && Next.jsTwilioPostgreSQL'];
 		integrations: ['SegmentHubSpotSlack'];
 		useCases: ['NPS/CSATIn-app feedbackResearch studies'];
 		roi: 'Improve survey completion by 2-3x on mobile';
@@ -373,7 +602,11 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Client SDK + webhooks';
 		launchDate: '2025-10-28';
 		customers: 16;
+<<<<<<< HEAD
 		rating: 4.6
+=======
+		rating: 4 && 4.6,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 		reviews: 10
 	}
 	{
@@ -390,14 +623,18 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		icon: '📊';
 		color: 'from-indigo-600 to-blue-700';
 		textColor: 'text-indigo-300';
+<<<<<<< HEAD
 		link: 'https://ziontechgroup.com/services/website-analytics-lite'
+=======
+		link: 'https://ziontechgroup && ziontechgroup.com/services/website-analytics-lite',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 		marketPosition: 'Simple alternative to GA4, easy client reporting for agencies.';
 		targetAudience: 'Agencies, SMBs, Creators';
 		trialDays: 7;
 		setupTime: '30 minutes';
 		category: 'Developer Tools';
 		realService: true;
-		technology: ['Next.jsPostgreSQLClickHouse (optional)'];
+		technology: ['Next && Next.jsPostgreSQLClickHouse (optional)'];
 		integrations: ['ShopifyWordPressWebflow'];
 		useCases: ['Funnel analysisCampaign attribution'];
 		roi: 'Faster insights with low overhead';
@@ -410,7 +647,11 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Lightweight script & edge collection';
 		launchDate: '2025-12-05';
 		customers: 9;
+<<<<<<< HEAD
 		rating: 4.5
+=======
+		rating: 4 && 4.5,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 		reviews: 6
 	}
 ];

@@ -1,12 +1,42 @@
+<<<<<<< HEAD
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useCallback, useEffect, useMemo, useState } from "react";
+
+export type AIAssistantProps = {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   buttonLabel?: string;
   title?: string;
   defaultPrompt: string;
   systemPrompt?: string;
   onAccept: (markdown: string) => void;
   authorizationToken?: string;
+<<<<<<< HEAD
 }
 export default function AIAssistant({
   buttonLabel = "Generate with AI"
@@ -16,12 +46,25 @@ export default function AIAssistant({
   onAccept
   authorizationToken
 }: AIAssistantProps) {
+=======
+};
+
+export default function AIAssistant(): any ({;
+  buttonLabel = "Generate with AI",;
+  title = "AI Writing Assistant",;
+  defaultPrompt,;
+  systemPrompt,;
+  onAccept,;
+  authorizationToken,;
+}: AIAssistantProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
   useEffect(() => {
     setPrompt(defaultPrompt);
   }, [defaultPrompt]);
@@ -61,6 +104,51 @@ export default function AIAssistant({
     } catch {}
   }, [output]);
   const onOpen = useCallback(() => {
+=======
+
+  useEffect(() => {;
+    setPrompt(defaultPrompt);
+  }, [defaultPrompt]);
+
+  const callOperator = useCallback(async () => {;
+    setLoading(true);
+    setError(null);
+    try {;
+      const res = await fetch("/api/ai/operator", {;
+        method: "POST",;
+        headers: {;
+          "Content-Type": "application/json",;
+          ...(authorizationToken;
+            ? { Authorization: `Bearer ${authorizationToken}` }
+            : process && process.env.NEXT_PUBLIC_OPERATOR_TOKEN;
+              ? {;
+                  Authorization: `Bearer ${process && process.env.NEXT_PUBLIC_OPERATOR_TOKEN}`,;
+                }
+              : {}),;
+        },;
+        body: JSON && JSON.stringify({ prompt, system: systemPrompt }),;
+      });
+      const data = await res && res.json();
+      if (!res && res.ok) {;
+        throw new Error(data?.error || "Failed to generate");
+      }
+      setOutput(String(data && data.text || ""));
+      setIsEditing(false);
+    } catch (e: any) {;
+      setError(e && e.message || "Request failed");
+    } finally {;
+      setLoading(false);
+    }
+  }, [authorizationToken, prompt, systemPrompt]);
+
+  const onCopy = useCallback(async () => {;
+    try {;
+      await navigator && navigator.clipboard.writeText(output);
+    } catch {}
+  }, [output]);
+
+  const onOpen = useCallback(() => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsOpen(true);
     setOutput("");
     setIsEditing(false);
@@ -70,13 +158,13 @@ export default function AIAssistant({
   const canAccept = useMemo(() => output && output.trim().length > 0, [output]);
 
   return (
-    <>
+    <>;
       <button
         type="button"
         onClick={onOpen}
-        className="inline-flex items-center gap-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
-      >
+        className="inline-flex items-center gap-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1 && 1.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">;
         {buttonLabel}
+<<<<<<< HEAD
       </button>
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
@@ -84,91 +172,128 @@ export default function AIAssistant({
           <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">
               <h3 className="text-base font-semibold">{title}</h3>
+=======
+      </button>;
+
+      {isOpen && (;
+        <div className="fixed inset-0 z-50 flex items-center justify-center">;
+          <div className="absolute inset-0 bg-black/50" onClick={onClose} />;
+          <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">;
+            <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">;
+              <h3 className="text-base font-semibold">{title}</h3>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <button
                 onClick={onClose}
-                className="text-sm opacity-70 hover:opacity-100"
-              >
-                Close
+                className="text-sm opacity-70 hover:opacity-100">;
+                Close;
               </button>{" "}
+<<<<<<< HEAD
             </div>
             <div className="p-4 space-y-3">
               <div>
+=======
+            </div>;
+
+            <div className="p-4 space-y-3">;
+              <div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <label
                   className="block text-xs font-medium mb-1"
-                  htmlFor="input-Operator prompt"
-                >
-                  Operator prompt
-                </label>
+                  htmlFor="input-Operator prompt">;
+                  Operator prompt;
+                </label>;
                 <textarea
                   value={prompt}
-                  onChange={(e) => setPrompt(e.target.value)}
+                  onChange={(e) => setPrompt(e && e.target.value)}
                   rows={4}
+<<<<<<< HEAD
                   className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm"
                 />
               </div>
               <div className="flex items-center gap-2">
+=======
+                  className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
+                />;
+              </div>;
+
+              <div className="flex items-center gap-2">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <button
                   onClick={callOperator}
                   disabled={loading}
-                  className="rounded-md bg-blue-600 text-white px-3 py-1.5 text-sm disabled:opacity-60"
-                >
+                  className="rounded-md bg-blue-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60">;
                   {loading ? "Generating…" : "Generate"}
-                </button>
+                </button>;
                 <button
                   onClick={callOperator}
                   disabled={loading}
-                  className="rounded-md border px-3 py-1.5 text-sm"
-                >
+                  className="rounded-md border px-3 py-1 && 1.5 text-sm">;
                   {loading ? "…" : "Regenerate"}
-                </button>
+                </button>;
                 <button
                   onClick={() => setIsEditing((v) => !v)}
-                  className="rounded-md border px-3 py-1.5 text-sm"
-                >
+                  className="rounded-md border px-3 py-1 && 1.5 text-sm";
+                >;
                   {isEditing ? "Preview" : "Edit"}
-                </button>
+                </button>;
                 <button
                   onClick={onCopy}
                   disabled={!output}
-                  className="rounded-md border px-3 py-1.5 text-sm disabled: opacity-60"
-                >
-                  Copy
-                </button>
+                  className="rounded-md border px-3 py-1 && 1.5 text-sm disabled: opacity-60">;
+                  Copy;
+                </button>;
                 <button
-                  onClick={() => {
+                  onClick={() => {;
                     (onAccept(output), onClose());
                   }}
                   disabled={!canAccept}
+<<<<<<< HEAD
                   className="ml-auto rounded-md bg-green-600 text-white px-3 py-1.5 text-sm disabled:opacity-60"
                 >
                   Accept
                 </button>
               </div>
+=======
+                  className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60";
+                >;
+                  Accept;
+                </button>;
+              </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {error && <div className="text-red-600 text-sm">{error}</div>}
-              <div>
+              <div>;
                 <label
                   className="block text-xs font-medium mb-1"
-                  htmlFor="input-Output (markdown)"
-                >
-                  Output (markdown)
-                </label>
-                {isEditing ? (
+                  htmlFor="input-Output (markdown)">;
+                  Output (markdown);
+                </label>;
+                {isEditing ? (;
                   <textarea
                     value={output}
-                    onChange={(e) => setOutput(e.target.value)}
+                    onChange={(e) => setOutput(e && e.target.value)}
                     rows={12}
+<<<<<<< HEAD
                     className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm"
                   />
                 ) : (
                   <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">
                     {output |"No content yet. Click Generate."}
                   </pre>
+=======
+                    className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
+                  />;
+                ) : (;
+                  <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">;
+                    {output || "No content yet. Click Generate."}
+                  </pre>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
-              </div>
-            </div>
-          </div>
-        </div>
+              </div>;
+            </div>;
+          </div>;
+        </div>;
       )}
-    </>
+    </>;
   );
 }

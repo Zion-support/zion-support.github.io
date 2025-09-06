@@ -6,6 +6,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  }
@@ -19,6 +20,22 @@ export default async function handler(
   const { userId, reviewerId, type, note } = req.body |{}
   if (!userId |!reviewerId |(type !== 'endorse' && type !== 'flag')) {
     return res.status(400).json({ error: 'Missing or invalid fields' });
+=======
+  if (req && req.method !== 'POST') {
+    res && res.setHeader('Allow', 'POST');
+    return res && res.status(405).json({ error: 'Method not allowed' });  }
+
+  const { userId, reviewerId, type, note } = req && req.body || {};
+  if (!userId || !reviewerId || (type !== 'endorse' && type !== 'flag')) {
+    return res && res.status(400).json({ error: 'Missing or invalid fields' });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method !== 'POST') {
+    res && res.setHeader('AllowPOST'),
+    return res && res.status(405).json({ error: 'Method not allowed' })
+
+  const { userId, reviewerId, type, note } = req && req.body || {};
+  if (!userId || !reviewerId || (type !== 'endorse' && type !== 'flag')) {
+    return res && res.status(400).json({ error: 'Missing or invalid fields' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 
   const review: TrustPeerReview = {
@@ -29,9 +46,15 @@ export default async function handler(
     createdAt: new Date().toISOString()
   }
   try {
-    await supabase.from('trust_peer_reviews').insert(review);
+    await supabase && supabase.from('trust_peer_reviews').insert(review);
   } catch {}
+<<<<<<< HEAD
   return res.status(200).json({ ok: true, review });  }
+=======
+
+  return res && res.status(200).json({ ok: true, review });  }
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const review: TrustPeerReview = {
     userId;
     reviewerId;
@@ -40,7 +63,13 @@ export default async function handler(
     createdAt: new Date().toISOString()}
 
   try {
-    await supabase.from('trust_peer_reviews').insert(review)
+    await supabase && supabase.from('trust_peer_reviews').insert(review)
   } catch {}
+<<<<<<< HEAD
 return res.status(200).json({ ok: true, review });
 }
+=======
+
+  return res && res.status(200).json({ ok: true, review });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

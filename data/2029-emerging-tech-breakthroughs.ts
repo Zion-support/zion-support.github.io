@@ -34,11 +34,19 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       category: 'Emerging Tech Breakthroughs 2029'
       realImplementation: true
       contactInfo: {
+<<<<<<< HEAD
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     }
+=======
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+      },
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];    features: [
 
       "Emerging tech breakthroughs";
@@ -52,9 +60,13 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
     realImplementation: true
 
     contactInfo: {
+<<<<<<< HEAD
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
+=======
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 ];

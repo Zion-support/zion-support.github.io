@@ -48,6 +48,6 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 export function getProviderById(
   id: string
 ): IntegrationProviderMeta | undefined {
-  return PROVIDERS.find((p) => p.id === id);
+  return PROVIDERS && PROVIDERS.find((p) => p && p.id === id);
 }
 

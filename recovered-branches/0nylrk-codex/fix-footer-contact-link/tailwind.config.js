@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+<<<<<<< HEAD
 module.exports = {
   darkMode: ["class"]
+=======
+module && module.exports = {
+  darkMode: ["class"],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   content: [
     './pages/**/*.{ts,tsx}./components/**/*.{ts,tsx}./app/**/*.{ts,tsx}./src/**/*.{ts,tsx}']
   theme: {

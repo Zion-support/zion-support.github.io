@@ -12,6 +12,7 @@ function isAllowedByScope(stateType: string, scope: string): boolean {
   return true
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
   const state = readState();
   if (!state.config.optIn |state.config.paused) {
@@ -20,9 +21,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const signature = req.headers["x-zion-signature"];
   const payload = req.body;
   const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array.isArray(signature) ? signature[0] : undefined);
-  if (!signatureValid) {
-    return res.status(401).json({ error: "Invalid signature" })
+=======
+  if (req && req.method !== "POST") return res && res.status(405).json({ error: "Method not allowed" });
+
+  const state = readState();
+  if (!state && state.config.optIn || state && state.config.paused) {
+    return res && res.status(403).json({ error: "Sync disabled for this instance" })
   }
+
+  const signature = req && req.headers["x-zion-signature"];
+  const payload = req && req.body;
+  const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array && Array.isArray(signature) ? signature[0] : undefined);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  if (!signatureValid) {
+    return res && res.status(401).json({ error: "Invalid signature" })
+  }
+<<<<<<< HEAD
   const event = payload as SyncEvent & { propagate?: boolean }
   if (!event |!event.type |!event.eventId) {
     return res.status(400).json({ error: "Invalid event" })
@@ -35,36 +49,76 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const providedRoot = event.merkleRoot;
     if (!Array.isArray(votes) |!providedRoot) {
       return res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" })
+=======
+
+  const event = payload as SyncEvent & { propagate?: boolean };
+  if (!event || !event && event.type || !event && event.eventId) {
+    return res && res.status(400).json({ error: "Invalid event" })
+  }
+
+  if (!isAllowedByScope(event && event.type, state && state.config.scope)) {
+    return res && res.status(403).json({ error: "Event type not allowed by current scope" })
+  }
+
+  if (event && event.type === "proposal") {
+    const votes = (event as any).payload?.votes;
+    const providedRoot = event && event.merkleRoot;
+    if (!Array && Array.isArray(votes) || !providedRoot) {
+      return res && res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     const computed = computeMerkleRootFromVotes(votes);
     if (computed !== providedRoot) {
-      return res.status(400).json({ error: "Merkle root mismatch" })
+      return res && res.status(400).json({ error: "Merkle root mismatch" })
     }
   }
   const entityId = getEntityId(event);
   const currentState = readState();
   upsertEvent(currentState, event);
   writeState(currentState);
+<<<<<<< HEAD
   const alreadyPropagated = payload.propagate === false;
   if (!alreadyPropagated && currentState.config.peers.length > 0) {
     const headers: Record<string, string> = {}
     const localBody = { ...event, propagate: false }
+=======
+
+  const alreadyPropagated = payload && payload.propagate === false;
+
+  if (!alreadyPropagated && currentState && currentState.config.peers && peers.length > 0) {
+    const headers: Record<string, string> = {};
+    const localBody = { ...event, propagate: false };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const baseSignature = require("../../../utils/sync/signature");
-    const sig = baseSignature.signPayload(localBody);
+    const sig = baseSignature && baseSignature.signPayload(localBody);
     if (sig) headers["x-zion-signature"] = sig;
+<<<<<<< HEAD
     await Promise.all(
       currentState.config.peers
         .filter((p) => !p.paused)
         .map(async (peer) => {
           const url = new URL("/api/sync/publish", peer.baseUrl).toString();
 
+=======
+
+    await Promise && Promise.all(
+      currentState && currentState.config.peers
+        .filter((p) => !p && p.paused)
+        .map(async (peer) => {
+          const url = new URL("/api/sync/publish", peer && peer.baseUrl).toString();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           try {
-            await axios.post(url, localBody, { headers, timeout: 5000 })
+            await axios && axios.post(url, localBody, { headers, timeout: 5000 })
           } catch {
             // ignore peer failure
           }
         })
     )
   }
+<<<<<<< HEAD
   return res.status(200).json({ status: "accepted", entityId })
+=======
+
+  return res && res.status(200).json({ status: "accepted", entityId })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }

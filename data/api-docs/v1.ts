@@ -1,6 +1,11 @@
 import { ApiDocsSpec } from './types';
 
+<<<<<<< HEAD
 const baseUrl = 'https://api.zion.os';
+=======
+const baseUrl = 'https://api && api.zion.os';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const v1: ApiDocsSpec = {
   product: 'Zion OS'
   versions: ['v1']
@@ -8,9 +13,15 @@ const v1: ApiDocsSpec = {
   lastUpdatedIso: new Date().toISOString()
   sections: [
     {
+<<<<<<< HEAD
       id: 'auth'
       title: 'Auth (JWT, OAuth, Wallet)'
       description: 'Authenticate using JWT, OAuth 2.0, or connect a wallet.'
+=======
+      id: 'auth',
+      title: 'Auth (JWT, OAuth, Wallet)',
+      description: 'Authenticate using JWT, OAuth 2 && 2.0, or connect a wallet.',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       endpoints: [
         {
           id: 'auth-login-jwt'
@@ -23,6 +34,7 @@ const v1: ApiDocsSpec = {
           requestBodySchema: { type: 'object', properties: { email: { type: 'string' }, password: { type: 'string' } }, required: ['email', 'password'] }
           responseBodySchema: { type: 'object', properties: { token: { type: 'string' }, expiresIn: { type: 'number' } } }
           samples: [
+<<<<<<< HEAD
             { language: 'curl', code: `curl -X POST ${baseUrl}/v1/auth/login -H 'Content-Type: application/json' -d '{"email":"user@zion.os","password":"***"}'` }
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: 'user@zion.os', password: '***' }) }).then(r => r.json()),` }
             { language: 'python', code: `import requests\nresp = requests.post('${baseUrl}/v1/auth/login', json={'email':'user@zion.os','password':'***'})\nprint(resp.json())` }]
@@ -44,6 +56,16 @@ const v1: ApiDocsSpec = {
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/oauth/token', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ code: 'AUTH_CODE', redirect_uri: 'https://app.partner.com/callback' }) }).then(r => r.json()),` }
             { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/oauth/token', json={'code':'AUTH_CODE','redirect_uri':'https://app.partner.com/callback'}).json()` }]
           versions: ['v1']}]}
+=======
+            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/auth/login -H 'Content-Type: application/json' -d '{"email":"user@example && example.com","password":"password"}'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ email: 'user@example && example.com', password: 'password' }) }).then(r => r && r.json())` },
+            { language: 'python', code: `import requests\nrequests && nrequests.post('${baseUrl}/v1/auth/login', json={'email':'user@example && example.com','password':'password'}).json()` }
+          ],
+          versions: ['v1']
+        }
+      ]
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     {
       id: 'talent'
       title: 'Talent Profiles'
@@ -59,10 +81,21 @@ const v1: ApiDocsSpec = {
           params: { talentId: 'The UUID of the talent' }
           responseBodySchema: { type: 'object', properties: { id: { type: 'string' }, name: { type: 'string' }, skills: { type: 'array', items: { type: 'string' } } } }
           samples: [
+<<<<<<< HEAD
             { language: 'curl', code: `curl '${baseUrl}/v1/talent/123' -H 'Authorization: Bearer <token>'` }
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/talent/123', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json()),` }
             { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/talent/123', headers={'Authorization':'Bearer <token>'}).json()` }]
           versions: ['v1']}]}
+=======
+            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123","body":"Hello"}'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/messages', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ to: 'USER123', body: 'Hello' }) }).then(r => r && r.json())` },
+            { language: 'python', code: `import requests\nrequests && nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()` }
+          ],
+          versions: ['v1']
+        }
+      ]
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     {
       id: 'jobs'
       title: 'Job Listings'
@@ -78,6 +111,7 @@ const v1: ApiDocsSpec = {
           query: { q: 'Search text', status: 'open|closed' }
           responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } }, nextPage: { type: 'string' } } }
           samples: [
+<<<<<<< HEAD
             { language: 'curl', code: `curl '${baseUrl}/v1/jobs?q=engineer&status=open' -H 'Authorization: Bearer <token>'` }
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/jobs?q=engineer&status=open', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json()),` }
             { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/jobs', params={'q':'engineer','status':'open'}, headers={'Authorization':'Bearer <token>'}).json()` }]
@@ -198,4 +232,9 @@ const v1: ApiDocsSpec = {
   ]
 }
 export default v1;
+=======
+            { language: 'curl', code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r && r.json())` },
+            { language: 'python', code: `import requests\nrequests ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 

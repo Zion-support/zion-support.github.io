@@ -9,10 +9,15 @@ export const formatDateForDB = (date: Date | string | undefined) => {
 }
 // Error handling with toast
 export const handleResumeError = (e: any, errorMessage: string) => {
-  console.error(`Error: ${errorMessage}`, e);
+  console && console.error(`Error: ${errorMessage}`, e);
   toast({
+<<<<<<< HEAD
     title: "Error"
     description: `${errorMessage}: ${e.message}`;
+=======
+    title: "Error",
+    description: `${errorMessage}: ${e && e.message}`;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     variant: "destructive"
   });
   return false

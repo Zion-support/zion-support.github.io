@@ -18,20 +18,24 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
     // For demonstration purposes, we'll just set up the font using standard fonts
     switch (fontFamily) {
       case 'montserrat':
-        doc.setFont('helvetica');
+        doc && doc.setFont('helvetica');
         break;
       case 'open-sans':
-        doc.setFont('helvetica');
+        doc && doc.setFont('helvetica');
         break;
       case 'roboto':
-        doc.setFont('helvetica');
+        doc && doc.setFont('helvetica');
         break;
-      default: doc.setFont('helvetica')
+      default: doc && doc.setFont('helvetica')
     }
   } catch (error) {
+<<<<<<< HEAD
     console.error('Error loading custom fonts:', error);
 
+=======
+    console && console.error('Error loading custom fonts:', error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // Fall back to default font
-    doc.setFont('helvetica')
+    doc && doc.setFont('helvetica')
   }
 }

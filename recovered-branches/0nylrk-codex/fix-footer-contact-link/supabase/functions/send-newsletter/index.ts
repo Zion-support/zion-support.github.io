@@ -1,7 +1,12 @@
 
+<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Resend} from "npm: resend@2.0.0";
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {Resend} from "npm: resend@2 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -13,26 +18,42 @@ interface SendNewsletterRequest {
   testEmail?: string
 }
 serve(async (req) => {
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
-    const resendApiKey = Deno.env.get("RESEND_API_KEY");
+    const resendApiKey = Deno && Deno.env.get("RESEND_API_KEY");
     if (!resendApiKey) {
       throw new Error("Resend API key is not set in environment variables")
     }
     const resend = new Resend(resendApiKey);
+<<<<<<< HEAD
     const { subject, previewText, body, testMode, testEmail } = await req.json() as SendNewsletterRequest;
     // If test mode, send to test email only
     if (testMode && testEmail) {
       const emailResponse = await resend.emails.send({
         from: "Zion Marketplace <newsletter@ziontechgroup.com>";
         to: [testEmail]
+=======
+    const { subject, previewText, body, testMode, testEmail } = await req && req.json() as SendNewsletterRequest;
+
+    // If test mode, send to test email only
+    if (testMode && testEmail) {
+      const emailResponse = await resend && resend.emails.send({
+        from: "Zion Marketplace <newsletter@ziontechgroup && ziontechgroup.com>";
+        to: [testEmail],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         subject: `[TEST] ${subject}`;
         html: body
         text: previewText});
+<<<<<<< HEAD
       return new Response(JSON.stringify(emailResponse), {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
+=======
+
+      return new Response(JSON && JSON.stringify(emailResponse), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         status: 200})
     }
     // In production, we would fetch subscriber emails from the database
@@ -41,6 +62,7 @@ serve(async (req) => {
     const emailResponse = {
       id: "test-email-id"
       message: "Email would be sent to all subscribers in production"
+<<<<<<< HEAD
     }
     return new Response(JSON.stringify(emailResponse), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
@@ -49,6 +71,18 @@ serve(async (req) => {
     console.error("Error in send-newsletter function:", error);
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
+=======
+    };
+
+    return new Response(JSON && JSON.stringify(emailResponse), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" };
+      status: 200})
+  } catch (error) {
+    console && console.error("Error in send-newsletter function:", error);
+    
+    return new Response(JSON && JSON.stringify({ error: error && error.message }), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       status: 500})
   }
 });
