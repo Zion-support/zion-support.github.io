@@ -1,24 +1,93 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {ArrowRight, Check, ExternalLink} from "lucide-react";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Check, ExternalLink } from "lucide-react";
 interface IntegrationCardProps {
 
+<<<<<<< HEAD
   title: string
   description: string
   icon: React.ReactNode
+=======
+interface IntegrationCardProps {;
+  title: string,;
+  description: string,;
+  icon: React && React.ReactNode,;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   status?: "connected" | "disconnected" | "pending";
   href?: string;
   onConnect?: () => void;
 }
+<<<<<<< HEAD
 export function IntegrationCard({
+=======
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface IntegrationCardProps {
+  title: string,
+  description: string,
+  icon: React.ReactNode,
+  status?: "connected" | "disconnected" | "pending",
+  href?: string,
+
+  onConnect?: () => void
+}
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function IntegrationCard({;
+  title;
+  description;
+  icon;
+  status = "disconnected";
+  href;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function IntegrationCard({
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   title;
   description;
   icon;
   status;
+<<<<<<< HEAD
+=======
+=======
+  title,
+  description,
+  icon,
+  status = "disconnected",
+  href,
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   onConnect}: IntegrationCardProps) {
   return (
     <Card className="overflow-hidden">;
@@ -60,6 +129,14 @@ export function IntegrationCard({
             <span>Connect</span>;
             <ArrowRight className="ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5" />;
           </Button>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         )}
       </CardFooter>;
     </Card>;
@@ -71,6 +148,10 @@ export function IntegrationCards() {
       {/* Integration cards would go here */}
     </div>
   )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 import React from './react';
 import { Button } from '@/components / ui / button';
@@ -137,3 +218,12 @@ function IntegrationCards() {
       {/* Integration cards would go here */}
     </div>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

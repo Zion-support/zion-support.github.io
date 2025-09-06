@@ -5,8 +5,19 @@ export default function Custom404() {
   return (
     <>
       <Head>
+<<<<<<< HEAD
         <title>404 - Page Not Found</title>
       </Head>
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <title>404 - Page Not Found</title>
+      </Head>
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center py-12">
         <main className="text-center max-w-2xl px-4">
           <h1 className="text-6xl font-bold mb-4 gradient-text">404</h1>
@@ -16,11 +27,31 @@ export default function Custom404() {
           </p>
           <Link href="/" className="btn-primary">
             Go Back Home
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
+=======
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="text-center">
+          <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
+          <p className="text-xl text-gray-600 mb-8">Page not found</p>
+          <Link href="/" className="text-blue-600 hover:text-blue-800">
+            Go back home
+          >
+            Go Home
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </Link>
         </main>
       </div>
     </>
   );
+<<<<<<< HEAD
 import Head from 'next / head';
 import Link from 'next / link';
 ;
@@ -28,11 +59,48 @@ export default /**
  * Custom404 - Function description
  */
 function Custom404() {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+import type { NextPage } from 'next';
+import Head from 'next/head';
+const NotFoundPage: NextPage = () => {
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <>;
       <Head>;
           </Link>;
         </div>;
+<<<<<<< HEAD
       </div>;
     </>);
 }
+=======
+
+      </main>;
+    </>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

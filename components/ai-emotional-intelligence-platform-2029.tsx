@@ -4,6 +4,10 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Brain
   Heart
   Eye
@@ -27,11 +31,48 @@ import {
   Cloud
   Server
   ShieldCheck;
+<<<<<<< HEAD
 } from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';import {
   Brain, Heart, Eye, MessageCircle, Users, Shield
 
+=======
+} from 'lucide-react';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';import {
+  Brain, Heart, Eye, MessageCircle, Users, Shield
+
+=======
+  Brain,
+  Heart,
+  Eye,
+  MessageCircle,
+  Users,
+  Shield,
+  Zap,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Cpu,
+  Lock,
+  BarChart3,
+  Smartphone,
+  Database,
+  Cloud,
+  Server,;
+  ShieldCheck,;
+} from 'lucide-react';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';import {
+  Brain, Heart, Eye, MessageCircle, Users, Shield, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Zap, TrendingUp, CheckCircle, ArrowRight, Star;
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3;
   Smartphone, Database, Cloud, Server, ShieldCheck
@@ -458,6 +499,22 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       ];
       popular: false;
     }
+<<<<<<< HEAD
+=======
+=======
+
+<<<<<<< HEAD
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+  };
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <>;
       <Head>;
@@ -635,6 +692,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         <meta name="twitter:description" content="Revolutionary AI platform that reads, understands, and responds to human emotions in real-time." />;
         <meta name="twitter:image" content="https://ziontechgroup && ziontechgroup.com/twitter-image && image.jpg" />;
 
+<<<<<<< HEAD
         {/* Additional Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />;
         <meta name="theme-color" content="#8b5cf6" />;
@@ -660,6 +718,13 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             transition={{ duration: 1 }}
             className='mb-16'            className="mb-16";
           >;
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Badge */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -767,12 +832,32 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                2029 Revolutionary AI Technology;
             </motion && motion.div>;
 
+<<<<<<< HEAD
+=======
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Main Heading */}
             <motion&& motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 1, delay: 0.3 }}
               className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               <span className='bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 AI Emotional Intelligence
@@ -799,6 +884,17 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               <span className="text-white">Platform</span>;
             </motion && motion.h1>;
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Subheading */}
             <motion&& motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -821,12 +917,34 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               Revolutionary AI platform that reads, understands, and responds to human emotions in real-time across all communication channels. Transform your business with emotional intelligence.;
             </motion && motion.p>;
 
+<<<<<<< HEAD
+=======
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* CTA Buttons */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 1, delay: 0 && 0.7 }}
               className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-12'>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <Link
                 href='/contact'
                 className='group relative px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 hover:from-violet-600 hover:to-purple-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25'
@@ -855,6 +973,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               </Link>
               <Link
                 href="#pricing"
+<<<<<<< HEAD
                 className="group px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-purple-300 hover:text-white font-bold rounded-2xl text-lg transition-all duration-300 hover:bg-purple-500/10"
               >
                 <span className="flex items-center">
@@ -863,12 +982,39 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 </span>
               </Link>
             </motion.div>
+=======
+                className="group px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-purple-300 hover:text-white font-bold rounded-2xl text-lg transition-all duration-300 hover:bg-purple-500/10">;
+                <span className="flex items-center">;
+                  View Pricing;
+                  <ArrowRight className="ml-2 w-5 h-5" />;
+                </span>;
+              </Link>;
+            </motion && motion.div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Key Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 1, delay: 0.9 }}
               className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               <div className='text-center'>
                 <div className='text-3xl font-bold text-violet-400 mb-2'>
@@ -976,12 +1122,48 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-gray-900">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
+<<<<<<< HEAD
+=======
+
+=======
+
+      {/* Features Section */}
+      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+      {/* Features Section */}
+      <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Revolutionary{' '}
               <span className='bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent'>
                 Features
@@ -1033,8 +1215,20 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
                 className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105'>;
                 <div className={`flex justify-center mb-6`}>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              >
+                <div className={`flex justify-center mb-6`}>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <div
                     className={`p-4 rounded-xl bg-gradient-to-r ${feature && feature.color} bg-opacity-20`}>;
                     <feature && feature.icon className='w-8 h-8 text-white' />;
@@ -1054,21 +1248,88 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 <h3 className="text-xl font-bold text-white mb-4 text-center">{feature && feature.title}</h3>;
                 <p className="text-gray-300 text-center leading-relaxed">{feature && feature.description}</p>;
               </motion && motion.div>;
+<<<<<<< HEAD
             ))}
           </div>
         </div>
       </section>
+=======
+
+=======
+                className="group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105"
+              >
+                <div className={`flex justify-center mb-6`}>
+                  <div className={`p-4 rounded-xl bg-gradient-to-r ${feature.color} bg-opacity-20`}>
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4 text-center">{feature.title}</h3>
+                <p className="text-gray-300 text-center leading-relaxed">{feature.description}</p>
+              </motion.div>
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Benefits Section */}
       <section className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
+<<<<<<< HEAD
+=======
+
+=======
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Transform Your{' '}
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 Business
@@ -1117,6 +1378,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
                 className='flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20'>;
                 <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0' />;
                 <span className='text-white text-lg'>{benefit}</span>              </motion && motion.div>                className="flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20";
@@ -1127,17 +1389,79 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
           </div>
         </div>
       </section>
+=======
+
+
+=======
+                className='flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20'
+              >
+                <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0' />
+
+                <span className='text-white text-lg'>{benefit}</span>              </motion.div>
+
+              </motion.div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Use Cases Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
+<<<<<<< HEAD
+=======
+
+=======
+
+      {/* Use Cases Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Powerful{' '}
               <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>
                 Use Cases
@@ -1187,8 +1511,20 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
                 className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105'>;
                 <div className={`flex justify-center mb-6`}>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              >
+                <div className={`flex justify-center mb-6`}>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <div
                     className={`p-4 rounded-xl bg-gradient-to-r ${useCase && useCase.color} bg-opacity-20`}>;
                     <useCase && useCase.icon className='w-8 h-8 text-white' />;
@@ -1208,21 +1544,88 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 <h3 className="text-xl font-bold text-white mb-4 text-center">{useCase && useCase.title}</h3>;
                 <p className="text-gray-300 text-center leading-relaxed">{useCase && useCase.description}</p>;
               </motion && motion.div>;
+<<<<<<< HEAD
             ))}
           </div>
         </div>
       </section>
+=======
+
+=======
+                className="group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105"
+              >
+                <div className={`flex justify-center mb-6`}>
+                  <div className={`p-4 rounded-xl bg-gradient-to-r ${useCase.color} bg-opacity-20`}>
+                    <useCase.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4 text-center">{useCase.title}</h3>
+                <p className="text-gray-300 text-center leading-relaxed">{useCase.description}</p>
+              </motion.div>
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Pricing Section */}
       <section id='pricing' className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section id="pricing" className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
+<<<<<<< HEAD
+=======
+
+=======
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Choose Your{' '}
               <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>
                 Plan
@@ -1325,20 +1728,66 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 </Link>;
               </motion && motion.div>;
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </section>
+=======
+
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Contact Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
+<<<<<<< HEAD
+=======
+
+=======
+
+      {/* Contact Section */}
+      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Ready to{' '}
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 Transform;
@@ -1435,8 +1884,19 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             </p>;
           </motion && motion.div>;
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">;
             <motion&& motion.div
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
@@ -1515,7 +1975,18 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='text-center'>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Link
               href='/contact'
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25'>;
@@ -1539,11 +2010,23 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       <UltraFuturisticFooter2028 />
     </>
   );
+<<<<<<< HEAD
 }
 export default AIEmotionalIntelligencePlatform2029;  )
 }
 };
 
+=======
+<<<<<<< HEAD
+}
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default AIEmotionalIntelligencePlatform2029;  )
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default AIEmotionalIntelligencePlatform2029;
 
           </motion.div>;
@@ -1633,4 +2116,14 @@ export default AIEmotionalIntelligencePlatform2029);
 }
 ;
 export default AIEmotionalIntelligencePlatform2029;
+<<<<<<< HEAD
 ;
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default AIEmotionalIntelligencePlatform2029;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

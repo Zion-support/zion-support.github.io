@@ -8,10 +8,23 @@ export default function TechnologyInsightsPage() {
       id: 'quantum-computing'
       title: 'Quantum Computing in 2025'
       description:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech'
       readTime: '15 min read'
       featured: true
     }
+<<<<<<< HEAD
+=======
+=======
+        'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
+      readTime: '15 min read',
+      featured: true;
+    };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     {
       id: 'edge-ai'
       title: 'Edge AI Revolution'
@@ -248,6 +261,7 @@ export default function TechnologyInsightsPage() {;
           name='description'
           content="Explore Zion Tech Group's technology insights, research, and thought leadership in AI, automation, and emerging technologies."
         />;
+<<<<<<< HEAD
         <meta
           property='og:title'
           content='Technology Insights | Zion Tech Group'
@@ -332,10 +346,21 @@ export default function TechnologyInsightsPage() {;
                     >
                       Read More <span className="ml-1"></span>
                     </Link>
+=======
+        <meta name='twitter:card' content='summary_large_image' />;
+      </Head>;
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   </div>
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
                       href={`/blog/${trend && trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
                       Read More <span className='ml-1'></span>                    </Link>      </Head>;
@@ -381,6 +406,28 @@ export default function TechnologyInsightsPage() {;
               </h2>;
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
                 {researchAreas && researchAreas.map((area, index) => (;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {/* Research Areas */}
+            <div className='mb-16'>
+              <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
+                Research Focus Areas
+              </h2>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {researchAreas.map((area, index) => (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'>;
@@ -402,6 +449,7 @@ export default function TechnologyInsightsPage() {;
                     <ul className="space-y-2">;
                       {area && area.focus.map((focus, focusIndex) => (;
                         <li key={focusIndex} className="text-sm text-white/60 flex items-center">;
+<<<<<<< HEAD
                           <span className="text-cyan-400 mr-2"></span>;
                           {focus}
                         </li>;
@@ -418,6 +466,43 @@ export default function TechnologyInsightsPage() {;
               </h2>;
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
                 {whitepapers && whitepapers.map((paper, index) => (;
+=======
+                          <span className="text-cyan-400 mr-2">•</span>;
+
+=======
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Research Focus Areas</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {researchAreas.map((area, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
+                    <div className="text-4xl mb-4">{area.icon}</div>
+                    <h3 className="text-xl font-bold mb-3 text-white">{area.title}</h3>
+                    <p className="text-white/70 mb-4">{area.description}</p>
+                    <ul className="space-y-2">
+                      {area.focus.map((focus, focusIndex) => (
+                        <li key={focusIndex} className="text-sm text-white/60 flex items-center">
+                          <span className="text-cyan-400 mr-2">•</span>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {/* Whitepapers */}
+            <div className='mb-16'>
+              <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
+                Research Whitepapers
+              </h2>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {whitepapers.map((paper, index) => (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'>;
@@ -451,10 +536,25 @@ export default function TechnologyInsightsPage() {;
                     >
                       Download PDF <span className="ml-1"></span>
                     </Link>
+<<<<<<< HEAD
+=======
+=======
+
+                      Download PDF <span className='ml-1'>→</span>                    </Link>
+
+                    </Link>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   </div>
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
             {/* Innovation Lab */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
@@ -462,6 +562,21 @@ export default function TechnologyInsightsPage() {;
               </h2>
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {/* Innovation Lab */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <div>
                     <h3 className='text-2xl font-bold mb-4 text-cyan-400'>
                       Cutting-Edge Research
@@ -750,6 +865,7 @@ export default function TechnologyInsightsPage() {;
                 </Link>
                 <Link
                   href="/blog"
+<<<<<<< HEAD
                   className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200">;
 );
 }
@@ -767,3 +883,31 @@ export default function TechnologyInsightsPage() {;
 }
     </>);
 }
+=======
+
+                  className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200"
+                >
+                  Read Our Blog
+                </Link>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

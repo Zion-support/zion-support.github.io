@@ -4,12 +4,17 @@ import { useRouter  } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
 
 const categories: GrantCategory[] = [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   'Ecosystem Tools'
   'Talent Development'
   'Regional Expansion'
   'Research Grants'
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
 export default function ApplyGrantPage() {
+<<<<<<< HEAD
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
   'Talent Development',;
@@ -17,6 +22,16 @@ const categories: GrantCategory[] = [;
   'Research Grants',;
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
 export default function ApplyGrantPage() {;
+=======
+=======
+  'Ecosystem Tools',
+  'Talent Development',
+  'Regional Expansion',
+  'Research Grants',
+];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
+export default function ApplyGrantPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState('');
@@ -100,6 +115,7 @@ export default function ApplyGrantPage() {;
   }
 
   return (
+<<<<<<< HEAD
     <EnhancedLayout>;
       <h1 className='text-2xl font-semibold mb-4'>;
         Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}
@@ -139,6 +155,18 @@ export default function ApplyGrantPage() {;
             className='mt-1 w-full border rounded p-2'
             value={projectName}
             onChange={e => setProjectName(e && e.target.value)}
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {error && <div className='text-sm text-red-600'>{error}</div>}
+        <div className='flex gap-3'>
+=======
+            onChange={e => setPitchDeckUrl(e && e.target.value)}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           />;
         </label>;
         <label className='text-sm'>;
@@ -356,3 +384,15 @@ export default function ApplyGrantPage() {;
       </div>;
     </EnhancedLayout>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

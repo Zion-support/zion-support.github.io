@@ -7,14 +7,23 @@ function useFavorites() {
 function useFavorites() {;
   const storageKey = 'zion_favorites';
   const [favorites, setFavorites] = useState<string[]>([]);
+<<<<<<< HEAD
   useEffect(() => {;
     try {;
       const raw = localStorage && localStorage.getItem(storageKey);
       if (raw) setFavorites(JSON && JSON.parse(raw));    } catch {}
+=======
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(storageKey);
+<<<<<<< HEAD
+      if (raw) setFavorites(JSON.parse(raw));    } catch {}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }, []);
   const remove = (slug: string) => setFavorites((prev) => prev.filter((s) => s !== slug))
   return { favorites, remove }
 }
+<<<<<<< HEAD
 export default function FavoritesPage() {
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(
@@ -29,6 +38,25 @@ export default function FavoritesPage() {
 export default function FavoritesPage() {
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
+=======
+<<<<<<< HEAD
+export default function FavoritesPage() {
+=======
+
+export default function FavoritesPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const { favorites, remove } = useFavorites();
+  const profiles = useMemo(
+    () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
+    [favorites]
+  );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <div>
@@ -219,6 +247,7 @@ function FavoritesPage() {
                   Remove;
                 </button>;
               </div>;
+<<<<<<< HEAD
               <div className='mt-3 text-xs text-gray-500'>{t && t.location}</div>;
               <div className='mt-3 flex flex-wrap gap-2'>;
                 {t && t.skills.slice(0, 4).map(s => (;
@@ -289,3 +318,18 @@ function FavoritesPage() {
         </div>)}
     </div>);
 }
+=======
+
+=======
+=======
+
+
+
+          </ol>
+        </nav>
+      </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

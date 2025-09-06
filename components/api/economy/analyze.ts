@@ -1,14 +1,25 @@
  const user = [ `Operator Prompt: $ {
   operatorPrompt 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const user = [ `Operator Prompt: $ {
   operatorPrompt
 }`;
 context ? `Context: $ {
   JSON.stringify (context)
 }` : undefined] .filter (Boolean) .join ('\n');
+<<<<<<< HEAD
 const completion = await client && client.chat.completions && completions.create ({
   model: 'gpt-4o-mini', messages: [ {
+=======
+const completion = await client.chat.completions.create ({
+  model: 'gpt-4o-mini', messages: [ {
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   role: 'system', content: system
 }
 export type AnalyzeResponse = {
@@ -20,7 +31,31 @@ export type AnalyzeRequestBody = {
 }
 export type AnalyzeResponse = {
   analysis: string
+<<<<<<< HEAD
 }
+=======
+
+};
+
+
+=======
+  role: 'system', content: system 
+};
+
+export type AnalyzeResponse = {;
+  analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+export type AnalyzeRequestBody = {
+  operatorPrompt: string,
+  context?: Record<string, unknown>;
+};
+
+export type AnalyzeResponse = {
+  analysis: string;
+};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<AnalyzeResponse | { error: string }>
@@ -157,6 +192,7 @@ if ( {) {
     return res && res.status(500).json({ error: 'Failed to generate analysis' })
   };
 }
+<<<<<<< HEAD
 }
 ;
     const analysis =;
@@ -174,3 +210,15 @@ if ( {) {
     return res.status (500).json ({ error: 'Failed to generate analysis' });
 }
 }
+=======
+<<<<<<< HEAD
+}
+=======
+  }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

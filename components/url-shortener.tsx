@@ -3,7 +3,37 @@ import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
 
+<<<<<<< HEAD
 import {
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+
+import {
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Link
   Copy
   BarChart3
@@ -14,6 +44,7 @@ import {
   QrCode
   Settings
   Trash2;
+<<<<<<< HEAD
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -31,6 +62,18 @@ import {;
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
 export default function URLShortenerPage() {;
+=======
+} from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
+
+export default function URLShortenerPage() {
+=======
+import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+export default function URLShortenerPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [longUrl, setLongUrl] = useState('');
   const [customAlias, setCustomAlias] = useState('');
   const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),
@@ -398,6 +441,7 @@ export default function URLShortenerPage() {;
                 <BarChart3 className='w-6 h-6 mr-3 text-red-400' />
                 Your Statistics
               </h3>
+<<<<<<< HEAD
               <div className='space-y-6'>
                 <div className='grid grid-cols-2 gap-4'>
                   <div className='text-center p-4 bg-gray-700 rounded-lg'>
@@ -550,6 +594,14 @@ export default function URLShortenerPage() {;
           </div>
         </div>
       </section>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
         <section className='py-20 bg-gray-800'>
@@ -763,10 +815,20 @@ export default function URLShortenerPage() {;
         </section>;
       )}
       {/* Features */}
+<<<<<<< HEAD
       <section className='py-20 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+=======
+
+              Professional URL Shortening Features
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to create, manage, and track your shortened
@@ -944,6 +1006,46 @@ export default function URLShortenerPage() {;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-orange-600 to-red-600'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+          </h2>
+          <p className='text-xl text-orange-100 mb-8'>
+            Join thousands of businesses using our professional URL shortening
+            service to improve their link management.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <Button
+              href='/contact'
+              size='lg'
+              className='bg-white text-orange-600 hover:bg-gray-100'
+            >
+              Get Started Today
+              <ArrowRight className='w-5 h-5 ml-2' />
+            </Button>
+            <Button
+              href='/pricing'
+              variant='outline'
+              size='lg'
+              className='border-white text-white hover:bg-white hover:text-orange-600'            >              href="/pricing"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-orange-600"
+              View Pricing
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <section className='py-20 bg-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>;
@@ -1036,6 +1138,7 @@ export default function URLShortenerPage() {;
               Perfect For Every Business Need;
             </h2>;
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
+<<<<<<< HEAD
     return result;
   }
 ;
@@ -1723,3 +1826,13 @@ export default function URLShortenerPage() {;
 }
     </>);
 }
+=======
+=======
+}
+
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

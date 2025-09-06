@@ -1,7 +1,29 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {TalentProfile} from "@/types/talent";
+import {toast} from "@/hooks/use-toast";
+import {useAuthStatus} from "@/hooks/talent";
+export function useSavedTalents() {;
+  const { isAuthenticated, userDetails } = useAuthStatus();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
+  const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState, useEffect } from "react",
+import { supabase } from "@/integrations/supabase/client",
+import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { toast } from "@/hooks/use-toast";
 import { useAuthStatus } from "@/hooks/talent";
 export function useSavedTalents() {
@@ -9,8 +31,32 @@ export function useSavedTalents() {
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]),
   const [isLoading, setIsLoading] = useState(true);
+<<<<<<< HEAD
+=======
+=======
+import { toast } from "@/hooks/use-toast",
+import { useAuthStatus } from "@/hooks/talent",
+export function useSavedTalents() {
+  const { isAuthenticated, userDetails } = useAuthStatus(),
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
+  const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Fetch saved talents
   useEffect(() => {
+<<<<<<< HEAD
+=======
+    const fetchSavedTalents = async () => {
+      if (!isAuthenticated || !userDetails.id) {
+        setIsLoading(false),
+        return
+<<<<<<< HEAD
+      }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
     const fetchSavedTalents = async () => {
       if (!isAuthenticated |!userDetails.id) {
@@ -36,6 +82,7 @@ export function useSavedTalents() {
               .in('id', talentIds);
             if (talentError) throw talentError;
             setSavedTalents(talentData |[])
+<<<<<<< HEAD
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { TalentProfile } from '@/types / talent';
@@ -50,6 +97,25 @@ function useSavedTalents() {
   const [savedTalentIds, setSavedTalentIds] = useState < string[]>([]);
   const [is_loading, setIsLoading] = useState (true);
 ;
+=======
+=======
+<<<<<<< HEAD
+      if (!isAuthenticated || !userDetails.id) {
+        setIsLoading(false),
+        return
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState, useEffect } from "react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { TalentProfile } from "@/types/talent",;
+import { toast } from "@/hooks/use-toast",;
+import { useAuthStatus } from "@/hooks/talent",;
+export function useSavedTalents() {;
+  const { isAuthenticated, userDetails } = useAuthStatus(),;
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),;
+  const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Fetch saved talents;
   useEffect (() => {
     const fetchSavedTalents = async () => {
@@ -85,6 +151,7 @@ if ( {) {
   $2
 }
             // Fetch full talent profiles for saved talents;
+<<<<<<< HEAD
             const { data: talent_data, error: talent_error } = await supabase;
               .from ('talent_profiles');
               .select ('*');
@@ -110,6 +177,38 @@ if (throw talent_error) {
         setIsLoading (false);
       }
     }
+=======
+            const { data: talentData, error: talentError } = await supabase;
+              .from('talent_profiles');
+              .select('*');
+              .in('id', talentIds),;
+            if (talentError) throw talentError,;
+            setSavedTalents(talentData || []);
+          } else {;
+            setSavedTalents([]);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching saved talents:', error),
+        toast({
+
+          title: "Error loading favorites",
+          description: "There was a problem loading your saved talents.",
+
+          variant: "destructive"
+        })
+      } finally {
+        setIsLoading(false)
+      }
+
+    },
+    
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     fetchSavedTalents()
   }, [isAuthenticated, userDetails.id]);
   // Toggle save talent
@@ -168,10 +267,21 @@ if ( {) {
     } catch (error) {
       console && console.error('Error toggling saved talent:', error);
       toast({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         title: "Error";
         description: "There was a problem updating your favorites. Please try again."
         variant: "destructive"
       })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
   // Check if talent is saved
@@ -186,7 +296,41 @@ if ( {) {
 
     isTalentSaved
   }
+<<<<<<< HEAD
     const is_saved = savedTalentIds.includes (talent.id);
+=======
+=======
+<<<<<<< HEAD
+        title: "Error",
+        description: "There was a problem updating your favorites. Please try again.",
+        variant: "destructive"
+      })
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      } catch (error) {;
+        console.error('Error fetching saved talents:', error),;
+        toast({;
+          title: "Error loading favorites",;
+          description: "There was a problem loading your saved talents.",;
+          variant: "destructive";
+        });
+      } finally {;
+        setIsLoading(false);
+      }
+    },;
+    fetchSavedTalents();
+  }, [isAuthenticated, userDetails.id]),;
+  // Toggle save talent;
+  const toggleSaveTalent = async (talent: TalentProfile) => {;
+    if (!isAuthenticated || !userDetails.id || !talent.id) {;
+      toast({;
+        title: "Authentication required",;
+        description: "Please log in to save talents to your favorites",;
+        variant: "destructive";
+      }),;
+      return;
+    }
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
     try {
       // Check condition
@@ -250,5 +394,13 @@ if (throw error) {
     is_loading;
     toggleSaveTalent;
     isTalentSaved;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }

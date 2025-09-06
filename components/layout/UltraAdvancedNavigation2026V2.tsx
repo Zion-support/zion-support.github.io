@@ -322,6 +322,229 @@ export default function UltraAdvancedNavigation2026V2() {;
     mobile: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
+<<<<<<< HEAD
+=======
+
+=======
+      setIsScrolled(window.scrollY > 20)
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []);
+
+  const navigationItems = [
+    {
+      name: 'Home',
+      href: '/',
+      icon: <Zap className="w-4 h-4" />
+    };
+    {
+      name: 'Services',
+      href: '/services',
+      icon: <Brain className="w-4 h-4" />,
+      dropdown: [
+        { name: 'AI & Machine Learning', href: '/services?category=ai', icon: <Brain className="w-4 h-4" /> },
+        { name: 'Quantum & Space Tech', href: '/services?category=quantum', icon: <Atom className="w-4 h-4" /> },
+        { name: 'Emerging Technologies', href: '/services?category=emerging', icon: <Microscope className="w-4 h-4" /> },
+        { name: 'Micro SaaS', href: '/services?category=micro-saas', icon: <Code className="w-4 h-4" /> },
+        { name: 'Metaverse & VR', href: '/services?category=metaverse', icon: <Gamepad2 className="w-4 h-4" /> },
+        { name: 'Cybersecurity', href: '/services?category=cybersecurity', icon: <Shield className="w-4 h-4" /> },
+        { name: 'Space Technology', href: '/services?category=space', icon: <Rocket className="w-4 h-4" /> },
+        { name: 'Biotech & Healthcare', href: '/services?category=biotech', icon: <TestTube className="w-4 h-4" /> },
+        { name: 'Blockchain & Web3', href: '/services?category=blockchain', icon: <Database className="w-4 h-4" /> },
+        { name: 'Autonomous Vehicles', href: '/services?category=transportation', icon: <Car className="w-4 h-4" /> },
+        { name: 'Cloud & Infrastructure', href: '/services?category=cloud', icon: <Cloud className="w-4 h-4" /> },
+        { name: 'Edge Computing', href: '/services?category=edge', icon: <Server className="w-4 h-4" /> },
+        { name: 'IoT & Connectivity', href: '/services?category=iot', icon: <Network className="w-4 h-4" /> },
+        { name: 'Semiconductor Tech', href: '/services?category=semiconductor', icon: <Cpu className="w-4 h-4" /> },
+        { name: 'Creative & Design', href: '/services?category=creative', icon: <Palette className="w-4 h-4" /> },
+        { name: 'Global Solutions', href: '/services?category=global', icon: <Globe className="w-4 h-4" /> }
+      ]
+    };
+    {
+      name: 'Showcase',
+      href: '/enhanced-services-showcase-2026-v2',
+      icon: <Rocket className="w-4 h-4" />
+    };
+    {
+      name: 'Pricing',
+      href: '/pricing-enhanced-2026',
+      icon: <Database className="w-4 h-4" />
+    };
+    {
+      name: 'About',
+      href: '/about',
+      icon: <Globe className="w-4 h-4" />
+    };
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: <Mail className="w-4 h-4" />
+=======
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Zap,
+  Brain,
+  Atom,
+  Microscope,
+  Gamepad2,
+  Shield,
+  Rocket,
+  Database,
+  TestTube,
+  Car,
+  Globe,
+  Code,
+  Palette,
+  Cloud,
+  Server,
+  Network,;
+  Cpu,;
+<<<<<<< HEAD
+} from 'lucide-react';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+export default function UltraAdvancedNavigation2026V2() {;
+=======
+} from 'lucide-react';
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function UltraAdvancedNavigation2026V2() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    }
+    window.addEventListener ('scroll', handle_scroll);
+    return () => window.removeEventListener ('scroll', handle_scroll);  }, []);      setIsScrolled (window.scroll_y > 20);
+    }
+    window.addEventListener ('scroll', handle_scroll);
+    return () => window.removeEventListener ('scroll', handle_scroll);
+  const navigation_items = [;
+    {
+      name: 'Home',
+      href: '/',
+      icon: <Zap className='w - 4 h - 4' />,
+    },
+    {
+      name: 'Services',
+      href: '/services',
+      icon: <Brain className='w - 4 h - 4' />,
+      dropdown: [;
+        {
+          name: 'AI & Machine Learning',
+          href: '/services?category = ai',
+          icon: <Brain className='w - 4 h - 4' />,
+        },
+        {
+          name: 'Quantum & Space Tech',
+          href: '/services?category = quantum',
+          icon: <Atom className='w - 4 h - 4' />,
+        },
+        {
+          name: 'Emerging Technologies',
+          href: '/services?category = emerging',
+          icon: <Microscope className='w - 4 h - 4' />,
+        },
+        {
+          name: 'Micro SaaS',
+          href: '/services?category = micro - saas',
+          icon: <Code className='w - 4 h - 4' />,
+        },
+        {
+          name: 'Metaverse & VR',
+          href: '/services?category = metaverse',
+          icon: <Gamepad2 className='w - 4 h - 4' />,
+        },
+        {
+          name: 'Cybersecurity',
+          href: '/services?category = cybersecurity',
+          icon: <Shield className='w - 4 h - 4' />,
+        },
+        {
+          name: 'Space Technology',
+          href: '/services?category = space',
+          icon: <Rocket className='w - 4 h - 4' />,
+        },
+        {
+          name: 'Biotech & Healthcare',
+          href: '/services?category = biotech',
+          icon: <TestTube className='w - 4 h - 4' />,
+        },
+        {
+          name: 'Blockchain & Web3',
+          href: '/services?category = blockchain',
+          icon: <Database className='w - 4 h - 4' />,
+        },
+        {
+          name: 'Autonomous Vehicles',
+          href: '/services?category = transportation',
+          icon: <Car className='w - 4 h - 4' />,
+        },
+        {
+          name: 'Cloud & Infrastructure',
+          href: '/services?category = cloud',
+          icon: <Cloud className='w - 4 h - 4' />,
+        },
+        {
+          name: 'Edge Computing',
+          href: '/services?category = edge',
+          icon: <Server className='w - 4 h - 4' />,
+        },
+        {
+          name: 'IoT & Connectivity',
+          href: '/services?category = iot',
+          icon: <Network className='w - 4 h - 4' />,
+        },
+        {
+          name: 'Semiconductor Tech',
+          href: '/services?category = semiconductor',
+          icon: <Cpu className='w - 4 h - 4' />,
+        },
+        {
+          name: 'Creative & Design',
+          href: '/services?category = creative',
+          icon: <Palette className='w - 4 h - 4' />,
+        },
+        {
+          name: 'Global Solutions',
+          href: '/services?category = global',
+          icon: <Globe className='w - 4 h - 4' />,
+        },
+      ],
+    },    {
+      name: 'Showcase',
+      href: '/enhanced - services - showcase - 2026 - v2',
+      icon: <Rocket className='w - 4 h - 4' />,
+    },
+    {
+      name: 'Pricing',
+      href: '/pricing - enhanced - 2026',
+      icon: <Database className='w - 4 h - 4' />,
+    },
+    {
+      name: 'About',
+      href: '/about',
+      icon: <Globe className='w - 4 h - 4' />,
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: <Mail className='w - 4 h - 4' />,
+    },  ];      icon: <Mail className="w - 4 h - 4" />;
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   ];
 ;
@@ -331,6 +554,7 @@ export default function UltraAdvancedNavigation2026V2() {;
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
 
+<<<<<<< HEAD
   return (
     <>;
       {/* Top Contact Bar */}
@@ -356,6 +580,15 @@ export default function UltraAdvancedNavigation2026V2() {;
                 href='/enhanced-services-showcase-2026-v2'
                 className='text-purple-400 hover:text-purple-300 transition-colors'
               >                 New 2026 Services                <span>{contactInfo.mobile}</span>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                <span>{contactInfo.mobile}</span>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-blue-400" />
@@ -475,6 +708,7 @@ export default function UltraAdvancedNavigation2026V2() {;
                     <button
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
+<<<<<<< HEAD
                       className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2';
                     >;
                       {item && item.icon}
@@ -495,12 +729,45 @@ export default function UltraAdvancedNavigation2026V2() {;
                       {item && item.icon}
                       <span>{item && item.name}</span>;
                     </Link>;
+=======
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'
+                    >
+                      {item.icon}
+                      <span>{item.name}</span>
+                      <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                    </button>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'                    >                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                    >
+                      {item.icon}
+                      <span>{item.name}</span>
+<<<<<<< HEAD
+                      <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                    >
+                      {item.icon}
+                      <span>{item.name}</span>
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   )}
                   {/* Dropdown Menu */}
                   {item && item.dropdown && activeDropdown === item && item.name && (;
                     <div
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
+<<<<<<< HEAD
                       className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-4';
                     >;
                       <div className='grid grid-cols-1 gap-2'>;
@@ -526,6 +793,53 @@ export default function UltraAdvancedNavigation2026V2() {;
                               {dropdownItem && dropdownItem.name}
                             </span>;
                           </Link>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    >
+                      <div className='grid grid-cols-1 gap-2'>
+                        {item.dropdown.map(dropdownItem => (
+                          <Link
+                            key={dropdownItem.name}
+                            href={dropdownItem.href}
+                            className='flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group'
+                          >
+                            <div className='text-purple-400 group-hover:text-purple-300 transition-colors'>
+                              {dropdownItem.icon}
+                            </div>
+<<<<<<< HEAD
+                            <span className='text-gray-300 group-hover:text-white transition-colors'>                              {dropdownItem.name}                    >
+                      <div className="grid grid-cols-1 gap-2">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            href={dropdownItem.href}
+                            className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group"
+                          >
+                            <div className="text-purple-400 group-hover:text-purple-300 transition-colors">
+                              {dropdownItem.icon}
+                            </div>
+                            <span className="text-gray-300 group-hover:text-white transition-colors">
+                              {dropdownItem.name}
+=======
+                            <span className='text-gray-300 group-hover:text-white transition-colors'>                              {dropdownItem.name}
+
+                              {dropdownItem.name}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                            </span>
+                          </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         ))}
                       </div>;
                     </div>;
@@ -534,6 +848,7 @@ export default function UltraAdvancedNavigation2026V2() {;
               ))}
             </div>
             {/* CTA Button */}
+<<<<<<< HEAD
             <div className='hidden lg:flex items-center space-x-4'>
               <Link href='/contact'>
                 <button className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>                  Get Started            <div className="hidden lg:flex items-center space-x-4">
@@ -547,10 +862,19 @@ export default function UltraAdvancedNavigation2026V2() {;
               </Link>;
               <Link href="/contact">
                 <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   Get Started
                 </button>
               </Link>
             </div>
+<<<<<<< HEAD
             </div>;
 
             {/* CTA Button */}
@@ -678,6 +1002,14 @@ export default function UltraAdvancedNavigation2026V2() {;
               </Link>;
             </div>;
 
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -709,6 +1041,17 @@ export default function UltraAdvancedNavigation2026V2() {;
         </div>;
       </nav>;
 
+<<<<<<< HEAD
+=======
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -716,11 +1059,24 @@ export default function UltraAdvancedNavigation2026V2() {;
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
+<<<<<<< HEAD
             transition={{ duration: 0 && 0.3 }}
             className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden'
             <div className='p-6'>;
               <div className='flex items-center justify-between mb-8'>;
                 <div className='text-xl font-bold text-white'>Menu</div>;
+=======
+
+          >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <div className='p-6'>
+              <div className='flex items-center justify-between mb-8'>
+                <div className='text-xl font-bold text-white'>Menu</div>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <button
                   onClick={() => setIsOpen(false)}
                   className='p-2 text-gray-300 hover:text-white transition-colors'
@@ -777,11 +1133,26 @@ export default function UltraAdvancedNavigation2026V2() {;
                       <Link
                         href={item && item.href}
                         onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
                         className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3'                        className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3";
                       >;
                         {item && item.icon}
                         <span>{item && item.name}</span>;
                       </Link>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      >
+                        {item.icon}
+                        <span>{item.name}</span>
+                      </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     )}
                   </div>;
                 ))}
@@ -928,9 +1299,23 @@ export default function UltraAdvancedNavigation2026V2() {;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
           </motion && motion.div>;
         )}
       </AnimatePresence>
+=======
+
+      </AnimatePresence>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Overlay */}
       {isOpen && (;
         <motion&& motion.div
@@ -948,7 +1333,8 @@ export default function UltraAdvancedNavigation2026V2() {;
           className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}          className="fixed inset-0 bg-black/50 z-40 lg:hidden";
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={() => setIsOpen(false)}
-        />;
+<<<<<<< HEAD
+        />
       )}
       {/* Spacer for fixed navigation */}
       <div className='h-32'></div>
@@ -961,6 +1347,7 @@ export default function UltraAdvancedNavigation2026V2() {;
     </>;
   );
 }
+<<<<<<< HEAD
           className='fixed inset - 0 bg - black / 50 z - 40 lg:hidden'          on_click={() => setIsOpen (false)}          className="fixed inset - 0 bg - black / 50 z - 40 lg:hidden";
           on_click={() => setIsOpen (false)}
         />)}
@@ -969,3 +1356,37 @@ export default function UltraAdvancedNavigation2026V2() {;
     </>);      <div className="h - 32"></div>;
     </>);
 }
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}
+
+          onClick={() => setIsOpen(false)}
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        />
+      )}
+
+      {/* Spacer for fixed navigation */}
+      <div className='h-32'></div>
+    </>
+<<<<<<< HEAD
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+);      <div className="h-32"></div>
+    </>
+  );
+}
+
+}
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

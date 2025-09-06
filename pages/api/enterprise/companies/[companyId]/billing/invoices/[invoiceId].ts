@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 import type { NextApiRequest, NextApiResponse } from "next";
 export const config = {
   api: {
+<<<<<<< HEAD
     responseLimit: false,
   },
 };
@@ -15,6 +21,29 @@ export default async function handler(
 ) {
   try {
   const { companyId, invoiceId } = req && req.query;
+=======
+    responseLimit: false
+  }
+}
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+export const config = {
+  api: {
+    responseLimit: false,
+  },;
+};
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const { companyId, invoiceId } = req.query;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (
     !companyId |
     typeof companyId !== "string" |
@@ -36,7 +65,20 @@ export default async function handler(
   );
   res && res.status(200).send(pdfBuffer);
 }
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ invoice: 'PDF buffer' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export const config = {;
+  api: {;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     responseLimit: false}};
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -65,6 +107,7 @@ export const config = {
     response_limit: false,
   },
 }
+<<<<<<< HEAD
 ;
 export default async /**
  * handler - Function description
@@ -93,3 +136,16 @@ if ( {) {
   );
   res.status (200).send (pdf_buffer);
 }
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

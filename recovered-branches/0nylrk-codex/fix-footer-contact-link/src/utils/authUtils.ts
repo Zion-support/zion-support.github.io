@@ -1,6 +1,24 @@
 
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client";
 import type { UserDetails } from "@/types/auth";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { supabase } from "@/integrations/supabase/client";
+=======
+import {supabase} from "@/integrations/supabase/client";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import type { UserDetails } from "@/types/auth";
+=======
+import { supabase } from "@/integrations/supabase/client",
+import type { UserDetails } from "@/types/auth",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 /**
  * Utility function to clean up authentication state
  * This helps prevent auth state inconsistencies and "limbo" states
@@ -19,9 +37,48 @@ export const cleanupAuthState = () => {
   Object.keys(sessionStorage |{}).forEach((key) => {
     if (key.startsWith('supabase.auth.') |key.includes('sb-')) {
       sessionStorage.removeItem(key)
+<<<<<<< HEAD
     }
   })
 }
+=======
+<<<<<<< HEAD
+    }
+  })
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { supabase } from "@/integrations/supabase/client",;
+import type { UserDetails } from "@/types/auth",;
+/**;
+ * Utility function to clean up authentication state;
+ * This helps prevent auth state inconsistencies and "limbo" states;
+ */;
+export const cleanupAuthState = () => {;
+  // Remove standard auth tokens;
+  localStorage.removeItem('supabase.auth.token'),;
+  // Remove all Supabase auth keys from localStorage;
+  Object.keys(localStorage).forEach((key) => {;
+    if (key.startsWith('supabase.auth.') || key.includes('sb-')) {;
+      localStorage.removeItem(key);
+    }
+  }),;
+  // Remove from sessionStorage if in use;
+  Object.keys(sessionStorage || {}).forEach((key) => {;
+    if (key.startsWith('supabase.auth.') || key.includes('sb-')) {;
+      sessionStorage.removeItem(key);
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+  })
+},
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 /**
  * Utility function to check new user registration and schedule welcome emails
  */
@@ -108,6 +165,64 @@ if ( {) {
           user_id: user && user.id;
             user_type: user.user_type || "unknown",
             display_name: user.display_name || user.email?.split ("@")[0] || "User";
+<<<<<<< HEAD
+=======
+=======
+          user_id: user.id,
+          campaign_type: "welcome_series",
+          template_name: "welcome_email",
+          template_data: {
+<<<<<<< HEAD
+            user_id: user.id;
+            email_type: "welcome_series";
+            user_type: user.userType |"unknown"
+            display_name: user.displayName |user.email?.split("@")[0] |"User"
+          }
+        })
+    }
+  } catch (error) {
+    console.error("Error checking or scheduling welcome email:", error)
+<<<<<<< HEAD
+  }
+}
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            user_id: user.id,
+            email_type: "welcome_series",
+            user_type: user.userType || "unknown",
+            display_name: user.displayName || user.email?.split("@")[0] || "User"
+  });
+},;
+/**;
+ * Utility function to check new user registration and schedule welcome emails;
+ */;
+export const checkNewRegistration = async (user: UserDetails) => {;
+  try {;
+    // Check if user has received welcome email already;
+    const { data: existingCampaign } = await supabase;
+      .from("email_campaigns");
+      .select("id");
+      .eq("user_id", user.id);
+      .eq("campaign_type", "welcome_series");
+      .maybeSingle(),;
+    // If no welcome email sent yet, schedule one;
+    if (!existingCampaign) {;
+      // Create a scheduled job for the welcome email;
+      await supabase;
+        .from("scheduled_jobs");
+        .insert({;
+          job_type: "send_retention_email",;
+          scheduled_for: new Date().toISOString(),;
+          status: "pending",;
+          payload: {;
+            user_id: user.id,;
+            email_type: "welcome_series",;
+            user_type: user.userType || "unknown",;
+            display_name: user.displayName || user.email?.split("@")[0] || "User";
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           }
         });
 ;
@@ -129,7 +244,18 @@ if ( {) {
         });
     }
   } catch (error) {
+<<<<<<< HEAD
     console && console.error("Error checking or scheduling welcome email:", error)
+=======
+
+    console.error("Error checking or scheduling welcome email:", error)
+  } catch (error) {;
+    console.error("Error checking or scheduling welcome email:", error);
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }
 

@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 // Mock token service utility
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -6,7 +11,22 @@ export function getConfig() {
     decimals: 18,
     totalSupply: 1000000
   };
+<<<<<<< HEAD
 export interface TokenTransaction {
+=======
+=======
+export interface TokenTransaction {;
+  id: string;
+  userId: string;
+  amount: number;
+  type: 'issue' | 'redeem' | 'transfer';
+  reason: string;
+  timestamp: number;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   user_id: string;
   amount: number;
@@ -18,6 +38,10 @@ export interface TokenTransaction {
 let transactions: TokenTransaction[] = [];
 export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
   const transaction: TokenTransaction = {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount
@@ -25,6 +49,19 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
     reason
     timestamp: Date.now()
   }
+<<<<<<< HEAD
+=======
+=======
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    userId,
+    amount,
+    type: 'issue',
+    reason,
+    timestamp: Date.now();
+  };
+  
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   transactions.push(transaction);
   return transaction;
 }
@@ -33,10 +70,40 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     type: 'redeem'
     reason
     timestamp: Date.now()
   }
+<<<<<<< HEAD
+=======
+;
+  transactions.push (transaction);
+  return transaction;
+}
+export function redeem_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
+  const transaction: TokenTransaction = {
+    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
+    user_id,
+    amount: -amount, // Negative for redemption;
+    type: 'redeem',
+    reason,
+    timestamp: Date.now ();
+  }
+;
+  transactions.push (transaction);
+
+=======
+    type: 'redeem',
+    reason,
+    timestamp: Date.now();
+  };
+  
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   transactions.push(transaction);
   return transaction;
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
@@ -77,18 +144,13 @@ export interface TokenConfig {
   createdAt: Date;
   updatedAt: Date;
 }
-
-export interface TokenBalance {
-  address: string;
-  balance: string;
-  tokenId: string;
-  lastUpdated: Date;
-}
+<<<<<<< HEAD
 
 // Mock database - in production, this would connect to a real database
 const tokenConfigs: TokenConfig[] = [];
 const tokenBalances: TokenBalance[] = [];
 
+<<<<<<< HEAD
 export async function createTokenConfig(config: Omit<TokenConfig, 'id' | 'createdAt' | 'updatedAt'>): Promise<TokenConfig> {
   const newConfig: TokenConfig = {
     ...config,
@@ -167,3 +229,11 @@ export function set_config (
   // Update the configuration;
   Object.assign (current, partial);
 }
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

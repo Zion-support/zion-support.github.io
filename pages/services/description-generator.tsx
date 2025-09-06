@@ -22,11 +22,29 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useMemo, useState } from 'react';
+<<<<<<< HEAD
 export default function ServiceDescriptionGeneratorPage() {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default function ServiceDescriptionGeneratorPage() {
+=======
+export default function ServiceDescriptionGeneratorPage(req, res) {
+  try {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+export default function ServiceDescriptionGeneratorPage() {;
+=======
+export default function ServiceDescriptionGeneratorPage(req, res) {
+  try {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [title, setTitle] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
   const [additionalNotes, setAdditionalNotes] = useState('');
+<<<<<<< HEAD
   const [tone, setTone] = useState<;
     'professional' | 'friendly' | 'persuasive' | 'technical';
   >('professional');
@@ -35,15 +53,41 @@ export default function ServiceDescriptionGeneratorPage() {
   const [tone, setTone] = useState<;
     'professional' | 'friendly' | 'persuasive' | 'technical';
   >('professional');
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional'),
+
+=======
+  const [tone, setTone] = useState<
+    'professional' | 'friendly' | 'persuasive' | 'technical'
+
+  >('professional');
+=======
+  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
   const keyFeatures = useMemo(() => {;
     return featuresInput;
       .split('\n');
       .map(f => f && f.trim());
+=======
+  const keyFeatures = useMemo(() => {
+    return featuresInput
+      .split('\n')
+      .map(f => f.trim())
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       .filter(Boolean);  }, [featuresInput]);
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -76,6 +120,7 @@ export default function ServiceDescriptionGeneratorPage() {
   function handleAccept() {
     setAccepted(true);  }
   function handleCopy() {
+<<<<<<< HEAD
     if (!generated) return;
     navigator.clipboard.writeText(generated).catch(() => {});
 
@@ -118,8 +163,98 @@ export default function ServiceDescriptionGeneratorPage() {
     if (!generated) return;
     navigator && navigator.clipboard.writeText(generated).catch(() => {});
   }
+=======
+<<<<<<< HEAD
+    if (!generated) return;
+    navigator.clipboard.writeText(generated).catch(() => {});
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   }
+=======
+  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [generated, setGenerated] = useState('');
+  const [accepted, setAccepted] = useState(false);
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const keyFeatures = useMemo(() => {;
+    return featuresInput;
+      .split('\n');
+      .map((f) => f.trim());
+      .filter(Boolean);
+  }, [featuresInput]),;
+  async function handleSubmit(e: React.FormEvent) {;
+    e.preventDefault(),;
+    setLoading(true);
+    setError(null);
+    setAccepted(false);
+    try {
+      const response = await fetch('/api/generate-service-description', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON.stringify({;
+          title,;
+          keyFeatures,;
+          targetAudience,;
+          additionalNotes: additionalNotes || undefined,;
+          tone})}),;
+      if (!response.ok) {;
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error || 'Failed to generate');
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+      const data = (await response.json()) as { description: string };
+      setGenerated(data.description || '');
+    } catch (error) {
+      setError(err.message || 'Something went wrong');
+    } finally {;
+      setLoading(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  function handleAccept() {;
+    setAccepted(true);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  function handleCopy() {;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    if (!generated) return;
+    navigator.clipboard.writeText(generated).catch(() => {});
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className='max-w-3xl mx-auto'>
       <h1 className='text-2xl font-semibold mb-4'>
@@ -131,6 +266,7 @@ export default function ServiceDescriptionGeneratorPage() {
       </p>
       <form
         onSubmit={handleSubmit}
+<<<<<<< HEAD
         className='space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4'>;
         <div>;
           <label className='block text-sm font-medium mb-1'>;
@@ -142,6 +278,27 @@ export default function ServiceDescriptionGeneratorPage() {
             placeholder='e && e.g., On-Demand Web Performance Audit'
             value={title}
             onChange={e => setTitle(e.target.value)}            required
+=======
+        className='space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4'
+      >
+=======
+      <form onSubmit={handleSubmit} className="space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <div>
+          <label className="block text-sm font-medium mb-1">Service Title</label>
+          <input
+            type="text"
+            className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="e.g., On-Demand Web Performance Audit"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            required
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           />
         </div>
         <div>
@@ -219,6 +376,7 @@ export default function ServiceDescriptionGeneratorPage() {
             Additional Notes (optional);
           </label>;
           <textarea
+<<<<<<< HEAD
             className='w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             placeholder='Constraints, deliverables, timeline, pricing preferences, compliance, etc.'
             value={additionalNotes}
@@ -261,6 +419,58 @@ export default function ServiceDescriptionGeneratorPage() {
               <button
                 onClick={handleAccept}
                 className='rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm'              >
+=======
+            className="w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Constraints, deliverables, timeline, pricing preferences, compliance, etc."
+            value={additionalNotes  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            onChange={(e) => setAdditionalNotes(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          />
+        </div>
+<<<<<<< HEAD
+        <div className='flex items-center gap-3'>
+=======
+        <div className="flex items-center gap-3">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          <button
+            type="submit"
+            disabled={loading}
+            className="inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60"
+          >
+            {loading ? 'Generating…' : 'Generate Description'}
+          </button>
+          {error && <span className="text-red-600 text-sm">{error}</span>}
+        </div>
+      </form>
+
+      {generated && (
+        <div className="mt-8 space-y-3">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-semibold">Generated Description</h2>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={handleCopy}
+                className="rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
+              >
+                Copy
+              </button>
+              <button
+                onClick={handleAccept}
+                className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm"
+              >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 Accept
               </button>
             </div>
@@ -309,8 +519,19 @@ export default function ServiceDescriptionGeneratorPage() {
         </div>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+);
+<<<<<<< HEAD
+=======
+
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <div>;
           <label className='block text - sm font - medium mb - 1'>;
             Additional Notes (optional);
@@ -322,6 +543,7 @@ export default function ServiceDescriptionGeneratorPage() {
             on_change={e => setAdditionalNotes (e.target.value)}
           />;
         </div>;
+<<<<<<< HEAD
         <div className='flex items - center gap - 3'>;
           <button;
             type='submit';
@@ -361,3 +583,23 @@ export default function ServiceDescriptionGeneratorPage() {
         </div>)}
     </div>);
 ;
+=======
+
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

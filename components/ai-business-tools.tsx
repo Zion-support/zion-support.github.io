@@ -70,8 +70,29 @@ import {
   Check,
   ExternalLink,
   TrendingUp,
+<<<<<<< HEAD
   Shield,
   Globe,} from 'lucide-react';import {
+=======
+<<<<<<< HEAD
+  Shield,
+  Globe,;} from 'lucide-react';import { 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  Shield,;
+  Globe,;} from 'lucide-react';import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  Brain;
+  MessageSquare
+  Image
+  Video
+  FileText
+  BarChart3
+  Users
+
+
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Brain;
   MessageSquare,
   Image,
@@ -216,6 +237,237 @@ export default function AIBusinessToolsPage() {
         'Easy to use'
       ]
       cons: ['Limited avatar options', 'Expensive', 'Subscription required']
+<<<<<<< HEAD
+=======
+      bestFor: 'Training departments, marketers, educators'
+    }
+    {
+      name: 'Copy.ai'
+      description:
+        'AI copywriting tool that generates marketing copy, product descriptions, and creative content for businesses.'
+      category: 'AI Copywriting'
+      pricing: 'Free - $49/month'
+      rating: 4.4
+      users: '200K+'
+      icon: <MessageSquare className='w-8 h-8 text-orange-400' />
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+      features: [
+        'Marketing copy generation'
+        'Product descriptions'
+        'Social media posts'
+        'Email campaigns'
+        'Blog content'
+        'Free tier available'
+      ]
+      website: 'https://copy.ai'
+      useCase:
+        'Great for small businesses, entrepreneurs, and marketers who need quality copy without hiring writers.'
+      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable']
+      cons: ['Limited customization', 'Quality varies', 'Basic features']
+      bestFor: 'Small businesses, entrepreneurs, marketers'
+    }
+    {
+      name: 'Grammarly'
+      description:
+        'AI-powered writing assistant that checks grammar, spelling, tone, and style to improve your writing.'
+      category: 'AI Writing'
+      pricing: 'Free - $12/month'
+      rating: 4.7
+      users: '30M+'
+      icon: <Check className='w-8 h-8 text-green-400' />
+      color: 'bg-gradient-to-br from-green-500 to-teal-600'
+      features: [
+        'Grammar & spelling check'
+        'Tone analysis'
+        'Style suggestions'
+        'Plagiarism detection'
+        'Browser extension'
+        'Mobile apps'
+      ]
+      website: 'https://grammarly.com'
+      useCase:
+        'Essential for anyone who writes professionally, including students, professionals, and content creators.'
+      pros: [
+        'Excellent accuracy'
+        'Multiple platforms'
+        'Free tier'
+        'User-friendly'
+      ]
+      cons: ['Limited free features', 'Privacy concerns', 'Can be overzealous']
+      bestFor: 'Students, professionals, content creators'
+    }
+    {
+      name: 'Lumen5'
+      description:
+        'AI video maker that transforms text content into engaging videos for social media and marketing.',      category: 'AI Video'
+      pricing: 'Free - $79/month'
+      rating: 4.3
+      users: '100K+'
+      icon: <Video className='w-8 h-8 text-blue-400' />,      description: 'AI video maker that transforms text content into engaging videos for social media and marketing.'
+      category: 'AI Video'
+      pricing: 'Free - $79/month'
+      rating: 4.3
+      users: '100K+'
+      icon: <Video className='w-8 h-8 text-blue-400' />
+      features: [
+        'Text-to-video conversion'
+        'Video templates'
+        'Music library'
+        'Brand customization'
+        'Social media formats'
+        'Free tier available'
+      ]
+      website: 'https://lumen5.com'
+      useCase:
+        'Perfect for marketers, social media managers, and businesses that want to create video content from existing text.'
+      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable']
+      cons: ['Limited customization', 'Basic features', 'Watermark on free']
+      bestFor: 'Marketers, social media managers, small businesses'
+    }
+    {
+      name: 'Surfer SEO'
+      description:
+        'AI-powered SEO tool that helps optimize content for search engines using data-driven insights.',      category: 'AI SEO'
+      pricing: '$59 - $199/month'
+      rating: 4.6
+      users: '25K+'
+      icon: <TrendingUp className='w-8 h-8 text-green-400' />,      description: 'AI-powered SEO tool that helps optimize content for search engines using data-driven insights.'
+      category: 'AI SEO'
+      pricing: '$59 - $199/month'
+      rating: 4.6
+      users: '25K+'
+      icon: <TrendingUp className='w-8 h-8 text-green-400' />
+      features: [
+        'Content optimization'
+        'Keyword research'
+        'Competitor analysis'
+        'SERP analysis'
+        'Content editor'
+        'Rank tracking'
+      ]
+      website: 'https://surferseo.com'
+      useCase:
+        'Essential for content marketers, SEO specialists, and businesses that want to improve their search rankings.'
+      pros: [
+<<<<<<< HEAD
+        'Data-driven insights'
+        'Content optimization'
+        'Competitor analysis'
+        'Good support'
+      ]
+      cons: ['Expensive', 'Complex interface', 'Steep learning curve']
+      bestFor: 'SEO specialists, content marketers, businesses'
+    }
+=======
+  Globe;
+export default /**
+ * AIBusinessToolsPage - Function description
+ */
+function AIBusinessToolsPage() {
+  const ai_tools = [;
+    {
+      name: 'ChatGPT',
+      description:;
+        'Advanced AI language model that can help with writing, analysis, coding, and creative tasks. Perfect for content creation and problem - solving.',
+      pricing: 'Free - $20 / month',
+      rating: 4.8,
+      users: '100M+',
+      icon: <Brain className='w - 8 h - 8 text - green - 400' />,
+      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
+      features: [;
+        'Natural language processing',
+        'Code generation & debugging',
+        'Content creation',
+        'Data analysis',
+        'Creative writing',
+        'Multi - language support',
+      ],
+      website: 'https://chat.openai.com',
+      use_case:;
+        'Ideal for writers, developers, researchers, and anyone who needs AI assistance with complex tasks.',
+      pros: [;
+        'Powerful capabilities',
+        'Easy to use',
+        'Regular updates',
+        'Good free tier',
+      ],
+      cons: ['Sometimes inaccurate', 'Limited context', 'Privacy concerns'],
+      best_for: 'Content creators, developers, researchers',
+    },
+    {
+      name: 'Midjourney',
+      description:;
+        'AI - powered image generation tool that creates stunning artwork, illustrations, and designs from text descriptions.',
+      category: 'AI Art',
+      pricing: '$10 - $30 / month',
+      rating: 4.7,
+      users: '1M+',
+      icon: <Image className='w - 8 h - 8 text - purple - 400' />,
+      color: 'bg - gradient - to - br from - purple - 500 to - pink - 600',
+      features: [;
+        'Text - to - image generation',
+        'High - resolution output',
+        'Artistic styles',
+        'Commercial usage rights',
+        'Community features',
+        'Discord integration',
+      ],
+      website: 'https://midjourney.com',
+      use_case:;
+        'Perfect for designers, marketers, content creators, and businesses needing custom visual content.',
+      pros: [;
+        'High - quality output',
+        'Creative control',
+        'Commercial rights',
+        'Active community',
+      ],
+      cons: [;
+        'Discord - only interface',
+        'Limited customization',
+        'Monthly subscription',
+      ],
+      best_for: 'Designers, marketers, content creators',
+    },
+    {
+      name: 'Jasper',
+      description:;
+        'AI writing assistant that helps create marketing copy, blog posts, social media content, and more.',
+      category: 'AI Writing',
+      pricing: '$39 - $125 / month',
+      rating: 4.6,
+      users: '100K+',
+      icon: <FileText className='w - 8 h - 8 text - blue - 400' />,
+      color: 'bg - gradient - to - br from - blue - 500 to - indigo - 600',
+      features: [;
+        'Marketing copy generation',
+        'Blog post writing',
+        'Social media content',
+        'SEO optimization',
+        'Brand voice training',
+        'Team collaboration',
+      ],
+      website: 'https://jasper.ai',
+      use_case:;
+        'Essential for marketing teams, content creators, and businesses that need high - quality written content at scale.',
+      pros: [;
+        'Specialized for marketing',
+        'Brand voice training',
+        'SEO optimization',
+        'Team features',
+      ],
+      cons: ['Expensive', 'Limited free trial', 'Can be repetitive'],
+      best_for: 'Marketing teams, content creators, businesses',
+    },
+    {
+      name: 'Synthesia',
+      description:;
+        'AI video generation platform that creates professional videos with AI avatars and voice synthesis.',      category: 'AI Video',
+      pricing: '$30 - $89 / month',
+      rating: 4.5,
+      users: '50K+',
+      icon: <Video className='w - 8 h - 8 text - red - 400' />,      description: 'AI video generation platform that creates professional videos with AI avatars and voice synthesis.',
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       category: 'AI Video',
       pricing: '$30 - $89 / month',
       rating: 4.5,
@@ -288,6 +540,7 @@ export default function AIBusinessToolsPage() {
       pricing: '$59 - $199 / month',
       rating: 4.6,
       users: '25K+',
+<<<<<<< HEAD
       icon: <TrendingUp className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
@@ -371,6 +624,19 @@ export default function AIBusinessToolsPage() {
       cons: ['Expensive', 'Complex interface', 'Steep learning curve']
       bestFor: 'SEO specialists, content marketers, businesses'
     }
+=======
+
+
+        'Data-driven insights',
+        'Content optimization',
+        'Competitor analysis',
+        'Good support',
+      ],
+      cons: ['Expensive', 'Complex interface', 'Steep learning curve'],
+      bestFor: 'SEO specialists, content marketers, businesses',
+    },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ];
   const categories = [
     'All'
@@ -503,12 +769,21 @@ export default function AIBusinessToolsPage() {
             </div>
           </div>
           {/* Stats */}
+<<<<<<< HEAD
           <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
             style={{ animationDelay: '0.6s' }}
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {aiTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>AI Tools</div>
@@ -560,6 +835,7 @@ export default function AIBusinessToolsPage() {
       </section>;
 
       {/* Category Filter */}
+<<<<<<< HEAD
       <section className='py-16 bg-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='flex flex-wrap justify-center gap-4'>;
@@ -567,6 +843,23 @@ export default function AIBusinessToolsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="flex flex-wrap justify-center gap-4">;
             {categories && categories.map((category) => (;
+=======
+      <section className="py-16 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+
+=======
+
+
+              <button
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -578,6 +871,7 @@ export default function AIBusinessToolsPage() {
                 {category}
               </button>;
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -589,6 +883,29 @@ export default function AIBusinessToolsPage() {
               {selectedCategory === 'All';
                 ? 'All AI Tools';
                 : `${selectedCategory} Tools`}
+=======
+
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Tools Grid */}
+
+            </h2>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
                 ? 'Discover the most powerful AI tools that are transforming how businesses operate and create content.'
@@ -604,6 +921,7 @@ export default function AIBusinessToolsPage() {
                 <div className='flex items-start space-x-6'>;
                   <div className='relative'>;
                     <div
+<<<<<<< HEAD
                       className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}
                     >
                       {tool.icon}
@@ -631,6 +949,14 @@ export default function AIBusinessToolsPage() {
                     <p className='text-gray-400 leading-relaxed mb-4'>
                       {tool.description}
                     </p>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -659,6 +985,7 @@ export default function AIBusinessToolsPage() {
                         href={tool && tool.website}
                         variant='outline'
                         size='sm'
+<<<<<<< HEAD
                         className='group-hover:border-green-500 group-hover:text-green-400'
                       >
                         Visit Website
@@ -687,6 +1014,21 @@ export default function AIBusinessToolsPage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* AI Benefits Section */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Why Choose AI Tools?
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -767,10 +1109,55 @@ export default function AIBusinessToolsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
                         className='group-hover:border-green-500 group-hover:text-green-400'>;
                         Visit Website;
                         <ExternalLink className='w-4 h-4 ml-2' />;
                       </Button>;
+=======
+      {/* CTA Section */}
+      <section className='py-24 bg-gradient-to-r from-green-600 to-green-700 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+          </h2>
+          <p className='text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
+            Our AI experts can help you identify the right tools, implement them
+            effectively, and maximize their impact on your business.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+            <Button
+              href='/contact'
+              variant='secondary'
+              size='lg'
+              className='bg-white text-green-600 hover:bg-gray-100 shadow-2xl'
+            >
+              Get AI Strategy Session
+              <ArrowRight className='w-5 h-5 ml-2' />
+            </Button>
+            <Button
+              href='/saas-marketplace'
+              variant='outline'
+              size='lg'
+              className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'            >              href="/saas-marketplace"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"
+              Explore More Tools
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
                       <div className='text-right'>;
                         <div className='text-xs text-gray-500 mb-1'>;
@@ -1016,5 +1403,14 @@ export default function AIBusinessToolsPage() {
 }
   );
 }
+<<<<<<< HEAD
     </>);
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

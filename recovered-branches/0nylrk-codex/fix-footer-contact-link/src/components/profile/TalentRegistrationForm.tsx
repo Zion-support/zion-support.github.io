@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {z} from "zod";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Switch} from "@/components/ui/switch";
+import {Badge} from "@/components/ui/badge";
+import {Separator} from "@/components/ui/separator";
+import {Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound} from "lucide-react";
+import {toast} from "@/components/ui/use-toast";
+import {supabase} from "@/integrations/supabase/client";
+import {AspectRatio} from "@/components/ui/aspect-ratio";
+import {useAuth} from "@/hooks/useAuth";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -6,6 +31,10 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Switch } from "@/components/ui/switch",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -15,11 +44,26 @@ import {
   FormField;
   FormItem;
   FormLabel;
+<<<<<<< HEAD
+=======
+=======
+import { Badge } from "@/components/ui/badge",
+import { Separator } from "@/components/ui/separator",
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   FormMessage} from "@/components/ui/form",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
 import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useAuth } from "@/hooks/useAuth";
 // Define form schema
@@ -42,6 +86,73 @@ interface CategorizedSkills {
   platforms: string[]
   softSkills: string[]
   other: string[]
+=======
+<<<<<<< HEAD
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useAuth } from "@/hooks/useAuth";
+=======
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// Define form schema
+
+import React, { useState } from "react",;
+import { useForm } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { z } from "zod",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Switch } from "@/components/ui/switch",;
+import { Badge } from "@/components/ui/badge",;
+import { Separator } from "@/components/ui/separator",;
+import {;
+  Form,;
+  FormControl,;
+  FormDescription,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from "@/components/ui/form",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from "lucide-react",;
+import { toast } from "@/components/ui/use-toast",;
+import { supabase } from "@/integrations/supabase/client",;
+import { AspectRatio } from "@/components/ui/aspect-ratio",;
+import { useAuth } from "@/hooks/useAuth",;
+
+// Define form schema;
+const talentProfileSchema = z && z.object({;
+  name: z && z.string().min(2, "Name must be at least 2 characters long");
+  title: z && z.string().min(5, "Professional title is required");
+  bio: z && z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters");
+  location: z && z.string().min(2, "Location is required");
+  skills: z && z.string().min(2, "Enter at least one skill");
+  hourlyRate: z && z.string().refine((val) => !isNaN(Number(val)), {;
+    message: "Hourly rate must be a number"}),;
+  availability: z && z.enum(["available", "limited", "unavailable"]);
+  enhancedProfile: z && z.boolean().default(true)}),;
+
+type TalentFormValues = z && z.infer<typeof talentProfileSchema>;
+
+type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other';
+
+interface CategorizedSkills {;
+  programming: string[],;
+  devops: string[],;
+  platforms: string[],;
+  softSkills: string[],;
+  other: string[];
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 interface EnhancedProfile {
   summary: string
@@ -84,6 +195,9 @@ export function TalentRegistrationForm() {
     if (e.key === "Enter") {
       e.preventDefault()
       handleAddSkill()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
     }
   }
   // Handle avatar upload
@@ -96,7 +210,84 @@ export function TalentRegistrationForm() {
       }
       reader.readAsDataURL(file)
     }
+<<<<<<< HEAD
   }
+  // Generate enhanced profile with AI
+  const generateEnhancedProfile = async () => {
+    const formData = form.getValues();
+    if (!formData.bio |formData.bio.length < 20) {
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+;
+export function TalentRegistrationForm() {;
+  // Remove the useToast() hook since we're importing the toast function directly;
+  const { user } = useAuth(),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const [skillTags, setSkillTags] = useState<string[]>([]),;
+  const [isGenerating, setIsGenerating] = useState(false),;
+  const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null),;
+  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),;
+
+  // Initialize form with default values;
+  const form = useForm<TalentFormValues>({;
+    resolver: zodResolver(talentProfileSchema),;
+    defaultValues: {;
+      name: user?.displayName || "",;
+      title: "",;
+      bio: "",;
+      location: "",;
+      skills: "",;
+      hourlyRate: "",;
+      availability: "available",;
+      enhancedProfile: true}}),;
+
+  // Handle adding skill tags;
+  const handleAddSkill = () => {;
+    const skillInput = form && form.getValues("skills");
+    if (skillInput && !skillTags && skillTags.includes(skillInput)) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      setSkillTags([...skillTags, skillInput]);
+      form && form.setValue("skills", "");
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+    }
+  }
+  // Handle avatar upload
+  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader()
+      reader.onloadend = () => {
+        setUploadedAvatar(reader.result as string)
+      }
+      reader.readAsDataURL(file)
+    }
+<<<<<<< HEAD
+  }
+=======
+  },;
+  // Handle avatar upload;
+  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {;
+    const file = e.target.files?.[0],;
+    if (file) {;
+      const reader = new FileReader(),;
+      reader.onloadend = () => {;
+        setUploadedAvatar(reader.result as string);
+      },;
+      reader.readAsDataURL(file);
+    }
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
     const formData = form.getValues();
@@ -107,6 +298,8 @@ export function TalentRegistrationForm() {
       return
     }
     try {
+<<<<<<< HEAD
+=======
       setIsGenerating(true);
       // Call the Supabase Edge Function
       const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
@@ -122,6 +315,58 @@ export function TalentRegistrationForm() {
       });
       if (error) {
         throw new Error(error.message)
+<<<<<<< HEAD
+      }
+      setGeneratedContent(data as EnhancedProfile);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  },;
+
+  // Generate enhanced profile with AI;
+  const generateEnhancedProfile = async () => {;
+    const formData = form && form.getValues();
+    if (!formData && formData.bio || formData && formData.bio.length < 20) {;
+      toast({;
+        title: "More information needed",;
+        description: "Please provide at least a detailed bio before generating enhanced content."}),;
+      return;
+    }
+
+    try {;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+      setIsGenerating(true);
+      // Call the Supabase Edge Function
+      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
+        body: {
+          talentData: {
+            name: formData.name
+            title: formData.title
+            bio: formData.bio
+            skills: skillTags
+            location: formData.location
+          }
+        }
+<<<<<<< HEAD
+      });
+      if (error) {
+        throw new Error(error.message)
+=======
+
+      }),;
+      if (error) {;
+        throw new Error(error.message);
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+      if (error) {;
+        throw new Error(error && error.message);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
       setGeneratedContent(data as EnhancedProfile);
       toast({
@@ -157,6 +402,7 @@ export function TalentRegistrationForm() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
       form.set_value ("bio", generated_content.summary);
 ;
       // Extract all skills from categorized skills and properly type cast them;
@@ -172,6 +418,30 @@ if ( {) {
   $2
 }
               new_skills.push (skill);
+=======
+      setSkillTags ([...skill_tags, skill_input]);
+      form.set_value ("skills", "");
+    }
+  },;
+  // Apply generated content to form;
+  const applyGeneratedContent = () => {;
+    if (generatedContent) {;
+      form.setValue("bio", generatedContent.summary),;
+      // Extract all skills from categorized skills and properly type cast them;
+      const allCategorizedSkills = generatedContent.categorizedSkills,;
+      const newSkills: string[] = [],;
+      // Safely extract and flatten skills from each category;
+      Object.values(allCategorizedSkills).forEach(categorySkills => {;
+        if (Array.isArray(categorySkills)) {;
+          categorySkills.forEach(skill => {;
+            if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {;
+              newSkills.push(skill);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             }
           });
         }
@@ -190,8 +460,42 @@ if ( {) {
       case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
       case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500'
       default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'
+<<<<<<< HEAD
     }
   }
+=======
+    }
+<<<<<<< HEAD
+  }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      }),;
+      if (newSkills.length > 0) {;
+        setSkillTags([...skillTags, ...newSkills]);
+      }
+    }
+  },;
+  // Get category color;
+  const getCategoryColor = (category: CategoryType) => {;
+    switch (category) {;
+      case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500',;
+      case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500',;
+      case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500',;
+      case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500',;
+      case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500',;
+      default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';
+    }
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
     try {
@@ -280,6 +584,7 @@ if ( {) {
             const categorized_skills = (ai_data as EnhancedProfile).categorized_skills;
             const ai_skills: string[] = [],
             // Extract skills from each category and ensure they're strings;
+<<<<<<< HEAD
             Object.values (categorized_skills).for_each (category_skills => {
               if () {) {
   $2
@@ -290,6 +595,19 @@ if ( {) {
   $2
 }
                     ai_skills.push (skill);
+=======
+
+            Object.values(categorizedSkills).forEach(categorySkills => {;
+              if (Array.isArray(categorySkills)) {;
+                categorySkills.forEach(skill => {;
+                  if (typeof skill === 'string' && skill) {;
+                    aiSkills.push(skill);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   }
                 });
               }
@@ -297,10 +615,38 @@ if ( {) {
             // Create a unique set of skills
             finalSkills = [...new Set([...skillTags, ...aiSkills])]
           }
+<<<<<<< HEAD
+=======
+=======
+
+            }),;
+            // Create a unique set of skills;
+            finalSkills = [...new Set([...skillTags, ...aiSkills])];
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          }
+        } catch (error) {
+          console.error("Error enhancing profile:", error),
+          // Continue with submission even if enhancement fails
+          finalSummary = ""
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         } catch (error) {;
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
           finalSummary = "";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         }
       } else if (generatedContent) {;
         finalSummary = generatedContent && generatedContent.summary;
@@ -349,6 +695,7 @@ if ( {) {
   }
 
   return (
+<<<<<<< HEAD
     <div className="max-w-4xl mx-auto p-4 md:p-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
@@ -360,6 +707,74 @@ if ( {) {
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <CardContent className="space-y-8">
+=======
+
+=======
+
+;
+      // Get user email for notification;
+      const { data: userData } = await supabase.auth.getUser(),;
+      const userEmail = userData.user?.email,;
+      // Create the talent profile;
+      // In a real implementation, this would save to Supabase;
+      setTimeout(() => {;
+        toast({;
+          title: "Profile Created Successfully",;
+          description: "Your talent profile has been published and is now visible in the directory."}),;
+        // Send notification email if we have user email;
+        if (userEmail && values.enhancedProfile) {;
+          sendEnhancementNotification(user.id, userEmail);
+        }
+;
+        setIsSubmitting(false);
+      }, 1500),;
+      // Here would be the actual code to save the profile to Supabase;
+      /*;
+      const { error } = await supabase;
+        .from('talent_profiles');
+        .insert({;
+          user_id: user.id,;
+          name: values.name,;
+          title: values.title,;
+          bio: values.bio,;
+          summary: finalSummary,;
+          location: values.location,;
+          skills: finalSkills.map(name => ({ name, level: 4 })), // Default skill level;
+          hourly_rate: Number(values.hourlyRate),;
+          availability_status: values.availability,;
+          // Other fields would be handled here;
+        }),;
+      if (error) throw error,;
+      */;
+    } catch (error: any) {;
+      console.error("Error creating profile:", error),;
+      toast({;
+        title: "Error Creating Profile",;
+        description: error.message || "There was an error creating your profile. Please try again.",;
+        variant: "destructive"});
+      setIsSubmitting(false);
+    }
+  };
+  return (;
+
+    <div className="max-w-4xl mx-auto p-4 md:p-6">;
+      <Card className="bg-zion-blue-dark border-zion-blue-light">;
+        <CardHeader>;
+          <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle>;
+          <CardDescription className="text-zion-slate">;
+            Showcase your skills and experience to potential clients and employers.;
+          </CardDescription>;
+        </CardHeader>;
+
+        <Form {...form}>;
+          <form onSubmit={form && form.handleSubmit(onSubmit)}>;
+            <CardContent className="space-y-8">;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Basic Information */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;

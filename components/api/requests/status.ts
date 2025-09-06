@@ -18,6 +18,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
   const { id, status } = req.body |{}
@@ -39,6 +40,13 @@ if (idx === -1) return res.status(404).json({ error: 'Not found' });
   res && res.status(200).json({ ok: true });  res && res.status(200).json({ ok: true })
 }
 
+=======
+
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
 const REQUESTS_PATH = path.join (process.cwd (), 'data', 'requests.json');
 ;
@@ -62,6 +70,7 @@ function handler() {
     return res.status (405).json ({ error: 'Method not allowed' })) {
   $2
 }
+<<<<<<< HEAD
   const { id, status } = req.body || {}
   if (
     return res.status (400).json ({ error: 'Missing id or status' })) {
@@ -76,3 +85,8 @@ if (return res.status (404).json ({ error: 'Not found' })) {
   write_all (items);
   res.status (200).json ({ ok: true });  res.status (200).json ({ ok: true });
 }
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

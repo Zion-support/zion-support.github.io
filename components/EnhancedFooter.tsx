@@ -2,6 +2,10 @@ import React from 'react',
 import Link from 'next/link';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Brain
   Mail
   Phone
@@ -10,6 +14,19 @@ import {
   Github
   Linkedin
   Twitter;
+<<<<<<< HEAD
+=======
+=======
+  Brain,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Github,
+  Linkedin,;
+  Twitter,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
 import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
@@ -60,17 +77,43 @@ const EnhancedFooter: React.FC = () => {
     }
   ];
   const socialLinks = [
+<<<<<<< HEAD
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
+=======
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     {
       name: 'LinkedIn'
       href: 'https://linkedin.com/company/ziontechgroup'
       icon: Linkedin
     }
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       name: 'Twitter'
       href: 'https://twitter.com/ziontechgroup'
       icon: Twitter
     }
+<<<<<<< HEAD
+=======
+=======
+      name: 'Twitter',
+      href: 'https://twitter.com/ziontechgroup',
+      icon: Twitter,
+    },
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <footer className='bg-slate-950 border-t border-white/10'>;
       <div className='max-w-7xl mx-auto px-6 py-16'>;
@@ -154,6 +197,7 @@ const EnhancedFooter: React.FC = () => {
                       className="text - white / 70 hover: text - white transition - colors duration - 200";
                     >;
                       {link.name}
+<<<<<<< HEAD
                     </Link>
                   </li>
                 ))}
@@ -161,6 +205,19 @@ const EnhancedFooter: React.FC = () => {
             </div>;
           ))}
         </div>
+=======
+
+        </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Bottom Section */}
         <div className='pt-8 border-t border-white/10'>;
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
@@ -172,6 +229,7 @@ const EnhancedFooter: React.FC = () => {
               {socialLinks && socialLinks.map(social => (        <div className="pt-8 border-t border-white/10">;
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">;
             {/* Copyright */}
+<<<<<<< HEAD
             <div className="text-white/60 text-sm">
             </div>
             {/* Social Links */}
@@ -263,8 +321,37 @@ export default function EnhancedFooter() {;
       </div>;
     </footer>);
 }export default EnhancedFooter);
+=======
+
+            <div className="text-white/60 text-sm">;
+            </div>;
+
+
+            {/* Social Links */}
+
+};export default EnhancedFooter;  );
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};export default EnhancedFooter;  )
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
-;
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default EnhancedFooter;
 import React from './react';
   FileText,
@@ -550,6 +637,7 @@ company updates.;
       </button>
     </footer>
   )}"'
+<<<<<<< HEAD
 
         <div className="border - t border - gray - 800 pt - 8">";
           <div className="flex flex - col md: flex - row justify - between items - center">";
@@ -576,3 +664,22 @@ company updates.;
       </button>,
     </footer>,
   )}"';
+=======
+<<<<<<< HEAD
+
+      </button>,;
+    </footer>,;
+  )}"';
+
+=======
+export default EnhancedFooter;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  );
+};export default EnhancedFooter;  )
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

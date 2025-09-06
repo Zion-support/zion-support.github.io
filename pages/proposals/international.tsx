@@ -1,6 +1,26 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+
+=======
+import React, { useEffect, useState } from 'react',
+import EnhancedLayout from '../../components/layout/EnhancedLayout'
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import React, { useEffect, useState } from 'react',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+=======
+import React, { useEffect, useState } from 'react',
+import EnhancedLayout from '../../components/layout/EnhancedLayout'
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 type ProposalListItem = {
   id: string
   title: string
@@ -61,12 +81,31 @@ export default function InternationalProposalsPage() {
                 <a className="text-blue-600 underline" href={`/proposals/${i.id}.pdf`} target="_blank" rel="noreferrer">PDF</a>
               </div>
             </div>
+<<<<<<< HEAD
           ))}
           {filtered.length === 0 && <div className="p-4 text-sm text-gray-600">No proposals yet.</div>}
+=======
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          {filtered.length === 0 && <div className="p-4 text-sm text-gray-600">No proposals yet.</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         </div>
         <div className="text-sm text-gray-600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
   )
 }
   created_at: string;
@@ -120,3 +159,23 @@ function InternationalProposalsPage() {
       </div>;
     </EnhancedLayout>);
 }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

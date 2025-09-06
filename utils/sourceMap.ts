@@ -1,5 +1,6 @@
 // Mock source map utility
 export function getSourceMapWithExistence() {
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -38,9 +39,22 @@ export interface DeployTemplateResult {
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
+=======
+  return {
+<<<<<<< HEAD
+    nodes: []
+    edges: []
+  }
+=======
+    nodes: [],
+    edges: [];
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 export function getGitStatus() {
   return {
+<<<<<<< HEAD
     connected: false
     branch: 'main'
   }
@@ -95,6 +109,22 @@ export function getSourceMapWithExistence(): SourceNode[] {
   return nodes.map(markExistenceRecursive);
 }
 export interface DeployTemplateResult {
+<<<<<<< HEAD
+=======
+=======
+    connected: false,
+    branch: 'main';
+  };
+}
+
+export function getSourceMapWithExistence(): SourceNode[] {;
+  const nodes = buildZionSourceMap();
+  return nodes.map(markExistenceRecursive);
+}
+
+export interface DeployTemplateResult {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   createdPaths: string[];
   skippedPaths: string[];
 export function ensureDirectory(dirPath: string): void {
@@ -126,6 +156,15 @@ export function deployBasicTemplateForPath(
     skippedPaths && skippedPaths.push(readmeFile);
   }
 
+<<<<<<< HEAD
+=======
+  return { createdPaths, skippedPaths }
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return { createdPaths, skippedPaths };
 // Source map utilities
 export interface SourceMapInfo {
@@ -259,3 +298,12 @@ export function deployBasicTemplateForPath (
   }
   return { created_paths, skipped_paths }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

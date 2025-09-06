@@ -1,4 +1,22 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState} from "react";
+import {formatDistanceToNow} from "date-fns";
+import {JobApplication} from "@/types/jobs";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download} from "lucide-react";
+import {Link} from "react-router-dom";
+import {StatusBadge} from "./StatusBadge";
+import {ApplicationProgress} from "./ApplicationProgress";
+import {toast} from "sonner";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
 import { JobApplication } from "@/types/jobs",
@@ -7,11 +25,48 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from "lucide-react",
 import { Link } from "react-router-dom",
 import { StatusBadge } from "./StatusBadge",
+<<<<<<< HEAD
 import { ApplicationProgress } from "./ApplicationProgress";
 import { toast } from "sonner";
 interface ApplicationCardProps {
   application: JobApplication
 }
+=======
+<<<<<<< HEAD
+import { ApplicationProgress } from "./ApplicationProgress";
+import { toast } from "sonner";
+=======
+import { ApplicationProgress } from "./ApplicationProgress",
+import { toast } from "sonner",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+interface ApplicationCardProps {
+  application: JobApplication
+}
+
+export function ApplicationCard(): any ({ application }: ApplicationCardProps) {;
+  const [expanded, setExpanded] = useState(false);
+
+  const handleDownloadResume = () => {;
+    // This would typically download the resume file;
+    toast && toast.info("Resume download functionality will be implemented soon");
+  };
+
+  const renderActionButtons = () => {;
+    switch (application && application.status) {;
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+interface ApplicationCardProps {
+  application: JobApplication
+}
+
+<<<<<<< HEAD
+export function ApplicationCard({ application }: ApplicationCardProps) {;
+  const [expanded, setExpanded] = useState(false);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false);
 
@@ -97,6 +152,14 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
               </div>
             )}
           </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         )}
       </CardContent>
       <CardFooter className="flex flex-col gap-3 pt-0">
@@ -117,8 +180,18 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
             </Button>
           </div>
         </div>
+<<<<<<< HEAD
         <Button
           variant="secondary"
+=======
+<<<<<<< HEAD
+        <Button
+          variant="secondary"
+=======
+        <Button 
+          variant="secondary" 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           size="sm"
           className="w-full"
           asChild

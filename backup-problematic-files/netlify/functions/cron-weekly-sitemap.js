@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:netlify/functions/cron-weekly-sitemap.js
+=======
+<<<<<<< HEAD:backup-problematic-files/netlify/functions/cron-weekly-sitemap.js
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const { upsertFile } = require('./_lib/github'),;
 exports.handler = async function() {;
   try {;
@@ -19,6 +25,15 @@ exports.handler = async function() {;
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },;
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/cron-weekly-sitemap.js
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/cron-weekly-sitemap.js
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const { upsertFile } = require('./_lib/github');
 exports.handler = async function () {
   try {
@@ -78,5 +93,18 @@ exports.handler = async function () {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 
+<<<<<<< HEAD
 }
 
+=======
+},
+<<<<<<< HEAD
+>>>>>>> main:netlify/functions/cron-weekly-sitemap.js
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/cron-weekly-sitemap.js
+=======
+<<<<<<< HEAD:netlify/functions/cron-weekly-sitemap.js
+=======
+>>>>>>> main:netlify/functions/cron-weekly-sitemap.js
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/cron-weekly-sitemap.js
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

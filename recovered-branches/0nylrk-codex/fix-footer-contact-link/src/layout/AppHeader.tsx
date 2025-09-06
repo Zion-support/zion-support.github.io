@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState  } from 'react';
 import { useMessaging  } from '@/context/MessagingContext';
 import { MainNavigation  } from './MainNavigation';
@@ -9,6 +14,15 @@ import { MobileMenu  } from '@/components/header/MobileMenu';
 import { useIsMobile  } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 export function AppHeader() {
+<<<<<<< HEAD
+=======
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {useState} from 'react';
 import {use_messaging} from '@/context / MessagingContext';
 import {MainNavigation} from './MainNavigation';
@@ -19,6 +33,10 @@ import {MobileMenu} from '@/components/header/MobileMenu';
 import {useIsMobile} from '@/hooks/use-mobile';
 import {MobileBottomNav} from '@/components/header/MobileBottomNav';
 export function AppHeader() {;
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isMobile = useIsMobile();
@@ -30,6 +48,40 @@ export function AppHeader() {;
     unreadCount = count
   } catch (error) {
     console.warn ('Messaging context not available');
+<<<<<<< HEAD
+=======
+=======
+  } catch (error) {
+    console.warn('Messaging context not available')
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useState } from 'react',;
+import { useMessaging } from '@/context/MessagingContext',;
+import { MainNavigation } from './MainNavigation',;
+import { Logo } from '@/components/header/Logo',;
+import { ModeToggle } from '@/components/ModeToggle',;
+import { Menu, X } from 'lucide-react',;
+import { MobileMenu } from '@/components/header/MobileMenu',;
+import { useIsMobile } from '@/hooks/use-mobile',;
+import { MobileBottomNav } from '@/components/header/MobileBottomNav',;
+export function AppHeader() {;
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
+  const isMobile = useIsMobile(),;
+  // Try to access the messaging context, but provide a fallback value if it's not available;
+  let unreadCount = 0;
+  try {;
+    const { unreadCount: count } = useMessaging();
+    unreadCount = count;
+  } catch (error) {;
+    console.warn('Messaging context not available');
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   return (
     <>

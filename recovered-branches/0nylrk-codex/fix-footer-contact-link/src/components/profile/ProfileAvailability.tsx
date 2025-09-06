@@ -1,14 +1,31 @@
 
+<<<<<<< HEAD
 import { Availability } from "@/types/profile",
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Check } from "lucide-react";
+=======
+<<<<<<< HEAD
+import { Availability } from "@/types/profile",
+<<<<<<< HEAD
+import { Badge } from "@/components/ui/badge";
+import { Calendar, Clock, Check } from "lucide-react";
+=======
+<<<<<<< HEAD
+import {Availability} from "@/types/profile";
+import {Badge} from "@/components/ui/badge";
+import {Calendar, Clock, Check} from "lucide-react";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface ProfileAvailabilityProps {
   availability: Availability;
 }
 export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {
 
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
+<<<<<<< HEAD
     switch(status) {
+=======
+    switch(status) {;
       case 'available': return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
       case 'limited': return 'bg-amber-500/20 text-amber-400 border-amber-500/30';
       case 'unavailable': return 'bg-rose-500/20 text-rose-400 border-rose-500/30'
@@ -22,7 +39,48 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       case 'unavailable': return 'Currently Unavailable'
       default: return ''
     }
+<<<<<<< HEAD
   }
+=======
+=======
+  };
+=======
+import { Availability } from "@/types/profile",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Badge } from "@/components/ui/badge",
+import { Calendar, Clock, Check } from "lucide-react",
+
+interface ProfileAvailabilityProps {;
+  availability: Availability;
+}
+
+export function ProfileAvailability(): any ({ availability }: ProfileAvailabilityProps) {;
+  const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {;
+    switch(status) {;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+      case 'available': return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
+      case 'limited': return 'bg-amber-500/20 text-amber-400 border-amber-500/30';
+      case 'unavailable': return 'bg-rose-500/20 text-rose-400 border-rose-500/30'
+      default: return ''
+    }
+  }
+  const getStatusText = (status: 'available' | 'limited' | 'unavailable') => {
+    switch(status) {
+      case 'available': return 'Available Now';
+      case 'limited': return 'Limited Availability';
+      case 'unavailable': return 'Currently Unavailable'
+      default: return ''
+    }
+<<<<<<< HEAD
+  }
+=======
+  },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">

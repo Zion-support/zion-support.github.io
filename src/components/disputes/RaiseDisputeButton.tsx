@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {  Dialog
@@ -21,6 +28,10 @@ interface RaiseDisputeButtonProps {
   className?: string
 
 export function RaiseDisputeButton({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   projectId
   milestoneId
   variant = 'outline'
@@ -33,6 +44,7 @@ export function RaiseDisputeButton({
     setIsDialogOpen(false)
     router.push(`/dashboard/disputes/${disputeId}`)
   }
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {  Dialog,;
@@ -78,6 +90,11 @@ export function RaiseDisputeButton(): any ({;
 
   return (
     <>;
+=======
+
+  return (
+    <>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <Button
         variant={variant}
         size={size}
@@ -86,6 +103,81 @@ export function RaiseDisputeButton(): any ({;
         <ShieldAlert className='h-4 w-4 mr-2' />
         Raise Dispute
       </Button>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+
+  projectId: string,
+  milestoneId?: string,
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
+  size?: "default" | "sm" | "lg" | "icon",
+  className?: string
+}
+
+export function RaiseDisputeButton({ 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  projectId,
+  milestoneId, 
+  variant = "outline", 
+  size,
+  className 
+}: RaiseDisputeButtonProps) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const [isDialogOpen, setIsDialogOpen] = useState(false)
+  const router = useRouter()
+  const handleDisputeCreated = (disputeId: string) => {
+    setIsDialogOpen(false)
+    router.push(`/dashboard/disputes/${disputeId}`)
+  }
+  return (
+    <>
+      <Button
+        variant={variant}
+        size={size}
+        className={className}
+        onClick={() => setIsDialogOpen(true)}      >
+        <ShieldAlert className='h-4 w-4 mr-2' />
+        Raise Dispute
+      </Button>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [isDialogOpen, setIsDialogOpen] = useState(false),
+  const router = useRouter(),
+  
+  const handleDisputeCreated = (disputeId: string) => {
+    setIsDialogOpen(false),
+    router.push(`/dashboard/disputes/${disputeId}`)
+  },
+  
+  return (
+    <>
+      <Button 
+        variant={variant} 
+        size={size} 
+        className={className} 
+        onClick={() => setIsDialogOpen(true)}
+      >
+        <ShieldAlert className="h-4 w-4 mr-2" />
+        Raise Dispute
+      </Button>
+      
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className='sm:max-w-[550px]'>
           <DialogHeader>
@@ -95,6 +187,7 @@ export function RaiseDisputeButton(): any ({;
               this project.
             </DialogDescription>
           </DialogHeader>
+<<<<<<< HEAD
             <DialogDescription>;
               Please provide details about the issue you're experiencing with;
               this project.;
@@ -115,9 +208,94 @@ export function RaiseDisputeButton(): any ({;
           <DisputeForm;
             project_id={project_id}
             milestone_id={milestone_id}
+=======
+<<<<<<< HEAD
+          <DisputeForm
+<<<<<<< HEAD
+            projectId={projectId}
+            milestoneId={milestoneId}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             onDisputeCreated={handleDisputeCreated}
-            on_cancel={() => setIsDialogOpen (false)}          />;
-        </DialogContent>;
-      </Dialog>;
-    </>);
+            onCancel={() => setIsDialogOpen(false)}          />
+        </DialogContent>
+      </Dialog>
+    </>
+  )
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          
+          <DisputeForm 
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogHeader,;
+  DialogTitle,;
+  DialogDescription} from "@/components/ui/dialog",;
+import { DisputeForm } from "./DisputeForm",;
+import { useRouter } from 'next/router',;
+import { ShieldAlert } from 'lucide-react';
+interface RaiseDisputeButtonProps {;
+  projectId: string,;
+  milestoneId?: string,;
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",;
+  size?: "default" | "sm" | "lg" | "icon",;
+  className?: string;
+}
+;
+export function RaiseDisputeButton({;
+  projectId,;
+  milestoneId,;
+  variant = "outline",;
+  size,;
+  className;
+}: RaiseDisputeButtonProps) {;
+  const [isDialogOpen, setIsDialogOpen] = useState(false),;
+  const router = useRouter(),;
+  const handleDisputeCreated = (disputeId: string) => {;
+    setIsDialogOpen(false);
+    router.push(`/dashboard/disputes/${disputeId}`);
+  };
+  return (;
+    <>;
+      <Button;
+        variant={variant} ;
+        size={size} ;
+        className={className} ;
+        onClick={() => setIsDialogOpen(true)}
+      >;
+        <ShieldAlert className="h-4 w-4 mr-2" />;
+        Raise Dispute;
+      </Button>;
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
+        <DialogContent className="sm:max-w-[550px]">;
+          <DialogHeader>;
+            <DialogTitle>Raise a Dispute</DialogTitle>;
+            <DialogDescription>;
+              Please provide details about the issue you're experiencing with this project.;
+            </DialogDescription>;
+          </DialogHeader>;
+          <DisputeForm;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+            projectId={projectId}
+            milestoneId={milestoneId}
+            onDisputeCreated={handleDisputeCreated}
+            onCancel={() => setIsDialogOpen(false)}          />
+        </DialogContent>
+      </Dialog>;
+    </>;
+  );
+
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

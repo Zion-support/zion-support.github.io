@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 // Support utilities;
 export const support = {
   // Add support functionality here
+=======
+<<<<<<< HEAD
+// Support utilities
+export const support = {
+  // Add support functionality here
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   logEvent: (event: any) => null
   getArticles: () => []
   getArticleById: (id: string) => null
 }
+<<<<<<< HEAD
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here
   return null;
@@ -50,6 +59,30 @@ export function searchArticles(articles: HelpArticle[], query: string): HelpArti
 }
 ;
 export const logSupportEventToOperator = (event: any) =>: any {
+=======
+=======
+  logEvent: (event: any) => null,
+  getArticles: () => [],
+  getArticleById: (id: string) => null;
+};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const logSupportEventToOperator = (event: any) => {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Add support event logging functionality here;
   return null;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+<<<<<<< HEAD
+=======
+=======
+};
+=======
+
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

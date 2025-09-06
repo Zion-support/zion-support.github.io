@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -21,10 +22,47 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+<<<<<<< HEAD
+const InteractiveNavigation = () => {
+  return (
+    <nav className="bg-white shadow-lg">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          <div className="text-xl font-bold text-gray-800">Interactive Nav</div>
+          <div className="hidden md:flex space-x-8">
+            <Link href="/">
+              <span className="text-gray-600 hover:text-gray-900 transition-colors">Home</span>
+            </Link>
+            <Link href="/services">
+              <span className="text-gray-600 hover:text-gray-900 transition-colors">Services</span>
+            </Link>
+            <Link href="/about">
+              <span className="text-gray-600 hover:text-gray-900 transition-colors">About</span>
+            </Link>
+            <Link href="/contact">
+              <span className="text-gray-600 hover:text-gray-900 transition-colors">Contact</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
+export default InteractiveNavigation;
+=======
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface NavigationItem {
   name: string, href: string
   submenu?: NavigationItem[];
@@ -106,9 +144,24 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ ;
       </ul>;
     </nav>;
   );
+<<<<<<< HEAD
 }
 export default InteractiveNavigation;}
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
+=======
+<<<<<<< HEAD
+}
+export default InteractiveNavigation;}
+ursor/automate-test-fix-improve-and-merge-code-99d1,";
+=======
+
+};
+
+export default InteractiveNavigation;};
+ursor/automate-test-fix-improve-and-merge-code-99d1,";
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const InteractiveNavigation: React.FC: = () => {";
     <nav className="bg-white shadow-lg">";";
       <div: className="container mx-auto px-4">";";
@@ -119,6 +172,7 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>","
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
+<<<<<<< HEAD
 interface InteractiveNavigationProps {
   items: NavigationItem[], class_name?: string,
 }
@@ -197,3 +251,16 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href = "/about" className="text - gray - 600 hover:text - gray - 900: transition - colors">About</Link>", ";
             <Link: href="/contact" className="text - gray - 600 hover:text - gray - 900: transition - colors">Contact</Link>", ';
 export default Component}
+=======
+<<<<<<< HEAD
+export default Component}
+<<<<<<< HEAD
+=======
+
+export default Component}
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

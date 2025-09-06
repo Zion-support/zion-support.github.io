@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 {
   /* Robots Meta */
 }{
@@ -32,6 +37,10 @@
 }{
   type === 'article' && (<> {
   publishedTime && <meta property="article:published time" content= {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   publishedTime
 }/>
 }{
@@ -45,6 +54,7 @@
 }{
   section && <meta property="article:section" content= {
   section
+<<<<<<< HEAD
 }/>
 }{
   tags.map ( (tag, index) => (<meta key= {
@@ -110,29 +120,39 @@ import React from 'react';
 }{;
   type === 'article' && (<> {;
   publishedTime && <metaproperty="article:published time" content= {
+=======
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   publishedTime 
-}/> ;
-}{;
-  modifiedTime && <metaproperty="article:modified time" content= {
+}/>
+}{
+  modifiedTime && <meta property="article:modified time" content= {
   modifiedTime 
-}/> ;
-}{;
-  author && <metaproperty="article:author" content= {
+}/>
+}{
+  author && <meta property="article:author" content= {
   author 
-}/> ;
-}{;
-  section && <metaproperty="article:section" content= {
+}/>
+}{
+  section && <meta property="article:section" content= {
   section 
-}/> ;
-}{;
-  tags && tags.map ( (tag, index) => (<metakey= {
-  index 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}/>
+}{
+  tags.map ( (tag, index) => (<meta key= {
+  index
 }property="article:tag" content= {
+<<<<<<< HEAD
+  tag
+}/>
+}</>)
+=======
   tag 
-}/> ;
-}</>) ;
-}{;
-  /* Structured Data */ ;
+}/>
+}</>) 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}{
+  /* Structured Data */
 }<script
 }] 
 
@@ -386,6 +406,17 @@ const SEO: React.FC < SEOProps> = ({
         content='black - translucent';
       />;
       <meta name='apple - mobile - web - app - title' content='Zion Tech Group' />;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Structured Data */}
       <script;
         type='application / ld + json';
@@ -470,6 +501,19 @@ const SEO: React.FC < SEOProps> = ({
       {/* Canonical URL */}
       <link rel='canonical' href={fullUrl} />;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon && favicon.ico' />;
       <link
@@ -549,6 +593,7 @@ export default SEO;            __html: JSON && JSON.stringify(structuredData);
 export default SEO;  )
 }
 export default SEO;
+<<<<<<< HEAD
 
           __html: JSON.stringify ({
             '@context': 'https://schema.org',
@@ -661,3 +706,16 @@ export default SEO);
 ;
 export default SEO;
 ;
+=======
+<<<<<<< HEAD
+
+=======
+
+    </Head>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+    </Head>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

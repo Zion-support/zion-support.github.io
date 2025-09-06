@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.0";
@@ -71,6 +76,7 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
       .insert({ user_id: userId, balance });
     if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
   }
+<<<<<<< HEAD
   const { error: txError } = await supabase.from('token_transactions').insert({
     user_id: userId;
     amount: Math.abs(delta);
@@ -79,6 +85,22 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
   if (txError) return new Response(JSON && JSON.stringify({ error: txError && txError.message }), { status: 500 });
 
   return new Response(JSON.stringify({ success: true, balance }), { status: 200 })
+=======
+
+  return new Response(JSON.stringify({ success: true, balance }), { status: 200 })
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",;
+interface TokenRequest {;
+  userId: string,;
+  amount: number,;
+  reason?: string;
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
   const url = new URL (req.url);
   const action = url.pathname.split ('/').pop ();
@@ -131,11 +153,37 @@ if ( {) {
   $2
 }
     const { error } = await supabase;
+<<<<<<< HEAD
       .from ('wallets');
       .update ({ balance, updated_at: new Date ().toISOString () });
       .eq ('user_id', user_id);
     if (return new Response (JSON.stringify ({ error: error.message }), { status: 500 })) {
   $2
+=======
+
+      .from('wallets');
+      .update({ balance, updated_at: new Date().toISOString() });
+      .eq('user_id', userId),;
+    if (error) return new Response(JSON.stringify({ error: error.message }), { status: 500 });
+  } else {;
+    const { error } = await supabase;
+      .from('wallets');
+      .insert({ user_id: userId, balance }),;
+    if (error) return new Response(JSON.stringify({ error: error.message }), { status: 500 });
+  }
+;
+  const { error: txError } = await supabase.from('token_transactions').insert({;
+    user_id: userId,;
+    amount: Math.abs(delta),;
+    transaction_type: type,;
+    reason}),;
+  if (txError) return new Response(JSON.stringify({ error: txError.message }), { status: 500 });
+  return new Response(JSON.stringify({ success: true, balance }), { status: 200 });
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
   } else {
     const { error } = await supabase;

@@ -2,12 +2,27 @@ import { useState } from 'react';
 
 export type FeedbackContext = { actionType?: string; metadata?: any }
 export default function FeedbackModal({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   isOpen
   onClose
   defaultContext
   defaultKind = 'general'
   userHeaders
 }: {
+<<<<<<< HEAD
+=======
+=======
+  isOpen,
+  onClose,
+  defaultContext,
+  defaultKind = 'general',
+  userHeaders,
+}: {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
@@ -46,6 +61,7 @@ export default function FeedbackModal({
           context: defaultContext |{}
         })
       });
+<<<<<<< HEAD
     setLoading(false);
     onClose(true);
 
@@ -66,6 +82,46 @@ export default function FeedbackModal({
         <div className="text-lg font-medium">Was this helpful?</div>;
         <div className="flex gap-2">;
           {[1,2,3,4,5].map(n => (;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    setLoading(false);
+    onClose(true);
+=======
+
+    } catch {}
+=======
+=======
+
+    } catch {}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    setLoading(false);
+    onClose(true);
+  }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+  }
+  return (
+
+=======
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+      <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">
+        <div className="text-lg font-medium">Was this helpful?</div>
+        <div className="flex gap-2">
+          {[1,2,3,4,5].map(n => (
+
+=======
+
+
+            <button
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
@@ -282,6 +338,7 @@ function submit() {
     </div>
   );
 }
+<<<<<<< HEAD
         <div className='flex justify - end gap - 2'>;
           <button;
             on_click={() => on_close (false)}
@@ -320,3 +377,16 @@ function submit() {
       </div>;
     </div>);
 }
+=======
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -23,15 +23,29 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
+<<<<<<< HEAD
 type PersonaConfig = {;
+=======
+type PersonaConfig = {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   voice: 'Visionary' | 'Grounded' | 'Technical';
   language: string;
   cloneStyleText?: string;
 }
 export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({
+<<<<<<< HEAD
     voice: 'Visionary'
     language: 'English'
+=======
+<<<<<<< HEAD
+    voice: 'Visionary'
+    language: 'English'
+=======
+    voice: 'Visionary',
+    language: 'English',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   });
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
@@ -40,6 +54,7 @@ export default function StudioHostPage() {
     'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.'
   );}
 export default function StudioHostPage() {
+<<<<<<< HEAD
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' })
   const [operatorPrompt, setOperatorPrompt] = useState(;
     'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.';
@@ -47,6 +62,14 @@ export default function StudioHostPage() {
 
 export default function StudioHostPage() {;
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
+=======
+<<<<<<< HEAD
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' })
+=======
+
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
@@ -175,11 +198,19 @@ export default function StudioHostPage() {;
   return (
     <div className='space-y-8'>
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <section className='space-y-3'>
         <h2 className='text-xl font-semibold'>AI Persona</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
           <div>
             <label className='block text-sm font-medium'>Voice</label>
+<<<<<<< HEAD
     <div className='space-y-8'>;
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>;
 
@@ -188,6 +219,8 @@ export default function StudioHostPage() {;
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
           <div>;
             <label className='block text-sm font-medium'>Voice</label>;
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <select
               className='mt-1 w-full border rounded p-2'
               value={persona && persona.voice}
@@ -568,3 +601,64 @@ export default function StudioHostPage() {;
         </section>)}
     </div>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+                disabled={publishing}
+              >                {publishing ? 'Publishing…' : 'Update RSS'}
+              </button>
+            </div>
+            {episode.audio && (
+              <div className='flex gap-3'>
+                {episode.audio.mp3Url && (
+                  <a
+                    href={episode.audio.mp3Url}
+                    className='text-blue-600 underline'
+                  >
+                    Download MP3
+                  </a>
+                )}
+                {episode.audio.wavUrl && (
+                  <a
+                    href={episode.audio.wavUrl}
+                    className='text-blue-600 underline'
+                  >
+                    Download WAV
+                  </a>
+                )}
+                {episode.audio.mp4Url && (
+                  <a
+                    href={episode.audio.mp4Url}
+                    className='text-blue-600 underline'
+                  >
+                    Download MP4
+                  </a>
+                )}              </div>              <div className="flex gap-3">
+                {episode.audio.mp3Url && <a href={episode.audio.mp3Url} className="text-blue-600 underline">Download MP3</a>}
+                {episode.audio.wavUrl && <a href={episode.audio.wavUrl} className="text-blue-600 underline">Download WAV</a>}
+                {episode.audio.mp4Url && <a href={episode.audio.mp4Url} className="text-blue-600 underline">Download MP4</a>}
+            )}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            {episode.audio && (
+
+                {publishing ? 'Publishing…' : 'Update RSS'}
+              </button>
+            </div>
+            {episode.audio && (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

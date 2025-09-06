@@ -1,5 +1,26 @@
 
+<<<<<<< HEAD
 import { completeSitemap, SitemapItem } from "@/config/sitemap";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { completeSitemap, SitemapItem } from "@/config/sitemap";
+=======
+
+import { completeSitemap, SitemapItem } from "@/config/sitemap",
+
+
+=======
+import {completeSitemap, SitemapItem} from "@/config/sitemap";
+// Find a route by path in the complete sitemap
+export const findRouteByPath = (path: string): SitemapItem | undefined => {
+  return completeSitemap.find(route => route.path === path);
+};
+=======
+import { completeSitemap, SitemapItem } from "@/config/sitemap",
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Find a route by path in the complete sitemap
 
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
@@ -7,6 +28,7 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
 }
 // Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
+<<<<<<< HEAD
   const route = findRouteByPath(path)
   return route?.requiredAuth === true
 }
@@ -14,6 +36,25 @@ export const isProtectedRoute = (path: string): boolean => {
 export const canAccessRoute = (
   path: string;
   isAuthenticated: boolean;
+=======
+<<<<<<< HEAD
+  const route = findRouteByPath(path)
+=======
+  const route = findRouteByPath(path),
+
+// Check if a route is accessible by a specific user type
+export const canAccessRoute = (;
+  path: string;
+  isAuthenticated: boolean;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return route?.requiredAuth === true
+<<<<<<< HEAD
+}
+=======
+},
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   userType?: string | null
 ): boolean => {
   const route = findRouteByPath(path)
@@ -52,9 +93,18 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
     }
   }
   return breadcrumbs
+<<<<<<< HEAD
 }
 
+<<<<<<< HEAD
 import { complete_sitemap, SitemapItem } from '@/config / sitemap';
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { completeSitemap, SitemapItem } from "@/config/sitemap",;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Find a route by path in the complete sitemap;
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return complete_sitemap.find (route => route.path === path);
@@ -129,5 +179,15 @@ if ( {) {
     }
   }
   return breadcrumbs;
+<<<<<<< HEAD
 }
 ;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

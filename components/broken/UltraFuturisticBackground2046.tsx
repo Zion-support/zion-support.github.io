@@ -141,6 +141,7 @@ if (return) {
           case 'energy':;
             this && this.color = `hsl(${40 + Math && Math.random() * 60}, 100%, 70%)`;
             break;        }            break;
+<<<<<<< HEAD
             break;
           case 'neural':;
             this.color = `hsl (${280 + Math.random () * 40}, 80%, 70%)`;
@@ -152,6 +153,42 @@ if (return) {
             this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`;
             break
         }
+=======
+
+=======
+        
+        const types = ['quantumneuraldataenergy'];
+        this.type = types[Math.floor(Math.random() * types.length)] as any;
+        
+        switch (this.type) {
+          case 'quantum':
+            this.color = `hsl(${180 + Math.random() * 60}, 70%, 60%)`;
+            break;
+          case 'neural':
+            this.color = `hsl(${280 + Math.random() * 40}, 80%, 70%)`;
+            break;
+          case 'data':
+            this.color = `hsl(${200 + Math.random() * 40}, 90%, 80%)`;
+            break;
+          case 'energy':
+            this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`;
+<<<<<<< HEAD
+            break;        }            break
+        }
+<<<<<<< HEAD
+      }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            break;        }
+
+        }
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
       update() {
         this.x += this.vx;
@@ -928,6 +965,15 @@ if ( {) {
           ease: 'easeInOut'
         }}
       />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Quantum particle canvas */}
       <canvas
         ref={canvasRef}
@@ -1102,6 +1148,7 @@ export default UltraFuturisticBackground2046;              ease: "easeInOut",;
 export default UltraFuturisticBackground2046;  )
 }
 export default UltraFuturisticBackground2046;
+<<<<<<< HEAD
 
               duration: Math.random () * 6 + 4,
               repeat: Infinity,
@@ -1124,3 +1171,16 @@ export default UltraFuturisticBackground2046);
 ;
 export default UltraFuturisticBackground2046;
 ;
+=======
+<<<<<<< HEAD
+
+=======
+
+    </div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+    </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

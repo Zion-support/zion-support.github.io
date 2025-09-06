@@ -1,4 +1,31 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+
+
+=======
+import React from 'react',;
+import ReactMarkdown from 'react-markdown',;
+import { useRouter } from 'next/router',;
+import AdvancedSEO from '@/components/seo/AdvancedSEO',;
+import { BLOG_POSTS } from '@/data/blog-posts',;
+import { AuthorBio } from '@/components/blog/AuthorBio',;
+import { SocialShareButtons } from '@/components/blog/SocialShareButtons',;
+import { CommentsSection } from '@/components/blog/CommentsSection',;
+import type { BlogPost } from '@/types/blog',;
+import type { GetStaticPaths, GetStaticProps } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
+function parseMarkdown(filePath: string): BlogPost | null {
+  if (!fs.existsSync(filePath)) {
+    return null
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
@@ -101,6 +128,32 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   }, [slug, initialPost])
   if (error) {
     return <div>{error}</div>
+<<<<<<< HEAD
+=======
+
+=======
+const BlogPostPage: React.FC < BlogPostPageProps> = ({ initial_post }) => {
+  const router = use_router (),
+  const { slug } = router.query,
+  const [post, set_post] = React.useState < BlogPost | null>(initial_post),
+  const [error, set_error] = React.useState < string | null>(null),
+  React.useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+=======
+
+function parseMarkdown(filePath: string): BlogPost | null {;
+  if (!fs.existsSync(filePath)) {;
+    return null;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   if (!post) {
     return <div>Article not found</div>
@@ -140,10 +193,91 @@ if ( {) {
           <img;
             src={post.author.avatar_url}
             alt={post.author.name}
+<<<<<<< HEAD
+=======
+
+
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, [slug, initialPost]),;
+  if (error) {;
+    return <div>{error}</div>;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  if (!post) {;
+    return <div>Article not found</div>;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const articleLd = {;
+    author: post.author.name;
+    publishedTime: post.publishedDate;
+    tags: post.tags || []};
+  const body = (post as any).body || post.content;
+  return (;
+    <>;
+      <AdvancedSEO;
+        title={post.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        description={post.excerpt  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        image={post.featuredImage  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        type="article"
+        article={articleLd  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      />
+      <main className="prose dark:prose-invert max-w-3xl mx-auto py-8">
+        <h1>{post.title}</h1>
+        {post.excerpt && <p className="lead">{post.excerpt}</p>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <div className="flex items-center gap-3 mb-6">
+          <img
+            src={post.author.avatarUrl  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            alt={post.author.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             className="w-10 h-10 rounded-full"
             onError={(e) => {
               const target = e.currentTarget as HTMLImageElement
               target.src = '/images/blog-placeholder.svg'
+<<<<<<< HEAD
             }}
           />
           <div>
@@ -153,6 +287,26 @@ if ( {) {
                 {post.author.title}
               </p>
             )}
+=======
+
+
+                {post.author.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </p>;
+            )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </div>
         </div>
         {post.featuredImage && (
@@ -174,6 +328,26 @@ if ( {) {
             <img;
               src={post.featured_image}
               alt={post.title}
+<<<<<<< HEAD
+=======
+
+
+              src={post.featuredImage  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              alt={post.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="object-cover w-full h-full"
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement
@@ -262,3 +436,95 @@ if ( {) {
   return { props: { initial_post: post }, revalidate: 60 }
 },
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+              }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            />;
+          </div>;
+        )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return { props: { initialPost: post }, revalidate: 60 }
+},;
+;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+        <ReactMarkdown>{body}</ReactMarkdown>;
+        <AuthorBio author={post.author} />;
+        <SocialShareButtons title={post.title} />;
+        <CommentsSection slug={post.slug} />;
+      </main>;
+    </>;
+  );
+};
+export default BlogPostPage,;
+export const getStaticPaths: GetStaticPaths = async () => {;
+  const dir = path.join(process.cwd(), 'contentblog'),;
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith('.md'));
+  const paths = files.map((f) => ({;
+    params: { slug: f.replace(/\.md$/, '') }})),;
+  // Use `blocking` so new posts added after build can be generated on demand;
+  return { paths, fallback: 'blocking'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+},;
+export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({;
+  params}: {;
+  params?: { slug?: string   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}) => {;
+  const slug = params?.slug as string;
+  // Validate slug to prevent malformed paths;
+  if (!/^[a-z0-9-]+$/.test(slug)) {;
+    return { notFound: true   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const filePath = path.join(process.cwd(), 'contentblog', `${slug}.md`),;
+  const post = parseMarkdown(filePath);
+  if (!post) {;
+    return { notFound: true   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return { props: { initialPost: post }, revalidate: 60   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+};
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

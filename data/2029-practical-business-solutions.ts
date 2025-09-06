@@ -1,4 +1,14 @@
+<<<<<<< HEAD
 export interface PracticalBusinessSolution2029 {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export interface PracticalBusinessSolution2029 {
+=======
+export interface PracticalBusinessSolution2029 {;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   name: string;
   tagline: string;
@@ -7,12 +17,21 @@ export interface PracticalBusinessSolution2029 {
   features: string[];
   link: string;
   category: string;
+<<<<<<< HEAD
   real_implementation: boolean;
   contact_info: {
+=======
+  realImplementation: boolean;
+  contactInfo: {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     mobile: string;
     email: string;
 
     address: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] =
   [
@@ -39,11 +58,14 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
         address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     }
+<<<<<<< HEAD
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
       },
     },
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ];    features: [
 
       "Practical solutions";
@@ -60,6 +82,20 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
+<<<<<<< HEAD
+=======
+    }
+  }
+];
+=======
+export interface PracticalBusinessSolution2029 {;
+=======
+  };
+
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
+
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ];    features: [;
       "Practical solutions";
       "Business applications";
@@ -71,6 +107,49 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
     real_implementation: true,
     contact_info: {
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709";
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  description: string,;
+  features: string[],;
+  link: string,;
+  category: string,;
+  realImplementation: boolean,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string;
+  }
+}
+
+export interface PracticalBusinessSolution2029 {;
+
+      "Affordable pricing"
+    ],
+    link: "/services/2029-practical-business-solution",
+    category: "Practical Business Solutions 2029",
+    realImplementation: true,
+    contactInfo: {
+<<<<<<< HEAD
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+=======
+<<<<<<< HEAD
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
+=======
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
 ];

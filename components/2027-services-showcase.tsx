@@ -4,6 +4,10 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Search
   Star
   Users
@@ -40,6 +44,7 @@ import {
  } from 'lucide-react';
 import { cuttingEdge2027Innovations  } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027  } from '../data/2027-practical-micro-saas';
+<<<<<<< HEAD
 import {;
   Search,;
   Star,;
@@ -72,9 +77,51 @@ import {;
   Search, Star, Users, TrendingUp, DollarSign, Clock, ;
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe, ;
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud, ;
+=======
+=======
+import {
+=======
+
+
+  Search,
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Target,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Eye,
+  Heart,
+  Share2,
+  Download,
+  Phone,
+  Mail,
+  MapPin,} from 'lucide-react';import {
+  Search, Star, Users, TrendingUp, DollarSign, Clock,
+  CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe,
+  Zap, Sparkles, Shield, Target, Cpu, Database, Cloud,
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin;
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
 export default function ServicesShowcase2027() {;
@@ -580,9 +627,18 @@ export default function ServicesShowcase2027() {;
               </Link>;
               <Link
                 href="/pricing"
+<<<<<<< HEAD
                 className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <DollarSign className="w-5 h-5" />
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <span>View Pricing</span>
               </Link>
             </div>
@@ -598,6 +654,17 @@ export default function ServicesShowcase2027() {;
         </div>;
       </section>;
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Search and Filters */}
       <section className='px-4 sm:px-6 lg:px-8 mb-16'>;
         <div className='max-w-7xl mx-auto'>;
@@ -655,8 +722,23 @@ export default function ServicesShowcase2027() {;
                       {category && category.icon} {category && category.name} ({category && category.count});
                     </option>;
                   ))}
+<<<<<<< HEAD
                 </select>
               </div>
+=======
+
+                </select>;
+              </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Price Range Filter */}
               <div>;
                 <label className='block text-cyan-400 font-medium mb-2'>;
@@ -685,6 +767,16 @@ export default function ServicesShowcase2027() {;
                   Sort By;
                 </label>;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Sort By */}
               <div>
                 <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Sort By">Sort By</label>
@@ -791,6 +883,26 @@ export default function ServicesShowcase2027() {;
                       <div className='text-2xl font-bold text-white'>                    <div className="mb-4">
                       <div className="text-2xl font-bold text-white">
                         {service.price}
+<<<<<<< HEAD
+=======
+=======
+                    <div className='mb-4'>
+
+                      <div className='text-2xl font-bold text-white'>                        {service.price}
+
+                      {service.description}
+                    </p>
+
+                    {/* Price */}
+
+                        {service.price}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       </div>
                     </div>
                     <div className="flex items-start justify-between mb-4">;
@@ -829,6 +941,7 @@ export default function ServicesShowcase2027() {;
                             </span>;
                           </div>;
                         ))}
+<<<<<<< HEAD
                         {service && service.features.length > 3 && (;
                           <div className='text-cyan-400 text-sm'>                            +{service && service.features.length - 3} more features                        {service && service.features.slice(0, 3).map((feature, idx) => (;
                           <div key={idx} className="flex items-center space-x-2">;
@@ -851,6 +964,26 @@ export default function ServicesShowcase2027() {;
                       <div className='text-gray-400 text-xs'>
                         Return on Investment
                       </div>
+=======
+                        {service.features.length > 3 && (
+                          <div className="text-cyan-400 text-sm">
+                            +{service.features.length - 3} more features
+                          </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    {/* ROI */}
+
+                      </div>;
+                    </div>;
+=======
+                    <div className="mb-6 text-center">
+                      <div className="text-green-400 font-semibold text-lg">ROI: {service.roi}</div>
+                      <div className="text-gray-400 text-xs">Return on Investment</div>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     </div>
 
                     {/* ROI */}
@@ -883,11 +1016,49 @@ export default function ServicesShowcase2027() {;
                       <Link
                         href='/contact'
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                        href="/contact"
+<<<<<<< HEAD
+=======
+
+                        href={service.link}
+                        className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm"
+=======
+
+                        className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                      >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      >
+                        Learn More
+                      </Link>
+                      <Link
+                        href="/contact"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm"
                       >
                         Contact
                       </Link>
                     </div>
+<<<<<<< HEAD
+=======
+
+                        className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm">;
+                        Contact;
+                      </Link>;
+                    </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     {/* Category Badge */}
                     <div className='mt-4'>;
                       <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>                        {service && service.category}                    <div className="mt-4">;
@@ -898,8 +1069,23 @@ export default function ServicesShowcase2027() {;
                   </div>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
             </AnimatePresence>
           </div>
+=======
+
+            </AnimatePresence>;
+          </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* No Results */}
           {sortedServices && sortedServices.length === 0 && (;
             <motion&& motion.div
@@ -917,6 +1103,32 @@ export default function ServicesShowcase2027() {;
                   setSearchTerm('');
                   setSelectedCategory('all');
                   setSelectedPriceRange('all');
+<<<<<<< HEAD
+=======
+                }}
+<<<<<<< HEAD
+                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'              >              className="text-center py-20"
+            >
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
+              <p className="text-cyan-300 mb-6">Try adjusting your search criteria or browse all services.</p>
+=======
+                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'              >
+
+              <button
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                onClick={() => {
+                  setSearchTerm('');
+                  setSelectedCategory('all');
+                  setSelectedPriceRange('all');
+                }}
+                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 }}
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'              >              className="text-center py-20";
             >;
@@ -937,6 +1149,7 @@ export default function ServicesShowcase2027() {;
               </button>;
             </motion && motion.div>;
           )}
+<<<<<<< HEAD
         </div>
       </section>
       {/* Contact Section */}
@@ -944,6 +1157,21 @@ export default function ServicesShowcase2027() {;
         <div className='max-w-4xl mx-auto'>
           <div className='bg-gradient-to-r from-cyan-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 text-center shadow-2xl shadow-cyan-500/20'>
             <h2 className='text-3xl font-bold text-white mb-4'>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Contact Section */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Ready to Transform Your Business?
             </h2>
             <p className='text-cyan-300 mb-8 text-lg'>
@@ -1016,9 +1244,16 @@ export default function ServicesShowcase2027() {;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link
                 href="/contact"
+<<<<<<< HEAD
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25">;
                 Get Started Today;
               </Link>;
+=======
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25"
+              >
+                Get Started Today
+              </Link>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <Link
                 href='/pricing'
                 className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'                href="/pricing"
@@ -1047,6 +1282,7 @@ export default function ServicesShowcase2027() {;
             <p className='mt-2'>
               <Link
                 href='/privacy'
+<<<<<<< HEAD
                 className='hover:text-cyan-400 transition-colors duration-300'>;
                 Privacy Policy;
               </Link>;
@@ -1057,6 +1293,20 @@ export default function ServicesShowcase2027() {;
                 Terms of Service;
               </Link>;
               {'  '}
+=======
+                className='hover:text-cyan-400 transition-colors duration-300'
+              >
+                Privacy Policy
+              </Link>
+              {' • '}
+              <Link
+                href='/terms'
+                className='hover:text-cyan-400 transition-colors duration-300'
+              >
+                Terms of Service
+              </Link>
+              {' • '}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <Link
                 href='/contact'
                 className='hover:text-cyan-400 transition-colors duration-300'
@@ -1073,6 +1323,7 @@ export default function ServicesShowcase2027() {;
             <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>
             <p className="mt-2">
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300">Privacy Policy</Link>
+<<<<<<< HEAD
                 className='hover:text-cyan-400 transition-colors duration-300'>;
                 Contact Us;
               </Link>            </p>              Z;
@@ -1082,6 +1333,25 @@ export default function ServicesShowcase2027() {;
             </h3>;
             <p className="text-cyan-300">2027 Innovation Hub</p>;
           </div>;
+=======
+              {' • '}
+              <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300">Terms of Service</Link>
+              {' • '}
+              <Link href="/contact" className="hover: text-cyan-400 transition-colors duration-300">Contact Us</Link>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </UltraFuturisticMatrixBackground2027>
+<<<<<<< HEAD
+);  )
+}
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
           <div className="text-cyan-300 text-sm">;
             <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>;
@@ -1357,5 +1627,13 @@ export default function ServicesShowcase2027() {;
 }
   )
 }
+<<<<<<< HEAD
     </UltraFuturisticMatrixBackground2027>));
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

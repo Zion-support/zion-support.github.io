@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 </div>) )
 }</div> </div>) import fs from 'fs';
@@ -17,9 +19,20 @@ export async function getServerSideProps() {
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 import {TALENT_PROFILES} from '../../data/talent';
-type TalentSummary = { slug: string, summary: string },;
+type TalentSummary = { slug: string, summary: string }
+export async function getServerSideProps() {
+=======
+</div>) ) 
+=======
+ </div>) ) 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+import {TALENT_PROFILES} from '../../data/talent';
+type TalentSummary = { slug: string, summary: string },
 export async function getServerSideProps() {;
-  const file = path && path.join(process && process.cwd(), 'datatalent_ai && datatalent_ai.json');
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const file = path.join(process.cwd(), 'datatalent_ai.json');
   let generatedAt = '';
   let summaries: TalentSummary[] = [];  try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
@@ -29,7 +42,17 @@ export async function getServerSideProps() {;
   } catch {}
   return { props: { generatedAt, summaries } }
 }
+<<<<<<< HEAD
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
+=======
+export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const map = new Map(summaries.map(s => [s.slug, s.summary]));
 
   return (

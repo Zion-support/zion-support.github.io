@@ -4,11 +4,45 @@ import { toast  } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 // Props for the middleware component
 interface FraudDetectionMiddlewareProps {
-  children: React.ReactNode;
+  children: React.ReactNode
+<<<<<<< HEAD
 }
 // Interface for the context
 interface FraudDetectionContextType {
   scanMessageContent: (
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useCallback } from 'react',;
+import { checkMessage, monitorContent } from '@/services/fraud',;
+import { toast } from '@/hooks/use-toast',;
+import { supabase } from '@/integrations/supabase/client',;
+// Props for the middleware component;
+interface FraudDetectionMiddlewareProps {;
+  children: React.ReactNode;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+;
+// Interface for the context;
+interface FraudDetectionContextType {;
+  scanMessageContent: (;
+    userId: string,;
+    messageId: string,;
+    content: string,;
+    userEmail?: string;
+  ) => Promise<{;
+    isSafe: boolean,;
+    explanation?: string;
+  }>;
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
     userId: string
     messageId: string
@@ -62,6 +96,14 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
           }
         }
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       // For suspicious but not dangerous content, log but let it pass through
       if (quickCheck.severity === 'suspicious') {
         console.log('Suspicious content detected but allowed:', content)
@@ -76,6 +118,18 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         console.error('Error analyzing message:', error);
         return { isSafe: true }, // Default to safe on error
       }
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       if (data.classification === 'dangerous') {
         toast({
           title: "Message Blocked"
@@ -85,11 +139,66 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         return {
           isSafe: false
           explanation: data.explanation
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+      if (data.classification === 'dangerous') {;
+        toast({;
+          title: "Message Blocked",;
+          description: data.explanation || "This message contains prohibited content.",;
+          variant: "destructive";
+        }),;
+        return {;
+          isSafe: false,;
+          explanation: data.explanation;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         }
       }
       */
       // Message is considered safe
       return { isSafe: true }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    } catch (error) {
+      console.error('Error in fraud detection:', error);
+      // On error, let the message pass through but log the error
+      return { isSafe: true }
+    }
+  }, []);
+  // Create the context value
+  const contextValue: FraudDetectionContextType = {
+    scanMessageContent}
+  return (
+    <FraudDetectionContext.Provider value={contextValue}>
+      {children}
+    </FraudDetectionContext.Provider>
+  )
+}
+// Hook to use the fraud detection context
+export const useFraudDetection = () => {;
+  const context = React.useContext(FraudDetectionContext);
+  if (context === undefined) {
+    throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware')
+  }
+  return context
+<<<<<<< HEAD
+}
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     } catch (error) {;
       console && console.error('Error in fraud detection:', error);
       // On error, let the message pass through but log the error;
@@ -111,9 +220,20 @@ export const useFraudDetection = () => {
   if (context === undefined) {
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware')
   }
+<<<<<<< HEAD
   return context
 }
 
+=======
+  return context;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Interface for the context;
 interface FraudDetectionContextType {
   scanMessageContent: (

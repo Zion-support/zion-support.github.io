@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
+=======
+
+<<<<<<< HEAD
+import React, { useState } from 'react';
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
 import { useAuth  } from '@/hooks/useAuth';
 import { MilestoneCard  } from './MilestoneCard';
@@ -8,7 +15,72 @@ import { Card, CardContent  } from '@/components/ui/card';
 // lucide-react doesn't export PlusIcon, use our icon wrapper
 import { Plus  } from '@/components/icons';
 import { EmptyState } from '@/components/ui/empty-state';
+<<<<<<< HEAD
 interface MilestonesListProps {
+=======
+interface MilestonesListProps {
+=======
+import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
+import {useAuth} from '@/hooks/useAuth';
+import {MilestoneCard} from './MilestoneCard';
+import {AddMilestoneForm} from './AddMilestoneForm';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent} from '@/components/ui/card';
+// lucide-react doesn't export PlusIcon, use our icon wrapper;
+import {Plus} from '@/components/icons';
+import {EmptyState} from '@/components/ui/empty-state';
+interface MilestonesListProps {
+  milestones: Milestone[],
+  activities: Record<string, MilestoneActivity[]>;
+  isLoading: boolean,
+  isClient: boolean,
+  onCreateMilestone: (data: any) => Promise<Milestone | null>,
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
+  onDeleteMilestone: (id: string) => Promise<boolean>,
+  onUploadDeliverable: (id: string, file: File) => Promise<any>,
+  isSubmitting: boolean,
+  onApprove?: (id: string) => Promise<void>,
+  onReject?: (id: string) => Promise<void>
+}
+
+export const MilestonesList: React.FC<MilestonesListProps> = ({;
+  milestones;
+  activities;
+  isLoading;
+  isClient;
+  onCreateMilestone;
+  onUpdateStatus;
+  onDeleteMilestone;
+  onUploadDeliverable;
+  isSubmitting;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState } from 'react',;
+import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
+import { useAuth } from '@/hooks/useAuth',;
+import { MilestoneCard } from './MilestoneCard',;
+import { AddMilestoneForm } from './AddMilestoneForm',;
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent } from '@/components/ui/card',;
+// lucide-react doesn't export PlusIcon, use our icon wrapper;
+import { Plus } from '@/components/icons',;
+import { EmptyState } from '@/components/ui/empty-state',;
+interface MilestonesListProps {;
+  milestones: Milestone[],;
+  activities: Record<string MilestoneActivity[]>,;
+  isLoading: boolean,;
+  isClient: boolean,;
+  onCreateMilestone: (data: any) => Promise<Milestone | null>,;
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,;
+  onDeleteMilestone: (id: string) => Promise<boolean>,;
+  onUploadDeliverable: (id: string, file: File) => Promise<any>,;
+  isSubmitting: boolean,;
+  onApprove?: (id: string) => Promise<void>,;
+  onReject?: (id: string) => Promise<void>;
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   milestones: Milestone[]
   activities: Record<string, MilestoneActivity[]>;
@@ -134,11 +206,34 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
             onReject={onReject}
           />;
         ))}
+<<<<<<< HEAD
       </div>
     </div>
   )
 }
 
+=======
+<<<<<<< HEAD
+      </div>
+    </div>
+  )
+<<<<<<< HEAD
+}
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      </div>;
+    </div>;
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   is_submitting;
   on_approve,
   on_reject;

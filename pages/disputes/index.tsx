@@ -19,11 +19,22 @@ function DisputesIndexPage() {
   const { data } = useSWR ('/api / disputes', fetcher),
   const disputes = data?.disputes || [],
   return (
+<<<<<<< HEAD
     <EnhancedLayout>
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-between mb-4">
           <h1 className="text-2xl font-semibold">My Disputes</h1>
           <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</a></Link>
+=======
+
+
+          <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</Link></Link>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         </div>
         <div className="overflow-auto border rounded">
           <table className="min-w-full text-sm">
@@ -38,7 +49,18 @@ function DisputesIndexPage() {
             <tbody>
               {disputes.map((d: any) => (
                 <tr key={d.id} className="border-t">
+<<<<<<< HEAD
                   <td className="px-3 py-2"><Link href={`/disputes/${encodeURIComponent(d.id)}`}><a className="text-blue-700 hover:underline">{d.id}</a></Link></td>
+=======
+
+
+                  <td className="px-3 py-2"><Link href={`/disputes/${encodeURIComponent(d.id)}`}><a className="text-blue-700 hover:underline">{d.id}</Link></Link></td>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <td className="px-3 py-2">{d.projectId}</td>
                   <td className="px-3 py-2">{new Date(d.createdAt).toLocaleString()}</td>
                   <td className="px-3 py-2">{d.status}</td>
@@ -48,13 +70,30 @@ function DisputesIndexPage() {
                 <tr>
                   <td colSpan={4} className="px-3 py-6 text-center text-sm text-gray-500">No disputes yet</td>
                 </tr>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               )}
             </tbody>
           </table>
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
   )
+=======
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
                 <tr>;
                   <td col_span={4} className="px - 3 py - 6 text - center text - sm text - gray - 500">No disputes yet</td>;
@@ -63,5 +102,20 @@ function DisputesIndexPage() {
           </table>;
         </div>;
       </div>;
-    </EnhancedLayout>);
+    </EnhancedLayout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

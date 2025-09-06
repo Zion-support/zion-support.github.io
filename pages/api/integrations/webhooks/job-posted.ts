@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -81,8 +88,47 @@ function handler() {
   res && res.status(200).json({ ok: true, results });
 }
 
+<<<<<<< HEAD
   writeState(s => {
     s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } })
+=======
+<<<<<<< HEAD
+=======
+
+res.status(200).json({ ok: true, results });
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readState, writeState } from '../../../../lib/integrations/fileStore';
+import { crm } from '../../../../lib/integrations/connectors';
+export default async function handler(req, res) {
+  try {
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    const { log } = await crm.syncContact(conn, { company: job.company, contact: job.contact });
+    writeState(s => s.logs.push(log));
+    results.push({ providerId: conn.providerId, ok: true });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  // record Zapier event;
+  writeState(s => {;
+    s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } });
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   });
 
   res.status(200).json({ ok: true, results })
@@ -99,6 +145,7 @@ function handler() {
     write_state ((s) => s.logs.push (log));
     results.push ({ provider_id: conn.provider_id, ok: true });
   }
+<<<<<<< HEAD
   // record Zapier event;
   write_state ((s) => {
     s.events.push ({
@@ -110,4 +157,10 @@ function handler() {
   });
 ;
   res.status (200).json ({ ok: true, results });
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }

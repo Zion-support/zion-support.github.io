@@ -1,6 +1,20 @@
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 export interface WhitelabelTenant {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect  } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+export interface WhitelabelTenant {
+=======
+
+import {useState, useEffect} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+export interface WhitelabelTenant {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   brand_name: string;
   subdomain: string;
@@ -24,8 +38,19 @@ export interface WhitelabelTenant {
 
   email_template_override: Record<string, any> | null
 }
+<<<<<<< HEAD
 export function useWhitelabelTenant(externalSubdomain?: string) {
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null),
+=======
+<<<<<<< HEAD
+export function useWhitelabelTenant(externalSubdomain?: string) {
+  const [tenant, setTenant] = useState<WhitelabelTenant | null>(null),
+=======
+
+export function useWhitelabelTenant(externalSubdomain?: string) {;
+  const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [isLoading, setIsLoading] = useState(true);
 
   const [error, setError] = useState<string | null>(null);
@@ -92,6 +117,7 @@ if ( {) {
             headers: {
               'Content - Type': 'application / json'}}
         );
+<<<<<<< HEAD
         if (functionError) {
           console && console.error('Edge Function error:', functionError);
           setError('Failed to load tenant configuration. Please try again later.');
@@ -102,6 +128,19 @@ if ( {) {
           console && console.warn('No tenant data received');
           setTenant(null);
           return
+=======
+
+;
+        if (!data) {;
+          console.warn('No tenant data received'),;
+          setTenant(null),;
+          return;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         }
         if (data.tenant) {
           setTenant(data.tenant)
@@ -197,6 +236,14 @@ if (||) {
     }
     checkAdminStatus()
   }, [tenantId]);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return { isAdmin, isLoading }
 }

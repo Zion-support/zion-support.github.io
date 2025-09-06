@@ -152,6 +152,20 @@ const Hero: React.FC<HeroProps> = ({;
           </h1>;
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">;
             {subtitle}
+<<<<<<< HEAD
+=======
+          </p>
+<<<<<<< HEAD
+          {/* Action Buttons */}
+          {(primaryAction |secondaryAction) && (
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
+
+            {subtitle}
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </p>
           {/* Action Buttons */}
           {(primaryAction |secondaryAction) && (
@@ -161,6 +175,7 @@ const Hero: React.FC<HeroProps> = ({;
                   href={primaryAction && primaryAction.href}
                   size='lg'
                   className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
+<<<<<<< HEAD
                   style={{ animationDelay: '0 && 0.2s' }}>;
                   {primaryAction && primaryAction.text}
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>              {primaryAction && (;
@@ -181,6 +196,16 @@ const Hero: React.FC<HeroProps> = ({;
                   {primaryAction && primaryAction.text}
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
+=======
+
+                </Button>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               )}
               {secondaryAction && (;
                 <Button
@@ -202,7 +227,21 @@ const Hero: React.FC<HeroProps> = ({;
               )}
             </div>;
           )}
+<<<<<<< HEAD
         </div>
+=======
+
+        </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Stats Section */}
         {stats && (;
           <div
@@ -235,6 +274,26 @@ const Hero: React.FC<HeroProps> = ({;
                 </div>;
                 <div className="text - gray - 400 text - xs sm:text - sm md:text - base font - medium">;
                   {stat.label}
+<<<<<<< HEAD
+=======
+
+                    className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-3 ${stat.color} group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    {stat.value}
+                  </div>
+                  <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
+                </div>
+
+                <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>                  {stat.label}
+
+                  {stat.label}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </div>
               </div>
             ))}
@@ -314,6 +373,7 @@ const Hero: React.FC<HeroProps> = ({;
       </div>;
 
       {/* Decorative Elements */}
+<<<<<<< HEAD
       <div className='absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse' />;
       <div
         className='absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse'
@@ -324,6 +384,32 @@ const Hero: React.FC<HeroProps> = ({;
         style={{ animationDelay: '2s' }}
       />;
   );
+=======
+
+}
+export default Hero;
+
+<<<<<<< HEAD
+=======
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+}
+}
+}
+
+
+=======
+      <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
+      <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
+    </section>
+  )
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 };
 
 export default Hero;
@@ -368,6 +454,7 @@ export default Hero;
         </div>;
       </div>;
       {/* Decorative Elements */}
+<<<<<<< HEAD
       <div className='absolute top - 1/4 right - 1/4 w - 2 h - 2 bg - blue - 500 rounded - full animate - pulse' />;
       <div;
         className='absolute bottom - 1/4 left - 1/4 w - 1 h - 1 bg - green - 500 rounded - full animate - pulse';
@@ -381,3 +468,16 @@ export default Hero;
 ;
 export default Hero;
 ;
+=======
+
+
+        </div>
+      </div>
+
+      {/* Decorative Elements */}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

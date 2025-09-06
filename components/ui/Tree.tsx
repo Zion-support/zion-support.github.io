@@ -24,8 +24,21 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 export interface TreeNode {;
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+export interface TreeNode {;
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export interface TreeNode {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   name: string;
   path: string;
 
@@ -60,10 +73,15 @@ function NodeItem(): any ({;
   const copyPath = async () => {
     await navigator.clipboard.writeText(node.path);  }
 export interface TreeNode {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   name: string
   path: string
   type: "folder" | "file"
 
+<<<<<<< HEAD
 
   const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
   const toggle = () => setOpen(v => !v);
@@ -74,6 +92,14 @@ export interface TreeNode {;
   name: string,;
   path: string,;
   type: "folder" | "file",;
+=======
+=======
+
+  name: string,
+  path: string,
+  type: "folder" | "file",;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   exists?: boolean;
   children?: TreeNode[];
 }
@@ -283,6 +309,7 @@ function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, 
     </div>;
   );
 
+<<<<<<< HEAD
 export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
   return (
     <div className='w-full'>;
@@ -307,6 +334,13 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
         <div className="ml-4 border-l pl-2">
           {node.children!.map((child) => (
             <NodeItem key={child.path} node={child} depth={depth + 1} onDeploy={onDeploy} />
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           ))}
         </div>
       )}
@@ -328,6 +362,22 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
       {nodes && nodes.map((n) => (;
       ))}
     </div>;
+<<<<<<< HEAD
+=======
+  );  )
+}
+export function Tree({ nodes, onDeploy }: TreeProps) {
+  return (
+    <div className="w-full">
+      {nodes.map((n) => (
+      ))}
+<<<<<<< HEAD
+    </div>
+=======
+
+    </div>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
 
 export default Tree;
@@ -355,12 +405,34 @@ export default Tree;
 }depth= {
   0
 }onDeploy= {
+<<<<<<< HEAD
   onDeploy
 }/>) )
 }</div>)
+=======
+<<<<<<< HEAD
+  onDeploy
+}/>) )
+}</div>)
+=======
+  onDeploy 
+}/>) ) 
+}</div>) ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}export default Tree;}
+export default Tree;
+<<<<<<< HEAD
+
+=======
+    <div className="w-full">
+      {nodes.map((n) => (
+=======
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }export default Tree;}
 
 export default Tree;
+<<<<<<< HEAD
   child.path;
 }node= {
   child;
@@ -389,3 +461,19 @@ function Tree() {
 }export default Tree;}
 export default Tree;
 ;
+=======
+
+
+
+        <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
+      ))}
+    </div>
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+    </div>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

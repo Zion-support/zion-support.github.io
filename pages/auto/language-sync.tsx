@@ -21,6 +21,7 @@ const LanguageSync: NextPage = () => {
       </main>
     </div>
   )
+<<<<<<< HEAD
 }
 export default LanguageSync;
 
@@ -47,3 +48,21 @@ const LanguageSync: NextPage = () => {
     </div>);
 },
 export default LanguageSync,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+export default LanguageSync;
+
+=======
+},
+export default LanguageSync,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+},
+<<<<<<< HEAD
+
+export default LanguageSync,
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

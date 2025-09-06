@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
@@ -8,6 +12,13 @@ import { Download } from 'lucide-react'
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
 import { toast } from "sonner";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface ExportPanelProps {
 
   platform: AppPlatform
@@ -36,6 +47,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
         content += '\n\n_keywords:\n' + metadata.keywords.join ();
 }        file_name = `zion - app - metadata-${platform}-${metadata.version}.csv`;
       }
+<<<<<<< HEAD
       // Create download link
       const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' })
       const url = URL.createObjectURL(blob)
@@ -56,6 +68,64 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
     logInfo("Tracking app installation analytics...")
     toast.success("Analytics tracking enabled")
   }
+=======
+
+interface ExportPanelProps {;
+  platform: AppPlatform,;
+  metadata: AppMetadataValues;
+}
+
+export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },) => {;
+  const handleExport = (format: 'json' | 'csv',) => {;
+    try {;
+      let content: string,;
+      let fileName: string,;
+      if (format === 'json') {;
+        content = JSON && JSON.stringify(metadata, null, 2);
+        fileName = `zion-app-metadata-${platform}-${metadata && metadata.version}.json`;
+      } else {;
+        // Convert object to CSV format;
+        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];
+        const values = [;
+          metadata && metadata.appTitle;
+          metadata && metadata.shortDescription;
+          metadata && metadata.longDescription;
+          metadata && metadata.version;
+          metadata && metadata.platform;
+        ];
+
+        content = headers && headers.join() + '\n' + values && values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
+
+        // Add keywords as additional rows;
+        content += '\n\nKeywords:\n' + metadata && metadata.keywords.join();
+
+};        fileName = `zion-app-metadata-${platform}-${metadata && metadata.version}.csv`;
+      }
+
+      // Create download link;
+      const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' }),;
+      const url = URL && URL.createObjectURL(blob),;
+      const link = document && document.createElement('a'),;
+      link && link.href = url,;
+      link && link.download = fileName,;
+      document && document.body.appendChild(link),;
+      link && link.click(),;
+      document && document.body.removeChild(link),;
+      URL && URL.revokeObjectURL(url),;
+
+      toast && toast.success(`Exported ${format && format.toUpperCase()} file successfully`);
+    } catch (error) {;
+      logErrorToProduction('Export failed:', { data: error }),;
+      toast && toast.error(`Failed to export ${format && format.toUpperCase()} file`);
+    }
+  },;
+
+  const trackAnalytics = () => {;
+    logInfo("Tracking app installation analytics..."),;
+    toast && toast.success("Analytics tracking enabled");
+  },;
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -91,6 +161,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 }
 
@@ -117,3 +188,29 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
     </Card>);
 },
 ;
+=======
+<<<<<<< HEAD
+  )
+}
+=======
+=======
+  );
+};
+=======
+
+import React from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Download } from 'lucide-react'
+import { AppPlatform, AppMetadataValues } from "./MetadataManager",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { toast } from "sonner",
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

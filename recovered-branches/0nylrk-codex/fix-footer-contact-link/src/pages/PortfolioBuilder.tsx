@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState  } from 'react';
 import { AppHeader  } from '@/layout/AppHeader';
 import { Footer  } from '@/components/Footer';
@@ -7,6 +12,34 @@ import { ProtectedRoute  } from '@/components/ProtectedRoute';
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
 import { ResumeWizard  } from '@/components/resume-builder/ResumeWizard';
 import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
+<<<<<<< HEAD
+=======
+function PortfolioBuilderContent() {
+  const [activeTab, setActiveTab] = useState('resume');
+=======
+import {useState} from 'react';
+import {AppHeader} from '@/layout/AppHeader';
+import {Footer} from '@/components/Footer';
+import {SEO} from '@/components/SEO';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
+import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
+import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useState } from 'react',
+import { AppHeader } from '@/layout/AppHeader',
+import { Footer } from '@/components/Footer',
+import { SEO } from '@/components/SEO',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
+import { ResumeWizard } from '@/components/resume-builder/ResumeWizard',
+import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder',
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 function PortfolioBuilderContent() {
   const [activeTab, setActiveTab] = useState('resume');
   return (
@@ -42,6 +75,25 @@ export default function PortfolioBuilder() {
     </ProtectedRoute>
   )
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+;
+
+export default function PortfolioBuilder() {;
+  return (
+    <ProtectedRoute>;
+      <PortfolioBuilderContent />;
+    </ProtectedRoute>;
+  );
+}
+
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {useState} from 'react';
 import {AppHeader} from '@/layout / AppHeader';
 import {Footer} from '@/components / Footer';
@@ -56,6 +108,7 @@ import {PortfolioBuilder, as, PortfolioSection} from '@/components / resume - bu
 function PortfolioBuilderContent() {
   const [active_tab, setActiveTab] = useState ('resume');
 ;
+<<<<<<< HEAD
   return (
     <>;
       <SEO;
@@ -90,3 +143,6 @@ function PortfolioBuilder() {
       <PortfolioBuilderContent />;
     </ProtectedRoute>);
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -430,7 +430,16 @@ if (return) {
         if (this.y > canvas.height) this.y = 0;
         // Fade out near end of life
         if (this.life < 20) {
+<<<<<<< HEAD
           this.opacity *= 0.95;        }          this.opacity *= 0.95
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         }
       }
       draw() {
@@ -457,8 +466,27 @@ if (return) {
         ctx.restore();
       }
       isDead() {
+<<<<<<< HEAD
         return this.life <= 0 |this.opacity < 0.01;      }
         ctx.restore()
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        return this.life <= 0 |this.opacity < 0.01;      }
+=======
+
+        return this.life <= 0 || this.opacity < 0.01;      }        
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        ctx.restore()
+=======
+        return this.life <= 0 || this.opacity < 0.01;      }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
@@ -787,6 +815,51 @@ if (> 0.975) {) {
           }
         }
       }
+<<<<<<< HEAD
+=======
+
+      connections = [];
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {        particles.push(new Particle())
+      }
+      // Create connections between nearby particles
+      connections = [];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+<<<<<<< HEAD
+          const distance = Math.sqrt(
+            Math.pow(particles[i].x - particles[j].x, 2) +
+              Math.pow(particles[i].y - particles[j].y, 2)
+          );
+          if (distance < 150) {
+            connections.push(new Connection(particles[i], particles[j]));          }          const distance = Math.sqrt(
+            Math.pow(particles[i].x - particles[j].x, 2) +
+            Math.pow(particles[i].y - particles[j].y, 2)
+          );
+          if (distance < 150) {
+            connections.push(new Connection(particles[i], particles[j]))
+=======
+
+<<<<<<< HEAD
+      }
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          }
+        }
+      }
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       // Draw connections
       connections.forEach(connection => connection.draw());
       // Add floating geometric shapes
@@ -964,6 +1037,7 @@ if ( {) {
 }
 export default EnhancedFuturisticBackground;
 
+<<<<<<< HEAD
           background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
         }}
       />;
@@ -974,3 +1048,18 @@ export default EnhancedFuturisticBackground;
 ;
 export default EnhancedFuturisticBackground;
 ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+export default EnhancedFuturisticBackground;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default EnhancedFuturisticBackground;
+=======
+export default EnhancedFuturisticBackground;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

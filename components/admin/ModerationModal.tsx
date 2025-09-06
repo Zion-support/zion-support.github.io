@@ -1,3 +1,10 @@
+import React, { useState } from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export type ModerationModalProps = {;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -31,10 +38,24 @@ export type ModerationModalProps = {;
     adminNotes?: string
   ) => Promise<void>;
 export default function ModerationModal({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   flag
   onClose
   onAction
 }: ModerationModalProps) {
+<<<<<<< HEAD
+=======
+=======
+
+  flag,
+  onClose,
+  onAction,
+}: ModerationModalProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
 
@@ -274,3 +295,15 @@ if (return null) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

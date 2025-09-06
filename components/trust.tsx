@@ -26,9 +26,21 @@ import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
 import TrustRadar from '../components/ui/TrustRadar';
 import RiskIndicator from '../components/ui/RiskIndicator';
+<<<<<<< HEAD
 export default function TrustPage() {
   const [userId, setUserId] = useState<string>('demo-user'),
   const [data, setData] = useState<any>(null),
+=======
+<<<<<<< HEAD
+export default function TrustPage() {
+  const [userId, setUserId] = useState<string>('demo-user'),
+  const [data, setData] = useState<any>(null),
+=======
+export default function TrustPage() {;
+  const [userId, setUserId] = useState<string>('demo-user');
+  const [data, setData] = useState<any>(null);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
@@ -119,10 +131,29 @@ export default function TrustPage() {;
     form && form.reset();  }
 
   return (
+<<<<<<< HEAD
     <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ userId, message, contactEmail }) });
     alert('Appeal submitted');
 
     form.reset()
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
+    alert('Appeal submitted');
+
+<<<<<<< HEAD
+    form.reset()
+<<<<<<< HEAD
+=======
+=======
+    <EnhancedLayout>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   return (
     <EnhancedLayout>;
@@ -197,6 +228,7 @@ export default function TrustPage() {;
                         <span>{c.key}</span>
                         <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
                       </li>
+<<<<<<< HEAD
                     ))}
                   </ul>;
                 </div>;
@@ -208,6 +240,58 @@ export default function TrustPage() {;
             </div>                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap">;
                   <strong>Operator GPT Analysis:</strong> {data && data.reasonSummary}
                 </div>;
+=======
+
+                  metrics={(data && data.components || []).map((c: any) => ({;
+                    label: c && c.key,;
+                    value: Math && Math.round(c && c.raw * 100),;
+                  }))}
+                />;
+              </div>;
+              {showLogic && (;
+                <div className='bg-white dark:bg-gray-900 rounded border p-4 text-sm'>;
+                  <h3 className='font-medium mb-2'>Score Breakdown</h3>;
+                  <ul className='space-y-1'>;
+                    {data && data.components.map((c: any) => (;
+                      <li key={c && c.key} className='flex justify-between'>;
+                        <span>{c && c.key}</span>;
+                        <span>;
+                          {Math && Math.round(c && c.raw * 100)} / weighted{' '}
+                          {c && c.weighted.toFixed(3)}
+                        </span>                      </li>                <RiskIndicator status={data && data.riskLevel} />;
+              </div>;
+              <div className="bg-white dark:bg-gray-900 rounded border p-4">;
+                <h2 className="font-medium mb-2">Trust Metrics</h2>;
+                <TrustRadar metrics={(data && data.components || []).map((c: any) => ({ label: c && c.key, value: Math && Math.round(c && c.raw * 100) }))} />;
+              </div>;
+              {showLogic && (;
+                <div className="bg-white dark:bg-gray-900 rounded border p-4 text-sm">;
+                  <h3 className="font-medium mb-2">Score Breakdown</h3>;
+                  <ul className="space-y-1">;
+                    {data && data.components.map((c: any) => (;
+                      <li key={c && c.key} className="flex justify-between">;
+                        <span>{c && c.key}</span>;
+                        <span>{Math && Math.round(c && c.raw * 100)} / weighted {c && c.weighted.toFixed(3)}</span>;
+                      </li>;
+
+=======
+<<<<<<< HEAD
+  }
+  return (
+    <EnhancedLayout>
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+                      </li>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    ))}
+                  </ul>
+                </div>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               )}
             </div>;
             <div className='space-y-4'>;
@@ -255,6 +339,7 @@ export default function TrustPage() {;
                     <button className="text-sm px-3 py-1 rounded bg-blue-600 text-white" type="submit">Submit Appeal</button>;
                 </div>;
               )}
+<<<<<<< HEAD
             </div>;
           </div>;
         )}
@@ -264,6 +349,16 @@ export default function TrustPage() {;
 }
   );
 }
+=======
+            </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 import TrustBadge from '../components / ui / TrustBadge';
 import TrustRadar from '../components / ui / TrustRadar';
@@ -470,3 +565,10 @@ function submit_appeal() {
       </div>;
     </EnhancedLayout>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -2,10 +2,20 @@ import { useEffect, useState  } from 'react';
 import { useRouter  } from 'next/router';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication } from '../../types/grants';
+<<<<<<< HEAD
 export default function GrantDetailPage() {
 
+=======
+<<<<<<< HEAD
+export default function GrantDetailPage() {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
+=======
 export default function GrantDetailPage() {;
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const router = useRouter();
   const { id } = router && router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
   const router = useRouter();
@@ -21,12 +31,34 @@ export default function GrantDetailPage() {;
   useEffect(() => {;
     if (!id) return;
     setLoading(true);
+<<<<<<< HEAD
     fetch(`/api/grants/${id}`);
       .then(r => r && r.json());
       .then(d => setItem(d && d.record));
       .finally(() => setLoading(false));  }, [id]);
   const addUpdate = async () => {
     if (!id |!updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+=======
+    fetch(`/api/grants/${id}`)
+      .then(r => r.json())
+      .then(d => setItem(d.record))
+      .finally(() => setLoading(false));  }, [id]);
+  const addUpdate = async () => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    if (!id |!updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+=======
+    if (!id || !updateContent.trim()) return;
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+    if (!id || !updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+=======
+    if (!id || !updateContent.trim()) return;
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }, [id]);
   const addUpdate = async () => {
     if (!id |!updateContent.trim()) return;
@@ -274,6 +306,7 @@ export default function GrantDetailPage() {;
       </div>
     </EnhancedLayout>
 );
+<<<<<<< HEAD
 }
   );
 }
@@ -418,3 +451,20 @@ export default function GrantDetailPage() {;
       </div>;
     </EnhancedLayout>);
 }
+=======
+<<<<<<< HEAD
+=======
+    </EnhancedLayout>
+  );
+
+
+}
+=======
+}
+=======
+    </EnhancedLayout>
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

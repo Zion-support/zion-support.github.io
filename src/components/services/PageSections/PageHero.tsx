@@ -1,6 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { GradientHeading } from '@/components/GradientHeading'
+import { Clock, Map, DollarSign } from 'lucide-react'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading";
 import { Clock, Map, DollarSign } from 'lucide-react'
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function PageHero() {
   return (
     <div className='text-center mb-12'>
@@ -11,10 +27,25 @@ export function PageHero() {
         Professional IT onsite support services with transparent pricing across
         190+ countries worldwide
       </p>
+<<<<<<< HEAD
 <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12'>
         <div className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center'>
           <div className='bg-zion-purple/20 p-3 rounded-full mb-4'>
             <Map className='h-8 w-8 text-zion-cyan' />
+=======
+
+
+      
+      <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mt-12">
+        <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">
+          <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
+            <Map className="h-8 w-8 text-zion-cyan" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </div>
           <h3 className='text-xl font-bold text-white mb-2'>Global Coverage</h3>
           <p className='text-zion-slate-light'>
@@ -22,9 +53,23 @@ export function PageHero() {
             worldwide
           </p>
         </div>
+<<<<<<< HEAD
         <div className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center'>
           <div className='bg-zion-purple/20 p-3 rounded-full mb-4'>
             <Clock className='h-8 w-8 text-zion-cyan' />
+=======
+
+
+        
+        <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">
+          <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
+            <Clock className="h-8 w-8 text-zion-cyan" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </div>
           <h3 className='text-xl font-bold text-white mb-2'>Rapid Response</h3>
           <p className='text-zion-slate-light'>
@@ -75,14 +120,32 @@ export function PageHero() {
           <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
             <DollarSign className="h-8 w-8 text-zion-cyan" />
           </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <h3 className="text-xl font-bold text-white mb-2">Transparent Pricing</h3>
           <p className="text-zion-slate-light">Clear per-incident pricing includes transportation and first hour onsite</p>
         </div>
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 import { GradientHeading } from '@/components/GradientHeading';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { GradientHeading } from "@/components/GradientHeading";
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Clock, Map, DollarSign } from 'lucide-react';
 export function PageHero() {;
   return (
@@ -172,6 +235,7 @@ export function PageHero() {;
     </div>;
   );
 }
+<<<<<<< HEAD
   );
 }
 import { GradientHeading } from '@/components / GradientHeading';
@@ -261,3 +325,11 @@ function PageHero() {
       </div>;
     </div>);
 }
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-branch-merger.cjs
 <<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -166,6 +167,11 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-branch-merger.cjs
 const { execSync } = require('child_process')
 // console.log('� Comprehensive Branch Merger')
 console.log('==')
@@ -186,6 +192,7 @@ console.log('==')
       console.log('\n⚠ Some branches failed to "merge")
         execSync('git push origin main', { "stdio"})
         console.error(' Failed to push "changes")
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-branch-merger.cjs
 <<<<<<< HEAD
     console.error(' Comprehensive branch merger "failed")
 =======
@@ -199,3 +206,6 @@ console.log('==')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+    console.error(' Comprehensive branch merger "failed")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-branch-merger.cjs

@@ -1,7 +1,30 @@
 
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Download } from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Button} from "@/components/ui/button";
+import {Download} from "lucide-react";
+import type { QuoteRequest } from "@/types/quotes";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+import { Download } from "lucide-react";
+import type { QuoteRequest } from "@/types/quotes";
+=======
+import { Download } from "lucide-react",
+import type { QuoteRequest } from "@/types/quotes",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface ExportToCSVProps {
 
   quotes: QuoteRequest[]
@@ -60,6 +83,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   }
   return (
     <Button
+<<<<<<< HEAD
       variant="outline"
       onClick={handleExport}
       className="flex items-center gap-2"
@@ -71,6 +95,47 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   )
 }
 
+=======
+      variant="outline" 
+      onClick={handleExport}
+      className="flex items-center gap-2"
+      disabled={quotes && quotes.length === 0}>;
+=======
+
+  },
+  
+  return (
+    <Button 
+      variant="outline" 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Button } from "@/components/ui/button",;
+import { Download } from "lucide-react",;
+import type { QuoteRequest } from "@/types/quotes",;
+interface ExportToCSVProps {;
+  quotes: QuoteRequest[],;
+  filename?: string;
+}
+;
+export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {;
+  const handleExport = () => {;
+    // Define CSV Headers;
+    const headers = [;
+      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline',;
+      'StatusCreated Date';
+    ],;
+    // Format quote data for CSV;
+    const rows = quotes.map(quote => [;
+      quote.id,;
+      quote.talent_name || 'Unknown',;
+      quote.requester_name,;
+      quote.requester_email,;
+      quote.project_name,;
+      quote.project_summary,;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       quote.budget_display ||;
         (quote.budget_min && quote.budget_max;
           ? `$${quote.budget_min} - $${quote.budget_max}`;
@@ -112,12 +177,40 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   return (
     <Button;
       variant="outline";
-      on_click={handle_export}
-      className="flex items - center gap - 2";
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      onClick={handleExport}
+      className="flex items-center gap-2"
       disabled={quotes.length === 0}
+<<<<<<< HEAD
+    >
+      <Download size={16} />
+      Export CSV
+    </Button>
+  )
+<<<<<<< HEAD
+}
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
     >;
       <Download size={16} />;
       Export CSV;
+<<<<<<< HEAD
     </Button>);
 }
 ;
+=======
+    </Button>;
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

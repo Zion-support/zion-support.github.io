@@ -25,6 +25,10 @@ import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Star
   Users
   TrendingUp
@@ -42,8 +46,13 @@ import {
   Database
   Cloud;
 
+<<<<<<< HEAD
 import Button from '../ui/Button';
 interface Service {
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {;
   Star,;
   Users,;
@@ -61,6 +70,10 @@ import {;
   Code,;
   Database,;
   Cloud,;
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import Button from '../ui/Button';
 
 interface Service {;
@@ -535,12 +548,24 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
     <section className="py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
         {/* Header */}
+<<<<<<< HEAD
         <div className="text-center mb-16">;
           <motion&& motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'            className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">;
+=======
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {title}
           </motion && motion.h2>;
           <motion&& motion.p
@@ -554,10 +579,20 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           >;
             {subtitle}
           </motion.p>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>;
             {stats && stats.map((stat, index) => (;
@@ -580,15 +615,62 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             ))}
           </motion.div>
         </div>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className={`${stat.color} mb-2 flex justify-center`}>
+                  <stat.icon className="w-8 h-8" />
+                </div>
+                <div className="text-2xl font-bold text-white">{stat.value}</div>
+                <div className="text-sm text-gray-400">{stat.label}</div>
+              </div>
+
+          </motion && motion.div>;
+        </div>;
+
+
+=======
+
+
+            ))}
+          </motion.div>
+        </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Filters */}
         {showFilters && (;
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}
             className='mb-12'>;
             <div className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>;
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            <div className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Category Filter */}
                 <div>;
                   <label className='block text-sm font-medium text-gray-300 mb-3'>;
@@ -607,6 +689,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Category">Category</label>;
                   <select
                     value={selectedCategory}
+<<<<<<< HEAD
                     onChange={(e) => setSelectedCategory(e && e.target.value)}
                     className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
                   >;
@@ -643,6 +726,62 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     {price_ranges.map ((range) => (
                       <option key={range.id} value={range.id}>;
                         {range.name}
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                        {category.icon} {category.name}
+                      </option>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                    ))}
+
+                  </select>;
+                </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {/* Price Range Filter */}
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                        {range.name}
+
+                  </select>;
+                </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {/* Sort Options */}
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                        {option.name}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       </option>
                     ))}
                   </select>
@@ -699,6 +838,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
           transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
         >;
@@ -723,6 +863,14 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     </div>;
           transition={{ duration: 0.8, delay: 0.8 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         >
           <AnimatePresence>
             {filteredServices.map((service, index) => (
@@ -742,17 +890,51 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                 initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
                 whileInView={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
                 whileHover={{ y: -5, scale: 1.02 }}
                 className="group"
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               >
                 <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full">
                   {/* Popular Badge */}
                   {service.popular && (
+<<<<<<< HEAD
                     <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                        Most Popular
+=======
+<<<<<<< HEAD
+                    <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      ⭐ Most Popular              >
+                <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full">
+                  {/* Popular Badge */}
+                  {service.popular && (
+                    <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                      ⭐ Most Popular
+<<<<<<< HEAD
+                    </div>
+                  )}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                    <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      ⭐ Most Popular
+
+                      ⭐ Most Popular
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     </div>
                   )}
                   {/* Header */}
+<<<<<<< HEAD
                   <div className='mb-6'>
                     <div className='flex items-center justify-between mb-4'>
                       <div className='text-3xl'>{service.icon}</div>
@@ -789,6 +971,46 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     </h4>;
                     <ul className='space-y-2'>;
                       {service && service.features.slice(0, 4).map((feature, idx) => (;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      </div>
+                    </div>
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
+                      {service.name}
+                    </h3>
+
+                    <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}
+
+                      {service.tagline}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    </p>
+                  </div>
+                  {/* Features */}
+                  <div className='mb-6'>
+                    <h4 className='text-sm font-semibold text-gray-300 mb-3 flex items-center'>
+                      <CheckCircle className='w-4 h-4 mr-2 text-green-400' />
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      Key Features
+                    </h4>
+                    <ul className='space-y-2'>
+                      {service.features.slice(0, 4).map((feature, idx) => (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         <li
                           key={idx}
                           className='text-sm text-gray-400 flex items-start'>;
@@ -805,6 +1027,15 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   </div>
                   {/* Stats */}
                   <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <div>
                       <div className='text-lg font-bold text-white'>
                         {service.rating}
@@ -845,6 +1076,19 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     <div className="text-sm text-green-400 font-semibold mb-1"> ROI Promise</div>
                     <div className="text-xs text-gray-300 leading-relaxed">
                       {service.roi}
+<<<<<<< HEAD
+=======
+=======
+
+
+                      {service.roi}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     </div>
                   </div>
                   {/* Market Position */}
@@ -921,6 +1165,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   </div>;
 
                   {/* CTA */}
+<<<<<<< HEAD
                   <div className='mt-auto'>;
                     <Button
                       href={service && service.link}
@@ -933,6 +1178,17 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   {/* Contact Info */}                    <Button
                       href={service && service.link}
                   <div className="mt-auto">
+=======
+
+                  {/* CTA */}
+                  <div className='mt-auto'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <Button
                       href={service.link}
                       variant="primary"
@@ -964,12 +1220,28 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                 </div>;
               </motion && motion.div>;
             ))}
+<<<<<<< HEAD
           </AnimatePresence>
         </motion.div>
+=======
+
+          </AnimatePresence>;
+        </motion && motion.div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
           transition={{ duration: 0 && 0.8, delay: 1 && 1.0 }}
           className='text-center mt-16'
           <div className='bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20'>;
@@ -982,6 +1254,25 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
               started today and see the future of business technology.;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+=======
+
+        >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          <div className='bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20'>
+            <h3 className='text-2xl font-bold text-white mb-4'>
+              Ready to Transform Your Business?
+            </h3>
+            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
+              Join thousands of companies already achieving breakthrough results
+              with our cutting-edge AI, quantum, and blockchain solutions. Get
+              started today and see the future of business technology.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <Button
                 href='/contact'
                 variant='primary'
@@ -1018,6 +1309,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
       </div>;
     </section>;
   );
+<<<<<<< HEAD
 };
 
 export default EnhancedServiceShowcase;  );
@@ -1031,6 +1323,27 @@ export default EnhancedServiceShowcase;  );
 
 export default EnhancedServiceShowcase;
 
+=======
+<<<<<<< HEAD
+}
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default EnhancedServiceShowcase;  )
+}
+export default EnhancedServiceShowcase;
+
+<<<<<<< HEAD
+=======
+export default EnhancedServiceShowcase;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     </p>;
                   </div>;
                   {/* Features */}
@@ -1211,4 +1524,9 @@ export default EnhancedServiceShowcase);
 }
 ;
 export default EnhancedServiceShowcase;
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

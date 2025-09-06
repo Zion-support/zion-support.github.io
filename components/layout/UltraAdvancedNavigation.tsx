@@ -25,6 +25,10 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Menu
   X
   ChevronDown
@@ -54,6 +58,7 @@ import {
   Code;
 } from 'lucide-react';
 import Link from 'next/link';import {
+<<<<<<< HEAD
 import {;
   Menu,;
   X,;
@@ -85,6 +90,12 @@ import {;
 } from 'lucide-react';
 import Link from 'next/link';import { ;
 import { 
+=======
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Menu,
   X,
   ChevronDown,
@@ -113,7 +124,13 @@ import {
   Lock,
   Code,
 } from 'lucide-react';
+<<<<<<< HEAD
 import Link from 'next / link';import {
+=======
+
+import Link from 'next/link';import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
 
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
@@ -588,6 +605,7 @@ import Link from 'next / link';
       isScrolled 
         ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50' 
         : 'bg-transparent'
+<<<<<<< HEAD
     }`}>;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex justify-between items-center h-20">;
@@ -596,6 +614,14 @@ import Link from 'next / link';
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             className='flex items-center'
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
@@ -709,6 +735,20 @@ import Link from 'next / link';
                   >
                     {item.icon && <item.icon className="w-4 h-4" />}
                     <span>{item.name}</span>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  </Link>
+                )}
+=======
+
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   </Link>
                 )}
                 {/* Dropdown Menu */}
@@ -718,6 +758,7 @@ import Link from 'next / link';
                       <motion&& motion.div
                         initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
+<<<<<<< HEAD
                         exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                         transition={{ duration: 0 && 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'>;
@@ -727,6 +768,19 @@ import Link from 'next / link';
                           </div>;
                           <div className='space-y-2'>;
                             {item && item.dropdown.map(dropdownItem => (;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      >
+                        <div className="p-4">
+                          <div className="text-sm text-gray-400 mb-3">{item.description}</div>
+                          <div className="space-y-2">
+                            {item.dropdown.map((dropdownItem) => (
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                               <Link
                                 key={dropdownItem && dropdownItem.name}
                                 href={dropdownItem && dropdownItem.href}
@@ -754,7 +808,21 @@ import Link from 'next / link';
                 )}
               </div>;
             ))}
+<<<<<<< HEAD
           </div>
+=======
+
+          </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex items-center space-x-6'>;
             <div className='flex items-center space-x-4 text-sm text-gray-300'>;
@@ -768,8 +836,19 @@ import Link from 'next / link';
                 href={`mailto:${contactInfo.email}`}
                 className='flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200'
               >
+<<<<<<< HEAD
                 <Mail className='w-4 h-4' />
                 <span className='hidden xl:inline'>{contactInfo.email}</span>
+=======
+                <Phone className='w-4 h-4' />
+                <span className='hidden xl:inline'>{contactInfo.mobile}</span>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </a>
             </div>
             <motion.a
@@ -794,6 +873,7 @@ import Link from 'next / link';
           {/* Mobile Menu Button */}
           <div className='lg:hidden'>;
 
+<<<<<<< HEAD
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button
@@ -917,6 +997,15 @@ import Link from 'next / link';
         </div>;
       </div>;
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -992,6 +1081,7 @@ import Link from 'next / link';
                     <Link
                       href={item.href}
                       onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
                       className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3';
                     >;
                       {item && item.icon && <item && item.icon className='w-5 h-5' />}                      <span>{item && item.name}</span>                      className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3";
@@ -999,6 +1089,25 @@ import Link from 'next / link';
                       {item && item.icon && <item && item.icon className="w-5 h-5" />}
                       <span>{item && item.name}</span>;
                     </Link>;
+=======
+
+                      className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
+                    >
+                      {item.icon && <item.icon className="w-5 h-5" />}
+                      <span>{item.name}</span>
+=======
+                      {item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>
+
+                      <span>{item.name}</span>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    </Link>
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   )}
                 </div>
               ))}
@@ -1033,6 +1142,7 @@ import Link from 'next / link';
       </AnimatePresence>;
     </nav>;
   );
+<<<<<<< HEAD
 };
 
 export default UltraAdvancedNavigation;  );
@@ -1044,6 +1154,17 @@ export default UltraAdvancedNavigation;  )
 export default UltraAdvancedNavigation;  );
 };
 
+=======
+<<<<<<< HEAD
+}
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default UltraAdvancedNavigation;  )
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default UltraAdvancedNavigation;
 
       {/* Mobile Menu */}
@@ -1172,4 +1293,14 @@ export default UltraAdvancedNavigation);
 }
 ;
 export default UltraAdvancedNavigation;
+<<<<<<< HEAD
 ;
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default UltraAdvancedNavigation;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

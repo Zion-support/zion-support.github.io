@@ -1,14 +1,38 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useForm, useFieldArray } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useRouter } from 'next/router';
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod";
 import { useRouter  } from 'next/router';
 import { logErrorToProduction } from '@/utils/productionLogger';
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react'
+import { useForm, useFieldArray } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { useRouter } from 'next/router'
+import { logErrorToProduction } from '@/utils/productionLogger'
+=======
+import React, { useState } from "react",
+import { useForm, useFieldArray } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { useRouter } from 'next/router',
+import {logErrorToProduction} from '@/utils/productionLogger',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
   Form
   FormControl
@@ -59,9 +83,23 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Separator } from "@/components/ui/separator"
 import { toast } from "@/components/ui/use-toast"
 import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2 } from 'lucide-react'
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
 import { supabase } from "@/integrations/supabase/client";
+=======
+<<<<<<< HEAD
+import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
+import { supabase } from "@/integrations/supabase/client";
+=======
+<<<<<<< HEAD
+import { useAuth } from "@/hooks/useAuth"
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer"
+import { supabase } from "@/integrations/supabase/client"
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Define the form schema with validation
 
 const talentSchema = z.object({
@@ -118,10 +156,28 @@ export function TalentOnboardingForm() {
   const [showSuccessScreen, setShowSuccessScreen] = useState(false)
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer()
   const totalSteps = 4
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
+import { supabase } from "@/integrations/supabase/client",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import { useAuth } from "@/hooks/useAuth",
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
+import { supabase } from "@/integrations/supabase/client",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentSchema)
     defaultValues: {
       basicInfo: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         fullName: user?.displayName |''
         professionalTitle: ''
         profilePicture: undefined
@@ -167,6 +223,7 @@ export function TalentOnboardingForm() {
   ) => {
     const file = e.target.files?.[0]
     if (!file) return
+<<<<<<< HEAD
     // Preview the image
     const reader = new FileReader()
     reader.onloadend = () => {
@@ -187,6 +244,101 @@ if ( {) {
 }
       logErrorToProduction ('Error uploading CV:', { data: cv_error });
       throw new Error ('Failed to upload CV');
+=======
+=======
+        fullName: user?.displayName || "",
+        professionalTitle: "",
+        profilePicture: undefined},
+      experience: {
+        bio: "",
+        keyProjects: [{ title: "", description: "" }],
+        yearsOfExperience: ""},
+      skills: {
+        skillsList: "",
+        toolsUsed: ""},
+      availability: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        availabilityType: '',
+        timezone: '',
+        hourlyRate: '',
+        portfolioLinks: [{ url: '' }],
+        cv: undefined,
+      },
+    },
+    mode: 'onChange',
+  })
+  const {
+    fields: projectFields,
+    append: appendProject,
+    remove: removeProject,
+  } = useFieldArray({
+    name: 'experience.keyProjects',
+    control: form.control,
+  })
+  const {
+    fields: linkFields,
+    append: appendLink,
+    remove: removeLink,
+  } = useFieldArray({
+    name: 'availability.portfolioLinks',
+    control: form.control,
+  })
+  // Handle profile picture upload
+  const handleProfilePictureUpload = async (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const file = e.target.files?.[0]
+    if (!file) return;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        availabilityType: "",
+        timezone: "",
+        hourlyRate: "",
+        portfolioLinks: [{ url: "" }],
+        cv: undefined}},
+    mode: "onChange"}),
+  
+  const { fields: projectFields, append: appendProject, remove: removeProject } = 
+    useFieldArray({
+      name: "experience.keyProjects",
+      control: form.control}),
+    
+  const { fields: linkFields, append: appendLink, remove: removeLink } = 
+    useFieldArray({
+      name: "availability.portfolioLinks",
+      control: form.control}),
+
+  // Handle profile picture upload
+  const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0],
+    if (!file) return,
+    
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    // Preview the image
+    const reader = new FileReader()
+    reader.onloadend = () => {
+      setProfilePictureUrl(reader.result as string)
+<<<<<<< HEAD
+    }
+    reader.readAsDataURL(file)
+    // Store the file in the form data
+    form.setValue('basicInfo.profilePicture', file);
+  };
+  // Handle CV upload;
+  const handleCvUpload = async (file: File) => {;
+    const fileName = `cv-${user?.id}-${Date.now()}`;    const { error: cvError } = await supabase.storage
+      .from('resumes')
+      .upload(fileName, file)
+    if (cvError) {
+      logErrorToProduction('Error uploading CV:', { data: cvError })
+      throw new Error('Failed to upload CV')
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     // Get the public URL
     const {
@@ -208,6 +360,7 @@ const form = useForm<TalentFormValues> ({
   resolver: zodResolver (talentSchema), defaultValues: {
   basicInfo: {
   cv: undefined
+<<<<<<< HEAD
 }
 //Handle profile picture upload const handleProfilePictureUpload = async (e: React.ChangeEvent < HTMLInputElement>) => {
   const file = e.target.files?.[0];
@@ -235,3 +388,17 @@ return public_url;
 }
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null;
 }'}
+=======
+}
+//Rest of the file remains unchanged... // [Previous implementation continues...] return null;
+}'}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

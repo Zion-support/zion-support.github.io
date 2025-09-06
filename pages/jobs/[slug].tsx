@@ -1,7 +1,14 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useRouter  } from 'next/router';
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton',
 import EnhancedLoading from '../../components/ui/EnhancedLoading',
+<<<<<<< HEAD
+=======
 import useResponsive from '../../hooks/useResponsive';
 import { useToast  } from '../../components/ui/NotificationSystem';
 import { useEffect, useState } from 'react';
@@ -12,16 +19,52 @@ export default function JobDetailsPage() {
   const { isMobile } = useResponsive();
   const { notify } = useToast();
   const [loading, setLoading] = useState(true);
+=======
+import {useRouter} from 'next/router';
+import EnhancedCard from '../../components/ui/EnhancedCard';
+import EnhancedButton from '../../components/ui/EnhancedButton';
+import EnhancedLoading from '../../components/ui/EnhancedLoading';
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import useResponsive from '../../hooks/useResponsive';
+import { useToast  } from '../../components/ui/NotificationSystem';
+import { useEffect, useState } from 'react';
+export default function JobDetailsPage() {
+
+  const router = useRouter();
+  const { slug } = router.query as { slug?: string }
+  const { isMobile } = useResponsive();
+  const { notify } = useToast();
+  const [loading, setLoading] = useState(true);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
   }, []);
+<<<<<<< HEAD
   const onApply = () => {
     notify(
       'Application submitted! Well notify you when its viewed.'
       'success'
     );
   }
+=======
+<<<<<<< HEAD
+  const onApply = () => {
+    notify(
+      'Application submitted! We’ll notify you when it’s viewed.'
+      'success'
+    );
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <div className='relative'>
@@ -60,6 +103,7 @@ export default function JobDetailsPage() {
             </ul>
           </EnhancedCard>
         </div>
+<<<<<<< HEAD
     <div className='relative'>;
       {loading ? (;
         <EnhancedLoading lines={5} />;
@@ -111,12 +155,35 @@ export default function JobDetailsPage() {
     </div>
 );
       {/* Sticky mobile apply CTA */}
+=======
+<<<<<<< HEAD
+      )}
+      {/* Sticky mobile apply CTA */}
+=======
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+      {/* Sticky mobile apply CTA */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {isMobile && (
         <div className="fixed inset-x-0 bottom-0 z-30 bg-white/90 dark:bg-black/80 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-3">
           <div className="container mx-auto px-2">
             <EnhancedButton onClick={onApply} variant="primary" fullWidth>Apply Now</EnhancedButton>
           </div>
         </div>
+<<<<<<< HEAD
       )}
     </div>
   )
@@ -139,3 +206,33 @@ export default function JobDetailsPage() {
         </div>)}
     </div>);
 ;
+=======
+<<<<<<< HEAD
+      )}
+    </div>
+);
+<<<<<<< HEAD
+=======
+
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

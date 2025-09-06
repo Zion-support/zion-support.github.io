@@ -4,6 +4,10 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   CheckCircle
   ArrowRight
   Star
@@ -32,6 +36,38 @@ import {
   Gamepad2;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
 
+<<<<<<< HEAD
+=======
+=======
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Globe,
+  Atom,
+  Heart,
+  Leaf,
+  Car,
+  GraduationCap,
+  Scale,
+  Building,
+  Factory,
+  Camera,
+  Video,
+  Music,;
+  Gamepad2,;} from 'lucide-react';import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2
@@ -410,6 +446,7 @@ export default function ServicesShowcase2028() {;
               </Link>;
               <Link
                 href="/revolutionary-2028-pricing"
+<<<<<<< HEAD
                 className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"
               >
                 <span>View Pricing</span>
@@ -444,6 +481,17 @@ export default function ServicesShowcase2028() {;
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400">24/7</div>
                 <div className="text-cyan-300">Support Available</div>
+=======
+
+
+            {/* Stats */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </div>
             </div>
           </motion.div>
@@ -603,6 +651,14 @@ export default function ServicesShowcase2028() {;
                       ))}
                     </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <Link
                       href={`/services#${category && category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
                       className='inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group'>;
@@ -615,9 +671,25 @@ export default function ServicesShowcase2028() {;
                 </div>;
               </motion && motion.div>;
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </section>
+=======
+
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Featured Services */}
       <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -950,6 +1022,18 @@ export default function ServicesShowcase2028() {;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
+=======
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Market Analysis */}
       <section className='py - 20 bg - black / 50'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
@@ -972,8 +1056,18 @@ export default function ServicesShowcase2028() {;
             </p>;
           </div>;
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <motion&& motion.div
+=======
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
@@ -1128,12 +1222,42 @@ export default function ServicesShowcase2028() {;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion&& motion.div
+<<<<<<< HEAD
+=======
+
+=======
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='space-y-8'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Ready to{' '}
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
                 Transform;
@@ -1178,6 +1302,7 @@ export default function ServicesShowcase2028() {;
         </div>
       </section>
       <UltraFuturisticFooter2028 />
+<<<<<<< HEAD
     </>
 );
 }
@@ -1209,8 +1334,23 @@ export default function ServicesShowcase2028() {;
     </>;
   );
 }
+=======
+<<<<<<< HEAD
+    </>
+<<<<<<< HEAD
+);
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+    </>;
+);
 }
+
+}
+<<<<<<< HEAD
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div            </h2>;
             <p className="text - xl text - purple - 200 max - w-3xl mx - auto">;
               Understand the market dynamics and growth potential of our futuristic services.;
@@ -1357,3 +1497,12 @@ export default function ServicesShowcase2028() {;
       <UltraFuturisticFooter2028 />;
     </>);
 }
+=======
+}
+=======
+    </>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

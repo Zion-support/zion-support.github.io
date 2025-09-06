@@ -1,19 +1,55 @@
 
+<<<<<<< HEAD
 
 export type ForumCategory =
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export type ForumCategory =
+=======
+export type ForumCategory = 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   | 'getting-hired'
   | 'project-help'
   | 'ai-tools'
   | 'feedback'
   | 'announcements';
+<<<<<<< HEAD
 export interface ForumCategoryInfo {
+=======
+=======
+export type ForumCategory =;
+  | 'getting - hired';
+  | 'project - help';
+  | 'ai - tools';
+  | 'feedback';
+  | 'announcements';
+<<<<<<< HEAD
+export interface ForumCategoryInfo {
+=======
+
+export interface ForumCategoryInfo {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: ForumCategory;
   name: string;
   description: string;
   adminOnly: boolean
   icon: string
 }
+<<<<<<< HEAD
 export interface ForumPost {
+<<<<<<< HEAD
+=======
+=======
+}
+
+
+export interface ForumPost {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   title: string;
   content: string;
@@ -33,7 +69,17 @@ export interface ForumPost {
   isLocked?: boolean
   isFeatured?: boolean
 }
+<<<<<<< HEAD
 export interface ForumReply {
+<<<<<<< HEAD
+=======
+=======
+}
+
+
+export interface ForumReply {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   post_id: string;
   parentReplyId?: string;
@@ -48,19 +94,53 @@ export interface ForumReply {
   downvotes: number
   isAnswer?: boolean
 }
+<<<<<<< HEAD
 export interface Badge {
+<<<<<<< HEAD
+=======
+=======
+}
+
+
+export interface Badge {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   name: string;
   description: string;
   icon: string
   color: string
 }
+<<<<<<< HEAD
 export interface UserBadge {
+<<<<<<< HEAD
+=======
+  user_id: string;
+  badge_id: string,
+  awarded_at: string;
+
+}
+export interface CommunityUser {
+=======
+
+
+export interface UserBadge {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   userId: string;
   badgeId: string
   awardedAt: string
 }
+<<<<<<< HEAD
 export interface CommunityUser {
+=======
+<<<<<<< HEAD
+export interface CommunityUser {
+=======
+
+export interface CommunityUser {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   name: string;
   avatar?: string;
@@ -72,4 +152,92 @@ export interface CommunityUser {
   isVerified: boolean
 
   isModerator: boolean
+<<<<<<< HEAD
 }
+=======
+}
+=======
+export type ForumCategory =;
+  | 'getting-hired';
+  | 'project-help';
+  | 'ai-tools';
+  | 'feedback';
+  | 'announcements',;
+export interface ForumCategoryInfo {;
+  id: ForumCategory,;
+  name: string,;
+  description: string,;
+  adminOnly: boolean,;
+  icon: string;
+}
+;
+export interface ForumPost {;
+  id: string,;
+  title: string,;
+  content: string,;
+  authorId: string,;
+  authorName: string,;
+  authorAvatar?: string,;
+  authorRole?: string,;
+  categoryId: ForumCategory,;
+  tags: string[],;
+  createdAt: string,;
+  updatedAt: string,;
+  upvotes: number,;
+  downvotes: number,;
+  replyCount: number,;
+  isAnswered?: boolean,;
+  isPinned?: boolean,;
+  isLocked?: boolean,;
+  isFeatured?: boolean;
+}
+;
+export interface ForumReply {;
+  id: string,;
+  postId: string,;
+  parentReplyId?: string,;
+  content: string,;
+  authorId: string,;
+  authorName: string,;
+  authorAvatar?: string,;
+  authorRole?: string,;
+  createdAt: string,;
+  updatedAt: string,;
+  upvotes: number,;
+  downvotes: number,;
+  isAnswer?: boolean;
+}
+;
+export interface Badge {;
+  id: string,;
+  name: string,;
+  description: string,;
+  icon: string,;
+  color: string;
+}
+;
+export interface UserBadge {;
+  userId: string,;
+  badgeId: string,;
+  awardedAt: string;
+}
+;
+export interface CommunityUser {;
+  id: string,;
+  name: string,;
+  avatar?: string,;
+  role: string,;
+  reputation: number,;
+  postCount: number,;
+  replyCount: number,;
+  badges: Badge[],;
+  isVerified: boolean;
+  isModerator: boolean;
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

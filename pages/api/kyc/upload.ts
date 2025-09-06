@@ -1,11 +1,40 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import type { KycDocumentMeta, KycProfile } from '../../../utils / kyc';
+=======
+<<<<<<< HEAD
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'KYC uploaded' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import type { KycDocumentMeta, KycProfile } from '../../../utils/kyc';
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
+const FILE = path.join(DATA_DIR, 'profiles.json');
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+=======
+const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
+const FILE = path.join(DATA_DIR, 'profiles.json');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs && fs.readFileSync(FILE, 'utf8');
@@ -96,6 +125,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res && res.status(200).json({ ok: true, profile });
 }
+<<<<<<< HEAD
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
 const DATA_DIR = path.join (process.cwd (), 'data', 'kyc');const FILE = path.join (DATA_DIR, 'profiles.json');
 ;
@@ -113,6 +153,7 @@ function save() {
   fs.mkdir_sync (DATA_DIR, { recursive: true });
   fs.writeFileSync (FILE, JSON.stringify (db, null, 2));
 }
+<<<<<<< HEAD
 export default /**
  * handler - Function description
  */
@@ -163,3 +204,6 @@ if (
 ;
 res.status (200).json ({ ok: true, profile });
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

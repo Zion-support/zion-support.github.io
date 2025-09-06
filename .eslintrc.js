@@ -1,20 +1,55 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 /* eslint-env node */
 module && module.exports = {
   env: {
     node: true,
     es2021: true
   },
+<<<<<<< HEAD
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
 /* eslint-env node */
 module.exports = {
+=======
+
+
+
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+/* eslint-env node */
+module.exports = {
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   extends: [
     'next/core-web-vitals',
     '@typescript-eslint/recommended'
   ],
+<<<<<<< HEAD
 export default {
   extends: ['next/core-web-vitals', 'next/typescript'],
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+export default {
+  extends: ['next/core-web-vitals', 'next/typescript'],
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -114,6 +149,89 @@ module.exports = {
     browser: true,
     es2021: true
   },
+<<<<<<< HEAD
+=======
+
+=======
+
+
+
+  env: {
+    node: true,
+    es2021: true
+  },
+  extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+  rules: {
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    'react-hooks/exhaustive-deps': 'warn',
+    'react/react-in-jsx-scope': 'off',
+    'no-undef': 'off',
+    'react/no-unescaped-entities': 'off',
+    '@next/next/no-html-link-for-pages': 'off',
+    '@next/next/no-img-element': 'off'
+  },
+  env: {
+    browser: true,
+    es2021: true,
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+    node: true,
+    browser: true,
+    es2021: true
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+  env: {
+    node: true,
+    es2021: true
+  },
+<<<<<<< HEAD
+  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+=======
+  extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+=======
+/* eslint-env node */
+module.exports = {
+  env: {
+    node: true,
+    es2021: true,
+  },
+  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+  rules: {
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "off",
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-html-link-for-pages": "off",
+    "@next/next/no-img-element": "off"
+  },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ignorePatterns: [
     'node_modules/',
     '.next/',
@@ -271,6 +389,7 @@ module.exports = {
     'commit-and-push.js'
   ]
   rules: {
+<<<<<<< HEAD
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "react-hooks/exhaustive-deps": "warn",
@@ -292,7 +411,28 @@ module.exports = {
     "@next / next / no - html - link - for - pages": "off",
     "@next / next / no - img - element": "off",
   },
+<<<<<<< HEAD
   ignore_patterns: [;
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+    'react/no-unescaped-entities': 'off',
+    'no-unused-vars': 'warn',
+    '@next/next/no-img-element': 'warn'
+  }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+};
+=======
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+  ignorePatterns: [
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     "node_modules/",
     ".next/",
     "out/",
@@ -451,6 +591,7 @@ module.exports = {
     "temp_exclude/",
   ],
 };
+<<<<<<< HEAD
     "commit-and-push.js"
   ]
 };
@@ -506,3 +647,73 @@ module.exports = {
   ],
 }
 ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+};
+
+
+
+};
+
+=======
+
+>>>>>>> origin/automation-improvements-final
+=======
+    "commit-and-push.js"
+  ]
+};
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+};
+;
+
+;
+/* eslint-env node */;
+/* eslint-disable no-undef */;
+module.exports = {;
+  env: {;
+    node: true,;
+    es2021: true;
+  },;
+  globals: {;
+    module: 'readonly',;
+    require: 'readonly',;
+    exports: 'readonly',;
+    __dirname: 'readonly',;
+    __filename: 'readonly',;
+    global: 'readonly',;
+    Buffer: 'readonly',;
+    console: 'readonly';
+  },;
+  extends: ['next/core-web-vitals'],;
+  rules: {;
+    'react-hooks/rules-of-hooks': 'errorreact-hooks/exhaustive-deps': 'warn@typescript-eslint/no-unused-vars': [;
+      'warn',;
+      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
+    ],;
+    '@typescript-eslint/no-explicit-any': 'warn@typescript-eslint/no-empty-object-type': 'warn@next/next/no-html-link-for-pages': 'warn';
+  },;
+  ignorePatterns: [;
+    'node_modules/.next/out/build/',;
+    'dist/*.config.js*.config.tsscripts/',;
+    'automation/netlify/src/apps/';
+  ];
+},;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

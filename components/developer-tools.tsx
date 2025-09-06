@@ -59,8 +59,28 @@ import {
   ExternalLink,
   CheckCircle,
   TrendingUp,
+<<<<<<< HEAD
   Cpu,
   Globe,} from 'lucide-react';import {
+=======
+<<<<<<< HEAD
+  Cpu,
+  Globe,;} from 'lucide-react';import { 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  Cpu,;
+  Globe,;} from 'lucide-react';import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  Code;
+  GitBranch
+  Database
+  Cloud
+  Shield
+  Zap
+
+
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Code;
   GitBranch,
   Database,
@@ -806,6 +826,7 @@ export default function DeveloperToolsPage() {
                   <p className="text-sm text-gray-400">{stat && stat.description}</p>;
               </Card>;
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -814,6 +835,21 @@ export default function DeveloperToolsPage() {
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Developer Tools Grid */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Curated Developer Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1017,6 +1053,7 @@ export default function DeveloperToolsPage() {
                 </div>;
               </Card>;
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -1025,6 +1062,21 @@ export default function DeveloperToolsPage() {
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Developer Workflow */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Complete Developer Workflow
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1078,6 +1130,7 @@ export default function DeveloperToolsPage() {
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
+<<<<<<< HEAD
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
                 <div className="p-6 text-center">;
                   <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">;
@@ -1103,6 +1156,24 @@ export default function DeveloperToolsPage() {
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Tool Categories */}
+
+
+
+              Developer Tool Categories
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the different types of developer tools helps you
@@ -1120,6 +1191,7 @@ export default function DeveloperToolsPage() {
             {devCategories && devCategories.map((category, index) => (;
               <Card
                 key={index}
+<<<<<<< HEAD
                 className='card-hover border-gradient-blue'
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
                 <div className='p-6'>;
@@ -1193,6 +1265,46 @@ export default function DeveloperToolsPage() {
             existing workflow.;
           </p>;
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
+=======
+                className="card-hover border-gradient-blue"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>
+                  <p className="text-gray-400 mb-4">{category.description}</p>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-500">Tools Available: <span className="text-white">{category.tools}</span></span>
+                    <span className="text-cursor-blue font-semibold">{category.avgPrice}</span>
+                  </div>
+                </div>
+              </Card>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* CTA Section */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor text-center'>
+          <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
+
+            Ready to Level Up Your Development?
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          </h2>
+          <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12'>
+            Start with one tool or build a complete development stack. Each tool
+            is designed to work independently and integrate seamlessly with your
+            existing workflow.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Button
               href='/ai-tools'
               variant='primary'
@@ -1237,3 +1349,38 @@ export default function DeveloperToolsPage() {
 }
     </>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+              className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/ai-tools"
+              variant="primary"
+              size="lg"
+              className="bg-cursor-blue hover:bg-cursor-blue-dark"
+              Explore AI Tools
+            </Button>
+
+            <Button
+              href='/contact'
+              variant='outline'
+              size='lg'
+              className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'              href="/contact"
+              variant="outline"
+              size="lg"
+              className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white"
+              Get Dev Consultation
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+);
+}
+=======
+            <Button
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

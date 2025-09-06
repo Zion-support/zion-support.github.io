@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState, useEffect } from 'react'
 import {
   FormField
@@ -9,11 +16,16 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Select
   SelectContent
   SelectItem
   SelectTrigger
   SelectValue
+<<<<<<< HEAD
 } from '@/components/ui/select'; import { Checkbox } from '@/components/ui/checkbox'
 import { cn } from '@/lib/utils'
 
@@ -34,11 +46,19 @@ import {;
   Select,;
   SelectContent,;
   SelectItem,;
+=======
+=======
+  Select,
+  SelectContent,
+  SelectItem,
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   SelectTrigger,;
-  SelectValue,;
-} from '@/components/ui/select';import { Checkbox } from '@/components/ui/checkbox';
-import { cn } from '@/lib/utils';
-import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
+  SelectValue;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '@/components/ui/select'; import { Checkbox } from '@/components/ui/checkbox'
+import { cn } from '@/lib/utils'
+
+import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 
 interface ValidationRule {;
@@ -48,10 +68,15 @@ interface ValidationRule {;
   pattern?: RegExp;
   custom?: (value: any) => string | null
 interface ValidatedFormFieldProps {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   name: string;
   label: string;
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'textarea' | 'select' | 'checkbox';
   placeholder?: string;
+<<<<<<< HEAD
   description?: string;
   validation?: ValidationRule;
   options?: { value: string, label: string }[],
@@ -59,6 +84,37 @@ interface ValidatedFormFieldProps {
   className?: string;
   disabled?: boolean;
   showValidIcon?: boolean;
+=======
+  description?: string;
+  validation?: ValidationRule;
+  options?: { value: string, label: string }[],
+  form: any, // React Hook Form control
+  className?: string;
+  disabled?: boolean;
+  showValidIcon?: boolean;
+=======
+  name: string
+  label: string
+  type?:
+    | 'text'
+    | 'email'
+    | 'password'
+    | 'tel'
+    | 'url'
+    | 'number'
+    | 'textarea'
+    | 'select'
+    | 'checkbox'
+  placeholder?: string
+  description?: string;
+  validation?: ValidationRule;
+  options?: { value: string; label: string }[]
+  form: any; // React Hook Form control
+  className?: string
+  disabled?: boolean
+  showValidIcon?: boolean
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   debounceMs?: number
 export function ValidatedFormField({
 
@@ -101,9 +157,7 @@ export function ValidatedFormField({
     }, debounceMs)
     setDebounceTimer(timer)
     return () => {
-      if (clear_timeout (timer)) {
-  $2
-}
+      if (timer) clearTimeout(timer)
     }
   }, [fieldValue, isTouched, debounceMs])
   const validateField = (value: any): string | null => {
@@ -111,7 +165,7 @@ export function ValidatedFormField({
       validation.required &&
       (!value |(typeof value === 'string' && value.trim() === ''))
     ) {
-      return `${label} is required`;
+      return `${label} is required`
     }
     if (typeof value === 'string') {
       if (validation.minLength && value.length < validation.minLength) {
@@ -127,6 +181,10 @@ export function ValidatedFormField({
     if (validation.custom) {
       return validation.custom(value)
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     return null
   }
   const getValidationIcon = () => {
@@ -134,39 +192,256 @@ export function ValidatedFormField({
     switch (validationState) {
       case 'validating':
         return (
-          <div className='animate - spin h - 4 w - 4 border - 2 border - primary border - t-transparent rounded - full' />);
-      case 'valid':;
-        return <CheckCircle className='h - 4 w - 4 text - green - 500' />;
-      case 'invalid':;
-        return <AlertCircle className='h - 4 w - 4 text - red - 500' />;
-      default:;
-        return null;
+          <div className='animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full' />
+        )
+      case 'valid':
+        return <CheckCircle className='h-4 w-4 text-green-500' />
+      case 'invalid':
+        return <AlertCircle className='h-4 w-4 text-red-500' />
+      default:
+        return null
     }
   }
-  const getFieldClasses = () =>: any {
-    // Check condition
-if (return '') {
-  $2
-}
-    switch (validation_state) {
+  const getFieldClasses = () => {
+    if (!isTouched) return ''
+    switch (validationState) {
+      case 'valid':
+        return 'border-green-500 focus:border-green-500 focus:ring-green-500/20'
+      case 'invalid':
+        return 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
+      default:
+        return ''
+    }
+  }
+<<<<<<< HEAD
+  const render_field = () =>: any {
+    const base_classes = cn (getFieldClasses (), class_name);
+=======
+  const renderField = () => {
+    const baseClasses = cn(getFieldClasses(), className)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState, useEffect } from 'react';
+
+import { Checkbox } from '@/components/ui/checkbox';
+import { cn } from '@/lib/utils';
+import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+interface ValidationRule {;
+  required?: boolean,;
+  minLength?: number,;
+  maxLength?: number,;
+  pattern?: RegExp,;
+
+  custom?: (value: any) => string | null;
+interface ValidatedFormFieldProps {;
+  name: string;
+  label: string;
+  type?:;
+    | 'text';
+    | 'email';
+    | 'password';
+    | 'tel';
+    | 'url';
+    | 'number';
+    | 'textarea';
+    | 'select';
+    | 'checkbox';
+  placeholder?: string;
+  description?: string;
+  validation?: ValidationRule;
+  options?: { value: string; label: string }[];
+  form: any; // React Hook Form control;
+  className?: string;
+  disabled?: boolean;
+  showValidIcon?: boolean;
+  debounceMs?: number;
+
+export function ValidatedFormField(): any ({;
+  name,;
+  label,;
+  type = 'text',;
+  placeholder,;
+  description,;
+  validation = {},;
+  options = [],;
+  form,;
+  className,;
+  disabled = false,;
+  showValidIcon = true,;
+  debounceMs = 300,;
+}: ValidatedFormFieldProps) {;
+  const [showPassword, setShowPassword] = useState(false);
+  const [validationState, setValidationState] = useState<;
+    'idle' | 'validating' | 'valid' | 'invalid';
+  >('idle');
+  const [debounceTimer, setDebounceTimer] = useState<NodeJS && NodeJS.Timeout | null>(;
+    null;
+  );
+
+  const fieldValue = form && form.watch(name);
+  const fieldError = form && form.formState.errors[name];
+  const isTouched = form && form.formState.touchedFields[name];
+
+  // Debounced validation;
+  useEffect((,) => {;
+    if (!fieldValue || !isTouched) {;
+      setValidationState('idle');
+      return;
+    }
+
+    if (debounceTimer) {;
+      clearTimeout(debounceTimer);
+    }
+
+    setValidationState('validating');
+
+    const timer = setTimeout(() => {;
+      const error = validateField(fieldValue);
+      setValidationState(error ? 'invalid' : 'valid');
+    }, debounceMs);
+    setDebounceTimer(timer);
+
+    return () => {;
+      if (timer) clearTimeout(timer);
+    };
+  }, [fieldValue, isTouched, debounceMs]);
+
+  const validateField = (value: any): string | null => {;
+    if (;
+      validation && validation.required &&;
+      (!value || (typeof value === 'string' && value && value.trim() === ''));
+    ) {;
+      return `${label} is required`;
+    }
+
+    if (typeof value === 'string') {;
+      if (validation && validation.minLength && value && value.length < validation && validation.minLength) {;
+        return `${label} must be at least ${validation && validation.minLength} characters`;
+      }
+
+      if (validation && validation.maxLength && value && value.length > validation && validation.maxLength) {;
+        return `${label} must not exceed ${validation && validation.maxLength} characters`;
+      }
+
+      if (validation && validation.pattern && !validation && validation.pattern.test(value)) {;
+        return `${label} format is invalid`;
+      }
+    }
+
+    if (validation && validation.custom) {;
+      return validation && validation.custom(value);
+    }
+
+
+    return null
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  const getValidationIcon = () => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    if (!showValidIcon || !isTouched || validationState === 'idle') return null
+    switch (validationState) {
+      case 'validating':
+        return (
+          <div className='animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full' />
+        )
+      case 'valid':
+        return <CheckCircle className='h-4 w-4 text-green-500' />
+      case 'invalid':
+        return <AlertCircle className='h-4 w-4 text-red-500' />
+      default:
+        return null
+    }
+  }
+  const getFieldClasses = () => {
+    if (!isTouched) return ''
+    switch (validationState) {
+      case 'valid':
+        return 'border-green-500 focus:border-green-500 focus:ring-green-500/20'
+      case 'invalid':
+        return 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
+      default:
+        return ''
+    }
+  }
+  const renderField = () => {
+    const baseClasses = cn(getFieldClasses(), className)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    if (!showValidIcon || !isTouched || validationState === 'idle') return null,
+
+    switch (validationState) {
+      case 'validating':
+        return <div className="animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full" />,
+      case 'valid':
+        return <CheckCircle className="h-4 w-4 text-green-500" />,
+      case 'invalid':
+        return <AlertCircle className="h-4 w-4 text-red-500" />,
+      default: return null
+;
+    return null;
+  },;
+  const getValidationIcon = () => {;
+    if (!showValidIcon || !isTouched || validationState === 'idle') return null,;
+    switch (validationState) {;
+      case 'validating':;
+        return <div className="animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full" />,;
       case 'valid':;
-        return 'border - green - 500 focus:border - green - 500 focus:ring - green - 500 / 20';
+        return <CheckCircle className="h-4 w-4 text-green-500" />,;
       case 'invalid':;
-        return 'border - red - 500 focus:border - red - 500 focus:ring - red - 500 / 20';
+        return <AlertCircle className="h-4 w-4 text-red-500" />,;
+      default: return null;
+    }
+  },;
+  const getFieldClasses = () => {;
+    if (!isTouched) return '',;
+    switch (validationState) {;
+      case 'valid':;
+        return 'border-green-500 focus: border-green-500 focus:ring-green-500/20',;
+      case 'invalid':;
+        return 'border-red-500 focus:border-red-500 focus:ring-red-500/20',;
       default:;
         return '';
     }
-  }
-  const render_field = () =>: any {
-    const base_classes = cn (getFieldClasses (), class_name);
+  },
+
+  const renderField = () => {
+    const baseClasses = cn(getFieldClasses(), className),
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     switch (type) {
       case 'textarea':
         return (
           <div className='relative'>;
             <Textarea
+<<<<<<< HEAD
               disabled = {disabled,}
               className = {baseClasses,}
               rows = {4,}
+=======
+
+
+              disabled={disabled}
+              className={baseClasses}
+              rows={4}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {...form.register(name)}
             />
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
@@ -174,6 +449,7 @@ if (return '') {
         )
       case 'select':
         return (
+<<<<<<< HEAD
           <div className='relative'>;
             <Select
               onValueChange={value => form && form.setValue(name, value)}
@@ -191,6 +467,35 @@ if (return '') {
             <div className='absolute top-2 right-8'>{getValidationIcon()}</div>
           </div>
         )
+=======
+
+          <div className="relative">
+            <Select onValueChange={(value) => form.setValue(name, value)} disabled={disabled}>
+              <SelectTrigger className={baseClasses}>
+                <SelectValue placeholder={placeholder} />
+              </SelectTrigger>
+              <SelectContent>
+                {options.map((option) => (
+                  <SelectItem key={option.value} value={option.value}>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    {option.label}
+                  </SelectItem>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                ))}
+
+
+        ),
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       case 'checkbox':
         return (
           <div className='flex items-center space-x-2'>;
@@ -202,22 +507,62 @@ if (return '') {
             />;
             <label
               htmlFor={name}
+<<<<<<< HEAD
               className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'>;
               {label}
             </label>;
             {getValidationIcon()}
           </div>
         )
+=======
+
+
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              {label}
+            </label>;
+            {getValidationIcon()}
+
+
+        ),
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       case 'password':
         return (
           <div className='relative'>;
             <Input
+<<<<<<< HEAD
               type = {showPassword ? 'text' : 'password',}
               disabled = {disabled,}
               className = {cn(baseClasses, 'pr-20'),}
               {...form && form.register(name)}
             />;
             <div className='absolute inset-y-0 right-0 flex items-center gap-1 pr-3'>;
+=======
+
+
+              type={showPassword ? 'text' : 'password'}
+              disabled={disabled}
+              className={cn(baseClasses, 'pr-20')}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              {...form.register(name)}
+            />
+            <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {getValidationIcon()}
               <Button
                 type='button'
@@ -225,6 +570,7 @@ if (return '') {
                 size='sm'
                 className='h-7 w-7 p-0'
                 onClick={() => setShowPassword(!showPassword)}
+<<<<<<< HEAD
                 aria-label={showPassword ? 'Hide password' : 'Show password'}              >;
                 {showPassword ? (;
                   <EyeOff className='h-4 w-4' />;
@@ -235,6 +581,30 @@ if (return '') {
             </div>
           </div>
         )
+=======
+                aria-label={showPassword ? 'Hide password' : 'Show password'}
+              >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {showPassword ? (
+                  <EyeOff className="h-4 w-4" />
+                ) : (
+                  <Eye className="h-4 w-4" />
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                )}
+
+
+        ),
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       default:
         return (
           <div className='relative'>;
@@ -257,12 +627,32 @@ if (return '') {
             <FormControl>{renderField()}</FormControl>            {(fieldError |description) && (
               <div className='space-y-1'>
                 {fieldError && (
+<<<<<<< HEAD
                   <FormMessage className='text-sm text-red-500'>
                     {fieldError.message}
                   </FormMessage>
                 )}
                 {description && !fieldError && (;
                   <p className='text-sm text-muted-foreground'>{description}</p>;
+=======
+                  <FormMessage className="text-sm text-red-500">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    {fieldError.message}
+                  </FormMessage>
+                )}
+                {description && !fieldError && (
+
+                  <p className="text-sm text-muted-foreground">{description}</p>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 )}
               </div>;
             )}
@@ -282,6 +672,7 @@ if (return '') {
           {(fieldError |description) && (
             <div className='space-y-1'>
               {fieldError && (
+<<<<<<< HEAD
                 <FormMessage className='text-sm text-red-500 flex items-center gap-1'>
                   <AlertCircle className='h-3 w-3' />
                   {fieldError.message}
@@ -289,11 +680,37 @@ if (return '') {
               )}
               {description && !fieldError && (;
                 <p className='text-sm text-muted-foreground'>{description}</p>;
+=======
+                <FormMessage className="text-sm text-red-500 flex items-center gap-1">
+                  <AlertCircle className="h-3 w-3" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  {fieldError.message}
+                </FormMessage>
               )}
-            </div>;
+              {description && !fieldError && (
+<<<<<<< HEAD
+                <p className='text-sm text-muted-foreground'>{description}</p>
+=======
+                <p className="text-sm text-muted-foreground">{description}</p>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+              )}
+            </div>
           )}
-        </FormItem>;
+        </FormItem>
       )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     />
   )
 // Validation helpers for common patterns
@@ -338,9 +755,76 @@ export const commonValidations = {
   }
 }
     }
+<<<<<<< HEAD
   }}
     }
   }}
 
-
+=======
   }},
+<<<<<<< HEAD
+=======
+    };
+  }};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+    />;
+  );
+
+// Validation helpers for common patterns;
+export const validationPatterns = {;
+  email: /^[a-zA-Z0-9 && 9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,;
+  phone: /^[\+]?[1-9][\d]{0,15}$/,;
+  url: /^https?:\/\/.+/,;
+  strongPassword:;
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/,;
+};
+
+// Pre-configured validation rules;
+export const commonValidations = {;
+  required: { required: true },;
+  email: {;
+    required: true,;
+    pattern: validationPatterns && validationPatterns.email,;
+    custom: (value: string,) => {;
+      if (value && !validationPatterns && validationPatterns.email.test(value)) {;
+        return 'Please enter a valid email address';
+      }
+      return null;
+    },;
+  },;
+  password: {;
+    required: true,;
+    minLength: 8,;
+    custom: (value: string,) => {;
+      if (value && !validationPatterns && validationPatterns.strongPassword.test(value)) {;
+        return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character';
+      }
+      return null;
+    },;
+  },;
+  phone: {;
+    pattern: validationPatterns && validationPatterns.phone,;
+    custom: (value: string,) => {;
+      if (value && !validationPatterns && validationPatterns.phone.test(value)) {;
+        return 'Please enter a valid phone number';
+      }
+      return null;
+
+
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  }},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+    }
+  }};
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

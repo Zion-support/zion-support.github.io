@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
 import { Header } from "@/components/Header",
@@ -7,6 +8,44 @@ import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 export default function ServiceOnboarding() {
   const { user, isLoading } = useAuth();
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+export default function ServiceOnboarding() {;
+  const { user, isLoading } = useAuth();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+<<<<<<< HEAD
+import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom";
+export default function ServiceOnboarding() {
+  const { user, isLoading } = useAuth();
+=======
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+export default function ServiceOnboarding() {
+  const { user, isLoading } = useAuth(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+  // If not authenticated, redirect to login;
+  if (!isLoading && !user) {;
+    return <Navigate to="/login" replace />;
+
+=======
+
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // If not authenticated, redirect to login
   if (!isLoading && !user) {
     return <Navigate to="/login" replace />
@@ -44,3 +83,13 @@ export default function ServiceOnboarding() {
 }
     </>);
 }
+<<<<<<< HEAD
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

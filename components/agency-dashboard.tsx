@@ -2,7 +2,24 @@ import type { GetServerSideProps } from 'next';
 import { FormEvent, useEffect, useState } from 'react';
 import type { Vendor } from '../utils/vendor-types';
 
+<<<<<<< HEAD
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
+=======
+type Props = { vendor: Vendor | null };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
+export default function AgencyDashboardPage({ vendor }: Props) {;
+=======
+type Props = { vendor: Vendor | null };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function AgencyDashboardPage({ vendor }: Props) {
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },;
 export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
@@ -45,7 +62,17 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
     setActiveVendor(updated);
   }
   function addPackage() {
+<<<<<<< HEAD
     if (!pkgTitle |!pkgPrice |!activeVendor) return;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    if (!pkgTitle |!pkgPrice |!activeVendor) return;
+=======
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     const packages = [
       ...(activeVendor.packages |[])
       {
@@ -60,6 +87,15 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
     setPkgDesc('');
     setPkgPrice('');
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <div className='space-y-8'>;
       <div className='flex items-center justify-between'>;
@@ -139,6 +175,13 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
           </div>
         </form>
       </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <section className='space-y-3'>
         <h2 className='text-lg font-medium'>Publish Packages</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -201,6 +244,22 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
+
+          </div>
+        </form>
+      </section>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {
@@ -272,10 +331,24 @@ function Pipeline(): any ({ vendorId }: { vendorId: string }) {;
     });
     fetchItems();
 
+<<<<<<< HEAD
   useEffect(() => {;
     fetchItems();
   }, []);
+=======
+<<<<<<< HEAD
+  }
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+  }
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  useEffect(() => {
     fetchItems();
   }, []);
   return (
@@ -294,6 +367,7 @@ function Pipeline(): any ({ vendorId }: { vendorId: string }) {;
             </div>;
           </div>;
           <select
+<<<<<<< HEAD
             defaultValue={item && item.status}
             onChange={e => changeStatus(item && item.id, e && e.target.value)}
             className='border rounded px-2 py-1 bg-transparent text-sm';
@@ -329,12 +403,53 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] |null, // tie to auth later
+=======
+            defaultValue={item.status}
+            onChange={e => changeStatus(item.id, e.target.value)}
+            className='border rounded px-2 py-1 bg-transparent text-sm'
+          >
+            <option value='lead'>Lead</option>
+            <option value='qualified'>Qualified</option>
+            <option value='proposal'>Proposal</option>
+            <option value='in_progress'>In Progress</option>
+            <option value='complete'>Complete</option>
+            <option value='lost'>Lost</option>          </select>
+        </div>
+      ))}
+    </div>          <select defaultValue={item.status} onChange={e => changeStatus(item.id, e.target.value)} className="border rounded px-2 py-1 bg-transparent text-sm">
+            <option value="lead">Lead</option>
+            <option value="qualified">Qualified</option>
+            <option value="proposal">Proposal</option>
+            <option value="in_progress">In Progress</option>
+            <option value="complete">Complete</option>
+            <option value="lost">Lost</option>
+        </div>
+      ))}
+<<<<<<< HEAD
+    </div>
+  );
+<<<<<<< HEAD
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { listVendors } = await import('../utils/vendor-store');
-  const vendor = listVendors()[0] || null; // tie to auth later;
-  return { props: { vendor } };
-};  );
+  const vendor = listVendors()[0] |null; // tie to auth later
+  return { props: { vendor } }
+};  )
+}
+<<<<<<< HEAD
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+=======
+
+export const getServerSideProps: GetServerSideProps<Props> = async () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const { listVendors } = await import('../utils/vendor-store');
+  const vendor = listVendors()[0] |null, // tie to auth later
+  return { props: { vendor } }
+<<<<<<< HEAD
 }
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
@@ -343,6 +458,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   return { props: { vendor } }
 }
 
+<<<<<<< HEAD
 };
         </div>))}
     </div>);
@@ -359,3 +475,15 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
   return { props: { vendor } }
 }
 ;
+=======
+
+    </div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

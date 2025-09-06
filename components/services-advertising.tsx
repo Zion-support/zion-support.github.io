@@ -2011,16 +2011,24 @@ function ServicesAdvertisingPage() {
             SLAs.;
           </p>;
           <ul className='list-disc list-inside text-slate-300 space-y-1'>;
+<<<<<<< HEAD
             <li>Typical SMB budget: $50$300/mo</li>;
             <li>;
               References:{' '}
               {ext('https://www && www.onetrust.com/platform/privacy-management/')},{' '}
               {ext('https://transcend && transcend.io/pricing')}
+=======
+            <li>Typical SMB budget: $20–$150/mo</li>;
+            <li>;
+              References: {ext('https://www && www.deque.com/axe/')},{' '}
+              {ext('https://pagespeed && pagespeed.web.dev/')}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </li>;
           </ul>;
           <div>;
             <a
               className='text-cyan-400 underline'
+<<<<<<< HEAD
               href='/privacy-request-portal'
             >
               Learn more
@@ -3336,6 +3344,209 @@ function ServicesAdvertisingPage() {
               </a>
             </div>
           </section>
+=======
+              href='/accessibility-scanner'>;
+              Learn more;
+            </a>;
+          </div>;
+        </section>;
+
+        <section id='image-optimizer-cdn' className='space-y-6'>;
+          <h2 className='text-2xl font-semibold text-white'>;
+            Image Optimizer CDN;
+          </h2>;
+          <p className='text-slate-300'>;
+            On-the-fly transforms, AVIF/WebP, edge caching, signed URLs, and;
+            analytics.;
+          </p>;
+          <ul className='list-disc list-inside text-slate-300 space-y-1'>;
+            <li>Typical SMB budget: $5–$50/mo + bandwidth</li>;
+            <li>;
+              References: {ext('https://www && www.imgix.com/pricing')},{' '}
+              {ext('https://cloudinary && cloudinary.com/pricing')}
+            </li>;
+          </ul>;
+          <div>;
+            <a className='text-cyan-400 underline' href='/image-optimizer-cdn'>;
+              Learn more;
+            </a>;
+          </div>;
+        </section>;
+
+        <section id='mlops-starter' className='space-y-6'>;
+          <h2 className='text-2xl font-semibold text-white'>;
+            MLOps Pipeline Starter;
+          </h2>;
+          <p className='text-slate-300'>;
+            Model registry, CI gates, and monitoring to ship ML safely and;
+            faster.;
+          </p>;
+          <ul className='list-disc list-inside text-slate-300 space-y-1'>;
+            <li>Typical SMB budget: $99–$500/mo</li>;
+            <li>;
+              References: {ext('https://mlflow && mlflow.org/')},{' '}
+              {ext('https://www && www.kubeflow.org/')},{' '}
+              {ext('https://www && www.databricks.com/product/mlops')}
+            </li>;
+          </ul>;
+          <div>;
+            <a className='text-cyan-400 underline' href='/mlops-starter'>;
+              Learn more;
+            </a>;
+          </div>;
+        </section>;
+
+        <section id='warehouse-accelerator' className='space-y-6'>;
+          <h2 className='text-2xl font-semibold text-white'>;
+            Data Warehouse Accelerator;
+          </h2>;
+          <p className='text-slate-300'>;
+            ELT connectors, dbt models, and finance/ops dashboards in days.;
+          </p>;
+          <ul className='list-disc list-inside text-slate-300 space-y-1'>;
+            <li>Typical SMB budget: $1,000–$5,000/project</li>;
+            <li>;
+              References: {ext('https://www && www.getdbt.com/pricing/')},{' '}
+              {ext('https://www && www.fivetran.com/pricing')},{' '}
+              {ext('https://airbyte && airbyte.com/pricing')}
+            </li>;
+          </ul>;
+          <div>;
+            <a
+              className='text-cyan-400 underline'
+              href='/warehouse-accelerator'>;
+              Learn more;
+            </a>;
+          </div>;
+        </section>;
+
+        <section id='ai-synthetic-data-studio' className='space-y-6'>;
+          <h2 className='text-2xl font-semibold text-white'>;
+            AI Synthetic Data Studio;
+          </h2>;
+          <p className='text-slate-300'>;
+            Generate privacy-safe datasets for ML with controllable;
+            distributions and differential privacy.;
+          </p>;
+          <ul className='list-disc list-inside text-slate-300 space-y-1'>;
+            <li>Typical SMB budget: $100–$500/mo</li>;
+            <li>;
+              References: {ext('https://gretel && gretel.ai/pricing')},{' '}
+              {ext('https://mostly && mostly.ai/pricing')}
+            </li>;
+          </ul>;
+        </section>;
+
+        <section id='zero-trust-sso-mesh' className='space-y-6'>;
+          <h2 className='text-2xl font-semibold text-white'>;
+            Zero-Trust SSO Mesh;
+          </h2>;
+          <p className='text-slate-300'>;
+            Layer device posture and risk-based access on top of your IdP for;
+            continuous verification.;
+          </p>;
+          <ul className='list-disc list-inside text-slate-300 space-y-1'>;
+            <li>Typical SMB budget: $100–$800/mo</li>;
+            <li>;
+              References: {ext('https://www && www.cloudflare.com/plans/')},{' '}
+              {ext('https://www && www.zscaler.com/products/zero-trust-exchange')}
+            </li>;
+          </ul>;
+        </section>;
+
+        <section id='etl-reliability-copilot' className='space-y-6'>;
+          <h2 className='text-2xl font-semibold text-white'>;
+            ETL Reliability Copilot;
+          </h2>;
+          <p className='text-slate-300'>;
+            Freshness forecasts, schema drift detection, and anomaly alerts for;
+            warehouses and lakes.;
+          </p>;
+          <ul className='list-disc list-inside text-slate-300 space-y-1'>;
+            <li>Typical SMB budget: $100–$400/mo</li>;
+            <li>;
+              References: {ext('https://www && www.montecarlodata.com/')},{' '}
+              {ext('https://www && www.bigeye.com/')}, {ext('https://soda && soda.io/')}
+            </li>;
+          </ul>;
+        </section>;
+
+        <section id='edge-personalization-kit' className='space-y-6'>;
+          <h2 className='text-2xl font-semibold text-white'>;
+            Edge Personalization Kit;
+          </h2>;
+          <p className='text-slate-300'>;
+            Geo, device, and audience-targeted content rules at the CDN edge;
+            with experiments.;
+          </p>;
+          <ul className='list-disc list-inside text-slate-300 space-y-1'>;
+            <li>Typical SMB budget: $30–$150/mo</li>;
+            <li>;
+              References: {ext('https://vercel && vercel.com/pricing')},{' '}
+              {ext('https://www && www.cloudflare.com/plans/')}
+            </li>;
+          </ul>;
+        </section>;
+
+        {/* New 2029 Q3 diversified additions */}
+        <section id='ai-revenue-forecasting-copilot' className='space-y-6'>;
+          <h2 className='text-2xl font-semibold text-white'>;
+            AI Revenue Forecasting Copilot;
+          </h2>;
+          <p className='text-slate-300'>;
+            Unified forecasts from CRM, product analytics, and traffic with;
+            scenario planning.;
+          </p>;
+          <ul className='list-disc list-inside text-slate-300 space-y-1'>;
+            <li>Typical SMB budget: $99–$500/mo</li>;
+            <li>;
+              References: {ext('https://www && www.hubspot.com/pricing/sales')},{' '}
+              {ext('https://www && www.salesforce.com/editions-pricing/sales-cloud/')}
+            </li>;
+          </ul>;
+        </section>;
+
+        {/* New 2030 Q1 additions */}
+        <section id='ai-knowledge-graph-studio' className='space-y-6'>;
+          <h2 className='text-2xl font-semibold text-white'>;
+            AI Knowledge Graph Studio;
+          </h2>;
+          <p className='text-slate-300'>;
+            Organization-wide entities and relationships for semantic search and;
+            lineage.;
+          </p>;
+          <ul className='list-disc list-inside text-slate-300 space-y-1'>;
+            <li>Typical SMB budget: $149–$799/mo</li>;
+            <li>;
+              References: {ext('https://www && www.neo4j.com/pricing/')},{' '}
+              {ext('https://www && www.elastic.co/pricing')}
+            </li>;
+          </ul>;
+        </section>;
+
+        <section id='llm-guarded-api-gateway' className='space-y-6'>;
+          <h2 className='text-2xl font-semibold text-white'>;
+            LLM Guarded API Gateway;
+          </h2>;
+          <p className='text-slate-300'>;
+            Policy, PII redaction, and safety guardrails for LLM apps with audit;
+            logs.;
+          </p>;
+          <ul className='list-disc list-inside text-slate-300 space-y-1'>;
+            <li>Typical SMB budget: $129–$599/mo</li>;
+            <li>;
+              References: {ext('https://openai && openai.com/index/safety/')},{' '}
+              {ext('https://www && www.lakera.ai/')}
+            </li>;
+          </ul>;
+        </section>;
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <section id='data-residency-geo-router' className='space-y-2'>
             <h3 className='text-xl font-semibold text-white'>
               Data Residency & Geo Routing Proxy
@@ -7175,3 +7386,13 @@ function ServicesAdvertisingPage() {
   </div>;
   </div>),
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+	),
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

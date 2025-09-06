@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-deployment-automation.cjs
 <<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -131,6 +132,11 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-deployment-automation.cjs
 const { execSync } = require('child_process')
 console.log(' Starting Comprehensive Deployment Automation...')
   "status"
@@ -148,6 +154,7 @@ runDeploymentStep('Create Robots.txt', 'echo "User-"agent": *\nAllow: /\nSitemap
 // console.log('\n� Phase "7")
 console.log('\n� Phase "8")
   "criticalFailures"
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-deployment-automation.cjs
 <<<<<<< HEAD
 console.log('� Deployment summary saved "to")
 =======
@@ -161,3 +168,6 @@ console.log('� Deployment summary saved "to")
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+console.log('� Deployment summary saved "to")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-deployment-automation.cjs

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -26,6 +27,13 @@ import Head from 'next/head';
 import { useEffect, useMemo, useState  } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import Link from 'next/link';
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Simple icons using inline SVG to avoid external assets
 
 function StarIcon({
@@ -260,6 +268,7 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
             <a href={storeUrl} target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1 && 1.5 rounded-md border border-gray-300 dark:border-gray-700">Install</a>;
             <button
               aria-label="Dismiss"
+<<<<<<< HEAD
               onClick={() => { localStorage && localStorage.setItem('smartBannerDismissed1'), setVisible(false) }}
               className="text-xs px-2 py-1 rounded-md hover: bg-gray-100 dark:hover:bg-gray-800";
   }, []);
@@ -338,6 +347,14 @@ if (return null) {
       </div>;
     </div>;
   );
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
   'https://apps.apple.com/app/id0000000000';
@@ -364,6 +381,7 @@ const testimonials = [
       'I love tracking milestones on the go. Clear visibility and fewer meetings.'
   }
 ];
+<<<<<<< HEAD
 export default function MobileLaunchPage() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<
@@ -372,6 +390,28 @@ export default function MobileLaunchPage() {
   { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' }
   { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }]
 export default function MobileLaunchPage() {
+=======
+<<<<<<< HEAD
+export default function MobileLaunchPage() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<
+    'idle' | 'loading' | 'success' | 'error'
+  >('idle');  const [error, setError] = useState('');  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' }
+  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' }
+  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }]
+export default function MobileLaunchPage() {
+=======
+
+export default function MobileLaunchPage() {;
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<
+    'idle' | 'loading' | 'success' | 'error'
+  >('idle');  const [error, setError] = useState('');  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
+  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
+  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
+export default function MobileLaunchPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
   // Auto-rotate testimonial index
@@ -433,16 +473,38 @@ export default function MobileLaunchPage() {
       setEmail('');
     } catch (err: any) {;
       setStatus('error');
+<<<<<<< HEAD
       setError(err?.message |'Something went wrong.');    }      if (!res.ok) throw new Error(await res.text());
       const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) }),
       if (!res.ok) throw new Error(await res.text());
+=======
+<<<<<<< HEAD
+      setError(err?.message |'Something went wrong.');    }      if (!res.ok) throw new Error(await res.text());
+=======
+<<<<<<< HEAD
+      setError(err?.message || 'Something went wrong.');    }      if (!res.ok) throw new Error(await res.text());
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       setStatus('success');
       setEmail('');
     } catch (err: any) {;
       setStatus('error');
+<<<<<<< HEAD
       setError(err?.message |'Something went wrong.')
 
       setError(err?.message || 'Something went wrong.')
+=======
+<<<<<<< HEAD
+      setError(err?.message |'Something went wrong.')
+
+=======
+      setError(err?.message || 'Something went wrong.')
+=======
+      setError(err?.message || 'Something went wrong.');    }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
   return (
@@ -703,6 +765,7 @@ export default function MobileLaunchPage() {
           <button
             type="submit"
             disabled={status === 'loading'}
+<<<<<<< HEAD
             className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60">;
             {status === 'loading' ? 'Submitting' : 'Notify me'}
           </button>;
@@ -728,6 +791,21 @@ export default function MobileLaunchPage() {
           <Link href='/download'>
             <a className='underline'>Shareable link: /download</a>
           </Link>        </div>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            {status === 'loading' ? 'Submitting…' : 'Notify me'}
+          </button>
+        </form>
+        {status === 'success' && <div className="mt-2 text-sm text-emerald-600">Thanks! You’re on the list.</div>}
+        {status === 'error' && <div className="mt-2 text-sm text-rose-600">{error || 'Please try again later.'}</div>}
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       </section>
     </EnhancedLayout>
   );      </section>
@@ -778,5 +856,20 @@ export default function MobileLaunchPage() {
 }/>) );
 }<span className="text - sm opacity - 80" >4.9 average rating</span> </div> </div> </div>) );
 }</div> </div> </section> <input type="email" required > {
+<<<<<<< HEAD
   status === 'loading' ? 'Submitting' : 'Notify me';
 }</button> </form> <span></span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
+=======
+  status === 'loading' ? 'Submitting…' : 'Notify me';
+}</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

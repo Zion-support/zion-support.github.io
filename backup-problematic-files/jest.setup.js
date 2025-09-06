@@ -19,6 +19,7 @@ jest.mock("next/router", () => ({
         off: jest.fn(),
         emit: jest.fn()
       },
+<<<<<<< HEAD
       isFallback: false,
       isFallback: false
     }
@@ -33,6 +34,9 @@ jest.mock('next/image', () => ({
     return <img {...props} />
   }
 }));
+=======
+      isFallback: false
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     };
   },
 }));
@@ -44,6 +48,7 @@ jest.mock("next/image", () => {
   };
 });
 
+<<<<<<< HEAD
 // Mock Next.js Link component
 jest.mock("next/link", () => {
   return function MockedLink({ children, href, ...props }) {
@@ -62,6 +67,18 @@ jest.mock('next/link', () => ({
     return <a href={href} {...props}>{children}</a>
   }
 }));
+=======
+// Mock Next.js Link component
+jest.mock("next/link", () => {
+  return function MockedLink({ children, href, ...props }) {
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
+  };
+});
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -93,3 +110,12 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 };
+<<<<<<< HEAD
+=======
+
+// Global test setup
+beforeEach(() => {
+  // Reset all mocks before each test
+  jest.clearAllMocks();
+});
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

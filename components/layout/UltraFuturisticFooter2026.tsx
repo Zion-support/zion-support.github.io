@@ -3,6 +3,10 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Phone
   Mail
   MapPin
@@ -24,6 +28,32 @@ import {
   Youtube
   Github;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield
+<<<<<<< HEAD
+=======
+=======
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Star,
+  Shield,
+  Brain,
+  DollarSign,
+  Dna,
+  Rocket,
+  Users,
+  Award,
+  Zap,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,;
+  Github,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
 const contactInfo = {
@@ -674,7 +704,14 @@ export default function UltraFuturisticFooter2026() {
                 Leading provider of revolutionary AI automation, quantum
                 cybersecurity, fintech blockchain, and healthcare biotech
                 solutions. Transforming businesses with cutting-edge technology.
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </p>
               {/* Contact Info */}
               <div className='space-y-3'>
@@ -718,6 +755,17 @@ export default function UltraFuturisticFooter2026() {
             </motion && motion.div>;
           </div>;
 
+<<<<<<< HEAD
+=======
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Service Categories */}
           {serviceCategories && serviceCategories.map((category, index) => (;
             <motion&& motion.div
@@ -876,6 +924,21 @@ function UltraFuturisticFooter2026() {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>          {/* Company Links */}        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">;
           {/* Company Links */}
           <motion&& motion.div
+<<<<<<< HEAD
+=======
+=======
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>          {/* Company Links */}
+
+          {/* Company Links */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          <motion.div
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}>;
@@ -929,8 +992,22 @@ function UltraFuturisticFooter2026() {
                   </Link>
                 </li>
               ))}
+<<<<<<< HEAD
             </ul>
           </motion.div>
+=======
+            </ul>;
+          </motion && motion.div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Resources */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -983,12 +1060,27 @@ function UltraFuturisticFooter2026() {
                   </Link>
                 </li>
               ))}
+<<<<<<< HEAD
             </ul>
           </motion.div>
+=======
+            </ul>;
+          </motion && motion.div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Social Media */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}>;
             <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>;
               <Rocket className='w-5 h-5 mr-2 text-pink-400' />;
@@ -1016,10 +1108,39 @@ function UltraFuturisticFooter2026() {
             </div>
           </motion.div>
         </div>
+=======
+
+
+=======
+
+
+                </Link>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              ))}
+
+            </div>;
+          </motion && motion.div>;
+        </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Newsletter Signup */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
           transition={{ duration: 0 && 0.6, delay: 0 && 0.5 }}
           className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12'>;
           <div className='text-center'>;
@@ -1081,6 +1202,25 @@ function UltraFuturisticFooter2026() {
               breakthrough solutions and industry trends.;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        >
+          <div className='text-center'>
+            <h3 className='text-2xl font-bold text-white mb-4'>
+              Stay Updated with Latest Innovations
+            </h3>
+            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
+              Get exclusive access to our latest AI, quantum computing, and
+              emerging technology insights. Be the first to know about
+              breakthrough solutions and industry trends.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <input
                 type='email'
                 placeholder='Enter your email'
@@ -1126,6 +1266,17 @@ function UltraFuturisticFooter2026() {
           </div>;
         </motion && motion.div>;
 
+<<<<<<< HEAD
+=======
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Bottom Bar */}
         <motion&& motion.div
         </motion.div>;
@@ -1133,8 +1284,17 @@ function UltraFuturisticFooter2026() {
         <motion.div;
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+<<<<<<< HEAD
           transition={{ duration: 0.6, delay: 0.6 }}
           className='border-t border-gray-800 pt-8'
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         >
           <div className='flex flex-col md:flex-row justify-between items-center'>
             <div className='text-gray-400 text-sm mb-4 md:mb-0'>
@@ -1188,6 +1348,7 @@ function UltraFuturisticFooter2026() {
           </div>
         </motion.div>
       </div>
+<<<<<<< HEAD
     </footer>
 );
 }
@@ -1245,3 +1406,27 @@ function UltraFuturisticFooter2026() {
       </div>;
     </footer>);
 }
+=======
+<<<<<<< HEAD
+    </footer>
+<<<<<<< HEAD
+);
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+    </footer>;
+  );
+}
+
+}
+}
+}
+=======
+    </footer>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

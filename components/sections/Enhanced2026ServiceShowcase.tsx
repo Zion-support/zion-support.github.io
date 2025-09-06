@@ -2,6 +2,10 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ArrowRight
   Star
   TrendingUp
@@ -10,6 +14,7 @@ import {
   Brain
   Globe
   Rocket;
+<<<<<<< HEAD
 import {;
   ArrowRight,;
   Star,;
@@ -19,6 +24,19 @@ import {;
   Brain,;
   Globe,;
   Rocket,;
+=======
+=======
+
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Brain,
+  Globe,;
+  Rocket,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
@@ -147,6 +165,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
     }
   };
 
+<<<<<<< HEAD
   const cardVariants = {;
     hover: {;
       y: -10,;
@@ -214,6 +233,72 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
           <p className='text-slate-300 text-sm mb-4 leading-relaxed'>            {service.description}
           </p>
           {/* Features */}          <p className="text-slate-300 text-sm mb-4 leading-relaxed">
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    >
+      <motion.div
+        variants={cardVariants}
+        className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300"
+      >
+=======
+        ease: 'ease_out' as const,
+      },
+    },  }        ease: "ease_out" as const;
+      }
+    }
+  }
+;
+  const card_variants = {
+    hover: {
+      coordinate_y: -10,
+      scale: 1.02,
+      transition: {
+        duration: 0.3,
+        ease: 'ease_out' as const,
+      },
+    },  }        ease: "ease_out" as const;
+      }
+    }
+  }
+;
+  const renderServiceCard = (service: any, index: number) =>: any (
+    <motion.div;
+      key={service.id}
+      variants={item_variants}
+      while_hover='hover';
+      className='group relative';
+    >;
+      <motion.div;
+        variants={card_variants}
+        className='relative overflow - hidden rounded - 2xl bg - gradient - to - br from - slate - 900 / 80 via - slate - 800 / 80 to - slate - 900 / 80 backdrop - blur - xl border border - slate - 700 / 50 hover:border - slate - 600 / 50 transition - all duration - 300';
+      >;
+        {/* Glowing border effect */}
+        <div className='absolute inset - 0 rounded - 2xl bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300' />;
+        <div className='relative p - 6'>;
+          {/* Service header */}
+          <div className='flex items - start justify - between mb - 4'>;
+            <div className='flex items - center space - x-3'>;
+              <div className='text - 3xl'>{service.icon}</div>;
+              <div>;
+                <h3 className='text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300'>;
+                  {service.name}
+                </h3>;
+                <p className='text - slate - 400 text - sm'>{service.tagline}</p>;
+              </div>;
+            </div>;
+            {service.popular && (
+              <div className='flex items - center space - x-1 bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white px - 2 py - 1 rounded - full text - xs font - medium'>;
+                <Star className='w - 3 h - 3 fill - current' />                <span > Popular</span>    >;
+      <motion.div;
+        variants={card_variants}
+        className="relative overflow - hidden rounded - 2xl bg - gradient - to - br from - slate - 900 / 80 via - slate - 800 / 80 to - slate - 900 / 80 backdrop - blur - xl border border - slate - 700 / 50 hover:border - slate - 600 / 50 transition - all duration - 300";
+      >;
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Glowing border effect */}
         <div className="absolute inset - 0 rounded - 2xl bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300" />;
         <div className="relative p - 6">;
@@ -282,6 +367,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
               <div className='text-2xl font-bold text-white'>
                 {service.price}
               </div>
+<<<<<<< HEAD
               <div className='text-slate-400 text-sm'>{service.period}</div>            </div>
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -290,6 +376,37 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             >
               <span>Learn More</span>
               <ArrowRight className='w-4 h-4' />            </motion.button>
+=======
+            </div>
+            {service.popular && (
+              <div className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium'>
+
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>
+
+                <span>Popular</span>
+
+              </div>
+            )}
+          </div>
+
+          {/* Description */}
+          <p className='text-slate-300 text-sm mb-4 leading-relaxed'>            {service.description}
+          </p>
+
+          {/* Features */}
+
+            {service.description}
+          </p>
+
+          {/* Features */}
+
+            </motion.button>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </div>
           {/* Market info */}
           <div className='mt-4 pt-4 border-t border-slate-700/50'>
@@ -400,7 +517,16 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+<<<<<<< HEAD
           className='text-center mb-16'
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         >
           <div className='flex items-center justify-center space-x-2 mb-4'>
             <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
@@ -446,6 +572,19 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 
       <div className="container mx-auto px-4 relative z-10">;
         <motion&& motion.div
+<<<<<<< HEAD
+=======
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* AI Services Section */}
+        <motion.div
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
@@ -495,8 +634,18 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.2 }}
           className='mb-20'
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         >
           <div className='flex items-center space-x-3 mb-8'>
             <Brain className='w-6 h-6 text-cyan-400' />
@@ -557,12 +706,34 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
           </motion && motion.div>;
         </motion && motion.div>;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* IT Infrastructure Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.4 }}
           className='mb-20'
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         >
           <div className='flex items-center space-x-3 mb-8'>
             <Globe className='w-6 h-6 text-purple-400' />
@@ -592,6 +763,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             {innovative2026ITInfrastructureServices.map((service, index) => renderServiceCard(service, index))}
           </motion.div>
         </motion.div>
+<<<<<<< HEAD
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
           className='mb-20'>;
           <div className='flex items-center space-x-3 mb-8'>;
@@ -602,6 +774,27 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
           </div>;
 
           <motion&& motion.div
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* Micro SAAS Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          <div className='flex items-center space-x-3 mb-8'>
+            <Zap className='w-6 h-6 text-pink-400' />
+            <h3 className='text-2xl font-bold text-white'>
+              Micro SAAS Solutions
+            </h3>
+          </div>
+          <motion.div
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             variants={containerVariants}
             initial='hidden'
             whileInView='visible'
@@ -623,8 +816,23 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
           </motion && motion.div>;
         </motion && motion.div>;
 
+<<<<<<< HEAD
         {/* Micro SAAS Section */}
         <motion&& motion.div
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* CTA Section */}
+        <motion.div
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -679,12 +887,20 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
           </motion && motion.div>;
         </motion && motion.div>;
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           className='text-center mt-16'
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         >
           <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -727,6 +943,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 );
 }
           transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}
@@ -736,6 +953,12 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
               Ready to Transform Your Business?;
             </h3>;
             <p className='text-slate-300 mb-6 max-w-2xl mx-auto'>;
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <p className='text - slate - 300 text - sm mb - 4 leading - relaxed'>            {service.description}
           </p>;
           {/* Features */}          <p className="text - slate - 300 text - sm mb - 4 leading - relaxed">;
@@ -975,6 +1198,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
               and IT services to drive growth, efficiency, and competitive;
               advantage.;
             </p>;
+<<<<<<< HEAD
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4'>;
               <motion&& motion.button
                 whileHover={{ scale: 1 && 1.05 }}
@@ -1043,3 +1267,18 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
       </div>;
     </section>);
 }
+=======
+
+
+  );
+
+}
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

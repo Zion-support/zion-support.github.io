@@ -76,6 +76,7 @@ function GrantsPage() {
     region?: string;
     program?: string;
   }>({});
+<<<<<<< HEAD
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected']
 export default function GrantsPage() {
@@ -84,6 +85,20 @@ export default function GrantsPage() {
 export default function GrantsPage() {
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
+=======
+<<<<<<< HEAD
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
+const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected']
+export default function GrantsPage() {
+=======
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
+const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],
+export default function GrantsPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [items, setItems] = useState<GrantApplication[]>([]);
+  const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
+  useEffect(() => {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   useEffect(() => {
 
@@ -148,7 +163,23 @@ function GrantsPage() {
   }, [filters]);
 ;
   return (
+<<<<<<< HEAD
     <EnhancedLayout>
+=======
+
+    <EnhancedLayout>      .then((r) => r && r.json());
+      .then((d) => setItems(d && d.items || []));
+      .catch(() => setItems([]));
+  }, [filters]);
+
+  return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    <EnhancedLayout>
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <div className='flex items-center justify-between mb-6'>
         <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>
         <div className='flex gap-2'>
@@ -167,6 +198,7 @@ function GrantsPage() {
           value={filters.sector |''}
           onChange={e =>
             setFilters(f => ({ ...f, sector: e.target.value |undefined }))
+<<<<<<< HEAD
               Incubator;
             </a>;
           </Link>;
@@ -192,6 +224,8 @@ function GrantsPage() {
           value={filters.status |''}
           onChange={e =>
             setFilters(f => ({ ...f, status: e.target.value |undefined }))
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           }
         >;
           <option value=''>All Stages</option>;
@@ -241,6 +275,7 @@ function GrantsPage() {
               </div>;
               <div className='flex gap - 2 items - center'>;
                 {g.program === 'incubator' && (
+<<<<<<< HEAD
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
                     Incubated by Zion
                   </span>
@@ -321,3 +356,38 @@ function GrantsPage() {
       </div>;
     </EnhancedLayout>);
 }
+=======
+
+          value={filters && filters.program || ''}
+          onChange={e =>;
+            setFilters(f => ({ ...f, program: e && e.target.value || undefined }));
+          }
+        >;
+          <option value=''>All Programs</option>;
+          <option value='grant'>Grant</option>;
+          <option value='incubator'>Incubator</option>;
+        </select>;
+      </div>;
+=======
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>
+        <div className="flex gap-2">
+          <Link href="/grants/apply"><a className="px-3 py-2 bg-blue-600 text-white rounded">Apply</a></Link>
+          <Link href="/incubator"><a className="px-3 py-2 bg-purple-600 text-white rounded">Incubator</a></Link>
+        </div>
+      </div>
+    </EnhancedLayout>
+);
+}
+=======
+<<<<<<< HEAD
+
+
+  return (
+    <EnhancedLayout>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

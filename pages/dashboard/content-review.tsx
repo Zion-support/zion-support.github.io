@@ -1,12 +1,30 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import useSWR from 'swr',
 import React, { useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GetServerSideProps } from 'next';
 import ModerationModal from '../../components/admin/ModerationModal';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 const fetcher = (url: string) => fetch(url).then(r => r.json())
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const cookies = (req.headers.cookie |'').split(';').reduce(
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+const fetcher = (url: string) => fetch(url).then(r => r.json()),
+
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
+  const cookies = (req.headers.cookie || '').split(';').reduce(
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     (acc: any, part: string) => {
       const [k, v] = part.trim().split('=');
       if (k) acc[k] = decodeURIComponent(v |'');
@@ -23,11 +41,16 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   return { props: {} }
 }
 export default function ContentReviewPage() {
+<<<<<<< HEAD
   const [filters, setFilters] = useState<{
+=======
+  const [filters, setFilters] = useState<{;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     status?: string;
     reason?: string;
     userEmail?: string;
     contentType?: string;
+<<<<<<< HEAD
   }>({ status: 'pending' });  const query = useMemo(() => {;
     const p = new URLSearchParams();
     if (filters && filters.status) p && p.set('status', filters && filters.status);
@@ -35,6 +58,54 @@ export default function ContentReviewPage() {
     if (filters && filters.userEmail) p && p.set('userEmail', filters && filters.userEmail);
     if (filters && filters.contentType) p && p.set('contentType', filters && filters.contentType);
     return p && p.toString();
+=======
+  }>({ status: 'pending' });  const query = useMemo(() => {
+=======
+<<<<<<< HEAD
+import useSWR from 'swr';
+import React, { useMemo, useState } from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type { GetServerSideProps } from 'next';
+import ModerationModal from '../../components/admin/ModerationModal';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+const fetcher = (url: string) => fetch(url).then(r => r.json());
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
+  const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {;
+    const [k, v] = part.trim().split('=');
+    if (k) acc[k] = decodeURIComponent(v || '');
+    return acc;
+  }, {} as Record<string, string>),;
+  let role = 'guest';
+  try { role = cookies['x-user'] ? JSON.parse(cookies['x-user']).role : 'guest' } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  if (role !== 'admin') return { redirect: { destination: '/', permanent: false } },;
+  return { props: {}   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+},;
+export default function ContentReviewPage(req, res) {
+  try {
+  const [filters, setFilters] = useState<{ status?: string, reason?: string, userEmail?: string, contentType?: string }>({ status: 'pending' }),;
+  const query = useMemo(() => {;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    const p = new URLSearchParams();
+    if (filters.status) p.set('status', filters.status);
+    if (filters.reason) p.set('reason', filters.reason);
+    if (filters.userEmail) p.set('userEmail', filters.userEmail);
+    if (filters.contentType) p.set('contentType', filters.contentType);
+    return p.toString();
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }, [filters]);
   const { data, mutate } = useSWR(
     `/api/admin/moderation/flags${query ? `?${query}` : ''}`
@@ -52,6 +123,7 @@ export default function ContentReviewPage() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ action, adminNotes })
+<<<<<<< HEAD
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
 import type { GetServerSideProps } from 'next';
 import ModerationModal from '../../components / admin / ModerationModal';
@@ -123,10 +195,35 @@ if (return) {
         method: 'POST',
         headers: { 'Content - Type': 'application / json' },
         body: JSON.stringify ({ action, admin_notes }),
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
     );
-    set_selected (null);
-    mutate ();  }
+    setSelected(null);
+    mutate();  }
+
+=======
+  }, [filters]),;
+  const { data, mutate } = useSWR(`/api/admin/moderation/flags${query ? `?${query}` : ''}`, fetcher);
+  const flags = data?.flags || [];
+  const [selected, setSelected] = useState<any | null>(null);
+  async function handleAction(action: 'approve'|'remove'|'warn'|'ban', adminNotes?: string) {;
+    if (!selected) return,;
+    await fetch(`/api/admin/moderation/flags/${encodeURIComponent(selected.id)}/action`, {;
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action, adminNotes });
+    });
+    setSelected(null);
+    mutate();
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <EnhancedLayout>;
       <div className='max-w-7xl mx-auto'>;
@@ -272,6 +369,7 @@ if (return) {
                     </button>                  </td>;
                 </tr>;
               ))}
+<<<<<<< HEAD
               {flags && flags.length === 0 && (;
                 <tr>;
                   <td
@@ -279,12 +377,48 @@ if (return) {
                     className='px-3 py-6 text-center text-gray-500'>;
                     No results;
                   </td>;
+=======
+              {flags.length === 0 && (
+<<<<<<< HEAD
+                <tr>
+                  <td
+                    colSpan={8}
+                    className='px-3 py-6 text-center text-gray-500'
+                  >
+                    No results
+                  </td>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </tr>              )}
             </tbody>
           </table>
         </div>
       </div>
       {selected && (
+<<<<<<< HEAD
+=======
+        <ModerationModal
+          flag={selected}
+          onClose={() => setSelected(null)}
+          onAction={handleAction}
+        />
+      )}
+    </EnhancedLayout>
+);
+<<<<<<< HEAD
+=======
+
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
+              )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </tbody>;
           </table>;
         </div>;
@@ -364,3 +498,19 @@ if (return) {
         />)}
     </EnhancedLayout>);
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

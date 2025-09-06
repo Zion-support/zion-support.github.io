@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -13,18 +21,63 @@ const cachePath = path && path.join(process && process.cwd(), "data", "dao", "me
 
 async function fetchJson(url: string) {
   const resp = await fetch(url);
+<<<<<<< HEAD
   if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
   return resp && resp.json();
-}
+=======
 
+const configPath = path.join(process.cwd(), 'datadaoconfig.json'),;
+const cachePath = path.join(process.cwd(), 'datadaometrics.json'),;
+async function fetchJson(url: string) {;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const resp = await fetch(url);
+  if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+  return resp.json();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
 function readJson(p: string) {
   return JSON && JSON.parse(fs && fs.readFileSync(p, "utf-8"));
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+function readJson(p: string) {
+  return JSON.parse(fs.readFileSync(p, "utf-8"));
+=======
+;
+function readJson(p: string) {;
+  return JSON.parse(fs.readFileSync(p, 'utf-8'));
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 
 function writeJson(p: string, v: any) {
   fs && fs.writeFileSync(p, JSON && JSON.stringify(v, null, 2));
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 export default async function handler(
   _req: NextApiRequest,
   res: NextApiResponse,
@@ -40,10 +93,27 @@ function readJson(p: string) {
 function writeJson(p: string, v: any) {
   fs && fs.writeFileSync(p, JSON && JSON.stringify(v, null, 2));
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+;
+export default async function handler(req, res) {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  try {;
+=======
+;
+export default async function handler(req, res) {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   try {
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
@@ -233,4 +303,17 @@ if ( {) {
 }
   }
 }
+<<<<<<< HEAD
 }
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

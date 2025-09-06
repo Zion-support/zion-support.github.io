@@ -22,6 +22,7 @@ const particles: Array< {;
 for (let i = 0, i < count, i++) {;
   particles && particles.push ({;
 
+<<<<<<< HEAD
 export default function UltraAdvancedFuturisticBackground(): any ({;
   children,;
   intensity = 'medium',;
@@ -30,6 +31,37 @@ export default function UltraAdvancedFuturisticBackground(): any ({;
   animationSpeed = 1 && 1.0,;
   enableHolographic = true,;
   enableQuantumEffects = true,}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground(): any ({ ;
+=======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+const particles: Array< {
+  //Initialize particles with enhanced properties const initParticles = () => {
+  const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math.floor (particleCount * 0.7) : Math.floor (particleCount * 0.5);
+for (let i = 0, i < count, i++) {
+  particles.push ({
+export default function UltraAdvancedFuturisticBackground({
+<<<<<<< HEAD
+  children
+  intensity = 'medium'
+  theme = 'quantum'
+  particleCount = 200
+  animationSpeed = 1.0
+  enableHolographic = true
+  enableQuantumEffects = true,}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground({
+=======
+export default function UltraAdvancedFuturisticBackground({
+
+  children,
+  intensity = 'medium',
+  theme = 'quantum',
+  particleCount = 200,
+  animationSpeed = 1.0,
+  enableHolographic = true,
+  enableQuantumEffects = true,}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground({ ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   children;
   intensity = 'medium';
   theme = 'quantum';
@@ -235,7 +267,16 @@ if (return) {
             ctx.lineWidth = 1;
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(partner.x, partner.y);
+<<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           }
         }
         // Bounce off edges with quantum tunneling
@@ -307,6 +348,7 @@ if (< 0.1) {) {
             particle.vx *= -1;
           }
         }
+<<<<<<< HEAD
         if (particle.y <= 0 |particle.y >= canvas.height) {
           if (enableQuantumEffects && Math.random() < 0.1) {
             // Quantum tunneling effect
@@ -327,6 +369,31 @@ if (< 0.1) {) {
             particle.vy *= -1;          }            particle.coordinate_y = particle.y <= 0 ? canvas.height : 0;
           } else {
             particle.vy *= -1;
+=======
+
+
+            particle.vx *= -1;          }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          }
+        }
+
+        if (particle.y <= 0 || particle.y >= canvas.height) {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          if (enableQuantumEffects && Math.random() < 0.1) {
+            // Quantum tunneling effect
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           }
         }
         // Wrap around edges
@@ -358,6 +425,14 @@ if (< 0.1) {) {
           gradient.addColorStop(0.3, particle.color + '80');
           gradient.addColorStop(0.6, particle.color + '40');
           gradient.addColorStop(1, 'transparent');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           ctx.fillStyle = gradient;
           ctx.fillRect(
             -particle.size * 2
@@ -365,6 +440,15 @@ if (< 0.1) {) {
             particle.size * 4
             particle.size * 4
           );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+            }
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           // Quantum wave rings
           if (enableQuantumEffects) {
             for (let i = 1; i <= 3; i++) {
@@ -776,7 +860,26 @@ if (< 0.1) {) {
           ctx.arc(x, y, 50 + 30 * Math.sin(time + i), 0, Math.PI * 2);
           ctx.stroke();        }          ctx.stroke()
         }
+<<<<<<< HEAD
       }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          ctx.stroke();        }
+
+        }
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       // Add holographic matrix effect
       if (enableHolographic && theme === 'holographic') {
         const time = Date.now() * 0.001;
@@ -840,7 +943,21 @@ if (< 0.1) {) {
         ref={canvasRef}
         className='fixed inset-0 w-full h-full pointer-events-none'
         style={{ zIndex: -1 }}
+<<<<<<< HEAD
       />
+=======
+
+      />;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Additional futuristic overlay effects */}
       {enableHolographic && (;
         <div
@@ -859,13 +976,18 @@ if (< 0.1) {) {
         </div>;
       )}
       {children}
-    </div>;
+    </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );      }
         // Wrap around edges;
         // Check condition
 if (particle.coordinate_x = canvas.width) {
   $2
 }
+<<<<<<< HEAD
         // Check condition
 if (particle.coordinate_x = 0) {
   $2
@@ -1187,3 +1309,16 @@ if ( {) {
       {children}
     </div>);
 }
+=======
+=======
+<<<<<<< HEAD
+
+      {children}
+    </div>;
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

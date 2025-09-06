@@ -1,10 +1,23 @@
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 import { exec_sync } from 'child_process';
 import type { NextApiRequest, NextApiResponse } from 'next';
 export type DevRole = 'admin' | 'maintainer' | 'contributor';
 export interface DevIdentity {
   is_authenticated: boolean;
+=======
+import { execSync } from 'child_process';
+import type { NextApiRequest, NextApiResponse } from 'next';
+export type DevRole = 'admin' | 'maintainer' | 'contributor';
+<<<<<<< HEAD
+export interface DevIdentity {
+=======
+
+export interface DevIdentity {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  isAuthenticated: boolean;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   roles: DevRole[];
   user_id?: string;
 }
@@ -33,7 +46,16 @@ export function getGitStatus (): { connected: boolean; branch?: string } {
     return { connected: false }
   }
 }
+<<<<<<< HEAD
 export function getDevIdentity(req: NextApiRequest): DevIdentity {
+=======
+<<<<<<< HEAD
+export function getDevIdentity(req: NextApiRequest): DevIdentity {
+=======
+
+export function getDevIdentity(req: NextApiRequest): DevIdentity {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // TODO: integrate real auth; for now, check a header and env var for dev
   const token = req.headers['x-dev-token'] |req.headers['x-admin-token'];
   const adminToken = process.env.ADMIN_TOKEN;
@@ -58,6 +80,15 @@ export function requireRoles(
     return undefined;
   }
   return identity;
+<<<<<<< HEAD
+=======
+
+}
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function getDevIdentity (req: NextApiRequest): DevIdentity {
   // TODO: integrate real auth; for now, check a header and env var for dev;
   const token = req.headers['x - dev - token'] || req.headers['x - admin - token'];
@@ -92,3 +123,12 @@ if ( {) {
   }
   return identity;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

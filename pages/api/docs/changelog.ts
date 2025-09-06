@@ -1,15 +1,29 @@
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (req && req.method === "GET") {
     try {
       const content = fs.existsSync(filePath)
         ? JSON.parse(fs.readFileSync(filePath, "utf8"))
         : { content: "" }
+=======
+  if (req.method === "GET") {
+    try {
+      const content = fs.existsSync(filePath)
+<<<<<<< HEAD
+        ? JSON.parse(fs.readFileSync(filePath, "utf8"))
+        : { content: "" }
+=======
+        ? JSON.parse(fs.readFileSync(filePath, "utf8"));
+        : { content: "" };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       res.status(200).json(content);
     } catch (e: any) {
       res.status(500).json({ error: e?.message |"Failed to read changelog" });
     }
     return;
+<<<<<<< HEAD
   }
   if (req.method === "POST") {
     try {
@@ -33,6 +47,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(500).json({ error: e?.message || 'Failed to read changelog' })
     }
     return
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 
   if (req.method === 'POST') {
@@ -63,7 +79,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default /**
  * handler - Function description
  */
@@ -103,3 +127,33 @@ if ( {) {
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
 }
+<<<<<<< HEAD
+=======
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  res.setHeader('AllowGET, POST');
+  res.status(405).end('Method Not Allowed');
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

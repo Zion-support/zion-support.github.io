@@ -3,6 +3,10 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Star
   TrendingUp
   Zap
@@ -20,6 +24,7 @@ import {
   ExternalLink;} from 'lucide-react';import {
   Star, TrendingUp, Zap, Brain, Rocket, Shield
 
+<<<<<<< HEAD
   DollarSign, Users, Clock, CheckCircle, ArrowRight;
   Phone, Mail, MapPin, ExternalLink
  } from 'lucide-react';
@@ -58,6 +63,9 @@ export default function InnovativeServicesShowcase() {
   const containerVariants = {
     hidden: { opacity: 0 }
 import {
+=======
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Star,
   TrendingUp,
   Zap,
@@ -71,6 +79,7 @@ import {
   ArrowRight,
   Phone,
   Mail,
+<<<<<<< HEAD
   MapPin,
   ExternalLink,} from 'lucide-react';import {
   Star, TrendingUp, Zap, Brain, Rocket, Shield,
@@ -85,10 +94,42 @@ export default /**
  */
 function InnovativeServicesShowcase() {
   const contact_info = {
+=======
+
+  MapPin,;
+  ExternalLink,;} from 'lucide-react';import {
+  Star, TrendingUp, Zap, Brain, Rocket, Shield, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  DollarSign, Users, Clock, CheckCircle, ArrowRight;
+  Phone, Mail, MapPin, ExternalLink
+ } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import { emergingTechServicesEnhanced2025  } from '../data/emerging-tech-services';
+import { nextGenAIServices } from '../data/next-gen-ai-services';
+export default function InnovativeServicesShowcase() {
+<<<<<<< HEAD
+=======
+  const contactInfo = {
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com';
+<<<<<<< HEAD
+=======
+
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ;
   const container_variants = {
@@ -132,6 +173,90 @@ function InnovativeServicesShowcase() {
         'Zero-trust architecture'
       ]
       link: 'https://ziontechgroup.com/quantum-internet-security-platform'
+<<<<<<< HEAD
+=======
+      color: 'from-indigo-600 to-purple-700'
+    }
+    {
+      title: '🧬 AI-Powered Quantum Drug Discovery'
+      description:
+        'Revolutionary platform combining quantum computing and AI to accelerate drug discovery by 100x. Simulates molecular interactions at quantum level.'
+      price: '$12,999/month'
+      marketData: '$150B AI in healthcare, 400% annual growth'
+      competitors: 'Insitro ($100M+ funding), Recursion ($2B+ funding)'
+      savings: '100x faster drug discovery vs. traditional methods'
+      features: [
+        'Quantum molecular simulation'
+        'AI-powered drug screening'
+        'Protein folding prediction'
+        'Drug interaction modeling'
+        'Clinical trial optimization'
+      ]
+      link: 'https://ziontechgroup.com/ai-quantum-drug-discovery'
+      color: 'from-emerald-600 to-teal-700'
+    }
+    {
+      title: '💰 Autonomous Quantum Trading System'
+      description:
+        'AI-powered quantum trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and returns.'
+      price: '$15,999/month'
+      marketData: '$15T algorithmic trading, 200% annual growth'
+      competitors: 'Renaissance Technologies, Two Sigma, Citadel'
+      savings: 'Accessible quantum AI for smaller firms'
+      features: [
+        'Quantum AI trading algorithms'
+        'Nanosecond execution'
+        'Real-time market analysis'
+        'Risk management'
+        'Portfolio optimization'
+      ]
+      link: 'https://ziontechgroup.com/autonomous-quantum-trading-system'
+      color: 'from-yellow-600 to-orange-700'
+    }
+    {
+      title: '🧠 Neural Interface Development Platform'
+      description:
+        'Revolutionary platform for developing neural interfaces that connect human brains directly to computers. Enables next-generation human-AI collaboration.'
+      price: '$19,999/month'
+      marketData: '$5B neural interface market, 500% annual growth'
+      competitors: 'Basic research tools, Traditional medical devices'
+      savings: 'First comprehensive neural interface platform'
+      features: [
+        'Neural signal processing'
+        'Brain activity monitoring'
+        'AI-powered interpretation'
+        'Real-time communication'
+        'Safety protocols'
+      ]
+      link: 'https://ziontechgroup.com/neural-interface-development-platform'
+      color: 'from-purple-600 to-indigo-700'
+    },  ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <div className='min-h-screen'>      color: 'from-indigo-600 to-purple-700'
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+=======
+        stagger_children: 0.1,
+        delay_children: 0.2,
+      },
+    },  }        delay_children: 0.2;
+      }
+    }
+  }
+;
+  const item_variants = {
+    hidden: { opacity: 0, coordinate_y: 30 },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     visible: {
       opacity: 1,
       coordinate_y: 0,
@@ -543,6 +668,34 @@ export default function InnovativeServicesShowcase() {;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
               className="text-center mb-16"
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <div className='min-h-screen'>
+
+
+  ];
+
+  return (
+    <UltraAdvancedFuturisticBackground>
+
+              initial={{ opacity: 0, y: 30 }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -591,7 +744,16 @@ export default function InnovativeServicesShowcase() {;
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
                   className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300'
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 >
                   <div className='mb-6'>
                     <h3 className='text-2xl font-bold text-white mb-4'>
@@ -723,12 +885,37 @@ export default function InnovativeServicesShowcase() {;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
               className="text-center mb-16"
+<<<<<<< HEAD
+=======
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* Emerging Tech Services */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto'>
+            <motion.div
+
+              className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}
+
+              initial={{ opacity: 0, y: 30 }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-                <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>;
-                  Emerging;
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+                <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>
+                  Emerging
                 </span>{' '}
                 Tech Services
               </h2>
@@ -737,6 +924,17 @@ export default function InnovativeServicesShowcase() {;
                 transforming industries
               </p>
             </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {emergingTechServicesEnhanced2025
                 .slice(0, 6)
@@ -828,6 +1026,18 @@ export default function InnovativeServicesShowcase() {;
             </div>
             <motion.div
               className="text-center mt-16"
+<<<<<<< HEAD
+=======
+=======
+
+              className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -864,6 +1074,7 @@ export default function InnovativeServicesShowcase() {;
                 <span className='bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent'>;
                   ArrowRight-Generation;
                 </span>{' '}
+<<<<<<< HEAD
                 AI Services
               </h2>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -872,6 +1083,30 @@ export default function InnovativeServicesShowcase() {;
               </p>
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {nextGenAIServices.slice(0, 6).map((service, index) => (                  ArrowRight-Generation
+=======
+
+
+        {/* ArrowRight-Gen AI Services */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">
+                  ArrowRight-Generation
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </span> AI Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -952,6 +1187,7 @@ export default function InnovativeServicesShowcase() {;
               viewport={{ once: true }}>;
               <motion&& motion.a
                 href='/services'
+<<<<<<< HEAD
             </div>
             <motion.div
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}              className="text-center mt-16"
@@ -966,6 +1202,105 @@ export default function InnovativeServicesShowcase() {;
               >
                 <span>Discover All AI Services</span>
                 <ArrowRight className='w-6 h-6' />              </motion.a>                href="/services"
+=======
+
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <UltraFuturisticCard variant="quantum-holographic" className="p-6">
+                    <div className="text-4xl mb-4">{service.icon}</div>
+                    <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
+                    <p className="text-gray-400 text-sm mb-4">{service.description}</p>
+                    <div className="text-2xl font-bold text-cyan-400 mb-2">
+=======
+              className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >;
+              <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
+                <span className='bg - gradient - to - r from - emerald - 400 to - teal - 400 bg - clip - text text - transparent'>;
+                  Emerging;
+                </span>{' '}
+                Tech Services;
+              </h2>;
+              <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
+                Discover the latest technologies that are emerging and;
+                transforming industries;
+              </p>;
+            </motion.div>;
+            <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
+              {emergingTechServicesEnhanced2025;
+                .slice (0, 6);
+                .map ((service, index) => (
+                  <motion.div;
+                    key={service.id}
+                    initial={{ opacity: 0, coordinate_y: 50 }}
+                    whileInView={{ opacity: 1, coordinate_y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >;
+                    <UltraFuturisticCard;
+                      variant='quantum - holographic';
+                      className='p - 6';
+                    >;
+                      <div className='text - 4xl mb - 4'>{service.icon}</div>;
+                      <h3 className='text - xl font - bold text - white mb - 3'>;
+                        {service.name}
+                      </h3>;
+                      <p className='text - gray - 300 text - sm mb - 4'>;
+                        {service.description}
+                      </p>;
+                      <div className='text - 2xl font - bold text - cyan - 400 mb - 2'>;
+                        {service.price}
+                        <span className='text - sm text - gray - 400'>;
+                          {service.period}
+                        </span>;
+                      </div>;
+                      <div className='text - sm text - gray - 400 mb - 4'>;
+                        {service.market_size} • {service.growth_rate}
+                      </div>;
+                      <a;
+                        href={service.link}
+                        className='bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white px - 4 py - 2 rounded - lg text - sm font - semibold hover:from - cyan - 400 hover:to - blue - 500 transition - all duration - 300 inline - flex items - center space - x-2';
+                      >;
+                        <span > Learn More</span>;
+                        <ArrowRight className='w - 4 h - 4' />;
+                      </a>;
+                    </UltraFuturisticCard>;
+                  </motion.div>))}
+            </div>;
+            <motion.div;
+              className='text - center mt - 16'              initial={{ opacity: 0, coordinate_y: 30 }}                  Emerging;
+                </span> Tech Services;
+              </h2>;
+              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+                Discover the latest technologies that are emerging and transforming industries;
+              </p>;
+            </motion.div>;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+                              {emergingTechServicesEnhanced2025.slice (0, 6).map ((service, index) => (
+                <motion.div;
+                  key={service.id}
+                  initial={{ opacity: 0, coordinate_y: 50 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >;
+                  <UltraFuturisticCard variant="quantum - holographic" className="p - 6">;
+                    <div className="text - 4xl mb - 4">{service.icon}</div>;
+                    <h3 className="text - xl font - bold text - white mb - 3">{service.name}</h3>;
+                    <p className="text - gray - 300 text - sm mb - 4">{service.description}</p>;
+                    <div className="text - 2xl font - bold text - cyan - 400 mb - 2">;
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       {service.price}
                       <span className="text - sm text - gray - 400">{service.period}</span>;
                     </div>;
@@ -1024,6 +1359,22 @@ export default function InnovativeServicesShowcase() {;
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+        {/* Call to Action */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -1059,9 +1410,16 @@ export default function InnovativeServicesShowcase() {;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
                 <a
                   href="/contact"
+<<<<<<< HEAD
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">;
                   Get Started Today;
                 </a>;
+=======
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
+                >
+                  Get Started Today
+                </a>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <a
                   href='/services'
                   className='border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300'                  href="/services"
@@ -1099,6 +1457,7 @@ export default function InnovativeServicesShowcase() {;
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 );
 }
   );
@@ -1298,3 +1657,19 @@ export default function InnovativeServicesShowcase() {;
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

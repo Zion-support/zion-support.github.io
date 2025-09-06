@@ -59,11 +59,22 @@ const EnhancedNavigation: React.FC = () => {
             <div className="relative">;
               <button
                 onClick={() => toggleDropdown('services')}
+<<<<<<< HEAD
                 className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors"
               >
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
               </button>
+=======
+
+
+              
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {activeDropdown === 'services' && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -91,7 +102,21 @@ const EnhancedNavigation: React.FC = () => {
                   </div>;
                 </motion && motion.div>;
               )}
+<<<<<<< HEAD
             </div>
+=======
+
+            </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Company Dropdown */}
             <div className="relative">;
               <button
@@ -130,19 +155,50 @@ const EnhancedNavigation: React.FC = () => {
             {/* CTA Button */}
             <Link
               href="/contact"
+<<<<<<< HEAD
               className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
             >
               Get Started
             </Link>
           </div>
+=======
+              className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors">;
+              Get Started;
+            </Link>;
+          </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 text-white hover:text-blue-300 transition-colors";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
           </button>
         </div>
+=======
+
+          </button>;
+        </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Mobile Menu */}
         {isOpen && (;
           <motion&& motion.div
@@ -412,3 +468,17 @@ const EnhancedNavigation: React.FC = () => {
 }
 export default EnhancedNavigation;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default EnhancedNavigation;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+export default EnhancedNavigation;
+=======
+export default EnhancedNavigation;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

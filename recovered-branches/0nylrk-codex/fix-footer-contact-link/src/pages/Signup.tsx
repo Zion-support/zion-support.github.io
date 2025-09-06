@@ -1,10 +1,29 @@
 
+<<<<<<< HEAD
 import {useState} from "react";
 import {Link, Navigate} from "react-router-dom";
 import {useForm, type, UseFormReturn} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {z} from "zod";
 import {User, Mail, Lock, Eye, EyeOff, Facebook, Twitter} from "lucide-react";
+=======
+
+
+import { useState } from "react",
+import { Link, Navigate } from "react-router-dom",
+import { useForm, type UseFormReturn } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
@@ -164,6 +183,7 @@ if ( {) {
                 </Link>;
               </p>;
             </div>;
+<<<<<<< HEAD
 
             <div className="bg-zion-blue-dark rounded-lg p-6">;
               <Form {...form}>;
@@ -176,18 +196,44 @@ if ( {) {
                         <FormLabel className="text-zion-slate-light">Full Name</FormLabel>;
                         <FormControl>;
                           <div className="relative">;
+=======
+            <div className="bg-zion-blue-dark rounded-lg p-6">;
+              <Form {...form}>;
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" noValidate>;
+                  <FormField;
+                    control={form.control}
+                    name="displayName"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
+                        <FormControl>
+                          <div className="relative">
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                             <Input
                               placeholder="John Doe"
                               className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                               {...field}
+<<<<<<< HEAD
                               aria-autocomplete="none"
                               autoComplete="off"
+=======
+                              aria-autocomplete="none";
+                              autoComplete="off";
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                             />;
                             <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                           </div>;
                         </FormControl>;
                         <FormMessage className="text-red-400" />;
                       </FormItem>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     )}
                   />
                   <FormField

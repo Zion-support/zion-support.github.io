@@ -3,6 +3,10 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Menu
   X
   ChevronDown
@@ -59,6 +63,7 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Briefcase
 
+<<<<<<< HEAD
 import {;
   Menu,;
   X,;
@@ -119,6 +124,9 @@ import {
   Menu, X, ChevronDown, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Briefcase, 
+=======
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
   Menu,
   X,
@@ -170,11 +178,21 @@ import {
   Wrench,
   Smartphone,
   BarChart3,
+<<<<<<< HEAD
   Eye,
   Timer,} from 'lucide-react';import {
   Menu, X, ChevronDown, Phone, Mail, MapPin,
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   Microscope, DollarSign, Home, Briefcase,
+=======
+
+  Eye,;
+  Timer,;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Phone, Mail, MapPin, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, DollarSign, Home, Briefcase, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -488,6 +506,7 @@ const serviceCategories = [
     icon: Rocket,
     color: 'from - red - 600 to - orange - 600',
     description: 'Interplanetary expansion and resource extraction',
+<<<<<<< HEAD
     services: [
       { name: 'Mars Colonization Automation Platform', href: '/mars-colonization-automation-platform', description: 'Automate Mars colonization process', price: '$99,999/month' };
       { name: 'Interplanetary Communication Network', href: '/interplanetary-communication-network', description: 'Real-time solar system communication', price: '$75,999/month' };
@@ -669,6 +688,45 @@ const serviceCategories = [
       { name: 'Corporate Intelligence Platform', href: '/corporate-intelligence-platform', description: 'AI-powered business intelligence', price: '$7,999/month' }
     ];
   }
+=======
+
+    services: [;
+      {
+        name: 'Mars Colonization Automation Platform',
+        href: '/mars - colonization - automation - platform',
+        description: 'Automate Mars colonization process',
+        price: '$99, 999 / month',
+      },
+      {
+        name: 'Interplanetary Communication Network',
+        href: '/interplanetary - communication - network',
+        description: 'Real - time solar system communication',
+        price: '$75, 999 / month',
+      },
+      {
+        name: 'Space Mining Automation Platform',
+        href: '/space - mining - automation - platform',
+        description: 'Automate asteroid and lunar mining',
+        price: '$65, 999 / month',
+      },
+    ],
+  },  {      { name: 'Mars Colonization Automation Platform', href: '/mars - colonization - automation - platform', description: 'Automate Mars colonization process', price: '$99, 999 / month' }
+      { name: 'Interplanetary Communication Network', href: '/interplanetary - communication - network', description: 'Real - time solar system communication', price: '$75, 999 / month' }
+      { name: 'Space Mining Automation Platform', href: '/space - mining - automation - platform', description: 'Automate asteroid and lunar mining', price: '$65, 999 / month' }
+    ];
+  }
+<<<<<<< HEAD
+
+];
+=======
+<<<<<<< HEAD
+=======
+
+];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const mainNavItems = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -678,6 +736,41 @@ const mainNavItems = [
   { name: 'News', href: '/news', icon: TrendingUp }
   { name: 'Support', href: '/support', icon: MessageCircle }
   { name: 'Contact', href: '/contact', icon: Phone },];  { name: 'Contact', href: '/contact', icon: Phone }
+<<<<<<< HEAD
+=======
+
+];
+<<<<<<< HEAD
+export default function UltraFuturisticNavigation2029() {
+=======
+    services: [;
+      {
+        name: 'Enterprise AI Operations Center',
+        href: '/enterprise - ai - operations - center',
+        description: 'Centralized AI operations',
+        price: '$15, 999 / month',
+      },
+      {
+        name: 'Business Process Automation',
+        href: '/business - process - automation',
+        description: 'End - to - end process automation',
+        price: '$4, 999 / month',
+      },
+      {
+        name: 'Corporate Intelligence Platform',
+        href: '/corporate - intelligence - platform',
+        description: 'AI - powered business intelligence',
+        price: '$7, 999 / month',
+      },
+    ],
+  }, ];      { name: 'Enterprise AI Operations Center', href: '/enterprise - ai - operations - center', description: 'Centralized AI operations', price: '$15, 999 / month' }
+      { name: 'Business Process Automation', href: '/business - process - automation', description: 'End - to - end process automation', price: '$4, 999 / month' }
+      { name: 'Corporate Intelligence Platform', href: '/corporate - intelligence - platform', description: 'AI - powered business intelligence', price: '$7, 999 / month' }
+    ];
+  }
+const mainNavItems = [;
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
   { name: 'Solutions', href: '/solutions', icon: Target },
@@ -687,7 +780,14 @@ const mainNavItems = [
   { name: 'Support', href: '/support', icon: MessageCircle },
   { name: 'Contact', href: '/contact', icon: Phone }
 ];
+<<<<<<< HEAD
 export default function UltraFuturisticNavigation2029() {
+=======
+
+
+export default function UltraFuturisticNavigation2029() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -733,6 +833,7 @@ export default function UltraFuturisticNavigation2029() {;
   return (
     <>;
       {/* Top Contact Bar */}
+<<<<<<< HEAD
       <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4'>;
         <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;
           <div className='flex items-center space-x-6'>;
@@ -770,6 +871,36 @@ export default function UltraFuturisticNavigation2029() {;
             >              {contactInfo.website.replace('https://', '')}          <div className="flex items-center space-x-4">
             <a href={contactInfo.website} className="hover:text-cyan-300 transition-colors">
               {contactInfo.website.replace('https://', '')}
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              <Phone size={14} />
+              <span>{contactInfo.mobile}</span>
+            </a>
+            <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-300 transition-colors">
+              <Mail size={14} />
+              <span>{contactInfo.email}</span>
+            </a>
+            <div className="flex items-center space-x-2">
+              <MapPin size={14} />
+              <span>{contactInfo.address}</span>
+            </div>
+          </div>
+
+
+
+              {contactInfo.website.replace('https://', '')}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </a>
           </div>
         </div>
@@ -998,6 +1129,41 @@ function UltraFuturisticNavigation2029() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0 && 0.1 }}
                         className='group'>;
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+
+              </div>
+            </motion.div>
+
+            {/* Desktop Navigation */}
+
+
+                </Link>
+              ))}
+              {/* Services Dropdown */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    {serviceCategories.map((category, index) => (
+                      <motion.div
+                        key={category.title}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        className='group'
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         <div
                           className={`p-4 rounded-lg bg-gradient-to-br ${category && category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>;
                           <div className='flex items-center space-x-3 mb-3'>;
@@ -1080,23 +1246,56 @@ function UltraFuturisticNavigation2029() {
                                   </span>;
                                   <span className="text - xs text - cyan - 400 font - mono">;
                                     {service.price}
+<<<<<<< HEAD
                                   </span>
                                 </div>
                                 <p className="text-xs text-gray-500 mt-1">{service.description}</p>
                               </Link>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                             ))}
                           </div>;
                         </div>;
                       </motion && motion.div>;
                     ))}
+<<<<<<< HEAD
                   </div>
                 </div>
               </div>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* CTA Button */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'              >                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
+=======
+
+                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
+
+=======
+
+                className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'              >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               >
                 Get Started
               </motion.button>
@@ -1123,18 +1322,46 @@ function UltraFuturisticNavigation2029() {
               <button
                 onClick={toggleMenu}
                 className="text-gray-300 hover:text-white transition-colors"
+<<<<<<< HEAD
+=======
+              >
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+                className='text-gray-300 hover:text-white transition-colors'              >
+
+              >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
           </div>
         </div>
       </nav>
+<<<<<<< HEAD
               </button>;
             </div>;
           </div>;
         </div>;
       </nav>;
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1142,7 +1369,18 @@ function UltraFuturisticNavigation2029() {
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
+<<<<<<< HEAD
             className='fixed inset-0 z-50 lg:hidden'>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <div
               className='absolute inset-0 bg-black/80 backdrop-blur-sm'
               onClick={closeMenu}
@@ -1213,6 +1451,7 @@ function UltraFuturisticNavigation2029() {
                     </Link>;
                   ))}
                 </div>
+<<<<<<< HEAD
                 {/* Mobile Services */}
                 <div className='mt-8'>;
                   <h3 className='text-lg font-semibold text-white mb-4'>;
@@ -1259,12 +1498,46 @@ function UltraFuturisticNavigation2029() {
                                 <span className="text-sm text-gray-300">{service && service.name}</span>;
                                 <span className="text-xs text-cyan-400 font-mono">{service && service.price}</span>;
                             </Link>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {/* Mobile Services */}
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                            </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           ))}
                         </div>;
                       </div>;
                     ))}
+<<<<<<< HEAD
                   </div>
                 </div>
+=======
+
+                  </div>;
+                </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Mobile CTA */}
                 <div className='mt-8'>;
                   <motion&& motion.button
@@ -1296,7 +1569,13 @@ function UltraFuturisticNavigation2029() {
   );      <div className="h-20" />;
     </>;
   );
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -1434,3 +1713,10 @@ function UltraFuturisticNavigation2029() {
     </>);      <div className="h - 20" />;
     </>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -3,9 +3,30 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
 import {
+<<<<<<< HEAD
   authenticateRequest
   enforceRateLimit
   recordRequest;
+=======
+<<<<<<< HEAD
+  authenticateRequest
+  enforceRateLimit
+  recordRequest;
+=======
+  authenticateRequest,
+  enforceRateLimit,;
+  recordRequest,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '../../utils/api/partnerAuth';
+<<<<<<< HEAD
+=======
+
+
+  authenticateRequest,
+  enforceRateLimit,;
+  recordRequest,;
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from '../../utils/api/partnerAuth';
 const TALENTS_FILE = path.join(
   process.cwd()
@@ -16,15 +37,19 @@ const TALENTS_FILE = path.join(
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
+<<<<<<< HEAD
 ) {
+=======
+) {;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const started = Date.now();
   const auth = await authenticateRequest(req)
   if (!auth) {
-    return res && res.status(401).json({ error: 'Unauthorized' });
+    return res.status(401).json({ error: 'Unauthorized' });
   }
-  if (!(await enforceRateLimit(auth && auth.apiKey))) {
-    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 429);
-    return res && res.status(429).json({ error: 'Rate limit exceeded' });
+  if (!(await enforceRateLimit(auth.apiKey))) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
+    return res.status(429).json({ error: 'Rate limit exceeded' });
   }
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
@@ -35,6 +60,7 @@ export default async function handler(
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
     return res.status(400).json({ error: 'email required' });
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
   const started = Date && Date.now();
@@ -66,6 +92,21 @@ await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 200);
   return res && res.status(200).json({ verified });  return res && res.status(200).json({ verified })
 }
+=======
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const started = Date.now();
+  const auth = await authenticateRequest(req);
+  if (!auth) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   authenticate_request,
   enforceRateLimit,
   record_request,
@@ -154,3 +195,23 @@ await record_request (req, res, auth.partner, auth.api_key, started, 400);
   await record_request (req, res, auth.partner, auth.api_key, started, 200);
   return res.status (200).json ({ verified });  return res.status (200).json ({ verified });
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+=======
+
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  const { email, programTrack } = req.body || {};
+  if (!email) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

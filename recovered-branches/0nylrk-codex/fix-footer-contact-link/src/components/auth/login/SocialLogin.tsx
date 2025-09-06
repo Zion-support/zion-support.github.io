@@ -4,8 +4,15 @@ import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth";
 import { Web3Login } from "./Web3Login";
 export function SocialLogin() {
+<<<<<<< HEAD
 
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =
+<<<<<<< HEAD
+=======
+=======
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     useAuth();
 
   return (
@@ -74,11 +81,70 @@ export function SocialLogin() {
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => loginWithTwitter()}
           disabled={isLoading}
+<<<<<<< HEAD
         >;
           <span className="sr-only">Sign in with Twitter</span>;
           <Twitter className="h-5 w-5" />;
         </Button>;
         <Web3Login />;
+=======
+        >
+          <span className="sr-only">Sign in with Twitter</span>
+          <Twitter className="h-5 w-5" />
+        </Button>
+        <Web3Login />
+      </div>
+    </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  )
+import { Facebook, Twitter } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Web3Login } from "./Web3Login",;
+
+export function SocialLogin() {;
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
+    useAuth();
+
+  return (
+    <div className="mt-6">;
+      <div className="relative">;
+        <div className="absolute inset-0 flex items-center">;
+          <div className="w-full border-t border-zion-blue-light" />;
+        </div>;
+        <div className="relative flex justify-center text-sm">;
+          <span className="px-2 bg-zion-blue-dark text-zion-slate-light">;
+=======
+import { Facebook, Twitter  } from './lucide-react';
+import { Button  } from '@/components / ui / button';
+import { use_auth  } from '@/hooks / use_auth';
+import { Web3Login  } from './Web3Login';
+export /**
+ * SocialLogin - Function description
+ */
+function SocialLogin() {
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, is_loading } =;
+    use_auth ();
+;
+  return (
+    <div className="mt - 6">;
+      <div className="relative">;
+        <div className="absolute inset - 0 flex items - center">;
+          <div className="w - full border - t border - zion - blue - light" />;
+        </div>;
+        <div className="relative flex justify - center text - sm">;
+          <span className="px - 2 bg - zion - blue - dark text - zion - slate - light">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            Or continue with;
+          </span>;
+        </div>;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       </div>;
     </div>;
   );
@@ -86,6 +152,7 @@ export function SocialLogin() {
         <Button;
           type="button";
           variant="outline";
+<<<<<<< HEAD
           className="w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion - cyan";
           on_click={() => loginWithGoogle ()}
           disabled={is_loading}
@@ -139,3 +206,15 @@ export function SocialLogin() {
       </div>;
     </div>);
 }
+=======
+          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

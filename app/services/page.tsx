@@ -2,7 +2,11 @@ import Link from "next/link";
 export const metadata = {
   title: "Services | Zion Tech Group",
   description:
+<<<<<<< HEAD
     "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
+=======
+    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed. Expert solutions for modern enterprises.",
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 };
 export default function ServicesOverviewPage() {;
   return (
@@ -29,11 +33,49 @@ export default function ServicesOverviewPage() {;
             "Foundational architecture"
             "Billing + subscriptions"
             "Growth analytics"
+<<<<<<< HEAD
 import Link from './next / link';
 export const metadata = {
   title: "Services | Zion Tech Group",
   description:;
     "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
+=======
+          ]}
+          icon="🚀"
+        />
+        <ServiceCard
+          href="/services/ai-services"
+          title="AI Services"
+          description="LLM applications, RAG systems, and MLOps pipelines"
+          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
+          icon="🤖"
+        />
+        <ServiceCard
+          href="/services/it-services"
+          title="IT Services"
+          description="Cloud migration, DevOps, and security solutions"
+          bullets={["Cloud migration", "DevOps + SRE", "Security"]}
+          icon="⚙️"
+        />
+        <ServiceCard
+          href="/services/blockchain-solutions"
+          title="Blockchain Solutions"
+          description="DeFi protocols, NFTs, smart contracts, and Web3 applications"
+          bullets={["Smart contracts", "DeFi protocols", "NFT marketplaces"]}
+          icon="⛓️"
+        />
+        <ServiceCard
+          href="/services/mobile-development"
+          title="Mobile Development"
+          description="iOS, Android, and cross-platform mobile applications"
+          bullets={["Native development", "Cross-platform", "App store optimization"]}
+          icon="📱"
+        />
+      </div>
+      <CTA />{" "}
+    </div>;
+  );
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 export default /**
  * ServicesOverviewPage - Function description

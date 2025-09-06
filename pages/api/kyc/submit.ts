@@ -1,16 +1,53 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import type { KycProfile } from '../../../utils/kyc';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import type { KycProfile } from '../../../utils/kyc';
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { validateKycSubmission } from '[^']*';
 import { getAmlProvider } from '[^']*';
 import fs from 'fs';
 import path from 'path';
 
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'KYC submitted' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { KycProfile } from '../../../utils/kyc';
+import { validateKycSubmission } from '../../../utils/kyc';
+import { getAmlProvider } from '../../../utils/aml';
+import fs from 'fs';
+import path from 'path';
+const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
+const FILE = path.join(DATA_DIR, 'profiles.json');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function load(): Record<string, KycProfile> {
   try {
+<<<<<<< HEAD
     const raw = fs && fs.readFileSync(FILE, 'utf8');
     return JSON && JSON.parse(raw);
+=======
+
+    const raw = fs.readFileSync(FILE, 'utf8');
+    return JSON.parse(raw);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   } catch {
     return {}
   }
@@ -22,6 +59,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });  const { userId } = req.body as { userId?: string }
   if (!userId) return res.status(400).json({ error: 'Missing userId' });
@@ -29,6 +67,16 @@ export default async function handler(
     return res && res.status(405).json({ error: 'Method not allowed' });  const { userId } = req && req.body as { userId?: string };
   if (!userId) return res && res.status(400).json({ error: 'Missing userId' });
 
+=======
+<<<<<<< HEAD
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });  const { userId } = req.body as { userId?: string }
+=======
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  const { userId } = req.body as { userId?: string };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (!userId) return res.status(400).json({ error: 'Missing userId' });
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const db = load();
   const profile = db[userId];
   if (!profile) return res && res.status($1).json({$2});
@@ -164,11 +212,49 @@ function handler() {
   if (return res.status ($1).json ({$2})) {
   $2
 }
-  const validation = validateKycSubmission (profile);
-  // Check condition
-if (
-    return res) {
-  $2
+
+=======
+<<<<<<< HEAD
+=======
+  } catch {;
+    return {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
       .status (400);
       .json ({ error: 'Missing data', missing: validation.missing });
@@ -241,14 +327,22 @@ if ( {) {
   profile.status = 'submitted';
   const now = new Date ().toISOString ();
   profile.lastUpdatedAt = now;
-  profile.audit_trail.push ({
-    at: now,
-    by: user_id,
-    action: 'kyc_submitted',
-    details: { aml: aml_result, ip },
-  });
-  db[user_id] = profile;
-  save (db);
-;
-res.status (200).json ({ ok: true, profile, aml: aml_result });
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  profile.auditTrail.push({ at: now, by: userId, action: 'kyc_submitted', details: { aml: amlResult, ip } });
+  db[userId] = profile;
+  save(db);
+  res.status(200).json({ ok: true, profile, aml: amlResult })
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,9 +1,57 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import z from "zod";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {useToast} from "@/hooks/use-toast";
+import {useNavigate} from "react-router-dom";
+import {Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {AspectRatio} from "@/components/ui/aspect-ratio";
+import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
+import {AIListingGenerator} from "@/components/listing/AIListingGenerator";
+import {Sparkles} from "lucide-react";
+// Define the form schema with zod;
+const productSchema = z && z.object({;
+  title: z && z.string().min(3, "Title must be at least 3 characters");
+  description: z && z.string().min(10, "Description must be at least 10 characters");
+  price: z && z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {;
+    message: "Price must be a valid number"}),;
+  category: z && z.string().min(1, "Please select a category");
+  image: z && z.instanceof(File).optional(),;
+  tags: z && z.string().optional()}),;
+
+// Type for our form values;
+type ProductFormValues = z && z.infer<typeof productSchema>;
+
+export function ProductSubmissionForm() {;
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = React && React.useState(false);
+  const [imagePreview, setImagePreview] = React && React.useState(null as string | null);
+  const [activeTab, setActiveTab] = React && React.useState("manual");
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import z from "zod",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
 import {
@@ -13,14 +61,42 @@ import {
   FormField;
   FormItem;
   FormLabel;
+<<<<<<< HEAD
+=======
+=======
+import { useToast } from "@/hooks/use-toast",
+import { useNavigate } from "react-router-dom",
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   FormMessage} from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
+<<<<<<< HEAD
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
 import { Sparkles } from "lucide-react";
+=======
+<<<<<<< HEAD
+import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
+import { Sparkles } from "lucide-react";
+=======
+import { AIListingGenerator } from "@/components/listing/AIListingGenerator",
+import { Sparkles } from "lucide-react",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Define the form schema with zod
 
 const productSchema = z.object({
@@ -60,6 +136,7 @@ export function ProductSubmissionForm() {
       }
       reader.readAsDataURL(file)
     }
+<<<<<<< HEAD
   }
   // Apply AI-generated content to the form
   const handleApplyGenerated = (content: any) => {
@@ -71,6 +148,24 @@ export function ProductSubmissionForm() {
     // Switch to the manual tab to show applied content
     setActiveTab("manual")
   }
+=======
+  },
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  // Apply AI-generated content to the form
+  const handleApplyGenerated = (content: any) => {
+    form.setValue("description", content.description),
+    form.setValue("tags", content.tags.join(", ")),
+    
+    // Set a default price as the middle of the suggested range
+    const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2),
+    form.setValue("price", averagePrice),
+    
+    // Switch to the manual tab to show applied content
+    setActiveTab("manual")
+  },
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Handle form submission
   const onSubmit = async (values: ProductFormValues) => {
     if (!user) {
@@ -80,6 +175,136 @@ export function ProductSubmissionForm() {
         variant: "destructive"})
       return
     }
+<<<<<<< HEAD
+    setIsSubmitting(true);
+=======
+
+    setIsSubmitting(true),
+    
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    try {
+      // Create the product listing
+      const productData = {
+        title: values.title
+        description: values.description
+        price: parseFloat(values.price)
+        category: values.category
+        currency: "USD", // Default currency
+        tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [],
+        author: {
+          name: user.displayName |"Anonymous Creator"
+          id: user.id}
+        createdAt: new Date().toISOString()}
+      const { data: productRecord, error: productError } = await supabase
+        .from('product_listings')
+        .insert([productData])
+        .select('id')
+<<<<<<< HEAD
+        .single();
+      if (productError) {
+        throw new Error(productError.message)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      }
+      // If we have an image, upload it
+      if (values.image) {
+        const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
+        const { error: uploadError } = await supabase.storage
+          .from('products')
+          .upload(imagePath, values.image);
+        if (uploadError) {
+          throw new Error(uploadError.message)
+        }
+        // Get the public URL for the image
+        const { data: publicUrlData } = supabase.storage
+          .from('products')
+          .getPublicUrl(imagePath);
+        // Update the product with the image URL
+        const { error: updateError } = await supabase
+          .from('product_listings')
+          .update({
+            images: [publicUrlData.publicUrl]
+          })
+          .eq('id', productRecord.id);
+        if (updateError) {
+          throw new Error(updateError.message)
+<<<<<<< HEAD
+        }
+      }
+=======
+        .single(),
+        
+      if (productError) {
+        throw new Error(productError.message)
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",;
+import { useForm } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import z from "zod",;
+import { supabase } from "@/integrations/supabase/client",;
+import { useAuth } from "@/hooks/useAuth",;
+import { useToast } from "@/hooks/use-toast",;
+import { useNavigate } from "react-router-dom",;
+import {;
+  Form,;
+  FormControl,;
+  FormDescription,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import { AspectRatio } from "@/components/ui/aspect-ratio",;
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
+import { AIListingGenerator } from "@/components/listing/AIListingGenerator",;
+import { Sparkles } from "lucide-react",;
+// Define the form schema with zod;
+const productSchema = z.object({;
+  title: z.string().min(3, "Title must be at least 3 characters"),;
+  description: z.string().min(10, "Description must be at least 10 characters"),;
+  price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {;
+    message: "Price must be a valid number"}),;
+  category: z.string().min(1, "Please select a category"),;
+  image: z.instanceof(File).optional(),;
+  tags: z.string().optional()}),;
+// Type for our form values;
+type ProductFormValues = z.infer<typeof productSchema>,;
+export function ProductSubmissionForm() {;
+  const { user } = useAuth(),;
+  const { toast } = useToast(),;
+  const navigate = useNavigate(),;
+  const [isSubmitting, setIsSubmitting] = React.useState(false),;
+  const [imagePreview, setImagePreview] = React.useState(null as string | null),;
+  const [activeTab, setActiveTab] = React.useState("manual"),;
+  // Initialize the form;
+  const form = useForm<ProductFormValues>({;
+    resolver: zodResolver(productSchema),;
+    defaultValues: {;
+      title: "",;
+      description: "",;
+      price: "",;
+      category: "",;
+      tags: ""}}),;
+
+
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  // Handle form submission
+  const onSubmit = async (values: ProductFormValues) => {
+    if (!user) {
+      toast({
+        title: "Authentication Required"
+        description: "You must be logged in to publish products"
+        variant: "destructive"})
+      return
+    }
+<<<<<<< HEAD
     setIsSubmitting(true);
     try {
       // Create the product listing
@@ -124,6 +349,79 @@ export function ProductSubmissionForm() {
           .eq('id', productRecord.id);
         if (updateError) {
           throw new Error(updateError.message)
+=======
+  },;
+  // Apply AI-generated content to the form;
+  const handleApplyGenerated = (content: any) => {;
+    form.setValue("description", content.description),;
+    form.setValue("tags", content.tags.join(", ")),;
+    // Set a default price as the middle of the suggested range;
+    const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2),;
+    form.setValue("price", averagePrice),;
+    // Switch to the manual tab to show applied content;
+    setActiveTab("manual");
+  },;
+  // Handle form submission;
+  const onSubmit = async (values: ProductFormValues) => {;
+    if (!user) {;
+      toast({;
+        title: "Authentication Required",;
+        description: "You must be logged in to publish products",;
+        variant: "destructive"}),;
+      return;
+    }
+;
+    setIsSubmitting(true),;
+    try {;
+      // Create the product listing;
+      const productData = {;
+        title: values.title,;
+        description: values.description,;
+        price: parseFloat(values.price),;
+        category: values.category,;
+        currency: "USD", // Default currency;
+        tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [],;
+        author: {;
+          name: user.displayName || "Anonymous Creator",;
+          id: user.id},;
+        createdAt: new Date().toISOString()},;
+      const { data: productRecord, error: productError } = await supabase;
+        .from('product_listings');
+        .insert([productData]);
+        .select('id');
+        .single(),;
+      if (productError) {;
+        throw new Error(productError.message);
+      }
+;
+      // If we have an image, upload it;
+      if (values.image) {;
+        const imagePath = `product_images/${productRecord.id}/${values.image.name}`,;
+        const { error: uploadError } = await supabase.storage;
+          .from('products');
+          .upload(imagePath, values.image),;
+        if (uploadError) {;
+          throw new Error(uploadError.message);
+        }
+;
+        // Get the public URL for the image;
+        const { data: publicUrlData } = supabase.storage;
+          .from('products');
+          .getPublicUrl(imagePath),;
+        // Update the product with the image URL;
+        const { error: updateError } = await supabase;
+          .from('product_listings');
+          .update({;
+            images: [publicUrlData.publicUrl];
+          });
+          .eq('id', productRecord.id),;
+        if (updateError) {;
+          throw new Error(updateError.message);
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         }
       }
       // Show success message
@@ -357,6 +655,14 @@ if ( {) {
                   </FormDescription>;
                   <FormMessage />;
                 </FormItem>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               )}
             />
             <FormField

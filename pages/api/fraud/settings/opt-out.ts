@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 export default async function handler(
@@ -9,6 +12,17 @@ export default async function handler(
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getFraudStore } from "../../../../utils/fraud/store";
+export default async function handler(
+<<<<<<< HEAD
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const store = getFraudStore();
   if (req.method === "GET") {
     const userId = (req.query.userId as string) |"";
@@ -25,7 +39,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   }
   res.status(405).json({ error: "Method not allowed" });
+<<<<<<< HEAD
 }
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 ;
@@ -60,3 +80,95 @@ if ( {) {
   }
   res.status (405).json ({ error: "Method not allowed" });
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getFraudStore } from "../../../../utils/fraud/store";
+export default async function handler(
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getFraudStore } from '../../../../utils/fraud/store';
+export default async function handler(req, res) {
+  try {
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const store = getFraudStore();
+  if (req.method === 'GET') {
+    const userId = (req.query.userId as string) || '';
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  if (req.method === 'GET') {
+    const { userId, optOut } = req.body || {};
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    const updated = await store.setPrivacySettings(userId, optOut);
+    return res.status(200).json(updated);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+res.status(405).json({ error: "Method not allowed" });
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  res.status(405).json({ error: 'Method not allowed' });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

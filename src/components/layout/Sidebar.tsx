@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {
@@ -7,7 +11,11 @@ import {
   DollarSign,
   Phone,
   Menu
+<<<<<<< HEAD
 } from 'lucide-react';
+=======
+} from 'lucide-react'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 const Sidebar = () => {
   const navigation = [
@@ -39,10 +47,15 @@ const Sidebar = () => {
           ))}
         </nav>
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     </aside>
   )
 }
 export default Sidebar
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -66,45 +79,55 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+=======
+    </div>
+  );
+};
+
+export default Sidebar;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Sidebar: React.FC = () => {;
   return (
-    <div className="fixed left-0 top-0 h-full w-80 bg-white shadow-lg z-40 lg:block hidden">;
-      <div className="p-6">;
-        <h2 className="text-xl font-bold text-gray-900 mb-6">Navigation</h2>;
-        <nav className="space-y-2">;
-          <Link
-            to="/"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
-            Home;
-          </Link>;
-          <Link
-            to="/about"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
-            About;
-          </Link>;
-          <Link
-            to="/services"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
-            Services;
-          </Link>;
-          <Link
-            to="/contact"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
-            Contact;
-          </Link>;
-          <Link
-            to="/pricing"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
-            Pricing;
-          </Link>;
-        </nav>;
-      </div>;
-    </div>;
+    <aside className="w-64 bg-gray-800 text-white min-h-screen">
+      <div className="p-4">
+        <h2 className="text-lg font-semibold mb-4">Navigation</h2>
+        <nav className="space-y-2">
+          <a
+            href="/"
+            className="block px-3 py-2 rounded-md hover:bg-gray-700"
+          >
+            Home
+          </a>
+          <a
+            href="/about"
+            className="block px-3 py-2 rounded-md hover:bg-gray-700"
+          >
+            About
+          </a>
+          <a
+            href="/services"
+            className="block px-3 py-2 rounded-md hover:bg-gray-700"
+          >
+            Services
+          </a>
+          <a
+            href="/contact"
+            className="block px-3 py-2 rounded-md hover:bg-gray-700"
+          >
+            Contact
+          </a>
+        </nav>
+      </div>
+    </aside>
   );
 };
+<<<<<<< HEAD
 
 export default Sidebar;
   };
@@ -314,3 +337,6 @@ export default Sidebar;
   );
 };
 export default Sidebar;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

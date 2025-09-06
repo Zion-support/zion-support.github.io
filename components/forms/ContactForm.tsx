@@ -5,12 +5,17 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Mail
   Phone
   MapPin
   Send
   CheckCircle
   AlertCircle;
+<<<<<<< HEAD
 } from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -27,12 +32,21 @@ import {;
   Send,;
   CheckCircle,;
   AlertCircle,;
+=======
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Mail,
   Phone,
   MapPin,
   Send,
+<<<<<<< HEAD
   CheckCircle,
   AlertCircle,
+=======
+  CheckCircle,;
+  AlertCircle,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 const ContactForm: React.FC = () => {;
@@ -217,6 +231,7 @@ const ContactForm: React.FC = () => {;
         <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1),transparent_50%)]" />
       </div>
 
+<<<<<<< HEAD
       <div className="relative container mx-auto px-4">
         {/* Section Header */}
         <motion&& motion.div
@@ -225,6 +240,13 @@ const ContactForm: React.FC = () => {;
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
           className='text-center mb-16'
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         >
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
             Let&apos;s Start a
@@ -323,6 +345,23 @@ const ContactForm: React.FC = () => {;
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">;
           {/* Contact Information */}
           <motion&& motion.div
+<<<<<<< HEAD
+=======
+=======
+
+
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>          {/* Contact Information */}
+
+          {/* Contact Information */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          <motion.div
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -374,6 +413,7 @@ const ContactForm: React.FC = () => {;
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
                   className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 group'>;
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300'>;
                     <info && info.icon className='w-6 h-6 text-white' />;
@@ -395,6 +435,39 @@ const ContactForm: React.FC = () => {;
                 </motion && motion.a>;
               ))}
             </div>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <info.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-1">{info.title}</h4>
+                    <p className="text-gray-300 group-hover:text-blue-400 transition-colors duration-300">
+                      {info.content}
+                    </p>
+                  </div>
+                </motion.a>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              ))}
+
+            </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Additional Info */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -481,17 +554,41 @@ const ContactForm: React.FC = () => {;
             </motion && motion.div>;
           </motion && motion.div>;
 
+<<<<<<< HEAD
+=======
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Contact Form */}
           <motion&& motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8'>            className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8";
           >;
             {submitStatus === 'success' ? (;
               <motion&& motion.div
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            {submitStatus === 'success' ? (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 animate={{ opacity: 1, scale: 1 }}
                 className='text-center py-12'>;
                 <CheckCircle className='w-20 h-20 text-green-400 mx-auto mb-6' />;
@@ -666,6 +763,7 @@ const ContactForm: React.FC = () => {;
                     required
                     rows={5}
                     className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none'
+<<<<<<< HEAD
                     placeholder='Tell us about your project or inquiry...'                  />                  <labelhtmlFor="message" className="block text-white font-medium mb-2" htmlFor="input-
                     Message *
                   ">;
@@ -680,6 +778,15 @@ const ContactForm: React.FC = () => {;
                     className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none'
                     placeholder='Tell us about your project or inquiry...'                    className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none"
                     placeholder="Tell us about your project or inquiry..."
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   />
                 </div>
                 {submitStatus === 'error' && (
@@ -860,3 +967,29 @@ export default ContactForm);
 ;
 export default ContactForm;
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  );
+<<<<<<< HEAD
+}
+=======
+};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default ContactForm;  )
+}
+export default ContactForm;
+
+<<<<<<< HEAD
+=======
+export default ContactForm;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default ContactForm;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

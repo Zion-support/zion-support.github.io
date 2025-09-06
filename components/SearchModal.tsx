@@ -150,6 +150,7 @@ const searchData: SearchResult[] = [
     category: "Company"
   }
 ];
+<<<<<<< HEAD
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
 interface SearchModalProps {;
@@ -276,6 +277,14 @@ const searchData: SearchResult[] = [;
 ];
 
 export default function SearchModal(): any ({ isOpen, onClose }: SearchModalProps) {;
+=======
+<<<<<<< HEAD
+export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
+=======
+
+export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);

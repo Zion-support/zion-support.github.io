@@ -62,6 +62,7 @@ if ( {) {
   }
   if (!user) {
     return (
+<<<<<<< HEAD
       <Card className='w-full max-w-sm'>
         <CardHeader>
           <CardTitle className='flex items-center gap-2'>
@@ -101,16 +102,99 @@ if ( {) {
           <div className='flex items-center gap-2'>
             <span className='text-sm font-medium'>Joined:</span>
             <span className='text-sm'>
+=======
+      <Card className='w-full max-w-sm'>;
+        <CardContent className='p-6'>;
+          <div className='animate-pulse space-y-4'>;
+            <div className='h-4 bg-muted rounded'></div>;
+            <div className='h-4 bg-muted rounded w-3/4'></div>;
+          </div>;
+        </CardContent>;
+      </Card>;
+    );
+  }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (loading) {
+    return (
+      <Card className='w-full max-w-sm'>;
+        <CardHeader>;
+          <CardTitle className='flex items-center gap-2'>;
+            <User className='h-5 w-5' />;
+            Not Signed In;
+          </CardTitle>;
+        </CardHeader>;
+        <CardContent>;
+          <Button onClick={handleSignIn} className='w-full'>;
+            <LogIn className='h-4 w-4 mr-2' />;
+            Sign In;
+          </Button>;
+        </CardContent>;
+      </Card>;
+    );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  }
+  return (
+    <Card className="w-full max-w-sm">
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <User className="h-5 w-5" />
+          User Profile
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="space-y-2">
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-medium">Email:</span>
+            <span className="text-sm">{user.email}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-medium">Status:</span>
+            <Badge variant={user.email_confirmed_at ? "default" : "secondary"}>
+              {user.email_confirmed_at ? "Verified" : "Unverified"}
+            </Badge>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-medium">Joined:</span>
+            <span className="text-sm">
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {new Date(user.created_at).toLocaleDateString()}
             </span>
           </div>
         </div>
+<<<<<<< HEAD
         <Button onClick={handleSignOut} variant='outline' className='w-full'>
           <LogOut className='h-4 w-4 mr-2' />
+=======
+<<<<<<< HEAD
+        <Button onClick={handleSignOut} variant='outline' className='w-full'>
+          <LogOut className='h-4 w-4 mr-2' />
+<<<<<<< HEAD
+=======
+          Sign Out
+        </Button>;
+      </CardContent>;
+    </Card>;
+  );
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        
+        <Button onClick={handleSignOut} variant="outline" className="w-full">
+          <LogOut className="h-4 w-4 mr-2" />
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           Sign Out
         </Button>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
   // Check condition
 if ( {) {
@@ -165,3 +249,18 @@ if ( {) {
         </Button>;
       </CardContent>;
     </Card>);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  )
+=======
+
+  )
+} 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  )
+} 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

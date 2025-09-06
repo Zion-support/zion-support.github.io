@@ -1,7 +1,24 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 return (<UltraAdvancedFuturisticBackground> <Head> <title> {
   service.name
 }- Zion Tech Group</title>) )
+<<<<<<< HEAD
+=======
+=======
+ return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+=======
+return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+=======
+ return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  service.name 
+}- Zion Tech Group</title>) ) 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 import Head from 'next/head';
 import { Shield, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
@@ -11,6 +28,23 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 export default function ApiObservabilityPage() {
 
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'));
+<<<<<<< HEAD
+=======
+=======
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function ApiObservabilityPage() {
+
+=======
+<<<<<<< HEAD
+export default function ApiObservabilityPage() {;
+=======
+export default function ApiObservabilityPage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'));
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (!service) return null;
 
   return (
@@ -104,6 +138,7 @@ if (return null) {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </UltraAdvancedFuturisticBackground>;
   );
 }
@@ -111,3 +146,17 @@ if (return null) {
     </UltraAdvancedFuturisticBackground>);
 }
 ;
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

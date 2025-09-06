@@ -3,6 +3,7 @@ import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   ArrowRight
   Play
   Star
@@ -30,6 +31,49 @@ import {
   Palette;} from 'lucide-react';import {
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket
 
+=======
+
+
+  ArrowRight,
+  Play,
+  Star,
+  Users,
+  Award,
+  TrendingUp,
+  Brain,
+  Shield,
+  Rocket,
+  Loader2,
+  ChevronDown,
+  Zap,
+  Globe,
+  Target,
+  Lightbulb,
+  Code,
+  Database,
+  Cloud,
+  Lock,
+  ChartBar,
+  Cpu,
+  Atom,
+  Satellite,
+<<<<<<< HEAD
+  Gamepad2,
+  Palette,;} from 'lucide-react';import { 
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+  Gamepad2,;
+  Palette,;} from 'lucide-react';import {
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, ;
+=======
+  Gamepad2,
+  Palette,;} from 'lucide-react';import { 
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
  } from 'lucide-react';
@@ -222,11 +266,44 @@ const Homepage2035: React.FC = () => {
     { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
   ];
   const allServices = [
+<<<<<<< HEAD
               service && service.category.includes('Financial') ||;
               service && service.category.includes('Trading');
             );
           return true;
         });
+=======
+    ...innovative2025MicroSaasBatch;
+    ...innovative2025ITEnterpriseBatch;
+    ...innovative2025AIServicesBatch
+  ];
+<<<<<<< HEAD
+  const filteredServices = activeCategory === 'all'
+    ? allServices
+=======
+
+<<<<<<< HEAD
+  const filteredServices = activeCategory === 'all' 
+    ? allServices 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    : allServices.filter(service => {
+        if (activeCategory === 'ai') return service.category.includes('AI') |service.category.includes('Machine Learning');
+        if (activeCategory === 'it') return service.category.includes('IT') |service.category.includes('Enterprise');
+        if (activeCategory === 'quantum') return service.name.includes('Quantum');
+        if (activeCategory === 'space') return service.category.includes('Space');
+        if (activeCategory === 'cyber') return service.category.includes('Security') |service.category.includes('Cybersecurity');
+        if (activeCategory === 'cloud') return service.category.includes('Cloud') |service.category.includes('DevOps');
+        if (activeCategory === 'fintech') return service.category.includes('Financial') |service.category.includes('Trading');
+        return true
+      });
+  if (isLoading) {
+    return <LoadingFallback />
+<<<<<<< HEAD
+  }
+=======
+    initial: { opacity: 0, scale: 0.8 },
+    animate: {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   if (isLoading) {;
     return <LoadingFallback />;  }      opacity: 1,;
@@ -246,7 +323,11 @@ const Homepage2035: React.FC = () => {
     { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
   ];
 
+<<<<<<< HEAD
   const allServices = [;
+=======
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
   ArrowRight,
   Play,
@@ -511,6 +592,16 @@ if ( {) {
 }
     return <LoadingFallback />;
   }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <Layout>;
       <UltraFuturisticBackground2035>;
@@ -519,10 +610,31 @@ if ( {) {
           <div className='max-w-7xl mx-auto text-center'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}
               className='mb-8'        <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto text-center">;
             <motion&& motion.div
+=======
+
+  }
+
+  return (
+    <Layout>
+      <UltraFuturisticBackground2035>
+        {/* Hero Section */}
+        <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+=======
+              className='mb-8'
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <motion.div
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -600,6 +712,17 @@ if ( {) {
               </div>;
             </motion && motion.div>;
 
+<<<<<<< HEAD
+=======
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -685,20 +808,70 @@ if ( {) {
                   <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-gray-400 text-sm">{stat.label}</div>
                 </motion.div>
+<<<<<<< HEAD
               ))}
             </motion.div>
           </div>
         </section>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              ))}
+
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Services Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
+<<<<<<< HEAD
+=======
+
+=======
+
+        {/* Services Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className='text-center mb-16'
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
                 Revolutionary Technology Solutions
@@ -728,12 +901,24 @@ if ( {) {
               </p>;
             </motion && motion.div>;
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Category Filter */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className='flex flex-wrap justify-center gap-4 mb-12'>;
               {categories && categories.map(category => (                <motion&& motion.button              className="flex flex-wrap justify-center gap-4 mb-12">;
               {categories && categories.map((category) => (;
@@ -746,13 +931,45 @@ if ( {) {
                     activeCategory === category && category.id;
                       ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400';
                       : 'border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400';
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  key={category.id}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setActiveCategory(category.id)}
+                  className={`flex items-center space-x-2 px-6 py-3 rounded-full border transition-all duration-300 ${
+                    activeCategory === category.id
+                      ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400'
+                      : 'border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   }`}
                 >;
                   {category && category.icon}
                   <span>{category && category.name}</span>;
                 </motion && motion.button>;
               ))}
+<<<<<<< HEAD
             </motion.div>
+=======
+
+            </motion && motion.div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Services Grid */}
             <motion&& motion.div
               variants={staggerContainer}
@@ -772,13 +989,28 @@ if ( {) {
                   <UltraFuturisticServiceCard2035 service={service} />;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
             </motion.div>
+=======
+
+            </motion && motion.div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* View All Services Button */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className='text-center mt-16'            >
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -787,6 +1019,14 @@ if ( {) {
               >
                 <span>View All Services</span>
                 <ArrowRight className='w-5 h-5' />              </motion.button>              className="text-center mt-16"
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -827,11 +1067,46 @@ if ( {) {
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
+<<<<<<< HEAD
+=======
+
+=======
+                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto"
+              >
+                <span>View All Services</span>
+                <ArrowRight className="w-5 h-5" />
+              </motion.button>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className='text-center mb-16'
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
                 Why Choose Zion Tech Group?
@@ -1012,6 +1287,7 @@ if ( {) {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
                   className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'>;
                   <div className='text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300'>;
                     {feature && feature.icon}
@@ -1026,6 +1302,34 @@ if ( {) {
                   <h3 className="text-xl font-bold text-white mb-3">{feature && feature.title}</h3>;
                   <p className="text-gray-300">{feature && feature.description}</p>;
                 </motion && motion.div>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                  className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                >
+                  <div className='text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300'>
+                    {feature.icon}
+                  </div>
+                  <h3 className='text-xl font-bold text-white mb-3'>
+                    {feature.title}
+                  </h3>
+
+                  <p className='text-gray-300'>{feature.description}</p>                </motion.div>
+
+                </motion.div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               ))}
             </div>
           </div>
@@ -1035,6 +1339,27 @@ if ( {) {
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
+<<<<<<< HEAD
+=======
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* CTA Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1082,8 +1407,27 @@ if ( {) {
       </UltraFuturisticBackground2035>;
     </Layout>;
   );
+<<<<<<< HEAD
 }
 animate: {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+animate: {
+=======
+};
+
+  animate: {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+};
+
+
+  animate: {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   transition: {
   staggerChildren: 0.1, delayChildren: 0.2
 }
@@ -1138,14 +1482,31 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
   duration: 0.8
 }viewport= {
   {
+<<<<<<< HEAD
   once: true
 }> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button
 }
 export default Homepage2035;  )
 }
+=======
+=======
+
+
+  once: true 
+
+}> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button 
+};
+<<<<<<< HEAD
+export default Homepage2035;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+export default Homepage2035;  )
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 };
 
 export default Homepage2035;
+<<<<<<< HEAD
 
                   className='text - center';
                 >;
@@ -1502,3 +1863,7 @@ export default Homepage2035);
 ;
 export default Homepage2035;
 ;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

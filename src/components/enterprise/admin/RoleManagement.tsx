@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import {
@@ -20,6 +22,78 @@ import { toast } from '@/hooks/use-toast'; import { InfoIcon } from 'lucide-reac
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
+<<<<<<< HEAD
+=======
+=======
+=======
+import React from 'react'
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  TableRow,
+} from '@/components / ui / table';
+import { Badge } from '@/components / ui / badge';
+import { Switch } from '@/components / ui / switch';
+import { toast } from '@/hooks / use - toast'; import { InfoIcon } from 'lucide-react';
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+import React from "react",
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Switch } from "@/components/ui/switch",
+import { toast } from "@/hooks/use-toast",
+import { InfoIcon } from 'lucide-react'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger} from "@/components/ui/tooltip",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from '@/components/ui/table'
+import { Badge } from '@/components/ui/badge'
+import { Switch } from '@/components/ui/switch'
+import { toast } from '@/hooks/use-toast'; import { InfoIcon } from 'lucide-react'
+  Tooltip
+  TooltipContent
+  TooltipProvider
+  TooltipTrigger
+} from '@/components/ui/tooltip'
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function RoleManagement() {
+  // Mock team members data
+  const teamMembers = [
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     {
       id: 1
       name: 'Alex Johnson'
@@ -192,6 +266,7 @@ export function RoleManagement() {;
   };
 
   return (
+<<<<<<< HEAD
     <div className='space-y-6'>;
       <div>;
         <h3 className='text-xl font-medium mb-4'>Role Permissions</h3>;
@@ -210,6 +285,118 @@ export function RoleManagement() {;
         </div>
       </div>
       <div className='rounded-md border'>
+=======
+
+
+      id: 1,
+      name: "Alex Johnson",
+      email: "alex@example.com",
+      role: "Admin",
+      permissions: {
+        viewCandidates: true,
+        editCandidates: true,
+        createJobs: true,
+        manageTeam: true,
+        viewBilling: true,
+        manageBilling: true}},
+    {
+      id: 2,
+      name: "Jamie Smith",
+      email: "jamie@example.com",
+      role: "Recruiter",
+      permissions: {
+        viewCandidates: true,
+        editCandidates: true,
+        createJobs: true,
+        manageTeam: false,
+        viewBilling: false,
+        manageBilling: false}},
+    {
+      id: 3,
+      name: "Sam Williams",
+      email: "sam@example.com",
+      role: "Manager",
+      permissions: {
+        viewCandidates: true,
+        editCandidates: false,
+        createJobs: true,
+        manageTeam: false,
+        viewBilling: true,
+        manageBilling: false}},
+    {
+      id: 4,
+      name: "Taylor Brown",
+      email: "taylor@example.com",
+      role: "Viewer",
+      permissions: {
+        viewCandidates: true,
+        editCandidates: false,
+        createJobs: false,
+        manageTeam: false,
+        viewBilling: false,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        manageBilling: false,
+      },
+    },
+  ]
+  const handlePermissionChange = (
+    _memberId: number,
+    permission: string,
+    value: boolean
+  ) => {    // In a real app, this would make an API call to update permissions
+    toast({
+      title: 'Permission updated',
+      description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`,
+    })
+  }
+  const roleDescriptions: Record<string, string> = {
+    Admin: 'Full access to all features and settings',
+    Recruiter: 'Can manage candidates and job postings',
+    Manager: 'Can view candidates and create jobs',
+    Viewer: 'Read-only access to candidates',
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        manageBilling: false}}],
+
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <div className="space-y-6">
+      <div>
+
+        <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+          {Object.entries(roleDescriptions).map(([role, description]) => (
+            <div key={role} className="bg-card rounded-lg p-4 border border-border">
+              <div className="flex items-center gap-2 mb-2">
+                <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>
+              </div>
+              <p className="text-sm text-muted-foreground">{description}</p>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            </div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          ))}
+
+
+
+      <div className="rounded-md border">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <Table>
           <TableHeader>
             <TableRow>
@@ -293,7 +480,19 @@ export function RoleManagement() {;
             </TableRow>
           </TableHeader>
           <TableBody>
+<<<<<<< HEAD
             {teamMembers.map(member => (              <TableRow key={member.id}>
+=======
+
+
+            {teamMembers.map((member) => (
+              <TableRow key={member.id}>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <TableCell>
                   <div className='font-medium'>{member.name}</div>
                   <div className='text-sm text-muted-foreground'>
@@ -301,6 +500,259 @@ export function RoleManagement() {;
                   </div>
                 </TableCell>
                 <TableCell>
+<<<<<<< HEAD
+=======
+
+=======
+
+                  <select 
+                    className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                    defaultValue={member.role}
+                  >
+                    <option value="Admin">Admin</option>
+                    <option value="Recruiter">Recruiter</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Viewer">Viewer</option>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  </select>
+                </TableCell>
+                <TableCell className="text-center">
+                  <Switch
+
+                    aria-label="View candidates"
+                    checked={member.permissions.viewCandidates}
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "viewCandidates", checked)
+                    }
+                  />
+                </TableCell>
+                <TableCell className="text-center">
+                  <Switch
+                    aria-label="Edit candidates"
+                    checked={member.permissions.editCandidates}
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "editCandidates", checked)
+                    }
+                  />
+                </TableCell>
+                <TableCell className="text-center">
+                  <Switch
+                    aria-label="Create jobs"
+                    checked={member.permissions.createJobs}
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "createJobs", checked)
+                    }
+                  />
+                </TableCell>
+                <TableCell className="text-center">
+                  <Switch
+                    aria-label="Manage team"
+                    checked={member.permissions.manageTeam}
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "manageTeam", checked)
+                    }
+                  />
+                </TableCell>
+                <TableCell className="text-center">
+                  <Switch
+                    aria-label="View billing"
+                    checked={member.permissions.viewBilling}
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "viewBilling", checked)
+import React from "react",;
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow} from "@/components/ui/table",;
+import { Badge } from "@/components/ui/badge",;
+import { Switch } from "@/components/ui/switch",;
+import { toast } from "@/hooks/use-toast",;
+import { InfoIcon } from 'lucide-react';
+import {;
+  Tooltip,;
+  TooltipContent,;
+  TooltipProvider,;
+  TooltipTrigger} from "@/components/ui/tooltip",;
+export function RoleManagement() {;
+  // Mock team members data;
+  const teamMembers = [;
+    {;
+      id: 1,;
+      name: "Alex Johnson",;
+      email: "alex@example.com",;
+      role: "Admin",;
+      permissions: {;
+        viewCandidates: true,;
+        editCandidates: true,;
+        createJobs: true,;
+        manageTeam: true,;
+        viewBilling: true,;
+        manageBilling: true}},;
+    {;
+      id: 2,;
+      name: "Jamie Smith",;
+      email: "jamie@example.com",;
+      role: "Recruiter",;
+      permissions: {;
+        viewCandidates: true,;
+        editCandidates: true,;
+        createJobs: true,;
+        manageTeam: false,;
+        viewBilling: false,;
+        manageBilling: false}},;
+    {;
+      id: 3,;
+      name: "Sam Williams",;
+      email: "sam@example.com",;
+      role: "Manager",;
+      permissions: {;
+        viewCandidates: true,;
+        editCandidates: false,;
+        createJobs: true,;
+        manageTeam: false,;
+        viewBilling: true,;
+        manageBilling: false}},;
+    {;
+      id: 4,;
+      name: "Taylor Brown",;
+      email: "taylor@example.com",;
+      role: "Viewer",;
+      permissions: {;
+        viewCandidates: true,;
+        editCandidates: false,;
+        createJobs: false,;
+        manageTeam: false,;
+        viewBilling: false,;
+        manageBilling: false}}],;
+  const handlePermissionChange = (_memberId: number, permission: string, value: boolean) => {;
+    // In a real app, this would make an API call to update permissions;
+    toast({;
+      title: "Permission updated",;
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
+  },;
+  const roleDescriptions: Record<string string> = {;
+    "Admin": "Full access to all features and settings",;
+    "Recruiter": "Can manage candidates and job postings",;
+    "Manager": "Can view candidates and create jobs";
+    "Viewer": "Read-only access to candidates"};
+  return (;
+    <div className="space-y-6">;
+      <div>;
+        <h3 className="text-xl font-medium mb-4">Role Permissions</h3>;
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">;
+          {Object.entries(roleDescriptions).map(([role, description]) => (;
+            <div key={role} className="bg-card rounded-lg p-4 border border-border">;
+              <div className="flex items-center gap-2 mb-2">;
+                <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>;
+              </div>;
+              <p className="text-sm text-muted-foreground">{description}</p>;
+            </div>;
+          ))}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        </div>;
+      </div>;
+
+      <div className='rounded-md border'>;
+        <Table>;
+          <TableHeader>;
+            <TableRow>;
+              <TableHead>Team Member</TableHead>;
+              <TableHead>Role</TableHead>;
+              <TableHead className='text-center'>;
+                <div className='flex items-center justify-center gap-1'>;
+                  View Candidates;
+                  <TooltipProvider>;
+                    <Tooltip>;
+                      <TooltipTrigger>;
+                        <InfoIcon className='h-4 w-4 text-muted-foreground' />;
+                      </TooltipTrigger>;
+                      <TooltipContent>;
+                        Can view candidate profiles and applications;
+                      </TooltipContent>;
+                    </Tooltip>;
+                  </TooltipProvider>;
+                </div>;
+              </TableHead>;
+              <TableHead className='text-center'>;
+                <div className='flex items-center justify-center gap-1'>;
+                  Edit Candidates;
+                  <TooltipProvider>;
+                    <Tooltip>;
+                      <TooltipTrigger>;
+                        <InfoIcon className='h-4 w-4 text-muted-foreground' />;
+                      </TooltipTrigger>;
+                      <TooltipContent>;
+                        Can edit candidate information and status;
+                      </TooltipContent>;
+                    </Tooltip>;
+                  </TooltipProvider>;
+                </div>;
+              </TableHead>;
+              <TableHead className='text-center'>;
+                <div className='flex items-center justify-center gap-1'>;
+                  Create Jobs;
+                  <TooltipProvider>;
+                    <Tooltip>;
+                      <TooltipTrigger>;
+                        <InfoIcon className='h-4 w-4 text-muted-foreground' />;
+                      </TooltipTrigger>;
+                      <TooltipContent>;
+                        Can create and publish job listings;
+                      </TooltipContent>;
+                    </Tooltip>;
+                  </TooltipProvider>;
+                </div>;
+              </TableHead>;
+              <TableHead className='text-center'>;
+                <div className='flex items-center justify-center gap-1'>;
+                  Manage Team;
+                  <TooltipProvider>;
+                    <Tooltip>;
+                      <TooltipTrigger>;
+                        <InfoIcon className='h-4 w-4 text-muted-foreground' />;
+                      </TooltipTrigger>;
+                      <TooltipContent>;
+                        Can add, edit, and remove team members;
+                      </TooltipContent>;
+                    </Tooltip>;
+                  </TooltipProvider>;
+                </div>;
+              </TableHead>;
+              <TableHead className='text-center'>;
+                <div className='flex items-center justify-center gap-1'>;
+                  Billing Access;
+                  <TooltipProvider>;
+                    <Tooltip>;
+                      <TooltipTrigger>;
+                        <InfoIcon className='h-4 w-4 text-muted-foreground' />;
+                      </TooltipTrigger>;
+                      <TooltipContent>;
+                        Can view and manage billing information;
+                      </TooltipContent>;
+                    </Tooltip>;
+                  </TooltipProvider>;
+                </div>;
+              </TableHead>;
+            </TableRow>;
+          </TableHeader>;
+          <TableBody>;
+            {teamMembers && teamMembers.map(member => (              <TableRow key={member && member.id}>;
+                <TableCell>;
+                  <div className='font-medium'>{member && member.name}</div>;
+                  <div className='text-sm text-muted-foreground'>;
+                    {member && member.email}
+                  </div>;
+                </TableCell>;
+                <TableCell>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <select
                     className='w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring'
                     defaultValue={member && member.role}>;
@@ -422,9 +874,21 @@ export function RoleManagement() {;
                     <option value='Viewer'>Viewer</option>;
                   </select>;
                 </TableCell>;
+<<<<<<< HEAD
                 <TableCell className='text-center'>;
                   <Switch
                     aria-label='View candidates'
+=======
+
+                <TableCell className="text-center">;
+                  <Switch;
+                    aria-label="View candidates";
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={checked =>
                       handlePermissionChange(
@@ -465,10 +929,41 @@ export function RoleManagement() {;
                 <TableCell className='text-center'>;
                   <Switch
                     aria-label='View billing'
+<<<<<<< HEAD
                     checked={member && member.permissions.viewBilling}
                     onCheckedChange={checked =>;
                       handlePermissionChange(member && member.id, 'viewBilling', checked);
                     }                  />;
+=======
+                    checked={member.permissions.viewBilling}
+<<<<<<< HEAD
+                    onCheckedChange={checked =>
+                      handlePermissionChange(member.id, 'viewBilling', checked)
+                    }                  />
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+<<<<<<< HEAD
+      </div>
+    </div>
+  )
+}
+=======
+                    checked={member.permissions.viewBilling}
+
+      </div>;
+    </div>;
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                    onCheckedChange={(checked) =>;
+                      handlePermissionChange(member.id, "viewBilling", checked);
+                    }
+                  />;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </TableCell>;
               </TableRow>;
             ))}
@@ -478,8 +973,19 @@ export function RoleManagement() {;
     </div>
   )
 }
+<<<<<<< HEAD
 
 
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <TableCell className='text - center'>;
                   <Switch;
                     aria - label='View candidates';
@@ -532,3 +1038,13 @@ export function RoleManagement() {;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

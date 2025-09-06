@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -9,6 +11,21 @@ import {
   WifiOff
   Clock
   Zap
+<<<<<<< HEAD
+=======
+=======
+import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import {
+  Loader2,
+  AlertTriangle,
+  RefreshCw,
+  Wifi,
+  WifiOff,
+  Clock,;
+  Zap;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react'; import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -61,6 +78,7 @@ interface LoadingSpinnerProps {;
   variant?: 'default' | 'primary' | 'success' | 'warning' | 'error';
   className?: string;
   showText?: boolean;
+<<<<<<< HEAD
   text?: string;
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
@@ -86,18 +104,123 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
 
   return (
     <div className={cn('flex items-center gap-2', className)}>;
+=======
+  text?: string
+<<<<<<< HEAD
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState, useEffect } from 'react',;
+import { motion, AnimatePresence } from 'framer-motion',;
+import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent } from '@/components/ui/card',;
+import { Badge } from '@/components/ui/badge',;
+import { cn } from '@/lib/utils',;
+// Enhanced loading spinner with different variants;
+interface LoadingSpinnerProps {;
+  size?: 'sm' | 'md' | 'lg' | 'xl',;
+  variant?: 'default' | 'primary' | 'success' | 'warning' | 'error',;
+  className?: string,;
+  showText?: boolean,;
+  text?: string;
+}
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+  variant = 'default',
+  className,
+  showText = false,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  text = 'Loading...',
+}) => {  const sizeClasses = {
+    sm: 'h-4 w-4',
+    md: 'h-6 w-6',
+    lg: 'h-8 w-8',
+    xl: 'h-12 w-12',
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  text = 'Loading...'
+}) => {
+  const sizeClasses = {
+    sm: 'h-4 w-4',
+    md: 'h-6 w-6',
+    lg: 'h-8 w-8',
+    xl: 'h-12 w-12'
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
+  size = 'md'
+  variant = 'default'
+  className
+  showText = false
+  text = 'Loading...'
+}) => {  const sizeClasses = {
+    sm: 'h-4 w-4'
+    md: 'h-6 w-6'
+    lg: 'h-8 w-8'
+    xl: 'h-12 w-12'
+  }
+  const variantClasses = {
+<<<<<<< HEAD
+    default: 'text-muted-foreground'
+    primary: 'text-primary'
+    success: 'text-green-500'
+    warning: 'text-yellow-500'
+    error: 'text-red-500'
+  }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  const variantClasses = {
+    default: 'text-muted-foreground',
+    primary: 'text-primary',
+    success: 'text-green-500',
+    warning: 'text-yellow-500',
+<<<<<<< HEAD
+    error: 'text-red-500',
+  }
+=======
+    error: 'text-red-500'
+  },
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <div className={cn('flex items-center gap-2', className)}>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <Loader2
         className={cn(
           'animate-spin'
           sizeClasses[size]
           variantClasses[variant]
         )}
+<<<<<<< HEAD
       />;
       {showText && (;
         <span className='text-sm text-muted-foreground'>{text}</span>;
       )}
     </div>
   )
+=======
+      />
+      {showText && (
+        <span className='text-sm text-muted-foreground'>{text}</span>
+      )}
+    </div>
+  )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 //Progressive loading component useEffect ( () => {
   if (currentStep !== undefined) {
@@ -115,12 +238,43 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
   showProgress = true
   onComplete
 }) => {
-  const [active_step, setActiveStep] = useState (0);
-  const progress = ((active_step + 1) / steps.length) * 100;
-  useEffect ((, ) => {
-    // Check condition
-if ( {) {
-  $2
+  const [activeStep, setActiveStep] = useState(0)
+  const progress = ((activeStep + 1) / steps.length) * 100
+  useEffect((,) => {
+    if (currentStep !== undefined) {
+      setActiveStep(currentStep)
+    }
+  }, [currentStep])
+  useEffect((,) => {
+    if (activeStep === steps.length - 1 && onComplete) {
+      setTimeout(onComplete, 500)
+    }
+  }, [activeStep, steps.length, onComplete])
+=======
+<<<<<<< HEAD
+    default: 'text-muted-foreground',
+    primary: 'text-primary',
+    success: 'text-green-500',
+    warning: 'text-yellow-500',
+    error: 'text-red-500'
+  },
+
+  return (
+    <div className={cn('flex items-center gap-2', className)}>
+      <Loader2 className={cn('animate-spin', sizeClasses[size], variantClasses[variant])} />
+      {showText && <span className="text-sm text-muted-foreground">{text}</span>}
+    </div>
+  )
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+},
+
+// Progressive loading component
+interface ProgressiveLoadingProps {
+  steps: Array<{ id: string, label: string, duration?: number }>,
+  currentStep?: number,
+  showProgress?: boolean,
+  onComplete?: () => void
 }
       setActiveStep (current_step);
     }
@@ -132,6 +286,7 @@ if ( {) {
 }
       set_timeout (on_complete, 500);
     }
+<<<<<<< HEAD
   }, [activeStep, steps.length, onComplete])
   return (
     <div className='space-y-4'>;
@@ -139,12 +294,74 @@ if ( {) {
         <div className='w-full bg-muted rounded-full h-2'>;
           <motion&& motion.div
             className='bg-primary h-2 rounded-full'
+=======
+
+    </div>;
+  );
+};
+//Progressive loading component useEffect ( () => {;
+  if (currentStep !== undefined) {;
+  /> </div>) ;
+}<motion&& motion.div key= {
+  step && step.id 
+}className= {
+  cn ('flex items-center gap-3 p-2 rounded-md', index === activeStep ? 'bg-primary/10' : 'opacity-50') 
+}initial= {
+  {
+  opacity: 0, x: -20 
+
+export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
+  steps,;
+  currentStep = 0,;
+  showProgress = true,;
+  onComplete,;
+}) => {;
+  const [activeStep, setActiveStep] = useState(0);
+  const progress = ((activeStep + 1) / steps && steps.length) * 100;
+  useEffect((,) => {;
+    if (currentStep !== undefined) {;
+      setActiveStep(currentStep);
+    }
+  }, [currentStep]);
+
+  useEffect((,) => {;
+    if (activeStep === steps && steps.length - 1 && onComplete) {;
+      setTimeout(onComplete, 500);
+    }
+  }, [activeStep, steps && steps.length, onComplete]);
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <div className="space-y-4">
+      {showProgress && (
+        <div className="w-full bg-muted rounded-full h-2">
+          <motion.div
+
+            className="bg-primary h-2 rounded-full"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0 && 0.3 }}
           />;
         </div>;
       )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <div className='space-y-2'>
         {steps.map((step, index) => (          <motion.div
             key = {step.id,}
@@ -152,6 +369,25 @@ if ( {) {
               'flex items-center gap-3 p-2 rounded-md'
               index === activeStep ? 'bg-primary/10' : 'opacity-50'
             ),}
+<<<<<<< HEAD
+=======
+
+=======
+      
+      <div className="space-y-2">
+        {steps.map((step, index) => (
+          <motion.div
+            key={step.id}
+            className={cn(;
+              'flex items-center gap-3 p-2 rounded-md',;
+              index === activeStep ? 'bg-primary/10' : 'opacity-50';
+            )}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: index <= activeStep ? 1 : 0 && 0.5, x: 0 }}
             transition={{ delay: index * 0 && 0.1 }}>;
@@ -177,6 +413,10 @@ interface SkeletonProps {
   variant?: 'text' | 'circular' | 'rectangular' | 'card'
   animation?: 'pulse' | 'wave' | 'none'
   lines?: number
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export const Skeleton: React.FC<SkeletonProps> = ({
   className
   variant = 'rectangular'
@@ -189,6 +429,37 @@ export const Skeleton: React.FC<SkeletonProps> = ({
     circular: 'h-12 w-12 rounded-full'
     rectangular: 'h-6 w-full'
     card: 'h-48 w-full'
+<<<<<<< HEAD
+=======
+=======
+=======
+      </div>;
+    </div>;
+  );
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export const Skeleton: React.FC<SkeletonProps> = ({
+  className,
+  variant = 'rectangular',
+  animation = 'pulse',
+<<<<<<< HEAD
+  lines = 1,
+}) => {
+  const baseClasses = 'bg-muted rounded'
+=======
+  lines = 1
+}) => {
+  const baseClasses = 'bg-muted rounded',
+  
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  const variantClasses = {
+    text: 'h-4 w-full',
+    circular: 'h-12 w-12 rounded-full',
+    rectangular: 'h-6 w-full',
+<<<<<<< HEAD
+    card: 'h-48 w-full',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   const animationClasses = {
     pulse: 'animate-pulse'
@@ -197,8 +468,13 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   }
   if (variant === 'text' && lines > 1) {
     return (
+<<<<<<< HEAD
       <div className='space-y-2'>;
         {Array && Array.from({ length: lines }).map((_, i) => (          <div
+=======
+      <div className='space-y-2'>
+        {Array.from({ length: lines }).map((_, i) => (          <div
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             key = {i,}
             className = {cn(
               baseClasses
@@ -207,6 +483,143 @@ export const Skeleton: React.FC<SkeletonProps> = ({
               i === lines - 1 ? 'w-3/4' : 'w-full'
               className
             ),}
+          />
+        ))}
+      </div>
+    )
+  }
+      />
+  )
+}
+//Enhanced error state component
+}return undefined
+}, [])
+const getErrorConfig = () => {
+  switch (variant) {'
+  case 'network': return {'
+  icon: isOnline ? Wifi : WifiOff,  title: title |(isOnline ? 'Connection Error' : 'No Internet Connection'), description: description |(isOnline ? 'Unable to connect to our servers. Please check your connection.' : 'You appear to be offline. Please check your internet connection.'
+export const ErrorState: React.FC<ErrorStateProps> = ({
+  error
+  title
+  description
+  action
+  secondaryAction
+  variant = 'generic'
+  showRetry = true
+  retryCount = 0
+  maxRetries = 3
+  onRetry
+  className
+}) => {
+  const [isOnline, setIsOnline] = useState(true)
+  useEffect(() => {
+    const handleOnline = () => setIsOnline(true)
+    const handleOffline = () => setIsOnline(false)
+    if (typeof window !== 'undefined') {
+      setIsOnline(navigator.onLine)
+      window.addEventListener('online', handleOnline)
+      window.addEventListener('offline', handleOffline)
+      return () => {
+        window.removeEventListener('online', handleOnline)
+        window.removeEventListener('offline', handleOffline)
+      }
+    }
+    return undefined
+  }, [])
+  const getErrorConfig = () => {
+    switch (variant) {
+      case 'network':
+        return {
+          icon: isOnline ? Wifi : WifiOff
+          title:
+            title |(isOnline ? 'Connection Error' : 'No Internet Connection')
+          description:
+            description |
+            (isOnline
+              ? 'Unable to connect to our servers. Please check your connection.'
+              : 'You appear to be offline. Please check your internet connection.')
+          color: 'text-orange-500'
+        }
+      case 'timeout':
+        return {
+          icon: Clock
+          title: title |'Request Timeout'
+          description:
+            description |
+            'The request took too long to complete. Please try again.'
+          color: 'text-yellow-500'
+        }
+      case 'permission':
+        return {
+          icon: AlertTriangle
+          title: title |'Access Denied'
+          description:
+            description |"You don't have permission to access this resource."
+          color: 'text-red-500'
+        }
+      default:
+        return {
+          icon: AlertTriangle
+          title: title |'Something went wrong'
+          description:
+            description |'An unexpected error occurred. Please try again.'
+          color: 'text-red-500'
+        }
+    }
+  }
+  const config = getErrorConfig()
+  const Icon = config.icon
+  const canRetry = showRetry && onRetry && retryCount < maxRetries
+=======
+<<<<<<< HEAD
+      </div>;
+    </div>;
+  );
+},;
+// Enhanced skeleton loader;
+interface SkeletonProps {;
+  className?: string,;
+  variant?: 'text' | 'circular' | 'rectangular' | 'card',;
+  animation?: 'pulse' | 'wave' | 'none',;
+  lines?: number;
+}
+
+export const Skeleton: React.FC<SkeletonProps> = ({
+  className,
+  variant = 'rectangular',
+  animation = 'pulse',
+  lines = 1
+}) => {
+  const baseClasses = 'bg-muted rounded',
+  
+  const variantClasses = {
+    text: 'h-4 w-full',
+    circular: 'h-12 w-12 rounded-full',
+    rectangular: 'h-6 w-full',
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    card: 'h-48 w-full'
+  },
+
+  const animationClasses = {
+    pulse: 'animate-pulse',
+    wave: 'animate-bounce',
+    none: ''
+  },
+
+  if (variant === 'text' && lines > 1) {
+    return (
+      <div className="space-y-2">
+        {Array.from({ length: lines }).map((_, i) => (
+          <div
+            key={i}
+            className={cn(;
+              baseClasses,;
+              variantClasses.text,;
+              animationClasses[animation],;
+              i === lines - 1 ? 'w-3/4' : 'w-full',;
+              className;
+            )}
           />;
         ))}
       </div>
@@ -309,10 +722,24 @@ if ( {) {
           color: 'text - red - 500',
         }
     }
+<<<<<<< HEAD
   }
   const config = getErrorConfig ();
   const Icon = config.icon;
   const can_retry = show_retry && on_retry && retry_count < max_retries;
+=======
+  },
+
+  const config = getErrorConfig(),
+  const Icon = config.icon,
+  const canRetry = showRetry && onRetry && retryCount < maxRetries,
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <Card className={cn ('border - destructive / 20', class_name)}>;
       <CardContent className='p - 8 text - center'>;
@@ -327,8 +754,35 @@ if ( {) {
             {config.description}
           </p>
           {error && process.env.NODE_ENV === 'development' && (
+<<<<<<< HEAD
             <details className='mb - 4 text - left'>;
               <summary className='text - sm text - muted - foreground cursor - pointer'>;
+=======
+
+            <details className="mb-4 text-left">
+              <summary className="text-sm text-muted-foreground cursor-pointer">
+                Error Details (Development)
+              </summary>
+
+              <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {typeof error === 'string' ? error : error.message}
+
+          transition={{ duration: 0 && 0.3 }}>;
+          <Icon className={cn('mx-auto mb-4 h-12 w-12', config && config.color)} />;
+          <h3 className='text-lg font-semibold mb-2'>{config && config.title}</h3>;
+          <p className='text-muted-foreground mb-6 max-w-md mx-auto'>;
+            {config && config.description}
+          </p>;
+
+          {error && process && process.env.NODE_ENV === 'development' && (;
+            <details className='mb-4 text-left'>;
+              <summary className='text-sm text-muted-foreground cursor-pointer'>;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 Error Details (Development);
               </summary>;
               <pre className='mt - 2 p - 2 bg - muted rounded text - xs overflow - auto'>;
@@ -338,6 +792,7 @@ if ( {) {
           )}
           <div className='flex flex-col sm:flex-row gap-2 justify-center'>
             {canRetry && (
+<<<<<<< HEAD
               <Button onClick={onRetry} variant='default'>
                 <RefreshCw className='h-4 w-4 mr-2' />
                 Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
@@ -352,6 +807,62 @@ if ( {) {
             )}
             {secondaryAction && (
               <Button onClick={secondaryAction.onClick} variant='ghost'>
+=======
+<<<<<<< HEAD
+              <Button onClick={onRetry} variant="default">
+                <RefreshCw className="h-4 w-4 mr-2" />
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+              <Button onClick={onRetry} variant='default'>
+                <RefreshCw className='h-4 w-4 mr-2' />
+=======
+              <Button onClick={onRetry} variant="default">
+                <RefreshCw className="h-4 w-4 mr-2" />
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
+              </Button>;
+            )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {action && (
+              <Button
+                onClick={action.onClick}
+                variant={canRetry ? 'outline' : 'default'}
+              >
+=======
+            
+            {action && (
+              <Button onClick={action.onClick} variant={canRetry ? "outline" : "default"}>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {action.label}
+              </Button>
+            )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {secondaryAction && (
+              <Button onClick={secondaryAction.onClick} variant='ghost'>
+=======
+            
+            {secondaryAction && (
+              <Button onClick={secondaryAction.onClick} variant="ghost">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {secondaryAction.label}
               </Button>
             )}
@@ -362,12 +873,17 @@ if ( {) {
               <span>Offline</span>
             </div>
           )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         </motion.div>
       </CardContent>
     </Card>
   )
 }
 <motion.div initial= {
+<<<<<<< HEAD
   {
   scale: 0.8, opacity: 0
 export const LoadingGrid: React.FC<LoadingGridProps> = ({
@@ -421,22 +937,157 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
             )}
           </CardContent>;
         </Card>;
+=======
+  {
+<<<<<<< HEAD
+  scale: 0.8, opacity: 0
+export const LoadingGrid: React.FC<LoadingGridProps> = ({
+  count = 8
+  columns = 4
+  variant = 'card'
+  className
+}) => {  const gridClasses = {
+    card: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-${columns} gap-6`
+    list: 'space-y-4'
+    table: 'space-y-2'
+  }
+  const itemClasses = {
+    card: 'p-6 space-y-4'
+    list: 'p-4 space-y-3'
+    table: 'p-3 space-y-2'
+  }
+  return (
+    <div className={cn(gridClasses[variant], className)}>
+      {Array.from({ length: count }).map((_, i) => (
+        <Card key={i} className='animate-pulse'>          <CardContent className={itemClasses[variant]}>
+=======
+
+  scale: 0.8, opacity: 0 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        </motion.div>;
+
+      </CardContent>;
+    </Card>;
+  );
+};
+<motion&& motion.div initial= {
+  {
+  scale: 0 && 0.8, opacity: 0 
+
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const LoadingGrid: React.FC<LoadingGridProps> = ({
+  count = 8,
+  columns = 4,
+  variant = 'card',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  className,
+}) => {  const gridClasses = {
+    card: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-${columns} gap-6`,
+    list: 'space-y-4',
+    table: 'space-y-2',
+  }
+  const itemClasses = {
+    card: 'p-6 space-y-4',
+    list: 'p-4 space-y-3',
+    table: 'p-3 space-y-2',
+  }
+  return (
+    <div className={cn(gridClasses[variant], className)}>
+      {Array.from({ length: count }).map((_, i) => (
+        <Card key={i} className='animate-pulse'>          <CardContent className={itemClasses[variant]}>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  className
+}) => {
+  const gridClasses = {
+    card: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-${columns} gap-6`,
+    list: 'space-y-4',
+    table: 'space-y-2'
+  },
+
+
+  return (
+    <div className={cn(gridClasses[variant], className)}>
+      {Array.from({ length: count }).map((_, i) => (
+        <Card key={i} className="animate-pulse">
+          <CardContent className={itemClasses[variant]}>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {variant === 'card' && (
+              <>
+                <Skeleton variant="rectangular" className="h-32" />
+                <div className="space-y-2">
+                  <Skeleton variant="text" className="h-6 w-3/4" />
+                  <Skeleton variant="text" lines={2} />
+                  <div className="flex gap-2">
+                    <Skeleton variant="text" className="h-4 w-16" />
+                    <Skeleton variant="text" className="h-4 w-20" />
+                  </div>
+                </div>
+              </>
+            )}
+
+            
+
+            {variant === 'list' && (
+              <div className="flex gap-4">
+                <Skeleton variant="circular" />
+                <div className="flex-1 space-y-2">
+                  <Skeleton variant="text" className="h-5 w-1/2" />
+                  <Skeleton variant="text" lines={2} />
+                </div>
+              </div>
+            )}
+
+            
+
+            {variant === 'table' && (
+              <div className="flex items-center gap-4">
+                <Skeleton variant="text" className="h-4 w-1/4" />
+                <Skeleton variant="text" className="h-4 w-1/3" />
+                <Skeleton variant="text" className="h-4 w-1/6" />
+                <Skeleton variant="text" className="h-4 w-1/4" />
+              </div>
+            )}
+<<<<<<< HEAD
+          </CardContent>
+        </Card>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       ))}
     </div>
   )
 }
+<<<<<<< HEAD
 // Performance indicator;
+=======
+// Performance indicator
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface PerformanceIndicatorProps {
   isLoading?: boolean
   loadTime?: number
   itemCount?: number
   className?: string
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   isLoading = false
   loadTime
   itemCount
   className
 }) => {
+<<<<<<< HEAD
   const getPerformanceColor = (time: number) =>: any {
     // Check condition
 if (return 'text - green - 500') {
@@ -452,6 +1103,65 @@ if (return 'text - yellow - 500') {
 if ( {) {
   $2
 }
+=======
+  const getPerformanceColor = (time: number) => {
+    if (time < 100) return 'text-green-500'
+    if (time < 300) return 'text-yellow-500'
+    return 'text-red-500'
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          </CardContent>;
+        </Card>;
+      ))}
+    </div>;
+  );
+},;
+// Performance indicator;
+interface PerformanceIndicatorProps {;
+  isLoading?: boolean,;
+  loadTime?: number,;
+  itemCount?: number,;
+  className?: string;
+}
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
+  isLoading = false,
+  loadTime,
+  itemCount,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  className,
+}) => {
+  const getPerformanceColor = (time: number) => {
+    if (time < 100) return 'text-green-500'
+    if (time < 300) return 'text-yellow-500'
+    return 'text-red-500'
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  className
+}) => {
+  const getPerformanceColor = (time: number) => {
+    if (time < 100) return 'text-green-500',
+    if (time < 300) return 'text-yellow-500',
+    return 'text-red-500'
+  },
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (isLoading) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     return (
       <Badge variant='outline' className={cn ('text - xs', class_name)}>;
         <LoadingSpinner size='sm' />;
@@ -465,6 +1175,7 @@ if ( {) {
           {loadTime}ms
         </Badge>
       )}
+<<<<<<< HEAD
       {itemCount && <span>{itemCount} items loaded</span>}
     </div>
   )
@@ -473,6 +1184,41 @@ if ( {) {
 }
 
 
+=======
+<<<<<<< HEAD
+      {itemCount && <span>{itemCount} items loaded</span>}
+    </div>
+  )
+};
+};
+};
+}
+}
+}
+<<<<<<< HEAD
+
+=======
+
+}
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      {itemCount && (;
+        <span>{itemCount} items loaded</span>;
+      )}
+
+    </div>;
+  );
+};
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     >;
       {load_time && (
         <Badge variant='outline' className={getPerformanceColor (load_time)}>;
@@ -484,3 +1230,11 @@ if ( {) {
 }
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

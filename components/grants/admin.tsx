@@ -1,7 +1,21 @@
 import { useEffect, useMemo, useState  } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';
+<<<<<<< HEAD
 export default function GrantsAdminPage() {
+=======
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+export default function GrantsAdminPage() {;
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function GrantsAdminPage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [token, setToken] = useState('');
 
   const [items, setItems] = useState<GrantApplication[]>([]);
@@ -578,10 +592,25 @@ if (return) {
             ) : (
               <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>
             )}
+<<<<<<< HEAD
+=======
+=======
+    <EnhancedLayout>
+
+
+            )}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </div>
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 );
 }
   );
@@ -626,3 +655,23 @@ if (return) {
       </div>;
     </EnhancedLayout>);
 }
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+=======
+
+  );
+
+}
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

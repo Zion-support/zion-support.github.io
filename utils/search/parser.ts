@@ -18,6 +18,7 @@ export interface SearchFilters {
 export const searchAll = (parsed: any, access: any) => {
   // Add search functionality here
   return {
+<<<<<<< HEAD
     all: []
     talent: []
     jobs: []
@@ -69,6 +70,13 @@ export const suggestDidYouMean = (query: string) => {
     };
   } catch {
     return base;
+=======
+<<<<<<< HEAD
+    keywords: []
+    skills: []
+    location: null
+    type: null
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 
   const words = query && query.toLowerCase().split(/\s+/);
@@ -100,6 +108,11 @@ export const suggestDidYouMean = (query: string) => {
   }
   
   return filters;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     keywords: [],
     skills: [],
     location: null,
@@ -114,6 +127,7 @@ export const search_all = (parsed: any, access: any) =>: any {
     talent: [],
     jobs: [],
     projects: [];
+<<<<<<< HEAD
   }
 }
 ;
@@ -121,3 +135,30 @@ export const suggestDidYouMean = (query: string) =>: any {
   // Add did you mean functionality here;
   return null;
 }
+=======
+
+  };
+};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const suggestDidYouMean = (query: string) => {
+  // Add did you mean functionality here;
+  return null;
+<<<<<<< HEAD
+=======
+
+export const suggestDidYouMean = (query: string) => {
+  // Add did you mean functionality here;
+  return null;
+
+
+
+}
+=======
+};
+=======
+
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

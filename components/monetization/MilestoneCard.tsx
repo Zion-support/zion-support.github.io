@@ -1,34 +1,22 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 import React, { useState } from 'react';
 import { Milestone } from '../../utils/types/milestones';
+<<<<<<< HEAD
 
 type Props = {;
 import { Milestone } from '../../utils / types / milestones';
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 type Props = {
   milestone: Milestone;
-  project_id: string;
+  projectId: string;
   role: 'client' | 'talent' | 'admin';
   onAction: (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid'
@@ -43,11 +31,25 @@ const statusSteps = [
   'Paid'
 ] as const;
 export default function MilestoneCard({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   milestone
   projectId
   role
   onAction
 }: Props) {
+<<<<<<< HEAD
+=======
+=======
+  milestone,
+  projectId,
+  role,
+  onAction,
+}: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [expanded, setExpanded] = useState(false);
   const currentIndex = statusSteps.findIndex(s => s === milestone.status);
   const canClientMarkInProgress =
@@ -79,6 +81,7 @@ export default function MilestoneCard({
   milestone: Milestone
   projectId: string
   role: 'client' | 'talent' | 'admin'
+<<<<<<< HEAD
   milestone: Milestone,
   project_id: string,
   role: 'client' | 'talent' | 'admin',
@@ -86,6 +89,41 @@ export default function MilestoneCard({
 }
 const statusSteps = ['PendingIn ProgressSubmittedApprovedPaid'] as const;
 export default function MilestoneCard({ milestone, projectId, role, onAction }: Props) {
+=======
+  onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void
+}
+const statusSteps = ['PendingIn ProgressSubmittedApprovedPaid'] as const;
+<<<<<<< HEAD
+export default function MilestoneCard({ milestone, projectId, role, onAction }: Props) {
+=======
+;
+  return (
+    <div className='border rounded - lg p - 4 bg - white shadow - sm'>;
+      <div className='flex items - start justify - between'>;
+        <div>;
+          <h3 className='text - lg font - semibold'>{milestone.title}</h3>;
+          <p className='text - sm text - gray - 600'>;
+            Due: {new Date (milestone.due_date).toLocaleDateString ()}
+          </p>;
+        </div>;
+        <button;
+          className='text - sm text - blue - 600';
+          on_click={() => set_expanded (v => !v)}
+        >          {expanded ? 'Hide' : 'Details'}
+        </button>;
+      </div>;
+      <div className='mt - 3'>;
+        <div className='flex items - center gap - 2'>type Props = {
+
+  milestone: Milestone,
+  project_id: string,
+  role: 'client' | 'talent' | 'admin',
+
+
+
+export default function MilestoneCard({ milestone, projectId, role, onAction }: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [expanded, setExpanded] = useState(false);
   const currentIndex = statusSteps.findIndex((s) => s === milestone.status);
   const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
@@ -170,6 +208,7 @@ function MilestoneCard() {
                   (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300')                }
                 title={step}
               />;
+<<<<<<< HEAD
               {idx < statusSteps && statusSteps.length - 1 && (          {statusSteps && statusSteps.map((step, idx) => (;
             <div key={step} className="flex items-center">;
               <div
@@ -191,12 +230,32 @@ function MilestoneCard() {
             </div>;
           ))}
         </div>                <div className={'h-0 && 0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />;
+=======
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                }
+                title={step}
+              />
+              {idx < statusSteps.length - 1 && (
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               )}
             </div>;
           ))}
         </div>
         <div className='mt-2 text-xs text-gray-700'>
           Status: {milestone.status}
+<<<<<<< HEAD
         </div>
       </div>
       {expanded && (
@@ -204,6 +263,22 @@ function MilestoneCard() {
           <div > Amount: ${milestone.amount_usd.to_fixed (2)}</div>;
           {milestone.attachments && milestone.attachments.length > 0 && (
             <div>        <div className="mt-2 text-xs text-gray-700">Status: {milestone.status}</div>
+=======
+        </div>;
+      </div>;
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              )}
+            </div>
+          ))}
+        </div>
+        <div className="mt-2 text-xs text-gray-700">Status: {milestone.status}</div>
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       </div>
       {expanded && (
         <div className="mt-4 space-y-2 text-sm text-gray-800">
@@ -224,6 +299,7 @@ function MilestoneCard() {
                 {milestone.attachments.map((a) => (
                   <li key={a.id}>
                     <a className="text-blue-600 underline" href={a.url} target="_blank" rel="noreferrer">
+<<<<<<< HEAD
                     </a>
                   </li>
                       rel='noreferrer'>                      {a && a.label || a && a.url}              <div className="font-medium">Attachments</div>;
@@ -233,12 +309,29 @@ function MilestoneCard() {
                     <a className="text-blue-600 underline" href={a && a.url} target="_blank" rel="noreferrer">;
                     </a>;
                   </li>;
+=======
+
+                      {a.label || a.url}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+                      {a.label || a.url}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    </a>
+                  </li>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 ))}
-              </ul>;
-            </div>;
+              </ul>
+            </div>
           )}
-        </div>;
+        </div>
       )}
+<<<<<<< HEAD
       <div className='mt-4 flex flex-wrap gap-2'>
         {canClientMarkInProgress && (
           <button
@@ -248,10 +341,46 @@ function MilestoneCard() {
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700">;
             Mark In Progress;
           </button>;
+=======
+<<<<<<< HEAD
+      <div className='mt-4 flex flex-wrap gap-2'>
+        {canClientMarkInProgress && (
+          <button
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">
+        {canClientMarkInProgress && (
+          <button
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
+=======
+<<<<<<< HEAD
+
+      <div className='mt-4 flex flex-wrap gap-2'>
+        {canClientMarkInProgress && (
+          <button
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}
+
+            onClick={() => onAction('in_progress', milestone.id)}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            Mark In Progress
+          </button>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         )}
         {canTalentSubmit && (;
           <button
         )}
+<<<<<<< HEAD
         {canTalentSubmit && (;
           <button
             className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700'            onClick={() => onAction('submitted', milestone && milestone.id)}            className="px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700";
@@ -281,6 +410,14 @@ function MilestoneCard() {
 }
             className="px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700"
             onClick={() => onAction('submitted', milestone.id)}
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           >
             Submit Work
           </button>
@@ -289,6 +426,15 @@ function MilestoneCard() {
           <button
             className="px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700"
             onClick={() => onAction('approved', milestone.id)}
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           >
             Approve
           </button>
@@ -297,12 +443,22 @@ function MilestoneCard() {
           <button
             className="px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800"
             onClick={() => onAction('paid', milestone.id)}
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           >
             Mark as Paid
           </button>
         )}
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
             <div>        <div className="mt - 2 text - xs text - gray - 700">Status: {milestone.status}</div>;
@@ -365,3 +521,19 @@ function MilestoneCard() {
       </div>;
     </div>);
 }
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+
+
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

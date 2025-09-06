@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState} from "react";
+import {MatchResultItem} from "@/lib/ai-matchmaking";
+import {Card, CardContent} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {BarChart3, BriefcaseIcon, Monitor, User} from "@/components/icons";
+import {Skeleton} from "@/components/ui/skeleton";
+import {cn} from "@/lib/utils";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
 import { Card, CardContent } from "@/components/ui/card",
@@ -5,6 +22,10 @@ import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 interface AIMatchingResultsProps {
@@ -14,6 +35,7 @@ interface AIMatchingResultsProps {
 
   isLoading?: boolean;
   projectDescription?: string;
+<<<<<<< HEAD
   serviceType?: string;
 }
 export function AIMatchingResults({
@@ -25,6 +47,41 @@ export function AIMatchingResults({
   serviceType: _serviceType = "";
 }: AIMatchingResultsProps) {;
   const [activeTab, setActiveTab] = useState("all");
+=======
+=======
+import { Skeleton } from "@/components/ui/skeleton",
+import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface AIMatchingResultsProps {
+  matches: MatchResultItem[],
+  onSelectMatch?: (match: MatchResultItem) => void,
+  isLoading?: boolean,
+  projectDescription?: string,
+
+  serviceType?: string
+}
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function AIMatchingResults({;
+  matches;
+  onSelectMatch;
+  isLoading = false;
+  projectDescription = "";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function AIMatchingResults({
+<<<<<<< HEAD
+  matches;
+  onSelectMatch;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Group matches by category
   const categories = {
     all: matches
@@ -65,6 +122,14 @@ export function AIMatchingResults({
               <p className="text-xs text-zion-slate-light">Your search:</p>;
               <p className="text-sm text-white">{projectDescription}</p>;
             </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           )}
         </CardContent>;
       </Card>;

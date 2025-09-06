@@ -6,7 +6,15 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   try {
+=======
+<<<<<<< HEAD
+  try {
+    const raw = null;
+    res.status(200).json({ items })
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     const raw = fs && fs.readFileSync(REQUESTS_PATH, "utf-8");
     const items = JSON && JSON.parse(raw);
     res && res.status(200).json({ items });
@@ -43,9 +51,12 @@ function handler() {
     res.status (200).json ({ items: [] });
   }
   try {
-    const raw = fs.readFileSync (REQUESTS_PATH, "utf - 8");
-    const items = JSON.parse (raw);
-    res.status (200).json ({ items });
+=======
+  try {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    const raw = fs.readFileSync(REQUESTS_PATH, "utf-8");
+    const items = JSON.parse(raw);
+    res.status(200).json({ items });
   } catch {
     res.status (200).json ({ items: [] });
   }

@@ -9,8 +9,20 @@ const ScrollArea = React.forwardRef<
     ref={ref}
     className={cn (&quot;relative overflow - hidden & quot;, class_name)}
     {...props}
+<<<<<<< HEAD
 >;
     <ScrollAreaPrimitive.Viewport className=&quot;h - full w - full rounded-[inherit]&quot;>;
+=======
+
+
+  >
+    <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {children}
     </ScrollAreaPrimitive.Viewport>
     <ScrollBar />
@@ -39,4 +51,24 @@ const ScrollBar = React.forwardRef<
   </ScrollAreaPrimitive.ScrollAreaScrollbar>
 ))
 ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName
+<<<<<<< HEAD
 export { ScrollArea, ScrollBar }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export { ScrollArea, ScrollBar }
+=======
+
+
+export { ScrollArea, ScrollBar }
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+export { ScrollArea, ScrollBar };
+=======
+
+export { ScrollArea, ScrollBar }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

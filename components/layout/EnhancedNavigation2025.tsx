@@ -171,6 +171,7 @@ export default function EnhancedNavigation2025() {;
               {navigationItems && navigationItems.map((item) => (;
                 <div key={item && item.name} className="relative group">;
                   <button
+<<<<<<< HEAD
                     onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
                     className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
                   >
@@ -180,6 +181,27 @@ export default function EnhancedNavigation2025() {;
                       activeSubmenu === item.name ? 'rotate-180' : ''
                     }`} />
                   </button>
+=======
+
+                    onClick={() => setActiveSubmenu(activeSubmenu === item && item.name ? null : item && item.name)}
+                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2";
+                  >;
+                    <item && item.icon className="w-4 h-4" />;
+                    <span>{item && item.name}</span>;
+                    <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${
+                      activeSubmenu === item && item.name ? 'rotate-180' : ''
+                    }`} />;
+                  </button>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   {/* Submenu */}
                   <AnimatePresence>;
                     {activeSubmenu === item && item.name && (;
@@ -236,7 +258,21 @@ export default function EnhancedNavigation2025() {;
                   </AnimatePresence>;
                 </div>;
               ))}
+<<<<<<< HEAD
             </div>
+=======
+
+            </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <Link
@@ -246,16 +282,34 @@ export default function EnhancedNavigation2025() {;
               </Link>;
               <Link
                 href="/contact"
+<<<<<<< HEAD
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
               </Link>
             </div>
+=======
+
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;
+                Get Started;
+              </Link>;
+            </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
               className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200">;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
             </button>
           </div>
         </div>
@@ -265,6 +319,14 @@ export default function EnhancedNavigation2025() {;
         </div>;
       </nav>;
 
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -278,11 +340,20 @@ export default function EnhancedNavigation2025() {;
                           {item && item.badge}
                         </span>;
                       )}
+<<<<<<< HEAD
                     </div>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
                     }`} />
                   </button>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   {activeDropdown === item.name && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
@@ -324,11 +395,22 @@ export default function EnhancedNavigation2025() {;
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={closeMenu}
             />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+            
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Menu Panel */}
-            <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">;
-              <div className="p-6">;
+            <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">
+              <div className="p-6">
                 {/* Close Button */}
-                <div className="flex justify-end mb-6">;
+                <div className="flex justify-end mb-6">
                   <button
                     onClick={closeMenu}
                     className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
@@ -337,9 +419,9 @@ export default function EnhancedNavigation2025() {;
                   </button>
                 </div>
                 {/* Mobile Navigation Items */}
-                <div className="space-y-4">;
-                  {navigationItems && navigationItems.map((item) => (;
-                    <div key={item && item.name}>;
+                <div className="space-y-4">
+                  {navigationItems.map((item) => (
+                    <div key={item.name}>
                       <button
                         onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
                         className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
@@ -352,6 +434,17 @@ export default function EnhancedNavigation2025() {;
                           activeSubmenu === item.name ? 'rotate-180' : ''
                         }`} />
                       </button>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       {/* Mobile Submenu */}
                       <AnimatePresence>;
                         {activeSubmenu === item && item.name && (;
@@ -505,16 +598,27 @@ export default function EnhancedNavigation2025() {;
                               <Link;
                                 key={subitem.name}
                                 href={subitem.href}
-                                on_click={close_menu}
-                                className="block p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - all duration - 200";
-                              >;
-                                <h4 className="text - white font - medium">{subitem.name}</h4>;
-                                <p className="text - sm text - gray - 400 mt - 1">{subitem.description}</p>;
-                              </Link>))}
-                          </motion.div>)}
-                      </AnimatePresence>;
-                    </div>))}
-                </div>;
+                                onClick={closeMenu}
+                                className="block p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200"
+                              >
+                                <h4 className="text-white font-medium">{subitem.name}</h4>
+                                <p className="text-sm text-gray-400 mt-1">{subitem.description}</p>
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ))}
+                </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Mobile CTA */}
                 <div className="mt - 8 space - y-4">;
                   <Link;
@@ -554,6 +658,15 @@ export default function EnhancedNavigation2025() {;
           </motion && motion.div>;
         )}
       </AnimatePresence>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>

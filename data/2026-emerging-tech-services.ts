@@ -1,4 +1,14 @@
+<<<<<<< HEAD
 export interface EmergingTechService2026 {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export interface EmergingTechService2026 {
+=======
+export interface EmergingTechService2026 {;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   name: string;
   tagline: string;
@@ -9,6 +19,7 @@ export interface EmergingTechService2026 {
   popular: boolean;
   icon: string;
   color: string;
+<<<<<<< HEAD
   text_color: string;
   link: string;
   market_position: string;
@@ -25,6 +36,24 @@ export interface EmergingTechService2026 {
   market_size: string;
   growth_rate: string;
   contact_info: {
+=======
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  contactInfo: {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     mobile: string;
     email: string;
     address: string;
@@ -61,8 +90,11 @@ const contact = {
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
   {
+<<<<<<< HEAD
     id: 'quantum-computing-as-a-service',
     name: 'Quantum Computing as a Service (QCaaS)',
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     id: 'quantum-computing-as-a-service'
     name: 'Quantum Computing as a Service (QCaaS)'
     tagline:
@@ -83,12 +115,17 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'API for quantum application development'
     ]
     popular: true
+<<<<<<< HEAD
     icon: ''
+=======
+    icon: '🔮'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     color: 'from-purple-600 to-indigo-600'
     textColor: 'text-purple-400'
     link: 'https://ziontechgroup.com/quantum-computing-as-a-service'
     marketPosition:
       'Competes with IBM Quantum ($0.60/credit), Amazon Braket ($0.30/hour), Google Quantum AI (Free). Our advantage: AI optimization improves quantum algorithm performance by 40% and reduces quantum resource requirements.'
+<<<<<<< HEAD
       'Access to multiple quantum processors (IBM, Google, Rigetti)',
       'AI - optimized quantum algorithm library',
       'Quantum error correction and noise mitigation',
@@ -107,6 +144,8 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-computing-as-a-service',
     marketPosition:
       'Competes with IBM Quantum ($0 && 0.60/credit), Amazon Braket ($0 && 0.30/hour), Google Quantum AI (Free). Our advantage: AI optimization improves quantum algorithm performance by 40% and reduces quantum resource requirements.',
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     targetAudience:
       'Research institutions, Pharmaceutical companies, Financial institutions, AI research labs, Universities'
     trialDays: 30
@@ -154,6 +193,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     rating: 4.9
     reviews: 18
   }
+<<<<<<< HEAD
       'IBM Quantum',
       'Amazon Braket',
       'Google Quantum AI',
@@ -171,6 +211,8 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     reviews: 18,
   },
 
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Blockchain & Web3 Solutions
   {
     id: 'ai-blockchain-intelligence-platform'
@@ -194,6 +236,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'API for blockchain applications'
     ]
     popular: true
+<<<<<<< HEAD
     icon: ''
     color: 'from-blue-600 to-cyan-600'
     textColor: 'text-blue-400'
@@ -213,6 +256,12 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     color: 'from-blue-600 to-cyan-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-blockchain-intelligence-platform',
+=======
+    icon: '⛓️'
+    color: 'from-blue-600 to-cyan-600'
+    textColor: 'text-blue-400'
+    link: 'https://ziontechgroup.com/ai-blockchain-intelligence-platform'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     marketPosition:
       'Competes with Chainalysis ($1000+/month), Elliptic ($500/month), CipherTrace ($300/month). Our advantage: AI automation provides deeper insights and reduces analysis time by 80%.'
     targetAudience:
@@ -229,6 +278,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'PostgreSQL'
       'Redis'
     ]
+<<<<<<< HEAD
       'Python',
       'TensorFlow',
       'React',
@@ -236,6 +286,8 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'PostgreSQL',
       'Redis',
     ],
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     integrations: [
       'Ethereum'
       'Bitcoin'
@@ -264,6 +316,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     rating: 4.7
     reviews: 89
   }
+<<<<<<< HEAD
       'Blockchain analytics',
       'DeFi optimization',
       'Portfolio management',
@@ -284,6 +337,8 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     reviews: 89,
   },
 
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Internet of Things (IoT) Platform
   {
     id: 'ai-iot-intelligence-platform'
@@ -307,12 +362,17 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Advanced analytics and reporting'
     ]
     popular: false
+<<<<<<< HEAD
     icon: ''
+=======
+    icon: '📡'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     color: 'from-green-600 to-emerald-600'
     textColor: 'text-green-400'
     link: 'https://ziontechgroup.com/ai-iot-intelligence-platform'
     marketPosition:
       'Competes with AWS IoT ($0.08/million messages), Azure IoT Hub ($0.50/million messages), Google Cloud IoT ($0.40/million messages). Our advantage: AI automation reduces IoT management complexity by 60% and improves device performance.'
+<<<<<<< HEAD
       'Predictive maintenance and monitoring',
       'Smart automation and control',
       'Edge computing optimization',
@@ -329,6 +389,8 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     link: 'https://ziontechgroup && ziontechgroup.com/ai-iot-intelligence-platform',
     marketPosition:
       'Competes with AWS IoT ($0 && 0.08/million messages), Azure IoT Hub ($0 && 0.50/million messages), Google Cloud IoT ($0 && 0.40/million messages). Our advantage: AI automation reduces IoT management complexity by 60% and improves device performance.',
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     targetAudience:
       'Smart home companies, Industrial IoT providers, City planners, Manufacturing companies'
     trialDays: 14
@@ -343,6 +405,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'PostgreSQL'
       'Redis'
     ]
+<<<<<<< HEAD
       'Python',
       'TensorFlow',
       'React',
@@ -350,6 +413,8 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'PostgreSQL',
       'Redis',
     ],
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     integrations: [
       'AWS IoT'
       'Azure IoT'
@@ -378,6 +443,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     rating: 4.6
     reviews: 45
   }
+<<<<<<< HEAD
       'Smart home automation',
       'Industrial monitoring',
       'Smart city management',
@@ -398,6 +464,8 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     reviews: 45,
   },
 
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Edge Computing & 5G Services
   {
     id: 'edge-computing-optimization-platform'
@@ -421,6 +489,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'API for edge applications'
     ]
     popular: false
+<<<<<<< HEAD
     icon: ''
     color: 'from-indigo-600 to-purple-600'
     textColor: 'text-indigo-400'
@@ -440,6 +509,12 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     color: 'from-indigo-600 to-purple-600',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup && ziontechgroup.com/edge-computing-optimization-platform',
+=======
+    icon: '📶'
+    color: 'from-indigo-600 to-purple-600'
+    textColor: 'text-indigo-400'
+    link: 'https://ziontechgroup.com/edge-computing-optimization-platform'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     marketPosition:
       'Competes with AWS Outposts ($1000+/month), Azure Stack Edge ($1000+/month), Google Anthos ($1000+/month). Our advantage: AI optimization improves edge performance by 40% and reduces latency by 60%.'
     targetAudience:
@@ -489,6 +564,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     rating: 4.5
     reviews: 23
   }
+<<<<<<< HEAD
       'AWS Outposts',
       'Azure Stack Edge',
       'Google Anthos',
@@ -506,6 +582,8 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     reviews: 23,
   },
 
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Augmented Reality (AR) & Virtual Reality (VR)
   {
     id: 'ai-ar-vr-development-platform'
@@ -529,6 +607,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'API for AR/VR applications'
     ]
     popular: false
+<<<<<<< HEAD
     icon: ''
     color: 'from-pink-600 to-rose-600'
     textColor: 'text-pink-400'
@@ -548,6 +627,12 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     color: 'from-pink-600 to-rose-600',
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-ar-vr-development-platform',
+=======
+    icon: '🥽'
+    color: 'from-pink-600 to-rose-600'
+    textColor: 'text-pink-400'
+    link: 'https://ziontechgroup.com/ai-ar-vr-development-platform'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     marketPosition:
       'Competes with Unity Pro ($180/month), Unreal Engine (5% royalty), Vuforia ($500/month). Our advantage: AI automation reduces AR/VR development time by 70% and improves content quality.'
     targetAudience:
@@ -592,6 +677,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     rating: 4.4
     reviews: 34
   }
+<<<<<<< HEAD
       '3D content creation',
       'Immersive training',
       'Virtual events',
@@ -611,6 +697,8 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     reviews: 34,
   },
 
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Robotics & Automation Services
   {
     id: 'ai-robotics-automation-platform'
@@ -634,6 +722,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'API for robotics applications'
     ]
     popular: false
+<<<<<<< HEAD
     icon: ''
     color: 'from-slate-600 to-gray-600'
     textColor: 'text-slate-400'
@@ -653,6 +742,12 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     color: 'from-slate-600 to-gray-600',
     textColor: 'text-slate-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-robotics-automation-platform',
+=======
+    icon: '🤖'
+    color: 'from-slate-600 to-gray-600'
+    textColor: 'text-slate-400'
+    link: 'https://ziontechgroup.com/ai-robotics-automation-platform'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     marketPosition:
       'Competes with ABB RobotStudio ($2000/month), FANUC ROBOGUIDE ($1500/month), KUKA Sim ($1000/month). Our advantage: AI automation improves robotic efficiency by 50% and reduces programming time by 80%.'
     targetAudience:
@@ -695,6 +790,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     rating: 4.3
     reviews: 18
   }
+<<<<<<< HEAD
       'ABB RobotStudio',
       'FANUC ROBOGUIDE',
       'KUKA Sim',
@@ -712,6 +808,8 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     reviews: 18,
   },
 
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Digital Twin & Simulation
   {
     id: 'ai-digital-twin-platform'
@@ -735,6 +833,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Mobile app for monitoring'
     ]
     popular: false
+<<<<<<< HEAD
     icon: ''
     color: 'from-cyan-600 to-teal-600'
     textColor: 'text-cyan-400'
@@ -753,6 +852,12 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     color: 'from-cyan-600 to-teal-600',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-digital-twin-platform',
+=======
+    icon: '🔄'
+    color: 'from-cyan-600 to-teal-600'
+    textColor: 'text-cyan-400'
+    link: 'https://ziontechgroup.com/ai-digital-twin-platform'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     marketPosition:
       'Competes with Siemens Digital Twin ($5000/month), PTC ThingWorx ($3000/month), GE Digital Twin ($2000/month). Our advantage: AI automation reduces digital twin creation time by 60% and improves simulation accuracy.'
     targetAudience:
@@ -774,7 +879,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'PTC'
       'GE Digital'
       'Autodesk'
+<<<<<<< HEAD
       'Dassault Systmes'
+=======
+      'Dassault Systèmes'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       'IoT platforms'
     ]
     useCases: [
@@ -796,12 +905,17 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.'
     launchDate: '2024-06-25'
     customers: 56
     rating: 4.4
     reviews: 29
   }
+<<<<<<< HEAD
       'Siemens Digital Twin',
       'PTC ThingWorx',
       'GE Digital Twin',
@@ -825,6 +939,29 @@ export const getEmergingTechServices2026ByCategory = (category: string) => {
   );
 }
 export const getPopularEmergingTechServices2026 = () => {
+=======
+=======
+      'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
+    launchDate: '2024-06-25',
+    customers: 56,
+    rating: 4.4,
+    reviews: 29,
+  },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+];
+export const getEmergingTechServices2026ByCategory = (category: string) => {
+  return emergingTechServices2026.filter(
+    service => service.category === category;
+  );
+<<<<<<< HEAD
+}
+export const getPopularEmergingTechServices2026 = () => {
+=======
+};
+
+export const getPopularEmergingTechServices2026 = () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return emergingTechServices2026.filter(service => service.popular);
 }
 export const getEmergingTechServices2026ByPriceRange = (
@@ -836,12 +973,62 @@ export const getEmergingTechServices2026ByPriceRange = (
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice
+<<<<<<< HEAD
   })
 };
 ;
 export const getEmergingTechServices2026ByCategory = (category: string) =>: any {
   return emergingTechServices2026.filter (
     service => service.category === category);
+=======
+
+  })
+<<<<<<< HEAD
+}
+
+=======
+export interface EmergingTechService2026 {;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 ;
 export const getPopularEmergingTechServices2026 = () =>: any {
@@ -855,7 +1042,17 @@ export const getEmergingTechServices2026ByPriceRange = (
     const price = parse_int (service.price.replace ('$', ''));
     return price >= min_price && price <= max_price;
   });
+<<<<<<< HEAD
 }    return price >= min_price && price <= max_price;
   });
 }
 ;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

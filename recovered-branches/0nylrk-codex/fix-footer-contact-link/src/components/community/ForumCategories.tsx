@@ -1,7 +1,28 @@
 
+<<<<<<< HEAD
 import { Link } from "react-router-dom",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Link} from "react-router-dom";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+import {useAuth} from "@/hooks/useAuth";
+import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/icons";
+import {ForumCategory, ForumCategoryInfo} from "@/types/community";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Link } from "react-router-dom",
+<<<<<<< HEAD
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { useAuth } from "@/hooks/useAuth";
+=======
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { useAuth } from "@/hooks/useAuth",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
   MessageSquare;
   Briefcase;
@@ -9,7 +30,21 @@ import {
   FileText;
   Megaphone
 } from "@/components/icons",
+<<<<<<< HEAD
 import { ForumCategory, ForumCategoryInfo } from "@/types/community";
+=======
+<<<<<<< HEAD
+import { ForumCategory, ForumCategoryInfo } from "@/types/community";
+const categories: ForumCategoryInfo[] = [
+  {
+
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const categories: ForumCategoryInfo[] = [
   {
 
@@ -133,9 +168,20 @@ export const ForumCategories = () => {
           </Link>;
         );
       })}
+<<<<<<< HEAD
     </div>
   )
 }
+=======
+
+    </div>;
+  );
+};
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default ForumCategories;
 
   Megaphone;

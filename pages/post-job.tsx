@@ -1,6 +1,15 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
+=======
+=======
+import { useState } from 'react',;
+import { useRouter } from 'next/router',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function PostJobPage() {
   const router = useRouter()
   const [title, setTitle] = useState('')
@@ -61,11 +70,70 @@ export default function PostJobPage() {
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
   }
   return (
     <div className="max-w-2xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
       {error && <p className="text-red-600 mb-3">{error}</p>}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+export default function PostJobPage(req, res) {
+  try {
+  const router = useRouter();
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [category, setCategory] = useState('');
+  const [skills, setSkills] = useState<string>('');
+  const [budgetMinUsd, setBudgetMinUsd] = useState<string>('');
+  const [budgetMaxUsd, setBudgetMaxUsd] = useState<string>('');
+  const [deliveryDeadlineIso, setDeliveryDeadlineIso] = useState<string>('');
+  const [clientEmail, setClientEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  async function handleSubmit(e: React.FormEvent) {;
+    e.preventDefault(),;
+    setError(null);
+    if (!title || !description || !category || !clientEmail) {;
+      setError('Please fill in all required fields.');
+      return;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  }
+  return (
+    <div className="max-w-2xl mx-auto">
+      <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
+<<<<<<< HEAD
+      {error && <p className="text-red-600 mb-3">{error}</p>}
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {error && <p className="text-red-600 mb-3">{error}</p>}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {error && <p className="text-red-600 mb-3">{error}</p>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium">Project Title *</label>
@@ -103,12 +171,32 @@ export default function PostJobPage() {
         </div>
         <div className="pt-2">
           <button type="submit" className="px-4 py-2 rounded bg-black text-white disabled:opacity-50" disabled={isSubmitting}>
+<<<<<<< HEAD
             {isSubmitting ? 'Posting' : 'Post Job'}
+=======
+<<<<<<< HEAD
+            {isSubmitting ? 'Posting…' : 'Post Job'}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </button>
         </div>
       </form>
     </div>
+<<<<<<< HEAD
   )
+=======
+<<<<<<< HEAD
+  )
+=======
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            {isSubmitting ? 'Posting…' : 'Post Job'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 import { useState } from 'react',
 import { use_router } from 'next / router',
@@ -213,5 +301,22 @@ if ( {) {
           </button>;
         </div>;
       </form>;
+<<<<<<< HEAD
     </div>);
 }
+=======
+
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useEffect, useMemo, useState } from 'react',;
+import DatePicker from 'react-datepicker',;
+import { useRouter } from 'next/router',;
+type PaymentType = 'hourly' | 'fixed',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
@@ -193,9 +201,92 @@ if ( {) {
       set_loading (false);
     }
   }
+<<<<<<< HEAD
   function copyToClipboard() {
     if (!contract) return
     void navigator.clipboard.writeText(contract)
+=======
+
+<<<<<<< HEAD
+    URL.revokeObjectURL(url)
+  }
+=======
+    setLoading(true),
+    setError(null),
+    setContract(''),
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+import DatePicker from 'react-datepicker';
+import { useRouter } from 'next/router';
+type PaymentType = 'hourly' | 'fixed';
+export default function ContractBuilderPage(req, res) {
+  try {
+  const router = useRouter();
+  const [talentName, setTalentName] = useState('');
+  const [projectName, setProjectName] = useState('');
+  const [scopeSummary, setScopeSummary] = useState('');
+  const [startDate, setStartDate] = useState<Date | null>(null);
+  const [endDate, setEndDate] = useState<Date | null>(null);
+  const [paymentType, setPaymentType] = useState<PaymentType>('hourly');
+  const [currency, setCurrency] = useState('USD');
+  const [hourlyRate, setHourlyRate] = useState<number>(100);
+  const [weeklyHourCap, setWeeklyHourCap] = useState<number | ''>('');
+  const [fixedAmount, setFixedAmount] = useState<number>(5000);
+  const [milestoneSummary, setMilestoneSummary] = useState('');
+  const [paymentSchedule, setPaymentSchedule] = useState('Net 15 on invoice');
+  const [nda, setNda] = useState(true);
+  const [ipTransfer, setIpTransfer] = useState(true);
+  const [governingLaw, setGoverningLaw] = useState('Delaware, USA');
+  const [revisionRounds, setRevisionRounds] = useState<number>(2);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [contract, setContract] = useState<string>('');
+  useEffect(() => {;
+    if (!router.isReady) return,;
+    const { talent, project } = router.query as { talent?: string, project?: string },;
+    if (talent && !talentName) setTalentName(decodeURIComponent(talent)),;
+    if (project && !projectName) setProjectName(decodeURIComponent(project));
+  }, [router.isReady, router.query, talentName, projectName]),;
+  const canSubmit = useMemo(() => {;
+    return (;
+      talentName.trim().length > 0 &&;
+      projectName.trim().length > 0 &&;
+      scopeSummary.trim().length > 0 &&;
+      !!startDate &&;
+      !!endDate &&;
+      (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0);
+    );
+  }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount]),;
+  async function submitForm(event: React.FormEvent) {;
+    event.preventDefault(),;
+    if (!canSubmit) return,;
+    setLoading(true);
+    setError(null);
+    setContract('');
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    try {
+      const body = {;
+        talentName;
+        projectName;
+        scopeSummary;
+        startDate: startDate?.toISOString().slice(0, 10);
+        endDate: endDate?.toISOString().slice(0, 10);
+        payment:;
+          paymentType === 'hourly';
+            ? {;
+                type: 'hourly',;
+                currency,;
+                hourlyRate,;
+                weeklyHourCap: typeof weeklyHourCap === 'number' ? weeklyHourCap : undefined,;
+                paymentSchedule  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   function downloadAsTxt() {
     if (!contract) return
@@ -298,10 +389,44 @@ if ( {) {
           <input type="number" className="w-full input input-bordered" value={revisionRounds} onChange={(e) => setRevisionRounds(Number(e.target.value))} />
         </div>
         <div className="md:col-span-2 flex items-center gap-3">
+<<<<<<< HEAD
           <button type="submit" className="btn btn-primary" disabled={!canSubmit |loading}>
             {loading ? 'Generating' : 'Generate contract'}
           </button>
           {error && <span className="text-red-600 text-sm">{error}</span>}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <button type="submit" className="btn btn-primary" disabled={!canSubmit |loading}>
+=======
+          <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {loading ? 'Generating…' : 'Generate contract'}
+          </button>
+          {error && <span className="text-red-600 text-sm">{error}</span>}
+=======
+<<<<<<< HEAD
+          <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {loading ? 'Generating…' : 'Generate contract'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </button>
+          {error && <span className="text-red-600 text-sm">{error}</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         </div>
       </form>
       {contract && (
@@ -325,3 +450,56 @@ if ( {) {
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+        <div className="mt-8">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-2xl font-semibold">Generated Contract</h2>
+            <div className="flex gap-2">
+              <button className="btn btn-secondary" onClick={copyToClipboard}>Copy</button>
+              <button className="btn" onClick={downloadAsTxt}>Download .txt</button>
+            </div>
+          </div>
+          <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
+<<<<<<< HEAD
+            {contract}
+          </article>
+        </div>
+      )}
+    </div>
+<<<<<<< HEAD
+  )
+=======
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            {contract  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </article>;
+        </div>;
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

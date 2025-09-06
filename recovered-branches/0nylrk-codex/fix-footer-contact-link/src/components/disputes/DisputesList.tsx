@@ -1,5 +1,12 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from "react";
 import {Dispute, DisputeStatus} from "@/types/disputes";
 import {Button} from "@/components/ui/button";
@@ -9,6 +16,31 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {formatDistanceToNow} from "date-fns";
 import {ShieldAlert} from "lucide-react";
 import {Link} from "react-router-dom";
+<<<<<<< HEAD
+=======
+
+=======
+import React, { useState } from "react",
+import { Dispute, DisputeStatus } from "@/types/disputes",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Skeleton } from "@/components/ui/skeleton",
+import { formatDistanceToNow } from "date-fns",
+import { ShieldAlert } from "lucide-react",
+import { Link } from "react-router-dom",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 type DisputesListProps = {
   disputes: Dispute[]
   isLoading: boolean
@@ -62,10 +94,16 @@ function DisputesList() {
       default:;
         return "default";
     }
+<<<<<<< HEAD
   }
 
   if (isLoading) {;
     return (
+=======
+  };
+  if (isLoading) {;
+    return (;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <div className="space-y-4">;
         <div className="flex gap-2 mb-4">;
           {["All", "Open", "Under Review", "Resolved", "Closed"].map((status) => (;
@@ -94,6 +132,14 @@ function DisputesList() {
                   <TableCell><Skeleton className="h-6 w-20" /></TableCell>;
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>;
                 </TableRow>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               ))}
             </TableBody>;
           </Table>;

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from 'react';
 import { Button  } from '@/components/ui/button';
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
@@ -6,6 +11,44 @@ import { Loader2, Sparkles, Check  } from 'lucide-react';
 import { Badge  } from '@/components/ui/badge';
 import { format, parseISO } from 'date-fns';
 interface MilestoneSuggestionsProps {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  projectName: string,
+  scopeSummary: string,
+  startDate: Date,
+  endDate?: Date;
+  projectType: string,
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
+}
+
+export function MilestoneSuggestions({;
+  projectName;
+  scopeSummary;
+  startDate;
+  endDate;
+  projectType;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Loader2, Sparkles, Check } from 'lucide-react',;
+import { Badge } from '@/components/ui/badge',;
+import { format, parseISO } from 'date-fns',;
+interface MilestoneSuggestionsProps {;
+  projectName: string,;
+  scopeSummary: string,;
+  startDate: Date,;
+  endDate?: Date,;
+  projectType: string,;
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   projectName: string
   scopeSummary: string
@@ -26,6 +69,7 @@ export function MilestoneSuggestions({
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
   const [showSuggestions, setShowSuggestions] = useState(false);
 
+<<<<<<< HEAD
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
       scope: `${projectName}: ${scopeSummary}`
@@ -33,6 +77,60 @@ export function MilestoneSuggestions({
       endDate: endDate ? endDate.toISOString() : null
       projectType: projectType |"Other"
     }
+=======
+
+=======
+
+      scope: `${projectName}: ${scopeSummary}`,
+      startDate: startDate.toISOString(),
+      endDate: endDate ? endDate.toISOString() : null,
+      projectType: projectType || "Other"
+    },
+
+    const milestones = await generateMilestones(input),
+    
+
+    if (milestones.length > 0) {
+      setShowSuggestions(true),
+      if (onMilestonesGenerated) {
+        onMilestonesGenerated(milestones)
+<<<<<<< HEAD
+      }
+    }
+  }
+  const formatDate = (dateString: string) => {
+    try {
+      return format(parseISO(dateString), 'MMM dd, yyyy')
+    } catch (error) {
+      return dateString
+    }
+<<<<<<< HEAD
+  }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+;
+export function MilestoneSuggestions({;
+  projectName,;
+  scopeSummary,;
+  startDate,;
+  endDate,;
+  projectType,;
+  onMilestonesGenerated;
+}: MilestoneSuggestionsProps) {;
+  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),;
+  const [showSuggestions, setShowSuggestions] = useState(false),;
+
+  const handleGenerateMilestones = async () => {;
+    const input: MilestoneInput = {;
+      scope: `${projectName}: ${scopeSummary}`,;
+      startDate: startDate && startDate.toISOString(),;
+      endDate: endDate ? endDate && endDate.toISOString() : null,;
+      projectType: projectType || "Other";
+    };
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     const milestones = await generateMilestones(input);
     if (milestones.length > 0) {
       setShowSuggestions(true);
@@ -47,7 +145,17 @@ export function MilestoneSuggestions({
     } catch (error) {
       return dateString
     }
+<<<<<<< HEAD
   }
+=======
+
+  },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <div className="space-y-4">;

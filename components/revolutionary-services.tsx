@@ -24,6 +24,10 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import Head from 'next/head';
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Check
   Star
   Zap
@@ -92,6 +96,7 @@ import {
   Microscope as MicroscopeIcon
   GraduationCap as GraduationCapIcon
   ShieldCheck as ShieldCheckIcon;
+<<<<<<< HEAD
 import {;
   Check,;
   Star,;
@@ -161,16 +166,102 @@ import {;
   Microscope as MicroscopeIcon,;
   GraduationCap as GraduationCapIcon,;
   ShieldCheck as ShieldCheckIcon,;
+=======
+=======
+  Check,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Target,
+  Building,
+  Rocket,
+  Award,
+  DollarSign,
+  ChartBar,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Zap as ZapIcon,
+  Code,
+  BookOpen,
+  Activity,
+  Database as DatabaseIcon,
+  Play,
+  Mail,
+  Phone,
+  MapPin,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Sparkles,
+  FlaskConical,
+  Dna,
+  Car,
+  Leaf,
+  Factory,
+  Truck,
+  Microscope,
+  GraduationCap,
+  ShieldCheck,
+  Brain,
+  Atom,
+  Globe2,
+  Bot,
+  Eye,
+  Trophy,
+  FlaskConical as FlaskIcon,
+  Dna as DnaIcon,
+  Car as CarIcon,
+  Leaf as LeafIcon,
+  Factory as FactoryIcon,
+  Truck as TruckIcon,
+  Microscope as MicroscopeIcon,
+  GraduationCap as GraduationCapIcon,;
+  ShieldCheck as ShieldCheckIcon,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   revolutionaryMicroSaasServices
   revolutionaryServiceCategories
   getRevolutionaryServicesByCategory
   getPopularRevolutionaryServices
   getRevolutionaryServicesByPriceRange;
+<<<<<<< HEAD
+=======
+=======
+  revolutionaryMicroSaasServices,
+  revolutionaryServiceCategories,
+  getRevolutionaryServicesByCategory,
+  getPopularRevolutionaryServices,;
+  getRevolutionaryServicesByPriceRange,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -429,6 +520,22 @@ export default function RevolutionaryServicesPage() {;
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length
       color: 'from-yellow-500 to-orange-600'
     }
+<<<<<<< HEAD
+=======
+  ];
+=======
+
+
+  ];
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const containerVariants = {
     hidden: { opacity: 0 }
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
@@ -546,9 +653,29 @@ export default function RevolutionaryServicesPage() {;
       y: 0
       opacity: 1
       transition: {
+<<<<<<< HEAD
         duration: 0.5
       }
     }
+=======
+
+
+        duration: 0.5,
+      },
+    },
+
+<<<<<<< HEAD
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+  };
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
       <div className='min-h-screen'>
@@ -642,6 +769,20 @@ export default function RevolutionaryServicesPage() {;
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+<<<<<<< HEAD
+=======
+=======
+                transition={{ duration: 0.8 }}
+              >
+
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -654,11 +795,20 @@ export default function RevolutionaryServicesPage() {;
               <motion&& motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: 0.4 }}
               >              </motion.p>
               {/* Service Count Stats */}
               <motion.div
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -859,6 +1009,7 @@ export default function RevolutionaryServicesPage() {;
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
               variants={containerVariants}
               initial="hidden"
+<<<<<<< HEAD
               whileInView="visible">;
               {enhancedCategories && enhancedCategories.map((category, index) => (;
                 <motion&& motion.div
@@ -899,6 +1050,22 @@ export default function RevolutionaryServicesPage() {;
             </motion.div>
           </div>
         </section>
+=======
+
+=======
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {enhancedCategories.map((category, index) => (
+                <motion.div
+                  key={category.name}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Popular Services Showcase */}
         <section className='py-16'>
           <div className='container mx-auto px-4'>
@@ -907,6 +1074,21 @@ export default function RevolutionaryServicesPage() {;
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-12"
+<<<<<<< HEAD
+=======
+
+              initial={{ opacity: 0, y: 20 }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+              initial={{ opacity: 0, y: 20 }}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -936,6 +1118,7 @@ export default function RevolutionaryServicesPage() {;
                 Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <motion.div
                 </span>;
                 <br />;
@@ -947,10 +1130,19 @@ export default function RevolutionaryServicesPage() {;
             </motion && motion.div>;
 
             <motion&& motion.div 
+=======
+<<<<<<< HEAD
+            <motion.div
+=======
+
+            <motion.div 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
+<<<<<<< HEAD
               viewport={{ once: true }}>;
               {popularServices && popularServices.slice(0, 6).map((service, index) => (;
                 <motion&& motion.div
@@ -969,6 +1161,14 @@ export default function RevolutionaryServicesPage() {;
                     variant={service && service.variant as any}
                     size='large'
                     className='h-full cursor-pointer'
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     onClick={() => setSelectedService(service)}
                   >
                     <div className='text-center mb-6'>
@@ -1048,6 +1248,16 @@ export default function RevolutionaryServicesPage() {;
             {/* Filters and Controls */}
             <motion.div
               className="mb-8"
+<<<<<<< HEAD
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
@@ -1114,8 +1324,11 @@ export default function RevolutionaryServicesPage() {;
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
+<<<<<<< HEAD
                     >;
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />;
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     >
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />
                     </button>
@@ -1123,6 +1336,7 @@ export default function RevolutionaryServicesPage() {;
                 </div>
               </div>
             </motion.div>
+<<<<<<< HEAD
                     >;
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />;
                       </div>;
@@ -1259,6 +1473,10 @@ export default function RevolutionaryServicesPage() {;
 
             {/* Services Display */}
             <motion&& motion.div
+=======
+            {/* Services Display */}
+            <motion.div
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className={
                 viewMode === 'grid'
                   ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
@@ -1266,6 +1484,7 @@ export default function RevolutionaryServicesPage() {;
               }
               variants={containerVariants}
               initial='hidden'
+<<<<<<< HEAD
               whileInView='visible'              viewport={{ once: true }}            <motion && motion.div 
             </motion && motion.div>;
 
@@ -1281,15 +1500,42 @@ export default function RevolutionaryServicesPage() {;
               whileInView='visible'              viewport={{ once: true }}            <motion.div
               className={viewMode === 'grid'
               className={viewMode === 'grid' 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+              whileInView='visible'              viewport={{ once: true }}            <motion.div
+              className={viewMode === 'grid'
+=======
+
+              whileInView='visible'              viewport={{ once: true }}            <motion.div 
+              className={viewMode === 'grid' 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
               variants={containerVariants}
               initial="hidden"
+<<<<<<< HEAD
               whileInView="visible">;
               {filteredServices && filteredServices.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            >
+              {filteredServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   variants={itemVariants}
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
@@ -1563,6 +1809,26 @@ export default function RevolutionaryServicesPage() {;
           {selectedService && (;
             <motion&& motion.div
               className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+<<<<<<< HEAD
+=======
+
+=======
+
+        {/* Service Details Modal */}
+        <AnimatePresence>
+          {selectedService && (
+            <motion.div
+              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -1881,6 +2147,7 @@ export default function RevolutionaryServicesPage() {;
           )}
         </AnimatePresence>
 
+<<<<<<< HEAD
         {/* Contact Section */}
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
@@ -1978,6 +2245,13 @@ export default function RevolutionaryServicesPage() {;
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
                 </div>
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </div>
             </motion.div>
           </div>
@@ -2143,3 +2417,15 @@ export default function RevolutionaryServicesPage() {;
       </div>;
     </UltraFuturisticBackground>));
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

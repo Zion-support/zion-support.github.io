@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react'
+import { useInterviews } from '@/hooks/useInterviews'
+import { Interview } from '@/types/interview'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { SEO } from '@/components/SEO'
+import { ProtectedRoute } from '@/components/ProtectedRoute'
+import { InterviewCard } from '@/components/interviews/InterviewCard'
+import { Button } from '@/components/ui/button'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React, { useEffect, useState } from "react",
 import { useInterviews } from "@/hooks/useInterviews",
@@ -6,7 +19,16 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { InterviewCard } from "@/components/interviews/InterviewCard",
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
+=======
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button";
+=======
+import { Button } from "@/components/ui/button",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Calendar, Clock, Video } from 'lucide-react'
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
@@ -20,6 +42,13 @@ function InterviewsContent() {
     // Modified to handle Promise<Interview[]> return type
     const loadInterviews = async () => {
       await fetchInterviews()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     load_interviews ();
   }, []);
@@ -51,9 +80,41 @@ function InterviewsContent() {
     const grouped: Record<string, Interview[]> = {}
     interviews.forEach(interview => {
       const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd')
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+  const { interviews, isLoading, fetchInterviews } = useInterviews(),
+  const [activeTab, setActiveTab] = useState("upcoming"),
+  
+  useEffect(() => {
+    // Modified to handle Promise<Interview[]> return type
+    const loadInterviews = async () => {
+      await fetchInterviews()
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    },
+    
+    loadInterviews()
+  }, []),
+
+
+  // Group interviews by date
+  const groupInterviewsByDate = (interviews: Interview[]) => {
+    const grouped: Record<string Interview[]> = {},
+    
+    interviews.forEach((interview) => {
+      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd'),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       if (!grouped[dateKey]) {
         grouped[dateKey] = []
       }
+<<<<<<< HEAD
       grouped[date_key].push (interview);
     });
     return grouped;
@@ -64,6 +125,26 @@ function InterviewsContent() {
   const renderInterviewGroups = (
     groupedInterviews: Record<string, Interview[]>
   ) => {
+=======
+
+      grouped[dateKey].push(interview)
+
+    }),
+    
+    return grouped
+  },
+  
+  const upcomingGrouped = groupInterviewsByDate(upcomingInterviews),
+  const pendingGrouped = groupInterviewsByDate(pendingInterviews),
+  const pastGrouped = groupInterviewsByDate(pastInterviews),
+
+  const renderInterviewGroups = (groupedInterviews: Record<string Interview[]>) => {
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     return Object.entries(groupedInterviews)
       .sort(
         ([dateA], [dateB]) =>
@@ -80,9 +161,22 @@ function InterviewsContent() {
               <InterviewCard
                 key={interview && interview.id}
                 interview={interview}
+<<<<<<< HEAD
                 onRefresh={async () => {
                   await fetchInterviews() }}
               />
+=======
+
+                onRefresh={async () => {;
+                  await fetchInterviews();
+                }}
+              />;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             ))}
           </div>
         </div>
@@ -97,6 +191,18 @@ function InterviewsContent() {
       ));
   };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+  },
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <>;
       <SEO
@@ -117,6 +223,7 @@ function InterviewsContent() {
           </div>;
         </div>;
 
+<<<<<<< HEAD
         <Tabs
           defaultValue={activeTab}
           onValueChange={setActiveTab}
@@ -142,6 +249,49 @@ function InterviewsContent() {
             <TabsTrigger value='past'>Past</TabsTrigger>
           </TabsList>
           <TabsContent value='upcoming' className='space-y-6'>
+=======
+
+
+        <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="space-y-8">
+          <TabsList className="mb-6">
+            <TabsTrigger value="upcoming" className="flex items-center">
+              <Clock className="h-4 w-4 mr-2" />
+              Upcoming
+              {upcomingInterviews.length > 0 && (
+                <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  {upcomingInterviews.length}
+                </span>
+              )}
+            </TabsTrigger>
+            <TabsTrigger value="pending">
+              Pending
+              {pendingInterviews.length > 0 && (
+
+                <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  {pendingInterviews.length}
+                </span>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              )}
+
+
+          
+          <TabsContent value="upcoming" className="space-y-6">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {isLoading ? (
               <div className='flex justify-center py-12'>
                 <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>
@@ -160,7 +310,19 @@ function InterviewsContent() {
               </div>
             )}
           </TabsContent>
+<<<<<<< HEAD
           <TabsContent value='pending' className='space-y-6'>
+=======
+
+
+          
+          <TabsContent value="pending" className="space-y-6">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {isLoading ? (
               <div className='flex justify-center py-12'>
                 <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>
@@ -180,7 +342,19 @@ function InterviewsContent() {
               </div>
             )}
           </TabsContent>
+<<<<<<< HEAD
           <TabsContent value='past' className='space-y-6'>
+=======
+
+
+          
+          <TabsContent value="past" className="space-y-6">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {isLoading ? (
               <div className='flex justify-center py-12'>
                 <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>
@@ -278,7 +452,16 @@ export default function Interviews() {;
     </ProtectedRoute>;
   );
 }
+<<<<<<< HEAD
 }
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <Tabs;
           default_value={active_tab}
           onValueChange={setActiveTab}
@@ -362,3 +545,12 @@ function Interviews() {
     </ProtectedRoute>);
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

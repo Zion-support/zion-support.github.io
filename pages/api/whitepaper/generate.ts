@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 const client = process && process.env.OPENAI_API_KEY
@@ -95,9 +102,21 @@ function fallbackMarkdown(input: any): string {
         .map((d: any) => `- ${d && d.label}: ${d && d.percent}%`)
         .join("\n")
     : "";
+<<<<<<< HEAD
   return `# ${input?.tokenName |"Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName |"Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases |""}.\n\n## Rewards System\n${input?.rewardsLogic |""}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply |""}.\n\n## Governance Model\n${input?.governance |""}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction |"applicable"} regulations.`;
 }
 
+=======
+<<<<<<< HEAD
+  return `# ${input?.tokenName |"Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName |"Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases |""}.\n\n## Rewards System\n${input?.rewardsLogic |""}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply |""}.\n\n## Governance Model\n${input?.governance |""}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction |"applicable"} regulations.`;
+}
+
+=======
+
+  return `# ${input?.tokenName || "Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName || "Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases || ""}.\n\n## Rewards System\n${input?.rewardsLogic || ""}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply || ""}.\n\n## Governance Model\n${input?.governance || ""}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction || "applicable"} regulations.`;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       markdown = content.trim ();
     } else {
       markdown = fallback_markdown ({
@@ -125,3 +144,63 @@ function fallback_markdown (input: any): string {
     : "";
   return `# ${input?.token_name || "Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.token_name || "Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI - native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.use_cases || ""}.\n\n## Rewards System\n${input?.rewards_logic || ""}.\n\n## Distribution\n${dist_lines}\n\n_total Supply: ${input?.token_supply || ""}.\n\n## Governance Model\n${input?.governance || ""}.\n\n## Risks + Disclaimers\n_not financial advice. Subject to ${input?.jurisdiction || "applicable"} regulations.`;
 }
+<<<<<<< HEAD
+=======
+
+;
+    res.status(200).json({ markdown });
+  } catch (error) {
+    console.error('generation_error', e?.message || e);
+    res.status(500).json({ error: 'Generation failed' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+function fallbackMarkdown(input: any): string {;
+  const distLines = Array.isArray(input?.distribution);
+    ? input.distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join('\n');
+    : '';
+  return `# ${input?.tokenName || 'Token'} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName || 'Token'} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases || ''}.\n\n## Rewards System\n${input?.rewardsLogic || ''}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply || ''}.\n\n## Governance Model\n${input?.governance || ''}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction || 'applicable'} regulations.`;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

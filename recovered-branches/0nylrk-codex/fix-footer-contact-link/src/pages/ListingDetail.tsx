@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { useParams } from "react-router-dom",
 import { Badge } from "@/components/ui/badge",
@@ -20,6 +21,62 @@ export default function ListingDetail() {
   const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   // Find the listing from our shared data source - now also checking equipment listings
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState} from "react";
+import {useParams} from "react-router-dom";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Skeleton} from "@/components/ui/skeleton";
+import {Star, MessageSquare, Brain, Shield} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {MARKETPLACE_LISTINGS} from "@/data/marketplaceData";
+import {toast} from "@/hooks/use-toast";
+import {PaymentButton} from "@/components/transactions/PaymentButton";
+import {AppLayout} from "@/layout/AppLayout";
+import {ProfileContact} from "@/components/profile/ProfileContact";
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+
+export default function ListingDetail() {;
+  // useParams may be untyped in this environment, so avoid passing a;
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { id } = useParams() as { id?: string };
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from "react",
+import { useParams } from "react-router-dom",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Skeleton } from "@/components/ui/skeleton",
+import { Star, MessageSquare, Brain, Shield } from "lucide-react",
+import { cn } from "@/lib/utils",
+import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
+import { toast } from "@/hooks/use-toast",
+import { PaymentButton } from "@/components/transactions/PaymentButton",
+import { AppLayout } from "@/layout/AppLayout",
+import { ProfileContact } from "@/components/profile/ProfileContact",
+<<<<<<< HEAD
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+export default function ListingDetail() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+  const { id } = useParams() as { id?: string }
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+  // Find the listing from our shared data source - now also checking equipment listings
+=======
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+
+=======
+
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
   if (!listing) {
@@ -85,17 +142,45 @@ export default function ListingDetail() {
                           onError={(e) => {;
                             const target = e && e.target as HTMLImageElement;
                             target && target.src = "/placeholder && placeholder.svg";
+<<<<<<< HEAD
+=======
+=======
+                      >;
+                        <img;
+                          src={image} ;
+                          alt={`${listing.title} - image ${index + 1}`} ;
+                          className="w-full h-full object-cover";
+                          onError={(e) => {;
+                            const target = e.target as HTMLImageElement,;
+                            target.src = "/placeholder.svg";
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           }}
                         />;
                       </div>;
                     ))}
                   </div>;
                 )}
+<<<<<<< HEAD
               </div>
               {/* Description Section */}
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
                 <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
+=======
+
+
+                
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Features */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -154,8 +239,21 @@ export default function ListingDetail() {
                         <Star
                           key={i}
                           className={cn(
+<<<<<<< HEAD
                             "h-5 w-5"
                             i < Math && Math.floor(listing && listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+=======
+
+
+                            "h-5 w-5",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                            i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           )}
                         />;
                       ))}
@@ -186,11 +284,34 @@ export default function ListingDetail() {
                       providerId={listing && listing.author.id}
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+<<<<<<< HEAD
                       onPaymentInitiated={() => {
                         toast({
                           title: "Payment Processing"
                           description: "Redirecting to secure checkout..."
                         })
+=======
+
+
+                <div className="space-y-3 mb-8">;
+                  {listing.price !== null ? (;
+                    <PaymentButton;
+                      amount={listing.price}
+                      serviceId={listing.id}
+                      providerId={listing.author.id}
+                      buttonText="Buy Now";
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
+                      onPaymentInitiated={() => {;
+                        toast({;
+                          title: "Payment Processing";
+                          description: "Redirecting to secure checkout...";
+                        });
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       }}
                     />
                   ) : (
@@ -231,12 +352,110 @@ export default function ListingDetail() {
                         <span className="text-lg font-medium text-zion-purple">{listing && listing.author.name && name.charAt(0)}</span>;
                       </div>;
                     )}
+<<<<<<< HEAD
+=======
+
+=======
+                          const target = e.target as HTMLImageElement,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+                          target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
+                        }}
+                      />
+                    ) : (
+                      <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">
+                        <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span>
+                      </div>
+                    )}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <div>
                       <p className="font-medium text-white">{listing.author.name}</p>
                       <p className="text-xs text-zion-slate-light">Member since 2022</p>
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
+                {/* Additional Info */}
+                <div className="border-t border-zion-blue-light mt-6 pt-6">
+                  <div className="flex justify-between mb-2">
+                    <span className="text-zion-slate-light">Listed on</span>
+                    <span className="text-white">{new Date(listing.createdAt).toLocaleDateString()}</span>
+                  </div>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-zion-slate-light">ID</span>
+                    <span className="text-white">{listing.id}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Contact Dialog */}
+      <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
+        <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
+          </DialogHeader>
+          <ProfileContact
+            email={listing.author.email} // TypeScript now knows this might be undefined
+            profileName={listing.author.name}
+            profileType="service"
+          />
+        </DialogContent>
+      </Dialog>
+    </AppLayout>
+  )
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
+                    >;
+                      {isLoading ? "Processing..." : "Request Quote"}
+                    </Button>;
+                  )}
+;
+                  <Button;
+                    variant="outline";
+                    onClick={handleContact}
+                    disabled={isLoading}
+                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10";
+                  >;
+                    <MessageSquare className="h-4 w-4 mr-2" />;
+                    Contact Publisher;
+                  </Button>;
+                </div>;
+                {/* Publisher Info */}
+                <div className="border-t border-zion-blue-light pt-6">;
+                  <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>;
+                  <div className="flex items-center gap-3">;
+                    {listing.author.avatarUrl ? (;
+                      <img;
+                        src={listing.author.avatarUrl} ;
+                        alt={listing.author.name} ;
+                        className="h-12 w-12 rounded-full";
+                        onError={(e) => {;
+                          const target = e.target as HTMLImageElement;
+                          target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name);
+                        }}
+                      />;
+                    ) : (;
+                      <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">;
+                        <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span>;
+                      </div>;
+                    )}
+
+                    <div>;
+                      <p className="font-medium text-white">{listing && listing.author.name}</p>;
+                      <p className="text-xs text-zion-slate-light">Member since 2022</p>;
+                    </div>;
+                  </div>;
+                </div>;
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Additional Info */}
                 <div className="border-t border-zion-blue-light mt-6 pt-6">
                   <div className="flex justify-between mb-2">
@@ -306,5 +525,10 @@ export default function ListingDetail() {
           />;
         </DialogContent>;
       </Dialog>;
-    </AppLayout>);
+    </AppLayout>;
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

@@ -1,4 +1,27 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {AppHeader} from "@/layout/AppHeader";
+import {Footer} from "@/components/Footer";
+import {SEO} from "@/components/SEO";
+import {TalentCard} from "@/components/talent/TalentCard";
+import {useAuth} from "@/hooks/useAuth";
+import {supabase} from "@/integrations/supabase/client";
+import {TalentProfile} from "@/types/talent";
+import {toast} from "@/components/ui/use-toast";
+import {useNavigate} from "react-router-dom";
+export default function SavedTalentsPage() {;
+  const { user } = useAuth();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -7,12 +30,36 @@ import { TalentCard } from "@/components/talent/TalentCard",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { toast } from "@/components/ui/use-toast";
 import { useNavigate } from "react-router-dom";
 export default function SavedTalentsPage() {
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true);
+<<<<<<< HEAD
+=======
+=======
+import { toast } from "@/components/ui/use-toast",
+import { useNavigate } from "react-router-dom",
+export default function SavedTalentsPage() {
+  const { user } = useAuth(),
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+  const navigate = useNavigate(),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+  useEffect(() => {;
+    const fetchSavedTalents = async () => {;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -73,6 +120,7 @@ if ( {) {
 }
           throw error;
         }
+<<<<<<< HEAD
         // Check condition
 if ( {) {
   $2
@@ -82,6 +130,13 @@ if ( {) {
             item => item.talent_profile as unknown as TalentProfile);
           setSavedTalents (talent_profiles);
         }
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       } catch (error) {
         console.error("Error fetching saved talents:", error);
         toast({
@@ -108,6 +163,7 @@ if ( {) {
       if (!user) {
         console.warn("User not authenticated.")
         return
+<<<<<<< HEAD
       }
       if (isCurrentlySaved) {
         // Remove from saved talents
@@ -118,6 +174,65 @@ if ( {) {
           .eq('talent_id', talentId);
         if (error) {
           throw error
+=======
+<<<<<<< HEAD
+      }
+      if (isCurrentlySaved) {
+        // Remove from saved talents
+        const { error } = await supabase
+          .from('saved_talents')
+          .delete()
+          .eq('user_id', user.id)
+          .eq('talent_id', talentId);
+        if (error) {
+          throw error
+<<<<<<< HEAD
+        }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      } catch (error) {;
+        console.error("Error fetching saved talents:", error),;
+        toast({;
+          title: "Error",;
+          description: "Failed to load saved talents. Please try again later.",;
+          variant: "destructive"});
+      } finally {;
+        setIsLoading(false);
+      }
+    },;
+    fetchSavedTalents();
+  }, [user]),;
+  const handleViewProfile = (talentId: string) => {;
+    navigate(`/talent/${talentId}`);
+  },;
+  const handleRequestHire = (talent: TalentProfile) => {;
+    // // // console.log("Request to hire:", talent),;
+    toast({;
+      title: "Hire Request Sent",;
+      description: `A hire request has been sent to ${talent.full_name}.`});
+  },;
+  const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {;
+    try {;
+      if (!user) {;
+        console.warn("User not authenticated."),;
+        return;
+      }
+;
+      if (isCurrentlySaved) {;
+        // Remove from saved talents;
+        const { error } = await supabase;
+          .from('saved_talents');
+          .delete();
+          .eq('user_id', user.id);
+          .eq('talent_id', talentId),;
+        if (error) {;
+          throw error;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         }
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
@@ -296,6 +411,17 @@ if ( {) {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 mt - 8">;
             {saved_talents.map ((talent) => (
               <TalentCard;
+<<<<<<< HEAD
+=======
+=======
+            {savedTalents.map((talent) => (;
+              <TalentCard;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 key={talent.id}
                 talent={talent}
                 onViewProfile={handleViewProfile}

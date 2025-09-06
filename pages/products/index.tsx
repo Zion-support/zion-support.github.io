@@ -1,6 +1,33 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import type { NextPage } from 'next';
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from 'react';
+import { NextPage } from 'next';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Head from 'next/head';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';
@@ -85,6 +112,14 @@ const categories = [
 const ProductsIndex: NextPage = () => {
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [searchTerm, setSearchTerm] = React.useState('');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const filteredProducts = products.filter(product => {
     const matchesCategory = selectedCategory === 'All' |product.category === selectedCategory;
     const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) |
@@ -92,9 +127,52 @@ const ProductsIndex: NextPage = () => {
                          product.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 const Index: NextPage = () => {
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+const Index: NextPage = () => {
+  return (
+<<<<<<< HEAD
+=======
+
+  const filteredProducts = products.filter(product => {
+    const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         product.category.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  return (
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     <Layout
       title="Products - Zion Tech Group"
       description="Discover our comprehensive suite of technology products designed to transform your business operations."
@@ -288,10 +366,49 @@ const Index: NextPage = () => {
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
         <meta name='description' content='Index page' />
       </Head>
 
 export default ProductsIndex;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+<<<<<<< HEAD
+};
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+=======
+
+
+export default Index;
+=======
+import type { NextPage } from 'next',
+import Head from 'next/head',
+const Index: NextPage = () => {
+  return (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    <div>
+      <Head>
+        <title>Index - Zion Tech Solutions</title>
+
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
+                  Contact Sales;
+                </Link>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
         <meta name="description" content="Index page" />
       </Head>
@@ -301,6 +418,35 @@ export default ProductsIndex;
         <p>This page is under construction.</p>
       </main>
     </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  ),
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  );
+};
+
+export default Index;
+=======
+=======
+  );
+};
+
+<<<<<<< HEAD
+export default ProductsIndex;
+>>>>>>> origin/main
+  )
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
 }
 export default ProductsIndex;
@@ -312,6 +458,7 @@ export default Index;
 };
 
 export default Index;
+<<<<<<< HEAD
         {/* Products Grid */}
         <section className="py - 16">;
           <div className="container mx - auto px - 4">;
@@ -426,3 +573,30 @@ export default ProductsIndex);
 ;
 export default Index;
 ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+}
+export default ProductsIndex;
+>>>>>>> origin/main
+  )
+<<<<<<< HEAD
+}
+export default Index;
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+},
+export default Index,
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

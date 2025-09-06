@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react'
+import { Badge } from "@/types/community",
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 interface UserBadgesProps {
   badges: Badge[];
@@ -9,6 +22,7 @@ const iconMap = {
   BadgeCheck
   Star
   MessageSquare
+<<<<<<< HEAD
 }
   return (
     <div className="flex flex-wrap gap-2">
@@ -17,8 +31,93 @@ const iconMap = {
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] |Trophy
 export default UserBadges
 
+=======
+},
+
+export const UserBadges = ({ badges }: UserBadgesProps) => {
+  if (!badges?.length) return null,
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <div className="flex flex-wrap gap-2">
+      {badges.map((badge) => {
+        // Get the correct icon component based on the badge's icon name
+<<<<<<< HEAD
+<<<<<<< HEAD
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] |Trophy
+export default UserBadges
+
+=======
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
+export default UserBadges;
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
+        
+        return (
+          <TooltipProvider key={badge.id}>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div 
+                  style={{ backgroundColor: badge.color + '20' }}
+                  className="w-8 h-8 rounded-full flex items-center justify-center cursor-pointer"
+                >
+                  <IconComponent 
+                    style={{ color: badge.color }} 
+                    className="w-4 h-4" 
+                  />
+                </div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <div className="text-center">
+                  <div className="font-medium">{badge.name}</div>
+                  <div className="text-xs text-gray-500">{badge.description}</div>
+                </div>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        )
+import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react';
+import { Badge } from "@/types/community",;
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",;
+
+interface UserBadgesProps {;
+  badges: Badge[];
+}
+
+const iconMap = {;
+  Trophy;
+  Award;
+  BadgeCheck;
+  Star;
+  MessageSquare;
+};
+export default UserBadges;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     <div className="flex flex - wrap gap - 2">;
       {badges.map ((badge, ) => {
         // Get the correct icon component based on the badge's icon name;
         const IconComponent = icon_map[badge.icon as keyof typeof icon_map] || Trophy;
 export default UserBadges;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
+=======
+<<<<<<< HEAD
+import { useEffect, useState } from 'react';
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 type Note = {
   id: string
@@ -16,6 +22,7 @@ export default function AdminNotesConsole() {
     async function load() {
       setLoading(true)
       try {
+<<<<<<< HEAD
         const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } })
         if (!res.ok) return
         const data = await res.json()
@@ -56,6 +63,52 @@ if (return, ) {
         set_loading (false);
       }
     }
+=======
+
+
+=======
+=======
+<<<<<<< HEAD
+import { useEffect, useState } from 'react',;
+;
+=======
+import { useEffect, useState } from 'react';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+type Note = {
+  id: string;
+  targetType: string;
+  targetId: string;
+  text: string;
+  authorId: string;
+  createdAt: number;
+};
+export default function AdminNotesConsole(req, res) {
+  try {
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {;
+    async function load() {;
+      setLoading(true);
+      try {
+        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } });
+        if (!res.ok) return,;
+        const data = await res.json();
+        setNotes(data.notes || []);
+      } finally {;
+        setLoading(false);
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     if (isAdmin) load()
   }, [isAdmin])
 
@@ -80,10 +133,17 @@ if (return, ) {
               <div className="font-medium mb-1">{n.targetType}  {n.targetId}</div>
               <div>{n.text}</div>
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           ))}
         </div>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
     if (load ()) {
@@ -112,3 +172,32 @@ if (return, ) {
         </div>)}
     </div>);
 }
+=======
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>;
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

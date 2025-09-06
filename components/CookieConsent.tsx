@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -45,8 +46,16 @@ export default function CookieConsent() {
       marketing: true
       functional: true
     }
+=======
+import React, { useState, useEffect } from "react";
+import { X, Cookie, Settings } from "lucide-react";
+<<<<<<< HEAD
+export default function CookieConsent() {
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 export default function CookieConsent() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [preferences, setPreferences] = useState({;

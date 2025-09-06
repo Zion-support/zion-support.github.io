@@ -64,16 +64,74 @@ const ResumeBuilder: NextPage = () => {
             <AIAssistant
               buttonLabel="Generate with AI"
               title="Generate Resume Summary"
+<<<<<<< HEAD
               defaultPrompt={generateSummaryPrompt}
               onAccept={setSummary}
               authorizationToken={operatorToken}
+=======
+
+
+              defaultPrompt={generateSummaryPrompt  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              onAccept={setSummary  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              authorizationToken={operatorToken  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             />
             <AIAssistant
               buttonLabel="Improve with AI"
               title="Improve Resume Summary"
+<<<<<<< HEAD
               defaultPrompt={improveSectionPrompt('summary', summary |'No content provided. Generate a summary based on role, years, and skills.')}
               onAccept={setSummary}
               authorizationToken={operatorToken}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+              defaultPrompt={improveSectionPrompt('summary', summary |'No content provided. Generate a summary based on role, years, and skills.')}
+=======
+
+              defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              onAccept={setSummary}
+              authorizationToken={operatorToken}
+=======
+              defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              onAccept={setSummary  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              authorizationToken={operatorToken  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             />
           </div>
         </div>
@@ -85,9 +143,42 @@ const ResumeBuilder: NextPage = () => {
           <AIAssistant
             buttonLabel="Improve with AI"
             title="Improve Experience"
+<<<<<<< HEAD
             defaultPrompt={improveSectionPrompt('experience section', experience |'Add experience details to improve.')}
             onAccept={setExperience}
             authorizationToken={operatorToken}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            defaultPrompt={improveSectionPrompt('experience section', experience |'Add experience details to improve.')}
+=======
+
+            defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            onAccept={setExperience}
+            authorizationToken={operatorToken}
+=======
+            defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            onAccept={setExperience  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            authorizationToken={operatorToken  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           />
         </div>
         <textarea value={experience} onChange={e => setExperience(e.target.value)} rows={10} className="w-full rounded-md border p-3" />
@@ -98,15 +189,49 @@ const ResumeBuilder: NextPage = () => {
           <AIAssistant
             buttonLabel="Improve with AI"
             title="Improve Skills"
+<<<<<<< HEAD
             defaultPrompt={improveSectionPrompt('skills list', skillsText |`Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
             onAccept={setSkillsText}
             authorizationToken={operatorToken}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            defaultPrompt={improveSectionPrompt('skills list', skillsText |`Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
+=======
+
+            defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            onAccept={setSkillsText}
+            authorizationToken={operatorToken}
+=======
+            defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            onAccept={setSkillsText  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            authorizationToken={operatorToken  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           />
         </div>
         <textarea value={skillsText} onChange={e => setSkillsText(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
       </section>
     </div>
   )
+<<<<<<< HEAD
 }
 export default ResumeBuilder;
 
@@ -201,3 +326,21 @@ const ResumeBuilder: NextPage = () => {
     </div>);
 },
 export default ResumeBuilder,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+export default ResumeBuilder;
+
+=======
+},
+export default ResumeBuilder,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+},
+<<<<<<< HEAD
+
+export default ResumeBuilder,
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

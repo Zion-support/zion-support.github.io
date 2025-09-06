@@ -1,11 +1,30 @@
 
+<<<<<<< HEAD
 import Document, {
+=======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Document, {
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Html
   Head
   Main
   NextScript
   DocumentContext;
+<<<<<<< HEAD
 } from 'next/document';
+=======
+=======
+  Html,
+  Head,
+  Main,
+  NextScript,;
+  DocumentContext,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from 'next/document';
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 export default function Document() {
 import Document, {;

@@ -71,8 +71,31 @@ import {
   Cloud,
   ArrowRight,
   Star,
+<<<<<<< HEAD
   Check,
   ExternalLink,} from 'lucide-react';import {
+=======
+<<<<<<< HEAD
+  Check,
+  ExternalLink,;} from 'lucide-react';import { 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  Check,;
+  ExternalLink,;} from 'lucide-react';import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  Zap;
+  Shield
+  BarChart3
+  Globe
+  Users
+  Lock
+  TrendingUp
+  Code
+  Database
+
+
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Zap;
   Shield,
   BarChart3,
@@ -158,7 +181,11 @@ export default function SaaSMarketplacePage() {
       description:
         'Complete payment processing platform for online businesses. Accept payments, manage subscriptions, and handle compliance.'
       category: 'Payments'
+<<<<<<< HEAD
       pricing: '2.9% + 30 per transaction'
+=======
+      pricing: '2.9% + 30¢ per transaction'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       rating: 4.9
       users: '1M+'
       icon: <Shield className='w-8 h-8 text-blue-400' />
@@ -324,6 +351,10 @@ export default function SaaSMarketplacePage() {
       useCase:
         'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.'
       pros: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         'Lightning fast'
         'Beautiful design'
         'Great keyboard shortcuts'
@@ -331,6 +362,18 @@ export default function SaaSMarketplacePage() {
       ]
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem']
     }
+<<<<<<< HEAD
+=======
+=======
+        'Lightning fast',
+        'Beautiful design',
+        'Great keyboard shortcuts',
+        'Git integration',
+      ],
+      cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],
+    },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ];
   const categories = [
     'All'
@@ -474,12 +517,21 @@ export default function SaaSMarketplacePage() {
             </div>
           </div>
           {/* Stats */}
+<<<<<<< HEAD
           <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
             style={{ animationDelay: '0.6s' }}
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {microSaasServices.length}+
               </div>
               <div className='text-gray-400 text-sm'>Curated Services</div>
@@ -592,6 +644,28 @@ export default function SaaSMarketplacePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="flex flex-wrap justify-center gap-4">;
             {categories && categories.map((category) => (;
+<<<<<<< HEAD
+=======
+
+=======
+
+      {/* Category Filter */}
+      <section className="py-16 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+
+=======
+
+
+              <button
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -603,6 +677,7 @@ export default function SaaSMarketplacePage() {
                 {category}
               </button>;
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -614,6 +689,29 @@ export default function SaaSMarketplacePage() {
               {selectedCategory === 'All';
                 ? 'All Services';
                 : `${selectedCategory} Services`}
+=======
+
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Services Grid */}
+
+            </h2>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
                 ? 'Explore our curated selection of the best micro SaaS services for modern businesses.'
@@ -629,6 +727,7 @@ export default function SaaSMarketplacePage() {
                 <div className='flex items-start space-x-6'>;
                   <div className='relative'>;
                     <div
+<<<<<<< HEAD
                       className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}
                     >
                       {service.icon}
@@ -656,6 +755,14 @@ export default function SaaSMarketplacePage() {
                     <p className='text-gray-400 leading-relaxed mb-4'>
                       {service.description}
                     </p>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -706,6 +813,7 @@ export default function SaaSMarketplacePage() {
                         <ExternalLink className='w-4 h-4 ml-2' />;
                       </Button>;
 
+<<<<<<< HEAD
                       <div className='text-right'>;
                         <div className='text-xs text-gray-500 mb-1'>;
                           Use Case:;
@@ -801,6 +909,34 @@ export default function SaaSMarketplacePage() {
             implementation support.;
           </p>;
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* CTA Section */}
+      <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+
+
+            Need Help Choosing?
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          </h2>
+          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
+            Our team of experts can help you select the perfect SaaS tools for
+            your business needs. Get personalized recommendations and
+            implementation support.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Button
               href='/contact'
               variant='secondary'
@@ -823,12 +959,26 @@ export default function SaaSMarketplacePage() {
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 }
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'>              href="/services";
               variant="outline";
               size="lg";
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl";
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               View Our Services;
             </Button>;
           </div>;
@@ -839,5 +989,14 @@ export default function SaaSMarketplacePage() {
 }
   );
 }
+<<<<<<< HEAD
     </>);
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

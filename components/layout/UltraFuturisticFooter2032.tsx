@@ -3,6 +3,10 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Phone
   Mail
   MapPin
@@ -41,6 +45,7 @@ import {
   Star as StarIcon;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom
 
+<<<<<<< HEAD
 import {;
   Phone,;
   Mail,;
@@ -81,6 +86,9 @@ import {;
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
 import { 
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
+=======
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
   Phone,
   Mail,
@@ -116,9 +124,17 @@ import {
   Users as UsersIcon,
   Briefcase as BriefcaseIcon,
   BookOpen as BookOpenIcon,
+<<<<<<< HEAD
   MessageCircle as MessageCircleIcon,
   Star as StarIcon,} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom,
+=======
+
+  MessageCircle as MessageCircleIcon,;
+  Star as StarIcon,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
@@ -878,10 +894,23 @@ const itemVariants = {;
 
 export default function UltraFuturisticFooter2032() {;
   return (
+<<<<<<< HEAD
     <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>      staggerChildren: 0 && 0.1;
     }
   }
 }
+=======
+    <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>      staggerChildren: 0.1
+    }
+<<<<<<< HEAD
+  }
+}
+=======
+  };
+};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const itemVariants = {
   hidden: { opacity: 0, y: 20 }
   visible: { opacity: 1, y: 0 },  visible: { opacity: 1, y: 0 }
@@ -1029,11 +1058,40 @@ export default function UltraFuturisticFooter2032() {
                   <Globe className="w-4 h-4 text-cyan-400" />
                   <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 transition-colors">
                     {contactInfo.website}
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },};
+
+
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+
+};
+
+export default function UltraFuturisticFooter2032() {
+  return (
+
+                    {contactInfo.website}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+                    {contactInfo.website}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   </a>
                 </div>
               </div>
             </motion.div>
             {/* Service Categories */}
+<<<<<<< HEAD
             <motion && motion.div variants={itemVariants} className='lg:col-span-2'>;
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>;
                 Our Revolutionary Services;
@@ -1046,6 +1104,29 @@ export default function UltraFuturisticFooter2032() {
                     </h4>;
                     <ul className='space-y-2'>                      {category && category.services.map((service, serviceIndex) => (;
                         <li key={serviceIndex}>;
+=======
+
+            {/* Service Categories */}
+            <motion.div variants={itemVariants} className='lg:col-span-2'>
+              <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                Our Revolutionary Services
+              </h3>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+                {serviceCategories.map((category, index) => (
+                  <div key={index} className='space-y-4'>
+                    <h4 className='text-lg font-medium text-white'>
+                      {category.title}
+                    </h4>
+                    <ul className='space-y-2'>                      {category.services.map((service, serviceIndex) => (
+                        <li key={serviceIndex}>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           <Link
                             href={service && service.href}
                             className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform'>                Our Revolutionary Services;
@@ -1072,6 +1153,15 @@ export default function UltraFuturisticFooter2032() {
             {/* Quick Links & Company Info */}
             <motion.div variants={itemVariants} className='lg:col-span-1'>
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 Quick Access
               </h3>
               {/* Quick Links */}
@@ -1102,6 +1192,7 @@ export default function UltraFuturisticFooter2032() {
                         <span>{link && link.name}</span>;
                       </Link>;
                     </li>;
+<<<<<<< HEAD
               {/* Quick Links */}
               <div className="mb - 8">;
                 <h4 className="text - lg font - medium text - white mb - 4">Quick Links</h4>;
@@ -1124,6 +1215,29 @@ export default function UltraFuturisticFooter2032() {
               <div className="mb-8">
                 <h4 className="text-lg font-medium text-white mb-4">Company</h4>
                 <ul className="space-y-2">
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              {/* Company Info */}
+              <div className='mb-8'>
+                <h4 className='text-lg font-medium text-white mb-4'>Company</h4>
+                <ul className='space-y-2'>                  {companyInfo.map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        href={item.href}
+
+                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   {companyInfo.map((item, index) => (
                     <li key={index}>
                       <Link
@@ -1155,8 +1269,23 @@ export default function UltraFuturisticFooter2032() {
                       </Link>;
                     </li>;
                   ))}
+<<<<<<< HEAD
                 </ul>
               </div>
+=======
+
+                </ul>;
+              </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Social Links */}
               <div>;
                 <h4 className='text-lg font-medium text-white mb-4'>;
@@ -1238,6 +1367,7 @@ export default function UltraFuturisticFooter2032() {
                     <a;
                       key={index}
                       href={social.href}
+<<<<<<< HEAD
                       target='_blank';
                       rel='noopener noreferrer';
                       className='w - 10 h - 10 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 rounded - lg flex items - center justify - center text - cyan - 400 hover:text - cyan - 300 hover:border - cyan - 400 / 50 transition - all duration - 300 hover:scale - 110 hover:shadow - lg hover:shadow - cyan - 500 / 20';
@@ -1247,10 +1377,26 @@ export default function UltraFuturisticFooter2032() {
                       className="w - 10 h - 10 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 rounded - lg flex items - center justify - center text - cyan - 400 hover:text - cyan - 300 hover:border - cyan - 400 / 50 transition - all duration - 300 hover:scale - 110 hover:shadow - lg hover:shadow - cyan - 500 / 20";
                     >;
                       <social.icon className="w - 5 h - 5" />))}
+=======
+
+=======
+
+
+                    </a>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  ))}
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </div>;
               </div>;
             </motion.div>;
           </div>;
+<<<<<<< HEAD
           {/* Newsletter Signup */}
           <motion.div;
             variants={item_variants}
@@ -1266,6 +1412,32 @@ export default function UltraFuturisticFooter2032() {
                 development. Join our community of future technology pioneers.;
               </p>;
               <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>;
+=======
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {/* Newsletter Signup */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                Stay Ahead with Future Technology
+              </h3>
+              <p className='text-slate-300 mb-8 max-w-2xl mx-auto'>
+                Get the latest insights on AI breakthroughs, quantum computing
+                advances, space technology innovations, and autonomous systems
+                development. Join our community of future technology pioneers.
+              </p>
+              <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <input
                   type='email'
                   placeholder='Enter your email address'
@@ -1419,8 +1591,36 @@ export default function UltraFuturisticFooter2032() {
       </div>;
     </footer>;
   );
+<<<<<<< HEAD
+=======
+}        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center text-white"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        >
+          <ArrowRight className="w-6 h-6 transform rotate-[-90deg]" />
+        </motion.button>
+      </div>
+    </footer>
+<<<<<<< HEAD
+);
+}
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+  );
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
   );
+<<<<<<< HEAD
 }
           </motion.div>;
         </motion.div>;
@@ -1447,3 +1647,7 @@ export default function UltraFuturisticFooter2032() {
       </div>;
     </footer>);
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

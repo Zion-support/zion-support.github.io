@@ -1,6 +1,27 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import type { NextPage } from 'next';
+import Head from 'next/head';
+
+=======
+
+import type { NextPage } from 'next'
+import Head from 'next/head'
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+=======
+import type { NextPage } from 'next'
+import Head from 'next/head'
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const Page: NextPage = () => {
   return (
     <>
@@ -14,9 +35,15 @@ const Page: NextPage = () => {
       </div>
     </>
   )
+<<<<<<< HEAD
 }
 };
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default Page;
 
 import type { NextPage } from 'next',
@@ -36,3 +63,20 @@ const Page: NextPage = () => {
 },
 export default Page,
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+},
+
+export default Page
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+},
+
+
+export default Page
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

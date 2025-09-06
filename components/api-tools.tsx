@@ -73,8 +73,29 @@ import {
   ExternalLink,
   Play,
   BookOpen,
+<<<<<<< HEAD
   Github,
   Terminal,} from 'lucide-react';import {
+=======
+<<<<<<< HEAD
+  Github,
+  Terminal,;} from 'lucide-react';import { 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  Github,;
+  Terminal,;} from 'lucide-react';import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  Code;
+  Database
+  Globe
+  Shield
+  Zap
+  Bot
+  BarChart3
+
+
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Code;
   Database,
   Globe,
@@ -290,6 +311,10 @@ export default function ApiToolsPage() {
         'Hardware security module (HSM) support'
       ]
       pricing: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         free: '1,000 operations/month'
         pro: '$119/month'
         enterprise: 'Custom'
@@ -302,6 +327,23 @@ export default function ApiToolsPage() {
       users: '4,200+'
       responseTime: '<20ms'
     }
+<<<<<<< HEAD
+=======
+=======
+        free: '1,000 operations/month',
+        pro: '$119/month',
+        enterprise: 'Custom',
+      },
+      category: 'Security',      color: 'bg-gradient-to-br from-gray-500 to-slate-600',      gradient: 'from-gray-400 to-slate-500',
+      website: 'https://encrypt.api',
+      docs: 'https://docs.encrypt.api',
+      github: 'https://github.com/encrypt-api',
+      status: 'Live',
+      users: '4,200+',
+      responseTime: '<20ms',
+    },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ];
   const categories = [
     'All'
@@ -428,6 +470,21 @@ export default function ApiToolsPage() {
           <div className="flex flex-wrap justify-center gap-4 mb-8">;
             {categories && categories.map((category) => (;
               <button
+<<<<<<< HEAD
+=======
+=======
+    <>
+      <Head>
+
+
+              <button
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${;
@@ -439,6 +496,7 @@ export default function ApiToolsPage() {
                 {category}
               </button>;
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -450,6 +508,28 @@ export default function ApiToolsPage() {
               {selectedCategory === 'All';
                 ? 'All API Tools';
                 : `${selectedCategory} APIs`}
+=======
+
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* API Tools Grid */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               {filteredTools.length} APIs available. Each tool is
@@ -591,10 +671,21 @@ export default function ApiToolsPage() {
                         href={tool && tool.website}
                         variant="primary"
                         size="sm"
+<<<<<<< HEAD
                         className="bg-indigo-600 hover:bg-indigo-700">;
                         <ExternalLink className="w-4 h-4 mr-2" />;
                         Visit API;
                       </Button>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                        Visit API
+                      </Button>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       <Button
                         href={tool && tool.docs}
                         variant='outline'
@@ -624,6 +715,7 @@ export default function ApiToolsPage() {
                 </div>;
               </Card>;
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -632,6 +724,21 @@ export default function ApiToolsPage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Developer Resources */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Developer Resources
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -690,9 +797,54 @@ export default function ApiToolsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
+=======
+      {/* CTA Section */}
+      <section className='py-24 bg-gradient-to-r from-indigo-600 to-indigo-700 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+          </h2>
+          <p className='text-xl text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
+            Start integrating our APIs today and join thousands of developers
+            building the future.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+            <Button
+              href='/contact'
+              variant='secondary'
+              size='lg'
+              className='bg-white text-indigo-600 hover:bg-gray-100 shadow-2xl'
+            >
+              Get API Access
+              <ArrowRight className='w-5 h-5 ml-2' />
+            </Button>
+            <Button
+              href='/docs'
+              variant='outline'
+              size='lg'
+              className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl'            >              href="/docs"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl"
+              View Documentation
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
       {/* Developer Resources */}
       <section className='py-24 bg-gray-800'>;
@@ -813,5 +965,14 @@ export default function ApiToolsPage() {
 }
   );
 }
+<<<<<<< HEAD
     </>);
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

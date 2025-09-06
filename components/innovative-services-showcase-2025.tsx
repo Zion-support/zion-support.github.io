@@ -3,6 +3,10 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Search
   Filter
   Star
@@ -30,10 +34,49 @@ import {
   GraduationCap
   Leaf
   Truck;
+<<<<<<< HEAD
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';import {
   Search, Filter, Star, CheckCircle, ArrowRight
 
+=======
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';import {
+  Search, Filter, Star, CheckCircle, ArrowRight
+
+=======
+  Search,
+  Filter,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Target,
+  Microscope,
+  Phone,
+  Mail,
+  MapPin,
+  TrendingUp,
+  Users,
+  Award,
+  Zap,
+  Globe,
+  Cpu,
+  Database,
+  Lock,
+  Cloud,
+  Stethoscope,
+  GraduationCap,
+  Leaf,;
+  Truck,;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';import {
+  Search, Filter, Star, CheckCircle, ArrowRight, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Phone, Mail, MapPin, TrendingUp, Users, Award;
   Zap, Globe, Cpu, Database, Lock, Cloud;
@@ -53,10 +96,183 @@ import { innovativeITServices2025  } from '../data/2025-innovative-it-services';
 import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
 
 const contactInfo = {
+<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
+=======
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+const serviceCategories = [
+  {
+    id: 'financial-technology'
+    title: '💰 Financial Technology'
+    description: 'Innovative fintech, DeFi, and financial services'
+    icon: TrendingUp
+    color: 'from-green-500 to-emerald-500'
+    services: [...innovativeFinancialServices2025]
+    gradient: 'from-green-500/20 to-emerald-500/20'
+    badge: 'New'
+  },  {    badge: 'New'
+  }
+  {
+    id: 'healthcare-biotech'
+    title: '🏥 Healthcare & Biotech'
+    description: 'AI-powered healthcare and biotechnology solutions'
+    icon: Stethoscope
+    color: 'from-blue-500 to-indigo-500'
+    services: [...innovativeHealthcareServices2025]
+    gradient: 'from-blue-500/20 to-indigo-500/20'
+    badge: 'Hot'
+  },  {    badge: 'Hot'
+  }
+  {
+    id: 'education-technology'
+    title: '🎓 Education Technology'
+    description: 'AI-powered learning and educational innovation'
+    icon: GraduationCap
+    color: 'from-purple-500 to-pink-500'
+    services: [...innovativeEducationServices2025]
+    gradient: 'from-purple-500/20 to-pink-500/20'
+    badge: 'Innovative'
+  },  {    badge: 'Innovative'
+  }
+  {
+    id: 'sustainability-green-tech'
+    title: '🌱 Sustainability & Green Tech'
+    description: 'Environmental technology and sustainability solutions'
+    icon: Leaf
+    color: 'from-emerald-500 to-teal-500'
+    services: [...innovativeSustainabilityServices2025]
+    gradient: 'from-emerald-500/20 to-teal-500/20'
+    badge: 'Eco-Friendly'
+  },  {    badge: 'Eco-Friendly'
+  }
+  {
+    id: 'logistics-supply-chain'
+    title: '🚚 Logistics & Supply Chain'
+    description: 'Autonomous logistics and supply chain optimization'
+    icon: Truck
+    color: 'from-orange-500 to-red-500'
+    services: [...innovativeLogisticsServices2025]
+    gradient: 'from-orange-500/20 to-red-500/20'
+    badge: 'Autonomous'
+  }
+  {
+    id: 'ai-consciousness'
+    title: '🧠 AI & Consciousness'
+    description:
+      'Revolutionary AI consciousness and emotional intelligence platforms',    icon: Brain
+    color: 'from-violet-500 to-purple-500'
+    services: [...innovativeAIServices2025]
+    gradient: 'from-violet-500/20 to-indigo-500/20'
+    badge: 'Revolutionary'
+  },  {    badge: 'Autonomous'
+  }
+  {
+    id: 'ai-consciousness'
+    title: '🧠 AI & Consciousness'
+    description: 'Revolutionary AI consciousness and emotional intelligence platforms'
+    color: 'from-violet-500 to-purple-500'
+    services: [...innovativeAIServices2025]
+    gradient: 'from-violet-500/20 to-indigo-500/20'
+    badge: 'Revolutionary'
+  },    badge: 'Revolutionary'
+  }
+  {
+    id: 'quantum-emerging'
+    title: '⚛️ Quantum & Emerging Tech'
+    description: 'Quantum computing, DNA computing, and beyond'
+    icon: Atom
+    color: 'from-indigo-500 to-blue-500'
+    services: [...emergingTechServices2025]
+    gradient: 'from-indigo-500/20 to-cyan-500/20'
+    badge: 'Quantum'
+  },  {    badge: 'Quantum'
+  }
+  {
+    id: 'enterprise-it'
+    title: '🏙️ Enterprise IT'
+    description: 'Autonomous operations and zero-trust security'
+    icon: Shield
+    color: 'from-blue-500 to-cyan-500'
+    services: [...innovativeITServices2025]
+    gradient: 'from-blue-500/20 to-teal-500/20'
+    badge: 'Enterprise'
+  },  {    badge: 'Enterprise'
+  }
+  {
+    id: 'micro-saas'
+    title: '🎯 Micro SAAS'
+    description: 'Innovative solutions for every business need'
+    icon: Target
+    color: 'from-teal-500 to-green-500'
+    services: [...realMicroSaasServices2025]
+    gradient: 'from-teal-500/20 to-green-500/20'
+    badge: 'Popular'
+  },];    badge: 'Popular'
+  }
+];
+<<<<<<< HEAD
+export default function InnovativeServicesShowcase2025() {
+=======
+  Search,
+  Filter,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Target,
+  Microscope,
+  Phone,
+  Mail,
+  MapPin,
+  TrendingUp,
+  Users,
+  Award,
+  Zap,
+  Globe,
+  Cpu,
+  Database,
+  Lock,
+  Cloud,
+  Stethoscope,
+  GraduationCap,
+  Leaf,
+  Truck,
+} from 'lucide-react';
+import Layout from '../components / layout / Layout';import {
+  Search, Filter, Star, CheckCircle, ArrowRight,
+  Brain, Atom, Shield, Rocket, Target, Microscope;
+  Phone, Mail, MapPin, TrendingUp, Users, Award;
+  Zap, Globe, Cpu, Database, Lock, Cloud;
+  Stethoscope, GraduationCap, Leaf, Truck;
+} from 'lucide-react';
+import Layout from '../components / layout / Layout';
+import { innovativeFinancialServices2025 } from '../data / 2025 - innovative - financial - services';
+import { innovativeHealthcareServices2025 } from '../data / 2025 - innovative - healthcare - services';
+import { innovativeEducationServices2025 } from '../data / 2025 - innovative - education - services';
+import { innovativeSustainabilityServices2025 } from '../data / 2025 - innovative - sustainability - services';
+import { innovativeLogisticsServices2025 } from '../data / 2025 - innovative - logistics - services';
+// Import existing services for comprehensive coverage;
+import { realMicroSaasServices2025 } from '../data / 2025 - real - micro - saas - services';
+import { innovativeAIServices2025 } from '../data / 2025 - innovative - ai - services';
+import { innovativeITServices2025 } from '../data / 2025 - innovative - it - services';
+import { emergingTechServices2025 } from '../data / 2025 - emerging - tech - services';
+const contact_info = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }  website: 'https://ziontechgroup.com';
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 const serviceCategories = [
   {
@@ -253,11 +469,19 @@ const serviceCategories = [
     icon: Target,
     color: 'from - teal - 500 to - green - 500',
     services: [...realMicroSaasServices2025],
+<<<<<<< HEAD
     gradient: 'from-teal-500/20 to-green-500/20',
     badge: 'Popular'
   }
 ];
 export default function InnovativeServicesShowcase2025() {
+=======
+
+
+
+export default function InnovativeServicesShowcase2025() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
@@ -422,6 +646,7 @@ function InnovativeServicesShowcase2025() {
         />;
       </Head>;
 
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
         <div className='absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black'></div>;
@@ -487,12 +712,28 @@ function InnovativeServicesShowcase2025() {
             </p>;
           </motion && motion.div>;
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0.8, delay: 0.2 }}
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           >
             <div className='text-center'>
               <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>
@@ -634,6 +875,14 @@ function InnovativeServicesShowcase2025() {
                 />;
               </div>;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Category Filter */}
               <div>;
                 <select
@@ -649,8 +898,23 @@ function InnovativeServicesShowcase2025() {
                       {category && category.title}
                     </option>;
                   ))}
+<<<<<<< HEAD
                 </select>
               </div>
+=======
+
+                </select>;
+              </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Sort By */}
               <div>;
                 <select
@@ -896,7 +1160,18 @@ function InnovativeServicesShowcase2025() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
                 className='group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Service Header */}
                 <div className='mb-6'>
                   <div className='flex items-center justify-between mb-4'>
@@ -982,6 +1257,20 @@ function InnovativeServicesShowcase2025() {
                   </h3>;
                   <p className="text - gray - 300 text - sm leading - relaxed">;
                     {service.description}
+<<<<<<< HEAD
+=======
+
+
+                  <p className='text-gray-300 text-sm leading-relaxed'>                    {service.description}
+
+                    {service.description}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   </p>
                 </div>
                 {/* Features */}
@@ -1024,6 +1313,15 @@ function InnovativeServicesShowcase2025() {
                 </div>
                 {/* Market Info */}
                 <div className='mb-6 grid grid-cols-2 gap-4 text-sm'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <div>
                     <div className='text-gray-400'>Market Size</div>
                     <div className='text-white font-semibold'>
@@ -1071,6 +1369,7 @@ function InnovativeServicesShowcase2025() {
                     Learn More
                   </a>;
                   <a
+<<<<<<< HEAD
                     href={`mailto:${service && service.contact.email}`}
                     className='px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg-cyan-500/10 transition-all duration-300'>;
                     <Mail className='w-5 h-5' />                  </a>                    className="px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg-cyan-500/10 transition-all duration-300";
@@ -1081,6 +1380,22 @@ function InnovativeServicesShowcase2025() {
               </motion && motion.div>;
             ))}
           </div>
+=======
+
+                    href={`mailto:${service.contact.email}`}
+                    className="px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
+                  >
+                    <Mail className="w-5 h-5" />
+                  </a>
+                </div>
+              </motion.div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {sortedServices.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -1096,18 +1411,65 @@ function InnovativeServicesShowcase2025() {
               <div className="text-gray-400 text-xl mb-4">No services found</div>;
               <div className="text-gray-500">Try adjusting your search or filter criteria</div>;
           )}
+<<<<<<< HEAD
         </div>
       </section>
+=======
+
+        </div>;
+      </section>;
+
+
+=======
+
+
+          )}
+        </div>
+      </section>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Contact Section */}
       <section className='py-20 bg-gradient-to-b from-slate-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-slate-900 to-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
+<<<<<<< HEAD
+=======
+
+=======
+
+      {/* Contact Section */}
+      <section className="py-20 bg-gradient-to-b from-slate-900 to-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='text-center mb-16'
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Ready to Transform Your Business?
@@ -1148,11 +1510,33 @@ function InnovativeServicesShowcase2025() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <motion&& motion.div
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className='text-center'
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Phone className='w-8 h-8 text-white' />
@@ -1184,7 +1568,16 @@ function InnovativeServicesShowcase2025() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className='text-center'
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Mail className='w-8 h-8 text-white' />
@@ -1216,6 +1609,7 @@ function InnovativeServicesShowcase2025() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className='text-center'>;
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
                 <MapPin className='w-8 h-8 text-white' />;
@@ -1418,3 +1812,35 @@ function InnovativeServicesShowcase2025() {
       </section>;
     </Layout>);
 }
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
+              <p className="text-gray-300">{contactInfo.address}</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  );
+<<<<<<< HEAD
+}
+
+=======
+<<<<<<< HEAD
+}
+;
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

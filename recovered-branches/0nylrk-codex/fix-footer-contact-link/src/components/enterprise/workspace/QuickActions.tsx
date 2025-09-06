@@ -1,18 +1,71 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
 import { FileText, Plus, Users, Search, Calendar } from "lucide-react";
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {FileText, Plus, Users, Search, Calendar} from "lucide-react";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button";
+import { FileText, Plus, Users, Search, Calendar } from "lucide-react";
+=======
+import { Button } from "@/components/ui/button",
+import { FileText, Plus, Users, Search, Calendar } from "lucide-react",
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function QuickActions() {
 
   const actions = [
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       id: "post-job"
       label: "Post New Job"
       icon: <FileText className="h-5 w-5 mr-2" />
       description: "Create a new job posting"
+<<<<<<< HEAD
       color: "bg-blue-100 dark:bg-blue-900/20"
     }
+=======
+=======
+      id: "post-job",
+      label: "Post New Job",
+      icon: <FileText className="h-5 w-5 mr-2" />,
+      description: "Create a new job posting",
+<<<<<<< HEAD
+      color: "bg-blue-100 dark:bg-blue-900/20";
+    };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      color: "bg-blue-100 dark:bg-blue-900/20"
+<<<<<<< HEAD
+    }
+=======
+    },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     {
       id: "add-member"
       label: "Add Team Member"
@@ -116,6 +169,7 @@ function QuickActions() {
               <div className="flex flex - col items - start text - left">;
                 <div className="flex items - center">;
                   {action.icon}
+<<<<<<< HEAD
                   <span>{action.label}</span>;
                 </div>;
                 <span className="mt - 1 text - xs text - muted - foreground">{action.description}</span>;
@@ -124,4 +178,22 @@ function QuickActions() {
         </div>;
       </CardContent>;
     </Card>);
+=======
+
+                  <span>{action.label}</span>
+                </div>
+                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
+              </div>
+            </Button>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  )
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }

@@ -1,12 +1,42 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {Link, useNavigate, useSearchParams} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {Button} from "@/components/ui/button";
+import PostForm from "@/components/community/PostForm";
+import {useToast} from "@/hooks/use-toast";
+import {ForumCategory} from "@/types/community";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useSearchParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
 import { Button } from "@/components/ui/button",
 import PostForm from "@/components/community/PostForm",
+<<<<<<< HEAD
 import { useToast } from "@/hooks/use-toast";
 import { ForumCategory } from "@/types/community";
+=======
+<<<<<<< HEAD
+import { useToast } from "@/hooks/use-toast";
+import { ForumCategory } from "@/types/community";
+=======
+import { useToast } from "@/hooks/use-toast",
+import { ForumCategory } from "@/types/community",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface PostFormValues {
 
   title: string
@@ -15,6 +45,7 @@ interface PostFormValues {
 
   tags: string
 }
+<<<<<<< HEAD
 export default function CreatePostPage() {
 
   const navigate = useNavigate();
@@ -25,6 +56,24 @@ export default function CreatePostPage() {
   const initialValues: Partial<PostFormValues> = {
     categoryId: initialCategory |"project-help"
   }
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export default function CreatePostPage() {;
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [searchParams] = useSearchParams();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function CreatePostPage() {
+<<<<<<< HEAD
+
+
+
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally save to the database
@@ -89,6 +138,7 @@ function CreatePostPage() {
   const { toast } = use_toast ();
   const [search_params] = useSearchParams ();
 ;
+<<<<<<< HEAD
   // Get category from URL query params if available;
   const initial_category = search_params.get ("category") as ForumCategory | null;
 ;
@@ -139,3 +189,11 @@ function CreatePostPage() {
       </div>;
     </AppLayout>);
 }
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

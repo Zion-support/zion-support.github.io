@@ -1,7 +1,25 @@
 
+<<<<<<< HEAD
 import React from "react";
 
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
+=======
+<<<<<<< HEAD
+import React from "react";
+<<<<<<< HEAD
+=======
+import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from "react",
+import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",
+
+<<<<<<< HEAD
+import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const features = [
   {
     title: "Private Hiring Portal"
@@ -43,6 +61,7 @@ export function EnterpriseFeatures() {;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature) => (
             <div
+<<<<<<< HEAD
               key={feature && feature.title}
               className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md">;
               <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5">;
@@ -51,11 +70,24 @@ export function EnterpriseFeatures() {;
               <h3 className="font-bold text-xl mb-3">{feature && feature.title}</h3>;
               <p className="text-muted-foreground">{feature && feature.description}</p>;
             </div>;
+=======
+              key={feature.title}
+              className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md"
+            >
+              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
+                <feature.icon className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
+              <p className="text-muted-foreground">{feature.description}</p>
+            </div>
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           ))}
         </div>
       </div>
     </section>
   )
+<<<<<<< HEAD
 }
     title: "Global Access",
     description: "Connect with talent across multiple regions with localized interfaces.",
@@ -64,6 +96,45 @@ export /**
  * EnterpriseFeatures - Function description
  */
 function EnterpriseFeatures() {
+=======
+<<<<<<< HEAD
+}
+=======
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from "react",;
+import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",;
+
+const features = [;
+  {;
+    title: "Private Hiring Portal",;
+    description: "Create a secure, private hiring portal accessible only to your team members.";
+    icon: Shield},;
+  {;
+    title: "Dedicated Talent Pool",;
+    description: "Access to a curated pool of pre-vetted talent matched to your industry and needs.",;
+    icon: Users},;
+  {;
+    title: "Custom SLA",;
+    description: "Get guaranteed response times and dedicated support with our custom SLAs.",;
+    icon: Award},;
+  {;
+    title: "Branded Onboarding",;
+    description: "Customize the onboarding experience with your company branding and messaging.",;
+    icon: Briefcase},;
+  {;
+    title: "Admin Dashboards",;
+    description: "Powerful analytics and management tools for team leaders and administrators.",;
+    icon: Settings},;
+  {;
+    title: "Global Access",;
+    description: "Connect with talent across multiple regions with localized interfaces.",;
+    icon: Globe}],;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+export function EnterpriseFeatures() {;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <section className="py - 20 px - 4 md:px - 6 bg - muted / 50">;
       <div className="container mx - auto max - w-6xl">;
@@ -91,3 +162,13 @@ function EnterpriseFeatures() {
       </div>;
     </section>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

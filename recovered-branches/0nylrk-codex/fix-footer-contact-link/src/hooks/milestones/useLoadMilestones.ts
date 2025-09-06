@@ -1,11 +1,22 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneActivity} from './types';
+<<<<<<< HEAD
 export const useLoadMilestones = (projectId?: string) => {
+=======
+export const useLoadMilestones = (projectId?: string) => {;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const { user } = useAuth();
   const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [activities, setActivities] = useState<Record<string, MilestoneActivity[]>>({});
@@ -34,17 +45,29 @@ export const useLoadMilestones = (projectId?: string) => {
             *;
             created_by_profile:profiles!user_id(display_name, avatar_url)
           `)
+<<<<<<< HEAD
           .eq('milestone_id', milestone && milestone.id)
           .order('created_at', { ascending: false });
         if (activitiesError) throw activitiesError;
+=======
+          .eq('milestone_id', milestone.id)
+          .order('created_at', { ascending: false });
+        if (activitiesError) throw activitiesError;
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         activitiesMap[milestone.id] = activitiesData |[]
       }
       setActivities(activitiesMap);
       setError(null)
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error fetching milestones:", err);
       setError("Failed to fetch milestones: " + err.message)
       toast.error("Failed to fetch milestones")
+=======
+
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export const useLoadMilestones = (project_id?: string) =>: any {
   const { user } = use_auth ();
   const [milestones, set_milestones] = useState < Milestone[]>([]);
@@ -58,6 +81,30 @@ if ( {) {
   $2
 }
       setIsLoading (false);
+<<<<<<< HEAD
+=======
+=======
+
+        
+        activitiesMap[milestone.id] = activitiesData || []
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useState, useEffect } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { useAuth } from '@/hooks/useAuth',;
+import { toast } from 'sonner',;
+import { Milestone, MilestoneActivity } from './types',;
+export const useLoadMilestones = (projectId?: string) => {;
+  const { user } = useAuth(),;
+  const [milestones, setMilestones] = useState<Milestone[]>([]),;
+  const [activities, setActivities] = useState<Record<string MilestoneActivity[]>>({}),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [error, setError] = useState<string | null>(null),;
+  const fetchMilestones = async () => {;
+    if (!projectId) {;
+      setIsLoading(false),;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       return;
     }
     try {
@@ -85,6 +132,7 @@ if (throw milestones_error) {
             *;
             created_by_profile:profiles ! user_id (display_name, avatar_url);
           `);
+<<<<<<< HEAD
           .eq ('milestone_id', milestone.id);
           .order ('created_at', { ascending: false });
 ;
@@ -93,6 +141,36 @@ if (throw activities_error) {
   $2
 }
         activities_map[milestone.id] = activities_data || [];
+=======
+
+          .eq('milestone_id', milestone.id);
+          .order('created_at', { ascending: false }),;
+        if (activitiesError) throw activitiesError,;
+        activitiesMap[milestone.id] = activitiesData || [];
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      }
+      
+      setActivities(activitiesMap),
+      setError(null)
+    } catch (err: any) {
+      console.error("Error fetching milestones:", err),
+      setError("Failed to fetch milestones: " + err.message),
+      toast.error("Failed to fetch milestones")
+    } finally {
+      setIsLoading(false)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+  };
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
       set_activities (activities_map);
       set_error (null);
@@ -116,6 +194,38 @@ if (throw activities_error) {
     is_loading;
     error;
     refetch: fetch_milestones;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+      setActivities(activitiesMap),;
+      setError(null);
+    } catch (err: any) {;
+      console.error("Error fetching milestones:", err),;
+      setError("Failed to fetch milestones: " + err.message),;
+      toast.error("Failed to fetch milestones");
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  // Fetch milestones when component mounts or projectId changes;
+  useEffect(() => {;
+    if (projectId) {;
+      fetchMilestones();
+    }
+  }, [projectId]),;
+  return {;
+    milestones,;
+    activities,;
+    isLoading,;
+    error;
+    refetch: fetchMilestones;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }
 

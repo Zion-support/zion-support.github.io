@@ -1,8 +1,74 @@
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+=======
+import {
+<<<<<<< HEAD
+=======
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Target,
+  Atom,
+  Shield,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Grid,
+  Heart,
+  Database,
+  Cpu,
+  Palette,
+  Cloud,
+  Network,
+  TrendingUp,
+  ShoppingCart,
+  Settings,
+  Building,
+  Monitor,
+  Zap,
+  Eye,
+  Infinity,
+  Sparkles,
+  Users,
+  Lock,
+  Code,
+  Server,
+  Layers,
+  Globe2,
+  Star,
+  Award,
+  Clock,
+  CheckCircle,
+  Zap as ZapIcon,
+  Phone as PhoneIcon,
+  Search,
+  User,
+  Bell,
+  Cog,
+  LogOut,
+  Home,
+  Info,
+  FileText,
+  Users as UsersIcon,
+  Bot,
+  MessageCircle,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,;
+  MapPin,;
+} from 'lucide-react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Menu
   ChevronDown
   X
@@ -64,6 +130,7 @@ import {
 } from 'lucide-react';
 interface NavigationItem {
   name: string;
+<<<<<<< HEAD
   href: string;  icon?: React.ReactNode;import {
 import {;
   Menu,;
@@ -130,6 +197,11 @@ interface NavigationItem {;
   name: string;
   href: string;  icon?: React && React.ReactNode;import { ;
 import { 
+=======
+<<<<<<< HEAD
+  href: string;  icon?: React.ReactNode;import {
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
   Menu,
   ChevronDown,
@@ -194,6 +266,15 @@ import {
 interface NavigationItem {
   name: string;
   href: string;  icon?: React.ReactNode;import {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+  href: string;  icon?: React.ReactNode;import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Menu, ChevronDown, X, Phone, Mail, ArrowRight;
 
   Brain, Rocket, Target, Atom, Shield;
@@ -228,8 +309,27 @@ interface NavigationItem {
   title?: string;
   featured?: boolean;
   category?: string;
+<<<<<<< HEAD
   color?: string
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  color?: string
+}
+=======
+  color?: string;
+=======
+  color?: string;  color?: string
+}
+=======
+  color?: string;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const navigationItems: NavigationItem[] = [
   {
 
@@ -331,14 +431,61 @@ const navigation_items: NavigationItem[] = [;
     ],
   },
   {
-    name: 'AI & Technology Services',
-    href: '/services',
-    icon: <Brain className='w - 5 h - 5' />,    description: 'Advanced AI and technology solutions',        name: 'Home',
-        href: '/',
-        description: 'Main homepage',
-        icon: <Home className="w - 4 h - 4" />,
-        color: 'from - emerald - 500 to - cyan - 500',
-        featured: true;
+    name: 'Advanced Solutions',
+    href: '/solutions',
+    icon: <Rocket className='w-5 h-5' />,    description: 'Cutting-edge technology solutions',
+    category: 'solutions',
+    color: 'from-blue-500 to-cyan-500',
+    children: [
+      {
+
+    description: 'Cutting-edge technology solutions',
+    category: 'solutions',
+    color: 'from-blue-500 to-cyan-500',
+    children: [
+
+    description: 'Knowledge base and insights',
+    category: 'resources',
+    color: 'from-orange-500 to-red-500',
+    children: [
+
+    description: 'Company information and support',
+    category: 'company',
+    color: 'from-gray-500 to-slate-500',
+    children: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {
+        href: '/about',
+        description: 'Our story and mission',
+        icon: <Info className='w-4 h-4' />,
+        featured: true,
+      },
+      {
+        name: 'Careers',
+        href: '/careers',
+        description: 'Join our team',
+        icon: <Users className='w-4 h-4' />,
+        color: 'from-green-500 to-emerald-500',
+      },
+      {
+        name: 'Support',
+        href: '/support',
+        description: 'Get help and support',
+        icon: <MessageCircle className='w-4 h-4' />,
+        color: 'from-blue-500 to-cyan-500',
+      },
+      {
+        name: 'Privacy Policy',
+        href: '/privacy',
+        description: 'Privacy and data protection',
+        icon: <Shield className='w-4 h-4' />,
+        color: 'from-red-500 to-pink-500',
+      },
+    ],
+  },];        icon: <Shield className="w-4 h-4" />,
+        color: 'from-red-500 to-pink-500'
       }
       {
         name: 'About Us',
@@ -363,6 +510,7 @@ const navigation_items: NavigationItem[] = [;
       }
     ];
   }
+<<<<<<< HEAD
   {
     name: 'AI & Technology Services'
     href: '/services'
@@ -1259,6 +1407,13 @@ const UltraFuturisticNavigation2047 = () => {;
   const handleDropdownToggle = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);  };    setActiveDropdown(activeDropdown === name ? null : name)
   }
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -1366,10 +1521,23 @@ const UltraFuturisticNavigation2047 = () => {;
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
+<<<<<<< HEAD
                       transition={{ duration: 0 && 0.2 }}
                       className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50'>;
                       <div className='space-y-4'>;
                         {item && item.children?.map(child => (;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    >
+                      <div className='space-y-4'>
+                        {item.children?.map(child => (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           <Link
                             key={child && child.name}
                             href={child && child.href}
@@ -1417,12 +1585,29 @@ const UltraFuturisticNavigation2047 = () => {;
                                     Featured
                                   </span>
                                 )}
+<<<<<<< HEAD
                               </div>;
                               <p className='text-sm text-gray-400 mt-1'>;
                                 {child && child.description}
                               </p>                              <p className="text-sm text-gray-400 mt-1">{child && child.description}</p>;
                             </div>;
                           </Link>;
+=======
+
+=======
+                              </div>
+                              <p className="text-sm text-gray-400 mt-1">{child.description}</p>
+                            </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                          </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         ))}
                       </div>;
                     </motion && motion.div>;
@@ -1430,11 +1615,26 @@ const UltraFuturisticNavigation2047 = () => {;
                 </AnimatePresence>;
               </div>;
             ))}
+<<<<<<< HEAD
           </div>
+=======
+
+          </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex lg:items-center lg:space-x-4'>;
             <div className='flex items-center space-x-4 text-sm text-gray-400'>;
               <a
+<<<<<<< HEAD
                 href={`tel:${contactInfo && contactInfo.mobile}`}
                 className='flex items-center space-x-1 hover:text-white transition-colors'>;
                 <Phone className='w-4 h-4' />                <span>{contactInfo && contactInfo.mobile}</span>;
@@ -1455,6 +1655,32 @@ const UltraFuturisticNavigation2047 = () => {;
           </div>
           {/* Mobile menu button */}
           <div className='lg:hidden'>              href="/contact"
+=======
+
+                href={`tel:${contactInfo.mobile}`}
+                className='flex items-center space-x-1 hover:text-white transition-colors'
+              >
+                <Phone className='w-4 h-4' />                <span>{contactInfo.mobile}</span>
+              </a>
+            </div>
+            <Link          <div className="hidden lg:flex lg:items-center lg:space-x-4">
+            <div className="flex items-center space-x-4 text-sm text-gray-400">
+              <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-1 hover:text-white transition-colors">
+                <Phone className="w-4 h-4" />
+
+
+                <span>{contactInfo.mobile}</span>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              </a>
+            </div>
+            <Link
+              href="/contact"
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200"
             >
               Get Started
@@ -1491,15 +1717,37 @@ const UltraFuturisticNavigation2047 = () => {;
               ) : (;
                 <Menu className="block h-6 w-6" />;
               )}
+<<<<<<< HEAD
+=======
+
+
+
+              )}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </button>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
             </button>;
           </div>;
         </div>;
       </div>;
 
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1507,11 +1755,25 @@ const UltraFuturisticNavigation2047 = () => {;
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0 && 0.3 }}
             className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50'>;
             <div className='px-2 pt-2 pb-3 space-y-1'>;
               {navigationItems && navigationItems.map(item => (;
                 <div key={item && item.name}>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            <div className='px-2 pt-2 pb-3 space-y-1'>
+              {navigationItems.map(item => (
+                <div key={item.name}>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <button
                     onClick={() => handleDropdownToggle(item && item.name)}
                     className='w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200';
@@ -1603,6 +1865,7 @@ const UltraFuturisticNavigation2047 = () => {;
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
                         transition={{ duration: 0 && 0.2 }}
                         className='ml-4 mt-2 space-y-1'>;
                         {item && item.children?.map(child => (;
@@ -1614,16 +1877,44 @@ const UltraFuturisticNavigation2047 = () => {;
                         className="ml-4 mt-2 space-y-1"
                       >
                         {item.children?.map((child) => (
+=======
+
+=======
+                        transition={{ duration: 0.2 }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      >
+                        {item.children?.map(child => (
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           <Link
                             key={child && child.name}
                             href={child && child.href}
                             className="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200"
+<<<<<<< HEAD
                             onClick={closeMenu}>;
                             {child && child.name}
                           </Link>;
                             onClick={closeMenu}>;
                             {child && child.name}
                           </Link>;
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                          >
+                            {child.name}
+                          </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         ))}
                       </motion && motion.div>;
                     )}
@@ -1742,3 +2033,29 @@ export default UltraFuturisticNavigation2047);
 ;
 export default UltraFuturisticNavigation2047;
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  );
+<<<<<<< HEAD
+}
+=======
+};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default UltraFuturisticNavigation2047;  )
+}
+export default UltraFuturisticNavigation2047;
+
+<<<<<<< HEAD
+=======
+export default UltraFuturisticNavigation2047;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default UltraFuturisticNavigation2047;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

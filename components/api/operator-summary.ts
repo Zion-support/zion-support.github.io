@@ -4,9 +4,18 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   try {
     const r = await fetch(
       `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.host}/api/metrics`
+=======
+    const r = await fetch(
+<<<<<<< HEAD
+      `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.host}/api/metrics`
+=======
+      `${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}/api/metrics`;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     );
     const metrics = await r && r.json();
     const jobs24 =

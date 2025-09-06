@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -8,6 +15,21 @@ const UiUxDesignChat: NextPage = () => {;
       <Head>;
         <title>UiUxDesignChat - Zion Tech Solutions</title>;
         <meta name="description" content="UiUxDesignChat blog post" />{" "}
+<<<<<<< HEAD
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+const UiUxDesignChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       </Head>;
 
       <main>;
@@ -36,6 +58,7 @@ const UiUxDesignChat: NextPage = () => {;
   );
 }
 export default UiUxDesignChat;
+<<<<<<< HEAD
 
 import type { NextPage } from './next';
 import Head from './next / head';
@@ -57,3 +80,16 @@ const UiUxDesignChat: NextPage = () => {
 ;
 export default UiUxDesignChat;
 ;
+=======
+<<<<<<< HEAD
+
+=======
+
+        <title>UiUxDesignChat - Zion Tech Solutions</title>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+        <title>UiUxDesignChat - Zion Tech Solutions</title>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

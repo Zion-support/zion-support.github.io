@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
@@ -8,13 +10,68 @@ import {ApiKeysManager} from "@/components/developers/ApiKeysManager";
 import {WebhooksManager} from "@/components/developers/WebhooksManager";
 import {ApiDocumentation} from "@/components/developers/ApiDocumentation";
 import {ApiLogs} from "@/components/developers/ApiLogs";
+<<<<<<< HEAD
+=======
+=======
+import {useState} from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from "lucide-react";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useState } from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { 
+  BookOpen,
+  Code, 
+  Key, 
+  List, 
+  LucideIcon, 
+  Terminal, 
+  Webhook 
+} from "lucide-react",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
+import { WebhooksManager } from "@/components/developers/WebhooksManager",
+import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
+import { ApiLogs } from "@/components/developers/ApiLogs",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface TabDefinition {
   id: string
   label: string
 
   icon: LucideIcon
 }
+<<<<<<< HEAD
 export function DeveloperPortal() {
+=======
+<<<<<<< HEAD
+=======
+
+interface TabDefinition {;
+  id: string,;
+  label: string,;
+  icon: LucideIcon;
+}
+
+export function DeveloperPortal() {;
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState<string>("documentation");
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function DeveloperPortal() {
+<<<<<<< HEAD
+  const { user } = useAuth();
+
+  const [activeTab, setActiveTab] = useState<string>("documentation");
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const { user } = useAuth();
 
   const [activeTab, setActiveTab] = useState<string>("documentation");
@@ -75,12 +132,27 @@ export function DeveloperPortal() {
                     ? "text-white border-zion-purple"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
                 }`}
+<<<<<<< HEAD
                 onClick={() => setActiveTab(tab && tab.id)}
               >;
                 <Icon size={16} className="mr-2" />;
                 {tab && tab.label}
               </button>;
             );
+=======
+                onClick={() => setActiveTab(tab.id)}
+              >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                <Icon size={16} className="mr-2" />
+                {tab.label}
+              </button>
+            )
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           })}
         </div>
       </div>
@@ -94,6 +166,10 @@ export function DeveloperPortal() {
     </div>;
   );
 }
+<<<<<<< HEAD
+export default function ProtectedDeveloperPortal() {
+=======
+<<<<<<< HEAD
 export default function ProtectedDeveloperPortal() {
   return (
     <ProtectedRoute>
@@ -101,6 +177,20 @@ export default function ProtectedDeveloperPortal() {
     </ProtectedRoute>
   )
 }
+<<<<<<< HEAD
+=======
+
+;
+
+export default function ProtectedDeveloperPortal() {;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  return (
+    <ProtectedRoute>
+      <DeveloperPortal />
+    </ProtectedRoute>
+  )
+}
+<<<<<<< HEAD
               <button;
                 key={tab.id}
                 className={`inline - flex items - center px - 4 py - 3 border - b-2 text - sm font - medium ${
@@ -134,3 +224,11 @@ function ProtectedDeveloperPortal() {
       <DeveloperPortal />;
     </ProtectedRoute>);
 }
+=======
+
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

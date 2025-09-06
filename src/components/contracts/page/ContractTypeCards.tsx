@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Button } from '@/components/ui/button'
 import {
   Card
@@ -17,6 +24,7 @@ export function ContractTypeCards({
   onStandardClick
   onSmartClick
 }: ContractTypeCardsProps) {
+<<<<<<< HEAD
   return (
     <div className='grid md:grid-cols-2 gap-6 mb-10'>
       <Card>
@@ -29,6 +37,41 @@ interface ContractTypeCardsProps {
 
   onStandardClick: () => void
 
+=======
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { FileText, ShieldCheck } from 'lucide-react'
+
+interface ContractTypeCardsProps {
+  onStandardClick: () => void,
+  onSmartClick: () => void
+}
+
+export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <div className="grid md:grid-cols-2 gap-6 mb-10">
+      <Card>
+        <CardHeader>
+<<<<<<< HEAD
+          <CardTitle className='flex items-center gap-2'>
+            <FileText className='h-5 w-5' />            Standard Contracts
+          <CardTitle className="flex items-center gap-2">
+            <FileText className="h-5 w-5" />
+interface ContractTypeCardsProps {
+
+  onStandardClick: () => void
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   onSmartClick: () => void
 }
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
@@ -36,6 +79,15 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
     <div className="grid md:grid-cols-2 gap-6 mb-10">
       <Card>
         <CardHeader>
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <CardTitle className="flex items-center gap-2">
             <FileText className="h-5 w-5" />
             Standard Contracts
@@ -70,6 +122,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardFooter>
       </Card>
       <Card>
+<<<<<<< HEAD
         <CardHeader className='bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg'>
           <div className='flex justify-between items-center'>
             <CardTitle className='flex items-center gap-2'>
@@ -77,6 +130,13 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
               Smart Contracts
             </CardTitle>
             <span className='px-2 py-1 bg-primary/10 text-primary text-xs rounded-full'>              Blockchain Powered      <Card>
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
             <CardTitle className="flex items-center gap-2">
@@ -119,9 +179,11 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </Button>
         </CardFooter>
       </Card>
+<<<<<<< HEAD
     </div>
   )
 }
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import {;
   Card,;
@@ -131,6 +193,16 @@ import {;
   CardHeader,;
   CardTitle,;
 } from '@/components/ui/card';
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          <Button 
+            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { FileText, ShieldCheck } from 'lucide-react';
 interface ContractTypeCardsProps {;
   onStandardClick: () => void;
@@ -288,3 +360,15 @@ function ContractTypeCards() {
 }
     </div>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

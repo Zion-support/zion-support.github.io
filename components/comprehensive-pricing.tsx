@@ -2,6 +2,10 @@ import React, { useState } from 'react',
 import Head from 'next/head';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Check
   Star
   Zap
@@ -73,6 +77,7 @@ import {
   Crown
   Gem
   Diamond;
+<<<<<<< HEAD
 import Head from 'next/head';
 import {;
   Check,;
@@ -146,13 +151,98 @@ import {;
   Crown,;
   Gem,;
   Diamond,;
+=======
+=======
+  Check,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Target,
+  Building,
+  Rocket,
+  Award,
+  DollarSign,
+  ChartBar,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Zap as ZapIcon,
+  Code,
+  BookOpen,
+  Activity,
+  Database as DatabaseIcon,
+  Play,
+  Mail,
+  Phone,
+  MapPin,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Sparkles,
+  FlaskConical,
+  Dna,
+  Car,
+  Leaf,
+  Factory,
+  Truck,
+  Microscope,
+  GraduationCap,
+  ShieldCheck,
+  Brain,
+  Atom,
+  Globe2,
+  Bot,
+  Eye,
+  Trophy,
+  FlaskConical as FlaskIcon,
+  Dna as DnaIcon,
+  Car as CarIcon,
+  Leaf as LeafIcon,
+  Factory as FactoryIcon,
+  Truck as TruckIcon,
+  Microscope as MicroscopeIcon,
+  GraduationCap as GraduationCapIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Crown,
+  Gem,;
+  Diamond,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import {
+<<<<<<< HEAD
   revolutionaryMicroSaasServices
   revolutionaryServiceCategories;
+=======
+<<<<<<< HEAD
+  revolutionaryMicroSaasServices
+  revolutionaryServiceCategories;
+=======
+  revolutionaryMicroSaasServices,;
+  revolutionaryServiceCategories,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from '../data/revolutionary-micro-saas-services';import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -341,6 +431,7 @@ export default function ComprehensivePricingPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
+<<<<<<< HEAD
     }
   });
 ;
@@ -367,6 +458,132 @@ export default function ComprehensivePricingPage() {
       ]
       icon: <Star className="w-6 h-6" />
       color: 'from-blue-500 to-cyan-600'
+=======
+  // Pricing tiers
+  const pricingTiers = [
+    {
+      name: 'Starter'
+      price: '$49'
+      period: '/month'
+      description: 'Perfect for small businesses and startups'
+      features: [
+        'Basic service access'
+        'Email support'
+        'Standard features'
+        'Community forum access'
+        'Basic analytics'
+      ]
+      icon: <Star className="w-6 h-6" />
+      color: 'from-blue-500 to-cyan-600'
+      popular: false
+    },    {        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
+      ];
+      icon: <Star className="w-6 h-6" />
+      color: 'from-blue-500 to-cyan-600'
+      popular: false
+    }
+      name: 'Professional'
+      price: '$199'
+      period: '/month'
+      description: 'Ideal for growing businesses and teams'
+      features: [
+        'Advanced service access'
+        'Priority support'
+        'Advanced features'
+        'API access'
+        'Advanced analytics'
+        'Custom integrations'
+      ]
+      icon: <Gem className="w-6 h-6" />
+      color: 'from-purple-500 to-pink-600'
+      popular: true
+    },    {        'Advanced service accessPriority supportAdvanced featuresAPI accessAdvanced analyticsCustom integrations'
+      ];
+      icon: <Gem className="w-6 h-6" />
+      color: 'from-purple-500 to-pink-600'
+      popular: true
+    }
+      name: 'Enterprise'
+      price: '$499'
+      period: '/month'
+      description: 'For large organizations and enterprises'
+      features: [
+        'Full service access'
+        '24/7 dedicated support'
+        'All features'
+        'Custom development'
+        'Enterprise analytics'
+        'White-label options'
+        'SLA guarantees'
+      ]
+      icon: <Crown className="w-6 h-6" />
+      color: 'from-yellow-500 to-orange-600'
+      popular: false
+    },  ];        'Full service access24/7 dedicated supportAll featuresCustom developmentEnterprise analyticsWhite-label optionsSLA guarantees'
+      ];
+      icon: <Crown className="w-6 h-6" />
+      color: 'from-yellow-500 to-orange-600'
+      popular: false
+    }
+  // Market statistics
+  const marketStats = [
+    {
+      metric: '$15.2B'
+      label: 'Total Market Size'
+      description: 'Combined market value of all services'
+      icon: <ChartBar className='w-6 h-6' />
+    },    {
+      metric: '400+'
+      label: 'Services Available'
+      description: 'Comprehensive micro SaaS portfolio'
+      icon: <Database className='w-6 h-6' />
+    },    {
+      metric: '99.99%'
+      label: 'Uptime Guarantee'
+      description: 'Enterprise-grade reliability'
+      icon: <Shield className='w-6 h-6' />
+    },    {
+      metric: '2000%+'
+      label: 'Average ROI'
+      description: 'Proven business value'
+      icon: <TrendingUp className='w-6 h-6' />
+    },  ];      icon: <ChartBar className="w-6 h-6" />
+    }
+    {
+      metric: '400+'
+      label: 'Services Available'
+      description: 'Comprehensive micro SaaS portfolio'
+      icon: <Database className='w-6 h-6' />
+    },      icon: <Database className="w-6 h-6" />
+    }
+    {
+      metric: '99.99%'
+      label: 'Uptime Guarantee'
+      description: 'Enterprise-grade reliability'
+      icon: <Shield className='w-6 h-6' />
+    },      icon: <Shield className="w-6 h-6" />
+    }
+    {
+<<<<<<< HEAD
+<<<<<<< HEAD
+      metric: '2000%+'
+      label: 'Average ROI'
+      description: 'Proven business value'
+      icon: <TrendingUp className='w-6 h-6' />
+    },      icon: <TrendingUp className="w-6 h-6" />
+    }
+=======
+      metric: '2000%+',
+      label: 'Average ROI',
+      description: 'Proven business value',
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
+      ];
+      icon: <Star className="w-6 h-6" />,
+      color: 'from-blue-500 to-cyan-600',
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       popular: false
     },    {        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
       ];
@@ -510,8 +727,14 @@ export default function ComprehensivePricingPage() {
       metric: '2000%+',
       label: 'Average ROI',
       description: 'Proven business value',
+<<<<<<< HEAD
       icon: <TrendingUp className="w-6 h-6" />
     }
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ];
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -706,6 +929,26 @@ export default function ComprehensivePricingPage() {
         duration: 0.5,
       },
     },
+<<<<<<< HEAD
+=======
+=======
+
+        duration: 0.5,
+      },
+    },
+
+<<<<<<< HEAD
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+  };
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>;
       <div className='min - h-screen'>;
@@ -777,10 +1020,25 @@ export default function ComprehensivePricingPage() {
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+<<<<<<< HEAD
+=======
+=======
+                transition={{ duration: 0.8 }}
+              >
+
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
+<<<<<<< HEAD
                 Transparent pricing for all our revolutionary micro SaaS
                 services. Choose the perfect plan for your business with
                 guaranteed ROI and enterprise-grade reliability.
@@ -832,11 +1090,48 @@ export default function ComprehensivePricingPage() {
                     <div className="text-gray-500 text-xs">{stat && stat.description}</div>;
                 ))}
               </motion.div>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                {marketStats.map((stat, index) => (
+                  <div key={index} className='text-center'>
+                    <div className='text-3xl font-bold text-cyan-400 mb-2'>
+                      {stat.metric}
+                    </div>
+                    <div className='text-gray-400 text-sm'>{stat.label}</div>
+                    <div className='text-gray-500 text-xs'>
+                      {stat.description}
+                    </div>                  </div>                  <div key={index} className="text-center">
+                    <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
+                    <div className="text-gray-400 text-sm">{stat.label}</div>
+                    <div className="text-gray-500 text-xs">{stat.description}</div>
+
+
+                  </div>
+
+                ))}
+              </motion.div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
+<<<<<<< HEAD
               >              <motion.div
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
                 initial={{ opacity: 0, y: 20 }}
@@ -861,6 +1156,40 @@ export default function ComprehensivePricingPage() {
                       .getElementById('services-pricing');
                       ?.scrollIntoView({ behavior: 'smooth' });
                   }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+              >              <motion.div
+=======
+
+              >              <motion.div 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+=======
+              >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                <Button 
+                  variant="primary" 
+                  size="lg"
+                  onClick={() => document.getElementById('pricing-tiers')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  View Pricing Tiers
+                  <DollarSign className="ml-2 w-5 h-5" />
+                </Button>
+                <Button 
+                  variant="futuristic" 
+                  size="lg"
+                  onClick={() => document.getElementById('services-pricing')?.scrollIntoView({ behavior: 'smooth' })}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 >
                   Browse All Services
                   <Search className='ml-2 w-5 h-5' />                </Button>                  <Search className="ml-2 w-5 h-5" />
@@ -899,6 +1228,22 @@ export default function ComprehensivePricingPage() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+              initial={{ opacity: 0, y: 20 }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+
+              initial={{ opacity: 0, y: 20 }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -928,6 +1273,7 @@ export default function ComprehensivePricingPage() {
                 Choose the perfect plan that scales with your business. All plans include our 21-day free trial and ROI guarantee.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <motion.div
                 </span>;
                 <br />;
@@ -939,6 +1285,14 @@ export default function ComprehensivePricingPage() {
             </motion && motion.div>;
 
             <motion&& motion.div 
+=======
+<<<<<<< HEAD
+            <motion.div
+=======
+
+            <motion.div 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
               variants={containerVariants}
               initial="hidden"
@@ -1051,6 +1405,7 @@ export default function ComprehensivePricingPage() {
         <section id='services-pricing' className='py-20'>;
           <div className='container mx-auto px-4'>;
 
+<<<<<<< HEAD
         {/* Services Pricing Grid */}
         <section id="services-pricing" className="py-20">
           <div className="container mx-auto px-4">
@@ -1061,6 +1416,28 @@ export default function ComprehensivePricingPage() {
             {/* Filters and Controls */}
             <motion.div
               className="mb-8"
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* Services Pricing Grid */}
+        <section id='services-pricing' className='py-20'>
+          <div className='container mx-auto px-4'>
+            {/* Filters and Controls */}
+            <motion.div
+
+              className='mb-8'              initial={{ opacity: 0, y: 20 }}
+
+              initial={{ opacity: 0, y: 20 }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
@@ -1127,8 +1504,11 @@ export default function ComprehensivePricingPage() {
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
+<<<<<<< HEAD
                     >;
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />;
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     >
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />
                     </button>
@@ -1136,6 +1516,7 @@ export default function ComprehensivePricingPage() {
                 </div>
               </div>
             </motion.div>
+<<<<<<< HEAD
                     >;
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />;
                       </div>;
@@ -1274,6 +1655,10 @@ export default function ComprehensivePricingPage() {
 
             {/* Services Display */}
             <motion&& motion.div
+=======
+            {/* Services Display */}
+            <motion.div
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className={
                 viewMode === 'grid'
                   ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
@@ -1281,6 +1666,7 @@ export default function ComprehensivePricingPage() {
               }
               variants={containerVariants}
               initial='hidden'
+<<<<<<< HEAD
               whileInView='visible'              viewport={{ once: true }}            <motion && motion.div 
             </motion && motion.div>;
 
@@ -1296,11 +1682,23 @@ export default function ComprehensivePricingPage() {
               whileInView='visible'              viewport={{ once: true }}            <motion.div
               className={viewMode === 'grid'
               className={viewMode === 'grid' 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+              whileInView='visible'              viewport={{ once: true }}            <motion.div
+              className={viewMode === 'grid'
+=======
+
+              whileInView='visible'              viewport={{ once: true }}            <motion.div 
+              className={viewMode === 'grid' 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
               variants={containerVariants}
               initial="hidden"
+<<<<<<< HEAD
               whileInView="visible">;
               {filteredServices && filteredServices.map((service, index) => (;
                 <motion&& motion.div
@@ -1312,6 +1710,37 @@ export default function ComprehensivePricingPage() {
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
                     variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            >
+              {filteredServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                  variants={itemVariants}
+                  whileHover={{ y: -5 }}>;
+                  <UltraFuturisticCard
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
+=======
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
+=======
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
                   >
@@ -1571,9 +2000,19 @@ export default function ComprehensivePricingPage() {
               <motion.div
                 className='text-center py-16'                initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+<<<<<<< HEAD
                 transition={{ duration: 0.6 }}
               >              <motion.div
                 className="text-center py-16"
+=======
+                transition={{ duration: 0 && 0.6 }}>              <motion&& motion.div 
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0 && 0.6 }}>;
@@ -1718,6 +2157,27 @@ export default function ComprehensivePricingPage() {
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
                 </div>
+<<<<<<< HEAD
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+              >
+
+
+                </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </div>
             </motion.div>
           </div>
@@ -1922,3 +2382,15 @@ export default function ComprehensivePricingPage() {
       </div>;
     </UltraFuturisticBackground>));
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

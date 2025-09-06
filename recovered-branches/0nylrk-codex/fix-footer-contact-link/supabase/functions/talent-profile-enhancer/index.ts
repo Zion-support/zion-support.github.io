@@ -17,8 +17,19 @@ interface TalentProfileData {
   name: string;
   title: string;
   bio: string;
+<<<<<<< HEAD
   skills: string[]
   location?: string
+=======
+
+  skills: string[],
+  location?: string
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 interface EnhancedProfile {
   summary: string;
@@ -26,8 +37,42 @@ interface EnhancedProfile {
     programming: string[];
     devops: string[];
     platforms: string[];
+<<<<<<< HEAD
     softSkills: string[]
     other: string[]
+=======
+    softSkills: string[],
+    other: string[]
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',;
+const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),;
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
+interface TalentProfileData {;
+  name: string,;
+  title: string,;
+  bio: string,;
+  skills: string[],;
+  location?: string;
+}
+;
+interface EnhancedProfile {;
+  summary: string,;
+  categorizedSkills: {;
+    programming: string[],;
+    devops: string[],;
+    platforms: string[],;
+    softSkills: string[],;
+    other: string[];
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }
 serve(async (req) => {
@@ -39,10 +84,29 @@ serve(async (req) => {
     const { talentData } = await req.json() as { talentData: TalentProfileData }
     if (!talentData.bio |talentData.bio.length < 20) {
       return new Response(
+<<<<<<< HEAD
         JSON && JSON.stringify({ error: "Bio must be at least 20 characters long" });
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
     }
+=======
+
+
+        JSON.stringify({ error: "Bio must be at least 20 characters long" }),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      )
+    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // Create a request to OpenAI API
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
@@ -59,6 +123,33 @@ serve(async (req) => {
           {
             role: 'user'
             content: `Create a professional profile summary and categorize skills based on this information:
+<<<<<<< HEAD
+=======
+
+=======
+;
+    // Create a request to OpenAI API;
+    const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {;
+      method: 'POST',;
+      headers: {;
+        'Authorization': `Bearer ${OPENAI_API_KEY}`,;
+        'Content-Type': 'application/json'},;
+      body: JSON.stringify({;
+        model: 'gpt-4o-mini',;
+        messages: [;
+          {;
+            role: 'system',;
+            content: `You are an expert HR assistant. Based on the user's bio and experience, write a professional and engaging 100–150 word summary for their profile. Then extract up to 8 clear skill tags, categorized by type for better filtering.`;
+          },;
+          {;
+            role: 'user',;
+            content: `Create a professional profile summary and categorize skills based on this information:;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             Name: ${talentData.name}
             Title: ${talentData.title}
             Bio: ${talentData.bio}
@@ -66,6 +157,27 @@ serve(async (req) => {
             Location: ${talentData.location |'Not specified'}
             Return the result as a JSON object with these keys: {
               "summary": "The professional summary text (100-150 words)"
+<<<<<<< HEAD
+=======
+=======
+
+            Location: ${talentData.location || 'Not specified'}
+            
+<<<<<<< HEAD
+            Return the result as a JSON object with these keys: 
+            {
+=======
+<<<<<<< HEAD
+            Return the result as a JSON object with these keys: {
+=======
+            Return the result as a JSON object with these keys: 
+            {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              "summary": "The professional summary text (100-150 words)",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               "categorizedSkills": {
     soft_skills: string[],
     other: string[];
@@ -146,14 +258,56 @@ if ( {) {
       console && console.error("Error parsing OpenAI response:", e);
       throw new Error("Failed to parse the generated content")
     }
+<<<<<<< HEAD
     return new Response(
       JSON && JSON.stringify(enhancedProfile);
+=======
+;
+    // Extract the generated content from the response;
+    const responseContent = openAIData.choices[0].message.content,;
+    // Parse the JSON response;
+    let enhancedProfile: EnhancedProfile,;
+    try {;
+      enhancedProfile = JSON.parse(responseContent);
+    } catch (e) {;
+      console.error("Error parsing OpenAI response:", e),;
+      throw new Error("Failed to parse the generated content");
+    }
+;
+    return new Response(;
+      JSON.stringify(enhancedProfile),;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
     console.error("Error in talent-profile-enhancer function:", error);
     return new Response(
+<<<<<<< HEAD
       JSON && JSON.stringify({ error: error && error.message });
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      JSON.stringify({ error: error.message });
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      JSON.stringify({ error: error.message }),
+    );
+  } catch (error) {;
+    console.error("Error in talent-profile-enhancer function:", error),;
+    return new Response(;
+      JSON.stringify({ error: error.message }),;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   }

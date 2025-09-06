@@ -1,5 +1,19 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 ]
+<<<<<<< HEAD
+=======
+=======
+ ] 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+] 
+=======
+ ] 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }];
 ];</div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50" ></div> </div> <div> <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h2> <p className="text-xs text-gray-400" >Navigation</p> </div> </div> </div> </div> </div> {
   section.badge
@@ -777,6 +791,15 @@ const supportLinks = [
                 <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />;
               )}
             </button>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <AnimatePresence>
               {expandedSections.has(section.title) && (
                 <motion.div
@@ -834,6 +857,15 @@ const supportLinks = [
                 </div>;
               )}
             </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Contact Information */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -912,11 +944,163 @@ const supportLinks = [
                 {sidebarItems && sidebarItems.map((item) => (;
                   <div key={item && item.name}>;
                     <button
+<<<<<<< HEAD
                       onClick={() => toggleCategory(item.name)}
                       className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
                     >
                       <div className="flex items-center space-x-3">
                         <div className={`w-8 h-8 bg-gradient-to-r ${item.isHot ? 'from-indigo-500 to-purple-600' : 'from-cyan-500 to-blue-600'} rounded-lg flex items-center justify-center`}>
+=======
+
+                  className="ml - 8 space - y-1";
+                >;
+                  <CloseIcon className="w - 5 h - 5" />;
+                </button>;
+              </div>;
+              {/* Search Bar */}
+              <div className="relative">;
+                <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - gray - 400" />;
+                <input;
+                  type="text";
+                  placeholder="Search services...";
+                  value={search_query}
+                  on_change={(e) => setSearchQuery (e.target.value)}
+                  className="w - full pl - 10 pr - 4 py - 2 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border - cyan - 500 / 50";
+                />;
+              </div>;
+              {/* Search Results */}
+              {search_query && (
+                <div className="mt - 4 space - y-2">;
+                  <h4 className="text - sm font - medium text - gray - 300">Search Results</h4>;
+                  {filtered_services.length > 0 ? (
+                    <div className="space - y-1">;
+                      {filtered_services.slice (0, 5).map ((service) => (
+                        <Link;
+                          key={service.name}
+                          href={service.href}
+                          on_click={on_close}
+                          className="block p - 2 rounded - lg hover:bg - gray - 800 / 30 transition - colors duration - 200 group";
+                        >;
+                          <div className="text - sm font - medium text - gray - 300 group - hover:text - white transition - colors duration - 200">;
+                            {service.name}
+                          </div>;
+                          <div className="text - xs text - gray - 500">;
+                            {service.description}
+                          </div>;
+                        </Link>))}
+                      {filtered_services.length > 5 && (
+                        <div className="text - xs text - cyan - 400 text - center">;
+                          +{filtered_services.length - 5} more results;
+                        </div>)}
+                    </div>) : (
+                    <div className="text - sm text - gray - 500 text - center py - 2">;
+                      No services found;
+                    </div>)}
+                </div>)}
+            </div>;
+            {/* Contact Information */}
+            <div className="p - 6 border - b border - cyan - 500 / 30">;
+              <h3 className="text - lg font - semibold text - white mb - 4 flex items - center space - x-2">;
+                <Mail className="w - 5 h - 5 text - cyan - 400" />;
+                <span > Contact Information</span>;
+              </h3>;
+              <div className="space - y-3">;
+                <div className="flex items - center space - x-3 text - gray - 300">;
+                  <Phone className="w - 4 h - 4 text - cyan - 400" />;
+                  <a href={`tel:${contact_info.mobile}`} className="hover:text - cyan - 400 transition - colors duration - 200">;
+                    {contact_info.mobile}
+                  </a>;
+                </div>;
+                <div className="flex items - center space - x-3 text - gray - 300">;
+                  <Mail className="w - 4 h - 4 text - cyan - 400" />;
+                  <a href={`mailto:${contact_info.email}`} className="hover:text - cyan - 400 transition - colors duration - 200">;
+                    {contact_info.email}
+                  </a>;
+                </div>;
+                <div className="flex items - start space - x-3 text - gray - 300">;
+                  <MapPin className="w - 4 h - 4 text - cyan - 400 mt - 1" />;
+                  <span className="text - sm">{contact_info.address}</span>;
+                </div>;
+              </div>;
+            </div>;
+            {/* Quick Stats */}
+            <div className="p - 6 border - b border - cyan - 500 / 30">;
+              <h3 className="text - lg font - semibold text - white mb - 4 flex items - center space - x-2">;
+                <TrendingUp className="w - 5 h - 5 text - cyan - 400" />;
+                <span > Company Stats</span>;
+              </h3>;
+              <div className="grid grid - cols - 2 gap - 4">;
+                {stats.map ((stat, index) => (
+                  <motion.div;
+                    key={stat.label}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30"
+                  >
+                    <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                    <div className="text-xs text-gray-400">{stat.label}</div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {/* Quick Links */}
+            <div className="p - 6 border - b border - cyan - 500 / 30">;
+              <h3 className="text - lg font - semibold text - white mb - 4 flex items - center space - x-2">;
+                <Star className="w - 5 h - 5 text - cyan - 400" />;
+                <span > Quick Links</span>;
+              </h3>;
+              <div className="space - y-2">;
+                {quick_links.map ((link) => (
+                  <Link;
+                    key={link.name}
+                    href={link.href}
+                    on_click={on_close}
+                    className="flex items - center space - x-3 p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - colors duration - 200 group";
+                  >;
+                    <div className="text - gray - 400 group - hover:text - cyan - 400 transition - colors duration - 200">;
+                      {link.icon}
+                    </div>;
+                    <span className="text - gray - 300 group - hover:text - white transition - colors duration - 200">;
+                      {link.name}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {/* Service Categories */}
+            <div className="p - 6 border - b border - cyan - 500 / 30">;
+              <h3 className="text - lg font - semibold text - white mb - 4 flex items - center space - x-2">;
+                <Rocket className="w - 5 h - 5 text - cyan - 400" />;
+                <span > Service Categories</span>;
+              </h3>;
+              <div className="space - y-2">;
+                {sidebar_items.map ((item) => (
+                  <div key={item.name}>;
+                    <button;
+                      on_click={() => toggle_category (item.name)}
+                      className="w - full flex items - center justify - between p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - colors duration - 200 group";
+                    >;
+                      <div className="flex items - center space - x-3">;
+                        <div className={`w - 8 h - 8 bg - gradient - to - r ${item.is_hot ? 'from - indigo - 500 to - purple - 600' : 'from - cyan - 500 to - blue - 600'} rounded - lg flex items - center justify - center`}>;
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           {item.icon}
                         </div>;
                         <span className="text - gray - 300 group - hover:text - white transition - colors duration - 200">;
@@ -929,6 +1113,17 @@ const supportLinks = [
                         }`}
                       />
                     </button>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+                    
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <AnimatePresence>
                       {expandedCategory === item.name && (
                         <motion.div
@@ -1015,6 +1210,7 @@ const supportLinks = [
         <div className="pt-4 border-t border-gray-800 px-3">;
           <Link
             href="/contact"
+<<<<<<< HEAD
             className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
           >
             <span>Get Started Today</span>
@@ -1022,6 +1218,122 @@ const supportLinks = [
           </Link>
         </div>
       </div>
+=======
+
+                        </span>;
+                      </div>;
+                      <ChevronRight;
+                        className={`w - 4 h - 4 text - gray - 400 transition - transform duration - 200 ${
+                          expanded_category === item.name ? 'rotate - 90' : '';
+                        }`}
+                      />;
+                    </button>;
+                    <AnimatePresence>;
+                      {expanded_category === item.name && (
+                        <motion.div;
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="ml - 8 mt - 2 space - y-1";
+                        >;
+                          {item.children?.map ((child) => (
+                            <Link;
+                              key={child.name}
+                              href={child.href}
+                              on_click={on_close}
+                              className="flex items - center justify - between p - 2 rounded - lg hover:bg - gray - 800 / 30 transition - colors duration - 200 group";
+                            >;
+                              <span className="text - sm text - gray - 400 group - hover:text - cyan - 400 transition - colors duration - 200">;
+                                {child.name}
+                              </span>;
+                              {child.badge && (
+                                <span className="px - 2 py - 1 text - xs bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - full">;
+                                  {child.badge}
+                                </span>
+                              )}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
+              </div>
+            </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {/* Quick Links */}
+            <div className="p - 6 border - b border - cyan - 500 / 30">;
+              <h3 className="text - lg font - semibold text - white mb - 4 flex items - center space - x-2">;
+                <Zap className="w - 5 h - 5 text - cyan - 400" />;
+                <span > Quick Links</span>;
+              </h3>;
+              <div className="space - y-2">;
+                <Link;
+                  href="/contact";
+                  on_click={on_close}
+                  className="block p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - colors duration - 200 group";
+                >;
+                  <div className="font - medium text - gray - 300 group - hover:text - white transition - colors duration - 200">;
+                    Contact Us;
+                  </div>;
+                  <div className="text - xs text - gray - 500">Get in touch with our team</div>;
+                </Link>;
+                <Link;
+                  href="/pricing";
+                  on_click={on_close}
+                  className="block p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - colors duration - 200 group";
+                >;
+                  <div className="font - medium text - gray - 300 group - hover:text - white transition - colors duration - 200">;
+                    View Pricing;
+                  </div>;
+                  <div className="text - xs text - gray - 500">Explore our pricing plans</div>;
+                </Link>;
+                <Link;
+                  href="/about";
+                  on_click={on_close}
+                  className="block p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - colors duration - 200 group";
+                >;
+                  <div className="font - medium text - gray - 300 group - hover:text - white transition - colors duration - 200">;
+                    About Us;
+                  </div>;
+                  <div className="text - xs text - gray - 500">Learn about Zion Tech Group</div>;
+                </Link>;
+              </div>;
+            </div>;
+            <div className="text - center p - 3 bg - gray - 800 / 50 rounded - lg">;
+              <div className="text - lg font - bold text - blue - 400">1000+</div>;
+              <div className="text - xs text - gray - 400">Clients</div>;
+            </div>;
+            <div className="text - center p - 3 bg - gray - 800 / 50 rounded - lg">;
+              <div className="text - lg font - bold text - purple - 400">24 / 7</div>;
+              <div className="text - xs text - gray - 400">Support</div>;
+            </div>;
+            <div className="text - center p - 3 bg - gray - 800 / 50 rounded - lg">;
+              <div className="text - lg font - bold text - green - 400">99.9%</div>;
+              <div className="text - xs text - gray - 400">Uptime</div>;
+            </div>;
+          </div>;
+        </div>;
+        {/* CTA Section */}
+        <div className="pt - 4 border - t border - gray - 800 px - 3">;
+          <Link;
+            href="/contact";
+            className="block w - full text - center px - 4 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text - white font - medium rounded - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow - cyan - 500 / 25";
+          >;
+            <span > Get Started Today</span>;
+            <ArrowRight className="w - 4 h - 4 ml - 2 inline" />;
+          </Link>;
+        </div>;
+      </div>;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Floating Elements */}
       <div className="absolute top-1/4 left-4 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
       <div className="absolute top-1/2 right-4 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000"></div>

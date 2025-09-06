@@ -5,7 +5,11 @@ import { useToast } from '../hooks/use-toast';
 import { Loader2 } from 'lucide-react';
 import { logErrorToProduction } from '../utils/productionLogger';
 
+<<<<<<< HEAD
 export function FooterNewsletter(): any (): React && React.ReactElement {;
+=======
+export function FooterNewsletter(): React.ReactElement {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [email, setEmail] = useState('');
   const [honeypot, setHoneypot] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -52,7 +56,11 @@ export function FooterNewsletter(): any (): React && React.ReactElement {;
         description: "Something went wrong. Please try again.",
         variant: "destructive",
       });
+<<<<<<< HEAD
     } finally {;
+=======
+    } finally {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       setIsSubmitting(false);
     }
   };
@@ -86,9 +94,16 @@ export function FooterNewsletter(): any (): React && React.ReactElement {;
         onChange={(e) => setHoneypot(e.target.value)}
         style={{ display: 'none' }}
         tabIndex={-1}
+<<<<<<< HEAD
         autoComplete="off"
       />
       
+=======
+        autoComplete='off';
+        style={{ display: 'none' }}
+      />;
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <Button
         type="submit"
         disabled={isSubmitting}
@@ -102,9 +117,10 @@ export function FooterNewsletter(): any (): React && React.ReactElement {;
         ) : (
           'Subscribe'
         )}
-      </Button>;
-    </form>;
+      </Button>
+    </form>
   );
+<<<<<<< HEAD
 }
 
 import React, { useState, useRef } from 'react';
@@ -230,3 +246,6 @@ if ( {) {
 }
 }
 }
+=======
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

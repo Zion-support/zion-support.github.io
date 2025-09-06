@@ -1,8 +1,32 @@
 
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from "lucide-react",
 import { Checkbox } from "@/components/ui/checkbox";
 import { AvailabilityFilterProps } from "@/types/filters";
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {ChevronDown, ChevronUp} from "lucide-react";
+import {Checkbox} from "@/components/ui/checkbox";
+import {AvailabilityFilterProps} from "@/types/filters";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { ChevronDown, ChevronUp } from "lucide-react",
+<<<<<<< HEAD
+import { Checkbox } from "@/components/ui/checkbox";
+import { AvailabilityFilterProps } from "@/types/filters";
+
+=======
+import { Checkbox } from "@/components/ui/checkbox",
+import { AvailabilityFilterProps } from "@/types/filters",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const AVAILABILITY_OPTIONS = [
   { id: "full_time", label: "Full-time" }
   { id: "part_time", label: "Part-time" }
@@ -39,6 +63,7 @@ export function AvailabilityFilter({
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple";
               />;
               <label
+<<<<<<< HEAD
                 htmlFor={`availability-${option && option.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer">;
                 {option && option.label}
@@ -47,6 +72,29 @@ export function AvailabilityFilter({
           ))}
         </div>;
       )}
+=======
+
+                htmlFor={`availability-${option.id}`}
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
+              >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {option.label}
+              </label>
+            </div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          ))}
+        </div>;
+      )}
+    </div>
+<<<<<<< HEAD
+  );
+}
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     </div>
   );
 }
@@ -59,6 +107,7 @@ const AVAILABILITY_OPTIONS = [;
   { id: "project", label: "Project - based" },
 ];
 ;
+<<<<<<< HEAD
 export /**
  * AvailabilityFilter - Function description
  */
@@ -94,3 +143,6 @@ function AvailabilityFilter() {
         </div>)}
     </div>);
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

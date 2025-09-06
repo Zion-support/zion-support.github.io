@@ -1,5 +1,12 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -12,10 +19,25 @@ import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {HireNowCTA} from "@/components/profile/HireNowCTA";
 import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2} from "lucide-react";
+<<<<<<< HEAD
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
   const { profileId } = useParams() as { profileId?: string }
+=======
+<<<<<<< HEAD
+export default function ProfilePage() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+  const { profileId } = useParams() as { profileId?: string }
+=======
+
+export default function ProfilePage() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { profileId } = useParams() as { profileId?: string };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
@@ -44,11 +66,20 @@ export default function ProfilePage() {
         setIsLoading (false);
       }
     }
+<<<<<<< HEAD
     if (profileId) {
       fetchProfile()
     }
   }, [profileId]);
   if (isLoading) {
+=======
+  }, [profileId]),
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     return (
       <div className="min-h-screen flex items-center justify-center">;
         <span className="loading loading-ring loading-lg"></span>;
@@ -114,9 +145,21 @@ export default function ProfilePage() {
                         <span>{profileData && profileData.availability}</span>;
                       </div>;
                     )}
+<<<<<<< HEAD
                   </div>
                 </div>
               </div>
+=======
+
+                  </div>;
+                </div>;
+              </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Skills */}
               {profileData && profileData.skills && profileData && profileData.skills.length > 0 && (;
                 <div className="mt-4">;
@@ -169,27 +212,69 @@ export default function ProfilePage() {
                     href={profileData && profileData.github_link}
                     target="_blank"
                     rel="noopener noreferrer"
+<<<<<<< HEAD
                     className="text-zion-cyan hover:text-white transition-colors">;
                     <Github className="h-6 w-6" />;
                   </a>;
+=======
+
+                    className="text-zion-cyan hover:text-white transition-colors"
+                  >
+                    <Github className="h-6 w-6" />
+
+                  </Link>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 )}
                 {profileData && profileData.twitter_link && (;
                   <a
                     href={profileData && profileData.twitter_link}
                     target="_blank"
                     rel="noopener noreferrer"
+<<<<<<< HEAD
                     className="text-zion-cyan hover:text-white transition-colors">;
                     <Twitter className="h-6 w-6" />;
                   </a>;
+=======
+
+                    className="text-zion-cyan hover:text-white transition-colors"
+                  >
+                    <Twitter className="h-6 w-6" />
+
+                  </Link>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 )}
                 {profileData && profileData.linkedin_link && (;
                   <a
                     href={profileData && profileData.linkedin_link}
                     target="_blank"
                     rel="noopener noreferrer"
+<<<<<<< HEAD
                     className="text-zion-cyan hover:text-white transition-colors">;
                     <Linkedin className="h-6 w-6" />;
                   </a>;
+=======
+
+                    className="text-zion-cyan hover:text-white transition-colors"
+                  >
+                    <Linkedin className="h-6 w-6" />
+
+                  </Link>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 )}
               </div>
             </div>
@@ -198,10 +283,30 @@ export default function ProfilePage() {
           <div className="col-span-12 lg:col-span-4 space-y-6">;
             <HireNowCTA
               talentProfile={{
+<<<<<<< HEAD
                 id: profileData?.id |''
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
                 hourly_rate: profileData?.hourly_rate |0
+=======
+
+              }}
+            />
+            {/* Placeholder for other sidebar elements */}
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
+}
+<<<<<<< HEAD
+=======
+                id: profileData?.id || '',
+                full_name: profileData?.full_name || '',
+                professional_title: profileData?.professional_title || '',
+                hourly_rate: profileData?.hourly_rate || 0
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
               }}
             />;
@@ -222,3 +327,18 @@ export default function ProfilePage() {
 }
     </>);
 }
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+;
+
+=======
+
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

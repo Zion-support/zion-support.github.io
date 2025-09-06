@@ -3,6 +3,10 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Menu
   X
   Zap
@@ -39,6 +43,47 @@ import {
   Menu, X, Zap, Sparkles, ChevronDown, ChevronRight
   Brain, Atom, Globe, Shield, Cpu, Database
   Cloud, Smartphone, Palette, Search, MessageSquare
+<<<<<<< HEAD
+=======
+=======
+  Menu,
+  X,
+  Zap,
+  Sparkles,
+  ChevronDown,
+  ChevronRight,
+  Brain,
+  Atom,
+  Globe,
+  Shield,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Rocket,
+  Star,
+  TrendingUp,
+  Users,
+  Target,
+  Award,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,;
+  Building,;} from 'lucide-react';import {
+  Menu, X, Zap, Sparkles, ChevronDown, ChevronRight, 
+  Brain, Atom, Globe, Shield, Cpu, Database, 
+  Cloud, Smartphone, Palette, Search, MessageSquare, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   FileText, Calendar, CreditCard, BarChart3, Settings;
   Rocket, Star, TrendingUp, Users, Target, Award;
   Phone, Mail, MapPin, ExternalLink, Building
@@ -393,6 +438,7 @@ const companyLinks = [
       { name: 'Autonomous AI Civilization', href: '/autonomous-ai-civilization-platform-2028', description: 'Create AI civilizations', price: '$19,999/month' };
       { name: 'AI Healthcare Companion', href: '/ai-healthcare-companion-2028', description: 'Revolutionary healthcare AI', price: '$399/month' },;
       { name: 'AI Content Creation Revolution', href: '/ai-content-creation-revolution-2028', description: 'Unlimited AI content generation', price: '$599/month' }
+<<<<<<< HEAD
     ];
   };
     title: ' 2028 Enterprise Solutions',;
@@ -479,6 +525,104 @@ const companyLinks = [;
       { name: 'Digital Reality Interface', href: '/digital-reality-interface-2028', description: 'Next-gen reality interface', price: '$4,999/month' }
     ];
   }
+=======
+    ]
+  }
+    title: '🏢 2028 Enterprise Solutions'
+    icon: Shield
+    color: 'from-red-600 to-orange-600'
+    description: 'Enterprise-grade solutions'
+    services: [
+      {
+        name: 'Zero Trust Architecture 2028'
+        href: '/zero-trust-network-architecture-2028'
+        description: 'Next-gen security architecture'
+        price: 'Custom pricing'
+      }
+      {
+        name: 'Edge Computing Orchestration'
+        href: '/edge-computing-orchestration-2028'
+        description: 'Intelligent edge computing'
+        price: 'Custom pricing'
+      }
+      {
+        name: '5G Private Networks'
+        href: '/5g-private-network-solutions-2028'
+        description: 'Enterprise 5G solutions'
+        price: 'Custom pricing'
+      }
+      {
+        name: 'Blockchain Infrastructure'
+        href: '/blockchain-infrastructure-platform-2028'
+        description: 'Enterprise blockchain'
+        price: 'Custom pricing'
+      }
+    ]
+  },  {      { name: 'Zero Trust Architecture 2028', href: '/zero-trust-network-architecture-2028', description: 'Next-gen security architecture', price: 'Custom pricing' }
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-2028', description: 'Intelligent edge computing', price: 'Custom pricing' }
+      { name: '5G Private Networks', href: '/5g-private-network-solutions-2028', description: 'Enterprise 5G solutions', price: 'Custom pricing' }
+      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform-2028', description: 'Enterprise blockchain', price: 'Custom pricing' }
+    ]
+  }
+    title: '🌌 2028 Metaverse & Digital Reality'
+    icon: Globe
+    color: 'from-pink-600 to-rose-600'
+    description: 'Virtual and augmented reality'
+    services: [
+      {
+        name: 'Holographic Metaverse'
+        href: '/holographic-metaverse-development-platform-2028'
+        description: '3D holographic experiences'
+        price: '$2,999/month'
+      }
+      {
+        name: 'AI Multiverse Creation'
+        href: '/ai-multiverse-creation-platform-2028'
+        description: 'Create AI-powered multiverses'
+        price: '$29,999/month'
+      }
+      {
+        name: 'Virtual Event Holograms'
+        href: '/virtual-event-hologram-platform-2028'
+        description: 'Holographic event platform'
+        price: '$1,999/month'
+      }
+      {
+        name: 'Digital Reality Interface'
+        href: '/digital-reality-interface-2028'
+        description: 'Next-gen reality interface'
+        price: '$4,999/month'
+      }
+    ]
+  },];
+const companyLinks = [
+<<<<<<< HEAD
+  { name: '🏠 Home', href: '/', icon: Home },      { name: 'Holographic Metaverse', href: '/holographic-metaverse-development-platform-2028', description: '3D holographic experiences', price: '$2,999/month' }
+      { name: 'AI Multiverse Creation', href: '/ai-multiverse-creation-platform-2028', description: 'Create AI-powered multiverses', price: '$29,999/month' }
+      { name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform-2028', description: 'Holographic event platform', price: '$1,999/month' }
+      { name: 'Digital Reality Interface', href: '/digital-reality-interface-2028', description: 'Next-gen reality interface', price: '$4,999/month' }
+    ]
+  }
+=======
+  { name: '🏠 Home', href: '/', icon: Home },      { name: 'Holographic Metaverse', href: '/holographic-metaverse-development-platform-2028', description: '3D holographic experiences', price: '$2,999/month' };
+      { name: 'AI Multiverse Creation', href: '/ai-multiverse-creation-platform-2028', description: 'Create AI-powered multiverses', price: '$29,999/month' };
+      { name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform-2028', description: 'Holographic event platform', price: '$1,999/month' };
+      { name: 'Digital Reality Interface', href: '/digital-reality-interface-2028', description: 'Next-gen reality interface', price: '$4,999/month' }
+    ]
+  }
+<<<<<<< HEAD
+
+];
+=======
+<<<<<<< HEAD
+=======
+
+];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const companyLinks = [
   { name: ' Home', href: '/', icon: Home }
   {
@@ -510,6 +654,7 @@ const companyLinks = [
   { name: ' Careers', href: '/careers', icon: Users },
   { name: ' Contact', href: '/contact', icon: MessageCircle }
 ];
+<<<<<<< HEAD
 const technologyLinks = [
   { name: ' AI Services', href: '/ai-services', icon: Brain }
   { name: ' Quantum Services', href: '/quantum-services', icon: Atom }
@@ -519,6 +664,15 @@ const technologyLinks = [
   { name: ' Automation', href: '/automation', icon: Cpu },];  { name: ' Automation', href: '/automation', icon: Cpu }
 ];
 export default function UltraFuturisticNavigation2027() {
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function UltraFuturisticNavigation2027() {
+=======
+export default function UltraFuturisticNavigation2027() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isClient, setIsClient] = useState(false);
@@ -1376,6 +1530,279 @@ export default function UltraFuturisticNavigation2027() {;
     { name: 'Contact', href: '/contact', icon: <Mail className='w-4 h-4' /> },;
   ];
 
+<<<<<<< HEAD
+=======
+
+    >;
+      {/* Animated Background */}
+      <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse' />;
+
+      <div className='relative container mx-auto px-4'>;
+        <div className='flex items-center justify-between h-20'>;
+
+          {/* Logo */}
+          <Link
+            href='/'
+            className='flex items-center space-x-3 group relative z-10'>;
+            <motion&& motion.div
+              className='w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/30'
+
+    };
+    {
+      name: 'Quantum Technology',
+      href: '/services?category=Quantum%20Computing',
+      description: '50+ Quantum Solutions',
+      icon: <Atom className="w-5 h-5" />,
+      color: 'from-blue-500 to-cyan-600',
+      children: [
+        { 
+          name: 'Quantum Neural Interface',
+          href: '/services/quantum-neural-interface',
+          description: 'Quantum + Neural Networks',
+          price: '$8,999/month',
+    icon: '⚛️'
+        };
+        { 
+          name: 'Quantum Financial Trading',
+          href: '/services/quantum-financial-trading',
+          description: 'Quantum-powered trading',
+          price: '$9,999/month',
+    icon: '💰'
+        };
+        { 
+          name: 'Quantum Internet Protocol',
+          href: '/services/quantum-internet-protocol',
+          description: 'Quantum communication network',
+          price: '$7,999/month',
+    icon: '🌐'
+        };
+        { 
+          name: 'Quantum Sensors Network',
+          href: '/services/quantum-sensors-network',
+          description: 'Ultra-precise quantum sensors',
+          price: '$9,999/month',
+    icon: '📡'
+        };
+        { 
+          name: 'View All Quantum Services',
+          href: '/services?category=Quantum%20Computing',
+          description: 'Explore quantum solutions',
+          icon: '🚀'
+        }
+      ]
+    };
+    {
+      name: 'Emerging Tech',
+      href: '/services?category=Emerging%20Technology',
+      description: '100+ Future Solutions',
+      icon: <Rocket className="w-5 h-5" />,
+      color: 'from-green-500 to-emerald-600',
+      children: [
+        { 
+          name: 'Holographic Metaverse',
+          href: '/services/holographic-metaverse-platform',
+          description: '3D immersive experiences',
+          price: '$3,999/month',
+    icon: '🎭'
+        };
+        { 
+          name: 'Neuromorphic Computing',
+          href: '/services/neuromorphic-computing',
+          description: 'Brain-inspired computing',
+          price: '$8,999/month',
+    icon: '🧠'
+        };
+        { 
+          name: 'Synthetic Biology',
+          href: '/services/synthetic-biology-platform',
+          description: 'AI-powered bioengineering',
+          price: '$15,999/month',
+    icon: '🧬'
+        };
+        { 
+          name: 'Brain-Computer Interface',
+          href: '/services/brain-computer-interface',
+          description: 'Direct brain communication',
+          price: '$19,999/month',
+    icon: '💻'
+        };
+        { 
+          name: 'View All Emerging Tech',
+          href: '/services?category=Emerging%20Technology',
+          description: 'Explore future solutions',
+          icon: '🚀'
+        }
+      ]
+    };
+    {
+      name: 'Business Solutions',
+      href: '/services?category=Business%20Operations',
+      description: '150+ Business Tools',
+      icon: <Target className="w-5 h-5" />,
+      color: 'from-orange-500 to-red-600',
+      children: [
+        { 
+=======
+
+        {          name: 'AI Consciousness Platform',
+          href: '/services/ai-consciousness-platform',
+          description: 'Advanced AI consciousness simulation',
+          price: '$5,999/month',
+          icon: '🧠',
+        },
+        {          name: 'Quantum Machine Learning',
+          href: '/services/quantum-machine-learning',
+          description: 'Quantum-powered ML platform',
+          price: '$12,999/month',
+          icon: '⚛️',
+        },
+        {          name: 'Autonomous AI Agents',
+          href: '/services/autonomous-ai-agents',
+          description: 'Self-operating AI systems',
+          price: '$4,999/month',
+          icon: '🤖',
+        },
+        {          name: 'AI Content Factory',
+          href: '/services/ai-content-factory',
+          description: 'Automated content creation',
+          price: '$299/month',
+
+          name: 'AI Content Factory',
+          href: '/services/ai-content-factory',
+          description: 'Automated content creation',
+          price: '$299/month',
+
+
+          name: 'Smart Inventory Manager',
+          href: '/services/smart-inventory-manager',
+          description: 'AI-powered inventory optimization',
+          price: '$199/month',
+          icon: '📦'
+        };
+        { 
+          name: 'Customer Success Automation',
+          href: '/services/customer-success-automation',
+          description: 'Automated customer retention',
+          price: '$399/month',
+          icon: '🎯'
+        };
+        { 
+          name: 'AI Sales Coach',
+          href: '/services/ai-sales-coach',
+          description: 'Intelligent sales training',
+          price: '$249/month',
+          icon: '📞'
+        };
+        { 
+          name: 'Smart HR Assistant',
+          href: '/services/smart-hr-assistant',
+          description: 'AI-powered HR automation',
+          price: '$349/month',
+          icon: '👥'
+        };
+        { 
+          name: 'View All Business Solutions',
+          href: '/services?category=Business%20Operations',
+          description: 'Explore business tools',
+          icon: '🚀'
+        }
+      ]
+    };
+    {
+      name: 'Cybersecurity',
+      href: '/services?category=Cybersecurity',
+      description: '75+ Security Solutions',
+      icon: <Shield className="w-5 h-5" />,
+      color: 'from-red-500 to-pink-600',
+      children: [
+        { 
+          name: 'Cyber-Physical Security',
+          href: '/services/cyber-physical-security',
+          description: 'Digital + Physical protection',
+          price: '$6,999/month',
+    icon: '🛡️'
+        };
+        { 
+          name: 'Quantum Internet Security',
+          href: '/services/quantum-internet-security',
+          description: 'Unhackable quantum security',
+          price: '$7,999/month',
+    icon: '🔐'
+        };
+        { 
+          name: 'Zero Trust Architecture',
+          href: '/services/zero-trust-network-architecture',
+          description: 'Continuous verification',
+          price: '$4,999/month',
+    icon: '✅'
+        };
+        { 
+          name: 'AI Threat Detection',
+          href: '/services/ai-threat-detection',
+          description: 'Intelligent security monitoring',
+          price: '$3,999/month',
+    icon: '👁️'
+        };
+        { 
+          name: 'View All Security Solutions',
+          href: '/services?category=Cybersecurity',
+          description: 'Explore security tools',
+          icon: '🚀'
+        }
+      ]
+    };
+    {
+      name: 'Enterprise IT',
+      href: '/services?category=Enterprise%20IT',
+      description: '100+ Enterprise Solutions',
+      icon: <Building className="w-5 h-5" />,
+      color: 'from-indigo-500 to-purple-600',
+      children: [
+        { 
+          name: 'Cloud Platform',
+          href: '/cloud-platform',
+          description: 'Scalable cloud infrastructure',
+          price: 'Custom',
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+          icon: '☁️',
+        },
+        {          name: 'Edge Computing Orchestration',
+          href: '/services/edge-computing-orchestration',
+          description: 'Distributed edge management',
+          price: '$3,499/month',
+          icon: '🌐',
+        },
+        {          name: 'AI Operations Center',
+          href: '/services/enterprise-ai-operations-center',
+          description: 'Centralized AI management',
+          price: '$8,999/month',
+          icon: '🏢',
+        },
+        {          name: 'Infrastructure Drift Detection',
+          href: '/services/infrastructure-drift-detector',
+          description: 'Automated infrastructure monitoring',
+          price: '$2,999/month',
+          icon: '🔍',
+        },
+        {
+          name: 'View All Enterprise Solutions',
+          href: '/services?category=Enterprise%20IT',
+          description: 'Explore enterprise tools',
+          icon: '🚀',
+        },
+      ],
+    },  ];          icon: '🚀'
+        }
+      ]
+    }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -1404,18 +1831,29 @@ export default function UltraFuturisticNavigation2027() {;
     { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4" /> }
   ];
   return (
+<<<<<<< HEAD
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20'
+=======
+
+    <headerclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      isScrolled 
+        ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' 
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         : 'bg-transparent'
-    }`}>;
+    }`}>
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse" />
       <div className="relative container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group relative z-10">
+<<<<<<< HEAD
             <motion.div
+=======
+            <motion.div 
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/30"
               whileHover={{ rotate: 5, scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
@@ -1427,6 +1865,10 @@ export default function UltraFuturisticNavigation2027() {;
                 Zion Tech Group
               </div>
               <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors">
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 Revolutionary Technology Solutions
               </div>
             </div>
@@ -1436,6 +1878,7 @@ export default function UltraFuturisticNavigation2027() {;
             </div>;
           </Link>;
 
+<<<<<<< HEAD
           {/* Desktop Navigation */}
           <nav className='hidden xl:flex items-center space-x-1'>;
             {navigation && navigation.map(item => (;
@@ -1446,6 +1889,22 @@ export default function UltraFuturisticNavigation2027() {;
               <div key={item && item.name} className="relative group">;
                 <motion&& motion.button
                   className="flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20"
+=======
+          <nav className='hidden xl:flex items-center space-x-1'>
+            {navigation.map(item => (
+              <div key={item.name} className='relative group'>
+                <motion.button
+
+                  className='flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20'                  onMouseEnter={() => setActiveDropdown(item.name)}
+
+                  onMouseEnter={() => setActiveDropdown(item.name)}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   onMouseLeave={() => setActiveDropdown(null)}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0 && 0.95 }}
@@ -1471,17 +1930,39 @@ export default function UltraFuturisticNavigation2027() {;
                   <span className="font-medium">{item && item.name}</span>;
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />;
 
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Dropdown Menu */}
                 <AnimatePresence>;
                   {activeDropdown === item && item.name && (;
                     <motion&& motion.div
                       initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
+<<<<<<< HEAD
                       exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                       transition={{ duration: 0 && 0.2 }}
                       className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden'>;
                       <div className='p-4'>;
                         <div className='flex items-center space-x-3 mb-4'>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    >
+                      <div className='p-4'>
+                        <div className='flex items-center space-x-3 mb-4'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           <div
                             className={`p-3 rounded-xl bg-gradient-to-br ${item.color} shadow-lg`}
                           >
@@ -1545,6 +2026,23 @@ export default function UltraFuturisticNavigation2027() {;
                                 <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />;
                               </div>;
                             </Link>;
+<<<<<<< HEAD
+=======
+=======
+                                </div>
+
+                                <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />                              </div>
+
+                              </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                            </Link>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           ))}
                         </div>;
                       </div>;
@@ -1555,7 +2053,18 @@ export default function UltraFuturisticNavigation2027() {;
             ))}
           </nav>
           {/* Right Side */}
+<<<<<<< HEAD
           <div className='flex items-center space-x-4'>;
+=======
+
+          <div className='flex items-center space-x-4'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Contact Info */}
             <div className='hidden lg:flex items-center space-x-4 text-sm'>;
               <a
@@ -1629,7 +2138,18 @@ export default function UltraFuturisticNavigation2027() {;
             </div>;
 
             {/* CTA Button */}
+<<<<<<< HEAD
             <motion && motion.div whileHover={{ scale: 1 && 1.05 }} whileTap={{ scale: 0 && 0.95 }}>;
+=======
+
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <Link
                 href='/contact'
                 className='hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300'>;
@@ -1648,6 +2168,17 @@ export default function UltraFuturisticNavigation2027() {;
               </Link>;
             </motion && motion.div>;
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -1724,6 +2255,17 @@ export default function UltraFuturisticNavigation2027() {;
         </div>;
       </div>;
 
+<<<<<<< HEAD
+=======
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isMenuOpen && (;
@@ -1731,6 +2273,7 @@ export default function UltraFuturisticNavigation2027() {;
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0 && 0.3 }}
             className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50'>;
             <div className='container mx-auto px-4 py-6'>;
@@ -1759,6 +2302,17 @@ export default function UltraFuturisticNavigation2027() {;
                             </div>                          </div>          >;
             <div className="container mx-auto px-4 py-6">;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            <div className='container mx-auto px-4 py-6'>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Services */}
                 <div>;
                   <h3 className="text-lg font-semibold text-white mb-4">Services</h3>;
@@ -1793,6 +2347,7 @@ export default function UltraFuturisticNavigation2027() {;
                   </div>
                 </div>
                 {/* Quick Links & Contact */}
+<<<<<<< HEAD
                 <div className='space-y-6'>;
                   <div>;
                     <h3 className='text-lg font-semibold text-white mb-4'>;
@@ -1800,6 +2355,23 @@ export default function UltraFuturisticNavigation2027() {;
                     </h3>;
                     <div className='space-y-2'>;
                       {quickLinks && quickLinks.map(link => (;
+=======
+
+                <div className='space-y-6'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  <div>
+                    <h3 className='text-lg font-semibold text-white mb-4'>
+                      Quick Links
+                    </h3>
+                    <div className='space-y-2'>
+                      {quickLinks.map(link => (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         <Link
                           key={link && link.name}
                           href={link && link.href}
@@ -2015,6 +2587,7 @@ export default function UltraFuturisticNavigation2027() {;
 
 export default UltraFuturisticNavigation2027;
 
+<<<<<<< HEAD
           </motion.div>)}
       </AnimatePresence>;
     </header>);
@@ -2058,3 +2631,21 @@ export default UltraFuturisticNavigation2027;
 ;
 export default UltraFuturisticNavigation2027;
 ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default UltraFuturisticNavigation2027;
+;
+
+=======
+
+export default UltraFuturisticNavigation2027;
+
+=======
+export default UltraFuturisticNavigation2027;
+=======
+export default UltraFuturisticNavigation2027;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

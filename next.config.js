@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true
   compress: true
   poweredByHeader: false
+<<<<<<< HEAD
   eslint: {
     ignoreDuringBuilds: true
   }
@@ -11,6 +12,24 @@ const nextConfig = {
   },
   pageExtensions: ["tsx", "ts", "jsx", "js"],
   trailingSlash: true,
+=======
+=======
+/** @type {import ('next').NextConfig} */;
+const next_config = {
+  reactStrictMode: true,
+  compress: true,
+  poweredByHeader: false,
+  output: 'export',
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  trailingSlash: true,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   
   // Performance optimizations
   experimental: {
@@ -20,6 +39,7 @@ const nextConfig = {
   },
   
   // Image optimization
+<<<<<<< HEAD
   page_extensions: ["tsx", "ts", "jsx", "js"],
   trailing_slash: true,
   images: {
@@ -36,6 +56,63 @@ const nextConfig = {
     device_sizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     image_sizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000,
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+  images: {
+    unoptimized: true,
+    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+<<<<<<< HEAD
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000, // 1 year
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+  
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+<<<<<<< HEAD
+    minimumCacheTTL: 31536000, // 1 year
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+  
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
+=======
+    minimumCacheTTL: 31536000,
+>>>>>>> origin/resolved-all-conflicts-clean
+=======
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+  },
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000,
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+  },
+  
+  // Webpack configuration to exclude problematic directories
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
   },
   experimental: {
@@ -102,6 +179,7 @@ const nextConfig = {
         aggregate_timeout: 300,
       }
     }
+<<<<<<< HEAD
 
           "**/node_modules/**"
           "**/.git/**"
@@ -142,6 +220,9 @@ const nextConfig = {
       }
 
     }
+=======
+    
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // Exclude apps directory from compilation
     config.module.rules.push({
       test: /\.(ts|tsx|js|jsx)$/
@@ -175,6 +256,7 @@ const nextConfig = {
       }
     ];
   }
+<<<<<<< HEAD
 }
 export default nextConfig;
     // Exclude apps directory from compilation;
@@ -215,3 +297,8 @@ export default nextConfig;
 ;
 export default next_config;
 ;
+=======
+};
+
+export default nextConfig;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

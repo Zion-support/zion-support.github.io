@@ -28,7 +28,27 @@ interface OptimizedImageProps {
 import Image from 'next / image';
 ;
 interface OptimizedImageProps {
+<<<<<<< HEAD
+  src: string, alt: string
+=======
+<<<<<<< HEAD
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+  className?: string;
+  sizes?: string;
+}
+
+export const OptimizedImage: React.FC<OptimizedImageProps> = ({
+=======
+
   src: string, alt: string,
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   width?: number;
   height?: number;
   class_name?: string;
@@ -40,6 +60,10 @@ interface OptimizedImageProps {
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   src
   alt
   width
@@ -49,6 +73,42 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
   quality = 85
   fill = false
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+  src,
+  alt,
+  width,
+  height,
+<<<<<<< HEAD
+  priority = false,
+  className,
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
+}) => {
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      priority={priority}
+      className={className}
+      sizes={sizes}
+      quality={85}
+    />
+  );
+};
+
+export default OptimizedImage;
+=======
+  className = '',
+  priority = false,
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
+  quality = 85,
+  fill = false,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   style
 
 }) => {
@@ -98,8 +158,36 @@ if ( {) {
       className={class_name}
       priority={priority}
       sizes={sizes}
+<<<<<<< HEAD
 quality={quality}
       style={style}
+=======
+<<<<<<< HEAD
+quality={quality}
+      style={style}
+<<<<<<< HEAD
   );
 }
 export default OptimizedImage;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      quality={quality}
+      style={style}
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  );
+}
+export default OptimizedImage;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

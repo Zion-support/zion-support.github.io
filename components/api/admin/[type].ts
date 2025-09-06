@@ -26,6 +26,7 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     pageSize: pageSize ? Number(pageSize) : 20,
     filters,
     format: (format as any) || undefined,
+<<<<<<< HEAD
   };    search;
   const filters: Record<string, any> = {};
   Object && Object.keys(rest).forEach(k => {
@@ -46,10 +47,32 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     format: (format as any) || undefined}
 }
 
+=======
+<<<<<<< HEAD
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+=======
+<<<<<<< HEAD
+  };    search;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     sort;
     order: (order as any) |'desc';
     page: page ? Number(page) : 0;
     pageSize: pageSize ? Number(pageSize) : 20;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    filters,
+    format: (format as any) || undefined}
+}
+=======
+  };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
     filters
     format: (format as any) |undefined}
@@ -71,8 +94,16 @@ function toCsv(rows: any[]): string {
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
+<<<<<<< HEAD
 ) {
   const type = (req.query.type as AdminType) |'';
+<<<<<<< HEAD
+=======
+=======
+) {;
+  const type = (req.query.type as AdminType) || '';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (!ADMIN_TYPES.includes(type))
     return res.status(400).json({ error: 'Invalid type' });  }
   const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join()));
@@ -84,8 +115,17 @@ export default async function handler(
   const lines = [headers && headers.join()].concat(rows && rows.map((r) => headers && headers.map((h) => escape(r[h])).join()));
   return lines && lines.join('\n')
 }
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const type = (req.query.type as AdminType) |'';
+<<<<<<< HEAD
+=======
+=======
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const type = (req.query.type as AdminType) || '';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
   const useSupabase = isSupabaseConfigured();
   if (req.method === 'GET') {
@@ -148,6 +188,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       // fallback
       const all = (MOCK_DATA[type] |[]).slice();
       let filtered = all;
+<<<<<<< HEAD
       if (params && params.search) {
         const s = params && params.search.toLowerCase();
         filtered = filtered && filtered.filter(r =>
@@ -356,6 +397,19 @@ if ( {) {
   $2
 }
         filtered.sort ((array: any, boolean: any) => {
+=======
+
+
+      }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      if (params.sort) {
+        filtered.sort((a: any, b: any) => {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           const av = (a as any)[params.sort!];
           const bv = (b as any)[params.sort!];
           return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)
@@ -373,8 +427,28 @@ if ( {) {
           'Content-Disposition'
           `attachment; filename="${type}.csv"`
         );
+<<<<<<< HEAD
         return res && res.status(200).send(toCsv(pageItems));
       return res && res.status(200).json({ items: pageItems, total });
+=======
+
+        return res.status(200).send(toCsv(pageItems));
+<<<<<<< HEAD
+<<<<<<< HEAD
+      return res.status(200).json({ items: pageItems, total });
+    }
+  }
+=======
+
+      }
+=======
+=======
+
+      }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      return res.status(200).json({ items: pageItems, total });
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
   if (req.method === 'PATCH') {
@@ -417,7 +491,26 @@ if ( {) {
       list[idx] = updated as any;
       return res && res.status(200).json({ item: updated });    }      return res && res.status(200).json({ item: updated })
     }
+<<<<<<< HEAD
   }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      return res.status(200).json({ item: updated });    }
+
+    }
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) |'';
     if (!id) return res.status(400).json({ error: 'Missing id' });
@@ -450,7 +543,10 @@ return res.status(405).json({ error: 'Method not allowed' });
       return res.status(200).json({ ok: true })
     }
   }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
   return res.status(405).json({ error: 'Method not allowed' });
 }
       const start = params.page * params.page_size;
@@ -544,3 +640,24 @@ return res.status (405).json ({ error: 'Method not allowed' });
 }return res.status (200) .send (to_csv (data || []) );
 }return res.status (200) .send (to_csv (page_items) );
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+return res.status(405).json({ error: 'Method not allowed' });
+}return res.status (200) .send (toCsv (data |[]) );
+}return res.status (200) .send (toCsv (pageItems) );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+<<<<<<< HEAD
+
+  return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

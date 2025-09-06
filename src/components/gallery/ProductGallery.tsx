@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import React, { useState, Suspense } from 'react';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState, Suspense } from 'react'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
@@ -216,8 +224,44 @@ function ProductGallery() {
             />          </div>;
         </DialogContent>;
       )}
+<<<<<<< HEAD
     </Dialog>
   )
+=======
+<<<<<<< HEAD
+    </Dialog>
+  )
+}
+}
+=======
+
+    </Dialog>;
+  );
+};
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState, Suspense } from 'react',;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogTrigger} from '@/components/ui/dialog',;
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',;
+import { AspectRatio } from '@/components/ui/aspect-ratio',;
+const ReactPlayer = React.lazy(() => import('react-player')),;
+const ModelViewer = React.lazy(async () => {;
+  await import('@google/model-viewer'),;
+  return {;
+    default: (props: any) => (;
+      React.createElement('model-viewer', props);
+    )}
+}),;
+interface ProductGalleryProps {;
+  images: string[],;
+  videoUrl?: string,;
+  modelUrl?: string;
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
           </TabsContent>)}
       </Tabs>;
@@ -235,4 +279,14 @@ function ProductGallery() {
         </DialogContent>)}
     </Dialog>);
 }
+<<<<<<< HEAD
 }
+=======
+
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

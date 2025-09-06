@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { KanbanBoard } from '@/components/hiring-tracker/KanbanBoard';
@@ -38,6 +39,56 @@ function HiringTrackerContent() {
   return (
     <>
       <SEO
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useState } from 'react'
+import { useRouter } from 'next/router'
+import { KanbanBoard } from '@/components/hiring-tracker/KanbanBoard'
+import { HiringAnalytics } from '@/components/hiring-tracker/HiringAnalytics'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { SEO } from '@/components/SEO'
+import { ProtectedRoute } from '@/components/ProtectedRoute'
+import { Briefcase } from 'lucide-react'
+function HiringTrackerContent() {
+
+  const router = useRouter()
+  const jobId = router.query.jobId as string
+  const [activeTab, setActiveTab] = useState<string>('kanban')
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+import { useState } from "react",
+import { useRouter } from "next/router",
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Briefcase } from 'lucide-react'
+<<<<<<< HEAD
+function HiringTrackerContent() {
+
+  const router = useRouter()
+  const jobId = router.query.jobId as string
+  const [activeTab, setActiveTab] = useState<string>('kanban')
+=======
+
+function HiringTrackerContent() {
+  const router = useRouter(),
+  const jobId = router.query.jobId as string,
+  const [activeTab, setActiveTab] = useState<string>("kanban"),
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <>;
+      <SEO
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         title="Hiring Tracker | Zion AI Marketplace"
         description="Manage your candidate pipeline in the Zion AI Marketplace."
       />
@@ -48,16 +99,37 @@ function HiringTrackerContent() {
               <Briefcase className="mr-2 h-6 w-6 text-primary" />
               Hiring Pipeline
             </h1>
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <p className="text-muted-foreground mt-1">
               Track and manage your candidates through the hiring process
             </p>
           </div>
         </div>
+<<<<<<< HEAD
         <Tabs
           defaultValue='kanban'
           onValueChange={setActiveTab}
           className='mb-8'
         >
+=======
+
+
+
+        <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <TabsList>
             <TabsTrigger value='kanban'>Kanban Board</TabsTrigger>
             <TabsTrigger value='analytics'>Analytics</TabsTrigger>
@@ -72,6 +144,21 @@ function HiringTrackerContent() {
           <TabsContent value="kanban" className="mt-6">
             <KanbanBoard jobId={jobId} />
           </TabsContent>
+<<<<<<< HEAD
+=======
+=======
+
+          
+          <TabsContent value="kanban" className="mt-6">
+            <KanbanBoard jobId={jobId} />
+          </TabsContent>
+          
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <TabsContent value="analytics" className="mt-6">
             <HiringAnalytics jobId={jobId} />
           </TabsContent>
@@ -83,10 +170,12 @@ function HiringTrackerContent() {
 export default function HiringTracker() {
   return (
     <ProtectedRoute>
+<<<<<<< HEAD
       <HiringTrackerContent />
     </ProtectedRoute>
   )
 }
+<<<<<<< HEAD
       />;
       <main className='container mx-auto px-4 py-8'>;
         <div className='flex justify-between items-center mb-8'>;
@@ -98,6 +187,31 @@ export default function HiringTracker() {
             <p className='text-muted-foreground mt-1'>              Track and manage your candidates through the hiring process  const [activeTab, setActiveTab] = useState<string>("kanban");
 
   return (
+=======
+=======
+  )
+
+      <HiringTrackerContent />;
+    </ProtectedRoute>;
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useState } from "react",;
+import { useRouter } from "next/router",;
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",;
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { Briefcase } from 'lucide-react';
+function HiringTrackerContent() {;
+  const router = useRouter(),;
+  const jobId = router.query.jobId as string,;
+  const [activeTab, setActiveTab] = useState<string>("kanban");
+  return (;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     <>;
       <SEO
         title="Hiring Tracker | Zion AI Marketplace" 
@@ -154,8 +268,15 @@ export default function HiringTracker() {;
     </ProtectedRoute>;
   );
 }
+<<<<<<< HEAD
   );
 }
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState } from 'react';
 import { use_router } from 'next / router';
 import { KanbanBoard } from '@/components / hiring - tracker / KanbanBoard';
@@ -238,3 +359,12 @@ function HiringTracker() {
       <HiringTrackerContent />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -12,9 +12,34 @@ import {
   Shield
   ArrowRight;
 } from 'lucide-react';
+<<<<<<< HEAD
 export default function FuturisticFooter() {
   const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
 export default function FuturisticFooter() {
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+import {
+  Mail
+  Phone
+  MapPin
+  Globe
+  Zap
+  Bot
+  Cloud
+  Shield
+  ArrowRight;
+} from 'lucide-react';
+=======
+<<<<<<< HEAD
+export default function FuturisticFooter() {;
+=======
+
+
+export default function FuturisticFooter() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const currentYear = new Date().getFullYear();
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -236,6 +261,7 @@ export default function FuturisticFooter() {;
                   <span className="text-lg">{social && social.icon}</span>;
                 </a>;
               ))}
+<<<<<<< HEAD
             </div>
           </div>
           {/* Quick Links */}
@@ -314,6 +340,40 @@ export default function FuturisticFooter() {;
                   <a
                     href={`tel:${contactInfo.mobile}`}
                     className='text-gray-400 hover:text-blue-400 transition-colors duration-200'                  >              Contact Us
+=======
+
+            </div>;
+          </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {/* Quick Links */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {/* Services */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-6 flex items-center">
+              <Shield className="w-5 h-5 text-purple-400 mr-2" />
+              Contact Us
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
@@ -401,6 +461,7 @@ export default function FuturisticFooter() {;
       <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
     </footer>
+<<<<<<< HEAD
 );
 }
                 className='text-gray-400 hover:text-white transition-colors duration-200'>                Cookie Policy               {currentYear} Zion Tech Group. All rights reserved.;
@@ -539,3 +600,21 @@ export default function FuturisticFooter() {;
       <div className="absolute top - 1/2 left - 10 w - 1 h - 1 bg - green - 400 rounded - full animate - pulse delay - 500" />;
     </footer>);
 }
+=======
+<<<<<<< HEAD
+);
+}
+<<<<<<< HEAD
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

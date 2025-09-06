@@ -24,9 +24,21 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect, useMemo, useState } from 'react';
 
 import {
+<<<<<<< HEAD
   LineChart
   BarChart
   DonutChart;
+=======
+<<<<<<< HEAD
+  LineChart
+  BarChart
+  DonutChart;
+=======
+  LineChart,
+  BarChart,;
+  DonutChart,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from '../components/salary/InsightCharts';
 type InsightResponse = {
 import {;
@@ -55,6 +67,7 @@ type InsightResponse = {;
   regionalComparison: { region: string, medianHourlyUsd: number }[]
   tags: string[]
   gptRecommendation?: string
+<<<<<<< HEAD
   recommendedMonthlyUsd: number,
   medianHourlyUsd: number,
   minHourlyUsd: number,
@@ -79,6 +92,15 @@ export default function SalaryInsightsPage() {
   gptRecommendation?: string;
 
 export default function SalaryInsightsPage() {;
+=======
+<<<<<<< HEAD
+export default function SalaryInsightsPage() {
+=======
+
+
+export default function SalaryInsightsPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
@@ -147,9 +169,18 @@ export default function SalaryInsightsPage() {;
       setError(e.message |'Unexpected error')
     } finally {
       setLoading(false)
+<<<<<<< HEAD
     }
   }
   useEffect(() => {
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
 
@@ -290,6 +321,21 @@ if ( {) {
         history && history.unshift(payload);
         localStorage && localStorage.setItem(key, JSON && JSON.stringify(history && history.slice(0, 50)));
         alert('Insight saved locally');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      } catch {}
+    })();
+  }
+=======
+
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       } catch {}
     })();
   }
@@ -685,7 +731,33 @@ if (return [] as { label: string, value: number }[], ) {
                 </div>;
               ) : (;
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />;
+<<<<<<< HEAD
               )}
+=======
+
+=======
+            </div>
+
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              <h3 className="font-medium mb-3">Distribution</h3>
+              {data ? (
+                <div className="flex flex-col items-center gap-3">
+                  <DonutChart slices={donutData.map((d, i) => ({ label: d.label, value: d.value })) as any} />
+                  <div className="flex gap-2 flex-wrap justify-center text-xs">
+                    {donutData.map((d) => (
+                      <span key={d.label} className="rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0.5">{d.label}</span>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </div>
           </div>
           {data?.gptRecommendation && (
@@ -695,6 +767,14 @@ if (return [] as { label: string, value: number }[], ) {
                 {data.gptRecommendation}
               </p>            </div>
           )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
@@ -728,6 +808,7 @@ if (return [] as { label: string, value: number }[], ) {
 }
   );
 }
+<<<<<<< HEAD
                       donut_data.map ((d, i) => ({
                         label: d.label,
                         value: d.value,
@@ -789,3 +870,21 @@ if (return [] as { label: string, value: number }[], ) {
       </div>;
     </div>);
 }
+=======
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {data && (
+
+            </div>
+          )}
+
+          {data && (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

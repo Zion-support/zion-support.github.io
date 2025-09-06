@@ -83,6 +83,7 @@ export function filterEventsByScope(
         e.type === 'leaderboard_entry'
     );
   }
+<<<<<<< HEAD
   return events;export function resetState(): void {
   state = { ...defaultState };
 }
@@ -224,12 +225,20 @@ export function resetState(): void {
 }
 // Singleton instance
 export const syncStorage = new SyncStorage();
+=======
+  lastSyncedAt: new Date().toISOString()
+<<<<<<< HEAD
+}
+=======
+};
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 // Main functions for external use
 export async function createJob(job: Omit<SyncJob, 'id' | 'createdAt' | 'updatedAt' | 'progress'>): Promise<SyncJob> {
   return syncStorage.createJob(job);
 }
 
+<<<<<<< HEAD
 export async function getJob(id: string): Promise<SyncJob | null> {
   return syncStorage.getJob(id);
 }
@@ -378,6 +387,11 @@ export function read_state (): SyncState {
 }
 export function update_state (updates: Partial < SyncState>): void {
   state = { ...state, ...updates }
+=======
+export function updateState(updates: Partial<SyncState>): void {;
+  state = { ...state, ...updates };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 export function upsert_event (
   state: MultiverseState,
@@ -448,6 +462,25 @@ if ( {) {
         e.type === 'talent_mobility' ||;
         e.type === 'leaderboard_entry');
   }
-  return events;export function reset_state (): void {
-  state = { ...default_state }
+<<<<<<< HEAD
+  return events;export function resetState(): void {
+  state = { ...defaultState }
 }
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  return events;export function resetState(): void {;
+  state = { ...defaultState };
+}
+
+}
+}
+}
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

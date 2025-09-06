@@ -23,18 +23,36 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
+<<<<<<< HEAD
 type Props = {;
   onSubmit: (payload: {;
+=======
+type Props = {
+  onSubmit: (payload: {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     title: string;
     description?: string;
     dueDate: string;
     amountUsd: number;
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
+<<<<<<< HEAD
 }
 export default function MilestoneForm({ onSubmit }: Props) {
 };
 
 export default function MilestoneForm(): any ({ onSubmit }: Props) {;
+=======
+<<<<<<< HEAD
+}
+export default function MilestoneForm({ onSubmit }: Props) {
+=======
+  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
+
+};
+
+export default function MilestoneForm({ onSubmit }: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
@@ -307,6 +325,7 @@ function MilestoneForm() {
         {loading ? 'Adding...' : 'Add Milestone'}
       </button>
     </form>
+<<<<<<< HEAD
 );
 }
   );
@@ -321,3 +340,23 @@ function MilestoneForm() {
       </button>;
     </form>);
 }
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+=======
+
+  );
+
+}
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

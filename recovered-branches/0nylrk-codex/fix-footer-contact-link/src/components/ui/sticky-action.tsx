@@ -1,16 +1,59 @@
 
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react",
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState } from "react",
+<<<<<<< HEAD
+import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState } from "react";
+import {cn} from "@/lib/utils";
+import {motion, AnimatePresence} from "framer-motion";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface StickyActionProps {
   className?: string;
 
   children: React.ReactNode
 
   showAfterScroll?: number;
-  position?: "bottom" | "top";
+<<<<<<< HEAD
+=======
+=======
+  position?: "bottom" | "top"
+}
+<<<<<<< HEAD
+export function StickyAction({
+=======
+
+export function StickyAction({;
+  className;
+  children;
+  showAfterScroll = 300;
+=======
+import React, { useEffect, useState } from "react",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { cn } from "@/lib/utils",
+import { motion, AnimatePresence } from "framer-motion",
+
+interface StickyActionProps {
+  className?: string,
+  children: React.ReactNode,
+  showAfterScroll?: number,
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  position?: "bottom" | "top"
 }
 export function StickyAction({
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   className;
   children;
 
@@ -34,12 +77,77 @@ export function StickyAction({
   const positionClasses = {
     bottom: "bottom-4"
     top: "top-20"
+<<<<<<< HEAD
   }
+=======
+
+  },
+
+
+  return (
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+<<<<<<< HEAD
+          initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+          transition={{ duration: 0.2 }}
+          className={cn(
+            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4";
+            positionClasses[position];
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+import React, { useEffect, useState } from "react",;
+import { cn } from "@/lib/utils",;
+import { motion, AnimatePresence } from "framer-motion",;
+interface StickyActionProps {;
+  className?: string,;
+  children: React.ReactNode,;
+  showAfterScroll?: number,;
+  position?: "bottom" | "top";
+}
+;
+export function StickyAction({;
+  className,;
+  children,;
+  showAfterScroll = 300,;
+  position = "bottom";
+}: StickyActionProps) {;
+  const [isVisible, setIsVisible] = useState(false),;
+
+  useEffect(() => {;
+    const handleScroll = () => {;
+      if (window && window.scrollY > showAfterScroll) {;
+        setIsVisible(true);
+      } else {;
+        setIsVisible(false);
+      }
+    };
+
+    window && window.addEventListener("scroll", handleScroll);
+    return () => {;
+      window && window.removeEventListener("scroll", handleScroll);
+    }
+  }, [showAfterScroll]);
+
+  const positionClasses = {;
+    bottom: "bottom-4",;
+    top: "top-20";
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <AnimatePresence>;
       {isVisible && (;
         <motion&& motion.div
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+<<<<<<< HEAD
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
           transition={{ duration: 0 && 0.2 }}
@@ -47,6 +155,14 @@ export function StickyAction({
             "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4";
             positionClasses[position];
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             className
           )}>;
           <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">;

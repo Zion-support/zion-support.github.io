@@ -3,6 +3,10 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Menu
   X
   ChevronDown
@@ -28,10 +32,49 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
   BookOpen, MessageCircle
+<<<<<<< HEAD
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
+=======
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+=======
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Home,
+  Users,
+  Briefcase,
+  BookOpen,;
+  MessageCircle,;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, DollarSign, Home, Users, Briefcase, 
+  BookOpen, MessageCircle 
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
 const serviceCategories = [
@@ -283,6 +326,7 @@ const contactInfo = {;
   website: 'https://ziontechgroup && ziontechgroup.com',};  website: 'https://ziontechgroup && ziontechgroup.com';
 };
 
+<<<<<<< HEAD
 const serviceCategories = [;
   {;
     title: 'AI & Machine Learning 2026',;
@@ -519,6 +563,28 @@ const serviceCategories = [;
       { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
     ];
   }
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+<<<<<<< HEAD
+
+];
+=======
+<<<<<<< HEAD
+=======
+
+];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'About Us', href: '/about', icon: Users }
@@ -896,9 +962,24 @@ const UltraAdvancedNavigation2026 = () => {;
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ];
     }
+<<<<<<< HEAD
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ];
     }
+=======
+<<<<<<< HEAD
+
+  ];
+=======
+<<<<<<< HEAD
+=======
+
+  ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const contactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -909,6 +990,7 @@ const UltraAdvancedNavigation2026 = () => {;
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
+<<<<<<< HEAD
       name: 'Quantum Tech',
       href: '/services?category = quantum',
       icon: Atom,
@@ -946,6 +1028,43 @@ const UltraAdvancedNavigation2026 = () => {;
         { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' },
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ]
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {/* Logo */}
+
+      sub_items: [;
+        {
+          name: 'Cloud Solutions',
+          href: '/services?category = cloud',
+          description: 'Cloud infrastructure and services',
+        },
+        {
+          name: 'Cybersecurity',
+          href: '/services?category = security',
+          description: 'Advanced security solutions',
+        },
+        {
+          name: 'Data Analytics',
+          href: '/services?category = analytics',
+          description: 'Business intelligence and analytics',
+        },
+        {
+          name: 'DevOps',
+          href: '/services?category = devops',
+          description: 'Development and operations',
+        },
+      ],
+    },  ];        { name: 'Cloud Solutions', href: '/services?category = cloud', description: 'Cloud infrastructure and services' },
+        { name: 'Cybersecurity', href: '/services?category = security', description: 'Advanced security solutions' },
+        { name: 'Data Analytics', href: '/services?category = analytics', description: 'Business intelligence and analytics' },
+        { name: 'DevOps', href: '/services?category = devops', description: 'Development and operations' }
+      ];
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   ];
 
@@ -1135,6 +1254,7 @@ const UltraAdvancedNavigation2026 = () => {;
                                 href={subItem && subItem.href}
                                 className="block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group"
                                 onClick={() => setActiveDropdown(null)}
+<<<<<<< HEAD
                               >;
                                 <div className="text-white font-medium group-hover:text-purple-300 transition-colors duration-200">;
                                   {subItem && subItem.name}
@@ -1143,6 +1263,21 @@ const UltraAdvancedNavigation2026 = () => {;
                                   {subItem && subItem.description}
                                 </div>;
                               </Link>;
+=======
+
+
+            {/* Desktop Navigation */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                                  {subItem.description}
+                                </div>
+                              </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                             ))}
                           </div>;
                             ))}
@@ -1166,12 +1301,23 @@ const UltraAdvancedNavigation2026 = () => {;
                 </div>;
               ))}
               {/* Quick Links */}
+<<<<<<< HEAD
               <div className='flex items-center space-x-6'>;
                 <Link
                   href='/services'
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'>;
                   All Services;
                 </Link>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  All Services
+                </Link>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <Link
                   href='/pricing'
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'>;
@@ -1295,8 +1441,23 @@ const UltraAdvancedNavigation2026 = () => {;
                 href="/contact"
                 className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
                 Get Started
+<<<<<<< HEAD
               </Link>
             </div>
+=======
+
+              </Link>;
+            </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -1347,6 +1508,17 @@ const UltraAdvancedNavigation2026 = () => {;
         </div>;
       </nav>;
 
+<<<<<<< HEAD
+=======
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1366,6 +1538,23 @@ const UltraAdvancedNavigation2026 = () => {;
             onClick={() => setIsOpen(false)}
           >;
             <motion&& motion.div
+<<<<<<< HEAD
+=======
+=======
+
+            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}
+
+            onClick={() => setIsOpen(false)}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            <motion.div
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
@@ -1432,6 +1621,7 @@ const UltraAdvancedNavigation2026 = () => {;
                     </Link>
 
 
+<<<<<<< HEAD
                     {/* Mobile Sub-items */}
                     <div className='mt-3 ml-11 space-y-2'>;
                       {item && item.subItems.slice(0, 3).map(subItem => (;
@@ -1443,6 +1633,16 @@ const UltraAdvancedNavigation2026 = () => {;
                         >;
                           {subItem && subItem.name}
                         </Link>;
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                        >
+                          {subItem.name}
+                        </Link>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       ))}
                     </div>;
                   </div>;
@@ -1575,3 +1775,39 @@ export default UltraAdvancedNavigation2026;    </>);
 }
 export default UltraAdvancedNavigation2026;
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Spacer for fixed navigation */}
+      <div className='h-20'></div>
+    </>
+  );
+<<<<<<< HEAD
+}
+=======
+};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default UltraAdvancedNavigation2026;    </>
+  );
+}
+export default UltraAdvancedNavigation2026;
+
+<<<<<<< HEAD
+=======
+export default UltraAdvancedNavigation2026;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default UltraAdvancedNavigation2026;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

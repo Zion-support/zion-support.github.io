@@ -1,6 +1,29 @@
+<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+import SEO from '../components/SEO';
+import {Check, ExternalLink} from 'lucide-react';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from 'react',
+<<<<<<< HEAD
+import SEO from '../components/SEO';
+import { Check, ExternalLink } from 'lucide-react';
+=======
+import SEO from '../components/SEO',
+import { Check, ExternalLink } from 'lucide-react',
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function BrowserAutomationCloudPage() {
 	return (
 		<>
@@ -44,6 +67,7 @@ export default function BrowserAutomationCloudPage() {
 			</main>
 		</>
 	)
+<<<<<<< HEAD
 }
 
 class ErrorBoundary extends React.Component {
@@ -68,6 +92,15 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from 'react';
 import SEO from '../components/SEO';
 import {Check, ExternalLink} from 'lucide-react';
@@ -116,6 +149,7 @@ export default function BrowserAutomationCloudPage() {;
 		</>;
 	);
 }
+<<<<<<< HEAD
 import SEO from '../components / SEO';
 import {Check, ExternalLink} from 'lucide-react';
 export default /**
@@ -164,3 +198,10 @@ return (
   </main>;
   </>);
 }
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

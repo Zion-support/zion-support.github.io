@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
@@ -10,11 +15,37 @@ import {
   AlertDialogFooter
   AlertDialogHeader
   AlertDialogTitle
+<<<<<<< HEAD
 } from "../components/ui/alert-dialog";
 import {
   useLanguage
   SupportedLanguage
   LanguageContextType
+=======
+} from "../components/ui/alert-dialog";
+import {
+  useLanguage
+  SupportedLanguage
+  LanguageContextType
+=======
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+AlertDialogTitle,;
+} from "../components/ui/alert-dialog";
+import {
+  useLanguage,
+  SupportedLanguage,
+  LanguageContextType,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "../context/LanguageContext";
 export function LanguageDetectionPopup() {
   const [open, setOpen] = useState(false);
@@ -44,10 +75,67 @@ export function LanguageDetectionPopup() {
   const languageName =
     supportedLanguages.find((lang) => lang.code === detectedLanguage)?.name |
     detectedLanguage;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const handleAccept = async () => {
     await changeLanguage(detectedLanguage);
     setOpen(false);
   }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useState, useEffect } from 'react',;
+import { useTranslation } from 'react-i18next',;
+import {;
+  AlertDialog,;
+  AlertDialogAction,;
+  AlertDialogCancel,;
+  AlertDialogContent,;
+  AlertDialogDescription,;
+  AlertDialogFooter,;
+  AlertDialogHeader,;
+  AlertDialogTitle} from '../components/ui/alert-dialog',;
+import { useLanguage, SupportedLanguage, LanguageContextType } from '../context/LanguageContext',;
+export function LanguageDetectionPopup() {;
+  const [open, setOpen] = useState(false),;
+  const { t } = useTranslation(),;
+  const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage() as LanguageContextType,;
+  const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null),;
+  useEffect(() => {;
+    // Check if this is first visit;
+    const hasVisited = localStorage.getItem('zion_has_visited'),;
+    if (hasVisited) return,;
+    // Mark as visited;
+    localStorage.setItem('zion_has_visitedtrue'),;
+    // Get browser language;
+    const browserLang = navigator.language.substring(0, 2) as SupportedLanguage,;
+    // Check if browser language is supported and different from current language;
+    const isSupported = supportedLanguages.some(lang => lang.code === browserLang),;
+    if (isSupported && browserLang !== currentLanguage) {;
+      setDetectedLanguage(browserLang),;
+      setOpen(true);
+    }
+  }, []),
+
+  if (!detectedLanguage) return null,
+
+  const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage,
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  const handleAccept = async () => {
+    await changeLanguage(detectedLanguage),
+    setOpen(false)
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <AlertDialog open={open} onOpenChange={setOpen}>
@@ -66,13 +154,40 @@ export function LanguageDetectionPopup() {
           </AlertDialogCancel>
           <AlertDialogAction
             onClick={handleAccept}
+<<<<<<< HEAD
             className="bg-zion-purple text-white hover:bg-zion-purple-dark">;
             {t("general && general.yes")}
+=======
+            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
+          >
+            {t("general.yes")}
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+<<<<<<< HEAD
+  );
+}
+=======
+
+);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            {t('general.no')}
+          </AlertDialogCancel>;
+          <AlertDialogAction;
+            onClick={handleAccept}
+            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
+          >
+            {t('general.yes')}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </AlertDialogAction>;
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>;
   );
+<<<<<<< HEAD
 import { useState, useEffect  } from './react';
 import { use_translation  } from './react - i18next';
 import {
@@ -107,6 +222,12 @@ function LanguageDetectionPopup() {
     // Check condition
 if (return) {
   $2
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
     // Mark as visited;
     local_storage.set_item ("zion_has_visitedtrue");

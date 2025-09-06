@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
@@ -112,8 +116,13 @@ const { execSync } = require("child_process")
 =======
   this.log(`� Fatal error in "deployment": ${error.message}`, "ERROR"`)
 =======
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -209,6 +218,7 @@ class DeploymentAutomator {
 
 // Run the deployment automator
 const automator = new DeploymentAutomator();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 automator.run().catch(console.error)
@@ -476,3 +486,11 @@ automator.run().catch(console.error);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+automator.run().catch(console.error);
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+automator.deploy().catch(console.error);
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

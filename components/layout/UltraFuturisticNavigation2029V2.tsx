@@ -3,6 +3,10 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Menu
   X
   Search
@@ -61,6 +65,7 @@ import {
   Award
   Clock
   CheckCircle;} from 'lucide-react';import {
+<<<<<<< HEAD
 import {;
   Menu,;
   X,;
@@ -121,6 +126,9 @@ import {;
   Clock,;
   CheckCircle,;} from 'lucide-react';import { ;
 import { 
+=======
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
   Menu,
   X,
@@ -178,8 +186,15 @@ import {
   Briefcase,
   Lightbulb,
   Award,
+<<<<<<< HEAD
   Clock,
   CheckCircle,} from 'lucide-react';import {
+=======
+
+  Clock,;
+  CheckCircle,;} from 'lucide-react';import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Menu, X, Search, ChevronDown, ChevronRight;
 
   Home, Users, Settings, HelpCircle, Mail, Phone, MapPin;
@@ -751,12 +766,26 @@ const quick_links = [;
 
 export default function UltraFuturisticNavigation2029V2() {
   const [isOpen, setIsOpen] = useState(false)
+<<<<<<< HEAD
+=======
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function UltraFuturisticNavigation2029V2() {
+=======
+export default function UltraFuturisticNavigation2029V2() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [isOpen, setIsOpen] = useState(false);
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
   return (
+<<<<<<< HEAD
     <nav className='relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20'>;
       {/* Main Navigation Bar */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -769,6 +798,14 @@ export default function UltraFuturisticNavigation2029V2() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             className='flex-shrink-0'
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='relative'>
@@ -865,7 +902,16 @@ export default function UltraFuturisticNavigation2029V2() {
           </div>
 
           {/* Right side - Contact & Search */}
+<<<<<<< HEAD
           <div className='hidden lg:flex items-center space-x-4'>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Search */}
             <div className='relative'>;
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />;
@@ -890,6 +936,14 @@ export default function UltraFuturisticNavigation2029V2() {
               />;
             </div>;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Contact Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -988,6 +1042,17 @@ export default function UltraFuturisticNavigation2029V2() {
         </div>;
       </div>;
 
+<<<<<<< HEAD
+=======
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -995,9 +1060,21 @@ export default function UltraFuturisticNavigation2029V2() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0 && 0.3 }}
             className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20'>;
             <div className='px-4 py-6 space-y-4'>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            <div className='px-4 py-6 space-y-4'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Mobile Search */}
               <div className='relative'>;
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />;
@@ -1049,6 +1126,15 @@ export default function UltraFuturisticNavigation2029V2() {
                   </Link>;
                 ))}
               </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Quick Links */}
               <div className='pt-4 border-t border-gray-700'>;
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>;
@@ -1079,6 +1165,7 @@ export default function UltraFuturisticNavigation2029V2() {
                 </div>
               </div>
 
+<<<<<<< HEAD
               {/* Contact Info */}
               <div className="pt-4 border-t border-gray-700">
                 <h3 className="text-sm font-medium text-gray-400 mb-3 px-4">Contact Info</h3>
@@ -1086,6 +1173,28 @@ export default function UltraFuturisticNavigation2029V2() {
                   <div className="flex items-center space-x-3 text-gray-400">
                     <Phone className="w-4 h-4" />
                     <span className="text-sm">{contactInfo.mobile}</span>
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              {/* Contact Info */}
+              <div className='pt-4 border-t border-gray-700'>
+                <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
+                  Contact Info
+                </h3>
+                <div className='space-y-2 px-4'>
+                  <div className='flex items-center space-x-3 text-gray-400'>
+                    <Phone className='w-4 h-4' />
+                    <span className='text-sm'>{contactInfo.mobile}</span>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   </div>
                   <div className="flex items-center space-x-3 text-gray-400">
                     <Mail className="w-4 h-4" />
@@ -1242,6 +1351,15 @@ export default function UltraFuturisticNavigation2029V2() {
           </motion && motion.div>;
         )}
       </AnimatePresence>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Service Categories Dropdown */}
       <AnimatePresence>;
         {activeCategory && (;
@@ -1249,6 +1367,7 @@ export default function UltraFuturisticNavigation2029V2() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
+<<<<<<< HEAD
             transition={{ duration: 0 && 0.3 }}
             className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40'>;
             <div className='max-w-7xl mx-auto px-4 py-8'>;
@@ -1256,6 +1375,21 @@ export default function UltraFuturisticNavigation2029V2() {
                 {serviceCategories && serviceCategories.map(category => (;
                   <div key={category && category.title} className='space-y-4'>;
                     <div className='flex items-center space-x-3'>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            <div className='max-w-7xl mx-auto px-4 py-8'>
+              <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
+                {serviceCategories.map(category => (
+                  <div key={category.title} className='space-y-4'>
+                    <div className='flex items-center space-x-3'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       <div
                         className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}
                       >
@@ -1316,6 +1450,25 @@ export default function UltraFuturisticNavigation2029V2() {
                             <span className="text-sm font-semibold text-cyan-400">{service && service.price}</span>;
                           </div>;
                         </Link>;
+<<<<<<< HEAD
+=======
+
+=======
+                        <Link
+                          key={service.name}
+                          href={service.href}
+
+                          </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                        </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       ))}
                     </div>;
                   </div>;
@@ -1326,6 +1479,7 @@ export default function UltraFuturisticNavigation2029V2() {
         )}
       </AnimatePresence>
     </nav>
+<<<<<<< HEAD
 );
 }
   );
@@ -1388,3 +1542,23 @@ export default function UltraFuturisticNavigation2029V2() {
       </AnimatePresence>;
     </nav>);
 }
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+=======
+
+  );
+
+}
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

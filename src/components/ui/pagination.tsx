@@ -31,25 +31,65 @@ const PaginationItem = React.forwardRef<
 PaginationItem.displayName = &quot;PaginationItem&quot;
 type PaginationLinkProps = {
   isActive?: boolean
+<<<<<<< HEAD
   size?: ButtonProps[&quot;size&quot;]
 } & React.ComponentProps<&quot;a&quot;>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface PaginationButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   page: number
   isActive?: boolean
 }
 const PaginationLink = ({
+<<<<<<< HEAD
   className
   isActive
   size = &quot;icon&quot;
+=======
+
+
+  className,
+  isActive,
+<<<<<<< HEAD
+  size = &quot;icon&quot;
+=======
+  size = "icon",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ...props
 }: PaginationLinkProps) => (
   <a
     aria-current={isActive ? &quot;page" : undefined}
     className={cn(
       buttonVariants({
+<<<<<<< HEAD
         variant: isActive ? "outline&quot; : &quot;ghost&quot;
         size})
+=======
+<<<<<<< HEAD
+        variant: isActive ? "outline&quot; : &quot;ghost&quot;
+<<<<<<< HEAD
+        size})
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        variant: isActive ? "outline" : "ghost",
+
+        size}),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       className
     )}
     {...props}
@@ -64,8 +104,20 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
       aria-label={`Page ${page}`}
       aria-current={isActive ? 'page' : undefined}
       className={cn(;
+<<<<<<< HEAD
         buttonVariants({ variant: 'ghost', size: 'icon' });
         isActive && 'bg-green-600 text-white';
+=======
+
+
+        buttonVariants({ variant: 'ghost', size: 'icon' }),;
+        isActive && 'bg-green-600 text-white',;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         className;
       )}
       {...props}
@@ -120,6 +172,7 @@ const PaginationEllipsis = ({
 )
 PaginationEllipsis.displayName = &quot;PaginationEllipsis"
 export {
+<<<<<<< HEAD
   Pagination
   PaginationContent
   PaginationEllipsis
@@ -128,3 +181,23 @@ export {
   PaginationButton
   PaginationNext
   PaginationPrevious}
+=======
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationButton,
+<<<<<<< HEAD
+  PaginationNext,;
+  PaginationPrevious};
+=======
+  PaginationNext,
+  PaginationPrevious}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

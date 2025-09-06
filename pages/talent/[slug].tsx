@@ -1,10 +1,22 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import EnhancedButton from "../../components/ui/EnhancedButton";
 import { TrustBadge, MicroTestimonial } from "../../components/ui/Badges";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const TalentProfile: NextPage = () => {
   const router = use_router ();
   const { slug } = router.query;
@@ -17,6 +29,7 @@ const TalentProfile: NextPage = () => {
       { action, at: new Date().toISOString() }
     ]);
   }
+<<<<<<< HEAD
   return (
     <div className="space-y-6 pb-20">;
       {" "}
@@ -48,6 +61,48 @@ const TalentProfile: NextPage = () => {
           >
             Negotiate
           </EnhancedButton>
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import { useRouter } from 'next/router',
+import { useState } from 'react',
+import EnhancedButton from '../../components/ui/EnhancedButton',
+import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges',
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+const TalentProfile: NextPage = () => {
+  const router = useRouter(),
+  const { slug } = router.query,
+  const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>>([]),
+  const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
+    setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }])
+  };
+
+  return (
+    <div className="space-y-6 pb-20">
+      <Head>
+        <title>{slug} - Talent - Zion</title>
+      </Head>
+
+      <header className="flex items-start justify-between gap-4">
+        <div>
+          <h1 className="text-2xl font-semibold">{slug}</h1>
+          <div className="text-sm opacity-80">Full-Stack Developer</div>
+          <div className="mt-2 flex gap-1">
+            <TrustBadge type="Verified" />
+            <TrustBadge type="Top Rated" />
+          </div>
+        </div>
+        <div className="flex gap-2">
+          <EnhancedButton onClick={() => handleRespond('Accept')}>Accept</EnhancedButton>
+          <EnhancedButton variant="secondary" onClick={() => handleRespond('Decline')}>Decline</EnhancedButton>
+          <EnhancedButton variant="ghost" onClick={() => handleRespond('Negotiate')}>Negotiate</EnhancedButton>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         </div>
       </header>
           <div className="border rounded-md p-4">;
@@ -174,9 +229,18 @@ const TalentProfile: NextPage = () => {
           </div>;
         </aside>;
       </section>;
+<<<<<<< HEAD
     </div>;
   );
 }
+=======
+
+},;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default TalentProfile;
 
     </div>);

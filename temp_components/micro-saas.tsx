@@ -1,7 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 const microSaasServices = [ {
   return (<> <Head> <title>Micro SaaS Services | Zion Tech Group - Specialized Business Solutions</title> <meta name="description" content="Discover our 85+ specialized micro SaaS solutions for content creation, design systems, performance monitoring, SEO automation, chatbots, business intelligence, video generation, e-commerce analytics, HR management, legal automation, inventory management, customer support, financial planning, learning management, real estate management, cybersecurity, metaverse development, Web3 DeFi, IoT edge computing, autonomous vehicles, climate prediction, biotechnology, financial trading, education personalization, enterprise IT, and more. Competitive pricing with 14-day free trials." /> <meta property="og:title" content="Micro SaaS Services | Zion Tech Group" /> <meta property="og:description" content="Specialized business solutions with competitive pricing and free trials." /> <meta name="twitter:card" content="summary large image" /> </Head> <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6" > <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse" /> Comprehensive Micro SaaS Guide </div> <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight" > Micro SaaS Services </h1> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12" > Real solutions with comprehensive market research, competitive analysis, and proven business models. Each service is designed to solve specific business problems with AI-powered automation. </p> <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto" > <div className="text-center" > <div className="text-3xl font-bold text-blue-400 mb-2" >85+</div> <div className="text-sm text-gray-400" >Services</div> </div> <div className="text-center" > <div className="text-3xl font-bold text-green-400 mb-2" >25+</div> <div className="text-sm text-gray-400" >Categories</div> </div> <div className="text-center" > <div className="text-3xl font-bold text-purple-400 mb-2" >99.9%</div> <div className="text-sm text-gray-400" >Uptime</div> </div> <div className="text-center" > <div className="text-3xl font-bold text-orange-400 mb-2" >24/7</div> <div className="text-sm text-gray-400" >Support</div> </div> </div> <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight" > Specialized Tools for <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400" > Every Business Need</span> </h1> <p className="text-xl text-gray-400 max-w-5xl mx-auto leading-relaxed mb-12" > 85+ specialized micro SaaS solutions covering AI-powered content creation, video generation, design systems, performance monitoring;
   return (<> <Head> <title > Micro SaaS Services | Zion Tech Group - Specialized Business Solutions</title> <meta name="description" content="Discover our 85+ specialized micro SaaS solutions for content creation, design systems, performance monitoring, SEO automation, chatbots, business intelligence, video generation, e - commerce analytics, HR management, legal automation, inventory management, customer support, financial planning, learning management, real estate management, cybersecurity, metaverse development, Web3 DeFi, IoT edge computing, autonomous vehicles, climate prediction, biotechnology, financial trading, education personalization, enterprise IT, and more. Competitive pricing with 14 - day free trials." /> <meta property="og:title" content="Micro SaaS Services | Zion Tech Group" /> <meta property="og:description" content="Specialized business solutions with competitive pricing and free trials." /> <meta name="twitter:card" content="summary large image" /> </Head> <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center" > <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - blue - 500 / 10 border border - blue - 500 / 20 text - blue - 400 text - sm font - medium mb - 6" > <span className="w - 2 h - 2 bg - blue - 500 rounded - full mr - 2 animate - pulse" /> Comprehensive Micro SaaS Guide </div> <h1 className="text - 4xl sm:text - 5xl lg:text - 6xl font - bold text - white mb - 8 leading - tight" > Micro SaaS Services </h1> <p className="text - xl text - gray - 300 max - w-4xl mx - auto leading - relaxed mb - 12" > Real solutions with comprehensive market research, competitive analysis, and proven business models. Each service is designed to solve specific business problems with AI - powered automation. </p> <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto" > <div className="text - center" > <div className="text - 3xl font - bold text - blue - 400 mb - 2" >85+</div> <div className="text - sm text - gray - 400" >Services</div> </div> <div className="text - center" > <div className="text - 3xl font - bold text - green - 400 mb - 2" >25+</div> <div className="text - sm text - gray - 400" >Categories</div> </div> <div className="text - center" > <div className="text - 3xl font - bold text - purple - 400 mb - 2" >99.9%</div> <div className="text - sm text - gray - 400" >Uptime</div> </div> <div className="text - center" > <div className="text - 3xl font - bold text - orange - 400 mb - 2" >24 / 7</div> <div className="text - sm text - gray - 400" >Support</div> </div> </div> <h1 className="text - 4xl sm:text - 5xl lg:text - 6xl font - bold text - white mb - 8 leading - tight" > Specialized Tools for <span className="text - transparent bg - clip - text bg - gradient - to - r from - green - 400 to - emerald - 400" > Every Business Need</span> </h1> <p className="text - xl text - gray - 400 max - w-5xl mx - auto leading - relaxed mb - 12" > 85+ specialized micro SaaS solutions covering AI - powered content creation, video generation, design systems, performance monitoring;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+const microSaasServices = [ {
+  return (<> <Head> <title>Micro SaaS Services | Zion Tech Group - Specialized Business Solutions</title> <meta name="description" content="Discover our 85+ specialized micro SaaS solutions for content creation, design systems, performance monitoring, SEO automation, chatbots, business intelligence, video generation, e-commerce analytics, HR management, legal automation, inventory management, customer support, financial planning, learning management, real estate management, cybersecurity, metaverse development, Web3 DeFi, IoT edge computing, autonomous vehicles, climate prediction, biotechnology, financial trading, education personalization, enterprise IT, and more. Competitive pricing with 14-day free trials." /> <meta property="og:title" content="Micro SaaS Services | Zion Tech Group" /> <meta property="og:description" content="Specialized business solutions with competitive pricing and free trials." /> <meta name="twitter:card" content="summary large image" /> </Head> <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6" > <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse" /> Comprehensive Micro SaaS Guide </div> <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight" > Micro SaaS Services </h1> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12" > Real solutions with comprehensive market research, competitive analysis, and proven business models. Each service is designed to solve specific business problems with AI-powered automation. </p> <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto" > <div className="text-center" > <div className="text-3xl font-bold text-blue-400 mb-2" >85+</div> <div className="text-sm text-gray-400" >Services</div> </div> <div className="text-center" > <div className="text-3xl font-bold text-green-400 mb-2" >25+</div> <div className="text-sm text-gray-400" >Categories</div> </div> <div className="text-center" > <div className="text-3xl font-bold text-purple-400 mb-2" >99.9%</div> <div className="text-sm text-gray-400" >Uptime</div> </div> <div className="text-center" > <div className="text-3xl font-bold text-orange-400 mb-2" >24/7</div> <div className="text-sm text-gray-400" >Support</div> </div> </div> <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight" > Specialized Tools for <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400" > Every Business Need</span> </h1> <p className="text-xl text-gray-400 max-w-5xl mx-auto leading-relaxed mb-12" > 85+ specialized micro SaaS solutions covering AI-powered content creation, video generation, design systems, performance monitoring;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 SEO automation, chatbots, business intelligence, email marketing, social media management;
 customer feedback, billing, project management, API infrastructure, e - commerce analytics, legal document generation;
 HR management, AI customer support, data backup, AI code assistance, cybersecurity monitoring, supply chain analytics;
@@ -41,8 +50,18 @@ import {Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, T
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target  } from 'lucide-react';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react';
 export default function MicroSaasPage() {
+=======
+<<<<<<< HEAD
+import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react';
+export default function MicroSaasPage() {
+=======
+import {Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap, as, Lightning} from 'lucide-react';
+export default function MicroSaasPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const microSaasServices = [
@@ -1247,10 +1266,15 @@ export default function MicroSaasPage() {
     }
   ];
   const categories = [...new Set(microSaasServices.map(service => service.category))];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const competitiveAdvantages = [
     {
       title: "Specialized Focus"
       description: "Each of our 65+ services is designed for a specific business need, ensuring deep functionality and expertise without feature bloat.";
+<<<<<<< HEAD
       icon: ""
     }
     {
@@ -1277,6 +1301,19 @@ export default function MicroSaasPage() {
       icon: ''
       title: 'Seamless Integration'
       description: 'Connect with your existing tools and workflows. Our services integrate with popular platforms and provide comprehensive APIs.'
+=======
+      icon: "🎯"
+    }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from 'react',;
+import Head from 'next/head',;
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target } from 'lucide-react',;
+import Button from '../components/ui/Button',;
+import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react',;
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function MicroSaasPage() {;
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -2485,6 +2522,7 @@ export default function MicroSaasPage() {;
 
   const categories = [...new Set(microSaasServices && microSaasServices.map(service => service && service.category))];
 
+<<<<<<< HEAD
   const competitiveAdvantages = [;
     {;
       title: "Specialized Focus",;
@@ -2515,6 +2553,53 @@ export default function MicroSaasPage() {;
       icon: '',;
       title: 'Seamless Integration',;
       description: 'Connect with your existing tools and workflows. Our services integrate with popular platforms and provide comprehensive APIs.';
+=======
+  const categories = [...new Set(microSaasServices.map(service => service.category))],
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  const competitiveAdvantages = [
+    {
+      title: "Specialized Focus",
+      description: "Each of our 65+ services is designed for a specific business need, ensuring deep functionality and expertise without feature bloat.",
+      icon: "🎯"
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    {
+      icon: '💰'
+      title: 'Transparent Pricing'
+      description: 'No hidden fees, no enterprise sales calls. Simple monthly pricing that scales with your business needs and growth.'
+
+    },
+
+    {
+      icon: '🔒'
+      title: 'Enterprise Security'
+      description: 'Bank-level security, SOC 2 compliance, and 99.9% uptime guarantee for all services. Built for production use.'
+
+    },
+
+    {
+      icon: '🎯'
+      title: 'Focused Solutions'
+      description: 'Each service solves a specific business problem without the complexity of enterprise platforms. Do one thing exceptionally well.'
+
+    },
+
+    {
+      icon: '📱'
+      title: 'Mobile First'
+      description: 'All services are optimized for mobile devices, ensuring your team can work efficiently from anywhere, anytime.'
+
+    },
+
+    {
+      icon: '🔄'
+      title: 'Seamless Integration'
+      description: 'Connect with your existing tools and workflows. Our services integrate with popular platforms and provide comprehensive APIs.'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   ];
   return (
@@ -4369,9 +4454,30 @@ function MicroSaasPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* CTA Section */}
     </>
   )
+=======
+<<<<<<< HEAD
+      {/* CTA Section */}
+    </>
+  )
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+      {/* CTA Section */}
+    </>;
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
                   </div>;
                   <div className="flex - 1">;

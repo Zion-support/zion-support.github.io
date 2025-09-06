@@ -1,6 +1,7 @@
 
 import React from "react";
 
+<<<<<<< HEAD
 import {Link} from "react-router-dom";
 import {ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone} from "lucide-react";
 export function QuickAccess() {
@@ -11,6 +12,53 @@ export function QuickAccess() {
       icon: <Search className="h-6 w-6 text-zion-cyan" />
       link: "/match"
     }
+=======
+
+import React from "react",
+import { Link } from "react-router-dom",
+import { 
+  ArrowRight,
+  Search, 
+  Users, 
+  Briefcase, 
+  Settings, 
+  MessageSquare, 
+  Smartphone 
+} from "lucide-react",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
+export function QuickAccess() {
+  const quickLinks = [
+    {
+<<<<<<< HEAD
+      title: "AI Matcher"
+      description: "Find the perfect match for your project needs"
+      icon: <Search className="h-6 w-6 text-zion-cyan" />
+=======
+      title: "AI Matcher",
+      description: "Find the perfect match for your project needs",
+      icon: <Search className="h-6 w-6 text-zion-cyan" />,
+<<<<<<< HEAD
+      link: "/match";
+    };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      link: "/match"
+<<<<<<< HEAD
+    }
+=======
+    },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     {
       title: "Talent Directory"
       description: "Browse verified tech specialists"
@@ -115,6 +163,14 @@ function QuickAccess() {
                 <ArrowRight className="ml-1 h-3 w-3" />
               </div>
             </Link>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           ))}
         </div>
       </div>

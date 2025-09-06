@@ -2,6 +2,10 @@
 import React from "react";
 import Head from "next/head";
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Phone
   Mail
   MapPin
@@ -9,13 +13,34 @@ import {
   ArrowRight
   Shield
   Star
+<<<<<<< HEAD
+=======
+=======
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Shield,
+  Star,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
 export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
+<<<<<<< HEAD
     s.link.endsWith("/quantum-internet-security-platform")
+=======
+<<<<<<< HEAD
+    s.link.endsWith("/quantum-internet-security-platform")
+=======
+
+    s.link.endsWith("/quantum-internet-security-platform"),;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
   if (!service) return null;
 
@@ -128,6 +153,42 @@ function QuantumInternetSecurityPage() {
   // Check condition
 if (return null) {
   $2
+<<<<<<< HEAD
+=======
+=======
+                className="w-full"
+              >
+                Request a Security Demo
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+              <div className="mt-6 space-y-3 text-sm text-slate-300">
+                <div className="flex items-center space-x-2">
+                  <Phone className="w-4 h-4 text-cyan-400" />
+                  <span>{service.contactInfo.mobile}</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Mail className="w-4 h-4 text-purple-400" />
+                  <span>{service.contactInfo.email}</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <MapPin className="w-4 h-4 text-green-400" />
+                  <span className="text-xs">{service.contactInfo.address}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  );
+<<<<<<< HEAD:pages-disabled/quantum-iot.tsx
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main:pages-disabled/quantum-iot.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/quantum-internet-security-platform.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
   return (
     <UltraAdvancedFuturisticBackground>;

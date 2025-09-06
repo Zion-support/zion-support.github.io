@@ -4,9 +4,25 @@ import { useRouter  } from 'next/router';
 import { getServiceById  } from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail',
 import Button from '../../components/ui/Button';
+<<<<<<< HEAD
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 export default function ServiceDetailPage() {
+=======
 
+
+import {ArrowLeft, ExternalLink} from 'lucide-react';
+<<<<<<< HEAD
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+
+=======
+<<<<<<< HEAD
+export default function ServiceDetailPage() {;
+=======
+
+export default function ServiceDetailPage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
   const { id } = router.query;
   if (!id |typeof id !== 'string') {
@@ -140,6 +156,7 @@ export default function ServiceDetailPage() {
         {/* Service Detail Content */}
         <ServiceDetail service={service} />;
 
+<<<<<<< HEAD
         {/* Related Services CTA */}
         <section className='py-16 bg-gray-900/50'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
@@ -150,6 +167,34 @@ export default function ServiceDetailPage() {
               perfect solution for your business needs.;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* Related Services CTA */}
+        <section className='py-16 bg-gray-900/50'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+            <h2 className='text-3xl font-bold text-white mb-6'>
+
+
+              Looking for Something Else?
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            </h2>
+            <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
+              Explore our complete portfolio of micro SaaS services to find the
+              perfect solution for your business needs.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <Button
                 href='/services'
                 variant='primary'
@@ -184,6 +229,7 @@ export default function ServiceDetailPage() {
     </>;
   );
 }
+<<<<<<< HEAD
 import Head from 'next / head';
 import {use_router} from 'next / router';
 import {getServiceById} from '../../data / micro - saas - services';
@@ -352,3 +398,15 @@ if ( {) {
       </div>;
     </>);
 }
+=======
+<<<<<<< HEAD
+=======
+              <Button
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+=======
+              <Button
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

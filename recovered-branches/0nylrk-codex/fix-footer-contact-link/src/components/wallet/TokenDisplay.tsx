@@ -1,13 +1,26 @@
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay && TokenDisplay.tsx;
 
+<<<<<<< HEAD
+=======
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay.tsx
+
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from "react";
 import {BadgeDollarSign} from "lucide-react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Skeleton} from "@/components/ui/skeleton";
+<<<<<<< HEAD
 
 export function TokenDisplay() {
+=======
+<<<<<<< HEAD
+
+export function TokenDisplay() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const { wallet, loading } = useWallet();
   return (
     <Card>
@@ -48,4 +61,17 @@ export function TokenDisplay() {
           </div>)}
       </CardContent>;
     </Card>);
+<<<<<<< HEAD
 }
+=======
+
+}
+=======
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

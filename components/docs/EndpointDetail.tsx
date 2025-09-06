@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import CodeSamples from './CodeSamples',
 import TryItConsole from './TryItConsole';
@@ -8,6 +9,31 @@ export default function EndpointDetail({
 }: {
   endpoint: EndpointSpec;
 }) {
+=======
+
+
+import React from 'react';
+import CodeSamples from './CodeSamples';
+
+export default function EndpointDetail({
+<<<<<<< HEAD
+  endpoint
+}: {
+=======
+  endpoint,
+}: {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  endpoint: EndpointSpec;
+}) {
+
+
+  return (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     <div className='space-y-4'>
 
       <div>
@@ -69,6 +95,7 @@ export default function EndpointDetail({
             {endpoint.rateLimits.map((r, idx) => (
               <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>
             ))}
+<<<<<<< HEAD
           </ul>;
         </div>;
       )}
@@ -90,6 +117,22 @@ export default function EndpointDetail({
   );
 }
             ))}
+=======
+<<<<<<< HEAD
+          </ul>
+        </div>
+      )}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+            ))}
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </ul>
         </div>
       )}
@@ -101,11 +144,18 @@ export default function EndpointDetail({
             {endpoint.errors.map((e) => (
               <li key={e.code}><strong>{e.code}</strong> ({e.httpStatus}) - {e.message}</li>
             ))}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </ul>
         </div>
       )}
     </div>
   );
+<<<<<<< HEAD
 }
           </span>        </div>;
       </div>;
@@ -166,3 +216,13 @@ export default function EndpointDetail({
         </div>)}
     </div>);
 }
+=======
+<<<<<<< HEAD
+=======
+
+}
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -4,6 +4,10 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   DropdownMenu
   DropdownMenuContent
   DropdownMenuItem
@@ -47,6 +51,7 @@ export function LanguageSelector() {;
       </DropdownMenuContent>;
     </DropdownMenu>;
   );
+<<<<<<< HEAD
 import React from './react';
 import { use_translation  } from './react - i18next';
 import { Button  } from '@/components / ui / button';
@@ -65,6 +70,23 @@ function LanguageSelector() {
   const { t } = use_translation ();
   const { current_language, change_language, supported_languages } = use_language ();
 ;
+=======
+=======
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+DropdownMenuTrigger,;
+} from "@/components/ui/dropdown-menu";
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+<<<<<<< HEAD
+export function LanguageSelector() {;
+  const { t } = useTranslation();
+  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <DropdownMenu>;
       <DropdownMenuTrigger as_child>;
@@ -84,10 +106,22 @@ function LanguageSelector() {
         {supported_languages.map ((lang) => (
           <DropdownMenuItem;
             key={lang.code}
+<<<<<<< HEAD
             className={`cursor - pointer ${
               current_language === lang.code;
                 ? "bg - zion - purple / 20 text - zion - cyan";
                 : "text - white hover:bg - zion - purple / 10";
+=======
+
+
+            className={`cursor-pointer ${;
+              currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10';
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             }`}
             on_click={() => change_language (lang.code)}
           >;
@@ -97,5 +131,16 @@ function LanguageSelector() {
             </div>;
           </DropdownMenuItem>))}
       </DropdownMenuContent>;
+<<<<<<< HEAD
     </DropdownMenu>);
+=======
+    </DropdownMenu>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  );
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }

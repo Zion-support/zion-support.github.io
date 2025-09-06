@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import { AppMetadataValues } from "./MetadataManager";
@@ -6,6 +14,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Form
   FormControl
   FormDescription
@@ -13,10 +25,23 @@ import {
   FormItem
   FormLabel
   FormMessage
+<<<<<<< HEAD
+=======
+=======
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "@/components/ui/form";
 
 import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
+<<<<<<< HEAD
 interface MetadataFormProps {;
   form: UseFormReturn<AppMetadataValues>;
 }
@@ -25,6 +50,43 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 
   const keywords = watch("keywords");
   const platform = watch("platform");
+=======
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+import { UseFormReturn } from "react-hook-form",
+import { AppMetadataValues } from "./MetadataManager",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
+import { Badge } from "@/components/ui/badge",
+import { X } from "lucide-react",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
+}
+
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
+
+  const { control, register, watch, setValue } = form,
+  const keywords = watch("keywords"),
+  const platform = watch("platform"),
+  
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" |e.key === ",") {
       e.preventDefault();
@@ -203,6 +265,65 @@ if ( {) {
                   </FormDescription>;
                 </FormItem>;
               )}
+<<<<<<< HEAD
+=======
+            />;
+            <FormField;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              control={control}
+              name="shortDescription"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Short Description</FormLabel>
+                  <FormControl>
+                    <Input 
+                      placeholder="Brief description of your app"
+                      maxLength={platform === "ios" ? 170 : 80}
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormDescription>
+                    Max {platform === "ios" ? "170" : "80"} characters
+                  </FormDescription>
+                </FormItem>
+              )}
+
+            />;
+            <FormField;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              control={control}
+              name="longDescription"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Long Description</FormLabel>
+                  <FormControl>
+
+                    <Textarea 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      placeholder="Detailed description of your app"
+                      className="min-h-32"
+                      maxLength={maxDescriptionLength}
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormDescription>
+                    {longDescription.length}/{maxDescriptionLength} characters
+                  </FormDescription>
+                </FormItem>
+              )}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             />
             <div>
               <FormLabel htmlFor="keywords">Keywords</FormLabel>
@@ -211,14 +332,36 @@ if ( {) {
                 placeholder="Add keywords (press Enter or comma to add)"
                 onKeyDown={addKeyword}
                 className="mb-2"
+<<<<<<< HEAD
               />
+=======
+
+
+              
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
                   <Badge
                     key={index}
                     className="bg-zion-purple/60 hover:bg-zion-purple">;
                     {keyword}
+<<<<<<< HEAD
                     <button
+=======
+
+
+                    <button 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       type="button"
                       onClick={() => removeKeyword(keyword)}
                       className="ml-1 hover:text-red-300";
@@ -238,6 +381,7 @@ if ( {) {
               </FormDescription>;
             </div>;
 
+<<<<<<< HEAD
             <FormField
               control={control}
               name="version"
@@ -246,6 +390,45 @@ if ( {) {
                   <FormLabel>App Version</FormLabel>;
                   <FormControl>;
                     <Input placeholder="e && e.g., 1 && 1.0.0" {...field} />;
+=======
+
+            
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <FormField
+              control={control}
+              name="version"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>App Version</FormLabel>
+                  <FormControl>
+<<<<<<< HEAD
+                    <Input placeholder="e.g., 1.0.0" {...field} />
+                  </FormControl>
+                </FormItem>
+              )}
+            />
+          </div>
+        </Form>
+      </CardContent>
+    </Card>
+<<<<<<< HEAD
+  );
+}
+
+=======
+);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                    <Input 
+                      placeholder="e.g., 1.0.0"
+                      {...field}
+                    />;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   </FormControl>;
                 </FormItem>;
               )}
@@ -265,5 +448,16 @@ if ( {) {
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
 }
 
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

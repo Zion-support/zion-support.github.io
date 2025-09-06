@@ -1,10 +1,33 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {useNavigate} from "react-router-dom";
+import {toast} from "sonner";
+interface Message {;
+  id: string,;
+  content: string,;
+  timestamp: string,;
+  isMe: boolean,;
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 interface Message {
@@ -22,6 +45,11 @@ import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from './
 import { cn } from '@/lib / utils';
 import { use_navigate } from './react-router-dom';
 import { toast } from './sonner';
+=======
+<<<<<<< HEAD
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface Message {
   id: string,
   content: string,
@@ -41,6 +69,79 @@ interface MobileChatViewProps {
   }
   messages: Message[]
   onBack: () => void
+<<<<<<< HEAD
+=======
+=======
+import { useNavigate } from "react-router-dom",
+import { toast } from "sonner",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface Message {
+  id: string,
+  content: string,
+  timestamp: string,
+  isMe: boolean,
+  sender?: string,
+  avatar?: string,
+  status?: 'sent' | 'delivered' | 'read'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+
+
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
+  const [newMessage, setNewMessage] = useState("");
+  const navigate = useNavigate();
+  
+  const handleSend = () => {
+    if (newMessage.trim() !== "") {
+      onSendMessage(newMessage);
+      setNewMessage("")
+    }
+  };
+  
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault(),
+      handleSend()
+    }
+  };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from "react",;
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+import { useNavigate } from "react-router-dom",;
+import { toast } from "sonner",;
+interface Message {;
+  id: string,;
+  content: string,;
+  timestamp: string,;
+  isMe: boolean,;
+  sender?: string,;
+  avatar?: string,;
+  status?: 'sent' | 'delivered' | 'read';
+}
+;
+interface MobileChatViewProps {;
+  contact: {;
+    id: string,;
+    name: string,;
+    avatar?: string,;
+    status?: string;
+  },;
+  messages: Message[],;
+  onBack: () => void,;
+  onSendMessage: (content: string) => void;
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   onSendMessage: (content: string) => void
 }
@@ -59,7 +160,24 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       e.preventDefault()
       handleSend()
     }
+<<<<<<< HEAD
   }
+=======
+  },;
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
+    if (e.key === 'Enter' && !e.shiftKey) {;
+      e.preventDefault(),;
+      handleSend();
+    }
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`;
     toast.success("Starting video call", {
@@ -131,10 +249,190 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
               )}>
+<<<<<<< HEAD
                 {message.timestamp}
                 {message.is_me && message.status && (
                   <span className="ml - 1">;
                     {message.status === 'read' ? '' : ''}
+=======
+=======
+                "text-xs mt-1 flex justify-end",
+                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
+              )}>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  },;
+  const startVideoCall = () => {;
+    const roomId = `mobile-${contact.id}`,;
+    toast.success("Starting video call", {;
+      description: `Connecting with ${contact.name}...`;
+    });
+;
+    // Navigate to video call page;
+    navigate (`/call/${room_id}`);
+  }
+;
+  const startAudioCall = () =>: any {
+    const room_id = `mobile - audio-${contact.id}`;
+    toast.success ("Starting audio call", {
+      description: `Connecting with ${contact.name}...`;
+    });
+;
+    // Navigate to video call page with audio - only flag;
+    navigate (`/call/${room_id}?audio_only = true`);
+  }
+;
+  return (
+    <div className="flex flex - col h - full pb - safe">;
+      <header className="sticky top - 0 z - 10 bg - background border - b border - border">;
+        <div className="flex items - center h - 14 px - 4">;
+          <Button variant="ghost" size="icon" on_click={on_back}>;
+            <ChevronLeft className="h - 5 w - 5" />;
+          </Button>;
+          <div className="flex items - center flex - 1 gap - 3 mx - 2">;
+            <Avatar>;
+              <AvatarImage src={contact.avatar} alt={contact.name} />;
+              <AvatarFallback>{contact.name.char_at (0).toUpperCase ()}</AvatarFallback>;
+            </Avatar>;
+            <div>;
+              <h3 className="font - medium">{contact.name}</h3>;
+              <p className="text - xs text - muted - foreground">;
+                {contact.status || "Online"}
+              </p>;
+            </div>;
+          </div>;
+          <div className="flex">;
+            <Button variant="ghost" size="icon" on_click={startAudioCall}>;
+              <Phone className="h - 5 w - 5" />;
+            </Button>;
+            <Button variant="ghost" size="icon" on_click={startVideoCall}>;
+              <Video className="h - 5 w - 5" />;
+            </Button>;
+            <Button variant="ghost" size="icon">;
+              <MoreVertical className="h - 5 w - 5" />;
+            </Button>;
+          </div>;
+        </div>;
+      </header>;
+      <div className="flex - 1 overflow - y-auto p - 4 space - y-4">;
+        {messages.map ((message) => (
+          <div;
+            key={message.id}
+            className={cn (
+              "flex";
+              message.is_me ? "justify - end" : "justify - start")}
+          >;
+            <div;
+              className={cn (
+                "max - w-[80%] rounded - 2xl px - 4 py - 2";
+                message.is_me;
+                  ? "bg - primary text - primary - foreground rounded - tr - none";
+                  : "bg - muted rounded - tl - none")}
+            >;
+              <p>{message.content}</p>;
+              <div className={cn (
+                "text - xs mt - 1 flex justify - end";
+                message.is_me ? "text - primary - foreground / 80" : "text - muted - foreground")}>;
+
+                {message.timestamp}
+                {message.is_me && message.status && (
+                  <span className="ml - 1">;
+                    {message.status === 'read' ? '✓✓' : '✓'}
+
+  };
+
+  const handleKeyDown = (e: React && React.KeyboardEvent<HTMLInputElement>) => {;
+    if (e && e.key === 'Enter' && !e && e.shiftKey) {;
+      e && e.preventDefault(),;
+      handleSend();
+    }
+  };
+
+  const startVideoCall = () => {;
+    const roomId = `mobile-${contact && contact.id}`;
+    toast && toast.success("Starting video call", {;
+      description: `Connecting with ${contact && contact.name}...`;
+    });
+
+    // Navigate to video call page;
+    navigate(`/call/${roomId}`);
+  };
+
+  const startAudioCall = () => {;
+    const roomId = `mobile-audio-${contact && contact.id}`;
+    toast && toast.success("Starting audio call", {;
+      description: `Connecting with ${contact && contact.name}...`;
+    });
+
+    // Navigate to video call page with audio-only flag;
+    navigate(`/call/${roomId}?audioOnly=true`);
+  };
+
+  return (
+    <div className="flex flex-col h-full pb-safe">;
+      <header className="sticky top-0 z-10 bg-background border-b border-border">;
+        <div className="flex items-center h-14 px-4">;
+          <Button variant="ghost" size="icon" onClick={onBack}>;
+            <ChevronLeft className="h-5 w-5" />;
+          </Button>;
+
+          <div className="flex items-center flex-1 gap-3 mx-2">;
+            <Avatar>;
+              <AvatarImage src={contact && contact.avatar} alt={contact && contact.name} />;
+              <AvatarFallback>{contact && contact.name.charAt(0).toUpperCase()}</AvatarFallback>;
+            </Avatar>;
+            <div>;
+              <h3 className="font-medium">{contact && contact.name}</h3>;
+              <p className="text-xs text-muted-foreground">;
+                {contact && contact.status || "Online"}
+              </p>;
+            </div>;
+          </div>;
+
+          <div className="flex">;
+            <Button variant="ghost" size="icon" onClick={startAudioCall}>;
+              <Phone className="h-5 w-5" />;
+            </Button>;
+
+            <Button variant="ghost" size="icon" onClick={startVideoCall}>;
+              <Video className="h-5 w-5" />;
+            </Button>;
+
+            <Button variant="ghost" size="icon">;
+              <MoreVertical className="h-5 w-5" />;
+            </Button>;
+          </div>;
+        </div>;
+      </header>;
+
+      <div className="flex-1 overflow-y-auto p-4 space-y-4">;
+        {messages && messages.map((message) => (;
+          <div
+            key={message && message.id} 
+            className={cn(
+              "flex"
+              message && message.isMe ? "justify-end" : "justify-start"
+            )}>;
+            <div
+              className={cn(
+                "max-w-[80%] rounded-2xl px-4 py-2"
+                message && message.isMe 
+                  ? "bg-primary text-primary-foreground rounded-tr-none" 
+                  : "bg-muted rounded-tl-none"
+              )}>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {message.timestamp}
+                {message.isMe && message.status && (
+                  <span className="ml-1">
+                    {message.status === 'read' ? '✓✓' : '✓'}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   </span>
                 )}
               </div>;

@@ -25,6 +25,10 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ArrowRight
   Star
   TrendingUp
@@ -33,6 +37,7 @@ import {
   Rocket
   Globe
   Sparkles;
+<<<<<<< HEAD
 import {;
   ArrowRight,;
   Star,;
@@ -42,6 +47,34 @@ import {;
   Rocket,;
   Globe,;
   Sparkles,;
+=======
+=======
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
+import Link from 'next/link';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
+import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
+
+
+
+import Link from 'next/link';
+import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
+import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
+
+
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Rocket,
+
+  Globe,;
+  Sparkles,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';import Link from 'next/link';
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
 import Link from 'next/link';
@@ -53,8 +86,17 @@ import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-service
 import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
 export default function Revolutionary2026ServicesShowcase() {
+<<<<<<< HEAD
   // Get featured services from each category
 
+=======
+<<<<<<< HEAD
+  // Get featured services from each category
+
+=======
+  // Get featured services from each category;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const featuredAIServices = aiAutonomousServices2026.slice(0, 3);
   const featuredQuantumServices = quantumSpaceTechServices2026.slice(0, 3);
   const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(
@@ -132,6 +174,7 @@ export default function Revolutionary2026ServicesShowcase() {;
     }
   };
 
+<<<<<<< HEAD
   const itemVariants = {;
     hidden: { opacity: 0, y: 20 },;
     visible: {;
@@ -142,6 +185,23 @@ export default function Revolutionary2026ServicesShowcase() {;
       },;
     },;
   };
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+    <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
+      {/* Enhanced Background Effects */}
+      <div className='absolute inset-0'>
+        <div className='absolute inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-cyan-900/30'></div>
+        <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/20 via-transparent to-blue-900/20'></div>
+        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse'></div>
+        <div className='absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000'></div>
+      </div>
+<<<<<<< HEAD
+      <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}  }
+=======
+      <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
@@ -167,11 +227,40 @@ export default function Revolutionary2026ServicesShowcase() {;
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Enhanced Header */}
         <motion&& motion.div
+<<<<<<< HEAD
+=======
+=======
+
+      <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}  };
+
+
+
+      <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}
+
+        {/* Enhanced Header */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <motion.div
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
           className='text-center mb-20'
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         >
           <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>
             <Sparkles className='w-5 h-5 text-purple-400' />
@@ -334,11 +423,31 @@ export default function Revolutionary2026ServicesShowcase() {;
           </div>;
         </motion && motion.div>;
 
+<<<<<<< HEAD
         {/* AI Autonomous Services Section */}
         <motion&& motion.div
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
+=======
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* AI Autonomous Services Section */}
+        <motion&& motion.div
+          variants={containerVariants}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           viewport={{ once: true }}
           className='mb-20'
         >
@@ -437,8 +546,18 @@ export default function Revolutionary2026ServicesShowcase() {;
                       <span className="text-gray-400 text-sm">({service.reviews})</span>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <Link
                     href={service.link}
+=======
+<<<<<<< HEAD
+                  <Link
+                    href={service.link}
+=======
+                  <Link 
+                    href={service.link} 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -447,6 +566,7 @@ export default function Revolutionary2026ServicesShowcase() {;
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
           <div className='text-center mt-8'>
             ))}
           </div>;
@@ -461,6 +581,57 @@ export default function Revolutionary2026ServicesShowcase() {;
               href="/services?category=ai-autonomous"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">;
               View All AI Autonomous Services <ArrowRight className="w-5 h-5 ml-2" />;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* Quantum Space Tech Services Section */}
+        <motion.div
+          variants={containerVariants}
+          initial='hidden'
+          whileInView='visible'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          viewport={{ once: true }}
+          className='mb-20'
+        >
+          <div className='flex items-center space-x-3 mb-12'>
+            <div className='w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center'>
+              <Rocket className='w-6 h-6 text-white' />
+            </div>
+            <div>
+              <h3 className='text-3xl font-bold text-white'>
+                Quantum Space Technology
+              </h3>
+              <p className='text-indigo-300'>
+                Revolutionary quantum-powered space exploration and technology
+              </p>
+            </div>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredQuantumServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+                variants={itemVariants}
+                className='group relative'          viewport={{ once: true }}
+          className="mb-20">;
+          <div className="flex items-center space-x-3 mb-12">;
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">;
+              <Brain className="w-6 h-6 text-white" />;
+            </div>;
+            <div>;
+              <h3 className="text-3xl font-bold text-white">AI Autonomous Services</h3>;
+              <p className="text-blue-300">Fully autonomous AI systems that run your business</p>;
+            </div>;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </div>;
         </motion && motion.div>;
 
@@ -595,8 +766,18 @@ export default function Revolutionary2026ServicesShowcase() {;
                       <span className="text-gray-400 text-sm">({service.reviews})</span>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <Link
                     href={service.link}
+=======
+<<<<<<< HEAD
+                  <Link
+                    href={service.link}
+=======
+                  <Link 
+                    href={service.link} 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -732,11 +913,31 @@ export default function Revolutionary2026ServicesShowcase() {;
           </div>;
         </motion && motion.div>;
 
+<<<<<<< HEAD
         {/* Metaverse & Digital Reality Services Section */}
         <motion&& motion.div
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
+=======
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* Metaverse & Digital Reality Services Section */}
+        <motion&& motion.div
+          variants={containerVariants}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           viewport={{ once: true }}
             <Link
               href='/services?category=quantum-space'
@@ -861,8 +1062,18 @@ export default function Revolutionary2026ServicesShowcase() {;
                       <span className="text-gray-400 text-sm">({service.reviews})</span>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <Link
                     href={service.link}
+=======
+<<<<<<< HEAD
+                  <Link
+                    href={service.link}
+=======
+                  <Link 
+                    href={service.link} 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     className="inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -1004,6 +1215,17 @@ export default function Revolutionary2026ServicesShowcase() {;
           </div>;
         </motion && motion.div>;
 
+<<<<<<< HEAD
+=======
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Call to Action Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -1022,7 +1244,25 @@ export default function Revolutionary2026ServicesShowcase() {;
                 {' '}
                 Contact us today;
               </span>{' '}
+<<<<<<< HEAD
               to start your transformation.
+=======
+
+          className="text-center"
+        >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          <div className='bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
+            <h3 className='text-4xl font-bold text-white mb-6'>
+              Ready to Experience the Future?
+            </h3>
+            <p className="text-gray-300 text-xl mb-8 max-w-3xl mx-auto">
+              Join thousands of companies already achieving unprecedented success with our revolutionary 2026 technologies. 
+              <span className="text-purple-400 font-semibold"> Contact us today</span> to start your transformation.
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </p>
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
               <Link
@@ -1058,6 +1298,7 @@ export default function Revolutionary2026ServicesShowcase() {;
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 );
 }
   );
@@ -1160,3 +1401,23 @@ export default function Revolutionary2026ServicesShowcase() {;
       </div>;
     </section>);
 }
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+=======
+
+  );
+
+}
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

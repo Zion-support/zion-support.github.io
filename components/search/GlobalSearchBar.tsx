@@ -1,7 +1,37 @@
+<<<<<<< HEAD
 import { useEffect, useMemo, useRef, useState  } from 'react';
 import { useRouter } from 'next/router';
 export default function GlobalSearchBar() {
 
+=======
+<<<<<<< HEAD
+import { useEffect, useMemo, useRef, useState  } from 'react';
+=======
+import { useEffect, useMemo, useRef, useState } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import { useRouter } from 'next/router';
+<<<<<<< HEAD
+export default function GlobalSearchBar() {
+
+=======
+export default function GlobalSearchBar() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const router = useRouter();
+  const [query, setQuery] = useState('');
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [open, setOpen] = useState(false);
+  const controller = useRef<AbortController | null>(null);
+  useEffect(() => {
+    if (!query) {
+      setSuggestions([]);
+      return;      return
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 export default function GlobalSearchBar() {
@@ -105,6 +135,7 @@ export default function GlobalSearchBar() {
                     setOpen(false);
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
+<<<<<<< HEAD
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
     rec.start()
   }
@@ -112,6 +143,18 @@ export default function GlobalSearchBar() {
     rec && rec.start();
   };
 
+=======
+<<<<<<< HEAD
+                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
+    rec.start()
+<<<<<<< HEAD
+  }
+=======
+  };
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">;
       <input
@@ -139,6 +182,7 @@ export default function GlobalSearchBar() {
 
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
+<<<<<<< HEAD
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
                 >;
                   {s}
@@ -157,6 +201,22 @@ export default function GlobalSearchBar() {
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
                 >
+=======
+                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
+                >
+=======
+<<<<<<< HEAD
+                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
+
+                >
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   {s}
                 </button>
               </li>
@@ -335,3 +395,15 @@ if (return) {
         </div>)}
     </form>));
 }
+<<<<<<< HEAD
+=======
+
+=======
+
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

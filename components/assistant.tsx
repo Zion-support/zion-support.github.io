@@ -47,26 +47,32 @@ export default function Assistant() {
 interface Message {;
   role: 'user' | 'assistant';
   content: string;
-
-export default function Assistant() {;
-  const params =;
-    typeof window !== 'undefined';
-      ? new URLSearchParams(window && window.location.search);
-      : new URLSearchParams();  const tenantId = params && params.get('tenantId') || '';
-  const brand = params && params.get('brand') || 'Zion AI';
+export default function Assistant() {
+  const params =
+    typeof window !== 'undefined'
+<<<<<<< HEAD
+      ? new URLSearchParams(window.location.search)
+      : new URLSearchParams();  const tenantId = params.get('tenantId') |'';
+  const brand = params.get('brand') |'Zion AI';
+  const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
+export default function Assistant() {
+=======
+      ? new URLSearchParams(window.location.search);
+      : new URLSearchParams();  const tenantId = params.get('tenantId') || '';
+  const brand = params.get('brand') || 'Zion AI';
 
   const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
 
 export default function Assistant() {;
-  const params = typeof window !== 'undefined' ? new URLSearchParams(window && window.location.search) : new URLSearchParams();
-  const tenantId = params && params.get('tenantId') || '';
-  const brand = params && params.get('brand') || 'Zion AI';
-
-  const [messages, setMessages] = useState<Message[]>([;
-    {;
-      role: 'assistant',;
-      content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`,;
-    },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
+  const tenantId = params.get('tenantId') |'';
+  const brand = params.get('brand') |'Zion AI';
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      role: 'assistant'
+      content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`
+    }
   ]);
   const [input, setInput] = useState('');
 
@@ -184,6 +190,7 @@ export default function Assistant() {;
         <button type="submit" className="bg-gray-900 text-white text-sm rounded px-3 py-2">Send</button>
       </form>
     </div>
+<<<<<<< HEAD
 );
 }
 import {useEffect, useMemo, useState} from 'react';
@@ -333,3 +340,31 @@ if ( {) {
       </form>;
     </div>);
 }
+=======
+<<<<<<< HEAD
+  );      >
+        <input
+          className="flex-1 border rounded px-3 py-2 text-sm"
+          placeholder="Ask about the role..."
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <button type="submit" className="bg-gray-900 text-white text-sm rounded px-3 py-2">Send</button>
+      </form>
+    </div>
+);
+}
+<<<<<<< HEAD
+=======
+  );
+
+=======
+
+}
+
+
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

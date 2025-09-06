@@ -25,9 +25,45 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+<<<<<<< HEAD
   ArrowRight,
   Award,
   BarChart3,
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+  ArrowRight,
+  Award,
+  BarChart3,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+=======
+  Shield,
+  Code,
+  Zap,
+  Globe,
+  Home,
+  Building,
+  FileText,
+  MessageSquare,
+  Calendar,
+  ShoppingCart,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   BookOpen,
   Brain,
   Building,
@@ -62,6 +98,7 @@ import {
   Star,
   Target,
   TrendingUp,
+<<<<<<< HEAD
   Truck,
   Users,
   X,
@@ -70,6 +107,132 @@ import {
   Truck,
   Users,
   X,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+  Truck,
+  Users,
+  X,
+  Zap,;
+
+} from "lucide-react";
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+  Truck,
+  Users,
+  X,
+  Zap
+<<<<<<< HEAD
+=======
+=======
+  Clock,
+  DollarSign,
+  Cpu,
+  Rocket,
+  Car,
+  Sprout,
+  Wifi,
+  GraduationCap,
+  Award as Recognition,
+  Star as Rating,
+  Users as People,
+  Settings as Config,
+  BarChart3 as Analytics,
+  Shield as Security,
+  Code as Programming,
+  Zap as Lightning,
+  Globe as World,
+  Home as House,
+  Building as Office,
+  FileText as Document,
+  MessageSquare as Chat,
+  Calendar as Schedule,
+  ShoppingCart as Cart,
+  BookOpen as Book,
+  Camera as Photo,
+  Music as Audio,
+  Gamepad2 as Gaming,
+  Heart as Love,
+  Truck as Delivery,
+  Calculator as Math,
+  CreditCard as Payment,
+  Lock as Secure,
+  Eye as View,
+  Target as Goal,
+  TrendingUp as Growth,
+  Clock as Time,
+  DollarSign as Money;
+
+} from 'lucide-react';
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+=======
+=======
+  Truck,
+  Users,
+  X,
+  Zap,
+} from "lucide-react";
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+
+
+=======
+
+
+} from 'lucide-react';
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  ArrowRight
+  Award
+  BarChart3
+  BookOpen
+  Brain
+  Building
+  Calculator
+  Calendar
+  Camera
+  CheckCircle
+  ChevronDown
+  Clock
+  Cloud
+  Code
+  CreditCard
+  DollarSign
+  Eye
+  FileText
+  Gamepad2
+  Globe
+  Heart
+  Home
+  Lock
+  Mail
+  MapPin
+  Menu
+  MessageSquare
+  Music
+  Network
+  Phone
+  Rocket
+  Settings
+  Shield
+  ShoppingCart
+  Star
+  Target
+  TrendingUp
+  Truck
+  Users
+  X
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Zap
 } from 'lucide-react';
 
@@ -315,7 +478,25 @@ const quickLinks = [
   { title: "Quote", href: "/quote", icon: FileText }
   { title: "API Docs", href: "/api-docs", icon: Code }
 ];
+<<<<<<< HEAD
 export default function Navigation() {
+=======
+
+const quickLinks = [;
+  { title: "Pricing", href: "/pricing", icon: DollarSign },;
+  { title: "Contact", href: "/contact", icon: Phone },;
+  { title: "Support", href: "/support", icon: MessageSquare },;
+  { title: "Status", href: "/status", icon: BarChart3 },;
+  { title: "Quote", href: "/quote", icon: FileText },;
+  { title: "API Docs", href: "/api-docs", icon: Code },;
+];
+<<<<<<< HEAD
+export default function Navigation() {
+=======
+
+export default function Navigation() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   return (

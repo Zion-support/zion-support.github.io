@@ -2,6 +2,10 @@
 import React from "react";
 import Head from "next/head";
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Phone
   Mail
   MapPin
@@ -9,13 +13,34 @@ import {
   ArrowRight
   Sparkles
   Star
+<<<<<<< HEAD
+=======
+=======
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Sparkles,
+  Star,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
 export default function MetaverseAIPlatformPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
+<<<<<<< HEAD
     s.link.endsWith("/metaverse-ai-development-platform")
+=======
+<<<<<<< HEAD
+    s.link.endsWith("/metaverse-ai-development-platform")
+=======
+
+    s.link.endsWith("/metaverse-ai-development-platform"),;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
   if (!service) return null;
 
@@ -128,6 +153,42 @@ function MetaverseAIPlatformPage() {
   // Check condition
 if (return null) {
   $2
+<<<<<<< HEAD
+=======
+=======
+                className="w-full"
+              >
+                Request a Demo
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+              <div className="mt-6 space-y-3 text-sm text-slate-300">
+                <div className="flex items-center space-x-2">
+                  <Phone className="w-4 h-4 text-cyan-400" />
+                  <span>{service.contactInfo.mobile}</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Mail className="w-4 h-4 text-purple-400" />
+                  <span>{service.contactInfo.email}</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <MapPin className="w-4 h-4 text-green-400" />
+                  <span className="text-xs">{service.contactInfo.address}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  );
+<<<<<<< HEAD:pages-disabled/quantum-blockchain.tsx
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main:pages-disabled/quantum-blockchain.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/metaverse-ai-development-platform.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
   return (
     <UltraAdvancedFuturisticBackground>;

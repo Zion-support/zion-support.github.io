@@ -26,6 +26,10 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Code
   Copy
   RefreshCw
@@ -36,6 +40,7 @@ import {
   Upload
   Settings
   Eye;
+<<<<<<< HEAD
 import {;
   Code,;
   Copy,;
@@ -47,6 +52,9 @@ import {;
   Upload,;
   Settings,;
   Eye,;
+=======
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
@@ -59,8 +67,15 @@ import {
   ArrowRight,
   Download,
   Upload,
+<<<<<<< HEAD
   Settings,
   Eye,
+=======
+
+  Settings,;
+  Eye,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Star } from 'lucide-react';
@@ -526,6 +541,7 @@ export default function JSONFormatterPage() {;
                     }`}>                    {isValid ? 'Valid' : 'Invalid'}                <div className="flex items-center space-x-2">;
                   <spanclassName={`px-2 py-1 rounded text-xs font-medium ${
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Input Section */}
             <Card className="p-8 bg-gray-800 border border-gray-700">
@@ -548,6 +564,13 @@ export default function JSONFormatterPage() {;
                 <div className="relative">;
                   {showLineNumbers && (
                     <div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden">
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     </div>
                   }`}>;
                   </span>;
@@ -578,7 +601,18 @@ export default function JSONFormatterPage() {;
                   <div className='p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>                    <strong>Error:</strong> {errorMessage}
                   </div>;
                 )}
+<<<<<<< HEAD
                 <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
+=======
+
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <strong>Error:</strong> {errorMessage}
                   </div>;
                 )}
@@ -644,6 +678,7 @@ export default function JSONFormatterPage() {;
                       Copy;
                     </Button>;
                     <Button
+<<<<<<< HEAD
                       onClick={() =>;
                         downloadJSON(formattedJson, 'formatted && formatted.json');
                       }
@@ -712,17 +747,45 @@ export default function JSONFormatterPage() {;
                     <p> Characters: {formattedJson.length}</p>
                     <p> Lines: {formattedJson.split('\n').length}</p>
                     <p> Size: {(formattedJson.length * 2 / 1024).toFixed(2)} KB</p>
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 )}
               </div>
             </Card>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Features */}
+
+
+
+              Professional JSON Formatting Features
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to work with JSON data efficiently and
@@ -898,6 +961,45 @@ export default function JSONFormatterPage() {;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-teal-600 to-cyan-600'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+          </h2>
+          <p className='text-xl text-teal-100 mb-8'>
+            Join thousands of developers and professionals who trust our JSON
+            formatter for their data needs.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <Button
+              href='/contact'
+              size='lg'
+              className='bg-white text-teal-600 hover:bg-gray-100'
+            >
+              Get Started Today
+              <ArrowRight className='w-5 h-5 ml-2' />
+            </Button>
+            <Button
+              href='/pricing'
+              variant='outline'
+              size='lg'
+              className='border-white text-white hover:bg-white hover:text-teal-600'            >              href="/pricing"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-teal-600"
+              View Pricing
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
                 {formattedJson && (;
                   <div className='text-sm text-gray-400'>;
@@ -1010,6 +1112,7 @@ export default function JSONFormatterPage() {;
               Perfect For Every JSON Need;
             </h2>;
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
+<<<<<<< HEAD
             {/* Output Section */}
             <Card className='p - 8 bg - gray - 800 border border - gray - 700'>;
               <div className='flex items - center justify - between mb - 6'>;
@@ -1334,3 +1437,12 @@ export default function JSONFormatterPage() {;
 }
     </>);
 }
+=======
+=======
+}
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,7 +1,32 @@
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Download, FileImage, FileText, FileType, FileVideo, Link} from "lucide-react";
+import {toast} from "@/hooks/use-toast";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
+=======
+import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",
+import { toast } from "@/hooks/use-toast",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface ResourceItem {
 
   id: string
@@ -98,10 +123,23 @@ export function PartnerResources() {
                     className="w-full flex items-center gap-2";
                   >;
                     <Download className="h-4 w-4" />;
+<<<<<<< HEAD
                     {resource && resource.type === 'link' ? 'Visit Link' : 'Download'}
                   </Button>;
                 </CardContent>;
               </Card>;
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    {resource.type === 'link' ? 'Visit Link' : 'Download'}
+                  </Button>
+                </CardContent>
+              </Card>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             ))}
           </div>
         </CardContent>
@@ -155,6 +193,7 @@ export function PartnerResources() {
       </Card>
     </div>
   )
+<<<<<<< HEAD
           <CardDescription>;
             Best practices for promoting the Zion AI Marketplace;
           </CardDescription>;
@@ -180,6 +219,14 @@ export function PartnerResources() {
               <li>Modify or alter our brand assets in unauthorized ways</li>;
               <li>Create fake accounts or use bots to generate referrals</li>;
             </ul>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </div>;
         </CardContent>;
       </Card>;
@@ -203,5 +250,16 @@ export function PartnerResources() {
       </Card>;
     </div>;
   );
+<<<<<<< HEAD
     </div>);
 }
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

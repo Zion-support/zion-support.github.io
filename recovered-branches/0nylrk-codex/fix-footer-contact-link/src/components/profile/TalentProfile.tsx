@@ -1,4 +1,26 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {Handshake, MessageSquare, Star} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {HireNowCTA} from "./HireNowCTA";
+import {ProfileHero} from "./ProfileHero";
+import {ProfileSkills} from "./ProfileSkills";
+import {ProfileExperience} from "./ProfileExperience";
+import {ProfileProjects} from "./ProfileProjects";
+import {ProfileAvailability} from "./ProfileAvailability";
+import {ProfileContact} from "./ProfileContact";
+import {ProfileRatings} from "./ProfileRatings";
+import {TalentProfile, as, TalentProfileType} from "@/types/talent";
+import {useAuth} from "@/hooks/useAuth";
+import {Availability} from "@/types/profile";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from "react",
 import { Handshake, MessageSquare, Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -11,8 +33,22 @@ import { ProfileAvailability } from "./ProfileAvailability",
 import { ProfileContact } from "./ProfileContact",
 import { ProfileRatings } from "./ProfileRatings",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import { Availability } from "@/types/profile";
+=======
+<<<<<<< HEAD
+import { useAuth } from "@/hooks/useAuth";
+import { Availability } from "@/types/profile";
+=======
+import { useAuth } from "@/hooks/useAuth",
+import { Availability } from "@/types/profile",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface TalentProfileProps {
 
   profile: TalentProfileType
@@ -48,6 +84,71 @@ export function TalentProfile({
 
   return (
     <div className="container mx-auto px-4 py-8">;
+<<<<<<< HEAD
+=======
+=======
+
+  })) || [],
+  
+  return (
+    <div className="container mx-auto px-4 py-8">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",;
+import { Handshake, MessageSquare, Star } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { HireNowCTA } from "./HireNowCTA",;
+import { ProfileHero } from "./ProfileHero",;
+import { ProfileSkills } from "./ProfileSkills",;
+import { ProfileExperience } from "./ProfileExperience",;
+import { ProfileProjects } from "./ProfileProjects",;
+import { ProfileAvailability } from "./ProfileAvailability",;
+import { ProfileContact } from "./ProfileContact",;
+import { ProfileRatings } from "./ProfileRatings",;
+import { TalentProfile as TalentProfileType } from "@/types/talent",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Availability } from "@/types/profile",;
+interface TalentProfileProps {;
+  profile: TalentProfileType,;
+  onRequestHire: () => void,;
+  onMessageTalent?: () => void;
+}
+;
+export function TalentProfile({;
+  profile,;
+  onRequestHire,;
+  onMessageTalent;
+}: TalentProfileProps) {;
+  const { isAuthenticated } = useAuth(),;
+  // Create proper availability object from talent profile;
+  const availability: Availability = {;
+    status: profile.availability_type === 'full_time' ? 'available' :;
+            profile.availability_type === 'part_time' ? 'limited' : 'unavailable',;
+    message: `${profile.professional_title} with ${profile.years_experience} years of experience`;
+  },;
+  // Create proper skills array for ProfileSkills component;
+  const skillsArray = profile.skills?.map(skill => ({;
+    name: skill,;
+    level: 3 // Default level since we don't have this data;
+  })) || [],;
+  // Create proper projects array for ProfileProjects component;
+  const projectsArray = profile.key_projects?.map((proj, i) => ({;
+    id: `project-${i}`,;
+    title: proj.title,;
+    description: proj.description;
+    date: new Date().toISOString() // Default date since we don't have this data;
+  })) || [];
+  return (;
+    <div className="container mx-auto px-4 py-8">;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Profile Header */}
       <ProfileHero
         name={profile && profile.full_name}
@@ -72,12 +173,23 @@ export function TalentProfile({
         {/* Right Column - Bio & Projects */}
         <div className="lg:col-span-2 space-y-8">;
           {/* Bio Section */}
+<<<<<<< HEAD
           <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
             <h2 className="text-xl font-bold text-white mb-4">About {profile.full_name}</h2>
             <div className="prose prose-invert max-w-none">
               <p className="text-zion-slate whitespace-pre-wrap">{profile.bio}</p>
             </div>
           </div>
+=======
+
+
+          
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />
           {/* Ratings Section */}

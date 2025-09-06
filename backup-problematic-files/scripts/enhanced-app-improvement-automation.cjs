@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-app-improvement-automation.cjs
 <<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -435,6 +436,11 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/enhanced-app-improvement-automation.cjs
 const { execSync } = require('child_process')
 // console.log(' Starting Enhanced App Improvement Automation')
 console.log('======')
@@ -464,6 +470,7 @@ console.log('======')
     execSync('npm run build', { "stdio"})
       execSync('npm run export', { "stdio"})
   "status"
+<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-app-improvement-automation.cjs
 <<<<<<< HEAD
     console.error('� Automation "failed")
 =======
@@ -477,3 +484,6 @@ console.log('======')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+    console.error('� Automation "failed")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/enhanced-app-improvement-automation.cjs

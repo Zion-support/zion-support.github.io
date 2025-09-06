@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from 'react';
 import { Dialog;
   DialogContent;
@@ -6,6 +11,45 @@ import { Dialog;
 import { AIEnhancementPanel  } from './AIEnhancementPanel';
 import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 interface AIEnhancementDialogProps {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  title: string,
+  isOpen: boolean,
+  onClose: () => void,
+  onApply: (content: string) => void,
+  defaultOptions: AIEnhancementOptions,
+  initialContent?: string
+}
+
+export function AIEnhancementDialog({;
+  title;
+  isOpen;
+  onClose;
+  onApply;
+  defaultOptions;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from 'react',;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogHeader,;
+  DialogTitle} from '@/components/ui/dialog',;
+import { AIEnhancementPanel } from './AIEnhancementPanel',;
+import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
+interface AIEnhancementDialogProps {;
+  title: string,;
+  isOpen: boolean,;
+  onClose: () => void,;
+  onApply: (content: string) => void,;
+  defaultOptions: AIEnhancementOptions,;
+  initialContent?: string;
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   title: string
   isOpen: boolean

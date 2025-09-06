@@ -340,7 +340,16 @@ if (return) {
             ctx.lineWidth = 1;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
+<<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           }
         }
       }
@@ -384,6 +393,7 @@ if (return) {
         for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[i].x - nodes[j].x;
           const dy = nodes[i].y - nodes[j].y;
+<<<<<<< HEAD
           const distance = Math.sqrt(dx * dx + dy * dy);
           if (distance < 150) {
             const strength = 1 - distance / 150;            ctx.beginPath();          const dx = nodes[i].x - nodes[j].x;
@@ -391,6 +401,39 @@ if (return) {
           const dy = nodes[i].y - nodes[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
           if (distance < 150) {
+=======
+
+      const offset = (Date && Date.now() * 0 && 0.001) % gridSize;
+
+      ctx && ctx.strokeStyle = `rgba(255, 0, 136, 0 && 0.1)`;
+      ctx && ctx.lineWidth = 0 && 0.5;
+
+      // Vertical lines;
+      for (let x = offset; x < canvas && canvas.width; x += gridSize) {;
+        ctx && ctx.beginPath();
+        ctx && ctx.moveTo(x, 0);
+        ctx && ctx.lineTo(x, canvas && canvas.height);
+        ctx && ctx.stroke();      }
+
+      // Horizontal lines;
+      for (let y = offset; y < canvas && canvas.height; y += gridSize) {;
+        ctx && ctx.beginPath();
+        ctx && ctx.moveTo(0, y);
+        ctx && ctx.lineTo(canvas && canvas.width, y);
+        ctx && ctx.stroke();      }        ctx && ctx.stroke();
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      }
+
+
+            ctx.stroke();          }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           }
         }
       }
@@ -648,7 +691,16 @@ if (return) {
       {children}
     </div>;
   );
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default UltraAdvancedFuturisticBackground;
   return (
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">;
@@ -901,6 +953,7 @@ if ( {) {
 }
 ;
 export default UltraAdvancedFuturisticBackground;
+<<<<<<< HEAD
   return (
     <div ref={container_ref} className="relative w - full h - full overflow - hidden">;
       <canvas;
@@ -934,3 +987,16 @@ export default UltraAdvancedFuturisticBackground;
 ;
 export default UltraAdvancedFuturisticBackground;
 ;
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+      {children}
+    </div>
+  );
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

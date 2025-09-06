@@ -3,9 +3,20 @@ import fs from "fs";
 import path from "path";
 function fixDoubleCommas(filePath) {
   try {
+<<<<<<< HEAD
     const content = fs && fs.readFileSync(filePath, "utf8");
     let modified = false;
     // Fix double commas in import statements
+=======
+    const content = fs.readFileSync(filePath, "utf8");
+    let modified = false;
+<<<<<<< HEAD
+    // Fix double commas in import statements
+=======
+
+    // Fix double commas in import statements;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     const doubleCommaRegex = /,\s*,/g;
     const fixedContent = content.replace(doubleCommaRegex, ",");
     if (fixedContent !== content) {

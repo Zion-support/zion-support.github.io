@@ -21,5 +21,34 @@ declare module 'lovable-tagger' {import { Plugin } from 'vite';
   export function componentTagger(): Plugin;
 }
 // Add Node.js globals
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+}
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+declare let __dirname: string,
+declare let process: {
+  env: {
+    [key: string]: string | undefined,
+    NODE_ENV: 'development' | 'production' | 'test',
+    PORT?: string
+;
+// Add Node.js globals;
+declare let __dirname: string,;
+declare let process: {;
+  env: {;
+    [key: string]: string | undefined,;
+    NODE_ENV: 'development' | 'production' | 'test';
+    PORT?: string;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }

@@ -1,20 +1,62 @@
 
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect  } from 'react';
+=======
+import { useState, useEffect } from 'react',
+
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react";
 import { supabase  } from '@/integrations/supabase/client';
 import { ModelConfig } from '@/utils/zion-gpt';
+=======
+
+
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",
+import { supabase } from '@/integrations/supabase/client',
+import { ModelConfig } from '@/utils/zion-gpt',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import {useState, useEffect} from 'react';
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {Loader2, RefreshCw, Play, CheckCircle, AlertCircle} from "lucide-react";
+import {supabase} from '@/integrations/supabase/client';
+import {ModelConfig} from '@/utils/zion-gpt';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface ModelVersionData extends ModelConfig {
 
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed'
 
   errorMessage?: string
+<<<<<<< HEAD
 }
 export function ZionGPTModelManager() {
   const [models, setModels] = useState<ModelVersionData[]>([]),
+=======
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+export function ZionGPTModelManager() {
+  const [models, setModels] = useState<ModelVersionData[]>([]),
+=======
+
+export function ZionGPTModelManager() {;
+  const [models, setModels] = useState<ModelVersionData[]>([]);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [isLoading, setIsLoading] = useState(true);
   const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({})
   // Fetch model data on component mount
@@ -79,6 +121,7 @@ export function ZionGPTModelManager() {
       setActiveJobs (prev => ({ ...prev, [model_id]: false }));
     }
   }
+<<<<<<< HEAD
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {
     try {
       // If activating, deactivate all other models with the same purpose
@@ -87,6 +130,125 @@ export function ZionGPTModelManager() {
           .from('model_versions')
           .update({ active: false })
           .eq('purpose', purpose)
+=======
+
+=======
+    }
+<<<<<<< HEAD
+  }
+=======
+=======
+  };
+=======
+import { useState, useEffect } from 'react',
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",
+import { supabase } from '@/integrations/supabase/client',
+import { ModelConfig } from '@/utils/zion-gpt',
+interface ModelVersionData extends ModelConfig {
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
+  errorMessage?: string
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState, useEffect } from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
+import { Badge } from "@/components/ui/badge",;
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",;
+import { supabase } from '@/integrations/supabase/client',;
+import { ModelConfig } from '@/utils/zion-gpt',;
+interface ModelVersionData extends ModelConfig {;
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',;
+  errorMessage?: string;
+}
+;
+export function ZionGPTModelManager() {;
+  const [models, setModels] = useState<ModelVersionData[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),;
+  // Fetch model data on component mount;
+  useEffect(() => {;
+    fetchModels();
+  }, []),;
+  const fetchModels = async () => {;
+    try {;
+      setIsLoading(true),;
+
+      const { data, error } = await supabase;
+        .from('model_versions');
+        .select('*');
+        .order('createdAt', { ascending: false }),;
+
+      if (error) throw error;
+
+      // Map the data to our component state;
+      setModels(data && data.map(model => ({;
+        id: model && model.id,;
+        version: model && model.version,;
+        createdAt: model && model.created_at,;
+        baseModel: model && model.base_model,;
+        purpose: model && model.purpose,;
+        active: model && model.active,;
+        trainingStatus: model && model.training_status,;
+        errorMessage: model && model.error_message;
+      })));
+    } catch (error) {;
+      console && console.error('Error fetching models:', error);
+    } finally {;
+      setIsLoading(false);
+    }
+  };
+
+  const checkTrainingStatus = async (modelId: string) => {;
+    try {;
+      setActiveJobs(prev => ({ ...prev, [modelId]: true }));
+
+      // Call an edge function that checks the OpenAI fine-tuning job status;
+      const { data, error } = await supabase && supabase.functions.invoke('check-training-status', {;
+        body: { modelId }
+      });
+
+      if (error) throw error;
+
+      // Update the local model status;
+      setModels(prev => ;
+        prev && prev.map(model => ;
+          model && model.id === modelId ;
+            ? { ...model, trainingStatus: data && data.status, errorMessage: data && data.error || null } ;
+            : model;
+        );
+      );
+
+      // Also update in the database;
+      await supabase;
+        .from('model_versions');
+        .update({;
+          training_status: data && data.status,;
+          error_message: data && data.error || null,;
+          // If training succeeded, automatically set to active;
+          ...(data && data.status === 'succeeded' ? { active: true } : {});
+        });
+        .eq('id', modelId);
+
+    } catch (error) {;
+      console && console.error(`Error checking status for model ${modelId}:`, error);
+    } finally {;
+      setActiveJobs(prev => ({ ...prev, [modelId]: false }));
+    }
+  };
+
+  const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {;
+    try {;
+      // If activating, deactivate all other models with the same purpose;
+      if (!currentActive) {;
+        await supabase;
+          .from('model_versions');
+          .update({ active: false });
+          .eq('purpose', purpose);
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
       // Update this model
       await supabase
@@ -98,7 +260,17 @@ export function ZionGPTModelManager() {
     } catch (error) {
       console.error('Error toggling model active state:', error)
     }
+<<<<<<< HEAD
   }
+=======
+
+  },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <Card className="w-full">;
@@ -194,6 +366,18 @@ export function ZionGPTModelManager() {
                     )}
                   </TableCell>;
                 </TableRow>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                    )}
+
+                  </TableCell>;
+                </TableRow>;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               ))}
             </TableBody>;
           </Table>;

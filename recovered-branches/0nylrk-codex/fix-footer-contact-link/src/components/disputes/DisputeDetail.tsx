@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react",
 import { useParams, useNavigate } from "react-router-dom",
 import { useDisputes } from "@/hooks/useDisputes",
@@ -23,6 +24,58 @@ export function DisputeDetail() {
   const navigate = useNavigate();
   const { user } = useAuth();
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from "react";
+import {useParams, useNavigate} from "react-router-dom";
+import {useDisputes} from "@/hooks/useDisputes";
+import {disputeReasonLabels, DisputeMessage, DisputeStatus} from "@/types/disputes";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Separator} from "@/components/ui/separator";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {format, formatDistanceToNow} from "date-fns";
+import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
+import {ShieldAlert, ArrowDown, Check, X, MessageSquare, Download} from "lucide-react";
+import {useAuth} from "@/hooks/useAuth";
+import {toast} from "sonner";
+export function DisputeDetail() {;
+  // useParams may be untyped in this environment, so avoid passing a;
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { disputeId } = useParams() as { disputeId?: string };
+  const navigate = useNavigate();
+  const { user } = useAuth();
+  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState, useEffect } from "react",
+import { useParams, useNavigate } from "react-router-dom",
+import { useDisputes } from "@/hooks/useDisputes",
+import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/disputes",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Separator } from "@/components/ui/separator",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { format, formatDistanceToNow } from "date-fns",
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
+import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react",
+import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+import { toast } from "sonner";
+export function DisputeDetail() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [dispute, setDispute] = useState<any>(null);
   const [messages, setMessages] = useState<DisputeMessage[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -63,7 +116,121 @@ export function DisputeDetail() {
     if (success && dispute) {;
       setDispute({ ...dispute, status });
     }
+<<<<<<< HEAD
   }
+=======
+
+
+
+    const loadDisputeData = async () => {
+      setIsLoading(true),
+      try {
+        const disputeData = await getDisputeById(disputeId),
+        if (!disputeData) {
+          toast.error("Dispute not found"),
+          navigate("/dashboard/disputes"),
+          return
+        }
+
+        setDispute(disputeData),
+        
+        const messagesData = await getDisputeMessages(disputeId),
+
+        setMessages(messagesData)
+      } catch (error) {
+        console.error("Error loading dispute data:", error),
+        toast.error("Failed to load dispute")
+      } finally {
+        setIsLoading(false)
+<<<<<<< HEAD
+      }
+    }
+    loadDisputeData()
+  }, [disputeId, navigate, getDisputeById, getDisputeMessages]);
+  const handleStatusChange = async (status: DisputeStatus) => {
+    if (!disputeId) return
+    const success = await updateDisputeStatus(disputeId, status);
+    if (success && dispute) {
+      setDispute({ ...dispute, status })
+    }
+<<<<<<< HEAD
+  }
+  const handleResolveDispute = async () => {
+    if (!disputeId) return;
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState, useEffect } from "react",;
+import { useParams, useNavigate } from "react-router-dom",;
+import { useDisputes } from "@/hooks/useDisputes",;
+import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/disputes",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Separator } from "@/components/ui/separator",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { format, formatDistanceToNow } from "date-fns",;
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;
+import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react",;
+import { useAuth } from "@/hooks/useAuth",;
+import { toast } from "sonner",;
+export function DisputeDetail() {;
+  // useParams may be untyped in this environment, so avoid passing a;
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { disputeId } = useParams() as { disputeId?: string },;
+  const navigate = useNavigate(),;
+  const { user } = useAuth(),;
+  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),;
+  const [dispute, setDispute] = useState<any>(null),;
+  const [messages, setMessages] = useState<DisputeMessage[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [message, setMessage] = useState(""),;
+  const [isSending, setIsSending] = useState(false),;
+  const [resolution, setResolution] = useState({;
+    summary: "",;
+    resolution_type: "compromise"}),;
+  const [activeTab, setActiveTab] = useState("overview"),;
+  // Check if user is admin (placeholder - implement proper admin check);
+  const isAdmin = user?.userType === "admin",;
+  useEffect(() => {;
+    if (!disputeId) return,;
+    const loadDisputeData = async () => {;
+      setIsLoading(true),;
+      try {;
+        const disputeData = await getDisputeById(disputeId),;
+        if (!disputeData) {;
+          toast.error("Dispute not found"),;
+          navigate("/dashboard/disputes"),;
+          return;
+        }
+        setDispute(disputeData),;
+        const messagesData = await getDisputeMessages(disputeId),;
+        setMessages(messagesData);
+      } catch (error) {;
+        console.error("Error loading dispute data:", error),;
+        toast.error("Failed to load dispute");
+      } finally {;
+        setIsLoading(false);
+      }
+    },;
+    loadDisputeData();
+  }, [disputeId, navigate, getDisputeById, getDisputeMessages]),;
+  const handleStatusChange = async (status: DisputeStatus) => {;
+    if (!disputeId) return,;
+    const success = await updateDisputeStatus(disputeId, status),;
+    if (success && dispute) {;
+      setDispute({ ...dispute, status });
+    }
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const handleResolveDispute = async () => {
     if (!disputeId) return;
     if (!resolution.summary) {
@@ -82,7 +249,67 @@ export function DisputeDetail() {
     }
   }
   const handleSendMessage = async () => {
+<<<<<<< HEAD
     if (!disputeId |!message.trim()) return;
+=======
+    if (!disputeId || !message.trim()) return,
+    
+    setIsSending(true),
+
+    try {
+      const success = await addDisputeMessage(disputeId, message, isAdmin),
+      if (success) {
+        // Refresh messages
+        const updatedMessages = await getDisputeMessages(disputeId),
+        setMessages(updatedMessages),
+        setMessage("")
+      }
+    } catch (error) {
+      console.error("Error sending message:", error)
+    } finally {
+      setIsSending(false)
+<<<<<<< HEAD
+    }
+  }
+  if (isLoading) {
+    return (
+      <div className="p-8 text-center">
+        <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>
+        <p>Loading dispute details...</p>
+      </div>
+    )
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  },;
+
+  const handleResolveDispute = async () => {;
+    if (!disputeId) return;
+
+    if (!resolution && resolution.summary) {;
+      toast && toast.error("Please provide a resolution summary");
+      return;
+    }
+
+    const success = await resolveDispute(disputeId, resolution);
+    if (success && dispute) {;
+      setDispute({ ;
+        ...dispute, ;
+        status: "resolved", ;
+        resolution_summary: resolution && resolution.summary,;
+        resolution_type: resolution && resolution.resolution_type,;
+        resolved_at: new Date().toISOString();
+      });
+    }
+  };
+
+  const handleSendMessage = async () => {;
+    if (!disputeId || !message && message.trim()) return;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     setIsSending(true);
     try {;
       const success = await addDisputeMessage(disputeId, message, isAdmin);
@@ -105,6 +332,13 @@ export function DisputeDetail() {
         <p>Loading dispute details...</p>;
       </div>;
     );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   if (!dispute) {
     return (
@@ -287,6 +521,7 @@ if ( {) {
       case "closed": return "outline";
       default: return "default";
     }
+<<<<<<< HEAD
   }
   return (
     <div className="container mx-auto p-4 space-y-6">
@@ -295,6 +530,22 @@ if ( {) {
           <div className="flex items-center gap-2">
             <h1 className="text-2xl font-bold">Dispute Case</h1>
             <Badge variant={getStatusBadgeVariant(dispute.status)}>
+=======
+
+  },;
+  return (;
+    <div className="container mx-auto p-4 space-y-6">;
+      <div className="flex flex-wrap items-center justify-between gap-4">;
+        <div>;
+          <div className="flex items-center gap-2">;
+            <h1 className="text-2xl font-bold">Dispute Case</h1>;
+            <Badge variant={getStatusBadgeVariant(dispute.status)}>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {dispute.status.replace('_ ')}
             </Badge>
           </div>
@@ -606,6 +857,7 @@ if ( {) {
                           onClick={() => {
                             if (message.trim()) {
                               addDisputeMessage(disputeId!, message, true).then(() => {
+<<<<<<< HEAD
                                 getDisputeMessages(disputeId!).then(setMessages);
 
                                 setMessage("")
@@ -675,6 +927,106 @@ if ( {) {
                                 getDisputeMessages (dispute_id!).then (set_messages);
                                 set_message ("");
                               });
+=======
+
+                                setMessage("")
+                              })
+=======
+                                getDisputeMessages(disputeId!).then(setMessages),
+                                setMessage("")
+                              })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      </div>;
+                    </div>;
+
+                    {dispute && dispute.status !== "resolved" && (;
+                      <div>;
+                        <h3 className="font-medium mb-2">Resolve Dispute</h3>;
+                        <div className="space-y-4">;
+                          <Textarea
+                            placeholder="Enter resolution summary..."
+                            value={resolution && resolution.summary}
+                            onChange={(e) => setResolution({ ...resolution, summary: e && e.target.value })}
+                            className="min-h-[100px]";
+                          />;
+
+                          <div className="grid grid-cols-2 gap-4">;
+                            <div>;
+                              <label className="text-sm font-medium mb-1 block">Resolution Type</label>;
+                              <select
+                                className="w-full p-2 border rounded"
+                                value={resolution && resolution.resolution_type}
+                                onChange={(e) => setResolution({ ...resolution, resolution_type: e && e.target.value })}
+                              >;
+                                <option value="client_favor">In Client's Favor</option>;
+                                <option value="talent_favor">In Talent's Favor</option>;
+                                <option value="compromise">Compromise</option>;
+                                <option value="dismissed">Dismissed</option>;
+                              </select>;
+                            </div>;
+                          </div>;
+
+                          <Button onClick={handleResolveDispute}>Resolve Dispute</Button>;
+                        </div>;
+                      </div>;
+                    )}
+
+                    <div>;
+                      <h3 className="font-medium mb-2">Admin Notes</h3>;
+                      <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">;
+                        {messages;
+                          .filter(msg => msg && msg.is_admin_note);
+                          .map((msg) => (;
+                          <div key={msg && msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">;
+                            <div className="flex items-center justify-between mb-2">;
+                              <div className="flex items-center gap-2">;
+                                <Avatar className="h-6 w-6">;
+                                  <AvatarImage src={msg && msg.user_profile?.avatar_url} />;
+                                  <AvatarFallback>;
+                                    {msg && msg.user_profile?.display_name?.[0] || 'A'}
+                                  </AvatarFallback>;
+                                </Avatar>;
+                                <span className="text-sm font-medium">;
+                                  {msg && msg.user_profile?.display_name || 'Admin'}
+                                </span>;
+                              </div>;
+                              <span className="text-xs opacity-70">;
+                                {format(new Date(msg && msg.created_at), 'MMM d, h:mm a')}
+                              </span>;
+                            </div>;
+                            <p className="whitespace-pre-wrap text-sm">{msg && msg.message}</p>;
+                          </div>;
+                        ))}
+
+                        {!messages && messages.some(msg => msg && msg.is_admin_note) && (;
+                          <p className="text-sm text-muted-foreground italic">No admin notes yet</p>;
+                        )}
+                      </div>;
+
+                      <div className="mt-4 space-y-4">;
+                        <Textarea
+                          placeholder="Add an admin note (only visible to administrators)..."
+                          value={message}
+                          onChange={(e) => setMessage(e && e.target.value)}
+                        />;
+                        <Button
+                          variant="outline" 
+                          onClick={() => {;
+                            if (message && message.trim()) {;
+                              addDisputeMessage(disputeId!, message, true).then(() => {;
+                                getDisputeMessages(disputeId!).then(setMessages);
+                                setMessage("");
+                              });
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                             }
                           }}
                         >;

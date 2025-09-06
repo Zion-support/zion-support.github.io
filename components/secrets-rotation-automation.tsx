@@ -3,6 +3,42 @@ import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 export default function SecretsRotationAutomationPage() {
 
+<<<<<<< HEAD
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+=======
+
+
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const features = [
     "Automated key and secret rotation"
     "JIT credentials with expirations"
@@ -10,6 +46,7 @@ export default function SecretsRotationAutomationPage() {
     "CI/CD integration (GitHub Actions, CircleCI)"
     "Cloud KMS and Vault support"
   ];
+<<<<<<< HEAD
   return (
     <>;
       <SEO
@@ -67,6 +104,18 @@ export default /**
  */
 function SecretsRotationAutomationPage() {
   const features = [;
+=======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export default function SecretsRotationAutomationPage() {
+  const features = [
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     "Automated key and secret rotation",
     "JIT credentials with expirations",
     "Policy approvals and audit trails",
@@ -75,6 +124,7 @@ function SecretsRotationAutomationPage() {
   ];
 ;
   return (
+<<<<<<< HEAD
     <>;
       <SEO;
         title="Secrets Rotation Automation";
@@ -135,6 +185,11 @@ function SecretsRotationAutomationPage() {
   );
   return (
     <>;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    <>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <SEO
         title="Secrets Rotation Automation"
         description="Automate key and secret rotation across cloud and CI/CD with approvals and audit logs."

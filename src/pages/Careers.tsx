@@ -1,8 +1,29 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { SEO } from '@/components/SEO'
+import { GradientHeading } from '@/components/GradientHeading'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import Link from 'next/link'
+import { CAREER_JOBS } from '@/data/careersJobs'
+export default function Careers() {
+  const applyEmail = 'careers@ziontechgroup.com'
+  const jobs = CAREER_JOBS
+  const whyWork = null;
+    'At Zion, we’re building more than a marketplace—we’re cultivating a community where forward-thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote-first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real-world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open-source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+<<<<<<< HEAD
 import Link from "next/link";
 import { CAREER_JOBS } from "@/data/careersJobs";
 export default function Careers() {
@@ -11,6 +32,25 @@ export default function Careers() {
   const jobs = CAREER_JOBS
   const whyWork =
     'At Zion, were building more than a marketplacewere cultivating a community where forward-thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. Youll join a remote-first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. Youll work alongside passionate peers who care about real-world results, not just buzzwords. Zions growth means endless opportunities to expand your skills, explore new roles, and contribute to open-source initiatives. If youre driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine whats possible and make advanced AI accessible to all. Join us to transform ideas into reality today.'
+=======
+<<<<<<< HEAD
+import Link from "next/link";
+import { CAREER_JOBS } from "@/data/careersJobs";
+export default function Careers() {
+=======
+import Link from "next/link",
+import { CAREER_JOBS } from "@/data/careersJobs",
+export default function Careers() {
+  const applyEmail = "careers@ziontechgroup.com",
+  const jobs = CAREER_JOBS,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Benefits list
   const benefits = [
     {
@@ -94,6 +134,7 @@ export default function Careers() {
       )
     }
     {
+<<<<<<< HEAD
       title: 'Impactful Projects'
       description:
         'Contribute to innovations that make advanced technology accessible worldwide.'
@@ -115,12 +156,42 @@ export default function Careers() {
     }
   ]
 
+=======
+      title: "Impactful Projects",
+      description: "Contribute to innovations that make advanced technology accessible worldwide.",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      icon: (
+        <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      ),
+    },
+  ]
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      )
+    }
+<<<<<<< HEAD
+  ]
+=======
+  ],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <>;
       <SEO
         title='Careers at Zion - Join Our Team'
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
         keywords='Zion careers, AI jobs, tech careers, remote work, startup jobs'
+<<<<<<< HEAD
         canonical='https://app.ziontechgroup.com/careers'
       />
       <main className='min-h-screen bg-zion-blue pt-24 pb-20'>
@@ -132,6 +203,17 @@ export default function Careers() {
             </p>
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24'>
+=======
+
+
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <div>
               <h2 className='text-3xl font-bold text-white mb-6'>
                 Why Work at Zion?
@@ -164,6 +246,29 @@ export default function Careers() {
                   </h3>;
                   <p className='text-zion-slate-light'>{benefit && benefit.description}</p>;
                 </div>;
+<<<<<<< HEAD
+=======
+=======
+
+          
+          <div className="mb-24">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
+                  <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
+                    {benefit.icon}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                  <p className="text-zion-slate-light">{benefit.description}</p>
+                </div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               ))}
             </div>
           </div>
@@ -242,7 +347,68 @@ function Careers() {
   const apply_email = 'careers@ziontechgroup.com';
   const jobs = CAREER_JOBS;
   const why_work =;
+<<<<<<< HEAD
     'At Zion, were building more than a marketplacewere cultivating a community where forward - thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. Youll join a remote - first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. Youll work alongside passionate peers who care about real - world results, not just buzzwords. Zions growth means endless opportunities to expand your skills, explore new roles, and contribute to open - source initiatives. If youre driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine whats possible and make advanced AI accessible to all. Join us to transform ideas into reality today.';
+=======
+    'At Zion, we’re building more than a marketplace—we’re cultivating a community where forward - thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote - first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real - world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open - source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.';
+=======
+
+          
+          <div className="mb-24">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>
+            
+            <Tabs defaultValue="engineering" className="w-full">
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light mb-8 w-full flex flex-wrap justify-center">
+                <TabsTrigger value="engineering" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Engineering</TabsTrigger>
+                <TabsTrigger value="product" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Product</TabsTrigger>
+                <TabsTrigger value="marketing" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Marketing</TabsTrigger>
+                <TabsTrigger value="operations" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Operations</TabsTrigger>
+              </TabsList>
+              
+              {Object.entries(jobs).map(([department, jobList]) => (
+                <TabsContent key={department} value={department} className="space-y-6">
+                  {jobList.map((job, index) => (
+                    <Card key={index} className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors">
+                      <CardContent className="p-6">
+                        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                          <div>
+                            <h3 className="text-xl font-bold text-white mb-2">{job.title}</h3>
+                            <div className="flex flex-wrap gap-2 mb-4">
+                              <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.location}</span>
+                              <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.type}</span>
+                              <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.department}</span>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                            </div>
+                            <p className="text-zion-slate-light mb-4">{job.description}</p>
+                          </div>
+                          <Button
+                            asChild
+                            className="w-full md:w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                          >
+                            <Link href={`/careers/${job.id}`}>View Details</Link>
+                          </Button>
+                        </div>
+                      </CardContent>
+                    </Card>
+
+import { SEO } from "@/components/SEO",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import Link from "next/link",;
+import { CAREER_JOBS } from "@/data/careersJobs",;
+export default function Careers() {;
+  const applyEmail = "careers@ziontechgroup.com",;
+  const jobs = CAREER_JOBS,;
+  const whyWork =;
+    "At Zion, we’re building more than a marketplace—we’re cultivating a community where forward-thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote-first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real-world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open-source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.",;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Benefits list;
   const benefits = [;
     {
@@ -471,6 +637,7 @@ function Careers() {
                         </div>;
                       </CardContent>;
                     </Card>;
+<<<<<<< HEAD
                   ))}
                 </TabsContent>;
               ))}
@@ -484,6 +651,43 @@ function Careers() {
               We're always looking for talented individuals who are passionate
               about AI and technology. Send us your resume and let's start a
               conversation. You can also apply directly by emailing us at
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  ))}
+                </TabsContent>;
+              ))}
+
+            </Tabs>;
+          </div>;
+
+          <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center'>;
+            <h2 className='text-3xl font-bold text-white mb-6'>;
+              Don't see the right position?;
+            </h2>;
+            <p className='text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto'>;
+              We're always looking for talented individuals who are passionate;
+              about AI and technology. Send us your resume and let's start a;
+              conversation. You can also apply directly by emailing us at;
+
+=======
+
+          
+          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>
+            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
+              We're always looking for talented individuals who are passionate about AI and technology.
+              Send us your resume and let's start a conversation. You can also
+              apply directly by emailing us at
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <a
                 href={`mailto:${applyEmail}`}
                 className='text-zion-cyan hover:text-zion-purple transition-colors'>;
@@ -493,15 +697,25 @@ function Careers() {
             </p>;
             <Button
               asChild
+<<<<<<< HEAD
               className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
             >
               <a href={`mailto:${applyEmail}`}>Send General Application</a>
+=======
+              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+            >
+              <a href={`mailto:${applyEmail}`}>Send General Application</Link>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </Button>
           </div>
         </div>
       </main>
     </>
   )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from 'react'
 import { SEO } from '../components/SEO'
 const Careers: React.FC = () => {
@@ -515,7 +729,25 @@ const Careers: React.FC = () => {
       </div>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+
+export default Careers
+}
+=======
+
+
+
+=======
+
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     </Card>))}
                 </TabsContent>))}
             </Tabs>;
@@ -561,3 +793,9 @@ const Careers: React.FC = () => {
 }
 export default Careers;
 }
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

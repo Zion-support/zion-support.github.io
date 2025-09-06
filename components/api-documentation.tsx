@@ -3,6 +3,10 @@ import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Code
   Database
   Shield
@@ -15,6 +19,7 @@ import {
   BarChart3
   Lock
   Brain;
+<<<<<<< HEAD
 import {;
   Code,;
   Database,;
@@ -28,6 +33,22 @@ import {;
   BarChart3,;
   Lock,;
   Brain,;
+=======
+=======
+  Code,
+  Database,
+  Shield,
+  Zap,
+  Globe,
+  Cpu,
+  BookOpen,
+  CheckCircle,
+  ArrowRight,
+  BarChart3,
+  Lock,;
+  Brain,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';
 
 export default function APIDocumentation() {;

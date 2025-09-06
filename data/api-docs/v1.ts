@@ -108,6 +108,7 @@ const v1: ApiDocsSpec = {
           query: { q: 'Search text', status: 'open|closed' }
           responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } }, nextPage: { type: 'string' } } }
           samples: [
+<<<<<<< HEAD
             { language: 'curl', code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r && r.json())` },
             { language: 'python', code: `import requests\nrequests ;
@@ -412,10 +413,61 @@ export default v1;
         }
       ];
     }
+=======
+
+
+=======
+
+
+const baseUrl = 'https://api.zion.os';
+
+
+const baseUrl = 'https://api.zion.os';
+const v1: ApiDocsSpec = {
+
+  openapi: '3.0.0',
+  info: {
+    title: 'Zion OS API',
+    version: '1.0.0',
+    description: 'Zion OS API Documentation'
+  },
+  servers: [{ url: baseUrl }],
+  paths: {
+    '/v1/nation/stats': {
+      get: {
+        summary: 'Get Nation Stats',
+        responses: {
+          '200': {
+            description: 'Success',
+            content: {
+              'application/json': {
+                schema: { type: 'object' }
+              }
+            }
+          }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        }
+      }
+    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ]
 }
 export default v1;
 
+<<<<<<< HEAD
+=======
+=======
+=======
+
+  ];
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 };
 
 export default v1;

@@ -1,5 +1,19 @@
+<<<<<<< HEAD
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import { Bot, Globe2, MonitorSmartphone } from 'lucide-react';
+=======
+
+import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function FeaturesPage() {
   return (
     <EnhancedLayout>;
@@ -73,3 +87,24 @@ function FeaturesPage() {
       </div>;
     </EnhancedLayout>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+}        <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
+          <MonitorSmartphone className="h-6 w-6 text-indigo-500" />
+          <div className="mt-3 text-lg font-semibold">Mobile Milestones</div>
+          <p className="mt-1 text-sm opacity-80">Track deliverables and approvals anywhere.</p>
+      </div>
+    </EnhancedLayout>
+
+  );
+}
+=======
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

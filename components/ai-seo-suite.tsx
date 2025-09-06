@@ -4,6 +4,10 @@ import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Search
   TrendingUp
   Target
@@ -24,6 +28,7 @@ import {
   Lightbulb
   Rocket
   Settings;
+<<<<<<< HEAD
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -46,13 +51,46 @@ import {;
   Sparkles,;
   ChartBar,;
   Lightbulb,;
+=======
+} from 'lucide-react';
+export default function AISeosuitePage() {
+  const features = [
+    {
+<<<<<<< HEAD
+      icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
+=======
+  Search,
+  TrendingUp,
+  Target,
+  BarChart3,
+  Globe,
+  Zap,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Star,
+  Eye,
+  Brain,
+  Shield,
+  Lock,
+  Sparkles,
+  ChartBar,
+  Lightbulb,
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Rocket,;
   Settings,;
 } from 'lucide-react';
+<<<<<<< HEAD
 export default function AISeosuitePage() {;
   const features = [;
     {;
       icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function AISeosuitePage() {
   const features = [
     {
@@ -99,12 +137,138 @@ export default function AISeosuitePage() {
       icon: <Zap className='w-8 h-8 text-white' />
       title: 'Automated Reports'
       description:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         'Generate comprehensive SEO reports automatically with actionable insights and recommendations.'
       color: 'bg-gradient-to-br from-pink-500 to-rose-600'
       gradient: 'from-pink-400 to-rose-500'
     }
+<<<<<<< HEAD
   ];
   const seoTools = [
+=======
+  ];
+=======
+        'Generate comprehensive SEO reports automatically with actionable insights and recommendations.',
+      color: 'bg-gradient-to-br from-pink-500 to-rose-600',
+      gradient: 'from-pink-400 to-rose-500',
+    },;
+  ];
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const seoTools = [
+    {
+      category: 'Keyword Research'
+      icon: <Search className='w-6 h-6 text-blue-400' />
+      tools: [
+        'Long-tail keyword finder'
+        'Competitor keyword analysis'
+        'Search volume estimation'
+        'Keyword difficulty scoring'
+        'Trending keywords'
+      ]
+    }
+    {
+      category: 'On-Page SEO'
+      icon: <Target className='w-6 h-6 text-green-400' />
+      tools: [
+        'Content optimization'
+        'Meta tag generator'
+        'Schema markup builder'
+        'Internal linking suggestions'
+        'Image optimization'
+      ]
+    }
+    {
+      category: 'Technical SEO'
+      icon: <Settings className='w-6 h-6 text-purple-400' />
+      tools: [
+        'Site audit tool'
+        'Page speed analyzer'
+        'Mobile optimization'
+        'Core Web Vitals'
+        'XML sitemap generator'
+      ]
+    }
+    {
+      category: 'Analytics & Reporting'
+      icon: <BarChart3 className='w-6 h-6 text-orange-400' />
+      tools: [
+        'Ranking tracker'
+        'Traffic analysis'
+        'Conversion tracking'
+        'Competitor monitoring'
+        'Custom dashboards'
+      ]
+    },  ];      title: 'AI Keyword Research'
+      description: 'Discover high-value keywords using advanced AI algorithms that analyze search patterns and competition.'
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+      gradient: 'from-blue-400 to-cyan-500'}
+    {
+      icon: <TrendingUp className="w-8 h-8 text-white" />
+      title: 'Ranking Analytics'
+      description: 'Track your search rankings in real-time with comprehensive analytics and competitor insights.'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      gradient: 'from-green-400 to-emerald-500'}
+    {
+      icon: <Target className="w-8 h-8 text-white" />
+      title: 'Content Optimization'
+      description: 'AI-powered content analysis and optimization suggestions to improve search visibility.'
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+      gradient: 'from-purple-400 to-indigo-500'}
+    {
+      icon: <BarChart3 className="w-8 h-8 text-white" />
+      title: 'Technical SEO'
+      description: 'Comprehensive technical SEO audits with actionable recommendations for improvement.'
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+      gradient: 'from-orange-400 to-red-500'}
+    {
+      icon: <Globe className="w-8 h-8 text-white" />
+      title: 'Local SEO'
+      description: 'Optimize for local search with location-based keyword research and citation management.'
+      color: 'bg-gradient-to-br from-teal-500 to-blue-600'
+      gradient: 'from-teal-400 to-blue-500'}
+    {
+      icon: <Zap className="w-8 h-8 text-white" />
+      title: 'Automated Reports'
+      description: 'Generate comprehensive SEO reports automatically with actionable insights and recommendations.'
+      color: 'bg-gradient-to-br from-pink-500 to-rose-600'
+      gradient: 'from-pink-400 to-rose-500'}]
+  const seoTools = [
+    {
+      category: 'Keyword Research'
+      icon: <Search className="w-6 h-6 text-blue-400" />
+      tools: ['Long-tail keyword finderCompetitor keyword analysisSearch volume estimationKeyword difficulty scoringTrending keywords']
+    }
+    {
+      category: 'On-Page SEO'
+      icon: <Target className="w-6 h-6 text-green-400" />
+      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization']
+    }
+    {
+      category: 'Technical SEO'
+      icon: <Settings className="w-6 h-6 text-purple-400" />
+      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator']
+    }
+    {
+      category: 'Analytics & Reporting'
+      icon: <BarChart3 className="w-6 h-6 text-orange-400" />
+      tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']
+    }
+=======
+<<<<<<< HEAD
+      icon: <Search className='w-8 h-8 text-white' />,
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  ];
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+export default function AISeosuitePage() {
+  const features = [
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     {
       category: 'Keyword Research'
       icon: <Search className='w-6 h-6 text-blue-400' />
@@ -540,6 +704,7 @@ export default function AISeosuitePage() {;
     }
   ];
 
+<<<<<<< HEAD
   const pricingPlans = [;
     {;
       name: 'Starter',;
@@ -604,6 +769,12 @@ export default function AISeosuitePage() {;
       color: 'border-purple-600',;
       buttonColor: 'bg-purple-600 hover:bg-purple-700',;
     },;
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ];
 
   const integrations = [;
@@ -708,6 +879,10 @@ export default function AISeosuitePage() {;
     { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' },;
     { metric: 'ROI', value: '400%', description: 'Average return on investment' }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <>;
       <Head>;
@@ -1127,6 +1302,7 @@ export default function AISeosuitePage() {;
               <Card
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
+<<<<<<< HEAD
                 style={{ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }}>;
                 <div className="relative">;
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
@@ -1148,12 +1324,30 @@ export default function AISeosuitePage() {;
                 </h3>;
                 <p className="text - gray - 400 leading - relaxed">;
                   {feature.description}
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </p>
               </Card>
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </section>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* SEO Tools Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -1205,15 +1399,39 @@ export default function AISeosuitePage() {;
                           <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
                           {toolName}
                         </div>;
+<<<<<<< HEAD
+=======
+=======
+
+
+                          {toolName}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                        </div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       ))}
                     </div>;
                   </div>;
                 </div>;
               </Card>;
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </section>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Success Metrics Section */}
       <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -1268,7 +1486,51 @@ export default function AISeosuitePage() {;
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Trusted by businesses across industries for SEO success
             </p>
           </div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>      <section className="py-24 bg-black relative overflow-hidden">
+=======
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {successMetrics.map((metric, index) => (
+              <Card
+                key={index}
+                className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="text-4xl font-bold mb-4 text-blue-400 group-hover:scale-110 transition-transform duration-300">
+                  {metric.value}
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-white">{metric.metric}</h3>
+                <p className="text-gray-400 text-sm">{metric.description}</p>
+              </Card>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+              </Card>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            ))}
+          </div>
+        </div>
+      </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Use Cases Section */}
+
+      <section className="py-24 bg-black relative overflow-hidden">
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
@@ -1315,15 +1577,39 @@ export default function AISeosuitePage() {;
                           <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
                           {benefit}
                         </div>;
+<<<<<<< HEAD
+=======
+=======
+
+
+                          {benefit}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                        </div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       ))}
                     </div>;
                   </div>;
                 </div>;
               </Card>;
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </section>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Pricing Section */}
       <section
         id='pricing'
@@ -1399,6 +1685,29 @@ export default function AISeosuitePage() {;
                     {plan.price}
                     <span className='text-lg text-gray-400'>{plan.period}</span>
                   </div>
+<<<<<<< HEAD
+=======
+                )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+
+                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+                <div className='text-center mb-8'>
+                  <h3 className='text-2xl font-bold text-white mb-2'>
+                    {plan.name}
+                  </h3>
+                  <div className='text-4xl font-bold text-white mb-2'>
+                    {plan.price}
+                    <span className='text-lg text-gray-400'>{plan.period}</span>
+                  </div>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <p className='text-gray-400'>{plan.description}</p>
                 </div>
                 <ul className='space-y-4 mb-8'>
@@ -1414,6 +1723,13 @@ export default function AISeosuitePage() {;
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+<<<<<<< HEAD
+=======
+                      {feature}
+=======
+<<<<<<< HEAD
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       {feature}
                     </li>;
                   ))}
@@ -1430,10 +1746,43 @@ export default function AISeosuitePage() {;
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
               </Card>;
+<<<<<<< HEAD
             ))}
           </div>
         </div>
       </section>
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                      {feature}
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    </li>
+                  ))}
+                </ul>
+
+                <Button
+                  href="/contact"
+                  className={`w-full ${plan.buttonColor} text-white`}
+                  size="lg"
+                >
+                  Get Started
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Card>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ))}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Integrations Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -1476,10 +1825,44 @@ export default function AISeosuitePage() {;
                 <h3 className="font-semibold text-white mb-2">{integration && integration.name}</h3>;
                 <p className="text-sm text-gray-400">{integration && integration.description}</p>;
               </Card>;
+<<<<<<< HEAD
+=======
+
+=======
+              Connect with your favorite tools and platforms
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {integrations.map((integration, index) => (
+              <Card
+                key={index}
+                className="text-center group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300"
+              >
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {integration.icon}
+                </div>
+                <h3 className="font-semibold text-white mb-2">{integration.name}</h3>
+                <p className="text-sm text-gray-400">{integration.description}</p>
+              </Card>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+              </Card>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
@@ -1492,6 +1875,35 @@ export default function AISeosuitePage() {;
             driving more organic traffic.;
           </p>;
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* CTA Section */}
+      <section className='py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            Ready to Dominate Search Rankings?
+          </h2>
+          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
+            Join thousands of businesses who are already ranking higher and
+            driving more organic traffic.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Button
               href='/contact'
               variant='secondary'
@@ -1523,8 +1935,11 @@ export default function AISeosuitePage() {;
               href="#demo"
               variant="outline"
               size="lg"
+<<<<<<< HEAD
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl">;
               <Play className="w-5 h-5 mr-2" />;
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
             >
               <Play className="w-5 h-5 mr-2" />
@@ -1534,6 +1949,7 @@ export default function AISeosuitePage() {;
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 }
               Watch Demo;
@@ -1548,3 +1964,21 @@ export default function AISeosuitePage() {;
 }
     </>);
 }
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

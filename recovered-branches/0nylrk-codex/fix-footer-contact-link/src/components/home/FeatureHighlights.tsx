@@ -1,17 +1,51 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from "lucide-react";
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {Card, CardContent} from "@/components/ui/card";
+import {Check} from "lucide-react";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+<<<<<<< HEAD
+import { Card, CardContent } from "@/components/ui/card";
+import { Check } from "lucide-react";
+=======
+import { Card, CardContent } from "@/components/ui/card",
+import { Check } from "lucide-react",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function FeatureHighlights() {
 
   const highlightsData = [
     {
+<<<<<<< HEAD
       title: "For Talent Seekers"
       features: [
+=======
+<<<<<<< HEAD
+      title: "For Talent Seekers"
+=======
+      title: "For Talent Seekers",
+<<<<<<< HEAD
+      features: [;
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         "AI-powered talent matching based on your specific project requirements";
         "Verified profiles with skills validation and credential checking";
         "Transparent pricing and no hidden fees";
         "Direct communication with potential candidates";
+<<<<<<< HEAD
         "Secure payment protection and dispute resolution"
         "Post jobs and receive AI-matched applicants"
       ]
@@ -31,6 +65,22 @@ function FeatureHighlights() {
       title: "For Talent Seekers",
       features: [;
         "AI - powered talent matching based on your specific project requirements";
+=======
+
+        "Secure payment protection and dispute resolution",;
+        "Post jobs and receive AI-matched applicants";
+      ];
+    };
+    {;
+      title: "For Talent & Service Providers",;
+      features: [;
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      features: [
+<<<<<<< HEAD
+        "AI-powered talent matching based on your specific project requirements";
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         "Verified profiles with skills validation and credential checking";
         "Transparent pricing and no hidden fees";
         "Direct communication with potential candidates";
@@ -77,6 +127,7 @@ function FeatureHighlights() {
   ];
 ;
   return (
+<<<<<<< HEAD
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -96,6 +147,77 @@ function FeatureHighlights() {
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
+=======
+
+=======
+
+import React from "react",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Check } from "lucide-react",;
+export function FeatureHighlights() {;
+  const highlightsData = [;
+    {;
+      title: "For Talent Seekers",;
+      features: [;
+        "AI-powered talent matching based on your specific project requirements",;
+        "Verified profiles with skills validation and credential checking",;
+        "Transparent pricing and no hidden fees",;
+        "Direct communication with potential candidates",;
+        "Secure payment protection and dispute resolution",;
+        "Post jobs and receive AI-matched applicants";
+      ];
+    },;
+    {;
+      title: "For Talent & Service Providers",;
+      features: [;
+        "Create a professional profile showcasing your skills and experience",;
+        "Get matched with relevant projects that fit your expertise",;
+        "Secure payment processing with on-time disbursements",;
+        "Build your reputation through client reviews and ratings",;
+        "Access to enterprise clients and high-value projects",;
+        "Professional development resources and community support";
+      ];
+    },;
+    {;
+      title: "For Enterprise Clients",;
+      features: [;
+        "White-labeled talent portal with your company branding",;
+        "Dedicated account management and priority support",;
+        "Custom talent pools and preferred provider networks",;
+        "Advanced analytics and reporting capabilities",;
+        "API access for seamless integration with your HR systems";
+        "Customizable workflow and approval processes";
+      ];
+    }
+  ];
+  return (;
+
+    <section className="py-16 bg-zion-blue">;
+      <div className="container mx-auto px-4">;
+        <div className="text-center mb-12">;
+          <h2 className="text-3xl font-bold text-white mb-3">Tailored Solutions for Everyone</h2>;
+          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">;
+            Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed;
+          </p>;
+        </div>;
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
+          {highlightsData && highlightsData.map((category, index) => (;
+            <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">;
+              <CardContent className="p-6">;
+                <h3 className="text-xl font-bold text-white mb-4">{category && category.title}</h3>;
+                <ul className="space-y-3">;
+                  {category && category.features.map((feature, idx) => (;
+                    <li key={idx} className="flex items-start">;
+                      <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0 && 0.5 flex-shrink-0" />;
+                      <span className="text-zion-slate-light">{feature}</span>;
+                    </li>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   ))}
                 </ul>;
               </CardContent>;

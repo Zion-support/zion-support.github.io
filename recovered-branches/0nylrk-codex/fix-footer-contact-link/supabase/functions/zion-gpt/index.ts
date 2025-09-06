@@ -1,6 +1,28 @@
 
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
+=======
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import "https://deno.land/x/xhr@0.1.0/mod.ts";
+=======
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import "https://deno.land/x/xhr@0.1.0/mod.ts",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
@@ -121,10 +143,32 @@ if ( {) {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 });
 
     console.error ("Error in zion - gpt function:", error);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import "https://deno.land/x/xhr@0.1.0/mod.ts",;
+const corsHeaders = {;
+  "Access-Control-Allow-Origin": "*",;
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
+serve(async (req) => {;
+  // Handle CORS preflight requests;
+  if (req.method === "OPTIONS") {;
+    return new Response(null, { headers: corsHeaders });
+  }
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
     return new Response (
       JSON.stringify ({ error: error.message });
@@ -132,6 +176,22 @@ if ( {) {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
+<<<<<<< HEAD
+=======
+
+  } catch (error) {;
+    console.error("Error in zion-gpt function:", error),;
+    return new Response(;
+      JSON.stringify({ error: error.message }),;
+      {;
+        status: 500,;
+        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+    );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 });
 ;

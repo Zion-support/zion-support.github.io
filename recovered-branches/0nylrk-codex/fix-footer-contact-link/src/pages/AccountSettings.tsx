@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState, useEffect  } from 'react';
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
@@ -13,6 +18,15 @@ import { Switch  } from '@/components/ui/switch';
 import { Label  } from '@/components/ui/label';
 import { toast } from 'sonner';
 export default function AccountSettings() {
+<<<<<<< HEAD
+=======
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {useState, useEffect} from 'react';
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
@@ -27,11 +41,18 @@ import {Switch} from '@/components / ui / switch';
 import {Label} from '@/components / ui / label';
 import {toast} from 'sonner';
 export default function AccountSettings() {;
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
   useEffect(() => {
     try {
 
@@ -41,11 +62,101 @@ export default function AccountSettings() {;
         setDisplayWeb3(!!parsed.displayWeb3);
         setDidHandle(parsed.didHandle |'');
         setEnableBackup(!!parsed.enableBackup)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useState, useEffect } from 'react',
+import { Header } from '@/components/Header',
+import { Footer } from '@/components/Footer',
+import { SEO } from '@/components/SEO',
+import { useAuth } from '@/hooks/useAuth',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Wallet, Database, Save } from "lucide-react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
+import { Separator } from '@/components/ui/separator',
+import { Switch } from '@/components/ui/switch',
+import { Label } from '@/components/ui/label',
+import { toast } from 'sonner',
+export default function AccountSettings() {
+  const { user } = useAuth(),
+  const [displayWeb3, setDisplayWeb3] = useState(false),
+  const [didHandle, setDidHandle] = useState(''),
+  const [enableBackup, setEnableBackup] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  useEffect(() => {
+    try {
+
+      const saved = localStorage.getItem('account_settings');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        setDisplayWeb3(!!parsed.displayWeb3);
+        setDidHandle(parsed.didHandle |'');
+        setEnableBackup(!!parsed.enableBackup)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState, useEffect } from 'react',;
+import { Header } from '@/components/Header',;
+import { Footer } from '@/components/Footer',;
+import { SEO } from '@/components/SEO',;
+import { useAuth } from '@/hooks/useAuth',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Wallet, Database, Save } from "lucide-react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Separator } from '@/components/ui/separator',;
+import { Switch } from '@/components/ui/switch',;
+import { Label } from '@/components/ui/label',;
+import { toast } from 'sonner',;
+export default function AccountSettings() {;
+  const { user } = useAuth(),;
+  const [displayWeb3, setDisplayWeb3] = useState(false),;
+  const [didHandle, setDidHandle] = useState(''),;
+  const [enableBackup, setEnableBackup] = useState(false),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  useEffect(() => {;
+    try {;
+      const saved = localStorage.getItem('account_settings'),;
+      if (saved) {;
+        const parsed = JSON.parse(saved),;
+        setDisplayWeb3(!!parsed.displayWeb3),;
+        setDidHandle(parsed.didHandle || ''),;
+        setEnableBackup(!!parsed.enableBackup);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
     } catch (e) {;
       console && console.error('Error loading account settings', e);
     }
+<<<<<<< HEAD
   }, []);
+=======
+<<<<<<< HEAD
+  }, []);
+<<<<<<< HEAD
+  const handleSave = () => {
+    setIsSubmitting(true);
+=======
+  }, []),
+=======
+=======
+  }, []),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const handleSave = () => {
     setIsSubmitting(true);
     // Simulate API call
@@ -82,12 +193,27 @@ export default function AccountSettings() {;
         method: 'personal_sign'
         params: [address, message]
       });
+<<<<<<< HEAD
       // Auto-set DID handle if ENS is available
       try {
         const provider = new (window as any).ethers.providers.Web3Provider(ethereum);
         const ensName = await provider.lookupAddress(address);
         if (ensName) {
           setDidHandle(ensName)
+=======
+
+      // Auto-set DID handle if ENS is available;
+      try {;
+        const provider = new (window as any).ethers && ethers.providers.Web3Provider(ethereum);
+        const ensName = await provider && provider.lookupAddress(address);
+        if (ensName) {;
+          setDidHandle(ensName);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         }
       } catch (error) {;
         console && console.error('ENS lookup error:', error);
@@ -96,7 +222,22 @@ export default function AccountSettings() {;
     } catch (error: any) {
       toast.error(error.message |'Failed to connect wallet')
     }
+<<<<<<< HEAD
   }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  };
+=======
+  },
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <>

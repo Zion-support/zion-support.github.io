@@ -1,5 +1,20 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+<<<<<<< HEAD
+=======
+=======
+ //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+=======
+//Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+=======
+ //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }];
 setIsSearching (true);
 //Simulate API call delay setTimeout ( () => {
@@ -326,6 +341,7 @@ function debounce<T extends (...args: any[]) => any>(;
 }
 export default EnhancedSearch;
 
+<<<<<<< HEAD
   category.id;
 }on_click= {
   () => toggle_filter (category.id);
@@ -435,6 +451,13 @@ export default EnhancedSearch;
 }</div> </div> </div>);
 }</div> </motion.div>);
 }</AnimatePresence> </div>);
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 // Debounce utility function function debounce < T extends (...args: unknown[]) => any> (func: T;
 wait: number;
@@ -449,5 +472,17 @@ function debounce < T extends (...args: any[]) => any>(
     timeout = set_timeout (() => func (...args), wait);
   }
 }
+<<<<<<< HEAD
 export default EnhancedSearch;
 ;
+=======
+}
+}
+}
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react",
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -9,6 +10,30 @@ import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { Project, ProjectStatus } from '@/types/projects';
 import { Button } from '@/components/ui/button';
 import { logErrorToProduction } from '@/utils/productionLogger';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { format } from 'date-fns'
+import { useAuth } from '@/hooks/useAuth'
+import { useProjects } from '@/hooks/useProjects'
+import { SEO } from '@/components/SEO'
+import { ProtectedRoute } from '@/components/ProtectedRoute'
+import { Project, ProjectStatus } from '@/types/projects';
+import { Button } from '@/components/ui/button';
+import { logErrorToProduction } from '@/utils/productionLogger'; import Link from 'next/link'
+import { format } from "date-fns"
+import { useAuth } from "@/hooks/useAuth"
+import { useProjects } from "@/hooks/useProjects"
+import { SEO } from "@/components/SEO"
+import { ProtectedRoute } from "@/components/ProtectedRoute"
+import { Project, ProjectStatus } from "@/types/projects"
+import { Button } from "@/components/ui/button"
+import {logErrorToProduction} from '@/utils/productionLogger'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
   Card,
   CardContent,
@@ -16,9 +41,39 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
+<<<<<<< HEAD
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
+=======
+
+} from '@/components / ui / card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState, useEffect } from "react",
+import Link from 'next/link';
+import { useRouter  } from 'next/router';
+import { format } from "date-fns",
+import { useAuth } from "@/hooks/useAuth",
+import { useProjects } from "@/hooks/useProjects",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { Project, ProjectStatus } from "@/types/projects",
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
+import {
+=======
+import { Button } from "@/components/ui/button",
+import {logErrorToProduction} from '@/utils/productionLogger',
+import {
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -27,6 +82,7 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
+<<<<<<< HEAD
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
 import { Avatar } from '@/components/ui/avatar';
@@ -47,6 +103,58 @@ import {
   User,
   XCircle,
 } from 'lucide-react';
+=======
+<<<<<<< HEAD
+  AlertDialogTrigger} from "@/components/ui/alert-dialog",
+import { Avatar } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",
+import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+  AlertDialog
+  AlertDialogAction
+  AlertDialogCancel
+  AlertDialogContent
+  AlertDialogDescription
+  AlertDialogFooter
+  AlertDialogHeader
+  AlertDialogTitle
+  AlertDialogTrigger
+=======
+<<<<<<< HEAD
+  AlertDialogTrigger,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '@/components/ui/alert-dialog'
+import { Avatar } from '@/components/ui/avatar'
+import { Badge } from '@/components/ui/badge'
+import { Textarea } from '@/components/ui/textarea'
+import { toast } from '@/hooks/use-toast'
+import { supabase } from '@/integrations/supabase/client'
+import { ProjectReviewSection } from '@/components/projects/reviews/ProjectReviewSection'
+  AlertCircle
+  Calendar
+  CheckCircle2
+  Clock
+  FileText
+  Layers
+  MessageSquare
+  Video
+  User
+  XCircle
+} from 'lucide-react'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 function ProjectDetailsContent() {
   const router = useRouter()
@@ -60,23 +168,129 @@ function ProjectDetailsContent() {
   const [newNote, setNewNote] = useState('')
   const [isSubmittingNote, setIsSubmittingNote] = useState(false)
   const [activeTab, setActiveTab] = useState('details')
+=======
+<<<<<<< HEAD
+=======
+  AlertDialogTrigger} from "@/components/ui/alert-dialog",
+import { Avatar } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",
+import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
+
+function ProjectDetailsContent() {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const router = useRouter(),
+  // Get projectId from Next.js router query params
+  const { projectId } = router.query as { projectId?: string },
+  const { user } = useAuth(),
+  const { getProjectById, updateProjectStatus } = useProjects(),
+  
+  const [project, setProject] = useState<Project | null>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [notes, setNotes] = useState<any[]>([]),
+  const [newNote, setNewNote] = useState(""),
+  const [isSubmittingNote, setIsSubmittingNote] = useState(false),
+  const [activeTab, setActiveTab] = useState("details"),
+  
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Load project data
   useEffect(() => {
     async function loadProject() {
+<<<<<<< HEAD
+<<<<<<< HEAD
       if (!projectId) return
+<<<<<<< HEAD
+=======
+=======
+
+
+  // Load project data
+  useEffect(() => {
+    async function loadProject() {
+
+      if (!projectId) return;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       setIsLoading(true)
       const projectData = await getProjectById(projectId)
       if (projectData) {
         setProject(projectData)
+<<<<<<< HEAD
+=======
+
+=======
+      if (!projectId) return,
+      
+      setIsLoading(true),
+      const projectData = await getProjectById(projectId),
+      
+      if (projectData) {
+        setProject(projectData),
+        
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
         toast({
+<<<<<<< HEAD
           title: 'Project not found'
           description: 'The requested project could not be found.'
           variant: 'destructive'
         })
         router.push('/dashboard')
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          title: 'Project not found'
+          description: 'The requested project could not be found.'
+          variant: 'destructive'
+        })
+        router.push('/dashboard')
+=======
+          title: 'Project not found',
+          description: 'The requested project could not be found.',
+          variant: 'destructive',
+        })
+        router.push('/dashboard')
+      }
+
+      setIsLoading(false)
+    }
+
+    loadProject()
+  }, [projectId])
+  const fetchProjectNotes = async (projectId: string) => {    try {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          title: "Project not found",
+          description: "The requested project could not be found.",
+          variant: "destructive"}),
+        router.push("/dashboard")
+import React, { useState, useEffect } from "react",;
+import Link from 'next/link',;
+import { useRouter } from 'next/router',;
+import { format } from "date-fns",;
+import { useAuth } from "@/hooks/useAuth",;
+import { useProjects } from "@/hooks/useProjects",;
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { Project, ProjectStatus } from "@/types/projects",;
+import { Button } from "@/components/ui/button",;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {;
   AlertCircle,;
   Calendar,;
@@ -157,13 +371,97 @@ function ProjectDetailsContent() {;
   const handleSubmitNote = async () => {
     if (!newNote.trim() |!project |!user) return
     setIsSubmittingNote(true)
+<<<<<<< HEAD
+=======
+=======
+
+    
+    loadProject()
+  }, [projectId]),
+  
+  const fetchProjectNotes = async (projectId: string) => {
+    try {
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      const { data, error } = await supabase
+        .from("project_notes")
+        .select(`
+          *,
+          created_by_profile:profiles!user_id(display_name, avatar_url)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        `
+        )
+        .eq('project_id', projectId)
+        .order('created_at', { ascending: false })
+      if (error) throw error
+      setNotes(data || [])
+    } catch (err: any) {
+      logErrorToProduction('Error fetching project notes:', { data: err })
+      toast({
+        title: 'Failed to load notes',
+        description:
+          err.message || 'An error occurred while loading project notes.',
+        variant: 'destructive',
+      })
+    }
+  }
+  const handleSubmitNote = async () => {
+    if (!newNote.trim() || !project || !user) return;
+    setIsSubmittingNote(true)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        `)
+        .eq("project_id", projectId)
+        .order("created_at", { ascending: false }),
+      
+      if (error) throw error,
+      
+      setNotes(data || [])
+    } catch (err: any) {
+      logErrorToProduction('Error fetching project notes:', { data: err }),
+      toast({
+        title: "Failed to load notes",
+        description: err.message || "An error occurred while loading project notes.",
+        variant: "destructive"})
+    }
+  },
+  
+  const handleSubmitNote = async () => {
+    if (!newNote.trim() || !project || !user) return,
+    
+    setIsSubmittingNote(true),
+    
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     try {
       const { data, error } = await supabase
         .from('project_notes')
         .insert({
+<<<<<<< HEAD
           project_id: project.id
           user_id: user.id
           content: newNote
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          project_id: project.id
+          user_id: user.id
+          content: newNote
+=======
+          project_id: project.id,
+          user_id: user.id,
+<<<<<<< HEAD
+          content: newNote,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         })
         .select()
       if (error) throw error
@@ -174,6 +472,7 @@ function ProjectDetailsContent() {;
         title: 'Note added'
         description: 'Your note has been added to the project.'
       })
+<<<<<<< HEAD
     } catch (err: any) {
       logErrorToProduction('Error adding note:', { data: err })
       toast({
@@ -242,6 +541,8 @@ if (throw error) {
   $2
 }
       set_notes (data || []);
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     } catch (err: any) {
       logErrorToProduction ('Error fetching project notes:', { data: err });
       toast ({
@@ -252,31 +553,32 @@ if (throw error) {
       });
     }
   }
-  const handleSubmitNote = async () => {
-    if (|| !project || !user) return) {
-  $2
-}
-    setIsSubmittingNote (true);
-    try {
-      const { data, error } = await supabase;
-        .from ('project_notes');
-        .insert ({
+  const handleStatusChange = async (newStatus: ProjectStatus) => {
+    if (!project) return;
+    const success = await updateProjectStatus(project.id, newStatus)
+    if (success) {
+      setProject({
+        ...project
+        status: newStatus
+      })
+=======
+<<<<<<< HEAD
           project_id: project.id,
           user_id: user.id,
-          content: new_note,
-        });
-        .select ();
-      // Check condition
-if (throw error) {
-  $2
-}
-      // Refresh notes;
-      fetchProjectNotes (project.id);
-      setNewNote ('');
-      toast ({
-        title: 'Note added',
-        description: 'Your note has been added to the project.',
-      });
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          content: newNote})
+        .select(),
+      
+      if (error) throw error,
+      
+      // Refresh notes
+      fetchProjectNotes(project.id),
+      setNewNote(""),
+      
+      toast({
+        title: "Note added",
+        description: "Your note has been added to the project."})
     } catch (err: any) {
       logErrorToProduction ('Error adding note:', { data: err });
       toast ({
@@ -287,6 +589,7 @@ if (throw error) {
     } finally {
       setIsSubmittingNote (false);
     }
+<<<<<<< HEAD
   }
   const handleStatusChange = async (newStatus: ProjectStatus) => {
     if (!project) return
@@ -302,6 +605,33 @@ if (throw error) {
           title: 'Offer Accepted! '
           description: 'The project is now in progress. Congratulations!'
         })
+=======
+  },
+  
+  const handleStatusChange = async (newStatus: ProjectStatus) => {
+    if (!project) return,
+    
+    const success = await updateProjectStatus(project.id, newStatus),
+    
+    if (success) {
+      setProject({
+        ...project,
+        status: newStatus}),
+      
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      // If offer was accepted, show a special toast
+      if (newStatus === 'offer_accepted') {
+        toast({
+<<<<<<< HEAD
+<<<<<<< HEAD
+          title: 'Offer Accepted! 🎉'
+          description: 'The project is now in progress. Congratulations!'
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const handleStatusChange = async (new_status: ProjectStatus) => {
     // Check condition
 if (return) {
@@ -324,7 +654,13 @@ if ( {) {
         toast ({
           title: 'Offer Accepted! ',
           description: 'The project is now in progress. Congratulations!',
+<<<<<<< HEAD
         });
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        })
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
     }
   };
@@ -353,10 +689,46 @@ if ( {) {
         return <Badge variant='outline'>{status}</Badge>;
     }
   }
+<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
 }
+=======
+
+=======
+          title: "Offer Accepted! 🎉",
+          description: "The project is now in progress. Congratulations!"})
+      }
+    }
+  },
+  
+  const getStatusBadge = (status: ProjectStatus) => {
+    switch (status) {
+      case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,
+      case "offer_accepted":
+        return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>,
+      case "changes_requested":
+        return <Badge variant="secondary">Changes Requested</Badge>,
+      case "in_progress":
+        return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>,
+      case "completed":
+        return <Badge variant="default">Completed</Badge>,
+      case "canceled":
+        return <Badge variant="destructive">Canceled</Badge>,
+      default:
+        return <Badge variant="outline">{status}</Badge>
+    }
+  },
+  
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (isLoading) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     return (
       <div className='container mx - auto py - 8'>;
         <div className='flex justify - center items - center h - 64'>;
@@ -380,13 +752,30 @@ if ( {) {
             </p>
             <Button onClick={() => router.push('/dashboard')}>
               Return to Dashboard
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </Button>
           </CardContent>
         </Card>
       </div>
     )
   }
+<<<<<<< HEAD
   // Check if user is either the client or the talent
+=======
+<<<<<<< HEAD
+  // Check if user is either the client or the talent
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const isClient = user?.id === project.client_id
   const isTalent = user?.id === project.talent_id
   if (!isClient && !isTalent) {
@@ -402,12 +791,48 @@ if ( {) {
   const isActiveProject = ['offer_accepted', 'in_progress'].includes(
     project.status
   )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <>;
       <SEO
         title={`Project: ${project.job?.title |'Project Details'} | Zion AI Marketplace`}
         description='View and manage your project details and collaboration.'
+<<<<<<< HEAD
+=======
+=======
+  
+  // Check if user is either the client or the talent
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const isClient = user?.id === project.client_id,
+  const isTalent = user?.id === project.talent_id,
+  
+  if (!isClient && !isTalent) {
+    router.push("/unauthorized"),
+    return null
+  }
+  
+  const isOfferPending = project.status === "offer_sent",
+  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
+  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
+  
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <>
+      <SEO 
+        title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} 
+        description="View and manage your project details and collaboration."
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       />
       <main className='container mx-auto px-4 py-8'>
         <div className='mb-6'>
@@ -511,15 +936,55 @@ if ( {) {
                         </AlertDialogDescription>;
                       </AlertDialogHeader>;
                       <AlertDialogFooter>;
+<<<<<<< HEAD
                         <AlertDialogCancel>Cancel</AlertDialogCancel>;
                         <AlertDialogAction
                           onClick={() => handleStatusChange('offer_accepted')}
                         >
                           Accept Offer
+=======
+
+
+            
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {/* Action Buttons Based on Role and Status */}
+            <div className="space-x-2">
+              {isTalent && isOfferPending && (
+                <>
+                  <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                      <Button variant="default">
+                        <CheckCircle2 className="mr-2 h-4 w-4" /> Accept Offer
+                      </Button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle>
+                        <AlertDialogDescription>
+                          By accepting this offer, you agree to the project terms and timeline. 
+                          This will initiate the contract and start the project.
+                        </AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter>
+                        <AlertDialogCancel>Cancel</AlertDialogCancel>
+
+                        <AlertDialogAction onClick={() => handleStatusChange("offer_accepted")}>
+                          Accept Offer
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
+<<<<<<< HEAD
                         >                          Accept Offer;
                         </AlertDialogAction>;
                       </AlertDialogFooter>;
@@ -533,6 +998,28 @@ if ( {) {
                     <MessageSquare className='mr-2 h-4 w-4' /> Request Changes;
                   </Button>;
                 </>;
+=======
+<<<<<<< HEAD
+                  <Button
+                    variant='outline'
+                    onClick={() => handleStatusChange('changes_requested')}
+                  >
+                    <MessageSquare className='mr-2 h-4 w-4' /> Request Changes
+<<<<<<< HEAD
+                  </Button>
+                </>
+              )}
+              {(isClient |isTalent) && project.status === 'in_progress' && (
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                  
+                  <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
+                    <MessageSquare className="mr-2 h-4 w-4" /> Request Changes
+
+                  </Button>
+                </>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               )}
               {(isClient |isTalent) && project.status === 'in_progress' && (
                 <AlertDialog>
@@ -559,6 +1046,14 @@ if ( {) {
                         onClick={() => handleStatusChange('completed')}
                       >
                         Mark as Completed
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       </AlertDialogAction>
                     </AlertDialogFooter>
                   </AlertDialogContent>
@@ -578,7 +1073,17 @@ if ( {) {
                   </Link>
                 </Button>
               )}
+<<<<<<< HEAD
               {(isClient |isTalent) &&
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+              {(isClient |isTalent) &&
+=======
+
+              {(isClient || isTalent) &&
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 ['offer_sent', 'offer_accepted', 'in_progress'].includes(
                   project.status
                 ) && (
@@ -680,7 +1185,17 @@ if ( {) {
                   <TabsTrigger value='reviews'>Reviews</TabsTrigger>;
                 )}
               </TabsList>
+<<<<<<< HEAD
               <TabsContent value='details'>
+=======
+              
+              <TabsContent value="details">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Scope</CardTitle>
@@ -700,12 +1215,34 @@ if ( {) {
                           </p>
                         </div>
                       </div>
+<<<<<<< HEAD
+=======
+
+
+                      
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       <div>
                         <h3 className='font-semibold mb-2'>Payment Terms</h3>
                         <Badge variant='outline' className='capitalize'>
                           {project.payment_terms} Payment
                         </Badge>
                       </div>
+<<<<<<< HEAD
+=======
+
+
+                      
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       <div>
                         <h3 className='font-semibold mb-2'>Job Details</h3>
                         <div className='bg-muted/30 p-4 rounded-md'>
@@ -718,7 +1255,19 @@ if ( {) {
                   </CardContent>
                 </Card>
               </TabsContent>
+<<<<<<< HEAD
               <TabsContent value='timeline'>
+=======
+
+
+              
+              <TabsContent value="timeline">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Timeline</CardTitle>
@@ -733,8 +1282,21 @@ if ( {) {
                           <p>{format(new Date(project.start_date), 'PPP')}</p>
                         </div>
                       </div>
+<<<<<<< HEAD
                       <div className='flex items-start gap-3 p-3 bg-muted/30 rounded-md'>
                         <Clock className='h-5 w-5 text-primary mt-0.5' />
+=======
+
+
+                      
+                      <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">
+                        <Clock className="h-5 w-5 text-primary mt-0.5" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         <div>
                           <h3 className='font-semibold'>Project Status</h3>
                           <div className='mt-1'>
@@ -746,7 +1308,19 @@ if ( {) {
                   </CardContent>
                 </Card>
               </TabsContent>
+<<<<<<< HEAD
               <TabsContent value='documents'>
+=======
+
+
+              
+              <TabsContent value="documents">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Documents</CardTitle>
@@ -771,6 +1345,7 @@ if ( {) {
                             </p>;
                           </div>;
                         </div>;
+<<<<<<< HEAD
                         <Button variant='outline' size='sm' asChild>;
                           <a
                             href={project && project.agreement_url}
@@ -793,6 +1368,17 @@ if ( {) {
                 </Card>
               </TabsContent>
               <TabsContent value='notes'>
+=======
+
+
+              
+              <TabsContent value="notes">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Notes</CardTitle>
@@ -809,11 +1395,35 @@ if ( {) {
                               <div className='flex items-center gap-2 mb-2'>;
                                 <Avatar className='h-6 w-6'>;
                                   {note && note.created_by_profile?.avatar_url ? (;
+<<<<<<< HEAD
+=======
+=======
+
+                          notes.map((note) => (
+                            <div key={note.id} className="bg-muted/30 p-3 rounded-md">
+                              <div className="flex items-center gap-2 mb-2">
+                                <Avatar className="h-6 w-6">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                                  {note.created_by_profile?.avatar_url ? (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                                     <img
                                       src={note.created_by_profile.avatar_url}
                                       alt={note.created_by_profile.display_name}
                                       loading='lazy'
                                     />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                                   ) : (
                                     <User className='h-4 w-4' />
                                   )}
@@ -840,6 +1450,25 @@ if ( {) {
                           </div>;
                         )}
                       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                      {isOfferAccepted && (
+                        <div>
+                          <Textarea
+                            placeholder='Add a note or update to the project...'
+                            value={newNote}
+                            onChange={e => setNewNote(e.target.value)}
+                            className='min-h-[100px] mb-2'                          />
+<<<<<<< HEAD
+                          <Button
+                            onClick = {handleSubmitNote,}
+                            disabled = {!newNote.trim() |isSubmittingNote,}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                      
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       {isOfferAccepted && (
                         <div>
                           <Textarea
@@ -848,6 +1477,13 @@ if ( {) {
                             onChange={e => setNewNote(e.target.value)}
                             className='min-h-[100px] mb-2'
                           />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           <Button
                             onClick={handleSubmitNote}
                             disabled={!newNote.trim() || isSubmittingNote}
@@ -858,30 +1494,146 @@ if ( {) {
                           </Button>;
                         </div>;
                       )}
+<<<<<<< HEAD
                     </div>
                   </CardContent>
                 </Card>
               </TabsContent>
               <TabsContent value='reviews'>
+=======
+
+
+              
+              <TabsContent value="reviews">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <ProjectReviewSection project={project} />
               </TabsContent>
             </Tabs>
           </div>
+<<<<<<< HEAD
           <div className='order-1 lg:order-2 lg:col-span-1'>
+=======
+
+
+          
+          <div className="order-1 lg:order-2 lg:col-span-1">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Card>
               <CardHeader>
                 <CardTitle>Project Participants</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className='space-y-6'>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <Avatar className="h-10 w-10">
+                      {project.talent_profile?.profile_picture_url ? (
+                        <img
+                          src={project.talent_profile.profile_picture_url}
+                          alt={project.talent_profile.full_name}
+<<<<<<< HEAD
+                          loading='lazy'                        />
+=======
+                          loading="lazy"
+                        />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      ) : (
+                        <User className="h-6 w-6" />
+                      )}
+                    </Avatar>
+                    <div>
+<<<<<<< HEAD
+                      <h3 className='font-semibold'>
+                        {project.talent_profile?.full_name |'Talent'}
+                      </h3>
+                      <p className='text-sm text-muted-foreground'>
+                        {project.talent_profile?.professional_title |
+                          'Professional'}
+                      </p>
+                      {isClient && (
+                        <Button
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                          variant='outline'
+                          size='sm'
+                          className='mt-2'
+                          onClick={() =>
+                            router.push(
+                              `/messages?talentId=${project.talent_id}`
+                            )
+                          }                        >
+                          <MessageSquare className='mr-1 h-3 w-3' /> Message
+=======
+<<<<<<< HEAD
+                      <h3 className="font-semibold">
+                        {project.talent_profile?.full_name || "Talent"}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {project.talent_profile?.professional_title || "Professional"}
+                      </p>
+                      {isClient && (
+                        <Button
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                          variant="outline"
+                          size="sm"
+                          className="mt-2"
+                          onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
+                        >
+                          <MessageSquare className="mr-1 h-3 w-3" /> Message
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                        </Button>
+                      )}
+                    </div>
+                  </div>
+<<<<<<< HEAD
                   <div className='flex items-start gap-4'>
                     <Avatar className='h-10 w-10'>
+<<<<<<< HEAD
+=======
+=======
+                  
+                  <div className="flex items-start gap-4">
+                    <Avatar className="h-10 w-10">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       {project.talent_profile?.profile_picture_url ? (
                         <img;
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
                           loading='lazy'
                         />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       ) : (
                         <User className='h-6 w-6' />
                       )}
@@ -949,7 +1701,16 @@ if ( {) {
               </CardContent>
             </Card>
             {/* Project Status Card */}
+<<<<<<< HEAD
             <Card className='mt-6'>
+=======
+            <Card className="mt-6">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <CardHeader>
                 <CardTitle>Project Status</CardTitle>
               </CardHeader>
@@ -965,10 +1726,23 @@ if ( {) {
                       {format(new Date(project.created_at), 'PPP')}
                     </span>
                   </div>
+<<<<<<< HEAD
                   <div className='flex justify-between items-center'>
                     <span className='text-sm font-medium'>Start Date:</span>
                     <span className='text-sm'>
                       {format(new Date(project.start_date), 'PPP')}
+=======
+                  
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm font-medium">Start Date:</span>
+                    <span className="text-sm">
+                      {format(new Date(project.start_date), "PPP")}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     </span>
                   </div>
                 </div>
@@ -978,6 +1752,7 @@ if ( {) {
                 </div>;
               </CardContent>;
 
+<<<<<<< HEAD
               {/* Conditional Footer Based on Status */}
               {project && project.status === 'changes_requested' && isClient && (;
                 <CardFooter className='flex-col items-start gap-2 border-t pt-6'>;
@@ -993,6 +1768,49 @@ if ( {) {
                     className='w-full'
                   >
                     <MessageSquare className='mr-2 h-4 w-4' /> Discuss Changes
+=======
+
+              
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              {/* Conditional Footer Based on Status */}
+              {project.status === "changes_requested" && isClient && (
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
+                  <p className="text-sm text-amber-600 flex items-center gap-1">
+                    <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
+                  </p>
+<<<<<<< HEAD
+                  <Button
+                    variant='outline'
+                    onClick={() =>
+                      router.push(`/messages?talentId=${project.talent_id}`)
+                    }
+                    className='w-full'                  >
+                    <MessageSquare className='mr-2 h-4 w-4' /> Discuss Changes
+<<<<<<< HEAD
+                  </Button>
+                </CardFooter>
+              )}
+              {project.status === 'offer_sent' && isClient && (
+                <CardFooter className='flex-col items-start gap-2 border-t pt-6'>
+                  <p className='text-sm text-muted-foreground'>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                  <Button 
+                    variant="outline"
+                    onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
+                    className="w-full"
+                  >
+                    <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   </Button>
                 </CardFooter>
               )}
@@ -1003,6 +1821,7 @@ if ( {) {
                   </p>
                 </CardFooter>
               )}
+<<<<<<< HEAD
               {project.status === 'completed' && (
                 <CardFooter className='flex-col items-start gap-2 border-t pt-6'>
                   <p className='text-sm text-green-600 flex items-center gap-1'>
@@ -1019,11 +1838,50 @@ if ( {) {
                   </p>
                 </CardFooter>
               )}
+=======
+
+                    className='w-full'                  >;
+                    <MessageSquare className='mr-2 h-4 w-4' /> Discuss Changes;
+                  </Button>;
+                </CardFooter>;
+              )}
+
+              {project && project.status === 'offer_sent' && isClient && (;
+                <CardFooter className='flex-col items-start gap-2 border-t pt-6'>;
+                  <p className='text-sm text-muted-foreground'>;
+                    Waiting for the talent to accept your offer.;
+                  </p>;
+                </CardFooter>;
+              )}
+
+              {project && project.status === 'completed' && (;
+                <CardFooter className='flex-col items-start gap-2 border-t pt-6'>;
+                  <p className='text-sm text-green-600 flex items-center gap-1'>;
+                    <CheckCircle2 className='h-4 w-4' /> This project has been;
+                    completed.;
+                  </p>;
+                </CardFooter>;
+              )}
+
+              {project && project.status === 'canceled' && (;
+                <CardFooter className='flex-col items-start gap-2 border-t pt-6'>;
+                  <p className='text-sm text-red-600 flex items-center gap-1'>;
+                    <XCircle className='h-4 w-4' /> This project has been;
+                    canceled.;
+                  </p>;
+                </CardFooter>;
+              )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </Card>
           </div>
         </div>
       </main>
     </>
+<<<<<<< HEAD
             </Card>;
           </div>;
         </div>;
@@ -1033,6 +1891,12 @@ if ( {) {
 }
 
 export default function ProjectDetails() {
+=======
+  )
+=======
+    </>);
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 setIsSubmittingNote (true);
 try {
@@ -1063,7 +1927,15 @@ case "in progress": return <Badge className="bg - blue - 100 text - blue - 800">
 case "completed": return <Badge variant="default">Completed</Badge>;";
 case "canceled": return <Badge variant="destructive">Canceled</Badge>;";
 default: return <Badge variant="outline"> {
+<<<<<<< HEAD
   status
+=======
+<<<<<<< HEAD
+  status
+=======
+  status 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }</Badge>
 };'"
 <p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10" > <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick={"
@@ -1169,10 +2041,12 @@ const ProjectDetails = () => {
               <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
                 Contact Us
               </Link>
+<<<<<<< HEAD
             </div>
     </>
   )
 }
+<<<<<<< HEAD
   status;
 }</Badge>;
 }'";
@@ -1236,6 +2110,43 @@ function ProjectDetails() {
  */
 function ProjectDetails() {
   return (
+=======
+
+=======
+              
+              {project.status === "completed" && (
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
+                  <p className="text-sm text-green-600 flex items-center gap-1">
+                    <CheckCircle2 className="h-4 w-4" /> This project has been completed.
+                  </p>
+                </CardFooter>
+              )}
+              
+              {project.status === "canceled" && (
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
+                  <p className="text-sm text-red-600 flex items-center gap-1">
+                    <XCircle className="h-4 w-4" /> This project has been canceled.
+                  </p>
+                </CardFooter>
+              )}
+=======
+            </div>;
+    </>;
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            </Card>;
+          </div>;
+        </div>;
+      </main>;
+    </>;
+  );
+}
+;
+export default function ProjectDetails() {;
+  return (;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     <ProtectedRoute>;
       <ProjectDetailsContent />;
     </ProtectedRoute>;
@@ -1287,3 +2198,12 @@ const ProjectDetails = () =>: any {
             </div>;
     </>);
 }
+<<<<<<< HEAD
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -4,10 +4,38 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / ca
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
 import { User, Mail, Calendar, Shield } from 'lucide-react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import Head from 'next/head';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
 interface PrivatePageProps {user: SupabaseUser;
+=======
+
+import Link from 'next / link';
+import Head from 'next / head';
+import type { User as SupabaseUser } from '@supabase / supabase - js';
+interface PrivatePageProps {
+  user: SupabaseUser;
+
+=======
+
+interface PrivatePageProps {;
+  user: SupabaseUser;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 export default /**
  * PrivatePage - Function description
@@ -19,7 +47,19 @@ function PrivatePage() {
         <title>Private Profile - Zion Tech Marketplace</title>
         <meta name=&quot;description&quot; content=&quot;Private user profile page&quot; />
       </Head>
+<<<<<<< HEAD
       <div className=&quot;container max-w-4xl mx-auto py-8&quot;>
+=======
+<<<<<<< HEAD
+      <div className=&quot;container max-w-4xl mx-auto py-8&quot;>
+=======
+      <div className="container max-w-4xl mx-auto py-8">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <Card>
           <CardHeader>
             <CardTitle className=&quot;flex items-center gap-2&quot;>
@@ -60,9 +100,26 @@ function PrivatePage() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
             <div className=&quot;p-4 bg-muted/50 rounded-lg&quot;>
               <h4 className=&quot;font-medium mb-2&quot;>Authentication Details</h4>
               <div className=&quot;grid gap-2 text-sm&quot;>
+=======
+<<<<<<< HEAD
+            <div className=&quot;p-4 bg-muted/50 rounded-lg&quot;>
+              <h4 className=&quot;font-medium mb-2&quot;>Authentication Details</h4>
+              <div className=&quot;grid gap-2 text-sm&quot;>
+<<<<<<< HEAD
+                <div>
+                  <span className=&quot;font-medium&quot;>Last Sign In: </span>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            <div className="p-4 bg-muted/50 rounded-lg">
+              <h4 className="font-medium mb-2">Authentication Details</h4>
+              <div className="grid gap-2 text-sm">
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <div>
                   <span className=&quot;font-medium&quot;>Last Sign In: </span>
                   {user.last_sign_in_at
@@ -78,7 +135,18 @@ function PrivatePage() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
             <div className=&quot;flex gap-2&quot;>
+=======
+
+
+            <div className="flex gap-2">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <Button asChild>
                 <Link href=&quot;/dashboard&quot;>
                   Go to Dashboard
@@ -96,13 +164,69 @@ function PrivatePage() {
     </>
   )
 }
+<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {const supabase = createServerSideClient(context);
+=======
+export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
+  const supabase = createServerSideClient (context);
+  const { data, error } = await supabase.auth.get_user ();
+  // Check condition
+if ( {) {
+  $2
+}
+    return {
+      redirect: {
+        destination: '/auth / login';
+        permanent: false}}
+  }
+  return {
+    props: {
+
+      user: data.user}}
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {;
+  const supabase = createServerSideClient(context);
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const { data, error } = await supabase.auth.getUser();
   if (error |!data?.user) {return {;
       redirect: {;
         destination: '/auth/login';
         permanent: false}}
   }
+<<<<<<< HEAD
   return {props: {;
       user: data.user}}
 }
+=======
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  return {;
+    props: {;
+      user: data.user}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+} ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+} ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -5,6 +5,24 @@ import {Slot} from "@radix-ui/react-slot"
 import {ChevronRight} from "lucide-react"
 
 import {cn} from "@/lib/utils"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+const Breadcrumb = React.forwardRef<;
+  HTMLElement;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { Slot } from "@radix-ui/react-slot"
+import { ChevronRight } from "lucide-react"
+ 
+import { cn } from "@/lib/utils"
+ 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const Breadcrumb = React.forwardRef<
   HTMLElement;
   React && React.ComponentPropsWithoutRef<"nav"> & {;
@@ -141,7 +159,14 @@ const BreadcrumbEllipsis = ({
   </span>
 )
 BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
+<<<<<<< HEAD
 export {
+=======
+<<<<<<< HEAD
+export {
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     {...props}>;
     &#8230,;
   </span>;
@@ -149,10 +174,34 @@ export {
 BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = "BreadcrumbElipssis";
 
 export {;
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Breadcrumb;
   BreadcrumbList;
   BreadcrumbItem;
   BreadcrumbLink;
   BreadcrumbSeparator;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  BreadcrumbEllipsis}
+
+=======
+=======
+=======
+export {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   BreadcrumbEllipsis}
 

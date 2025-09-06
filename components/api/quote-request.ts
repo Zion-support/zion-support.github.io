@@ -65,6 +65,7 @@ export default async function handler(
               .filter(Boolean)
           : [];
       }
+<<<<<<< HEAD
       let saved: any = null;
       if (supabase) {
         const { data, error } = await supabase
@@ -192,6 +193,13 @@ if ( {) {
               .filter (Boolean);
           : [];
       }
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       let saved: any = null;
       // Check condition
 if ( {) {
@@ -228,3 +236,20 @@ if (throw error) {
     return res.status (500).json ({ message: "Server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    return res
+      .status(200)
+      .json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id });
+  } catch (e: any) {
+    console.error('quote-request error', e);
+    return res.status(500).json({ message: 'Server error' });
+  }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

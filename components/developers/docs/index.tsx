@@ -19,8 +19,19 @@ type DocsContent = {
 }
 type PageProps = {
   docs: DocsContent;
+<<<<<<< HEAD
 }
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
+=======
+<<<<<<< HEAD
+}
+export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
+=======
+};
+
+export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const contentPath = path.join(process.cwd(), 'data', 'docs', 'content.json');
   const raw = fs.readFileSync(contentPath, 'utf8');
   const docs = JSON.parse(raw) as DocsContent;
@@ -50,17 +61,84 @@ export default function ApiDocsPage({ docs }: PageProps) {
                 </CodeBlock>              ))}            <div className="space-y-4 mt-4">;
               {section && section.code.map((c, idx) => (;
                 <CodeBlock key={idx} language={c && c.language}>{c && c.content}</CodeBlock>;
+<<<<<<< HEAD
+=======
+
+=======
+export type Section = {
+  id: string,
+  title: string,
+  html?: string;
+  code?: { language?: string, content: string }[]
+};
+
+type DocsContent = {
+  title: string,
+  sections: Section[]
+};
+
+type PageProps = {
+  docs: DocsContent
+};
+
+export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
+  const contentPath = path.join(process.cwd(), 'datadocscontent.json');
+  const raw = fs.readFileSync(contentPath, 'utf8');
+  const docs = JSON.parse(raw) as DocsContent;
+  return { props: { docs } }
+};
+
+export default function ApiDocsPage({ docs }: PageProps) {
+  return (
+    <DocsLayout title={docs.title} nav={docs.sections.map((s) => ({ id: s.id, title: s.title }))}>
+      {docs.sections.map((section) => (
+        <section key={section.id} id={section.id} className="scroll-mt-24">
+          <h2 className="text-2xl font-semibold">{section.title}</h2>
+          {section.html && (
+            <div dangerouslySetInnerHTML={{ __html: section.html }} />
+          )}
+          {section.code && section.code.length > 0 && (
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               ))}
             </div>;
           )}
         </section>;
       ))}
+<<<<<<< HEAD
     </DocsLayout>
 );
+=======
+<<<<<<< HEAD
+    </DocsLayout>
+<<<<<<< HEAD
+);
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+<<<<<<< HEAD
+    </DocsLayout>;
+  );
+=======
+
+  );
+
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
     </DocsLayout>
   );
 }
+<<<<<<< HEAD
 ;
 type PageProps = {
   docs: DocsContent;
@@ -101,3 +179,7 @@ function ApiDocsPage() {
         </section>))}
     </DocsLayout>);
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

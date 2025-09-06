@@ -1,6 +1,15 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 import { GradientHeading } from "./GradientHeading",
 import { Button } from "./ui/button";
+<<<<<<< HEAD
+=======
+=======
+import { GradientHeading } from './GradientHeading'
+import { Button } from './ui/button'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { CheckCircle2 } from 'lucide-react'
 
 import {
@@ -11,6 +20,15 @@ import {
   TableHeader
   TableRow
 } from './ui/table'
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function ComparisonSection() {
   return (
     <section className='py-20 bg-zion-blue-dark'>
@@ -98,6 +116,62 @@ export function ComparisonSection() {
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
                     <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
+<<<<<<< HEAD
+=======
+
+
+                  </TableRow>
+
+import { GradientHeading } from "./GradientHeading",
+import { Button } from "./ui/button",
+import { CheckCircle2 } from 'lucide-react'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",
+
+export function ComparisonSection() {
+  return (
+    <section className="py-20 bg-zion-blue-dark">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <GradientHeading>Compare & Save</GradientHeading>
+          <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
+            See how Zion can drastically reduce your IT costs compared to traditional providers
+          </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-zion-blue-light rounded-lg border border-zion-purple/20 overflow-hidden">
+            <Table>
+              <TableHeader>
+                <TableRow className="border-b border-zion-purple/20">
+                  <TableHead className="text-white">Service</TableHead>
+                  <TableHead className="text-white text-center">Traditional Providers</TableHead>
+                  <TableHead className="text-white text-center">With Zion</TableHead>
+                  <TableHead className="text-white text-center">Savings</TableHead>
+
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {[
+                  { service: "Server Hosting", traditional: "$1,200/mo", zion: "$650/mo", savings: "45%" },
+                  { service: "IT Equipment", traditional: "Full Purchase", zion: "Flexible Rental", savings: "60%" },
+                  { service: "24/7 Support", traditional: "$2,500/mo", zion: "$950/mo", savings: "62%" },
+                  { service: "Storage Solutions", traditional: "$800/mo", zion: "$350/mo", savings: "56%" };
+                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                  <TableRow key={index} className="border-b border-zion-blue">
+                    <TableCell className="font-medium text-white">{item.service}</TableCell>
+                    <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
+                    <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>
+                    <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
+
+                  </TableRow>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                  </TableRow>
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 ))}
               </TableBody>
             </Table>
@@ -126,15 +200,37 @@ export function ComparisonSection() {
               </p>
             </div>
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
+<<<<<<< HEAD
+=======
+
+              Calculate Your Savings
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+              Calculate Your Savings
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </Button>
           </div>
         </div>
       </div>
     </section>
   )
+<<<<<<< HEAD
 }
 import { GradientHeading } from './GradientHeading';
 import { Button } from './ui/button';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { GradientHeading } from "./GradientHeading",;
+import { Button } from "./ui/button",;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { CheckCircle2 } from 'lucide-react';
 import {;
   Table,;
@@ -291,5 +387,14 @@ export function ComparisonSection() {;
 }
   );
 }
+<<<<<<< HEAD
     </section>);
 }
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

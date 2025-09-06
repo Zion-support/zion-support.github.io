@@ -1,4 +1,14 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD:pages-disabled/quantum-metaverse.tsx
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from 'react',;
 import Head from 'next/head',;
 import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone } from 'lucide-react',;
@@ -37,7 +47,11 @@ export default function MDMPage() {;
               <div className="flex items-end justify-between mb-3">;
                 <div>;
                   <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>;
+<<<<<<< HEAD
                   <div className="text-slate-400">{service.trialDays ? `${service.trialDays}-day free trial  ` :''}Setup:{service.setupTime}</div>;
+=======
+                  <div className="text-slate-400">{service.trialDays ? `${service.trialDays}-day free trial • ` :''}Setup:{service.setupTime}</div>;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </div>;
               </div>;
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>;
@@ -52,6 +66,12 @@ export default function MDMPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   ),;
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from "react";
 import Head from "next/head";
 import {
@@ -62,6 +82,11 @@ import {
   ArrowRight
   Shield
   Star
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from "react";
 import Head from "next/head";
 import {
@@ -78,7 +103,15 @@ import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
 export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
+<<<<<<< HEAD
     s.link.endsWith("/quantum-internet-security-platform")
+=======
+<<<<<<< HEAD
+    s.link.endsWith("/quantum-internet-security-platform")
+=======
+    s.link.endsWith("/quantum-internet-security-platform"),;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
   if (!service) return null;
 
@@ -169,6 +202,19 @@ export default function QuantumInternetSecurityPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD:pages-disabled/quantum-metaverse.tsx
+<<<<<<< HEAD
+}
+=======
+>>>>>>> main:pages-disabled/quantum-metaverse.tsx
+=======
+=======
+>>>>>>> main:pages-disabled/quantum-metaverse.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 ;

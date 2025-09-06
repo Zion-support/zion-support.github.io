@@ -3,7 +3,37 @@ import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
 
+<<<<<<< HEAD
 import {
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+
+import {
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Lock
   Shield
   Eye
@@ -14,6 +44,7 @@ import {
   XCircle
   AlertTriangle
   ArrowRight;
+<<<<<<< HEAD
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -31,6 +62,18 @@ import {;
 } from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
 export default function PasswordCheckerPage() {;
+=======
+} from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+
+export default function PasswordCheckerPage() {
+=======
+import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+export default function PasswordCheckerPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [strength, setStrength] = useState(0);
@@ -452,6 +495,7 @@ export default function PasswordCheckerPage() {;
     )
     return 'bg-red-400';  };
 
+<<<<<<< HEAD
   const getCheckIcon = (passed: boolean) => {;
     return passed ? (;
       <CheckCircle className='w-5 h-5 text-green-400' />;
@@ -496,6 +540,13 @@ export default function PasswordCheckerPage() {;
           content='Advanced password strength analyzer with security recommendations.'
         />
       </Head>
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -817,6 +868,17 @@ if (return 'bg - orange - 400') {
                   </div>;
                 </div>;
 
+<<<<<<< HEAD
+=======
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Generate Password */}
                 <div>;
                   <Button
@@ -837,6 +899,17 @@ if (return 'bg - orange - 400') {
                   </Button>;
                 </div>;
 
+<<<<<<< HEAD
+=======
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Generated Password Display */}
                 {generatedPassword && (;
                   <div className='p-4 bg-gray-700 rounded-lg border border-gray-600'>;
@@ -868,6 +941,31 @@ if (return 'bg - orange - 400') {
                       {generatedPassword}
                     </div>;
                   </div>;
+<<<<<<< HEAD
+=======
+=======
+                        variant='outline'
+                        size='sm'
+                        className='border-gray-600 text-gray-300 hover:bg-gray-600'
+                      >
+                        <Copy className='w-4 h-4 mr-2' />
+                        Copy
+                      </Button>
+                    </div>
+
+                    <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}
+
+                      {generatedPassword}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    </div>
+                  </div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 )}
                 <div className='text-sm text-gray-400'>                  <p> Real-time strength analysis</p>                <div className="text-sm text-gray-400">
                   <p> Real-time strength analysis</p>
@@ -908,9 +1006,35 @@ if (return 'bg - orange - 400') {
                         {strengthText} ({strength}/100)
                       </span>
                     </div>
+<<<<<<< HEAD
                     <div className='w-full bg-gray-700 rounded-full h-3'>
                       <div                    <div className="w-full bg-gray-700 rounded-full h-3">
                       <div
+=======
+<<<<<<< HEAD
+                    <div className='w-full bg-gray-700 rounded-full h-3'>
+                      <div                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}                <div className="space-y-6">
+                  {/* Strength Score */}
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm text-gray-300">Password Strength:</span>
+                        {strengthText} ({strength}/100)
+                      </span>
+                    </div>
+                    <div className='w-full bg-gray-700 rounded-full h-3'>
+                      <div                    <div className="w-full bg-gray-700 rounded-full h-3">
+<<<<<<< HEAD
+                      <div
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                      <div 
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
                         style={{ width: `${strength}%` }}
                       />
@@ -931,6 +1055,7 @@ if (return 'bg - orange - 400') {
                     </div>;
                   </div>;
 
+<<<<<<< HEAD
                   {/* Security Checks */}
                   <div>;
                     <h4 className='text-lg font-semibold text-white mb-3'>;
@@ -1065,6 +1190,30 @@ if (return 'bg - orange - 400') {
                         <div key={key} className="flex items - center space - x-3">;
                           {getCheckIcon (passed)}
                           <span className={`text - sm ${passed ? 'text - green - 400' : 'text - red - 400'}`}>;
+=======
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  {/* Security Checks */}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+                            className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}
+
+                          >                            {key === 'length' && 'At least 8 characters'}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                             {key === 'length' && 'At least 8 characters'}
                             {key === 'uppercase' && 'Contains uppercase letter'}
                             {key === 'lowercase' && 'Contains lowercase letter'}
@@ -1076,6 +1225,7 @@ if (return 'bg - orange - 400') {
                           </span>;
                         </div>;
                       ))}
+<<<<<<< HEAD
                     </div>
                   </div>
                   {/* Suggestions */}
@@ -1098,10 +1248,39 @@ if (return 'bg - orange - 400') {
                           <div key={index} className="flex items-start space-x-3">;
                             <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0 && 0.5 flex-shrink-0" />;
                             <span className="text-sm text-yellow-300">{suggestion}</span>;
-                        ))}
-                      </div>;
+=======
+
                     </div>;
+                  </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  {/* Suggestions */}
+
+
+=======
+
+                            </span>                          </div>
+
+                          </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+                        ))}
+                      </div>
+                    </div>
                   )}
+<<<<<<< HEAD
                 </div>;
               ) : (;
                 <div className='bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>;
@@ -1113,11 +1292,35 @@ if (return 'bg - orange - 400') {
                   <p className="text-gray-400">;
                     Enter a password above to see the security analysis and get personalized suggestions.;
                 </div>;
+=======
+                </div>
+              ) : (
+                <div className='bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>
+                  <div className='text-6xl mb-4'>🔒</div>
+                  <p className='text-gray-400'>
+                    Enter a password above to see the security analysis and get
+                    personalized suggestions.                  </p>                <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
+                  <div className="text-6xl mb-4">🔒</div>
+                  <p className="text-gray-400">
+                    Enter a password above to see the security analysis and get personalized suggestions.
+                </div>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               )}
             </Card>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1584,6 +1787,7 @@ if (return 'bg - orange - 400') {
       </section>;
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-r from-indigo-600 to-purple-600'>;
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
           <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>;
@@ -1593,6 +1797,26 @@ if (return 'bg - orange - 400') {
             improve their account security.;
           </p>;
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+=======
+      <section className='py-20 bg-gradient-to-r from-indigo-600 to-purple-600'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+
+
+            Ready to Secure Your Passwords?
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          </h2>
+          <p className='text-xl text-indigo-100 mb-8'>
+            Join thousands of users who trust our password strength checker to
+            improve their account security.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Button
               href='/contact'
               size='lg'
@@ -1614,6 +1838,7 @@ if (return 'bg - orange - 400') {
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 }
               className='border-white text-white hover:bg-white hover:text-indigo-600'>              href="/pricing";
@@ -1632,3 +1857,19 @@ if (return 'bg - orange - 400') {
 }
     </>);
 }
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

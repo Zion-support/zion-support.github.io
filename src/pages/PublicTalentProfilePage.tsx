@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState, useEffect } from "react",
 import { useRouter } from "next/router",
 import { supabase } from "@/integrations/supabase/client",
@@ -7,8 +11,18 @@ import { SEO } from "@/components/SEO",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 import { logErrorToProduction } from '@/utils/productionLogger';
+=======
+<<<<<<< HEAD
+import { HireNowCTA } from "@/components/profile/HireNowCTA";
+import { logErrorToProduction } from '@/utils/productionLogger';
+=======
+<<<<<<< HEAD
+import { logErrorToProduction } from '@/utils/productionLogger'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Star } from 'lucide-react'
@@ -25,6 +39,7 @@ export default function ProfilePage() {
     const fetchProfile = async () => {
       setIsLoading(true)
       setIsError(false)
+<<<<<<< HEAD
       try {
         const { data, error } = await supabase;
           .from ("talent_profiles");
@@ -41,6 +56,77 @@ if ( {) {
       } catch (error) {
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' })
         setIsError(true)
+=======
+=======
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from "react",
+import { useRouter } from "next/router",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/components/ui/use-toast",
+import { SEO } from "@/components/SEO",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { HireNowCTA } from "@/components/profile/HireNowCTA",
+import { logErrorToProduction } from '@/utils/productionLogger',
+import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react'
+
+export default function ProfilePage() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+  const router = useRouter(),
+  const profileId = router.query.profileId as string,
+  const [profileData, setProfileData] = useState<any>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [isError, setIsError] = useState(false),
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      setIsLoading(true),
+      setIsError(false),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      try {
+        const { data, error } = await supabase
+          .from("talent_profiles")
+          .select("*")
+          .eq("id", profileId)
+<<<<<<< HEAD
+          .single()
+=======
+          .single(),
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        if (error) {
+          throw error
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        }
+        setProfileData(data)
+      } catch (error) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' })
+        setIsError(true)
+=======
+        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
+        setIsError(true),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
+
+        setIsError(true),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         toast({
           title: "Error"
           description: "Failed to load profile. Please try again later."
@@ -49,10 +135,23 @@ if ( {) {
         setIsLoading (false);
       }
     }
+<<<<<<< HEAD
     if (profileId) {
       fetchProfile()
     }
   }, [profileId])
+=======
+  }, [profileId]);
+
+
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">;
@@ -70,8 +169,44 @@ if ( {) {
   return (
     <>;
       <SEO
+<<<<<<< HEAD
         title={`${profileData.full_name} | Talent Profile`}
         description = {profileData.bio |"View the profile of this talented individual.",}
+=======
+
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-red-500">Failed to load profile.</p>
+      </div>
+    )
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <>
+      <SEO
+        title={`${profileData.full_name} | Talent Profile`}
+<<<<<<< HEAD
+        description = {profileData.bio |"View the profile of this talented individual.",}
+=======
+        description = {profileData.bio || "View the profile of this talented individual.",}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+;
+  return (;
+    <>;
+      <SEO;
+        title={`${profileData.full_name} | Talent Profile`}
+        description={profileData.bio || "View the profile of this talented individual."}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
@@ -118,9 +253,21 @@ if ( {) {
                         <span>{profileData && profileData.availability}</span>;
                       </div>;
                     )}
+<<<<<<< HEAD
                   </div>
                 </div>
               </div>
+=======
+
+                  </div>;
+                </div>;
+              </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Skills */}
               {profileData && profileData.skills && profileData && profileData.skills.length > 0 && (;
                 <div className="mt-4">;
@@ -179,9 +326,20 @@ if ( {) {
                     <Github className="h-6 w-6" />;
                   </a>;
                 )}
+<<<<<<< HEAD
                 {profileData && profileData.twitter_link && (;
                   <a
                     href = {profileData && profileData.twitter_link,}
+=======
+                {profileData.twitter_link && (;
+                  <a;
+                    href={profileData.twitter_link}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
@@ -197,9 +355,23 @@ if ( {) {
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
                     aria-label="LinkedIn"
+<<<<<<< HEAD
                     title="LinkedIn">;
                     <Linkedin className="h-6 w-6" />;
                   </a>;
+=======
+
+                    title="LinkedIn"
+                  >
+                    <Linkedin className="h-6 w-6" />
+
+                  </Link>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 )}
               </div>
             </div>
@@ -208,6 +380,7 @@ if ( {) {
           <div className="col-span-12 lg:col-span-4 space-y-6">;
             <HireNowCTA
               talentProfile={{
+<<<<<<< HEAD
                 id: profileData?.id |''
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
@@ -216,6 +389,27 @@ if ( {) {
               }}
             />;
             {/* Placeholder for other sidebar elements */}
+=======
+
+
+                id: profileData?.id || '',
+                full_name: profileData?.full_name || '',
+                professional_title: profileData?.professional_title || '',
+<<<<<<< HEAD
+                hourly_rate: profileData?.hourly_rate || 0
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+                hourly_rate: profileData?.hourly_rate || 0,
+=======
+                hourly_rate: profileData?.hourly_rate || 0
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              }}
+            />;
+            {/* Placeholder for other sidebar elements */}
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </div>
         </div>
       </div>
@@ -255,10 +449,34 @@ if (isLoading) {"
   {'
   id: profileData?.id |'', full name: profileData?.full name |'',  professional title: profileData?.professional title |'', hourly rate: profileData?.hourly rate |0
 }/> {
+<<<<<<< HEAD
   /* Placeholder for other sidebar elements */
 }</div> </div> </div> </>)
 }'"}
 
+=======
+<<<<<<< HEAD
+  /* Placeholder for other sidebar elements */
+}</div> </div> </div> </>)
+}'"}
+=======
+  /* Placeholder for other sidebar elements */ ;
+}</div> </div> </div> </>) ;
+}'"};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          </div>;
+        </div>;
+      </div>;
+    </>;
+  );
+
+
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // Check condition
 if ( {) {
   $2
@@ -473,3 +691,16 @@ if ( {") {
   /* Placeholder for other sidebar elements */;
 }</div> </div> </div> </>);
 }'"}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

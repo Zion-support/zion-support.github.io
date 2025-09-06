@@ -26,6 +26,50 @@ export default function InteractiveCard({title;
       aria - label={`Navigate to ${title} page`}
 >;
       <div className=&quot;relative & quot;>;
+<<<<<<< HEAD
+=======
+=======
+
+'use client',;
+import React, { useState } from 'react',;
+import Link from 'next/link',;
+interface InteractiveCardProps {;
+  title: string,;
+  description: string,;
+  icon: string,;
+  href: string,;
+  color?: string,;
+  className?: string,;
+  children?: React.ReactNode;
+}
+;
+export default function InteractiveCard({;
+  title,;
+  description,;
+  icon,;
+  href,;
+  color = 'from-purple-500 to-blue-500',;
+  className = '',;
+  children;
+}: InteractiveCardProps) {;
+  const [isHovered, setIsHovered] = useState(false),;
+
+  return (;
+    <Link;
+      href={href}
+      className={`group block p-8 rounded-2xl border border-white/10 hover:border-white/30 bg-black/20 hover:bg-black/40 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm hover-lift ${className}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      aria-label={`Navigate to ${title} page`}
+
+    >
+      <div className="relative">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Animated background */}
         <div;
           className={`absolute inset - 0 bg - gradient - to - r ${color} rounded - xl opacity - 0 group - hover:opacity - 10 transition - opacity duration - 500 blur - xl`}
@@ -35,16 +79,44 @@ export default function InteractiveCard({title;
           {icon}
         </div>;
         {/* Content */}
+<<<<<<< HEAD
 <div className=&quot;relative z - 10 & quot;>;
           <h3 className=&quot;text - 2xl font - semibold text - white mb - 4 group - hover:text - purple - 400 transition - colors duration - 300 & quot;>;
+=======
+        <div className="relative z-10">
+          <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {title}
           </h3>;
           <p className=&quot;text - gray - 400 leading - relaxed text - lg mb - 6&quot;>;
             {description}
           </p>;
           {/* Custom children or default arrow */}
+<<<<<<< HEAD
 {children |(
             <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+{children |(
+=======
+{children || (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
+=======
+          {children || (
+            <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <span>Learn More</span>
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
@@ -109,7 +181,22 @@ export function TestimonialCard({quote;
 }) {return (;
     <div className={`bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/50 transition-all duration-300 transform hover:scale-105 ${className}`}>;
       {/* Quote icon */}
+<<<<<<< HEAD
 <div className=&quot;text-4xl mb-4&quot;></div>
+=======
+<<<<<<< HEAD
+      <div className="text-4xl mb-4">💬</div>
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+<div className=&quot;text-4xl mb-4&quot;>💬</div>
+=======
+      <div className="text-4xl mb-4">💬</div>
+      
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Rating */}
       <div className=&quot;flex mb - 4&quot;>;
         {Array.from ({ length: rating }).map ((_, i) => (
@@ -118,8 +205,20 @@ export function TestimonialCard({quote;
           </svg>))}
       </div>;
       {/* Quote */}
+<<<<<<< HEAD
 <blockquote className=&quot;text - gray - 300 text - lg leading - relaxed mb - 6 italic & quot;>;
         &quot;{quote}&quot;
+=======
+
+
+      <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
+        "{quote}"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       </blockquote>
       {/* Author info */}
       <div className=&quot;border - t border - white / 10 pt - 4&quot;>;

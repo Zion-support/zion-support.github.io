@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 import type {
+<<<<<<< HEAD
   CreateGrantPayload
   GrantApplication;
 } from '../../../types/grants';
@@ -25,6 +26,35 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const list = readAllGrants().filter(g => {      return (function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) {
     fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
+=======
+<<<<<<< HEAD
+  CreateGrantPayload
+  GrantApplication;
+=======
+  CreateGrantPayload,;
+  GrantApplication,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
+function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true });
+  }
+function readAllGrants(): GrantApplication[] {
+  ensureDir();
+  const files = fs.readdirSync(GRANTS_DIR).filter(f => f.endsWith('.json'));
+  return files.map(file => {
+    const full = path.join(GRANTS_DIR, file);
+    const raw = fs.readFileSync(full, 'utf8');
+    return JSON.parse(raw) as GrantApplication;
+  });
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'GET') {;
+    const { status, sector, region, program } = req.query;
+    const list = readAllGrants().filter(g => {      return (function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true })
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }
 function readAllGrants(): GrantApplication[] {
@@ -263,3 +293,31 @@ if ( {) {
   res.set_header ('AllowGET, POST');
   res.status (405).end ('Method Not Allowed');
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  res.setHeader('Allow', 'GET, POST');
+<<<<<<< HEAD
+  res.status(405).end('Method Not Allowed');
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+  res.status(405).end('Method Not Allowed');    } catch (e: any) {
+      res.status(500).json({ error: e?.message || 'Failed to create grant' })
+    }
+    return
+  }
+
+  res.setHeader('AllowGET, POST');
+  res.status(405).end('Method Not Allowed')
+}
+
+}
+}
+}
+=======
+  res.status(405).end('Method Not Allowed');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

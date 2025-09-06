@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/performance-monitor-fixed.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,6 +34,10 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+#!/usr/bin/env node;#!/usr/bin/env node;
+#!/usr/bin/env node;#!/usr/bin/env node;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/performance-monitor-fixed.cjs
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
       ""system": {        memory: {},        cpu": {},";        "process"
       "application": {"buildSize": 0,        "bundleSize": 0,,"loadTime": 0,,"}
@@ -40,6 +45,7 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
     this.reportFile = path.join(process.cwd(), "performance-report.json");"}"
 const fs = require("child_process")
 const path = require("path")
+<<<<<<< HEAD:backup-problematic-files/scripts/performance-monitor-fixed.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -151,6 +157,8 @@ async collectSystemMetrics() {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/performance-monitor-fixed.cjs
       "timestamp"
         "cpu"
         "process"
@@ -180,6 +188,7 @@ const { execSync } = require("child_process")
       const distPath = path.join(this.projectRoot, "dist")
       const nodeModulesPath = path.join(this.projectRoot, "node_modules")
       const srcPath = path.join(this.projectRoot, "src")
+<<<<<<< HEAD:backup-problematic-files/scripts/performance-monitor-fixed.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -260,6 +269,8 @@ const { execSync } = require("child_process")
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/performance-monitor-fixed.cjs
   getDirectorySize(dirPath) {
     let totalSize = 0
     if (!fs.existsSync(dirPath)) return 0
@@ -541,6 +552,7 @@ class PerformanceMonitor {
       "} catch (error) {console.error("Error saving report":", error.message),"}"}
   getRecommendations() {
     const recommendations = []
+<<<<<<< HEAD:backup-problematic-files/scripts/performance-monitor-fixed.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -552,6 +564,8 @@ class PerformanceMonitor {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/performance-monitor-fixed.cjs
       this.metrics.application.fileCounts = {"source": this.countFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]),"components": this.countFiles(path.join(srcPath, "components"), [".tsx", ".jsx"]),"pages": this.countFiles(path.join(srcPath, "pages"), [".tsx", ".jsx"}]
       console.log(" Application metrics collected")
       console.warn("⚠  Could not collect application "metrics": ")
@@ -607,6 +621,7 @@ class PerformanceMonitor {
         "Improve Cumulative Layout Shift - add size attributes to images and videos"
         "Reduce bundle size - remove unused dependencies and optimize imports"
         "Optimize memory usage - check for memory leaks and optimize data structures"
+<<<<<<< HEAD:backup-problematic-files/scripts/performance-monitor-fixed.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -640,3 +655,6 @@ class PerformanceMonitor {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+  console.error("Fatal "error": ")  console.error("Fatal "error": ")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/performance-monitor-fixed.cjs

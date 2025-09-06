@@ -1,5 +1,11 @@
 
+<<<<<<< HEAD
 import React from "react";
+=======
+<<<<<<< HEAD
+import React from "react";
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
   Card
   CardContent
@@ -9,6 +15,22 @@ import {
 } from "@/components/ui/card";
 
 import { HelpCategory } from "./types";
+<<<<<<< HEAD
+=======
+=======
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {HelpCategory} from "./types";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { HelpCategory } from "./types",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface HelpCategoryListProps {
   categories: HelpCategory[];
   onCategorySelect: (categoryId: string) => void;
@@ -67,6 +89,35 @@ export function HelpCategoryList({
             </p>;
           </CardContent>;
         </Card>;
+<<<<<<< HEAD
+=======
+=======
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {filteredCategories.map(category => (
+        <Card
+          key={category.id}
+          className="cursor-pointer hover:border-zion-purple/50 transition-colors"
+          onClick={() => onCategorySelect(category.id)}
+        >
+          <CardHeader className="pb-2">
+            <div className="w-10 h-10 rounded-full bg-zion-purple/10 flex items-center justify-center mb-3">
+              {category.icon}
+            </div>
+            <CardTitle>{category.name}</CardTitle>
+            <CardDescription>{category.description}</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-zion-slate-light">
+              {category.articles.length} articles
+            </p>
+          </CardContent>
+        </Card>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       ))}
     </div>
   );

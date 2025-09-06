@@ -1,5 +1,12 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -10,13 +17,52 @@ import {ExportPanel} from "./ExportPanel";
 import {Button} from "@/components/ui/button";
 import {toast} from "sonner";
 export type AppPlatform = "ios" | "android";
+<<<<<<< HEAD
 export type AppMetadataValues = {
+=======
+
+=======
+import React, { useState } from "react",
+import { useForm } from "react-hook-form",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { MetadataForm } from "./MetadataForm",
+import { ScreenshotManager } from "./ScreenshotManager",
+import { ChangelogManager } from "./ChangelogManager",
+import { ExportPanel } from "./ExportPanel",
+import { Button } from "@/components/ui/button",
+import { toast } from "sonner",
+export type AppPlatform = "ios" | "android",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export type AppMetadataValues = {
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   appTitle: string
   shortDescription: string
   longDescription: string
   keywords: string[]
   version: string
+<<<<<<< HEAD
   platform: AppPlatform
+=======
+=======
+  appTitle: string,
+  shortDescription: string,
+  longDescription: string,
+  keywords: string[],
+  version: string,
+<<<<<<< HEAD
+  platform: AppPlatform;
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  platform: AppPlatform
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 const defaultValues: AppMetadataValues = {
   appTitle: "Zion AI Marketplace"
@@ -33,6 +79,14 @@ export const MetadataManager: React.FC = () => {
   const iosForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "ios" } })
   const androidForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "android" } })
   const currentForm = currentPlatform === "ios" ? iosForm : androidForm;
+<<<<<<< HEAD
+=======
+=======
+},
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const handleSaveMetadata = async (data: AppMetadataValues) => {
     setIsSaving(true)
     try {
@@ -60,7 +114,15 @@ export const MetadataManager: React.FC = () => {
               Google Play (Android)
             </TabsTrigger>
           </TabsList>
+<<<<<<< HEAD
           <Button
+=======
+<<<<<<< HEAD
+          <Button
+=======
+          <Button 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             onClick={currentForm.handleSubmit(handleSaveMetadata)}
             disabled={isSaving}
           >
@@ -94,14 +156,177 @@ export const MetadataManager: React.FC = () => {
       </Tabs>
     </div>
   )
+<<<<<<< HEAD
 }
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+},
+import React, { useState } from "react",;
+import { useForm } from "react-hook-form",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { MetadataForm } from "./MetadataForm",;
+import { ScreenshotManager } from "./ScreenshotManager",;
+import { ChangelogManager } from "./ChangelogManager",;
+import { ExportPanel } from "./ExportPanel",;
+import { Button } from "@/components/ui/button",;
+import { toast } from "sonner",;
+export type AppPlatform = "ios" | "android",;
+
+export type AppMetadataValues = {;
+  appTitle: string,;
+  shortDescription: string,;
+  longDescription: string,;
+  keywords: string[],;
+  version: string,;
+  platform: AppPlatform;
+};
+
+const defaultValues: AppMetadataValues = {;
+  appTitle: "Zion AI Marketplace",;
+  shortDescription: "Hire top AI talent or find global IT jobs on the go.",;
+  longDescription: "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunity, our app simplifies the process with AI-powered matching, secure messaging, and streamlined hiring.";
+  keywords: ["AI freelancer", "tech jobs", "hire developers", "IT marketplace", "artificial intelligence jobs"];
+  version: "1 && 1.0.0",;
+  platform: "ios";
+};
+
+export const MetadataManager: React.FC = () => {;
+  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios");
+  const [isSaving, setIsSaving] = useState(false);
+
+  // Separate form instances for each platform;
+  const iosForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "ios" } }),;
+  const androidForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "android" } }),;
+
+  const currentForm = currentPlatform === "ios" ? iosForm : androidForm;
+
+  const handleSaveMetadata = async (data: AppMetadataValues) => {;
+    setIsSaving(true),;
+
+    try {;
+      // This would be implemented with actual API calls in production;
+      console && console.log("Saving metadata for", currentPlatform, data);
+
+      // Simulate API call;
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      toast && toast.success(`${currentPlatform === "ios" ? "iOS" : "Android"} metadata saved successfully!`);
+    } catch (error) {;
+      toast && toast.error("Failed to save metadata");
+      console && console.error(error);
+    } finally {;
+      setIsSaving(false);
+    }
+  };
+
+  return (
+    <div className="bg-zion-blue-dark rounded-lg p-6">;
+      <Tabs defaultValue="ios" className="w-full">;
+        <div className="flex justify-between items-center mb-6">;
+          <TabsList className="bg-zion-blue">;
+            <TabsTrigger value="ios" onClick={() => setCurrentPlatform("ios")}>;
+              App Store (iOS);
+            </TabsTrigger>;
+            <TabsTrigger value="android" onClick={() => setCurrentPlatform("android")}>;
+              Google Play (Android);
+            </TabsTrigger>;
+          </TabsList>;
+
+          <Button
+            onClick={currentForm && currentForm.handleSubmit(handleSaveMetadata)}
+            disabled={isSaving}>;
+            {isSaving ? "Saving..." : "Save Metadata"}
+          </Button>;
+        </div>;
+
+        <TabsContent value="ios" className="mt-0">;
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
+            <div className="lg:col-span-2 space-y-6">;
+              <MetadataForm form={iosForm} />;
+              <ChangelogManager platform="ios" />;
+            </div>;
+
+            <div className="space-y-6">;
+              <ScreenshotManager platform="ios" />;
+              <ExportPanel platform="ios" metadata={iosForm && iosForm.getValues()} />;
+            </div>;
+          </div>;
+        </TabsContent>;
+
+        <TabsContent value="android" className="mt-0">;
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
+            <div className="lg:col-span-2 space-y-6">;
+              <MetadataForm form={androidForm} />;
+              <ChangelogManager platform="android" />;
+            </div>;
+
+            <div className="space-y-6">;
+              <ScreenshotManager platform="android" />;
+              <ExportPanel platform="android" metadata={androidForm && androidForm.getValues()} />;
+=======
+;
+  return (
+    <div className="bg - zion - blue - dark rounded - lg p - 6">;
+      <Tabs default_value="ios" className="w - full">;
+        <div className="flex justify - between items - center mb - 6">;
+          <TabsList className="bg - zion - blue">;
+            <TabsTrigger value="ios" on_click={() => setCurrentPlatform ("ios")}>;
+              App Store (iOS);
+            </TabsTrigger>;
+            <TabsTrigger value="android" on_click={() => setCurrentPlatform ("android")}>;
+              Google Play (Android);
+            </TabsTrigger>;
+          </TabsList>;
+          <Button;
+            on_click={current_form.handle_submit (handleSaveMetadata)}
+            disabled={is_saving}
+          >;
+            {is_saving ? "Saving..." : "Save Metadata"}
+          </Button>;
+        </div>;
+        <TabsContent value="ios" className="mt - 0">;
+          <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
+            <div className="lg:col - span - 2 space - y-6">;
+              <MetadataForm form={ios_form} />;
+              <ChangelogManager platform="ios" />;
+            </div>;
+            <div className="space - y-6">;
+              <ScreenshotManager platform="ios" />;
+              <ExportPanel platform="ios" metadata={ios_form.get_values ()} />;
+            </div>;
+          </div>;
+        </TabsContent>;
+        <TabsContent value="android" className="mt - 0">;
+          <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
+            <div className="lg:col - span - 2 space - y-6">;
+              <MetadataForm form={android_form} />;
+              <ChangelogManager platform="android" />;
+            </div>;
+            <div className="space - y-6">;
+              <ScreenshotManager platform="android" />;
+              <ExportPanel platform="android" metadata={android_form.get_values ()} />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </div>;
           </div>;
         </TabsContent>;
       </Tabs>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 };
     </div>);
 }

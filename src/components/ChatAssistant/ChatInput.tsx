@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, {
   useState
   useRef
@@ -7,6 +14,7 @@ import React, {
   KeyboardEvent
 } from 'react'
 import { Button } from '@/components/ui/button'
+<<<<<<< HEAD
 
 import { Send } from 'lucide-react'
 interface ChatInputProps {
@@ -65,6 +73,28 @@ import React, {;
   KeyboardEvent,;
 } from 'react';
 import { Button } from '@/components/ui/button';
+=======
+<<<<<<< HEAD
+
+=======
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
+import { Button } from "@/components/ui/button",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
+import { Button } from "@/components/ui/button",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Send } from 'lucide-react'
+interface ChatInputProps {
+
+  onSend: (message: string) => void,
+  disabled?: boolean
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
+import { Button } from "@/components/ui/button",;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Send } from 'lucide-react';
 
 interface ChatInputProps {;
@@ -97,6 +127,7 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
   useEffect(() => {;
     // Focus input when component mounts;
     inputRef && inputRef.current?.focus();
+<<<<<<< HEAD
   }, []);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {;
@@ -118,6 +149,17 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
     }
   };
 
+=======
+
+    }
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <form onSubmit={handleSubmit} className='flex items-end gap-2'>;
       <textarea
@@ -125,6 +167,7 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
         className='flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light'
         placeholder='Type your message...'
         value={message}
+<<<<<<< HEAD
         onChange={e => setMessage(e && e.target.value)}        onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
@@ -141,19 +184,67 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
         className='bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center'
         disabled={!message.trim() |disabled}      >
         <Send className='h-5 w-5' />
+=======
+        onChange={(e) => setMessage(e.target.value)}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        onKeyDown={handleKeyPress}
+        rows={1}
+        disabled={disabled}
+      />
+=======
+
+        className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light"
+        placeholder="Type your message..."
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+
+
+        onKeyDown={handleKeyPress}
+        rows={1}
+        disabled={disabled}
+      />
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      <Button 
+        type="submit" 
+        className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
+        disabled={!message.trim() || disabled}
+
+      >
+        <Send className="h-5 w-5" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       </Button>
     </form>
   )
 }
+<<<<<<< HEAD
         disabled={!message && message.trim() || disabled}
       >;
         <Send className="h-5 w-5" />;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        disabled={!message.trim() |disabled}
+=======
+        disabled={!message.trim() || disabled}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       >
         <Send className="h-5 w-5" />
       </Button>
     </form>
   )
 }
+<<<<<<< HEAD
         disabled={!message && message.trim() || disabled}>;
         <Send className='h-5 w-5' />;
       </Button>;
@@ -167,6 +258,12 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
     </form>;
   );
 }
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <Button;
         type='submit';
         className='bg - zion - purple hover:bg - zion - purple - light text - white rounded - full p - 2 h - 10 w - 10 flex items - center justify - center';
@@ -181,3 +278,11 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
       </Button>;
     </form>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,8 +1,24 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 const LOG_DIR = path.join(process.cwd(), 'dataanalytics');
 const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl');
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import fs from 'fs';
+import path from 'path';
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
+const LOG_DIR = path.join(process.cwd(), 'dataanalytics'),
+const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl'),
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 function ensureLogFile() {
   if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR, { recursive: true });
@@ -39,6 +55,29 @@ ip: (req.headers['x-forwarded-for'] |req.socket.remoteAddress |'') as string}
     at: at && typeof at === 'string' ? at : nowIso, ua: req.headers['user-agent'] || '',
     ip: (req.headers['x-forwarded-for'] || req.socket.remoteAddress || '') as string};
 
+<<<<<<< HEAD
+=======
+
+    fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n')
+  } catch (e) {
+    // ignore file errors in serverless
+  }
+<<<<<<< HEAD
+res.status(200).json({ ok: true })
+}
+
+=======
+=======
+
+res.status(200).json({ ok: true });
+};
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { ensureAdmin } from '../../../utils/auth';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   try {
     ensureLogFile();
     fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n')
@@ -48,6 +87,7 @@ ip: (req.headers['x-forwarded-for'] |req.socket.remoteAddress |'') as string}
 
   res.status(200).json({ ok: true })
 }
+<<<<<<< HEAD
   } catch (e) {
     // ignore file errors in serverless;
   }
@@ -57,3 +97,10 @@ res.status(200).json({ ok: true })
 res.status (200).json ({ ok: true });
 }
 ;
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

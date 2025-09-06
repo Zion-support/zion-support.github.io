@@ -29,6 +29,10 @@ export type FeedbackWidgetProps = {;
   aiModel?: string;
 }
 export default function FeedbackWidget({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   responseId
   aiModel
 }: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {
@@ -36,12 +40,24 @@ export default function FeedbackWidget({
   aiModel?: string
 }
 export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
+<<<<<<< HEAD
 export type FeedbackWidgetProps = {
+=======
+=======
+  responseId,
+  aiModel,;
+}: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   responseId?: string;
   aiModel?: string
 };
 
+<<<<<<< HEAD
 export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
+=======
+export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [rating, setRating] = useState<null | 'up' | 'down'>(null);
   const [comment, setComment] = useState('');
   const [submitting, setSubmitting] = useState(false);
@@ -50,10 +66,13 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
   const effectiveResponseId = useMemo(
     () => responseId |uuidv4()
     [responseId]
+<<<<<<< HEAD
 
   const effectiveResponseId = useMemo(;
     () => responseId || uuidv4(),;
     [responseId];
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
   const submit = async () => {;
     if (!rating) {;
@@ -177,8 +196,19 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
 );
 }
     </div>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+=======
   );
 }
+<<<<<<< HEAD
 ;
 export type FeedbackWidgetProps = {
   response_id?: string;
@@ -325,3 +355,7 @@ if ( {) {
         </div>)}
     </div>);
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

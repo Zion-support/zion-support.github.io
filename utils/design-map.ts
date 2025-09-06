@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type UIKitKind = 'ios' | 'android' | 'web';
 export interface TokenSet {
   colors: Record < string, string>;
@@ -6,6 +7,27 @@ export interface TokenSet {
 }
 export interface UIKit {
   components: Record < string, any>;
+=======
+<<<<<<< HEAD
+export type UIKitKind = 'ios' | 'android' | 'web';
+<<<<<<< HEAD
+export interface TokenSet {
+=======
+
+export interface TokenSet {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  colors: Record<string, string>;
+  typography: Record<string, any>;
+  spacing: Record<string, number>;
+}
+<<<<<<< HEAD
+export interface UIKit {
+=======
+
+export interface UIKit {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  components: Record<string, any>;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   tokens: TokenSet;
 }
 export async function buildTokenSet(fileId: string): Promise<TokenSet> {
@@ -29,6 +51,7 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
       md: 16
       lg: 24
       xl: 32
+<<<<<<< HEAD
     }
 
 class ErrorBoundary extends React.Component {
@@ -48,6 +71,9 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     
     return this.props.children;
@@ -104,6 +130,10 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
         'export function Button({ children }: { children: React && React.ReactNode }) { return <button className="px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90">{children}</button> }',
       'components/Card && Card.tsx':
         'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     };
   }
   if (kind === 'chakra') {
@@ -198,6 +228,7 @@ export class DesignMapManager {
   private designSystems: Map<string, DesignSystem> = new Map();
   private figmaNodes: Map<string, FigmaNode> = new Map();
 
+<<<<<<< HEAD
   // Design System methods
   createDesignSystem(id: string, name: string, version: string = '1.0.0'): DesignSystem {
     const designSystem: DesignSystem = {
@@ -425,6 +456,11 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
 export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < UIKit> {
   const tokens = await buildTokenSet (file_id);
 ;
+=======
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const tokens = await buildTokenSet(fileId);
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return {
     components: {
       button: {
@@ -441,7 +477,21 @@ export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < U
           padding: tokens.spacing.md;
         }
       }
-    },
-    tokens;
+    }
+    tokens
+<<<<<<< HEAD
   }
+<<<<<<< HEAD
 }
+=======
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  };
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

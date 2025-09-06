@@ -10,11 +10,46 @@ import {
   TableRow
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import {
   DropdownMenu
   DropdownMenuContent
   DropdownMenuItem
   DropdownMenuTrigger
+=======
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger,;
+
+=======
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+<<<<<<< HEAD
+  TableRow,;
+=======
+  TableRow,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+} from "@/components/ui/table";
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+<<<<<<< HEAD
+  DropdownMenuTrigger,
+=======
+<<<<<<< HEAD
+DropdownMenuTrigger,;
+=======
+  DropdownMenuTrigger,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
@@ -33,10 +68,17 @@ import { format } from "date-fns";
 export function TenantsList() {
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   useEffect(() => {
     loadTenants();
   }, []);
 
+<<<<<<< HEAD
   const loadTenants = async () => {;
     try {;
       setIsLoading(true);
@@ -44,11 +86,22 @@ export function TenantsList() {
         .from("whitelabel_tenants");
         .select("*");
         .order("created_at", { ascending: false });
+=======
+  const loadTenants = async () => {
+    try {
+      setIsLoading(true);
+      const { data, error } = await supabase
+        .from("whitelabel_tenants")
+        .select("*")
+        .order("created_at", { ascending: false });
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       if (error) throw error;
       setTenants(data as WhitelabelTenant[]);
     } catch (error: any) {
       console.error("Error loading tenants:", error);
       toast({
+<<<<<<< HEAD
         variant: "destructive"
         title: "Failed to load tenants"
         description: error.message
@@ -57,6 +110,17 @@ export function TenantsList() {
       setIsLoading(false);
     }
   }
+=======
+        variant: "destructive",
+        title: "Failed to load tenants",
+        description: error.message,
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const toggleTenantStatus = async (tenant: WhitelabelTenant) => {
     try {
       const { error } = await supabase
@@ -110,7 +174,135 @@ export function TenantsList() {
         description: error.message
       });
     }
+<<<<<<< HEAD
   }
+=======
+  };
+=======
+  RefreshCcw,
+} from "@/components/icons";
+import { format } from "date-fns";
+export function TenantsList() {
+  const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState, useEffect } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow;
+} from '@/components/ui/table',;
+import { Button } from '@/components/ui/button',;
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger} from '@/components/ui/dropdown-menu',;
+import { Badge } from '@/components/ui/badge',;
+import { toast } from '@/hooks/use-toast',;
+import { WhitelabelTenant } from '@/hooks/useWhitelabelTenant',;
+import { Edit, MoreHorizontal, ExternalLink, Power, PowerOff, Users, RefreshCcw } from '@/components/icons',;
+import { format } from 'date-fns',;
+export function TenantsList() {;
+  const [tenants, setTenants] = useState<WhitelabelTenant[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  useEffect(() => {;
+    loadTenants();
+  }, []),;
+  const loadTenants = async () => {;
+    try {;
+      setIsLoading(true),;
+      const { data, error } = await supabase;
+        .from('whitelabel_tenants');
+        .select('*');
+        .order('created_at', { ascending: false }),;
+      if (error) throw error,;
+      setTenants(data as WhitelabelTenant[]);
+    } catch (error: any) {;
+      console.error('Error loading tenants:', error),;
+      toast({;
+        variant: 'destructive',;
+        title: 'Failed to load tenants',;
+        description: error.message});
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+
+  const toggleTenantStatus = async (tenant: WhitelabelTenant) => {;
+    try {;
+      const { error } = await supabase;
+        .from("whitelabel_tenants");
+        .update({ is_active: !tenant && tenant.is_active });
+        .eq("id", tenant && tenant.id);
+
+      if (error) throw error;
+
+      // Update local state;
+      setTenants(;
+        tenants && tenants.map((t) =>;
+          t && t.id === tenant && tenant.id ? { ...t, is_active: !t && t.is_active } : t,;
+        ),;
+      );
+
+      toast({;
+        title: `Tenant ${tenant && tenant.is_active ? "deactivated" : "activated"}`,;
+        description: `${tenant && tenant.brand_name} has been ${tenant && tenant.is_active ? "deactivated" : "activated"} successfully.`,;
+      });
+    } catch (error: any) {;
+      console && console.error("Error toggling tenant status:", error);
+      toast({;
+        variant: "destructive",;
+        title: "Failed to update tenant",;
+        description: error && error.message,;
+      });
+    }
+  };
+
+  const verifyDns = async (tenant: WhitelabelTenant) => {;
+    try {;
+      // In a real implementation, this would verify DNS records;
+      // For now, we'll just mark it as verified;
+      const { error } = await supabase;
+        .from("whitelabel_tenants");
+        .update({ dns_verified: true });
+        .eq("id", tenant && tenant.id);
+
+      if (error) throw error;
+
+      // Update local state;
+      setTenants(;
+        tenants && tenants.map((t) =>;
+          t && t.id === tenant && tenant.id ? { ...t, dns_verified: true } : t,;
+        ),;
+      );
+
+      toast({;
+        title: "DNS verified",;
+        description: `Custom domain for ${tenant && tenant.brand_name} has been verified.`,;
+      });
+    } catch (error: any) {;
+      console && console.error("Error verifying DNS:", error);
+      toast({;
+        variant: "destructive",;
+        title: "Failed to verify DNS",;
+        description: error && error.message,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      });
+    }
+
+  },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <div className="space-y-4">
@@ -488,4 +680,14 @@ if (throw error) {
       )}
     </div>;
   );
+<<<<<<< HEAD
 }
+=======
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

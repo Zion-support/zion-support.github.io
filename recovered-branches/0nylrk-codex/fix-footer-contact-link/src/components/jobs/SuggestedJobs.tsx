@@ -1,13 +1,53 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useAuth} from "@/hooks/useAuth";
+import {Loader2} from "lucide-react";
+import {Badge} from "@/components/ui/badge";
+import {useJobSuggestions} from "@/hooks/useJobSuggestions";
+import {JobMatchesCard} from "./JobMatchesCard";
+import {NoJobsCard} from "./NoJobsCard";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useAuth } from "@/hooks/useAuth",
 import { Loader2 } from "lucide-react",
 import { Badge } from "@/components/ui/badge",
 import { useJobSuggestions } from "@/hooks/useJobSuggestions",
+<<<<<<< HEAD
 import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
 interface SuggestedJobsProps {
   talentId?: string
 }
+=======
+<<<<<<< HEAD
+import { JobMatchesCard } from "./JobMatchesCard";
+import { NoJobsCard } from "./NoJobsCard";
+=======
+import { JobMatchesCard } from "./JobMatchesCard",
+import { NoJobsCard } from "./NoJobsCard",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+interface SuggestedJobsProps {
+  talentId?: string
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+interface SuggestedJobsProps {
+  talentId?: string
+}
+
+<<<<<<< HEAD
+export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
+  const { user } = useAuth();
+  const currentTalentId = talentId || user?.id;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { user } = useAuth();
 
@@ -35,6 +75,14 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
         <Loader2 className="w-6 h-6 animate-spin text-primary" />;
       </div>;
     );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
     return <NoJobsCard />
@@ -58,6 +106,67 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
                 onApply={handleApply}
                 onDecline={handleDecline}
               />
+<<<<<<< HEAD
+=======
+            ))}
+          </div>
+        </div>
+      )}
+      {/* Previously Viewed Section */}
+      {viewedMatches.length > 0 && (
+        <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <h3 className="text-lg font-medium">Previously Viewed</h3>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            {viewedMatches.map(match => (
+              <JobMatchesCard
+                key={match.id}
+                match={match}
+                onApply={handleApply}
+                onDecline={handleDecline}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+      {/* Applied Jobs Section */}
+      {appliedMatches.length > 0 && (
+        <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <h3 className="text-lg font-medium">Applied Jobs</h3>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            {appliedMatches.map(match => (
+<<<<<<< HEAD
+              <JobMatchesCard
+                key={match.id}
+                match={match}
+                onApply={handleApply}
+                onDecline={handleDecline}
+                showApplied={true}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              />
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+<<<<<<< HEAD
+=======
+              <JobMatchesCard 
+                key={match.id} 
+                match={match} 
+                onApply={handleApply} 
+                onDecline={handleDecline} 
+              />;
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             ))}
           </div>;
         </div>;
@@ -95,6 +204,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
                 onDecline={handleDecline}
                 showApplied={true}
               />;
+<<<<<<< HEAD
             ))}
           </div>;
         </div>;
@@ -102,6 +212,10 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     </div>
   )
 }
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { use_auth } from '@/hooks / use_auth';
 import { Loader2 } from './lucide-react';
 import { Badge } from '@/components / ui / badge';
@@ -207,3 +321,11 @@ if ( {) {
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

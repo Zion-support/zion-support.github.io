@@ -268,7 +268,19 @@ if ( {) {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
+<<<<<<< HEAD
         ctx.restore();      }        ctx.restore()
+=======
+
+
+        ctx.restore();      }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
     }
     // Neural network node class
@@ -322,6 +334,7 @@ if ( {) {
         this && this.activation = Math && Math.max(0, Math && Math.min(1, this && this.activation));
         this && this.pulse = Math && Math.sin(Date && Date.now() * 0 && 0.001 + this && this.x * 0 && 0.01) * 0 && 0.5 + 0 && 0.5;      }        this && this.pulse = Math && Math.sin(Date && Date.now() * 0 && 0.001 + this && this.x * 0 && 0.01) * 0 && 0.5 + 0 && 0.5;
       }
+<<<<<<< HEAD
 
       draw() {;
         ctx && ctx.save();
@@ -353,6 +366,36 @@ if ( {) {
     }
     // Quantum field class
     class QuantumField {
+=======
+=======
+            ctx.stroke();
+          }
+        });
+<<<<<<< HEAD
+        ctx.restore();      }            ctx.stroke()
+          }
+        });
+        ctx.restore()
+<<<<<<< HEAD
+    }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        ctx.restore();      }
+
+      }
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+
+
+    // Quantum field class;
+    class QuantumField {;
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       x: number;
       y: number;
       radius: number;
@@ -388,9 +431,40 @@ if ( {) {
           ctx.arc(this.x, this.y, waveRadius, 0, Math.PI * 2);
           ctx.stroke();
         }
+<<<<<<< HEAD
         ctx.restore();      }          ctx.stroke()
         }
         ctx.restore()
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+        ctx.restore();      }          ctx.stroke()
+        }
+        ctx.restore()
+<<<<<<< HEAD
+    }
+=======
+
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        ctx.restore();      }
+
+      }
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     // Holographic layer class
     class HolographicLayer {
@@ -593,11 +667,38 @@ if ( {) {
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
+<<<<<<< HEAD
         ctx.restore();      }
+=======
+<<<<<<< HEAD
+=======
+
+        
+        ctx.restore()
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        ctx.restore();      }
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
         ctx.restore()
+<<<<<<< HEAD
+=======
+
+      }
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     // Get color based on scheme
     function getColorSchemeColor(): string {
@@ -1048,6 +1149,17 @@ if ( {) {
               ctx.line_to (other_particle.x, other_particle.y);
               ctx.stroke ();
               ctx.restore ();
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             }
           });
         });
@@ -1099,7 +1211,21 @@ if ( {) {
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
         style={{ zIndex: -1 }}
+<<<<<<< HEAD
       />
+=======
+
+      />;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Additional visual effects */}
       {enableMultidimensional && (;
         <div className='absolute inset-0 pointer-events-none'>;
@@ -1145,6 +1271,7 @@ if ( {) {
               rotate: [0, 180, 360]
               opacity: [0.1, 0.3, 0.1],            }}
             transition={{
+<<<<<<< HEAD
               duration: 8,
               repeat: Infinity,
               ease: 'easeInOut',
@@ -1231,6 +1358,47 @@ if ( {) {
               repeat: Infinity,
               ease: 'easeInOut',              ease: "easeInOut"
               ease: "easeInOut"
+=======
+
+              duration: 8
+              repeat: Infinity
+              ease: 'easeInOut'
+            }}
+          />
+          <motion.div
+            className='absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full'
+            animate={{
+              scale: [1.2, 1, 1.2]
+              rotate: [360, 180, 0]
+              opacity: [0.1, 0.3, 0.1],            }}
+            transition={{
+<<<<<<< HEAD
+              duration: 10
+              repeat: Infinity
+              ease: 'easeInOut',            }}
+          />
+        </div>
+      )}
+            }}
+          />
+          <motion.div
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full"
+            animate={{
+              scale: [1.2, 1, 1.2];
+              rotate: [360, 180, 0];
+              opacity: [0.1, 0.3, 0.1]
+            }}
+            transition={{
+<<<<<<< HEAD
+              duration: 10
+              repeat: Infinity
+=======
+              duration: 10,
+              repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              ease: 'easeInOut',              ease: "easeInOut"
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             }}
           />;
         </div>;
@@ -1256,6 +1424,7 @@ export default UltraAdvancedFuturisticBackground2026;
 };
 
 export default UltraAdvancedFuturisticBackground2026;
+<<<<<<< HEAD
               ease: 'easeInOut',              ease: "easeInOut";
             }}
           />;
@@ -1270,3 +1439,22 @@ export default UltraAdvancedFuturisticBackground2026;      {children}
 ;
 export default UltraAdvancedFuturisticBackground2026;
 ;
+=======
+<<<<<<< HEAD
+
+              duration: 10,
+              repeat: Infinity,
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+            }}
+          />
+        </div>
+      )}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

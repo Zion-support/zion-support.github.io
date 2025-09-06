@@ -8,6 +8,7 @@ interface ConversationsListProps {
   activeConversation: Conversation | null
   setActiveConversation: (conversation: Conversation) => void
 
+<<<<<<< HEAD
   markAsRead: (conversationId: string) => Promise<void>
 }
 export function ConversationsList({
@@ -16,6 +17,43 @@ export function ConversationsList({
   activeConversation
   setActiveConversation
   markAsRead
+=======
+
+  markAsRead: (conversationId: string) => Promise<void>
+}
+<<<<<<< HEAD
+export function ConversationsList({
+  conversations;
+
+  activeConversation
+  setActiveConversation
+  markAsRead
+=======
+
+export function ConversationsList({ ;
+  conversations;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from 'react',;
+import { User } from 'lucide-react',;
+import { Conversation } from '@/types/messaging',;
+import { ConversationItem } from './ConversationItem',;
+interface ConversationsListProps {;
+  conversations: Conversation[],;
+  activeConversation: Conversation | null,;
+  setActiveConversation: (conversation: Conversation) => void,;
+  markAsRead: (conversationId: string) => Promise<void>;
+}
+
+export function ConversationsList({ 
+  conversations,
+
+  activeConversation, 
+  setActiveConversation, 
+  markAsRead 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }: ConversationsListProps) {
   return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
@@ -39,8 +77,17 @@ export function ConversationsList({
               isActive={activeConversation?.id === conversation && conversation.id}
               onClick={() => {;
                 setActiveConversation(conversation);
+<<<<<<< HEAD
 
                 markAsRead(conversation.id)
+=======
+                markAsRead(conversation.id);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               }}
             />;
           ))}

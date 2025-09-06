@@ -1,6 +1,22 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import Head from 'next / head';
+import Link from 'next / link';
+;
+const Blueprint20250818123006: React.FC = () => {
+  const blueprint_details = {
+    id: 'blueprint - 2025 - 08 - 18 - 123006',
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const Blueprint20250818123006: React.FC = () => {
   const blueprintDetails = {
     id: 'blueprint-2025-08-18-123006'
@@ -11,7 +27,18 @@ const Blueprint20250818123006: React.FC = () => {
     complexity: 'critical'
     lastUpdated: '2025-08-18 12:30:06'
     version: '1.5.0'
+<<<<<<< HEAD
   }
+=======
+  };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const edgeNodes = [
     {
       name: 'North America'
@@ -35,6 +62,7 @@ const Blueprint20250818123006: React.FC = () => {
       latency: '35ms'
     }
     {
+<<<<<<< HEAD
       name: 'South America'
       description: 'Edge node for LATAM region'
       status: 'deploying'
@@ -76,8 +104,105 @@ const Blueprint20250818123006: React.FC = () => {
       default: return 'text - gray - 400';
     }
   }
+=======
+      name: 'South America',
+      description: 'Edge node for LATAM region',
+      status: 'deploying',
+      health: 'good',
+      latency: '45ms'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+  ];
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const features = [
+
+    {
+      feature: 'Global Load Balancing',
+      description: 'Intelligent traffic routing based on location and performance',
+      benefit: 'Reduced latency and improved user experience',
+      status: 'implemented';
+    },
+    {
+      feature: 'Content Delivery',
+      description: 'Edge caching and content distribution',
+      benefit: 'Faster content delivery worldwide',
+      status: 'implemented';
+    },
+    {
+      feature: 'Failover Management',
+      description: 'Automatic failover between edge nodes',
+      benefit: 'High availability and reliability',
+      status: 'implemented';
+    },
+    {
+      feature: 'Performance Monitoring',
+      description: 'Real - time monitoring of edge node performance',
+      benefit: 'Proactive issue detection and resolution',
+
+      status: 'implemented'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+  ];
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  ];
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'active': return 'text-green-400';
+      case 'implemented': return 'text-green-400';
+      case 'deploying': return 'text-yellow-400';
+      default: return 'text-gray-400';
+<<<<<<< HEAD
+    }
+<<<<<<< HEAD
+  }
+=======
+  };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  };
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const getHealthColor = (health: string) => {
     switch (health) {
+<<<<<<< HEAD
       case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
       case 'good': return 'bg - yellow - 500 / 20 text - yellow - 400';
       case 'warning': return 'bg - orange - 500 / 20 text - orange - 400';
@@ -85,6 +210,34 @@ const Blueprint20250818123006: React.FC = () => {
       default: return 'bg - gray - 500 / 20 text - gray - 400';
     }
   }
+=======
+
+      case 'excellent': return 'bg-green-500/20 text-green-400';
+      case 'good': return 'bg-yellow-500/20 text-yellow-400';
+      case 'warning': return 'bg-orange-500/20 text-orange-400';
+      case 'critical': return 'bg-red-500/20 text-red-400';
+      default: return 'bg-gray-500/20 text-gray-400';
+<<<<<<< HEAD
+    }
+<<<<<<< HEAD
+  }
+=======
+  };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  };
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
       <Head>
@@ -93,7 +246,22 @@ const Blueprint20250818123006: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="container mx-auto px-4 py-8">
+<<<<<<< HEAD
         {/* Header */}
+=======
+
+
+        {/* Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <div className="mb-8">
           <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
              Back to Blueprints
@@ -105,7 +273,20 @@ const Blueprint20250818123006: React.FC = () => {
             {blueprintDetails.description}
           </p>
         </div>
+<<<<<<< HEAD
         {/* Blueprint Overview */}
+=======
+        {/* Blueprint Overview */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-purple-400">Status</h3>
@@ -161,6 +342,91 @@ const Blueprint20250818123006: React.FC = () => {
                   <h3 className="text - lg font - semibold text - white">{feature.feature}</h3>;
                   <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (feature.status)}`}>;
                     {feature.status}
+<<<<<<< HEAD
+=======
+
+
+        {/* Edge Nodes */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Edge Computing Nodes</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {edgeNodes.map((node, index) => (
+              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-lg font-semibold text-white">{node.name}</h3>
+                  <span className={`px-2 py-1 text-xs rounded-full ${getHealthColor(node.health)}`}>
+
+                    {node.health  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  </span>
+                </div>
+                <p className="text-gray-300 text-sm mb-4">{node.description}</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-400 text-sm">Latency: {node.latency}</span>
+                  <span className={`text-xs ${getStatusColor(node.status)}`}>
+
+                    ● {node.status  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </span>
+                </div>
+              </div>
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>
+        </div>
+        {/* Features */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Key Features</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-lg font-semibold text-white">{feature.feature}</h3>
+                  <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(feature.status)}`}>
+
+                    {feature.status  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-2">{feature.description}</p>
@@ -169,7 +435,20 @@ const Blueprint20250818123006: React.FC = () => {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
         {/* Network Architecture */}
+=======
+        {/* Network Architecture */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Network Architecture</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -177,8 +456,23 @@ const Blueprint20250818123006: React.FC = () => {
               <div className="text-6xl font-bold text-purple-400 mb-4"></div>
               <h3 className="text-xl font-semibold mb-2 text-white">Global Edge Network</h3>
               <p className="text-gray-300 mb-6">
+<<<<<<< HEAD
                 Our edge computing network provides distributed computing capabilities across
                 multiple geographic regions, ensuring low-latency access and high availability
+=======
+<<<<<<< HEAD
+                Our edge computing network provides distributed computing capabilities across
+                multiple geographic regions, ensuring low-latency access and high availability
+=======
+<<<<<<< HEAD
+                Our edge computing network provides distributed computing capabilities across 
+                multiple geographic regions, ensuring low-latency access and high availability 
+=======
+                Our edge computing network provides distributed computing capabilities across
+                multiple geographic regions, ensuring low-latency access and high availability
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 for users worldwide.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
@@ -202,7 +496,22 @@ const Blueprint20250818123006: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         {/* Technology Stack */}
+=======
+
+
+        {/* Technology Stack */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Technology Stack</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -230,21 +539,68 @@ const Blueprint20250818123006: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         {/* Navigation */}
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
+=======
+<<<<<<< HEAD
+        {/* Navigation */}
+<<<<<<< HEAD
+=======
+        <div className="flex flex-wrap gap-4 justify-center">
+          <Link 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        {/* Navigation */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+        <div className="flex flex-wrap gap-4 justify-center">
+          <Link
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50"
           >
             All Blueprints
           </Link>
+<<<<<<< HEAD
           <Link
+=======
+<<<<<<< HEAD
+          <Link
+=======
+<<<<<<< HEAD
+          <Link 
+=======
+          <Link
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             href="/reports/blueprints/comprehensive-redundancy"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >
             Comprehensive Redundancy
           </Link>
+<<<<<<< HEAD
           <Link
+=======
+<<<<<<< HEAD
+          <Link
+=======
+<<<<<<< HEAD
+          <Link 
+=======
+          <Link
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             href="/reports/blueprints/ultimate-redundancy"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-red-400/50"
           >
@@ -255,4 +611,17 @@ const Blueprint20250818123006: React.FC = () => {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+=======
+};
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default Blueprint20250818123006;

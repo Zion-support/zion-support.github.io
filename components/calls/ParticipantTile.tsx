@@ -24,10 +24,15 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect, useRef } from 'react';
 
 import type {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   RemoteParticipant
   LocalParticipant
   TrackPublication
   Track;
+<<<<<<< HEAD
 } from 'livekit-client';
 type Props = {
   participant: RemoteParticipant | LocalParticipant;
@@ -61,27 +66,56 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
 import type {;
   RemoteParticipant,;
   LocalParticipant,;
+=======
+=======
+  RemoteParticipant,
+  LocalParticipant,
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   TrackPublication,;
   Track,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'livekit-client';
 
 type Props = {;
   participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
   displayName?: string;
-};
-
-export default function ParticipantTile(): any ({;
-  participant,;
-  isLocal,;
+}
+export default function ParticipantTile({
+<<<<<<< HEAD
+  participant
+  isLocal
+  displayName
+=======
+  participant,
+  isLocal,
   displayName,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
+<<<<<<< HEAD
 type Props = {;
   participant: RemoteParticipant | LocalParticipant,;
+=======
+type Props = {
+  participant: RemoteParticipant | LocalParticipant
+  isLocal?: boolean;
+  displayName?: string
+<<<<<<< HEAD
+}
+export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
+=======
+import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
+
+type Props = {
+  participant: RemoteParticipant | LocalParticipant,
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   isLocal?: boolean;
   displayName?: string;
 };
 
+<<<<<<< HEAD
 export default function ParticipantTile(): any ({ participant, isLocal, displayName }: Props) {;
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -90,6 +124,16 @@ export default function ParticipantTile(): any ({ participant, isLocal, displayN
     const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {;
       if (track && track.kind === 'video' && videoRef && videoRef.current) {;
         track && track.attach(videoRef && videoRef.current);
+=======
+export default function ParticipantTile({ participant, isLocal, displayName }: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  useEffect(() => {
+    const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
+      if (track.kind === 'video' && videoRef.current) {
+        track.attach(videoRef.current);
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.attach(audioRef && audioRef.current);      }
@@ -294,3 +338,17 @@ if ( {) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+      </div>
+    </div>
+
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

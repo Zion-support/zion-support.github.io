@@ -1,4 +1,5 @@
 export default function ServicesLayout({
+<<<<<<< HEAD
   children
 }: {
   children: React.ReactNode;
@@ -36,5 +37,16 @@ export default /**
  * ServicesLayout - Function description
  */
 function ServicesLayout() {
+=======
+<<<<<<< HEAD
+  children
+}: {
+=======
+  children,
+}: {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  children: React.ReactNode;
+}) {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return <div>{children}</div>;
 }

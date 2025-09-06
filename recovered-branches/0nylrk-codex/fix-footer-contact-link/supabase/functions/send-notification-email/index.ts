@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
@@ -51,6 +56,7 @@ serve(async (req) => {
     return new Response(
       JSON && JSON.stringify({ error: error && error.message });
       {
+<<<<<<< HEAD
         headers: { ...corsHeaders, "Content-Type": "application/json" }
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
@@ -60,6 +66,32 @@ const cors_headers = {
 ;
 interface EmailRequest {
   user_id: string,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+        status: 500}
+    )
+  }
+});
+
+=======
+
+        headers: { ...corsHeaders, "Content-Type": "application/json" };
+        status: 500}
+    )
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
+const corsHeaders = {;
+  "Access-Control-Allow-Origin": "*",;
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
+interface EmailRequest {;
+  user_id: string,;
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   notification_id: string;
 }
 serve (async (req) => {
@@ -118,6 +150,13 @@ if ( {) {
         headers: { ...cors_headers, "Content - Type": "application / json" }
         status: 500}
     );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 });
 

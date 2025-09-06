@@ -1,5 +1,13 @@
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -14,6 +22,7 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {SEO} from "@/components/SEO";
 import {useNavigate} from "react-router-dom";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
 const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {;
   switch (type) {;
     case 'message':;
@@ -30,6 +39,51 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
       return <AlertCircle className={cn(className, "text-yellow-500")} />;
     default:;
       return <Bell className={cn(className, "text-gray-500")} />;
+=======
+
+=======
+import React, { useState } from 'react',
+import { AppHeader } from "@/layout/AppHeader",
+import { Footer } from "@/components/Footer",
+import { useNotifications } from "@/context/notifications/NotificationContext",
+import {
+  NotificationType,
+  NotificationContextType
+} from "@/context/notifications",
+import { formatDistanceToNow } from "date-fns",
+import { 
+  Bell, Check, Trash2, ChevronRight, CheckCircle, 
+  AlertCircle, MessageCircle, Briefcase, UserCheck, Settings
+} from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
+import { Badge } from "@/components/ui/badge",
+import { Skeleton } from "@/components/ui/skeleton",
+import { SEO } from "@/components/SEO",
+import { useNavigate } from "react-router-dom",
+import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
+  switch (type) {
+    case 'message':
+      return <MessageCircle className={cn(className, "text-blue-500")} />,
+    case 'quote_request':
+      return <Briefcase className={cn(className, "text-purple-500")} />,
+    case 'booking_confirmation':
+      return <CheckCircle className={cn(className, "text-green-500")} />,
+    case 'hire_request':
+      return <UserCheck className={cn(className, "text-zion-purple")} />,
+    case 'onboarding':
+      return <Settings className={cn(className, "text-zion-cyan")} />,
+    case 'system':
+      return <AlertCircle className={cn(className, "text-yellow-500")} />,
+    default:
+      return <Bell className={cn(className, "text-gray-500")} />
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }
 const getNotificationTypeBadge = (type: NotificationType) => {
@@ -65,14 +119,44 @@ const NotificationCard: React.FC<{
   onDismiss: (id: string) => Promise<void>
 }> = ({ notification, onMarkAsRead, onDismiss }) => {
   const navigate = useNavigate();
+<<<<<<< HEAD
   const handleAction = () => {
     if (!notification.read) {
       onMarkAsRead(notification.id)
+=======
+
+  const handleAction = () => {;
+
+    if (!notification.read) {;
+      onMarkAsRead(notification.id);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     if (notification.action_url) {
       navigate(notification.action_url)
     }
+<<<<<<< HEAD
   }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
+  },
+=======
+  };
+=======
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <divclassName={cn(
       "border rounded-lg shadow-sm p-4 mb-3 group transition-colors"

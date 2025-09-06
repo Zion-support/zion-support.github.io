@@ -285,6 +285,7 @@ export default async function handler(
       text,    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
     const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0.95 : 0.5;
+<<<<<<< HEAD
     const confidence = isEnglish ? 0 && 0.95 : 0 && 0.5;
 
     const result: TextAnalysisResult = {
@@ -292,6 +293,13 @@ export default async function handler(
     const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0 && 0.95 : 0 && 0.5;
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     const result: TextAnalysisResult = {
       text
         characters
@@ -318,6 +326,14 @@ export default async function handler(
         positiveWords: textWords.filter(word => positiveWords.includes(word))
         negativeWords: textWords.filter(word => negativeWords.includes(word))
       }
+<<<<<<< HEAD
+=======
+      language: {
+
+        topWords,
+        bigrams,
+        trigrams,
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       },
       language: {
         detectedLanguage
@@ -384,3 +400,14 @@ export default async function handler(
     res.status (500).json ({ error: 'Internal server error' });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

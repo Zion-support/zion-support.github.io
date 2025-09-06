@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { use_auth } from '@/hooks / use_auth';
 import { ChatWidget } from '@/components / ChatWidget';
@@ -6,6 +7,21 @@ import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import Skeleton from '@/components / ui / skeleton';
 import ImageWithRetry from '@/components / ui / ImageWithRetry';
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+import { useState } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { ChatWidget } from '@/components/ChatWidget';
+import { useRouter } from 'next/router';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import Skeleton from '@/components/ui/skeleton';
+import ImageWithRetry from '@/components/ui/ImageWithRetry';
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Star, MessageSquare, Brain, Shield } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
@@ -14,10 +30,23 @@ import { toast } from '@/hooks/use-toast';
 import { PaymentButton } from '@/components/transactions/PaymentButton';
 import { ProfileContact } from '@/components/profile/ProfileContact';
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Dialog
   DialogContent
   DialogHeader
   DialogTitle
+<<<<<<< HEAD
+=======
+} from '@/components/ui/dialog';
+=======
+  Dialog,
+  DialogContent,
+  DialogHeader,;
+  DialogTitle;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from '@/components/ui/dialog';
 
 import { useCurrency } from '@/hooks/useCurrency';
@@ -31,6 +60,15 @@ export default function ListingDetail() {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const { user } = useAuth();
   const { formatPrice } = useCurrency();
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
   if (!listing) {
@@ -108,6 +146,7 @@ export default function ListingDetail() {
     }
   }
   return (
+<<<<<<< HEAD
     <>;
       <div className='min-h-screen bg-zion-blue py-12 px-4'>;
         <div className='container mx-auto'>;
@@ -175,6 +214,8 @@ export default function ListingDetail() {
                 <p className='text-zion-slate-light whitespace-pre-line'>
                   {listing.description}
                 </p>
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     <>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
@@ -190,6 +231,14 @@ export default function ListingDetail() {
                       className="object-cover"
                       fallbackSrc="/placeholder.svg"
                     />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
                       <span className="text-zion-slate-light">No image available</span>
@@ -199,16 +248,47 @@ export default function ListingDetail() {
                 
                 {listing.images && listing.images.length > 1 && (
                   <div className="flex p-4 gap-2 overflow-x-auto">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     {listing.images.map((image, index) => (
                       <div 
                         key = {index}
                         onClick={() => setSelectedImageIndex(index)}
+<<<<<<< HEAD
+=======
+
+                        className={cn(
+<<<<<<< HEAD
+<<<<<<< HEAD
+                          'w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2'
+=======
+                          'w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                          index === selectedImageIndex
+                            ? 'border-zion-purple'
+                            : 'border-transparent'                        )}                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
+                          index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
+                        )}
+                  <div className="flex p-4 gap-2 overflow-x-auto">
+                    {listing.images.map((image, index,) => (
+                      <div
+                        key = {index,}
+                        onClick = {(,) => setSelectedImageIndex(index),}
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         className = {cn(
                           "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         )}
                       >
                         <ImageWithRetry
+<<<<<<< HEAD
                           src = {image,}
                           alt={`${listing && listing.title} - image ${index + 1}`}
                           className='object-cover'
@@ -216,6 +296,21 @@ export default function ListingDetail() {
                           fallbackSrc="/placeholder && placeholder.svg";
                         />;
                       </div>;
+=======
+
+                          src={image}
+                          alt={`${listing.title} - image ${index + 1}`}
+                          className="object-cover"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                          fallbackSrc="/placeholder.svg"
+                        />
+                      </div>
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     ))}
                   </div>
                 )}
@@ -230,6 +325,21 @@ export default function ListingDetail() {
                   {listing && listing.description}
                 </p>;
 
+<<<<<<< HEAD
+=======
+=======
+
+
+              <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
+                <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
+                <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
+                
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Features */}
                 <div className='mt-8'>;
                   <h3 className='text-xl font-bold text-white mb-4'>;
@@ -292,6 +402,7 @@ export default function ListingDetail() {
                   {listing.description}
                 </p>;
                 {/* Features */}
+<<<<<<< HEAD
                 <div className='mt - 8'>;
                   <h3 className='text - xl font - bold text - white mb - 4'>;
                     Key Features;
@@ -323,6 +434,8 @@ export default function ListingDetail() {
                   </div>;
                 </div>;
                 {/* Features */}
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -340,6 +453,15 @@ export default function ListingDetail() {
                         <Shield className="h-5 w-5 text-zion-cyan" />
                       </div>
                       <div>
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         <h4 className="font-medium text-white">Enterprise Security</h4>
                         <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>
                       </div>
@@ -441,6 +563,22 @@ export default function ListingDetail() {
                     {listing.category}
                   </Badge>;
                   {listing.featured && (
+<<<<<<< HEAD
+=======
+
+            <div className="lg:col-span-1">
+              <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
+                <div className="mb-2">
+                  <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">
+                    {listing.category}
+                  </Badge>
+                  {listing.featured && (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">
                       Featured
                     </Badge>
@@ -452,12 +590,31 @@ export default function ListingDetail() {
                 {listing.rating && (
                   <div className="flex items-center gap-2 mb-6">
                     <div className="flex items-center">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
                           className={cn(
+<<<<<<< HEAD
                             'h-5 w-5',
                             i < Math && Math.floor(listing && listing.rating!)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                            'h-5 w-5'
+=======
+                            'h-5 w-5',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                            i < Math.floor(listing.rating!)
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                               ? 'text-zion-cyan fill-zion-cyan'
                               : 'text-zion-slate-light'                          )}
                         />;
@@ -493,6 +650,14 @@ export default function ListingDetail() {
                     </div>
                     <span className="text-sm text-zion-slate-light">
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     </span>
                   </div>
                 )}
@@ -521,11 +686,102 @@ export default function ListingDetail() {
                     <div className="text-2xl font-bold text-white">;
                       Custom Pricing;
                     </div>;
+<<<<<<< HEAD
                   )}
                 </div>
                 {/* Action Buttons */}
                 <div className='space-y-3 mb-8'>
                 {/* Action Buttons */}
+=======
+=======
+
+                <div className="mb-6">
+                  {listing.price !== null ? (
+                    <div className="text-3xl font-bold text-white">
+                      {formatPrice(listing.price)}
+                    </div>
+                  ) : (
+=======
+                <div className="mb-6">
+                  {listing.price !== null ? (
+                    <div className="text-3xl font-bold text-white">
+                      {formatPrice(listing.price)}
+                    </div>
+                  ) : (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    <div className="text-2xl font-bold text-white">
+                      Custom Pricing
+                    </div>
+                  )}
+<<<<<<< HEAD
+                </div>
+                {/* Action Buttons */}
+                <div className='space-y-3 mb-8'>
+=======
+                </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {/* Action Buttons */}
+                <div className="space-y-3 mb-8">
+                  {listing.price !== null ? (
+                    <PaymentButton
+<<<<<<< HEAD
+=======
+                      amount={listing.price}
+                      serviceId={listing.id}
+                      providerId={listing.author.id}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                      buttonText='Buy Now'
+                      className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'
+                      amount = {listing.price,}
+                      serviceId = {listing.id,}
+                      providerId = {listing.author.id,}
+                      buttonText="Buy Now"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      onPaymentInitiated={(,) => {
+                        toast({
+                          title: 'Payment Processing',
+                          description: 'Redirecting to secure checkout...',
+                        });
+                      }}
+                    />
+                  ) : (
+                    <Button
+                      onClick={handleContact}
+                      disabled={isLoading}
+                      className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'                    >
+                      {isLoading ? 'Processing...' : 'Request Quote'}
+                    </Button>
+                  )}
+
+                  <Button
+                    variant='outline'
+                    onClick={handleContact}
+                    disabled={isLoading}
+                    className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'                  >
+                    <MessageSquare className='h-4 w-4 mr-2' />
+                    Contact Publisher
+                  </Button>
+                </div>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      buttonText="Buy Now"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      onPaymentInitiated={() => {
+                        toast({
+                          title: "Payment Processing",
+                          description: "Redirecting to secure checkout..."
+                        })
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <div className="space-y-3 mb-8">;
                   {listing && listing.price !== null ? (;
                     <PaymentButton
@@ -653,6 +909,14 @@ export default function ListingDetail() {
                   </Button>
                 </div>
                 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Publisher Info */}
                 <div className="border-t border-zion-blue-light pt-6">
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
@@ -662,9 +926,35 @@ export default function ListingDetail() {
                         <ImageWithRetry
                           src={listing.author.avatarUrl}
                           alt={listing.author.name}
+<<<<<<< HEAD
                           className="object-cover"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
+=======
+<<<<<<< HEAD
+                          className='object-cover'
+                          onError={e => {
+                            const target = e.target as HTMLImageElement;
+                            target.src =
+                              'https://ui-avatars.com/api/?name=' +
+                              encodeURIComponent(listing.author.name);                          }}
+                        />
+                      </div>
+                    ) : (                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                          className="object-cover"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement,
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                             target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                           }}
                         />
@@ -675,11 +965,30 @@ export default function ListingDetail() {
                       </div>
                     )}
                     <div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       <p className="font-medium text-white">{listing.author.name}</p>
                       <p className="text-xs text-zion-slate-light">Member since 2022</p>
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
+
+
+                
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Additional Info */}
                 <div className="border-t border-zion-blue-light mt-6 pt-6">;
                   <div className="flex justify-between mb-2">;
@@ -833,6 +1142,44 @@ export default function ListingDetail() {
           <ProfileContact
             email={listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing.author.name}
+<<<<<<< HEAD
+=======
+=======
+      <ChatWidget;
+        roomId={listing.id}
+        recipientId={listing.author.id}
+        isOpen={isChatOpen}
+        onClose={() => setIsChatOpen(false)}
+      />;
+      {/* Contact Dialog */}
+      <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
+        <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
+          </DialogHeader>
+          <ProfileContact 
+            email={listing.author.email} // TypeScript now knows this might be undefined
+            profileName={listing.author.name}
+<<<<<<< HEAD
+            profileType='service'          />            profileType="service"
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
+          </DialogHeader>
+          <ProfileContact
+            email={listing.author.email} // TypeScript now knows this might be undefined
+            profileName={listing.author.name}
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             profileType="service"
           />
         </DialogContent>
@@ -865,6 +1212,7 @@ export default function ListingDetail() {
     </>;
   );
 
+<<<<<<< HEAD
 }/>) : (<Button </Button>) ";
 }<Button > <MessageSquare className=" h - 4 w - 4 mr - 2"/> Contact Publisher </Button> </div> ;
 }";
@@ -884,3 +1232,16 @@ export default function ListingDetail() {
 }'"}
 }/> <DialogHeader> <DialogTitle className=" text - xl font - bold text - white" >Contact Publisher</DialogTitle> </DialogHeader> <ProfileContact /> </DialogContent> </Dialog> </>) ;
 }'"}
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+  )
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

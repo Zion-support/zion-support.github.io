@@ -1,4 +1,69 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
+import { 
+  CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain, 
+  Atom, Rocket, Target, Microscope, DollarSign, Phone, 
+  Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase
+} from 'lucide-react',;
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',;
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',;
+import FuturisticAnimatedBackground2029 from '../components/ui/FuturisticAnimatedBackground2029',;
+import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem',;
+import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs',;
+import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions',;
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
+
+export default function ComprehensivePricing2029() {
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [billingCycle, setBillingCycle] = useState('monthly'),
+
+  const allServices = [
+    ...aiAutonomousEcosystemServices2029,
+    ...emergingTechBreakthroughServices2029,
+    ...practicalBusinessSolutionServices2029
+  ],
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: Briefcase, count: allServices.length },
+    { id: 'ai-autonomous', name: 'AI Autonomous', icon: Brain, count: aiAutonomousEcosystemServices2029.length },
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: Atom, count: emergingTechBreakthroughServices2029.length },
+    { id: 'business-solutions', name: 'Business Solutions', icon: Target, count: practicalBusinessSolutionServices2029.length }
+  ],
+
+  const filteredServices = selectedCategory === 'all' 
+    ? allServices 
+    : allServices.filter(service => {
+        if (selectedCategory === 'ai-autonomous') {
+          return service.category.some(cat => cat.includes('AI') && cat.includes('Autonomous'))
+        } else if (selectedCategory === 'emerging-tech') {
+          return service.category.some(cat => cat.includes('Quantum') || cat.includes('Biotech') || cat.includes('Space'))
+        } else if (selectedCategory === 'business-solutions') {
+          return service.category.some(cat => cat.includes('Business') || cat.includes('Marketing') || cat.includes('Education'))
+        }
+        return true
+      }),
+
+  const getPrice = (price: string) => {
+    const numericPrice = parseInt(price.replace(/[^0-9]/g, '')),
+    return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -137,7 +202,50 @@ if ( {) {
       return `$${Math.round(numericPrice * 0.8).toLocaleString()}/month (billed annually)`
     }
   }
+<<<<<<< HEAD
 
+=======
+}
+  ],;
+  const filteredServices = selectedCategory === 'all';
+    ? allServices;
+    : allServices.filter(service => {;
+        if (selectedCategory === 'ai-autonomous') {;
+          return service.category.some(cat => cat.includes('AI') && cat.includes('Autonomous'));
+        } else if (selectedCategory === 'emerging-tech') {;
+          return service.category.some(cat => cat.includes('Quantum') || cat.includes('Biotech') || cat.includes('Space'));
+        } else if (selectedCategory === 'business-solutions') {;
+          return service.category.some(cat => cat.includes('Business') || cat.includes('Marketing') || cat.includes('Education'));
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        return true;
+      });
+  const getPrice = (price: string) => {;
+    const numericPrice = parseInt(price.replace(/[^0-9]/g, '')),;
+    return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8);
+  },;
+  const getBillingText = (price: string) => {;
+    const numericPrice = parseInt(price.replace(/[^0-9]/g, ''));
+    if (billingCycle === 'monthly') {;
+      return `$${numericPrice.toLocaleString()}/month`;
+    } else {;
+      return `$${Math.round(numericPrice * 0.8).toLocaleString()}/month (billed annually)`;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  },
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <div className="min-h-screen bg-black text-white relative">
       <FuturisticAnimatedBackground2029 />
@@ -149,22 +257,83 @@ if ( {) {
       </Head>
       <UltraFuturisticNavigation2029 />
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="relative overflow-hidden py-32">
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+=======
+
+
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      <section className="relative overflow-hidden py-32">
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           >
             <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8">
               2029 Comprehensive Pricing
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+<<<<<<< HEAD
               Transparent pricing for our revolutionary 2029 services. Choose the perfect plan
               for your business transformation journey.
             </p>
 
             {/* Billing Toggle */}
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              Transparent pricing for our revolutionary 2029 services. Choose the perfect plan 
+              for your business transformation journey.
+            </p>
+            {/* Billing Toggle */}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              Transparent pricing for our revolutionary 2029 services. Choose the perfect plan
+              for your business transformation journey.
+            </p>
+<<<<<<< HEAD
+            {/* Billing Toggle */}
+=======
+            {/* Billing Toggle */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <div className="flex items-center justify-center gap-4 mb-12">
               <span className="text-gray-400">Monthly</span>
               <button
@@ -197,6 +366,21 @@ if ( {) {
         </div>
       </section>
       {/* Category Filter */}
+<<<<<<< HEAD
+=======
+
+
+      {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <section className="py-12 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
@@ -227,6 +411,7 @@ if ( {) {
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -237,12 +422,46 @@ if ( {) {
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
+=======
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Service Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
               {filteredServices.length} cutting-edge services available to transform your business.
+=======
+<<<<<<< HEAD
+              {filteredServices.length} cutting-edge services available to transform your business.
+=======
+<<<<<<< HEAD
+              {filteredServices.length} cutting-edge services available to transform your business. 
+=======
+              {filteredServices.length} cutting-edge services available to transform your business.
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Each service includes comprehensive features, support, and implementation.
             </p>
           </motion.div>
@@ -264,6 +483,44 @@ if ( {) {
                 <div className="absolute inset - 0 bg - gradient - to - r from - purple - 600 / 10 to - blue - 600 / 10 rounded - 2xl blur - xl group - hover:opacity - 100 transition - opacity duration - 500"></div>;
                 <div className="relative bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 rounded - 2xl p - 8 hover:border - gray - 500 transition - all duration - 500 h - full">;
                   {/* Service Header */}
+<<<<<<< HEAD
+=======
+
+
+                key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }} className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500 h-full">
+                  {/* Service Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <div className="text-center mb-6">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mb-4">
                       <Brain className="w-8 h-8 text-white" />
@@ -274,7 +531,20 @@ if ( {) {
                   {/* Pricing */}
                   <div className="text-center mb-6">
                     <div className="text-4xl font-bold text-purple-400 mb-2">
+<<<<<<< HEAD
                       {getBillingText(service.price)}
+=======
+                      {getBillingText(service.price)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     </div>
                     <div className="text-sm text-gray-400">
                       {billingCycle === 'annual' && (
@@ -283,7 +553,28 @@ if ( {) {
                     </div>
                   </div>
 
+<<<<<<< HEAD
                   {/* Categories */}
+=======
+
+                      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </div>;
+                  </div>;
+                  {/* Categories */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <div className="flex flex-wrap gap-2 mb-6 justify-center">
                     {service.category.slice(0, 3).map((cat, catIndex) => (
                       <span
@@ -294,10 +585,37 @@ if ( {) {
                       <span;
                         key={cat_index} className="px - 3 py - 1 bg - gray - 800 text - gray - 300 text - sm rounded - full border border - gray - 600">;
                         {cat}
+<<<<<<< HEAD
                       </span>
                     ))}
                   </div>
                   {/* Key Features */}
+=======
+
+
+                        {cat  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </span>;
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </div>;
+                  {/* Key Features */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <ul className="space-y-2">
@@ -306,10 +624,32 @@ if ( {) {
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
+<<<<<<< HEAD
                       ))}
                     </ul>
                   </div>
                   {/* Key Benefits */}
+=======
+
+
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </ul>;
+                  </div>;
+                  {/* Key Benefits */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Benefits</h4>
                     <ul className="space-y-2">
@@ -318,10 +658,32 @@ if ( {) {
                           <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                           <span>{benefit}</span>
                         </li>
+<<<<<<< HEAD
                       ))}
                     </ul>
                   </div>
                   {/* Market Info */}
+=======
+
+
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </ul>;
+                  </div>;
+                  {/* Market Info */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <div className="grid grid-cols-2 gap-4 mb-6 text-center">
                     <div>
                       <div className="text-gray-400 text-xs mb-1">Market Size</div>
@@ -332,7 +694,22 @@ if ( {) {
                       <div className="text-sm font-semibold text-green-400">{service.roi}</div>
                     </div>
                   </div>
+<<<<<<< HEAD
                   {/* CTA Buttons */}
+=======
+
+
+                  {/* CTA Buttons */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <div className="flex gap-3">
                     <Link
                       href={`/services/${service.id}`} className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-sm">
@@ -350,6 +727,7 @@ if ( {) {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Enterprise Solutions */}
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
@@ -366,12 +744,67 @@ if ( {) {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+=======
+
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Enterprise Solutions */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           >
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Enterprise Solutions
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+<<<<<<< HEAD
               Need a custom solution or enterprise package? We offer tailored solutions
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              Need a custom solution or enterprise package? We offer tailored solutions 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              Need a custom solution or enterprise package? We offer tailored solutions
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               for large organizations with specific requirements.
             </p>
             <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -424,6 +857,7 @@ if ( {) {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
@@ -440,12 +874,59 @@ if ( {) {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+=======
+
+      {/* Contact CTA */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           >
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+<<<<<<< HEAD
               Contact our team to discuss your specific needs and get a personalized quote
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              Contact our team to discuss your specific needs and get a personalized quote 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              Contact our team to discuss your specific needs and get a personalized quote
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               for our revolutionary 2029 services.
             </p>
             <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -489,8 +970,19 @@ if ( {) {
       </section>
       <UltraFuturisticFooter2029 />
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  )
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           >;
             <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
               Ready to Get Started?;
@@ -538,5 +1030,20 @@ if ( {) {
         </div>;
       </section>;
       <UltraFuturisticFooter2029 />;
-    </div>);
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

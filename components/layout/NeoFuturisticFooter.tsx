@@ -49,17 +49,33 @@ import {;
   Github,;
   Linkedin,;
   ExternalLink,;
+<<<<<<< HEAD
+} from 'lucide-react';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
 } from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
 
-const contactInfo = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup && ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup && ziontechgroup.com',};
-
-export default function NeoFuturisticFooter() {;
-  return (  website: 'https://ziontechgroup && ziontechgroup.com';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com',}
+export default function NeoFuturisticFooter() {
+<<<<<<< HEAD
+  return (  website: 'https://ziontechgroup.com'
+}
+=======
+<<<<<<< HEAD
+  return (  website: 'https://ziontechgroup.com';
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 export default function NeoFuturisticFooter() {;
   return (
@@ -251,6 +267,7 @@ function NeoFuturisticFooter() {
     </footer>
   );
 }
+<<<<<<< HEAD
                 href='https://www && www.linkedin.com/company/zion-tech-group/'
                 className='text-slate-400 hover:text-white'>;
                 <Linkedin className='w-5 h-5' />;
@@ -267,6 +284,11 @@ function NeoFuturisticFooter() {
               <a aria-label="LinkedIn" href="https://www && www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>;
           </div>;
         </div>;
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
         <div className='mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-slate-800/60 pt-6'>;
           <div className='text-xs text-slate-500'>;
@@ -393,3 +415,20 @@ function NeoFuturisticFooter() {
     </footer>);
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+  return (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+export default function NeoFuturisticFooter() {
+  return (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,5 +1,11 @@
 
+<<<<<<< HEAD
 import React from "react";
+=======
+<<<<<<< HEAD
+import React from "react";
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
   Card
   CardContent
@@ -9,6 +15,8 @@ import {
 } from "@/components/ui/card";
 
 import { HELP_CATEGORIES } from "./help-content";
+<<<<<<< HEAD
+=======
 interface HelpArticleListProps {
   categoryId: string;
   onArticleSelect: (articleId: string) => void;
@@ -23,6 +31,66 @@ export function HelpArticleList({
   const category = HELP_CATEGORIES.find((cat) => cat.id === categoryId);
   if (!category) {
     return <div>Category not found</div>;
+  }
+=======
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {HELP_CATEGORIES} from "./help-content";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { HELP_CATEGORIES } from "./help-content",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+interface HelpArticleListProps {
+  categoryId: string;
+  onArticleSelect: (articleId: string) => void;
+  searchQuery: string
+<<<<<<< HEAD
+}
+
+export function HelpArticleList({
+  categoryId
+  onArticleSelect
+  searchQuery
+}: HelpArticleListProps) {
+  const category = HELP_CATEGORIES.find((cat) => cat.id === categoryId);
+  if (!category) {
+    return <div>Category not found</div>;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+
+export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
+  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId);
+  
+  if (!category) {
+    return <div>Category not found</div>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { HELP_CATEGORIES } from "./help-content",;
+interface HelpArticleListProps {;
+  categoryId: string,;
+  onArticleSelect: (articleId: string) => void,;
+  searchQuery: string;
+}
+;
+export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
+  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
+  if (!category) {;
+    return <div>Category not found</div>;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   // Filter articles based on search query
   const filteredArticles = searchQuery
@@ -76,6 +144,7 @@ function formatDate(date: string): string {
     year: "numeric"
     month: "long"
     day: "numeric"
+<<<<<<< HEAD
   });
 }
 
@@ -92,12 +161,21 @@ interface HelpArticleListProps {
   category_id: string;
   onArticleSelect: (article_id: string) => void;
   search_query: string;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  });
 }
-export /**
- * HelpArticleList - Function description
- */
-function HelpArticleList() {
-  const category = HELP_CATEGORIES.find ((cat) => cat.id === category_id);
+
+=======
+  })
+=======
+  })
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
   // Check condition
 if ( {) {
@@ -156,3 +234,12 @@ function format_date (date: string): string {
     day: "numeric",
   });
 }
+<<<<<<< HEAD
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

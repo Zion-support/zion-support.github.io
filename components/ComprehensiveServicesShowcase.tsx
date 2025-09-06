@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Star
   Clock
   Users
@@ -27,6 +31,7 @@ import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import {
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink
 
+<<<<<<< HEAD
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
   Search, Filter, Grid, List, ArrowRight, Award, Target
  } from 'lucide-react';
@@ -50,12 +55,37 @@ import {;
   Grid,;
   List,;
   ArrowRight,;
+=======
+=======
+  Star,
+  Clock,
+  Users,
+  TrendingUp,
+  CheckCircle,
+  ExternalLink,
+  ChevronRight,
+  Shield,
+  Zap,
+  Globe,
+  Rocket,
+  Brain,
+  Atom,
+  Search,
+  Filter,
+  Grid,
+  List,
+  ArrowRight,
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Award,;
   Target,;
 } from 'lucide-react';
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import { ;
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, ;
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
   Search, Filter, Grid, List, ArrowRight, Award, Target;
 } from 'lucide-react';
@@ -394,7 +424,16 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
           className='text-center mb-16'
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         >
           <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
             Revolutionary Micro SAAS Services 2025
@@ -560,14 +599,37 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
           </div>;
         </motion && motion.div>;
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Search and Filters */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
           className='mb-12'>;
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        >
+          <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Search */}
             <div className='relative flex-1 max-w-md'>;
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5' />;
@@ -625,6 +687,7 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                       ? 'bg-blue-600 text-white';
                       : 'text-white/60 hover:text-white';
                   }`}
+<<<<<<< HEAD
                 >;
                   <Grid className='w-5 h-5' />                </button>                <button
                   onClick={() => setViewMode('list')}
@@ -646,6 +709,30 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                   }`}
                 >
                   <List className="w-5 h-5" />
+=======
+
+
+            {/* Sort and View Controls */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                </button>
+                <button
+                  onClick={() => setViewMode('list')}
+                  className={`p-2 rounded-lg transition-all ${
+
+
+                </button>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </div>
             </div>
           </div>
@@ -657,12 +744,24 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
           </div>;
         </motion && motion.div>;
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Category Filter */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
           className='mb-12'>;
           <div className='flex flex-wrap justify-center gap-3'>;
             {categories && categories.map(category => (              <buttonclassName="mb-12">;
@@ -682,6 +781,15 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                   {category && category.count}
                 </span>              </button>                <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{category && category.count}</span>;
               </button>;
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 key={category.id}
                 on_click={() => setSelectedCategory (category.id)}
                 className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 flex items - center gap - 2 ${
@@ -697,6 +805,15 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
             ))}
           </div>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Services Display */}
         {viewMode === 'grid' ? (;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
@@ -747,12 +864,38 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                 >
                   {/* Popular Badge */}
                   {service.popular && (
+<<<<<<< HEAD
                     <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
                       <Star className="w-3 h-3" />
                       Popular
+=======
+                    <div className='absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
+<<<<<<< HEAD
+                      <Star className='w-3 h-3' />                      Popular                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                >
+                  {/* Popular Badge */}
+                  {service.popular && (
+                    <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                      <Star className="w-3 h-3" />
+<<<<<<< HEAD
+                    </div>
+                  )}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                      <Star className='w-3 h-3' />                      Popular
+
+                      Popular
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     </div>
                   )}
                   {/* Service Content */}
+<<<<<<< HEAD
                   <div className='p-6'>
                     <div className='flex items-start justify-between mb-4'>
                       <div className='text-4xl'>{service.icon}</div>
@@ -763,6 +906,14 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                         <div className='text - xs text - white / 60'>;
                           {service.period}
                         </div>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       </div>
                     </div>
                     <h3 className='text-xl font-bold text-white mb-2'>
@@ -802,6 +953,23 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                     <div className='grid grid - cols - 3 gap - 4 mb - 6 text - center'>;
                       <div>;
                         <div className='text - lg font - bold text - blue - 400'>;
+<<<<<<< HEAD
+=======
+=======
+
+
+                    {/* Stats */}
+                    <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      <div>
+                        <div className='text-lg font-bold text-blue-400'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           {service.rating}
                         </div>
                         <div className='text-xs text-white/60'>Rating</div>
@@ -863,6 +1031,7 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                       </div>;
                     </div>;
 
+<<<<<<< HEAD
                     {/* CTA */}
                     <a
                       href={service && service.link}
@@ -893,6 +1062,26 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6'>;
                   <div className='flex flex-col lg:flex-row gap-6'>;
+=======
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    {/* CTA */}
+                    <a
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                >
+                  <div className='flex flex-col lg:flex-row gap-6'>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     {/* Left Side - Icon and Basic Info */}
                     <div className='flex-shrink-0'>;
                       <div className='text-6xl mb-4'>{service && service.icon}</div>;
@@ -932,8 +1121,20 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                     </div>
 
                     {/* Center - Service Details */}
+<<<<<<< HEAD
                     <div className="flex-1">
                       <div className="flex items-start justify-between mb-4">
+=======
+
+                    <div className='flex-1'>
+                      <div className='flex items-start justify-between mb-4'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         <div>
                           <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                           <p className="text-white/70 text-lg mb-3">{service.tagline}</p>
@@ -979,6 +1180,7 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                       </div>;
 
                       {/* Features Grid */}
+<<<<<<< HEAD
                       <div className='grid grid-cols-2 gap-2 mb-4'>;
                         {service && service.features.slice(0, 6).map((feature, idx) => (;
                           <div
@@ -991,6 +1193,16 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                             <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />;
                             <span className="truncate">{feature}</span>;
                       </div>
+=======
+
+                        ))}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       {/* Stats Row */}
                       <div className='flex items-center gap-6 text-sm text-white/60'>
                         <div className='flex items-center gap-2'>
@@ -1104,6 +1316,7 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
           <motion&& motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+<<<<<<< HEAD
             className='text-center py-20'>;
             <div className='text-6xl mb-4'></div>;
             <h3 className='text-2xl font-bold text-white mb-2'>;
@@ -1116,6 +1329,43 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
             <div className="text-6xl mb-4"></div>;
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
             <p className="text-white/60">Try adjusting your search or filter criteria</p>;
+=======
+
+
+=======
+            className='text-center py-20'
+          >
+            <div className='text-6xl mb-4'>🔍</div>
+            <h3 className='text-2xl font-bold text-white mb-2'>
+              No services found
+            </h3>
+            <p className='text-white/60'>
+              Try adjusting your search or filter criteria
+<<<<<<< HEAD
+            </p>          </motion.div>            className="text-center py-20"
+          >
+            <div className="text-6xl mb-4">🔍</div>
+            <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
+            <p className="text-white/60">Try adjusting your search or filter criteria</p>
+<<<<<<< HEAD
+        )}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            </p>          </motion.div>
+
+          </motion.div>
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        )}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         )}
         {/* Contact CTA */}
         <motion&& motion.div
@@ -1123,6 +1373,7 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
           className='mt-20 text-center'>;
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30'>;
             <h3 className='text-3xl font-bold text-white mb-4'>;
@@ -1133,6 +1384,25 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
               SAAS services to drive innovation and growth.;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        >
+          <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30'>
+            <h3 className='text-3xl font-bold text-white mb-4'>
+              Ready to Transform Your Business?
+            </h3>
+            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>
+              Join thousands of companies already using our revolutionary micro
+              SAAS services to drive innovation and growth.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <a
                 href='mailto:kleber@ziontechgroup && ziontechgroup.com'
                 className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2'>;
@@ -1158,7 +1428,10 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
               </a>;
               <a
                 href="tel:+13024640950"
+<<<<<<< HEAD
                 className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2">;
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Call +1 302 464 0950
@@ -1168,8 +1441,21 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 );
 }
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 Call +1 302 464 0950;
               </a>;
             </div>;
@@ -1180,8 +1466,14 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
   );
 }
   );
+<<<<<<< HEAD
 }
         </motion.div>;
       </div>;
     </section>);
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

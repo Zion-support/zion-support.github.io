@@ -1,7 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
+<<<<<<< HEAD
   createSessionCookie
   validateCredentials;
+=======
+<<<<<<< HEAD
+  createSessionCookie
+  validateCredentials;
+=======
+  createSessionCookie,;
+  validateCredentials,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from '../../../utils/auth-utils';import { createSessionCookie, validateCredentials } from '../../../utils/auth-utils';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {

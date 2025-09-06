@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts'
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
 import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',
@@ -154,6 +162,7 @@ if ( {) {
         .single ();
 ;
       // If no match on custom domain, try subdomain;
+<<<<<<< HEAD
       // Check condition
 if ( {) {
   $2
@@ -174,6 +183,25 @@ if ( {) {
   $2
 }
             tenant_info = subdomain_result.data as TenantInfo;
+=======
+
+      if (!data && !error) {;
+        const subdomain = hostname.split('.')[0],;
+        if (subdomain && !['wwwapplocallocalhost'].includes(subdomain)) {;
+          const subdomainResult = await supabase;
+            .from('whitelabel_tenants');
+            .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');
+            .eq('subdomain', subdomain);
+            .eq('is_active', true);
+            .single(),;
+          if (!subdomainResult.error) {;
+            tenantInfo = subdomainResult.data as TenantInfo;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           }
         }
       } else // Check condition
@@ -183,6 +211,14 @@ if ( {) {
         tenant_info = data as TenantInfo;
       }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     return new Response(
       JSON.stringify({
         tenant: tenantInfo
@@ -219,9 +255,41 @@ if ( {) {
       {
         status: 500;
         headers: {
+<<<<<<< HEAD
           'Content-Type': 'application/json'
           ...corsHeaders}}
     )
+=======
+
+=======
+;
+    return new Response(;
+      JSON.stringify({;
+        tenant: tenantInfo,;
+        status: 'success';
+      }),;
+      {;
+        headers: {;
+          'Content-Type': 'application/json',;
+          ...corsHeaders}});
+  } catch (error) {;
+    console.error('Tenant detector error:', error),;
+    return new Response(;
+      JSON.stringify({;
+        error: error.message || 'Internal server error',;
+        status: 'error';
+      }),;
+      {;
+        status: 500,;
+        headers: {;
+          'Content-Type': 'application/json',;
+          ...corsHeaders}});
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 });
 

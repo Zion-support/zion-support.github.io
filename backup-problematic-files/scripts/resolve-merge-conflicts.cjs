@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/resolve-merge-conflicts.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -65,6 +66,8 @@ function resolveMergeConflicts(filePath) {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/resolve-merge-conflicts.cjs
         conflictType = 'incoming';
         continue;
       }
@@ -183,6 +186,7 @@ function findConflictedFiles(dir) {
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
+<<<<<<< HEAD:backup-problematic-files/scripts/resolve-merge-conflicts.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -204,6 +208,8 @@ function findConflictedFiles(dir) {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/resolve-merge-conflicts.cjs
             conflictedFiles.push(fullPath);
           }
         } catch (error) {
@@ -250,6 +256,7 @@ try {
 } catch (error) {
   console.error('❌ Error during merge conflict resolution:', error.message);
   process.exit(1);
+<<<<<<< HEAD:backup-problematic-files/scripts/resolve-merge-conflicts.cjs
 <<<<<<< HEAD
 }
 =======
@@ -264,3 +271,6 @@ try {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/resolve-merge-conflicts.cjs

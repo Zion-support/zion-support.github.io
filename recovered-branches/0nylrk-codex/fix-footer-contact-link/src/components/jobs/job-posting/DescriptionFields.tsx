@@ -1,13 +1,36 @@
+<<<<<<< HEAD
 
 import React from "react";
 import { Control } from "react-hook-form";
 import {
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+import React from "react";
+import { Control } from "react-hook-form";
+import {
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   FormField
   FormItem
   FormLabel
   FormControl
   FormDescription
   FormMessage
+<<<<<<< HEAD
+=======
+=======
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormDescription,
+  FormMessage,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
@@ -25,8 +48,66 @@ export function DescriptionFields({
   return (
     <>;
       <FormField
+<<<<<<< HEAD
         control;
                   field.onChange(e.target.value)
+=======
+<<<<<<< HEAD
+        control;
+                  field.onChange(e.target.value)
+=======
+=======
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from 'react',
+import { Control } from 'react-hook-form',
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
+import { Textarea } from "@/components/ui/textarea",
+import { JobSchemaType } from './validation',
+interface DescriptionFieldsProps {
+  control: Control<JobSchemaType>,
+  handleEditorChange: (content: string) => void,
+  editorContent: string
+import React from 'react',;
+import { Control } from 'react-hook-form',;
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",;
+import { Textarea } from "@/components/ui/textarea",;
+import { JobSchemaType } from './validation',;
+interface DescriptionFieldsProps {;
+  control: Control<JobSchemaType>,;
+  handleEditorChange: (content: string) => void,;
+  editorContent: string;
+}
+;
+export function DescriptionFields({ control, handleEditorChange, editorContent }: DescriptionFieldsProps) {;
+  return (;
+    <>;
+      <FormField;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        control={control}
+        name="description"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Job Description</FormLabel>
+            <FormControl>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <Textarea
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              <Textarea 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+                value={editorContent}
+                onChange={(e) => {;
+                  handleEditorChange(e && e.target.value);
+                  field && field.onChange(e && e.target.value);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 }}
                 className="min-h-[200px]";
 import React from './react';
@@ -205,5 +286,13 @@ function DescriptionFields() {
         )}
       />;
     </>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
 }

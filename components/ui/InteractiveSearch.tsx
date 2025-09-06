@@ -25,8 +25,32 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 export default function InteractiveSearch({
+<<<<<<< HEAD
   placeholder = 'Search talent, skills, or jobs...'
 }: {
+=======
+<<<<<<< HEAD
+  placeholder = 'Search talent, skills, or jobs...'
+}: {
+=======
+  placeholder = 'Search talent, skills, or jobs...',
+}: {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  placeholder?: string;
+}) {
+  const [value, setValue] = useState('');
+    >
+      <input
+        value={value}
+        onChange={e => setValue(e.target.value)}
+        placeholder={placeholder}
+        className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'      />
+      {value && (
+        <button
+          onClick={() => setValue('')}
+          className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'        >  const [value, setValue] = useState('');
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   placeholder?: string;
 }) {;
 export default function InteractiveSearch({ placeholder = 'Search talent, skills, or jobs...' }: { placeholder?: string }) {
@@ -140,8 +164,16 @@ function InteractiveSearch() {
         </button>;
       </div>;
     </form>;
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 }}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  );
+}}
+<<<<<<< HEAD
           className="w - full px - 4 py - 2 border border - gray - 300 rounded - lg focus: ring - 2 focus:ring - blue - 500 focus:border - transparent"  />";
         <button type="submit;
           className="absolute right - 2 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 hover:text - gray - 600">";
@@ -152,3 +184,8 @@ function InteractiveSearch() {
       </div>;
     </form>);
 }}
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

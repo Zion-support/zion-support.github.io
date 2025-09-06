@@ -5,7 +5,25 @@ interface ScoreBadgeProps {;
 }
 export function ScoreBadge({ application }: ScoreBadgeProps) {
 
+<<<<<<< HEAD
   const score = application.match_score |0;
+=======
+
+
+export function ScoreBadge(): any ({ application }: ScoreBadgeProps) {;
+  const score = application && application.match_score || 0;
+
+=======
+
+export function ScoreBadge({ application }: ScoreBadgeProps) {
+  const score = application.match_score || 0,
+  
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Determine color based on score
   let className = "text-gray-700 bg-gray-100";
   if (score >= 80) className = "text-green-700 bg-green-100";
@@ -50,4 +68,17 @@ if (class_name = "text - orange - 700 bg - orange - 100") {
     <span className={`rounded - full px - 2 py - 1 text - xs font - medium ${class_name}`}>;
       {score ? `${score}%` : "Not scored"}
     </span>);
+<<<<<<< HEAD
 }
+=======
+
+}
+=======
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

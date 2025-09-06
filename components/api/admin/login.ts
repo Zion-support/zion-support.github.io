@@ -4,6 +4,15 @@ import { setSessionCookie } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    return;  }export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {;
+    res.status(405).json({ error: 'Method Not Allowed' });
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     return
 
   const { username, password } = req.body |{}

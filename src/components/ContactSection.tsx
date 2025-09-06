@@ -22,6 +22,7 @@ export function ContactSection() {
       </div>
     </section>
   );
+<<<<<<< HEAD
 }
     name?: string;
     email?: string;
@@ -319,3 +320,6 @@ description: err.message;
 }</Button>);
 }</div> </form> </div> </div> </div> </div> </section>);
 }'"}
+=======
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

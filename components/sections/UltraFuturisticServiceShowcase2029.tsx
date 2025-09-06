@@ -17,6 +17,19 @@ interface UltraFuturisticServiceShowcase2029Props {
   title?: string;
   subtitle?: string;
 
+<<<<<<< HEAD
+=======
+
+interface UltraFuturisticServiceShowcase2029Props {
+<<<<<<< HEAD
+  services: Service[]
+=======
+  services: Service[],;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  title?: string;
+  subtitle?: string;
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function UltraFuturisticServiceShowcase2029(): any ({;
   services,;
   title = '2029 Cutting-Edge Services',;
@@ -89,12 +102,33 @@ export default function UltraFuturisticServiceShowcase2029({
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.slice(0, 6).map((service, index) => (
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20'
+=======
+
+
+
+            >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <div className='flex items-center justify-between mb-4'>
                 <div className='flex items-center space-x-2'>
                   <div className='w-3 h-3 bg-cyan-400 rounded-full animate-pulse' />
@@ -150,6 +184,7 @@ export default function UltraFuturisticServiceShowcase2029({
                   <Brain className="w-4 h-4 text-purple-400" />;
               </div>;
 
+<<<<<<< HEAD
               <Link
                 href={service && service.link}
                 className='inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25'>;
@@ -161,11 +196,29 @@ export default function UltraFuturisticServiceShowcase2029({
             </motion && motion.div>;
           ))}
         </div>
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
           transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
           className='text-center mt-12'>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <Link
             href='/services'
             className='inline-flex items-center justify-center bg-transparent border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105'>;
@@ -231,3 +284,15 @@ export default function UltraFuturisticServiceShowcase2029({
       </div>;
     </section>);
 }
+<<<<<<< HEAD
+=======
+
+=======
+    </section>
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -59,12 +59,38 @@ import {
   ArrowRight,
   Play,
   AlertTriangle,
+<<<<<<< HEAD
   Clock,
   Database,
 } from 'lucide-react';import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Zap, Star } from 'lucide-react';
 export default function APITestingSuitePage() {;
+=======
+  Clock,;
+  Database,;
+<<<<<<< HEAD
+} from 'lucide-react';
+
+=======
+<<<<<<< HEAD
+} from 'lucide-react';import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
+export default function APITestingSuitePage() {;
+=======
+} from 'lucide-react';
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function APITestingSuitePage() {
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+  Clock,;
+  Database,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [isTesting, setIsTesting] = useState(false);
   const [testResults, setTestResults] = useState(null);
   const [apiEndpoint, setApiEndpoint] = useState('');
@@ -543,12 +569,25 @@ function APITestingSuitePage() {
             threshold: 'Authenticated'
           }
           {
+<<<<<<< HEAD
             name: 'Rate Limiting'
             status: 'pass'
             value: 'Within limits'
             threshold: 'No throttling'
           }
         ]
+=======
+
+
+            name: 'Rate Limiting',
+            status: 'pass',
+            value: 'Within limits',
+            threshold: 'No throttling',
+          },
+        ],
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         recommendations: [
           'Consider implementing response caching for better performance'
           'Monitor response times during peak usage'
@@ -557,6 +596,7 @@ function APITestingSuitePage() {
       });
       setIsTesting(false);
     }, 3000);  };        recommendations: [
+<<<<<<< HEAD
           'Consider implementing response caching for better performance',
           'Monitor response times during peak usage',
           'Implement rate limiting headers for better API documentation',
@@ -571,12 +611,15 @@ function APITestingSuitePage() {
           { name: 'Rate Limiting', status: 'pass', value: 'Within limits', threshold: 'No throttling' }
         ];
         recommendations: [
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           'Consider implementing response caching for better performanceMonitor response times during peak usageImplement rate limiting headers for better API documentation'
         ]
-      })
+      });
       setIsTesting(false)
     }, 3000)
   }
+<<<<<<< HEAD
       });
       setIsTesting (false);
     }, 3000);  }        recommendations: [;
@@ -602,6 +645,23 @@ function APITestingSuitePage() {
           property='og:title'
           content='API Testing Suite - Zion Tech Group'
         />;
+=======
+  return (
+    <>
+      <Head>
+        <title>
+          API Testing Suite - Zion Tech Group | Comprehensive API Testing &
+          Monitoring Tool
+        </title>
+        <meta
+          name='description'
+          content='Test, monitor, and optimize your APIs with our comprehensive testing suite. Functional, performance, and security testing for REST, GraphQL, and SOAP APIs.'
+        />
+        <meta
+          property='og:title'
+          content='API Testing Suite - Zion Tech Group'
+        />
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <meta
           property='og:description'
           content='Comprehensive API testing tool with functional, performance, and security testing capabilities.'
@@ -626,7 +686,14 @@ function APITestingSuitePage() {
             suite. Functional, performance, and security testing for REST
             GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and
             secure.
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </p>
           {/* API Testing Form */}
           <div className='max-w-3xl mx-auto mb-8'>;
@@ -792,6 +859,7 @@ function APITestingSuitePage() {
               <Card
                 key={index}
                 className="card-hover group border-gradient-indigo"
+<<<<<<< HEAD
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
                 <div className="flex items-start space-x-6">;
                   <div className="relative">;
@@ -820,11 +888,21 @@ function APITestingSuitePage() {
                     </h3>;
                     <p className="text - gray - 400 leading - relaxed">;
                       {feature.description}
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     </p>
                   </div>
                 </div>
               </Card>
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -833,6 +911,21 @@ function APITestingSuitePage() {
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Test Types Section */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Comprehensive Testing Coverage
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -884,6 +977,7 @@ function APITestingSuitePage() {
               <Card
                 key={index}
                 className="card-hover border-gradient-indigo"
+<<<<<<< HEAD
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
                 <h3 className="text-xl font-bold mb-4 text-white">{type && type.name}</h3>;
                 <p className="text-gray-400 mb-6">{type && type.description}</p>;
@@ -900,6 +994,14 @@ function APITestingSuitePage() {
           </div>
         </div>
       </section>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Demo Test Results */}
       {testResults && (
         <section className='section-padding bg-gradient-cursor-accent'>
@@ -1026,6 +1128,7 @@ function APITestingSuitePage() {
               </Card>;
 
               {/* Test Results */}
+<<<<<<< HEAD
               <Card className='border-gradient-indigo'>;
                 <h3 className='text-2xl font-bold mb-6 text-white'>;
                   Test Results;
@@ -1073,6 +1176,58 @@ function APITestingSuitePage() {
                     <span className='text-indigo-400 font-bold'>
                       {testResults.responseTime}
                     </span>
+=======
+
+=======
+              <Card className="border-gradient-indigo">
+                <h3 className="text-2xl font-bold mb-6 text-white">Test Results</h3>
+                <div className="space-y-3">
+                  {testResults.tests.map((test, index) => (
+                    <div key={index} className="flex items-center justify-between">
+                      <span className="text-gray-300 text-sm">{test.name}</span>
+                      <div className="flex items-center space-x-2">
+                        <span className={`text-xs px-2 py-1 rounded ${
+                          test.status === 'pass' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
+                        }`}>
+                          {test.status}
+                        </span>
+                        <span className="text-xs text-gray-400">{test.value}</span>
+                      </div>
+=======
+                          }`}
+                        >
+                          {test.status}
+                        </span>
+                        <span className='text-xs text-gray-400'>
+                          {test.value}
+
+                        </span>                      </div>
+
+                      </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                  ))}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              {/* Performance Metrics */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Throughput</span>
@@ -1141,6 +1296,7 @@ function APITestingSuitePage() {
             </div>;
 
             {/* Recommendations */}
+<<<<<<< HEAD
             <Card className='border-gradient-indigo'>;
               <h3 className='text-2xl font-bold mb-6 text-white'>;
                 Optimization Recommendations;
@@ -1156,17 +1312,57 @@ function APITestingSuitePage() {
                   <div key={index} className="flex items-start space-x-3">;
                     <CheckCircle className="w-5 h-5 text-indigo-400 mt-1 flex-shrink-0" />;
                     <span className="text-gray-300">{rec}</span>;
+=======
+            <Card className="border-gradient-indigo">
+              <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {testResults.recommendations.map((rec, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-indigo-400 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">{rec}</span>
+                  </div>
+=======
+            {/* Recommendations */}
+            <Card className='border-gradient-indigo'>
+              <h3 className='text-2xl font-bold mb-6 text-white'>
+                Optimization Recommendations
+              </h3>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                {testResults.recommendations.map((rec, index) => (
+                  <div key={index} className='flex items-start space-x-3'>
+                    <CheckCircle className='w-5 h-5 text-indigo-400 mt-1 flex-shrink-0' />
+
+                    <span className='text-gray-300'>{rec}</span>                  </div>
+
+                  </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 ))}
               </div>;
             </Card>;
           </div>;
         </section>;
       )}
+<<<<<<< HEAD
       {/* Pricing Section */}
       <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1434,6 +1630,31 @@ function APITestingSuitePage() {
                     </span>
                     <span className='text-gray-400'>{plan.period}</span>
                   </div>
+<<<<<<< HEAD
+=======
+                )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+
+                    <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+                <div className='text-center mb-8'>
+                  <h3 className='text-2xl font-bold text-white mb-4'>
+                    {plan.name}
+                  </h3>
+                  <div className='mb-6'>
+                    <span className='text-4xl font-bold text-white'>
+                      {plan.price}
+                    </span>
+                    <span className='text-gray-400'>{plan.period}</span>
+                  </div>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <p className='text-gray-400'>{plan.description}</p>
                 </div>
                 <ul className='space-y-4 mb-8'>
@@ -1451,11 +1672,27 @@ function APITestingSuitePage() {
                       <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>;
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                      {feature}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    </li>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   ))}
                 </ul>
                 <Button
                   href='/contact'
                   size='lg'
+<<<<<<< HEAD
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>;
                   Get Started;
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact";
@@ -1465,10 +1702,43 @@ function APITestingSuitePage() {
                   Get Started;
                   <ArrowRight className="w-5 h-5 ml-2" />;
               </Card>;
+=======
+
+=======
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <Button
+                  href="/contact"
+                  size="lg"
+                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
+                >
+                  Get Started
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+=======
+                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
+                >
+                  Get Started
+
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>
+
+                </Button>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              </Card>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
@@ -1480,6 +1750,36 @@ function APITestingSuitePage() {
             suite to ensure their APIs are reliable and performant.;
           </p>;
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* CTA Section */}
+      <section className='section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
+        <div className='container-cursor text-center relative z-10'>
+          <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
+
+
+            Ready to Test Your APIs?
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          </h2>
+          <p className='text-responsive-md text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
+            Join thousands of developers and businesses using our API testing
+            suite to ensure their APIs are reliable and performant.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Button
               href='/contact'
               size='lg'
@@ -1501,6 +1801,7 @@ function APITestingSuitePage() {
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 }
               className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl'>              href="/contact";
@@ -1519,3 +1820,19 @@ function APITestingSuitePage() {
 }
     </>);
 }
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

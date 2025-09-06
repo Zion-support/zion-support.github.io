@@ -1,9 +1,18 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
+=======
+  
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { useAuth } from "@/context/auth/AuthProvider"
 import { AlertCircle } from 'lucide-react'import { useRouter } from 'next/router'
+<<<<<<< HEAD
 
 import { AlertCircle } from 'lucide-react'
 import { Alert, AlertDescription } from "@/components/ui/alert",
@@ -17,12 +26,21 @@ import Link from 'next/link';
 import { useAuth } from "@/context/auth/AuthProvider";
 import { AlertCircle } from 'lucide-react';
 import { Alert, AlertDescription } from "@/components/ui/alert";
+=======
+
+import { AlertCircle } from 'lucide-react'
+import { Alert, AlertDescription } from "@/components/ui/alert",
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function SignUpForm() {;
 
   const router = useRouter()
   const { signUp, login, loginWithGoogle } = useAuth()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [formData, setFormData] = useState({
     email: ""
     password: ""
@@ -43,12 +61,139 @@ export function SignUpForm() {;
     setFieldErrors({})
     setIsLoading(true)
     const errors: { email?: string, password?: string, name?: string } = {}
+<<<<<<< HEAD
     const email_regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const strongPasswordRegex = /^(?=.*[a - z])(?=.*[A - Z])(?=.*\d).{8}$/;
     if () {) {
   $2
 }
       errors.name = 'Full name is required';
+=======
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/
+    if (signupMode && !formData.name.trim()) {
+      errors.name = 'Full name is required'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState } from "react",
+import { Label } from "@/components/ui/label",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { LoadingSpinner } from "@/components/ui/enhanced-loading-states",
+import { useRouter } from 'next/router',
+import Link from 'next/link',
+import { useAuth } from "@/context/auth/AuthProvider",
+import { AlertCircle } from 'lucide-react'
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter",
+import {logErrorToProduction} from '@/utils/productionLogger',
+export function SignUpForm() {
+
+  const router = useRouter(),
+  const { signUp, login, loginWithGoogle } = useAuth(),
+  
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    name: ""}),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const [isLoading, setIsLoading] = useState(false)
+  const [signupMode, setSignupMode] = useState(true)
+  const [error, setError] = useState("")
+  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({})
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false);
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    setError("");    setFieldErrors(prev => ({ ...prev, [name]: "" }))
+  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setError(""),
+    setFieldErrors({})
+    setIsLoading(true)
+    const errors: { email?: string, password?: string, name?: string } = {}
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/
+    if (signupMode && !formData.name.trim()) {
+      errors.name = 'Full name is required'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [isLoading, setIsLoading] = useState(false),
+  const [signupMode, setSignupMode] = useState(true),
+  const [error, setError] = useState(""),
+  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({}),
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false),
+  
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target,
+    setFormData(prev => ({ ...prev, [name]: value })),
+    setError(""),
+    setFieldErrors(prev => ({ ...prev, [name]: "" }))
+  },
+  
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault(),
+    setError(""),
+    setFieldErrors({}),
+    setIsLoading(true),
+
+
+    if (signupMode && !formData.name.trim()) {
+      errors.name = 'Full name is required'
+import React, { useState } from "react",;
+import { Label } from "@/components/ui/label",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { LoadingSpinner } from "@/components/ui/enhanced-loading-states",;
+import { useRouter } from 'next/router',;
+import Link from 'next/link',;
+import { useAuth } from "@/context/auth/AuthProvider",;
+import { AlertCircle } from 'lucide-react';
+import { Alert, AlertDescription } from "@/components/ui/alert",;
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter",;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+export function SignUpForm() {;
+  const router = useRouter(),;
+  const { signUp, login, loginWithGoogle } = useAuth(),;
+  const [formData, setFormData] = useState({;
+    email: "",;
+    password: "",;
+    name: ""}),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [signupMode, setSignupMode] = useState(true),;
+  const [error, setError] = useState(""),;
+  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({}),;
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false),;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+    const { name, value } = e.target,;
+    setFormData(prev => ({ ...prev, [name]: value })),;
+    setError(""),;
+    setFieldErrors(prev => ({ ...prev, [name]: "" }));
+  },;
+  const handleSubmit = async (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    setError(""),;
+    setFieldErrors({}),;
+    setIsLoading(true),;
+    const errors: { email?: string, password?: string, name?: string } = {},;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,;
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/,;
+    if (signupMode && !formData.name.trim()) {;
+      errors.name = 'Full name is required';
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     if (!formData.email.trim()) {
       errors.email = 'Email is required'
@@ -60,6 +205,14 @@ export function SignUpForm() {;
     } else if (!strongPasswordRegex.test(formData.password)) {
       errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.'
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors)
       setIsLoading(false)
@@ -72,6 +225,32 @@ export function SignUpForm() {;
           name: formData.name})
         if (result?.error) {
           throw new Error(result.error as any), // Cast to any if type is AuthError
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+;
+    if (Object.keys(errors).length > 0) {;
+      setFieldErrors(errors),;
+      setIsLoading(false),;
+      return;
+    }
+;
+    try {;
+      setShowVerificationMessage(false), // Reset verification message;
+      if (signupMode) {;
+        const result = await signUp(formData.email, formData.password, {;
+          name: formData.name}),;
+        if (result?.error) {;
+          throw new Error(result.error as any), // Cast to any if type is AuthError;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         }
         if (result?.emailVerificationRequired) {
           setShowVerificationMessage(true)
@@ -88,6 +267,16 @@ if ( {) {
           throw new Error (error);
         }
         router.push("/mobile")
+<<<<<<< HEAD
+=======
+;
+        router.push("/mobile");
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
     } catch (err: any) {
       logErrorToProduction('Signup/Login error:', { data: err })
@@ -96,6 +285,7 @@ if ( {) {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
   const handleGoogleLogin = async () => {
     try {
       await loginWithGoogle ();
@@ -120,6 +310,13 @@ if ( {) {
     const { name, value } = e && e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     setError("");    setFieldErrors(prev => ({ ...prev, [name]: "" }));
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   };
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
@@ -193,11 +390,30 @@ if ( {) {
     }
   };
 
+<<<<<<< HEAD
   return (
     <div className="space-y-4 px-4">;
       <h2 className="text-xl font-medium text-center">;
         {signupMode ? "Create your account" : "Welcome back"}
       </h2>
+=======
+  },
+  
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+
+
+      
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <div className="space-y-2">
         <Button
           variant="outline"
@@ -212,8 +428,18 @@ if ( {) {
           </svg>
           Continue with Google
         </Button>
+<<<<<<< HEAD
         <Button
           variant="outline"
+=======
+<<<<<<< HEAD
+        <Button
+          variant="outline"
+=======
+        <Button 
+          variant="outline" 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -232,12 +458,22 @@ if ( {) {
         </Button>;
       </div>;
 
+<<<<<<< HEAD
       <div className="relative flex items-center">;
         <div className="flex-grow border-t border-border"></div>;
         <span className="mx-2 text-xs text-muted-foreground">OR</span>;
         <div className="flex-grow border-t border-border"></div>;
       </div>;
 
+=======
+
+      
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Error Alert */}
       {error && (;
         <Alert variant="destructive" className="mb-4">;
@@ -245,6 +481,26 @@ if ( {) {
           <AlertDescription>{error}</AlertDescription>;
         </Alert>;
       )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Verification Message */}
+      {showVerificationMessage && (
+        <Alert className="mb-4 border-blue-500 bg-blue-50">
+          <AlertCircle className="h-4 w-4" />
+          <AlertDescription>
+            Please check your email and click the verification link before signing in.
+          </AlertDescription>
+        </Alert>
+<<<<<<< HEAD
+=======
+=======
+;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Verification Message */}
       {showVerificationMessage && (;
         <Alert className="mb-4 border-blue-500 bg-blue-50">;
@@ -253,6 +509,11 @@ if ( {) {
             Please check your email and click the verification link before signing in.;
           </AlertDescription>;
         </Alert>;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       )}
       <form onSubmit={handleSubmit} className="space-y-4">
         {signupMode && (
@@ -261,10 +522,36 @@ if ( {) {
             <Input
               id="name"
               name="name"
+<<<<<<< HEAD
               value = {formData && formData.name,}
               onChange = {handleInputChange,}
               required
               aria-invalid = {!!fieldErrors && fieldErrors.name,}
+=======
+
+
+              value={formData.name}
+              onChange={handleInputChange}
+              required;
+              aria-invalid={!!fieldErrors.name}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              placeholder="Enter your full name"
+            />
+            {fieldErrors.name && (
+              <p className="text-red-500 text-sm">{fieldErrors.name}</p>
+            )}
+          </div>
+        )}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               placeholder="Enter your full name"
             />;
             {fieldErrors && fieldErrors.name && (;
@@ -278,10 +565,24 @@ if ( {) {
             id="email"
             name="email"
             type="email"
+<<<<<<< HEAD
             value = {formData && formData.email,}
             onChange = {handleInputChange,}
             required
             aria-invalid = {!!fieldErrors && fieldErrors.email,}
+=======
+
+
+            value={formData.email}
+            onChange={handleInputChange}
+            required;
+            aria-invalid={!!fieldErrors.email}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             placeholder="Enter your email"
           />;
           {fieldErrors && fieldErrors.email && (;
@@ -294,17 +595,46 @@ if ( {) {
             id="password"
             name="password"
             type="password"
+<<<<<<< HEAD
             value = {formData && formData.password,}
             onChange = {handleInputChange,}
             required
             aria-invalid = {!!fieldErrors && fieldErrors.password,}
+=======
+
+
+            value={formData.password}
+            onChange={handleInputChange}
+            required;
+            aria-invalid={!!fieldErrors.password}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             placeholder="Create a password"
           />;
           <PasswordStrengthMeter password={formData && formData.password} />;
           {fieldErrors && fieldErrors.password && (;
             <p className="text-red-500 text-sm">{fieldErrors && fieldErrors.password}</p>;
           )}
+<<<<<<< HEAD
         </div>
+=======
+
+        </div>;
+
+
+=======
+
+        
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <Button
           type="submit"
           className="w-full py-6"
@@ -317,8 +647,19 @@ if ( {) {
           ) : (;
             signupMode ? "Create Account" : "Sign In";
           )}
+<<<<<<< HEAD
         </Button>
       </form>
+=======
+
+
+      
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <p className="text-center text-sm">
         {signupMode
           ? "Already have an account? "
@@ -396,3 +737,16 @@ if ( {) {
   is_loading ? (<> <LoadingSpinner size="sm" className="mr - 2" /> Please wait... </>) : (signup_mode ? "Create Account" : "Sign In") ";
 }</Button> </form> <Link href="/login" className="p - 0 h - auto text - zion - cyan hover: text - zion - cyan - light cursor - pointer" > Sign In </Link> </p> </div>);
 }"}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

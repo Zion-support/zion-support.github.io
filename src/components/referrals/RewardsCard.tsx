@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
   Card
   CardContent
@@ -8,6 +15,15 @@ import {
 } from '@/components/ui/card'
 import { ReferralReward } from '@/types/referrals'
 import { formatDate } from '@/utils/referralUtils'
+<<<<<<< HEAD
+=======
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { ReferralReward } from "@/types/referrals",
+import { formatDate } from "@/utils/referralUtils",
+import { BadgeDollarSign, Badge } from 'lucide-react'
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 import { BadgeDollarSign, Badge } from 'lucide-react'
 interface RewardsCardProps {
@@ -37,6 +53,22 @@ import { BadgeDollarSign, Badge } from 'lucide-react';
 interface RewardsCardProps {;
   rewards: ReferralReward[];
   isLoading: boolean;
+<<<<<<< HEAD
+=======
+
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { ReferralReward } from "@/types/referrals"
+import { formatDate } from "@/utils/referralUtils"
+import { Badge } from '@/components/ui/badge'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
@@ -44,9 +76,23 @@ import { BadgeDollarSign, Badge } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
+<<<<<<< HEAD
 interface RewardsCardProps {;
   rewards: ReferralReward[],;
   isLoading: boolean;
+=======
+
+
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface RewardsCardProps {
+
+  rewards: ReferralReward[]
+
+  isLoading: boolean
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
   if (isLoading) {;
@@ -54,10 +100,21 @@ export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
   if (isLoading) {
     return (
+<<<<<<< HEAD
       <Card>
         <CardHeader>
           <CardTitle className='flex items-center gap-2'>
             <BadgeDollarSign className='h-5 w-5' />
+=======
+
+          <CardTitle className="flex items-center gap-2">
+            <BadgeDollarSign className="h-5 w-5" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             Your Rewards
           </CardTitle>
           <CardDescription>
@@ -80,14 +137,46 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    ) }            Your Rewards
+          </CardTitle>
+          <CardDescription>Rewards earned from successful referrals</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="flex items-center justify-center p-4">
+            <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
+          </div>
+        </CardContent>
+      </Card>
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     )
   }
   if (rewards.length === 0) {
     return (
       <Card>
         <CardHeader>
+<<<<<<< HEAD
           <CardTitle className='flex items-center gap-2'>
             <BadgeDollarSign className='h-5 w-5' />
+=======
+
+
+          <CardTitle className="flex items-center gap-2">
+            <BadgeDollarSign className="h-5 w-5" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             Your Rewards
           </CardTitle>
           <CardDescription>
@@ -102,6 +191,15 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
           <CardDescription>Rewards earned from successful referrals</CardDescription>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <div className="flex flex-col items-center justify-center p-4 text-center">
             <p className="text-muted-foreground">No rewards yet</p>
             <p className="text-sm text-muted-foreground mt-1">
@@ -110,7 +208,83 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
     ) }    )
+=======
+
+=======
+
+    )
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+  return (
+    <Card>
+      <CardHeader>
+
+        <CardTitle className="flex items-center gap-2">
+          <BadgeDollarSign className="h-5 w-5" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          Your Rewards
+        </CardTitle>
+        <CardDescription>Rewards earned from successful referrals</CardDescription>
+      </CardHeader>
+      <CardContent>
+
+}
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        <div className="space-y-4">
+          {rewards.map((reward, index) => (
+            <div 
+              key={reward.id}
+              className={`flex justify-between items-start ${
+                index !== rewards.length - 1 ? "border-b pb-3" : ""
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { ReferralReward } from "@/types/referrals",;
+import { formatDate } from "@/utils/referralUtils",;
+import { BadgeDollarSign, Badge } from 'lucide-react';
+interface RewardsCardProps {;
+  rewards: ReferralReward[];
+  isLoading: boolean;
+}
+;
+export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
+  if (isLoading) {;
+    return (;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      <Card>;
+        <CardHeader>;
+          <CardTitle className='flex items-center gap-2'>;
+            <BadgeDollarSign className='h-5 w-5' />;
+=======
+  rewards: ReferralReward[],
+  is_loading: boolean;
+}
+export /**
+ * RewardsCard - Function description
+ */
+function RewardsCard() {
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <Card>;
+        <CardHeader>;
+          <CardTitle className='flex items - center gap - 2'>;
+            <BadgeDollarSign className='h - 5 w - 5' />;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             Your Rewards;
           </CardTitle>;
           <CardDescription>;
@@ -222,6 +396,13 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
 }
   );
 }
+<<<<<<< HEAD
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <div className='space - y-4'>          {rewards.map ((reward, index) => (
             <div;
               key={reward.id}
@@ -260,3 +441,12 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -24,6 +24,10 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Brain
   Shield
   Rocket
@@ -37,6 +41,7 @@ import {
   Star
   Filter
   ChevronDown;
+<<<<<<< HEAD
 import {;
   Brain,;
   Shield,;
@@ -51,6 +56,23 @@ import {;
   Star,;
   Filter,;
   ChevronDown,;
+=======
+=======
+  Brain,
+  Shield,
+  Rocket,
+  Cpu,
+  Database,
+  Atom,
+  Users,
+  CheckCircle,
+  TrendingUp,
+  Clock,
+  Star,
+  Filter,;
+  ChevronDown,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';
 
 interface Service {;
@@ -657,6 +679,40 @@ const EnhancedServicesShowcase: React.FC = () => {;
     return iconMap[category] || Brain;
   };
 
+<<<<<<< HEAD
+  ];
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+  ];
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const filteredServices = services.filter(service => {
+    const matchesCategory =
+      selectedCategory === 'all' |service.category === selectedCategory;
+    const matchesSearch =
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;  });
+  const getCategoryIcon = (category: string) => {
+    const iconMap: { [key: string]: React.ComponentType<any> } = {    const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch
+  const getCategoryIcon = (category: string) => {
+    const iconMap: { [key: string]: React.ComponentType<any> } = {
+      'AI & Analytics': Brain
+      Security: Shield
+      Infrastructure: Cpu
+      'Space Tech': Rocket
+      'Emerging Tech': Brain
+      'Quantum AI': Atom
+    }
+    return iconMap[category] |Brain;
+  }
   return (
     <section id='services' className='py-24 px-6 relative overflow-hidden'>;
       {/* Background */}
@@ -707,6 +763,7 @@ const EnhancedServicesShowcase: React.FC = () => {;
           <div className='relative'>;
             <select
               value={selectedCategory}
+<<<<<<< HEAD
               onChange={e => setSelectedCategory(e && e.target.value)}
               className='px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12';
             >;
@@ -727,6 +784,21 @@ const EnhancedServicesShowcase: React.FC = () => {;
             >;
               {categories && categories.map((category) => (;
                 <option key={category} value={category} className="bg-slate-800 text-white">;
+=======
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12"
+            >
+              {categories.map((category) => (
+                <option key={category} value={category} className="bg-slate-800 text-white">
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   {category === 'all' ? 'All Categories' : category}
                 </option>;
               ))}
@@ -771,6 +843,42 @@ const EnhancedServicesShowcase: React.FC = () => {;
             />
             <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />
           </div>
+<<<<<<< HEAD
+=======
+        </div>
+        {/* Services Grid */}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {filteredServices.map((service, index) => (
+            <div
+              key={service.id}
+              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+            >
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className='absolute top-4 right-4 z-20'>
+                  <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
+                    <Star className='w-3 h-3' />                    Popular          {filteredServices.map((service, index) => (
+            <div
+              key={service.id}
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            >
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className="absolute top-4 right-4 z-20">
+                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                    <Star className="w-3 h-3" />
+                    Popular
+                  </div>
+                </div>
+              )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              {/* Service Content */}
+              <div className='p-8'>
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         </div>
               onChange={(e) => setSearchTerm(e && e.target.value)}
               className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64";
@@ -820,7 +928,18 @@ const EnhancedServicesShowcase: React.FC = () => {;
                 </div>;
               )}
               {/* Service Content */}
+<<<<<<< HEAD
               <div className='p-8'>;
+=======
+
+              <div className='p-8'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Icon and Category */}
                 <div className='flex items-center justify-between mb-4'>;
                   <div
@@ -938,6 +1057,7 @@ const EnhancedServicesShowcase: React.FC = () => {;
                         <CheckCircle className="w-3 h-3 text-green-400" />;
                       </div>;
                     ))}
+<<<<<<< HEAD
                   </div>
                 </div>
                 {/* Benefits */}
@@ -960,6 +1080,27 @@ const EnhancedServicesShowcase: React.FC = () => {;
                     ))}
                   </div>
                 </div>
+=======
+
+                  </div>;
+                </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {/* Benefits */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* ROI and Market Info */}
                 <div className='mb-6 p-4 bg-white/5 rounded-lg'>
                   <div className='text-xs text-white/60 mb-2'>
@@ -1023,6 +1164,7 @@ const EnhancedServicesShowcase: React.FC = () => {;
                   </button>;
                 </div>;
               </div>;
+<<<<<<< HEAD
             </div>;
           ))}
         </div>
@@ -1037,6 +1179,50 @@ const EnhancedServicesShowcase: React.FC = () => {;
               accelerate your digital transformation journey.;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+=======
+
+=======
+                <div className="flex gap-3">
+                  <button
+                    onClick={() => window.location.href = `mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
+                    className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105"
+                  >
+                    Get Started
+                  </button>
+                  <button
+                    onClick={() => window.location.href = `mailto:kleber@ziontechgroup.com?subject=Demo request for ${service.name}`}
+                    className="px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
+                  >
+                    Demo
+                  </button>
+                </div>
+              </div>
+            </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* CTA Section */}
+        <div className='text-center mt-16'>
+          <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
+            <h3 className='text-2xl font-bold text-white mb-4'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              Ready to Transform Your Business?
+            </h3>
+            <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
+              Let's discuss how our cutting-edge technology solutions can
+              accelerate your digital transformation journey.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <a
                 href='mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Consultation Request'
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
@@ -1125,3 +1311,32 @@ export default EnhancedServicesShowcase);
 ;
 export default EnhancedServicesShowcase;
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  );
+<<<<<<< HEAD
+}
+=======
+};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default EnhancedServicesShowcase;  )
+}
+export default EnhancedServicesShowcase;
+
+<<<<<<< HEAD
+=======
+export default EnhancedServicesShowcase;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+}
+=======
+export default EnhancedServicesShowcase;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

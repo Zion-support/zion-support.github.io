@@ -1,9 +1,47 @@
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from 'react';
 import { FileText  } from 'lucide-react';
 import { ResumeOption  } from '../resume-selector/types';
 import { ResumePreviewCard  } from './ResumePreviewCard';
 import { Resume } from '@/types/resume';
 interface SelectResumeSectionProps {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  resumeOptions: ResumeOption[],
+  selectedResume: ResumeOption | null,
+  handleResumeSelect: (resumeId: string) => void,
+  handleDownloadResume: () => void,
+  isLoading: boolean
+}
+
+export function SelectResumeSection({;
+  resumeOptions;
+  selectedResume;
+  handleResumeSelect;
+  handleDownloadResume;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from 'react',;
+import { FileText } from 'lucide-react',;
+import { ResumeOption } from '../resume-selector/types',;
+import { ResumePreviewCard } from './ResumePreviewCard',;
+import { Resume } from '@/types/resume',;
+interface SelectResumeSectionProps {;
+  resumeOptions: ResumeOption[],;
+  selectedResume: ResumeOption | null,;
+  handleResumeSelect: (resumeId: string) => void,;
+  handleDownloadResume: () => void,;
+  isLoading: boolean;
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   resumeOptions: ResumeOption[]
   selectedResume: ResumeOption | null

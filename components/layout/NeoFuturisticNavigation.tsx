@@ -108,7 +108,151 @@ import {;
   Link as LinkIcon,;
 import Button from '../ui/Button';
 
+<<<<<<< HEAD
 export default function NeoFuturisticNavigation() {;
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import {
+  Menu
+  X
+  ChevronDown
+  ChevronRight
+  Phone
+  Mail
+  MapPin
+  Globe
+  ArrowRight
+  Sparkles
+  Brain
+  Atom
+  Shield
+  DollarSign
+  FileText
+  BarChart3
+  MessageSquare
+  Truck
+  Users
+  Database
+  Cpu
+  Cloud
+  Play
+  Search
+  ShieldCheck
+  TrendingUp
+  Rocket
+  Zap
+  Check
+  Star
+  Clock
+  Target
+  Building
+  Award
+  ChartBar
+  Lock
+  Smartphone
+  Palette
+  Calendar
+  CreditCard
+  Settings
+  Code
+  BookOpen
+  Activity
+  Bot
+  ChevronRight as ChevronRightIcon
+  Eye
+  FlaskConical
+  Link as LinkIcon;
+import Button from '../ui/Button';
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import {
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Sparkles,
+  Brain,
+  Atom,
+  Shield,
+  DollarSign,
+  FileText,
+  BarChart3,
+  MessageSquare,
+  Truck,
+  Users,
+  Database,
+  Cpu,
+  Cloud,
+  Play,
+  Search,
+  ShieldCheck,
+  TrendingUp,
+  Rocket,
+  Zap,
+  Check,
+  Star,
+  Clock,
+  Target,
+  Building,
+  Award,
+  ChartBar,
+  Lock,
+  Smartphone,
+  Palette,
+  Calendar,
+  CreditCard,
+  Settings,
+  Code,
+  BookOpen,
+  Activity,
+  Bot,
+  ChevronRight as ChevronRightIcon,
+  Eye,
+  FlaskConical,;
+  Link as LinkIcon,;
+import Button from '../ui/Button';
+<<<<<<< HEAD
+export default function NeoFuturisticNavigation() {;
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function NeoFuturisticNavigation() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -1163,8 +1307,17 @@ function NeoFuturisticNavigation() {
                   <span>Services</span>;
                   <ChevronRight
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
+<<<<<<< HEAD
                   />
                 </button>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
                     {serviceCategories.map((category, index) => (
@@ -1202,7 +1355,21 @@ function NeoFuturisticNavigation() {
                     </div>;
                   </div>;
                 )}
+<<<<<<< HEAD
               </div>
+=======
+
+              </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Company Section */}
               <div>;
                 <button

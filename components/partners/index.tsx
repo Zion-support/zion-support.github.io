@@ -1,7 +1,40 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import Head from "next/head";
 export default function Partners() {
   const [form, setForm] = useState({
+=======
+<<<<<<< HEAD
+import { useState } from "react";
+import Head from "next/head";
+=======
+import { useState } from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function Partners() {
+  const [form, setForm] = useState({
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export default function Partners() {
+  const [form, setForm] = useState({
+    name: '',
+    entityType: '',
+    pocName: '',
+    pocEmail: '',
+    useCaseType: 'Education Partnership',;
+  });  const [result, setResult] = useState<any>(null);    name: "",
+    entityType: "",
+    pocName: "",
+    pocEmail: "",
+    useCaseType: "Education Partnership"}),
+  const [loading, setLoading] = useState(false);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
     name: ''
     entityType: ''
@@ -293,12 +326,38 @@ export default function Partners() {;
             <p className="text-sm">Your API Key:</p>;
             <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result && result.apiKey}</pre>;
             <a href={result && result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>;
+<<<<<<< HEAD
+=======
+
+=======
+          <div className="mt-8 bg-white p-6 rounded-lg shadow">
+            <h3 className="text-lg font-medium mb-2">Registration Successful</h3>
+            <p className="text-sm">Your API Key:</p>
+            <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result.apiKey}</pre>
+            <a href={result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>
+<<<<<<< HEAD
+        )}
+      </div>
+    </div>
+);
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+          </div>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         )}
       </div>
     </div>
 );
 }
   );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
     <div className="min - h-screen bg - gray - 50 text - gray - 900">;
       <Head>;
@@ -399,3 +458,13 @@ export default function Partners() {;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  );
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,9 +1,39 @@
 
+<<<<<<< HEAD
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs",
 import { Avatar } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge";
 import { ClickableBadge } from "@/components/ui/clickable-badge";
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {format} from "date-fns";
+import {JobApplication} from "@/types/jobs";
+import {Avatar} from "@/components/ui/avatar";
+import {Badge} from "@/components/ui/badge";
+import {ClickableBadge} from "@/components/ui/clickable-badge";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {ApplicationActions} from "./ApplicationActions";
+import {StatusBadge} from "./StatusBadge";
+import {Briefcase, User} from "lucide-react";
+import {HireConfirmationModal} from "@/components/hiring-tracker/HireConfirmationModal";
+import {useState} from "react";
+import {toast} from "@/hooks/use-toast";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { format } from "date-fns",
+import { JobApplication } from "@/types/jobs",
+import { Avatar } from "@/components/ui/avatar",
+<<<<<<< HEAD
+import { Badge } from "@/components/ui/badge";
+import { ClickableBadge } from "@/components/ui/clickable-badge";
+=======
+import { Badge } from "@/components/ui/badge",
+import { ClickableBadge } from "@/components/ui/clickable-badge",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { 
   Table;
   TableBody;
@@ -16,8 +46,22 @@ import { ApplicationActions } from "./ApplicationActions",
 import { StatusBadge } from "./StatusBadge",
 import { Briefcase, User } from "lucide-react",
 import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",
+<<<<<<< HEAD
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
+=======
+<<<<<<< HEAD
+import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
+=======
+import { useState } from "react",
+import { toast } from "@/hooks/use-toast",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface ApplicationsTableProps {
 
   applications: JobApplication[]
@@ -159,6 +203,15 @@ export function ApplicationsTable({
                       <Briefcase className="h - 3 w - 3 mr - 1" /> Hire;
                     </ClickableBadge>;
                     <ApplicationActions;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                    <ApplicationActions;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       application={application}
                       processing_id={processing_id}
                       onViewApplication={onViewApplication}

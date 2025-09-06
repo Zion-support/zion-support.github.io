@@ -1,11 +1,29 @@
 import React from 'react';
+<<<<<<< HEAD
 export function VerifiedBadge({ labels }: { labels: string[] }) {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   if (!labels |labels.length === 0) return null;
 
+  if (!labels |labels.length === 0) return null;
 
+<<<<<<< HEAD
 export function VerifiedBadge(): any ({ labels }: { labels: string[] }) {;
   if (!labels || labels && labels.length === 0) return null;
+=======
+=======
+export function VerifiedBadge({ labels }: { labels: string[] }) {;
+=======
+
+export function VerifiedBadge({ labels }: { labels: string[] }) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  if (!labels || labels.length === 0) return null;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <div className='flex gap-2 items-center'>;
       {labels && labels.map(label => (;
@@ -31,6 +49,7 @@ export function VerifiedBadge(): any ({ labels }: { labels: string[] }) {;
       ))}
     </div>;
   );
+<<<<<<< HEAD
 }
 export /**
  * VerifiedBadge - Function description
@@ -66,3 +85,19 @@ if (return null) {
         </span>))}
     </div>);
 }
+=======
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+
+}
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

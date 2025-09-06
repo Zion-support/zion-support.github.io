@@ -21,11 +21,69 @@ const defaultContext: NotificationContextType = {
 // Cast the default context value to avoid issues when React types are missing.
 const NotificationContext = createContext(
   defaultContext as NotificationContextType
+<<<<<<< HEAD
+=======
+);
+<<<<<<< HEAD
+export const useNotifications = (): NotificationContextType => {
+  const context = useContext(NotificationContext) as NotificationContextType;
+  if (!context) {
+    throw new Error('useNotifications must be used within a NotificationProvider')
+  }
+  return context
+}
+export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
+  const { user } = useAuth();
+  const notificationOps = useNotificationOperations(user?.id);
+  // Load notifications when user changes
+  useEffect(() => {
+    notificationOps.fetchNotifications();
+=======
+
+
+export const useNotifications = (): NotificationContextType => {;
+  const context = useContext(NotificationContext) as NotificationContextType;
+  if (!context) {
+    throw new Error('useNotifications must be used within a NotificationProvider')
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { useAuth } from '@/hooks/useAuth',;
+import { useNotificationOperations } from './useNotificationOperations',;
+import { NotificationContextType } from './types',;
+
+// Default context used when React type definitions are missing. Providing a;
+// fully-typed object here avoids TypeScript errors that occur when an untyped;
+// `createContext` call returns `{}` instead of the expected shape.;
+const defaultContext: NotificationContextType = {;
+  notifications: [],;
+  filteredNotifications: [],;
+  unreadCount: 0,;
+  loading: false,;
+  filter: 'all',;
+  markAsRead: async () => {},;
+  markAllAsRead: async () => {},;
+  dismissNotification: async () => {},;
+  setFilter: () => {},;
+  fetchNotifications: async () => {}},;
+
+// Cast the default context value to avoid issues when React types are missing.;
+const NotificationContext = createContext(;
+  defaultContext as NotificationContextType;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 );
 export const useNotifications = (): NotificationContextType => {
   const context = useContext(NotificationContext) as NotificationContextType;
   if (!context) {;
     throw new Error('useNotifications must be used within a NotificationProvider');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   return context
 }
@@ -49,6 +107,55 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
           (payload) => {
             console.log('Notification change received:', payload);
             notificationOps.fetchNotifications()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          }
+        )
+        .subscribe();
+      return () => {
+        supabase.removeChannel(channel)
+      }
+    }
+  }, [user]);
+  return (
+    <NotificationContext.Provider value={notificationOps}>
+      {children}
+    </NotificationContext.Provider>
+  )
+<<<<<<< HEAD
+}
+
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  return context;
+};
+
+export const NotificationProvider = ({ children }: { children: ReactNode }): JSX && JSX.Element => {;
+  const { user } = useAuth();
+  const notificationOps = useNotificationOperations(user?.id);
+
+  // Load notifications when user changes;
+  useEffect(() => {;
+    notificationOps && notificationOps.fetchNotifications();
+
+    // Set up real-time subscription for new notifications;
+    if (user) {;
+      const channel = supabase;
+        .channel('notifications-changes');
+        .on('postgres_changes', ;
+          {;
+            event: '*', ;
+            schema: 'public',;
+            table: 'notifications',;
+            filter: `user_id=eq.${user && user.id}`;
+          };
+          (payload) => {;
+            console && console.log('Notification change received:', payload);
+            notificationOps && notificationOps.fetchNotifications();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           }
         );
         .subscribe();
@@ -64,6 +171,7 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
   )
 }
 
+<<<<<<< HEAD
 ;
   return (
     <NotificationContext.Provider value={notification_ops}>;
@@ -71,3 +179,14 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
     </NotificationContext.Provider>);
 }
 ;
+=======
+    </NotificationContext && NotificationContext.Provider>;
+  );
+};
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,4 +1,14 @@
+<<<<<<< HEAD
 export interface SpecializedITSolution2026 {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export interface SpecializedITSolution2026 {
+=======
+export interface SpecializedITSolution2026 {;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   name: string;
   tagline: string;
@@ -9,6 +19,7 @@ export interface SpecializedITSolution2026 {
   popular: boolean;
   icon: string;
   color: string;
+<<<<<<< HEAD
   text_color: string;
   link: string;
   market_position: string;
@@ -25,6 +36,24 @@ export interface SpecializedITSolution2026 {
   market_size: string;
   growth_rate: string;
   contact_info: {
+=======
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  contactInfo: {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     mobile: string;
     email: string;
     address: string;
@@ -61,8 +90,11 @@ const contact = {
 export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps
   {
+<<<<<<< HEAD
     id: 'cloud-infrastructure-automation',
     name: 'Cloud Infrastructure Automation Platform',
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     id: 'cloud-infrastructure-automation'
     name: 'Cloud Infrastructure Automation Platform'
     tagline:
@@ -83,6 +115,7 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
       'Advanced analytics and reporting'
     ]
     popular: true
+<<<<<<< HEAD
     icon: ''
     color: 'from-blue-600 to-indigo-600'
     textColor: 'text-blue-400'
@@ -103,6 +136,12 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     color: 'from-blue-600 to-indigo-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup && ziontechgroup.com/cloud-infrastructure-automation',
+=======
+    icon: '☁️'
+    color: 'from-blue-600 to-indigo-600'
+    textColor: 'text-blue-400'
+    link: 'https://ziontechgroup.com/cloud-infrastructure-automation'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     marketPosition:
       'Competes with Terraform Cloud ($20/user/month), AWS CloudFormation (pay-per-use). Our advantage: AI automation reduces infrastructure management time by 70% and optimizes costs by 30%.'
     targetAudience:
@@ -147,6 +186,7 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     rating: 4.8
     reviews: 45
   }
+<<<<<<< HEAD
       'Infrastructure automation',
       'Multi - cloud management',
       'DevOps automation',
@@ -167,6 +207,8 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     reviews: 45,
   },
 
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Cybersecurity & Threat Intelligence
   {
     id: 'ai-cybersecurity-threat-intelligence'
@@ -190,12 +232,17 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
       'Comprehensive security reporting'
     ]
     popular: true
+<<<<<<< HEAD
     icon: ''
+=======
+    icon: '🛡️'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     color: 'from-red-600 to-pink-600'
     textColor: 'text-red-400'
     link: 'https://ziontechgroup.com/ai-cybersecurity-threat-intelligence'
     marketPosition:
       'Competes with CrowdStrike ($8.99/user/month), Palo Alto Networks ($1000+/month). Our advantage: AI automation reduces false positives by 90% and improves threat detection accuracy by 40%.'
+<<<<<<< HEAD
       'Automated incident response and remediation',
       'Threat intelligence and sharing',
       'Vulnerability assessment and management',
@@ -212,6 +259,8 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     link: 'https://ziontechgroup && ziontechgroup.com/ai-cybersecurity-threat-intelligence',
     marketPosition:
       'Competes with CrowdStrike ($8 && 8.99/user/month), Palo Alto Networks ($1000+/month). Our advantage: AI automation reduces false positives by 90% and improves threat detection accuracy by 40%.',
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     targetAudience:
       'Security teams, IT administrators, Small to medium businesses, Enterprises'
     trialDays: 14
@@ -226,6 +275,7 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
       'PostgreSQL'
       'Redis'
     ]
+<<<<<<< HEAD
       'Python',
       'TensorFlow',
       'React',
@@ -233,6 +283,8 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
       'PostgreSQL',
       'Redis',
     ],
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     integrations: [
       'Splunk'
       'IBM QRadar'
@@ -260,6 +312,7 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     rating: 4.7
     reviews: 78
   }
+<<<<<<< HEAD
       'Threat detection',
       'Incident response',
       'Vulnerability management',
@@ -280,6 +333,8 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     reviews: 78,
   },
 
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Data Engineering & Analytics
   {
     id: 'ai-data-engineering-platform'
@@ -303,12 +358,17 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
       'API for custom integrations'
     ]
     popular: false
+<<<<<<< HEAD
     icon: ''
+=======
+    icon: '📊'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     color: 'from-green-600 to-emerald-600'
     textColor: 'text-green-400'
     link: 'https://ziontechgroup.com/ai-data-engineering-platform'
     marketPosition:
       'Competes with Apache Airflow (Free), DataFactory ($25/month), Fivetran ($1.50/credit). Our advantage: AI automation reduces data pipeline development time by 80% and improves data quality.'
+<<<<<<< HEAD
       'Data quality monitoring and validation',
       'Real - time data processing and streaming',
       'Automated data transformation and cleaning',
@@ -326,6 +386,8 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     link: 'https://ziontechgroup && ziontechgroup.com/ai-data-engineering-platform',
     marketPosition:
       'Competes with Apache Airflow (Free), DataFactory ($25/month), Fivetran ($1 && 1.50/credit). Our advantage: AI automation reduces data pipeline development time by 80% and improves data quality.',
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     targetAudience:
       'Data engineers, Data scientists, Analytics teams, IT departments'
     trialDays: 14
@@ -368,6 +430,7 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     rating: 4.6
     reviews: 34
   }
+<<<<<<< HEAD
       'Data pipeline automation',
       'ETL process optimization',
       'Data quality management',
@@ -388,6 +451,8 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     reviews: 34,
   },
 
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // API Management & Integration
   {
     id: 'ai-api-management-platform'
@@ -411,6 +476,7 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
       'Advanced reporting and analytics'
     ]
     popular: false
+<<<<<<< HEAD
     icon: ''
     color: 'from-purple-600 to-indigo-600'
     textColor: 'text-purple-400'
@@ -430,6 +496,12 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     color: 'from-purple-600 to-indigo-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-api-management-platform',
+=======
+    icon: '🔌'
+    color: 'from-purple-600 to-indigo-600'
+    textColor: 'text-purple-400'
+    link: 'https://ziontechgroup.com/ai-api-management-platform'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     marketPosition:
       'Competes with Kong ($250/month), Apigee ($500/month), AWS API Gateway (pay-per-use). Our advantage: AI automation improves API performance by 40% and reduces development time by 60%.'
     targetAudience:
@@ -439,12 +511,15 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     category: 'API Management & Integration'
     realService: true
     technology: ['Node.js', 'React', 'Python', 'PostgreSQL', 'Redis', 'Docker']
+<<<<<<< HEAD
       'API developers, DevOps teams, Platform engineers, Enterprises',
     trial_days: 14,
     setup_time: '2 - 3 hours',
     category: 'API Management & Integration',
     realService: true,
     technology: ['Node && Node.js', 'React', 'Python', 'PostgreSQL', 'Redis', 'Docker'],
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     integrations: [
       'Kubernetes'
       'Docker'
@@ -473,6 +548,7 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     rating: 4.5
     reviews: 22
   }
+<<<<<<< HEAD
       'API lifecycle management',
       'Performance optimization',
       'Developer experience',
@@ -493,6 +569,8 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     reviews: 22,
   },
 
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Network Monitoring & Management
   {
     id: 'ai-network-monitoring-suite'
@@ -516,7 +594,11 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
       'API for custom integrations'
     ]
     popular: false
+<<<<<<< HEAD
     icon: ''
+=======
+    icon: '🌐'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     color: 'from-cyan-600 to-blue-600'
     textColor: 'text-cyan-400'
     link: 'https://ziontechgroup.com/ai-network-monitoring-suite'
@@ -549,6 +631,7 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     rating: 4.4
     reviews: 39
   }
+<<<<<<< HEAD
       'Automated issue detection and resolution',
       'Predictive maintenance and alerting',
       'Network traffic analysis and optimization',
@@ -594,6 +677,8 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     reviews: 39,
   },
 
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Database Management & Optimization
   {
     id: 'ai-database-optimization-platform'
@@ -617,6 +702,7 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
       'Advanced reporting and insights'
     ]
     popular: false
+<<<<<<< HEAD
     icon: ''
     color: 'from-orange-600 to-red-600'
     textColor: 'text-orange-400'
@@ -636,6 +722,12 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     color: 'from-orange-600 to-red-600',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-database-optimization-platform',
+=======
+    icon: '🗄️'
+    color: 'from-orange-600 to-red-600'
+    textColor: 'text-orange-400'
+    link: 'https://ziontechgroup.com/ai-database-optimization-platform'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     marketPosition:
       'Competes with SolarWinds Database Performance Monitor ($1000+/month), Quest Foglight ($800/month). Our advantage: AI automation improves database performance by 50% and reduces maintenance overhead by 60%.'
     targetAudience:
@@ -652,6 +744,7 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
       'Redis'
       'Machine Learning'
     ]
+<<<<<<< HEAD
       'Python',
       'React',
       'Node && Node.js',
@@ -659,6 +752,8 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
       'Redis',
       'Machine Learning',
     ],
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     integrations: [
       'MySQL'
       'PostgreSQL'
@@ -692,6 +787,7 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     rating: 4.3
     reviews: 28
   }
+<<<<<<< HEAD
       'SolarWinds DPM',
       'Quest Foglight',
       'Redgate SQL Monitor',
@@ -709,6 +805,8 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     reviews: 28,
   },
 
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // IT Service Management
   {
     id: 'ai-itsm-platform'
@@ -731,6 +829,7 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
       'API for custom integrations'
     ]
     popular: false
+<<<<<<< HEAD
     icon: ''
     color: 'from-teal-600 to-cyan-600'
     textColor: 'text-teal-400'
@@ -750,6 +849,12 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     color: 'from-teal-600 to-cyan-600',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-itsm-platform',
+=======
+    icon: '🛠️'
+    color: 'from-teal-600 to-cyan-600'
+    textColor: 'text-teal-400'
+    link: 'https://ziontechgroup.com/ai-itsm-platform'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     marketPosition:
       'Competes with ServiceNow ($100/user/month), Jira Service Management ($20/user/month), Freshservice ($19/user/month). Our advantage: AI automation reduces ticket resolution time by 60% and improves user satisfaction.'
     targetAudience: 'IT service desks, Help desk teams, MSPs, Enterprises'
@@ -765,6 +870,7 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
       'Redis'
       'Machine Learning'
     ]
+<<<<<<< HEAD
       'React',
       'Node && Node.js',
       'Python',
@@ -772,6 +878,8 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
       'Redis',
       'Machine Learning',
     ],
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     integrations: [
       'Jira'
       'Slack'
@@ -805,6 +913,7 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     rating: 4.5
     reviews: 45
   }
+<<<<<<< HEAD
       'ServiceNow',
       'Jira Service Management',
       'Freshservice',
@@ -822,6 +931,8 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     reviews: 45,
   },
 
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Backup & Disaster Recovery
   {
     id: 'ai-backup-disaster-recovery'
@@ -844,6 +955,7 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
       'API for custom integrations'
     ]
     popular: false
+<<<<<<< HEAD
     icon: ''
     color: 'from-gray-600 to-slate-600'
     textColor: 'text-gray-400'
@@ -863,6 +975,12 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     color: 'from-gray-600 to-slate-600',
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-backup-disaster-recovery',
+=======
+    icon: '💾'
+    color: 'from-gray-600 to-slate-600'
+    textColor: 'text-gray-400'
+    link: 'https://ziontechgroup.com/ai-backup-disaster-recovery'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     marketPosition:
       'Competes with Veeam ($1000+/month), Commvault ($800/month), Acronis ($500/month). Our advantage: AI automation reduces backup time by 50% and improves recovery success rates by 90%.'
     targetAudience: 'IT administrators, DevOps teams, Enterprises, MSPs'
@@ -878,6 +996,7 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
       'Redis'
       'Machine Learning'
     ]
+<<<<<<< HEAD
       'Python',
       'React',
       'Node && Node.js',
@@ -885,6 +1004,8 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
       'Redis',
       'Machine Learning',
     ],
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     integrations: [
       'AWS S3'
       'Azure Blob'
@@ -907,12 +1028,17 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.'
     launchDate: '2024-05-25'
     customers: 67
     rating: 4.4
     reviews: 33
   }
+<<<<<<< HEAD
       'Backup automation',
       'Disaster recovery',
       'Data protection',
@@ -939,6 +1065,29 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) => {
   );
 }
 export const getPopularSpecializedITSolutions2026 = () => {
+=======
+=======
+      'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.',
+    launchDate: '2024-05-25',
+    customers: 67,
+    rating: 4.4,
+    reviews: 33,
+  },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+];
+export const getSpecializedITSolutions2026ByCategory = (category: string) => {
+  return specializedITSolutions2026.filter(
+    solution => solution.category === category;
+  );
+<<<<<<< HEAD
+}
+export const getPopularSpecializedITSolutions2026 = () => {
+=======
+};
+
+export const getPopularSpecializedITSolutions2026 = () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return specializedITSolutions2026.filter(solution => solution.popular);
 }
 export const getSpecializedITSolutions2026ByPriceRange = (
@@ -950,12 +1099,62 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice
+<<<<<<< HEAD
   })
 };
 ;
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>: any {
   return specializedITSolutions2026.filter (
     solution => solution.category === category);
+=======
+
+  })
+<<<<<<< HEAD
+}
+
+=======
+export interface SpecializedITSolution2026 {;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 ;
 export const getPopularSpecializedITSolutions2026 = () =>: any {
@@ -969,7 +1168,17 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     const price = parse_int (solution.price.replace ('$', ''));
     return price >= min_price && price <= max_price;
   });
+<<<<<<< HEAD
 }    return price >= min_price && price <= max_price;
   });
 }
 ;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

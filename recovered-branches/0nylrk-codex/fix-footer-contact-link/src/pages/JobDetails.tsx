@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -21,6 +22,35 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate  } from 'react-router-dom';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { Calendar, Clock, DollarSign, Tag, Users, Briefcase  } from '@/components/icons';
+import { formatDistanceToNow  } from 'date-fns';
+import { toast  } from 'sonner';
+import { useAuth  } from '@/hooks/useAuth';
+import useJobDetails from '@/hooks/useJobDetails';
+<<<<<<< HEAD
+import { ApplyToJobModal  } from '@/components/messaging/job-application';
+import { SEO  } from '@/components/SEO';
+import { useWhitelabel  } from '@/context/WhitelabelContext';
+export default function JobDetails() {
+  // Cast to specify the expected route param type since useParams may be untyped
+  const { jobId } = useParams() as { jobId?: string }
+  const { job, isLoading, error } = useJobDetails(jobId);
+  const { user, isAuthenticated } = useAuth();
+
+  const navigate = useNavigate();
+  const { isWhitelabel, brandName } = useWhitelabel();
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate  } from 'react-router-dom';
@@ -45,6 +75,42 @@ export default function JobDetails() {
 
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState, useEffect } from 'react',
+import { useParams, useNavigate } from 'react-router-dom',
+import { Header } from '@/components/Header',
+import { Footer } from '@/components/Footer',
+import { Button } from '@/components/ui/button',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import { Badge } from '@/components/ui/badge',
+import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from '@/components/icons',
+import { formatDistanceToNow } from 'date-fns',
+import { toast } from 'sonner',
+import { useAuth } from '@/hooks/useAuth',
+import useJobDetails from '@/hooks/useJobDetails',
+import { ApplyToJobModal } from '@/components/messaging/job-application',
+import { SEO } from '@/components/SEO',
+import { useWhitelabel } from '@/context/WhitelabelContext',
+export default function JobDetails() {
+  // Cast to specify the expected route param type since useParams may be untyped
+  const { jobId } = useParams() as { jobId?: string },
+  const { job, isLoading, error } = useJobDetails(jobId),
+  const { user, isAuthenticated } = useAuth(),
+  const navigate = useNavigate(),
+  const { isWhitelabel, brandName } = useWhitelabel(),
+
+  
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  if (isLoading) {
+=======
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
   if (isLoading) {
     return (
@@ -131,6 +197,137 @@ export default function JobDetails() {
                   <div className="flex flex-wrap gap-2">
                     {job.skills?.map((skill: string, i: number) => (
                       <Badge key={i} variant="secondary">
+<<<<<<< HEAD
+=======
+
+
+=======
+
+import React, { useState, useEffect } from 'react',;
+import { useParams, useNavigate } from 'react-router-dom',;
+import { Header } from '@/components/Header',;
+import { Footer } from '@/components/Footer',;
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Badge } from '@/components/ui/badge',;
+import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from '@/components/icons',;
+import { formatDistanceToNow } from 'date-fns',;
+import { toast } from 'sonner',;
+import { useAuth } from '@/hooks/useAuth',;
+import useJobDetails from '@/hooks/useJobDetails',;
+import { ApplyToJobModal } from '@/components/messaging/job-application',;
+import { SEO } from '@/components/SEO',;
+import { useWhitelabel } from '@/context/WhitelabelContext',;
+export default function JobDetails() {;
+  // Cast to specify the expected route param type since useParams may be untyped;
+  const { jobId } = useParams() as { jobId?: string },;
+  const { job, isLoading, error } = useJobDetails(jobId),;
+  const { user, isAuthenticated } = useAuth(),;
+  const navigate = useNavigate(),;
+  const { isWhitelabel, brandName } = useWhitelabel(),;
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),;
+  if (isLoading) {;
+    return (;
+      <div className="flex items-center justify-center min-h-screen">;
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;
+      </div>;
+    );
+  }
+;
+  if (error || !job) {;
+    return (;
+      <>;
+        <Header />;
+        <div className="container mx-auto px-4 py-16 text-center">;
+          <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>;
+          <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>;
+          <Button onClick={() => navigate('/jobs')}>View All Jobs</Button>;
+        </div>;
+        <Footer />;
+      </>;
+    );
+  }
+;
+  const handleApply = () => {;
+    if (!isAuthenticated) {;
+      toast.error("Please log in to apply for this job"),;
+      navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`)),;
+      return;
+    }
+;
+
+    if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {;
+      toast && toast.error("Only job seekers can apply for jobs");
+      return;
+    }
+
+    setIsApplyModalOpen(true);
+  };
+
+  const handleApplySuccess = async (appliedJobId: string) => {;
+    toast && toast.success("Application submitted successfully!"),;
+    setIsApplyModalOpen(false);
+  };
+
+  const formatBudget = (budget: any) => {;
+    if (!budget) return "Not specified",;
+    return `$${budget && budget.min} - $${budget && budget.max}`;
+  };
+
+  const isOwnJob = user?.id === job && job.client_id;
+
+  return (
+    <>;
+      <SEO
+        title={`${job && job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
+        description={job && job.description.substring(0, 160)}
+      />;
+      <Header />;
+      <main className="container mx-auto px-4 py-8">;
+        <div className="mb-6">;
+          <Button
+            variant="outline" 
+            size="sm"
+            onClick={() => navigate('/jobs')}
+          >;
+            ← Back to Jobs;
+          </Button>;
+        </div>;
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
+          <div className="lg:col-span-2">;
+            <Card>;
+              <CardHeader>;
+                <div className="flex justify-between items-start">;
+                  <div>;
+                    <CardTitle className="text-2xl mb-2">{job && job.title}</CardTitle>;
+                    <div className="flex items-center text-muted-foreground">;
+                      <Calendar className="mr-2 h-4 w-4" />;
+                      <span>Posted {formatDistanceToNow(new Date(job && job.created_at), { addSuffix: true })}</span>;
+                    </div>;
+                  </div>;
+                  <Badge>{job && job.category}</Badge>;
+                </div>;
+              </CardHeader>;
+              <CardContent className="space-y-6">;
+                <div>;
+                  <h3 className="font-semibold text-lg mb-3">Job Description</h3>;
+                  <div className="whitespace-pre-wrap">;
+                    {job && job.description}
+                  </div>;
+                </div>;
+
+                <div>;
+                  <h3 className="font-semibold text-lg mb-3">Required Skills</h3>;
+                  <div className="flex flex-wrap gap-2">;
+                    {job && job.skills?.map((skill: string, i: number) => (;
+                      <Badge key={i} variant="secondary">;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         {skill}
                       </Badge>;
                     ))}

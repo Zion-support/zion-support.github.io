@@ -1,4 +1,21 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useState } from "react";
+interface TemplateListProps {
+  templates: ContractTemplate[],
+  isLoading: boolean,
+  onSelect: (template: ContractTemplate,) => void,
+  onEdit: (template: ContractTemplate,) => void
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
@@ -6,7 +23,17 @@ import { useContractTemplates } from "@/hooks/useContractTemplates",
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useAuth } from "@/hooks/useAuth";
+=======
+import { useAuth } from "@/hooks/useAuth",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // useRouter replaces the old useLocation hook from react-router
 
   AlertDialog
@@ -17,7 +44,94 @@ import { useAuth } from "@/hooks/useAuth";
   AlertDialogFooter
   AlertDialogHeader
   AlertDialogTitle} from "@/components/ui/alert-dialog"
+<<<<<<< HEAD
 import { useState } from "react"
+=======
+<<<<<<< HEAD
+=======
+import { ContractTemplate } from "@/types/contracts"
+import { Button } from "@/components/ui/button"
+import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
+import { useContractTemplates } from "@/hooks/useContractTemplates"
+import { Card, CardContent } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import { useAuth } from "@/hooks/useAuth"
+// useRouter replaces the old useLocation hook from react-router
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle} from "@/components/ui/alert-dialog",
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from "react"
+interface TemplateListProps {
+  templates: ContractTemplate[]
+  isLoading: boolean
+  onSelect: (template: ContractTemplate,) => void
+  onEdit: (template: ContractTemplate,) => void
+
+
+  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null)
+  const { deleteTemplate, setDefaultTemplate } = useContractTemplates()
+  const { user } = useAuth()
+  const router = useRouter()
+  const handleDeleteClick = (templateId: string,) => {
+    setTemplateToDelete(templateId)
+  }
+  const handleDeleteConfirm = async () => {
+    if (templateToDelete) {
+      await deleteTemplate.mutateAsync(templateToDelete)
+      setTemplateToDelete(null)
+    }
+  }
+  const handleSetDefault = async (templateId: string,) => {
+    if (!user) {
+      const currentPath = router.asPath
+      router.push(`/auth/login?returnTo=${encodeURIComponent(currentPath)}`)
+      return;
+    }
+    await setDefaultTemplate.mutateAsync(templateId)
+  }
+=======
+<<<<<<< HEAD
+import { useAuth } from "@/hooks/useAuth",
+// useRouter replaces the old useLocation hook from react-router
+import { useRouter } from 'next/router',
+import {
+  AlertDialog;
+  AlertDialogAction;
+  AlertDialogCancel;
+  AlertDialogContent;
+  AlertDialogDescription;
+  AlertDialogFooter;
+  AlertDialogHeader;
+  AlertDialogTitle } from '@/components / ui / alert - dialog';
+import { ContractTemplate  } from '@/types / contracts';
+import { Button  } from '@/components / ui / button';
+import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react';
+import { useContractTemplates  } from '@/hooks / useContractTemplates';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Separator  } from '@/components / ui / separator';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components / ui / tooltip';
+import { use_auth  } from '@/hooks / use_auth';
+// use_router replaces the old use_location hook from react - router;
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle} from "@/components/ui/alert-dialog",
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from "react",
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface TemplateListProps {
   templates: ContractTemplate[]
   isLoading: boolean
@@ -125,7 +239,17 @@ export function TemplateList(): any ({;
     await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
   };
 
+<<<<<<< HEAD
   if (isLoading) {;
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (isLoading) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     return (
       <div className="flex justify-center items-center py-8">;
         <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
@@ -152,11 +276,22 @@ export function TemplateList(): any ({;
                   {template && template.is_default && (;
                     <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;
                   )}
+<<<<<<< HEAD
                 </div>
                 <p className="text-xs text-muted-foreground">
                   Last updated: {new Date(template.updated_at).toLocaleDateString()}
                 </p>
               </div>
+=======
+
+
+              
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <div className="flex items-center gap-2">
                 <Button
                   variant="ghost"
@@ -194,13 +329,30 @@ export function TemplateList(): any ({;
                 <Button
                   variant="ghost"
                   size="icon"
+<<<<<<< HEAD
                   onClick = {() => handleDeleteClick(template.id),}
+=======
+                  onClick={() => handleDeleteClick(template.id)}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   aria-label="Delete template"
                 >
                   <Trash className="h-4 w-4 text-destructive" />
                 </Button>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <Separator className="my-3" />
+<<<<<<< HEAD
+            <Button
+              onClick = {() => onSelect(template),}
+              variant="outline"
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Separator className="my-3" />
             <Button
               onClick = {() => onSelect(template),}
@@ -212,6 +364,14 @@ export function TemplateList(): any ({;
           </CardContent>
         </Card>
       ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -240,8 +400,18 @@ const handleSetDefault = async (templateId: string) => {
 router.push (`/auth/login?returnTo=$ {
   encodeURIComponent (currentPath)
 }`)
+<<<<<<< HEAD
 return
 }await setDefaultTemplate.mutateAsync (templateId)
+=======
+<<<<<<< HEAD
+return
+}await setDefaultTemplate.mutateAsync (templateId)
+=======
+return;
+}await setDefaultTemplate.mutateAsync (templateId) 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 <CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {
   template.title
@@ -261,10 +431,52 @@ return
 }onOpenChange= {
   () => setTemplateToDelete (null) "
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={
+<<<<<<< HEAD
   handleDeleteConfirm
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>)
 }'"}
 
+=======
+<<<<<<< HEAD
+  handleDeleteConfirm
+}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>)
+}'"}
+=======
+
+  handleDeleteConfirm ;
+}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
+}'"};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+;
+
+      <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
+        <AlertDialogContent>;
+          <AlertDialogHeader>;
+            <AlertDialogTitle>Delete Template</AlertDialogTitle>;
+            <AlertDialogDescription>;
+              Are you sure you want to delete this template? This action cannot be undone.;
+            </AlertDialogDescription>;
+          </AlertDialogHeader>;
+          <AlertDialogFooter>;
+            <AlertDialogCancel>Cancel</AlertDialogCancel>;
+            <AlertDialogAction
+              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+              onClick = {handleDeleteConfirm,}>;
+              Delete;
+            </AlertDialogAction>;
+          </AlertDialogFooter>;
+        </AlertDialogContent>;
+      </AlertDialog>;
+    </div>;
+  );
+
+
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Check condition
 if ( {) {
   $2
@@ -405,3 +617,16 @@ return;
   handleDeleteConfirm;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>);
 }'"}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

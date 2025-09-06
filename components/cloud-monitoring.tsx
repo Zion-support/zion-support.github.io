@@ -4,6 +4,10 @@ import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Activity
   BarChart3
   AlertTriangle
@@ -25,6 +29,7 @@ import {
   Bell
   Settings
   Code;
+<<<<<<< HEAD
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -48,13 +53,47 @@ import {;
   Cloud,;
   Eye,;
   Bell,;
+=======
+} from 'lucide-react';
+export default function CloudMonitoringPage() {
+  const features = [
+    {
+<<<<<<< HEAD
+      icon: <Activity className='w-8 h-8 text-white' />,import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
+=======
+  Activity,
+  BarChart3,
+  AlertTriangle,
+  Clock,
+  Database,
+  Globe,
+  Lock,
+  Shield,
+  TrendingUp,
+  Users,
+  Zap,
+  ArrowRight,
+  Play,
+  CheckCircle,
+  Star,
+  Server,
+  Cloud,
+  Eye,
+  Bell,
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Settings,;
   Code,;
 } from 'lucide-react';
+<<<<<<< HEAD
 export default function CloudMonitoringPage() {;
   const features = [;
     {;
       icon: <Activity className='w-8 h-8 text-white' />,import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function CloudMonitoringPage() {
   const features = [
     {
@@ -100,11 +139,121 @@ export default function CloudMonitoringPage() {
       icon: <Zap className='w-8 h-8 text-white' />
       title: 'Auto-scaling'
       description:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         'Intelligent auto-scaling based on real-time metrics and predictive analytics.'
       color: 'bg-gradient-to-br from-teal-500 to-blue-600'
       gradient: 'from-teal-400 to-blue-500'
     }
+<<<<<<< HEAD
   ];
+=======
+  ];
+=======
+        'Intelligent auto-scaling based on real-time metrics and predictive analytics.',
+      color: 'bg-gradient-to-br from-teal-500 to-blue-600',
+      gradient: 'from-teal-400 to-blue-500',
+    },;
+  ];
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const monitoringCapabilities = [
+    {
+      category: 'Infrastructure'
+      icon: <Server className='w-6 h-6 text-blue-400' />
+      metrics: [
+        'CPU Usage'
+        'Memory Utilization'
+        'Disk I/O'
+        'Network Performance'
+        'Container Metrics'
+      ]
+    }
+    {
+      category: 'Applications'
+      icon: <Code className='w-6 h-6 text-green-400' />
+      metrics: [
+        'Response Time'
+        'Error Rates'
+        'Throughput'
+        'User Experience'
+        'API Performance'
+      ]
+    }
+    {
+      category: 'Databases'
+      icon: <Database className='w-6 h-6 text-purple-400' />
+      metrics: [
+        'Query Performance'
+        'Connection Pool'
+        'Index Usage'
+        'Replication Lag'
+        'Storage Growth'
+      ]
+    }
+    {
+      category: 'Security'
+      icon: <Shield className='w-6 h-6 text-red-400' />
+      metrics: [
+        'Threat Detection'
+        'Access Logs'
+        'Vulnerability Scans'
+        'Compliance Status'
+        'Audit Trails'
+      ]
+    },  ];      icon: <Shield className="w-6 h-6 text-red-400" />
+      metrics: ['Threat DetectionAccess LogsVulnerability ScansCompliance StatusAudit Trails']
+    }
+=======
+<<<<<<< HEAD
+      icon: <Activity className='w-8 h-8 text-white' />,
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  ];
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+export default function CloudMonitoringPage() {
+  const features = [
+    {
+      icon: <Activity className="w-8 h-8 text-white" />,
+      title: 'Real-time Monitoring',
+      description: 'Monitor your entire infrastructure in real-time with sub-second latency and instant alerting.',
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      gradient: 'from-green-400 to-emerald-500'},
+    {
+      icon: <BarChart3 className="w-8 h-8 text-white" />,
+      title: 'Advanced Analytics',
+      description: 'Deep insights into performance metrics, resource utilization, and business intelligence.',
+    color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
+      gradient: 'from-blue-400 to-cyan-500'},
+    {
+      icon: <AlertTriangle className="w-8 h-8 text-white" />,
+      title: 'Smart Alerting',
+      description: 'AI-powered anomaly detection and intelligent alerting to prevent issues before they impact users.',
+      color: 'bg-gradient-to-br from-red-500 to-pink-600',
+      gradient: 'from-red-400 to-pink-500'},
+    {
+      icon: <Database className="w-8 h-8 text-white" />,
+      title: 'Multi-Cloud Support',
+      description: 'Monitor AWS, Azure, Google Cloud, and on-premises infrastructure from a single dashboard.',
+    color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
+      gradient: 'from-purple-400 to-indigo-500'},
+    {
+      icon: <Shield className="w-8 h-8 text-white" />,
+      title: 'Security Monitoring',
+      description: 'Comprehensive security monitoring with threat detection, compliance reporting, and audit trails.',
+    color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
+      gradient: 'from-yellow-400 to-orange-500'},
+    {
+      icon: <Zap className="w-8 h-8 text-white" />,
+      title: 'Auto-scaling',
+      description: 'Intelligent auto-scaling based on real-time metrics and predictive analytics.',
+      color: 'bg-gradient-to-br from-teal-500 to-blue-600',
+      gradient: 'from-teal-400 to-blue-500'}],
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const monitoringCapabilities = [
     {
       category: 'Infrastructure'
@@ -717,9 +866,23 @@ export default function CloudMonitoringPage() {
                 </h3>;
                 <p className="text - gray - 400 leading - relaxed">;
                   {feature.description}
+<<<<<<< HEAD
+=======
+
+
+
+                  {feature.description}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </p>
               </Card>
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -728,6 +891,21 @@ export default function CloudMonitoringPage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Monitoring Capabilities */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Comprehensive Monitoring
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -798,6 +976,7 @@ export default function CloudMonitoringPage() {
                 </div>;
               </Card>;
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -806,6 +985,21 @@ export default function CloudMonitoringPage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Use Cases Section */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Use Cases
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -860,6 +1054,7 @@ export default function CloudMonitoringPage() {
             {useCases && useCases.map((useCase, index) => (;
               <Card
                 key={index}
+<<<<<<< HEAD
                 className="group border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300">;
                 <div className="flex items-start space-x-4">;
                   <div className="text-4xl">{useCase && useCase.icon}</div>;
@@ -885,6 +1080,14 @@ export default function CloudMonitoringPage() {
           </div>
         </div>
       </section>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Pricing Section */}
       <section id='pricing' className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -955,6 +1158,29 @@ export default function CloudMonitoringPage() {
                     {plan.price}
                     <span className='text-lg text-gray-400'>{plan.period}</span>
                   </div>
+<<<<<<< HEAD
+=======
+                )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+
+                    <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+                <div className='text-center mb-8'>
+                  <h3 className='text-2xl font-bold text-white mb-2'>
+                    {plan.name}
+                  </h3>
+                  <div className='text-4xl font-bold text-white mb-2'>
+                    {plan.price}
+                    <span className='text-lg text-gray-400'>{plan.period}</span>
+                  </div>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <p className='text-gray-400'>{plan.description}</p>
                 </div>
                 <ul className='space-y-4 mb-8'>
@@ -970,6 +1196,13 @@ export default function CloudMonitoringPage() {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+<<<<<<< HEAD
+=======
+                      {feature}
+=======
+<<<<<<< HEAD
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       {feature}
                     </li>;
                   ))}
@@ -986,10 +1219,43 @@ export default function CloudMonitoringPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
               </Card>;
+<<<<<<< HEAD
             ))}
           </div>
         </div>
       </section>
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                      {feature}
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    </li>
+                  ))}
+                </ul>
+
+                <Button
+                  href="/contact"
+                  className={`w-full ${plan.buttonColor} text-white`}
+                  size="lg"
+                >
+                  Get Started
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Card>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ))}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Integrations Section */}
       <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -1032,10 +1298,44 @@ export default function CloudMonitoringPage() {
                 <h3 className="font-semibold text-white mb-2">{integration && integration.name}</h3>;
                 <p className="text-sm text-gray-400">{integration && integration.description}</p>;
               </Card>;
+<<<<<<< HEAD
+=======
+
+=======
+              Connect with your favorite tools and platforms
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {integrations.map((integration, index) => (
+              <Card
+                key={index}
+                className="text-center group border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300"
+              >
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {integration.icon}
+                </div>
+                <h3 className="font-semibold text-white mb-2">{integration.name}</h3>
+                <p className="text-sm text-gray-400">{integration.description}</p>
+              </Card>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+              </Card>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
@@ -1048,6 +1348,35 @@ export default function CloudMonitoringPage() {
             critical infrastructure.;
           </p>;
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* CTA Section */}
+      <section className='py-24 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            Ready to Monitor Your Infrastructure?
+          </h2>
+          <p className='text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
+            Join thousands of DevOps teams who trust us to monitor their
+            critical infrastructure.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Button
               href='/contact'
               variant='secondary'
@@ -1079,8 +1408,11 @@ export default function CloudMonitoringPage() {
               href="#demo"
               variant="outline"
               size="lg"
+<<<<<<< HEAD
               className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl">;
               <Play className="w-5 h-5 mr-2" />;
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"
             >
               <Play className="w-5 h-5 mr-2" />
@@ -1090,6 +1422,7 @@ export default function CloudMonitoringPage() {
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 }
               Watch Demo;
@@ -1104,3 +1437,21 @@ export default function CloudMonitoringPage() {
 }
     </>);
 }
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

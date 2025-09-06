@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 import { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../utils/auth";
@@ -5,6 +7,17 @@ import {
   getConversationById
   getMessages
   sendMessage
+<<<<<<< HEAD
+=======
+=======
+import { NextApiRequest, NextApiResponse } from "next";
+import { requireUser } from "../../../utils/auth";
+import {
+  getConversationById,
+  getMessages,
+  sendMessage,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "../../../utils/messaging/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
@@ -34,6 +47,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!recipientId |!body)
       return res.status(400).json({ error: "Missing required fields" });
     const { conversation, message } = sendMessage({
+<<<<<<< HEAD
       conversationId
       senderId: user.id
       recipientId
@@ -65,6 +79,38 @@ if (return) {
 if ( {) {
   $2
 }
+=======
+      conversationId,
+      senderId: user.id,
+      recipientId,
+      body,
+      linkUrl,
+      attachmentBase64,
+      attachmentName,
+      context
+    });
+    res.status(200).json({ conversation, message })
+  } else {
+<<<<<<< HEAD
+    res.status(405).json({ error: 'Method not allowed' })
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }
+}
+=======
+    res.status(405).json({ error: "Method not allowed" });
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import { NextApiRequest, NextApiResponse } from 'next';
+import { requireUser } from '../../../utils/auth';
+import { getConversationById, getMessages, sendMessage } from '../../../utils/messaging/storage';
+export default function handler(req, res) {
+  try {
+  const user = requireUser(req, res);
+  if (!user) return,;
+  if (req.method === 'GET') {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     const { id } = req.query;
     if (return res.status ($1).json ({ $2 })) {
   $2
@@ -116,3 +162,27 @@ if ( {) {
     res.status (405).json ({ error: "Method not allowed" });
   }
 }
+<<<<<<< HEAD
+=======
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+  }
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

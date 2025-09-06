@@ -44,6 +44,18 @@ const team = [
     role: 'Chief Operations Officer'
     bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.'
     image: '/images/team/james-kim.jpg'}]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export default function AboutPage() {;
+  return (;
+    <div className=&quot;bg-black&quot;>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function AboutPage() {
   return (
     <div className=&quot;bg - black & quot;>;
@@ -150,6 +162,7 @@ export default function AboutPage() {
         </div>;
       </div>;
       {/* Leadership Team */}
+<<<<<<< HEAD
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Leadership</h2>;
@@ -178,6 +191,44 @@ export default function AboutPage() {
               <div className=&quot;max - w-xl & quot;>;
                 <div className=&quot;group relative & quot;>;
                   <h3 className=&quot;mt - 3 text - lg font - semibold leading - 6 text - white group - hover:text - blue - 400 transition - colors duration - 200 & quot;>;
+=======
+
+
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Leadership</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            Meet Our Team
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            World-class researchers, engineers, and business leaders driving innovation at Zion Tech Group.
+          </p>
+        </div>
+        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+          {team.map((person) => (
+            <article key={person.name} className="flex flex-col items-start group">
+              <div className="relative w-full">
+                <div className="aspect-[16/9] w-full rounded-2xl bg-gray-900 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
+                  <div className="h-full w-full bg-gradient-to-br from-blue-900/20 to-purple-900/20 rounded-2xl flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="mx-auto h-12 w-12 rounded-full bg-blue-600/20 flex items-center justify-center mb-4">
+                        <UserGroupIcon className="h-6 w-6 text-blue-400" />
+                      </div>
+                      <p className="text-sm text-gray-400">Team Member</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="max-w-xl">
+                <div className="group relative">
+                  <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     {person.name}
                   </h3>;
                   <p className=&quot;mt - 2 text - sm text - blue - 400 & quot;>{person.role}</p>;
@@ -188,9 +239,31 @@ export default function AboutPage() {
         </div>;
       </div>;
       {/* CTA section */}
+<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl text-center&quot;>
           <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+=======
+<<<<<<< HEAD
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl text-center&quot;>
+          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+<<<<<<< HEAD
+            Join us in shaping the future
+          </h2>
+          <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
+            Ready to be part of the AI revolution? Let's discuss how we can work together to
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             Join us in shaping the future
           </h2>
           <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>

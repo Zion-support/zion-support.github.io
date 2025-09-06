@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NextApiRequest } from 'next';
 
 export interface User {
@@ -14,6 +15,12 @@ export interface DemoUser extends User {
 
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session
+=======
+<<<<<<< HEAD
+import { NextApiRequest } from 'next';
+export function getUserFromRequest(req: any): User | null {
+  // Mock implementation - in production, this would extract user from JWT or session;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const authHeader = req.headers.authorization;
   if (!authHeader |!authHeader.startsWith('Bearer ')) {
     return null;
@@ -29,6 +36,7 @@ export function getUserFromRequest(req: any): User | null {
   }
   return null;
 }
+<<<<<<< HEAD
 
 export function getDemoUser(req: any): DemoUser {
   // Mock implementation - in production, this would extract user from JWT or session
@@ -44,6 +52,16 @@ export function getDemoUser(req: any): DemoUser {
 export function assertTalentOrClientForOffer(
   req: NextApiRequest
   offer: { clientId: string; talentSlug: string }
+=======
+export function assertTalentOrClientForOffer(
+<<<<<<< HEAD
+  req: NextApiRequest
+  offer: { clientId: string; talentSlug: string }
+=======
+  req: NextApiRequest,;
+  offer: { clientId: string; talentSlug: string },
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
@@ -66,6 +84,7 @@ export function requireAuth(req: any): User {
   }
   return user;
 }
+<<<<<<< HEAD
 export function getUserFromRequest (req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session;
   const auth_header = req.headers.authorization;
@@ -116,3 +135,42 @@ if ( {) {
   }
   return user;
 }
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+
+=======
+// Marketplace authentication utilities
+export interface MarketplaceUser {
+  id: string;
+  role: 'client' | 'talent' | 'admin';
+  email: string;
+  name: string;
+  slug: string;
+  isVerified: boolean;
+  profile?: {
+    bio?: string;
+    skills?: string[];
+    experience?: string;
+    portfolio?: string[];
+    hourlyRate?: number;
+    availability?: 'available' | 'busy' | 'unavailable';
+  };
+  business?: {
+    name: string;
+    industry: string;
+    size: 'startup' | 'small' | 'medium' | 'large' | 'enterprise';
+    website?: string;
+  };
+  createdAt: string;
+  lastActiveAt: string;
+}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

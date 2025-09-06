@@ -3,6 +3,42 @@ import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 export default function ApiPerformanceTestingPage() {
 
+<<<<<<< HEAD
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+=======
+
+
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const features = [
     "k6/Gatling-compatible test runner"
     "SLO-aware latency reports"
@@ -10,6 +46,7 @@ export default function ApiPerformanceTestingPage() {
     "CI checks and PR annotations"
     "Synthetic traffic for staging"
   ];
+<<<<<<< HEAD
   return (
     <>;
       <SEO
@@ -69,12 +106,27 @@ function ApiPerformanceTestingPage() {
   const features = [;
     "k6 / Gatling - compatible test runner",
     "SLO - aware latency reports",
+=======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export default function ApiPerformanceTestingPage() {
+  const features = [
+    "k6/Gatling-compatible test runner",
+    "SLO-aware latency reports",
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
     "Synthetic traffic for staging",
   ];
 ;
   return (
+<<<<<<< HEAD
     <>;
       <SEO;
         title="API Performance Testing";
@@ -135,6 +187,11 @@ function ApiPerformanceTestingPage() {
   );
   return (
     <>;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    <>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <SEO
         title="API Performance Testing"
         description="Load, latency and regression testing-as-a-service with CI and SLOs."

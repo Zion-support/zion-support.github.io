@@ -1,11 +1,41 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import {JobMatch} from "@/types/jobs";
+export function useJobSuggestions(talentId?: string) {;
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState, useEffect } from "react",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { JobMatch } from "@/types/jobs";
 export function useJobSuggestions(talentId?: string) {
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+<<<<<<< HEAD
+=======
+=======
+import { JobMatch } from "@/types/jobs",
+export function useJobSuggestions(talentId?: string) {
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   useEffect(() => {
 
     const fetchSuggestedJobs = async () => {
@@ -69,9 +99,20 @@ export function useJobSuggestions(talentId?: string) {
     } catch (error) {
       console && console.error("Error updating job match status:", error);
       toast({
+<<<<<<< HEAD
         title: "Error";
         description: "Failed to update job status"
         variant: "destructive"})
+=======
+<<<<<<< HEAD
+        title: "Error";
+        description: "Failed to update job status"
+        variant: "destructive"})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
   // Filter matches by status
@@ -91,6 +132,7 @@ export function useJobSuggestions(talentId?: string) {
       declinedMatches
     }
   }
+<<<<<<< HEAD
 ;
     fetchSuggestedJobs ();
   }, [talent_id]);
@@ -100,6 +142,46 @@ export function useJobSuggestions(talentId?: string) {
       const updates = {
         status,
         ...(status === 'viewed' ? { viewed_at: new Date ().toISOString () } : {});
+=======
+=======
+<<<<<<< HEAD
+        title: "Error",
+        description: "Failed to update job status",
+        variant: "destructive"})
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState, useEffect } from "react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/hooks/use-toast",;
+import { JobMatch } from "@/types/jobs",;
+export function useJobSuggestions(talentId?: string) {;
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  useEffect(() => {;
+    const fetchSuggestedJobs = async () => {;
+      if (!talentId) return,;
+      try {;
+        setIsLoading(true),;
+        // Get job matches with job details;
+        const { data, error } = await supabase;
+          .from("job_talent_matches");
+          .select(`;
+            *,;
+            job:job_id (*);
+          `);
+          .eq("talent_id", talentId);
+          .order("created_at", { ascending: false }),;
+        if (error) throw error,;
+        setJobMatches(data || []);
+      } catch (error) {;
+        console.error("Error fetching job matches:", error),;
+        toast({;
+          title: "Error",;
+          description: "Failed to load job suggestions",;
+          variant: "destructive"});
+      } finally {;
+        setIsLoading(false);
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
 ;
       const { error } = await supabase;
@@ -146,6 +228,7 @@ if ( {) {
   }
 ;
   // Filter matches by status;
+<<<<<<< HEAD
   const new_matches = job_matches.filter (match => match.status === 'new');
   const viewed_matches = job_matches.filter (match => match.status === 'viewed');
   const applied_matches = job_matches.filter (match => match.status === 'applied');
@@ -160,6 +243,26 @@ if ( {) {
       viewed_matches;
       applied_matches,
       declined_matches;
+=======
+  const newMatches = jobMatches.filter(match => match.status === 'new'),;
+  const viewedMatches = jobMatches.filter(match => match.status === 'viewed'),;
+  const appliedMatches = jobMatches.filter(match => match.status === 'applied'),;
+  const declinedMatches = jobMatches.filter(match => match.status === 'declined'),;
+  return {;
+    jobMatches,;
+    isLoading,;
+    updateJobMatchStatus,;
+    categorizedMatches: {;
+      newMatches,;
+      viewedMatches;
+      appliedMatches;
+      declinedMatches;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
 }

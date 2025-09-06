@@ -124,6 +124,7 @@ async function main() {
       // non-fatal
     }
   } catch {}
+<<<<<<< HEAD
   // Generate automation ideas if key present
 async /**
  * generateIdeasIfPossible - Function description
@@ -155,6 +156,14 @@ function main() {
   // Minimal status update;
   const status = write_status (automations, { note: 'Cloud autonomous run executed' }),
   // Feedback analysis;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  // Generate automation ideas if key present
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   try {
     // Prefer spawning: node scripts / analyze - feedback.js;
     const { spawn_sync } = require ('child_process'),
@@ -163,13 +172,20 @@ function main() {
 if ( {) {
   $2
 }
-      // non - fatal;
-    }
-  } catch {}
+
+<<<<<<< HEAD
+main().catch((e) => { console.error(e), process.exit(1) });
+
+=======
+=======
+main().catch((e) => { console.error(e), process.exit(1) }),;
+=======
+;
   // Generate automation ideas if key present;
   try {
     await generateIdeasIfPossible ();
   } catch {}
+<<<<<<< HEAD
   console.log('Cloud autonomous run complete:', status.updatedAt)
 }
 
@@ -178,3 +194,16 @@ main().catch((e) => { console.error(e), process.exit(1) });
   console.log ('Cloud autonomous run complete:', status.updated_at);
 }
 main ().catch ((e) => { console.error (e), process.exit (1) }),
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  console && console.log('Cloud autonomous run complete:', status && status.updatedAt)
+}
+;
+main().catch((e) => { console.error(e), process.exit(1) }),;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

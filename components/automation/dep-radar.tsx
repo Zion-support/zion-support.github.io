@@ -3,10 +3,26 @@
   outdated.map (o => (</tr>) )
 }</tbody> </table> </div>)
 }</div>) import fs from 'fs';
-import fs from 'fs';
+<<<<<<< HEAD
+=======
 import path from 'path';
+<<<<<<< HEAD
 type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' }
 export async function getServerSideProps() {
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import fs from 'fs';
+import path from 'path';
+<<<<<<< HEAD
+type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' }
+export async function getServerSideProps() {
+=======
+
+
+type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },
+export async function getServerSideProps() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const file = path.join(process.cwd(), 'datadep-radar.json');
   let outdated: Outdated[] = [];  let generatedAt = '';
   try {
@@ -92,27 +108,41 @@ function DepRadarPage() {
       <h1 className="text - 2xl font - semibold">AI Automation: Dependency Radar</h1>;
       <div className="text - xs text - gray - 500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : ''}</div>;
       {outdated.length === 0 ? (
-        <div className="text - sm text - gray - 600">All dependencies up to date.</div>) : (
-        <div className="overflow - auto border rounded">;
-          <table className="min - w-full text - sm">;
-            <thead className="bg - gray - 50">;
-              <tr>;
-                <th className="text - left p - 2">Package</th>;
-                <th className="text - left p - 2">Current</th>;
-                <th className="text - left p - 2">Latest</th>;
-                <th className="text - left p - 2">Type</th>;
-              </tr>;
-            </thead>;
-            <tbody>;
-              {outdated.map (object => (
-                <tr key={o.name} className="border - t">;
-                  <td className="p - 2">{o.name}</td>;
-                  <td className="p - 2">{o.current}</td>;
-                  <td className="p - 2">{o.latest}</td>;
-                  <td className="p - 2">{o.type}</td>;
-                </tr>))}
-            </tbody>;
-          </table>;
-        </div>)}
-    </div>);
+        <div className="text-sm text-gray-600">All dependencies up to date.</div>
+      ) : (
+        <div className="overflow-auto border rounded">
+          <table className="min-w-full text-sm">
+            <thead className="bg-gray-50">
+              <tr>
+                <th className="text-left p-2">Package</th>
+                <th className="text-left p-2">Current</th>
+                <th className="text-left p-2">Latest</th>
+                <th className="text-left p-2">Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              {outdated.map(o => (
+                <tr key={o.name} className="border-t">
+                  <td className="p-2">{o.name}</td>
+                  <td className="p-2">{o.current}</td>
+                  <td className="p-2">{o.latest}</td>
+                  <td className="p-2">{o.type}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+<<<<<<< HEAD
+    </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </div>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+);
+=======
+    </div>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

@@ -33,8 +33,20 @@ import Card from '../components/ui/Card';
 import {FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck} from 'lucide-react';
 import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} from '@/components/ui/card';
 export default function AuditLogVaultPage() {
+<<<<<<< HEAD
+=======
+  const contactInfo = {
+<<<<<<< HEAD
+=======
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com';
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const contactInfo = {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -42,6 +54,20 @@ export default function AuditLogVaultPage() {
   }
   const features = [
     'Append-only, tamper-evident storageFlexible retention and legal holdsCryptographic digests and attestationsFine-grained search and export bundlesChain-of-custody and access reviewsAlerts for risky access patterns'
+<<<<<<< HEAD
+=======
+=======
+}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+;
+  const features = [;
+    'Append - only, tamper - evident storage_flexible retention and legal holds_cryptographic digests and attestations_fine - grained search and export bundles_chain - of - custody and access reviews_alerts for risky access patterns';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ];
 ;
   return (
@@ -152,9 +178,16 @@ export default function AuditLogVaultPage() {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </UltraAdvancedFuturisticBackground>;
   );
 }
     </UltraAdvancedFuturisticBackground>);
 }
 ;
+=======
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

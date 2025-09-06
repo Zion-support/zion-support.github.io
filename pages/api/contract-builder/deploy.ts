@@ -1,6 +1,19 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { Interface } from 'ethers';
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+
+import { Interface } from 'ethers';
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { Interface } from 'ethers',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Simple ABI for demonstration (release/refund)
 const abi = [
   'constructor(address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release() externalfunction refund() externalfunction client() view returns (address)function talent() view returns (address)function totalAmount() view returns (uint256)'
@@ -19,17 +32,45 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const tx = {
       data: bytecode + data.slice(2)
       // gas and value are intentionally left for client to estimate via MetaMask
+<<<<<<< HEAD
     };
     }
 
+=======
+
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     return res.status(200).json({ abi, tx })
   } catch (e: any) {
     return res.status(400).json({ error: e?.message |'Failed to prepare deployment tx' })
   }
 }
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { Interface } from 'ethers',
 // Simple ABI for demonstration (release / refund);
+=======
+
+=======
+=======
+  try {
+    const iface = new Interface(abi),
+    const data = iface.encodeDeploy(constructorArgs),
+    const tx = {
+      data: bytecode + data.slice(2),
+      // gas and value are intentionally left for client to estimate via MetaMask
+    },
+    return res.status(200).json({ abi, tx })
+  } catch (e: any) {
+    return res.status(400).json({ error: e?.message || 'Failed to prepare deployment tx' })
+  };
+};
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Interface } from 'ethers';
+// Simple ABI for demonstration (release/refund);
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const abi = [;
   'constructor (address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release () externalfunction refund () externalfunction client () view returns (address)function talent () view returns (address)function total_amount () view returns (uint256)';
 ],
@@ -62,3 +103,21 @@ if ( {) {
     return res.status (400).json ({ error: e?.message || 'Failed to prepare deployment tx' });
   }
 }
+<<<<<<< HEAD
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }
+<<<<<<< HEAD
+}
+=======
+
+
+  }
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

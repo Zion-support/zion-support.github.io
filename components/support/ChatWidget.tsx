@@ -97,6 +97,33 @@ export default function ChatWidget() {;
       });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
     } catch {}
   }
+<<<<<<< HEAD
+=======
+=======
+
+          sessionId: sessionIdRef.current,
+          eventType,
+          payload,
+        }),
+<<<<<<< HEAD
+      });    } catch {}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+      });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
+=======
+      });    } catch {}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    } catch {}
+  }
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
@@ -108,10 +135,35 @@ export default function ChatWidget() {;
           tag: 'escalate'
         })
       });
+<<<<<<< HEAD
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })})
       setShowEscalation(true)
     } catch {}
   }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })})
+=======
+
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      setShowEscalation(true)
+=======
+      setShowEscalation(true);    } catch {}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    } catch {}
+  }
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
     if (!text) return;
@@ -177,32 +229,52 @@ export default function ChatWidget() {;
       setIsLoading(false);    }
   }
 
+<<<<<<< HEAD
       if (data?.meta?.intentMatched === false) {
         setFailedIntents((n) => {
 
       if (data?.meta?.intentMatched === false) {;
         setFailedIntents((n) => {;
+=======
+  return (
+    <div className='fixed bottom-4 right-4 z-50'>      }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      if (data?.meta?.intentMatched === false) {
+        setFailedIntents((n) => {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           const next = n + 1;
-          if (next >= 3) {;
-            escalateSupport('Failed to match user intent 3+ times');
+          if (next >= 3) {
+            escalateSupport('Failed to match user intent 3+ times')
           }
-          return next;
-        });
-      } else if (data?.meta?.intentMatched === true) {;
-        setFailedIntents(0);
+          return next
+        })
+      } else if (data?.meta?.intentMatched === true) {
+        setFailedIntents(0)
       }
-    } catch (e) {;
-      setMessages((prev) => [;
+    } catch (e) {
+      setMessages((prev) => [
         ...prev;
+<<<<<<< HEAD
         { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date && Date.now() }]);
     } finally {;
       setIsLoading(false);
         { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date && Date.now() }]);
     } finally {;
       setIsLoading(false);
+=======
+        { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }])
+    } finally {
+      setIsLoading(false)
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
   return (
+<<<<<<< HEAD
     <div className='fixed bottom-4 right-4 z-50'>;
       {!isOpen && (;
         <button
@@ -246,15 +318,47 @@ export default function ChatWidget() {;
                     m && m.role === 'assistant'
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'            {messages && messages.map((m, idx) => (;
               <div key={idx} className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>;
+=======
+
+
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <div
                   className={
                     m && m.role === 'assistant'
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
+<<<<<<< HEAD
                   }>;
                   {m && m.content}
                 </div>;
               </div>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  }
+                >
+                  {m.content}
+                </div>
+              </div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             ))}
             {isLoading && (;
               <div className='text-sm'>;
@@ -279,7 +383,36 @@ export default function ChatWidget() {;
                   <button
                     key={q}
                     onClick={() => onSend(q)}
+<<<<<<< HEAD
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800";
+=======
+                    className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+                  >
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
+
+                  >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    {q}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     {q}
                   </button>;
                 ))}
@@ -303,11 +436,19 @@ export default function ChatWidget() {;
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
+<<<<<<< HEAD
                   className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >            {!showEscalation ? (;
               <div className="flex gap-2">;
 
           <div className="border-t border-gray-200 dark:border-gray-800 p-2">
             {!showEscalation ? (
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >            {!showEscalation ? (
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <div className="flex gap-2">
                 <input
                   value={input}
@@ -319,9 +460,25 @@ export default function ChatWidget() {;
                       onSend()
                     }
                   }}
+<<<<<<< HEAD
                   placeholder="Ask a question";
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500";
                 />;
+=======
+
+=======
+                  placeholder="Ask a question…"
+                  className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                  className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                />
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
@@ -359,8 +516,19 @@ export default function ChatWidget() {;
 );
 }
     </div>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+=======
   );
 }
+<<<<<<< HEAD
 useEffect ( () => {
   // Check condition
 if ( {) {
@@ -734,3 +902,7 @@ if ( {) {
         </div>)}
     </div>);
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

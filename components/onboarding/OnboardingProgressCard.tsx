@@ -9,14 +9,29 @@ export type OnboardingStep = {;
   completed: boolean;
   ctaLabel?: string;
   ctaHref?: string;
+<<<<<<< HEAD
 }
 export type OnboardingProgressCardProps = {
+=======
+<<<<<<< HEAD
+}
+export type OnboardingProgressCardProps = {
+=======
+};
+
+export type OnboardingProgressCardProps = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   title: string;
   steps: OnboardingStep[];
   highlightColorClass?: string;}
 function computePercentage(steps: OnboardingStep[]): number {
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return Math.round((completedCount / steps.length) * 100);  ctaLabel?: string;
   ctaHref?: string
 }
@@ -25,15 +40,44 @@ export type OnboardingProgressCardProps = {
   steps: OnboardingStep[]
   highlightColorClass?: string
 }
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+  return Math.round((completedCount / steps.length) * 100);  ctaLabel?: string;
+  ctaHref?: string
+};
+=======
+  return Math.round((completedCount / steps.length) * 100);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 function computePercentage(steps: OnboardingStep[]): number {
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
   return Math.round((completedCount / steps.length) * 100);
+<<<<<<< HEAD
 export default function OnboardingProgressCard({
+=======
+<<<<<<< HEAD
+export default function OnboardingProgressCard({
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   title
   steps
   highlightColorClass = 'from-neon-green to-neon-blue'
 }: OnboardingProgressCardProps) {
+<<<<<<< HEAD
+=======
+=======
+  title,
+  steps,
+  highlightColorClass = 'from-neon-green to-neon-blue',
+}: OnboardingProgressCardProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const percentage = computePercentage(steps);
   const allDone = percentage === 100;
   const firstIncomplete = steps.find(
@@ -163,6 +207,7 @@ function OnboardingProgressCard() {
           <PartyPopper size={18} />
           <span className="text-sm">All steps completed  great job!</span>
         </div>
+<<<<<<< HEAD
         />;
       </div>;
 
@@ -203,6 +248,59 @@ function OnboardingProgressCard() {
           </li>;
         ))}
       </ul>
+=======
+      ) : null}
+<<<<<<< HEAD
+      {/* Checklist */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      <ul className='mt-4 space-y-2'>
+        {steps.map(step => (
+          <li key={step.id} className='flex items-center justify-between'>
+            <div className='flex items-center gap-2'>
+                <CheckCircle2
+                  className='text-green-600 dark:text-green-400'
+                  size={18}
+                />
+              ) : (
+                <Circle className="text-gray-400" size={18} />
+              )}
+              <span className={step.completed ? 'line-through opacity-70' : ''}>{step.label}</span>
+            </div>
+            {!step.completed && step.ctaHref && step.ctaLabel ? (
+              <Link href={step.ctaHref}>
+                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+=======
+
+<<<<<<< HEAD
+      {/* Checklist */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  {step.ctaLabel}
+                </a>
+              </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ) : null}
+          </li>;
+        ))}
+
+      </ul>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Primary CTA for next step */}
       {!allDone && firstIncomplete ? (;
         <div className='mt-5'>;
@@ -227,6 +325,7 @@ function OnboardingProgressCard() {
         </div>
       ) : null}
     </div>
+<<<<<<< HEAD
   );
 }
         />;
@@ -274,3 +373,20 @@ function OnboardingProgressCard() {
         </div>) : null}
     </div>);
 }
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+
+}
+=======
+}
+=======
+
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

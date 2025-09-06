@@ -1,13 +1,71 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {Card} from "@/components/ui/card";
+import {ThumbsUp, ThumbsDown} from "lucide-react";
+import {toast} from "@/components/ui/use-toast";
+import {HELP_CATEGORIES} from "./help-content";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { ThumbsUp, ThumbsDown } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
+<<<<<<< HEAD
 import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleViewProps {
   article_id: string;
 }
+=======
+<<<<<<< HEAD
+import { HELP_CATEGORIES } from "./help-content";
+interface HelpArticleViewProps {
+=======
+import { HELP_CATEGORIES } from "./help-content",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface HelpArticleViewProps {
+  articleId: string
+}
+
+
+export function HelpArticleView({ articleId }: HelpArticleViewProps) {
+  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
+
+  
+  // Find the article in all categories
+  let article,
+  for (const category of HELP_CATEGORIES) {
+    const found = category.articles.find(a => a.id === articleId),
+    if (found) {
+      article = found,
+      break
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Card } from "@/components/ui/card",;
+import { ThumbsUp, ThumbsDown } from "lucide-react",;
+import { toast } from "@/components/ui/use-toast",;
+import { HELP_CATEGORIES } from "./help-content",;
+interface HelpArticleViewProps {;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  articleId: string;
+}
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
   const [feedbackGiven, setFeedbackGiven] = useState<
@@ -38,6 +96,13 @@ if ( {) {
 }
       article = found;
       break;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
   if (!article) {
@@ -143,6 +208,7 @@ if ( {) {
                 }
                 onClick={() => handleFeedback("not-helpful")}
                 disabled={feedbackGiven !== null}
+<<<<<<< HEAD
               >
                 <ThumbsDown className="h-4 w-4 mr-2" />
                 No
@@ -162,6 +228,30 @@ if ( {) {
                 Contact Support
               </Button>
             </div>
+=======
+
+              >;
+                <ThumbsDown className="h-4 w-4 mr-2" />;
+                No;
+              </Button>;
+            </div>;
+          </div>;
+
+          {feedbackGiven === "not-helpful" && (;
+            <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">;
+              <p className="text-sm text-zion-slate-light mb-2">;
+                We're sorry this article wasn't helpful. Please contact our support team for further assistance.;
+              </p>;
+              <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-light">;
+                Contact Support;
+              </Button>;
+            </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           )}
         </div>
       </Card>
@@ -208,3 +298,43 @@ function format_date (date: string): string {
     day: "numeric",
   });
 }
+<<<<<<< HEAD
+=======
+
+=======
+
+
+function formatDate(date: string): string {
+  return new Date(date).toLocaleDateString("en-US", {
+    year: "numeric"
+    month: "long"
+    day: "numeric"
+<<<<<<< HEAD
+<<<<<<< HEAD
+  });
+}
+
+  })
+=======
+  })
+=======
+  })
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+function formatDate(date: string): string {;
+  return new Date(date).toLocaleDateString("en-US", {;
+    year: "numeric";
+    month: "long";
+    day: "numeric";
+  });
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

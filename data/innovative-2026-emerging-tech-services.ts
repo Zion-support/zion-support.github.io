@@ -42,11 +42,19 @@ import { ServiceVariant } from '../types / service - variants';
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
 
   reviews: number;
 export const innovative2026EmergingTechServices: Innovative2026EmergingTechService[] =
   [
     // Neuromorphic Computing Platform
+=======
+  reviews: number;
+;
+export const innovative2026EmergingTechServices: Innovative2026EmergingTechService[] =;
+  [;
+    // Neuromorphic Computing Platform;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     {
       id: 'neuromorphic-computing-platform-2026'
       name: 'Neuromorphic Computing Platform 2026'
@@ -69,6 +77,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
         'Research collaboration platform'
       ]
       popular: true
+<<<<<<< HEAD
       icon: ''
       color: 'from-purple-500 to-indigo-600'
       textColor: 'text-purple-400'
@@ -88,6 +97,12 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       color: 'from-purple-500 to-indigo-600',
       textColor: 'text-purple-400',
       link: 'https://ziontechgroup && ziontechgroup.com/services/neuromorphic-computing-platform-2026',
+=======
+      icon: '🧠'
+      color: 'from-purple-500 to-indigo-600'
+      textColor: 'text-purple-400'
+      link: 'https://ziontechgroup.com/services/neuromorphic-computing-platform-2026'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       marketPosition:
         'Competitive with Intel Loihi ($2,000+/chip), IBM TrueNorth ($1,500+/chip), and BrainChip ($500+/chip). Our advantage: Cloud-based platform, comprehensive tools, and 70% cost savings.'
       targetAudience:
@@ -145,6 +160,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       rating: 4.9
       reviews: 40
     }
+<<<<<<< HEAD
         'Intel Loihi',
         'IBM TrueNorth',
         'BrainChip',
@@ -169,6 +185,8 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       reviews: 40,
     },
 
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // DNA Computing Platform
     {
       id: 'dna-computing-platform-2026'
@@ -192,6 +210,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
         'Professional bioengineering support'
       ]
       popular: false
+<<<<<<< HEAD
       icon: ''
       color: 'from-green-500 to-emerald-600'
       textColor: 'text-green-400'
@@ -211,6 +230,12 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       color: 'from-green-500 to-emerald-600',
       textColor: 'text-green-400',
       link: 'https://ziontechgroup && ziontechgroup.com/services/dna-computing-platform-2026',
+=======
+      icon: '🧬'
+      color: 'from-green-500 to-emerald-600'
+      textColor: 'text-green-400'
+      link: 'https://ziontechgroup.com/services/dna-computing-platform-2026'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       marketPosition:
         'Competitive with Microsoft DNA Storage ($10,000+/setup), Catalog DNA ($5,000+/setup), and Twist Bioscience ($3,000+/setup). Our advantage: Cloud-based platform, comprehensive tools, and 60% cost savings.'
       targetAudience:
@@ -268,6 +293,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       rating: 4.9
       reviews: 25
     }
+<<<<<<< HEAD
         'Microsoft DNA Storage',
         'Catalog DNA',
         'Twist Bioscience',
@@ -292,6 +318,8 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       reviews: 25,
     },
 
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // Photonic Computing Platform
     {
       id: 'photonic-computing-platform-2026'
@@ -315,6 +343,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
         'Professional engineering support'
       ]
       popular: true
+<<<<<<< HEAD
       icon: ''
       color: 'from-yellow-500 to-orange-600'
       textColor: 'text-yellow-400'
@@ -335,6 +364,12 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       color: 'from-yellow-500 to-orange-600',
       textColor: 'text-yellow-400',
       link: 'https://ziontechgroup && ziontechgroup.com/services/photonic-computing-platform-2026',
+=======
+      icon: '💡'
+      color: 'from-yellow-500 to-orange-600'
+      textColor: 'text-yellow-400'
+      link: 'https://ziontechgroup.com/services/photonic-computing-platform-2026'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       marketPosition:
         'Competitive with Lightmatter ($5,000+/setup), PsiQuantum ($10,000+/setup), and Xanadu ($3,000+/setup). Our advantage: Cloud-based platform, comprehensive tools, and 65% cost savings.'
       targetAudience:
@@ -392,6 +427,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       rating: 4.8
       reviews: 60
     }
+<<<<<<< HEAD
         'Lightmatter',
         'PsiQuantum',
         'Xanadu',
@@ -416,6 +452,8 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       reviews: 60,
     },
 
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // Holographic Display Platform
     {
       id: 'holographic-display-platform-2026'
@@ -438,6 +476,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
         'Professional installation services'
       ]
       popular: false
+<<<<<<< HEAD
       icon: ''
       color: 'from-pink-500 to-rose-600'
       textColor: 'text-pink-400'
@@ -458,6 +497,12 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       color: 'from-pink-500 to-rose-600',
       textColor: 'text-pink-400',
       link: 'https://ziontechgroup && ziontechgroup.com/services/holographic-display-platform-2026',
+=======
+      icon: '🌟'
+      color: 'from-pink-500 to-rose-600'
+      textColor: 'text-pink-400'
+      link: 'https://ziontechgroup.com/services/holographic-display-platform-2026'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       marketPosition:
         'Competitive with Looking Glass ($600-6,000/display), Light Field Lab ($2,000-10,000/display), and RealView ($1,500-8,000/display). Our advantage: Cloud-based platform, comprehensive tools, and 50% cost savings.'
       targetAudience:
@@ -515,6 +560,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       rating: 4.7
       reviews: 100
     }
+<<<<<<< HEAD
         'Looking Glass',
         'Light Field Lab',
         'RealView',
@@ -539,6 +585,8 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       reviews: 100,
     },
 
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // Biometric Authentication Platform
     {
       id: 'biometric-authentication-platform-2026'
@@ -562,12 +610,17 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
         'Enterprise security features'
       ]
       popular: true
+<<<<<<< HEAD
       icon: ''
+=======
+      icon: '🔐'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       color: 'from-blue-500 to-indigo-600'
       textColor: 'text-blue-400'
       link: 'https://ziontechgroup.com/services/biometric-authentication-platform-2026'
       marketPosition:
         'Competitive with Face ID ($0.50-2.00/user/month), Touch ID ($0.30-1.50/user/month), and Voice ID ($0.40-1.80/user/month). Our advantage: Multi-modal authentication, AI-powered recognition, and comprehensive security.'
+<<<<<<< HEAD
         'Facial recognition technology',
         'Fingerprint and palm scanning',
         'Voice and speech recognition',
@@ -584,6 +637,8 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       link: 'https://ziontechgroup && ziontechgroup.com/services/biometric-authentication-platform-2026',
       marketPosition:
         'Competitive with Face ID ($0 && 0.50-2 && 2.00/user/month), Touch ID ($0 && 0.30-1 && 1.50/user/month), and Voice ID ($0 && 0.40-1 && 1.80/user/month). Our advantage: Multi-modal authentication, AI-powered recognition, and comprehensive security.',
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       targetAudience:
         'Financial institutions, Healthcare organizations, Government agencies, Technology companies, Retail businesses, Educational institutions'
       trialDays: 21
@@ -633,6 +688,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       rating: 4.8
       reviews: 175
     }
+<<<<<<< HEAD
         'User authentication',
         'Access control',
         'Identity verification',
@@ -660,6 +716,8 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       reviews: 175,
     },
 
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // Quantum Internet Platform
     {
       id: 'quantum-internet-platform-2026'
@@ -682,6 +740,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
         'Government compliance features'
       ]
       popular: false
+<<<<<<< HEAD
       icon: ''
       color: 'from-cyan-500 to-blue-600'
       textColor: 'text-cyan-400'
@@ -702,6 +761,12 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       color: 'from-cyan-500 to-blue-600',
       textColor: 'text-cyan-400',
       link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-internet-platform-2026',
+=======
+      icon: '🌐'
+      color: 'from-cyan-500 to-blue-600'
+      textColor: 'text-cyan-400'
+      link: 'https://ziontechgroup.com/services/quantum-internet-platform-2026'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       marketPosition:
         'Competitive with Quantum Xchange ($50,000+/setup), ID Quantique ($30,000+/setup), and Toshiba Quantum ($40,000+/setup). Our advantage: Modern architecture, faster deployment, and 70% cost savings.'
       targetAudience:
@@ -753,12 +818,17 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       }
       realImplementation: true
       implementationDetails:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.'
       launchDate: '2026-01-25'
       customers: 60
       rating: 4.9
       reviews: 30
     }
+<<<<<<< HEAD
         'Quantum Xchange',
         'ID Quantique',
         'Toshiba Quantum',
@@ -776,6 +846,11 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       },
       real_implementation: true,
       implementation_details:;
+=======
+  ];
+export const getPopularEmergingTechServices = () => {
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
       launch_date: '2026 - 01 - 25',
       customers: 60,
@@ -783,7 +858,14 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       reviews: 30,
     },
   ];
+<<<<<<< HEAD
 export const getPopularEmergingTechServices = () => {
+=======
+
+
+export const getPopularEmergingTechServices = () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return innovative2026EmergingTechServices.filter(service => service.popular);
 }
 // DNA Computing Platform realImplementation: true;
@@ -867,8 +949,17 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     const price = parseInt(service && service.price.replace('$', '').replace(, ''));
     return price >= minPrice && price <= maxPrice
   })
+<<<<<<< HEAD
 }
 
+=======
+<<<<<<< HEAD
+}
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 reviews: 30;
 }];
 export const getEmergingTechServicesByCategory = (category: string) =>: any {
@@ -889,5 +980,15 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
     const price = parse_int (service.price.replace ('$', '').replace (, ''));
     return price >= min_price && price <= max_price;
   });
+<<<<<<< HEAD
 }
 ;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

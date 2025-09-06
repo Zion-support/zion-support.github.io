@@ -4,6 +4,7 @@ import { useNavigate  } from 'react-router-dom';
 import { Button  } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 interface ProjectHeaderProps {
+<<<<<<< HEAD
   title: string;
 }
 export function ProjectHeader({ title }: ProjectHeaderProps) {
@@ -24,11 +25,44 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
         </Button>;
         <h1 className="text - 2xl md:text - 3xl font - bold truncate max - w-xl">;
           {title}
+<<<<<<< HEAD
         </h1>
       </div>
     </div>
   );
 }
+=======
+
+
+
+=======
+  title: string
+}
+
+export function ProjectHeader({ title }: ProjectHeaderProps) {;
+  const navigate = useNavigate();
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import {useNavigate} from 'react-router-dom';
+import {Button} from '@/components/ui/button';
+import {ArrowLeft} from 'lucide-react';
+interface ProjectHeaderProps {;
+  title: string;
+}
+
+export function ProjectHeader(): any ({ title }: ProjectHeaderProps) {;
+  const navigate = useNavigate();
+
+  return (
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">;
+      <div className="flex items-center">;
+        <Button
+          variant="ghost" 
+          size="sm" 
+          className="mr-2"
+          onClick={() => navigate(-1)}
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         </h1>;
       </div>;
     </div>);

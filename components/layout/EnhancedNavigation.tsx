@@ -1,7 +1,29 @@
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, X, ChevronDown, Search, User, 
+  Settings, LogOut, Bell, Globe, Zap
+} from 'lucide-react';
+import Link from 'next/link';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Menu
   X
   ChevronDown
@@ -23,9 +45,36 @@ import {
   Bot
   Factory
   Car
+<<<<<<< HEAD
+=======
+=======
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  User,
+  Settings,
+  LogOut,
+  Bell,
+  Globe,
+  Zap,
+  Brain,
+  Rocket,
+  Dna,
+  DollarSign,
+  Lock,
+  Wifi,
+  Truck,
+  Gamepad2,
+  Bot,
+  Factory,
+  Car,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "lucide-react";
 import Link from "next/link";
-interface EnhancedNavigationProps {;
+>>>>>>> origin/main
+interface EnhancedNavigationProps {
   className?: string;
 }
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
@@ -447,11 +496,28 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
               transition={{ duration: 0.5, delay: 0.6 }}
               className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300"
             >
               <Search className="w-5 h-5" />
             </motion.button>
+=======
+
+              transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
+              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300">;
+              <Search className="w-5 h-5" />;
+            </motion && motion.button>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Notifications */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -463,12 +529,30 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
               transition={{ duration: 0.5, delay: 0.7 }}
               className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative"
             >
               <Bell className="w-5 h-5" />
               <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
             </motion.button>
+=======
+
+              transition={{ duration: 0 && 0.5, delay: 0 && 0.7 }}
+              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative">;
+              <Bell className="w-5 h-5" />;
+              <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />;
+            </motion && motion.button>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* CTA Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -490,9 +574,25 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
           </motion.button>
         </div>
       </div>
+=======
+
+          </motion && motion.button>;
+        </div>;
+      </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -556,6 +656,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
                   className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300";
               className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300 relative";
             >;
@@ -660,6 +761,40 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       </AnimatePresence>;
     </nav>;
   );
+=======
+                  className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300"
+                >
+                  Get Started Today
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+<<<<<<< HEAD
+  );
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 export default EnhancedNavigation;
 
+<<<<<<< HEAD
+=======
+=======
+      </AnimatePresence>
+    </nav>
+
+};
+
+export default EnhancedNavigation;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+);
+};
+
+
+export default EnhancedNavigation;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

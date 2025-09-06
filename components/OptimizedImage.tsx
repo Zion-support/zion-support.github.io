@@ -24,12 +24,25 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import Image from 'next/image';
 interface OptimizedImageProps {
+<<<<<<< HEAD
   src: string
   alt: string
+<<<<<<< HEAD
 
 interface OptimizedImageProps {;
   src: string,;
   alt: string,;
+=======
+=======
+<<<<<<< HEAD
+  src: string;
+  alt: string;
+=======
+  src: string,
+  alt: string,
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   width?: number;
   height?: number;
   class_name?: string;
@@ -37,7 +50,18 @@ interface OptimizedImageProps {;
   quality?: number;
 }
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
+<<<<<<< HEAD
 const OptimizedImage: React.FC < OptimizedImageProps> = ({
+=======
+<<<<<<< HEAD
+  src,
+  alt,
+  width = 800,
+  height = 600,
+  className = '',
+  priority = false,
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   src;
   alt;
 
@@ -45,8 +69,18 @@ const OptimizedImage: React.FC < OptimizedImageProps> = ({
   height = 600;
   class_name = '';
   priority = false;
+<<<<<<< HEAD
   quality = 75
 
+=======
+<<<<<<< HEAD
+  quality = 75
+
+=======
+>>>>>>> origin/main
+  quality = 75,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }) => {
   return (
     <Image;

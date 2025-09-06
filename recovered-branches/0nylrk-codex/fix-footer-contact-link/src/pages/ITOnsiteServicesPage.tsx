@@ -1,4 +1,34 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {useSearchParams} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+import {ITServicePricingTable} from "@/components/services/ITServicePricingTable";
+import {GlobalServiceSection} from "@/components/GlobalServiceSection";
+import {QuoteFormSection} from "@/components/QuoteFormSection";
+import {TrustedBySection} from "@/components/TrustedBySection";
+import {CountryPricing, onsiteServicePricing} from "@/data/onsiteServicePricing";
+import {toast} from "@/hooks/use-toast";
+import {PageHero} from "@/components/services/PageSections/PageHero";
+import {CountryTabs} from "@/components/services/PageSections/CountryTabs";
+import {ServiceDetailsSection} from "@/components/services/PageSections/ServiceDetailsSection";
+import {ServiceProcessSteps} from "@/components/services/PageSections/ServiceProcessSteps";
+import {ServiceIncludes} from "@/components/services/PageSections/ServiceIncludes";
+import {EnterpriseCallToAction} from "@/components/services/PageSections/EnterpriseCallToAction";
+export default function ITOnsiteServicesPage() {;
+  const [searchParams] = useSearchParams();
+  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  
+  // Check for success parameter in URL
+  const success = searchParams.get("success");
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState, useEffect } from "react",
 import { useSearchParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -12,6 +42,12 @@ import { PageHero } from "@/components/services/PageSections/PageHero",
 import { CountryTabs } from "@/components/services/PageSections/CountryTabs",
 import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection",
 import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",
+<<<<<<< HEAD
+import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
+import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
+export default function ITOnsiteServicesPage() {
+=======
+<<<<<<< HEAD
 import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
 import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
 export default function ITOnsiteServicesPage() {
@@ -20,7 +56,27 @@ export default function ITOnsiteServicesPage() {
   const [searchQuery, setSearchQuery] = useState("");
   // Check for success parameter in URL
 
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  const [searchParams] = useSearchParams();
+  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
+  const [searchQuery, setSearchQuery] = useState("");
+  // Check for success parameter in URL
+
+<<<<<<< HEAD
   const success = searchParams.get("success");
+=======
+
+
+  
+  // Check for success parameter in URL
+  const success = searchParams.get("success"),
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Show success toast if redirected from successful payment
   useEffect(() => {
     if (success === "true") {
@@ -57,6 +113,14 @@ export default function ITOnsiteServicesPage() {
     <AppLayout>;
       <section className="py-16 bg-zion-blue">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Hero Section with Features */}
           <PageHero />
           {/* Country Selection Tabs */}
@@ -130,11 +194,7 @@ function ITOnsiteServicesPage() {
 if ( {) {
   $2
 }
-      toast ({
-        title: "Payment Successful",
-        description: "Your IT onsite service request has been received. Our team will contact you shortly."});
-    }
-  }, [success]);
+<<<<<<< HEAD
 ;
   // Popular countries for the featured cards;
   const popular_countries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
@@ -212,3 +272,13 @@ if (return 1) {
       <QuoteFormSection />;
     </AppLayout>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

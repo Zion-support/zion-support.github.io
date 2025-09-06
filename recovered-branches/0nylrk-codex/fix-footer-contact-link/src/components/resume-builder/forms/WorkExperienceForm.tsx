@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -19,6 +24,27 @@ import { useResume  } from '@/hooks/useResume';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { Card, CardContent  } from '@/components/ui/card';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
+<<<<<<< HEAD
+=======
+=======
+import {useState} from 'react';
+import {useForm} from 'react-hook-form';
+import {zodResolver} from '@hookform/resolvers/zod';
+import {z} from 'zod';
+import {Button} from '@/components/ui/button';
+import {Textarea} from '@/components/ui/textarea';
+import {Input} from '@/components/ui/input';
+import {Checkbox} from '@/components/ui/checkbox';
+import {format} from 'date-fns';
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form';
+import {WorkExperience} from '@/types/resume';
+import {Loader2, Edit, Trash2} from 'lucide-react';
+import {useResume} from '@/hooks/useResume';
+import {Alert, AlertDescription} from '@/components/ui/alert';
+import {Card, CardContent} from '@/components/ui/card';
+import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Define schema for form validation
 
 const workExperienceSchema = z.object({
@@ -36,7 +62,16 @@ interface WorkExperienceFormProps {
   onComplete: () => void
   onBack: () => void
 }
+<<<<<<< HEAD
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
+=======
+<<<<<<< HEAD
+export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
+=======
+
+export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -81,11 +116,116 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           description: ''
           location: ''})
         setEditingId(null)
+<<<<<<< HEAD
+=======
+
+=======
+import { useState } from 'react',;
+import { useForm } from 'react-hook-form',;
+import { zodResolver } from '@hookform/resolvers/zod',;
+import { z } from 'zod',;
+import { Button } from '@/components/ui/button',;
+import { Textarea } from '@/components/ui/textarea',;
+import { Input } from '@/components/ui/input',;
+import { Checkbox } from '@/components/ui/checkbox',;
+import { format } from 'date-fns',;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from '@/components/ui/form',;
+import { WorkExperience } from '@/types/resume',;
+import { Loader2, Edit, Trash2 } from 'lucide-react',;
+import { useResume } from '@/hooks/useResume',;
+import { Alert, AlertDescription } from '@/components/ui/alert',;
+import { Card, CardContent } from '@/components/ui/card',;
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',;
+// Define schema for form validation;
+const workExperienceSchema = z.object({;
+  company_name: z.string().min(1, 'Company name is required'),;
+  role_title: z.string().min(1, 'Job title is required'),;
+  start_date: z.string().min(1, 'Start date is required'),;
+  end_date: z.string().optional(),;
+  is_current: z.boolean().default(false),;
+  description: z.string().optional(),;
+  location: z.string().optional()}),;
+type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>,;
+interface WorkExperienceFormProps {;
+  resumeId: string,;
+  workExperiences: WorkExperience[],;
+  onComplete: () => void,;
+  onBack: () => void;
+}
+;
+export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
+  const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume(),;
+  const [editingId, setEditingId] = useState<string | null>(null),;
+  const [error, setError] = useState<string | null>(null),;
+  // Helper function to format dates to string;
+  const formatDateValue = (dateValue: string | Date | undefined): string => {;
+    if (!dateValue) return '',;
+    if (typeof dateValue === 'string') return dateValue,;
+    return format(dateValue, 'yyyy-MM-dd');
+  },;
+  const form = useForm<WorkExperienceFormValues>({;
+    resolver: zodResolver(workExperienceSchema),;
+    defaultValues: {;
+      company_name: '',;
+      role_title: '',;
+      start_date: format(new Date(), 'yyyy-MM-dd'),;
+      is_current: false,;
+      description: '',;
+      location: ''}}),;
+  const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {;
+    try {;
+      setError(null),;
+      let success,;
+      const experienceData: WorkExperience = {;
+        company_name: data.company_name, // Required field;
+        role_title: data.role_title, // Required field;
+        start_date: data.start_date, // Required field;
+        end_date: data.is_current ? undefined : (data.end_date || undefined),;
+        is_current: data.is_current,;
+        description: data.description,;
+        location: data.location},;
+      if (editingId) {;
+        success = await updateWorkExperience(editingId, experienceData);
+      } else {;
+        success = await addWorkExperience(resumeId, experienceData);
+      }
+;
+      if (success) {;
+        form.reset({;
+          company_name: '',;
+          role_title: '',;
+          start_date: format(new Date(), 'yyyy-MM-dd'),;
+          is_current: false,;
+          description: '',;
+          location: ''}),;
+        setEditingId(null);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
     } catch (err: any) {
       setError(err.message |'An error occurred')
     }
+<<<<<<< HEAD
   }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
+  };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
     form.reset({
@@ -97,7 +237,37 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     if (confirm('Are you sure you want to delete this work experience?')) {
       await deleteWorkExperience(id)
     }
+<<<<<<< HEAD
   }
+=======
+<<<<<<< HEAD
+  }
+  const handleEnhanceDescription = (enhancedContent: string) => {
+    form.setValue('description', enhancedContent)
+  }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  },;
+  const handleEdit = (work: WorkExperience) => {;
+    setEditingId(work.id!),;
+    form.reset({;
+      ...work,;
+      start_date: formatDateValue(work.start_date),;
+      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined});
+  },;
+  const handleDelete = async (id: string) => {;
+    if (confirm('Are you sure you want to delete this work experience?')) {;
+      await deleteWorkExperience(id);
+    }
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
   }

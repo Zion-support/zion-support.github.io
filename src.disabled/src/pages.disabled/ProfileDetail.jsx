@@ -32,5 +32,18 @@ export default function ProfileDetail({ }: ProfileDetailProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD:src.disabled/src/pages.disabled/ProfileDetail.jsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }

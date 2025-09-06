@@ -28,21 +28,64 @@ interface TryItProps {
   path: string; // full URL or relative
   requiresAuth: boolean;
 export default function TryItConsole({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   method
   path
   requiresAuth
 }: TryItProps) {
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
+<<<<<<< HEAD
 
+=======
+
+=======
+
+  method,
+  path,
+  requiresAuth,
+}: TryItProps) {;
+  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   path: string, // full URL or relative
   requiresAuth: boolean
 }
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
+<<<<<<< HEAD
 
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os')
 
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),
   const [token, setToken] = useState('');
+=======
+<<<<<<< HEAD
+
+interface TryItProps {;
+  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+  path: string; // full URL or relative;
+  requiresAuth: boolean;
+
+export default function TryItConsole(): any ({;
+  method,;
+  path,;
+  requiresAuth,;
+}: TryItProps) {;
+  const [baseUrl, setBaseUrl] = useState('https://api && api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
+  path: string, // full URL or relative;
+  requiresAuth: boolean;
+}
+
+export default function TryItConsole(): any ({ method, path, requiresAuth }: TryItProps) {;
+  const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false);
@@ -78,11 +121,20 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
       setLoading(false);    }
   }
   return (
+<<<<<<< HEAD
     <div className='space-y-2'>;
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
       const res = await fetch(url, {;
       const headers: Record<string, string> = { 'Content-Type': 'application/json' };
       if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
+=======
+    <div className='space-y-2'>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       const res = await fetch(url, {
         method;
         headers;
@@ -94,6 +146,16 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
       setResponse(String(e?.message |e))
     } finally {
       setLoading(false)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
   return (
@@ -229,7 +291,12 @@ if (headers['Authorization'] = `Bearer ${token}`) {
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={method} readOnly />
         </div>
       </div>
+<<<<<<< HEAD
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
+=======
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div>
           <label className='block text-sm mb-1'>Request Body (JSON)</label>
           <textarea
@@ -268,6 +335,7 @@ if (headers['Authorization'] = `Bearer ${token}`) {
     </div>
   );
 }
+<<<<<<< HEAD
           <label className='block text - sm mb - 1'>Method</label>;
           <input;
             className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary';
@@ -313,3 +381,22 @@ if (headers['Authorization'] = `Bearer ${token}`) {
       </div>;
     </div>);
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+<<<<<<< HEAD
+
+    }
+  }
+  return (
+    <div className='space-y-2'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
+
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+        <div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+        <div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

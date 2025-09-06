@@ -1,8 +1,42 @@
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+=======
+import {
+<<<<<<< HEAD
+=======
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Rocket,
+  Brain,
+  Atom,
+  Cpu,
+  Target,
+  Microscope,
+  Shield,
+  Zap,
+  Sparkles,
+  Menu,
+  X,
+  Search,
+  ChevronDown,
+  Home,
+  Briefcase,
+  DollarSign,
+  BookOpen,
+  Users,;
+  MessageCircle,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, ;
+  Cpu, Target, Microscope, Shield, Zap, Sparkles;
+  Menu, X, Search, ChevronDown, Home, Briefcase, 
+  DollarSign, BookOpen, Users, MessageCircle
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Phone
   Mail
   MapPin
@@ -106,6 +140,7 @@ const contactInfo = {
   /* Contact Button */
 }<motion.div whileHover= {  {  website: 'https://ziontechgroup.com'
 }
+<<<<<<< HEAD
 import {;
   Phone,;
   Mail,;
@@ -134,6 +169,198 @@ import {;
   Cpu, Target, Microscope, Shield, Zap, Sparkles;
   Menu, X, Search, ChevronDown, Home, Briefcase, ;
   DollarSign, BookOpen, Users, MessageCircle;
+=======
+const serviceCategories = [
+    title: '🧠 Revolutionary AI'
+    icon: Brain
+    color: 'from-violet-500 to-purple-600'
+    services: [
+      {
+        name: 'AI Consciousness Evolution'
+        href: '/ai-consciousness-evolution-platform'
+        description: 'Advanced AI consciousness'
+        price: '$2,999/month'
+      }
+      {
+        name: 'AI Emotional Intelligence'
+        href: '/ai-emotional-intelligence-platform'
+        description: 'Emotional AI platform'
+        price: '$1,999/month'
+      }
+      {
+        name: 'AI Creativity Orchestrator'
+        href: '/ai-creativity-orchestrator'
+        description: 'Creative AI solutions'
+        price: '$1,499/month'
+      }
+      {
+        name: 'AI Autonomous Business Manager'
+        href: '/ai-autonomous-business-manager'
+        description: 'Autonomous business AI'
+        price: '$3,999/month'
+      }
+    ]
+  },  {      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', description: 'Advanced AI consciousness', price: '$2,999/month' }
+      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'Emotional AI platform', price: '$1,999/month' }
+      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Creative AI solutions', price: '$1,499/month' }
+      { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Autonomous business AI', price: '$3,999/month' }
+    ]
+  }
+    title: '⚛️ Quantum & Emerging Tech'
+    icon: Atom
+    color: 'from-indigo-500 to-blue-600'
+    services: [
+      {
+        name: 'Quantum Internet Security'
+        href: '/quantum-internet-security-gateway'
+        description: 'Quantum security'
+        price: '$4,999/month'
+      }
+      {
+        name: 'Biotech DNA Computing'
+        href: '/biotech-dna-computing-platform'
+        description: 'DNA computing platform'
+        price: '$3,999/month'
+      }
+      {
+        name: 'Quantum Financial Trading'
+        href: '/quantum-financial-trading-platform'
+        description: 'Quantum trading'
+        price: '$5,999/month'
+      }
+      {
+        name: 'DNA Computing Platform'
+        href: '/dna-computing-platform'
+        description: 'Molecular computing'
+        price: '$1,299/month'
+      }
+      {
+        name: 'Photonic Computing Infrastructure'
+        href: '/photonic-computing-infrastructure'
+        description: 'Light-speed computing'
+        price: '$699/month'
+      }
+      {
+        name: 'Swarm Robotics Platform'
+        href: '/swarm-robotics-platform'
+        description: 'Collective robot intelligence'
+        price: '$1,199/month'
+      }
+    ]
+  },  {      { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway', description: 'Quantum security', price: '$4,999/month' }
+      { name: 'Biotech DNA Computing', href: '/biotech-dna-computing-platform', description: 'DNA computing platform', price: '$3,999/month' }
+      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', description: 'Quantum trading', price: '$5,999/month' }
+      { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing', price: '$1,299/month' }
+      { name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month' }
+      { name: 'Swarm Robotics Platform', href: '/swarm-robotics-platform', description: 'Collective robot intelligence', price: '$1,199/month' }
+    ]
+  }
+    title: '🏙️ Enterprise IT Solutions'
+    icon: Cpu
+    color: 'from-blue-500 to-cyan-600'
+    services: [
+      {
+        name: 'Autonomous DevOps Platform'
+        href: '/autonomous-devops-platform'
+        description: 'Self-managing DevOps'
+        price: '$2,499/month'
+      }
+      {
+        name: 'Zero Trust Network Architecture'
+        href: '/zero-trust-network-architecture'
+        description: 'Zero trust security'
+        price: '$1,999/month'
+      }
+      {
+        name: 'Edge Computing Orchestration'
+        href: '/edge-computing-orchestration'
+        description: 'Edge computing platform'
+        price: '$1,799/month'
+      }
+      {
+        name: 'AI IT Operations Center'
+        href: '/ai-it-operations-center'
+        description: 'AI-powered IT ops'
+        price: '$2,999/month'
+      }
+    ]
+  },  {      { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Self-managing DevOps', price: '$2,499/month' }
+      { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Zero trust security', price: '$1,999/month' }
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Edge computing platform', price: '$1,799/month' }
+      { name: 'AI IT Operations Center', href: '/ai-it-operations-center', description: 'AI-powered IT ops', price: '$2,999/month' }
+    ]
+  }
+    title: '🌌 Space & Metaverse Tech'
+    icon: Rocket
+    color: 'from-teal-500 to-emerald-600'
+    services: [
+      {
+        name: 'Space Mining Automation'
+        href: '/space-mining-automation-platform'
+        description: 'Space mining platform'
+        price: '$9,999/month'
+      }
+      {
+        name: 'Metaverse Development'
+        href: '/metaverse-development-platform'
+        description: 'Metaverse platform'
+        price: '$3,999/month'
+      }
+      {
+        name: 'Virtual Event Holograms'
+        href: '/virtual-event-hologram-platform'
+        description: 'Holographic events'
+        price: '$2,499/month'
+      }
+    ]
+  }
+];
+const quickLinks = [
+  {
+    name: 'Services Overview'
+    href: '/enhanced-services-overview'
+    icon: Globe
+    color: 'from-cyan-500 to-blue-600'
+  }
+  {
+    name: 'AI Services'
+    href: '/ai-services'
+    icon: Brain
+    color: 'from-violet-500 to-purple-600'
+  }
+  {
+    name: 'Quantum Tech'
+    href: '/quantum-services'
+    icon: Atom
+    color: 'from-indigo-500 to-blue-600'
+  }
+  {
+    name: 'Space Tech'
+    href: '/space-technology'
+    icon: Rocket
+    color: 'from-teal-500 to-emerald-600'
+  }
+  {
+    name: 'Enterprise IT'
+    href: '/enterprise-it'
+    icon: Cpu
+    color: 'from-blue-500 to-cyan-600'
+  }
+  {
+    name: 'Micro SAAS'
+    href: '/enhanced-micro-saas-showcase'
+    icon: Target
+    color: 'from-green-500 to-yellow-600'
+  },];  { name: 'Services Overview', href: '/enhanced-services-overview', icon: Globe, color: 'from-cyan-500 to-blue-600' }
+  { name: 'AI Services', href: '/ai-services', icon: Brain, color: 'from-violet-500 to-purple-600' }
+  { name: 'Quantum Tech', href: '/quantum-services', icon: Atom, color: 'from-indigo-500 to-blue-600' }
+  { name: 'Space Tech', href: '/space-technology', icon: Rocket, color: 'from-teal-500 to-emerald-600' }
+  { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' }
+  { name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }
+<<<<<<< HEAD
+export default function UltraFuturisticNavigation2033() {
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
@@ -536,6 +763,16 @@ const quick_links = [;
 
 export default function UltraFuturisticNavigation2033() {
   const [isOpen, setIsOpen] = useState(false)
+<<<<<<< HEAD
+=======
+=======
+
+
+export default function UltraFuturisticNavigation2033() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [isOpen, setIsOpen] = useState(false);
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -807,6 +1044,14 @@ function UltraFuturisticNavigation2033() {
                   <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />;
                 </button>;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Mega Menu */}
                 <AnimatePresence>;
                   {activeCategory === 'services' && (;
@@ -817,12 +1062,27 @@ function UltraFuturisticNavigation2033() {
                       transition={{ duration: 0 && 0.2 }}
                       onMouseEnter={() => setActiveCategory('services')}
                       onMouseLeave={() => setActiveCategory(null)}
+<<<<<<< HEAD
                       className='absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4';
                     >;
                       <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>;
                         {serviceCategories && serviceCategories.map(category => (;
                           <div key={category && category.title} className='space-y-4'>;
                             <div className='flex items-center space-x-3'>;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    >
+                      <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
+                        {serviceCategories.map(category => (
+                          <div key={category.title} className='space-y-4'>
+                            <div className='flex items-center space-x-3'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                               <div
                                 className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category && category.color} flex items-center justify-center`}>;
                                 <category && category.icon className='w-5 h-5 text-white' />;
@@ -891,16 +1151,26 @@ function UltraFuturisticNavigation2033() {
                                     </div>
                                     <p className="text-sm text-gray-400">{service.description}</p>
                                   </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                                 </Link>
                               ))}
-                            </div>;
-                          </div>;
+                            </div>
+                          </div>
                         ))}
-                      </div>;
-                    </motion && motion.div>;
+                      </div>
+                    </motion.div>
                   )}
                 </AnimatePresence>
               </div>
+<<<<<<< HEAD
               {/* Quick Links */}
               {quickLinks && quickLinks.map(link => (;
                 <Link
@@ -921,6 +1191,54 @@ function UltraFuturisticNavigation2033() {
                 whileHover={{ scale: 1 && 1.05 }}
                 whileTap={{ scale: 0 && 0.95 }}>;
                 <Link
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              {/* Quick Links */}
+              {quickLinks.map(link => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+<<<<<<< HEAD
+                  className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >              {quickLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+<<<<<<< HEAD
+                  {link.name}
+                </Link>
+              ))}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                  className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
+
+                >
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  {link.name}
+                </Link>
+              ))}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+              {/* Contact Button */}
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   href='/contact'
                   className='px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg'                >                  href="/contact"
                   className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg"
@@ -932,6 +1250,7 @@ function UltraFuturisticNavigation2033() {
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>;
 
+<<<<<<< HEAD
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
               <button
@@ -1004,6 +1323,15 @@ function UltraFuturisticNavigation2033() {
           </div>;
         </div>;
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -1011,9 +1339,20 @@ function UltraFuturisticNavigation2033() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0 && 0.3 }}
               className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20'
               <div className='px-4 py-6 space-y-6'>;
+=======
+
+            >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              <div className='px-4 py-6 space-y-6'>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Mobile Services */}
                 <div className='space-y-4'>;
                   <h3 className='text-lg font-semibold text-white'>Services</h3>;
@@ -1045,7 +1384,21 @@ function UltraFuturisticNavigation2033() {
                       </div>;
                     </div>;
                   ))}
+<<<<<<< HEAD
                 </div>
+=======
+
+                </div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Mobile Quick Links */}
                 <div className='space-y-4'>;
                   <h3 className='text-lg font-semibold text-white'>;
@@ -1068,10 +1421,24 @@ function UltraFuturisticNavigation2033() {
                         {link && link.name}
                       </Link>;
                     ))}
+<<<<<<< HEAD
                   </div>
                 </div>
                 {/* Mobile Contact Button */}
                 <div className='pt-4'>;
+=======
+
+                  </div>;
+                </div>;
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <Link
                     href='/contact'
                     onClick={closeMenu}
@@ -1189,3 +1556,25 @@ function UltraFuturisticNavigation2033() {
 }</div>) );
 }</div> </div> > Get Started </a> </div> </div> </motion.div>);
 }</AnimatePresence> </nav> </>) }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+  /* Mobile Menu */ 
+}<AnimatePresence>) ) 
+}</div> </div>) ) 
+}</div>) ) 
+}</div> </div> > Get Started </a> </div> </div> </motion.div>) 
+<<<<<<< HEAD
+}</AnimatePresence> </nav> </>)
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+}</AnimatePresence> </nav> </>) }
+=======
+}</AnimatePresence> </nav> </>)
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

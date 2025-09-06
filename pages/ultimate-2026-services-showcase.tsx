@@ -1,4 +1,118 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import React, { useState, useMemo } from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
+import {
+  Search, Star, DollarSign, CheckCircle,
+  ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List,
+  ChevronDown, Sparkles
+} from 'lucide-react',;
+import { ultimate2026Services } from '../data/ultimate-2026-services',;
+import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations',;
+export default function Ultimate2026ServicesShowcase() {
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<string>('name'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
+
+  // Combine all services
+  const allServices = [
+    ...ultimate2026Services,
+    ...revolutionary2026Innovations
+  ],
+
+  // Dynamic category counts
+  const aiCount = allServices.filter(service =>
+    service.category?.includes('AI') || service.category?.includes('Machine Learning')
+  ).length,
+  const quantumCount = allServices.filter(service =>
+    service.category?.includes('Quantum') || service.category?.includes('Space')
+  ).length,
+  const enterpriseCount = allServices.filter(service =>
+    service.category?.includes('Enterprise') || service.category?.includes('IT')
+  ).length,
+  const emergingCount = allServices.filter(service =>
+    service.category?.includes('Emerging') || service.category?.includes('Innovation')
+  ).length,
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
+    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumCount },
+    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
+    { id: 'emerging', name: 'Emerging Tech', icon: '✨', count: emergingCount }
+  ],
+
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
+    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
+    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
+    { id: 'enterprise', name: 'Custom pricing', range: 'Custom' }
+  ],
+
+  // Filter and sort services
+  const filteredServices = useMemo(() => {
+    let filtered = allServices.filter(service => {
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase()),
+
+      const matchesCategory = selectedCategory === 'all' ||
+        (selectedCategory === 'ai' && service.category.includes('AI')) ||
+        (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||
+        (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT'))) ||
+        (selectedCategory === 'emerging' && (service.category.includes('Emerging') || service.category.includes('Innovation'))),
+
+      const matchesPrice = selectedPriceRange === 'all' ||
+        (selectedPriceRange === 'low' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
+        (selectedPriceRange === 'medium' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) <= 5000) ||
+        (selectedPriceRange === 'high' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) > 5000) ||
+        (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing'),
+
+      return matchesSearch && matchesCategory && matchesPrice
+    }),
+
+    // Sort services
+    switch (sortBy) {
+      case 'name':
+        filtered.sort((a, b) => a.name.localeCompare(b.name)),
+        break,
+      case 'price':
+        filtered.sort((a, b) => {
+          const priceA = a.price === 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, '')),
+          const priceB = b.price === 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g, '')),
+          return priceA - priceB
+        }),
+        break,
+      case 'popularity':
+        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
+        break,
+      case 'rating':
+        filtered.sort((a, b) => b.rating - a.rating),
+        break,
+      default: break
+    }
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -134,8 +248,130 @@ export default function Ultimate2026ServicesShowcase() {
       default: break
     }
     return filtered
+<<<<<<< HEAD
   }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy])
   const featuredServices = allServices.filter(service => service.popular).slice(0, 6)
+=======
+
+  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
+
+  const featuredServices = allServices.filter(service => service.popular).slice(0, 6);
+
+
+=======
+
+import {;
+  Search, Star, DollarSign, CheckCircle,;
+  ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List,;
+  ChevronDown, Sparkles;
+} from 'lucide-react',;
+import { ultimate2026Services } from '../data/ultimate-2026-services';
+import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
+export default function Ultimate2026ServicesShowcase(req, res) {
+  try {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('name');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const contactInfo = {;
+    mobile: '+1 302 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 1008 Middletown DE 19709';
+    website: 'https://ziontechgroup.com';
+  };
+  // Combine all services;
+  const allServices = [;
+    ...ultimate2026Services;
+    ...revolutionary2026Innovations;
+  ];
+  // Dynamic category counts;
+  const aiCount = allServices.filter(service =>;
+    service.category?.includes('AI') || service.category?.includes('Machine Learning');
+  ).length;
+  const quantumCount = allServices.filter(service =>;
+    service.category?.includes('Quantum') || service.category?.includes('Space');
+  ).length;
+  const enterpriseCount = allServices.filter(service =>;
+    service.category?.includes('Enterprise') || service.category?.includes('IT');
+  ).length;
+  const emergingCount = allServices.filter(service =>;
+    service.category?.includes('Emerging') || service.category?.includes('Innovation');
+  ).length;
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },;
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },;
+    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumCount },;
+    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },;
+    { id: 'emerging', name: 'Emerging Tech', icon: '✨', count: emergingCount   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const priceRanges = [;
+    { id: 'all', name: 'All Prices', range: 'All' },;
+    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },;
+    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },;
+    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },;
+    { id: 'enterprise', name: 'Custom pricing', range: 'Custom'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  // Filter and sort services;
+  const filteredServices = useMemo(() => {;
+    let filtered = allServices.filter(service => {;
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' ||;
+        (selectedCategory === 'ai' && service.category.includes('AI')) ||;
+        (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||;
+        (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT'))) ||;
+        (selectedCategory === 'emerging' && (service.category.includes('Emerging') || service.category.includes('Innovation')));
+      const matchesPrice = selectedPriceRange === 'all' ||;
+        (selectedPriceRange === 'low' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||;
+        (selectedPriceRange === 'medium' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) <= 5000) ||;
+        (selectedPriceRange === 'high' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) > 5000) ||;
+        (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing'),;
+      return matchesSearch && matchesCategory && matchesPrice;
+    }),;
+    // Sort services;
+    switch (sortBy) {;
+      case 'name':;
+        filtered.sort((a, b) => a.name.localeCompare(b.name)),;
+        break,;
+      case 'price':;
+        filtered.sort((a, b) => {;
+          const priceA = a.price === 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, '')),;
+          const priceB = b.price === 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g, '')),;
+          return priceA - priceB;
+        }),;
+        break,;
+      case 'popularity':;
+        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),;
+        break,;
+      case 'rating':;
+        filtered.sort((a, b) => b.rating - a.rating),;
+        break,;
+      default: break;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    return filtered
+  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
+  const featuredServices = allServices.filter(service => service.popular).slice(0, 6),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <>
       <Head>
@@ -205,6 +441,27 @@ export default function Ultimate2026ServicesShowcase() {
       {/* Hero Section */}
       <section className="relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - gray - 900 to - black">;
         {/* Animated Background */}
+<<<<<<< HEAD
+=======
+
+
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
+        {/* Animated Background */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
@@ -225,7 +482,26 @@ export default function Ultimate2026ServicesShowcase() {
               Discover revolutionary AI consciousness simulation, quantum neural interfaces, autonomous AI agents
               and cutting-edge enterprise solutions that will transform your business in 2026 and beyond.
             </p>
+<<<<<<< HEAD
             {/* Service Statistics */}
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            {/* Service Statistics */}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {/* Service Statistics */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
@@ -256,12 +532,42 @@ export default function Ultimate2026ServicesShowcase() {
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
         {/* Floating Elements */}
+=======
+
+
+        {/* Floating Elements */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <div className="absolute top-20 left-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-10 w-24 h-24 bg-pink-500/20 rounded-full blur-xl animate-pulse delay-500"></div>
       </section>
+<<<<<<< HEAD
       {/* Contact Bar */}
+=======
+
+
+      {/* Contact Bar */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <section className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 text-white py-4">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center space-x-6 mb-4 md:mb-0">
@@ -290,8 +596,26 @@ export default function Ultimate2026ServicesShowcase() {
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+=======
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Revolutionary Services</span>
@@ -303,9 +627,34 @@ export default function Ultimate2026ServicesShowcase() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (
               <motion.div
+<<<<<<< HEAD
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+=======
+
+
+                key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 transition={{ duration: 0.8, delay: index * 0.1 }} className="group relative">
                 <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -329,6 +678,37 @@ export default function Ultimate2026ServicesShowcase() {
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-2xl font-bold text-cyan-400">
                         {service.price}
+<<<<<<< HEAD
+=======
+=======
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+
+                      {service.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </h3>
+                    <p className="text-gray-400 mb-4 line-clamp-3">
+                      {service.description  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </p>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-2xl font-bold text-cyan-400">
+                        {service.price  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         <span className="text-sm text-gray-400">{service.period}</span>
                       </div>
                       <div className="flex items-center text-yellow-400">
@@ -357,8 +737,26 @@ export default function Ultimate2026ServicesShowcase() {
       <section id="services" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+=======
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               All <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Revolutionary Services</span>
@@ -373,6 +771,27 @@ export default function Ultimate2026ServicesShowcase() {
           {/* Filters and Search */}
           <div className="mb - 12 space - y-6">;
             {/* Search Bar */}
+<<<<<<< HEAD
+=======
+
+
+          {/* Filters and Search */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <div className="mb-12 space-y-6">
+            {/* Search Bar */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <div className="relative max-w-2xl mx-auto">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
@@ -390,7 +809,20 @@ export default function Ultimate2026ServicesShowcase() {
               {/* Category Filter */}
               <div className="relative">
                 <select
+<<<<<<< HEAD
                   value={selectedCategory}
+=======
+                  value={selectedCategory  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   onChange={(e) => setSelectedCategory(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
@@ -404,6 +836,28 @@ export default function Ultimate2026ServicesShowcase() {
               <div className="relative">;
                 <select;
                   value={selectedPriceRange}
+<<<<<<< HEAD
+=======
+
+
+              {/* Price Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <div className="relative">
+                <select
+                  value={selectedPriceRange  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   onChange={(e) => setSelectedPriceRange(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
                   {priceRanges.map((range) => (
                     <option key={range.id} value={range.id}>
@@ -416,7 +870,20 @@ export default function Ultimate2026ServicesShowcase() {
               {/* Sort */}
               <div className="relative">
                 <select
+<<<<<<< HEAD
                   value={sortBy}
+=======
+                  value={sortBy  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   onChange={(e) => setSortBy(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
                   <option value="name">Sort by Name</option>
                   <option value="price">Sort by Price</option>
@@ -425,7 +892,22 @@ export default function Ultimate2026ServicesShowcase() {
                 </select>
                 <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
               </div>
+<<<<<<< HEAD
               {/* View Mode */}
+=======
+
+
+              {/* View Mode */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <div className="flex bg-gray-800 border border-gray-700 rounded-lg p-1">
                 <button
                   onClick={() => setViewMode('grid')}
@@ -442,6 +924,7 @@ export default function Ultimate2026ServicesShowcase() {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
           {/* Services Grid/List */}
           <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
             {filteredServices.map((service, index) => (
@@ -451,6 +934,76 @@ export default function Ultimate2026ServicesShowcase() {
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.05 }}
                 className={viewMode === 'grid' ? 'group relative' : 'group relative bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300'}
+=======
+
+                    </option>))}
+                </select>;
+                <ChevronDown className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 4 h - 4 pointer - events - none" />;
+              </div>;
+              {/* Sort */}
+              <div className="relative">;
+                <select;
+                  value={sort_by}
+                  on_change={(e) => setSortBy (e.target.value)} className="appearance - none bg - gray - 800 border border - gray - 700 rounded - lg px - 4 py - 2 text - white focus:outline - none focus:border - cyan - 500 focus:ring - 2 focus:ring - cyan - 500 / 20 transition - all">;
+                  <option value="name">Sort by Name</option>;
+                  <option value="price">Sort by Price</option>;
+                  <option value="popularity">Sort by Popularity</option>;
+                  <option value="rating">Sort by Rating</option>;
+                </select>;
+                <ChevronDown className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 4 h - 4 pointer - events - none" />;
+              </div>;
+              {/* View Mode */}
+              <div className="flex bg - gray - 800 border border - gray - 700 rounded - lg p - 1">;
+                <button;
+                  on_click={() => setViewMode ('grid')}
+                  className={`p - 2 rounded ${view_mode === 'grid' ? 'bg - cyan - 500 text - white' : 'text - gray - 400 hover:text - white'}`}
+                >;
+                  <Grid className="w - 4 h - 4" />;
+                </button>;
+                <button;
+                  on_click={() => setViewMode ('list')}
+                  className={`p - 2 rounded ${view_mode === 'list' ? 'bg - cyan - 500 text - white' : 'text - gray - 400 hover:text - white'}`}
+                >;
+                  <List className="w - 4 h - 4" />;
+                </button>;
+              </div>;
+            </div>;
+          </div>;
+          {/* Services Grid / List */}
+          <div className={view_mode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' : 'space - y-6'}>;
+            {filtered_services.map ((service, index) => (
+              <motion.div;
+                key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.8, delay: index * 0.05 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className={viewMode === 'grid' ? 'group relative' : 'group relative bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               >
                 {viewMode === 'grid' ? (
                   <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
@@ -475,6 +1028,37 @@ export default function Ultimate2026ServicesShowcase() {
                       <div className="flex items-center justify-between mb-4">
                         <div className="text-2xl font-bold text-cyan-400">
                           {service.price}
+<<<<<<< HEAD
+=======
+=======
+                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+
+                        {service.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </h3>
+                      <p className="text-gray-400 mb-4 line-clamp-3">
+                        {service.description  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </p>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-2xl font-bold text-cyan-400">
+                          {service.price  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           <span className="text-sm text-gray-400">{service.period}</span>
                         </div>
                         <div className="flex items-center text-yellow-400">
@@ -500,7 +1084,22 @@ export default function Ultimate2026ServicesShowcase() {
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
                         <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+<<<<<<< HEAD
                           {service.name}
+=======
+
+
+                          {service.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         </h3>
                         {service.popular && (
                           <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center">
@@ -536,6 +1135,21 @@ export default function Ultimate2026ServicesShowcase() {
                     <div className="text - right">;
                       <div className="text - 2xl font - bold text - cyan - 400 mb - 2">;
                         {service.price}
+<<<<<<< HEAD
+=======
+
+
+                        {service.price  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         <span className="text-sm text-gray-400">{service.period}</span>
                       </div>
                       <Link
@@ -545,6 +1159,7 @@ export default function Ultimate2026ServicesShowcase() {
                       </Link>
                     </div>
                   </div>
+<<<<<<< HEAD
                 )}
               </motion.div>
             ))}
@@ -552,6 +1167,34 @@ export default function Ultimate2026ServicesShowcase() {
           {filteredServices.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
+=======
+
+
+                )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </motion.div>;
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+          {filteredServices.length === 0 && (;
+            <motion.div;
+              initial={{ opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               animate={{ opacity: 1 }} className="text-center py-20">
               <div className="text-6xl mb-4"></div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
@@ -561,6 +1204,28 @@ export default function Ultimate2026ServicesShowcase() {
         </div>
       </section>
       {/* CTA Section */}
+<<<<<<< HEAD
+=======
+
+
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>;
+      </section>;
+      {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <section className="py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto text-center px-6">
           <motion.div
@@ -604,7 +1269,22 @@ export default function Ultimate2026ServicesShowcase() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Footer Contact */}
+=======
+
+
+      {/* Footer Contact */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -668,6 +1348,7 @@ export default function Ultimate2026ServicesShowcase() {
         </div>
       </section>
     </>
+<<<<<<< HEAD
   )
 }
           >;
@@ -770,3 +1451,23 @@ export default function Ultimate2026ServicesShowcase() {
       </section>;
     </>);
 }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 }}};
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ursor/automate-test-fix-improve-and-merge-code-48f3; const createJestConfig = nextJest({ \"dir\": \'./}) const customJestConfig = { \"setupFilesAfterEnv\": \'[\',<rootDir>/jest.setup.js\'],\"testEnvironment\": \'jsdom,\"moduleNameMapper\": {,^@/(.*)$\': \'<rootDir>/$1},\"collectCoverageFrom\": \'[\',components*.{js,jsx,ts,tsx},pages*.{js,jsx,ts,tsx},utils*.{js,jsx,ts,tsx},!**node_modules/** \' ],\"testPathIgnorePatterns\": [\'<rootDir>/.next/,<rootDir>/node_modules/\',<rootDir>/out/ \',<rootDir>/__tests__.disabled/\',<rootDir>/tests.disabled/ \',<rootDir>/src_backup/\',<rootDir>/test.disabled/ \',<rootDir>/plugins.disabled/\',<rootDir>/supabase.disabled/ \',<rootDir>/dao/\',<rootDir>/pages.disabled/\'; ]} ; module.exports = createJestConfig(customJestConfig)
 ursor/automate-test-fix-improve-and-merge-code-48f3; const createJestConfig = nextJest({ dir: "./}) const customJestConfig = { setupFilesAfterEnv: "[",<rootDir>/jest.setup.js"],testEnvironment: "jsdom,moduleNameMapper: {,^@/(.*)$": "<rootDir>/$1},collectCoverageFrom: "[",components*.{js,jsx,ts,tsx},pages*.{js,jsx,ts,tsx},utils*.{js,jsx,ts,tsx},!**node_modules/** " ],testPathIgnorePatterns: ["<rootDir>/.next/,<rootDir>/node_modules/",<rootDir>/out/ ",<rootDir>/__tests__.disabled/",<rootDir>/tests.disabled/ ",<rootDir>/src_backup/",<rootDir>/test.disabled/ ",<rootDir>/plugins.disabled/",<rootDir>/supabase.disabled/ ",<rootDir>/dao/",<rootDir>/pages.disabled/"; ]} ; module.exports = createJestConfig(customJestConfig)"""
 import React from 'react';
@@ -12,8 +17,22 @@ export default function Jest.config({ }: Jest.configProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
 }}};
 }}}
 }}}
 ;
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+=======
+}}};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+}}};
+>>>>>>> origin/main
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -19,6 +19,7 @@ import { Calendar as CalendarComponent } from '@/components/ui/calendar'
 import { format } from 'date-fns'
 import type { DateRange } from 'react-day-picker'
 import type { QuoteStatus } from '@/types/quotes'
+<<<<<<< HEAD
 import React from 'react';
 import { Calendar, RefreshCw } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -42,6 +43,32 @@ import type { DateRange } from 'react-day-picker';
 import type { QuoteStatus } from '@/types/quotes';
 
 interface QuotesFilterProps {;
+=======
+<<<<<<< HEAD
+
+interface QuotesFilterProps {;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from "react",
+import { Calendar, RefreshCw } from 'lucide-react'
+import { Card, CardContent } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { Button } from "@/components/ui/button",
+import { Calendar as CalendarComponent } from "@/components/ui/calendar",
+import { format } from "date-fns",
+import type { DateRange } from "react-day-picker",
+import type { QuoteStatus } from "@/types/quotes",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface QuotesFilterProps {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   searchQuery: string;
   setSearchQuery: (value: string) => void;
   statusFilter: QuoteStatus | 'all';
@@ -296,16 +323,21 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             <RefreshCw className='mr - 2 h - 4 w - 4' /> Reset Filters          </Button>;
         </div>;
       </CardContent>;
-    </Card>);
+    </Card>;
+  );
+};  )
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-            <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
-            on_click={on_reset}
-            className="border - zion - blue - light text - zion - slate - light";
-          >;
-            <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
-          </Button>;
-        </div>;
-      </CardContent>;
-    </Card>);
-}  );
+
+=======
 }
+<<<<<<< HEAD
+=======
+=======
+}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

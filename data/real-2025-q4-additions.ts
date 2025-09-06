@@ -42,12 +42,18 @@ export interface Q4Service {
   rating?: number;
 
   reviews?: number;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
+<<<<<<< HEAD
   website: 'https://ziontechgroup && ziontechgroup.com',
 };
 
@@ -463,6 +469,9 @@ export const realQ4Services2025: RealQ4Service[] = [
   },
 ];
 export const real2025Q4Additions = [;
+=======
+export const realQ4Services2025: RealQ4Service[] = [
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   {
     id: 'ai-governed-rag-platform'
     name: 'AI-Governed RAG Platform'
@@ -577,7 +586,90 @@ export const real2025Q4Additions = [;
       'Dashboards and exports',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '',
+=======
+    icon: '⚡',
+
+    technology: ['Next.js', 'Node.js', 'PostgreSQL'],
+    integrations: ['Zendesk', 'Freshdesk', 'Datadog', 'Grafana'],
+    useCases: ['IT support', 'SLA management', 'Client reporting'],
+    roi: 'Faster resolution, less toil; better client satisfaction.',
+    competitors: ['Zendesk', 'Freshdesk', 'HaloPSA'],
+    marketSize: '$10B helpdesk software',
+    growthRate: '10% YoY',
+    variant: 'ai-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails:
+      'Email ingestion, rules engine, and portal with RBAC.',
+    launchDate: '2025-09-28',
+    customers: 70,
+    rating: 4.5,
+    reviews: 28,
+  },
+];
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+}
+
+export const real2025Q4Additions = [
+  {
+    id: 'ai-governed-rag-platform',
+    name: 'AI-Governed RAG Platform',
+    tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
+    price: '$699',
+    period: '/month',
+    description: 'Production-ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high-stakes workflows.',
+    features: [
+      'Document sync and chunking pipelinesMetadata and policy guardrails',
+      'Evals and drift trackingHuman-in-the-loop approvals',
+      'Observability and cost capsSDKs for Node/Python'
+    ],
+    popular: true,
+    icon: '🧠',
+    color: 'from-cyan-600 to-blue-700',
+    textColor: 'text-cyan-300',
+    link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
+
+    marketPosition: 'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.',
+
+    targetAudience: 'Platform, data, and compliance teams',
+    trialDays: 14,
+    setupTime: '1–2 days',
+    category: 'AI & Data',
+    realService: true,
+    technology: ['OpenAI, Anthropic, Vector DB, OpenTelemetry'],
+    integrations: ['Zendesk, Confluence, Google Drive, S3'],
+    useCases: ['Support copilots, Internal search, Drafting with review'],
+    roi: 'Ship copilots 3x faster with governance baked in.',
+    competitors: ['LangChain + custom, LlamaIndex + custom, Guardrails AI'],
+    marketSize: '$30B+ AI tooling',
+    growthRate: '45% YoY',
+    variant: 'ai-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Pipelines, policies, eval harness, cost and latency budgets.',
+    launchDate: '2025-03-01',
+    customers: 18,
+    rating: 4.8,
+    reviews: 11
+  },
+  {
+    id: 'edge-personalization-engine',
+    name: 'Edge Personalization Engine',
+    tagline: 'Real-time content and pricing personalization at the edge',
+    price: '$249',
+    period: '/month',
+    description: 'Low-latency personalization rules and ML scoring at the edge with audience definitions, A/B tests, and analytics.',
+    features: [
+      'Audience builder and traitsEdge functions and KV cache',
+      'A/B and holdout testsPrivacy-first scoring',
+      'Dashboards and exports'
+    ],
+    popular: true,
+    icon: '⚡',
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,

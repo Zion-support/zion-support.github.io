@@ -1,10 +1,40 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import type { UserProfile } from "@/types/auth";
+import {toast} from "@/hooks/use-toast";
+import {trackReferral, checkUrlForReferralCode} from "@/utils/referralUtils";
+import {cleanupAuthState} from "@/utils/authUtils";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState, useEffect } from "react",
+import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import type { UserProfile } from "@/types/auth";
 import { toast } from "@/hooks/use-toast";
 import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils";
 import { cleanupAuthState } from "@/utils/authUtils";
+<<<<<<< HEAD
+=======
+=======
+import type { UserProfile } from "@/types/auth",
+import { toast } from "@/hooks/use-toast",
+import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils",
+import { cleanupAuthState } from "@/utils/authUtils",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function useAuthOperations(
 
   setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>
@@ -81,8 +111,27 @@ if ( {) {
             display_name: display_name}}});
       if (error) {
         toast({
+<<<<<<< HEAD
           variant: "destructive";
           title: "Error during signup"
+=======
+          variant: "destructive",
+          title: "Error during signup",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          description: error.message}),
+        return { data: null, error: error.message }
+          variant: "destructive",
+          title: "Error during signup",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           description: error.message});
         return { data: null, error: error.message }
       }
@@ -209,9 +258,39 @@ if ( {) {
           description: error && error.message});
         return { error: error && error.message }
       }
+<<<<<<< HEAD
       // Optimistically update the local user state
       setUser((prevUser) => {
         if (prevUser) {
+=======
+
+
+          variant: "destructive",
+          title: "Failed to update profile",
+          description: error.message});
+<<<<<<< HEAD
+        return { error: error.message };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+        return { error: error.message }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      }
+      // Optimistically update the local user state
+      setUser((prevUser) => {
+        if (prevUser) {
+<<<<<<< HEAD
+=======
+=======
+        return { error: error.message };
+      }
+;
+      // Optimistically update the local user state;
+      setUser((prevUser) => {;
+        if (prevUser) {;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           return { ...prevUser, ...profileData }
         }
         return prev_user;
@@ -257,6 +336,78 @@ if ( {) {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
+=======
+
+;
+
+=======
+
+  },
+
+
+  const loginWithGoogle = async () => {
+    setIsLoading(true),
+    try {
+      const { data, error } = await supabase.auth.signInWithOAuth({
+
+        provider: "google"}),
+
+      if (error) {
+        toast({
+          variant: "destructive",
+          title: "Oh no! Something went wrong.",
+          description: error.message})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      }
+    } finally {
+      setIsLoading(false)
+    }
+  };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        return prevUser;
+      }),;
+      toast({;
+        title: "Profile updated!",;
+        description: "Your profile has been successfully updated."}),;
+      return { error: null }
+    } catch (error) {;
+      console.error("Profile update failed:", error),;
+      toast({;
+        variant: "destructive",;
+        title: "Profile update failed",;
+        description: "There was an issue updating your profile. Please try again."}),;
+      return { error: "Failed to update profile." }
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  const loginWithGoogle = async () => {;
+    setIsLoading(true),;
+    try {;
+      const { data, error } = await supabase.auth.signInWithOAuth({;
+        provider: "google"}),;
+      if (error) {;
+        toast({;
+          variant: "destructive",;
+          title: "Oh no! Something went wrong.",;
+          description: error.message});
+      }
+    } finally {;
+      setIsLoading(false);
+    }
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const loginWithFacebook = async () => {
     setIsLoading (true);
     try {
@@ -278,10 +429,46 @@ if ( {) {
           variant: "destructive";
           title: "Oh no! Something went wrong.",
           description: error.message});
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+      const { data, error } = await supabase.auth.signInWithOAuth({
+
+        provider: "facebook"}),
+
+      if (error) {
+        toast({
+          variant: "destructive",
+          title: "Oh no! Something went wrong.",
+          description: error.message})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  },;
+  const loginWithFacebook = async () => {;
+    setIsLoading(true),;
+    try {;
+      const { data, error } = await supabase.auth.signInWithOAuth({;
+        provider: "facebook"}),;
+      if (error) {;
+        toast({;
+          variant: "destructive",;
+          title: "Oh no! Something went wrong.",;
+          description: error.message});
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
     } finally {
       setIsLoading (false);
     }
+<<<<<<< HEAD
   }
   const loginWithTwitter = async () => {
     setIsLoading (true);
@@ -293,6 +480,12 @@ if ( {) {
           variant: "destructive";
           title: "Oh no! Something went wrong."
           description: error.message})
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       const { data, error } = await supabase.auth.signInWithOAuth ({
         provider: "twitter"});
 ;
@@ -304,11 +497,76 @@ if ( {) {
           variant: "destructive";
           title: "Oh no! Something went wrong.",
           description: error.message});
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  },
+=======
+  };
+=======
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const loginWithTwitter = async () => {
+    setIsLoading(true),
+    try {
+      const { data, error } = await supabase.auth.signInWithOAuth({
+
+        provider: "twitter"}),
+
+      if (error) {
+        toast({
+          variant: "destructive",
+          title: "Oh no! Something went wrong.",
+          description: error.message})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  },;
+  const loginWithTwitter = async () => {;
+    setIsLoading(true),;
+    try {;
+      const { data, error } = await supabase.auth.signInWithOAuth({;
+        provider: "twitter"}),;
+      if (error) {;
+        toast({;
+          variant: "destructive",;
+          title: "Oh no! Something went wrong.",;
+          description: error.message});
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
     } finally {
       setIsLoading (false);
     }
+<<<<<<< HEAD
   }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
+  },
+=======
+  };
+=======
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+;
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const loginWithWeb3 = async () => {
     setIsLoading (true);
     try {
@@ -372,6 +630,74 @@ if ( {) {
     reset_password;
     update_profile;
     loginWithGoogle;
+<<<<<<< HEAD
+=======
+=======
+
+  },
+=======
+  };
+=======
+  },
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const loginWithWeb3 = async () => {
+    setIsLoading(true),
+    try {
+      const ethereum = (window as any).ethereum,
+      if (!ethereum) {
+        throw new Error("Web3 wallet not found")
+
+  },;
+  const loginWithWeb3 = async () => {;
+    setIsLoading(true),;
+    try {;
+      const ethereum = (window as any).ethereum,;
+      if (!ethereum) {;
+        throw new Error("Web3 wallet not found");
+      }
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),;
+      const address = accounts[0],;
+      await ethereum.request({;
+        method: 'personal_sign',;
+        params: [address, address];
+      }),;
+      // Fix: Create a proper UserProfile object;
+      setUser({;
+        id: address,;
+        displayName: address,;
+        profileComplete: true,;
+        email: '', // Add required fields;
+        userType: 'talent', // Default user type;
+        createdAt: new Date().toISOString(),;
+        updatedAt: new Date().toISOString();
+      } as UserProfile),;
+      toast({ title: 'Wallet connected', description: address });
+    } catch (error: any) {;
+      toast({;
+        variant: 'destructive',;
+        title: 'Web3 login failed',;
+        description: error?.message || 'Unable to connect wallet';
+      });
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  return {;
+    login,;
+    signup,;
+    logout,;
+    resetPassword,;
+    updateProfile,;
+    loginWithGoogle,;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     loginWithFacebook;
     loginWithTwitter;
 

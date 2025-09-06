@@ -1,8 +1,40 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 //Enhanced animation variants for better performance const containerVariants = {
   hidden: {
   opacity: 0
+<<<<<<< HEAD
 }
+=======
+}
+=======
+//Enhanced animation variants for better performance const containerVariants = {
+  hidden: {
+  opacity: 0 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from 'react';
+
+interface Homepage2040Props {
+  className?: string;
+}
+
+const Homepage2040: React.FC<Homepage2040Props> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Homepage2040</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1, delayChildren: 0.2
@@ -447,19 +479,47 @@ const Homepage2040: React.FC = () => {;
                 <span>Innovation Leader 2040</span>
                 <Sparkles className="w-5 h-5 animate-pulse" aria-hidden="true" />
               </motion.div>
+<<<<<<< HEAD
               <motion.h1
+=======
+<<<<<<< HEAD
+              <motion.h1
+=======
+              <motion.h1 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 variants={itemVariants}
                 id="hero-heading"
                 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight"
               >
                 Zion Tech Group
               </motion.h1>
+<<<<<<< HEAD
               <motion.p
+=======
+<<<<<<< HEAD
+              <motion.p
+=======
+              <motion.p 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 variants={itemVariants}
                 className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
               >
                 Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide
               </motion.p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+              {/* Enhanced CTA Section */}
+              <motion.div
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+              
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Enhanced CTA Section */}
               <motion.div
                 variants={itemVariants}
@@ -484,6 +544,65 @@ const Homepage2040: React.FC = () => {;
                   </button>
                 </Link>
               </motion.div>
+<<<<<<< HEAD
+=======
+
+                aria-label="Company recognition">;
+                <Star className="w-5 h-5 animate-pulse" aria-hidden="true" />;
+                <span>Innovation Leader 2040</span>;
+                <Sparkles className="w-5 h-5 animate-pulse" aria-hidden="true" />;
+              </motion && motion.div>;
+
+              <motion&& motion.h1 
+=======
+
+              
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              {/* Enhanced Trust Indicators */}
+              <motion.div
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                variants={itemVariants}
+                id="hero-heading"
+                className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight">;
+                Zion Tech Group;
+              </motion && motion.h1>;
+
+              <motion&& motion.p 
+                variants={itemVariants}
+                className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">;
+                Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide;
+              </motion && motion.p>;
+
+              {/* Enhanced CTA Section */}
+              <motion&& motion.div 
+                variants={itemVariants}
+                className="flex flex-col sm:flex-row gap-6 justify-center mb-12">;
+                <Link href="/get-started" aria-label="Get started with our services">;
+                  <button className="group px-10 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black">;
+                    <span className="flex items-center gap-3">;
+                      Get Started;
+                      <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" aria-hidden="true" />;
+                    </span>;
+                  </button>;
+                </Link>;
+                <Link href="/services" aria-label="Learn more about our services">;
+                  <button className="px-10 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black">;
+                    Explore Services;
+                  </button>;
+                </Link>;
+                <Link href="/pricing" aria-label="View our pricing">;
+                  <button className="px-10 py-5 border-3 border-purple-400 text-purple-400 font-bold text-lg rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-black">;
+                    View Pricing;
+                  </button>;
+                </Link>;
+              </motion && motion.div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Enhanced Trust Indicators */}
               <motion&& motion.div
                 variants={itemVariants}
@@ -535,9 +654,25 @@ const Homepage2040: React.FC = () => {;
                   <div className="text-gray-400">{stat && stat.description}</div>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
             </motion.div>
           </div>
         </section>
+=======
+
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Enhanced Service Categories */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-7xl mx-auto">;
@@ -583,9 +718,25 @@ const Homepage2040: React.FC = () => {;
                   </div>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
             </motion.div>
           </div>
         </section>
+=======
+
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Enhanced Featured Services Section */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-7xl mx-auto">;
@@ -651,6 +802,18 @@ const Homepage2040: React.FC = () => {;
                           {service.price}
                         </span>
                       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                      {/* CTA Button */}
+                      <Link
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       {/* CTA Button */}
                       <Link
                         href={service.link}
@@ -662,6 +825,58 @@ const Homepage2040: React.FC = () => {;
                     </motion.div>
                   ))}
                 </motion.div>
+<<<<<<< HEAD
+=======
+
+                  </div>;
+
+                  <h3 className="text-2xl font-bold text-white mb-3">{service && service.name}</h3>;
+                  <p className="text-gray-400 mb-4">{service && service.tagline}</p>;
+
+                  <div className="flex items-center justify-between mb-6">;
+                    <div className="text-3xl font-bold text-cyan-400">;
+                      ${service && service.price.monthly}
+                      <span className="text-lg text-gray-400">/month</span>;
+                    </div>;
+                    <div className="text-sm text-gray-400">;
+                      {service && service.rating} ⭐ ({service && service.reviews});
+                    </div>;
+                  </div>;
+
+                  <div className="space-y-3 mb-6">;
+                    {service && service.features.slice(0, 3).map((feature, idx) => (;
+                      <div key={idx} className="flex items-center gap-3 text-gray-300">;
+                        <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>;
+                        <span className="text-sm">{feature}</span>;
+                      </div>;
+
+                      {/* Service Price */}
+                      <div className="mb-6">;
+                        <span className="text-2xl font-bold text-cyan-400">;
+                          {service && service.price}
+                        </span>;
+                      </div>;
+
+                      {/* CTA Button */}
+                      <Link
+                        href={service && service.link}
+                        className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 group-hover:shadow-lg group-hover:shadow-cyan-400/25">;
+                        Learn More;
+                        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />;
+                      </Link>;
+                    </motion && motion.div>;
+                  ))}
+                </motion && motion.div>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* View All Services Button */}
                 <motion&& motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -694,9 +909,25 @@ const Homepage2040: React.FC = () => {;
                   </Link>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
             </motion.div>
           </div>
         </section>
+=======
+
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -719,7 +950,15 @@ const Homepage2040: React.FC = () => {;
               >
                 Join thousands of companies already leveraging our revolutionary technology solutions
               </motion.p>
+<<<<<<< HEAD
               <motion.div
+=======
+<<<<<<< HEAD
+              <motion.div
+=======
+              <motion.div 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-6 justify-center"
               >

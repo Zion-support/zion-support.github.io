@@ -1,17 +1,33 @@
+<<<<<<< HEAD
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 export type ZionSupabase = SupabaseClient | undefined;
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL |process.env.SUPABASE_URL |'';
 const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |process.env.SUPABASE_ANON_KEY |'';
+=======
+<<<<<<< HEAD
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
+export type ZionSupabase = SupabaseClient | undefined;
+<<<<<<< HEAD
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL |process.env.SUPABASE_URL |'';
+const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |process.env.SUPABASE_ANON_KEY |'';
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { createClient, SupabaseClient } from '@supabase/supabase-js',;
 export type ZionSupabase = SupabaseClient | undefined,;
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || '',;
 const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || '',;
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 let browserClient: SupabaseClient | undefined;
 export function getSupabaseClient(): ZionSupabase {try {;
     if (!SUPABASE_URL |!SUPABASE_ANON_KEY) return undefined;
     if (typeof window !== 'undefined') {;
       if (!browserClient) {;
         browserClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+<<<<<<< HEAD
 import { create_client, SupabaseClient } from '@supabase / supabase - js',
 export type ZionSupabase = SupabaseClient | undefined,
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || '',
@@ -38,6 +54,21 @@ if ( {) {
     // Server-side: create a new client per call to avoid cross-request state;
     return createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   } catch {return undefined;
+=======
+      }
+      return browser_client;
+    }
+<<<<<<< HEAD
+    // Server-side: create a new client per call to avoid cross-request state;
+    return createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  } catch {return undefined;
+=======
+=======
+=======
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
+export type ZionSupabase = SupabaseClient | undefined;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || '';
 const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || '';
 let browserClient: SupabaseClient | undefined;
@@ -56,10 +87,18 @@ export function getSupabaseClient(): ZionSupabase {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // Server-side: create a new client per call to avoid cross-request state;
     return createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   } catch {;
     return undefined;
+<<<<<<< HEAD
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -76,3 +115,25 @@ export function getSupabaseClient(): ZionSupabase {;
     return undefined;
   }
 }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,7 +1,113 @@
+<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
 export default function ProjectRoomPage() {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+}
+}
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState } from 'react',;
+import { useRouter } from 'next/router', // Changed from useParams;
+import { Header } from '@/components/Header',;
+import { SEO } from '@/components/SEO',;
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
+import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react';
+import { VideoCallRoom } from '@/components/video/VideoCallRoom',;
+import { toast } from 'sonner',;
+export default function ProjectRoom() {;
+  const router = useRouter(),;
+  const { projectId: rawProjectId } = router.query,;
+  const projectId = typeof rawProjectId === 'string' ? rawProjectId : '', // Ensure string, default to empty if not;
+  const [activeTab, setActiveTab] = useState('chat'),;
+  const [isInCall, setIsInCall] = useState(false),;
+  const [callParticipants, setCallParticipants] = useState<Array<{;
+    id: string,;
+    name: string,;
+    avatar?: string,;
+    isMuted?: boolean,;
+    isVideoEnabled?: boolean,;
+    isScreenSharing?: boolean,;
+    isHost?: boolean;
+  }>>([;
+    {;
+      id: 'user-1',;
+      name: 'You',;
+      isHost: true,;
+      isVideoEnabled: true,;
+      isMuted: false;
+    }
+  ]),
+  
+  const startVideoCall = () => {
+    setIsInCall(true),
+    toast.success("Video call started", {
+      description: "Others can join with the project room link"
+    }),
+    // Switch to video tab if not already there
+    if (activeTab !== 'video') {
+      setActiveTab('video')
+    }
+  },
+  
+  const endVideoCall = () => {
+    setIsInCall(false),
+    toast.info("Video call ended", {
+      description: "Call duration and participants will be logged"
+    })
+  },
+  
+  const simulateUserJoining = () => {
+    // This is just for demo purposes - in a real app, this would be handled by the video call service
+    const mockUsers = [
+      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
+      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
+  ]),;
+  const startVideoCall = () => {;
+    setIsInCall(true),;
+    toast.success("Video call started", {;
+      description: "Others can join with the project room link";
+    }),;
+    // Switch to video tab if not already there;
+    if (activeTab !== 'video') {;
+      setActiveTab('video');
+    }
+  },;
+  const endVideoCall = () => {;
+    setIsInCall(false),;
+    toast.info("Video call ended", {;
+      description: "Call duration and participants will be logged";
+    });
+  },;
+  const simulateUserJoining = () => {;
+    // This is just for demo purposes - in a real app, this would be handled by the video call service;
+    const mockUsers = [;
+      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
+      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
+      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+    ],;
+    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],;
+    if (randomUser && !callParticipants.find(p => p.id === randomUser.id)) {;
+      setCallParticipants(prev => [...prev, randomUser]);
+      toast(`${randomUser.name} joined the call`);
+    }
+  },
+  
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <>
       <SEO
@@ -22,3 +128,17 @@ export default function ProjectRoomPage() {
 ;
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+  )
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

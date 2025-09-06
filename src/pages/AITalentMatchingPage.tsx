@@ -1,4 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from "react";
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
+=======
+import React from "react",
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import { Bot, Users, TrendingUp } from 'lucide-react'
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -25,6 +35,14 @@ import React from "react";
 import { ServiceLandingTemplate } from "../components/services/ServiceLandingTemplate";
 import { Bot, Users, TrendingUp, Star } from 'lucide-react';
 
+=======
+=======
+import React from "react"
+import { ServiceLandingTemplate } from "../components/services/ServiceLandingTemplate"
+import { Bot, Users, TrendingUp, Star } from 'lucide-react'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function AITalentMatchingPage() {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 export default function AITalentMatchingPage() {
 
@@ -75,6 +93,58 @@ export default function AITalentMatchingPage() {;
     }
   ];
 
+<<<<<<< HEAD
+=======
+  return (
+    <ServiceLandingTemplate
+      title="AI Talent Matching"
+      subtitle="Find the perfect talent with our AI-powered matching system"
+      description="Our advanced AI technology analyzes skills, experience, and cultural fit to match the right candidates with the right opportunities, ensuring successful placements and satisfied clients."
+<<<<<<< HEAD
+      benefits={benefits}
+      features={features}
+      stats={stats}
+      ctaText="Start Matching Talent"
+      ctaLink="/contact"
+    />
+  )
+}
+=======
+=======
+=======
+import React from "react",
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
+import { Bot, Users, TrendingUp } from 'lucide-react'
+
+export default function AITalentMatchingPage() {
+  const benefits = [
+    {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      title: "Precise Candidate Matching",
+      description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
+      icon: <Bot className = "h-8 w-8" />},
+    {
+      title: "Streamlined Hiring Workflow",
+      description: "Automated screening and ranking saves your team valuable time.",
+      icon: <Users className = "h-8 w-8" />},
+    {
+      title: "Scalable Talent Pools",
+      description: "Access a global network of vetted professionals ready for your projects.",
+      icon: <TrendingUp className = "h-8 w-8" />}],
+  const testimonials = [
+    {
+      name: "Emily Stone",
+      role: "HR Director",
+      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.";
+      avatar: "/placeholder.svg"},
+    {
+      name: "Raj Patel",
+      role: "Startup Founder",
+      text: "The quality of candidates has improved dramatically since using Zion's platform.",
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const features = [;
     "Machine learning-based candidate matching",;
     "Comprehensive skill assessment tools",;
@@ -146,3 +216,17 @@ function AITalentMatchingPage() {
       cta_link="/contact";
     />);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

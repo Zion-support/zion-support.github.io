@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState, useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { useResume  } from '@/hooks/useResume';
@@ -18,9 +23,13 @@ import { useResumeProgress  } from './useResumeProgress';
 import { ResumeVersionSelector  } from './ResumeVersionSelector';
 import { RESUME_STEPS } from './constants';
 export function ResumeWizard() {
+<<<<<<< HEAD
   const { user } = useAuth();
   const {
     isLoading;
+=======
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
     error
     resume
@@ -44,6 +53,10 @@ import {useResumeProgress} from './useResumeProgress';
 import {ResumeVersionSelector} from './ResumeVersionSelector';
 import {RESUME_STEPS} from './constants';
 export function ResumeWizard() {;
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const { user } = useAuth();
   const { ;
     isLoading;
@@ -56,6 +69,8 @@ export function ResumeWizard() {;
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
   // Use the extracted hook for progress calculation
 
+<<<<<<< HEAD
+=======
   const progress = useResumeProgress(resume);
   useEffect(() => {
     if (user) {
@@ -80,10 +95,85 @@ export function ResumeWizard() {;
     if (currentIndex > 0) {
       setActiveTab(RESUME_STEPS[currentIndex - 1].id)
     }
+<<<<<<< HEAD
   }
   const handleResumeChange = (resumeId: string) => {
     fetchResume(resumeId)
   }
+
+=======
+
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useState, useEffect } from 'react',;
+import { useAuth } from '@/hooks/useAuth',;
+import { useResume } from '@/hooks/useResume',;
+import { Tabs } from '@/components/ui/tabs',;
+import { Card, CardContent } from '@/components/ui/card',;
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert',;
+import { AlertCircle, FilePlus, Loader2 } from 'lucide-react',;
+import { Button } from '@/components/ui/button',;
+import { Resume } from '@/types/resume',;
+// Import components;
+import { ResumeProgress } from './ResumeProgress',;
+import { EmptyResumeState } from './EmptyResumeState',;
+import { CreateResumeForm } from './CreateResumeForm',;
+import { ResumeSteps } from './ResumeSteps',;
+import { ResumeStepContent } from './ResumeStepContent',;
+import { useResumeProgress } from './useResumeProgress',;
+import { ResumeVersionSelector } from './ResumeVersionSelector',;
+import { RESUME_STEPS } from './constants',;
+export function ResumeWizard() {;
+  const { user } = useAuth(),;
+  const {;
+    isLoading,;
+    error,;
+    resume,;
+    fetchResume,;
+    createResume;
+  } = useResume(),;
+  const [activeTab, setActiveTab] = useState('basic-info'),;
+  const [showNewResumeForm, setShowNewResumeForm] = useState(false),;
+
+  // Use the extracted hook for progress calculation;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  const progress = useResumeProgress(resume);
+  useEffect(() => {
+    if (user) {
+      fetchResume()
+    }
+  }, [user, fetchResume]);
+  const handleCreateNewResume = async (title: string) => {
+    const resumeId = await createResume({ title: title.trim() })
+    if (resumeId) {
+      await fetchResume(resumeId);
+      setShowNewResumeForm(false)
+    }
+  }
+  const nextStep = () => {
+    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
+    if (currentIndex < RESUME_STEPS.length - 1) {
+      setActiveTab(RESUME_STEPS[currentIndex + 1].id)
+    }
+  }
+  const prevStep = () => {
+    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
+    if (currentIndex > 0) {
+      setActiveTab(RESUME_STEPS[currentIndex - 1].id)
+    }
+<<<<<<< HEAD
+  }
+  const handleResumeChange = (resumeId: string) => {
+    fetchResume(resumeId)
+  }
+=======
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   if (isLoading) {
     return (
@@ -101,8 +191,30 @@ export function ResumeWizard() {;
       </Alert>;
     );
   }
+<<<<<<< HEAD
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
+=======
+
+  if (error) {
+    return (
+      <Alert variant="destructive" className="mb-6">
+        <AlertCircle className="h-4 w-4" />
+        <AlertTitle>Error</AlertTitle>
+        <AlertDescription>{error}</AlertDescription>
+      </Alert>
+    )
+<<<<<<< HEAD
+  }
+  if (!resume && !showNewResumeForm) {
+    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   if (showNewResumeForm) {
     return (

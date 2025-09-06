@@ -8,10 +8,23 @@ export default function AutomationInsightsPage() {
       id: 'ai-automation-2025'
       title: 'AI Automation Trends 2025'
       description:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends'
       readTime: '8 min read'
       featured: true
     }
+<<<<<<< HEAD
+=======
+=======
+        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
+      readTime: '8 min read',
+      featured: true;
+    };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     {
       id: 'autonomous-systems'
       title: 'Building Autonomous Systems'
@@ -329,6 +342,7 @@ export default function AutomationInsightsPage() {;
                     <div className="text-lg font-semibold text-white mb-1">{item && item.label}</div>;
                     <div className="text-sm text-white/70">{item && item.description}</div>;
                 ))}
+<<<<<<< HEAD
               </div>
             </div>
             {/* Automation Trends */}
@@ -338,6 +352,28 @@ export default function AutomationInsightsPage() {;
               </h2>;
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
                 {automationTrends && automationTrends.map((trend, index) => (;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {/* Automation Trends */}
+            <div className='mb-16'>
+              <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
+                Latest Automation Trends
+              </h2>
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {automationTrends.map((trend, index) => (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300'>;
@@ -371,6 +407,20 @@ export default function AutomationInsightsPage() {;
                     >
                       Read More <span className="ml-1"></span>
                     </Link>
+<<<<<<< HEAD
+=======
+=======
+
+                      Read More <span className='ml-1'>→</span>                    </Link>
+
+                    </Link>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   </div>
                 ))}
               </div>
@@ -395,6 +445,7 @@ export default function AutomationInsightsPage() {;
               </div>;
             </div>;
 
+<<<<<<< HEAD
             {/* Automation Tools & Frameworks */}
             <div className='mb-16'>;
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>;
@@ -437,6 +488,40 @@ export default function AutomationInsightsPage() {;
                 future;
               </p>;
               <div className='flex flex-wrap justify-center gap-4'>;
+=======
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {/* Automation Tools & Frameworks */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {/* Call to Action */}
+            <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
+              <h2 className='text-3xl font-bold mb-4 text-white'>
+                Ready to Automate Your Business?
+              </h2>
+              <p className='text-xl text-white/80 mb-6'>
+                Let our experts help you build the automation systems of the
+                future
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              </p>
+              <div className='flex flex-wrap justify-center gap-4'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105'>;
@@ -456,6 +541,7 @@ export default function AutomationInsightsPage() {;
                 </Link>
                 <Link
                   href="/case-studies"
+<<<<<<< HEAD
                   className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200">;
 );
 }
@@ -473,3 +559,31 @@ export default function AutomationInsightsPage() {;
 }
     </>);
 }
+=======
+
+                  className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200"
+                >
+                  View Case Studies
+                </Link>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

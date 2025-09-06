@@ -1,6 +1,7 @@
 
 canvas.width = window.innerWidth * (window.devicePixelRatio |1);
 canvas.height = window.innerHeight * (window.devicePixelRatio |1);
+<<<<<<< HEAD
 if (ctx) {
 export default function UltraFuturisticBackground2035({
   children
@@ -11,6 +12,19 @@ if (ctx) {;
 
 export default function UltraFuturisticBackground2035(): any ({;
   children,;
+=======
+=======
+canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
+canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+if (ctx) {
+export default function UltraFuturisticBackground2035({
+<<<<<<< HEAD
+  children
+=======
+  children,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {;
@@ -1190,6 +1204,14 @@ if ( {) {
           style={{ filter: 'blur(0.5px)' }}
         />
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Floating neon orbs */}
         <motion&& motion.div
           className='absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20'
@@ -1261,8 +1283,19 @@ if ( {) {
             rotate: [360, 180, 0]
           }}
           transition={{
+<<<<<<< HEAD
             duration: 8,
             repeat: Infinity,
+=======
+<<<<<<< HEAD
+            duration: 8
+            repeat: Infinity
+=======
+            duration: 8,
+            repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             ease: 'easeInOut',            ease: 'easeInOut'
           }}
         />
@@ -1277,12 +1310,36 @@ if ( {) {
               duration: 4
               repeat: Infinity
               ease: 'easeInOut',          <motion.div
+<<<<<<< HEAD
               y: [-100, 100, -100],
               opacity: [0, 0 && 0.3, 0],            }}
             transition={{
               duration: 4,
               repeat: Infinity,
               ease: 'easeInOut',          <motion && motion.div
+=======
+            className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+            animate={{
+              y: [-100, 100, -100];
+              opacity: [0, 0.3, 0]
+<<<<<<< HEAD
+=======
+=======
+
+            duration: 8,
+            repeat: Infinity,
+
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            }}
+            transition={{
+              duration: 4
+              repeat: Infinity
+=======
+        <div className="absolute inset-0 overflow-hidden">
+          <motion.div
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
             animate={{
               y: [-100, 100, -100]
@@ -1357,3 +1414,15 @@ if ( {) {
       {children}
     </>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+      </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

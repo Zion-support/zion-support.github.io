@@ -8,8 +8,58 @@ import { SEO  } from './SEO';
 // Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string, string> = {
 
+<<<<<<< HEAD
   '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'}
 const resolvePath = (path: string): string => pathMap[path] ?? path
+=======
+
+const resolve_path = (path: string): string => path_map[path] ?? path, import React from 'react';
+import { complete_sitemap, dynamic_paths } from '@/config / sitemap';
+import Link from 'next / link';
+import { ChevronRight } from 'lucide-react';
+import React from 'react';
+import { completeSitemap, dynamicPaths  } from '@/config/sitemap';
+import Link from 'next/link';
+import { ChevronRight } from 'lucide-react'
+<<<<<<< HEAD
+import { SEO  } from './SEO';
+=======
+import React from 'react'
+import { SEO } from './SEO'
+// Map sitemap paths to their actual routes in the application
+// Note: This pathMap might need to be updated based on Next.js page structure
+const pathMap: Record<string, string> = {
+  '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { SEO } from './SEO';
+// Map sitemap paths to their actual routes in the application;
+// Note: This path_map might need to be updated based on Next.js page structure;
+const path_map: Record < string, string> = {
+  '/about': '/content / about / blog': '/blog / careers': '/careers / green - it': '/content / green - it / sitemap - page': '/content / sitemap - page / talent - onboarding': '/talent - onboarding / forgot - password': '/forgot - password / signup / talent': '/auth / signup / talent / signup / client': '/auth / signup / client / talent - dashboard': '/talent - dashboard / client - dashboard': '/client - dashboard / hiring - tracker': '/dashboard / hiring - tracker / messages': '/dashboard / messages / notifications': '/dashboard / notifications / project/:project_id / room': '/dashboard / project/:project_id / room / post - job': '/marketplace / post - job'}
+const resolve_path = (path: string): string => path_map[path] ?? path,
+
+=======
+
+import React from 'react',
+import { completeSitemap, dynamicPaths } from '@/config/sitemap',
+import Link from 'next/link',
+import { ChevronRight } from 'lucide-react'
+import { SEO } from './SEO',
+// Map sitemap paths to their actual routes in the application
+// Note: This pathMap might need to be updated based on Next.js page structure
+const pathMap: Record<string string> = {
+  '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'},
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+const resolvePath = (path: string): string => pathMap[path] ?? path,
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export const SitemapPage: React.FC = () => {
 import { ChevronRight } from 'lucide-react';
 import React from 'react';
@@ -26,6 +76,7 @@ const resolvePath = (path: string): string => pathMap[path] ?? path,;
 export const SitemapPage: React.FC = () => {;
   return (
     <>;
+<<<<<<< HEAD
       <SEO
         title="Sitemap | Zion AI Marketplace"
         description="Complete sitemap of the Zion AI Marketplace"
@@ -34,6 +85,16 @@ export const SitemapPage: React.FC = () => {;
       />
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
+=======
+
+
+        
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Public Pages */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">;
@@ -52,8 +113,20 @@ export const SitemapPage: React.FC = () => {;
                     </Link>;
                   </li>));
               }
+<<<<<<< HEAD
             </ul>
           </div>
+=======
+
+
+            </ul>;
+          </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
@@ -71,12 +144,23 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
+<<<<<<< HEAD
                       {route.label}
                     </Link>;
                   </li>));
               }
             </ul>
           </div>
+=======
+=======
+            </ul>;
+          </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>
@@ -94,12 +178,23 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
+<<<<<<< HEAD
                       {route.label}
                     </Link>;
                   </li>));
               }
             </ul>
           </div>
+=======
+=======
+            </ul>;
+          </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>
@@ -117,12 +212,23 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
+<<<<<<< HEAD
                       {route.label}
                     </Link>;
                   </li>));
               }
             </ul>
           </div>
+=======
+=======
+            </ul>;
+          </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Admin Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>
@@ -143,6 +249,7 @@ export const SitemapPage: React.FC = () => {;
                     </Link>;
                   </li>));
               }
+<<<<<<< HEAD
             </ul>
           </div>
           {/* Dynamic Routes */}
@@ -158,6 +265,37 @@ export const SitemapPage: React.FC = () => {;
                   </div>;
                 </li>;
               ))}
+=======
+            </ul>;
+          </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {/* Dynamic Routes */}
+          <div className="bg-zion-blue-dark p-6 rounded-lg">
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
+            <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>
+            <ul className="space-y-2">
+<<<<<<< HEAD
+              {Object.entries(dynamicPaths).map(([key, path],) => (
+=======
+              {Object.entries(dynamicPaths).map(([key, path]) => (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                <li key={key}>
+                  <div className="flex items-center text-zion-slate">
+                    <ChevronRight className="h-4 w-4 mr-2" />
+                    {path} <span className="ml-2 text-xs italic">({key})</span>
+                  </div>
+                </li>
+              ))}
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </ul>
           </div>
         </div>
@@ -219,6 +357,7 @@ export const SitemapPage: React.FC = () => {;
           <p className="text - xl text - zinc - 300 max - w-3xl mx - auto">;
             Navigate through our comprehensive website structure to find the information and services you need.</p>;
         </div>;
+<<<<<<< HEAD
 ";
         <div className="grid grid - cols - 1 md: anygrid - cols - 2 lg:grid - cols - 4 gap - 8">;
           {sitemap_data.map ((section, section_index)  => (";
@@ -253,10 +392,49 @@ export const SitemapPage: React.FC = () => {;
 '"
 }
 
+=======
+      </div>;
+    </div>;) }
+'"
+}
+<<<<<<< HEAD
+
+          {/* Dynamic Routes */}
+          <div className="bg-zion-blue-dark p-6 rounded-lg">
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
+            <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>
+            <ul className="space-y-2">
+
+              {Object.entries(dynamicPaths).map(([key, path]) => (
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            </ul>;
+          </div>;
+        </div>;
+      </div>;
+    </>;
+  );
+};
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             for assistance.;
           </p>;
         </div>;
       </div>;
     </div>) }
 '";
+<<<<<<< HEAD
 };
+=======
+
+}
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type MediaBundle = 'general' | 'web3' | 'institutional';
 export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale';
 
@@ -30,6 +31,51 @@ export async function generateMediaContent(request: MediaGenerationRequest): Pro
   }
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
+=======
+<<<<<<< HEAD
+export type MediaBundle = 'general' | 'web3' | 'institutional';
+export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale';
+export interface MediaGenerationResponse {;
+  ok: boolean;
+  text?: string;
+  error?: string
+}
+export async function generateMediaContent(request: MediaGenerationRequest): Promise<MediaGenerationResponse> {
+  // Mock implementation - in production, this would call OpenAI or other AI service
+  return {
+<<<<<<< HEAD
+    ok: true
+    text: `Mock ${request.type} for ${request.companyName} on ${request.date}`
+  }
+=======
+    ok: true,
+    text: `Mock ${request.type} for ${request.companyName} on ${request.date}`;
+  };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
+  const base: MediaAsset[] = [
+    {
+      path: ''
+      filename: 'legal/terms-of-use.md'
+      type: 'text'
+      content: `# Terms of Use\n\nBy using Zion products, you agree to these terms. Replace with counsel-approved language.`
+    }
+    {
+      path: ''
+      filename: 'legal/privacy-policy.md'
+      type: 'text'
+      content: `# Privacy Policy\n\nWe respect your privacy. Replace with counsel-approved language.`
+    }
+    {
+<<<<<<< HEAD
+      path: ''
+      filename: 'legal/jurisdictional-disclosures.md'
+      type: 'text'
+      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
+    }
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export async function generateMediaContent (request: MediaGenerationRequest): Promise < MediaGenerationResponse> {
   // Mock implementation - in production, this would call OpenAI or other AI service;
   return {
@@ -59,8 +105,18 @@ export function buildLegalDocs (kind: MediaBundle): MediaAsset[] {
     }
       filename: 'legal/terms-of-use && use.md',
       type: 'text',
+<<<<<<< HEAD
       content: `# Terms of Use\n\n_by using Zion products, you agree to these terms. Replace with counsel - approved language.`,
     },
+=======
+
+      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
+    },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  ];
+  const web3Extras: MediaAsset[] = [
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     {
       path: '',
       filename: 'legal/privacy-policy && policy.md',
@@ -103,7 +159,13 @@ export function buildLegalDocs (kind: MediaBundle): MediaAsset[] {
 }
 
 export function buildPressRelease(
+<<<<<<< HEAD
   type: PressReleaseType
+<<<<<<< HEAD
+=======
+  params: {
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
   // Check condition
 if (return [...base, ...web3Extras]) {
@@ -115,6 +177,17 @@ export function buildPressRelease (
   type: PressReleaseType,
   params: {
     company_name: string;
+<<<<<<< HEAD
+=======
+=======
+export function buildPressRelease(
+
+  type: PressReleaseType,
+  params: {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    companyName: string;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     date: string;
     raise_amount?: string;
     token_name?: string;
@@ -145,6 +218,7 @@ export function buildTimeline(startDate: Date) {
     }
     { label: 'Week 4: Zion Global Summit', date: fmt(addDays(startDate, 21)) }
   ];
+<<<<<<< HEAD
 }
 
 function titleCase(s: string) {
@@ -626,3 +700,21 @@ function title_case() {
   return s.replace (
     /\w\S*/g,
     w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ());}
+=======
+function titleCase(s: string) {
+  return s.replace(
+    /\w\S*/g
+    w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
+  );}
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+function titleCase(s: string) {
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

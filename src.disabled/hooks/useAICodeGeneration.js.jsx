@@ -1,3 +1,19 @@
+<<<<<<< HEAD
 import { useState,useCallback,useRef,useEffect } from\';react\' import { useAnalytics } from\';\';./useAnalytics\' \"export\": const useAICodeGeneration = () => { const { trackEvent } = useAnalytics({ \"enableTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'true\'}) const [isGenerating,setIsGenerating] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [generatedCode,setGeneratedCode] = useState(\'';\';) const [codeAnalysis,setCodeAnalysis] = useState(null) const [suggestions,setSuggestions] = useState([]) const [history,setHistory] = useState([]) const generationTimeoutRef = useRef(null)\'';
+=======
+<<<<<<< HEAD:src.disabled/hooks/useAICodeGeneration.js.jsx
+<<<<<<< HEAD
+import { useState,useCallback,useRef,useEffect } from\';react\' import { useAnalytics } from\';\';./useAnalytics\' \"export\": const useAICodeGeneration = () => { const { trackEvent } = useAnalytics({ \"enableTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'true\'}) const [isGenerating,setIsGenerating] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [generatedCode,setGeneratedCode] = useState(\'';\';) const [codeAnalysis,setCodeAnalysis] = useState(null) const [suggestions,setSuggestions] = useState([]) const [history,setHistory] = useState([]) const generationTimeoutRef = useRef(null)\'';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const { useState,useCallback,useRef,useEffect } from";react" import { useAnalytics } from";";./useAnalytics" export: const useAICodeGeneration = () => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [isGenerating,setIsGenerating] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [generatedCode,setGeneratedCode] = useState("";";) const [codeAnalysis,setCodeAnalysis] = useState(null) const [suggestions,setSuggestions] = useState([]) const [history,setHistory] = useState([]) const generationTimeoutRef = useRef(null)"";'"'"
 const { useState,useCallback,useRef,useEffect } from";react" import { useAnalytics } from";";./useAnalytics" export: const useAICodeGeneration = () => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [isGenerating,setIsGenerating] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [generatedCode,setGeneratedCode] = useState("";";) const [codeAnalysis,setCodeAnalysis] = useState(null) const [suggestions,setSuggestions] = useState([]) const [history,setHistory] = useState([]) const generationTimeoutRef = useRef(null)"";'"'"
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+=======
+const { useState,useCallback,useRef,useEffect } from";react" import { useAnalytics } from";";./useAnalytics" export: const useAICodeGeneration = () => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [isGenerating,setIsGenerating] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [generatedCode,setGeneratedCode] = useState("", ") const [codeAnalysis,setCodeAnalysis] = useState(null) const [suggestions,setSuggestions] = useState([]) const [history,setHistory] = useState([]) const generationTimeoutRef = useRef(null)"";'"'"
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/hooks/useAICodeGeneration.js.jsx
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

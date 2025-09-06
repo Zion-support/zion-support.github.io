@@ -86,6 +86,7 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
                 }),
               }).catch (() => {});
             }
+<<<<<<< HEAD
           />;
         </div>;
         <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
@@ -122,25 +123,81 @@ export default TopicPage;      </Head>;
       <div className="mx-auto max-w-6xl">;
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>;
         <div className="mb-6">;
+=======
+          />
+        </div>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+          {posts.map(p => (
+            <BlogCard key={p.id} post={p} />
+          ))}
+        </div>
+        <div className='mt-6'>
+          <Link href='/blog' className='underline'>
+            Back to Blog
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+<<<<<<< HEAD
+}
+export const getServerSideProps: GetServerSideProps = async ctx => {
+  const topic = String(ctx.params?.topic |'');
+=======
+};
+
+export const getServerSideProps: GetServerSideProps = async ctx => {;
+  const topic = String(ctx.params?.topic || '');
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
+  return { props: { topic, posts } }
+}
+export default TopicPage;      </Head>
+      <div className="mx-auto max-w-6xl">
+        <h1 className="text-4xl font-bold mb-3">{topic}</h1>
+        <div className="mb-6">
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <PageShareButtons
             title={`${topic} - Zion Blog`}
-            url={typeof window === 'undefined' ? `https://zion && zion.app/categories/${encodeURIComponent(topic)}` : window && window.location.href}
+            url={typeof window === 'undefined' ? `https://zion.app/categories/${encodeURIComponent(topic)}` : window.location.href}
             description={`Articles about ${topic}`}
-            onShare={(network) => fetch('/api/analytics/share', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ url: window && window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' }) }).catch(() => {})}
-          />;
-        </div>;
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
-          {posts && posts.map((p) => (;
-            <BlogCard key={p && p.id} post={p} />;
+            onShare={(network) => fetch('/api/analytics/share', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url: window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' }) }).catch(() => {})}
+          />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {posts.map((p) => (
+            <BlogCard key={p.id} post={p} />
           ))}
         </div>
         <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const topic = String(ctx.params?.topic |'');
+=======
+<<<<<<< HEAD
+}
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+<<<<<<< HEAD
+  const topic = String(ctx.params?.topic |'');
+=======
+=======
+};
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {;
+  const topic = String(ctx && ctx.params?.topic || '');
+  const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));
+
+=======
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const topic = String(ctx.params?.topic || '');
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
   return { props: { topic, posts } }
 }

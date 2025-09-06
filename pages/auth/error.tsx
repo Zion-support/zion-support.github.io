@@ -4,8 +4,36 @@ import { Button } from '@/components / ui / button';
 import { AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
 import Head from 'next/head';
+<<<<<<< HEAD
 const errorMessages: Record<string string> = {OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
   default: 'There was an issue with your authentication request.';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+const errorMessages: Record<string string> = {OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
+  default: 'There was an issue with your authentication request.';
+}
+export default function AuthErrorPage() {
+  const { query } = useRouter()
+  const message = errorMessages[query.error as string] |errorMessages.default
+=======
+const errorMessages: Record<string string> = {;
+  OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
+  default: 'There was an issue with your authentication request.';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+const errorMessages: Record<string, string> = {;
+  OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
+  default: 'There was an issue with your authentication request.';
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 export default function AuthErrorPage() {
   const { query } = useRouter()

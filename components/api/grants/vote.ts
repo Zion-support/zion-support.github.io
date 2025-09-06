@@ -73,10 +73,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     choice: payload.choice
     createdAt: new Date().toISOString()
   }
+<<<<<<< HEAD
   g.votes = [...(g.votes |[]), vote];
   g.updatedAt = new Date().toISOString();
   writeGrant(g);
   res.status(200).json({ record: g });  }
+=======
+  const payload = req.body as VotePayload;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  if (!payload?.grantId |!payload?.voter |!payload?.choice) {
+=======
+  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    res.status(400).json({ error: 'Missing fields' });
+    return
+  }
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const g = readGrant(payload.grantId);
   if (!g) return res.status(404).json({ error: 'Grant not found' });
   const vote = { id: uuidv4(), voter: payload.voter, choice: payload.choice, createdAt: new Date().toISOString() }
@@ -86,6 +101,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(200).json({ record: g })
 }
+<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
@@ -143,3 +159,34 @@ if ( {) {
   write_grant (g);
   res.status (200).json ({ record: g });
 }
+=======
+<<<<<<< HEAD
+=======
+  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
+    res.status(400).json({ error: 'Missing fields' });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+    id: uuidv4(),
+    voter: payload && payload.voter,
+    choice: payload && payload.choice,
+    createdAt: new Date().toISOString(),
+  };
+  g && g.votes = [...(g && g.votes || []), vote];
+  g && g.updatedAt = new Date().toISOString();
+  writeGrant(g);
+  res && res.status(200).json({ record: g });  }
+  const g = readGrant(payload && payload.grantId);
+  if (!g) return res && res.status(404).json({ error: 'Grant not found' });
+  const vote = { id: uuidv4(), voter: payload && payload.voter, choice: payload && payload.choice, createdAt: new Date().toISOString() };
+  g && g.votes = [...(g && g.votes || []), vote];
+  g && g.updatedAt = new Date().toISOString();
+  writeGrant(g);
+  res && res.status(200).json({ record: g })
+}
+
+=======
+    res.status(400).json({ error: 'Missing fields' });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

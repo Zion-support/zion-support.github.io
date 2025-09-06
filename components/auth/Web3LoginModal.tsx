@@ -205,8 +205,23 @@ if ( {) {
       console.error(e);
       setError(e?.message |'Phantom connection failed');
     } finally {
+<<<<<<< HEAD
       setLoading(false);    }      if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
       onLoggedIn?.({ address: publicKey, chain: 'sol' })
+=======
+<<<<<<< HEAD
+      setLoading(false);    }      if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
+<<<<<<< HEAD
+      onLoggedIn?.({ address: publicKey, chain: 'sol' })
+=======
+=======
+      setLoading(false);    }
+
+
+
+      onLoggedIn?.({ address: publicKey, chain: 'sol' }),
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       onClose()
     } catch (e: any) {
       console.error(e);
@@ -217,6 +232,7 @@ if ( {) {
   }, [onClose, onLoggedIn]);
   if (!isOpen) return null;
   return (
+<<<<<<< HEAD
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/60'>;
       <div className='w-full max-w-md rounded-xl bg-white dark:bg-neutral-900 p-6 shadow-2xl'>;
         <div className='mb-4'>;
@@ -412,12 +428,83 @@ export default function Web3LoginModal(): any (props: Web3LoginModalProps) {;
       </div>;
     </div>;
   );
+=======
+    <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/60'>
+      <div className='w-full max-w-md rounded-xl bg-white dark:bg-neutral-900 p-6 shadow-2xl'>
+        <div className='mb-4'>
+          <h2 className='text-lg font-semibold'>Connect your wallet</h2>
+          <p className='text-sm text-gray-500 dark:text-gray-400'>
+            No gas needed. We will verify your ownership with a signed message.
+          </p>
+        </div>
+        {error && (
+          <div className='mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300'>
+            {error}
+          </div>
+        )}
+        <div className='space-y-3'>
+          <button
+            onClick={handleEvmConnect}
+            disabled={loading}
+            className='w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black'
+          >
+            {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
+          </button>
+          <button
+            onClick={handlePhantomConnect}
+            disabled={loading}
+            className='w-full rounded-lg bg-purple-600 text-white py-2.5'
+          >
+            {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
+          </button>
+        </div>
+        <div className='mt-4 flex justify-end'>
+          <button
+            onClick={onClose}
+            className='text-sm text-gray-600 dark:text-gray-300'
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default function Web3LoginModal(props: Web3LoginModalProps) {
+  if (!isClient) return null;
+=======
+
+export default function Web3LoginModal(props: Web3LoginModalProps) {;
+  if (!isClient) return null;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return <ModalInner {...props} />;        </div>
+        {error && (
+          <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
+        )}
+        <div className="space-y-3">
+          <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">
+            {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
+          </button>
+          <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">
+            {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
+          </button>
+        </div>
+        <div className="mt-4 flex justify-end">
+          <button onClick={onClose} className="text-sm text-gray-600 dark: text-gray-300">Cancel</button>
+        </div>
+      </div>
+    </div>
+  )
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null;
 
   return <ModalInner {...props} />
 }
+<<<<<<< HEAD
 export default /**
  * Web3LoginModal - Function description
  */
@@ -428,3 +515,19 @@ if (return null) {
 }
   return <ModalInner {...props} />;
 }
+=======
+=======
+
+export default function Web3LoginModal(props: Web3LoginModalProps) {;
+  if (!isClient) return null;
+<<<<<<< HEAD
+  return <ModalInner {...props} />;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  return <ModalInner {...props} />
+}
+=======
+  return <ModalInner {...props} />;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

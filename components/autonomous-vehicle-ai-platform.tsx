@@ -2,6 +2,10 @@ import React from 'react',
 import Head from 'next/head';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Phone
   Mail
   MapPin
@@ -9,6 +13,7 @@ import {
   ArrowRight
   Car
   Star;
+<<<<<<< HEAD
 import Head from 'next/head';
 import {;
   Phone,;
@@ -18,10 +23,30 @@ import {;
   ArrowRight,;
   Car,;
   Star,;
+=======
+=======
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Car,;
+  Star,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function AutonomousVehicleAIPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/autonomous-vehicle-ai-platform')
@@ -153,6 +178,7 @@ function AutonomousVehicleAIPage() {
 if (return null) {
   $2
 }
+<<<<<<< HEAD
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -241,3 +267,17 @@ if (return null) {
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
+=======
+<<<<<<< HEAD
+=======
+}
+
+=======
+<<<<<<< HEAD
+;
+}
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

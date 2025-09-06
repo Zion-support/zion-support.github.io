@@ -54,6 +54,17 @@ export default function CoachWidget() {
     } finally {;
       setLoading(false);    }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+  return (
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (      });
       const data = await resp.json();
       setReply(data.text |'')
@@ -62,6 +73,11 @@ export default function CoachWidget() {
       setLoading(false)
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
   return (
     <div className='border rounded p-3'>;
       <div className='font-medium mb-2'>ZionGPT Coach</div>;
@@ -96,6 +112,7 @@ export default function CoachWidget() {
     </div>
   );
 }
+<<<<<<< HEAD
 import React, { useState } from 'react';
 export default /**
  * CoachWidget - Function description
@@ -154,3 +171,20 @@ function ask() {
         </div>)}
     </div>);
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+<<<<<<< HEAD
+
+  return (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+    }
+  }
+
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

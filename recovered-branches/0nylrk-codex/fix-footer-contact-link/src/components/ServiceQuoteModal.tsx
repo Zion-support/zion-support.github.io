@@ -1,6 +1,34 @@
 import React from 'react';
 
+<<<<<<< HEAD
 import { useState  } from 'react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState  } from 'react';
+=======
+import {useState} from 'react';
+import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Label} from "@/components/ui/label";
+import {Slider} from "@/components/ui/slider";
+import {Calendar} from "@/components/ui/calendar";
+import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
+import {format} from "date-fns";
+import {CalendarIcon} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {ProductListing} from "@/types/listings";
+import {toast} from '@/hooks/use-toast';
+import {supabase} from "@/integrations/supabase/client";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useState } from 'react',
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -13,9 +41,22 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
 import { ProductListing } from "@/types/listings";
 import { toast  } from '@/hooks/use-toast';
 import { supabase } from "@/integrations/supabase/client";
+=======
+
+
+import { ProductListing } from "@/types/listings",
+import { toast } from '@/hooks/use-toast',
+import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface ServiceQuoteModalProps {
 
   open: boolean
@@ -136,10 +177,24 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                     <SelectValue placeholder="Select your budget range" />;
                   </SelectTrigger>;
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;
+<<<<<<< HEAD
                     {BUDGET_RANGES && BUDGET_RANGES.map((range) => (;
                       <SelectItem key={range && range.value} value={range && range.value} className="text-white hover:bg-zion-blue-light">;
                         {range && range.label}
                       </SelectItem>;
+=======
+
+                    {BUDGET_RANGES.map((range) => (;
+                      <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                        {range.label}
+                      </SelectItem>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     ))}
                   </SelectContent>;
                 </Select>;
@@ -260,6 +315,43 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                       <span className="text-white">{format(startDate, "PPP")}</span>
                     </div>
                   )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                </div>
+              </div>
+            </div>
+<<<<<<< HEAD
+          )}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                />;
+              </div>;
+
+              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-md p-4">;
+                <h3 className="font-medium text-zion-cyan mb-2">Quote Summary</h3>;
+                <div className="space-y-2 text-sm">;
+                  <div className="flex justify-between">;
+                    <span className="text-zion-slate-light">Service:</span>;
+                    <span className="text-white">{service?.title || "Custom Service"}</span>;
+                  </div>;
+                  <div className="flex justify-between">;
+                    <span className="text-zion-slate-light">Budget:</span>;
+                    <span className="text-white">{BUDGET_RANGES && BUDGET_RANGES.find(b => b && b.value === formData && formData.budget)?.label}</span>;
+                  </div>;
+                  <div className="flex justify-between">;
+                    <span className="text-zion-slate-light">Timeline:</span>;
+                    <span className="text-white">{TIMELINE_OPTIONS && TIMELINE_OPTIONS.find(t => t && t.value === formData && formData.timeframe)?.label}</span>;
+                  </div>;
+                  {startDate && (;
+                    <div className="flex justify-between">;
+                      <span className="text-zion-slate-light">Start Date:</span>;
+                      <span className="text-white">{format(startDate, "PPP")}</span>;
+                    </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                  )}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   {endDate && (;
                     <div className="flex justify-between">;
                       <span className="text-zion-slate-light">End Date:</span>;
@@ -269,6 +361,13 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           )}
           <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">
             {currentStep !== 'details' && (
