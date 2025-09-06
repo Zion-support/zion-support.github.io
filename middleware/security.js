@@ -21,4 +21,3 @@ export function securityMiddleware(request) {
   }
   
   return response;
-}
