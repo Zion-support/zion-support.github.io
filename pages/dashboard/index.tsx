@@ -33,7 +33,6 @@ const Dashboard: NextPage = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         />
       </section>
       <section>
@@ -43,7 +42,6 @@ const Dashboard: NextPage = () => {
           description="When conversations start, they’ll show up here."
 
 
-=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import EmptyState from '../../components / ui / EmptyState',
@@ -72,4 +70,3 @@ export default Dashboard;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

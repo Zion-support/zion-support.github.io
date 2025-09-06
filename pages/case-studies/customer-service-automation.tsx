@@ -20,7 +20,6 @@
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <header className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30 mb-6">
               Financial Services Industry
@@ -33,7 +32,6 @@
             </p>
           </header>
 
-=======
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -77,7 +75,6 @@ function CaseStudyPage() {
 
           {/* Case Study Content */}
           <div className="max - w-4xl mx - auto">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {/* Company Overview */}
 
 
@@ -94,7 +91,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -104,13 +100,9 @@ function CaseStudyPage() {
 
                   A leading financial services company serving millions of customers with banking,
 
-=======
                   A leading financial services company serving millions of customers with banking, 
-=======
                   A leading financial services company serving millions of customers with banking,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   investment, and insurance products. The company faced challenges with high customer service costs and long response times.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
@@ -138,7 +130,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -172,7 +163,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Solution</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -223,11 +213,9 @@ function CaseStudyPage() {
 
                       Round-the-clock automated support with seamless escalation 
 
-=======
 
                       Round-the-clock automated support with seamless escalation
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       to human agents when needed.
                     </p>
                   </div>
@@ -243,7 +231,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Results & Impact</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -302,7 +289,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -550,7 +536,6 @@ export default function CaseStudyPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Timeline</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -595,7 +580,6 @@ export default function CaseStudyPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="text-center">
               <div className="bg-gradient-to-r from-green-500/10 to-cyan-500/10 rounded-2xl p-8 border border-green-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Transform Your Customer Service?</h2>
@@ -627,10 +611,8 @@ export default function CaseStudyPage(req, res) {
     </>
   )
 
-=======
 }
 
-=======
             <section className="mb - 16">;
               <h2 className="text - 3xl font - bold text - white mb - 6">Company Overview</h2>;
               <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20">;
@@ -745,7 +727,6 @@ export default function CaseStudyPage(req, res) {
                         <span className="text - white / 90">Support Coverage</span>;
                         <span className="text - 2xl font - bold text - green - 400">24 / 7</span>;
                       </div>;
-=======
 
             <section className="mb-16">;
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Timeline</h2>;
@@ -756,7 +737,6 @@ export default function CaseStudyPage(req, res) {
                     <div>;
                       <h4 className="text-lg font-semibold text-white">System Design & Planning (Month 1)</h4>;
                       <p className="text-white/70">Customer service workflow analysis and system architecture design</p>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>;
                   </div>;
                   <div>;

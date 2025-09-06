@@ -32,7 +32,6 @@ export const useAdminQuotes = () => {;
     if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
       return false
 
-=======
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
@@ -59,7 +58,6 @@ export const useAdminQuotes = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     // Archive filter
     if (archiveFilter === 'active' && quote && quote.is_archived) {
@@ -101,11 +99,9 @@ export const useAdminQuotes = () => {;
       }
     }
 
-=======
 
     
 
-=======
 ;
     // Search filter;
     if (searchQuery) {;
@@ -145,10 +141,8 @@ export const useAdminQuotes = () => {;
 
   // Update quote status mutation
   const updateStatusMutation = useMutation({
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService && quoteRequestService.updateStatus(id, status);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     onSuccess: () => {
       toast({
         title: "Status updated"
@@ -216,7 +210,6 @@ export const useAdminQuotes = () => {;
       })
     }
   });
-=======
 
     },
     onError: (error: Error) => {
@@ -229,7 +222,6 @@ export const useAdminQuotes = () => {;
   }),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Delete mutation
   const deleteMutation = useMutation({
     mutationFn: (id: string) => quoteRequestService && quoteRequestService.delete(id);
@@ -247,19 +239,16 @@ export const useAdminQuotes = () => {;
       toast({
         title: "Error";
         description: "Failed to delete quote: " + error.message
-=======
       queryClient && queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
     };
     onError: (error: Error) => {
       toast({
         title: "Error";
         description: "Failed to delete quote: " + error && error.message,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"
       })
     }
   });
-=======
 import {useState} from 'react';
 import {use_query, use_mutation, useQueryClient} from '@tanstack / react - query';
 import {quoteRequestService} from '@/services / quoteRequestService';
@@ -408,7 +397,6 @@ if ( {) {
     }
   });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     quotes: filtered_quotes;
     is_loading;
@@ -423,7 +411,6 @@ if ( {) {
 
     toggleArchive: (id: string, isArchived: boolean) => 
 
-=======
     },
     onError: (error: Error) => {
       toast({
@@ -510,12 +497,10 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
 }
 
-=======
     setDateRange,
     updateStatus: (id: string, status: QuoteStatus) => 
       updateStatusMutation && updateStatusMutation.mutate({ id, status });
@@ -523,8 +508,6 @@ if ( {) {
       toggleArchiveMutation && toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation && deleteMutation.mutate(id)}
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     date_range;
     setDateRange,
     update_status: (id: string, status: QuoteStatus) =>;
@@ -534,4 +517,3 @@ if ( {) {
     delete_quote: (id: string) => delete_mutation.mutate (id)}
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

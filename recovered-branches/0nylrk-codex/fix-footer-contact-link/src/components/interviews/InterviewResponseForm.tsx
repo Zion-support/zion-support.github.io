@@ -6,10 +6,8 @@ import { Interview  } from '@/types / interview';
 import { format, parseISO  } from './date - fns';
 
 interface InterviewResponseFormProps {
-=======
 
 interface InterviewResponseFormProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   interview: Interview;
 
 
@@ -23,7 +21,6 @@ export function InterviewResponseForm(): any ({;
   const interviewDate = parseISO(interview && interview.scheduled_date);
   const formattedDate = format(interviewDate, "EEEE, MMMM d");
   const formattedTime = format(interviewDate, "h: mm a");
-=======
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Interview } from "@/types/interview";
@@ -46,7 +43,6 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
 
 
   // Calculate when interview ends;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const endTime = new Date(interviewDate);
   endTime && endTime.setMinutes(endTime && endTime.getMinutes() + interview && interview.duration_minutes);
   const formattedEndTime = format(endTime, "h: mm a");
@@ -58,7 +54,6 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
         </p>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="grid gap-3">
           <div className="flex items-center gap-3">
             <div className="w-24 text-sm text-zion-slate-light">Date:</div>
@@ -67,7 +62,6 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
           <div className="flex items-center gap-3">
             <div className="w-24 text-sm text-zion-slate-light">Time:</div>
 
-=======
             <div>{formattedTime} - {formattedEndTime}</div>
           </div>
           <div className="flex items-center gap-3">
@@ -136,7 +130,6 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
           <div className="flex items-center gap-3">;
             <div className="w-24 text-sm text-zion-slate-light">Time:</div>;
             <div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {formattedTime} - {formattedEndTime}
             </div>;
           </div>;
@@ -239,9 +232,6 @@ function InterviewResponseForm() {
     </div>);
 
 }
-=======
 }
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

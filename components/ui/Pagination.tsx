@@ -30,7 +30,6 @@ import EnhancedButton from './EnhancedButton';
   total: number;
 
 export type PaginationProps = {
-=======
   on_change: (next_page: number) => void;
 }
 ;
@@ -110,11 +109,9 @@ export default function Pagination(): any ({ page, pageSize, total, onChange }: 
   );
 
 }  }
-=======
     if (p >= 1 && p <= totalPages) onChange(p)
   };
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
     <div className="flex items-center justify-between gap-2 mt-4">;
@@ -142,7 +139,6 @@ const Pagination: React.FC<PaginationProps> = ({ ;
   className = '' ;
 }) => {;
   const getPageNumbers = () => {;
-=======
   on_change: (next_page: number) => void;
 }
 ;
@@ -212,7 +208,6 @@ const Pagination: React.FC < PaginationProps> = ({
   const getPageNumbers = () =>: any {
 
     const pages = [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const maxVisiblePages = 5;
 
     } else {;
@@ -293,7 +288,6 @@ const Pagination: React.FC < PaginationProps> = ({
         <Link
           href={`${baseUrl}?page=${currentPage + 1}`}
           className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors">;
-=======
     // Check condition
 if ( {) {
   $2
@@ -386,7 +380,6 @@ if ( {) {
         <Link;
           href={`${base_url}?page=${current_page + 1}`}
           className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 500 bg - white border border - gray - 300 rounded - lg hover:bg - gray - 50 hover:text - gray - 700 transition - colors">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           Next;
           <ChevronRight className="w - 4 h - 4 ml - 1" />;
         </Link>) : (
@@ -397,21 +390,14 @@ if ( {) {
 }
 export default Pagination;
 }
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           <ChevronRight className="w - 4 h - 4 ml - 1" />;
         </span>)}
     </nav>);
 }
 export default Pagination;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

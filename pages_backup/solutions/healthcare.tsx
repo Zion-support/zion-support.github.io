@@ -20,13 +20,9 @@ const features = [
     icon: Users,
 
 
-=======
 export default function HealthcareSolutions() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/healthcare.tsx
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout
       title="Healthcare Solutions - Zion Tech Group"
@@ -73,7 +69,6 @@ export default function HealthcareSolutions() {;
               </p>
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
@@ -88,7 +83,6 @@ export default function HealthcareSolutions() {;
                     {feature.description}
                   </p>
                 </div>
-=======
         <section className="bg-gradient-to-r from-green-600 to-blue-700 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center">;
@@ -277,7 +271,6 @@ export default function HealthcareSolutions() {;
                     {feature && feature.description}
                   </p>;
                 </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/healthcare.tsx
               ))}
             </div>,;
           </div>;
@@ -469,7 +462,6 @@ export default function HealthcareSolutions() {;
                 </button>;
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
                   Download Healthcare Guide;
-=======
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-green-600 to-blue-700 p-8 rounded-xl text-white">;
@@ -481,7 +473,6 @@ export default function HealthcareSolutions() {;
                 <button className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">;
                   Schedule Demo;
                   <ArrowRight className="w-5 h-5 ml-2" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/healthcare.tsx
                 </button>;
               </div>;
             </div>;
@@ -489,11 +480,8 @@ export default function HealthcareSolutions() {;
         </section>;
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
@@ -520,9 +508,7 @@ export default function HealthcareSolutions() {;
       </div>
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   );
-=======
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">;
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
@@ -554,4 +540,3 @@ export default function HealthcareSolutions() {;
     </>;
   ),;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/healthcare.tsx

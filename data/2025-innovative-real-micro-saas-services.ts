@@ -1,10 +1,8 @@
 
 
 export interface InnovativeMicroSaasService {
-=======
 
 export interface InnovativeMicroSaasService {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   id: string;
   name: string;
@@ -41,7 +39,6 @@ export interface InnovativeMicroSaasService {;
   }
 
         'AI-powered data analysis and visualization',
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -76,7 +73,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       popular: true,
       icon: '📊',
 
-=======
       color: 'from - blue - 600 to - cyan - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / ai - business - intelligence - suite',
@@ -119,7 +115,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     },
 
         'AI-powered content generation',
-=======
     // AI Content Generation Platform;
     {
       id: 'ai - content - generation - platform',
@@ -153,7 +148,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       growthRate: '18% annual growth',
       variant: 'ai-content-enterprise',
       contactInfo: {
-=======
       color: 'from - purple - 600 to - pink - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / ai - content - generation - platform',
@@ -196,7 +190,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
         'AI-powered chatbot with natural language processing',
         'Multi-language support (50+ languages)',
         '24/7 automated customer support',
-=======
     // AI Customer Service Automation;
     {
       id: 'ai - customer - service - automation',
@@ -222,7 +215,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       popular: true,
       icon: '🤖',
 
-=======
       color: 'from - green - 600 to - emerald - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / ai - customer - service - automation',
@@ -265,7 +257,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     },
 
         'AI-powered lead scoring and qualification',
-=======
     // AI Sales Intelligence Platform;
     {
       id: 'ai - sales - intelligence - platform',
@@ -291,7 +282,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       popular: true,
       icon: '💰',
 
-=======
       color: 'from - yellow - 600 to - orange - 600',
       text_color: 'text - yellow - 400',
       link: 'https://ziontechgroup.com / ai - sales - intelligence - platform',
@@ -334,7 +324,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     },
 
         'AI-powered campaign optimization',
-=======
     // AI Marketing Automation Suite;
     {
       id: 'ai - marketing - automation - suite',
@@ -360,7 +349,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       popular: true,
       icon: '📈',
 
-=======
       color: 'from - red - 600 to - pink - 600',
       text_color: 'text - red - 400',
       link: 'https://ziontechgroup.com / ai - marketing - automation - suite',
@@ -403,7 +391,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     },
 
         'AI-powered task allocation and scheduling',
-=======
     // AI Project Management Platform;
     {
       id: 'ai - project - management - platform',
@@ -437,7 +424,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       growthRate: '13% annual growth',
       variant: 'ai-project-enterprise',
       contactInfo: {
-=======
       color: 'from - indigo - 600 to - purple - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / ai - project - management - platform',
@@ -477,7 +463,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
 
         'AI-powered financial analysis and forecasting',
         'Real-time market data and insights',
-=======
     // AI Financial Analytics Platform;
     {
       id: 'ai - financial - analytics - platform',
@@ -503,7 +488,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       popular: true,
       icon: '💹',
 
-=======
       color: 'from - emerald - 600 to - teal - 600',
       text_color: 'text - emerald - 400',
       link: 'https://ziontechgroup.com / ai - financial - analytics - platform',
@@ -546,7 +530,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     },
 
         'AI-powered candidate screening and matching',
-=======
     // AI HR Management Platform;
     {
       id: 'ai - hr - management - platform',
@@ -572,7 +555,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       popular: true,
       icon: '👥',
 
-=======
       color: 'from - blue - 600 to - indigo - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / ai - hr - management - platform',
@@ -615,7 +597,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     },
 
         'AI-powered demand forecasting',
-=======
     // AI Supply Chain Optimization;
     {
       id: 'ai - supply - chain - optimization',
@@ -641,7 +622,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       popular: true,
       icon: '🚚',
 
-=======
       color: 'from - orange - 600 to - red - 600',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / ai - supply - chain - optimization',
@@ -684,7 +664,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     },
 
         'AI-powered contract analysis and review',
-=======
     // AI Legal Document Analysis;
     {
       id: 'ai - legal - document - analysis',
@@ -718,7 +697,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       growthRate: '16% annual growth',
       variant: 'ai-legal-enterprise',
       contactInfo: {
-=======
       color: 'from - gray - 600 to - slate - 600',
       text_color: 'text - gray - 400',
       link: 'https://ziontechgroup.com / ai - legal - document - analysis',
@@ -753,11 +731,9 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       implementation_details:;
         'AI - powered legal document analysis platform with natural language processing and machine learning for contract analysis and legal insights.',
       launch_date: '2024 - 02 - 20',
-=======
 
         'AI-powered legal document analysis platform with natural language processing and machine learning for contract analysis and legal insights.',
       launchDate: '2024-02-20',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       customers: 42,
       rating: 4 && 4.7,
       reviews: 20,
@@ -767,7 +743,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
 
   ];    features: [
 
-=======
 export interface EnhancedRealMicroSaasService {
   id: string, name: string,
   tagline: string, price: string,
@@ -822,7 +797,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     variant: 'ai-bi-enterprise',
     contactInfo: {
       
-=======
   ];    features: [;
       'AI - powered contract analysis and review_legal risk identification and assessment_document comparison and analysis_legal research and case law analysis_compliance checking and monitoring_legal document generation_integration with legal systems_mobile legal app';
       'Multi - language legal support_predictive legal analytics';
@@ -876,12 +850,10 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     rating: 4 && 4.7,
 
     reviews: 20
-=======
     real_implementation: true, implementation_details: 'AI - powered legal document analysis platform with natural language processing and machine learning for contract analysis and legal insights.',
     launch_date: '2024 - 02 - 20', customers: 42,
     rating: 4.7,
     reviews: 20;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 ];
 
@@ -921,11 +893,8 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     reviews: 20
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -938,8 +907,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

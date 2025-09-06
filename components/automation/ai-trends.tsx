@@ -1,9 +1,7 @@
 
 
 }</div> </div>) import fs from 'fs';
-=======
 import fs from 'fs';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import path from 'path';
 export type Trend = {
 
@@ -50,7 +48,6 @@ export async function getServerSideProps() {;
 }
 
 export default function AiTrendsPage(): any ({ items }: { items: Trend[] }) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: Trend Watch</h1>;
@@ -103,14 +100,12 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
 
 );
 }
-=======
       </div>;
     </div>;
   );
 }
 
 
-=======
   items.sort ((a, b) => (a.date < b.date ? 1 : -1));
   return { props: { items } }
 }
@@ -140,4 +135,3 @@ function AiTrendsPage() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

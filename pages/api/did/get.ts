@@ -18,7 +18,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 const store: Record < string, any> = (global as any).__ZION_DID_STORE__ || {},
@@ -33,9 +32,6 @@ function handler() {
   const data = store[String (address).toLowerCase ()] || null,
   return res.status (200).json ({ data });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -43,5 +39,3 @@ function handler() {
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

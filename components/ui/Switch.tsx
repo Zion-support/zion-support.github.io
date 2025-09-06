@@ -3,10 +3,8 @@ import React from './react';
 ;
 
 interface SwitchProps {
-=======
 
 interface SwitchProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   checked?: boolean;
   onCheckedChange?: (checked: boolean) => void;
   disabled?: boolean;
@@ -20,7 +18,6 @@ const Switch: React.FC < SwitchProps> = ({
   class_name = "",
 
 }) => {
-=======
 
 const Switch: React.FC<SwitchProps> = ({;
   checked = false,;
@@ -28,7 +25,6 @@ const Switch: React.FC<SwitchProps> = ({;
   disabled = false,;
   className = "",;
 }) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <button;
       type="button";

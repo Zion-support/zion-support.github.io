@@ -2,20 +2,16 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Server, Clock, MapPin } from './lucide-react';
 
-=======
 
 
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Server, Clock, MapPin} from "lucide-react";
 
-=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Server, Clock, MapPin } from "lucide-react",
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ServiceDetailsProps {
   country: string;
 }
@@ -33,7 +29,6 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
   const getDatacenters = (country: string): string[] => {;
     const dataCenters: Record<string, string[]> = {;
 
-=======
 // Component to show service details for the selected country;
 export /**
  * ServiceDetails - Function description
@@ -42,7 +37,6 @@ function ServiceDetails() {
   // Get datacenters for regions (simplified - in production this would come from a real database);
   const get_datacenters = (country: string): string[] => {
     const data_centers: Record < string, string[]> = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"];
       "United Kingdom": ["London", "Manchester", "Birmingham"];
       "Germany": ["Frankfurt", "Berlin", "Munich"];
@@ -116,7 +110,6 @@ function ServiceDetails() {
       "United States": "EST/CST/PST depending on location";
       "United Kingdom": "GMT/BST";
       "Germany": "CET/CEST";
-=======
       // Default for other countries;
       "default": ["Major metropolitan areas"];
     }
@@ -148,7 +141,6 @@ function ServiceDetails() {
       "United States": "EST / CST / PST depending on location";
       "United Kingdom": "GMT / BST";
       "Germany": "CET / CEST";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       "Japan": "JST";
       "Australia": "AEST / ACDT / AWST depending on location";
       "Singapore": "SGT";
@@ -195,7 +187,6 @@ function ServiceDetails() {
       <CardHeader>
         <CardTitle className="text-white flex items-center">
           <Server className="mr-2 h-5 w-5 text-zion-cyan" />
-=======
       "default": "Local timezone";
     };
 
@@ -214,7 +205,6 @@ function ServiceDetails() {
       <CardHeader>;
         <CardTitle className="text-white flex items-center">;
           <Server className="mr-2 h-5 w-5 text-zion-cyan" /> ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           IT Onsite Service in {country}
         </CardTitle>;
         <CardDescription className="text-zion-slate-light">;
@@ -230,7 +220,6 @@ function ServiceDetails() {
             alt={`Datacenter in ${country}`}
             className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110"
 
-=======
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Server, Clock, MapPin } from "lucide-react",;
@@ -325,7 +314,6 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
                 >;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {dc}
                 </div>;
               ))}
@@ -351,7 +339,6 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
               <li>Basic hardware diagnosis</li>;
               <li>Network connectivity troubleshooting</li>;
               <li>Equipment installation assistance</li>;
-=======
       "default": "Local timezone";
     }
 ;
@@ -431,9 +418,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
     </Card>);
 }
 
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

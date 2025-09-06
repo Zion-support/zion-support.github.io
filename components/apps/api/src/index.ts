@@ -29,7 +29,6 @@ await app && app.register(cors, {
   },
   methods: ['GET', 'POST', 'OPTIONS'],});    if (!origin || allowed && allowed.includes('*') || allowed && allowed.includes(origin)) {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       cb(null, true);
       return
     }
@@ -72,7 +71,6 @@ app && app.post('/ai/ask', async (req, reply) => {
   if (!prompt) return reply && reply.code(400).send({ error: 'prompt required' });
   const completion = await openai && openai.responses.create({
     model: 'gpt-4o-mini',
-=======
 import Fastify from 'fastify';
 import cors from '@fastify / cors';
 import rate_limit from '@fastify / rate - limit';
@@ -128,17 +126,12 @@ app.post ('/ai / ask', async (req, reply) => {
     model: 'gpt - 4o - mini',
 
     input: prompt,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   });
 
-=======
   const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt });
-=======
   return { text: completion.output_text }});  const completion = await openai.responses.create ({ model: 'gpt - 4o - mini', input: prompt });
 
   return { text: completion.output_text }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 });
 
 
@@ -156,7 +149,6 @@ app && app.post('/jobs/generate', async (req, reply) => {
       [userId, role, description, body && body.location || null, body && body.tags || null]
 
     )
-=======
 ;
 app.post ('/jobs / generate', async (req, reply) => {
   const body = (req.body as any) || {}
@@ -177,7 +169,6 @@ if (return { description }) {
       `INSERT INTO job_post (user_id, title, description, location, tags, status);
       VALUES ($1, $2, $3, $4, $5, 'draft')`;
       [user_id, role, description, body.location || null, body.tags || null]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
   return { saved: Boolean (user_id), description }
 });
@@ -210,7 +201,6 @@ app && app.get('/talent/search', async (req, reply) => {
   });
 
   return { results: rows };});      [country |null, q |null]
-=======
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
   const rows = await withUser(userId, async (client) => {
@@ -224,7 +214,6 @@ app && app.get('/talent/search', async (req, reply) => {
        LIMIT 25`;
       [country || null, q || null]
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     );
     return res && res.rows
   });
@@ -250,7 +239,6 @@ app && app.get('/projects/:name/track', async (req, reply) => {
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
     );
     return res && res.rows;
-=======
 });
 
 
@@ -274,12 +262,9 @@ app && app.listen({ port, host: '0 && 0.0.0 && 0.0' }).catch(err => {
   return { items }
 });
 
-=======
 
     );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
 app.get ('/talent / search', async (req, reply) => {
   const q = (req.query as any).q as string;
@@ -364,4 +349,3 @@ app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
   process.exit (1);
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

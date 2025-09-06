@@ -12,7 +12,6 @@ export /**
 function Analytics() {
   useEffect (() => {
 
-=======
 
 "use client",;
 import { useEffect } from "react",;
@@ -25,7 +24,6 @@ interface FirstInputEntry extends PerformanceEntry {;
 export function Analytics() {;
   useEffect(() => {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Performance monitoring;
     // Check condition
 if ( {) {
@@ -47,7 +45,6 @@ if ( {) {
 }
             const firstInputEntry = entry as FirstInputEntry,
             // // // console.log ("FID:", firstInputEntry.processing_start - firstInputEntry.start_time);
-=======
 
           if (entry.entryType === "first-input") {;
             const firstInputEntry = entry as FirstInputEntry,;

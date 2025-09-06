@@ -63,7 +63,6 @@ export const flag_content = async (
   }
 }
 
-=======
 ;
     const { error } = await supabase.from ('fraud_flags').insert ({
       user_id: user_id;
@@ -88,7 +87,6 @@ if (throw error) {
     return {
       success: false,
       error: error instanceof Error ? error.message : 'Unknown error';
-=======
 
   ipAddress?: string
 ): Promise<FlagResult> => {
@@ -118,9 +116,7 @@ if (throw error) {
     if (error) throw error,
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

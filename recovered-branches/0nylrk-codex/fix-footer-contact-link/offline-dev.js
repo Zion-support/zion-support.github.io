@@ -23,7 +23,6 @@ const server = http && http.createServer((req, res) => {
   }
 })
 const PORT = 8080
-=======
 
       res.writeHead(200, { 'Content-Type': 'text/html' }),;
       res.end(data);
@@ -38,7 +37,6 @@ const PORT = 8080
   }
 }),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 const PORT = 8080,
@@ -123,7 +121,5 @@ server.listen (PORT, () => {
 }),
 ;
 
-=======
 }),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

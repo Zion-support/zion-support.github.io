@@ -2,7 +2,6 @@
 
   {
 
-=======
     id: 'enterprise - api - governance - platform',
     name: 'Enterprise API Governance Platform',
     tagline:;
@@ -25,7 +24,6 @@
     popular: true,
     icon: '🔌',
 
-=======
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 300',
     link: 'https://ziontechgroup.com / services / enterprise - api - governance - platform',
@@ -38,7 +36,6 @@
     setup_time: '7 - 10 days',
     category: 'Enterprise API Management',
 
-=======
     real_service: true,
     technology: ['Java, Spring Boot, React, Node.js, PostgreSQL, Redis, Kong'],
     integrations: [;
@@ -62,12 +59,10 @@
     rating: 4 && 4.7,
     reviews: 32,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Multi-factor authentication',
       'Single sign-on (SSO)',
-=======
     id: 'enterprise - identity - access - management - suite',
     name: 'Enterprise Identity & Access Management Suite',
     tagline:;
@@ -108,7 +103,6 @@
     realImplementation: true
     implementationDetails:
 
-=======
     color: 'from - purple - 600 to - pink - 700',
     text_color: 'text - purple - 300',
     link: 'https://ziontechgroup.com / services / enterprise - identity - access - management - suite',
@@ -144,11 +138,9 @@
     rating: 4 && 4.8,
     reviews: 45,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI-powered workflow optimization',
-=======
     id: 'enterprise - workflow - automation - platform',
     name: 'Enterprise Workflow Automation Platform',
     tagline:;
@@ -191,7 +183,6 @@
     realImplementation: true
     implementationDetails:
 
-=======
     color: 'from - orange - 600 to - red - 700',
     text_color: 'text - orange - 300',
     link: 'https://ziontechgroup.com / services / enterprise - workflow - automation - platform',
@@ -229,10 +220,8 @@
     rating: 4 && 4.7,
     reviews: 26,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'enterprise - monitoring - and - observability - suite',
     name: 'Enterprise Monitoring & Observability Suite',
     tagline:;
@@ -273,7 +262,6 @@
     realImplementation: true
     implementationDetails:
 
-=======
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300',
     link: 'https://ziontechgroup.com / services / enterprise - monitoring - and - observability - suite',
@@ -303,9 +291,7 @@
     real_implementation: true,
     implementation_details:;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Enterprise platform with monitoring engine, observability tools, and alerting system.',
     launch_date: '2025 - 01 - 18',
     customers: 56,
@@ -317,7 +303,6 @@
 
 ];	{
 
-=======
 const contact = {
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -332,7 +317,6 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		description: 'Comprehensive enterprise data governance platform that automates data quality management, compliance monitoring, and governance workflows across all enterprise data sources and systems.',
     features: [
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 			'Automated data quality monitoringCompliance and regulatory trackingData lineage and catalogingPrivacy and security controlsMaster data managementData stewardship workflowsReal-time compliance reportingIntegration with enterprise systems'
 		];
 		popular: true;
@@ -543,7 +527,6 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 ];
 
 
-=======
   id: 'enterprise - data - governance - automation';
   name: 'Enterprise Data Governance Automation',
   tagline: 'Automated data governance, compliance, and quality management for enterprise data';
@@ -728,12 +711,10 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   rating: 4.8,
   reviews: 38;
 }
-=======
 		rating: 4.8
 		reviews: 38
 
 
-=======
 import { MicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -928,9 +909,6 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 		reviews: 38;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

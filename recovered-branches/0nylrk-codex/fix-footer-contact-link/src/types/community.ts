@@ -7,7 +7,6 @@ export type ForumCategory =
   | 'ai-tools'
   | 'feedback'
   | 'announcements';
-=======
 export type ForumCategory =;
   | 'getting - hired';
   | 'project - help';
@@ -29,13 +28,11 @@ export interface ForumCategoryInfo {;
 
 }
 export interface ForumPost {
-=======
 }
 
 
 export interface ForumPost {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   title: string;
   content: string;
@@ -58,13 +55,11 @@ export interface ForumPost {;
 
 }
 export interface ForumReply {
-=======
 }
 
 
 export interface ForumReply {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   post_id: string;
   parentReplyId?: string;
@@ -82,13 +77,11 @@ export interface ForumReply {;
 
 }
 export interface Badge {
-=======
 }
 
 
 export interface Badge {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   name: string;
   description: string;
@@ -103,7 +96,6 @@ export interface UserBadge {
 
 }
 export interface CommunityUser {
-=======
 
 
 export interface UserBadge {;
@@ -116,7 +108,6 @@ export interface UserBadge {;
 
 export interface CommunityUser {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   name: string;
   avatar?: string;
@@ -127,4 +118,3 @@ export interface CommunityUser {;
   badges: Badge[];
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

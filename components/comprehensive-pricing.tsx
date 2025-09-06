@@ -35,10 +35,8 @@ import {;
 
 } from '../data/revolutionary-micro-saas-services';import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
 
-=======
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
@@ -59,7 +57,6 @@ export default function ComprehensivePricingPage() {;
     { value: 'popularity', label: 'Most Popular' },
     { value: 'category', label: 'Category' },
     { value: 'roi', label: 'Highest ROI' }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   ];
 
     filteredServices = filteredServices.filter(service => service.category === selectedCategory)
@@ -186,7 +183,6 @@ export default function ComprehensivePricingPage() {;
       case 'roi':;
         const aRoi = parseFloat(a && a.roi.match(/\d+/)?.[0] || '0');
         const bRoi = parseFloat(b && b.roi.match(/\d+/)?.[0] || '0');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return bRoi - aRoi;
       default:;
         return a && a.name.localeCompare(b && b.name);    }      default: return a && a.name.localeCompare(b && b.name);
@@ -203,12 +199,10 @@ export default function ComprehensivePricingPage() {;
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
-=======
         const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
         const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
         return bRoi - aRoi;
       default: return a.name.localeCompare(b.name)
-=======
 ;
   // Filter and sort services;
   let filtered_services = all_services;
@@ -278,7 +272,6 @@ if ( {) {
         return b_roi - a_roi;
       default:;
         return a.name.locale_compare (b.name);    }      default: return a.name.locale_compare (b.name);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   });
 ;
@@ -294,7 +287,6 @@ if ( {) {
 
 
 
-=======
         'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
       ];
       icon: <Star className="w-6 h-6" />,
@@ -302,7 +294,6 @@ if ( {) {
       popular: false
     };
     {
-=======
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
   }
 ;
@@ -329,7 +320,6 @@ if ( {) {
       color: 'from - blue - 500 to - cyan - 600',
       popular: false;
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       name: 'Professional',
       price: '$199',
       period: '/month',
@@ -572,7 +562,6 @@ if ( {) {
   return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>;
       <div className='min-h-screen'>;
-=======
       icon: <TrendingUp className='w - 6 h - 6' />,
     },      icon: <TrendingUp className="w - 6 h - 6" />;
     }
@@ -599,18 +588,15 @@ if ( {) {
         duration: 0.5,
       },
     },
-=======
 
         duration: 0.5,
       },
     },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>;
       <div className='min - h-screen'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         <Head>;
           <title>;
             Comprehensive Pricing | Zion Tech Group - Micro SaaS Services;
@@ -651,14 +637,11 @@ if ( {) {
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-=======
                 transition={{ duration: 0.8 }}
               >
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -671,7 +654,6 @@ if ( {) {
 
               {/* Market Stats */}
               <motion.div
-=======
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
                 Transparent pricing for all our revolutionary micro SaaS;
                 services. Choose the perfect plan for your business with;
@@ -696,7 +678,6 @@ if ( {) {
 
               {/* Market Stats */}
               <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -726,8 +707,6 @@ if ( {) {
               </motion.div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
@@ -736,18 +715,14 @@ if ( {) {
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>              <motion&& motion.div 
 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-=======
 
               >              <motion.div 
 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-=======
               >
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
@@ -841,12 +816,10 @@ if ( {) {
 
               initial={{ opacity: 0, y: 20 }}
 
-=======
 
             <motion.div 
               className="text-center mb-16"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -916,11 +889,9 @@ if ( {) {
               whileInView='visible'              viewport={{ once: true }}                  Flexible Pricing
 
 
-=======
 
             <motion.div 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
               variants={containerVariants}
               initial="hidden"
@@ -977,7 +948,6 @@ if ( {) {
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
 
-=======
 
                     <div className="text-center">
                                              <Button 
@@ -993,7 +963,6 @@ if ( {) {
                   </UltraFuturisticCard>
                 </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 
             </motion && motion.div>;
@@ -1004,12 +973,10 @@ if ( {) {
         {/* Services Pricing Grid */}
         <section id='services-pricing' className='py-20'>;
           <div className='container mx-auto px-4'>;
-=======
 
         {/* Services Pricing Grid */}
         <section id="services-pricing" className="py-20">
           <div className="container mx-auto px-4">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             {/* Filters and Controls */}
             <motion&& motion.div
               className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-pricing" className="py-20">;
@@ -1032,8 +999,6 @@ if ( {) {
               initial={{ opacity: 0, y: 20 }}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
@@ -1111,7 +1076,6 @@ if ( {) {
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     </button>;
                   </div>;
                 </div>;
@@ -1119,13 +1083,10 @@ if ( {) {
 
 
               className={viewMode === 'grid' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
               whileInView='visible'              viewport={{ once: true }}            <motion.div 
               className={viewMode === 'grid' 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
@@ -1137,26 +1098,19 @@ if ( {) {
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   variants={itemVariants}
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
 
                     variant={service.variant as any || 'quantum-advanced'}
 
-=======
 
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
 
 
-=======
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
-=======
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
                   >
@@ -1225,7 +1179,6 @@ if ( {) {
 
                         <div className='space-y-2 mb-6'>;
                           {service && service.features.slice(0, 3).map((feature, idx) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                             <div
                               key={idx}
                               className='flex items-center gap-2 text-sm'>;
@@ -1282,7 +1235,6 @@ if ( {) {
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                                  <Button
                    variant="primary"
                    onClick={() => {;
@@ -1391,11 +1343,9 @@ if ( {) {
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
                 </div>
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
@@ -1405,8 +1355,6 @@ if ( {) {
                 </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
             </motion.div>
           </div>
@@ -1490,11 +1438,8 @@ if ( {) {
   );  );
 }
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                           <div className='flex gap - 2'>;
                             <Button;
                               variant='primary';
@@ -1689,10 +1634,6 @@ if ( {) {
       </div>;
     </UltraFuturisticBackground>));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

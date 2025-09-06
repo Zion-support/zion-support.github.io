@@ -10,7 +10,6 @@ interface EducationListProps {
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void
 
-=======
 import { Education } from '@/types/resume',;
 import { EducationItem } from './EducationItem',;
 interface EducationListProps {;
@@ -20,7 +19,6 @@ interface EducationListProps {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export function EducationList({
   educationEntries
@@ -28,7 +26,6 @@ export function EducationList({
   onDelete
 }: EducationListProps) {
   if (!educationEntries |educationEntries.length === 0) {
-=======
 import {Education} from '@/types/resume';
 import {EducationItem} from './EducationItem';
 interface EducationListProps {;
@@ -39,7 +36,6 @@ interface EducationListProps {;
 
 export function EducationList(): any ({ educationEntries, onEdit, onDelete }: EducationListProps) {;
   if (!educationEntries || educationEntries && educationEntries.length === 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return null;
   }
 
@@ -63,7 +59,6 @@ export function EducationList(): any ({ educationEntries, onEdit, onDelete }: Ed
   );
 }
 
-=======
 import { Education  } from '@/types / resume';
 import { EducationItem  } from './EducationItem';
 interface EducationListProps {
@@ -93,11 +88,8 @@ if ( {) {
         />))}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

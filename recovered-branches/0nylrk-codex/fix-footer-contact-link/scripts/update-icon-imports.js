@@ -39,12 +39,10 @@ function updateIconImportsInFile(filePath) {
       console && console.log(`✅ Updated imports in ${filePath}`),
 
       return true
-=======
       fs.writeFileSync(filePath, updatedContent, 'utf8'),
       // // // console.log(`✅ Updated imports in ${filePath}`),
       return true
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     return false
   } catch (err) {
@@ -76,7 +74,6 @@ console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support t
 console && console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console && console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 
-=======
  * updateIconImportsInFile - Function description
  */
 function updateIconImportsInFile() {
@@ -114,14 +111,11 @@ if (updated_files++) {
 console.log (`\n🎉 Updated icon imports in ${updated_files} files`),
 console.log (`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),;
 ;
 
-=======
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 ;
@@ -136,5 +130,3 @@ files.forEach(file => {;
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`);
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

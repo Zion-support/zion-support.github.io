@@ -15,7 +15,6 @@ export interface SpaceColonization2029Service {
   {
 
       'Real-time interplanetary communication',
-=======
     id: 'interplanetary - communication - network',
     name: 'Interplanetary Communication Network',
     tagline: 'Real - time solar system communication network',
@@ -39,7 +38,6 @@ export interface SpaceColonization2029Service {
     popular: true,
     icon: '🌐',
 
-=======
     color: 'from - blue - 600 to - cyan - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / interplanetary - communication - network',
@@ -99,10 +97,8 @@ export interface SpaceColonization2029Service {
     rating: 4 && 4.8,
     reviews: 45,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'space - mining - automation - platform',
     name: 'Space Mining Automation Platform',
     tagline: 'Automate asteroid and lunar mining operations',
@@ -126,7 +122,6 @@ export interface SpaceColonization2029Service {
     popular: false,
     icon: '⛏️',
 
-=======
     color: 'from - yellow - 600 to - orange - 600',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / space - mining - automation - platform',
@@ -188,7 +183,6 @@ export interface SpaceColonization2029Service {
   },
 
       'AI-powered habitat design',
-=======
   // Space Architecture & Energy Services;
   {
     id: 'space - habitat - design - platform',
@@ -214,7 +208,6 @@ export interface SpaceColonization2029Service {
     popular: false,
     icon: '🏠',
 
-=======
     color: 'from - green - 600 to - teal - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / space - habitat - design - platform',
@@ -274,12 +267,10 @@ export interface SpaceColonization2029Service {
     rating: 4 && 4.6,
     reviews: 67,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Multi-source energy harvesting',
       'AI-powered energy optimization',
-=======
     id: 'space - energy - harvesting - platform',
     name: 'Space Energy Harvesting Platform',
     tagline: 'Harvest energy from space sources and celestial bodies',
@@ -324,12 +315,10 @@ export interface SpaceColonization2029Service {
     rating: 4.8
 
 
-=======
     reviews: 52
 
 
 
-=======
     color: 'from - purple - 600 to - pink - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / space - energy - harvesting - platform',
@@ -375,7 +364,6 @@ export interface SpaceColonization2029Service {
     growth_rate: '350% annual growth',
     variant: 'space - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -391,7 +379,6 @@ export interface SpaceColonization2029Service {
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -416,7 +403,6 @@ export interface SpaceColonization2029Service {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const spaceColonization2029Services: SpaceColonization2029Service[] = [
@@ -446,7 +432,6 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
@@ -459,7 +444,4 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     reviews: 52;
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

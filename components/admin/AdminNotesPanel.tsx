@@ -6,14 +6,11 @@ export type AdminNotesPanelProps = {;
 };
 
 type Note = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;
 }
 ;
 type Note = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   target_type: string;
   target_id: string;
@@ -25,14 +22,12 @@ export type AdminNotesPanelProps = {
 };
 
 
-=======
 
   targetType,
   targetId,;
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 type Note = {
   id: string
   targetType: string
@@ -44,14 +39,11 @@ type Note = {
 };
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 };
 
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
@@ -147,13 +139,11 @@ if ( {) {
       setText('');
       await fetchNotes();
 
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
         body: JSON.stringify({ targetType, targetId, text })});
       if (!res.ok) {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         alert('Failed to add note');
         return;
       }
@@ -164,7 +154,6 @@ if ( {) {
   }
 
   if (!isAdmin) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
 
 
@@ -177,7 +166,6 @@ if ( {) {
     return (
       <div className='rounded border p-3'>
         <div className='flex items-center gap-2 text-sm'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <input
             id='isAdminToggle'
             type='checkbox'
@@ -254,7 +242,6 @@ if ( {) {
               </li>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </ul>;
         )}
@@ -262,20 +249,14 @@ if ( {) {
       </div>;
     </div>;
   );
-=======
 
   );
 
 }
-=======
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   useEffect (() => {
     if (fetch_notes ()) {
   $2
@@ -400,4 +381,3 @@ if ( {) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -12,7 +12,6 @@ const categories: ForumCategoryInfo[] = [
     icon: "Briefcase"
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   {
 
     id: "project-help"
@@ -61,7 +60,6 @@ import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/icons";
 import {ForumCategory, ForumCategoryInfo} from "@/types/community";
 
-=======
 
 ],
 
@@ -147,8 +145,6 @@ const categories: ForumCategoryInfo[] = [;
 ];
 
 const iconMap = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { Link } from './react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
 import { use_auth } from '@/hooks / use_auth';
@@ -193,7 +189,6 @@ const categories: ForumCategoryInfo[] = [;
 ];
 ;
 const icon_map = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   Briefcase;
   MessageSquare;
   Code;
@@ -240,7 +235,6 @@ export const ForumCategories = () => {;
 
 export default ForumCategories;
 
-=======
   Megaphone;
 }
 ;
@@ -275,4 +269,3 @@ export const ForumCategories = () =>: any {
 ;
 export default ForumCategories;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -35,9 +35,7 @@
             <li key={u && u.userId}>;
               {u && u.name} — {u && u.points} pts;
             </li>          ))}
-=======
 
-=======
 
         <div className="font-medium mb-2">Leaderboard (Top Learners)</div>
         <ol className="list-decimal pl-6 space-y-1 text-sm">
@@ -48,14 +46,12 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </ol>;
       </div>;
     </div>;
   );
 
 
-=======
         <div className="font-medium mb-2">Leaderboard (Top Learners)</div>
         <ol className="list-decimal pl-6 space-y-1 text-sm">
           {leaderboard.map((u) => (
@@ -66,8 +62,6 @@
     </div>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import {useEffect, useState} from 'react';
 import CertificatePreview from '../../components / learn / CertificatePreview';
         </div>;
@@ -83,9 +77,6 @@ import CertificatePreview from '../../components / learn / CertificatePreview';
       </div>;
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -93,5 +84,3 @@ import CertificatePreview from '../../components / learn / CertificatePreview';
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -10,40 +10,32 @@ function ensureStorage() {
   if (!fs && fs.existsSync(EPISODES_PATH))
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path && path.join(process && process.cwd(), 'datapodcastepisodes && datapodcastepisodes.json');
 const RSS_PATH = path && path.join(process && process.cwd(), 'publicpodcast && publicpodcast.xml');
-=======
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 function ensureStorage() {
 
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 
-=======
 
 
   const siteUrl = process.env.SITE_URL || 'http://localhost:3000';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-=======
 
   const siteUrl = process && process.env.SITE_URL || 'http://localhost:3000';
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const items = episodes
     .filter(e => e && e.audio?.mp3Url)
     .map(e => {      const pubDate = new Date(e && e.createdAt).toUTCString();    .filter((e) => e && e.audio?.mp3Url)
     .map((e) => {
 
-=======
       const pubDate = new Date(e.createdAt).toUTCString();
       const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       return `
     <item>
 
@@ -86,8 +78,6 @@ function ensureStorage() {
 }</channel> </rss>`;  return res && res.status(200).json({ ok: true, path: '/podcast && podcast.xml' })
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 const EPISODES_PATH = path.join (
   process.cwd (),
@@ -174,16 +164,11 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8');
   items;
 }</channel> </rss>`;  return res.status (200).json ({ ok: true, path: '/podcast.xml' });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   items 
 }</channel> </rss>`;
 
-=======
   items 
 
 }</channel> </rss>`;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

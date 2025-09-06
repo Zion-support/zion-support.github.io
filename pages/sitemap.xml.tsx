@@ -247,7 +247,6 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {;
 
 export default SiteMap;
 
-=======
   // We generate the XML sitemap with the posts data;
   const sitemap = generateSiteMap ();
 ;
@@ -263,4 +262,3 @@ export default SiteMap;
 ;
 export default SiteMap;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

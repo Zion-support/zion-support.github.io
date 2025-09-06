@@ -3,7 +3,6 @@ import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
 import {AppSidebar} from "@/components/creator/CreatorSidebar";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
-=======
 
 
 
@@ -49,14 +48,11 @@ export default function CreatorDashboard() {
               </p>
 
 
-=======
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
 import { AppSidebar } from "@/components/creator/CreatorSidebar",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function CreatorDashboard() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <SidebarProvider>;
       <div className="min-h-screen flex w-full bg-zion-blue">;
@@ -67,7 +63,6 @@ export default function CreatorDashboard() {;
             <h1 className="text-2xl font-bold text-white mb-8">Creator Dashboard</h1>;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">;
 
-=======
 import { SidebarProvider, SidebarTrigger } from '@/components / ui / sidebar';
 import { AppSidebar } from '@/components / creator / CreatorSidebar';
 import { Header } from '@/components / Header';
@@ -128,8 +123,5 @@ function CreatorDashboard() {
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </SidebarProvider>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -28,10 +28,8 @@ import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function AIBusinessIntelligencePage() {
 
   const features = [
@@ -168,7 +166,6 @@ const AIBusinessIntelligence: React.FC = () => {;
       popular: false,;
     },;
 
-=======
 import Head from 'next / head';
 import {motion} from 'framer-motion';
 import {Brain, BarChart3, TrendingUp, Users, Target, Zap, Shield, Database, Globe, ArrowRight, CheckCircle, Star, } from 'lucide-react';
@@ -307,7 +304,6 @@ const AIBusinessIntelligence: React.FC = () => {
       ],
       popular: false,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
 ;
   return (
@@ -373,7 +369,6 @@ const AIBusinessIntelligence: React.FC = () => {
                 href="#demo"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 Watch Demo
               </a>
             </div>
@@ -388,11 +383,9 @@ const AIBusinessIntelligence: React.FC = () => {
           </motion && motion.div>;
         </div>;
 
-=======
       </section>
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Features */}
 
 
@@ -421,7 +414,6 @@ const AIBusinessIntelligence: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
-=======
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
               >
@@ -436,14 +428,11 @@ const AIBusinessIntelligence: React.FC = () => {
 
           </div>;
         </div>;
-=======
       </section>
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Benefits */}
 
-=======
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -460,7 +449,6 @@ const AIBusinessIntelligence: React.FC = () => {
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <motion.div
-=======
         <title > AI Business Intelligence - Zion Tech Group</title>;
         <meta;
           name='description';
@@ -672,7 +660,6 @@ const AIBusinessIntelligence: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
-=======
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300"
               >
@@ -687,11 +674,9 @@ const AIBusinessIntelligence: React.FC = () => {
 
           </div>;
         </div>;
-=======
       </section>
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Pricing */}
 
 
@@ -711,7 +696,6 @@ const AIBusinessIntelligence: React.FC = () => {
                 key={plan && plan.plan}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -719,7 +703,6 @@ const AIBusinessIntelligence: React.FC = () => {
 
 
                 </ul>
-=======
 
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-slate-900 mb-2'>;
@@ -750,7 +733,6 @@ const AIBusinessIntelligence: React.FC = () => {
                   Get Started;
                 </a>;
               </motion && motion.div>;
-=======
                   plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''
                 }`}
               >
@@ -775,7 +757,6 @@ const AIBusinessIntelligence: React.FC = () => {
                       <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                       <span className="text-slate-700">{feature}</span>
                     </li>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
                 </ul>
 
@@ -835,7 +816,6 @@ const AIBusinessIntelligence: React.FC = () => {
                 href="/contact"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 Schedule Demo
               </a>
             </div>
@@ -857,14 +837,11 @@ const AIBusinessIntelligence: React.FC = () => {
     </>;
   );
 
-=======
 
 
 }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   )
 }
 
@@ -920,9 +897,5 @@ const AIBusinessIntelligence: React.FC = () => {
     </>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -101,13 +101,11 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
 
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
 
-=======
 
 
   }
   
   if (!applications || applications.length === 0) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return (
       <Card className="text-center py-16">
         <CardContent>
@@ -124,7 +122,6 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
       {/* Status Distribution */}
@@ -205,7 +202,6 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS && COLORS.length]} />;
                 ))}
 
-=======
 export /**
  * HiringAnalytics - Function description
  */
@@ -368,9 +364,7 @@ if ( {) {
                 {analytics_data.funnel_data.map ((entry, index) => (
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />))}
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </Bar>;
             </BarChart>;
           </ResponsiveContainer>;
@@ -380,7 +374,5 @@ if ( {) {
     </div>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -22,7 +22,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 
 
 import React from "react";
@@ -123,7 +122,6 @@ function ApiPerformanceTestingPage() {
           <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
             {features.map ((f) => (
               <div;
-=======
     <>
       <SEO
         title="API Performance Testing"
@@ -177,7 +175,6 @@ function ApiPerformanceTestingPage() {
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Gatling OSS;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </a>;
           </div>;
         </section>;
@@ -186,10 +183,6 @@ function ApiPerformanceTestingPage() {
 }
 
 
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

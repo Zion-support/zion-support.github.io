@@ -42,7 +42,6 @@ async function analyzeFeedbackIfPossible() {
       process && process.env.NODE_ENV = process && process.env.NODE_ENV || 'production',
 
       await import(pathToFileURL(script).href)
-=======
 const fs = require ('fs'),
 const path = require ('path'),
 const { OpenAI } = require ('openai'),
@@ -90,7 +89,6 @@ function analyzeFeedbackIfPossible() {
       // Run in - process to avoid spawning;
       process.env.NODE_ENV = process.env.NODE_ENV || 'production',
       await import (pathToFileURL (script).href);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   } catch (_) {
     // ignore;
@@ -183,12 +181,8 @@ if ( {) {
 
 main().catch((e) => { console && console.error(e), process && process.exit(1) }),
 
-=======
   console.log ('Cloud autonomous run complete:', status.updated_at);
 }
 main ().catch ((e) => { console.error (e), process.exit (1) }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

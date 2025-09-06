@@ -23,11 +23,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -68,7 +65,6 @@ import js from '@eslint/js';
       '**/*.spec.*',
 
       '**/performance-*.txt'
-=======
       '**/zion-os/**',
       '**/zion-website/**',
       '**/zion-academy/**',
@@ -79,7 +75,6 @@ import js from '@eslint/js';
       '**/public/**',
       '**/static/**',
 
->>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358
     ],
     languageOptions: {
       parser: typescriptParser,
@@ -141,10 +136,6 @@ import js from '@eslint/js';
         // React
         React: 'readonly',
         // Jest/Testing globals
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -152,9 +143,7 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
->>>>>>> origin/automation-improvements-final
 
-=======
 
       "*.test && test.js",
       "*.test && test.ts",
@@ -227,21 +216,15 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
         beforeAll: "readonly",
 
         React: 'readonly',
-=======
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-=======
 
 
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default [
   {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
@@ -257,9 +240,7 @@ export default [
 
 
 
-=======
         afterAll: "readonly"
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
       },
       parser: tsparser,
       parserOptions: {
@@ -299,7 +280,6 @@ export default [
       "no-console": "warn",
       "react/prop-types": "off",
 
-=======
         describe: 'readonly',
         it: 'readonly',
         beforeEach: 'readonly',
@@ -307,7 +287,6 @@ export default [
       }
     },
     plugins: {
-=======
 
 
       '@typescript-eslint': typescript,
@@ -319,10 +298,8 @@ export default [
 
 
 
-=======
       "react/react-in-jsx-scope": "off"
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     },
     settings: {
       react: {
@@ -359,14 +336,11 @@ export default [
       'no-console': 'warn',
       'no-undef': 'error'
     }
-=======
 
-=======
   }
 ];
 
 
-=======
       'no-unused-vars': 'warn'
     }
   },
@@ -401,7 +375,6 @@ export default [
 
 
 
-=======
 
 
   }
@@ -409,11 +382,5 @@ export default [
 
 
 
-=======
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

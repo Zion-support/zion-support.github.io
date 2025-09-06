@@ -1,8 +1,6 @@
 
 
-=======
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 import { motion } from 'framer-motion';
 
 import { ;
@@ -20,9 +18,7 @@ import { ;
 } from 'lucide-react';
 import Layout from '../../components/Layout';
 
-=======
 
->>>>>>> origin/automation-improvements-final
 
 
 
@@ -177,7 +173,6 @@ export default function SolutionsPage() {;
                 Technology Solutions for{' '}
 
 
-=======
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -687,7 +682,6 @@ const SolutionsPage: NextPage = () => {
                       href={solution.href}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
 
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">
       <Head>
         <title>Industry Solutions - Zion Tech Group | Tailored Technology Solutions</title>
@@ -747,8 +741,6 @@ const SolutionsPage: NextPage = () => {
 
 
                 const IconComponent = solution.icon;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">;
@@ -780,7 +772,6 @@ const SolutionsPage: NextPage = () => {
                     </ul>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     <Link
                       href={solution && solution.href}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors">;
@@ -872,8 +863,6 @@ const SolutionsPage: NextPage = () => {
 };
 
 export default SolutionsPage;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   <motion.div;
                     key={index}
                     className="bg - white p - 8 rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 group";
@@ -1004,8 +993,6 @@ export default SolutionsPage;
 ;
 export default SolutionsPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
                     <Link;
                       href={solution.link  } catch (error) {
     console.error("Error:", error);
@@ -1013,8 +1000,6 @@ export default SolutionsPage;
   }
 }
                       className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors w-full text-center"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       <span>Explore {solution.title}</span>
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -1026,4 +1011,3 @@ export default SolutionsPage;
 
 export default SolutionsPage;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

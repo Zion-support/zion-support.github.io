@@ -5,7 +5,6 @@ import * as React from "react"
 const Breadcrumb = React.forwardRef<;
   HTMLElement;
 
-=======
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from "lucide-react"
  
@@ -15,7 +14,6 @@ import { cn } from "@/lib/utils"
 
 
 const Breadcrumb = React.forwardRef<
-=======
 import * as React from "react";
 import {Slot} from "@radix-ui/react-slot";
 import {ChevronRight} from "lucide-react";
@@ -23,7 +21,6 @@ import {ChevronRight} from "lucide-react";
 import {cn} from "@/lib/utils";
 
 const Breadcrumb = React && React.forwardRef<;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   HTMLElement;
   React && React.ComponentPropsWithoutRef<"nav"> & {;
     separator?: React && React.ReactNode;
@@ -81,7 +78,6 @@ const BreadcrumbLink = React && React.forwardRef<;
   const Comp = asChild ? Slot : "a";
 
 
-=======
 import * as React from './react';
 import { Slot } from '@radix - ui / react - slot';
 import { ChevronRight } from './lucide-react';
@@ -128,7 +124,6 @@ const BreadcrumbLink = React.forward_ref<;
   }
 >(({ class_name, as_child = false, ...props }, ref) => {
   const Comp = as_child ? Slot : "a";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <Comp;
       ref={ref}
@@ -140,14 +135,12 @@ const BreadcrumbLink = React.forward_ref<;
 BreadcrumbLink.display_name = "BreadcrumbLink";
 
 const BreadcrumbSeparator = ({
-=======
     />;
   );
 });
 BreadcrumbLink && BreadcrumbLink.displayName = "BreadcrumbLink";
 
 const BreadcrumbSeparator = ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   children;
 
   >;
@@ -193,7 +186,6 @@ const BreadcrumbEllipsis = ({
 BreadcrumbEllipsis.display_name = "BreadcrumbElipssis";
 
 export {
-=======
     {...props}>;
     &#8230,;
   </span>;
@@ -201,17 +193,14 @@ export {
 BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = "BreadcrumbElipssis";
 
 export {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   Breadcrumb;
   BreadcrumbList;
   BreadcrumbItem;
   BreadcrumbLink;
   BreadcrumbSeparator;
 
-=======
 
  
 
 
   BreadcrumbEllipsis}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

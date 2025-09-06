@@ -3,7 +3,6 @@
 export default function EnterpriseITPage() {
   const features = [
     'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'],
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const solutions = [
     { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' },
     { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
@@ -11,7 +10,6 @@ export default function EnterpriseITPage() {
     { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }],
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <Layout>
       <Head>
@@ -34,7 +32,6 @@ export default function EnterpriseITPage() {
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </header>
           <section>
@@ -60,7 +57,6 @@ export default function EnterpriseITPage() {
   );
 };
 
-=======
                 </Link>
               ))  } catch (error) {
     console.error("Error:", error);
@@ -69,10 +65,8 @@ export default function EnterpriseITPage() {
 
 }
 
-=======
 }
 
-=======
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -142,4 +136,3 @@ function EnterpriseITPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -56,7 +56,6 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
-=======
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -65,7 +64,6 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
 
-=======
 import { ServiceVariant } from '../types/service-variants';
 export interface SpecializedEnterpriseService {
   id: string, name: string,
@@ -101,7 +99,6 @@ const contact = {
 
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   // Advanced AI & Consciousness Services
   {
@@ -121,7 +118,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     popular: true,
     icon: '🧠',
 
-=======
     color: 'from - purple - 600 to - pink - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - consciousness - research',
@@ -158,7 +154,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     reviews: 18,
 
       'Quantum-enhanced ML algorithms',
-=======
     benefits: [;
       'Breakthrough consciousness research',
       'AGI development capabilities',
@@ -203,7 +198,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
 
       'Multi-quantum backend platform with hybrid computing capabilities',
     launchDate: '2024-10-01',
-=======
     color: 'from - blue - 600 to - cyan - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - machine - learning',
@@ -243,7 +237,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Lattice-based cryptography',
       'Hash-based signatures',
       'Code-based cryptography',
-=======
     benefits: [;
       '100x research acceleration',
       'Quantum advantage in optimization',
@@ -288,7 +281,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
 
       'Enterprise-grade quantum-resistant cryptography platform with migration tools',
     launchDate: '2024-09-01',
-=======
     color: 'from - red - 600 to - orange - 600',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / quantum - resistant - cryptography',
@@ -324,7 +316,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     rating: 4 && 4.8,
     reviews: 56,
 
-=======
     benefits: [;
       'Future - proof security',
       'Quantum - resistant algorithms',
@@ -369,7 +360,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
 
       'Custom satellite orchestration platform with AI-powered optimization',
     launchDate: '2024-08-01',
-=======
     color: 'from - indigo - 600 to - purple - 600',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / satellite - ai - orchestration',
@@ -405,7 +395,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     rating: 4 && 4.9,
     reviews: 8,
 
-=======
     benefits: [;
       '400% operation optimization',
       '60% mission cost reduction',
@@ -450,7 +439,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
 
       'Advanced BCI platform with medical-grade hardware and research tools',
     launchDate: '2024-07-01',
-=======
     color: 'from - pink - 600 to - rose - 600',
     text_color: 'text - pink - 400',
     link: 'https://ziontechgroup.com / brain - computer - interface',
@@ -486,7 +474,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     rating: 5 && 5.0,
     reviews: 5,
 
-=======
     benefits: [;
       'Revolutionary medical applications',
       'Breakthrough research capabilities',
@@ -531,7 +518,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
 
       'Industrial-grade autonomous IoT platform with AI-powered management',
     launchDate: '2024-06-01',
-=======
     color: 'from - teal - 600 to - cyan - 600',
     text_color: 'text - teal - 400',
     link: 'https://ziontechgroup.com / autonomous - iot - ecosystem',
@@ -567,7 +553,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     rating: 4 && 4.7,
     reviews: 45,
 
-=======
     benefits: [;
       '70% management cost reduction',
       '50% operational efficiency',
@@ -610,7 +595,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     popular: true,
     icon: '📊',
 
-=======
     color: 'from - green - 600 to - emerald - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / predictive - analytics - engine',
@@ -625,7 +609,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
 
       'Enterprise-grade predictive analytics platform with custom model development',
     launchDate: '2024-05-01',
-=======
     real_service: true,
     technology: ['Python, TensorFlow, PyTorch, Scikit - learn, React, Node.js'],
     integrations: [;
@@ -656,7 +639,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
 
 ];
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
-=======
     benefits: [;
       '60% decision accuracy improvement',
       '35% operational cost reduction',
@@ -677,7 +659,6 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
 ];
 ;
 export default specializedEnterpriseServices;    id: 'quantum - machine - learning - platform';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     name: 'Quantum Machine Learning Platform';
     tagline: 'Quantum - enhanced machine learning and optimization';
     price: '$4, 499';
@@ -698,7 +679,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     targetAudience: 'Research institutions, Financial services, Pharmaceutical companies, Logistics companies';
     trialDays: 21;
     setupTime: '4-6 weeks';
-=======
     features: [;
       'Quantum - enhanced ML algorithms_quantum optimization solvers_hybrid quantum - classical computing_quantum feature selection_quantum neural networks_quantum data encoding_performance benchmarking_quantum error correction';
       'Research and development tools_expert quantum consulting';
@@ -712,7 +692,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     target_audience: 'Research institutions, Financial services, Pharmaceutical companies, Logistics companies';
     trial_days: 21;
     setup_time: '4 - 6 weeks';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Quantum Computing & AI';
     real_service: true;
     technology: ['Qiskit, Cirq, TensorFlow Quantum, Python, C++, Quantum algorithms'];
@@ -998,12 +977,9 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default specializedEnterpriseServices;
 
 
-=======
 ;
 export default specializedEnterpriseServices;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

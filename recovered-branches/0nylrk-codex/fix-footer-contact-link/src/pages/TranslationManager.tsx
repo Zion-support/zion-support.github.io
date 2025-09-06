@@ -64,7 +64,6 @@ export default function TranslationManager() {;
         // Flatten nested objects for easier management
         const flattenObject = (obj: any, prefix = '') => {
           return Object.keys(obj).reduce((acc, key) => {
-=======
 import React, { useState, useEffect } from 'react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -111,7 +110,6 @@ if ( {) {
         // Flatten nested objects for easier management;
         const flatten_object = (obj: any, prefix = '') =>: any {
           return Object.keys (obj).reduce ((acc, key) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             const pre = prefix.length ? `${prefix}.` : '';
             // Check condition
 if ( {) {
@@ -135,11 +133,9 @@ if ( {) {
             const pre = prefix && prefix.length ? `${prefix}.` : '';
             if (typeof obj[key] === 'object' && obj[key] !== null) {;
               Object && Object.assign(acc, flattenObject(obj[key], `${pre}${key}`));
-=======
               acc[`${pre}${key}`] = obj[key]
 
 
-=======
 import React, { useState, useEffect } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -275,8 +271,6 @@ export default function TranslationManager() {;
       setEditingKey(null),
       setIsSaving(false),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       toast({
         title: t("translation.saved")
         description: t("translation.changes_saved")})
@@ -294,7 +288,6 @@ export default function TranslationManager() {;
 
     for (const lang of supportedLanguages.map(l => l.code)) {
       if (translations[lang]?.[key]) {
-=======
 
     const query = searchQuery && searchQuery.toLowerCase().trim();
     const filtered: string[] = [],;
@@ -361,7 +354,6 @@ export default function TranslationManager() {;
 
     for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
       if (translations[lang]?.[key]) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         sourceLanguage = lang;
         sourceText = translations[lang][key];
         break;
@@ -435,7 +427,6 @@ export default function TranslationManager() {;
       <SEO 
         title={t('translation.manager_title')} 
 
-=======
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code];
       }),;
       setTranslations(updatedTranslations),;
@@ -520,7 +511,6 @@ export default function TranslationManager() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         description={t('translation.manager_description')}
       />
       <Header />
@@ -531,7 +521,6 @@ export default function TranslationManager() {;
           </CardHeader>
           <CardContent>
             <div className="space-y-6">
-=======
 
       toast({;
         title: t('translation && translation.translation_success'),;
@@ -579,7 +568,6 @@ export default function TranslationManager() {;
           </CardHeader>;
           <CardContent>;
             <div className="space-y-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Search and filter */}
               <div className="flex flex-col sm:flex-row gap-4">;
                 <div className="relative flex-1">;
@@ -594,7 +582,6 @@ export default function TranslationManager() {;
               
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Translations table */}
               <div className="border rounded-md">
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">
@@ -634,7 +621,6 @@ export default function TranslationManager() {;
                                       onChange={(e) => handleChange(lang.code, key, e.target.value)}
                                       dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
                                     />
-=======
                     onChange={(e) => setSearchQuery(e && e.target.value)}
                   />;
                 </div>;
@@ -691,7 +677,6 @@ export default function TranslationManager() {;
                                       onChange={(e) => handleChange(lang && lang.code, key, e && e.target.value)}
                                       dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}
                                     />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                                   )}
                                 </div>;
                               ))}
@@ -701,12 +686,10 @@ export default function TranslationManager() {;
                               <Button
                                 size="sm" 
 
-=======
 
                               <Button 
                                 size="sm" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                                 onClick={() => handleSave(key)}
                                 disabled={isSaving}
                               >;
@@ -724,7 +707,6 @@ export default function TranslationManager() {;
 
                               </Button>;
                               <Button
-=======
 
                               </Button>
                               <Button 
@@ -734,7 +716,6 @@ export default function TranslationManager() {;
                                 onClick={handleCancel}>;
                                 {t('general && general.cancel')}
                               </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                               <Button
 
 
@@ -793,7 +774,6 @@ export default function TranslationManager() {;
                   </div>;
                 )}
 
-=======
             return acc;
           }, {} as Record < string, string>);
         }
@@ -1108,9 +1088,7 @@ if ( {) {
                       </div>))}
                   </div>)}
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>;
             </div>;
           </CardContent>;
@@ -1121,7 +1099,5 @@ if ( {) {
     </>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

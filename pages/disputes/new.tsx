@@ -43,7 +43,6 @@ const REASONS = [;
 ] as const;
 type ReasonType = (typeof REASONS)[number];
 
-=======
 
 import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
@@ -64,26 +63,21 @@ type ReasonType = (typeof REASONS)[number];
 export default function NewDisputePage() {;
 
 
-=======
 import { useRouter } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useCurrentUser } from '../../utils/auth';
 const REASONS = [
   'Scope DisagreementQuality IssuesDelivery DelayPayment IssueCommunication BreakdownOther'] as const;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export default function NewDisputePage() {;
   const router = useRouter();
 
-=======
   const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
   const user = useCurrentUser();
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const [projectId, setProjectId] = useState(qProjectId || '');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
   const [reasonDetails, setReasonDetails] = useState('');
   const [description, setDescription] = useState('');
@@ -139,10 +133,7 @@ export default function NewDisputePage() {;
     } finally {;
 
       setSubmitting(false);    }
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [talentUserId, setTalentUserId] = useState(talentId || '');
   const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
   const [submitting, setSubmitting] = useState(false);
@@ -155,7 +146,6 @@ export default function NewDisputePage() {;
     e.preventDefault();
     if (!projectId || !description || !clientUserId || !talentUserId) return alert('Please fill required fields');
     setSubmitting(true);
-=======
 import {use_router} from 'next / router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
@@ -209,7 +199,6 @@ function handle_submit() {
       return alert ('Please fill required fields')) {
   $2
 }    set_submitting (true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
       const res = await fetch ('/api / disputes', {
         method: 'POST',
@@ -305,7 +294,6 @@ if ( {) {
             <button
               disabled={submitting}
               className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50'>;
-=======
             <label className='block text - sm font - medium'>Reason</label>;
             <select;
               value={reason}
@@ -352,7 +340,6 @@ if ( {) {
               disabled={submitting}
               className='px - 4 py - 2 rounded bg - blue - 600 text - white hover:bg - blue - 700 disabled:opacity - 50';
             >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {submitting ? 'Submitting...' : 'Submit Dispute'}
             </button>          </div>;
         </form>;
@@ -378,7 +365,6 @@ function toBase64(): any (file: File): Promise<string> {;
   })
 }
 
-=======
     </EnhancedLayout>);
 function toBase64 (file: File): Promise < string> {
   return new Promise ((resolve, reject) => {
@@ -388,13 +374,9 @@ const reader = new FileReader ();
     reader.readAsDataURL (file);
   });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 }
 
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -402,5 +384,3 @@ const reader = new FileReader ();
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

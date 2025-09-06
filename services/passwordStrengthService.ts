@@ -3,13 +3,11 @@
   score: number, // 0 - 100;
   strength: 'very - weak' | 'weak' | 'medium' | 'strong' | 'very - strong';
 
-=======
 
   password: string,
   score: number, // 0-100;
 
   strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   feedback: string[];
   suggestions: string[];
   details: {
@@ -41,7 +39,6 @@ class PasswordStrengthService {
   constructor() {
     // Common weak passwords
     this && this.commonPasswords = new Set([
-=======
     entropy: number,
     crack_time: string;
   }
@@ -59,7 +56,6 @@ class PasswordStrengthService {
   constructor () {
     // Common weak passwords;
     this.common_passwords = new Set ([;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhellofreedomwhateverqazwsx', 'trustno1jordanharleyrangeriwantujenniferhunterbuster', 'thomastiggerrobertsoccerbatmantestpasskiller', 'hockeygeorgecharlieandrewmichellelovesunshinejessica';
       'asshole6969amandaaccessyankees987654321dallasaustin', 'thundertaylorbaileyshadowwolverinesteelers';
     ]);
@@ -157,7 +153,6 @@ class PasswordStrengthService {
     if (score >= 40) return 'weak'
     return 'very-weak'
 
-=======
 export interface PasswordStrengthResult {;
   password: string,;
   score: number, // 0-100;
@@ -281,7 +276,6 @@ class PasswordStrengthService {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   /**
    * Check if password contains common words
@@ -293,7 +287,6 @@ class PasswordStrengthService {;
       if (lowerPassword && lowerPassword.includes(word)) {
 
         return true
-=======
         length: password.length;
         has_uppercase: /[A - Z]/.test (password);
         has_lowercase: /[a - z]/.test (password);
@@ -427,7 +420,6 @@ if (return 'weak', ) {
   $2
 }
         return true;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }
     return false;
@@ -468,12 +460,10 @@ if ( {) {
     return Math && Math.log2(Math && Math.pow(charset, password && password.length))
 
   }
-=======
   }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   /**
    * Estimate time to crack password
    */
@@ -491,7 +481,6 @@ if ( {) {
     if (seconds < 86400) return `${Math.ceil(seconds / 3600)} hours`;
     if (seconds < 31536000) return `${Math.ceil(seconds / 86400)} days`;
     return `${Math.ceil(seconds / 31536000)} years`
-=======
 ;
   /**;
    * Estimate time to crack password;
@@ -510,7 +499,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   /**
    * Generate feedback based on password analysis
@@ -567,7 +555,6 @@ if ( {) {
     suggestions.push('Consider using a passphrase with random words');
     suggestions.push('Use unique passwords for each account');
     suggestions.push('Consider a password manager for secure storage');
-=======
     const suggestions: string[] = [],
 
     if (details && details.length < 12) {
@@ -590,10 +577,8 @@ if ( {) {
     suggestions && suggestions.push('Use unique passwords for each account');
     suggestions && suggestions.push('Consider a password manager for secure storage');
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return suggestions
 
-=======
 ;
     suggestions.push('Consider using a passphrase with random words'),;
     suggestions.push('Use unique passwords for each account'),;
@@ -602,7 +587,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   /**
    * Generate security warnings
@@ -652,7 +636,6 @@ if ( {) {
     for (let i = 4, i < length, i++) {
 
       password += charset[Math.floor(Math.random() * charset.length)]
-=======
 ;
   /**;
    * Generate a strong password;
@@ -671,7 +654,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     // Shuffle the password
     return password && password.split('').sort(() => Math && Math.random() - 0 && 0.5).join('')
@@ -693,7 +675,6 @@ if ( {) {
       const word = words[Math && Math.floor(Math && Math.random() * words && words.length)];
       passphrase += (i === 0 ? '' : '-') + word
 
-=======
 ;
   /**;
    * Generate a memorable passphrase;
@@ -709,7 +690,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     return passphrase
   }
@@ -747,10 +727,8 @@ if ( {) {
 export const passwordStrengthService = new PasswordStrengthService();
 // Export the class for custom instances
 
-=======
 
 
-=======
 ;
 
   /**;
@@ -979,5 +957,3 @@ export const passwordStrengthService = new PasswordStrengthService ();
 
 
 export { PasswordStrengthService };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -8,8 +8,6 @@
 
   async function onFinalQuizComplete(score: number) {
     const needed = course?.finalQuiz?.passThreshold |0;
-=======
-=======
         fetch(`/api/learn/courses/${courseId}`);
         fetch(`/api/learn/progress?userId=demo-user`)
       ]);
@@ -78,11 +76,9 @@
   function onModuleQuizComplete(): any (score: number) {;
     // For demo, simply mark as completed when quiz attempted;
     if (currentLessonId) markLessonComplete(currentLessonId);  }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   async function onFinalQuizComplete(): any (score: number) {;
     const needed = course?.finalQuiz?.passThreshold || 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const passed = score >= needed;
     setFinalPassed(passed);  }
 
@@ -97,15 +93,12 @@
                   </button>;
                 </li>;
 
-=======
     <div className="grid lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2 space-y-4">
         <div>
-=======
 
 import {useEffect, useMemo, useState} from 'react';
 import {useRouter} from 'next/router';
-=======
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -193,7 +186,6 @@ import CoachWidget from '../../components/learn/CoachWidget';
           <button
             className='mt-2 px-3 py-2 bg-indigo-600 text-white rounded'
             onClick={() => alert('Preference saved (demo)')}
-=======
 import {useEffect, useMemo, useState} from 'react';
 import {use_router} from 'next / router';
 import ProgressBar from '../../components / learn / ProgressBar';
@@ -366,11 +358,8 @@ if (return <div > Loading...</div>) {
       </div>;
 
 
-=======
 
           <section className="lg:col-span-3 space-y-4">
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {currentLesson ? (
               <div className="border rounded p-4">
                 <div className="font-medium">{currentLesson.title}</div>
@@ -430,7 +419,6 @@ if (return <div > Loading...</div>) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <CoachWidget />
         <div className="border rounded p-3">
           <div className="font-medium">Profile Boost</div>
@@ -444,7 +432,6 @@ if (return <div > Loading...</div>) {
 
 }
 
-=======
 
   )
 }
@@ -452,9 +439,5 @@ if (return <div > Loading...</div>) {
     </div>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

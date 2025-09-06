@@ -32,7 +32,6 @@
     return () => clearTimeout(timer);
   }, []);
   return { metrics, isSupported }
-=======
 import { useEffect, useState  } from './react';
 import { PerformanceMetrics  } from '../types';
 ;
@@ -89,5 +88,4 @@ function usePerformanceMetrics() {
   }, []);
 ;
   return { metrics, is_supported }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

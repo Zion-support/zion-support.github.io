@@ -1,6 +1,5 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 
 import React from 'react';
@@ -49,7 +48,6 @@ const apiEndpoints = [
     icon: Server
     methods: ['POST', 'GET', 'PUT']
     endpoint: '/api/it-services'
-=======
 import { ;
   ArrowRight,;
   Server,;
@@ -86,11 +84,9 @@ const apiEndpoints = [;
     icon: Server,;
     methods: ['POST', 'GET', 'PUT'],;
     endpoint: '/api/it-services';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 ];
 
-=======
 import React from 'react';
 import Head from 'next/head';
 
@@ -109,7 +105,6 @@ export default function APIDocsPage() {
       </Head>
 
 
-=======
 export default function APIDocsPage() {;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
@@ -118,10 +113,7 @@ export default function APIDocsPage() {;
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group services. Access our RESTful APIs for AI, IT, and micro SaaS solutions." />;
         <meta name="keywords" content="API documentation, developer resources, REST API, integration, SDK" />;
       </Head>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
       {/* Hero Section */}
 
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
@@ -250,7 +242,6 @@ function APIDocsPage() {
             {api_endpoints.map ((endpoint, index) => {
 
               const IconComponent = endpoint.icon;
-=======
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
             <h2 className="text-4xl font-bold text-gray-900 mb-4">API Endpoints</h2>;
@@ -262,7 +253,6 @@ function APIDocsPage() {
           <div className="grid md:grid-cols-2 gap-8">;
             {apiEndpoints && apiEndpoints.map((endpoint, index) => {;
               const IconComponent = endpoint && endpoint.icon;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               return (
 
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
@@ -317,8 +307,6 @@ function APIDocsPage() {
 
 
 
-=======
-=======
       <div className='container mx-auto px-4 py-16 text-gray-200'>
         <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
         <p className='text-gray-300'>
@@ -331,7 +319,6 @@ function APIDocsPage() {
       </div>
     </Layout>
 
->>>>>>> origin/automation-improvements-final
   );
 }
 import Layout from '../components/Layout';
@@ -339,15 +326,9 @@ export default function APIDocsPage() {
 
 
 
-=======
 
-=======
-=======
 import React from 'react',
 import Head from 'next/head',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function ApiDocsPage() {
   return (
     <>
@@ -357,10 +338,8 @@ export default function ApiDocsPage() {
         <meta name="description" content="API reference and guides." />
         <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </Head>
       <div className="container mx-auto px-4 py-16 text-gray-200">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
@@ -387,12 +366,10 @@ import Layout from '../components/Layout';
 export default function APIDocsPage() {;
 export default function ApiDocsPage() {;
   return (
-=======
 
 
 
   );
-=======
         <meta name="description" content="API reference and guides." />
         <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
       </Head>
@@ -400,15 +377,12 @@ export default function ApiDocsPage() {;
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
       </div>
-=======
 );
->>>>>>> origin/main
     </>
   )
 
 }
 
-=======
 
     </>
   )
@@ -417,7 +391,6 @@ import Head from 'next/head';
 export default function ApiDocsPage(req, res) {
   try {
   return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <>;
       <Head>;
         <title>API Docs | Zion Tech Group</title>;
@@ -435,7 +408,6 @@ export default function ApiDocsPage(req, res) {
 }
 
 
-=======
                 <motion.div;
                   key={index}
                   className="bg - white rounded - xl shadow - lg p - 8 border border - gray - 100";
@@ -520,8 +492,4 @@ function ApiDocsPage() {
     </Layout>);
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

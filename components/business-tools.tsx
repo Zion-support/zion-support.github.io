@@ -50,7 +50,6 @@ import {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function BusinessToolsPage() {
   const businessTools = [
     {
@@ -419,11 +418,9 @@ import React from 'react';
     }
 
   ];
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const businessInsights = [
     {
       title: 'Remote Work Tools'
@@ -482,7 +479,6 @@ import React from 'react';
       trend: '📈 Growing Demand',
       color: 'text-green-400'
     };
-=======
           description:;
             'Free web analytics service that tracks and reports website traffic.',
           features: [;
@@ -640,7 +636,6 @@ import React from 'react';
       trend: '🔒 Critical',;
       color: 'text-orange-400',;
     },      color: 'text-orange-400';
-=======
       title: 'Start with Free Tiers',
       description: 'Most tools offer free versions to test before committing to paid plans.',
       icon: <CheckCircle className="w-6 h-6 text-green-400" />
@@ -689,7 +684,6 @@ import React from 'react';
     },  ];              title: 'Train Your Team',;
         description: 'Invest in proper training to maximize the value of your chosen tools.',;
         icon: <Users className="w-6 h-6 text-orange-400" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   return (
 
@@ -776,7 +770,6 @@ import React from 'react';
               Business Tool Trends & Insights;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-=======
       color: 'text - orange - 400',
     },      color: 'text - orange - 400';
     }
@@ -889,7 +882,6 @@ import React from 'react';
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {businessInsights.map((insight, index) => (
-=======
                   className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${insight && insight.color} bg-gray-800/50`}>                  {insight && insight.trend}              Business Tool Trends & Insights;
             </h2>;
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
@@ -899,7 +891,6 @@ import React from 'react';
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {businessInsights && businessInsights.map((insight, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
@@ -911,7 +902,6 @@ import React from 'react';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Business Tools */}
 
       <section className="section-padding bg-gradient-cursor">
@@ -1188,7 +1178,6 @@ import React from 'react';
                           <li key={featureIndex} className="flex items-center text-gray-300 text-sm">;
                             <Check className="w-4 h-4 text-cursor-blue mr-3 flex-shrink-0" />;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             {feature}
                           </li>;
                         ))}
@@ -1197,12 +1186,9 @@ import React from 'react';
                     </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Button
 
 
@@ -1215,7 +1201,6 @@ import React from 'react';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Productivity Tips */}
 
 
@@ -1223,7 +1208,6 @@ import React from 'react';
               Productivity Tips & Best Practices
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Maximize the value of your business tools with these proven
@@ -1232,7 +1216,6 @@ import React from 'react';
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {productivityTips.map((tip, index) => (
-=======
         </div>;
       </section>;
 
@@ -1243,7 +1226,6 @@ import React from 'react';
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-=======
                       </p>;
                     </div>;
                     <div className='mb - 6'>;
@@ -1302,13 +1284,11 @@ import React from 'react';
             <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
             </h2>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Maximize the value of your business tools with these proven;
               strategies and best practices.;
             </p>;
           </div>;
 
-=======
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-16">
@@ -1333,14 +1313,11 @@ import React from 'react';
                 <h3 className="text-xl font-bold text-white mb-3">{tip.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{tip.description}</p>
 
-=======
 
 
               </Card>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
           </div>;
@@ -1369,7 +1346,6 @@ import React from 'react';
 
             Ready to Transform Your Business Operations?
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             These business tools can streamline your operations, improve team
@@ -1377,7 +1353,6 @@ import React from 'react';
             your tech stack strategically.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
               href='/micro-saas'
               variant='secondary'
@@ -1390,7 +1365,6 @@ import React from 'react';
               variant='outline'
               size='lg'
 
-=======
       <section className="section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
         <div className="container-cursor text-center relative z-10">
@@ -1417,10 +1391,8 @@ import React from 'react';
               className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"
             >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Get Business Consultation
 
-=======
           <div className='flex flex - col sm:flex - row gap - 6 justify - center'>;
             <Button;
               href='/micro - saas';
@@ -1457,11 +1429,8 @@ import React from 'react';
   );
 }
 
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
               className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'            >              href="/micro-saas"
               variant="secondary"
               size="lg"
@@ -1471,5 +1440,3 @@ import React from 'react';
 
             <Button
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

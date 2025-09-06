@@ -3,13 +3,11 @@ import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 
 export interface TalentProfileData {
-=======
 
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface TalentProfileData {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   name: string;
   title: string;
   bio: string;
@@ -19,13 +17,11 @@ export interface TalentProfileData {;
 
 }
 export interface CategorizedSkills {
-=======
 }
 
 
 export interface CategorizedSkills {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   programming: string[];
   devops: string[];
   platforms: string[];
@@ -58,7 +54,6 @@ export function useTalentProfileEnhancer() {;
 
       if (error) {
         throw new Error(error.message)
-=======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 export interface TalentProfileData {;
@@ -98,7 +93,6 @@ export function useTalentProfileEnhancer() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       return data as EnhancedProfile
     } catch (err: any) {
@@ -120,7 +114,6 @@ export function useTalentProfileEnhancer() {;
     isGenerating;
 
     error
-=======
   soft_skills: string[],
   other: string[];
 }
@@ -167,6 +160,5 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

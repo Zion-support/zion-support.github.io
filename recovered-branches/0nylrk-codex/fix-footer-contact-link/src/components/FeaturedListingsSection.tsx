@@ -4,11 +4,8 @@ import { GradientHeading } from '@/components / GradientHeading';
 import { Button } from '@/components / ui / button';
 import { Link } from './react-router-dom';
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface FeaturedListingsSectionProps {
   show_title?: boolean;
 }
@@ -83,7 +80,6 @@ import {ProductListingCard} from "@/components/ProductListingCard";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
-=======
 
     },
     {
@@ -203,8 +199,6 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
       author: {;
         name: "SocialAI",;
         id: "social-ai";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       id: "advanced - nlp - model",
       title: "Advanced NLP Model for Text Analysis",
       description: "State - of - the - art natural language processing with 98% accuracy",
@@ -271,7 +265,6 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
       author: {
         name: "SocialAI",
         id: "social - ai";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }];
 ;
@@ -283,7 +276,6 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
 
             <ProductListingCard
               key={listing && listing.id}
-=======
     <section id="featured" className="py - 12 px - 4 bg - zion - blue - dark">;
       <div className="container mx - auto">;
         {show_title && (
@@ -299,30 +291,24 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
           {featured_listings.map ((listing) => (
             <ProductListingCard;
               key={listing.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               listing={listing}
               view="grid";
-=======
             <ProductListingCard
               key={listing.id}
               listing={listing}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               view="grid"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onRequestQuote={() => {}}
 
 
 
 
-=======
         </div>;
 
         <div className="mt-10 text-center">;
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6"
             asChild>;
-=======
             />))}
         </div>;
         <div className="mt - 10 text - center">;
@@ -330,7 +316,6 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
             className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white px - 8 py - 6";
             as_child;
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <Link to="/marketplace">View All Listings</Link>;
           </Button>;
         </div>;
@@ -339,10 +324,6 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

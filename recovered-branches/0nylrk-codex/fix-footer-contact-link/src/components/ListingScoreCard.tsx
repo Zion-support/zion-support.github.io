@@ -10,7 +10,6 @@ import {StarIcon} from "lucide-react";
 interface ListingScoreCardProps {;
   title: string,;
   description: string,;
-=======
 import { cn } from '@/lib / utils';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
@@ -21,7 +20,6 @@ interface ListingScoreCardProps {
 
   image?: string;
   category: string,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   tags?: string[];
   author?: string;
   author_image?: string;
@@ -75,7 +73,6 @@ export function ListingScoreCard({
     <div className={cn(
       "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       className
     )}>
       {image && (
@@ -158,14 +155,12 @@ export function ListingScoreCard({
                       ? "text-zion-cyan fill-zion-cyan" 
 
                       : "text-zion-slate-light"
-=======
 
                     "h-4 w-4", 
                     star <= Math.round(rating) 
                       ? "text-zion-cyan fill-zion-cyan" 
                       : "text-zion-slate-light"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   )}
                 />;
               ))}
@@ -186,14 +181,12 @@ export function ListingScoreCard({
 
 
 
-=======
               </Badge>;
             ))}
           </div>;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
 
 
@@ -220,7 +213,6 @@ export function ListingScoreCard({
   );
 }
 
-=======
   review_count?: number;
   class_name?: string;
 }
@@ -293,4 +285,3 @@ function ListingScoreCard() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

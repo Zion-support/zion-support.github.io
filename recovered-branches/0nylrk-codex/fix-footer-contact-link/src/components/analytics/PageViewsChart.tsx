@@ -18,7 +18,6 @@ interface PageViewsChartProps {;
   onTimeRangeChange: (range: string) => void
 }
 
-=======
 
 interface PageViewsChartProps {
   data: Array<{ date: string, views: number }>,
@@ -32,7 +31,6 @@ export function PageViewsChart(): any ({;
   timeRange,;
   onTimeRangeChange,;
 }: PageViewsChartProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
       <CardHeader className="pb-2">;
@@ -47,7 +45,6 @@ export function PageViewsChart(): any ({;
 
 
 
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
@@ -79,9 +76,7 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
     </Card>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
-=======
 import React from './react';
 import {
   Card,
@@ -118,5 +113,4 @@ function PageViewsChart() {
         />;
       </CardContent>;
     </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

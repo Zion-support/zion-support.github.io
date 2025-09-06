@@ -8,7 +8,6 @@ import {;
   CardHeader,;
   CardTitle,;
 
-=======
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -21,7 +20,6 @@ import {
   CardHeader,
   CardTitle,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { IntegrationCards } from "./IntegrationCards";
@@ -36,7 +34,6 @@ export function IntegrationsHub() {
   const [activeTab, setActiveTab] = useState("marketplace");
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="flex gap-2">
           <Button variant="outline">View Documentation</Button>
           <Button>Connect New Integration</Button>
@@ -47,7 +44,6 @@ export function IntegrationsHub() {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card>
           <CardHeader className="pb-2">
@@ -82,7 +78,6 @@ export function IntegrationsHub() {
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Card className="md:col-span-2">
           <CardHeader className="pb-2">
             <CardTitle className="text-lg">Recent Activity</CardTitle>
@@ -126,7 +121,6 @@ export function IntegrationsHub() {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="grid grid-cols-3 md: w-[400px]">
           <TabsTrigger value="marketplace">Marketplace</TabsTrigger>
@@ -138,7 +132,6 @@ export function IntegrationsHub() {
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="mt-6">
           <TabsContent value="marketplace" className="m-0">
             <IntegrationCards />
@@ -152,7 +145,6 @@ export function IntegrationsHub() {
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <TabsContent value="webhooks" className="m-0">
             <Card>
               <CardHeader>
@@ -171,7 +163,6 @@ export function IntegrationsHub() {
             
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Card className="mt-6">
               <CardHeader>
                 <CardTitle>Synchronization Log</CardTitle>
@@ -189,10 +180,8 @@ export function IntegrationsHub() {
       </Tabs>
     </div>
 
-=======
 
 
-=======
   )
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -228,7 +217,6 @@ export function IntegrationsHub() {;
             <div className="flex justify-between items-center">;
               <CardTitle className="text-lg">Status</CardTitle>;
               <Badge variant="outline" className="bg-green-100 text-green-800">;
-=======
 import React, { useState } from './react';
 import { Button  } from '@/components / ui / button';
 import {
@@ -271,7 +259,6 @@ function IntegrationsHub() {
             <div className="flex justify - between items - center">;
               <CardTitle className="text - lg">Status</CardTitle>;
               <Badge variant="outline" className="bg - green - 100 text - green - 800">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Healthy;
               </Badge>;
             </div>;
@@ -393,9 +380,6 @@ function IntegrationsHub() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
-=======
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

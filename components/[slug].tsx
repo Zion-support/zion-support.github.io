@@ -24,11 +24,9 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useMemo } from 'react';
 
-=======
 
 import React, { useMemo } from 'react';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';
@@ -94,7 +92,6 @@ import { realVerifiedServices } from '../data/real-verified-services';
       );
     const byLink = all.find(s => {
 
-=======
 import React, { useMemo } from 'react';
 import Head from 'next / head';
 import {use_router} from 'next / router';
@@ -161,7 +158,6 @@ if (return undefined) {
       realQ4Services2025 as any,
       real2026Q1Additions as any,
       ultimateFuturisticServices2025 as any);    const by_link = all.find (string => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       try {
         const url = new URL (s.link);
         return url.pathname.replace (/^\/+|\/+$/g, '') === slug.replace (/^\/+|\/+$/g, '');
@@ -209,10 +205,7 @@ export default function DynamicServicePage() {;
         return false;        return false;
 
 
-=======
         return false
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     });
     if (byLink) return byLink;
@@ -427,7 +420,6 @@ if ( {) {
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
-=======
             </p>;
           </div>;
           <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6 mb - 12'>;
@@ -492,7 +484,6 @@ if ( {) {
                 <div className="flex items - center space - x-2"><Phone className="w - 4 h - 4 text - cyan - 400" /><span>{service.contact_info.mobile}</span></div>;
                 <div className="flex items - center space - x-2"><Mail className="w - 4 h - 4 text - purple - 400" /><span>{service.contact_info.email}</span></div>;
                 <div className="flex items - center space - x-2"><MapPin className="w - 4 h - 4 text - green - 400" /><span className="text - xs">{service.contact_info.address}</span></div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </div>;
@@ -501,7 +492,6 @@ if ( {) {
 
 
 
-=======
 
 // Static export support: generate root-level pages for service slugs;
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
@@ -511,8 +501,6 @@ function normalizeSlug(value: string): string {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(link?: string): string | null {
-=======
-=======
         <meta name="description" content={service.description} />
         <link rel="canonical" href={canonicalUrl} />
       </Head>
@@ -575,7 +563,6 @@ function collectAllServices(): any (): Svc[] {;
     realMarketServices as Svc[],;
     realVerifiedServices as unknown as Svc[];
   );
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 function normalizeSlug(): any (value: string): string {;
   return value;
@@ -584,7 +571,6 @@ function normalizeSlug(): any (value: string): string {;
     .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(): any (link?: string): string | null {;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   if (!link) return null;
   try {;
     const url = new URL(link);
@@ -595,17 +581,13 @@ function normalizeSlug(): any (value: string): string {;
     return null;
   } catch {;
     return null;
-=======
 
 
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const services = collectAllServices();
 
   const candidateSlugs = new Set<string>(),;
@@ -624,7 +606,6 @@ function normalizeSlug(): any (value: string): string {;
   try {
     const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
 
-=======
     </UltraAdvancedFuturisticBackground>);
 // Static export support: generate root - level pages for service slugs;
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
@@ -679,7 +660,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     }
   } catch {}
       const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     for (const entry of entries) {
       if (&& /\.tsx?$/.test (entry.name)) {) {
   $2
@@ -771,18 +751,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // No dynamic fetching needed, the component resolves the service client-side.;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return { props: {} }
 
 };
 
-=======
 
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array.from (candidate_slugs).filter (
     slug => !static_slugs.has (slug));
@@ -810,4 +786,3 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return { props: {} }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

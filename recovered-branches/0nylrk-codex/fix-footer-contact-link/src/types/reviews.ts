@@ -3,11 +3,9 @@ export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 ;
 
 export interface Review {
-=======
 
 export interface Review {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   project_id: string;
   reviewer_id: string;
@@ -46,4 +44,3 @@ export interface ReviewReport {;
   created_at: string,
   resolved_at?: string;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

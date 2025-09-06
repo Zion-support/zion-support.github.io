@@ -8,7 +8,6 @@ export default function AIAutomationPage() {;
         <h1 className="text-4xl font-bold">AI Workflow Automation</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
           Transform your business processes with intelligent automation powered by cutting-edge AI technology;
-=======
 "use client",
 export default /**
  * AIAutomationPage - Function description
@@ -20,7 +19,6 @@ function AIAutomationPage() {
         <h1 className="text - 4xl font - bold">AI Workflow Automation</h1>;
         <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
           Transform your business processes with intelligent automation powered by cutting - edge AI technology;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         </p>;
       </div>;
       {/* Service Overview */}

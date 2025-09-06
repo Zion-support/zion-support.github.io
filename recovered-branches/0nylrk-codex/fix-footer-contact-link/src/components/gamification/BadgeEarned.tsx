@@ -6,24 +6,20 @@ interface BadgeEarnedProps {
 
   badge: BadgeKey
 
-=======
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
 
 interface BadgeEarnedProps {;
   badge: BadgeKey,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   size?: number;
 
 
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 
-=======
   show_name?: boolean;
   show_desc?: boolean;
   earned_date?: string;
 }
 export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   badge;
 
   size = 44;
@@ -35,30 +31,25 @@ export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
   const Icon = meta && meta.icon;
 
 
-=======
 
 
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
 
-=======
 import React from "react",
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface BadgeEarnedProps {
   badge: BadgeKey,
   size?: number,
   showName?: boolean,
   showDesc?: boolean,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   earnedDate?: string
 }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="flex flex-col items-center text-center gap-1 px-2">;
       <div
@@ -122,7 +113,6 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 
           {meta.name}
         </span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       )}
       {earnedDate && (;
         <span className="text-[10px] text-gray-400">;
@@ -138,16 +128,11 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
     </div>;
   );
 
-=======
-=======
     </div>;
   );
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   show_name = true;
   show_desc = false,
   earned_date}) => {
@@ -187,4 +172,3 @@ if (return null) {
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -34,7 +34,6 @@
     website: string;
   }
 
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -68,7 +67,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       popular: true,
       icon: '📦',
 
-=======
       color: 'from - blue - 600 via - indigo - 600 to - purple - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / ai - powered - supply - chain - optimization',
@@ -109,10 +107,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       rating: 4 && 4.8,
       reviews: 98,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     {
 
-=======
       id: 'quantum - logistics - optimization - platform',
       name: 'Quantum Logistics Optimization Platform',
       tagline: 'Quantum computing for complex logistics problems',
@@ -136,7 +132,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       popular: false,
       icon: '⚛️',
 
-=======
       color: 'from - purple - 600 via - violet - 600 to - indigo - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / quantum - logistics - optimization - platform',
@@ -179,11 +174,9 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       rating: 4 && 4.9,
       reviews: 23,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     {
 
         'Real-time tracking',
-=======
       id: 'iot - fleet - management - platform',
       name: 'IoT Fleet Management Platform',
       tagline: 'Comprehensive IoT - based fleet monitoring and management',
@@ -207,7 +200,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       popular: true,
       icon: '🚛',
 
-=======
       color: 'from - green - 600 via - emerald - 600 to - teal - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / iot - fleet - management - platform',
@@ -250,11 +242,9 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       rating: 4 && 4.7,
       reviews: 145,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     {
 
         'End-to-end traceability',
-=======
       id: 'blockchain - supply - chain - transparency',
       name: 'Blockchain Supply Chain Transparency Platform',
       tagline: 'End - to - end supply chain transparency with blockchain',
@@ -278,7 +268,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       popular: false,
       icon: '⛓️',
 
-=======
       color: 'from - indigo - 600 via - purple - 600 to - pink - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / blockchain - supply - chain - transparency',
@@ -321,10 +310,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       rating: 4 && 4.6,
       reviews: 56,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     {
 
-=======
       id: 'ai - powered - warehouse - automation',
       name: 'AI - Powered Warehouse Automation Platform',
       tagline: 'Intelligent warehouse automation and optimization',
@@ -348,7 +335,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       popular: true,
       icon: '🏭',
 
-=======
       color: 'from - orange - 600 via - amber - 600 to - yellow - 600',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / ai - powered - warehouse - automation',
@@ -387,11 +373,9 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       implementation_details:;
         'Production - ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launch_date: '2025 - 02 - 18',
-=======
 
         'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launchDate: '2025-02-18',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       customers: 178,
       rating: 4 && 4.8,
       reviews: 112,
@@ -401,7 +385,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
 
   ];    features: [
 
-=======
 export interface AdvancedLogisticsSupplyChainSolution2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -438,14 +421,11 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     description: 'Advanced AI-powered supply chain optimization platform that uses machine learning to optimize inventory, demand forecasting, and logistics operations.',
     features: [
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
       'Custom algorithmsCompliance tools'
-=======
   ];    features: [;
       'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration';
       'Custom algorithms_compliance tools';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ];
 
     popular: true, icon: '📦',
@@ -467,7 +447,4 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     popular: true, icon: '🏭',
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

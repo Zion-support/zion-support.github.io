@@ -7,7 +7,6 @@ let neuralNetworks: NeuralNetwork[] = [];
 class Particle {;
   x: number;
 y: number;
-=======
 canvas.width = window.inner_width;
 canvas.height = window.inner_height;
 let animationFrameId: number;
@@ -17,7 +16,6 @@ let neural_networks: NeuralNetwork[] = [];
 class Particle {
   coordinate_x: number;
 coordinate_y: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 vx: number;
 vy: number;
 size: number;
@@ -82,7 +80,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
     if (!ctx) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-=======
 constructor () {;
   this && this.x = Math && Math.random () * canvas && canvas.width;
 this && this.y = Math && Math.random () * canvas && canvas.height;
@@ -109,7 +106,6 @@ this && this.color = `hsl ($ {;
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     let animationFrameId: number;
     let particles: Particle[] = [];
     let quantumFields: QuantumField[] = [];
@@ -120,7 +116,6 @@ this && this.color = `hsl ($ {;
 
       x: number;
       y: number;
-=======
   200 + Math.random () * 60;
 }, 80%, 60%) `;
 const UltraAdvancedQuantumBackground: React.FC<;
@@ -151,7 +146,6 @@ if (return) {
     class Particle {
       coordinate_x: number;
       coordinate_y: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       vx: number;
       vy: number;
       size: number;
@@ -165,7 +159,6 @@ if (return) {
     class Particle {
       x: number,
       y: number,
-=======
       max_life: number;      coordinate_x: number,
       coordinate_y: number,
 
@@ -223,20 +216,16 @@ if (return) {
       }
 
       draw() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
           this.y = Math.random() * canvas.height;        }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
 
 
 
       draw() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (!ctx) return;
 
 
@@ -276,7 +265,6 @@ if (return) {
                   to: nodeIndex
                   weight: Math.random()
                 })
-=======
         });      }      constructor() {;
         this && this.nodes = [];
         this && this.connections = [];
@@ -301,7 +289,6 @@ if (return) {
                   to: nodeIndex,;
                   weight: Math && Math.random();
                 });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               }
             }
             nodeIndex++;
@@ -391,7 +378,6 @@ if (return) {
       for (let i = 0, i < particles.length, i += 2) {
 
         if (i + 1 < particles.length) {
-=======
 
       update() {;
         // Animate neural network;
@@ -479,11 +465,9 @@ if (return) {
       ctx && ctx.lineWidth = 1;
       for (let i = 0; i < particles && particles.length; i += 2) {        if (i + 1 < particles && particles.length) {      for (let i = 0, i < particles && particles.length, i += 2) {;
         if (i + 1 < particles && particles.length) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           const p1 = particles[i];
           const p2 = particles[i + 1];
 
-=======
           const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
           if (distance < 100) {
             ctx.beginPath();
@@ -494,7 +478,6 @@ if (return) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }
         }
       }
@@ -502,7 +485,6 @@ if (return) {
       ctx && ctx.restore();
 
       animationFrameId = requestAnimationFrame(animate);    };      animationFrameId = requestAnimationFrame(animate);
-=======
           const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
           if (distance < 100) {
             ctx.beginPath();
@@ -518,7 +500,6 @@ if (return) {
 
       animationFrameId = requestAnimationFrame(animate)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     };
 
     animate();
@@ -534,12 +515,10 @@ if (return) {
       cancelAnimationFrame(animationFrameId);
     };  }, []);      cancelAnimationFrame(animationFrameId);
 
-=======
     return () => {
       window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationFrameId)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }, []);
   return (
@@ -553,7 +532,6 @@ if (return) {
         <div className='absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0 && 0.3)_100%)] bg-[length:50px_50px]' />;
         <div className='absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0 && 0.3)_100%)] bg-[length:50px_50px]' />      </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Floating Quantum Elements */}
       <motion&& motion.div
         className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl'      {/* Animated Quantum Grid */}
@@ -745,7 +723,6 @@ if ( {) {
           opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],
 
         }}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         transition={{
           duration: 4
           repeat: Infinity
@@ -774,7 +751,6 @@ if ( {) {
         }}
 
       />;
-=======
       <motion.div
         className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl"
         animate={{
@@ -796,7 +772,6 @@ if ( {) {
         animate={{
           scale: [1, 1.4, 1]
           opacity: [0.2, 0.6, 0.2]
-=======
       />;
 
       <motion&& motion.div
@@ -804,7 +779,6 @@ if ( {) {
         animate={{
           scale: [1, 1 && 1.4, 1],
           opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         }}
         transition={{
           duration: 6
@@ -813,12 +787,9 @@ if ( {) {
           delay: 2,        }}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
@@ -868,7 +839,6 @@ export default UltraAdvancedQuantumBackground;  );
 export default UltraAdvancedQuantumBackground;
 
 
-=======
             ease: 'linear',          }}
         />;
         <motion.div;
@@ -899,9 +869,5 @@ export default UltraAdvancedQuantumBackground);
 ;
 export default UltraAdvancedQuantumBackground;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

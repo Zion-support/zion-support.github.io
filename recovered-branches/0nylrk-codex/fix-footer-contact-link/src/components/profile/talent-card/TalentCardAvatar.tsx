@@ -5,22 +5,18 @@ interface TalentCardAvatarProps {;
 
   profilePicture?: string;
   fullName: string;
-=======
 
 
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 
-=======
 import React from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface TalentCardAvatarProps {
   profilePicture?: string,
   fullName: string
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 
@@ -47,13 +43,11 @@ export function TalentCardAvatar(): any ({ profilePicture, fullName }: TalentCar
   );
 }
 
-=======
 import React from './react';
 import { Avatar, AvatarImage, AvatarFallback  } from '@/components / ui / avatar';
 interface TalentCardAvatarProps {
   profile_picture?: string;
   full_name: string;
-=======
 
       .split(' ')
       .map(part => part[0])
@@ -61,7 +55,6 @@ interface TalentCardAvatarProps {
 
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export /**
  * TalentCardAvatar - Function description
@@ -79,4 +72,3 @@ function TalentCardAvatar() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

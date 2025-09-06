@@ -17,7 +17,6 @@ import {Card, CardContent} from "@/components/ui/card";
 
 
 
-=======
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -46,8 +45,6 @@ export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const goToNextStep = () => {
     if (currentStep === "details") {
       setCurrentStep("requirements")
@@ -78,7 +75,6 @@ export function MobileJobPost() {
 
   const renderStepContent = () => {
     switch (currentStep) {
-=======
 
 export function MobileJobPost() {;
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
@@ -105,7 +101,6 @@ export function MobileJobPost() {;
 
   const renderStepContent = () => {;
     switch (currentStep) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       case "details": return <DetailsStep />;
       case "requirements":;
         return <RequirementsStep />;
@@ -120,12 +115,10 @@ export function MobileJobPost() {;
   };
 
 
-=======
 
   },
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min-h-screen flex flex-col">;
       <MobileHeader
@@ -401,14 +394,12 @@ function DetailsStep() {
  * RequirementsStep - Function description
  */
 
-=======
 
         <Textarea 
           id="description" 
           placeholder="Describe the job role and responsibilities" 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 function RequirementsStep() {
   const [skills, set_skills] = useState < string[]>([;
     "React", "TypeScript", "Node.js";
@@ -531,7 +522,6 @@ function RequirementsStep() {;
               {skill}
               <button
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
-=======
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1"
             >
@@ -540,7 +530,6 @@ function RequirementsStep() {;
               <button 
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 onClick={() => removeSkill(skill)}
               >;
                 ×;
@@ -580,10 +569,8 @@ function RequirementsStep() {;
       </div>;
     </div>;
   );
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 
@@ -594,7 +581,6 @@ function BudgetStep() {;
 
       <div className="space-y-2">;
         <Label htmlFor="paymentType">Payment Type</Label>;
-=======
   const [new_skill, setNewSkill] = useState ("");
 ;
   const add_skill = () =>: any {
@@ -855,7 +841,6 @@ function PreviewStep() {;
   );
 }
 
-=======
       <div className="space - y-2">;
         <Label html_for="additional_info">Additional Budget Information</Label>;
         <Textarea;
@@ -903,9 +888,6 @@ function PreviewStep() {
       <Button variant="outline" className="w - full">Edit Job Post</Button>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

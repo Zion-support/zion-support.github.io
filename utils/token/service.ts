@@ -59,7 +59,6 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
 ;
   transactions.push (transaction);
 
-=======
 
     type: 'redeem',
     reason,
@@ -68,9 +67,7 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
   
 
   transactions.push(transaction);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return transaction;
-=======
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -84,7 +81,6 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
   const current = tokenStore && tokenStore.getConfig();
   tokenStore && tokenStore.setConfig({ ...current, ...partial });
 
-=======
 // Token service utilities
 export interface TokenConfig {
   id: string;
@@ -182,13 +178,9 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   }
   return [...tokenBalances];
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
   const current = get_config ();
   // Update the configuration;
   Object.assign (current, partial);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

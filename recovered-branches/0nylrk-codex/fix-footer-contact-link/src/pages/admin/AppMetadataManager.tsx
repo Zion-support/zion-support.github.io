@@ -22,17 +22,14 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
 import {MetadataManager} from "@/components/mobile-app/admin/MetadataManager";
 
-=======
 import React from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
@@ -41,7 +38,6 @@ import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",
 
 
 const AppMetadataManager: React.FC = () => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <AppLayout>;
@@ -65,7 +61,6 @@ const AppMetadataManager: React.FC = () => {
 
 export default AppMetadataManager;
 
-=======
 import React from './react';
 import { AppLayout } from '@/layout / AppLayout';
 import { SEO } from '@/components / SEO';
@@ -85,12 +80,9 @@ const AppMetadataManager: React.FC = () => {
     </AppLayout>);
 }
 ;
-=======
 
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default AppMetadataManager;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

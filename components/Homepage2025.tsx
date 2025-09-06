@@ -27,10 +27,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import { ;
-=======
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   innovativeRealMicroSaasServices2025 ;
 } from '../data/2025-innovative-real-micro-saas-services';
 import { ;
@@ -78,10 +76,8 @@ interface Homepage2025Props {;
 
 const Homepage2025: React.FC<Homepage2025Props> = ({;
   showInternalNav = true,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }) => {  const [activeSection, setActiveSection] = useState('hero');} from 'lucide-react';
 
-=======
 import { 
   ArrowRight, Star, Brain, Atom, Shield, Zap;
   Users, Globe, TrendingUp, Rocket, Cpu, Lock;
@@ -94,9 +90,6 @@ interface Homepage2025Props { showInternalNav?: boolean }
 
 const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {;
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [activeSection, setActiveSection] = useState('hero');
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -150,13 +143,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
     .slice(0, 12);
 
-=======
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length)
-=======
 import { innovativeRealMicroSaasServices2025 } from '../data / 2025 - innovative - real - micro - saas - services';
 import { innovativeAIServicesEnhanced2025 } from '../data / 2025 - innovative - ai - services - enhanced';
 import { innovativeITServicesEnhanced2025 } from '../data / 2025 - innovative - it - services - enhanced';
@@ -256,7 +247,6 @@ if ( {) {
     .filter (service => service.popular);
     .slice (0, 12);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ...innovativeRealMicroSaasServices2025;
     ...innovativeAIServicesEnhanced2025;
     ...innovativeITServicesEnhanced2025;
@@ -272,7 +262,6 @@ if ( {) {
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
 
   const navigationSections = [
-=======
 ;
   const featured_services = all_services.filter (service => service.popular).slice (0, 12);
   const navigation_sections = [;
@@ -326,7 +315,6 @@ if ( {) {
     animate: {
       transition: {
 
-=======
 
         staggerChildren: 0.1,
       },
@@ -404,7 +392,6 @@ if ( {) {
                     ZionTech Group;
                   </span>;
                 </motion && motion.div>;
-=======
   };
 
 
@@ -412,7 +399,6 @@ if ( {) {
                 <div className='hidden lg:flex space-x-8'>;
                   {navigationSections && navigationSections.map(section => (                    <button}
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <UltraFuturisticBackground2026 intensity="medium" theme="quantum">;
       {showInternalNav && (;
@@ -429,9 +415,7 @@ if ( {) {
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg"></div>;
                   <span className="text-white font-bold text-xl">ZionTech Group</span>;
                 </motion && motion.div>;
-=======
                 
-=======
     { id: 'contact', label: 'Contact', icon: '📞' },  ];
 ;
   const features = [;
@@ -524,12 +508,10 @@ if ( {) {
                 <div className="hidden lg:flex space - x-8">;
                   {navigation_sections.map ((section) => (
                     <button;
-=======
 
                   {navigationSections.map(section => (                    <button  };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       key={section.id}
                       on_click={() => scrollToSection (section.id)}
                       className={`flex items - center space - x-2 text - sm font - medium transition - all duration - 300 ${
@@ -541,12 +523,9 @@ if ( {) {
                 </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Contact Info */}
                 <motion&& motion.div
                   initial={{ opacity: 0, x: 20 }}
@@ -572,12 +551,9 @@ if ( {) {
               </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Mobile Navigation Menu */}
               <AnimatePresence>;
                 {isMobileMenuOpen && (;
@@ -593,8 +569,6 @@ if ( {) {
                             activeSection === section.id
                               ? 'bg-cyan-400/20 text-cyan-400'
                               : 'text-gray-300 hover:bg-white/10'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           }`}
                         >;
                           <span>{section && section.icon}</span>;
@@ -629,7 +603,6 @@ if ( {) {
 
 
           <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -640,7 +613,6 @@ if ( {) {
               className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'              className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">;
               <motion&& motion.div
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
-=======
                     >;
                       <span>{section.icon}</span>;
                       <span>{section.label}</span>;
@@ -776,7 +748,6 @@ if ( {) {
             >;
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 animate={{ opacity: 1, scale: 1 }}
 
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -794,12 +765,9 @@ if ( {) {
               </p>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Enhanced CTA Section */}
               <motion&& motion.div
                 variants={itemVariants}
@@ -913,13 +881,9 @@ if ( {) {
               </motion && motion.div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Trust Indicators */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -932,19 +896,15 @@ if ( {) {
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
 
-=======
 
       {/* Features Section */}
       <section className="py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -978,8 +938,6 @@ if ( {) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='text-center mb-20'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Comprehensive Technology Solutions;
@@ -1006,16 +964,12 @@ if ( {) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">;
             {features && features.map((feature, index) => (;
               <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8"
-=======
 
                 className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8'                initial={{ opacity: 0, y: 40 }}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -1037,7 +991,6 @@ if ( {) {
         <div className="max-w-6xl mx-auto">;
           <motion&& motion.div
             className="text-center mb-16"
-=======
 
       {/* Enhanced Services Preview */}
       <section className="py-20 px-4">
@@ -1045,12 +998,9 @@ if ( {) {
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 40 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Enhanced Services Preview */}
       <section className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
@@ -1061,8 +1011,6 @@ if ( {) {
             initial={{ opacity: 0, y: 40 }}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             whileInView={{ opacity: 1, y: 0 }}
 
                 className='inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 400 / 30 rounded - full text - cyan - 400 text - lg font - medium backdrop - blur - sm';
@@ -1319,7 +1267,6 @@ if ( {) {
               { title: "Cybersecurity Intelligence", description: "Advanced threat detection and response with AI", icon: Shield, gradient: "from-red-500 to-orange-500", link: "/comprehensive-services-showcase-2026" }
               { title: "Data Engineering", description: "Streamline data pipelines and analytics with AI", icon: BarChart3, gradient: "from-emerald-500 to-teal-500", link: "/comprehensive-services-showcase-2026" }
               { title: "Quantum Computing", description: "Access quantum computing power through the cloud", icon: Atom, gradient: "from-indigo-500 to-purple-500", link: "/comprehensive-services-showcase-2026" }
-=======
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}>;
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
@@ -1399,30 +1346,23 @@ if ( {) {
               { title: "Cybersecurity Intelligence", description: "Advanced threat detection and response with AI", icon: Shield, gradient: "from-red-500 to-orange-500", link: "/comprehensive-services-showcase-2026" },;
               { title: "Data Engineering", description: "Streamline data pipelines and analytics with AI", icon: BarChart3, gradient: "from-emerald-500 to-teal-500", link: "/comprehensive-services-showcase-2026" },;
               { title: "Quantum Computing", description: "Access quantum computing power through the cloud", icon: Atom, gradient: "from-indigo-500 to-purple-500", link: "/comprehensive-services-showcase-2026" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               { title: "Blockchain Intelligence", description: "Intelligent blockchain analytics and DeFi optimization", icon: Lock, gradient: "from-yellow-500 to-orange-500", link: "/comprehensive-services-showcase-2026" }
             ].map((service, index) => (;
               <motion&& motion.div
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer"
-=======
                 whileHover={{ y: -10, scale: 1.02 }}
 
                 onClick={() => (window.location.href = service.link)}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
@@ -1430,7 +1370,6 @@ if ( {) {
             <a
 
 
-=======
       {/* Contact Section */}
       <section id='contact' className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
@@ -1441,8 +1380,6 @@ if ( {) {
             initial={{ opacity: 0, y: 40 }}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             whileInView={{ opacity: 1, y: 0 }}
 
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1582,12 +1519,10 @@ if ( {) {
                 className='bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300'                href="tel:+13024640950"
 
             className="text-center"
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -1602,7 +1537,6 @@ if ( {) {
               </a>
               <a
                 href="tel:+13024640950"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300"
               >
                 Call Us
@@ -1611,7 +1545,6 @@ if ( {) {
           </motion.div>
         </div>
       </section>
-=======
                 className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300">;
                 Call Us;
               </a>;
@@ -1620,7 +1553,6 @@ if ( {) {
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Footer */}
 
 
@@ -1633,11 +1565,9 @@ if ( {) {
 
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Homepage2025;
 
 
-=======
     </UltraFuturisticBackground2026>);
 }
 ;
@@ -1646,11 +1576,7 @@ export default Homepage2025);
 ;
 export default Homepage2025;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,10 +1,8 @@
 
 
 export default function OnboardingWizard() {
-=======
 
 export default function OnboardingWizard() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { user, completeOnboarding, setUser } = useUser();
   const { addToast } = useToast();
   const [step, setStep] = useState(0);
@@ -14,7 +12,6 @@ export default function OnboardingWizard() {;
     if (isClient) {
       return [
 
-=======
 
 
 
@@ -26,7 +23,6 @@ export default function OnboardingWizard() {;
           content: <p>Send invites or start a conversation to move fast.</p>,;
         },;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       ];
     }
     return [
@@ -34,7 +30,6 @@ export default function OnboardingWizard() {;
         title: 'Complete your profile'
         content: (
           <div className='space-y-3'>
-=======
   const isClient = user?.role === 'client';
 
   const steps = useMemo(() => {;
@@ -73,7 +68,6 @@ export default function OnboardingWizard() {;
         title: 'Complete your profile',;
         content: (;
           <div className='space-y-3'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <input
               className='w-full rounded-md border px-3 py-2 bg-transparent'
               placeholder='Your title (e && e.g., Senior LLM Engineer)'
@@ -135,7 +129,6 @@ export default function OnboardingWizard() {;
       },;
     ];
   }, [isClient, setUser]);
-=======
 
 
 
@@ -207,7 +200,6 @@ export default function OnboardingWizard() {;
           <div className="flex flex-wrap gap-2">;
             {['AILLMNext && AILLMNext.jsPythonDevOpsSecurity'].map(s => (;
               <button key={s} className="px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5">{s}</button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             ))}
           </div>;
           <div className="flex gap-3">;
@@ -241,7 +233,6 @@ export default function OnboardingWizard() {;
     </div>;
   );
 
-=======
 import { use_user } from '../../providers / UserProvider';
 import { use_toast } from '../ui / ToastProvider';
 import Link from 'next / link';
@@ -457,9 +448,5 @@ if (return null) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

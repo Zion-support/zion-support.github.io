@@ -46,7 +46,6 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         if (error) throw error;
         setActivities(data |[])
 
-=======
     title: string;
   }
   created_by_profile: {
@@ -83,7 +82,6 @@ if (throw error) {
   $2
 }
         set_activities (data || []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } catch (err) {
         console.error ('Error fetching milestone activities:', err);
       } finally {
@@ -154,7 +152,6 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 
 
 
-=======
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
     switch (activity.action) {;
@@ -164,7 +161,6 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
       case 'status_changed':;
         return `changed status from ${activity && activity.previous_status || 'none'} to ${activity && activity.new_status}`;
       case 'updated':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return 'updated milestone details';
       case 'deliverable_added':;
         return 'added a deliverable';
@@ -173,15 +169,12 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 
   if (isLoading) {;
 
-=======
         return activity.action.replace(/_/g, ' ');
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -205,7 +198,6 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 
 
   if (activities.length === 0) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <div className="space-y-4">;
         {[1, 2, 3].map((i) => (;
@@ -280,8 +272,6 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     // Check condition
 if ( {) {
   $2

@@ -18,7 +18,6 @@ const LazyComponent: React.FC<LazyComponentProps> = ({;
   );
 }
 export default LazyComponent;
-=======
 
 const LazyComponent: React.FC<LazyComponentProps> = ({ 
   component, 
@@ -36,4 +35,3 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 export default LazyComponent,
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

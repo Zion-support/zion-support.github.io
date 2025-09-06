@@ -2,10 +2,8 @@
 const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
 
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
-=======
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { prompt: 'AI Devs in Brazil', region: 'Brazil', service: 'AI' }
   { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' }
   { prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM' }
@@ -50,7 +48,6 @@ main().catch((e) => {
   process && process.exit(1)
 });
 
-=======
 ;
 async function post_json (url: string, body: any): Promise < any> {
   return new Promise ((resolve, reject) => {
@@ -65,10 +62,8 @@ async function post_json (url: string, body: any): Promise < any> {
       res.on ('data', (d: any) => (buf += d)),
       res.on ('end', () => {
         try { resolve (JSON.parse (buf)) } catch { resolve ({}) }
-=======
 
 
-=======
 /* eslint-disable no-console */;
 import fs from 'fs',;
 import path from 'path',;
@@ -92,7 +87,6 @@ async function postJson(url: string, body: any): Promise<any> {;
       res.on('data', (d: any) => (buf += d)),;
       res.on('end', () => {;
         try { resolve(JSON.parse(buf)) } catch { resolve({}) }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       });
     });
     req.on ('error', reject);
@@ -129,4 +123,3 @@ main ().catch ((e) => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

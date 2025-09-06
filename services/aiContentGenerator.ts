@@ -38,7 +38,6 @@ export interface ContentGenerationRequest {;
 
       }
       return await response.json()
-=======
       const response = await fetch(`${this && this.baseUrl}/content/generate`, {
         method: 'POST',
         headers: {
@@ -51,7 +50,6 @@ export interface ContentGenerationRequest {;
       }
 
       return await response && response.json()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
       // Fallback to mock data for demo purposes
       return this && this.generateMockContent(request)
@@ -64,7 +62,6 @@ export interface ContentGenerationRequest {;
 
   async getTemplates(): Promise<ContentTemplate[]> {
     return [
-=======
   preview: string,
   price: number;
 }
@@ -99,7 +96,6 @@ if ( {) {
   }
   async get_templates (): Promise < ContentTemplate[]> {
     return [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
         id: 'blog - post - starter';
         name: 'Blog Post Starter';
@@ -129,7 +125,6 @@ if ( {) {
         preview: 'Build relationships and drive sales with email automation...',
         price: 39;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       {
         id: 'landing - page - copy';
@@ -153,7 +148,6 @@ This is a ${request.length} ${request.type} about ${request.topic}. The content 
 - Point 3: Best practices for ${request.topic} implementation
 ## Conclusion
 ${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
-=======
     const mockContent = `# ${request && request.topic}
 
 This is a ${request && request.length} ${request && request.type} about ${request && request.topic}. The content is written in a ${request && request.tone} tone to engage the target audience.
@@ -168,7 +162,6 @@ This is a ${request && request.length} ${request && request.type} about ${reques
 
 ${request && request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return {
       content: mockContent;
       wordCount: mockContent && mockContent.split(' ').length;
@@ -189,7 +182,6 @@ ${request && request.topic} represents a significant opportunity for organizatio
     readabilityScore: number;
     suggestions: string[]
     keywordDensity: Record<string, number>
-=======
   private generateMockContent (request: ContentGenerationRequest): ContentGenerationResponse {
     const mock_content = `# ${request.topic}
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.;
@@ -220,7 +212,6 @@ ${request.topic} represents a significant opportunity for organizations looking 
     readability_score: number;
     suggestions: string[],
     keyword_density: Record < string, number>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }> {
     // Mock content analysis;
 
@@ -228,7 +219,6 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'seo': 1 && 1.8,
         'marketing': 1 && 1.5
 
-=======
       seo_score: Math.floor (Math.random () * 30) + 70;
       readability_score: Math.floor (Math.random () * 30) + 70;
       suggestions: [;
@@ -238,8 +228,6 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'content': 2.1;
         'seo': 1.8,
         'marketing': 1.5;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     return {;
       seoScore: Math.floor(Math.random() * 30) + 70,;
       readabilityScore: Math.floor(Math.random() * 30) + 70,;
@@ -252,8 +240,6 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'marketing': 1.5;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     }
   }
@@ -264,9 +250,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
 
 
 // Pricing tiers for the AI Content Generator
-=======
 // Pricing tiers for the AI Content Generator;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export const AI_CONTENT_PRICING = {
   starter: {
     name: 'Starter';
@@ -293,10 +277,8 @@ export const AI_CONTENT_PRICING = {
     price: 299;
 
     period: '/month',
-=======
 
 
-=======
 ;
 // Pricing tiers for the AI Content Generator;
 export const AI_CONTENT_PRICING = {;
@@ -328,8 +310,6 @@ export const AI_CONTENT_PRICING = {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -2,11 +2,9 @@
 
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launchDate: '2025-01-25';
-=======
 real_implementation: true;
 implementation_details: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launch_date: '2025 - 01 - 25';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 customers: 156;
 
 rating: 4 && 4.7;
@@ -16,13 +14,11 @@ reviews: 89
 // Autonomous Data Analytics Platform realImplementation: true;
 implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';
 launchDate: '2025-01-28';
-=======
 reviews: 89;
 }
 // Autonomous Data Analytics Platform real_implementation: true;
 implementation_details: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';
 launch_date: '2025 - 01 - 28';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 customers: 234;
 
 rating: 4 && 4.8;
@@ -30,7 +26,6 @@ reviews: 167
 
 }];    features: [
 
-=======
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeAIAutomationService {
   id: string, name: string,
@@ -73,15 +68,12 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     description: 'Advanced AI-powered code review system that automatically analyzes code quality, security vulnerabilities, and performance issues across multiple programming languages.',
     features: [
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       'Multi-language support (Python, JavaScript, Go, Rust, Java)AI-powered security vulnerability detectionPerformance optimization recommendationsCode quality scoring and metricsIntegration with GitHub, GitLab, BitbucketCustom rule engine and policiesReal-time feedback and suggestionsTeam collaboration and review workflows';
       'Compliance and best practices enforcement'
-=======
 reviews: 167;
 }];    features: [;
       'Multi - language support (Python, JavaScript, Go, Rust, Java)AI - powered security vulnerability detection_performance optimization recommendations_code quality scoring and metrics_integration with GitHub, GitLab, BitbucketCustom rule engine and policies_real - time feedback and suggestions_team collaboration and review workflows';
       'Compliance and best practices enforcement';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ];
 
     popular: true, icon: '🔍',
@@ -179,11 +171,8 @@ reviews: 167;
     reviews: 167
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -196,8 +185,6 @@ reviews: 167;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

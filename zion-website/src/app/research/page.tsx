@@ -120,11 +120,9 @@ function ResearchPage() {
 
   return (
     <div className=&quot;bg - black & quot;>;
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
@@ -174,7 +172,6 @@ function ResearchPage() {
                       <span className=&quot;text-sm text-gray-400&quot;>{topic}</span>
                     </div>
                   ))}
-=======
               <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
                 Innovation;
               </span>;
@@ -205,7 +202,6 @@ function ResearchPage() {
                 <div className=&quot;flex items - center gap - x-3 mb - 4&quot;>;
                   <area.icon className=&quot;h - 8 w - 8 text - blue - 400 & quot; />;
                   <h3 className=&quot;text - xl font - semibold text - white & quot;>{area.name}</h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </div>;
                 <p className=&quot;text - gray - 300 mb - 6&quot;>{area.description}</p>;
                 <div className=&quot;space - y-2 & quot;>;
@@ -245,7 +241,6 @@ function ResearchPage() {
                     publication.impact === 'Breakthrough' ? 'bg-purple-600/20 text-purple-400' :
                     'bg-gray-600/20 text-gray-400'
                   }`}>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {publication.impact}
                   </span>;
                   <span className=&quot;text - sm text - gray - 400 & quot;>{publication.year}</span>;
@@ -270,7 +265,6 @@ function ResearchPage() {
 
 
 
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
@@ -282,8 +276,6 @@ function ResearchPage() {
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our research has made significant contributions to the field, 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             influencing both academia and industry.
           </p>
         </div>
@@ -296,7 +288,6 @@ function ResearchPage() {
                 <p className=&quot;mt-2 text-sm text-gray-400&quot;>{item.description}</p>
               </div>
             ))}
-=======
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Impact</h2>;
@@ -316,7 +307,6 @@ function ResearchPage() {
                 <dd className=&quot;order - first text - 3xl font - bold tracking - tight text - white & quot;>{item.value}</dd>;
                 <p className=&quot;mt - 2 text - sm text - gray - 400 & quot;>{item.description}</p>;
               </div>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </dl>;
         </div>;
       </div>;
@@ -324,7 +314,6 @@ function ResearchPage() {
 
 
 
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Collaborations</h2>
@@ -336,8 +325,6 @@ function ResearchPage() {
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             We collaborate with leading academic institutions worldwide to advance 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             the frontiers of AI research and innovation.
           </p>
         </div>
@@ -352,7 +339,6 @@ function ResearchPage() {
                 <div className=&quot;space-y-3 text-gray-300&quot;>
                   <p className=&quot;flex items-center gap-2&quot;>
                     <GlobeAltIcon className=&quot;h-5 w-5 text-blue-400&quot; />
-=======
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Collaborations</h2>;
@@ -375,7 +361,6 @@ function ResearchPage() {
                 <div className=&quot;space - y-3 text - gray - 300 & quot;>;
                   <p className=&quot;flex items - center gap - 2&quot;>;
                     <GlobeAltIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {partner.location}
                   </p>;
                   <p className=&quot;flex items - center gap - 2&quot;>;
@@ -395,7 +380,6 @@ function ResearchPage() {
 
 
 
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -406,8 +390,6 @@ function ResearchPage() {
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Interested in collaborating on cutting-edge AI research? 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             Let's explore opportunities to work together.
           </p>
           <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>
@@ -426,7 +408,6 @@ function ResearchPage() {
     </div>
   )
 }
-=======
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl text - center & quot;>;
           <h2 className=&quot;text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
@@ -451,4 +432,3 @@ function ResearchPage() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

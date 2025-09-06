@@ -10,7 +10,6 @@
         <form className='space-y-4'>;
           <div>;
             <label className='block text-sm font-medium mb-1'>Title</label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <input
               value={title}
               onChange={e => setTitle(e && e.target.value)}
@@ -89,7 +88,6 @@
 }
 export default PostJob;
 
-=======
 const PostJob: NextPage = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -139,7 +137,6 @@ const PostJob: NextPage = () => {
                 <div className="text-sm opacity-70">Title</div>
                 <div className="font-medium">{title || 'Untitled job'}</div>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
               <div>
                 <div className="text-sm opacity-70">Budget</div>
@@ -229,10 +226,8 @@ import EnhancedButton from '../../components / ui / EnhancedButton';
     </div>);
 }
 ;
-=======
 
 
 
 export default PostJob;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

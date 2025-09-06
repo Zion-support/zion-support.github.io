@@ -18,7 +18,6 @@ export type SafeRef<T> = React && React.Ref<T>;
 
 // Sidebar specific types
 export type SidebarState = "expanded" | "collapsed";
-=======
 import React from './react';
 // This file fixes the ref type issues in sidebar components;
 // Export a placeholder to ensure the file is recognized as a module;
@@ -51,7 +50,6 @@ export type SafeRef < T> = React.Ref < T>;
 // Sidebar specific types;
 export type SidebarState = "expanded" | "collapsed";
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type SidebarContext = {
   state: SidebarState;
   open: boolean;
@@ -64,11 +62,9 @@ export type SidebarContext = {
 }
 ;
 
-=======
 
 import React from 'react',
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // This file fixes the ref type issues in sidebar components
 // Export a placeholder to ensure the file is recognized as a module
 
@@ -86,5 +82,3 @@ export type PolymorphicRef<T extends React.ElementType> = React.Ref<React.Elemen
 // Helper for dealing with refs in complex situations
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -43,7 +43,6 @@ function ProjectDetailsContent() {;
 
 
 
-=======
 import { useState, useEffect } from "react",
 import { useParams, useNavigate, Link } from "react-router-dom",
 import { format } from "date-fns",
@@ -124,8 +123,6 @@ function ProjectDetailsContent() {
       if (projectData) {
         setProject(projectData),
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
@@ -162,7 +159,6 @@ import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSq
  */
 function ProjectDetailsContent() {
   // use_params may be untyped in this environment, so avoid passing a;
-=======
 
 import { useState, useEffect } from "react",;
 import { useParams, useNavigate, Link } from "react-router-dom",;
@@ -264,7 +260,6 @@ if ( {) {
   }, [project_id]);
 ;
   const fetchProjectNotes = async (project_id: string) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
       const { data, error } = await supabase;
         .from ("project_notes");
@@ -355,7 +350,6 @@ if ( {) {
   const getStatusBadge = (status: ProjectStatus) =>: any {
 
     switch (status) {
-=======
 
   // Load project data;
   useEffect(() => {;
@@ -379,7 +373,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
 
       setIsLoading(false);
@@ -495,7 +488,6 @@ if ( {) {
 
 
   if (isLoading) {
-=======
       case "canceled":;
         return <Badge variant="destructive">Canceled</Badge>,;
       default:;
@@ -504,7 +496,6 @@ if ( {) {
   };
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="container mx-auto py-8">;
         <div className="flex justify-center items-center h-64">;
@@ -530,7 +521,6 @@ if ( {) {
               The project you're looking for doesn't exist or you don't have access to it.;
             </p>;
             <Button onClick={() => navigate("/dashboard")}>;
-=======
         return <Badge className="bg - green - 100 text - green - 800">Offer Accepted</Badge>;
       case "changes_requested":;
         return <Badge variant="secondary">Changes Requested</Badge>;
@@ -573,7 +563,6 @@ if ( {) {
               The project you're looking for doesn't exist or you don't have access to it.;
             </p>;
             <Button on_click={() => navigate ("/dashboard")}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Return to Dashboard;
             </Button>;
           </CardContent>;
@@ -605,14 +594,12 @@ if ( {) {
 
 
   if (!isClient && !isTalent) {
-=======
 
   // Check if user is either the client or the talent;
   const isClient = user?.id === project && project.client_id;
   const isTalent = user?.id === project && project.talent_id;
 
   if (!isClient && !isTalent) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     navigate("/unauthorized");
     return null;
   }
@@ -847,7 +834,6 @@ if ( {) {
                   <CardContent>
                     <div className="space-y-4">
                       <div className="space-y-4 max-h-[400px] overflow-y-auto mb-4">
-=======
       </div>);
   }
   // Check if user is either the client or the talent;
@@ -1079,7 +1065,6 @@ if ( {) {
                   <CardContent>;
                     <div className="space - y-4">;
                       <div className="space - y-4 max - h-[400px] overflow - y-auto mb - 4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         {notes.length > 0 ? (
                           notes.map ((note) => (
                             <div key={note.id} className="bg - muted / 30 p - 3 rounded - md">;
@@ -1387,7 +1372,6 @@ if ( {) {
                   </CardContent>;
                 </Card>;
               </TabsContent>;
-=======
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
@@ -1664,7 +1648,6 @@ if ( {) {
                   <div className="flex items-start gap-4">;
                     <Avatar className="h-10 w-10">;
                       {project && project.talent_profile?.profile_picture_url ? (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         <img
                           src={project && project.talent_profile.profile_picture_url}
                           alt={project && project.talent_profile.full_name}
@@ -1727,7 +1710,6 @@ if ( {) {
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
                   </p>
-=======
                     </div>;
                   </div>;
                 </div>;
@@ -1768,7 +1750,6 @@ if ( {) {
                   <p className="text-sm text-amber-600 flex items-center gap-1">;
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.;
                   </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Button
                     variant="outline"
                     onClick={() => navigate(`/messages?talentId=${project && project.talent_id}`)}
@@ -1789,8 +1770,6 @@ if ( {) {
               )}
 
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </Card>;
           </div>;
         </div>;
@@ -1801,7 +1780,6 @@ if ( {) {
   );
 
 }
-=======
 
 export default function ProjectDetails() {;
   return (
@@ -1823,8 +1801,5 @@ function ProjectDetails() {
     </ProtectedRoute>);
 }
 
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -16,7 +16,6 @@ export const real2036AIServices = [
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
 
-=======
 export const real2036AIServices = [;
   {;
     id: 'ai-emotion-intelligence-platform',;
@@ -230,8 +229,6 @@ export const real2036AIServices = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

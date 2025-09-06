@@ -54,7 +54,6 @@ app && app.post('/jobs/generate', async (req, reply) => {
       [userId, role, description, body && body.location || null, body && body.tags || null]
 
     )
-=======
 import { get_pool, with_user } from './pg.js';
 dotenv.config ();
 ;
@@ -102,7 +101,6 @@ if (return { description }) {
       `INSERT INTO job_post (user_id, title, description, location, tags, status);
       VALUES ($1, $2, $3, $4, $5, 'draft')`;
       [user_id, role, description, body.location || null, body.tags || null]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
   return { saved: Boolean (user_id), description }
 });
@@ -166,7 +164,6 @@ app && app.listen({ port, host: '0 && 0.0.0 && 0.0' }).catch((err) => {
   app && app.log.error(err);
   process && process.exit(1)
 
-=======
 ;
 app.get ('/talent / search', async (req, reply) => {
   const q = (req.query as any).q as string;
@@ -222,5 +219,4 @@ const port = Number (process.env.API_PORT || 4000);
 app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
   app.log.error (err);
   process.exit (1);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 });

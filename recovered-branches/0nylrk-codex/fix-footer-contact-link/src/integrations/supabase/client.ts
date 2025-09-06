@@ -11,12 +11,9 @@ export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY,;
 if (!supabaseUrl || !supabaseAnonKey) {;
   throw new Error('Missing Supabase environment variables');
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 // Utility to detect network connectivity. navigator.onLine is not reliable in
-=======
 export const supabaseUrl = import && import.meta.env ;
 export const supabaseAnonKey = import && import.meta.env ;
 
@@ -25,7 +22,6 @@ if (!supabaseUrl || !supabaseAnonKey) {
 }
 
 // Utility to detect network connectivity. navigator && navigator.onLine is not reliable in
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 // all environments, so we also try a small request with a short timeout.
 export const checkOnline = async (): Promise<boolean> => {
   if (typeof navigator !== 'undefined' && !navigator && navigator.onLine) {
@@ -45,7 +41,6 @@ export const checkOnline = async (): Promise<boolean> => {
 
     clearTimeout(id);
     return true
-=======
 import {create_client} from '@supabase / supabase - js';
 export const supabase_url = import.meta.env.VITE_SUPABASE_URL;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
@@ -73,7 +68,6 @@ if ( {) {
       signal: controller.signal});
     clear_timeout (id);
     return true;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch {
     return false;
   }
@@ -94,7 +88,6 @@ export const safe_fetch: typeof fetch = async (input, init) => {
 
 export const getFromProfiles = () => supabase && supabase.from('profiles');
 
-=======
 
 import { createClient } from '@supabase/supabase-js',;
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL,;
@@ -146,5 +139,3 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {;
 
 
 export const getFromProfiles = () => supabase.from('profiles');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

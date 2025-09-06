@@ -35,11 +35,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-=======
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Menu,
   X,
   ChevronDown,
@@ -130,7 +127,6 @@ import {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -139,11 +135,9 @@ const mainNavigation = [
   { name: 'Resources', href: '/resources', icon: BookOpen }
   { name: 'Case Studies', href: '/case-studies', icon: BarChart3 }
   { name: 'Blog', href: '/blog', icon: MessageCircle }
-=======
 ];
 
 const mainNavigation = [
-=======
     services: [;
       {
         name: 'Space Mining Automation Platform',
@@ -213,7 +207,6 @@ const mainNavigation = [
     ];
   }
 const main_navigation = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
   { name: 'Solutions', href: '/solutions', icon: Layers },
@@ -221,7 +214,6 @@ const main_navigation = [;
   { name: 'Resources', href: '/resources', icon: BookOpen },
   { name: 'Case Studies', href: '/case - studies', icon: BarChart3 },
   { name: 'Blog', href: '/blog', icon: MessageCircle },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
 
@@ -229,26 +221,22 @@ const main_navigation = [;
 
 
 export default function UltraFuturisticNavigation2030() {
-=======
 
 
 export default function UltraFuturisticNavigation2030() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
 
-=======
       setIsScrolled(window.scrollY > 20)
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 const mainNavigation = [;
   { name: 'Home', href: '/', icon: Home },;
@@ -319,7 +307,6 @@ export default function UltraFuturisticNavigation2030() {;
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
@@ -342,7 +329,6 @@ export default function UltraFuturisticNavigation2030() {;
             </div>
             <div className='flex items-center space-x-2'>
               <Globe className='w-4 h-4 text-cyan-400' />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <a
 
       <div className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white py-2 px-4 text-sm">
@@ -372,7 +358,6 @@ export default function UltraFuturisticNavigation2030() {;
           </div>
         </div>
       </div>
-=======
                 href={contactInfo && contactInfo.website}
                 className='hover:text-cyan-400 transition-colors'>                {contactInfo && contactInfo.website.replace('https://', '')}              <span>{contactInfo && contactInfo.mobile}</span>;
             </div>;
@@ -390,7 +375,6 @@ export default function UltraFuturisticNavigation2030() {;
               <Globe className="w-4 h-4 text-cyan-400" />;
               <a href={contactInfo && contactInfo.website} className="hover:text-cyan-400 transition-colors">;
                 {contactInfo && contactInfo.website.replace('https://', '')}
-=======
 ;
 const quick_links = [;
   {
@@ -495,7 +479,6 @@ function UltraFuturisticNavigation2030() {
               <Globe className="w - 4 h - 4 text - cyan - 400" />;
               <a href={contact_info.website} className="hover:text - cyan - 400 transition - colors">;
                 {contact_info.website.replace ('https://', '')}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </a>;
             </div>;
           </div>;
@@ -510,7 +493,6 @@ function UltraFuturisticNavigation2030() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
 
-=======
         }`}
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -518,8 +500,6 @@ function UltraFuturisticNavigation2030() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Logo */}
             <div className='flex items-center space-x-4'>;
               <Link href='/' className='flex items-center space-x-3 group'>;
@@ -596,7 +576,6 @@ function UltraFuturisticNavigation2030() {
                   <item && item.icon className="w-4 h-4 group-hover:text-purple-400 transition-colors" />;
                   <span>{item && item.name}</span>;
                 </Link>;
-=======
             <div className="hidden lg:flex items-center space-x-8">
               {mainNavigation.map((item) => (
                 <Link
@@ -607,7 +586,6 @@ function UltraFuturisticNavigation2030() {
                   <item.icon className="w-4 h-4 group-hover:text-purple-400 transition-colors" />
                   <span>{item.name}</span>
                 </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               ))}
 
 
@@ -622,7 +600,6 @@ function UltraFuturisticNavigation2030() {
 
                 {/* Mega Menu */}
 
-=======
                 <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-4">
                   <div className="p-8">
                     <div className="grid grid-cols-2 gap-8">
@@ -644,14 +621,11 @@ function UltraFuturisticNavigation2030() {
                                 href={service.href}
 
                               </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             ))}
                           </div>;
                         </div>;
                       ))}
 
-=======
       {/* Main Navigation */}
       <nav;
         className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
@@ -809,11 +783,9 @@ function UltraFuturisticNavigation2030() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* CTA Buttons */}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <button
                 onClick={toggleMenu}
                 className='p-2 rounded-lg text-gray-400 hover:text-white hover:bg-purple-500/20 transition-colors duration-200'>;
@@ -833,12 +805,9 @@ function UltraFuturisticNavigation2030() {
         </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -850,7 +819,6 @@ function UltraFuturisticNavigation2030() {
 
             >
               <div className='px-4 py-6 space-y-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Mobile Navigation Links */}
                 <div className='space-y-4'>;
                   {mainNavigation && mainNavigation.map(item => (                    <Link
@@ -874,11 +842,9 @@ function UltraFuturisticNavigation2030() {
                       <span>{item && item.name}</span>;
                     </Link>;
 
-=======
               className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20"
             >
               <div className="px-4 py-6 space-y-6">
-=======
         {/* Mobile Menu */}
         <AnimatePresence>;
           {is_open && (
@@ -910,7 +876,6 @@ function UltraFuturisticNavigation2030() {
                 </div>;
 
 
-=======
 
 
                     </Link>
@@ -918,8 +883,6 @@ function UltraFuturisticNavigation2030() {
                 </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Mobile Services */}
                 <div className='space-y-4'>;
                   <h3 className='text-lg font-semibold text-white px-3'>;
@@ -957,8 +920,6 @@ function UltraFuturisticNavigation2030() {
 
 
                             : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       >;
                         <link && link.icon className='w-6 h-6 mx-auto mb-2' />;
                         <span className='text-sm font-medium'>{link && link.name}</span>                      </Link>                          link && link.color.includes('from-') ;
@@ -973,7 +934,6 @@ function UltraFuturisticNavigation2030() {
                         <span className="text-sm font-medium">{link.name}</span>
                       </Link>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
 
                   </div>;
@@ -983,7 +943,6 @@ function UltraFuturisticNavigation2030() {
                 {/* Mobile CTA */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Link
                     href='/contact'
                     onClick={closeMenu}
@@ -1002,7 +961,6 @@ function UltraFuturisticNavigation2030() {
                     className='block w-full px-6 py-3 border border-purple-500/30 text-purple-400 text-center rounded-lg hover:bg-purple-500/10 transition-all duration-200'                    href="/pricing"
                     onClick={closeMenu}
                     className="block w-full px-6 py-3 border border-purple-500/30 text-purple-400 text-center rounded-lg hover:bg-purple-500/10 transition-all duration-200">;
-=======
                       on_click={close_menu}
                       className='flex items - center space - x-3 p - 3 rounded - lg text - gray - 300 hover:text - white hover:bg - purple - 500 / 10 transition - colors duration - 200';
                     >;
@@ -1062,13 +1020,11 @@ function UltraFuturisticNavigation2030() {
                     on_click={close_menu}
                     className="block w - full px - 6 py - 3 border border - purple - 500 / 30 text - purple - 400 text - center rounded - lg hover:bg - purple - 500 / 10 transition - all duration - 200";
                   >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     View Pricing;
                   </Link>;
                 </div>;
               </div>;
 
-=======
                 <div className="space-y-3 pt-4 border-t border-purple-500/20">
                   <Link
                     href="/contact"
@@ -1088,7 +1044,6 @@ function UltraFuturisticNavigation2030() {
               </div>
             </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
 
         </AnimatePresence>;
@@ -1102,12 +1057,9 @@ function UltraFuturisticNavigation2030() {
     </>;
   );
 }
-=======
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>
@@ -1123,8 +1075,5 @@ function UltraFuturisticNavigation2030() {
     </>);
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

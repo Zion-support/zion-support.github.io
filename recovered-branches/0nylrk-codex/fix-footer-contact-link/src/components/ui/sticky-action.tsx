@@ -31,7 +31,6 @@ export function StickyAction(): any ({;
     const handleScroll = () => {
       if (window.scrollY > showAfterScroll) {
         setIsVisible(true)
-=======
 import React, { useEffect, useState } from './react';
 import { cn } from '@/lib / utils';
 import { motion, AnimatePresence } from './framer-motion';
@@ -54,7 +53,6 @@ if ( {) {
   $2
 }
         setIsVisible (true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } else {
         setIsVisible (false);
       }
@@ -68,7 +66,6 @@ if ( {) {
   }, [showAfterScroll]);
 
 
-=======
 
     },
 
@@ -92,7 +89,6 @@ if ( {) {
         <motion.div
 
 
-=======
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
 import React, { useEffect, useState } from "react",;
 import { cn } from "@/lib/utils",;
@@ -132,7 +128,6 @@ export function StickyAction({;
     top: "top-20";
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <AnimatePresence>;
       {isVisible && (;
@@ -142,11 +137,8 @@ export function StickyAction({;
             "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4"
             positionClasses[position]
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className
           )}>;
           <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">;
@@ -159,7 +151,6 @@ export function StickyAction({;
   );
 }
 
-=======
 ;
   const position_classes = {
     bottom: "bottom - 4",
@@ -185,4 +176,3 @@ export function StickyAction({;
         </motion.div>)}
     </AnimatePresence>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -9,7 +9,6 @@ const corsHeaders = {
 interface Message {
   role: string
   content: string
-=======
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
 const openAIApiKey = Deno.env.get ('OPENAI_API_KEY'),
@@ -19,23 +18,18 @@ const cors_headers = {
 interface Message {
   role: string,
   content: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 
-=======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface Message {
   role: string
   content: string
@@ -49,8 +43,6 @@ interface Message {;
   role: string,;
   content: string;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 interface RequestBody {
   messages: Message[];
@@ -75,7 +67,6 @@ interface RequestBody {
 
 
 
-=======
 ;
   try {;
     const { messages } = await req.json() as RequestBody,;
@@ -110,15 +101,12 @@ interface RequestBody {
     // This would track common questions, successful interactions, etc.
     // // // console.log('AI chat interaction logged'),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return new Response(JSON.stringify({ message: assistantMessage }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
     console.error('Error in ai-chat function:', error);
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500
-=======
 
     const response = await fetch('https://api && api.openai.com/v1/chat/completions', {
       method: 'POST',
@@ -149,7 +137,6 @@ interface RequestBody {
     console && console.error('Error in ai-chat function:', error);
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       status: 500,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
 
 serve (async (req) => {
@@ -192,10 +179,8 @@ if ( {) {
       throw new Error (data.error.message);
     }
     const assistant_message = data.choices[0].message.content;
-=======
 
 
-=======
 
 ;
     // Log this interaction for analytics (in a real implementation);
@@ -212,8 +197,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

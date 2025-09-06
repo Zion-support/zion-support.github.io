@@ -6,7 +6,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
       const scrollAmount = 300
@@ -37,13 +36,11 @@ export const AppScreenshots: React.FC = () => {;
 
     }
   }
-=======
     }
 
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -63,7 +60,6 @@ export const AppScreenshots: React.FC = () => {;
                   src={screenshot.src}
                   alt={screenshot.alt}
 
-=======
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -85,7 +81,6 @@ export const AppScreenshots: React.FC = () => {;
   )
 
 
-=======
 },
 import React, { useRef } from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
@@ -139,7 +134,6 @@ export const AppScreenshots: React.FC = () => {;
                 <img
                   src={screenshot && screenshot.src} 
                   alt={screenshot && screenshot.alt}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   className="w-full h-full object-cover"
                 />;
               </div>;
@@ -161,8 +155,6 @@ export const AppScreenshots: React.FC = () => {;
   );
 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React, { useRef } from './react';
 import { ChevronLeft, ChevronRight } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -236,4 +228,3 @@ if ( {) {
     </section>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

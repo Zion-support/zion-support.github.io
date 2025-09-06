@@ -1,9 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     // TODO: Integrate with actual provider
     return res && res.status(200).json({ status: 'queued', provider });
@@ -16,7 +14,6 @@ return res
   };
 }
 
-=======
 ;
 export default async /**
  * handler - Function description
@@ -43,12 +40,9 @@ return res;
   }    return res.status (500).json ({ error: e.message || 'Failed to queue emails' });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
       .json({ error: e.message || 'Failed to queue emails' });
   }    return res.status(500).json({ error: e.message || 'Failed to queue emails' })
   };
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

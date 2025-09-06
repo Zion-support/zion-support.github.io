@@ -62,7 +62,6 @@
 import {Button} from "./ui/button";
 import {Twitter, Facebook, Linkedin, Link} from "@/components/icons";
 import {toast} from "./ui/use-toast";
-=======
     }],
 
   return (
@@ -81,7 +80,6 @@ import {toast} from "./ui/use-toast";
                 size="sm"
 
 
-=======
 import { Button } from "./ui/button",;
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",;
 import { toast } from "./ui/use-toast",;
@@ -144,8 +142,6 @@ export function SocialShareSection() {;
       icon: <Link className="h-5 w-5" />,;
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80",;
       onClick: copyLinkToClipboard;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { Button } from './ui / button';
 import { Twitter, Facebook, Linkedin, Link } from '@/components / icons';
 import { toast } from './ui / use - toast';
@@ -210,7 +206,6 @@ function SocialShareSection() {
       icon: <Link className="h - 5 w - 5" />,
       color: "bg - zion - blue - dark hover:bg - zion - blue - dark / 80",
       on_click: copyLinkToClipboard;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }];
 ;
   return (
@@ -220,17 +215,13 @@ function SocialShareSection() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
-=======
           </div>;
         </div>;
       </div>;
     </section>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     <section className="py - 12 bg - zion - blue">;
       <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-4xl mx - auto flex flex - col md:flex - row items - center justify - between gap - 6 bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 6">;
@@ -254,4 +245,3 @@ function SocialShareSection() {
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

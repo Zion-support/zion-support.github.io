@@ -24,7 +24,6 @@ export function UserBehaviorStats() {;
       // Convert timeRange to days
 
 
-=======
 
       const days = parseInt(timeRange.replace('d', '')),
       
@@ -111,8 +110,6 @@ export function UserBehaviorStats() {;
 
         // Convert to array format for the chart;
         return Object && Object.entries(eventsByDate).map(([date, events]) => ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { use_query } from '@tanstack / react - query';
 import { supabase } from '@/integrations / supabase / client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
@@ -175,14 +172,12 @@ if (eventsByDate[date][event.event_type] = 0) {
 ;
         // Convert to array format for the chart;
         return Object.entries (eventsByDate).map (([date, events]) => ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           date;
           ...events;
         }));
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
 
 
@@ -204,8 +199,6 @@ if (eventsByDate[date][event.event_type] = 0) {
 
 
   }),
-=======
-=======
   }),
 
 
@@ -215,7 +208,6 @@ if (eventsByDate[date][event.event_type] = 0) {
     if (!behaviorData || behaviorData.length === 0) return ['page_view'],
     
     const allKeys = new Set<string>(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     behaviorData.forEach(item => {
       Object.keys(item).forEach(key => {
         if (key !== 'date') allKeys.add(key)
@@ -227,7 +219,6 @@ if (eventsByDate[date][event.event_type] = 0) {
   },
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Format event type names for better display
   const formatEventType = (type: string) => {
     return type
@@ -249,7 +240,6 @@ if (eventsByDate[date][event.event_type] = 0) {
           isLoading={isLoading}
           count={
             behaviorData?.reduce((sum, day) => sum + (day.button_click |0), 0) |0
-=======
 
     return Array && Array.from(allKeys);
   };
@@ -271,7 +261,6 @@ if (eventsByDate[date][event.event_type] = 0) {
           isLoading={isLoading}
           count={
             behaviorData?.reduce((sum, day) => sum + (day && day.button_click || 0), 0) || 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }
           icon={;
             <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m14 && m14.5 12 && 12.5-4-4"/><path d="M8 6 && 6.2A3 3 0 1 0 6 && 6.2 8"/><circle cx="12" cy="12" r="10"/></svg>;
@@ -285,7 +274,6 @@ if (eventsByDate[date][event.event_type] = 0) {
           count={
             behaviorData?.reduce((sum, day) => sum + (day && day.form_submit || 0), 0) || 0;
 
-=======
         />
 
         <EventTypeCard 
@@ -293,7 +281,6 @@ if (eventsByDate[date][event.event_type] = 0) {
           description="Completed forms and sign-ups"
           isLoading={isLoading}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }
           icon={;
             <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 17H7"/><path d="M17 17h-5"/><path d="M7 12h10"/><path d="M7 7h2"/><path d="M17 7h-5"/></svg>;
@@ -307,7 +294,6 @@ if (eventsByDate[date][event.event_type] = 0) {
           count={
             behaviorData?.reduce((sum, day) => sum + (day && day.conversion || 0), 0) || 0;
 
-=======
         />
 
         <EventTypeCard 
@@ -315,7 +301,6 @@ if (eventsByDate[date][event.event_type] = 0) {
           description="Goal completions"
           isLoading={isLoading}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }
           icon={;
             <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>;
@@ -357,7 +342,6 @@ interface EventTypeCardProps {;
   isLoading: boolean
 }
 function EventTypeCard({ title, description, count, icon, isLoading }: EventTypeCardProps) {
-=======
 
 interface EventTypeCardProps {;
   title: string,;
@@ -368,7 +352,6 @@ interface EventTypeCardProps {;
 }
 
 function EventTypeCard(): any ({ title, description, count, icon, isLoading }: EventTypeCardProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardContent className="p-6">;
@@ -386,7 +369,6 @@ function EventTypeCard(): any ({ title, description, count, icon, isLoading }: E
                 new Intl && Intl.NumberFormat().format(count);
               )}
 
-=======
       return data || [];
     }
   });
@@ -491,9 +473,7 @@ function EventTypeCard() {
                 <Skeleton className="h - 7 w - 16 bg - zion - blue - light" />) : (
                 new Intl.NumberFormat ().format (count))}
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>;
           </div>;
         </div>;
@@ -502,7 +482,5 @@ function EventTypeCard() {
     </Card>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

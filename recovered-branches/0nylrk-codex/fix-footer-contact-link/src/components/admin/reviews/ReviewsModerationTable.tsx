@@ -12,7 +12,6 @@ import {Review, ReviewStatus} from "@/types/reviews";
 
 
 
-=======
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
@@ -46,8 +45,6 @@ import {
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ReviewsModerationTableProps {
   reviews: Review[]
   isLoading: boolean
@@ -78,7 +75,6 @@ interface ReviewsModerationTableProps {
         .from("reviews")
         .update({ status })
 
-=======
 
         .eq("id", reviewId),
 
@@ -172,7 +168,6 @@ interface ReviewsModerationTableProps {
           />
 
 
-=======
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
@@ -226,7 +221,6 @@ export function ReviewsModerationTable(): any ({;
       const { error } = await supabase;
         .from("reviews");
         .update({ status });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         .eq("id", reviewId);
       if (error) throw error;
       return { reviewId, status }
@@ -319,7 +313,6 @@ export function ReviewsModerationTable(): any ({;
   };
 
 
-=======
 import { useState } from './react';
 import { use_mutation } from '@tanstack / react - query';
 import { Check, X, User, Star, MoreHorizontal } from './lucide-react';
@@ -444,7 +437,6 @@ if ( {) {
       </div>);
   }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <>;
       <Table>;
@@ -456,7 +448,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |""}
                       />
@@ -464,7 +455,6 @@ if ( {) {
                       <AvatarFallback>
                         {review.reviewer_profile?.display_name
                           ? getInitials(review.reviewer_profile.display_name)
-=======
                         src={review && review.reviewer_profile.avatar_url}
                         alt={review && review.reviewer_profile.display_name || ""}
                       />;
@@ -472,7 +462,6 @@ if ( {) {
                       <AvatarFallback>;
                         {review && review.reviewer_profile?.display_name;
                           ? getInitials(review && review.reviewer_profile.display_name);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                           : <User className="h-4 w-4" />}
                       </AvatarFallback>;
                     )}
@@ -653,9 +642,7 @@ if ( {) {
                           Mark as approved;
                         </DropdownMenuItem>)}
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
@@ -664,7 +651,6 @@ if ( {) {
             </TableRow>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
 
         </TableBody>;
@@ -800,7 +786,6 @@ if ( {) {
       )}
     </>;
   );
-=======
             </TableRow>))}
         </TableBody>;
       </Table>;
@@ -913,5 +898,4 @@ if ( {) {
           </DialogContent>;
         </Dialog>)}
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

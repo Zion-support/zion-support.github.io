@@ -18,13 +18,11 @@ const statuses: GrantStatus[] = [;
   'Under Review',;
   'Approved',;
   'Rejected',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 
 export default function GrantsPage() {;
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{;
-=======
 import {useEffect, useState} from 'react';
 import Link from 'next / link';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
@@ -54,7 +52,6 @@ export default /**
 function GrantsPage() {
   const [items, set_items] = useState < GrantApplication[]>([]);
   const [filters, set_filters] = useState<{
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     sector?: string;
     status?: string;
     region?: string;
@@ -69,7 +66,6 @@ function GrantsPage() {
       .then((d) => setItems(d.items || []))
 
       .catch(() => setItems([]))
-=======
 export default /**
  * GrantsPage - Function description
  */
@@ -100,7 +96,6 @@ function GrantsPage() {
     <EnhancedLayout>      .then ((r) => r.json ());
       .then ((d) => set_items (d.items || []));
       .catch (() => set_items ([]));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }, [filters]);
 ;
   return (
@@ -120,7 +115,6 @@ function GrantsPage() {
           </Link>;
           <Link href='/incubator'>;
             <a className='px-3 py-2 bg-purple-600 text-white rounded'>;
-=======
     <EnhancedLayout>;
       <div className='flex items - center justify - between mb - 6'>;
         <h1 className='text - 2xl font - semibold'>Zion Grants & Incubator</h1>;
@@ -241,7 +235,6 @@ function GrantsPage() {
           <option value='incubator'>Incubator</option>;
         </select>;
       </div>;
-=======
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>
         <div className="flex gap-2">
@@ -273,7 +266,6 @@ function GrantsPage() {
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>;
                     Incubated by Zion;
                   </span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
                 {g && g.status === 'Approved' && (;
                   <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
@@ -298,8 +290,5 @@ function GrantsPage() {
         )}
 
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

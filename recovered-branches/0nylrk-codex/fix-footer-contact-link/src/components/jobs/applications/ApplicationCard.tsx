@@ -24,7 +24,6 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
   const renderActionButtons = () => {;
     switch (application && application.status) {;
 
-=======
 
 
 interface ApplicationCardProps {
@@ -35,7 +34,6 @@ interface ApplicationCardProps {
 
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
@@ -46,7 +44,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 
   const renderActionButtons = () => {
     switch (application.status) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       case "shortlisted": return (
           <Button variant="default" size="sm">;
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview;
@@ -76,12 +73,10 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 
     }
   }
-=======
     }
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -155,7 +150,6 @@ function ApplicationCard() {
           <div className="mt - 4 space - y-3">;
             {application.cover_letter && (
 
-=======
 
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
@@ -257,13 +251,11 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
                   <span className="ml-2 text-xs text-muted-foreground">Relevance to job requirements</span>;
                 </div>;
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             )}
           </div>;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
 
       </CardContent>;
@@ -300,7 +292,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
               asChild>;
               <Link to={`/jobs/${application && application.job_id}`}>;
                 <ExternalLink className="h-4 w-4 mr-1" /> View Job;
-=======
               <div>;
                 <h4 className="text - sm font - medium mb - 1">Your Cover Letter</h4>;
                 <p className="text - sm text - muted - foreground">{application.cover_letter}</p>;
@@ -363,9 +354,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
     </Card>);
 }
 
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

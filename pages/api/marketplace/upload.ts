@@ -1,17 +1,13 @@
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next",;
 ;
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from "next",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ ok: false, error: "Method not allowed" }),
   const { name, url } = req.body || {},
@@ -19,4 +15,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // Echo back URL, real impl would upload to storage (Supabase, S3, etc.)
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

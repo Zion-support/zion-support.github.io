@@ -5,10 +5,8 @@
 export function getShared(id: string) {
   return store[id]
 
-=======
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { randomUUID } from 'crypto',
 // In - memory store for demo purposes. Replace with persistent storage in production.;
@@ -36,9 +34,5 @@ function get_shared() {
   return store[id];
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

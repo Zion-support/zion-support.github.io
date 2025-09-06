@@ -2,7 +2,6 @@
 export const useRecordActivity = () => {;
   const { user } = useAuth();
 
-=======
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
 import { MilestoneActivity } from './types',
@@ -15,8 +14,6 @@ export const useRecordActivity = () => {
     action: string, 
     previousStatus: string | null, 
     newStatus: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     comment?: string
   ) => {
     if (!user) return null
@@ -100,7 +97,6 @@ if (throw error) {
 }
 ;
 
-=======
 
     }
   };
@@ -108,7 +104,6 @@ if (throw error) {
   return {
     recordMilestoneActivity
 
-=======
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { MilestoneActivity } from './types',;
@@ -142,16 +137,13 @@ export const useRecordActivity = () => {;
     } catch (err: any) {;
       console.error("Error recording activity:", err),;
       return null;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
 
   };
   return {;
     recordMilestoneActivity;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

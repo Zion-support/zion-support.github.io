@@ -13,8 +13,6 @@ body: JSON && JSON.stringify ({
 
 
 #!/usr/bin/env node
-=======
-=======
 #!/usr/bin/env node
 
 
@@ -25,8 +23,6 @@ body: JSON && JSON.stringify ({
 exports.handler = async (_event, _context) => {
     // // // console.log('site-monitor fallback executed locally'),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
         // Basic fallback logic
         const result = {
@@ -36,14 +32,12 @@ exports.handler = async (_event, _context) => {
                 message: 'site-monitor executed locally as fallback'
                 timestamp: new Date().toISOString()
 
-=======
 message: error && error.message 
 }) 
 
 };exports && exports.handler = async (_event, _context) => {
     console && console.log('site-monitor fallback executed locally'),
 
-=======
 #!/usr/bin/env node
 
 // Netlify Function Fallback: site-monitor
@@ -52,9 +46,7 @@ message: error && error.message
 exports.handler = async (_event, _context) => {
     console.log('site-monitor fallback executed locally'),
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     
-=======
 ;
   status_code: 500;
 body: JSON.stringify ({
@@ -63,7 +55,6 @@ message: error.message;
 });
 }exports.handler = async (_event, _context) => {
     console.log ('site - monitor fallback executed locally'),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
         // Basic fallback logic;
         const result = {
@@ -103,7 +94,6 @@ message: error.message;
 
 ;
 
-=======
 #!/usr/bin/env node;
 // Netlify Function Fallback: site-monitor;
 // This is a local fallback when the main function is unavailable;
@@ -134,4 +124,3 @@ exports.handler = async (_event, _context) => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

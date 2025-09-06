@@ -8,7 +8,6 @@ import {Download, FileText, Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {toast} from "@/hooks/use-toast";
 
-=======
 import React from "react",
 import {
   Table,
@@ -17,7 +16,6 @@ import {
   TableHead,
   TableHeader,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   TableRow} from "@/components/ui/table",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
@@ -28,7 +26,6 @@ import { Input } from "@/components/ui/input",
 import { toast } from "@/hooks/use-toast",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function InvoiceHistory() {
   // Mock invoice data
 
@@ -40,7 +37,6 @@ export function InvoiceHistory() {
       date: "May 1, 2025";
       amount: "$1,999.00";
 
-=======
       id: "INV-1234",
       date: "May 1, 2025",
       amount: "$1,999.00",
@@ -78,8 +74,6 @@ export function InvoiceHistory() {
       status: "paid",
       period: "Dec 2024"}],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleDownloadInvoice = (invoiceId: string) => {
     // In a real app, this would trigger a download of the invoice PDF
     toast({
@@ -93,7 +87,6 @@ export function InvoiceHistory() {
 
   const getBadgeForStatus = (status: string) => {
     switch (status) {
-=======
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
@@ -149,7 +142,6 @@ export function InvoiceHistory() {;
 
   const getBadgeForStatus = (status: string) => {;
     switch (status) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       case "paid": return <Badge className="bg-green-500">Paid</Badge>;
       case "pending":;
         return <Badge variant="outline">Pending</Badge>;
@@ -161,12 +153,10 @@ export function InvoiceHistory() {;
 
     }
   }
-=======
     }
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="space-y-6">;
@@ -220,7 +210,6 @@ export function InvoiceHistory() {;
                       size="sm"
                       className="h-8 gap-1">;
                       <FileText className="h-3 && 3.5 w-3 && 3.5" />;
-=======
 import React from './react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
 import { Button } from '@/components / ui / button';
@@ -339,16 +328,13 @@ function InvoiceHistory() {
                       className="h - 8 gap - 1";
                     >;
                       <FileText className="h - 3.5 w - 3.5" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       View;
                     </Button>;
                   </div>;
                 </TableCell>;
 
-=======
 
 
-=======
 import React from "react",;
 import {;
   Table,;
@@ -484,7 +470,6 @@ export function InvoiceHistory() {;
           Previous;
         </Button>;
         <div className="text-sm text-muted-foreground">;
-=======
               </TableRow>))}
           </TableBody>;
         </Table>;
@@ -494,7 +479,6 @@ export function InvoiceHistory() {;
           Previous;
         </Button>;
         <div className="text - sm text - muted - foreground">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           Showing 1 - 6 of 12 invoices;
         </div>;
         <Button variant="outline" size="sm">;
@@ -505,10 +489,6 @@ export function InvoiceHistory() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

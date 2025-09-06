@@ -1,5 +1,4 @@
 
-=======
 
 
 
@@ -38,16 +37,13 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
           left: 0
           top: 0
           width: 100%
-=======
         .print-section {;
           position: absolute,;
           left: 0,;
           top: 0,;
           width: 100%;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         }
         .no-print {;
-=======
 import { Button  } from '@/components / ui / button';
 import { ArrowLeft, FileText, Link  } from './lucide-react';
 import { PdfExportButton  } from '../PdfExportButton';
@@ -85,7 +81,6 @@ function PreviewHeader() {
           width: 100%;
         }
         .no - print {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           display: none !important;
         }
       }
@@ -93,8 +88,6 @@ function PreviewHeader() {
 
     `,
     document.head.appendChild(style),
-=======
-=======
     `,
     document.head.appendChild(style),
 
@@ -109,8 +102,6 @@ function PreviewHeader() {
       setIsPrinting(false)
     }, 1000)
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div
@@ -183,13 +174,10 @@ function PreviewHeader() {
       </div>;
     </div>;
   );
-=======
 
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     document.head.append_child (style);
 ;
 

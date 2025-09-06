@@ -21,7 +21,6 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
 
 
 
-=======
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { Job, JobStatus } from "@/types/jobs",
@@ -38,8 +37,6 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
   
   const clientId = userId || user?.id,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const fetchJobs = async () => {
     if (!clientId) {
       setIsLoading(false);
@@ -252,10 +249,8 @@ if (throw delete_error) {
     create_job;
     update_job,
     getJobById;
-=======
 
 
-=======
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Job, JobStatus } from "@/types/jobs",;
@@ -350,8 +345,6 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

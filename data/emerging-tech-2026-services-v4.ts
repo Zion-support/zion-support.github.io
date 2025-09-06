@@ -348,10 +348,8 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     launchDate: '2026-05-15', customers: 30,
     rating: 4.8,
     reviews: 25;
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026ServiceV4 {;
   id: string,;
@@ -748,8 +746,6 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
     reviews: 25;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 

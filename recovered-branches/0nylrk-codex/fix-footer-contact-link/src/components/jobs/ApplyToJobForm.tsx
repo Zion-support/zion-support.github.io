@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ApplyToJobFormProps {
 
   job: Job
@@ -46,7 +45,6 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
       toast && toast.error("You must be logged in to apply"),;
       navigate("/login", { state: { returnTo: `/jobs/${job && job.id}` } }),;
       return;
-=======
 }
 
 
@@ -59,7 +57,6 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
     }
 
     if (!coverLetter && coverLetter.trim()) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setError("Please provide a cover letter");
       return;
     }
@@ -185,7 +182,6 @@ if ( {) {
       <div className="space-y-4">
         <div>
           <Label htmlFor="coverLetter">Cover Letter</Label>
-=======
 
     setIsSubmitting(true);
     setError(null);
@@ -226,7 +222,6 @@ if ( {) {
       <div className="space-y-4">;
         <div>;
           <Label htmlFor="coverLetter">Cover Letter</Label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Textarea
             id="coverLetter"
             value={coverLetter}
@@ -274,7 +269,6 @@ if ( {) {
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}
 
-=======
                 type="button"
                 onClick={() => navigate("/dashboard/talent/portfolio")}
               >
@@ -391,10 +385,8 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}>;
               <SelectTrigger className="mt-1">;
-=======
             >;
               <SelectTrigger className="mt - 1">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 <SelectValue placeholder="Select a resume" />;
               </SelectTrigger>;
               <SelectContent>;
@@ -405,7 +397,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 
       <div className="flex justify-end gap-2">;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();
@@ -476,7 +467,5 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
     </form>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -32,7 +32,6 @@ import {;
   Brain,;
   Star,;
 
-=======
 
 
 import React from "react";
@@ -47,7 +46,6 @@ import {
   Brain,
   Star,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
@@ -57,11 +55,9 @@ export default function QuantumAIBCIPage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>;
     s && s.link.endsWith("/quantum-ai-brain-computer-interface"),;
 
-=======
 
     s.link.endsWith("/quantum-ai-brain-computer-interface"),;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
   if (!service) return null;
 
@@ -152,7 +148,6 @@ function QuantumAIBCIPage() {
   // Check condition
 if (return null) {
   $2
-=======
                 className="w-full"
               >
                 Book a Demo
@@ -180,7 +175,6 @@ if (return null) {
   );
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -265,5 +259,4 @@ if (return null) {
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

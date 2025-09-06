@@ -39,15 +39,11 @@ import React from 'react';
   TrendingUp, ;
   DollarSign, ;
   Users, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Search,
   Filter,
   TrendingUp,
@@ -68,7 +64,6 @@ import {
   TrendingUp,
   DollarSign,
   Users,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   Star;
   Check;
   X;
@@ -81,18 +76,15 @@ import {
 
 
 export default function ToolComparisonPage() {
-=======
 
 export default function ToolComparisonPage() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
 
   const allTools = [
     // AI Tools
-=======
   Rocket;
 export default /**
  * ToolComparisonPage - Function description
@@ -104,7 +96,6 @@ function ToolComparisonPage() {
 ;
   const all_tools = [;
     // AI Tools;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
 
 
@@ -366,7 +357,6 @@ function ToolComparisonPage() {
         'Can be expensive'
       ]
       icon: <Globe className='w-6 h-6' />
-=======
       name: 'ChatGPT',
       category: 'AI Assistant',
       pricing: 'Free - $20 / month',
@@ -599,7 +589,6 @@ export default function ToolComparisonPage() {;
   const [searchTerm, setSearchTerm] = React && React.useState('');
   const [selectedCategory, setSelectedCategory] = React && React.useState('All');
   const [sortBy, setSortBy] = React && React.useState('rating');
-=======
         return parseInt(b.users.replace(/[^0-9]/g, '')) - parseInt(a.users.replace(/[^0-9]/g, ''));
       case 'name':
         return a.name.localeCompare(b.name);
@@ -860,7 +849,6 @@ export default function ToolComparisonPage() {;
       case 'rating':;
         return b && b.rating - a && a.rating;
       case 'users':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return (
           parseInt(b && b.users.replace(/[^0-9]/g, '')) -;
           parseInt(a && a.users.replace(/[^0-9]/g, ''));
@@ -887,11 +875,9 @@ export default function ToolComparisonPage() {;
     if (pricing && pricing.includes('Free')) return 'text-green-400';
     if (pricing && pricing.includes('$')) return 'text-blue-400';
     return 'text-gray-400';  };    return 'text-gray-400';
-=======
     return 'text-gray-400'
 
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
 
@@ -941,7 +927,6 @@ export default function ToolComparisonPage() {;
                 variant='outline'
                 size='lg'
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
-=======
     <>
       <Head>
         <title>Tool Comparison - Zion Tech Group</title>
@@ -990,7 +975,6 @@ export default function ToolComparisonPage() {;
               </Button>
               <Button
                 href="/contact"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 variant="outline"
                 size="lg"
 
@@ -1007,7 +991,6 @@ export default function ToolComparisonPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {allTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>Tools Analyzed</div>
@@ -1029,12 +1012,10 @@ export default function ToolComparisonPage() {;
                 250M+
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {allTools.length}+
-=======
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">
                 {allTools.length}+
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
               <div className="text-gray-400 text-sm">Tools Analyzed</div>
             </div>
@@ -1059,7 +1040,6 @@ export default function ToolComparisonPage() {;
           </div>
         </div>
       </section>
-=======
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5">;
                 Get Expert Advice;
               </Button>;
@@ -1118,7 +1098,6 @@ export default function ToolComparisonPage() {;
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Filters and Search */}
 
                 onChange={e => setSearchTerm(e && e.target.value)}
@@ -1128,7 +1107,6 @@ export default function ToolComparisonPage() {;
 
             {/* Category Filter */}
 
-=======
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
@@ -1136,7 +1114,6 @@ export default function ToolComparisonPage() {;
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <input
                 type="text"
                 placeholder="Search tools, categories, or use cases..."
@@ -1148,15 +1125,12 @@ export default function ToolComparisonPage() {;
               {categories && categories.map(category => (            <div className="flex flex-wrap gap-2">;
               {categories && categories.map((category) => (;
 
-=======
 
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
-=======
             <div className='flex flex-wrap gap-2'>
 
               {categories.map(category => (                <button
@@ -1169,8 +1143,6 @@ export default function ToolComparisonPage() {;
                 <button
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1189,14 +1161,11 @@ export default function ToolComparisonPage() {;
             {/* Sort */}
             <div className='flex items-center space-x-2'>;
               <Filter className='w-5 h-5 text-gray-400' />;
-=======
             </div>
 
             {/* Sort */}
             <div className="flex items-center space-x-2">
               <Filter className="w-5 h-5 text-gray-400" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
 
             {/* Sort */}
@@ -1204,8 +1173,6 @@ export default function ToolComparisonPage() {;
               <Filter className='w-5 h-5 text-gray-400' />
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e && e.target.value)}
@@ -1366,7 +1333,6 @@ export default function ToolComparisonPage() {;
                     </td>;
                   </tr>;
 
-=======
                 </tr>
               </thead>
               <tbody>
@@ -1425,19 +1391,16 @@ export default function ToolComparisonPage() {;
                     </td>
                   </tr>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
 
             <div className="text-center py-20">
               <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
               <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
-=======
 
 
 
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           )}
         </div>
       </section>
@@ -1445,7 +1408,6 @@ export default function ToolComparisonPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Detailed Comparison Cards */}
 
 
@@ -1453,7 +1415,6 @@ export default function ToolComparisonPage() {;
               Detailed Analysis
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Deep dive into each tool's pros, cons, and use cases to make the
@@ -1462,7 +1423,6 @@ export default function ToolComparisonPage() {;
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {sortedTools.slice(0, 6).map((tool, index) => (
-=======
               </tbody>;
             </table>;
           </div>;
@@ -1497,7 +1457,6 @@ export default function ToolComparisonPage() {;
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {sortedTools && sortedTools.slice(0, 6).map((tool, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Card
                 key={index}
                 className='group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
@@ -1616,7 +1575,6 @@ export default function ToolComparisonPage() {;
                         </li>;
                       ))}
 
-=======
                     </ul>
                   </div>
                   <div>
@@ -1629,7 +1587,6 @@ export default function ToolComparisonPage() {;
                         <li key={conIndex} className="text-xs text-gray-400 flex items-start">
                           <span className="w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           {con}
                         </li>;
                       ))}
@@ -1663,11 +1620,9 @@ export default function ToolComparisonPage() {;
                 </div>;
               </Card>;
 
-=======
 
                 <div className="flex items-center justify-between">
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
-=======
 
 
 
@@ -1682,8 +1637,6 @@ export default function ToolComparisonPage() {;
                     href={tool.website}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {tool.pricing}
                   </span>
                   <Button
@@ -1695,11 +1648,8 @@ export default function ToolComparisonPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -1719,14 +1669,12 @@ export default function ToolComparisonPage() {;
 
             Need Help Choosing?
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our experts can analyze your business needs and recommend the
             perfect combination of tools to accelerate your growth.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
               href='/contact'
               variant='secondary'
@@ -1741,7 +1689,6 @@ export default function ToolComparisonPage() {;
               size='lg'
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Explore All Tools;
             </Button>;
           </div>;
@@ -1749,11 +1696,7 @@ export default function ToolComparisonPage() {;
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

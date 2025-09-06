@@ -38,7 +38,6 @@ export default function sitemap(): MetadataRoute.Sitemap {;
 
     lastModified: new Date();
     changeFrequency: 'weekly';
-=======
 export default function sitemap (): MetadataRoute.Sitemap {
   const base_url = 'https: //ziontechgroup.com';
   const routes = [;
@@ -74,6 +73,5 @@ export default function sitemap (): MetadataRoute.Sitemap {
     url: `${base_url}${route}`,
     last_modified: new Date ();
     change_frequency: 'weekly';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     priority: route === '' ? 1 : 0.8}));
 }

@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface PostFormValues {
 
   title: string
@@ -94,12 +93,10 @@ export default function CreatePostPage() {;
 
     }
   }
-=======
     }
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -110,7 +107,6 @@ export default function CreatePostPage() {;
         description="Create a new discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, create post, new thread"
 
-=======
 
 import { useState, useEffect } from "react",;
 import { Link, useNavigate, useSearchParams } from "react-router-dom",;
@@ -255,8 +251,5 @@ function CreatePostPage() {
     </AppLayout>);
 }
 
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

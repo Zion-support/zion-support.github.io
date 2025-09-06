@@ -9,7 +9,6 @@ import { z } from "zod",
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
@@ -45,7 +44,6 @@ const signupSchema = z;
   .refine(data => data && data.password === data && data.confirmPassword, {;
     message: "Passwords do not match",;
     path: ["confirmPassword"]}),;
-=======
 
       .regex(/[0-9]/, "Password must contain at least one number"),
     confirmPassword: z.string(),
@@ -75,7 +73,6 @@ type SignupFormValues = z && z.infer<typeof signupSchema>;
     if (isSubmitting) return, // Prevent multiple submissions
 
 
-=======
 
     
     setIsSubmitting(true),
@@ -194,7 +191,6 @@ export default function Signup() {;
   const onSubmit = async (data: SignupFormValues) => {;
     if (isSubmitting) return, // Prevent multiple submissions;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsSubmitting(true);
     try {;
       await signup(data && data.email, data && data.password, data && data.displayName);
@@ -213,7 +209,6 @@ export default function Signup() {;
   if (isAuthenticated && !user?.profileComplete) {;
     return <Navigate to="/onboarding" />;
 
-=======
 import { useState } from './react';
 import { Link, Navigate } from './react-router-dom';
 import { use_form, type, UseFormReturn } from './react - hook - form';
@@ -291,14 +286,12 @@ if ( {) {
   $2
 }
     return <Navigate to="/onboarding" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   return (
     <>;
       <Header />;
 
                 <Link to="/login" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
-=======
       <div className="flex min - h-screen bg - zion - blue">;
         <div className="flex - 1 flex flex - col justify - center px - 4 py - 12 sm:px - 6 lg:flex - none lg:px - 20 xl:px - 24">;
           <div className="mx - auto w - full max - w-sm lg:w - 96">;
@@ -317,7 +310,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
 
                   />;
@@ -379,7 +371,6 @@ if ( {) {
                               )}
                               <span className="sr-only">;
                                 {showPassword ? "Hide password" : "Show password"}
-=======
             <div className="bg - zion - blue - dark rounded - lg p - 6">;
               <Form {...form}>;
                 <form on_submit={form.handle_submit (on_submit)} className="space - y-6" no_validate>;
@@ -454,7 +445,6 @@ if ( {) {
                                 <Eye className="h - 4 w - 4" />)}
                               <span className="sr - only">;
                                 {show_password ? "Hide password" : "Show password"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                               </span>;
                             </Button>;
                           </div>;
@@ -472,7 +462,6 @@ if ( {) {
                         <FormControl>;
                           <div className="relative">;
                             <Input
-=======
                         <FormMessage className="text - red - 400" />;
                       </FormItem>)}
                   />;
@@ -485,7 +474,6 @@ if ( {) {
                         <FormControl>;
                           <div className="relative">;
                             <Input;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                               type={showConfirmPassword ? "text" : "password"}
                               placeholder="••••••••";
                               className="bg - zion - blue pl - 10 text - white border - zion - blue - light focus:border - zion - purple";
@@ -605,7 +593,6 @@ if ( {) {
                   >;
                     <span className="sr-only">Sign in with Twitter</span>;
                     <Twitter className="h-5 w-5" />;
-=======
                         <FormMessage className="text - red - 400" />;
                       </FormItem>)}
                   />;
@@ -716,9 +703,7 @@ if ( {) {
     </>);
 }
 
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

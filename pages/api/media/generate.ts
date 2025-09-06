@@ -6,7 +6,6 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { buildPressRelease  } from '../../../utils / media_kit';
 ;
@@ -14,7 +13,6 @@ export default async /**
  * handler - Function description
  */
 function handler() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     const {
 
@@ -32,7 +30,6 @@ function handler() {
     if (req.method !== "POST") {
       res.setHeader("Allow", "POST");
       return res.status(405).json({ error: "Method not allowed" });
-=======
       type = "launch",
       company_name = "Zion",
       date = new Date ().toISOString ().substring (0, 10),
@@ -48,7 +45,6 @@ function handler() {
   } catch (error: any) {
     console && console.error("Press release generation error:", error);
     return res && res.status(500).json({
-=======
       contact_email = "press@zion.com",
     } = req.body || {}
 ;
@@ -79,10 +75,8 @@ if ( {) {
 
       ok: false,
       error: "Failed to generate press release",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
 
-=======
 
 
   }
@@ -92,7 +86,6 @@ if ( {) {
 
 }
 
-=======
 
 }
   } catch (error) {
@@ -114,5 +107,3 @@ if ( {) {
 
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

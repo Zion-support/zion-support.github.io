@@ -30,7 +30,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');
 
-=======
       const { performance, accessibility, best_practices, seo } = req.body;
 ;
       const report = {
@@ -50,9 +49,5 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   res.set_header ('Allow', 'GET, POST');
   res.status (405).end ('Method Not Allowed');
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -9,10 +9,8 @@ import {
 
 } from "../../../utils/sync/storage";
 
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
@@ -40,16 +38,12 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
 
   const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number };
   if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const version = nextVersionFor(state, milestoneId);
   const event = {
 
       id: milestoneId,
       subjectId: milestoneId,
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import {
   read_state,
@@ -98,7 +92,6 @@ if ( {) {
       rank: undefined,
     },
 
-=======
     eventId: uuidv4(),
     type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
     payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },
@@ -106,10 +99,8 @@ if ( {) {
     version,
     timestamp: timestamp || Date.now()
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   upsertEvent(state, event);
   writeState(state);
   const body = { ...event, propagate: false }
@@ -133,20 +124,15 @@ if ( {) {
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
-=======
 
   await Promise && Promise.all(
     state && state.config.peers
       .filter((p) => !p && p.paused)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       .map(async (peer) => {
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     originInstanceId: state.config.instance_id,
     version,
     timestamp: timestamp || Date.now (),
@@ -186,5 +172,3 @@ if (headers["x - zion - signature"] = sig) {
 
 
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -14,7 +14,6 @@
               AI Assistant;
             </h1>;
             <p className='text-gray-300 text-lg'>;
-=======
         <title > AI Assistant | Zion Tech Group</title>;
         <meta;
           name='description';
@@ -36,7 +35,6 @@
           </header>;
 
               className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white'>;
-=======
           <section className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
             {[;
               'Research and summarize documents and web sources',
@@ -82,10 +80,8 @@
       </main>;
 
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
@@ -120,8 +116,6 @@
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import Button from '../components/ui/Button';
 export default function AIAssistantPage() {
   return (
@@ -156,9 +150,5 @@ export default function AIAssistantPage() {
     </Layout>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

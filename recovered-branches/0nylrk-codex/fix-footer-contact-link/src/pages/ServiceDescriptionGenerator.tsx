@@ -123,17 +123,14 @@ export default function ServiceDescriptionGenerator() {;
             {generatedDescription && (;
 
               <GeneratedDescriptionDisplay
-=======
 
               <GeneratedDescriptionDisplay 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 description={generatedDescription}
                 onSave={handleDescriptionSave}
               />;
             )}
 
-=======
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';

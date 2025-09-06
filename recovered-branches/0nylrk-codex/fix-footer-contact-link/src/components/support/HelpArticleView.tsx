@@ -45,7 +45,6 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
     const found = category.articles.find((a) => a.id === articleId);
     if (found) {
-=======
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card} from "@/components/ui/card";
@@ -64,8 +63,6 @@ export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
   for (const category of HELP_CATEGORIES) {;
     const found = category && category.articles.find(a => a && a.id === articleId);
     if (found) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export /**
  * HelpArticleView - Function description
  */
@@ -82,14 +79,12 @@ function HelpArticleView() {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       article = found;
       break;
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
 
@@ -126,7 +121,6 @@ if ( {) {
               Was this article helpful?
             </div>
             <div className="flex items-center space-x-3">
-=======
 
   if (!article) {;
     return <div>Article not found</div>;
@@ -165,11 +159,9 @@ if ( {) {
             </div>;
 
             <div className="flex items-center space-x-3">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 variant="outline"
                 size="sm"
-=======
   // Check condition
 if ( {) {
   $2
@@ -208,7 +200,6 @@ if ( {) {
               <Button;
                 variant="outline";
                 size="sm";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 className={
                   feedback_given === "helpful";
                     ? "bg - green - 100 dark:bg - green - 900 / 30";
@@ -224,7 +215,6 @@ if ( {) {
               <Button
                 variant="outline"
                 size="sm"
-=======
                 on_click={() => handle_feedback ("helpful")}
                 disabled={feedback_given !== null}
               >;
@@ -234,14 +224,12 @@ if ( {) {
               <Button;
                 variant="outline";
                 size="sm";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 className={
                   feedback_given === "not - helpful";
                     ? "bg - red - 100 dark:bg - red - 900 / 30";
                     : "";
                 }
 
-=======
 
 ;
   const handleFeedback = (type: "helpful" | "not-helpful") => {;
@@ -307,7 +295,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
         </div>;
       </Card>;
@@ -349,7 +336,6 @@ function format_date (date: string): string {
   });
 }
 
-=======
 
 
 function formatDate(date: string): string {
@@ -359,7 +345,5 @@ function formatDate(date: string): string {
     day: "numeric"
 
   })
-=======
   })
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

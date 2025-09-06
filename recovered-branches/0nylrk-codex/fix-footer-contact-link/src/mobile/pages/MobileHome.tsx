@@ -10,7 +10,6 @@ export function MobileHome() {;
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
 
   return (
-=======
 
 
   return (
@@ -45,7 +44,6 @@ export function MobileHome() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {isClient ? <ClientDashboard /> : <TalentDashboard />}
       </main>;
 
@@ -53,8 +51,6 @@ export function MobileHome() {;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
@@ -81,4 +77,3 @@ function MobileHome() {
       <BottomNavigation />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

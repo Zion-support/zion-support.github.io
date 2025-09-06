@@ -18,8 +18,6 @@ const { withErrorLogging } = require(
     if (!name || !email || !phone || !details) {;
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 
 async function handler(req, res) {
@@ -34,7 +32,6 @@ async function handler(req, res) {
     const { name, email, phone, details } = req.body || {};
     
     if (!name || !email || !phone || !details) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       res.statusCode = 400;
       res.json({ "error": 'Missing: required fields})';
       return}
@@ -56,5 +53,3 @@ async function handler(req, res) {
     res.statusCode = 500;
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

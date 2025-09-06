@@ -3,13 +3,11 @@
 import {supabase} from "@/integrations/supabase/client";
 
 import type { UserDetails } from "@/types/auth";
-=======
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 /**
  * Utility function to clean up authentication state
  * This helps prevent auth state inconsistencies and "limbo" states
@@ -44,10 +42,8 @@ export const cleanupAuthState = () => {
     }
   })
 }
-=======
 
 
-=======
 import { supabase } from "@/integrations/supabase/client",;
 import type { UserDetails } from "@/types/auth",;
 /**;
@@ -69,13 +65,10 @@ export const cleanupAuthState = () => {;
       sessionStorage.removeItem(key);
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   })
 },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 /**
  * Utility function to check new user registration and schedule welcome emails
  */
@@ -97,7 +90,6 @@ export const checkNewRegistration = async (user: UserDetails) => {
       await supabase
         .from("scheduled_jobs")
         .insert({
-=======
 import { supabase } from '@/integrations / supabase / client';
 import type { UserDetails } from "@/types / auth";
 /**;
@@ -149,7 +141,6 @@ if ( {) {
       await supabase;
         .from ("scheduled_jobs");
         .insert ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           job_type: "send_retention_email";
           scheduled_for: new Date ().toISOString ();
           status: "pending";
@@ -160,7 +151,6 @@ if ( {) {
 
           }
         });
-=======
 
             user_id: user.id,
             email_type: "welcome_series",
@@ -170,7 +160,6 @@ if ( {) {
         }),
         
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Create entry in email_campaigns table
       await supabase
         .from("email_campaigns")
@@ -178,14 +167,12 @@ if ( {) {
 
             user_type: user.user_type || "unknown",
             display_name: user.display_name || user.email?.split ("@")[0] || "User";
-=======
           user_id: user.id,
           campaign_type: "welcome_series",
           template_name: "welcome_email",
           template_data: {
 
 
-=======
             user_id: user.id,
             email_type: "welcome_series",
             user_type: user.userType || "unknown",
@@ -227,7 +214,6 @@ export const checkNewRegistration = async (user: UserDetails) => {;
         .from ("email_campaigns");
         .insert ({
           user_id: user.id;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           campaign_type: "welcome_series";
           template_name: "welcome_email";
           template_data: {
@@ -237,10 +223,8 @@ export const checkNewRegistration = async (user: UserDetails) => {;
             user_type: user && user.userType || "unknown",
             display_name: user && user.displayName || user && user.email?.split("@")[0] || "User"
 
-=======
             user_type: user.user_type || "unknown",
             display_name: user.display_name || user.email?.split ("@")[0] || "User";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
         });
     }
@@ -252,13 +236,10 @@ export const checkNewRegistration = async (user: UserDetails) => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 
-=======
     console.error ("Error checking or scheduling welcome email:", error);
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

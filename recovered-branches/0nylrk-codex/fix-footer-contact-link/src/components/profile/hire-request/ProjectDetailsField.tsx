@@ -15,7 +15,6 @@ interface ProjectDetailsFieldProps {
   form: UseFormReturn < FormValues>;
 }
 
-=======
 
 
 
@@ -27,7 +26,6 @@ import {FormValues} from "./useHireRequestForm";
 interface ProjectDetailsFieldProps {
   form: UseFormReturn<FormValues>
 
-=======
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -45,12 +43,9 @@ interface ProjectDetailsFieldProps {
   form: UseFormReturn<FormValues>;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <FormField
       control={form && form.control}
@@ -91,18 +86,14 @@ function ProjectDetailsField() {
   );
 }
 
-=======
             />;
           </FormControl>;
           <FormMessage className="text - red - 400" />;
         </FormItem>)}
     />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

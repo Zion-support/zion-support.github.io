@@ -1,7 +1,5 @@
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 async function handler(req, res) {
   if (req.method !== 'POST';';) {';
     res."statusCode": = 405;
@@ -78,5 +76,3 @@ async function handler(req, res) {'
     res.statusCode = 500;
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

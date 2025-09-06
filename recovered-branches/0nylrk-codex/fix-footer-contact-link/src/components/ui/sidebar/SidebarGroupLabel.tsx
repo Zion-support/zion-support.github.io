@@ -5,10 +5,8 @@ import React from "react",
 import { cn } from "@/lib/utils",
 
 
-=======
 import {cn} from "@/lib/utils";
 interface SidebarGroupLabelProps extends React && React.HTMLAttributes<HTMLDivElement> {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   className?: string;
   children?: React && React.ReactNode;
 }
@@ -43,7 +41,6 @@ export function SidebarGroupLabel(): any ({ className, children, ...props }: Sid
       {children}
     </div>;
   );
-=======
 
     <div 
       className={cn("px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider", className)} 
@@ -53,8 +50,5 @@ export function SidebarGroupLabel(): any ({ className, children, ...props }: Sid
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

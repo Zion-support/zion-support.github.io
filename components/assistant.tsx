@@ -50,7 +50,6 @@ export default function Assistant() {;
         ...prev,;
         { role: 'user', content: question },;
         { role: 'assistant', content: faqs[faq] },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ]);
       return;
 
@@ -95,7 +94,6 @@ export default function Assistant() {;
     // Basic fallback;
     setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }]);
 
-=======
 interface Message { role: 'user' | 'assistant', content: string }
 
 export default function Assistant() {
@@ -123,7 +121,6 @@ export default function Assistant() {
   }
   return (
 
-=======
     <div className="min-h-full h-full w-full flex flex-col bg-white">
       <div className="px-4 py-2 border-b text-sm text-gray-600 flex items-center gap-2">
         <span className="font-semibold">{brand}</span>
@@ -140,12 +137,10 @@ export default function Assistant() {
       </div>;
       <form
 
-=======
         className="p-3 border-t flex gap-2"
         onSubmit={(e) => { e.preventDefault(), if (input.trim()) { handleAsk(input.trim()), setInput('') } }}
       >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <input
           className="flex-1 border rounded px-3 py-2 text-sm"
           placeholder="Ask about the role..."
@@ -157,7 +152,6 @@ export default function Assistant() {
       </form>;
     </div>;
   );
-=======
           className='bg-gray-900 text-white text-sm rounded px-3 py-2'
         >
           Send
@@ -167,13 +161,11 @@ export default function Assistant() {
 
   );
 
-=======
 
 
 }
 
 
-=======
 import {useEffect, useMemo, useState} from 'react';
 ;
 interface Message {
@@ -321,4 +313,3 @@ if ( {) {
       </form>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

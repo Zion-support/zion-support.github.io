@@ -2,7 +2,6 @@
 
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
   {
@@ -27,7 +26,6 @@ export const getEmergingTechServices2026ByPriceRange = (
   })
 }
 
-=======
     id: 'quantum-computing-as-a-service', name: 'Quantum Computing as a Service (QCaaS)',
     tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms', price: '$999',
     period: '/month',
@@ -238,8 +236,6 @@ export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPri
 
   })
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 export const getEmergingTechServices2026ByCategory = (category: string) =>: any {
   return emergingTechServices2026.filter (
@@ -261,11 +257,7 @@ export const getEmergingTechServices2026ByPriceRange = (
   });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export interface EmergingTechService2026 {;
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

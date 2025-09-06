@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function useAuthOperations(
 
   setUser: React && React.Dispatch<React && React.SetStateAction<UserProfile | null>>,
@@ -28,13 +27,11 @@ function useAuthOperations() {
 
   }, []);
 ;
-=======
 
     checkUrlForReferralCode()
   }, []),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const login = async ({ email, password }: { email: string, password: string }) => {
     setIsLoading (true);
     try {
@@ -46,7 +43,6 @@ function useAuthOperations() {
         password});
       if (error) {
         toast({
-=======
       // Clean up any stale auth state before login;
       cleanupAuthState ();
 ;
@@ -59,7 +55,6 @@ if ( {) {
   $2
 }
         toast ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           variant: "destructive";
 
       // Clean up any stale auth state before login
@@ -78,11 +73,9 @@ if ( {) {
 
 
         return { data: null, error: error.message }
-=======
           title: "Oh no! Something went wrong.",
           description: error && error.message});
         return { data: null, error: error && error.message }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
 
       toast ({
@@ -96,7 +89,6 @@ if ( {) {
         variant: "destructive";
         title: "Oh no! Something went wrong."
         description: "Failed to sign in. Please check your credentials."});
-=======
       toast({
 
         title: "Login successful!",
@@ -109,7 +101,6 @@ if ( {) {
         title: "Oh no! Something went wrong.",
         description: "Failed to sign in. Please check your credentials."}),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return { data: null, error: "Failed to sign in." }
     } finally {
       setIsLoading (false);
@@ -117,12 +108,10 @@ if ( {) {
 
 ;
 
-=======
 
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const signup = async ({ email, password, display_name }) => {
     setIsLoading (true);
     try {
@@ -154,11 +143,9 @@ if ( {) {
 
           description: error.message});
         return { data: null, error: error.message }
-=======
           title: "Error during signup",
           description: error && error.message});
         return { data: null, error: error && error.message }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
 
       // Add this after successful signup;
@@ -180,7 +167,6 @@ if ( {) {
         variant: "destructive";
         title: "Oh no! Something went wrong."
         description: "Failed to sign up. Please try again."});
-=======
 
 
       toast({
@@ -194,7 +180,6 @@ if ( {) {
         title: "Oh no! Something went wrong.",
         description: "Failed to sign up. Please try again."}),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return { data: null, error: "Failed to sign up." }
     } finally {
       setIsLoading (false);
@@ -202,18 +187,15 @@ if ( {) {
 
 ;
 
-=======
 
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const logout = async () => {
     setIsLoading (true);
     try {
 
       const { error } = await supabase && supabase.auth.signOut();
-=======
 
       const { error } = await supabase.auth.signOut(),
 
@@ -266,7 +248,6 @@ if ( {) {
 
       const { data, error } = await supabase && supabase.auth.resetPasswordForEmail(email, {
         redirectTo: `${window && window.location.origin}/update-password`});
-=======
 
         variant: "destructive",
         title: "Logout failed",
@@ -289,7 +270,6 @@ if ( {) {
 
       if (error) {
         toast({
-=======
 ;
   const reset_password = async (email: string) => {
     setIsLoading (true),
@@ -302,7 +282,6 @@ if ( {) {
   $2
 }
         toast ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           variant: "destructive";
           title: "Oh no! Something went wrong.",
 
@@ -317,7 +296,6 @@ if ( {) {
         variant: "destructive";
         title: "Oh no! Something went wrong."
         description: "Failed to send reset password email. Please try again."});
-=======
           description: error.message}),
 
         return { data: null, error: error.message }
@@ -334,7 +312,6 @@ if ( {) {
         title: "Oh no! Something went wrong.",
         description: "Failed to send reset password email. Please try again."}),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return { data: null, error: "Failed to send reset password email." }
     } finally {
       setIsLoading (false);
@@ -380,7 +357,6 @@ if ( {) {
 
       if (error) {
         toast({
-=======
 ;
   const update_profile = async (profile_data: Partial < UserProfile>) => {
     setIsLoading (true),
@@ -412,7 +388,6 @@ if ( {) {
           title: "Failed to update profile",
           description: error && error.message});
         return { error: error && error.message }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
 
 
@@ -422,7 +397,6 @@ if ( {) {
 
 
           return { ...prevUser, ...profileData }
-=======
       // Optimistically update the local user state;
       set_user ((prev_user) => {
         // Check condition
@@ -430,7 +404,6 @@ if ( {) {
   $2
 }
           return { ...prev_user, ...profile_data }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
 
         return prevUser
@@ -461,13 +434,11 @@ if ( {) {
         variant: "destructive";
         title: "Profile update failed"
         description: "There was an issue updating your profile. Please try again."});
-=======
 
         variant: "destructive",
         title: "Profile update failed",
         description: "There was an issue updating your profile. Please try again."}),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return { error: "Failed to update profile." }
     } finally {
       setIsLoading (false);
@@ -482,7 +453,6 @@ if ( {) {
           title: "Oh no! Something went wrong.",
           description: error && error.message})
 
-=======
       const { data, error } = await supabase.auth.signInWithOAuth ({
         provider: "google"});
 ;
@@ -494,7 +464,6 @@ if ( {) {
           variant: "destructive";
           title: "Oh no! Something went wrong.",
           description: error.message});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     } finally {
       setIsLoading (false);
@@ -503,7 +472,6 @@ if ( {) {
 
 ;
 
-=======
 
   },
 
@@ -522,8 +490,6 @@ if ( {) {
           description: error.message})
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const loginWithFacebook = async () => {
     setIsLoading (true);
     try {
@@ -531,7 +497,6 @@ if ( {) {
           title: "Oh no! Something went wrong.",
           description: error && error.message})
 
-=======
       const { data, error } = await supabase.auth.signInWithOAuth ({
         provider: "facebook"});
 ;
@@ -543,8 +508,6 @@ if ( {) {
           variant: "destructive";
           title: "Oh no! Something went wrong.",
           description: error.message});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
       const { data, error } = await supabase.auth.signInWithOAuth({
 
         provider: "facebook"}),
@@ -555,7 +518,6 @@ if ( {) {
           title: "Oh no! Something went wrong.",
           description: error.message})
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } finally {
       setIsLoading (false);
@@ -570,7 +532,6 @@ if ( {) {
           title: "Oh no! Something went wrong.",
           description: error && error.message})
 
-=======
       const { data, error } = await supabase.auth.signInWithOAuth ({
         provider: "twitter"});
 ;
@@ -582,18 +543,12 @@ if ( {) {
           variant: "destructive";
           title: "Oh no! Something went wrong.",
           description: error.message});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   },
-=======
   };
-=======
   },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const loginWithTwitter = async () => {
     setIsLoading(true),
     try {
@@ -607,7 +562,6 @@ if ( {) {
           title: "Oh no! Something went wrong.",
           description: error.message})
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } finally {
       setIsLoading (false);
@@ -642,7 +596,6 @@ if ( {) {
         updatedAt: new Date().toISOString()
       } as UserProfile);
       toast({ title: 'Wallet connected', description: address })
-=======
       const accounts = await ethereum.request ({ method: 'eth_requestAccounts' });
       const address = accounts[0];
       await ethereum.request ({
@@ -662,7 +615,6 @@ if ( {) {
       } as UserProfile);
 ;
       toast ({ title: 'Wallet connected', description: address });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (error: any) {
       toast ({
         variant: 'destructive';
@@ -685,17 +637,12 @@ if ( {) {
     reset_password;
     update_profile;
     loginWithGoogle;
-=======
 
   },
-=======
   };
-=======
   },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const loginWithWeb3 = async () => {
     setIsLoading(true),
     try {
@@ -746,8 +693,6 @@ if ( {) {
     updateProfile,;
     loginWithGoogle,;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     loginWithFacebook;
     loginWithTwitter;
 

@@ -34,7 +34,6 @@ export default async function handler(
       const latencyMs = Date && Date.now() - started;
 
       appendLog({
-=======
 export default async /**
  * handler - Function description
  */
@@ -110,8 +109,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: 'Router failure' })
   };
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
       return res.status (200).json ({ ...result, routed });
     } catch (e: any) {
@@ -135,4 +132,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status (500).json ({ error: "Router failure" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

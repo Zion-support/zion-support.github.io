@@ -63,7 +63,6 @@ return (
             <Globe2 className="w-4 h-4" />{" "}
 
             <span>Explore detailed Space Technology offerings</span>;
-=======
 import React from './react';
 import Head from './next / head';
 import Layout from "../components / layout / Layout";
@@ -129,7 +128,6 @@ return (
     </div>;
 
 
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -187,8 +185,6 @@ export default function SpaceTechPage() {
   </Layout>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
             </div>;
           </section>;
           <section className="text-center">;
@@ -208,5 +204,3 @@ export default function SpaceTechPage() {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -20,7 +20,6 @@ export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProp
     error, ;
     updateApplicationStatus, ;
 
-=======
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
   const { 
@@ -29,7 +28,6 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
     error, 
     updateApplicationStatus, ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     markApplicationAsViewed;
     refetch;
   } = useJobApplications(jobId);
@@ -51,7 +49,6 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } finally {;
       setProcessingId(null);
@@ -72,7 +69,6 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
   const handleScoreUpdated = (updatedApplication: JobApplication) => {
     refetch()
   }
-=======
   };
 
   const handleViewScore = (application: JobApplication) => {;
@@ -87,7 +83,6 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
   const handleScoreUpdated = (updatedApplication: JobApplication) => {;
     refetch();
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   if (isLoading) {;
     return <LoadingState />;
@@ -95,7 +90,6 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 
 
@@ -107,16 +101,13 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
     return <EmptyState />;
 
   }
-=======
   }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       <ApplicationsTable
-=======
 import { useState } from './react';
 import { JobApplication, ApplicationStatus } from '@/types / jobs';
 import { useJobApplications } from '@/hooks / useJobApplications';
@@ -193,7 +184,6 @@ if ( {) {
   return (
     <>;
       <ApplicationsTable;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         applications={applications}
         processing_id={processing_id}
         onViewApplication={handleViewApplication}
@@ -204,10 +194,8 @@ if ( {) {
 
 
       <ScoreDialog
-=======
       />;
       <ScoreDialog;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         open={showScoreDialog}
         onOpenChange={setShowScoreDialog}
         application={selected_application}
@@ -218,8 +206,6 @@ if ( {) {
   );
 }
 
-=======
       />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

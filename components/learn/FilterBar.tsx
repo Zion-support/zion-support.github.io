@@ -2,7 +2,6 @@
 
   onChange: (next: { category: string, level: string, isFree: string }) => void
 }
-=======
         onChange={e => onChange({ category: e && e.target.value, level, isFree })}
       >;
         <option value=''>All Categories</option>        <option>AI Development</option>type Props = {;
@@ -96,12 +95,8 @@ function FilterBar() {
     </div>);
 }
 
-=======
 
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

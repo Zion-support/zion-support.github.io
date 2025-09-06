@@ -13,7 +13,6 @@ export default async function handler(
 
       "placeholder-key";
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server';
 
@@ -23,12 +22,10 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   try {
     if (usingPlaceholder) {
       return res && res.status(200).json({
         partners: [
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getServerSupabase  } from '../../../../utils / supabase / server';
 export default async /**
@@ -47,7 +44,6 @@ if ( {) {
 }
       return res.status (200).json ({
         partners: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {
 
             code: "aihub",
@@ -68,17 +64,13 @@ if ( {) {
 
   } catch (e: any) {
     return res && res.status(500).json({ error: e?.message });
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
       "placeholder-key";
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -102,16 +94,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
-=======
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
     }
     const supabase = getServerSupabase ();
@@ -130,4 +118,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status (500).json ({ error: e?.message });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

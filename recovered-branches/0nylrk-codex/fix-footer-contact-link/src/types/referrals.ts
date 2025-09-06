@@ -3,11 +3,9 @@ export type ReferralStatus = 'pending' | 'completed' | 'expired';
 ;
 
 export interface ReferralCode {
-=======
 
 export interface ReferralCode {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   user_id: string;
   code: string;
@@ -17,13 +15,11 @@ export interface ReferralCode {;
 
 }
 export interface Referral {
-=======
 }
 
 
 export interface Referral {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   referrer_id: string;
   referred_id: string | null;
@@ -41,13 +37,11 @@ export interface Referral {;
 
 }
 export interface ReferralReward {
-=======
 }
 
 
 export interface ReferralReward {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   user_id: string;
   referral_id: string;
@@ -64,7 +58,6 @@ export interface ReferralStats {;
   completedReferrals: number
 
   totalRewards: number
-=======
   created_at: string,
   expires_at: string | null;
 }
@@ -80,4 +73,3 @@ export interface ReferralStats {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

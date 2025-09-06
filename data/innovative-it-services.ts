@@ -2,7 +2,6 @@
 
   {
 
-=======
     id: 'edge - computing - platform',
     name: 'Edge Computing Platform',
     tagline: 'Distributed computing at the network edge',
@@ -26,7 +25,6 @@
     popular: true,
     icon: '🌐',
 
-=======
     color: 'from - blue - 500 to - cyan - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / edge - computing - platform',
@@ -51,7 +49,6 @@
       'AWS',
     ],
 
-=======
     integrations: [;
       'AWS IoT',
       'Azure IoT',
@@ -96,10 +93,8 @@
     rating: 4 && 4.8,
     reviews: 750,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'quantum - computing - as - a-service',
     name: 'Quantum Computing as a Service',
     tagline: 'Access to quantum computing power',
@@ -123,7 +118,6 @@
     popular: true,
     icon: '⚛️',
 
-=======
     color: 'from - purple - 500 to - indigo - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / quantum - computing - as - a-service',
@@ -147,7 +141,6 @@
       'AWS',
     ],
 
-=======
     integrations: [;
       'Jupyter Notebooks',
       'Python',
@@ -192,11 +185,9 @@
     rating: 4 && 4.9,
     reviews: 150,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Multi-consensus algorithms',
-=======
     id: 'blockchain - enterprise - platform',
     name: 'Blockchain Enterprise Platform',
     tagline: 'Enterprise - grade blockchain solutions',
@@ -220,7 +211,6 @@
     popular: true,
     icon: '🔗',
 
-=======
     color: 'from - green - 500 to - emerald - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / blockchain - enterprise - platform',
@@ -245,7 +235,6 @@
       'AWS',
     ],
 
-=======
     integrations: [;
       'Ethereum',
       'Hyperledger',
@@ -291,11 +280,9 @@
     rating: 4 && 4.8,
     reviews: 300,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'CI/CD pipelines',
-=======
     id: 'devops - automation - platform',
     name: 'DevOps Automation Platform',
     tagline: 'Complete DevOps automation and orchestration',
@@ -320,7 +307,6 @@
     icon: '🚀',
 
       'CI/CD',
-=======
     color: 'from - orange - 500 to - yellow - 600',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / devops - automation - platform',
@@ -345,7 +331,6 @@
       'AWS',
     ],
 
-=======
     integrations: [;
       'GitHub',
       'GitLab',
@@ -394,7 +379,6 @@
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -446,7 +430,6 @@ export const innovativeITServices: InnovativeITService[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
@@ -460,14 +443,10 @@ export const innovativeITServices: InnovativeITService[] = [
 
   }
 
-=======
 
 export interface InnovativeITService {;
 
   }
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,10 +1,7 @@
 
-=======
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 import {useState, useEffect} from 'react';
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
@@ -38,9 +35,7 @@ import {toast} from 'sonner';
         setDidHandle(parsed && parsed.didHandle || '');
         setEnableBackup(!!parsed && parsed.enableBackup);
 
-=======
 
-=======
 import { useState, useEffect } from 'react',
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
@@ -60,7 +55,6 @@ export default function AccountSettings() {
   const [didHandle, setDidHandle] = useState(''),
   const [enableBackup, setEnableBackup] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   useEffect(() => {
     try {
@@ -72,7 +66,6 @@ export default function AccountSettings() {
         setEnableBackup(!!parsed.enableBackup)
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } catch (e) {;
       console && console.error('Error loading account settings', e);
@@ -80,8 +73,6 @@ export default function AccountSettings() {
 
 
   }, []),
-=======
-=======
   }, []),
 
 
@@ -89,8 +80,6 @@ export default function AccountSettings() {
   const handleSave = () => {
     setIsSubmitting(true),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Simulate API call
     setTimeout(() => {
       try {
@@ -131,7 +120,6 @@ export default function AccountSettings() {
       }
 
 
-=======
           'account_settings',
           JSON.stringify({ displayWeb3, didHandle, enableBackup })
         ),
@@ -193,7 +181,6 @@ export default function AccountSettings() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       } catch (error) {;
         console && console.error('ENS lookup error:', error);
@@ -209,13 +196,9 @@ export default function AccountSettings() {
 
   },
 
-=======
   };
-=======
   },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -410,13 +393,11 @@ export default function AccountSettings() {
                 <p className="text-xs text-gray-500 mt-1">;
                   {enableBackup ;
                     ? 'Restore your profile data from decentralized storage' ;
-=======
 
                   {enableBackup 
                     ? 'Restore your profile data from decentralized storage' 
 
                     : 'Enable backup first to use this feature'}
-=======
 export default /**
  * AccountSettings - Function description
  */
@@ -680,7 +661,6 @@ if ( {) {
                   {enable_backup;
                     ? 'Restore your profile data from decentralized storage';
                     : 'Enable backup first to use this feature'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </p>;
               </div>;
             </CardContent>;
@@ -692,7 +672,5 @@ if ( {) {
     </>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

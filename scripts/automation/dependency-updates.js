@@ -1,9 +1,7 @@
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 #!/usr/bin/env node,"}),"})
 import { execSync } from,"}),"})
   'child_process',"}),"})

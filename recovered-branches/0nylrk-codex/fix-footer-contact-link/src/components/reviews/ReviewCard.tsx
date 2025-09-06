@@ -4,7 +4,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ReviewCardProps {
   review: Review;
   onReport: (reviewId: string, reason: string) => Promise<boolean>
@@ -50,11 +49,9 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
     if (!rating) return null;
 
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <div className="flex">;
         {[1, 2, 3, 4, 5].map((star) => (;
@@ -201,7 +198,6 @@ if (return null) {
                 <AvatarFallback>;
                   {review && review.reviewer_profile?.display_name ? ;
                     getInitials(review && review.reviewer_profile.display_name) : "??"}
-=======
 
       .substring(0, 2)
   },
@@ -232,7 +228,6 @@ if (return null) {
                     getInitials(review.reviewer_profile.display_name) : "??"}
 
                 </AvatarFallback>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </Avatar>;
           )}
@@ -255,13 +250,11 @@ if (return null) {
           </div>;
         </div>;
         <div className="flex">;
-=======
         </div>
         <div className="flex">
 
           {renderStars(review.rating)}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>
         <div className="flex">{renderStars(review.rating)}</div>
       </div>
@@ -296,13 +289,11 @@ if (return null) {
         review.would_work_again !== undefined) && (
         <div className="border - t pt - 3 mt - 3">;
           <div className="flex flex - wrap gap - 2">;
-=======
 
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
 
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {review.communication_rating && (
 
               <Badge variant="outline" className="flex gap - 1 items - center">;
@@ -391,13 +382,10 @@ if (return null) {
 
           </div>;
         </div>;
-=======
-=======
           </div>;
         </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       )}
 
 
@@ -406,7 +394,6 @@ if (return null) {
           <DialogTrigger asChild>;
             <Button variant="ghost" size="sm" className="text-muted-foreground">;
               <Flag className="h-3 w-3 mr-1" />;
-=======
               </Badge>)}
           </div>;
         </div>)}
@@ -456,9 +443,7 @@ if (return null) {
     </div>);
 }
 
-=======
 
   )
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

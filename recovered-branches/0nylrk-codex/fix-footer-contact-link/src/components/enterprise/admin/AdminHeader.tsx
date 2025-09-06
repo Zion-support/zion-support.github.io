@@ -11,7 +11,6 @@ export function AdminHeader() {;
   const { company } = useCompanyWorkspace();
   return (
 
-=======
 
 import React from "react",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -38,7 +37,6 @@ export function AdminHeader() {;
           </Button>;
           <Button variant="outline" size="sm" className="gap-2">;
             <Download className="h-4 w-4" />;
-=======
 :recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / enterprise / admin / AdminHeader.tsx;
 import React from './react';
 import { use_auth } from '@/hooks / use_auth';
@@ -68,7 +66,6 @@ function AdminHeader() {
           </Button>;
           <Button variant="outline" size="sm" className="gap - 2">;
             <Download className="h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Export Data;
           </Button>;
         </div>;
@@ -109,9 +106,6 @@ function AdminHeader() {
     </div>);
 
 }
-=======
 }
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

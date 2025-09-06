@@ -7,7 +7,6 @@ export interface MilestoneAssistantProps {
   endDateIso: string,
   project_type: ProjectType,
   on_accept?: (milestones: SuggestedMilestoneItem[], auto_add: boolean) => void;
-=======
 
 import React, { useMemo, useState } from "react",;
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types",;
@@ -135,11 +134,9 @@ function accept() {
 
 
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
-=======
               <div style={{ display: "flex", gap: 8, align_items: "center" }}>;
                 <span style={{ font_weight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", border_radius: 4, font_size: 12 }}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   AI Suggested;
                 </span>;
               </div>;
@@ -183,11 +180,9 @@ function accept() {
 
                     on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
 
-=======
 
                     onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value || "0", 10)) })}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   />;
                 </div>;
                 <div style={{ display: "flex", justify_content: "space - between", margin_top: 8 }}>;

@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export const useEmailAuth = (
   setUser: (user: UserProfile | null) => void
   setIsLoading: (loading: boolean) => void
@@ -16,7 +15,6 @@ export const useEmailAuth = (
         password});
       if (error) {
         toast({
-=======
 import { useState } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { toast } from '@/hooks / use - toast';
@@ -40,13 +38,11 @@ if ( {) {
   $2
 }
         toast ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           title: "Login failed";
 
           description: error && error.message,
 
           variant: "destructive"});
-=======
 
     try {
       setIsLoading(true),
@@ -64,7 +60,6 @@ if ( {) {
           title: "Login failed",
           description: error.message,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         return { error }
       }
       return { data }
@@ -78,7 +73,6 @@ if ( {) {
         description: error && error.message || "An unexpected error occurred",
 
         variant: "destructive"});
-=======
       console.error("Login error:", error),
       toast({
 
@@ -86,7 +80,6 @@ if ( {) {
         description: error.message || "An unexpected error occurred",
         variant: "destructive"}),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return { error }
     } finally {
       setIsLoading (false);
@@ -116,7 +109,6 @@ if ( {) {
       }
       // Create a proper options object
       const { data, error } = await supabase && supabase.auth.signUp({
-=======
 ;
   const signup = async (email: string, password: string, user_data?: any) => {
     try {
@@ -133,7 +125,6 @@ if ( {) {
       }
       // Create a proper options object;
       const { data, error } = await supabase.auth.sign_up ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         email;
         password;
         options: {
@@ -206,7 +197,6 @@ if ( {) {
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const resetPassword = async (email: string) => {
     try {
 
@@ -216,7 +206,6 @@ if ( {) {
 
       if (error) {
         toast({
-=======
 ;
   const reset_password = async (email: string) => {
     try {
@@ -232,7 +221,6 @@ if ( {) {
 
           title: "Password reset failed";
           description: error && error.message,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           variant: "destructive"});
         return { error }
       }
@@ -281,7 +269,6 @@ if ( {) {
 }
 ;
 
-=======
 
         title: "Password reset failed",
         description: error.message || "An unexpected error occurred",
@@ -295,5 +282,3 @@ if ( {) {
 
   return { login, signup, resetPassword }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

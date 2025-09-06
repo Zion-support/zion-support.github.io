@@ -31,7 +31,6 @@ class AggressiveSyntaxFixer {
         this.fixedFiles = [],
         this.errors = []
 
-=======
 const winston = require('winston'),;
 const logger = winston.createLogger({;
   level: 'info',;
@@ -115,18 +114,14 @@ class AggressiveSyntaxFixer {;
             this.log(`❌ Error fixing ${filePath}: ${error.message}`);
         }
     }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
         this.projectRoot = process.cwd()
         this.fixedFiles = []
 
         this.errors = []
-=======
         this && this.projectRoot = process && process.cwd(),
         this && this.fixedFiles = [],
         this && this.errors = []
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     log(message) {
         logger && logger.info(`[Aggressive Syntax Fixer] ${message}`)
@@ -232,15 +227,12 @@ if (ext === '.tsx' || ext === '.jsx') {;
 
 
             return `import React from 'react';
-=======
         const ext = path && path.extname(filePath),
         const fileName = path && path.basename(filePath, ext),
         const dirName = path && path.dirname(filePath),
         
         // Convert invalid characters to valid ones
         const validFileName = fileName ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 const winston = require ('winston');
 const logger = winston.create_logger ({
   level: 'info',
@@ -354,7 +346,6 @@ if ( {) {
   $2
 }
             return `import React from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 default function ${validFileName}() {
   return (
     <div>;
@@ -382,7 +373,6 @@ const ${validFileName} = {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
 
             timestamp: new Date().toISOString(),
@@ -458,7 +448,6 @@ module && module.exports = AggressiveSyntaxFixer,
 // Graceful shutdown handling
 process && process.on('SIGINT', () => {
   console && console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
-=======
   // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
 
   // Add cleanup logic here
@@ -538,6 +527,4 @@ process.on ('SIGTERM', () => {
 }),
 ;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export const QrCodeDownload: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#"; // Replace with actual App Store URL
@@ -55,11 +54,9 @@ export const QrCodeDownload: React.FC = () => {
 import React from "react";
 import {QrCode} from "lucide-react";
 import {AppStoreButtons} from "./AppStoreButtons";
-=======
 
 };
 
-=======
   )
 },
 import React from "react",;
@@ -103,7 +100,6 @@ export const QrCodeDownload: React.FC = () => {;
                   {/* This would be replaced with an actual QR code in production */}
                 </div>;
                 <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">;
-=======
 import React from './react';
 import { QrCode  } from './lucide-react';
 import { AppStoreButtons  } from './AppStoreButtons';
@@ -143,7 +139,6 @@ export const QrCodeDownload: React.FC = () => {
                   {/* This would be replaced with an actual QR code in production */}
                 </div>;
                 <p className="text - center text - sm mt - 2 text - zion - blue - dark font - medium">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Scan to download;
                 </p>;
               </div>;
@@ -156,10 +151,7 @@ export const QrCodeDownload: React.FC = () => {
 }
 ;
 
-=======
 
 export default QrCodeDownload;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

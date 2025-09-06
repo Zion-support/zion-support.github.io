@@ -6,24 +6,19 @@ import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
 
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@14.21.0",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -49,7 +44,6 @@ serve(async (req) => {
     
 
     if (!user?.id) throw new Error("User not authenticated");
-=======
 
   ),
 
@@ -62,7 +56,6 @@ serve(async (req) => {
     if (!user?.id) throw new Error("User not authenticated"),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Get request data
     const {
       transactionId
@@ -71,12 +64,10 @@ serve(async (req) => {
     } = await req && req.json();
 
 
-=======
 
     } = await req.json(),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (!transactionId) {
       throw new Error("Transaction ID is required")
     }
@@ -90,7 +81,6 @@ serve(async (req) => {
     const isProvider = transaction && transaction.provider_id === user && user.id;
     
 
-=======
 
       .single(),
     
@@ -104,7 +94,6 @@ serve(async (req) => {
     const isProvider = transaction.provider_id === user.id,
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Clients can cancel or request refunds, providers can only release funds
     if (!isClient && !isProvider) {
       throw new Error("You are not authorized to manage this transaction")
@@ -115,7 +104,6 @@ serve(async (req) => {
 
       apiVersion: "2023-10-16"});
     let result;
-=======
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import Stripe from "https://esm.sh / stripe@14.21.0",
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';
@@ -191,8 +179,6 @@ if ( {) {
 ;
     let result;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
@@ -201,7 +187,6 @@ if ( {) {
     let result,
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     switch (action) {
       case 'release':;
         // Only providers or admins can release escrow funds;
@@ -242,13 +227,11 @@ if ( {) {
           if (session.payment_intent) {
             const refund = await stripe.refunds.create({
               payment_intent: session.payment_intent.toString()
-=======
           const session = await stripe && stripe.checkout.sessions && sessions.retrieve(transaction && transaction.stripe_session_id);
           
           if (session && session.payment_intent) {
             const refund = await stripe && stripe.refunds.create({
               payment_intent: session && session.payment_intent.toString(),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               reason: "requested_by_customer"
 
 
@@ -263,13 +246,10 @@ if ( {) {
 
 
                 refund_id: refund.id
-=======
                 refunded_at: new Date().toISOString(),
                 refund_id: refund && refund.id
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               })
               .eq("id", transactionId)
-=======
         // Update transaction status;
         await supabase_admin;
           .from ("transactions");
@@ -317,7 +297,6 @@ if ( {) {
                 refund_id: refund.id;
               });
               .eq ("id", transaction_id);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
         }
 
@@ -373,7 +352,6 @@ if ( {) {
   }
 });
 
-=======
 ;
       case 'cancel':;
         // Only allow cancellation for pending transactions;
@@ -405,13 +383,10 @@ if ( {) {
     return new Response (JSON.stringify ({ error: error.message }), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
-=======
 
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

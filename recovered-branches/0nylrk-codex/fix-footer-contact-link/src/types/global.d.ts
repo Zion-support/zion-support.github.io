@@ -5,11 +5,9 @@ import {ReactNode} from 'react';
 
 // Extend FeatureCardProps to include key for mapping
 declare module '@/components/FeatureCard' {
-=======
 import {ReactNode} from 'react';
 // Extend FeatureCardProps to include key for mapping;
 declare module '@/components / FeatureCard' {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   export interface FeatureCardProps {
     title: string;
     description: string;
@@ -55,6 +53,5 @@ declare module '@/components / ProductListingCard' {
     onRequestQuote: (listing_id: string) => void,
     key?: string | number;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

@@ -8,7 +8,6 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {Button} from "./ui/button";
 import {Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle} from "lucide-react";
 
-=======
 import { Link } from "react-router-dom",
 import { GradientHeading } from "./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -28,7 +27,6 @@ import {
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function FeaturesGuideSection() {
   const features = [
     {
@@ -38,7 +36,6 @@ export function FeaturesGuideSection() {
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         "Connect with matched talents or services directly"
       ]
       link: "/match"
@@ -69,7 +66,6 @@ export function FeaturesGuideSection() {;
       instructions: [;
         "Access the talent directory from the main navigation",;
 
-=======
 import { Link } from './react-router-dom';
 import { GradientHeading } from './GradientHeading';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
@@ -102,7 +98,6 @@ function FeaturesGuideSection() {
       icon: <Users className="h - 10 w - 10 text - zion - purple" />,
       instructions: [;
         "Access the talent directory from the main navigation",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         "Use filters to narrow down by skills, experience, and pricing";
         "Save favorite profiles for future reference";
         "Contact talents directly or request quotes through their profiles";
@@ -159,7 +154,6 @@ function FeaturesGuideSection() {
       description: "Rent or buy specialized hardware and tech equipment for AI development and research."
       icon: <Settings className="h-10 w-10 text-zion-purple" />
       instructions: [
-=======
       icon: <Zap className="h - 10 w - 10 text - zion - cyan" />,
       instructions: [;
         "Browse service categories on the marketplace";
@@ -176,7 +170,6 @@ function FeaturesGuideSection() {
       description: "Rent or buy specialized hardware and tech equipment for AI development and research.",
       icon: <Settings className="h - 10 w - 10 text - zion - purple" />,
       instructions: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         "Search the equipment catalog by category or specifications";
         "Check availability and rental / purchase options";
         "Request quotes for bulk orders or specialized equipment";
@@ -337,7 +330,6 @@ function FeaturesGuideSection() {
       ]
       link: "/help"
       buttonText: "View Resources"
-=======
       link: "/create-profile",;
       buttonText: "Create Listing";
     };
@@ -354,8 +346,6 @@ function FeaturesGuideSection() {
       ],;
       link: "/help",;
       buttonText: "View Resources";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       icon: <BarChart3 className="h - 10 w - 10 text - zion - cyan" />,
       instructions: [;
         "Access analytics from your user dashboard";
@@ -408,7 +398,6 @@ function FeaturesGuideSection() {
       ],
       link: "/help",
       button_text: "View Resources";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   ];
 ;
@@ -419,7 +408,6 @@ function FeaturesGuideSection() {
         <div className="text - center mb - 12">;
           <GradientHeading > Your Complete Guide to Zion</GradientHeading>;
           <p className="text - zion - slate - light text - xl mt - 4 max - w-3xl mx - auto">;
-=======
                 key={feature.id}
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
@@ -571,7 +559,6 @@ export function FeaturesGuideSection() {;
           <TabsList className="grid grid - cols - 2 md:grid - cols - 4 gap - 2 bg - zion - blue rounded - lg p - 1 mb - 8">;
             {features.slice (0, 4).map (feature => (
               <TabsTrigger;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={feature.id}
                 value={feature.id}
 
@@ -579,7 +566,6 @@ export function FeaturesGuideSection() {;
               >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {feature.title}
 
               </TabsTrigger>))}
@@ -677,19 +663,16 @@ export function FeaturesGuideSection() {;
 };
 
 
-=======
         </Tabs>;
 
         <div className="mt-12 text-center">;
           <Button
             variant="outline" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             className="border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10"
             asChild>;
             <Link to="/marketplace">;
               Explore Full Marketplace;
               <ArrowRight className="ml-2 h-4 w-4" />;
-=======
               </TabsTrigger>))}
           </TabsList>;
           {features.map (feature => (
@@ -733,7 +716,6 @@ export function FeaturesGuideSection() {;
             <Link to="/marketplace">;
               Explore Full Marketplace;
               <ArrowRight className="ml - 2 h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </Link>;
           </Button>;
         </div>;
@@ -742,9 +724,6 @@ export function FeaturesGuideSection() {;
     </section>);
 
 }
-=======
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

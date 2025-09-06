@@ -1,6 +1,5 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function GithubContributorsPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 60)
@@ -10,10 +9,8 @@ export default function GithubContributorsPage() {
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">GitHub Contributors</h1>
 
-=======
 }
 
-=======
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 // @ts - ignore;
 import data from '../../data / github - contributors.json',
@@ -37,9 +34,6 @@ function GithubContributorsPage() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
         <ul className="mt-6 grid md:grid-cols-3 gap-4">
@@ -64,5 +58,3 @@ function GithubContributorsPage() {
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

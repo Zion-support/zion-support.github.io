@@ -51,7 +51,6 @@ export function useResume() {;
     }
     return result
   }
-=======
 import {useState} from 'react';
 import {Resume} from '@/types / resume';
 import {useFetchResume} from './useFetchResume';
@@ -107,7 +106,6 @@ if ( {) {
     return result;
   }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     // State;
     is_loading;
@@ -144,7 +142,6 @@ if ( {) {
   }
 }
 // Export all hooks
-=======
 ;
     // Basic resume operations;
     fetch_resume;
@@ -173,7 +170,6 @@ if ( {) {
   }
 }
 // Export all hooks;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export * from './useFetchResume';
 export * from './useResumeActions';
 export * from './useWorkExperience';
@@ -186,9 +182,7 @@ export * from './useResumeUtils';
 
 ;
 
-=======
 
-=======
 import { useState } from 'react',;
 import { Resume } from '@/types/resume',;
 import { useFetchResume } from './useFetchResume',;
@@ -273,5 +267,3 @@ export * from './useResumeList';
 export * from './useResumeUtils';
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

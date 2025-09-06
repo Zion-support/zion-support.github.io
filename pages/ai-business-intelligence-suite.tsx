@@ -3,7 +3,6 @@
 import Button from '../components/ui/Button';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-=======
 
 import React from 'react',;
 import Head from 'next/head',;
@@ -12,7 +11,6 @@ import { motion } from 'framer-motion',;
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
 
-=======
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -21,10 +19,8 @@ import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   DollarSign, Shield, Mail, MapPin, Rocket, BarChart3,
   Brain, Database, TrendingUp as TrendingUpIcon, Users,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   Target, BarChart, PieChart, Activity, Eye, Lock
 
 } from 'lucide-react',;
@@ -32,7 +28,6 @@ import Button from '../components/ui/Button',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function AIBusinessIntelligenceSuite() {
   const contactInfo = {
 
@@ -64,7 +59,6 @@ export default function AIBusinessIntelligenceSuite() {
       animationSpeed={2.0}
       enableHolographic={true}
       enableQuantumEffects={true}
-=======
     website: 'https://ziontechgroup.com'
 
   },
@@ -87,7 +81,6 @@ export default function AIBusinessIntelligenceSuite() {
   return (
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     >
       <div className="min-h-screen">
         <Head>
@@ -179,7 +172,6 @@ function AIBusinessIntelligenceSuite() {
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="mb-8"
               >
                 <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl shadow-2xl mb-6 relative overflow-hidden">
@@ -201,10 +193,8 @@ function AIBusinessIntelligenceSuite() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium"
               >
                 Transform data into actionable insights with <span className="text-blue-400 font-bold">AI-powered analytics</span>
@@ -264,7 +254,6 @@ function AIBusinessIntelligenceSuite() {
                   while_tap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="bg-gradient-to-r from-blue-500 to-indigo-600 p-1 rounded-2xl shadow-2xl"
                 >
                   <div className="bg-gray-900 rounded-2xl px-8 py-6">
@@ -291,10 +280,8 @@ function AIBusinessIntelligenceSuite() {
                 >
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     variant="secondary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"
                   >
@@ -348,7 +335,6 @@ function AIBusinessIntelligenceSuite() {
                 transition={{ duration: 1, delay: 0.8 }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
               >
                 <div className="text-center p-4">
@@ -397,7 +383,6 @@ function AIBusinessIntelligenceSuite() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -467,7 +452,6 @@ function AIBusinessIntelligenceSuite() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="group bg-gradient-to-br from-blue-900/20 to-indigo-900/20 border border-blue-500/30 rounded-2xl p-6 hover:border-blue-400/60 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300"
                 >
                   <div className="flex items-center space-x-3 mb-4">
@@ -504,7 +488,6 @@ function AIBusinessIntelligenceSuite() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -542,7 +525,6 @@ function AIBusinessIntelligenceSuite() {
                   viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300"
                 >
                   <div className="flex items-center space-x-3 mb-4">
@@ -560,7 +542,6 @@ function AIBusinessIntelligenceSuite() {
                     </div>;
                     <h3 className="text - lg font - semibold text - white group - hover:text - green - 300 transition - colors">;
                       {use_case}
-=======
 
                       {useCase  } catch (error) {
     console.error("Error:", error);
@@ -574,7 +555,6 @@ function AIBusinessIntelligenceSuite() {
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Technology & Integrations */}
 
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
@@ -616,7 +596,6 @@ function AIBusinessIntelligenceSuite() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 <h3 className="text-3xl font-bold text-white mb-8">
                   <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -644,7 +623,6 @@ function AIBusinessIntelligenceSuite() {
                       viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50"
                     >
                       <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
@@ -656,7 +634,6 @@ function AIBusinessIntelligenceSuite() {
                       <div className="w - 2 h - 2 bg - purple - 400 rounded - full"></div>;
                       <span className="text - gray - 200">{tech}</span>;
                     </motion.div>))}
-=======
 
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -666,7 +643,6 @@ function AIBusinessIntelligenceSuite() {
 
                 </div>;
               </motion.div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {/* Integrations */}
               <motion.div;
 
@@ -692,7 +668,6 @@ function AIBusinessIntelligenceSuite() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 <h3 className="text-3xl font-bold text-white mb-8">
                   <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -720,20 +695,17 @@ function AIBusinessIntelligenceSuite() {
                       viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50"
                     >
                       <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                       <span className="text-gray-200">{integration}</span>
                     </motion.div>
 
-=======
                       className="flex items - center space - x-3 p - 3 bg - gray - 800 / 40 rounded - lg border border - gray - 700 / 50";
                     >;
                       <div className="w - 2 h - 2 bg - cyan - 400 rounded - full"></div>;
                       <span className="text - gray - 200">{integration}</span>;
                     </motion.div>))}
-=======
 
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -777,7 +749,6 @@ function AIBusinessIntelligenceSuite() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -814,7 +785,6 @@ function AIBusinessIntelligenceSuite() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-2xl p-8"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Competitive Advantage</h3>
@@ -865,7 +835,6 @@ function AIBusinessIntelligenceSuite() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Return on Investment</h3>
@@ -900,7 +869,6 @@ function AIBusinessIntelligenceSuite() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -908,8 +876,6 @@ function AIBusinessIntelligenceSuite() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-=======
-=======
               className="text - center mb - 16";
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
@@ -976,7 +942,6 @@ function AIBusinessIntelligenceSuite() {
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* CTA Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
           <div className="max - w-4xl mx - auto text - center">;
@@ -987,10 +952,8 @@ function AIBusinessIntelligenceSuite() {
               viewport={{ once: true }}
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     variant="primary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 shadow-2xl hover:shadow-blue-500/25"
                   >
@@ -1008,10 +971,8 @@ function AIBusinessIntelligenceSuite() {
                 >
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     variant="secondary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"
                   >
@@ -1030,7 +991,6 @@ function AIBusinessIntelligenceSuite() {
                 <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-blue-400 hover:text-blue-300">{contactInfo.mobile}</Link> | <a href={`mailto:${contactInfo.email}`} className="text-blue-400 hover:text-blue-300">{contactInfo.email}</Link></p>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <p className="mt-2">{contactInfo.address}</p>
               </div>
             </motion.div>
@@ -1039,10 +999,8 @@ function AIBusinessIntelligenceSuite() {
       </div>
     </UltraAdvancedFuturisticBackground>
 
-=======
 }
 
-=======
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
                 Ready to Transform Your Business Intelligence?;
@@ -1095,9 +1053,5 @@ function AIBusinessIntelligenceSuite() {
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

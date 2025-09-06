@@ -6,7 +6,6 @@ import Link from 'next / link';
 const Blueprint20250818122901: React.FC = () => {
   const blueprint_details = {
     id: 'blueprint - 2025 - 08 - 18 - 122901',
-=======
 
 
 const Blueprint20250818122901: React.FC = () => {
@@ -94,7 +93,6 @@ const Blueprint20250818122901: React.FC = () => {
   };
 
 
-=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -103,13 +101,9 @@ const Blueprint20250818122901: React.FC = () => {
   };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const getHealthColor = (health: string) => {
-=======
 ;
   const getHealthColor = (health: string) =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (health) {
 
       case 'excellent': return 'bg-green-500/20 text-green-400';
@@ -121,7 +115,6 @@ const Blueprint20250818122901: React.FC = () => {
   };
 
 
-=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -131,7 +124,6 @@ const Blueprint20250818122901: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
       <Head>
@@ -149,7 +141,6 @@ const Blueprint20250818122901: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="mb-8">
           <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Blueprints
@@ -178,7 +169,6 @@ const Blueprint20250818122901: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-blue-400">Status</h3>
@@ -304,7 +294,6 @@ const Blueprint20250818122901: React.FC = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{component.description}</p>
@@ -332,7 +321,6 @@ const Blueprint20250818122901: React.FC = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Key Features</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -348,8 +336,6 @@ const Blueprint20250818122901: React.FC = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-2">{feature.description}</p>
@@ -371,7 +357,6 @@ const Blueprint20250818122901: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Content Generation Pipeline</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -415,7 +400,6 @@ const Blueprint20250818122901: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Technology Stack</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -448,7 +432,6 @@ const Blueprint20250818122901: React.FC = () => {
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
 
-=======
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -459,8 +442,6 @@ const Blueprint20250818122901: React.FC = () => {
           <Link
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50"
           >
@@ -583,9 +564,7 @@ const Blueprint20250818122901: React.FC = () => {
 }
 ;
 
-=======
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Blueprint20250818122901;

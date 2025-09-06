@@ -20,20 +20,15 @@ function ApiGettingStarted() {
 
 const quickStartJs = `import axios from 'axios';
 const response = await axios.get ('https://api.zionai.com / v1 / jobs', {
-=======
 
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
   const quickStartJs = `import axios from 'axios',
 
-=======
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
   const quickStartJs = `import axios from 'axios',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   headers: {
     Authorization: \`Bearer \${API_KEY}\`;
   }
@@ -133,7 +128,6 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
-=======
 
 import React from "react",;
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
@@ -219,7 +213,6 @@ console && console.log(response && response.data),`;
       </div>;
     </ApiDocsLayout>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 ;
@@ -227,7 +220,6 @@ console && console.log(response && response.data),`;
 
 export default ApiGettingStarted;
 
-=======
 ;
 console.log (response.data), `;
 ;
@@ -290,4 +282,3 @@ console.log (response.data), `;
 }
 export default ApiGettingStarted;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

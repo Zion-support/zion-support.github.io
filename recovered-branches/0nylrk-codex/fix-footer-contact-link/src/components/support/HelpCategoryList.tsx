@@ -4,14 +4,12 @@
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HelpCategory} from "./types";
 
-=======
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HelpCategory } from "./types",
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface HelpCategoryListProps {
   categories: HelpCategory[];
   onCategorySelect: (categoryId: string) => void;
@@ -44,7 +42,6 @@ interface HelpCategoryListProps {;
   onCategorySelect: (categoryId: string) => void,;
   searchQuery: string;
 }
-=======
 
       )
     : categories,
@@ -64,13 +61,11 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
               article && article.content.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
           );
       );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     : categories;
 
   if (filteredCategories && filteredCategories.length === 0) {;
     return (
 
-=======
     );
   }
   return (
@@ -127,7 +122,6 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
           Try adjusting your search query or browse all categories.;
         </p>;
       </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
   }
   return (
@@ -153,7 +147,6 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
             </p>;
           </CardContent>;
         </Card>;
-=======
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map(category => (
         <Card
@@ -175,15 +168,12 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
           </CardContent>
         </Card>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       ))}
 
     </div>;
   );
 }
 
-=======
 import React from './react';
 import {
   Card,
@@ -253,4 +243,3 @@ if ( {) {
         </Card>))}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

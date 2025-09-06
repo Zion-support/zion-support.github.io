@@ -25,7 +25,6 @@ class SecurityScanner {}
     if (!fs.existsSync(logDir)) {}
       fs.mkdirSync(logDir, { recursive: true });,
 
-=======
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -82,7 +81,6 @@ scanner.run().catch(error = > {; process.exit(1)}));
     _console.log(logMessage.trim());
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     try {}
       fs.appendFileSync(this.logFile, logMessage);,
     } catch (error) {}
@@ -358,11 +356,7 @@ module.exports = SecurityScanner;
 
 module.exports = SecurityScanner;
 
-=======
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 #!/usr/bin/env node;
->>>>>>> origin/automation-improvements-final
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -421,21 +415,13 @@ class SecurityScanner {; constructor() {; this && this.projectRoot = process && 
 const scanner = new SecurityScanner();
 scanner && scanner.run().catch(error = > {; process && process.exit(1)}));}),);
 
->>>>>>> origin/automation-improvements-final
-=======
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 
 
-=======
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 class SecurityScanner {;
   constructor() {;
     this.projectRoot = process.cwd();
@@ -940,7 +926,6 @@ scanner.run().catch(error => {,
 
 
 
-=======
 const fs = require ('fs');
 const path = require ('path');
 const { exec_sync } = require ('child_process');
@@ -1033,16 +1018,8 @@ const scanner = new SecurityScanner();
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
 
-=======
->>>>>>> origin/automation-improvements-final
-=======
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
 }),),;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

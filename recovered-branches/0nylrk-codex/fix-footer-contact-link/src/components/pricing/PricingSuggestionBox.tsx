@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface PricingSuggestionBoxProps {
 
   suggestion: PricingSuggestion | null
@@ -19,7 +18,6 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {Loader2, Info, ThumbsUp} from "lucide-react";
 import {PricingSuggestion} from "@/services/pricingSuggestionService";
-=======
 
 
 
@@ -59,14 +57,12 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
   onApplySuggestion,;
   rateType}) => {;
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <Card className="border border-dashed border-muted">;
         <CardContent className="flex items-center justify-center p-6">;
           <div className="text-center">;
             <Loader2 className="h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4" />;
             <p className="text-sm text-muted-foreground">;
-=======
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from '@/components / ui / tooltip';
@@ -95,7 +91,6 @@ if ( {) {
           <div className="text - center">;
             <Loader2 className="h - 10 w - 10 animate - spin text - muted - foreground mx - auto mb - 4" />;
             <p className="text - sm text - muted - foreground">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Generating optimal pricing suggestion...;
             </p>;
           </div>;
@@ -103,7 +98,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 
 
@@ -165,11 +159,9 @@ if ( {) {
     return null;
   }
 
-=======
 
 };
 
-=======
 },
 ;
 
@@ -215,7 +207,6 @@ if ( {) {
               </TooltipTrigger>;
               <TooltipContent>;
                 <p>Apply this suggestion to your pricing field</p>;
-=======
       </Card>);
   }
   // Check condition
@@ -263,7 +254,6 @@ if ( {) {
               </TooltipTrigger>;
               <TooltipContent>;
                 <p > Apply this suggestion to your pricing field</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </TooltipContent>;
             </Tooltip>;
           </TooltipProvider>;
@@ -277,10 +267,7 @@ if ( {) {
 }
 ;
 
-=======
 
 export default PricingSuggestionBox;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

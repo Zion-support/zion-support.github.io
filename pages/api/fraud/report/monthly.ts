@@ -25,8 +25,6 @@ export default async function handler(
   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 ;
@@ -68,4 +66,3 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

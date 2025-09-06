@@ -7,14 +7,12 @@
     title: 'Student Information Systems,',
     description: 'Integrated SIS solutions for managing student data, enrollment, and academic records.',
   },
-=======
   },;
   {}
     icon: Users,;
     title: 'Student Information Systems,',;
     description: 'Integrated SIS solutions for managing student data, enrollment, and academic records.',;
   },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/education.tsx
   {}
     icon: BookOpen,;
     title: 'Digital Content Management,',;
@@ -136,8 +134,6 @@ const benefits = [;
 ];
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 export default function EducationSolutions() {;
     title: 'Virtual Classrooms',;
     description: 'Online learning platform with video conferencing and collaboration',;
@@ -146,11 +142,8 @@ export default function EducationSolutions() {;
 ];
 
 export default function EducationSolutionsPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/education.tsx
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout
       title="Education Solutions - Zion Tech Group"
@@ -198,7 +191,6 @@ export default function EducationSolutionsPage() {;
               </p>
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
@@ -213,7 +205,6 @@ export default function EducationSolutionsPage() {;
                     {feature.description}
                   </p>
                 </div>
-=======
     title: 'Virtual Classrooms,',;
     description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
   },;
@@ -527,7 +518,6 @@ export default function EducationSolutionsPage() {;
                     {feature && feature.description}
                   </p>;
                 </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/education.tsx
               ))}
             </div>,;
           </div>;
@@ -719,7 +709,6 @@ export default function EducationSolutionsPage() {;
                 </button>;
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
                   Download Education Guide;
-=======
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-indigo-600 to-blue-700 p-8 rounded-xl text-white">;
@@ -731,7 +720,6 @@ export default function EducationSolutionsPage() {;
                 <button className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">;
                   Schedule Demo;
                   <ArrowRight className="w-5 h-5 ml-2" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/education.tsx
                 </button>;
               </div>;
             </div>;
@@ -739,11 +727,8 @@ export default function EducationSolutionsPage() {;
         </section>;
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
@@ -770,9 +755,7 @@ export default function EducationSolutionsPage() {;
       </div>
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   );
-=======
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">;
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
@@ -804,4 +787,3 @@ export default function EducationSolutionsPage() {;
     </>;
   ),;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/education.tsx

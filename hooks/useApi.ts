@@ -1,21 +1,16 @@
 
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       setLoading(false)};
 
   return { data, loading, error, execute }};
 };
 };
 };
-=======
       setLoading(false)}
-=======
       set_loading (false)}
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return { data, loading, error, execute }}
 }
 }
@@ -28,13 +23,10 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ApiState<T> {
-=======
 }import { useState, useEffect } from 'react';
 ;
 interface ApiState < T> {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   data: T | null;
   loading: boolean;
   error: string | null;
@@ -46,13 +38,11 @@ export function use_api < T>(url: string, options?: RequestInit) {
     loading: true,
     error: null,
 
-=======
 
     data: null,
     loading: true,
     error: null,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   });
 ;
   useEffect (() => {
@@ -68,7 +58,6 @@ export function use_api < T>(url: string, options?: RequestInit) {
         setState({ data, loading: false, error: null });
       } catch (error) {
         setState({
-=======
         set_state (prev => ({ ...prev, loading: true, error: null }));
         const response = await fetch (url, options);
 ;
@@ -86,7 +75,6 @@ if ( {) {
           data: null,
           loading: false,
           error: error instanceof Error ? error && error.message : 'An error occurred',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         });
       }
 
@@ -97,18 +85,13 @@ if ( {) {
 }
 
 
-=======
 
 
-=======
 import { useState, useEffect, useCallback } from 'react';
 
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
 interface UseApiProps {
   // Add props here as needed
@@ -117,14 +100,12 @@ interface UseApiProps {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface UseApiOptions {
   immediate?: boolean;
   onSuccess?: (data: any) => void;
   onError?: (error: any) => void}
 export const useApi = <T = any>(
   apiFunction: (...args: any[]) => Promise<T>
-=======
     }
 ;
     fetch_data ();
@@ -143,7 +124,6 @@ interface UseApiOptions {
   on_error?: (error: any) => void}
 export const use_api = <T = any>(
   api_function: (...args: any[]) => Promise < T>,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   options: UseApiOptions = {}
 ) => {
   const [loading, set_loading] = useState (false);
@@ -167,14 +147,11 @@ export const use_api = <T = any>(
     }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
-=======
   }, [execute, options && options.immediate]);
   return { data, loading, error, execute }};
 export default useApi;
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options && options.onSuccess?.(result); return result} catch (err) { setError(err); options && options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options && options.immediate) { execute()} },[execute,options && options.immediate]); return { data,loading,error,execute }}; export default useApi;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default function UseApi({ }: UseApiProps) {
   return (
     <div>
@@ -224,16 +201,10 @@ export function useApi<T>(
 }
 
 
->>>>>>> origin/automation-improvements-final
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
   }, [api_function, options]);
   useEffect (() => {
     // Check condition
@@ -257,4 +228,3 @@ function UseApi() {
       <p > This component is currently under development.</p>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

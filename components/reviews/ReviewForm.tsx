@@ -32,8 +32,6 @@ class ErrorBoundary extends React.Component {
  </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;
   submitting ? 'Submitting...' : 'Submit Review' ;
 }</button> </form>) ;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 };
 
 type Props = {;
@@ -58,7 +56,6 @@ type Props = {;
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
 
 const ReviewForm: React.FC<Props> = ({ initial }) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
   const [anonymous, setAnonymous] = useState(false);
@@ -158,7 +155,6 @@ function handle_submit() {
       <div>;
         <label className='block text-sm font-medium mb-2'>Your Review</label>          categories: {;
 
-=======
       const data = await res.json ();
       if (throw new Error (data.error || 'Failed to submit')) {
   $2
@@ -176,15 +172,12 @@ function handle_submit() {
       </div>;
       <div>;
         <label className='block text - sm font - medium mb - 2'>Your Review</label>          categories: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             communication;
             qualityOfWork;
             timeliness;
             wouldWorkWithAgain}})});
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
   return (
@@ -198,10 +191,8 @@ function handle_submit() {
         />;
       </div>;
 
-=======
         <label className="block text-sm font-medium mb-2" htmlFor="input-Your Review">Your Review</label>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
@@ -225,7 +216,6 @@ function handle_submit() {
             <StarRating
               value={communication |0}
               onChange={v => setCommunication(v)}
-=======
       set_submitting (false);
     }
   }
@@ -269,7 +259,6 @@ function handle_submit() {
             <StarRating;
               value={communication || 0}
               on_change={v => set_communication (v)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             />;
           </div>;
           <span className='pill'>Optional</span>;
@@ -300,7 +289,6 @@ function handle_submit() {
         </div>;
 
               onChange={e => setWouldWorkWithAgain(e && e.target.checked)}
-=======
         <div className='enhanced - card'>;
           <div className='flex items - center justify - between mb - 2'>;
             <span className='text - sm'>Would Work With Again</span>;

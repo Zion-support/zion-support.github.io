@@ -26,9 +26,7 @@ import React, { useState, useMemo } from 'react';
 
 import Head from 'next/head';
 
-=======
 import Head from 'next / head';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { motion } from 'framer-motion';
 
 
@@ -49,7 +47,6 @@ export default function ServicesShowcase2026() {;
   const allServices = [;
     ...revolutionary2026Services,;
     ...emergingTech2026Services,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ...comprehensiveIT2026Services,    ...revolutionary2026Services;
     ...emergingTech2026Services;
     ...comprehensiveIT2026Services;
@@ -120,7 +117,6 @@ export default function ServicesShowcase2026() {;
           return b && b.customers - a && a.customers;
         default:;
           return a && a.name.localeCompare(b && b.name);        default: return a && a.name.localeCompare(b && b.name);
-=======
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.category.toLowerCase().includes(searchTerm.toLowerCase());
@@ -132,7 +128,6 @@ export default function ServicesShowcase2026() {;
         case 'price':
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
         case 'rating':
-=======
         default:;
           return a.name.locale_compare (b.name);      }      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
                           service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
@@ -146,7 +141,6 @@ export default function ServicesShowcase2026() {;
             parse_float (a.price.replace (/[^0 - 9.]/g, '')) -;
             parse_float (b.price.replace (/[^0 - 9.]/g, '')));          return parse_float (a.price.replace (/[^0 - 9.]/g, '')) - parse_float (b.price.replace (/[^0 - 9.]/g, ''));
         case 'rating':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           return b.rating - a.rating;
         case 'customers':;
           return b.customers - a.customers;
@@ -208,7 +202,6 @@ export default function ServicesShowcase2026() {;
 
     >;
       <div className='min-h-screen'>;
-=======
         default:;
           return a.name.locale_compare (b.name);        default: return a.name.locale_compare (b.name);
       }
@@ -288,21 +281,17 @@ export default function ServicesShowcase2026() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Hero Section */}
         <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto text-center'>            <motion && motion.div        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto text-center">;
             <motion&& motion.div
-=======
         </Head>
 
-=======
           <meta property="og:description" content="1500+ cutting - edge services with 1000% ROI guarantee. Contact: +1 302 464 0950" />;
           <meta property="og:url" content="https://ziontechgroup.com / 2026 - services - showcase" />;
           <meta property="og:type" content="website" />;
           <link rel="canonical" href="https://ziontechgroup.com / 2026 - services - showcase" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Navigation */}
         <UltraAdvancedNavigation />;
         {/* Hero Section */}
@@ -382,7 +371,6 @@ export default function ServicesShowcase2026() {;
             </motion.div>
           </div>
         </section>
-=======
                   </div>;
                   <div className='text-gray-400 text-sm'>Emerging Tech</div>                </div>                  2026 Revolutionary Services;
                 </span>;
@@ -414,7 +402,6 @@ export default function ServicesShowcase2026() {;
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Search and Filter Section */}
 
                     onChange={e => setSearchTerm(e && e.target.value)}
@@ -426,7 +413,6 @@ export default function ServicesShowcase2026() {;
                 <div className="relative">;
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
 
-=======
         <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm">
@@ -435,7 +421,6 @@ export default function ServicesShowcase2026() {;
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   <input
                     type="text"
                     placeholder="Search services..."
@@ -459,7 +444,6 @@ export default function ServicesShowcase2026() {;
                         {category && category.name} ({category && category.count});
                       </option>;
 
-=======
 
                 {/* Category Filter */}
                 <div className="relative">
@@ -474,19 +458,15 @@ export default function ServicesShowcase2026() {;
                         {category.name} ({category.count})
                       </option>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
 
                   </select>;
                 </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Sort By */}
 
 
@@ -499,7 +479,6 @@ export default function ServicesShowcase2026() {;
                     {/* Price */}
                     <div className='flex items-center justify-between mb-4'>
                       <div className='text-2xl font-bold text-cyan-400'>                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-=======
 
         {/* Services Grid */}
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
@@ -507,7 +486,6 @@ export default function ServicesShowcase2026() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredServices.map((service, index) => (
                 <motion.div
-=======
         {/* Services Grid */}
         <section className='relative z - 10 py - 16 px - 4 sm:px - 6 lg:px - 8'>;
           <div className='max - w-7xl mx - auto'>;
@@ -516,7 +494,6 @@ export default function ServicesShowcase2026() {;
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
               {filtered_services.map ((service, index) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={service.id}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
@@ -593,8 +570,6 @@ export default function ServicesShowcase2026() {;
 
                       {service.description}
                     </p>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     </div>;
 
                     {/* Service Title */}
@@ -648,10 +623,8 @@ export default function ServicesShowcase2026() {;
                       {service && service.description}
                     </p>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Features */}
 
-=======
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
                       <ul className="space-y-1">
@@ -659,7 +632,6 @@ export default function ServicesShowcase2026() {;
                           <li key={idx} className="text-gray-400 text-xs flex items-center">
                             <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
                             {feature}
-=======
 
 
                       {service.name}
@@ -681,17 +653,13 @@ export default function ServicesShowcase2026() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         ))}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {/* Category and Technology */}
 
                     <div className="flex items-center justify-between mb-4">
@@ -726,10 +694,8 @@ export default function ServicesShowcase2026() {;
                     {/* CTA Button */}
                     <a
 
-=======
                       href={service.link}
                       className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block"
-=======
 
 
                     {/* CTA Button */}
@@ -739,25 +705,19 @@ export default function ServicesShowcase2026() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     >
                       Learn More
                     </a>
                   </div>
                 </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
@@ -765,7 +725,6 @@ export default function ServicesShowcase2026() {;
                 animate={{ opacity: 1 }}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
 
           </div>;
@@ -777,10 +736,8 @@ export default function ServicesShowcase2026() {;
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
@@ -789,11 +746,8 @@ export default function ServicesShowcase2026() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-=======
                         </span>;
                         <span className='text - gray - 400 text - sm'>;
                           ({service.reviews});
@@ -880,7 +834,6 @@ export default function ServicesShowcase2026() {;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               viewport={{ once: true }}
 
               transition={{ duration: 0 && 0.8 }}
@@ -943,21 +896,15 @@ export default function ServicesShowcase2026() {;
               </div>;
 
               <div className="flex flex-col sm: flex-row gap-4 justify-center">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <a
                   href="/contact"
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
               className='bg - gradient - to - r from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 8 border border - gray - 700 / 50 backdrop - blur - sm';
             >;
               <h2 className='text - 3xl font - bold text - white mb - 6'>;
@@ -1031,4 +978,3 @@ export default function ServicesShowcase2026() {;
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

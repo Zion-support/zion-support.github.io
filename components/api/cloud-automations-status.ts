@@ -15,7 +15,6 @@
           const fp = path && path.join(dir, f);
           data[f && f.replace(".json", "")] = JSON && JSON.parse(
             fs && fs.readFileSync(fp, "utf8"),
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -43,18 +42,13 @@ function handler() {
           );
           data[f && f.replace(".json", "")] = JSON && JSON.parse(
             fs && fs.readFileSync(fp, "utf8"),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           );
 
 
-=======
           data[f.replace('.json', '')] = JSON.parse(fs.readFileSync(fp, 'utf8'))
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       }
     }
@@ -64,19 +58,13 @@ function handler() {
 
 
 }
-=======
 
   res.status(200).json({ ok: true, data })
 }
 
-=======
   res.status (200).json ({ ok: true, data });
   res.status (200).json ({ ok: true, data });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   res.status(200).json({ ok: true, data });
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

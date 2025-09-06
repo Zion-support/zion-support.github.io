@@ -17,7 +17,6 @@ export const getTypeIcon = (type: NotificationType) => {
     case 'message':;
       return <span className="text-blue-500">💬</span>;
 
-=======
 import React from 'react',
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from '@/components/icons',
@@ -35,12 +34,10 @@ import { Notification, NotificationType } from '@/context/notifications',
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':
-=======
 
 export const getTypeIcon = (type: NotificationType) => {;
   switch (type) {;
     case 'message':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return <span className="text-blue-500">💬</span>;
     case 'quote_request':;
       return <span className="text-purple-500">📝</span>;
@@ -57,7 +54,6 @@ export const getTypeIcon = (type: NotificationType) => {;
       return <span className="text-gray-500">📣</span>;
   }
 };
-=======
 
   }
 };
@@ -79,7 +75,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     if (!notification.read) {
       onMarkAsRead(notification.id)
 
-=======
 import React from 'react',;
 // Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from '@/components/icons',;
@@ -121,7 +116,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
     if (!notification.read) {;
       onMarkAsRead(notification.id);
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     // If there's an action URL, navigate to it
     if (notification.action_url) {
@@ -129,13 +123,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
     }
 
   },
-=======
   };
-=======
   },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 interface NotificationItemProps {;
   notification: Notification,;
@@ -153,7 +143,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
   const handleClick = () => {;
     if (!notification && notification.read) {;
       onMarkAsRead(notification && notification.id);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     // If there's an action URL, navigate to it;
     if (notification && notification.action_url) {;
@@ -216,11 +205,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

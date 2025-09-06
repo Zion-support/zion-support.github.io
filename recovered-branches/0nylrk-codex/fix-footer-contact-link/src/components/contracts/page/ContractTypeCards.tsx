@@ -13,7 +13,6 @@ import {;
 
 import { Button  } from '@/components / ui / button';
 import {
-=======
 
 import { Button } from "@/components/ui/button";
 import {
@@ -49,7 +48,6 @@ interface ContractTypeCardsProps {
 
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-10">
       <Card>
@@ -81,7 +79,6 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
@@ -114,10 +111,8 @@ export function ContractTypeCards(): any ({;
   onSmartClick,;
 }: ContractTypeCardsProps) {;
   return (
-=======
 
 
-=======
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
 import { Button } from "@/components/ui/button",;
@@ -136,7 +131,6 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;
-=======
 export /**
  * ContractTypeCards - Function description
  */
@@ -147,7 +141,6 @@ function ContractTypeCards() {
         <CardHeader>;
           <CardTitle className="flex items - center gap - 2">;
             <FileText className="h - 5 w - 5" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Standard Contracts;
           </CardTitle>;
           <CardDescription>;
@@ -211,8 +204,6 @@ function ContractTypeCards() {
     </div>);
 
 }
-=======
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

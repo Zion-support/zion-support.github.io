@@ -4,11 +4,9 @@ export const metadata = {;
   description:;
     "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
 
-=======
 
     "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 export default function ServicesOverviewPage() {;
   return (
@@ -35,7 +33,6 @@ export default function ServicesOverviewPage() {;
             "Foundational architecture"
             "Billing + subscriptions"
             "Growth analytics"
-=======
 import Link from './next / link';
 export const metadata = {
   title: "Services | Zion Tech Group",
@@ -70,7 +67,6 @@ function ServicesOverviewPage() {
             "Foundational architecture",
             "Billing + subscriptions",
             "Growth analytics",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           ]}
           icon="🚀";
         />{" "}
@@ -105,14 +101,12 @@ function ServiceCard(): any ({;
   bullets: string[];
   icon: string;
 }) {;
-=======
     </div>);
 }
 /**
  * ServiceCard - Function description
  */
 function ServiceCard() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <Link;
       href={href}
@@ -132,7 +126,6 @@ function ServiceCard() {
         <a
           href="mailto:kleber@ziontechgroup && ziontechgroup.com"
           className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">;
-=======
       className="group border border - gray - 200 rounded - xl p - 8 block hover:border - blue - 300 hover:shadow - lg transition - all duration - 200 bg - white";
     >;
       {" "}
@@ -179,7 +172,6 @@ function CTA() {
           href="mailto:kleber@ziontechgroup.com";
           className="border - 2 border - blue - 600 text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - blue - 600 hover:text - white transition - colors";
         >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {" "}
           Email Us{" "}
         </a>{" "}

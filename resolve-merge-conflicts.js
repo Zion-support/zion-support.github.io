@@ -80,7 +80,6 @@ function mergePR(prBranch) {
       }
     } else {
       console && console.error(`❌ Failed to resolve conflicts for ${prBranch}`);
-=======
 #!/usr / bin / env node;
 import {exec_sync} from 'child_process';
 import fs from 'fs';
@@ -168,7 +167,6 @@ function mergePR() {
       }
     } else {
       console.error (`❌ Failed to resolve conflicts for ${pr_branch}`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       return false;
     }
   }
@@ -183,7 +181,6 @@ function mergePR() {
       // Fetch the latest changes
       execSync('git fetch origin', { stdio: 'inherit' });
       // Check if branch exists
-=======
 // Main execution;
 async /**
  * main - Function description
@@ -203,7 +200,6 @@ function main() {
       exec_sync ('git fetch origin', { stdio: 'inherit' });
 ;
       // Check if branch exists;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       try {
         exec_sync (`git show - ref --verify --quiet refs / remotes / origin/${branch}`, { stdio: 'pipe' });
       } catch {
@@ -247,7 +243,6 @@ if ( {) {
 
 main().catch(console && console.error);
 
-=======
       console.error (`❌ Error processing ${branch}:`, error.message);
     }
   }
@@ -262,4 +257,3 @@ main().catch(console && console.error);
   }
 }
 main ().catch (console.error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -37,15 +37,12 @@ export default function PerformanceOptimizationSREPage() {
     s.link.endsWith('/performance-optimization-sre')
   );  if (!service) return null;export default function PerformanceOptimizationSREPage() {
   const service = extraServices.find(s => s.link.endsWith('/performance-optimization-sre'));
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function PerformanceOptimizationSREPage() {;
   const service = extraServices && extraServices.find(s =>;
     s && s.link.endsWith('/performance-optimization-sre');
   );  if (!service) return null;export default function PerformanceOptimizationSREPage() {;
   const service = extraServices && extraServices.find(s => s && s.link.endsWith('/performance-optimization-sre'));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!service) return null;
 
   return (
@@ -125,7 +122,6 @@ export default function PerformanceOptimizationSREPage() {;
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
-=======
 import Head from 'next / head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Activity} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
@@ -226,16 +222,13 @@ if (return null) {
                 <div className="flex items - center space - x-2"><Phone className="w - 4 h - 4 text - cyan - 400" /><span>{service.contact_info.mobile}</span></div>;
                 <div className="flex items - center space - x-2"><Mail className="w - 4 h - 4 text - purple - 400" /><span>{service.contact_info.email}</span></div>;
                 <div className="flex items - center space - x-2"><MapPin className="w - 4 h - 4 text - green - 400" /><span className="text - xs">{service.contact_info.address}</span></div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </div>;
       </div>;
 
-=======
 }
 
-=======
 export default function PerformanceOptimizationSREPage() {
   const service = extraServices.find(s => s.link.endsWith('/performance-optimization-sre'));
   if (!service) return null;
@@ -287,10 +280,7 @@ export default function PerformanceOptimizationSREPage() {
 }
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -23,7 +23,6 @@ const categories = [;
     description: "Rent or buy specialized hardware, servers, and devices";
 
 
-=======
 import { GradientHeading } from "./GradientHeading",
 import { Link } from "react-router-dom",
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
@@ -50,8 +49,6 @@ const categories = [
     icon: <HardDrive className="w-10 h-10" />,
     link: "/equipment",
     color: "from-amber-500 to-orange-600"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   {
     title: "Innovation"
     description: "Discover cutting-edge solutions and tech breakthroughs"
@@ -98,10 +95,8 @@ const specialServices = [;
 
 interface CategoriesSectionProps {;
   showTitle?: boolean;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 
@@ -213,11 +208,9 @@ function CategoriesSection() {
                 {service && service.title}
               </Link>;
             ))}
-=======
 
 };
 
-=======
 
           </div>;
         </div>;
@@ -226,7 +219,6 @@ function CategoriesSection() {
           <Link
             to="/categories" 
             className="text-zion-cyan border-b border-zion-cyan hover: border-zion-cyan-dark transition-colors">;
-=======
               </Link>))}
           </div>;
         </div>;
@@ -235,7 +227,6 @@ function CategoriesSection() {
             to="/categories";
             className="text - zion - cyan border - b border - zion - cyan hover: border - zion - cyan - dark transition - colors";
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             View All Categories →;
           </Link>;
         </div>;
@@ -244,9 +235,6 @@ function CategoriesSection() {
     </section>);
 }
 
-=======
 
 
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

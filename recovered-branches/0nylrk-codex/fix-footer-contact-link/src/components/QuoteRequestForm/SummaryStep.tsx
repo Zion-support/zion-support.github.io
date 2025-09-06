@@ -41,17 +41,14 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
           queryString;
           formData && formData.serviceType;
           3;
-=======
 
 
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         // Get AI matches
         const results = await findMatches(
           queryString,
           formData.serviceType,
           3
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         );
 
 import { useEffect, useState } from './react';
@@ -150,7 +147,6 @@ if (return) {
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* AI Matching Results */}
       <AIMatchingResults
         serviceType={formData.serviceType}
@@ -371,7 +367,6 @@ if (return) {
               <div>;
                 <Label className="text-zion-slate-light">Project Description</Label>;
                 <div className="text-white whitespace-pre-wrap">{formData && formData.projectDescription}</div>;
-=======
     }
 ;
     run_matching ();
@@ -532,7 +527,5 @@ if ( {) {
     </div>);
 
 }
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

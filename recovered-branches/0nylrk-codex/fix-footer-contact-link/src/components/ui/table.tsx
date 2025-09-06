@@ -12,7 +12,6 @@ const Table = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div className=&quot;relative w-full overflow-auto&quot;>
     <table
-=======
 import * as React from &quot;react & quot;
 ;
 import { cn } from &quot;@/lib / utils & quot;
@@ -23,7 +22,6 @@ const Table = React.forward_ref<;
 >(({ class_name, ...props }, ref) => (
   <div className=&quot;relative w - full overflow - auto & quot;>;
     <table;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       ref={ref}
       className={cn (&quot;w - full caption - bottom text - sm & quot;, class_name)}
       {...props}
@@ -50,7 +48,6 @@ const TableBody = React.forwardRef<
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
   <tbody
-=======
 />;
   </div>));
 Table.display_name = &quot;Table & quot;
@@ -67,7 +64,6 @@ const TableBody = React.forward_ref<;
   React.HTMLAttributes < HTMLTableSectionElement>;
 >(({ class_name, ...props }, ref) => (
   <tbody;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn (&quot;[&_tr:last - child]:border - 0&quot;, class_name)}
     {...props}
@@ -151,7 +147,6 @@ const TableCell = React.forwardRef<
   React.HTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => (
   <td
-=======
 />));
 TableBody.display_name = &quot;TableBody & quot;
 ;
@@ -199,7 +194,6 @@ const TableCell = React.forward_ref<;
   React.HTMLAttributes < HTMLTableCellElement>;
 >(({ class_name, ...props }, ref) => (
   <td;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn (&quot;p - 4 align - middle [&:has ([role = checkbox])]:pr - 0&quot;, class_name)}
     {...props}
@@ -214,7 +208,6 @@ const TableCaption = React.forwardRef<
   React.HTMLAttributes<HTMLTableCaptionElement>
 >(({ className, ...props }, ref) => (
   <caption
-=======
 />));
 TableCell.display_name = &quot;TableCell & quot;
 ;
@@ -223,7 +216,6 @@ const TableCaption = React.forward_ref<;
   React.HTMLAttributes < HTMLTableCaptionElement>;
 >(({ class_name, ...props }, ref) => (
   <caption;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn (&quot;mt - 4 text - sm text - muted - foreground & quot;, class_name)}
     {...props}
@@ -231,7 +223,6 @@ const TableCaption = React.forward_ref<;
 />));
 TableCaption.display_name = &quot;TableCaption & quot;
 ;
-=======
 
 TableCaption.displayName = "TableCaption"
 
@@ -248,4 +239,3 @@ export {
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

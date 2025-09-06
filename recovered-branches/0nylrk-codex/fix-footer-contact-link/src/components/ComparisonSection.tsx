@@ -104,7 +104,6 @@ function ComparisonSection() {
 
                   <TableRow key={index} className="border-b border-zion-blue">
                     <TableCell className="font-medium text-white">
-=======
                     service: "24 / 7 Support",
                     traditional: "$2, 500 / mo",
                     zion: "$950 / mo",
@@ -125,7 +124,6 @@ function ComparisonSection() {
                 ].map ((item, index) => (
                   <TableRow key={index} className="border - b border - zion - blue">;
                     <TableCell className="font - medium text - white">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {item.service}
                     </TableCell>;
                     <TableCell className="text - center text - zion - slate - light">;
@@ -141,7 +139,6 @@ function ComparisonSection() {
             
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
               Calculate Your Savings
             </Button>
@@ -251,7 +248,6 @@ export function ComparisonSection() {;
                   Up to 65%;
                 </span>;
                 <span className="block text-sm text-zion-slate-light mt-1">;
-=======
                     </TableCell>;
                   </TableRow>))}
               </TableBody>;
@@ -286,9 +282,6 @@ export function ComparisonSection() {;
 
 
     </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-=======
     </section>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

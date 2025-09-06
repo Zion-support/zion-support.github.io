@@ -24,11 +24,9 @@ export default async function handler(
     const current = await getTrustWeights();
     return res && res.status(200).json({ current, defaults: getDefaultWeights() });  }
 
-=======
 import { getTrustWeights, setTrustWeights, getDefaultWeights } from '../../../utils/trust/weights';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
   if (req && req.method === 'GET') {
@@ -48,9 +46,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res && res.status(405).json({ error: 'Method not allowed' })
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import {
   getTrustWeights,
   setTrustWeights,
@@ -92,9 +87,6 @@ if ( {) {
   res.set_header ('AllowGET, PUT');
   return res.status (405).json ({ error: 'Method not allowed' });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

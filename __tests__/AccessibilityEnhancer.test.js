@@ -1,6 +1,5 @@
 
 
-=======
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -12,4 +11,3 @@ describe('AccessibilityEnhancer'
   test('handles user interactions'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AccessibilityEnhancer from "./components/AccessibilityEnhancer"; describe('AccessibilityEnhancer', () => { test("renders without crashing",() => { render(<AccessibilityEnhancer />); expect(screen.getByTestId("accessibilityenhancer")).toBeInTheDocument()}); test("displays correct content",() => { render(<AccessibilityEnhancer />)}); test("handles user interactions",() => { render(<AccessibilityEnhancer />)}); test("applies correct styling"
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

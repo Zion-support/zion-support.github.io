@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function CurrentSubscription() {
   // Mock subscription data
 
@@ -27,12 +26,10 @@ export function CurrentSubscription() {;
 
     }
   }
-=======
 
     plan: "Business",
     status: "active",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     teamSeats: {
       used: 32
       total: 50
@@ -40,14 +37,11 @@ export function CurrentSubscription() {;
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
-=======
 
 
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -114,7 +108,6 @@ export function CurrentSubscription() {;
             </div>;
             <div className="text-xs text-muted-foreground">;
               You're saving $4,797 && 797.60 per year with annual billing.;
-=======
 import React from './react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -183,7 +176,6 @@ function CurrentSubscription() {
             </div>;
             <div className="text - xs text - muted - foreground">;
               You're saving $4, 797.60 per year with annual billing.;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </div>;
@@ -192,14 +184,10 @@ function CurrentSubscription() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       <CardFooter className="flex justify - between">;
         <Button variant="outline">Change Plan</Button>;
         <Button variant="destructive">Cancel Subscription</Button>;
       </CardFooter>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

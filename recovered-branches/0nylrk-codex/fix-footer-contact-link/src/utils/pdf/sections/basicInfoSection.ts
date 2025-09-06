@@ -33,10 +33,8 @@ export function addBasicInfoSection(;
   // Add summary if available
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return yPos
-=======
 import {jsPDF} from 'jspdf';
 import {ResumeBasicInfo} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
@@ -80,5 +78,4 @@ if ( {) {
     y_pos += (summary_lines.length * 6) + 10;
   }
   return y_pos;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

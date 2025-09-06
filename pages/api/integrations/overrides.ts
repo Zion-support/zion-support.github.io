@@ -37,9 +37,6 @@
   return res && res.status(405).json({ error: "Method not allowed" });
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../lib / integrations / file_store';
 export default /**
@@ -85,10 +82,7 @@ if (state.overrides[idx] = entry) {
   }
   return res.status (405).json ({ error: "Method not allowed" });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-=======
 
   }
 }
@@ -98,4 +92,3 @@ if (state.overrides[idx] = entry) {
   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

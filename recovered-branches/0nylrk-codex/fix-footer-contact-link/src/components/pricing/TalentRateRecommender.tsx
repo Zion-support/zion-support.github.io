@@ -7,11 +7,9 @@ import {PricingSuggestionBox} from "./PricingSuggestionBox";
 import {useAuth} from "@/hooks/useAuth";
 import {Sparkles} from "lucide-react";
 
-=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { 
   getTalentRateSuggestion;
   PricingSuggestion;
@@ -34,7 +32,6 @@ interface TalentRateRecommenderProps {;
 }
 
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
-=======
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion } from '@/services / pricingSuggestionService';
@@ -78,7 +75,6 @@ export const TalentRateRecommender: React.FC < TalentRateRecommenderProps> = ({
 
   };
 
-=======
 
 import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from "lucide-react",
@@ -126,7 +122,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 
   };
 
-=======
 ;
     setIsLoading(true),;
     try {;
@@ -142,7 +137,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       setIsLoading(false);
     }
   },;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleApplySuggestion = () => {;
     if (suggestion) {;
       // We'll use the middle of the range as the suggested rate;
@@ -159,7 +153,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
           actualValue: suggestedRate,;
           accepted: true;
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
 
@@ -168,8 +161,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-4">;
       <div>;
@@ -186,7 +177,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
         ) : (;
 
           <PricingSuggestionBox
-=======
   onSuggestionApplied,
   rate_type}) => {
   const [is_loading, setIsLoading] = useState (false);
@@ -256,7 +246,6 @@ if ( {) {
             <Sparkles className="h - 4 w - 4 mr - 2" /> Optimize Rate with AI;
           </Button>) : (
           <PricingSuggestionBox;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             suggestion={suggestion}
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
@@ -264,7 +253,6 @@ if ( {) {
 
 
 
-=======
       </div>;
     </div>;
   );
@@ -272,14 +260,10 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
             rate_type={rate_type}
           />)}
       </div>;
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

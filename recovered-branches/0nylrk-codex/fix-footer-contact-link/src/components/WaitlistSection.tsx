@@ -14,7 +14,6 @@ export function WaitlistSection() {;
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-=======
 
 
 export function WaitlistSection() {
@@ -24,8 +23,6 @@ export function WaitlistSection() {
   const [agreeTerms, setAgreeTerms] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { toast } = useToast(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -143,14 +140,12 @@ if ( {) {
     }
   };
 
-=======
     } finally {
       setIsSubmitting(false)
     }
 
   },
   
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">;
@@ -248,11 +243,9 @@ if ( {) {
               disabled={isSubmitting} 
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
               {isSubmitting ? "Processing..." : "Complete Registration"}
-=======
 
 
 
-=======
 ;
   return (
     <section id="waitlist" className="py - 20 bg - zion - blue - dark relative overflow - hidden">;
@@ -321,7 +314,6 @@ if ( {) {
               className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
             >;
               {is_submitting ? "Processing..." : "Complete Registration"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </Button>;
           </form>;
         </div>;
@@ -330,10 +322,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

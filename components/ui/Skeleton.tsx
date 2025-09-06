@@ -1,6 +1,5 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Skeleton({ className = '' }: SkeletonProps) {
     >
       <div className='absolute inset-0 -translate-x-full animate-[shimmer_1.2s_infinite] bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent' />
@@ -20,17 +19,14 @@ export default function Skeleton(): any ({ className = '' }: SkeletonProps) {;
         @keyframes shimmer {;
           100% {;
 
-=======
 
           100% {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             transform: translateX(100%);
           }        }
       `}</style>;
     </div>;
   );
-=======
   class_name?: string;
 }
 ;
@@ -47,7 +43,6 @@ function Skeleton() {
           }        }
       `}</style>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export type SkeletonProps = {;
   className?: string;
@@ -107,9 +102,6 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";
 export default Component;
 }
 
-=======
       `}</style>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

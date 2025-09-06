@@ -4,15 +4,11 @@
 import { Badge } from "@/components/ui/badge",
 import { ProfileSkill } from "@/types/profile",
 
-=======
 import {Badge} from "@/components/ui/badge";
 import {ProfileSkill} from "@/types/profile";
-=======
 import { Badge } from "@/components/ui/badge",
 import { ProfileSkill } from "@/types/profile",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ProfileSkillsProps {
   skills: ProfileSkill[];
 }
@@ -69,12 +65,10 @@ export function ProfileSkills(): any ({ skills }: ProfileSkillsProps) {;
   );
 }
 
-=======
 import { Badge  } from '@/components / ui / badge';
 import { ProfileSkill  } from '@/types / profile';
 interface ProfileSkillsProps {
   skills: ProfileSkill[];
-=======
 
               <div 
                 className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan" 
@@ -82,7 +76,6 @@ interface ProfileSkillsProps {
   );
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export /**
  * ProfileSkills - Function description
@@ -111,4 +104,3 @@ function ProfileSkills() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

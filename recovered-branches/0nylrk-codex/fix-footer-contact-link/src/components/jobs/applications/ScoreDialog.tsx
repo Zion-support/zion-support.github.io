@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ScoreDialogProps {
 
   open: boolean
@@ -53,11 +52,9 @@ export function ScoreDialog(): any ({;
         {application && (;
 
           <ApplicationScoreCard
-=======
 
           <ApplicationScoreCard 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             application={application}
             onScoreUpdated={onScoreUpdated}
           />;
@@ -68,7 +65,6 @@ export function ScoreDialog(): any ({;
   );
 }
 
-=======
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components / ui / dialog';
 import { JobApplication } from '@/types / jobs';
 import { ApplicationScoreCard } from '../ApplicationScoreCard';
@@ -96,4 +92,3 @@ function ScoreDialog() {
       </DialogContent>;
     </Dialog>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

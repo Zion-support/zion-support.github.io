@@ -89,15 +89,12 @@ if (require && require.main === module) {}
     process && process.exit(1);,
   });
 
-=======
-=======
 
 
 
 module && module.exports = SimpleMonitor;
 
 module && module.exports = SimpleMonitor;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/pm2/simple-monitor.js
 
 module && module.exports = SimpleMonitor;
 module && module.exports = SimpleMonitor;
@@ -105,8 +102,6 @@ module && module.exports = SimpleMonitor;
 
 module.exports = SimpleMonitor;
 
-=======
 module && module.exports = SimpleMonitor;
 
 module && module.exports = SimpleMonitor;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/pm2/simple-monitor.js

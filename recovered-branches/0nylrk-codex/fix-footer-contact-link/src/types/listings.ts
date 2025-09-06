@@ -41,7 +41,6 @@ export interface ListingItem {
   image?: string,
   description?: string;
 }
-=======
 
 
 export interface ListingCategory {;
@@ -49,4 +48,3 @@ export interface ListingCategory {;
 
 export type ListingView = 'grid' | 'list';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

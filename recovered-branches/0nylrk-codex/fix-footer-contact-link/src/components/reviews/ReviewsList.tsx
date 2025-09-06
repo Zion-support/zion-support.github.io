@@ -4,15 +4,11 @@
 import { Review } from "@/types/reviews",
 import { ReviewCard } from "./ReviewCard",
 
-=======
 import {Review} from "@/types/reviews";
 import {ReviewCard} from "./ReviewCard";
-=======
 import { Review } from "@/types/reviews",
 import { ReviewCard } from "./ReviewCard",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ReviewsListProps {
   reviews: Review[];
   isLoading: boolean;
@@ -24,7 +20,6 @@ export function ReviewsList({
   onReportReview
 }: ReviewsListProps) {
   if (isLoading) {
-=======
 import { Review  } from '@/types / reviews';
 import { ReviewCard  } from './ReviewCard';
 interface ReviewsListProps {
@@ -40,7 +35,6 @@ function ReviewsList() {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return (
       <div className="space - y-4">;
         {Array (3);
@@ -76,7 +70,6 @@ export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: Revi
               <div className="h-6 w-16 bg-muted rounded"></div>;
             </div>;
           </div>;
-=======
               className="border rounded-lg p-4 bg-card animate-pulse"
             >
               <div className="flex items-center gap-3 mb-3">
@@ -138,7 +131,6 @@ if ( {) {
     </div>);
 }
 
-=======
     <div className="space-y-4">
       {reviews.map((review) => (
 
@@ -155,4 +147,3 @@ if ( {) {
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

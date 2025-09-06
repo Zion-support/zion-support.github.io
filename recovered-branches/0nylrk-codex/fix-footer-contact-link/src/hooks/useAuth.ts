@@ -25,10 +25,8 @@ if ( {) {
   $2
 }
     throw new Error ('use_auth must be used within an AuthProvider');
-=======
 
 
-=======
 import { useContext } from 'react',;
 import { AuthContext } from '@/context/auth/AuthContext',;
 import type { AuthContextType } from '@/types/auth',;
@@ -47,5 +45,3 @@ export const useAuth = (): AuthContextType => {;
 
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

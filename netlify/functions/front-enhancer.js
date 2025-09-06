@@ -60,7 +60,6 @@ exports && exports.handler = async () => {
     if (stdout) logs && logs.push(stdout),
     if (stderr) logs && logs.push(stderr),
     logs && logs.push(`exit=${status}`),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return status
   }
   // Update the front page auto-generated section
@@ -76,7 +75,6 @@ exports && exports.handler = async () => {
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
 
-=======
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
@@ -158,4 +156,3 @@ function log_step() {
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

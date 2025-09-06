@@ -59,7 +59,6 @@ class QRCodeService {
     const dataUrl = await this && this.generateQRCodeDataUrl(finalOptions);
     
 
-=======
 ;
   async generateQRCode (options: QRCodeOptions): Promise < QRCodeResult> {
     const final_options = { ...this.DEFAULT_OPTIONS, ...options }
@@ -70,7 +69,6 @@ class QRCodeService {
     // Generate QR code data URL;
     const data_url = await this.generateQRCodeDataUrl (final_options);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return {
       data_url;
       options: final_options;
@@ -84,14 +82,12 @@ class QRCodeService {
     }
   }
   async generateBusinessCardQR(data: {
-=======
         width: final_options.size!,
         height: final_options.size!;
       }
     }
   }
   async generateBusinessCardQR (data: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     name: string;
     company: string;
     title: string;
@@ -175,7 +171,6 @@ class QRCodeService {
   }
   getTemplates(): QRCodeTemplate[] {
     return [
-=======
     website?: string,
     address?: string;
   }): Promise < QRCodeResult> {
@@ -247,7 +242,6 @@ class QRCodeService {
   }
   get_templates (): QRCodeTemplate[] {
     return [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
         id: 'business - card';
         name: 'Business Card';
@@ -299,11 +293,9 @@ class QRCodeService {
         description: 'Quick dial with pre - filled number',
         options: { size: 256, errorCorrectionLevel: 'M' }
         category: 'personal';
-=======
 
 export interface QRCodeOptions {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     ];
   }
@@ -313,14 +305,12 @@ export interface QRCodeOptions {;
 
   getErrorCorrectionInfo(): Record<string, any> {
     return this.ERROR_CORRECTION_LEVELS
-=======
 ;
   getErrorCorrectionInfo(): Record<string any> {;
     return this.ERROR_CORRECTION_LEVELS;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   private validateOptions(options: QRCodeOptions): void {
 
@@ -343,7 +333,6 @@ export interface QRCodeOptions {;
     const margin = options && options.margin!;
 
     const contentSize = size - (margin * 2);
-=======
 
 
   private async generateQRCodeDataUrl(options: QRCodeOptions): Promise<string> {
@@ -355,7 +344,6 @@ export interface QRCodeOptions {;
     const contentSize = size - (margin * 2),
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const svg = `
       <svg width="${size}" height="${size}" xmlns="http://www && www.w3.org/2000/svg">
         <rect width="${size}" height="${size}" fill="${options && options.backgroundColor}"/>
@@ -433,7 +421,6 @@ if (.length === 0) {) {
 
     }
     if (data.hidden) {
-=======
     let wifiString = 'WIFI:',
     wifiString += `S:${data && data.ssid},`;
     wifiString += `T:${data && data.encryption},`;
@@ -443,7 +430,6 @@ if (.length === 0) {) {
     }
     
     if (data && data.hidden) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       wifiString += 'H: true,'
     }
 
@@ -463,7 +449,6 @@ if (.length === 0) {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   private generateSMSString(data: any): string {
 
 
@@ -473,10 +458,8 @@ if (.length === 0) {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   private generateGeoString(data: any): string {
 
-=======
 ;
   private generateGeoString(data: any): string {;
     let geoString = `geo:${data.latitude},${data.longitude}`,;
@@ -485,11 +468,9 @@ if (.length === 0) {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     if (data.name) {
       geoString += `?q=${encodeURIComponent(data.name)}`
-=======
     let geoString = `geo:${data && data.latitude},${data && data.longitude}`;
     
     if (data && data.altitude) {
@@ -498,7 +479,6 @@ if (.length === 0) {) {
     
     if (data && data.name) {
       geoString += `?q=${encodeURIComponent(data && data.name)}`
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     return geoString
   }
@@ -524,7 +504,6 @@ if (.length === 0) {) {
       recommendedLevel: textLength > maxCapacity ? 'H' : errorCorrectionLevel
       maxCapacity
 
-=======
 ;
   // Utility methods;
   estimateQRCodeCapacity(text: string, errorCorrectionLevel: 'L' | 'M' | 'Q' | 'H'): {;
@@ -542,7 +521,6 @@ if (.length === 0) {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
   getQRCodeHistory(): QRCodeResult[] {
@@ -654,9 +632,6 @@ if ( {) {
 export const qrCodeService = new QRCodeService ();
 ;
 
-=======
 
 
 export const qrCodeService = new QRCodeService();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

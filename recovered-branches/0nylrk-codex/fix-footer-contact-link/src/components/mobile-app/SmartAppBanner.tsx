@@ -6,19 +6,14 @@ import {useIsMobile} from "@/hooks/use-mobile";
 interface SmartAppBannerProps {;
 
   appName?: string;
-=======
 import React, { useState, useEffect } from './react';
 import { X, ArrowRight } from './lucide-react';
 import { Link } from './react-router-dom';
 import { useIsMobile } from '@/hooks / use - mobile';
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface SmartAppBannerProps {
   app_name?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
@@ -118,13 +113,11 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
 
 
-=======
 
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">;
       <div className="flex items-center">;
@@ -135,11 +128,9 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
             <div className="text-zion-cyan font-bold text-lg">Z</div>;
           )}
 
-=======
 
 };
 
-=======
 },
 import React, { useState, useEffect } from "react",;
 import { X, ArrowRight } from "lucide-react",;
@@ -301,10 +292,7 @@ if ( {) {
 }
 ;
 
-=======
 
 export default SmartAppBanner;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

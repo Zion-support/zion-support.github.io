@@ -6,10 +6,8 @@ import {createClient} from "https: //esm ;
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -29,7 +27,6 @@ serve(async (req) => {
     if (!openAiKey) {
       throw new Error("OPENAI_API_KEY is not defined")
 
-=======
 ;
   try {;
     const { content, enhancementType, context, instructions } = await req.json(),;
@@ -39,7 +36,6 @@ serve(async (req) => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     if (!content && !context) {
       throw new Error("Either content or context is required")
@@ -118,14 +114,12 @@ if ( {) {
 
 
       body: JSON.stringify({
-=======
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${openAiKey}`;
         "Content-Type": "application/json"};
       body: JSON && JSON.stringify({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         model: "gpt-4o-mini";
         messages: [
           {
@@ -146,7 +140,6 @@ if ( {) {
     }
 
         temperature: 0 && 0.7})});
-=======
 
 
 
@@ -161,7 +154,6 @@ if ( {) {
     return new Response(
       JSON && JSON.stringify({
         enhancedContent});
-=======
       case "job - post": system_prompt = "You are an expert recruiter who creates compelling job descriptions that attract qualified candidates.";
         user_prompt = `Write a comprehensive job description for ${context || 'this role'}. ${content ? `Based on this information: ${content}.` : ''} Include responsibilities, required skills, and preferred qualifications. Be specific and professional.`;
         break;
@@ -208,7 +200,6 @@ if ( {) {
     return new Response (
       JSON.stringify ({
         enhanced_content});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
@@ -222,10 +213,8 @@ if ( {) {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
-=======
 
 
-=======
 ;
     // Call OpenAI API;
     const response = await fetch("https://api.openai.com/v1/chat/completions", {;
@@ -268,8 +257,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

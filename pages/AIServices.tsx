@@ -28,7 +28,6 @@ import Layout from "../components/Layout";
 
 import React from 'react';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function AIServices() {
   return (
     <Layout
@@ -36,7 +35,6 @@ export default function AIServices() {
       description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
     >
 
-=======
 
 
             <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
@@ -48,7 +46,6 @@ export default function AIServices() {
             <p className="text-gray-600">AI Services page is under construction.</p>
 
 
-=======
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -218,7 +215,6 @@ export default function AIServices() {
         </div>
       </div>
     </Layout>
-=======
 export default function AIServices() {;
   return (
     <Layout
@@ -237,7 +233,6 @@ export default function AIServices() {;
           </div>;
           <div className="text-center">;
             <p className="text-gray-600">;
-=======
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -263,7 +258,6 @@ function AIServices() {
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               AI Services page is under construction.;
             </p>;
           </div>;
@@ -287,7 +281,6 @@ function AIServices() {
 
 }
 
-=======
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -385,13 +378,7 @@ export default function AIServices() {
 
 }
 
-=======
 
->>>>>>> origin/automation-improvements-final
-=======
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

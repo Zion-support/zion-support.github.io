@@ -41,7 +41,6 @@ export function reset_state (): void {
   }
 }
 
-=======
 
     connections: [],
     logs: [],
@@ -49,4 +48,3 @@ export function reset_state (): void {
   };
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

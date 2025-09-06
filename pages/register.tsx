@@ -229,7 +229,6 @@ export default function RegisterPage() {;
                           className={
                             isValid ? "text-green-400" : "text-gray-400"
                           }>;
-=======
 import React, { useState } from './react';
 import Link from './next / link';
 import { motion  } from './framer-motion';
@@ -459,7 +458,6 @@ if ( {) {
                             is_valid ? "text - green - 400" : "text - gray - 400";
                           }
                         >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           {key === "length" && "At least 8 characters"}
                           {key === "uppercase" && "One uppercase letter"}
                           {key === "lowercase" && "One lowercase letter"}
@@ -542,7 +540,6 @@ if ( {) {
                       href="/privacy"
 
                       className="text-blue-400 hover:text-blue-300">;
-=======
                         </span>;
                       </div>),
                   )}
@@ -632,7 +629,6 @@ if ( {) {
                   className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed">;
                   <span className="absolute left-0 inset-y-0 flex items-center pl-3">;
                     <ArrowRight className="h-5 w-5 text-white group-hover:translate-x-1 transition-transform" />;
-=======
                 <div className="flex items - center">;
                   <input;
                     id="subscribe_newsletter";

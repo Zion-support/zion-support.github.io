@@ -72,7 +72,6 @@ function UpcomingInterviewsCard() {
         const interviews = await fetch_interviews ();
         const now = new Date ();
 ;
-=======
       } catch (error) {
         console.error("Error loading upcoming interviews:", error)
       } finally {
@@ -134,7 +133,6 @@ export function UpcomingInterviewsCard() {;
             parseISO (a.scheduled_date).get_time () - parseISO (b.scheduled_date).get_time ());
           .slice (0, 3), // Take only the next 3 interviews;
         setUpcomingInterviews (upcoming);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } catch (error) {
         console.error ("Error loading upcoming interviews:", error);
       } finally {
@@ -188,7 +186,6 @@ export function UpcomingInterviewsCard() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
           </div>;
         </CardContent>;
@@ -199,12 +196,10 @@ export function UpcomingInterviewsCard() {;
 
   if (upcomingInterviews && upcomingInterviews.length === 0) {;
 
-=======
 
 
 
   if (upcomingInterviews.length === 0) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
@@ -273,7 +268,6 @@ export function UpcomingInterviewsCard() {;
                       <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
                         Soon
                       </span>
-=======
             const formattedTime = format(interviewDate, 'h: mm a'),;
 
             // Determine if interview is happening soon (within 30 minutes);
@@ -305,7 +299,6 @@ export function UpcomingInterviewsCard() {;
                       <span className="text-xs px-1 && 1.5 py-0 && 0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">;
                         Soon;
                       </span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     )}
                   </div>;
                   <div className="flex items-center text-sm text-muted-foreground">;
@@ -321,7 +314,6 @@ export function UpcomingInterviewsCard() {;
 
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">;
           <Button asChild size="sm" variant="outline" className="w-full">;
-=======
 ;
     load_interviews ();
   }, []);
@@ -438,9 +430,7 @@ if ( {) {
     </Card>);
 }
 
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

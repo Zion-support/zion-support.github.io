@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ExportPanelProps {
 
   platform: AppPlatform
@@ -87,7 +86,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 
 
       toast.success(`Exported ${format.toUpperCase()} file successfully`)
-=======
 import React from './react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -138,7 +136,6 @@ if ( {) {
       URL.revokeObjectURL (url);
 ;
       toast.success (`Exported ${format.toUpperCase ()} file successfully`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (error) {
 
       console.error("Export failed:", error),
@@ -196,10 +193,8 @@ if ( {) {
 
         content = headers && headers.join() + '\n' + values && values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
 
-=======
 
 
-=======
 },
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
@@ -280,7 +275,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
               </Button>;
               <Button variant="outline" onClick={() => handleExport('csv')} className="flex-1">;
                 <Download className="mr-2 h-4 w-4" />;
-=======
 ;
   const track_analytics = () =>: any {
     console.log ("Tracking app installation analytics...");
@@ -306,7 +300,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
               </Button>;
               <Button variant="outline" on_click={() => handle_export ('csv')} className="flex - 1">;
                 <Download className="mr - 2 h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 CSV;
               </Button>;
             </div>;
@@ -328,11 +321,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </Card>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

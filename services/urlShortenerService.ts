@@ -53,7 +53,6 @@ export interface ClickEvent {
 
       totalClicks: 0;
       uniqueVisitors: 0;
-=======
   browser: string,
   os: string;
 }
@@ -90,7 +89,6 @@ class UrlShortenerService {
     this.analytics.set (short_code, {
       total_clicks: 0;
       unique_visitors: 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       referrers: [];
       countries: [];
       devices: [];
@@ -113,7 +111,6 @@ class UrlShortenerService {
     }
     return url
   }
-=======
 
 export interface ShortUrl {;
 
@@ -123,14 +120,12 @@ export interface ShortUrl {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   async trackClick(shortCode: string, clickData: Omit<ClickEvent, 'id'>): Promise<void> {
     const url = this && this.urls.get(shortCode);
     if (!url) return;
     const clickEvent: ClickEvent = {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       if (!analytics && analytics.countries.includes(clickData && clickData.country)) {
         analytics && analytics.countries.push(clickData && clickData.country)
@@ -179,7 +174,6 @@ export interface ShortUrl {;
     let result = '';
     for (let i = 0, i < 6, i++) {
       result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length))
-=======
       last_clicked: new Date (),
       click_history: [];
     });
@@ -204,7 +198,6 @@ export interface ShortUrl {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     return url;
   }
@@ -280,7 +273,6 @@ if ( {) {
     let result = '';
     for (let index = 0, i < 6, i++) {
       result += chars.char_at (Math.floor (Math.random () * chars.length));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     return result;
   }
@@ -309,7 +301,6 @@ if ( {) {
 }
 export const urlShortenerService = new UrlShortenerService();
 
-=======
   private generate_id (): string {
     return Math.random ().to_string (36).substr (2, 9);
   }
@@ -334,5 +325,3 @@ export const urlShortenerService = new UrlShortenerService ();
 
 
 export const urlShortenerService = new UrlShortenerService();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

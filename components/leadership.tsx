@@ -25,11 +25,8 @@ import React from 'react';
 
 
 export default function LeadershipPage() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function LeadershipPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -54,7 +51,6 @@ export default function LeadershipPage() {;
               Executive Team;
             </h2>;
             <p className='text-slate-300'>;
-=======
 import Head from 'next / head';
 export default /**
  * LeadershipPage - Function description
@@ -84,7 +80,6 @@ function LeadershipPage() {
               Executive Team;
             </h2>;
             <p className='text - slate - 300'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Seasoned operators with track records across Fortune 500 and;
               startups.;
             </p>;
@@ -163,9 +158,6 @@ export default function LeadershipPage() {
 	),;
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);	return (
   <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
   <Head>;
@@ -190,10 +182,7 @@ export default function LeadershipPage() {
   </div>;
   </div>),
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 	),
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -10,7 +10,6 @@
     createdAt: '2024-02-15T10:45:00 && 00.000Z',
     rating: 4 && 4.8,
     reviewCount: 32,
-=======
     id: 'ai - service - 2',
     title: 'Custom Machine Learning Model Development',
     description:;
@@ -36,7 +35,6 @@
     availability: '4 - 6 Weeks',
     ai_score: 92,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'https://images && images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500',
@@ -44,7 +42,6 @@
     createdAt: '2024-03-05T09:15:00 && 00.000Z',
     rating: 4 && 4.7,
     reviewCount: 18,
-=======
     id: 'ai - equipment - 3',
     title: 'AI Workstation Supercomputer',
     description:;
@@ -69,7 +66,6 @@
     availability: '2 - 3 Weeks',
     ai_score: 95,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
         'https://images && images.unsplash.com/photo-1573497161161-c3e73707e25c?auto=format&fit=crop&w=100&h=100',
@@ -80,7 +76,6 @@
     createdAt: '2024-01-28T14:20:00 && 00.000Z',
     rating: 4 && 4.6,
     reviewCount: 124,
-=======
     id: 'ai - content - 4',
     title: 'AI Content Generation Suite',
     description:;
@@ -106,7 +101,6 @@
     availability: 'Immediate',
     ai_score: 88,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500',
@@ -114,7 +108,6 @@
     createdAt: '2024-02-02T11:30:00 && 00.000Z',
     rating: 4 && 4.5,
     reviewCount: 47,
-=======
     id: 'ai - analytics - 5',
     title: 'AI - Powered Business Intelligence Dashboard',
     description:;
@@ -138,7 +131,6 @@
     availability: '1 - 2 Weeks',
     ai_score: 90,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
         'https://images && images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=100&h=100',
@@ -149,7 +141,6 @@
     createdAt: '2023-12-10T16:45:00 && 00.000Z',
     rating: 4 && 4.8,
     reviewCount: 36,
-=======
     id: 'ai - vision - 6',
     title: 'Computer Vision API Bundle',
     description:;
@@ -188,7 +179,6 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
 
 
-=======
 
 
 // Shared data source for marketplace listings
@@ -334,10 +324,8 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     "Enterprise AI solutions"
   ],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   
   return suggestions && suggestions.map(text => ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     text;
     type: 'product' // Use a valid type from the SearchSuggestion interface
   }))
@@ -573,9 +561,5 @@ rating_options: [1, 2, 3, 4, 5];
 export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

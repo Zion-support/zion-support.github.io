@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface AIListingFormProps {
   onSubmit: (formData: {
 
@@ -17,7 +16,6 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles} from "lucide-react";
-=======
 
   }) => void,
   isLoading: boolean,
@@ -98,7 +96,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 
       <Button 
 
-=======
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -115,7 +112,6 @@ interface AIListingFormProps {;
   }) => void;
   isLoading: boolean,;
   initialValues?: {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     title?: string;
     category?: string;
     keyFeatures?: string;
@@ -203,7 +199,6 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
@@ -231,15 +226,12 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
             Generate Optimized Content;
           </>;
         )}
-=======
 
 
       </Button>;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';

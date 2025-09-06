@@ -14,7 +14,6 @@ export function MyApplications() {;
   const getStatusBadge = (status: ApplicationStatus) => {;
     switch (status) {;
 
-=======
 import { useState } from './react';
 import { useJobApplications } from '@/hooks / useJobApplications';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -31,13 +30,10 @@ function MyApplications() {
   const { applications, is_loading, error } = useJobApplications ();
 ;
   const getStatusBadge = (status: ApplicationStatus) =>: any {
-=======
 
 
   const getStatusBadge = (status: ApplicationStatus) => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     switch (status) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       case "new": return <Badge variant="secondary">New</Badge>;
       case "viewed":;
         return <Badge variant="outline">Viewed</Badge>;
@@ -49,7 +45,6 @@ function MyApplications() {
 
 
   if (isLoading) {
-=======
       case "rejected":;
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>,;
       default:;
@@ -58,7 +53,6 @@ function MyApplications() {
   };
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="flex justify-center items-center p-8">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
@@ -95,7 +89,6 @@ function MyApplications() {
 
 
 
-=======
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -181,8 +174,6 @@ export function MyApplications() {;
                 </p>
               )}
               
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="flex justify-between items-center">
                 <Button
                   variant="outline"
@@ -233,12 +224,10 @@ export function MyApplications() {;
                 <Button
                   variant="default" 
 
-=======
 
                 <Button 
                   variant="default" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   size="sm"
                   className="text-xs"
                   asChild>;
@@ -255,8 +244,6 @@ export function MyApplications() {;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
         return <Badge className="bg - blue - 100 text - blue - 800">Shortlisted</Badge>;
       case "interview":;
         return <Badge className="bg - purple - 100 text - purple - 800">Interview</Badge>;

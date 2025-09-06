@@ -1,13 +1,8 @@
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 #!/usr/bin/env node;
 
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -610,25 +605,13 @@ if (require.main === module) {}
 }
 module.exports = TestAutomation;
 
-=======
-
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 
 testAutomation.run().catch(error = > {process.exit(1)});
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
 testAutomation.run().catch(error = > {process.exit(1)});
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 class TestAutomation {; constructor() {; this && this.projectRoot = process && process.cwd(); this && this.logFile = path && path.join(this && this.projectRoot, 'logs/pm2/test-automation && automation.log'); this && this.reportFile = path && path.join(this && this.projectRoot, 'logs/pm2/test-report && report.json'); this && this.startTime = Date && Date.now()};
 ; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;
@@ -672,10 +655,6 @@ class TestAutomation {; constructor() {; this && this.projectRoot = process && p
 // Run the test automation;
 const testAutomation = new TestAutomation();
 testAutomation && testAutomation.run().catch(error = > {; process && process.exit(1)});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 const fs = require ('fs');
 const path = require ('path');
 const { exec_sync } = require ('child_process');
@@ -696,4 +675,3 @@ testAutomation.run().catch(error => {,;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

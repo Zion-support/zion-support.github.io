@@ -6,7 +6,6 @@
       "AI-powered churn prediction";
       "Automated customer health scoring";
       "Intelligent intervention recommendations";
-=======
 
 export interface InnovativeMicroSaasService2029V2 {;
 
@@ -14,8 +13,6 @@ export interface InnovativeMicroSaasService2029V2 {;
       "AI-powered churn prediction",
       "Automated customer health scoring",
       "Intelligent intervention recommendations",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       "Real-time customer sentiment analysis",
       "Predictive analytics dashboard",
       "Automated retention campaigns",
@@ -40,7 +37,6 @@ export interface InnovativeMicroSaasService2029V2 {;
     category: "Customer Success",    technology: ["AI/ML", "Predictive Analytics", "Automation", "Real-time Processing"];
 
     benefits: [
-=======
       technology: [;
         'AI / ML',
         'Predictive Analytics',
@@ -84,7 +80,6 @@ export interface InnovativeMicroSaasService2029V2 {;
     },
     category: "Customer Success",    technology: ["AI / ML", "Predictive Analytics", "Automation", "Real - time Processing"];
     benefits: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       "Reduce customer churn by 40%";
       "Increase customer lifetime value by 60%";
       "Automate 80% of customer success tasks";
@@ -161,7 +156,6 @@ export interface InnovativeMicroSaasService2029V2 {;
     category: "Business Process Automation",    technology: ["AI/ML", "RPA", "Process Mining", "Workflow Engine"];
 
     benefits: [
-=======
       "Customer health monitoring",
       "Proactive customer support";
     ];
@@ -192,7 +186,6 @@ export interface InnovativeMicroSaasService2029V2 {;
     },
     category: "Business Process Automation",    technology: ["AI / ML", "RPA", "Process Mining", "Workflow Engine"];
     benefits: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       "Reduce process execution time by 70%";
       "Eliminate 90% of manual errors";
       "Increase operational efficiency by 50%";
@@ -269,7 +262,6 @@ export interface InnovativeMicroSaasService2029V2 {;
     category: "Sales Intelligence",    technology: ["AI/ML", "Predictive Analytics", "Natural Language Processing", "Real-time Analytics"];
 
     benefits: [
-=======
       "Customer service automation",
       "Supply chain optimization";
     ];
@@ -300,7 +292,6 @@ export interface InnovativeMicroSaasService2029V2 {;
     },
     category: "Sales Intelligence",    technology: ["AI / ML", "Predictive Analytics", "Natural Language Processing", "Real - time Analytics"];
     benefits: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       "Increase sales conversion rates by 45%";
       "Reduce sales cycle time by 35%";
       "Improve sales forecast accuracy by 60%";
@@ -381,7 +372,6 @@ export interface InnovativeMicroSaasService2029V2 {;
     category: "Data Governance",    technology: ["AI/ML", "Data Quality", "Security", "Compliance"];
 
     benefits: [
-=======
       "Sales team coaching",
       "Revenue forecasting";
     ];
@@ -412,7 +402,6 @@ export interface InnovativeMicroSaasService2029V2 {;
     },
     category: "Data Governance",    technology: ["AI / ML", "Data Quality", "Security", "Compliance"];
     benefits: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       "Reduce data breaches by 80%";
       "Improve data quality by 60%";
       "Automate 70% of compliance tasks";
@@ -489,7 +478,6 @@ export interface InnovativeMicroSaasService2029V2 {;
     category: "Supply Chain Management",    technology: ["AI/ML", "Predictive Analytics", "IoT", "Blockchain"];
 
     benefits: [
-=======
       "Regulatory reporting",
       "Data quality improvement";
     ];
@@ -520,7 +508,6 @@ export interface InnovativeMicroSaasService2029V2 {;
     },
     category: "Supply Chain Management",    technology: ["AI / ML", "Predictive Analytics", "IoT", "Blockchain"];
     benefits: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       "Reduce inventory costs by 30%";
       "Improve forecast accuracy by 50%";
       "Reduce supply chain disruptions by 60%";
@@ -597,7 +584,6 @@ export interface InnovativeMicroSaasService2029V2 {;
     category: "HR Analytics",    technology: ["AI/ML", "Predictive Analytics", "People Analytics", "Machine Learning"];
 
     benefits: [
-=======
       "Logistics optimization",
       "Supplier relationship management";
     ];
@@ -628,7 +614,6 @@ export interface InnovativeMicroSaasService2029V2 {;
     },
     category: "HR Analytics",    technology: ["AI / ML", "Predictive Analytics", "People Analytics", "Machine Learning"];
     benefits: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       "Reduce employee turnover by 35%";
       "Improve hiring success rate by 45%";
       "Increase employee productivity by 25%";
@@ -638,7 +623,6 @@ export interface InnovativeMicroSaasService2029V2 {;
       "Talent acquisition optimization";
       "Employee retention strategies";
 
-=======
     ],
     link: "https://ziontechgroup.com/services/intelligent-hr-analytics",
     marketPosition: "AI-driven HR analytics and talent management leader",
@@ -670,14 +654,9 @@ export interface InnovativeMicroSaasService2029V2 {;
       "Performance management",
       "Workforce planning";
     ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
 ];
 
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

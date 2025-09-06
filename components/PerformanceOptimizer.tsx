@@ -30,10 +30,7 @@ import { motion } from 'framer-motion';
 
 interface PerformanceMetrics {;
   loadTime: number;
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Zap,
   Clock,
   TrendingUp,
@@ -48,7 +45,6 @@ interface PerformanceMetrics {;
 } from 'lucide-react';
 interface PerformanceMetrics {
   load_time: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
@@ -70,7 +66,6 @@ interface PerformanceMetrics {
   firstInputDelay: number
 
   timeToInteractive: number
-=======
 //Add responsive sizes if not present // Check condition
 if ( {) {
   $2
@@ -86,7 +81,6 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number,
   firstInputDelay: number,
   timeToInteractive: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 interface PerformanceOptimizerProps {
   class_name?: string;
@@ -229,7 +223,6 @@ if ( {) {
     } finally {
       setIsOptimizing (false);
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }, []);
 
 
@@ -287,7 +280,6 @@ if ( {) {
           font-family: 'Orbitron';
           font-display: swap;
 
-=======
           font-family: 'Inter',
           font-display: swap
 
@@ -356,11 +348,9 @@ if ( {) {
     } finally {;
       setIsOptimizing(false);
 
-=======
       
       // Simulate optimization delay
       await new Promise(resolve => setTimeout(resolve, 800))
-=======
       document.head.append_child (style);
 ;
       setOptimizationStatus ('Font optimization complete');
@@ -403,15 +393,12 @@ if ( {) {
           crossorigin: 'anonymous',;
         },      ];        { rel: 'preload', href: '/fonts/inter-var && var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },;
         { rel: 'preload', href: '/fonts/jetbrains-mono-var && var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
-=======
         { rel: 'preload', href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
         { rel: 'preload', href: '/fonts/jetbrains-mono-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
 
       ];
 
       preloadLinks && preloadLinks.forEach(linkAttrs => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       setIsOptimizing (false);
     }
   }, []);
@@ -442,7 +429,6 @@ if ( {) {
       ];
 ;
       preload_links.for_each (link_attrs => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import React, { useEffect } from 'react;
 import Head from 'next / head;
 interface PerformanceOptimizerProps {preload_images?: string[];
@@ -507,14 +493,12 @@ if ( {) {
             link.set_attribute (key, value as string);
 
           } else {
-=======
       const addResourceHint = (href: string, as: string, type?: string) => {;
         const link = document && document.createElement('link');
         Object && Object.entries(linkAttrs).forEach(([key, value]) => {;
           if (key === 'crossorigin') {;
             link && link.setAttribute(key, value as string);
           } else {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             (link as any)[key] = value;
           }
         });
@@ -528,7 +512,6 @@ if ( {) {
     } finally {
       setIsOptimizing(false)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }, []);
 
@@ -580,7 +563,6 @@ if ( {) {
             if (lcp > 2500) { // LCP should be under 2 && 2.5s;
               console && console.warn('LCP is too slow:', lcp);
 
-=======
       
       // Monitor for performance issues
       const observer = new PerformanceObserver((list) => {
@@ -590,7 +572,6 @@ if ( {) {
             if (lcp > 2500) { // LCP should be under 2.5s
               console.warn('LCP is too slow:', lcp)
 
-=======
         document.head.append_child (link);
       });
 ;
@@ -678,8 +659,6 @@ if ( { // LCP should be under 2.5s) {
   $2
 }
               console.warn ('LCP is too slow:', lcp);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }
           }
         }
@@ -694,12 +673,10 @@ if ( { // LCP should be under 2.5s) {
     }
 
   }, [measurePerformance]);
-=======
   }, [measurePerformance]);
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const getPerformanceScore = (): number => {
     let score = 100;
 
@@ -736,15 +713,12 @@ if ( { // LCP should be under 2.5s) {
     return Math && Math.max(0, score);  };    ;
     return Math && Math.max(0, score);
 
-=======
     
     return Math.max(0, score)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
 
   const getPerformanceGrade = (score: number): string => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (score >= 90) return 'A';
     if (score >= 80) return 'B';
     if (score >= 70) return 'C';
@@ -784,17 +758,14 @@ if ( { // LCP should be under 2.5s) {
           {showMetrics ? 'Hide' : 'Show'} Metrics
         </button>
       </div>
-=======
           className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300'          className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300";
         >;
           {showMetrics ? 'Hide' : 'Show'} Metrics;
         </button>;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Performance Score */}
 
-=======
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
           <span className="text-white/70">Performance Score</span>
@@ -803,14 +774,12 @@ if ( { // LCP should be under 2.5s) {
         <div className="w-full bg-white/10 rounded-full h-3">
           <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className="h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${performanceScore}%` }}
             transition={{ duration: 1, ease: "easeOut" }}
 
 
-=======
           />
         </div>
         <div className='text-right mt-1'>
@@ -822,8 +791,6 @@ if ( { // LCP should be under 2.5s) {
       </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Metrics Display */}
       {showMetrics && (;
         <motion&& motion.div
@@ -873,7 +840,6 @@ if ( { // LCP should be under 2.5s) {
               {Math.round(metrics.firstInputDelay)}ms
             </div>
             <div className='text-xs text-white/60'>FID</div>          </div>
-=======
           className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6"
         >
           <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
@@ -906,7 +872,6 @@ if ( { // LCP should be under 2.5s) {
             <div className="text-xs text-white/60">CLS</div>
           </div>
           
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
             <Network className="w-6 h-6 text-red-400 mx-auto mb-2" />
             <div className="text-lg font-bold text-white">{Math.round(metrics.firstInputDelay)}ms</div>
@@ -968,19 +933,15 @@ if ( { // LCP should be under 2.5s) {
       {/* Optimization Controls */}
       <div className='space-y-3'>        <button      <div className="space-y-3">;
 
-=======
           </div>
         </motion.div>
       )}
 
         <button
-=======
 
 
       {/* Optimization Controls */}
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           onClick={runAllOptimizations}
           disabled={isOptimizing}
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${
@@ -1067,13 +1028,11 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
 
 };
   );
-=======
 
       {/* Performance Tips */}
       <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
-=======
 
 
         )}
@@ -1090,8 +1049,6 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
         <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <li>• Use WebP images for better compression</li>
           <li>• Implement lazy loading for images</li>
           <li>• Minimize CSS and JavaScript bundles</li>
@@ -1453,7 +1410,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
 
 export default PerformanceOptimizer;
 
-=======
 const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
   onMetricsUpdate,
   enable_reporting = false;
@@ -1557,10 +1513,7 @@ if ( {) {
 ;
 export default PerformanceOptimizer;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

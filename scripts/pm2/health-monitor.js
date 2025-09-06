@@ -1,9 +1,7 @@
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {}
       fs.appendFileSync(this.logFile, logMessage);,
     } catch (error) {}
@@ -58,16 +56,11 @@
           this.error(alert.message);,
         }
 
-=======
     } catch (error) {_;
-=======
 
 
 module.exports = HealthMonitor;
 
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }};
 ; async checkSystemResources() {; try {; this && this.log('💻 Checking system resources...');
 ; const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' });
@@ -75,17 +68,13 @@ module.exports = HealthMonitor;
 }}; async checkSystemResources() {try {; this.log('💻 Checking system resources...'); const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' }); // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3]; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0'; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0; return {success: true, memory: {
       , total: parseInt(memTotal), used: parseInt(memUsed), free: parseInt(memFree)
 
-=======
 ; // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3];
 ; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0';
 ; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0;
 
-=======
 }}; async checkSystemResources() {try {; this.log('💻 Checking system resources...'); const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' }); // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3]; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0'; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0; return {success: true, memory: {
       , total: parseInt(memTotal), used: parseInt(memUsed), free: parseInt(memFree)
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     usagePercent: Math.round((parseInt(memUsed) / parseInt(memTotal)) * 100)
     }
     disk: {
@@ -323,11 +312,8 @@ healthMonitor.run().catch(error => {;
   process.exit(1);
 });
 
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     };
   };
 ,
@@ -339,7 +325,6 @@ healthMonitor.run().catch(error => {;
       const diskInfo = execSync('df -h', { encoding: 'utf8' }),
       const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' }),
 
-=======
 
 
 ,
@@ -909,25 +894,13 @@ if (require.main === module) {}
   });
 }
 
-=======
-
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 
 healthMonitor.run().catch(error = > {process.exit(1)});
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
 healthMonitor.run().catch(error = > {process.exit(1)});
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
     usagePercent: Math && Math.round((parseInt(memUsed) / parseInt(memTotal)) * 100)
     },
     disk: {,
@@ -987,10 +960,6 @@ healthMonitor.run().catch(error = > {process.exit(1)});
 // Run the health monitor;
 const healthMonitor = new HealthMonitor();
 healthMonitor && healthMonitor.run().catch(error = > {; process && process.exit(1)});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }}
 ; async checkSystemResources () { try { this.log ('💻 Checking system resources...');
 ; const mem_info = exec_sync ('free -m', { encoding: 'utf8' }); const disk_info = exec_sync ('df -h', { encoding: 'utf8' }); const cpu_info = exec_sync ('top -bn1 | grep "Cpu (s)"', { encoding: 'utf8' });
@@ -1146,4 +1115,3 @@ healthMonitor.run().catch(error => {,;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

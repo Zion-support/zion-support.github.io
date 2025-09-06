@@ -16,19 +16,16 @@ export default function ProjectPage() {
     // For talent view demo, swap role and provide slug
     // "x-demo-user-role": "talent"
     // "x-demo-talent-slug": "ava-chen"} as Record<string, string>
-=======
 
 import { useEffect, useState } from "react",;
 import { useRouter } from "next/router",;
 import FeedbackModal from "../../components/ui/FeedbackModal",;
 
-=======
 import { useEffect, useState } from "react",
 import { useRouter } from "next/router",
 import FeedbackModal from "../../components/ui/FeedbackModal",
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function ProjectPage() {
   const router = useRouter(),
   const { projectId } = router.query as { projectId?: string },
@@ -46,7 +43,6 @@ export default function ProjectPage() {
     // "x-demo-talent-slug": "ava-chen"} as Record<string, string>,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   useEffect(() => {
     async function load() {
       if (!projectId) return
@@ -60,7 +56,6 @@ export default function ProjectPage() {
 
 
         setProject(json.project)
-=======
 import { useEffect, useState  } from './react';,
 import { use_router  } from './next / router';,
 import FeedbackModal from "../../components / ui / FeedbackModal",
@@ -97,7 +92,6 @@ if (return, ) {
   $2
 }
         set_project (json.project);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } catch (e: any) {
         set_error (e.message);
       } finally {
@@ -132,7 +126,6 @@ if (return, ) {
 
 
 
-=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -152,13 +145,10 @@ if (return, ) {
       headers: { "Content-Type": "application/json", ...headers },
       body: JSON.stringify({ id: projectId, action: "mark_completed" })}),
     const json = await res.json(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (json.ok) {
       setProject(json.project)
 
       setShowFeedback(true)
-=======
     load ();
   }, [project_id]),
   const [show_feedback, setShowFeedback] = useState (false),
@@ -195,7 +185,6 @@ if ( {) {
 }
       set_project (json.project),
       setShowFeedback (true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
 
@@ -222,7 +211,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </span>
           </div>
           <section className="rounded border p-4">
@@ -237,7 +225,6 @@ if ( {) {
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Timeline</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
-=======
             </span>;
           </div>;
           <section className="rounded border p - 4">;
@@ -252,7 +239,6 @@ if ( {) {
           <section className="rounded border p - 4">;
             <h2 className="font - medium mb - 2">Timeline</h2>;
             <ul className="list - disc pl - 6 space - y-1 text - sm">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {project.timeline?.length ? (
 
                 project.timeline.map((m: any) => (
@@ -409,13 +395,11 @@ export default function ProjectPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </ul>
           </section>
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Documents</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
-=======
                   </li>))) : (
                 <li > No timeline defined</li>)}
             </ul>;
@@ -423,7 +407,6 @@ export default function ProjectPage(req, res) {
           <section className="rounded border p - 4">;
             <h2 className="font - medium mb - 2">Documents</h2>;
             <ul className="list - disc pl - 6 space - y-1 text - sm">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {project.documents?.length ? (
                 project.documents.map ((d: any) => (
                   <li key={d.id}>;
@@ -440,7 +423,6 @@ export default function ProjectPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <span className="text-gray-500"> • uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>
                   </li>
                 ))
@@ -464,7 +446,6 @@ export default function ProjectPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <span className="text-gray-500"> • {new Date(n.createdAtIso).toLocaleString()}</span>
                   </div>
                 ))
@@ -479,7 +460,6 @@ export default function ProjectPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
             <div className="flex gap-2">
               <input value={note} onChange={(e) => setNote(e.target.value)} placeholder="Add a note" className="flex-1 border rounded px-3 py-2" />
@@ -490,10 +470,8 @@ export default function ProjectPage(req, res) {
             {project.status !== "COMPLETED" && (
               <button onClick={markCompleted} className="px-4 py-2 rounded bg-emerald-600 text-white">Mark as Completed</button>
 
-=======
 }
 
-=======
                       <a href={d.url} className="text - indigo - 600 underline" target="_blank" rel="noreferrer">{d.name}</a>) : (
                       <span>{d.name}</span>)}
                     <span className="text - gray - 500"> • uploaded {new Date (d.uploadedAtIso).toLocaleString ()}</span>;
@@ -530,14 +508,10 @@ export default function ProjectPage(req, res) {
       />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   );
 };
 
-=======
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -581,5 +555,3 @@ export default function ProjectPage(req, res) {
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -18,10 +18,7 @@ export default async function handler(
   }
   try {
 
-=======
 
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -31,9 +28,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from '@supabase/supabase-js';
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
-=======
     const { projectId, roomName, inviterName } = req && req.body || {};
     if (!projectId || !roomName)
       return res && res.status(400).json({ error: "Missing required fields" });
@@ -42,7 +37,6 @@ const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
     const supabase = createClient(url, key);
     await supabase && supabase.channel(`project_${projectId}_calls`).send({
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { create_client  } from '@supabase / supabase - js';
 ;
@@ -72,7 +66,6 @@ if ( {) {
 }
     const supabase = create_client (url, key);
     await supabase.channel (`project_${project_id}_calls`).send ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       type: "broadcast",
       event: "call_invite",
       payload: { project_id, room_name, inviter_name },
@@ -82,8 +75,6 @@ if ( {) {
   }
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
     return res.status (200).json ({ ok: true });
   } catch (e) {
@@ -107,4 +98,3 @@ if ( {) {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

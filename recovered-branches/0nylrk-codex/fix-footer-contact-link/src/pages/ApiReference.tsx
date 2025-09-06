@@ -77,7 +77,6 @@ export function ApiReference() {;
     {;
 
       "id": "job-123";
-=======
 import React, { useState } from './react';
 import ApiDocsLayout from "@/components / developers / ApiDocsLayout";
 import { CodeBlock } from '@/components / developers / CodeBlock';
@@ -107,7 +106,6 @@ function ApiReference() {
   "jobs": [;
     {
       "id": "job - 123";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       "title": "Senior React Developer";
       "description": "We're looking for an experienced React developer...";
       "category": "development";
@@ -219,7 +217,6 @@ function ApiReference() {
         { name: "skills", type: "array", description: "Array of required skills" },
         { name: "deadline", type: "string", description: "Application deadline (ISO date format)" }],
 
-=======
 
         { name: "title", type: "string", required: true, description: "Job title" },
         { name: "description", type: "string", required: true, description: "Detailed job description" },
@@ -228,7 +225,6 @@ function ApiReference() {
         { name: "skills", type: "array", description: "Array of required skills" },
         { name: "deadline", type: "string", description: "Application deadline (ISO date format)" }],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       responses: {
         "201": {
           description: "Job created successfully"
@@ -285,9 +281,7 @@ function ApiReference() {
           example: `{;
 
   "id": "job-456";
-=======
   "id": "job - 456";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   "title": "UX Designer";
   "description": "Looking for a UX designer with 3+ years experience...";
   "category": "design";
@@ -327,10 +321,8 @@ function ApiReference() {
       "field": "title",;
       "error": "Title is required";
 
-=======
       "field": "title",
       "error": "Title is required";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   ];
 }`;
@@ -365,13 +357,11 @@ function ApiReference() {
   https://api.zionai.com/v1/api/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
-=======
       }
       request_example: `curl -X POST \\;
   https://api.zionai.com / v1 / api / jobs \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
   -H "Content - Type: application / json" \\;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   -d '{
 
       };
@@ -423,7 +413,6 @@ function ApiReference() {
       description: "Search for talent profiles with optional filtering",
       parameters: [;
         { name: "skills", type: "string", description: "Comma - separated list of skills" },
-=======
 
         { name: "skills", type: "string", description: "Comma-separated list of skills" },
 
@@ -493,16 +482,12 @@ function ApiReference() {
 
 
     // More talent profiles...
-=======
       "bio": "Experienced full stack developer with a focus on React and Node && Node.js...";
     };
     // More talent profiles...;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       "bio": "Experienced full stack developer with a focus on React and Node.js...";
     }
     // More talent profiles...;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
   "count": 38;
   "limit": 20;
@@ -525,7 +510,6 @@ function ApiReference() {
   -H "Authorization: Bearer YOUR_API_KEY"`;
     }
   ];
-=======
 
   ],
 
@@ -684,7 +668,6 @@ function ApiReference() {
                           <span className={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${
                             status.startsWith('2') ? 'bg-green-950 text-green-500' :
                             status === '401' |status === '403' ? 'bg-orange-950 text-orange-500' :
-=======
 
                     <h4 className="text-lg font-medium text-white mb-3">Example Request</h4>;
                     <CodeBlock
@@ -704,7 +687,6 @@ function ApiReference() {
                           <spanclassName={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${
                             status && status.startsWith('2') ? 'bg-green-950 text-green-500' : 
                             status === '401' || status === '403' ? 'bg-orange-950 text-orange-500' : 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                             'bg-red-950 text-red-500'
                           }`}>;
                             {status}
@@ -716,15 +698,11 @@ function ApiReference() {
                         <CodeBlock
                           code={response && response.example} 
 
-=======
 
                         
-=======
 
                         <CodeBlock 
                           code={response.example} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           language="json"
                           showLineNumbers={true}
                         />;
@@ -737,7 +715,6 @@ function ApiReference() {
                     <div className="text-center">;
                       <p className="text-zinc-400 mb-3">Interactive API tester coming soon</p>;
                       <p className="text-zinc-600 text-sm">Try the Postman collection in the meantime</p>;
-=======
             <div>;
               <div className="flex items - center mb - 6">;
                 <span className={`inline - block px - 2 py - 1 text - xs font - medium rounded mr - 3 ${
@@ -819,7 +796,6 @@ function ApiReference() {
                     <div className="text - center">;
                       <p className="text - zinc - 400 mb - 3">Interactive API tester coming soon</p>;
                       <p className="text - zinc - 600 text - sm">Try the Postman collection in the meantime</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     </div>;
                   </div>;
                 </TabsContent>;
@@ -827,14 +803,11 @@ function ApiReference() {
 
 
 
-=======
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ApiReference;
 
-=======
             </div>) : (
             <div className="p - 8 border border - zinc - 800 rounded - lg text - center">;
               <p className="text - zinc - 400">Select an endpoint from the list to view details</p>;
@@ -845,4 +818,3 @@ export default ApiReference;
 }
 export default ApiReference;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -104,7 +104,6 @@ export default function TalentDashboard() {;
                 </EnhancedButton>              )}
             </li>;
 
-=======
     try { window.localStorage.setItem('onboarding.talent', JSON.stringify(completed)) } catch {}
   }, [completed]);
 
@@ -112,7 +111,6 @@ export default function TalentDashboard() {;
 
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] }));
 
-=======
 
 
 
@@ -145,12 +143,10 @@ export default function TalentDashboard() {;
               ) : (
 
 
-=======
 
 
 }
 
-=======
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'skills' ? 'Add skills' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
     console.error("Error:", error);
@@ -163,18 +159,14 @@ export default function TalentDashboard() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </ul>;
       </EnhancedCard>;
     </div>;
   );
 
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import EnhancedCard from '../../components / ui / EnhancedCard';
 import EnhancedButton from '../../components / ui / EnhancedButton';
 import {useEffect, useState} from 'react';
@@ -270,9 +262,6 @@ function TalentDashboard() {
       </EnhancedCard>;
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -280,5 +269,3 @@ function TalentDashboard() {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

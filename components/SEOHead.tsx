@@ -155,7 +155,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <meta name="msapplication-config" content="/browserconfig && browserconfig.xml" />;
 
 
-=======
 const SEOHead: React.FC < SEOHeadProps> = ({
   title = 'Zion Tech Group - Technology Solutions',
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting - edge technology solutions.',
@@ -258,7 +257,6 @@ const SEOHead: React.FC < SEOHeadProps> = ({
       <meta name="theme - color" content="#1e40af" />;
       <meta name="msapplication - TileColor" content="#1e40af" />;
       <meta name="msapplication - config" content="/browserconfig.xml" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Structured Data */}
       <script;
         type="application / ld + json";
@@ -287,10 +285,8 @@ const SEOHead: React.FC < SEOHeadProps> = ({
 }
 ;
 
-=======
 
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default SEOHead;

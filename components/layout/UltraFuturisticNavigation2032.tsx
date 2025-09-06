@@ -35,11 +35,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-=======
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Menu,
   X,
   ChevronDown,
@@ -218,11 +215,9 @@ const mainNavigation = [
   { name: 'Case Studies', href: '/case-studies', icon: TrendingUp }
   { name: 'Blog', href: '/blog', icon: MessageCircle }
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
-=======
 ];
 
 const mainNavigation = [
-=======
     services: [;
       {
         name: 'Swarm Robotics Orchestration',
@@ -256,7 +251,6 @@ const mainNavigation = [
     ];
   }
 const main_navigation = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
   { name: 'Solutions', href: '/solutions', icon: Layers },
@@ -265,7 +259,6 @@ const main_navigation = [;
   { name: 'Case Studies', href: '/case - studies', icon: TrendingUp },
   { name: 'Blog', href: '/blog', icon: MessageCircle },
 
-=======
   { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
 ;
@@ -289,14 +282,12 @@ export default function UltraFuturisticNavigation2032() {;
   useEffect(() => {
     const handleScroll = () => {
 
-=======
       setIsScrolled(window.scrollY > 20)
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 const mainNavigation = [;
   { name: 'Home', href: '/', icon: Home },;
@@ -333,7 +324,6 @@ export default function UltraFuturisticNavigation2032() {;
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
@@ -368,7 +358,6 @@ export default function UltraFuturisticNavigation2032() {;
                 <div className="text-xs text-gray-400">2030 Future Technology</div>
               </div>
             </Link>
-=======
             <Link href='/' className='flex items-center space-x-3 group'>;
               <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;
                 <Rocket className='w-7 h-7 text-white' />;
@@ -429,7 +418,6 @@ export default function UltraFuturisticNavigation2032() {;
                   <item && item.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />;
                   <span>{item && item.name}</span>;
                 </Link>;
-=======
             <div className="hidden lg:flex items-center space-x-8">
               {mainNavigation.map((item) => (
                 <Link
@@ -440,7 +428,6 @@ export default function UltraFuturisticNavigation2032() {;
                   <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
                   <span>{item.name}</span>
                 </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               ))}
 
 
@@ -455,7 +442,6 @@ export default function UltraFuturisticNavigation2032() {;
 
                 {/* Mega Menu */}
 
-=======
                 <div className="absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">
                   <div className="bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20">
                     <div className="grid grid-cols-2 gap-8">
@@ -483,10 +469,7 @@ export default function UltraFuturisticNavigation2032() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                               </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             ))}
                           </div>;
                         </div>;
@@ -496,7 +479,6 @@ export default function UltraFuturisticNavigation2032() {;
 
               <Link href="/contact">
                 <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl">
-=======
 
 
             {/* CTA Buttons */}
@@ -505,8 +487,6 @@ export default function UltraFuturisticNavigation2032() {;
                 <button className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl'>                  Get Started
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Get Started
                 </button>
               </Link>
@@ -524,7 +504,6 @@ export default function UltraFuturisticNavigation2032() {;
                 <button className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl'>                  Get Started            <div className="hidden lg:flex items-center space-x-4">;
               <Link href="/contact">;
                 <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl">;
-=======
       {/* Main Navigation */}
       <nav;
         className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
@@ -675,12 +654,9 @@ export default function UltraFuturisticNavigation2032() {;
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
@@ -692,12 +668,9 @@ export default function UltraFuturisticNavigation2032() {;
       </nav>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -708,7 +681,6 @@ export default function UltraFuturisticNavigation2032() {;
 
 
           >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div
               className='absolute inset-0 bg-black/80 backdrop-blur-xl'
               onClick={closeMenu}
@@ -735,7 +707,6 @@ export default function UltraFuturisticNavigation2032() {;
                     </div>;
                     <div>;
                       <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">;
-=======
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -772,7 +743,6 @@ export default function UltraFuturisticNavigation2032() {;
                     </div>;
                     <div>;
                       <div className="text - xl font - bold bg - gradient - to - r from - cyan - 400 to - purple - 500 bg - clip - text text - transparent">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         Zion Tech Group;
                       </div>;
                     </div>;
@@ -797,9 +767,7 @@ export default function UltraFuturisticNavigation2032() {;
                 </div>;
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Mobile Navigation */}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <div className='space-y-6'>;
                   {mainNavigation && mainNavigation.map(item => (                <div className="space-y-6">;
                   {mainNavigation && mainNavigation.map((item) => (;
@@ -817,7 +785,6 @@ export default function UltraFuturisticNavigation2032() {;
 
                   {/* Services Accordion */}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <button
                       onClick={() =>;
                         setActiveCategory(activeCategory === 0 ? null : 0);
@@ -860,7 +827,6 @@ export default function UltraFuturisticNavigation2032() {;
                             {category && category.services.map((service, serviceIndex) => (;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                               <Link
                                 key={serviceIndex}
                                 href={service && service.href}
@@ -876,12 +842,9 @@ export default function UltraFuturisticNavigation2032() {;
                   </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Company Links */}
 
 
@@ -891,14 +854,12 @@ export default function UltraFuturisticNavigation2032() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Contact Info */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <span>{contactInfo.mobile}</span>
                       </div>
                       <div className='flex items-center space-x-2'>
@@ -908,14 +869,12 @@ export default function UltraFuturisticNavigation2032() {;
                       <div className='flex items-center space-x-2'>
                         <MapPin className='w-4 h-4 text-pink-400' />
                         <span className='text-xs'>{contactInfo.address}</span>                      </div>                        <span>{contactInfo.mobile}</span>
-=======
                   <div className="pt-4 border-t border-gray-700/50">
                     <div className="text-sm font-medium text-gray-400 mb-3">Contact</div>
                     <div className="space-y-2 text-sm text-gray-400">
                       <div className="flex items-center space-x-2">
                         <Phone className="w-4 h-4 text-cyan-400" />
                         <span>{contactInfo.mobile}</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       </div>
                       <div className="flex items-center space-x-2">
                         <Mail className="w-4 h-4 text-purple-400" />
@@ -979,7 +938,6 @@ export default function UltraFuturisticNavigation2032() {;
         )}
 
     </>
-=======
       </AnimatePresence>;
 
       {/* Spacer for fixed navigation */}
@@ -989,12 +947,10 @@ export default function UltraFuturisticNavigation2032() {;
     </>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 
 }
 
-=======
                   <button;
                     on_click={close_menu}
                     className='p - 2 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50';
@@ -1148,9 +1104,5 @@ export default function UltraFuturisticNavigation2032() {;
     </>);      <div className="h - 20" />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

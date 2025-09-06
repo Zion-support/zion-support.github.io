@@ -35,11 +35,7 @@ export const parseSearchQuery = (query: string) =>: any {
   }
   
   return filters;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     keywords: [],
     skills: [],
     location: null,
@@ -66,11 +62,7 @@ export const suggestDidYouMean = (query: string) => {
 
 
 }
-=======
 };
-=======
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

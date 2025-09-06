@@ -43,15 +43,11 @@ import React from 'react';
   TrendingUp, ;
   Code, ;
   Database, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Zap,
   Shield,
   BarChart3,
@@ -76,7 +72,6 @@ import {
   TrendingUp,
   Code,
   Database,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   Cloud;
   ArrowRight;
   Star;
@@ -116,7 +111,6 @@ import {
         );  const filteredServices = selectedCategory === 'All'
     ? microSaasServices
     : microSaasServices.filter(service => service.category === selectedCategory);
-=======
 export default function SaaSMarketplacePage() {;
   const microSaasServices = [;
     {;
@@ -359,7 +353,6 @@ export default function SaaSMarketplacePage() {;
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],;
     },;
 
-=======
       name: 'Zapier',
       description: 'Automate workflows between 5000+ apps with no code required. Connect your favorite tools and automate repetitive tasks.',
       category: 'Automation',
@@ -496,7 +489,6 @@ export default function SaaSMarketplacePage() {;
       cons: ['Limited reportingNo time trackingSmaller ecosystem']
     }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ];
 
   const categories = [;
@@ -546,7 +538,6 @@ export default function SaaSMarketplacePage() {;
                 size='lg'
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
 
-=======
   const filteredServices = selectedCategory === 'All' 
     ? microSaasServices 
     : microSaasServices.filter(service => service.category === selectedCategory);
@@ -617,7 +608,6 @@ export default function SaaSMarketplacePage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {microSaasServices.length}+
               </div>
               <div className='text-gray-400 text-sm'>Curated Services</div>
@@ -639,12 +629,10 @@ export default function SaaSMarketplacePage() {;
                 100K+
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {microSaasServices.length}+
-=======
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">
                 {microSaasServices.length}+
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
               <div className="text-gray-400 text-sm">Curated Services</div>
             </div>
@@ -725,7 +713,6 @@ export default function SaaSMarketplacePage() {;
               </div>;
               <div className="text-gray-400 text-sm">Total Users</div>;
 
-=======
   ExternalLink;
 export default /**
  * SaaSMarketplacePage - Function description
@@ -1107,7 +1094,6 @@ function SaaSMarketplacePage() {
               </div>;
               <div className="text - gray - 400 text - sm">Total Users</div>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             </div>;
           </div>;
         </div>;
@@ -1123,7 +1109,6 @@ function SaaSMarketplacePage() {
           <div className="flex flex-wrap justify-center gap-4">;
             {categories && categories.map((category) => (;
 
-=======
 
       {/* Category Filter */}
       <section className="py-16 bg-gray-900">
@@ -1131,14 +1116,11 @@ function SaaSMarketplacePage() {
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
 
-=======
 
 
               <button
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1156,12 +1138,9 @@ function SaaSMarketplacePage() {
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Services Grid */}
 
 
@@ -1173,7 +1152,6 @@ function SaaSMarketplacePage() {
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredServices.map((service, index) => (
-=======
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
               {selectedCategory === 'All';
                 ? 'Explore our curated selection of the best micro SaaS services for modern businesses.';
@@ -1183,7 +1161,6 @@ function SaaSMarketplacePage() {
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {filteredServices && filteredServices.map((service, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Card
                 key={index}
                 className='group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
@@ -1257,7 +1234,6 @@ function SaaSMarketplacePage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -1266,7 +1242,6 @@ function SaaSMarketplacePage() {
                         {service.features
                           .slice(0, 4)
                           .map((feature, featureIndex) => (
-=======
                       className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service && service.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
                       {service && service.icon}
                     </div>;
@@ -1304,7 +1279,6 @@ function SaaSMarketplacePage() {
                         {service && service.features;
                           .slice(0, 4);
                           .map((feature, featureIndex) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                             <div
                               key={featureIndex}
                               className='flex items-center text-sm text-gray-400'>;
@@ -1345,7 +1319,6 @@ function SaaSMarketplacePage() {
 
             Need Help Choosing?
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our team of experts can help you select the perfect SaaS tools for
@@ -1353,7 +1326,6 @@ function SaaSMarketplacePage() {
             implementation support.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
               href='/contact'
               variant='secondary'
@@ -1368,7 +1340,6 @@ function SaaSMarketplacePage() {
               size='lg'
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               View Our Services;
             </Button>;
           </div>;
@@ -1376,11 +1347,7 @@ function SaaSMarketplacePage() {
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

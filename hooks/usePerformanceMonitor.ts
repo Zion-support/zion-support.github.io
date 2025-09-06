@@ -46,7 +46,6 @@ interface PerformanceMetrics {
             ...prev,
             cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry && clsEntry.value,
 
-=======
   load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,
@@ -129,7 +128,6 @@ if ( {) {
           set_metrics (prev => ({
             ...prev,
             cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + cls_entry.value,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }));
         }
       });
@@ -142,7 +140,6 @@ if ( {) {
   return { metrics, isSupported }
 }
 
-=======
 ;
     // Observe different performance entry types;
     try {
@@ -158,4 +155,3 @@ if ( {) {
 ;
   return { metrics, is_supported }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

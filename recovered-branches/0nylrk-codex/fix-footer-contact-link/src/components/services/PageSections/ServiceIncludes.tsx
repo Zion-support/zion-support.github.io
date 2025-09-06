@@ -153,7 +153,6 @@ export function ServiceIncludes() {;
             <div>;
               <h3 className="text-white font-medium">Service Documentation</h3>;
               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>;
-=======
 import { Check  } from './lucide-react';
 export /**
  * ServiceIncludes - Function description
@@ -244,14 +243,11 @@ function ServiceIncludes() {
     </div>);
 }
 
-=======
 
   )
-=======
   )
 
 }
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -34,7 +34,6 @@
         matchesProductType &&
         matchesLocation &&
         matchesAvailability &&
-=======
       const matchesSearch = !searchQuery || 
         listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
         listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
@@ -60,7 +59,6 @@
         matchesProductType && 
         matchesLocation && 
         matchesAvailability && 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         matchesRating
     })
 
@@ -188,7 +186,6 @@ function useMarketplaceSearch() {
 
     filter_options;
 
-=======
           prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]
         ),
         break,
@@ -222,6 +219,5 @@ function useMarketplaceSearch() {
     clearAllFilters,
     filterOptions
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

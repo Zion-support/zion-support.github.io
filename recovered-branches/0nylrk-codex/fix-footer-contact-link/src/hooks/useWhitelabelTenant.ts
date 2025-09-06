@@ -3,13 +3,11 @@ import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 
 export interface WhitelabelTenant {
-=======
 
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   brand_name: string;
   subdomain: string;
@@ -64,7 +62,6 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
         const { data, error: functionError } = await supabase && supabase.functions.invoke(
 
           `${functionName}${params}`;
-=======
   dns_verified: boolean,
   email_template_override: Record < string, any> | null;
 }
@@ -103,7 +100,6 @@ if ( {) {
 ;
         const { data, error: function_error } = await supabase.functions.invoke (
           `${function_name}${params}`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {
             headers: {
               'Content - Type': 'application / json'}}
@@ -118,15 +114,11 @@ if ( {) {
 
 
         }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (data.tenant) {
           setTenant(data.tenant)
-=======
 
         if (data && data.tenant) {
           setTenant(data && data.tenant)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
         // Check condition
 if ( {) {
@@ -150,7 +142,6 @@ if ( {) {
   $2
 }
           set_tenant (data.tenant);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } else {
           set_tenant (null);
         }
@@ -206,7 +197,6 @@ export function useTenantAdminStatus(tenantId?: string) {
       } catch (err) {
         console && console.error('Error checking tenant admin status:', err);
         setIsAdmin(false)
-=======
         console.error ('Error loading tenant:', err);
         let message = err.message || 'An unexpected error occurred while loading tenant configuration';
         // Check condition
@@ -219,13 +209,11 @@ if (||) {
         }
         set_error (message);
         set_tenant (null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
         setIsLoading (false);
       }
     }
 
-=======
 
       } catch (err: any) {;
         console.error('Error loading tenant:', err),;
@@ -303,5 +291,4 @@ if ( {) {
 
 
   return { isAdmin, isLoading }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

@@ -9,9 +9,7 @@ export interface TenantResponse {
   error?: string;
 
 }
-=======
 
 
 export interface TenantInfo {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

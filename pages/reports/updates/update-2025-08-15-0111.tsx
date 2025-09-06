@@ -6,18 +6,12 @@ import Head from 'next/head';
 
 import React from 'react';
 
-=======
 import React from 'react',
-=======
 import React from 'react';
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Update202508150111() {
-=======
 import React from 'react',;
 export default function Update202508150111() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <Head>;
@@ -71,13 +65,11 @@ export default function Update202508150111() {;
                   <p className='text-blue-400'>✓ Real-time trend analysis</p>;
                   <p className='text-sm text-white/70 mt-2'>;
                     AI-powered insights generation;
-=======
 
 };
 ;
 
 
-=======
 import Head from 'next / head';
 import React from 'react',
 export default /**
@@ -134,7 +126,6 @@ function Update202508150111() {
                   <p className='text - blue - 400'>✓ Real - time trend analysis</p>;
                   <p className='text - sm text - white / 70 mt - 2'>;
                     AI - powered insights generation;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </p>;
                 </div>;
               </div>;
@@ -203,12 +194,7 @@ function Update202508150111() {
       </div>;
 
 
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

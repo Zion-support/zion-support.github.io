@@ -64,10 +64,8 @@ export /**
 function useTrackUserBehavior() {
   const { track_event } = use_analytics ();
   const component_ref = useRef < HTMLDivElement>(null);
-=======
 
 
-=======
 import { useRef, useEffect } from 'react',;
 import { useAnalytics } from '@/context/AnalyticsContext',;
 export function useTrackUserBehavior(componentName: string) {;
@@ -113,7 +111,6 @@ export function useTrackUserBehavior(componentName: string) {;
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
   useEffect (() => {
     const component = component_ref.current;
@@ -163,5 +160,4 @@ if ( {) {
   }, [track_event, component_name]);
 ;
   return component_ref;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

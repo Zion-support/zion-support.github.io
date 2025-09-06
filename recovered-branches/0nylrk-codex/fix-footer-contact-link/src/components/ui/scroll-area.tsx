@@ -12,7 +12,6 @@ const ScrollArea = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>
 >(({ className, children, ...props }, ref) => (
   <ScrollAreaPrimitive.Root
-=======
 import * as React from &quot;react & quot;
 import * as ScrollAreaPrimitive from &quot;@radix - ui / react - scroll - area & quot;
 ;
@@ -23,7 +22,6 @@ const ScrollArea = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof ScrollAreaPrimitive.Root>;
 >(({ class_name, children, ...props }, ref) => (
   <ScrollAreaPrimitive.Root;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn (&quot;relative overflow - hidden & quot;, class_name)}
     {...props}
@@ -33,7 +31,6 @@ const ScrollArea = React.forward_ref<;
     <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {children}
 
 
@@ -79,18 +76,12 @@ const ScrollBar = React.forward_ref<;
 ScrollBar.display_name = ScrollAreaPrimitive.ScrollAreaScrollbar.display_name;
 
 export { ScrollArea, ScrollBar }
-=======
 
 
 export { ScrollArea, ScrollBar }
 ;
 
-=======
 export { ScrollArea, ScrollBar };
-=======
 
 export { ScrollArea, ScrollBar }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

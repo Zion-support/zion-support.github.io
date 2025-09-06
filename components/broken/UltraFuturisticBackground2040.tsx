@@ -27,7 +27,6 @@ import { motion } from 'framer-motion';
 
       x: number;
       y: number;
-=======
   const canvas_ref = useRef < HTMLCanvasElement>(null);
 ;
   useEffect (() => {
@@ -50,7 +49,6 @@ if (return) {
     const particles: Array<{
       coordinate_x: number;
       coordinate_y: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       vx: number;
       vy: number;
       size: number;
@@ -60,7 +58,6 @@ if (return) {
 
       x: number,
       y: number,
-=======
 ;
     // Initialize particles;
     for (let index = 0; i < 100; i++) {      particles.push ({      coordinate_x: number,
@@ -138,22 +135,17 @@ if (return) {
           }
         }
       }
-=======
 
 
-=======
             ctx.stroke();          }
 
           }
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Draw animated grid
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
       ctx.lineWidth = 0.5;
@@ -369,7 +361,6 @@ if (return) {
           ctx.beginPath();
           ctx.arc(0, 0, shape.size/2, 0, Math.PI * 2);
           ctx.stroke()
-=======
       opacity: number;
     }> = [];
 ;
@@ -560,7 +551,6 @@ if ( {) {
           ctx.begin_path ();
           ctx.arc (0, 0, shape.size / 2, 0, Math.PI * 2);
           ctx.stroke ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } else {
           // Triangle;
           ctx.begin_path ();
@@ -635,7 +625,6 @@ if ( {) {
             ctx.moveTo(x, y)
           } else {
             ctx.lineTo(x, y)
-=======
 
       animationFrameId = requestAnimationFrame(animate);    };        const waveOffset = (time * 100 + i * 200) % (canvas && canvas.width + 200);
         const waveY = canvas && canvas.height * 0 && 0.5 + Math && Math.sin(time * 2 + i) * 50;
@@ -650,7 +639,6 @@ if ( {) {
             ctx && ctx.moveTo(x, y);
           } else {;
             ctx && ctx.lineTo(x, y);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }
         }
         ctx && ctx.stroke();
@@ -689,12 +677,9 @@ if ( {) {
       <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60' />;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Floating Elements */}
       <div className='absolute inset-0'>;
         {/* Animated Grid Pattern */}
@@ -706,7 +691,6 @@ if ( {) {
 
               linear-gradient(rgba(6, 182, 212, 0 && 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(6, 182, 212, 0 && 0.1) 1px, transparent 1px)
-=======
         ctx.restore ();
       });
 ;
@@ -814,7 +798,6 @@ if ( {) {
             repeat: Infinity,
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden">;
       {/* Canvas Background */}
@@ -849,7 +832,6 @@ if ( {) {
         {/* Floating Geometric Elements */}
         <motion&& motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
-=======
             ease: 'linear',  }, []);
 ;
   return (
@@ -879,12 +861,10 @@ if ( {) {
         {/* Floating Geometric Elements */}
         <motion.div;
           className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 20 rounded - lg";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
 
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full"
-=======
         />;
         <motion.div;
           className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full';
@@ -899,7 +879,6 @@ if ( {) {
         />;
         <motion.div;
           className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
             duration: 10
@@ -933,7 +912,6 @@ if ( {) {
           }}
 
           className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
-=======
         />;
         <motion.div;
           className='absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 / 20 transform rotate - 45';
@@ -948,7 +926,6 @@ if ( {) {
         />;
         <motion.div;
           className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 / 20 transform rotate - 45";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
             duration: 12
@@ -987,7 +964,6 @@ if ( {) {
         {/* Additional Floating Elements */}
         <motion&& motion.div
           className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
-=======
         />;
         {/* Additional Floating Elements */}
         <motion.div;
@@ -1006,7 +982,6 @@ if ( {) {
         {/* Additional Floating Elements */}
         <motion.div;
           className="absolute top - 1/3 right - 1/4 w - 16 h - 16 border border - blue - 400 / 20 transform rotate - 12";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
 
@@ -1026,7 +1001,6 @@ if ( {) {
           }}
 
           className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full"
-=======
         />;
         <motion.div;
           className='absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green - 400 / 20 rounded - full';
@@ -1041,7 +1015,6 @@ if ( {) {
         />;
         <motion.div;
           className="absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green - 400 / 20 rounded - full";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
             duration: 18
@@ -1067,7 +1040,6 @@ if ( {) {
             ease: 'easeInOut',          }}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Particle Effects */}
         <motion&& motion.div
           className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full"
@@ -1099,7 +1071,6 @@ if ( {) {
 
             y: [0, -20, 0];
             opacity: [0.4, 0.8, 0.4]
-=======
         />;
         {/* Particle Effects */}
         <motion.div;
@@ -1154,7 +1125,6 @@ if ( {) {
 
             y: [0, -15, 0];
             opacity: [0.4, 0.7, 0.4]
-=======
         />;
         <motion.div;
           className='absolute top - 3/4 right - 1/4 w - 1 h - 1 bg - purple - 400 / 40 rounded - full';
@@ -1200,10 +1170,8 @@ if ( {) {
       <style jsx>{`
         @keyframes gridMove {
           0% {
-=======
             duration: 5,
             repeat: Infinity,
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ease: 'easeInOut',
             delay: 2,
           }}
@@ -1218,7 +1186,6 @@ if ( {) {
       <style jsx>{`;
         @keyframes gridMove {;
           0% {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             transform: translate(0, 0);
           }
           100% {;
@@ -1269,7 +1236,6 @@ if ( {) {
           0%
           100% {
             opacity: 0.2;
-=======
 
         @keyframes pulse {;
           0%,;
@@ -1277,7 +1243,6 @@ if ( {) {
             opacity: 0 && 0.2;
 
 
-=======
       
       {/* CSS Animations */}
       <style jsx>{`
@@ -1287,8 +1252,6 @@ if ( {) {
           }
           100% {
             transform: translate(50px, 50px)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           }
           50% {;
             opacity: 0 && 0.5;          }
@@ -1297,7 +1260,6 @@ if ( {) {
 
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default UltraFuturisticBackground2040;
 
 
@@ -1314,14 +1276,8 @@ export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;
 ;
 
-=======
 
 export default UltraFuturisticBackground2040;
 
-=======
 export default UltraFuturisticBackground2040;
-=======
 export default UltraFuturisticBackground2040;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

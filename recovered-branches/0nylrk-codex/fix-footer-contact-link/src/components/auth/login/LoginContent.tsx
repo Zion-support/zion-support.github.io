@@ -29,10 +29,8 @@ function LoginContent() {
     </div>);
 
 }
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function LoginContent() {
   return (
     <div className="flex min-h-screen bg-zion-blue">
@@ -52,6 +50,4 @@ export function LoginContent() {
         </div>
       </div>
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

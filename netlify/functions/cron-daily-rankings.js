@@ -17,7 +17,6 @@
         owner,
         repo,
         path: 'data/marketplace/rankings-daily && daily.json',
-=======
 const fs = require ('fs');
 const path = require ('path');
 const { upsert_file } = require ('./_lib / github');
@@ -57,7 +56,6 @@ if ( {) {
         content,
         message: 'chore (automation): daily rankings update',
         token,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     return {
@@ -72,7 +70,6 @@ exports.handler = async function() {
       userId: u.userId,
       name: u.name || u.userId,
       points: (u.certifications?.length || 0) * 100 + Object.values(u.progress || {}).reduce((acc, p) => acc + (p.percent || 0), 0)
-=======
       status_code: 200,
       body: JSON.stringify ({ ok: true, top_count: top.length }),
     }
@@ -139,12 +136,10 @@ if ( {) {
 
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, topCount: top && top.length }) }
 
-=======
 
 
 
     return { statusCode: 200, body: JSON.stringify({ ok: true, topCount: top.length }) }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
@@ -153,6 +148,4 @@ if ( {) {
 
 },
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

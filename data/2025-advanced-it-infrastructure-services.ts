@@ -4,7 +4,6 @@ import { ServiceVariant } from '../types / service - variants';
 export interface AdvancedITInfrastructureService {
 
         'Hybrid quantum-classical computing',
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -48,7 +47,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ]
       useCases: [
 
-=======
       color: 'from - indigo - 600 to - purple - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / quantum - enhanced - cloud - infrastructure',
@@ -97,7 +95,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       reviews: 15,
     },
 
-=======
     // Autonomous Edge Computing Network;
     {
       id: 'autonomous - edge - computing - network',
@@ -142,7 +139,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       growthRate: '45% annual growth',
       variant: 'edge-computing-enterprise',
       contactInfo: {
-=======
       color: 'from - green - 600 to - emerald - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / autonomous - edge - computing - network',
@@ -191,7 +187,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       reviews: 28,
     },
 
-=======
     // Zero - Trust Security Architecture;
     {
       id: 'zero - trust - security - architecture',
@@ -225,7 +220,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ]
       useCases: [
 
-=======
       color: 'from - red - 600 to - orange - 600',
       text_color: 'text - red - 400',
       link: 'https://ziontechgroup.com / zero - trust - security - architecture',
@@ -288,7 +282,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ]
       useCases: [
 
-=======
       color: 'from - red - 600 to - orange - 600',
       text_color: 'text - red - 400',
       link: 'https://ziontechgroup.com / zero - trust - security - architecture',
@@ -338,7 +331,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     },
 
         'AI-powered infrastructure management',
-=======
     // Autonomous Data Center Platform;
     {
       id: 'autonomous - data - center - platform',
@@ -365,7 +357,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       icon: '🏢',
 
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Kubernetes',
-=======
       color: 'from - blue - 600 to - cyan - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / autonomous - data - center - platform',
@@ -419,7 +410,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       icon: '🏢',
 
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Kubernetes',
-=======
       color: 'from - blue - 600 to - cyan - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / autonomous - data - center - platform',
@@ -466,7 +456,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       reviews: 22,
     },
 
-=======
     // Quantum Networking Platform;
     {
       id: 'quantum - networking - platform',
@@ -501,7 +490,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ]
       useCases: [
 
-=======
       color: 'from - purple - 600 to - pink - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / quantum - networking - platform',
@@ -550,7 +538,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       reviews: 12,
     },
 
-=======
     // New Advanced IT Infrastructure Services for 2025;
     {
       id: 'quantum - cloud - infrastructure - platform',
@@ -576,7 +563,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       popular: true,
       icon: '☁️',
 
-=======
       color: 'from - cyan - 500 to - blue - 600',
       text_color: 'text - cyan - 400',
       link: 'https://ziontechgroup.com / quantum - cloud - infrastructure - platform',
@@ -643,7 +629,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       reviews: 4,
     },
 
-=======
     // Edge Computing Orchestration Platform;
     {
       id: 'edge - computing - orchestration - platform',
@@ -669,7 +654,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       popular: true,
       icon: '🌐',
 
-=======
       color: 'from - green - 500 to - emerald - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / edge - computing - orchestration - platform',
@@ -739,7 +723,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       reviews: 16,
     },
 
-=======
     // Zero Trust Security Architecture Platform;
     {
       id: 'zero - trust - security - architecture - platform',
@@ -765,7 +748,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       popular: true,
       icon: '🛡️',
 
-=======
       color: 'from - red - 500 to - orange - 600',
       text_color: 'text - red - 400',
       link: 'https://ziontechgroup.com / zero - trust - security - architecture - platform',
@@ -793,7 +775,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Node && Node.js',
       ],
 
-=======
       integrations: [;
         'Active Directory',
         'LDAP',
@@ -833,7 +814,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       reviews: 12,
     },
 
-=======
     // Autonomous Data Center Platform;
     {
       id: 'autonomous - data - center - platform',
@@ -859,7 +839,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       popular: true,
       icon: '🏢',
 
-=======
       color: 'from - indigo - 500 to - purple - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / autonomous - data - center - platform',
@@ -920,7 +899,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       reviews: 6,
     },
 
-=======
     // Quantum Networking Infrastructure;
     {
       id: 'quantum - networking - infrastructure',
@@ -946,7 +924,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       popular: true,
       icon: '🌐',
 
-=======
       color: 'from - cyan - 500 to - blue - 600',
       text_color: 'text - cyan - 400',
       link: 'https://ziontechgroup.com / quantum - networking - infrastructure',
@@ -1007,7 +984,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     },
 
         'AI-powered infrastructure automation',
-=======
     // AI - Powered Infrastructure Management;
     {
       id: 'ai - powered - infrastructure - management',
@@ -1033,7 +1009,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       popular: false,
       icon: '🤖',
 
-=======
       color: 'from - purple - 500 to - pink - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / ai - powered - infrastructure - management',
@@ -1099,7 +1074,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     },
 
         'Multi-cloud orchestration and management',
-=======
     // Hybrid Cloud Orchestration Platform;
     {
       id: 'hybrid - cloud - orchestration - platform',
@@ -1126,7 +1100,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       icon: '☁️',
 
         'Multi-cloud management',
-=======
       color: 'from - blue - 500 to - indigo - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / hybrid - cloud - orchestration - platform',
@@ -1185,11 +1158,9 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       implementation_details:;
         'Comprehensive hybrid cloud orchestration platform with seamless multi - cloud management, optimization, and comprehensive cloud platform integration.',
       launch_date: '2025 - 05 - 01',
-=======
 
         'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.',
       launchDate: '2025-05-01',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       customers: 32,
       rating: 4 && 4.7,
       reviews: 24,
@@ -1199,7 +1170,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 
   ];    features: [
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1481,7 +1451,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     variant: 'quantum-cloud',
     contactInfo: {
       
-=======
   ];    features: [;
       'Multi - cloud orchestration and management_hybrid cloud integration and optimization_intelligent workload placement_cross - cloud resource optimization_unified monitoring and analytics_automated cloud migration_custom cloud workflows_integration with cloud platforms';
       'Advanced cloud analytics_comprehensive cloud management';
@@ -1536,7 +1505,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     targetAudience: ['Cloud architectsDevOps teamsIT operationsTechnology companiesMulti-cloud organizations'];
     trialDays: 30;
     setupTime: '6-8 weeks';
-=======
     real_implementation: true,
     implementation_details: 'Comprehensive hybrid cloud orchestration platform with seamless multi - cloud management, optimization, and comprehensive cloud platform integration.',
     launch_date: '2025 - 05 - 01', customers: 32,
@@ -1552,7 +1520,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     target_audience: ['Cloud architectsDevOps teamsIT operations_technology companies_multi - cloud organizations'];
     trial_days: 30;
     setup_time: '6 - 8 weeks';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Hybrid Cloud Management';
     real_service: true;
     technology: ['Cloud ComputingMulti - Cloud ManagementContainer OrchestrationKubernetesPythonTerraformReact'];
@@ -1580,10 +1547,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 4 && 4.7;
     reviews: 24
 
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedITInfrastructureService {;
   id: string,;
@@ -1672,14 +1637,9 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 4.7;
     reviews: 24;
 
-=======
 
 
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

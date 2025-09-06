@@ -41,7 +41,6 @@ const testimonials = [;
 
 
 
-=======
 import {
   Carousel,
   CarouselContent,
@@ -80,8 +79,6 @@ const testimonials = [
     avatar: "https://i.pravatar.cc/150?img=67",
     company: "EcoTech"}],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function TestimonialCarousel() {
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -93,7 +90,6 @@ export function TestimonialCarousel() {
           </p>
         </div>
         <div className="max-w-5xl mx-auto px-8">
-=======
 const testimonials = [;
   {;
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",;
@@ -132,9 +128,7 @@ export function TestimonialCarousel() {;
         </div>;
 
         <div className="max-w-5xl mx-auto px-8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Carousel
-=======
     avatar: "https://i.pravatar.cc / 150?img = 67",
     company: "EcoTech"}],
 export /**
@@ -152,17 +146,14 @@ function TestimonialCarousel() {
         </div>;
         <div className="max - w-5xl mx - auto px - 8">;
           <Carousel;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             opts={{
               align: "start"
 
               loop: true}}
 
-=======
 
 };
 
-=======
 import {;
   Carousel,;
   CarouselContent,;
@@ -241,7 +232,6 @@ export function TestimonialCarousel() {;
             <div className="flex justify-center mt-8 gap-2">;
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
-=======
             className="w - full";
           >;
             <CarouselContent>;
@@ -269,7 +259,6 @@ export function TestimonialCarousel() {;
             <div className="flex justify - center mt - 8 gap - 2">;
               <CarouselPrevious className="relative static left - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover: bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple" />;
               <CarouselNext className="relative static right - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover:bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </Carousel>;
         </div>;
@@ -278,9 +267,6 @@ export function TestimonialCarousel() {;
     </section>);
 }
 
-=======
 
 
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

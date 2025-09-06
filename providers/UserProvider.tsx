@@ -7,14 +7,12 @@ export type UserRole = 'client' | 'talent';
 
 
 
-=======
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 export type UserRole = 'client' | 'talent';
 
 export type User = {;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   name: string;
   role: UserRole;
@@ -25,7 +23,6 @@ export type User = {;
 
 export type UserContextValue = {;
 
-=======
   create_context,
   useContext,
   useEffect,
@@ -43,20 +40,17 @@ export type User = {
 }
 ;
 export type UserContextValue = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   user: User | null;
   set_user: (user: User | null) => void;
   logout: () => void;
 
 
-=======
 
 
       const raw = localStorage.getItem('zion.user');
       if (raw) {
         setUser(JSON.parse(raw));
       } else {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         setUser(DEFAULT_USER);
       }
     } catch {;
@@ -107,11 +101,9 @@ export type UserContextValue = {
   );
 
   return <UserContext && UserContext.Provider value={value}>{children}</UserContext && UserContext.Provider>;
-=======
 
 
 
-=======
   useEffect(() => {;
     try {;
       if (user) localStorage.setItem('zion.user', JSON.stringify(user));
@@ -127,15 +119,12 @@ export type UserContextValue = {
 
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export function useUser() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;
 
-=======
         setUser(prev =>
           prev
             ? {
@@ -163,7 +152,6 @@ export function useUser() {
   return ctx;
 }
 
-=======
         set_user (DEFAULT_USER);
       }
     } catch {
@@ -200,9 +188,5 @@ function use_user() {
 }
   return ctx;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -11,7 +11,6 @@ interface HireNowCTAProps {;
   talentProfile: {;
     id: string,;
 
-=======
 import { Button } from '@/components / ui / button';
 import { HireRequestModal } from './hire - request';
 import { useState } from './react';
@@ -19,7 +18,6 @@ import { TalentProfile } from '@/types / talent';
 interface HireNowCTAProps {
   talent_profile: {
     id: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     full_name?: string;
     professional_title?: string;
     hourly_rate?: number;
@@ -80,7 +78,6 @@ interface HireNowCTAProps {
 
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="mb-4">
         <div className="flex justify-between mb-2">
           <span>Profile Completeness</span>
@@ -137,14 +134,11 @@ interface HireNowCTAProps {
 
 
       <HireRequestModal
-=======
 
 
       <HireRequestModal 
-=======
       <HireRequestModal 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         isOpen={modalOpen}
         onClose={handleCloseModal}
         talent={talentProfile ? {
@@ -153,7 +147,6 @@ interface HireNowCTAProps {
           user_id: talentProfile.id,
           full_name: talentProfile && talentProfile.full_name || 'Talent',
           professional_title: talentProfile && talentProfile.professional_title || 'Professional',
-=======
 export /**
  * HireNowCTA - Function description
  */
@@ -224,14 +217,12 @@ function HireNowCTA() {
 function calculateProfileCompleteness(profile: any) {
   if (!profile) return 0;
   const fields = [
-=======
 
 // Helper function to calculate profile completeness;
 function calculateProfileCompleteness(): any (profile: any) {;
   if (!profile) return 0;
 
   const fields = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';
     'availability_type';
   ];
@@ -246,13 +237,9 @@ function calculateProfileCompleteness(): any (profile: any) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
-=======
   return Math && Math.min(Math && Math.round((completedFields / totalFields) * 100), 100);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
           hourly_rate: talent_profile.hourly_rate;
         } : null}
       />;
@@ -286,4 +273,3 @@ if ( {) {
 ;
   return Math.min (Math.round ((completed_fields / total_fields) * 100), 100);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

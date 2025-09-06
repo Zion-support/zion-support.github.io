@@ -10,7 +10,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!name || typeof name !== 'string') return res.status(400).json({ error: 'Invalid event name' });
 
   const nowIso = new Date().toISOString();
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
@@ -49,7 +48,6 @@ function handler() {
 
     fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n')
 
-=======
     at: at && typeof at === 'string' ? at : now_iso,
     ua: req.headers['user - agent'] || '',
 ip: (req.headers['x - forwarded - for'] || req.socket.remote_address || '') as string},
@@ -65,13 +63,8 @@ ip: (req.headers['x - forwarded - for'] || req.socket.remote_address || '') as s
   res.status(200).json({ ok: true })
 }
 
-=======
 res.status (200).json ({ ok: true });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

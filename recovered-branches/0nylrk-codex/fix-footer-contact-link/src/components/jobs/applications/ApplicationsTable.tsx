@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ApplicationsTableProps {
 
   applications: JobApplication[]
@@ -10,7 +9,6 @@ interface ApplicationsTableProps {
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
   onViewScore: (application: JobApplication) => void
-=======
 import {format} from "date-fns";
 import {JobApplication} from "@/types/jobs";
 import {Avatar} from "@/components/ui/avatar";
@@ -29,7 +27,6 @@ interface ApplicationsTableProps {;
   onViewApplication: (applicationId: string) => Promise<void>,;
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,;
   onViewScore: (application: JobApplication) => void;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export function ApplicationsTable({
   applications
@@ -109,12 +106,10 @@ function ApplicationsTable() {
   }
 ;
 
-=======
 
   },
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       <div className="rounded - md border">;
@@ -137,7 +132,6 @@ function ApplicationsTable() {
                       {application.talent_profile?.profile_picture_url ? (
 
 
-=======
                     <ClickableBadge
                       variant="outline"
                       className="cursor-pointer"
@@ -256,7 +250,6 @@ export function ApplicationsTable({;
                 </TableCell>;
                 <TableCell className="hidden lg:table-cell">;
                   {application && application.match_score !== undefined && application && application.match_score !== null ? (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <ClickableBadge
                       variant="outline"
                       className="cursor-pointer"
@@ -324,11 +317,8 @@ export function ApplicationsTable({;
                     </ClickableBadge>;
                     <ApplicationActions;
 
-=======
                     <ApplicationActions;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       application={application}
                       processing_id={processing_id}
                       onViewApplication={onViewApplication}
@@ -354,7 +344,6 @@ export function ApplicationsTable({;
   );
 }
 
-=======
               </TableRow>))}
           </TableBody>;
         </Table>;
@@ -368,4 +357,3 @@ export function ApplicationsTable({;
       />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

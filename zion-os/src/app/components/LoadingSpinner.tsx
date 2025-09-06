@@ -22,7 +22,6 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
     </div>
   )
 }
-=======
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg',
   text?: string,
@@ -61,4 +60,3 @@ function LoadingSpinner() {
       {text && <span className=&quot;text - sm & quot;>{text}</span>}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

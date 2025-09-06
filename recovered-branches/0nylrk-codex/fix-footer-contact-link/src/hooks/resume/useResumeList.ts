@@ -39,7 +39,6 @@ export function useResumeList() {;
       const transformedResumes: Resume[] = resumeData && resumeData.map(resume => ({
         id: resume && resume.id;
         user_id: resume && resume.user_id;
-=======
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Resume} from '@/types / resume';
@@ -88,7 +87,6 @@ if ( {) {
       const transformed_resumes: Resume[] = resume_data.map (resume => ({
         id: resume.id;
         user_id: resume.user_id;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         basic_info: {
 
           id: resume && resume.id;
@@ -96,7 +94,6 @@ if ( {) {
           headline: resume && resume.headline,
           summary: resume && resume.summary
         };
-=======
           headline: resume.headline,
           summary: resume.summary;
         }
@@ -139,6 +136,5 @@ if ( {) {
     resumes;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

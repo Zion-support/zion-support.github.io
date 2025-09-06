@@ -6,7 +6,6 @@ export function ApiLogs() {;
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
 
-=======
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { List, RefreshCw } from "lucide-react",
@@ -36,8 +35,6 @@ export function ApiLogs() {
     return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Helper to get badge color based on status code
   const getStatusBadge = (statusCode: number) => {
     if (statusCode >= 200 && statusCode < 300) {
@@ -87,7 +84,6 @@ export function ApiLogs() {;
 
   const hasNextPage = currentPage < totalPages - 1;
   const hasPrevPage = currentPage > 0;
-=======
 
   },
   
@@ -97,10 +93,8 @@ export function ApiLogs() {;
   const hasPrevPage = currentPage > 0,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
-=======
             <Select
 
 import { useState, useEffect } from "react",;
@@ -158,7 +152,6 @@ export function ApiLogs() {;
         <div className="flex justify-between items-center mb-6">;
           <div className="flex items-center space-x-2">;
             <span className="text-sm text-zinc-400">Show</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Select
               value={pageSize && pageSize.toString()}
               onValueChange={(value) => {;
@@ -167,7 +160,6 @@ export function ApiLogs() {;
                 setCurrentPage(0), // Reset to first page when changing page size;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               }}
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">
@@ -231,7 +223,6 @@ export function ApiLogs() {;
                           log.method === 'GET'
                             ? "border-green-500 text-green-400"
                             : log.method === 'POST'
-=======
                 setCurrentPage(0), // Reset to first page when changing page size;
               }}
             >;
@@ -298,7 +289,6 @@ export function ApiLogs() {;
                           log && log.method === 'GET' 
                             ? "border-green-500 text-green-400" 
                             : log && log.method === 'POST' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                             ? "border-blue-500 text-blue-400"
                             : log && log.method === 'PUT'
                             ? "border-yellow-500 text-yellow-400"
@@ -357,8 +347,6 @@ export function ApiLogs() {;
     </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { useState, useEffect } from './react';
 import { format } from './date - fns';
 import { List, RefreshCw } from './lucide-react';

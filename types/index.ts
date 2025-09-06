@@ -7,16 +7,12 @@ export interface ContactInfo {
 
 export interface Service {;
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface Service {
 
   }
 
-=======
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   features: string[];
   technologies: string[];
   delivery_time: string;
@@ -42,7 +38,6 @@ export interface ServiceCategory {
 export interface SEOProps {
   title?: string;
   description?: string;
-=======
 
   title: string;
   href: string;
@@ -170,7 +165,6 @@ export interface ContactForm {
 
 }
 
-=======
 }
 export interface SEOProps {
   title?: string;
@@ -189,14 +183,11 @@ export interface LoadingState {
   progress?: number;
 }
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export interface AnimationState {
   isLoaded: boolean;
   hasError: boolean;
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 }
 export interface FormData {
   name: string;
@@ -223,7 +214,6 @@ export interface FormData {
   project?: string;
 }
 export interface BlogPost {
-=======
 
   project?: string;
 }
@@ -231,7 +221,6 @@ export interface BlogPost {
 
 export interface BlogPost {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   title: string;
   excerpt: string;
@@ -242,10 +231,8 @@ export interface BlogPost {;
 
   publishedAt: string;
   updatedAt: string;
-=======
   published_at: string;
   updated_at: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   tags: string[];
   category: string;
   image: string;
@@ -253,20 +240,16 @@ export interface BlogPost {;
   slug: string;
   featured?: boolean;
 
-=======
   read_time: number;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface TeamMember {
-=======
 
 }
 
 
 export interface TeamMember {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   name: string;
 
@@ -278,22 +261,15 @@ export interface TeamMember {;
   skills: string[];
 
 
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   social: {
     linkedin?: string;
     twitter?: string;
     github?: string;
 
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   linkedin?: string;
   github?: string;
@@ -307,19 +283,14 @@ export interface Project {
 
   id: string;
   title: string;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   name: string;
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
-=======
 ;
   description: string;
   image: string;
@@ -328,22 +299,17 @@ export interface Project {
   github_url?: string;
   featured: boolean;
   status: 'planning' | 'in - progress' | 'completed' | 'on - hold' | 'cancelled';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   priority: 'low' | 'medium' | 'high' | 'critical';
   start_date: Date;
   end_date: Date;
   budget: {
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   id: string, title: string,
   description: string, image: string,
   technologies: string[], liveUrl?: string,
->>>>>>> origin/automation-improvements-final
   githubUrl?: string;
   featured: boolean;
   name?: string;
@@ -352,7 +318,6 @@ export interface Project {
   startDate?: Date;
   endDate?: Date;
   budget?: {
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
     allocated: number;
     spent: number;
     currency: string;
@@ -373,7 +338,6 @@ export interface Project {
   };
 
   deliverables?: {
-=======
     allocated: number;
     spent: number;
     currency: string;
@@ -390,8 +354,6 @@ export interface Project {
   }
   deliverables: {
 
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
     allocated: number;
     spent: number;
     currency: string;
@@ -407,7 +369,6 @@ export interface Project {
     industry: string;
   }
   deliverables: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     name: string;
     description: string;
     status: 'pending' | 'in - progress' | 'completed' | 'review';
@@ -415,13 +376,9 @@ export interface Project {
   }[];
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   risks: {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     description: string;
     probability: 'low' | 'medium' | 'high';
     impact: 'low' | 'medium' | 'high';
@@ -429,26 +386,18 @@ export interface Project {
   }[];
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   dependencies: {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     project: string;
     type: 'blocking' | 'influencing';
     description: string;
   }[];
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   metrics: {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     name: string;
     value: number;
     unit: string;
@@ -456,13 +405,9 @@ export interface Project {
   }[];
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   lessons: {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     learned: string;
     category: 'technical' | 'process' | 'communication' | 'management';
     impact: 'positive' | 'negative' | 'neutral';
@@ -479,14 +424,11 @@ export interface Partner {
 }
 
 // Pricing Types
-=======
 export interface FAQ {
-=======
 
 
 export interface FAQ {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   question: string;
   answer: string;
   category?: string;
@@ -497,9 +439,7 @@ export interface FAQ {;
 export interface PricingPlan {;
 
   id: string;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   name: string;
   price: number;
   period: string;
@@ -529,12 +469,10 @@ export interface PricingPlan {
   name: string;
   href: string;
   children?: NavigationItem[];
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   submenu?: NavigationItem[];
   external?: boolean;
 }
 
-=======
 
 
 export interface SocialLink {;
@@ -560,7 +498,6 @@ export interface FooterSection {
   links: FooterLink[];
 }
 export interface HeroSection {
-=======
 
 }
 
@@ -577,7 +514,6 @@ export interface FooterSection {;
 
 export interface HeroSection {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   subtitle: string;
   cta: {
@@ -592,14 +528,12 @@ export interface HeroSection {;
     }
   }
 
-=======
     }
     secondary: {
       text: string;
       href: string;
     }
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   image?: string;
 }
 
@@ -683,7 +617,6 @@ export interface Event {
 }
 
 export interface CaseStudy {
-=======
 
 
 export interface CaseStudy {;
@@ -884,11 +817,7 @@ export interface Environment {
 }
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
 // Environment;
 export interface Environment {
   NODE_ENV: 'development' | 'production' | 'test';
@@ -897,7 +826,6 @@ export interface Environment {
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface Partner {
   name: string;
   logo: string;
@@ -998,15 +926,7 @@ export interface SuccessResponse < T> {
 
 
 
-=======
 export type Response<T> = SuccessResponse<T> | ErrorResponse;
->>>>>>> origin/main
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export type Response<T> = SuccessResponse<T> | ErrorResponse;
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
 export type Response < T> = SuccessResponse < T> | ErrorResponse;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

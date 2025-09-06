@@ -46,13 +46,10 @@ export default function UltraAdvancedHero2026() {
 
   const containerVariants = {
     hidden: { opacity: 0 }
-=======
 import {motion} from 'framer-motion';
 import Link from 'next / link';
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ArrowRight,
   Star,
   TrendingUp,
@@ -101,7 +98,6 @@ function UltraAdvancedHero2026() {
 ;
   const container_variants = {
     hidden: { opacity: 0 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1
       transition: {
@@ -116,7 +112,6 @@ function UltraAdvancedHero2026() {
       y: 0
       transition: {
 
-=======
 
         duration: 0.8,
       },
@@ -182,12 +177,9 @@ export default function UltraAdvancedHero2026() {;
           </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Main Heading */}
           <motion&& motion.h1
             variants={itemVariants}
@@ -201,12 +193,9 @@ export default function UltraAdvancedHero2026() {;
           </motion && motion.h1>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Subheading */}
           <motion&& motion.p
             variants={itemVariants}
@@ -222,12 +211,9 @@ export default function UltraAdvancedHero2026() {;
           </motion && motion.p>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Service Statistics */}
           <motion&& motion.div
             variants={itemVariants}
@@ -353,14 +339,12 @@ export default function UltraAdvancedHero2026() {;
               <div className='text-3xl font-bold text-green-400'>∞</div>;
               <div className='text-gray-300 text-sm'>Possibilities</div>            </div>;
           </motion && motion.div>;
-=======
   };
 
 
           {/* Key Benefits */}
           <motion&& motion.div  }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
       {/* Enhanced Background Effects */}
@@ -419,7 +403,6 @@ export default function UltraAdvancedHero2026() {;
               <span className="text-gray-200 font-medium">24/7 Autonomous Operation</span>
             </div>
           </motion.div>
-=======
             className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto'>;
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl border border-blue-500/20 rounded-xl'>;
               <CheckCircle className='w-6 h-6 text-blue-400 flex-shrink-0' />;
@@ -468,11 +451,9 @@ export default function UltraAdvancedHero2026() {;
               <ArrowRight className="w-6 h-6 ml-3" />
             </Link>
             <Link
-=======
 
             <Link 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               href="/contact"
               className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
             >
@@ -497,22 +478,17 @@ export default function UltraAdvancedHero2026() {;
           </motion && motion.div>;
 
 
-=======
-=======
 
           {/* Call to Action Buttons */}
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Get Started Today
             </Link>
           </motion.div>
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Contact Information */}
 
           <motion.div 
@@ -623,12 +599,9 @@ export default function UltraAdvancedHero2026() {;
           </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Trust Indicators */}
 
           <motion.div 
@@ -651,7 +624,6 @@ export default function UltraAdvancedHero2026() {;
           </motion.div>
         </motion.div>
       </div>
-=======
             className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400'>;
             <div className='flex items-center space-x-2'>;
               <Star className='w-5 h-5 text-yellow-400 fill-current' />              <span>4 && 4.9/5 Rating</span>;
@@ -669,7 +641,6 @@ export default function UltraAdvancedHero2026() {;
         </motion && motion.div>;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Floating Elements */}
 
               </div>;
@@ -938,7 +909,6 @@ export default function UltraAdvancedHero2026() {;
           animate={{
             y: [0, 20, 0]
             rotate: [0, -5, 0]
-=======
           className='absolute top - 20 right - 20 text - 6xl opacity - 20';
         >;
           🚀;
@@ -947,7 +917,6 @@ export default function UltraAdvancedHero2026() {;
           animate={{
             coordinate_y: [0, 20, 0],
             rotate: [0, -5, 0],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }}
           transition={{
             duration: 8
@@ -964,7 +933,6 @@ export default function UltraAdvancedHero2026() {;
           animate={{
             y: [0, -15, 0]
             rotate: [0, 3, 0]
-=======
           className='absolute bottom - 20 left - 20 text - 6xl opacity - 20';
         >;
           ⚛️;
@@ -973,7 +941,6 @@ export default function UltraAdvancedHero2026() {;
           animate={{
             coordinate_y: [0, -15, 0],
             rotate: [0, 3, 0],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }}
           transition={{
             duration: 7
@@ -990,7 +957,6 @@ export default function UltraAdvancedHero2026() {;
           animate={{
             y: [0, 15, 0]
             rotate: [0, -3, 0]
-=======
           className='absolute top - 1/3 left - 10 text - 5xl opacity - 20';
         >;
           🧠;
@@ -999,7 +965,6 @@ export default function UltraAdvancedHero2026() {;
           animate={{
             coordinate_y: [0, 15, 0],
             rotate: [0, -3, 0],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }}
           transition={{
             duration: 9
@@ -1011,7 +976,6 @@ export default function UltraAdvancedHero2026() {;
           className='absolute bottom-1/3 right-10 text-5xl opacity-20'>        <motion&& motion.div
           animate={{ 
             y: [0, -20, 0]
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             rotate: [0, 5, 0]
           }}
           transition={{
@@ -1070,11 +1034,8 @@ export default function UltraAdvancedHero2026() {;
           }}
 
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           className='absolute bottom - 1/3 right - 10 text - 5xl opacity - 20'        >        <motion.div;
           animate={{
             coordinate_y: [0, -20, 0];
@@ -1134,10 +1095,6 @@ export default function UltraAdvancedHero2026() {;
       </div>;
     </section>));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

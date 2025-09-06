@@ -4,13 +4,11 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
 import EnhancedButton from "../../components/ui/EnhancedButton";
-=======
 import type { NextPage } from './next';
 import Head from './next / head';
 import { useState  } from './react';
 import EnhancedButton from "../../components / ui / EnhancedButton";
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 const steps = ["Account", "Profile", "Preferences", "Preview"];
 
 import type { NextPage } from 'next';
@@ -21,10 +19,8 @@ const steps = ['AccountProfilePreferencesPreview'];
 
 const Onboarding: NextPage = () => {
 
-=======
 
 
-=======
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import { useState } from 'react',
@@ -32,16 +28,12 @@ import EnhancedButton from '../../components/ui/EnhancedButton',
 const steps = ['AccountProfilePreferencesPreview'],
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const Onboarding: NextPage = () => {
   const [step, setStep] = useState(0),
   const next = () => setStep((s) => Math.min(s + 1, steps.length - 1)),
   const prev = () => setStep((s) => Math.max(s - 1, 0)),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
-=======
     <div className="space-y-6">
       <Head>
         <title>Onboarding - Zion</title>
@@ -107,14 +99,10 @@ const Onboarding: NextPage = () => {
 export default Onboarding;
 ;
 
-=======
 
 
-=======
   )
 },
 export default Onboarding,
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

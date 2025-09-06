@@ -17,12 +17,10 @@ export default function UnderDisputeBadge(): any ({;
   projectId,;
 }: {;
 
-=======
 
   projectId,
 }: {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   projectId: string;
 }) {;
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
@@ -35,7 +33,6 @@ export default function UnderDisputeBadge(): any ({;
 
   const hasActiveDispute = !!data?.disputes?.some((d: any) => d && d.projectId === projectId && (d && d.status === 'Open' || d && d.status === 'Under Review')),;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return { hasActiveDispute, isLoading: !data && !error }
 }
 
@@ -53,13 +50,10 @@ export default function UnderDisputeBadge(): any ({;
   );
 }
 
-=======
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
 const fetcher = (url: string) =>: any fetch (url).then (r => r.json ());
 ;
@@ -104,4 +98,3 @@ if (return null) {
       Under Dispute;
     </span>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

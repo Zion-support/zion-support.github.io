@@ -22,7 +22,6 @@ export function ApplicationsTracker() {
 
 
 
-=======
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { ApplicationCard } from "./ApplicationCard",
@@ -69,7 +68,6 @@ export function ApplicationsTracker() {;
   
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-6">;
       <div className="flex flex-wrap gap-2">;
@@ -124,7 +122,6 @@ export function ApplicationsTracker() {;
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
         {filteredApplications.map((application) => (
           <ApplicationCard key={application.id} application={application} />
@@ -135,7 +132,6 @@ export function ApplicationsTracker() {;
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {filteredApplications.length === 0 && (
         <div className="text-center p-8">
           <p className="text-muted-foreground">
@@ -143,7 +139,6 @@ export function ApplicationsTracker() {;
           </p>
         </div>
 
-=======
 import { useState  } from './react';
 import { useJobApplications  } from '@/hooks / useJobApplications';
 import { ApplicationCard  } from './ApplicationCard';
@@ -159,13 +154,11 @@ function ApplicationsTracker() {
   const { applications, is_loading, error } = useJobApplications ();
   const [status_filter, setStatusFilter] = useState < ApplicationStatus | "all">(
     "all",
-=======
       )}
 
     </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
 ;
   // Check condition
@@ -240,7 +233,6 @@ if ( {) {
           size="sm";
           variant={status_filter === "rejected" ? "default" : "outline"}
           on_click={() => setStatusFilter ("rejected")}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         >;
           Not Selected;
         </Button>;

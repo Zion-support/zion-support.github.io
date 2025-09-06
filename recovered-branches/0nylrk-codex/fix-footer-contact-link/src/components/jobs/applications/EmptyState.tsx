@@ -21,10 +21,8 @@ function EmptyState() {
     </Card>);
 
 }
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function EmptyState() {
   return (
     <Card className="bg-muted/30">
@@ -38,6 +36,4 @@ export function EmptyState() {
         </Button>
       </CardContent>
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

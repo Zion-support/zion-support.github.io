@@ -270,7 +270,6 @@ const ServicesIndex: NextPage = () => {
       features: ["Demand forecasting", "Automated reordering", "Cost optimization", "Multi-location support"],
       pricing: "Starting at $249/month",
       link: "/services/intelligent-inventory-manager"
-=======
 export default function ServicesIndex() {;
 const ServicesIndex: NextPage = () => {;
   const services = [;
@@ -436,7 +435,6 @@ const ServicesIndex: NextPage = () => {;
       features: ["Demand forecasting", "Automated reordering", "Cost optimization", "Multi-location support"],;
       pricing: "Starting at $249/month",;
       link: "/services/intelligent-inventory-manager";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/index.tsx
     }
   ];
   const itServices = [;
@@ -515,10 +513,7 @@ const ServicesIndex: NextPage = () => {;
   ];
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <>
       <Head>
@@ -528,10 +523,8 @@ const ServicesIndex: NextPage = () => {;
       </Head>
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     Learn More
                   </Link>
                 </div>
@@ -554,19 +547,16 @@ const ServicesIndex: NextPage = () => {;
         </section>
 
 
-=======
                     Learn More
                   </Link>
                 </div>
               </div>
-=======
                     href={service && service.link}
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">;
                     Learn More;
                   </Link>;
                 </div>;
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/index.tsx
             ))}
           </div>;
         </section>;
@@ -884,4 +874,3 @@ export default ServicesIndex;
     </>;
 
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

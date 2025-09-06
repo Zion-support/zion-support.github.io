@@ -14,11 +14,9 @@ interface Contract {
 
 interface RecentContractsTableProps {;
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   contracts: Contract[];
   onViewContract: (contractId: string) => void
 }
@@ -96,7 +94,6 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
                     variant="ghost"
                     size="sm"
                     onClick={() => onViewContract(contract && contract.id)}
-=======
 interface RecentContractsTableProps {
   contracts: Contract[];
   onViewContract: (contract_id: string) => void;
@@ -176,7 +173,6 @@ function RecentContractsTable() {
                     variant="ghost";
                     size="sm";
                     on_click={() => onViewContract (contract.id)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   >;
                     View;
                   </Button>;
@@ -184,7 +180,6 @@ function RecentContractsTable() {
 
 
 
-=======
 
           </tbody>;
         </table>;
@@ -195,11 +190,9 @@ function RecentContractsTable() {
 
 
   );
-=======
               </tr>))}
           </tbody>;
         </table>;
       </div>;
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

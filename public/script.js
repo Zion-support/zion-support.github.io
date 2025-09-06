@@ -50,9 +50,7 @@
     // Initialize modals
     initializeModals()
 }),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 // Search function
 function performSearch(query) {
     // This would typically make an API call to search your content
@@ -130,7 +128,6 @@ function initializeModals() {
     // Close modal on escape key
 
 
-=======
 //Zion Tech Group Website JavaScript;
 });
 // Search function;
@@ -144,7 +141,6 @@ function perform_search() {
     // Check condition
 if ( {) {
   $2
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
         const results = [;
             { title: 'AI Autonomous Business Manager', url: '/solutions / ai - autonomous - business - manager' },
@@ -272,7 +268,6 @@ if ( {) {
 }
                     modal.class_list.remove ('active'),
                     document.body.style.overflow = '';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 }
             });
         }
@@ -280,13 +275,11 @@ if ( {) {
 }
 
 
-=======
 
         const perfData = window.window.window.performance.getEntriesByType('navigation')[0],
         // // // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms'),
         // // // console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 }
 // Error tracking
@@ -326,7 +319,6 @@ function trackEvent(eventName, eventData = {}) {
 
 //Reset button after delay //Initialize tooltips initializeTooltips ();
 //Initialize modals initializeModals ()
-=======
 // Performance monitoring;
 /**
  * log_performance - Function description
@@ -375,7 +367,6 @@ if ( {) {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 });
 }//Newsletter subscription submit_btn.disabled = true;
 //Simulate subscription (replace with actual API call) //Reset form this.reset ();
@@ -454,7 +445,6 @@ document && document.addEventListener('click', function(e) {
 // Log performance when page is fully loaded
 
 
-=======
   title: 'AI Autonomous Business Manager', url: '/solutions / ai - autonomous - business - manager';
 }
 {
@@ -527,11 +517,7 @@ document.addEventListener ('click', function (e) {
 }),
 // Log performance when page is fully loaded;
 window.addEventListener ('load', log_performance),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
     // // // console.log('Event tracked:', eventName, eventData),
     // Implement your analytics tracking here
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

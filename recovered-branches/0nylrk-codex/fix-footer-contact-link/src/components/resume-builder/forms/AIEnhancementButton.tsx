@@ -14,9 +14,6 @@ interface AIEnhancementButtonProps {
   context?: string;
   onEnhanced: (enhancedContent: string) => void
 
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Sparkles, Loader2} from 'lucide-react';
@@ -55,9 +52,7 @@ export function AIEnhancementButton({;
   };
 
 
-=======
 
-=======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2 } from 'lucide-react',;
@@ -77,7 +72,6 @@ export function AIEnhancementButton({
   context,
   onEnhanced,
   buttonText = "Enhance with AI",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   className
 }: AIEnhancementButtonProps) {
   const { enhanceContent, isEnhancing } = useResumeEnhancer(),
@@ -91,8 +85,6 @@ export function AIEnhancementButton({
 
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Button
       type="button"
@@ -110,12 +102,9 @@ export function AIEnhancementButton({
       <span className="text-xs">{buttonText}</span>;
     </Button>;
   );
-=======
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
 interface AIEnhancementButtonProps {
   current_content: string,

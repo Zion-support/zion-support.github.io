@@ -5,7 +5,6 @@ import React from 'react';
 
 
 const contactMethods = [
-=======
   EnvelopeIcon,
   PhoneIcon,
   MapPinIcon,
@@ -13,7 +12,6 @@ const contactMethods = [
   ChatBubbleLeftRightIcon;
 } from '@heroicons / react / 24 / outline';
 const contact_methods = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     name: 'Email'
     description: 'Get in touch with our team'
@@ -76,11 +74,9 @@ function ContactPage() {
 
   return (
     <div className=&quot;bg - black & quot;>;
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
@@ -98,7 +94,6 @@ function ContactPage() {
           </div>
         </div>
       </div>
-=======
               <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
                 Touch;
               </span>;
@@ -110,7 +105,6 @@ function ContactPage() {
           </div>;
         </div>;
       </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Contact methods */}
       <div className=&quot;mx - auto max - w-7xl px - 6 sm:px - 6 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
@@ -144,7 +138,6 @@ function ContactPage() {
                 </dd>
               </div>
             ))}
-=======
                 </dt>;
                 <dd className=&quot;mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray - 300 & quot;>;
                   <p className=&quot;flex - auto & quot;>{method.description}</p>;
@@ -158,7 +151,6 @@ function ContactPage() {
                   </p>;
                 </dd>;
               </div>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </dl>;
         </div>;
       </div>;
@@ -241,7 +233,6 @@ function ContactPage() {
                   <textarea
                     name="message"
                     id="message"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     rows={4}
 
                     className=&quot;block w - full rounded - md border - 0 bg - white / 5 px - 3.5 py - 2 text - white shadow - sm ring - 1 ring - inset ring - white / 10 focus:ring - 2 focus:ring - inset focus:ring - blue - 500 sm:text - sm sm:leading - 6&quot;
@@ -317,7 +308,6 @@ function ContactPage() {
             {faqs.map((faq, index) => (
               <div key={index} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
                 <dt className="text-lg font-semibold leading-7 text-white mb-4">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {faq.question}
                 </dt>;
                 <dd className=&quot;text - base leading - 7 text - gray - 300 & quot;>;
@@ -358,4 +348,3 @@ function ContactPage() {
 };
 
 export default Page;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

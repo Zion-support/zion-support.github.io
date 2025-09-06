@@ -1,7 +1,6 @@
 
 
 
-=======
 import React, { useState, useMemo } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -163,9 +162,7 @@ export default function Services2026ShowcaseEnhancedPage() {
           return b.rating - a.rating,
         default: return a.name.localeCompare(b.name)
       }
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -273,7 +270,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
 
   }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
 
-=======
 
 export default function Services2026ShowcaseEnhancedPage(req, res) {
   try {
@@ -462,7 +458,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     financialServices: all2026Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length,
     manufacturingServices: all2026Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
@@ -481,7 +476,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <meta property="og:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
@@ -496,7 +490,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
@@ -511,7 +504,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-cyan-900/30"></div>
           <div className="max-w-7xl mx-auto relative z-10 text-center">
@@ -519,8 +511,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
-=======
   ],
   const sort_options = [;
     { id: 'name', name: 'Name A - Z' },
@@ -660,7 +650,6 @@ if (return price >= 20000, ) {
           <meta name="twitter:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />;
           <meta name="twitter:image" content="https://ziontechgroup.com / og - image.svg" />;
         </Head>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Enhanced Header Section */}
         <section className="relative py - 32 px - 4 sm:px - 6 lg:px - 8 overflow - hidden">;
           <div className="absolute inset - 0 bg - gradient - to - r from - purple - 900 / 30 via - transparent to - cyan - 900 / 30"></div>;
@@ -690,7 +679,6 @@ if (return price >= 20000, ) {
                     transition={{ duration: 0.5, delay: key.length * 0.1 }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-4 border border-gray-600/30"
                   >
                     <div className="text-3xl font-bold text-cyan-400">{value}</div>
@@ -711,7 +699,6 @@ if (return price >= 20000, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4">Ready to Transform Your Business?</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -733,7 +720,6 @@ if (return price >= 20000, ) {
           </div>
         </section>
 
-=======
                     className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 backdrop - blur - sm rounded - xl p - 4 border border - gray - 600 / 30";
                   >;
                     <div className="text - 3xl font - bold text - cyan - 400">{value}</div>;
@@ -766,7 +752,6 @@ if (return price >= 20000, ) {
         <section className="py - 16 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
             <div className="bg - gradient - to - r from - gray - 900 / 50 to - gray - 800 / 50 backdrop - blur - sm border border - gray - 700 / 50 rounded - 2xl p - 8">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Search Bar */}
 
 
@@ -785,14 +770,12 @@ if (return price >= 20000, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="relative mb-6">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search for services, technologies, or use cases..."
 
-=======
               <div className="relative mb - 6">;
                 <Search className="absolute left - 4 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />;
                 <input;
@@ -806,7 +789,6 @@ if (return price >= 20000, ) {
 
               {/* Filters and Controls */}
               <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 4 mb - 6">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 {/* Category Filter */}
 
 
@@ -849,7 +831,6 @@ if (return price >= 20000, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {categories.map((category) => (
@@ -901,7 +882,6 @@ if (return price >= 20000, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {priceRanges.map((range) => (
@@ -959,7 +939,6 @@ if (return price >= 20000, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {sortOptions.map((option) => (
@@ -1004,7 +983,6 @@ if (return price >= 20000, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">View Mode</label>
                   <div className="flex bg-gray-800/50 border border-gray-600/30 rounded-lg p-1">
@@ -1021,7 +999,6 @@ if (return price >= 20000, ) {
                       className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
                         viewMode === 'list' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
                       }`}
-=======
                 <div>;
                   <label className="block text - sm font - medium text - gray - 300 mb - 2">View Mode</label>;
                   <div className="flex bg - gray - 800 / 50 border border - gray - 600 / 30 rounded - lg p - 1">;
@@ -1054,7 +1031,6 @@ if (return price >= 20000, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <span className="text-cyan-400 font-semibold">{all2026Services.length}</span> services
                 </p>
               </div>
@@ -1070,7 +1046,6 @@ if (return price >= 20000, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <AnimatePresence mode="wait">
@@ -1095,7 +1070,6 @@ if (return price >= 20000, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="text-center py-20"
                 >
                   <div className="text-6xl mb-4">🔍</div>
@@ -1107,7 +1081,6 @@ if (return price >= 20000, ) {
                   {filteredServices.map((service, index) => (
                     <motion.div
 
-=======
                     >;
                       <List className="w - 4 h - 4 mx - auto" />;
                     </button>;
@@ -1143,7 +1116,6 @@ if (return price >= 20000, ) {
                 <div className={view_mode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6' : 'space - y-4'}>;
                   {filtered_services.map ((service, index) => (
                     <motion.div;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       key={service.id}
                       initial={{ opacity: 0, coordinate_y: 20 }}
                       animate={{ opacity: 1, coordinate_y: 0 }}
@@ -1198,11 +1170,9 @@ if (return price >= 20000, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <div className="flex items-start justify-between mb-4">
                             <div className="text-4xl">{service.icon}</div>
                             {service.popular && (
-=======
                       className={view_mode === 'grid' ? '' : 'bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 backdrop - blur - sm rounded - xl p - 6 border border - gray - 600 / 30'}
                     >;
                       <UltraFuturisticCard;
@@ -1289,8 +1259,6 @@ if (return price >= 20000, ) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <div className="grid grid-cols-3 gap-2 mb-4 text-xs">
                             <div className="text-center">
                               <div className="text-cyan-400 font-semibold">{service.rating}★</div>
@@ -1314,7 +1282,6 @@ if (return price >= 20000, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <div className="mb-4 p-3 bg-gray-800/30 rounded-lg">
                             <h4 className="text-xs font-semibold text-gray-200 mb-1">Market Position:</h4>
                             <p className="text-xs text-gray-400 line-clamp-2">{service.marketPosition}</p>
@@ -1328,7 +1295,6 @@ if (return price >= 20000, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <div className="mb-4 p-3 bg-green-900/20 border border-green-500/30 rounded-lg">
                             <h4 className="text-xs font-semibold text-green-400 mb-1">ROI Promise:</h4>
                             <p className="text-xs text-green-300">{service.roi}</p>
@@ -1342,7 +1308,6 @@ if (return price >= 20000, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <div className="flex space-x-2">
                             <Button
                               variant="primary"
@@ -1357,7 +1322,6 @@ if (return price >= 20000, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             >
                               Learn More
                               <ArrowRight className="w-4 h-4 ml-1" />
@@ -1366,7 +1330,6 @@ if (return price >= 20000, ) {
                               variant="secondary"
                               size="sm"
 
-=======
                               <p className="text - xs text - gray - 500 mt - 1">+{service.features.length - 3} more features</p>)}
                           </div>;
                           {/* Service Stats */}
@@ -1409,7 +1372,6 @@ if (return price >= 20000, ) {
                               variant="secondary";
                               size="sm";
                               on_click={() => window.open (`mailto:${contact_info.email}?subject = Inquiry about ${service.name}`)}
-=======
 
                               onClick={() => window.open(`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`)  } catch (error) {
     console.error("Error:", error);
@@ -1459,7 +1421,6 @@ if (return price >= 20000, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1481,7 +1442,6 @@ if (return price >= 20000, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
@@ -1498,7 +1458,6 @@ if (return price >= 20000, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
@@ -1514,10 +1473,8 @@ if (return price >= 20000, ) {
       </div>
     </UltraFuturisticBackground>
 
-=======
 }
 
-=======
               className="bg - gradient - to - r from - cyan - 900 / 50 via - purple - 900 / 50 to - pink - 900 / 50 backdrop - blur - sm rounded - 2xl p - 8 border border - cyan - 500 / 30";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -1554,9 +1511,5 @@ if (return price >= 20000, ) {
       </div>;
     </UltraFuturisticBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

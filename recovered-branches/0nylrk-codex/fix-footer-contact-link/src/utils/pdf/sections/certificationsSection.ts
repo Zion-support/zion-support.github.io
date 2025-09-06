@@ -41,12 +41,10 @@ export function addCertificationsSection(;
     }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     yPos += 16
   }
   return yPos
-=======
 import {jsPDF} from 'jspdf';
 import {Certification} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
@@ -108,5 +106,4 @@ if ( {) {
     y_pos += 16;
   }
   return y_pos;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

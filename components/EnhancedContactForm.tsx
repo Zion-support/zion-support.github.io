@@ -1,10 +1,8 @@
 
 
-=======
 
  setErrors (newErrors);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
  setErrors (newErrors);
 }
@@ -44,7 +42,6 @@ export default EnhancedContactForm;
   const services = [;
     'AI & Machine LearningQuantum ComputingCybersecurityCloud InfrastructureData AnalyticsDigital TransformationOther';
 
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
@@ -65,7 +62,6 @@ const EnhancedContactForm: React.FC = () => {
   const services = [
     'AI & Machine LearningQuantum ComputingCybersecurityCloud InfrastructureData AnalyticsDigital TransformationOther'
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ];
 
 
@@ -112,12 +108,10 @@ const EnhancedContactForm: React.FC = () => {
       newErrors && newErrors.message = 'Message must be less than 1000 characters';
 
     }
-=======
     }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setErrors(newErrors);
 
     return Object && Object.keys(newErrors).length === 0;
@@ -238,7 +232,6 @@ const EnhancedContactForm: React.FC = () => {
               <div>;
                 <h4 className="text-lg font-semibold text-white mb-1">Location</h4>;
                 <p className="text-white/70">San Francisco, CA</p>;
-=======
 set_errors (new_errors);
 ;
 }
@@ -441,12 +434,10 @@ if ( {) {
 
 
                       : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
-=======
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${;
                     errors && errors.name ;
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' ;
                       : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
                   placeholder="Enter your full name";
                 />;
@@ -484,12 +475,10 @@ if ( {) {
 
 
                       : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
-=======
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${;
                     errors && errors.email ;
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' ;
                       : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
                   placeholder="Enter your email address";
                 />;
@@ -572,12 +561,10 @@ if ( {) {
 
 
                     : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
-=======
                 className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 resize-none ${;
                   errors && errors.message ;
                     ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' ;
                     : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
                 placeholder="Tell us about your project and requirements...";
               />;
@@ -618,7 +605,6 @@ if ( {) {
                 </>;
               )}
 
-=======
         {/* Contact Form */}
         <div className="bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl rounded - 2xl border border - white / 10 p - 8">;
           <form on_submit={handle_submit} className="space - y-6">;
@@ -777,13 +763,9 @@ if ( {) {
       </div>;
 
 
-=======
     </section>);
 }
 ;
 export default EnhancedContactForm;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

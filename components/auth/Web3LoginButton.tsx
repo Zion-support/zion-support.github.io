@@ -24,12 +24,10 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect, useState } from 'react';
 
 
-=======
 
 
 export default function Web3LoginButton() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<{;
     address: string;
@@ -43,13 +41,11 @@ export default function Web3LoginButton() {;
 
 }
 export default function Web3LoginButton() {
-=======
 }
 
 
 export default function Web3LoginButton() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [open, setOpen] = useState(false);
 
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
@@ -159,7 +155,6 @@ export default function Web3LoginButton() {;
     </>;
   );      <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1 && 1.5 text-xs">Connect Wallet</button>;
 
-=======
     const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null;
     if (saved) setUser(JSON.parse(saved));
     const pref = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-display') : null;
@@ -200,14 +195,12 @@ export default function Web3LoginButton() {;
     <>
       <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-xs">Connect Wallet</button>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
 
     </>;
   );
 }
 
-=======
 import dynamic from 'next / dynamic';
 ;
 const Web3LoginModal = dynamic (() => import ('./Web3LoginModal'), {
@@ -338,9 +331,6 @@ if ( {) {
       {open && <Web3LoginModal is_open={open} on_close={() => set_open (false)} onLoggedIn={onLoggedIn} />}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

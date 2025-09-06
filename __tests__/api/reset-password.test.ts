@@ -46,6 +46,4 @@ describe('/api/auth/reset token validation', () => {
   });
 });
 
-=======
       "body": { token: 'invalid', "newPassword"
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

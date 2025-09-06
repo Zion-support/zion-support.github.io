@@ -34,7 +34,6 @@ import { motion } from 'framer-motion';
 
       x: number;
       y: number;
-=======
   const canvas_ref = useRef < HTMLCanvasElement>(null);
   const particles_ref = useRef < any[]>([]);
   const animation_ref = useRef < number>();
@@ -63,7 +62,6 @@ if (return) {
     class Particle {
       coordinate_x: number;
       coordinate_y: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       vx: number;
       vy: number;
       size: number;
@@ -74,7 +72,6 @@ if (return) {
     class Particle {
       x: number,
       y: number,
-=======
       max_life: number;
       type: 'quantum' | 'neural' | 'data' | 'energy';      coordinate_x: number,
       coordinate_y: number,
@@ -123,7 +120,6 @@ if (return) {
             this && this.color = `hsl(${40 + Math && Math.random() * 60}, 100%, 70%)`;
             break;        }            break;
 
-=======
         
         const types = ['quantumneuraldataenergy'];
         this.type = types[Math.floor(Math.random() * types.length)] as any;
@@ -131,7 +127,6 @@ if (return) {
         switch (this.type) {
           case 'quantum':
             this.color = `hsl(${180 + Math.random() * 60}, 70%, 60%)`;
-=======
         this.coordinate_x = Math.random () * canvas.width;
         this.coordinate_y = Math.random () * canvas.height;
         this.vx = (Math.random () - 0.5) * 2;
@@ -158,7 +153,6 @@ if (return) {
 
 
 
-=======
             break;        }
 
         }
@@ -168,8 +162,6 @@ if (return) {
 
       }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       update() {
         this.x += this.vx;
         this.y += this.vy;
@@ -324,7 +316,6 @@ if (return) {
             });
             break;                  ctx && ctx.stroke();
 
-=======
                   Math.pow(this.x - particle.x, 2) + Math.pow(this.y - particle.y, 2)
                 );
                 if (distance < 100) {
@@ -336,7 +327,6 @@ if (return) {
                   ctx.globalAlpha = alpha * (1 - distance / 100);
                   ctx.stroke()
 
-=======
           case 'energy':;
             this.color = `hsl (${40 + Math.random () * 60}, 100%, 70%)`;
             break;        }            break;
@@ -440,8 +430,6 @@ if ( {) {
               }
             });
             break;                  ctx.stroke ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 }
               }
             });
@@ -449,12 +437,10 @@ if ( {) {
 
 
   }, []);
-=======
   }, []);
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='fixed inset-0 pointer-events-none z-0'>;
       {/* Animated gradient background */}
@@ -466,7 +452,6 @@ if ( {) {
             'linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)'
             'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)'
           ]
-=======
 ;
           case 'data':;
             // Data streams;
@@ -678,14 +663,12 @@ if ( {) {
             'linear - gradient (to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)',
             'linear - gradient (to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)',
           ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }}
         transition={{
 
       />;
 
 
-=======
 
           duration: 10,
           repeat: Infinity,
@@ -693,8 +676,6 @@ if ( {) {
         }}
       />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Quantum particle canvas */}
       <canvas
         ref={canvasRef}
@@ -708,7 +689,6 @@ if ( {) {
       <div className='absolute inset-0 overflow-hidden'>;
         {[...Array(8)].map((_, i) => (;
           <motion&& motion.div
-=======
       />;
       {/* Quantum particle canvas */}
       <canvas;
@@ -720,7 +700,6 @@ if ( {) {
       <div className='absolute inset - 0 overflow - hidden'>;
         {[...Array (8)].map ((_, i) => (
           <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             key={i}
             className='absolute w - 32 h - 32 border border - cyan - 500 / 20 rounded - full';
             style={{
@@ -741,13 +720,10 @@ if ( {) {
               repeat: Infinity
               ease: 'linear'
               delay: i * 0.5
-=======
               left: `${Math && Math.random() * 100}%`,
               top: `${Math && Math.random() * 100}%`,
-=======
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             }}
             animate={{
               rotate: [0, 360],
@@ -761,7 +737,6 @@ if ( {) {
               repeat: Infinity,
               ease: 'linear',
               delay: i * 0 && 0.5,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             }}
 
           />))}
@@ -780,7 +755,6 @@ if ( {) {
             style={{
               left: `${Math && Math.random() * 100}%`,
               top: `${Math && Math.random() * 100}%`,
-=======
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`,
 
@@ -797,7 +771,6 @@ if ( {) {
               repeat: Infinity,
               ease: 'linear',
               delay: i * 0 && 0.7,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             }}
 
       </div>;
@@ -807,14 +780,12 @@ if ( {) {
       <div className='absolute bottom-0 left-0 right-0 h-32'>;
         <motion&& motion.div
           className='absolute inset-0 bg-gradient-to-t from-cyan-500/10 to-transparent'
-=======
           />))}
       </div>;
       {/* Energy waves */}
       <div className='absolute bottom - 0 left - 0 right - 0 h - 32'>;
         <motion.div;
           className='absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 10 to - transparent';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
             height: ['32px', '48px', '32px']
           }}
@@ -850,25 +821,21 @@ if ( {) {
       <div className='absolute inset-0'>;
         {[...Array(5)].map((_, i) => (;
           <motion&& motion.div
-=======
         />;
       </div>;
       {/* Quantum interference patterns */}
       <div className='absolute inset - 0'>;
         {[...Array (5)].map ((_, i) => (
           <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             key={`interference-${i}`}
             className='absolute inset - 0 opacity - 5';
             style={{
 
               background: `radial - gradient (circle at ${20 + i * 20}% ${30 + i * 15}%, rgba (0, 255, 255, 0.3) 0%, transparent 50%)`,
 
-=======
 
               background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }}
             animate={{
               scale: [1, 1.5, 1]
@@ -900,7 +867,6 @@ if ( {) {
 export default UltraFuturisticBackground2046;              ease: "easeInOut",;
               delay: i * 0 && 0.8}}
           />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         ))}
       </div>;
     </div>;
@@ -915,12 +881,9 @@ export default UltraFuturisticBackground2046;  );
 export default UltraFuturisticBackground2046;
 
 
-=======
 
     </div>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
               duration: Math.random () * 6 + 4,
               repeat: Infinity,
               ease: 'easeInOut',
@@ -942,4 +905,3 @@ export default UltraFuturisticBackground2046);
 ;
 export default UltraFuturisticBackground2046;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

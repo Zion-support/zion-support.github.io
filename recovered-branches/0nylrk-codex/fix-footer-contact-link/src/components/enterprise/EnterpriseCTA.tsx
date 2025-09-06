@@ -64,7 +64,6 @@ export function EnterpriseCTA() {;
                       </span>;
                     </div>;
                     <p>Free consultation on implementation</p>;
-=======
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { Calendar, ArrowRight  } from './lucide-react';
@@ -133,7 +132,6 @@ function EnterpriseCTA() {
                       </span>;
                     </div>;
                     <p > Free consultation on implementation</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </li>;
                 </ul>;
               </div>;
@@ -145,7 +143,6 @@ function EnterpriseCTA() {
     </section>);
 
 }
-=======
 
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -193,6 +190,4 @@ function EnterpriseCTA() {
         </div>
       </div>
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -28,7 +28,6 @@ export type FilterType =
   | 'system';
 
 import {Notification, as, BaseNotification} from '@/types / notifications';
-=======
 
 
 export interface NotificationContextType {;
@@ -44,7 +43,6 @@ export interface NotificationContextType {;
   setFilter: (filter: FilterType) => void
 
   fetchNotifications: () => Promise<void>
-=======
 import { Notification as BaseNotification } from '@/types/notifications',;
 
 export type NotificationType =;
@@ -73,7 +71,6 @@ export type FilterType =;
   fetch_notifications: () => Promise < void>;
 }
 
-=======
   | 'system',;
 export interface NotificationContextType {;
   notifications: Notification[],;
@@ -88,6 +85,4 @@ export interface NotificationContextType {;
   fetchNotifications: () => Promise<void>;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

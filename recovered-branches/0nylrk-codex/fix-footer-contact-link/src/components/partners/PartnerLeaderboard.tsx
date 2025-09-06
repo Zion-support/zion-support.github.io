@@ -21,7 +21,6 @@ interface LeaderboardEntry {
   referrals: number,
   earnings: number,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   badges: string[]
 }
 export function PartnerLeaderboard() {
@@ -39,7 +38,6 @@ export function PartnerLeaderboard() {
       earnings: 4500,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
 
       id: "2"
@@ -333,7 +331,6 @@ function PartnerLeaderboard() {
                           Trending;
                         </Badge>;
                       )}
-=======
                       )}
                       {entry.badges.includes("trending") && (
                         <Badge variant="outline" className="bg-blue-500/20 border-blue-500 text-blue-400">
@@ -341,7 +338,6 @@ function PartnerLeaderboard() {
                         </Badge>
                       )}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>;
                   </div>;
                 </div>;
@@ -357,7 +353,6 @@ function PartnerLeaderboard() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
 
           </div>;
@@ -375,7 +370,6 @@ function PartnerLeaderboard() {
               Start referring to appear on the leaderboard;
             </p>;
             <Badge variant="outline" className="bg-zion-purple/20 border-zion-purple text-zion-purple">;
-=======
               leaderboard.map (entry => (
                 <div;
                   key={entry.id}
@@ -484,9 +478,7 @@ function PartnerLeaderboard() {
     </div>);
 }
 
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

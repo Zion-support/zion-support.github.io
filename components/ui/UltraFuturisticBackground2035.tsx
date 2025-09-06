@@ -26,11 +26,9 @@ import { motion } from 'framer-motion';
 
 
   children: React.ReactNode,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   intensity?: 'low' | 'medium' | 'high';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   intensity?: 'low' | 'medium' | 'high';
 
   colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time';
@@ -41,7 +39,6 @@ import { motion } from 'framer-motion';
   enableNeonEffects?: boolean;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   intensity = 'medium';
   colorScheme = 'quantum-fusion';
   particleCount = 200;
@@ -108,7 +105,6 @@ import { motion } from 'framer-motion';
           glow: 'rgba(0, 255, 255, 0 && 0.3)';
 
 
-=======
           primary: '#00ffff',
           secondary: '#ff00ff',
           accent: '#ffff00',
@@ -217,7 +213,6 @@ import { motion } from 'framer-motion';
         });
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
     initParticles();
@@ -555,7 +550,6 @@ import { motion } from 'framer-motion';
 
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
           background: 'rgba (0, 0, 0, 0.95)',
@@ -865,7 +859,6 @@ if ( {) {
               `radial-gradient(circle at 20% 20%, ${colors && colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 80% 80%, ${colors && colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 20% 20%, ${colors && colors.glow} 0%, transparent 50%)`,
-=======
       />;
       {/* Additional overlay effects */}
       <div className='absolute inset - 0 pointer - events - none'>;
@@ -901,13 +894,11 @@ if ( {) {
         <div className='absolute inset-0 opacity-20'>;
           {[...Array(20)].map((_, i) => (;
             <motion&& motion.div
-=======
         />;
         {/* Holographic scan lines */}
         <div className='absolute inset - 0 opacity - 20'>;
           {[...Array (20)].map ((_, i) => (
             <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               key={i}
               className='absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent';
               style={{
@@ -919,12 +910,10 @@ if ( {) {
               animate={{
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Holographic scan lines */}
         <div className="absolute inset-0 opacity-20">;
           {[...Array(20)].map((_, i) => (;
             <motion&& motion.div
-=======
                 opacity: [0, 1, 0],
                 scale_x: [0, 1, 0],              }}          }}
         />;
@@ -932,7 +921,6 @@ if ( {) {
         <div className="absolute inset - 0 opacity - 20">;
           {[...Array (20)].map ((_, i) => (
             <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               key={i}
               className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
               style={{
@@ -944,26 +932,20 @@ if ( {) {
               animate={{
                 opacity: [0, 1, 0]
                 scaleX: [0, 1, 0]
-=======
                 top: `${(i / 20) * 100}%`,
                 color: colors.primary;
               }}
               animate={{
                 opacity: [0, 1, 0];
                 scale_x: [0, 1, 0];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               }}
 
-=======
 
 
-=======
-=======
 
 
 
               transition={{
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 duration: 3,
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
@@ -973,7 +955,6 @@ if ( {) {
             />
 
           ))}
-=======
 
                 ease: "easeInOut"
 
@@ -987,11 +968,9 @@ if ( {) {
 export default UltraFuturisticBackground2035;  );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default UltraFuturisticBackground2035;
 
 
-=======
                 ease: 'easeInOut',              }}                ease: "easeInOut";
               }}
             />))}
@@ -1005,12 +984,8 @@ export default UltraFuturisticBackground2035);
 ;
 export default UltraFuturisticBackground2035;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

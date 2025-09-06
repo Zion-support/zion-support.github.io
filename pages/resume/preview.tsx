@@ -13,7 +13,6 @@
 
 
 
-=======
             onChange={e => setTheme(e && e.target.value as 'light' | 'dark')}
             className='border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black';
           >;
@@ -23,7 +22,6 @@
           {versions && versions.length > 0 && (;
             <>;
               <label className='text-sm ml-4'>Version</label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <select
                 value={selectedVersionId}
                 onChange={e => setSelectedVersionId(e && e.target.value)}
@@ -37,7 +35,6 @@
               </select>;
             </>;
 
-=======
 import { GetServerSideProps } from 'next';
 import React, { useMemo, useRef, useState } from 'react';
 import PdfExportButton from '../../components/ui/PdfExportButton';
@@ -75,7 +72,6 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {versions.length > 0 && (
             <>
               <label className="text-sm ml-4">Version</label>
@@ -139,7 +135,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />;
       </div>;
     </div>;
-=======
 
                   <option value={v.id} key={v.id}>{v.label}</option>
                 ))  } catch (error) {
@@ -154,7 +149,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
         </div>
       </div>
@@ -246,7 +240,6 @@ return { props: { initialData, versions } };
 };
 
 }
-=======
                   <option value={v.id} key={v.id}>{v.label}</option>
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -345,12 +338,10 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
     ],;
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
 return { props: { initialData, versions } }
 }
 
-=======
           'Built multi-agent automation systems improving throughput by 40%.Designed AI-driven dashboards and PDF export workflows.']}];
     education: [
       { institution: 'University of Example', degree: 'B.Sc. Computer Science', start: '2016', end: '2020' }],
@@ -362,8 +353,6 @@ return { props: { initialData, versions } }
   return { props: { initialData, versions } }
 
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) );
 }</select> </>);
 }</div> </div> <PdfExportButton target_ref= {
@@ -515,10 +504,6 @@ if ( {) {
 return { props: { initial_data, versions } }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -21,14 +21,10 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       'API for research integration',
       'Compliance with medical standards',
 
-=======
     tagline: 'World\'s first quantum-enhanced AI with human-like reasoning',
     price: '$2,999',
 
-=======
       '24 / 7 quantum AI support',    ],    price: '$2, 999',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     period: '/month',
     description: 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.',
     features: [;
@@ -45,11 +41,9 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     setup_time: '2 - 4 weeks',
     category: 'Quantum AI & Neuroscience',
 
-=======
     link: 'https://ziontechgroup.com/quantum-ai-brain-computer-interface',
     marketPosition: 'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     targetAudience: 'Research institutions, Medical centers, Defense contractors, Tech companies, Universities',
     trialDays: 30,
     setupTime: '2-4 weeks',
@@ -78,10 +72,8 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     ],
     roi: '1000% ROI within 6 months through breakthrough discoveries and patents',
 
-=======
     technology: ['Quantum ComputingNeural NetworksBrain-Computer InterfaceAI/MLQuantum Encryption'],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['Research APIsMedical devicesCloud platformsData analysis tools'],
     useCases: ['Medical researchCognitive enhancementNeural rehabilitationAI developmentDefense applications'],
     roi: '1000% ROI within 6 months through breakthrough discoveries and patents',
@@ -91,7 +83,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     growthRate: '300% annual growth',
     variant: 'quantum-ai-futuristic',
     contactInfo: {
-=======
     competitors: ['Neuralink ($10, 000+/month)', 'Kernel ($50, 000+/month)'],    market_size: '$1.5B BCI market',    technology: ['Quantum ComputingNeural NetworksBrain - Computer InterfaceAI / MLQuantum Encryption'],
     integrations: ['Research APIsMedical devices_cloud platforms_data analysis tools'],
     use_cases: ['Medical research_cognitive enhancement_neural rehabilitationAI development_defense applications'],
@@ -100,7 +91,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     growth_rate: '300% annual growth',
     variant: 'quantum - ai - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -113,7 +103,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4 && 4.9,
     reviews: 8
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
     id: 'quantum-ai-brain-computer-interface'
     name: 'Quantum AI Brain-Computer Interface'
@@ -202,14 +191,12 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     launchDate: '2024-12-01'
     customers: 15
     rating: 4.9
-=======
 
 export interface NextGenInnovativeService {;
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   // Quantum AI & Advanced Computing
   {
@@ -264,8 +251,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
 
     reviews: 8
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     reviews: 8
   }
@@ -273,7 +258,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   {
 
     id: 'space-technology-platform',
-=======
     real_implementation: true,
     implementation_details: 'Fully functional quantum AI platform with neural interface capabilities, real - time processing, and advanced security features.',
     launch_date: '2024 - 12 - 01',
@@ -303,14 +287,12 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       'Mission analytics dashboard',
       'Regulatory compliance tools',
 
-=======
     description: 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.',
     features: [
       'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',
       'Regulatory compliance toolsMulti-satellite operations'
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     popular: true,
     icon: '🚀',
     color: 'from-cyan-600 to-blue-700',
@@ -323,11 +305,9 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     setup_time: '4 - 6 weeks',
     category: 'Space Technology',
 
-=======
     link: 'https://ziontechgroup.com/space-technology',
     marketPosition: 'First comprehensive commercial space platform. 5x more features than existing solutions.',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     targetAudience: 'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions',
     trialDays: 30,
     setupTime: '4-6 weeks',
@@ -357,10 +337,8 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     ],
     roi: '500% ROI through operational efficiency and mission success rates',
 
-=======
     technology: ['Satellite TechnologyOrbital MechanicsSpace WeatherAI/MLCloud Computing'],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['SpaceX APIsNASA dataWeather servicesGround stationsLaunch providers'],
     useCases: ['Satellite operationsMission planningSpace infrastructureLaunch coordinationSpace research'],
     roi: '500% ROI through operational efficiency and mission success rates',
@@ -370,7 +348,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     growthRate: '400% annual growth',
     variant: 'space-futuristic',
     contactInfo: {
-=======
     competitors: ['SpaceX Starlink ($99 / month)', 'OneWeb ($50 / month)'],    market_size: '$469B space economy',    technology: ['Satellite TechnologyOrbital MechanicsSpace WeatherAI / MLCloud Computing'],
     integrations: ['SpaceX APIsNASA data_weather services_ground stations_launch providers'],
     use_cases: ['Satellite operations_mission planning_space infrastructure_launch coordination_space research'],
@@ -379,7 +356,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     growth_rate: '400% annual growth',
     variant: 'space - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -392,7 +368,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4 && 4.8,
     reviews: 12
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
     id: 'space-technology-platform'
     name: 'Space Technology Platform'
@@ -479,7 +454,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     launchDate: '2024-11-15'
     customers: 8
     rating: 4.8
-=======
 
     id: 'space-technology-platform',
     name: 'Space Technology Platform',
@@ -527,8 +501,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
 
     reviews: 12
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     reviews: 12
   }
@@ -536,7 +508,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   {
 
     id: 'biotech-ai-platform',
-=======
     real_implementation: true,
     implementation_details: 'Complete space operations platform with real - time tracking, mission planning tools, and regulatory compliance features.',
     launch_date: '2024 - 11 - 15',
@@ -566,14 +537,12 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       'Advanced analytics dashboard',
       'API for research integration',
 
-=======
     description: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.',
     features: [
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard',
       'API for research integrationMulti-omics data analysis'
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     popular: true,
     icon: '🧬',
     color: 'from-emerald-600 to-teal-700',
@@ -586,11 +555,9 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     setup_time: '2 - 3 weeks',
     category: 'Biotech & Healthcare AI',
 
-=======
     link: 'https://ziontechgroup.com/biotech-ai',
     marketPosition: 'Leading AI drug discovery platform. 5x faster than traditional methods.',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs',
     trialDays: 30,
     setupTime: '2-3 weeks',
@@ -618,10 +585,8 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     ],
     roi: '1000% ROI through accelerated drug development and patent generation',
 
-=======
     technology: ['AI/MLQuantum ComputingBioinformaticsGenomicsDrug Discovery'],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['Research databasesLab equipmentClinical trial systemsRegulatory databases'],
     useCases: ['Drug discoveryGenetic researchClinical trialsPersonalized medicineDisease research'],
     roi: '1000% ROI through accelerated drug development and patent generation',
@@ -631,7 +596,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     growthRate: '250% annual growth',
     variant: 'biotech-futuristic',
     contactInfo: {
-=======
     competitors: ['Insitro ($100M+ funding)', 'Recursion ($2B+ funding)'],    market_size: '$150B AI in healthcare',    technology: ['AI / MLQuantum ComputingBioinformaticsGenomicsDrug Discovery'],
     integrations: ['Research databases_lab equipment_clinical trial systems_regulatory databases'],
     use_cases: ['Drug discovery_genetic research_clinical trials_personalized medicine_disease research'],
@@ -640,7 +604,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     growth_rate: '250% annual growth',
     variant: 'biotech - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -653,7 +616,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4 && 4.7,
     reviews: 18
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
     id: 'biotech-ai-platform'
     name: 'Biotech AI Platform'
@@ -739,7 +701,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     launchDate: '2024-10-01'
     customers: 25
     rating: 4.7
-=======
 
     id: 'biotech-ai-platform',
     name: 'Biotech AI Platform',
@@ -787,8 +748,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
 
     reviews: 18
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     reviews: 18
   }
@@ -796,7 +755,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   {
 
     id: 'quantum-financial-trading',
-=======
     real_implementation: true,
     implementation_details: 'Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.',
     launch_date: '2024 - 10 - 01',
@@ -824,14 +782,12 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       'Regulatory compliance',
       'Performance analytics',
 
-=======
     description: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.',
     features: [
       'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance',
       'Performance analyticsAPI for integration'
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     popular: true,
     icon: '💰',
     color: 'from-yellow-600 to-orange-700',
@@ -844,11 +800,9 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     setup_time: '3 - 4 weeks',
     category: 'Quantum Finance & Trading',
 
-=======
     link: 'https://ziontechgroup.com/quantum-financial-trading',
     marketPosition: 'First quantum AI trading platform. 100x faster than traditional systems.',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     targetAudience: 'Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions',
     trialDays: 30,
     setupTime: '3-4 weeks',
@@ -880,10 +834,8 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       'Renaissance Technologies ($100B+ AUM)',
       'Two Sigma ($60B+ AUM)',
 
-=======
     technology: ['Quantum ComputingAI/MLAlgorithmic TradingHigh-Frequency TradingBlockchain'],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['Trading platformsMarket data feedsRisk management systemsPortfolio systems'],
     useCases: ['Algorithmic tradingPortfolio optimizationRisk managementMarket analysisHigh-frequency trading'],
     roi: '1000%+ ROI through superior trading performance and market timing',
@@ -893,7 +845,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     growthRate: '150% annual growth',
     variant: 'quantum-finance-futuristic',
     contactInfo: {
-=======
     ],    market_size: '$15T algorithmic trading',    technology: ['Quantum ComputingAI / MLAlgorithmic TradingHigh - Frequency TradingBlockchain'],
     integrations: ['Trading platforms_market data feeds_risk management systems_portfolio systems'],
     use_cases: ['Algorithmic trading_portfolio optimization_risk management_market analysis_high - frequency trading'],
@@ -902,7 +853,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     growth_rate: '150% annual growth',
     variant: 'quantum - finance - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -915,7 +865,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4 && 4.9,
     reviews: 15
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
     id: 'quantum-financial-trading'
     name: 'Quantum Financial Trading Platform'
@@ -1004,7 +953,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     launchDate: '2024-09-01'
     customers: 12
     rating: 4.9
-=======
 
     id: 'quantum-financial-trading',
     name: 'Quantum Financial Trading Platform',
@@ -1052,8 +1000,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
 
     reviews: 15
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     reviews: 15
   }
@@ -1061,7 +1007,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   {
 
     id: 'autonomous-vehicle-ai-platform',
-=======
     real_implementation: true,
     implementation_details: 'Complete quantum trading platform with real - time execution, advanced risk management, and comprehensive analytics.',
     launch_date: '2024 - 09 - 01',
@@ -1089,14 +1034,12 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       'Fleet management',
       'Performance analytics',
 
-=======
     description: 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.',
     features: [
       'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management',
       'Performance analyticsAPI for integration'
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     popular: true,
     icon: '🚗',
     color: 'from-blue-600 to-indigo-700',
@@ -1109,11 +1052,9 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     setup_time: '4 - 6 weeks',
     category: 'Autonomous Vehicles & Robotics',
 
-=======
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai',
     marketPosition: 'Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     targetAudience: 'Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies',
     trialDays: 30,
     setupTime: '4-6 weeks',
@@ -1142,10 +1083,8 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     ],
     roi: '800% ROI through operational efficiency and safety improvements',
 
-=======
     technology: ['Computer VisionAI/MLRoboticsSensor FusionEdge Computing'],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['Vehicle systemsDrone platformsRobotics hardwareFleet management systems'],
     useCases: ['Self-driving carsAutonomous dronesIndustrial roboticsLogistics automationSmart cities'],
     roi: '800% ROI through operational efficiency and safety improvements',
@@ -1155,7 +1094,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     growthRate: '200% annual growth',
     variant: 'autonomous-futuristic',
     contactInfo: {
-=======
     competitors: ['Waymo ($1B+ investment)', 'Tesla Autopilot ($12, 000)'],    market_size: '$2.5T autonomous vehicle market',    technology: ['Computer VisionAI / MLRoboticsSensor FusionEdge Computing'],
     integrations: ['Vehicle systems_drone platforms_robotics hardware_fleet management systems'],
     use_cases: ['Self - driving cars_autonomous drones_industrial robotics_logistics automation_smart cities'],
@@ -1164,7 +1102,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     growth_rate: '200% annual growth',
     variant: 'autonomous - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1177,7 +1114,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4 && 4.8,
     reviews: 22
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
     id: 'autonomous-vehicle-ai-platform'
     name: 'Autonomous Vehicle AI Platform'
@@ -1263,7 +1199,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     launchDate: '2024-08-01'
     customers: 18
     rating: 4.8
-=======
 
     id: 'autonomous-vehicle-ai-platform',
     name: 'Autonomous Vehicle AI Platform',
@@ -1311,8 +1246,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
 
     reviews: 22
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     reviews: 22
   }
@@ -1320,7 +1253,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   {
 
     id: 'quantum-cybersecurity-platform',
-=======
     real_implementation: true,
     implementation_details: 'Complete autonomous AI platform with computer vision, decision - making algorithms, and safety systems.',
     launch_date: '2024 - 08 - 01',
@@ -1347,14 +1279,12 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       'Vulnerability assessment',
       'Security automation',
 
-=======
     description: 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.',
     features: [
       'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment',
       'Security automationAPI for integration'
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     popular: true,
     icon: '🔒',
     color: 'from-red-600 to-pink-700',
@@ -1392,10 +1322,8 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       'Palo Alto Networks ($1, 000+/month)',
       'CrowdStrike ($500+/month)',
 
-=======
     technology: ['Quantum ComputingAI/MLCryptographyThreat DetectionBlockchain'],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['SIEM systemsFirewallsIdentity providersCompliance platforms'],
     useCases: ['Data protectionThreat detectionIncident responseComplianceRisk management'],
     roi: '600% ROI through security improvements and risk reduction',
@@ -1405,7 +1333,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     growthRate: '180% annual growth',
     variant: 'quantum-security-futuristic',
     contactInfo: {
-=======
     ],    market_size: '$200B cybersecurity market',    technology: ['Quantum ComputingAI / MLCryptographyThreat DetectionBlockchain'],
     integrations: ['SIEM systemsFirewallsIdentity providers_compliance platforms'],
     use_cases: ['Data protection_threat detection_incident responseComplianceRisk management'],
@@ -1414,7 +1341,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     growth_rate: '180% annual growth',
     variant: 'quantum - security - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1427,7 +1353,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4 && 4.9,
     reviews: 28
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
     id: 'quantum-cybersecurity-platform'
     name: 'Quantum Cybersecurity Platform'
@@ -1516,7 +1441,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     launchDate: '2024-07-01'
     customers: 35
     rating: 4.9
-=======
 
     id: 'quantum-cybersecurity-platform',
     name: 'Quantum Cybersecurity Platform',
@@ -1564,8 +1488,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
 
     reviews: 28
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     reviews: 28
   }
@@ -1573,7 +1495,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   {
 
     id: 'metaverse-ai-development-platform',
-=======
     real_implementation: true,
     implementation_details: 'Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.',
     launch_date: '2024 - 07 - 01',
@@ -1601,14 +1522,12 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       'Multi - platform support',
       'API for integration',
 
-=======
     description: 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.',
     features: [
       'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support',
       'API for integrationDeveloper tools'
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     popular: true,
     icon: '🌐',
     color: 'from-purple-600 to-pink-700',
@@ -1621,11 +1540,9 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     setup_time: '2 - 3 weeks',
     category: 'Metaverse & Virtual Reality',
 
-=======
     link: 'https://ziontechgroup.com/metaverse-ai-development',
     marketPosition: 'Leading metaverse AI platform. 5x more features than existing solutions.',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     targetAudience: 'Gaming companies, VR/AR developers, Social platforms, Educational institutions, Entertainment companies',
     trialDays: 30,
     setupTime: '2-3 weeks',
@@ -1652,10 +1569,8 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     ],
     roi: '700% ROI through user engagement and monetization',
 
-=======
     technology: ['AI/MLVR/AR3D GraphicsReal-time RenderingBlockchain'],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['VR headsetsGaming platformsSocial mediaPayment systems'],
     useCases: ['Virtual worldsGaming experiencesSocial platformsEducationEntertainment'],
     roi: '700% ROI through user engagement and monetization',
@@ -1665,7 +1580,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     growthRate: '300% annual growth',
     variant: 'metaverse-futuristic',
     contactInfo: {
-=======
     competitors: ['Meta Horizon ($30 / month)', 'Roblox ($25 / month)'],    market_size: '$800B metaverse market',    technology: ['AI / MLVR / AR3D GraphicsReal - time RenderingBlockchain'],
     integrations: ['VR headsets_gaming platforms_social media_payment systems'],
     use_cases: ['Virtual worlds_gaming experiences_social platformsEducationEntertainment'],
@@ -1674,7 +1588,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     growth_rate: '300% annual growth',
     variant: 'metaverse - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1687,7 +1600,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4 && 4.7,
     reviews: 32
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
     id: 'metaverse-ai-development-platform'
     name: 'Metaverse AI Development Platform'
@@ -1773,7 +1685,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     launchDate: '2024-06-01'
     customers: 45
     rating: 4.7
-=======
 
     id: 'metaverse-ai-development-platform',
     name: 'Metaverse AI Development Platform',
@@ -1821,8 +1732,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
 
     reviews: 32
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     reviews: 32
   }
@@ -1830,7 +1739,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   {
 
     id: 'quantum-internet-security-platform',
-=======
     real_implementation: true,
     implementation_details: 'Complete metaverse AI platform with content generation, world building, and social interaction features.',
     launch_date: '2024 - 06 - 01',
@@ -1858,14 +1766,12 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       'Performance analytics',
       'API for integration',
 
-=======
     description: 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.',
     features: [
       'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics',
       'API for integration24/7 monitoring'
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     popular: true,
     icon: '🌍',
     color: 'from-green-600 to-emerald-700',
@@ -1878,11 +1784,9 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     setup_time: '3 - 4 weeks',
     category: 'Quantum Internet & Security',
 
-=======
     link: 'https://ziontechgroup.com/quantum-internet-security',
     marketPosition: 'First quantum internet security platform. 100x more secure than traditional solutions.',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     targetAudience: 'Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations',
     trialDays: 30,
     setupTime: '3-4 weeks',
@@ -1911,10 +1815,8 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     ],
     roi: '800% ROI through security improvements and operational efficiency',
 
-=======
     technology: ['Quantum ComputingAI/MLNetwork SecurityCryptographyInternet Protocols'],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['Network equipmentCloud platformsSecurity toolsMonitoring systems'],
     useCases: ['Network securityData protectionThreat detectionCompliancePerformance monitoring'],
     roi: '800% ROI through security improvements and operational efficiency',
@@ -1924,7 +1826,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     growthRate: '200% annual growth',
     variant: 'quantum-internet-futuristic',
     contactInfo: {
-=======
     competitors: ['Cloudflare ($20 / month)', 'Akamai ($100+/month)'],    market_size: '$150B internet security market',    technology: ['Quantum ComputingAI / MLNetwork SecurityCryptographyInternet Protocols'],
     integrations: ['Network equipment_cloud platforms_security tools_monitoring systems'],
     use_cases: ['Network security_data protection_threat detectionCompliancePerformance monitoring'],
@@ -1933,7 +1834,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     growth_rate: '200% annual growth',
     variant: 'quantum - internet - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1946,7 +1846,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4 && 4.8,
     reviews: 19
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
     id: 'quantum-internet-security-platform'
     name: 'Quantum Internet Security Platform'
@@ -2032,7 +1931,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     launchDate: '2024-05-01'
     customers: 22
     rating: 4.8
-=======
 
     id: 'quantum-internet-security-platform',
     name: 'Quantum Internet Security Platform',
@@ -2080,8 +1978,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
 
     reviews: 19
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     reviews: 19
   }
@@ -2089,7 +1985,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   {
 
     id: 'ai-legal-contract-analyzer',
-=======
     real_implementation: true,
     implementation_details: 'Complete quantum internet security platform with encryption, monitoring, and protection features.',
     launch_date: '2024 - 05 - 01',
@@ -2120,14 +2015,12 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       'API for integration',
       'Mobile app support',    ],    description: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.',
 
-=======
     description: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.',
     features: [
       'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration',
       'API for integrationMobile app support'
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     popular: true,
     icon: '⚖️',
     color: 'from-indigo-600 to-purple-700',
@@ -2140,11 +2033,9 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     setup_time: '1 - 2 weeks',
     category: 'AI Legal Services',
 
-=======
     link: 'https://ziontechgroup.com/ai-legal-contract-analyzer',
     marketPosition: 'Leading AI legal platform. 10x faster than traditional legal review.',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     targetAudience: 'Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions',
     trialDays: 30,
     setupTime: '1-2 weeks',
@@ -2172,10 +2063,8 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     ],
     roi: '500% ROI through time savings and improved accuracy',
 
-=======
     technology: ['AI/MLNatural Language ProcessingLegal TechDocument AnalysisCloud Computing'],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['Document management systemsLegal databasesE-signature platformsCRM systems'],
     useCases: ['Contract reviewLegal researchCompliance checkingRisk assessmentDocument analysis'],
     roi: '500% ROI through time savings and improved accuracy',
@@ -2185,7 +2074,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     growthRate: '150% annual growth',
     variant: 'ai-legal-futuristic',
     contactInfo: {
-=======
     competitors: ['DocuSign ($25 / month)', 'ContractPodAi ($500+/month)'],    market_size: '$25B legal tech market',    technology: ['AI / MLNatural Language ProcessingLegal TechDocument AnalysisCloud Computing'],
     integrations: ['Document management systems_legal databases_e - signature platformsCRM systems'],
     use_cases: ['Contract review_legal research_compliance checking_risk assessment_document analysis'],
@@ -2194,7 +2082,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     growth_rate: '150% annual growth',
     variant: 'ai - legal - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2207,7 +2094,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4 && 4.6,
     reviews: 45
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
     id: 'ai-legal-contract-analyzer'
     name: 'AI Legal Contract Analyzer'
@@ -2293,7 +2179,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     launchDate: '2024-04-01'
     customers: 65
     rating: 4.6
-=======
 
     id: 'ai-legal-contract-analyzer',
     name: 'AI Legal Contract Analyzer',
@@ -2341,8 +2226,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
 
     reviews: 45
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     reviews: 45
   }
@@ -2355,7 +2238,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     price: '$2, 999',
     period: '/month',
 
-=======
     ],
 
     popular: true,
@@ -2363,7 +2245,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
 
-=======
     description:;
       'Revolutionary IoT platform that combines quantum security with AI edge computing. Secure billions of devices with real - time AI processing and quantum encryption.',
     features: [;
@@ -2385,10 +2266,8 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     ],
     roi: '600% ROI through security improvements and operational efficiency',
 
-=======
     link: 'https://ziontechgroup.com/quantum-iot-platform',
     marketPosition: 'First quantum IoT platform. 100x more secure than traditional solutions.',
-=======
     link: 'https://ziontechgroup.com/quantum-iot-platform',
 
 
@@ -2411,7 +2290,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     growthRate: '250% annual growth',
     variant: 'quantum-iot-futuristic',
     contactInfo: {
-=======
     competitors: ['AWS IoT ($5 / month)', 'Microsoft Azure IoT ($25 / month)'],    market_size: '$1.5T IoT market',    technology: ['Quantum ComputingAI / MLIoTEdge ComputingBlockchain'],
     integrations: ['IoT devices_cloud platforms_security tools_analytics platforms'],
     use_cases: ['Smart cities_industrial IoTHealthcare monitoring_consumer devices_security systems'],
@@ -2420,7 +2298,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     growth_rate: '250% annual growth',
     variant: 'quantum - iot - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2434,13 +2311,10 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
 
 ],
 
-=======
     rating: 4.7,
     reviews: 26;
   }
 ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
     growthRate: '250% annual growth',
@@ -2459,4 +2333,3 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.7,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

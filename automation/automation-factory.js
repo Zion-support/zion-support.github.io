@@ -1,9 +1,7 @@
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -51,18 +49,11 @@ class AutomationFactory {
   log(message, level = 'INFO') {
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }};
 ; loadStatus() {; try {; if (fs && fs.existsSync(this && this.statusFile)) {; const status = JSON && JSON.parse(fs && fs.readFileSync(this && this.statusFile, "utf8")); this && this.runningScripts = new Map(Object && Object.entries(status && status.runningScripts || {}))}} catch (error) {; this && this.log(`Error loading status: ${error && error.message}`)}}}};
 ; generateCodeQualityScript() {; const script = `#!/usr/bin/env node;const fs = require("fs");
-=======
 
 ;const fs = require("fs");
 const path = require("path");
@@ -95,10 +86,7 @@ const path = require("path");
 const { execSync } = require("child_process");
 ;const fs = require("fs");
 
-=======
 ; generatePerformanceOptimizer() {; const script = `#!/usr/bin/env node;
-=======
-=======
 
 class CodeQualityMonitor {;
   constructor() {;
@@ -110,20 +98,16 @@ class CodeQualityMonitor {;
 };
 ;
   log(message) {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
 }}; loadStatus() {try {; if (fs.existsSync(this.statusFile)) {; const status = JSON.parse(fs.readFileSync(this.statusFile, "utf8")); this.runningScripts = new Map(Object.entries(status.runningScripts |{}))}} catch (error) {this.log(`Error loading status: ${error.message}`)}}}}; generateCodeQualityScript() {const script = `#!/usr/bin/env node;const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");const fs = require("fs");
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const path = require("path");
 const { execSync } = require("child_process");
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] \${message}\\n\`;
     console.log(message);
@@ -247,7 +231,6 @@ monitor.analyzeCodeQuality().then(metrics => {;
 
 
 const fs = require("fs");
->>>>>>> origin/automation-improvements-final
 const path = require("path");
 const { execSync } = require("child_process");
 
@@ -262,7 +245,6 @@ const { execSync } = require("child_process");
 ; for (const [name, script] of this && this.scripts) {; if (script && script.status = = = "available") {; const success = await this && this.runScript(name); results && results.push({ name, success })};
 ;      };
 
-=======
 ;
 class PerformanceOptimizer {;
   constructor() {;
@@ -450,8 +432,6 @@ optimizer.optimizePerformance().then(report => {;
         const success = await this.runScript(name);
         results.push({ name, success });
 
-=======
-=======
     cwd: __dirname});
 ; this.runningScripts.set(scriptName, { startTime, pid: child.pid }); this.saveStatus();
 ; return new Promise((resolve) = > {; child.on("close", (code) = > {; const duration = Date.now() - startTime; this.runningScripts.delete(scriptName);
@@ -464,15 +444,9 @@ optimizer.optimizePerformance().then(report => {;
       };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     };
 
-=======
 
-=======
 
   optimizeImages() {,
     try {,
@@ -497,7 +471,6 @@ optimizer.optimizePerformance().then(report => {;
     };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   };
 ,
   loadStatus() {,
@@ -973,14 +946,11 @@ optimizer.optimizePerformance().then(report => {,
         results.push({ name, success })
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       };
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 optimizer.optimizePerformance().then(report = > {if (report) {; console.log("Performance report: ", report)}}),`; const scriptPath = path.join(__dirname, "performance-optimizer.js"); fs.writeFileSync(scriptPath, script); this.scripts.set("performance-optimizer", {file: "performance-optimizer.js", description: "Performance optimization with bundle analysis and recommendations", path: scriptPath, status: "available", lastRun: null, successCount: 0, errorCount: 0}); this.log("Generated performance optimizer script")}; async runScript(scriptName, options = {}) {if (!this.scripts.has(scriptName)) {; this.log(`Script "${scriptName}" not found`, "ERROR"); return false}; const script = this.scripts.get(scriptName); const startTime = Date.now(); try {this.log(`Starting script: ${scriptName}`); this.runningScripts.set(scriptName, { startTime, pid: null }); this.saveStatus(); const child = spawn("node", [script.path], {stdio: "pipe"
     cwd: __dirname}); this.runningScripts.set(scriptName, { startTime, pid: child.pid }); this.saveStatus(); return new Promise((resolve) = > {child.on("close", (code) = > {; const duration = Date.now() - startTime; this.runningScripts.delete(scriptName); if (code = = = 0) {; script.successCount++; this.log(`Script "${scriptName}" completed successfully in ${duration}ms`)} else {script.errorCount++; this.log(`Script "${scriptName}" failed with code ${code}`, "ERROR")}; script.lastRun = new Date().toISOString(); this.saveStatus(); resolve(code = = = 0)}); child.on("error", (error) = > {script.errorCount++; this.log(`Script "${scriptName}" error: ${error.message}`, "ERROR"); this.runningScripts.delete(scriptName); this.saveStatus(); resolve(false)})})} catch (error) {script.errorCount++; this.log(`Failed to start script "${scriptName}": ${error.message}`, "ERROR"); this.runningScripts.delete(scriptName); this.saveStatus(); return false}}; async runAllScripts() {this.log("Running all available scripts..."); const results = []; for (const [name, script] of this.scripts) {; if (script.status = = = "available") {; const success = await this.runScript(name); results.push({ name, success })};      }
       }
@@ -989,10 +959,6 @@ optimizer.optimizePerformance().then(report = > {if (report) {; console.log("Per
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }}
 ; load_status () { try { if () {) {
   $2
@@ -1091,5 +1057,3 @@ if ( {) {
       }
       }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

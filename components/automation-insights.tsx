@@ -107,7 +107,6 @@ export default function AutomationInsightsPage() {
       label: 'Pages Generated'
       description: 'Content created autonomously'
     },  ];      description: 'Content created autonomously'
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -152,7 +151,6 @@ import React from 'react';
             </h1>;
             <p className='text-xl text-white/80 max-w-3xl mx-auto'>;
 
-=======
         <meta;
           name='description';
           content="Explore Zion Tech Group's automation insights, trends, and expertise in building autonomous systems.";
@@ -174,14 +172,12 @@ import React from 'react';
             </h1>;
             <p className='text - xl text - white / 80 max - w-3xl mx - auto'>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Deep insights into AI automation, autonomous systems, and the;
               future of intelligent technology;
             </p>;
           </section>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
 
               </div>;
@@ -200,9 +196,7 @@ import React from 'react';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {automationTrends.map((trend, index) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300'>;
@@ -238,15 +232,12 @@ import React from 'react';
                     >
                       Read More <span className="ml-1">→</span>
                     </Link>
-=======
 
                       Read More <span className='ml-1'>→</span>                    </Link>
 
                     </Link>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
                 ))}
               </div>
@@ -273,12 +264,9 @@ import React from 'react';
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Automation Tools & Frameworks */}
 
 
@@ -302,10 +290,8 @@ import React from 'react';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </p>
               <div className='flex flex-wrap justify-center gap-4'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105'>;
@@ -345,12 +331,7 @@ import React from 'react';
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

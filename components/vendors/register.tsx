@@ -3,11 +3,9 @@ import {FormEvent, useState} from 'react';
 
 export default function VendorRegisterPage() {;
 
-=======
 
 import {FormEvent, useState} from 'react';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [loading, setLoading] = useState(false);
 
   const [message, setMessage] = useState<string | null>(null);
@@ -43,7 +41,6 @@ import {FormEvent, useState} from 'react';
       const data = await res && res.json();
       if (!res && res.ok) throw new Error(data?.error || 'Failed to submit');
 
-=======
           slug: String(payload.slug),
           name: String(payload.name),
           servicesOffered: String(payload.servicesOffered || '')
@@ -59,7 +56,6 @@ import {FormEvent, useState} from 'react';
           caseStudies: []})}),
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'Failed to submit');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       setMessage('Application submitted. Await approval.');
       form && form.reset();
     } catch (err: any) {;
@@ -69,13 +65,11 @@ import {FormEvent, useState} from 'react';
   }
 
 
-=======
 
   return (
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (            .map(s => s.trim())
             .filter(Boolean);
           teamSize: Number(payload.teamSize |0)
@@ -90,7 +84,6 @@ import {FormEvent, useState} from 'react';
       setMessage('Application submitted. Await approval.');
 
       form.reset()
-=======
 import {FormEvent, useState} from 'react';
 export default /**
  * VendorRegisterPage - Function description
@@ -160,7 +153,6 @@ function on_submit() {
     } finally {;
       setLoading(false);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
   return (
@@ -168,8 +160,6 @@ function on_submit() {
 
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       set_loading (false);
     }
   }
@@ -241,10 +231,6 @@ function on_submit() {
       <div className='text - center text - xs text - gray - 500'>Powered by Zion</div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

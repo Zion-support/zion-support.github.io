@@ -48,7 +48,6 @@ interface PartnerProfile {;
 
   social_media?: Record<string, string>;
 
-=======
 import { useState, useEffect } from './react';
 import { use_auth } from '@/hooks / use_auth';
 import { use_navigate } from './react-router-dom';
@@ -63,10 +62,8 @@ import { Alert, AlertDescription, AlertTitle } from '@/components / ui / alert';
 import { toast } from '@/hooks / use - toast';
 import { Check, Flag, Search, Settings, X } from './lucide-react';
 import { supabase } from '@/integrations / supabase / client';
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -76,7 +73,6 @@ interface PartnerProfile {
   niche: string,
   audience_size: string,
   social_media?: Record < string, string>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   website?: string;
   bio?: string;
   payout_method?: string;
@@ -97,20 +93,16 @@ export default function PartnerManager() {;
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
   useEffect(() => {;
     if (!isAuthenticated) {;
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       navigate("/login");
       return;
     }
@@ -250,11 +242,8 @@ if ( {) {
         set_partners (data as PartnerProfile[]);
         filter_partners (data as PartnerProfile[], active_tab, search_query);
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
 
       console.error ("Error fetching partners:", error);
@@ -285,7 +274,6 @@ if ( {) {
 
 
 
-=======
     } catch (error) {;
       console && console.error("Error fetching partners:", error);
       toast({;
@@ -323,7 +311,6 @@ if ( {) {
     setFilteredPartners(filtered)
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value)
     filterPartners(partners, activeTab, e.target.value)
@@ -368,7 +355,6 @@ if ( {) {
       ),
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       toast({
         title: status === 'approved' ? "Partner Approved" : "Partner Rejected"
         description: `The partner has been ${status}.`
@@ -457,11 +443,9 @@ if ( {) {
         variant: "destructive"})
 
 
-=======
 
   };
 
-=======
 ;
     setFilteredPartners(filtered);
   },;
@@ -539,7 +523,6 @@ if ( {) {
 
   const getAudienceSizeLabel = (size: string) => {;
     switch (size) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       case 'under1k': return 'Under 1,000';
       case '1k-10k': return '1,000 - 10,000';
       case '10k-50k': return '10,000 - 50,000';
@@ -553,18 +536,14 @@ if ( {) {
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'pending':
-=======
   };
 
   const getStatusBadge = (status: string) => {;
     switch (status) {;
       case 'pending':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>;
       case 'approved':;
         return <Badge variant="outline" className="bg-green-900/30 text-green-500 border-green-600">Approved</Badge>;
@@ -576,7 +555,6 @@ if ( {) {
 
   const getFraudFlagBadge = (flags: number = 0) => {
     if (flags === 0) return null
-=======
       case 'rejected':;
         return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,;
       default:;
@@ -587,7 +565,6 @@ if ( {) {
   const getFraudFlagBadge = (flags: number = 0) => {;
     if (flags === 0) return null,;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
 
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
@@ -637,7 +614,6 @@ if ( {) {
                 <div className="text-2xl font-bold text-white">;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {partners.filter(p => p.status === 'pending').length}
                 </div>
               </CardHeader>
@@ -693,7 +669,6 @@ if ( {) {
           <div className="w-full md:w-80">
             <div className="relative">
               <Search className="absolute left-2 top-2.5 h-4 w-4 text-zion-slate-light" />
-=======
       </Badge>;
     );
   };
@@ -724,7 +699,6 @@ if ( {) {
               </CardHeader>;
               <CardContent className="pt-0">;
                 <p className="text-xs text-zion-slate-light">;
-=======
 ;
   const filter_partners = (partners: PartnerProfile[], status: string, query: string) =>: any {
     let filtered = partners,
@@ -892,7 +866,6 @@ if (return null, ) {
               </CardHeader>;
               <CardContent className="pt - 0">;
                 <p className="text - xs text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Partners waiting for review and approval;
                 </p>;
               </CardContent>;
@@ -935,7 +908,6 @@ if (return null, ) {
         </CardContent>;
       </Card>;
 
-=======
       <Card className="bg - zion - blue - dark border - zion - blue - light">;
         <CardHeader className="pb - 3 flex flex - col md:flex - row justify - between md:items - center gap - 4">;
           <div>;
@@ -972,12 +944,10 @@ if (return null, ) {
 
 
                 isLoading={isLoading}
-=======
             <TabsContent value="pending" className="space - y-4">;
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
@@ -991,21 +961,17 @@ if (return null, ) {
               <PartnerTable
                 partners={filteredPartners} 
 
-=======
 
               <PartnerTable 
                 partners={filteredPartners} 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 isLoading={isLoading}
-=======
               />;
             </TabsContent>;
             <TabsContent value="approved" className="space - y-4">;
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
@@ -1017,12 +983,10 @@ if (return null, ) {
 
             <TabsContent value="rejected" className="space-y-4">;
               <PartnerTable
-=======
 
               <PartnerTable 
 
                 partners={filteredPartners} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 isLoading={isLoading}
 
               />;
@@ -1032,7 +996,6 @@ if (return null, ) {
                 partners={filtered_partners}
                 is_loading={is_loading}
 
-=======
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus} 
                 onOpenSettings={handleOpenSettings}
@@ -1045,7 +1008,6 @@ if (return null, ) {
                 partners={filteredPartners} 
 
                 isLoading={isLoading}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
@@ -1060,21 +1022,18 @@ if (return null, ) {
                 partners={filteredPartners} 
 
                 isLoading={isLoading}
-=======
               />;
             </TabsContent>;
             <TabsContent value="all" className="space - y-4">;
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
 
-=======
 
               />;
             </TabsContent>;
@@ -1138,7 +1097,6 @@ if (return null, ) {
                   <AlertTitle className="flex items-center gap-2">;
                     <Flag className="h-4 w-4" />;
                     Potential Fraud Detected ({selectedPartner && selectedPartner.fraud_flags});
-=======
           {selected_partner && (
             <div className="space - y-4">;
               <div className="grid grid - cols - 2 gap - 2">;
@@ -1215,7 +1173,6 @@ if (return null, ) {
         <DialogContent className="bg-zion-blue border-zion-blue-light">;
           <DialogHeader>;
             <DialogTitle>Partner Settings</DialogTitle>;
-=======
                 </Alert>)}
               {selected_partner.status === 'pending' && (
                 <div className="flex justify - end gap - 2 mt - 4">;
@@ -1287,7 +1244,6 @@ function PartnerTable({
   getFraudFlagBadge
 }: PartnerTableProps) {
   if (isLoading) {
-=======
 
 interface PartnerTableProps {;
   partners: PartnerProfile[],;
@@ -1309,7 +1265,6 @@ function PartnerTable(): any ({ ;
   getFraudFlagBadge;
 }: PartnerTableProps) {;
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="text-center py-8">;
         <p className="text-zion-slate-light">Loading partner data...</p>;
@@ -1320,12 +1275,9 @@ function PartnerTable(): any ({ ;
 
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (partners.length === 0) {
-=======
 
   if (partners && partners.length === 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="text-center py-8">;
         <p className="text-zion-slate-light">No partners found.</p>;
@@ -1501,18 +1453,14 @@ if ( {) {
                 </Button>;
 
                 <Button
-=======
 
                 
-=======
 
                 <Button 
 
                   variant="outline" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   size="sm"
                   onClick={() => onViewDetails(partner)}
-=======
                   <>;
                     <Button;
                       variant="ghost";
@@ -1546,7 +1494,6 @@ if ( {) {
                   variant="outline";
                   size="sm";
                   on_click={() => onViewDetails (partner)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 >;
                   View;
                 </Button>;
@@ -1558,7 +1505,5 @@ if ( {) {
     </Table>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

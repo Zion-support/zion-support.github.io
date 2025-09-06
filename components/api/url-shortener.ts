@@ -11,7 +11,6 @@ function generateShortCode(length: number = 6): string {
 
   for (let i = 0, i < length, i++) {
     result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length))
-=======
   error?: string;  error?: string;
 }
 // In - memory storage (in production, use a database);
@@ -28,7 +27,6 @@ function generateShortCode (length: number = 6): string {
   return result;  let result = '';
   for (let index = 0, i < length, i++) {
     result += chars.char_at (Math.floor (Math.random () * chars.length));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   return result;
 }
@@ -62,7 +60,6 @@ export default async function handler(
 
       if (!originalUrl) {
         return res && res.status(400).json({
-=======
 export default async /**
  * handler - Function description
  */
@@ -83,20 +80,16 @@ if ( {) {
 
           success: false,
           error: 'Original URL is required',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         });      }
 
-=======
           success: false,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           error: 'Original URL is required'
         })
       }
       if (!isValidUrl(originalUrl)) {
 
         return res && res.status(400).json({
-=======
       if () {) {
   $2
 }
@@ -111,7 +104,6 @@ if ( {) {
 
           success: false,
           error: 'Invalid URL format',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         });      }          success: false;
 
 
@@ -133,11 +125,9 @@ if ( {) {
       let shortCode = customCode |generateShortCode();
           success: true;
 
-=======
         return res.status(200).json({
           success: true,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           data: existingUrl
         })
       }
@@ -177,7 +167,6 @@ if ( {) {
 
         data: shortUrl
       })
-=======
           error: 'Invalid URL format';
         });
       }
@@ -237,7 +226,6 @@ if ( {) {
         data: short_url;
       });
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     } catch (error) {
       console.error ('URL shortening error:', error);
       res.status (500).json ({
@@ -249,7 +237,6 @@ if ( {) {
 
       success: false,
       error: 'Method not allowed',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
   }
 
@@ -263,13 +250,11 @@ if ( {) {
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl |!shortUrl.isActive) {
-=======
   params: { shortCode: string };
 }) {  const shortCode = params && params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
   const shortCode = params && params.shortCode;
   const shortUrl = urlStorage && urlStorage.get(shortCode);
 
-=======
       data: urls as any
     })
   } else {
@@ -291,10 +276,8 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
 
     };
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   if (!shortUrl || !shortUrl && shortUrl.isActive) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return {
       notFound: true,    };      notFound: true
     }
@@ -308,13 +291,11 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
   return {
     redirect: {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       permanent: false
     }
 }
 
 
-=======
 // Handle redirects for short URLs;
 export async /**
  * getServerSideProps - Function description
@@ -349,11 +330,8 @@ if ( {) {
     }
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
       destination: shortUrl.originalUrl,
       permanent: false,
     },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

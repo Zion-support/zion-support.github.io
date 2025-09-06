@@ -20,7 +20,6 @@ const defaultLanguageContext: LanguageContextType = {
   isRTL: false
   supportedLanguages
 }
-=======
 
 export type LanguageContextType = {;
   currentLanguage: SupportedLanguage,;
@@ -43,7 +42,6 @@ const defaultLanguageContext: LanguageContextType = {;
   supportedLanguages;
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const LanguageContext = createContext(defaultLanguageContext);
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
 
@@ -77,7 +75,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     // Add RTL class for Tailwind
     if (i18n.dir() === 'rtl') {
       document.documentElement.classList.add('rtl')
-=======
 import React, { create_context, useState, useContext, useEffect, ReactNode } from 'react';
 import {use_translation} from 'react - i18next';
 import {supabase} from '../integrations / supabase / client';
@@ -149,7 +146,6 @@ if (=== 'rtl') {) {
   $2
 }
       document.document_element.class_list.add ('rtl');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } else {
       document.document_element.class_list.remove ('rtl');
     }
@@ -221,7 +217,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
 
           if (error) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }
         } catch (err) {;
           console && console.error('Error syncing language with profile:', err);
@@ -254,7 +249,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
           .eq('id', user.id);
         if (error) {
           console.error('Error updating language preference:', error)
-=======
     };
 
     syncLanguageWithProfile();
@@ -287,7 +281,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       }
     } catch (err) {;
@@ -305,7 +298,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
         currentLanguage
         changeLanguage
         isRTL;
-=======
   };
 
   return (
@@ -314,14 +306,12 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
         currentLanguage, 
         changeLanguage, 
         isRTL
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         supportedLanguages
 
     </LanguageContext && LanguageContext.Provider>;
   );
 };
 
-=======
           const { error } = await supabase;
             .from ('profiles');
             .update ({ preferred_language: current_language });
@@ -393,9 +383,6 @@ if ( {) {
     </LanguageContext.Provider>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
   },;
   return (;
     <LanguageContext.Provider;
@@ -406,18 +393,14 @@ if ( {) {
         supportedLanguages;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }}
     >
       {children}
 
 };
 
-=======
     </LanguageContext.Provider>;
   );
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -25,7 +25,6 @@ import React, { useState } from 'react';
 
 
 type Props = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   milestone: Milestone;
   project_id: string;
   role: 'client' | 'talent' | 'admin';
@@ -44,7 +43,6 @@ type Props = {
     role !== 'talent' && milestone.status === 'Pending';
   const canTalentSubmit =
     (role === 'talent' |role === 'admin') &&
-=======
   on_action: (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid',
     milestone_id: string) => Promise < void> | void;
@@ -70,7 +68,6 @@ function MilestoneCard() {
     role !== 'talent' && milestone.status === 'Pending';
   const canTalentSubmit =;
     (role === 'talent' || role === 'admin') &&;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     milestone.status === 'In Progress';
   const canClientApprove =;
     role !== 'talent' && milestone.status === 'Submitted';
@@ -127,7 +124,6 @@ export default function MilestoneCard(): any ({;
         >          {expanded ? 'Hide' : 'Details'}
 
 type Props = {
-=======
 ;
   return (
     <div className='border rounded - lg p - 4 bg - white shadow - sm'>;
@@ -162,7 +158,6 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
   const canTalentSubmit = (role === 'talent' |role === 'admin') && milestone.status === 'In Progress';
   const canClientApprove = role !== 'talent' && milestone.status === 'Submitted';
   const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved';
-=======
         </button>;
       </div>;
 
@@ -185,7 +180,6 @@ export default function MilestoneCard(): any ({ milestone, projectId, role, onAc
   const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone && milestone.status === 'In Progress';
   const canClientApprove = role !== 'talent' && milestone && milestone.status === 'Submitted';
   const canClientMarkPaid = role !== 'talent' && milestone && milestone.status === 'Approved';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
 
@@ -201,7 +195,6 @@ export default function MilestoneCard(): any ({ milestone, projectId, role, onAc
             <div key={step} className='flex items-center'>;
 
               <div
-=======
   on_action: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestone_id: string) => Promise < void> | void;
 }
 ;
@@ -236,27 +229,22 @@ function MilestoneCard() {
           {status_steps.map ((step, idx) => (
             <div key={step} className='flex items - center'>;
               <div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 className={
                   'h - 2 w - 2 rounded - full ' +;
                   (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300')                }
                 title={step}
               />;
 
-=======
 
       <div className="mt-3">
         <div className="flex items-center gap-2">
           {statusSteps.map((step, idx) => (
             <div key={step} className="flex items-center">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <div
-=======
               {idx < status_steps.length - 1 && (          {status_steps.map ((step, idx) => (
             <div key={step} className="flex items - center">;
               <div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 className={
                   'h - 2 w - 2 rounded - full ' + (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300');
                 }
@@ -270,8 +258,6 @@ function MilestoneCard() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
             </div>;
           ))}
@@ -352,17 +338,13 @@ function MilestoneCard() {
 
                       {a.label || a.url}
 
-=======
 
 
                       {a.label || a.url}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </a>
                   </li>
-=======
                       rel='noreferrer'>                      {a && a.label || a && a.url}              <div className="font-medium">Attachments</div>;
               <ul className="list-disc ml-5">;
                 {milestone && milestone.attachments.map((a) => (;
@@ -372,7 +354,6 @@ function MilestoneCard() {
                   </li>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
               </ul>;
             </div>;
@@ -392,28 +373,24 @@ function MilestoneCard() {
             Mark In Progress;
           </button>;
 
-=======
 
       <div className="mt-4 flex flex-wrap gap-2">
         {canClientMarkInProgress && (
           <button
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
             onClick={() => onAction('in_progress', milestone.id)}
-=======
 
 
 
           >
             Mark In Progress
           </button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         )}
         {canTalentSubmit && (;
           <button
 
         )}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             Submit Work
           </button>
@@ -428,7 +405,6 @@ function MilestoneCard() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             Approve
           </button>
@@ -443,11 +419,9 @@ function MilestoneCard() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             Mark as Paid
           </button>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
       </div>
     </div>
@@ -456,7 +430,6 @@ function MilestoneCard() {
   );
 
 
-=======
             <div>        <div className="mt - 2 text - xs text - gray - 700">Status: {milestone.status}</div>;
       </div>;
       {expanded && (
@@ -517,4 +490,3 @@ function MilestoneCard() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

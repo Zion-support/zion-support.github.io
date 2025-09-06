@@ -81,7 +81,6 @@ export default function Index() {;
       description: "Take Zion with you on the go with our mobile app for iOS and Android"
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />
       link: "/mobile-launch"
-=======
 
   // Tools and features showcase;
   const toolsFeatures = [;
@@ -120,8 +119,6 @@ export default function Index() {;
       description: "Take Zion with you on the go with our mobile app for iOS and Android",;
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,;
       link: "/mobile-launch";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { TrustedBySection } from '@/components / TrustedBySection';
@@ -187,7 +184,6 @@ function Index() {
       description: "Take Zion with you on the go with our mobile app for iOS and Android",
       icon: <Smartphone className="h - 6 w - 6 text - zion - purple" />,
       link: "/mobile - launch";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   ];
 ;
@@ -306,7 +302,6 @@ export default function Index() {;
               </Link>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
           </div>
         </div>
@@ -328,7 +323,6 @@ export default function Index() {;
     </div>
   )
 }
-=======
     <div className="min-h-screen bg-zion-blue text-white">;
       <SEO
         title={t("home && home.seo_title")} 
@@ -393,8 +387,6 @@ export default function Index() {;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     <div className="min - h-screen bg - zion - blue text - white">;
       <SEO;
         title={t ("home.seo_title")}
@@ -451,4 +443,3 @@ export default function Index() {;
       <Footer />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

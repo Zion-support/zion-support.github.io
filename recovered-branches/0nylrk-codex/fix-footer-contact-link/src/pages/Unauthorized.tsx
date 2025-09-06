@@ -4,7 +4,6 @@ import {Button} from "@/components/ui/button";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {ShieldAlert} from "lucide-react";
-=======
 
 
 
@@ -44,15 +43,12 @@ export default function Unauthorized() {
   )
 
 
-=======
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { ShieldAlert } from "lucide-react";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Unauthorized() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <Header />;
@@ -77,7 +73,6 @@ export default function Unauthorized() {;
               to="/login"
 
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center">;
-=======
 import { Link } from './react-router-dom';
 import { Button } from '@/components / ui / button';
 import { Header } from '@/components / Header';
@@ -123,8 +118,6 @@ function Unauthorized() {
     </>);
 }
 
-=======
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

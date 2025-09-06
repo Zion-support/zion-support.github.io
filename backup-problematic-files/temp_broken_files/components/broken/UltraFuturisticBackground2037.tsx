@@ -302,7 +302,6 @@ export default function UltraFuturisticBackground2037({;
               ctx.moveTo(particle1.x, particle1.y);
               ctx.lineTo(particle2.x, particle2.y);
               ctx.stroke();
-=======
 
 export default function UltraFuturisticBackground2037({ 
   intensity = 'medium',
@@ -655,7 +654,6 @@ if (theme === 'quantum-neon' || theme === 'quantum') {
               ctx.stroke()
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             }
           });
         });
@@ -693,4 +691,3 @@ ref={canvasRef}
 
 export default UltraFuturisticBackground2037,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

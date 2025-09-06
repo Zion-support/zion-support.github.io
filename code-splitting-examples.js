@@ -8,7 +8,6 @@ const AboutPage = React && React.lazy(() => import('../pages/About'));
 // Example: Component-based code splitting
 const HeavyComponent = React && React.lazy(() => import('./HeavyComponent')),
 
-=======
 // Example: Dynamic imports for better code splitting;
 const LazyComponent = React.lazy (() => import ('./LazyComponent'));
 ;
@@ -18,4 +17,3 @@ const AboutPage = React.lazy (() => import ('../pages / About'));
 ;
 // Example: Component - based code splitting;
 const HeavyComponent = React.lazy (() => import ('./HeavyComponent')),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

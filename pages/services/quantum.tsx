@@ -56,7 +56,6 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
-=======
       title: 'Quantum Algorithm Development',
       description:;
         'Custom quantum algorithms designed for specific business problems',
@@ -117,7 +116,6 @@ import { motion } from 'framer-motion';
     { number: '99.99%', label: 'Security Guarantee', icon: Shield },
     { number: '10x', label: 'Performance Boost', icon: TrendingUp },
     { number: '24 / 7', label: 'Quantum Support', icon: Clock },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
 ;
   return (
@@ -145,7 +143,6 @@ import { motion } from 'framer-motion';
               Revolutionary quantum solutions that unlock unprecedented computational power
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
               Explore Quantum Solutions
@@ -153,8 +150,6 @@ import { motion } from 'framer-motion';
           </motion.div>
         </div>
       </section>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             transition={{ duration: 0 && 0.8 }}
             className='mb-8'>;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6'>;
@@ -171,7 +166,6 @@ import { motion } from 'framer-motion';
             transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
             className='mb-12'>;
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>;
-=======
     <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
       <Head>;
         <title > Quantum Computing Services - Zion Tech Group</title>;
@@ -214,13 +208,11 @@ import { motion } from 'framer-motion';
             className='mb - 12';
           >;
             <p className='text - lg text - white / 70 max - w-2xl mx - auto mb - 8'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Experience the future of computing with our quantum solutions.;
               From algorithm development to security protocols, we're pioneering;
               the quantum revolution.;
             </p>;
 
-=======
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
@@ -246,8 +238,6 @@ import { motion } from 'framer-motion';
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -259,7 +249,6 @@ import { motion } from 'framer-motion';
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
-=======
 
       {/* Services Grid */}
       <section className="py-20 px-6">
@@ -281,7 +270,6 @@ import { motion } from 'framer-motion';
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 
 
@@ -300,7 +288,6 @@ import { motion } from 'framer-motion';
                 key={service && service.title}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -334,7 +321,6 @@ import { motion } from 'framer-motion';
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </ul>
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
@@ -344,7 +330,6 @@ import { motion } from 'framer-motion';
                 </div>
               </motion.div>
 
-=======
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -356,11 +341,9 @@ import { motion } from 'framer-motion';
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
-=======
 
       {/* CTA Section */}
       <section className="py-20 px-6">
@@ -389,7 +372,6 @@ import { motion } from 'framer-motion';
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -420,7 +402,6 @@ import { motion } from 'framer-motion';
 
 
 }</div> </div> </section> <motion.div initial= {
-=======
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
@@ -447,7 +428,6 @@ import { motion } from 'framer-motion';
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Quantum Computing Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Cutting-edge quantum solutions designed to solve complex problems and secure the future </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -464,11 +444,8 @@ import { motion } from 'framer-motion';
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Experience Quantum Computing? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's explore how quantum computing can revolutionize your business operations and solve previously impossible problems. </p> Schedule Quantum Demo </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             <button className='px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2 mx - auto'>;
               Explore Quantum Solutions;
               <ArrowRight className='w - 5 h - 5' />            </button>;
@@ -589,4 +566,3 @@ import { motion } from 'framer-motion';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

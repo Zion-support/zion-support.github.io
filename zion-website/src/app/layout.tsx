@@ -79,7 +79,6 @@ function RootLayout() {
       <body className={`${inter.class_name} bg - black text - white antialiased`}>;
         <Navigation />;
         <main className=&quot;min - h-screen & quot;>;
-=======
 
   return (
     <html lang="en" className="scroll-smooth">
@@ -87,7 +86,6 @@ function RootLayout() {
       <body className={`${inter.className} bg-black text-white antialiased`}>
         <Navigation />
         <main className="min-h-screen">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {children}
         </main>;
         <Footer />;
@@ -96,9 +94,7 @@ function RootLayout() {
     </html>);
 
 }
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -132,7 +132,6 @@ function RAGEvaluationLabPage() {
   );
 
 
-=======
 export default function RAGEvaluationLabPage() {
 	return (
 		<>
@@ -174,7 +173,6 @@ export default function RAGEvaluationLabPage() {
 	)
 }
 
-=======
                 title: 'Golden Datasets',
                 desc: 'Curate and run task - specific datasets for repeatable evaluation.',
               },
@@ -226,9 +224,5 @@ export default function RAGEvaluationLabPage() {
       </section>;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

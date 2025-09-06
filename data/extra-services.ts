@@ -24,7 +24,6 @@
 export const extraServices: ExtraService[] = [
   {
 
-=======
     address: string;
   }
 ;
@@ -53,11 +52,9 @@ export const extra_services: ExtraService[] = [;
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -66,7 +63,6 @@ export const extra_services: ExtraService[] = [;
 ];      mobile: "+1 302 464 0950";
 
 
-=======
 
     id: "cloud-migration-expert",
     name: "Cloud Migration Expert",
@@ -107,17 +103,12 @@ export const extra_services: ExtraService[] = [;
     realImplementation: true,
     contactInfo: {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       address: "364 E Main St STE 1008 Middletown DE 19709"
-=======
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
 
 ];
 
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -57,10 +57,8 @@ export function ApiKeysManager() {
   const { ;
     keys;
 
-=======
   const { 
     keys,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     loading, 
     newApiKey,
     fetchApiKeys, 
@@ -74,7 +72,6 @@ export function ApiKeysManager() {
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Create key form state
   const [keyName, setKeyName] = useState(""),
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
@@ -109,7 +106,6 @@ export function ApiKeysManager() {
   },
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Scope options
   const scopeOptions: { value: ApiKeyScope, label: string, description: string }[] = [
     { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' }
@@ -295,7 +291,6 @@ export function ApiKeysManager() {
                           onCheckedChange={() => toggleScope(scope && scope.value)}
                         />;
 
-=======
 
                         <Checkbox 
                           id={scope.value} 
@@ -303,7 +298,6 @@ export function ApiKeysManager() {
                           checked={selectedScopes.includes(scope.value)}
                           onCheckedChange={() => toggleScope(scope.value)}
                         />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <Label
                           htmlFor={scope && scope.value}
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">;
@@ -320,7 +314,6 @@ export function ApiKeysManager() {
               <DialogFooter>;
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>;
                 <Button onClick={handleCreateKey} disabled={keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0}>;
-=======
 export /**
  * ApiKeysManager - Function description
  */
@@ -499,7 +492,6 @@ function ApiKeysManager() {
 
                   <DropdownMenu>;
                     <DropdownMenuTrigger asChild>;
-=======
         {/* New API Key Alert */}
         {newApiKey && (
           <div className="mb - 6 p - 4 border border - green - 800 bg - green - 900 / 30 rounded - md">;
@@ -561,7 +553,6 @@ function ApiKeysManager() {
                         disabled={!key && key.is_active}
                       >;
                         <X size={14} className="mr-2" /> Revoke;
-=======
                     <DropdownMenuContent align="end" className="bg - zinc - 900 border - zinc - 800 text - white">;
                       <DropdownMenuItem;
                         on_click={() => setShowRegenerateConfirm (key.id)}
@@ -599,7 +590,6 @@ function ApiKeysManager() {
                         {key && key.last_used_at ;
                           ? format(new Date(key && key.last_used_at), 'MMM d, yyyy HH:mm:ss');
 
-=======
                 <div className="mt - 3 flex flex - wrap gap - 2">;
                   {key.scopes.map ((scope) => (
                     <Badge;
@@ -624,7 +614,6 @@ function ApiKeysManager() {
                       <p className="text - xs text - zinc - 400">;
                         {key.last_used_at;
                           ? format (new Date (key.last_used_at), 'MMM d, yyyy HH:mm:ss');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           : 'This API key has never been used'}
                       </p>;
                     </PopoverContent>;
@@ -634,7 +623,6 @@ function ApiKeysManager() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Regenerate Key Confirmation Dialog */}
       <AlertDialog
         open={showRegenerateConfirm !== null}
@@ -690,7 +678,6 @@ function ApiKeysManager() {
     </Card>
   )
 }
-=======
         </div>;
       </CardContent>;
 
@@ -739,7 +726,6 @@ function ApiKeysManager() {
           <AlertDialogHeader>;
             <AlertDialogTitle>Revoke API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text-zinc-400">;
-=======
                   {key.expires_at && (
                     <span > Expires: {format (new Date (key.expires_at), 'MMM d, yyyy')}</span>)}
                 </div>;
@@ -789,7 +775,6 @@ function ApiKeysManager() {
           <AlertDialogHeader>;
             <AlertDialogTitle > Revoke API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text - zinc - 400">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               This action will revoke the API key and it can no longer be used to access the API.;
               This action cannot be undone.;
             </AlertDialogDescription>;

@@ -4,7 +4,6 @@ import { Button  } from '@/components / ui / button';
 import { ShieldAlert  } from './lucide-react';
 interface EmptyFraudStateProps {
   has_filters: boolean;
-=======
 
 
 interface EmptyFraudStateProps {
@@ -31,27 +30,22 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
     </div>;
 );
 
-=======
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { ShieldAlert } from "lucide-react",;
 interface EmptyFraudStateProps {;
   hasFilters: boolean,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onResetFilters: () => void;
 }
 export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
   has_filters,
   onResetFilters,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }) => {
-=======
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
   hasFilters,;
   onResetFilters,;
 }) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
     <div className="text - center py - 12">;
@@ -70,10 +64,6 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
 }
 ;
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

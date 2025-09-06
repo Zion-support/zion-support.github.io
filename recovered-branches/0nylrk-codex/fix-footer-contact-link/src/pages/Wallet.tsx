@@ -1,5 +1,4 @@
 
-=======
 
 
 
@@ -36,7 +35,6 @@ export default function WalletPage() {;
 
       <Tabs defaultValue="earnings">;
         <TabsList className="grid w-full grid-cols-2 mb-4">;
-=======
 import {use_wallet} from '@/hooks / use_wallet';
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from '@/components / ui / card';
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components / ui / tabs';
@@ -101,7 +99,6 @@ function WalletPage() {
   );
 }
 
-=======
           {transactions.filter (t => t.transaction_type === 'earn').length === 0 ? (
             <p className="text - muted - foreground">No earnings yet</p>) : (
             <ul className="space - y-2">;
@@ -131,10 +128,7 @@ function WalletPage() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -47,7 +47,6 @@ import {;
   Factory,;
   Car,;
 
-=======
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -75,7 +74,6 @@ import {
   Factory,
   Car,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "lucide-react";
 import Link from "next/link";
 interface EnhancedNavigationProps {;
@@ -211,7 +209,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     address: "364 E Main St STE 1008 Middletown DE 19709"
     website: "https://ziontechgroup.com"
   }
-=======
 
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
   className = "",;
@@ -231,7 +228,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ];
 
 ;
@@ -319,7 +315,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
             {/* Search */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
-=======
           </motion.div>;
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items - center space - x-8">;
@@ -380,7 +375,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
             {/* Search */}
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               animate={{ opacity: 1, scale: 1 }}
 
               transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
@@ -389,16 +383,12 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
             </motion && motion.button>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Notifications */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
-=======
               className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300";
             >;
               <Search className="w - 5 h - 5" />;
@@ -406,7 +396,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
             {/* Notifications */}
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               animate={{ opacity: 1, scale: 1 }}
 
               transition={{ duration: 0 && 0.5, delay: 0 && 0.7 }}
@@ -416,12 +405,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
             </motion && motion.button>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* CTA Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -449,12 +435,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
       </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -506,7 +489,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
                   )}
                 </div>;
               ))}
-=======
                         <Link
                           key={dropdownItem.name}
                           href={dropdownItem.href}
@@ -523,7 +505,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Contact Info */}
 
               <div className="pt-4 border-t border-cyan-500/20">;
@@ -546,7 +527,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
                   href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300";
-=======
               className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300 relative";
             >;
               <Bell className="w - 5 h - 5" />;
@@ -640,7 +620,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
                   href="/contact";
                   on_click={() => setIsOpen (false)}
                   className="block w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - center px - 6 py - 3 rounded - lg font - medium transition - all duration - 300";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 >;
                   Get Started Today;
                 </Link>;
@@ -654,7 +633,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
 export default EnhancedNavigation;
 ;
 
-=======
       </AnimatePresence>
     </nav>
 
@@ -662,12 +640,9 @@ export default EnhancedNavigation;
 
 export default EnhancedNavigation;
 
-=======
 );
 };
 
 
 export default EnhancedNavigation;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

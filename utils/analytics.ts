@@ -22,7 +22,6 @@ function track_event() {
 
   }
 }
-=======
 
 
     await fetch('/api/analytics/events/track', {;
@@ -34,4 +33,3 @@ function track_event() {
 
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

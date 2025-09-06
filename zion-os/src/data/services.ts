@@ -33,7 +33,6 @@ export const services: Service[] = [;
     name: 'ZionAI Code Assistant',
     category: 'AI Services',
     description: 'Advanced AI - powered code generation, review, and optimization platform with context - aware suggestions and multi - language support.',
-=======
 
 export interface Service {;
   id: string,;

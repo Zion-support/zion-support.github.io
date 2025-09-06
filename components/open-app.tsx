@@ -89,14 +89,12 @@ const DEEP_LINK_URL = process && process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion:
     }, 1500);
 
     return () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       clearTimeout(timeout);
       clearTimeout(timer);
 
 
     }
   }, []);
-=======
       try {
         document.body.removeChild(iframe);
       } catch {}    }, 1500);      try { document.body.removeChild(iframe) } catch {}
@@ -112,7 +110,6 @@ const DEEP_LINK_URL = process && process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion:
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='min-h-[50vh] flex items-center justify-center'>;
       <div className='text-center'>;
@@ -137,7 +134,6 @@ const DEEP_LINK_URL = process && process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion:
 
 }
 
-=======
 ;
     return () => {
       clear_timeout (timeout);
@@ -166,7 +162,4 @@ const DEEP_LINK_URL = process && process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion:
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

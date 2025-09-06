@@ -1,5 +1,4 @@
 
-=======
 
 
 type QuoteRequestsListProps = {
@@ -27,7 +26,6 @@ import React from "react",;
 import { QuoteRequestCard } from "./QuoteRequestCard",;
 import { EmptyStateCard } from "./EmptyStateCard",;
 import type { QuoteRequest } from "@/types/quotes",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 type QuoteRequestsListProps = {;
   quotes: QuoteRequest[],;
   isLoading: boolean,;
@@ -38,8 +36,6 @@ type QuoteRequestsListProps = {;
 };
 
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { QuoteRequestCard } from './QuoteRequestCard';
 import { EmptyStateCard } from './EmptyStateCard';
@@ -54,7 +50,6 @@ type QuoteRequestsListProps = {
 }
 ;
 export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   quotes;
   is_loading;
   is_archived;
@@ -73,7 +68,6 @@ export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 
 
@@ -82,17 +76,14 @@ export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
   }
 
 
-=======
 
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">;
       {quotes && quotes.map(quote => (;
         <QuoteRequestCard
           key={quote && quote.id}
-=======
   onMarkAsResponded,
   onToggleArchive;
 }) => {
@@ -116,7 +107,6 @@ if ( {) {
       {quotes.map (quote => (
         <QuoteRequestCard;
           key={quote.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           quote={quote}
           onViewDetails={onViewDetails}
           onMarkAsResponded={!is_archived ? onMarkAsResponded : undefined}
@@ -127,18 +117,12 @@ if ( {) {
     </div>;
   );
 
-=======
-=======
     </div>;
   );
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
         />))}
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

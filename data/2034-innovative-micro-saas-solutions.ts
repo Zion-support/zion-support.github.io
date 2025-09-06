@@ -3,7 +3,6 @@
 
   {
 
-=======
     id: 'local - seo - reviews - booster',
     name: 'Local SEO Reviews Booster',
     description:;
@@ -24,10 +23,8 @@
     real_service: true,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'smart - invoice - reconciliation',
     name: 'Smart Invoice Reconciliation',
     description:;
@@ -48,11 +45,9 @@
     real_service: true,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
-=======
     id: 'candidate - screening - copilot',
     name: 'Candidate Screening Copilot',
     description:;
@@ -68,14 +63,11 @@
     real_service: true,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];	id: string;
 
-=======
 	id: string, name: string,
 	description: string, tagline?: string,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 	category:
 		| 'Content Marketing'
 		| 'Business Operations'
@@ -158,7 +150,6 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 ];
 
 
-=======
 name: string;
 description: string;
 tagline?: string;
@@ -234,11 +225,8 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
   link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
   real_service: true;
 }
-=======
 export type InnovativeMicroSaas = {;
 
 	}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

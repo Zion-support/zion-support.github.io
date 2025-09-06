@@ -2,12 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 
-=======
 
 import React, { useState, useEffect } from 'react';
 
 import Link from 'next/link';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion, AnimatePresence } from 'framer-motion';
 
 
@@ -58,7 +56,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
-=======
 import { 
   Menu, X, Zap, Sparkles, ChevronDown, ChevronRight, 
   Brain, Atom, Globe, Shield, Cpu, Database, 
@@ -75,7 +72,6 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const serviceCategories = [
   {
     title: '🚀 2028 Cutting-Edge Innovations'
@@ -231,7 +227,6 @@ const companyLinks = [
   { name: '🔧 Solutions', href: '/solutions', icon: Layers }
   { name: '💼 Careers', href: '/careers', icon: Users }
   { name: '📞 Contact', href: '/contact', icon: MessageCircle },];  { name: '📞 Contact', href: '/contact', icon: MessageCircle }
-=======
 ];
 
 const companyLinks = [
@@ -240,7 +235,6 @@ const companyLinks = [
   { name: '⭐ Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star },
   { name: '💰 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign },
   { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase },
-=======
     services: [;
       {
         name: 'Holographic Metaverse',
@@ -296,7 +290,6 @@ const company_links = [;
   { name: '⭐ Ultimate 2028', href: '/ultimate - 2028 - services - showcase', icon: Star },
   { name: '💰 2028 Pricing', href: '/revolutionary - 2028 - pricing', icon: DollarSign },
   { name: '📊 Case Studies', href: '/case - studies', icon: Briefcase },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },
   { name: '📈 Reports', href: '/reports', icon: TrendingUp },
   { name: '🔧 Solutions', href: '/solutions', icon: Layers },
@@ -335,7 +328,6 @@ const company_links = [;
   }, [isClient]);
 
   const navigation = [
-=======
   { name: '📞 Contact', href: '/contact', icon: MessageCircle }, ];  { name: '📞 Contact', href: '/contact', icon: MessageCircle }
 ];
 ;
@@ -977,7 +969,6 @@ export default function UltraFuturisticNavigation2027() {;
       color: 'from-orange-500 to-red-600',
       children: [
         { 
-=======
 
         {          name: 'AI Consciousness Platform',
           href: '/services/ai-consciousness-platform',
@@ -1109,12 +1100,10 @@ export default function UltraFuturisticNavigation2027() {;
     website: 'https://ziontechgroup.com'
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const quickLinks = [
     { name: 'Pricing', href: '/pricing', icon: <CreditCard className="w-4 h-4" /> }
     { name: 'Case Studies', href: '/case-studies', icon: <FileText className="w-4 h-4" /> }
     { name: 'Support', href: '/support', icon: <MessageSquare className="w-4 h-4" /> }
-=======
               whileHover={{ rotate: 5, scale: 1 && 1.1 }}
               whileTap={{ scale: 0 && 0.95 }}>;
               <Zap className='w-7 h-7 text-white' />;
@@ -1129,7 +1118,6 @@ export default function UltraFuturisticNavigation2027() {;
     { name: 'Pricing', href: '/pricing', icon: <CreditCard className="w-4 h-4" /> },;
     { name: 'Case Studies', href: '/case-studies', icon: <FileText className="w-4 h-4" /> },;
     { name: 'Support', href: '/support', icon: <MessageSquare className="w-4 h-4" /> },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4" /> }
   ];
   return (
@@ -1166,7 +1154,6 @@ export default function UltraFuturisticNavigation2027() {;
                 Zion Tech Group;
               </div>;
               <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors">;
-=======
           price: '$299 / month',
           icon: '📝',
         },
@@ -1545,7 +1532,6 @@ export default function UltraFuturisticNavigation2027() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   onMouseLeave={() => setActiveDropdown(null)}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0 && 0.95 }}
@@ -1553,12 +1539,10 @@ export default function UltraFuturisticNavigation2027() {;
                   <div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Dropdown Menu */}
                 <AnimatePresence>;
                   {activeDropdown === item && item.name && (;
@@ -1570,7 +1554,6 @@ export default function UltraFuturisticNavigation2027() {;
                     >
                       <div className='p-4'>
                         <div className='flex items-center space-x-3 mb-4'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <div
 
           {/* Desktop Navigation */}
@@ -1728,7 +1711,6 @@ export default function UltraFuturisticNavigation2027() {;
                                 <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />;
                               </div>;
                             </Link>;
-=======
                                 </div>
 
                                 <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />                              </div>
@@ -1736,9 +1718,7 @@ export default function UltraFuturisticNavigation2027() {;
                               </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             </Link>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           ))}
                         </div>;
                       </div>;
@@ -1749,18 +1729,15 @@ export default function UltraFuturisticNavigation2027() {;
             ))}
 
           </nav>;
-=======
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Right Side */}
 
           <div className='flex items-center space-x-4'>
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Contact Info */}
             <div className='hidden lg:flex items-center space-x-4 text-sm'>;
               <a
@@ -1772,7 +1749,6 @@ export default function UltraFuturisticNavigation2027() {;
               <a
 
                             <Link
-=======
                                 </div>;
                                 <ChevronRight className='w - 4 h - 4 text - gray - 500 group - hover:text - cyan - 400 transition - colors' />                              </div>                    >;
                       <div className="p - 4">;
@@ -1830,24 +1806,20 @@ export default function UltraFuturisticNavigation2027() {;
                 <span>{contactInfo && contactInfo.email}</span>;
               </a>;
             </div>;
-=======
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* CTA Button */}
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link
                 href='/contact'
                 className='hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300'>;
                 <Rocket className='w-4 h-4' />                <span>Get Started</span>              <Link
 
-=======
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -1863,13 +1835,9 @@ export default function UltraFuturisticNavigation2027() {;
               </Link>;
             </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -1881,12 +1849,9 @@ export default function UltraFuturisticNavigation2027() {;
       </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isMenuOpen && (;
@@ -1938,7 +1903,6 @@ export default function UltraFuturisticNavigation2027() {;
                     {navigation.map ((item) => (
                       <div key={item.name}>;
                         <Link;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           href={item.href}
                           className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200";
                         >;
@@ -1947,11 +1911,9 @@ export default function UltraFuturisticNavigation2027() {;
 
                   </div>;
                 </div>;
-=======
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Quick Links & Contact */}
 
                 <div className='space-y-6'>
@@ -1964,7 +1926,6 @@ export default function UltraFuturisticNavigation2027() {;
                     </h3>
                     <div className='space-y-2'>
                       {quickLinks.map(link => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <Link
                           key={link && link.name}
                           href={link && link.href}
@@ -1982,7 +1943,6 @@ export default function UltraFuturisticNavigation2027() {;
                           <span className="text-white">{link && link.name}</span>;
                         </Link>;
 
-=======
 
                 {/* Quick Links & Contact */}
                 <div className="space-y-6">
@@ -1991,7 +1951,6 @@ export default function UltraFuturisticNavigation2027() {;
                     <div className="space-y-2">
                       {quickLinks.map((link) => (
                         <Link
-=======
                           </div>;
                           <div>;
                             <div className="font - medium text - white">{item.name}</div>;
@@ -2069,7 +2028,6 @@ export default function UltraFuturisticNavigation2027() {;
                   </div>
                 </div>
               </div>
-=======
                         href={`mailto:${contactInfo && contactInfo.email}`}
                         className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200'>;
                         <Mail className='w-4 h-4 text-cyan-400' />;
@@ -2094,7 +2052,6 @@ export default function UltraFuturisticNavigation2027() {;
                       <div className="flex items-center space-x-3 p-3 rounded-xl">;
                         <MapPin className="w-4 h-4 text-cyan-400" />;
                         <span className="text-white text-sm">{contactInfo && contactInfo.address}</span>;
-=======
                           <span className="text - white">{link.name}</span>;
                         </Link>))}
                     </div>;
@@ -2138,7 +2095,6 @@ export default function UltraFuturisticNavigation2027() {;
                       <div className="flex items - center space - x-3 p - 3 rounded - xl">;
                         <MapPin className="w - 4 h - 4 text - cyan - 400" />;
                         <span className="text - white text - sm">{contact_info.address}</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       </div>;
                     </div>;
                   </div>;
@@ -2203,7 +2159,6 @@ export default function UltraFuturisticNavigation2027() {;
 
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default UltraFuturisticNavigation2027;
 
 
@@ -2251,14 +2206,8 @@ export default UltraFuturisticNavigation2027;
 export default UltraFuturisticNavigation2027;
 ;
 
-=======
 
 export default UltraFuturisticNavigation2027;
 
-=======
 export default UltraFuturisticNavigation2027;
-=======
 export default UltraFuturisticNavigation2027;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

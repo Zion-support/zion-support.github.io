@@ -2,8 +2,6 @@
 
 import Link from 'next/link';
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Head from 'next/head';
 
 import { signIn } from 'next-auth/react';
@@ -12,7 +10,6 @@ import { supabase } from '@/utils/supabase/client';
 import type {;
   AuthError,;
   User,;
-=======
 
   AuthError,
   User,
@@ -39,7 +36,6 @@ import {;
   CardHeader,;
   CardTitle,;
 
-=======
 import {
 
   Card,
@@ -48,11 +44,9 @@ import {
   CardHeader,;
   CardTitle,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from '@/components/ui/card';
 const LoginPage = () => {;
 
-=======
 import { useRouter } from 'next/router';
 import { useEffect, useState, FormEvent } from 'react';
 import Link from 'next/link';
@@ -67,12 +61,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
-=======
 const LoginPage = () => {;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const router = useRouter();
   const { t } = useTranslation();
   const [email, setEmail] = useState('');
@@ -207,7 +198,6 @@ const LoginPage = () => {;
       return;
     }
 
-=======
       
       // Ensure returnTo is a relative path to prevent open redirect attacks
       if (returnTo.startsWith('http') || returnTo.includes('://')) {
@@ -247,12 +237,10 @@ const LoginPage = () => {;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ email }),;
 
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       });
 
       if (response && response.ok) {;
@@ -277,7 +265,6 @@ const LoginPage = () => {;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ email: proactiveResendEmail }),      });
 
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: proactiveResendEmail })
@@ -296,7 +283,6 @@ const LoginPage = () => {;
     }
   };
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
       const data = await response && response.json();
       if (response && response.ok) {;
@@ -363,7 +349,6 @@ const LoginPage = () => {;
 
           // Auto-resend verification email;
           setTimeout(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             handleResendVerification();
           }, 1000);
         } else {;
@@ -426,7 +411,6 @@ const LoginPage = () => {;
         data: catchedError,;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       });
       // Check if the caught error is a network error;
       let exceptionMessage = 'An unexpected error occurred. Please try again.';
@@ -454,14 +438,12 @@ const LoginPage = () => {;
 
 
 
-=======
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
                   displayMessage = 'Invalid email or password. Please try again.'
               } else if (signInError.message.toLowerCase().includes('network request failed')) {
                   displayMessage = 'Network error. Please check your internet connection and try again.'
               } else if (signInError.message.toLowerCase().includes('user disabled')) {
                   displayMessage = 'Your account has been disabled. Please contact support.'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   };
 
   // Auto-redirect to verification status page for unverified users after showing message;
@@ -470,7 +452,6 @@ const LoginPage = () => {;
       const timer = setTimeout(() => {;
 
 
-=======
         log_info ('LoginPage: Calling supabase.auth.get_session ()'),
         const {
           data: { session },
@@ -831,7 +812,6 @@ if ( {) {
 }
       const timer = set_timeout (() => {
         router.push (`/verify - status?email=${encodeURIComponent (email)}`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }, 3000);
       return () => clear_timeout (timer);
     }
@@ -845,7 +825,6 @@ if ( {) {
   }, [isEmailUnverified, verificationEmailSent, email, router]);
 
 
-=======
         router.push(`/verify-status?email=${encodeURIComponent(email)}`);
       }, 3000),;
       return () => clearTimeout(timer);
@@ -858,8 +837,6 @@ if ( {) {
   }, [isEmailUnverified, verificationEmailSent, email, router]),
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
@@ -870,7 +847,6 @@ if ( {) {
 
   // 1. Primary Loading State: During initial session check;
   if (isCheckingSession) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     logInfo('LoginPage: Rendering "Checking authentication..."');
     return (
       <div className='min-h-screen flex items-center justify-center'>;
@@ -905,8 +881,6 @@ if ( {) {
   if (router.pathname !== '/auth/login' && router.pathname !== '/login') {
     logWarn(
       `LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`
-=======
-=======
     logInfo('LoginPage: Rendering "Checking authentication..."'),
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -932,16 +906,12 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
     return null; // Or a minimal loader/empty div  }
   return (
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
               Enter your email and password to access your account
@@ -974,15 +944,12 @@ if ( {) {
                 </label>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <Input
                   id='email'
                   type='email'
                   value={email}
                   onChange={e => setEmail(e && e.target.value)}                  required;
 
-=======
-=======
 
             <form onSubmit={handleLogin} className="space-y-4">
               {error && (
@@ -1013,14 +980,12 @@ if ( {) {
                 </label>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <Input
                   id='password'
                   type='password'
                   value={password}
                   onChange={e => setPassword(e && e.target.value)}                  required;
 
-=======
               
               <div className="space-y-2">
                 <label htmlFor="password" className="text-sm font-medium">
@@ -1047,9 +1012,7 @@ if ( {) {
                 <Link href="/auth/register" className="text-blue-600 hover: underline">
                   Sign up
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </Link>
               </p>
             </div>
@@ -1059,14 +1022,11 @@ if ( {) {
     </>
 
 
-=======
 
 
-=======
   )
 },
 export default LoginPage,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 />;
               </div>;
 
@@ -1089,7 +1049,6 @@ export default LoginPage,
                   href='/auth/register'
                   className='text-blue-600 hover:underline'>                  Sign up;
 
-=======
 ;
   // --- Rendering Logic ---;
   // 1. Primary Loading State: During initial session check;
@@ -1203,7 +1162,6 @@ if ( {) {
                   className='text - blue - 600 hover:underline';
                 >                  Sign up;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 </Link>;
               </p>;
             </div>;
@@ -1212,16 +1170,10 @@ if ( {) {
       </div>;
 
 
-=======
     </>);
 }export default LoginPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 },;
 export default LoginPage;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

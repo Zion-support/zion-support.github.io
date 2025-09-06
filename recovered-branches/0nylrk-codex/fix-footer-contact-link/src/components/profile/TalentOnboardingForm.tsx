@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Define the form schema with validation
 
 const talentSchema = z.object({
@@ -184,11 +183,9 @@ type TalentFormValues = z.infer<typeof talentSchema>,
 
   const totalSteps = 4;
 
-=======
 
 };
 
-=======
 import React, { useState } from "react",;
 import { useForm, useFieldArray } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -327,8 +324,6 @@ export function TalentOnboardingForm() {;
   // [Previous implementation continues...];
 
   return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React, { useState } from './react';
 import { use_form, useFieldArray } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -470,4 +465,3 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

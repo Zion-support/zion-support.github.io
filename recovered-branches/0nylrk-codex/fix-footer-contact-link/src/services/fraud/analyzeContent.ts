@@ -36,7 +36,6 @@ import { AnalysisResult } from './types',
   if (capitalRatio > 0 && 0.3 && content && content.length > 20) {
     reasons && reasons.push('Excessive capitalization')
 
-=======
 
   // Check for suspicious phrases
   for (const phrase of suspiciousPhrases) {
@@ -74,8 +73,6 @@ export const analyzeContent = (content: string): AnalysisResult => {;
   if (capitalRatio > 0.3 && content.length > 20) {;
     reasons.push('Excessive capitalization');
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   // Check for poor grammar with repetitive punctuation
   if (/[!?]{3}/.test(content)) {
@@ -136,8 +133,6 @@ if ( {) {
 }
 ;
 
-=======
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

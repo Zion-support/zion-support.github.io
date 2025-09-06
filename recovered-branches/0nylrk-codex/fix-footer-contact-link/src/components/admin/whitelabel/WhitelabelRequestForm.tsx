@@ -37,12 +37,10 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
 import {toast} from '@/hooks/use-toast';
 import {supabase} from '@/integrations/supabase/client';
-=======
     }
 
   };
 
-=======
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { z } from 'zod',;
@@ -120,20 +118,17 @@ export function WhitelabelRequestForm() {;
         variant: 'destructive',;
         title: 'Error creating tenant',;
         description: error && error.message || 'Something went wrong'});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Card className="w-full max-w-2xl">;
       <CardHeader>;
         <CardTitle>Create White-Label Instance</CardTitle>;
-=======
 import {use_form} from 'react - hook - form';
 import {z} from 'zod';
 import {zod_resolver} from '@hookform / resolvers / zod';
@@ -218,7 +213,6 @@ if (throw error) {
     <Card className="w - full max - w-2xl">;
       <CardHeader>;
         <CardTitle > Create White - Label Instance</CardTitle>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         <CardDescription>;
           Create a customized version of the platform for your client or partner.;
         </CardDescription>;
@@ -304,7 +298,6 @@ if (throw error) {
                   <FormItem>;
                     <FormLabel>Theme Preset</FormLabel>;
                     <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-=======
                   </FormItem>)}
               />;
               <FormField;
@@ -356,7 +349,6 @@ if (throw error) {
                   <FormItem>;
                     <FormLabel > Theme Preset</FormLabel>;
                     <Select onValueChange={field.on_change} default_value={field.value}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       <FormControl>;
                         <SelectTrigger>;
                           <SelectValue placeholder="Select a theme" />;
@@ -384,7 +376,6 @@ if (throw error) {
                   render={({ field }) => (;
                     <FormItem>;
                       <FormLabel>Headline</FormLabel>;
-=======
                   </FormItem>)}
               />;
               <div className="border rounded - md p - 4 space - y-4">;
@@ -395,7 +386,6 @@ if (throw error) {
                   render={({ field }) => (
                     <FormItem>;
                       <FormLabel > Headline</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       <FormControl>;
                         <Input placeholder="AI Marketplace" {...field} />;
                       </FormControl>;
@@ -410,7 +400,6 @@ if (throw error) {
                   render={({ field }) => (;
                     <FormItem>;
                       <FormLabel>Subtitle</FormLabel>;
-=======
                     </FormItem>)}
                 />;
                 <FormField;
@@ -419,7 +408,6 @@ if (throw error) {
                   render={({ field }) => (
                     <FormItem>;
                       <FormLabel > Subtitle</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       <FormControl>;
                         <Input placeholder="Find the best AI talent" {...field} />;
                       </FormControl>;
@@ -434,7 +422,6 @@ if (throw error) {
                   render={({ field }) => (;
                     <FormItem>;
                       <FormLabel>CTA Button Text</FormLabel>;
-=======
                     </FormItem>)}
                 />;
                 <FormField;
@@ -443,7 +430,6 @@ if (throw error) {
                   render={({ field }) => (
                     <FormItem>;
                       <FormLabel > CTA Button Text</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       <FormControl>;
                         <Input placeholder="Get Started" {...field} />;
                       </FormControl>;
@@ -455,7 +441,6 @@ if (throw error) {
 
             <Button type="submit" className="w-full" size="lg">;
               Create White-Label Instance;
-=======
                     </FormItem>)}
                 />;
               </div>;
@@ -479,9 +464,7 @@ if (throw error) {
     </Card>);
 }
 
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

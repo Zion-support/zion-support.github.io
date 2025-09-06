@@ -60,7 +60,6 @@ import Button from '../components/ui/Button';
                   <div className='text-3xl font-bold text-white'>;
                     {service?.price || 'Custom pricing'}
                     <span className='text-slate-400 text-base'>;
-=======
         <meta;
           name='description';
           content={
@@ -148,14 +147,12 @@ import Button from '../components/ui/Button';
                   <MapPin className='w-4 h-4 text-green-400' />;
                   <span className='text-xs'>{contactInfo && contactInfo.address}</span>;
 
-=======
 
 
 }
 }
 
 
-=======
               <Button;
                 href='/contact';
                 variant='quantum';
@@ -176,8 +173,6 @@ import Button from '../components/ui/Button';
                 <div className='flex items - center space - x-2'>;
                   <MapPin className='w - 4 h - 4 text - green - 400' />;
                   <span className='text - xs'>{contact_info.address}</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 </div>              </div>;
             </div>;
           </div>;
@@ -185,12 +180,8 @@ import Button from '../components/ui/Button';
       </div>;
 
 
-=======
     </UltraAdvancedFuturisticBackground>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -199,5 +190,3 @@ import Button from '../components/ui/Button';
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

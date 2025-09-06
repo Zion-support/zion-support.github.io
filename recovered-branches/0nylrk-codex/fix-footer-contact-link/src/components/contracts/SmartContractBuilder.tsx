@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface SmartContractBuilderProps {
 
   isOpen: boolean
@@ -114,7 +113,6 @@ export function SmartContractBuilder(): any ({;
       setActiveTab("preview");
       if (onContractGenerated) {;
         onContractGenerated(generatedContractText);
-=======
 import { useState } from './react';
 import { Dialog, DialogContent } from '@/components / ui / dialog';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components / ui / tabs';
@@ -173,7 +171,6 @@ if ( {) {
   $2
 }
         onContractGenerated (generatedContractText);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
 
       const generatedContractText = await generateSolidityContract(formValues, talent, clientName),
@@ -202,7 +199,6 @@ if ( {) {
         setDeploymentInfo(contractInfo);
         setDeployStatus('deployed');
         toast.success("Smart contract deployed successfully!")
-=======
 ;
   const handleDeployContract = async () => {
     // Check condition
@@ -220,7 +216,6 @@ if ( {) {
         setDeploymentInfo (contract_info);
         setDeployStatus ('deployed');
         toast.success ("Smart contract deployed successfully!");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } else {
         setDeployStatus ('error');
         toast.error ("Failed to deploy smart contract");
@@ -230,7 +225,6 @@ if ( {) {
 
   };
 
-=======
       console.error("Error deploying contract:", error),
       setDeployStatus('error'),
       toast.error("Failed to deploy smart contract")
@@ -327,7 +321,6 @@ export function SmartContractBuilder({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -409,7 +402,6 @@ export function SmartContractBuilder({;
                 className="flex gap-1";
               >;
                 <Save className="h-4 w-4" />;
-=======
 ;
   // Modified to match the expected interface;
   const handleFormSubmit = (contract: string) =>: any {
@@ -451,11 +443,9 @@ if ( {) {
           <TabsContent value="form" className="pt - 4">;
             <ContractForm;
 
-=======
 
             <ContractForm 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               talent={talent}
               client_name={client_name}
               initial_values={form_values}
@@ -472,11 +462,9 @@ if ( {) {
               <div>;
 
                 <ContractPreview
-=======
 
                 <ContractPreview 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   generatedContract={generatedContract}
                   talent={talent}
                   onClose={onClose}
@@ -550,7 +538,5 @@ if ( {) {
     </Dialog>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

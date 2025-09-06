@@ -1,5 +1,4 @@
 
-=======
 
 import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
@@ -15,7 +14,6 @@ export default function VerifyPage() {
 
   const [requiredDocs, setRequiredDocs] = useState<KycDocumentMeta['kind'][]>([]);
   const [optionalDocs, setOptionalDocs] = useState<KycDocumentMeta['kind'][]>([]);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [fullLegalName, setFullLegalName] = useState('');
   const [businessName, setBusinessName] = useState('');
   const [businessReg, setBusinessReg] = useState('');
@@ -79,7 +77,6 @@ if (return 0) {
     const have = Array.from (uploaded).filter (key =>;
       required_docs.includes (k as any)).length;
     const base = required > 0 ? Math.round ((have / required) * 80) : 0; // up to 80%;
-=======
   const progress = useMemo(() => {;
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     const base = required > 0 ? Math.round((have / required) * 80) : 0, // up to 80%;
@@ -119,7 +116,6 @@ if (return 0) {
       setProfile(data && data.profile);
       setRequiredDocs(data && data.requiredDocuments);
       setOptionalDocs(data && data.optionalDocuments);
-=======
   async function upload(kind: KycDocumentMeta['kind']) {;
     const filename = prompt(`Enter filename for ${kind}`) || '';
     if (!filename) return;
@@ -139,7 +135,6 @@ if (return 0) {
     }
     setBusy(false);  }
 
-=======
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, kind, filename })});
@@ -170,7 +165,6 @@ if (return 0) {
     setBusy(false)
   }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   async function upload(): any (kind: KycDocumentMeta['kind']) {;
     const filename = prompt(`Enter filename for ${kind}`) || '';
@@ -234,7 +228,6 @@ if (return 0) {
               className='mt-1 w-full border rounded px-3 py-2'
               value={role}
               onChange={e => setRole(e && e.target.value as KycRole)}
-=======
       set_message (data.error || 'Upload failed');
     }
     set_busy (false);  }
@@ -294,7 +287,6 @@ if ( {) {
               className='mt - 1 w - full border rounded px - 3 py - 2';
               value={role}
               on_change={e => set_role (e.target.value as KycRole)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             >;
               <option value='client'>Client</option>;
               <option value='talent'>Talent</option>;
@@ -348,7 +340,6 @@ if ( {) {
                 <input className="mt-1 w-full border rounded px-3 py-2" value={businessReg} onChange={(e) => setBusinessReg(e.target.value)} />
               </div>
             </>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
         </div>
 
@@ -368,9 +359,7 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
             <section>
 
@@ -428,7 +417,6 @@ if ( {) {
                     </div>;
                   );                })}
 
-=======
 
 
               <h2 className="font-semibold mb-2">Required documents</h2>
@@ -448,7 +436,6 @@ if ( {) {
                     </div>
                   )
                 })}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
             </section>
             {optionalDocs.length > 0 && (
@@ -489,7 +476,6 @@ if ( {) {
             )}
 
 
-=======
                 <h2 className="font-semibold mb-2">Optional documents</h2>
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                   {optionalDocs.map((k) => {
@@ -506,7 +492,6 @@ if ( {) {
 
 
 
-=======
                     )
 ;
   const labels = getBadgeLabels(profile || undefined);
@@ -584,7 +569,6 @@ if ( {) {
             </div>;
 
 
-=======
                 <h2 className="font-semibold mb-2">Optional documents</h2>
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                   {optionalDocs.map((k) => {
@@ -614,8 +598,6 @@ if ( {) {
     </>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 />              </div>;
             </div>;
             <section>;
@@ -684,9 +666,6 @@ if ( {) {
       </main>;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
             <section>;
               <h2 className="font-semibold mb-2">Required documents</h2>;
               <div className="grid grid-cols-1 md: grid-cols-2 gap-2">;
@@ -763,5 +742,3 @@ if ( {) {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

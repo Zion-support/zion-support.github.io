@@ -3,7 +3,6 @@
 
 
 export function EnterpriseHero() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <section className="py-20 px-4 md:px-6 bg-gradient-to-b from-background to-background/80">;
       <div className="container mx-auto max-w-6xl">;
@@ -31,7 +30,6 @@ export function EnterpriseHero() {
               </p>
               <div className="flex gap-6 opacity-70">
 
-=======
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { GradientHeading  } from '@/components / GradientHeading';
@@ -112,7 +110,6 @@ function EnterpriseHero() {
     </section>);
 
 }
-=======
                 <img src="/logos/placeholder-logo.svg" alt="Enterprise 1" className="h-8" />
                 <img src="/logos/placeholder-logo.svg" alt="Enterprise 2" className="h-8" />
                 <img src="/logos/placeholder-logo.svg" alt="Enterprise 3" className="h-8" />
@@ -136,6 +133,4 @@ function EnterpriseHero() {
         </div>
       </div>
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

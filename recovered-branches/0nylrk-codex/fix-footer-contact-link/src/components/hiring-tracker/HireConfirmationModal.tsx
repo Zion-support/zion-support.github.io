@@ -18,7 +18,6 @@ import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 
-=======
 
 
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
@@ -47,7 +46,6 @@ export function HireConfirmationModal({ ;
   isOpen;
   onClose, ;
   candidateData, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   application;
   onConfirm;
   isSubmitting = false;
@@ -58,7 +56,6 @@ export function HireConfirmationModal({ ;
   const [isLoading, setIsLoading] = useState(false);
   const { user } = useAuth();
 
-=======
 
 import React, { useState } from 'react',
 import {
@@ -134,7 +131,6 @@ export function HireConfirmationModal({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     if (!user) {
       toast({
@@ -179,12 +175,10 @@ export function HireConfirmationModal({;
       return;
 
     }
-=======
     }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setIsLoading(true);
 
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components / ui / dialog';
@@ -324,7 +318,6 @@ if ( {) {
               variant: 'destructive'}),;
 
             setIsLoading(false);
-=======
             client_id: user.id,
             talent_id: talent_data.user_id,
             job_id: application?.job_id || null,
@@ -387,7 +380,6 @@ if ( {) {
               description: availability_error.message,
               variant: 'destructive'}),
             setIsLoading (false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             return;
           }
 
@@ -404,12 +396,10 @@ if ( {) {
       }
 
 
-=======
     }
 
   };
 
-=======
 ;
     setIsLoading(true),;
     // Create a new project;
@@ -495,14 +485,12 @@ if ( {) {
         variant: 'destructive'});
     } finally {;
       setIsLoading(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -550,7 +538,6 @@ if ( {) {
               htmlFor="updateAvailability"
 
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed">;
-=======
           console.error ('Error updating availability:', error);
           toast ({
             title: 'Error updating availability',
@@ -638,9 +625,7 @@ if ( {) {
     </Dialog>);
 }
 
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

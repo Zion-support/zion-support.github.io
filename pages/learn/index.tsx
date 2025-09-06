@@ -14,14 +14,12 @@ export default function LearnMarketplace() {;
     level: '',;
     isFree: '',;
   });  const [courses, setCourses] = useState<Course[]>([]);
-=======
 
     category: '',
     level: '',
     isFree: '',;
   });  const [courses, setCourses] = useState<Course[]>([]);
 
-=======
 import { useEffect, useState } from 'react';
 import CourseCard, { Course } from '../../components/learn/CourseCard';
 import FilterBar from '../../components/learn/FilterBar';
@@ -31,20 +29,16 @@ export default function LearnMarketplace(req, res) {
   const [courses, setCourses] = useState<Course[]>([]);
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {;
     async function load() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setLoading(true);
 
       const params = new URLSearchParams();
 
 
       setLoading(false);
-=======
 import {useEffect, useState} from 'react';
 import CourseCard, { Course } from '../../components / learn / CourseCard';
 import FilterBar from '../../components / learn / FilterBar';
@@ -79,7 +73,6 @@ function load() {
       const data = await resp.json ();
       set_courses (data.courses || []);
       set_loading (false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     load ();
   }, [filters]);
@@ -92,7 +85,6 @@ function load() {
     load()
   }, [filters]);
 
-=======
       setCourses(data.courses |[]);
       setLoading(false);
 
@@ -105,7 +97,6 @@ function load() {
   }, [filters]),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between gap-4">
@@ -113,7 +104,6 @@ function load() {
           <h1 className="text-2xl font-semibold">Zion Academy</h1>
           <div className="text-gray-500 text-sm">Courses • Certifications • Career Boost</div>
         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       </div>
       <FilterBar {...filters} onChange={setFilters} />
       {loading ? (
@@ -137,11 +127,9 @@ function load() {
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>;
           {courses && courses.map(c => (            <CourseCard key={c && c.id} course={c} />;
 
-=======
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {courses.map((c) => (
             <CourseCard key={c.id} course={c} />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           ))}
         </div>;
       )}
@@ -149,7 +137,6 @@ function load() {
     </div>;
   );
 
-=======
     <div className='space - y-6'>;
       <div className='flex items - end justify - between gap - 4'>;
         <div>;
@@ -166,9 +153,6 @@ function load() {
         </div>)}
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -176,5 +160,3 @@ function load() {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

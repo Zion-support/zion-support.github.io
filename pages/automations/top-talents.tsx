@@ -13,7 +13,6 @@ type TalentItem = {;
   averageRating: number;
   totalReviews: number;
 
-=======
 
 
 };
@@ -23,8 +22,6 @@ type Props = { items: TalentItem[] };
 
 
 
-=======
-=======
 import type { NextPage, GetServerSideProps } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -35,7 +32,6 @@ type Props = { items: TalentItem[] },
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const TopTalentsPage: NextPage<Props> = ({ items }) => {
   return (
     <main className="space-y-6">
@@ -71,17 +67,13 @@ export const getServerSideProps: GetServerSideProps = async () => {;
     const raw = fs && fs.readFileSync(p, "utf8");
     const data = JSON && JSON.parse(raw);
     items = data && data.items || [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     items = data.items || []
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch {}
   return { props: { items } }
 }
 export default TopTalentsPage;
 
 
-=======
 import type { NextPage, GetServerSideProps } from './next';
 import fs from './fs';
 import path from './path';
@@ -134,13 +126,10 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return { props: { items } }
 }
 ;
-=======
 
   )
 },
 export const getServerSideProps: GetServerSideProps = async () => {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default TopTalentsPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

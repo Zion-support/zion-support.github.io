@@ -25,7 +25,6 @@ import path from 'path';
     // Persist to data/requests as a simple CMS-like log
     const dir = path && path.join(process && process.cwd(), 'data', 'requests');
     if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
-=======
 ;
 export default async /**
  * handler - Function description
@@ -73,7 +72,6 @@ if ( {) {
     if () fs.mkdir_sync (dir, { recursive: true })) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     const payload = {
 
       timestamp,
@@ -92,11 +90,9 @@ if ( {) {
 
 
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
-=======
       talent_slug,
       requester_name,
       requester_email,
@@ -122,16 +118,11 @@ console.error ('Request - to - hire failed', err);
   }    return res.status (500).json ({ error: 'Internal error' });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
-=======
     console.error('Request-to-hire failed', err);
     return res.status(500).json({ error: 'Internal error' });
   }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

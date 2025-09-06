@@ -35,17 +35,14 @@ export default function ServiceOnboarding() {;
   if (!isLoading && !user) {;
     return <Navigate to="/login" replace />;
 
-=======
 
 
   // If not authenticated, redirect to login
   if (!isLoading && !user) {
     return <Navigate to="/login" replace />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return (
 
-=======
 
 import React from "react",;
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",;
@@ -69,7 +66,6 @@ export default function ServiceOnboarding() {;
           <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12">;
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Join Our Service Provider Network</h1>;
             <p className="text-zion-slate-light max-w-2xl mx-auto">;
-=======
 import React from './react';
 import { ServiceProviderRegistrationForm } from '@/components / profile / ServiceProviderRegistrationForm';
 import { Header } from '@/components / Header';
@@ -97,7 +93,6 @@ if ( {) {
           <div className="max - w-4xl mx - auto text - center mb - 8 md:mb - 12">;
             <h1 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">Join Our Service Provider Network</h1>;
             <p className="text - zion - slate - light max - w-2xl mx - auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Showcase your services to potential clients. Create a professional profile;
               to get discovered on the Zion Marketplace.;
             </p>;
@@ -112,8 +107,5 @@ if ( {) {
     </>);
 }
 
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

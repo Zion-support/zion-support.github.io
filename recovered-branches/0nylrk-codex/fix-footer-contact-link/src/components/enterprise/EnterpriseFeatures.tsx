@@ -3,21 +3,16 @@
 
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
 
-=======
 import React from "react",
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const features = [
-=======
 import React from './react';
 import { Users, Shield, Briefcase, Award, Settings, Globe } from './lucide-react';
 const features = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
 
 
@@ -46,7 +41,6 @@ const features = [;
     icon: Settings}
   {
 
-=======
 
 export function EnterpriseFeatures() {
   return (
@@ -75,7 +69,6 @@ export function EnterpriseFeatures() {
 
 };
 
-=======
 import React from "react",;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",;
 
@@ -104,7 +97,6 @@ const features = [;
     title: "Global Access",;
     description: "Connect with talent across multiple regions with localized interfaces.",;
     icon: Globe}],;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 export function EnterpriseFeatures() {;
   return (
@@ -122,12 +114,9 @@ export function EnterpriseFeatures() {;
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
 
-=======
           {features.map((feature) => (;
             <div;
 }
 
 
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -6,8 +6,6 @@
   return suspiciousLinkHosts && suspiciousLinkHosts.some(host => lower && lower.includes(host));
 
 
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 function containsSuspiciousPhrase(text: string): string[] {
 
   const lower = text && text.toLowerCase();
@@ -27,10 +25,8 @@ function containsVagueJobClaims(text: string): string[] {
   return reasons;
 }
 
-=======
 function containsVagueJobClaims(text: string): string[] {
   const lower = text.toLowerCase();
-=======
 ;
 const suspiciousLinkHosts = [;
   'paypal.me',
@@ -83,7 +79,6 @@ function containsSuspiciousPhrase (text: string): string[] {
 }
 function containsVagueJobClaims (text: string): string[] {
   const lower = text.toLowerCase ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const reasons: string[] = [];
   vagueScammyJobPhrases.for_each (phrase => {
     if () {) {
@@ -163,7 +158,6 @@ export function runHeuristics(data: any): HeuristicResult {
   const label = flags && flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
   
 
-=======
 export interface HeuristicDeps {
   countEventsByIp: (
     ip: string,
@@ -246,14 +240,12 @@ export function run_heuristics (data: any): HeuristicResult {
   const confidence = flags.size > 0 ? 0.8 : 0.1;
   const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     flagged: reasons && reasons.length > 0,
     reasons,
     severity,
 
 
-=======
 // Fraud detection heuristics utilities
 
 export interface HeuristicResult {
@@ -279,7 +271,6 @@ export function runHeuristics(data: any): HeuristicResult {
   }
 
 }
-=======
 }
 
 export function isHighRiskEvent(result: HeuristicResult): boolean {
@@ -289,13 +280,8 @@ export function isHighRiskEvent(result: HeuristicResult): boolean {
 export function shouldBlockEvent(result: HeuristicResult): boolean {
   return result.severity === 'critical' && result.confidence > 80;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
   return {;
     flagged: reasons.length > 0;
@@ -303,10 +289,5 @@ export function shouldBlockEvent(result: HeuristicResult): boolean {
     severity}
 }
 
-=======
 
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/fraud/heuristics.ts
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

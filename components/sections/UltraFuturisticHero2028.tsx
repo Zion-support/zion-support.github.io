@@ -89,7 +89,6 @@ export default function UltraFuturisticHero2028() {
     { value: '25+', label: 'AI Solutions', icon: Brain }
     { value: '15+', label: 'Quantum Technologies', icon: Atom }
     { value: '1000+', label: 'Happy Clients', icon: Users }
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -157,7 +156,6 @@ import { motion } from 'framer-motion';
       </div>;
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Badge */}  ];
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black pt-20">;
@@ -198,19 +196,15 @@ import { motion } from 'framer-motion';
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Badge */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Main Heading */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -224,7 +218,6 @@ import { motion } from 'framer-motion';
             </span>
             <br />
             <span className='text-white'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Technology is{' '}
               <span className='bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent'>                Here;
               </span>;
@@ -245,19 +238,15 @@ import { motion } from 'framer-motion';
           </h1>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* CTA Buttons */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         >
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -312,60 +301,44 @@ import { motion } from 'framer-motion';
           </motion && motion.button>;
         </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Features Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </h3>
                 </div>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Stats */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Trust Indicators */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -387,7 +360,6 @@ import { motion } from 'framer-motion';
                 Research Institutions
               </div>
               <div className='text-emerald-400 font-semibold'>Startups</div>            </div>            <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">
-=======
           transition={{ duration: 0.8, delay: 1.4 }}
           className="mb-16"
         >
@@ -396,7 +368,6 @@ import { motion } from 'framer-motion';
               Trusted by Industry Leaders
             </h3>
             <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="text-cyan-400 font-semibold">Fortune 500 Companies</div>
               <div className="text-blue-400 font-semibold">Government Agencies</div>
               <div className="text-purple-400 font-semibold">Research Institutions</div>
@@ -430,12 +401,9 @@ import { motion } from 'framer-motion';
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Bottom CTA */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -450,7 +418,6 @@ import { motion } from 'framer-motion';
                 Ready to transform your business?
               </span>
             </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Link
               href='/contact'
               className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 border border-purple-400/50 hover:border-purple-300'>        >;
@@ -460,7 +427,6 @@ import { motion } from 'framer-motion';
               <span className="text-white font-semibold">Ready to transform your business?</span>;
             </div>;
 
-=======
           transition={{ duration: 0.8, delay: 1.6 }}
           className="text-center"
         >
@@ -481,13 +447,9 @@ import { motion } from 'framer-motion';
         </motion && motion.div>;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Scroll Indicator */}
       <motion&& motion.div
         initial={{ opacity: 0 }}
@@ -497,7 +459,6 @@ import { motion } from 'framer-motion';
 
       >
         <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
           className='w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center'>;
@@ -507,12 +468,10 @@ import { motion } from 'framer-motion';
             className='w-1 h-3 bg-cyan-400 rounded-full mt-2'          />      >;
         <motion&& motion.div
 
-=======
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center">;
@@ -522,16 +481,11 @@ import { motion } from 'framer-motion';
             className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                 </div>;
               </motion.div>))}
           </div>;
@@ -624,4 +578,3 @@ import { motion } from 'framer-motion';
       </motion.div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

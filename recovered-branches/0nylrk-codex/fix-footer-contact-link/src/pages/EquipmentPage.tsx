@@ -2,16 +2,10 @@
 
 import React from 'react',
 
-=======
-=======
 import React from 'react',
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const EquipmentPage = () => {
-=======
 const EquipmentPage = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="container mx-auto px-4 py-8">;
       <h1 className="text-3xl font-bold mb-6">Equipment</h1>;
@@ -30,7 +24,6 @@ const EquipmentPage = () => {;
 };
 
 
-=======
 const EquipmentPage = () =>: any {
   return (
     <div className="container mx - auto px - 4 py - 8">;
@@ -49,10 +42,7 @@ const EquipmentPage = () =>: any {
 ;
 export default EquipmentPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

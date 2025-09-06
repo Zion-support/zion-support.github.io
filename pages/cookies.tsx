@@ -1,14 +1,7 @@
 
 
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
 import { motion } from 'framer-motion';
@@ -74,8 +67,6 @@ export default function CookiePolicyPage() {
   }
   const savePreferences = () => {
     // In a real implementation, this would save to localStorage and update cookie settings
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -163,7 +154,6 @@ export default function CookiePolicyPage() {;
 
   const savePreferences = () => {;
     // In a real implementation, this would save to localStorage and update cookie settings;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     alert('Cookie preferences saved!');
   }
   return (
@@ -318,7 +308,6 @@ export default function CookiePolicyPage() {;
                     onClick={savePreferences}
 
                     className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
-=======
   Shield,
   Settings,
   Info,
@@ -605,7 +594,6 @@ if (return) {
                     </li>;
                   </ul>;
                 </motion && motion.div>;
-=======
         {/* Cookie Information */}
         <section className="py - 20 bg - white">;
           <div className="container mx - auto px - 4">;
@@ -718,7 +706,6 @@ if (return) {
                   </p>;
                   <p className="text-sm text-gray-500">;
                     Last updated: {new Date().toLocaleDateString()}
-=======
         {/* Contact Information */}
         <section className="py - 20 bg - gray - 50">;
           <div className="container mx - auto px - 4">;
@@ -761,7 +748,6 @@ if (return) {
         </section>;
       </div>;
 
-=======
 
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -769,8 +755,6 @@ if (return) {
         title='Cookie Policy | Zion Tech Group'
         description='Information about cookies used by Zion Tech Group.'
 
-=======
-=======
 
 import React from 'react';
 import SEO from '../components/SEO';
@@ -779,9 +763,6 @@ export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
       <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
       <div className="container mx-auto px-4 py-24 text-white">
         <div className="max-w-3xl mx-auto space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold">Cookie Policy</h1>
@@ -789,17 +770,10 @@ export default function CookiesPage() {
           <ul className="list-disc list-inside text-gray-300 space-y-1">
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <li>Purpose: performance and security</li>
-=======
 <li>Purpose: performance and security</li>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             <li>Retention: session or short‑term</li>
             <li>Opt‑out: browser settings and extensions</li>
           </ul>
@@ -807,10 +781,8 @@ export default function CookiesPage() {
 
   );
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
-=======
           <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       </div>
     </UltraAdvancedFuturisticBackground>
   )
@@ -841,7 +813,6 @@ export default function CookiesPage() {
             Questions?{' '}
             <a className='text-cyan-400' href='mailto:kleber@ziontechgroup && ziontechgroup.com'>;
               kleber@ziontechgroup && ziontechgroup.com;
-=======
     </MainLayout>);
 }
 import { motion } from 'framer-motion';
@@ -888,20 +859,15 @@ function CookiesPage() {
       </Layout>;
 
 
-=======
 
 
   );
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </>);
 ;
 <li > Purpose: performance and security</li> <li > Retention: session or short‑term</li> <li > Opt‑out: browser settings and extensions</li> </ul> <p className="text - gray - 400 text - sm" >Questions? <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

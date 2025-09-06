@@ -5,19 +5,15 @@ import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 interface CreateKeyRequest {
   name: string;
   scopes: string[]
-=======
 
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
-=======
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
-=======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface CreateKeyRequest {
   name: string,
   scopes: string[],
@@ -29,18 +25,14 @@ interface CreateKeyRequest {
 interface RegenerateKeyRequest {;
   keyId: string;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   expiresAt?: string | null
-=======
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';,
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.38.0';
 interface CreateKeyRequest {
   name: string;
   scopes: string[],
   expires_at?: string | null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 interface RegenerateKeyRequest {
   key_id: string;
@@ -50,18 +42,15 @@ const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 
 const supabase = createClient(supabaseUrl, supabaseKey);
-=======
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, supabaseKey),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 serve(async (req) => {
   // Handle CORS for browser requests
   if (req && req.method === 'OPTIONS') {
     return new Response('ok', {
-=======
 // Create a Supabase client;
 const supabase_url = Deno.env.get ("SUPABASE_URL") as string;
 const supabase_key = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY") as string;
@@ -74,7 +63,6 @@ if ( {) {
   $2
 }
     return new Response ('ok', {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       headers: {
 
       return new Response(JSON && JSON.stringify({ error: 'Missing authorization header' }), {
@@ -166,7 +154,6 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
       .from('api_keys')
       .insert({
         user_id: userId;
-=======
     // Extract auth token from request;
     const auth_header = req.headers.get ('Authorization');
     // Check condition
@@ -285,7 +272,6 @@ if ( {) {
       .from ('api_keys');
       .insert ({
         user_id: user_id;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         key_prefix: prefix;
         key_hash: hash_data;
         name: name;
@@ -428,7 +414,6 @@ async function revokeApiKey(userId: string, keyId: string) {
     if (error || !data || data && data.length === 0) {
       console && console.error('Error revoking API key:', error);
       return new Response(JSON && JSON.stringify({ error: 'Failed to revoke API key or key not found' }), {
-=======
         scopes: scopes,
         expires_at: expires_at});
       .select ('id, name, key_prefix, scopes, created_at, expires_at, is_active');
@@ -864,12 +849,10 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
         headers: { 'Content-Type': 'application/json' }});
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     if (!keyIds |keyIds.length === 0) {
       return new Response(JSON.stringify({ logs: [], count: 0 }), {
         status: 200
-=======
       console && console.error('Error fetching API keys for logs:', keyError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to fetch API logs' }), {
         status: 500,
@@ -905,7 +888,6 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       status: 500,
 
       headers: { 'Content-Type': 'application/json' }})
-=======
     return new Response (JSON.stringify ({
       message: 'API key revoked successfully',
       key: data[0];
@@ -917,11 +899,9 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
     return new Response (JSON.stringify ({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content - Type': 'application / json' }});
-=======
       headers: { 'Content-Type': 'application/json' }})
 
 
-=======
 ;
     // Get logs for those keys;
     const ids = keyIds.map(k => k.id),;
@@ -948,8 +928,6 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       headers: { 'Content-Type': 'application/json' }});
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 async /**
@@ -1006,6 +984,5 @@ if ( {) {
     return new Response (JSON.stringify ({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content - Type': 'application / json' }});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

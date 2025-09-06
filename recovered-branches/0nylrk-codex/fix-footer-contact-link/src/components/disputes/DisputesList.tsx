@@ -13,7 +13,6 @@ import {formatDistanceToNow} from "date-fns";
 import {ShieldAlert} from "lucide-react";
 import {Link} from "react-router-dom";
 
-=======
 import React, { useState } from "react",
 import { Dispute, DisputeStatus } from "@/types/disputes",
 import { Button } from "@/components/ui/button",
@@ -39,7 +38,6 @@ type DisputesListProps = {
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default";
@@ -49,7 +47,6 @@ type DisputesListProps = {
         return "outline", // Changed from "success" to "outline"
       case "closed":
 
-=======
         return "outline",
       default:
         return "default"
@@ -125,8 +122,6 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
       case "resolved":;
         return "outline", // Changed from "success" to "outline";
       case "closed":;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React, { useState } from './react';
 import { Dispute, DisputeStatus } from '@/types / disputes';
 import { Button } from '@/components / ui / button';
@@ -159,7 +154,6 @@ function DisputesList() {
       case "resolved":;
         return "outline", // Changed from './success'; to "outline";
       case "closed":;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         return "outline";
       default:;
         return "default";
@@ -167,7 +161,6 @@ function DisputesList() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
             </TableBody>;
           </Table>;
@@ -179,12 +172,10 @@ function DisputesList() {
 
   if (disputes && disputes.length === 0) {;
 
-=======
 
 
 
   if (disputes.length === 0) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <div className="text-center py-12 border rounded-md bg-muted/20">;
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
@@ -230,7 +221,6 @@ function DisputesList() {
           variant={statusFilter === "closed" ? "default" : "outline"}
           onClick={() => setStatusFilter("closed")}
 
-=======
   }
 ;
   // Check condition
@@ -386,7 +376,5 @@ if ( {) {
     </div>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

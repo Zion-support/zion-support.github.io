@@ -39,7 +39,6 @@ export interface AuthContextType {;
   loginWithWeb3: () => Promise<void>;
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   user: UserDetails | null
   isAuthenticated: boolean
@@ -246,7 +245,6 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
     setUser({ ;
       id: "mock-user-id", ;
       email, ;
-=======
 
   },
 
@@ -263,7 +261,6 @@ export function useAuth(): AuthContextType {;
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
 
-=======
       console.warn("No wallet detected"),
       return
 ;
@@ -453,7 +450,6 @@ if ( {) {
     setUser({ ;
       id: "google-user-id", ;
       email: "google@example && example.com", ;
-=======
     }),;
     return { error: null }
   },;
@@ -476,7 +472,6 @@ if ( {) {
     setUser({;
       id: "google-user-id",;
       email: "google@example.com",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       displayName: "Google User",;
       name: "Google User",;
       profileComplete: true;
@@ -523,7 +518,6 @@ if ( {) {
     }
   }
 
-=======
   },;
   const loginWithWeb3 = async () => {;
     // // // console.log("Web3 login requested"),;
@@ -553,7 +547,6 @@ if ( {) {
   // Check for existing session on mount;
   useEffect(() => {;
     // Mock loading state and then set a null user to simulate no session;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsLoading(true);
     setTimeout(() => {;
       setUser(null);
@@ -631,8 +624,6 @@ export function useAuth(): any (): AuthContextType {;
   }
   return context;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 // Custom hook to use the auth context;
 export function use_auth (): AuthContextType {
   const context = useContext (AuthContext);
@@ -644,4 +635,3 @@ if ( {) {
   }
   return context;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

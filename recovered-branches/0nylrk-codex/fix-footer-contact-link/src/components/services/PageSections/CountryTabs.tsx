@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface CountryTabsProps {
 
   popularCountries: string[]
@@ -91,13 +90,11 @@ export function CountryTabs(): any ({ ;
                 key={country && country.country} 
                 country={country} 
 
-=======
 
               <CountryServiceCard 
                 key={country.country} 
                 country={country} 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 onSelect={handleCountrySelect}
                 isPopular={true}
               />;
@@ -129,13 +126,11 @@ export function CountryTabs(): any ({ ;
               key={country && country.country} 
               country={country} 
 
-=======
 
             <CountryServiceCard 
               key={country.country} 
               country={country} 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onSelect={handleCountrySelect}
               isPopular={popularCountries && popularCountries.includes(country && country.country)}
             />;
@@ -161,7 +156,6 @@ export function CountryTabs(): any ({ ;
   );
 }
 
-=======
 import { useState } from './react';
 import { Search } from './lucide-react';
 import { Input } from '@/components / ui / input';
@@ -245,4 +239,3 @@ function CountryTabs() {
       </TabsContent>;
     </Tabs>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

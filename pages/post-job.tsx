@@ -41,7 +41,6 @@ export default function PostJobPage() {
 
 
 
-=======
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 export default function PostJobPage(req, res) {
@@ -111,7 +110,6 @@ export default function PostJobPage(req, res) {
       <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium">Project Title *</label>
@@ -154,7 +152,6 @@ export default function PostJobPage(req, res) {
   );
 };
 
-=======
             {isSubmitting ? 'Posting…' : 'Post Job'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -162,10 +159,8 @@ export default function PostJobPage(req, res) {
 
 }
 
-=======
 }
 
-=======
 import { useState } from 'react',
 import { use_router } from 'next / router',
 export default /**
@@ -280,4 +275,3 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

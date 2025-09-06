@@ -97,7 +97,6 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
   await new Promise<void>((resolve, reject) => {
 
 
-=======
     dispute.updated_at = now;
     await upsert_dispute (dispute);
     return res.status (201).json ({ dispute });
@@ -117,19 +116,15 @@ async function fsPromisesWrite (file_path: string, data: Buffer): Promise < void
 }
         fs.write_file (file_path, data, (err2: any) =>;
           err2 ? reject (err2) : resolve (),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         );
       }
     );
   });
 
 
-=======
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
 
   } catch (error) {
@@ -226,4 +221,3 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

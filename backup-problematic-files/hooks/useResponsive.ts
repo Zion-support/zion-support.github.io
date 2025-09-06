@@ -1,10 +1,8 @@
 
-=======
 
         "isDesktop":width >= 1024})},;
 ;
     updateDimensions(),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useResponsive.ts
     window.addEventListener(;
   'resize', updateDimensions);
     return () => window.removeEventListener(;
@@ -13,7 +11,6 @@
   return state},;
 export default useResponsive,;import { useState, useEffect } from 'react';
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   'resize', updateDimensions)}, []);
   return state}
@@ -42,9 +39,6 @@ const defaultBreakpoints: Breakpoints = {
   return state},
 export default useResponsive,
 
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
     updateDimensions();
     window.addEventListener(,
@@ -56,8 +50,6 @@ export default useResponsive;
 
 
 
->>>>>>> origin/automation-improvements-final
-=======
 
   return state}
 export default useResponsive
@@ -65,10 +57,3 @@ import { useState,useEffect } from 'react'; interface ResponsiveState { screenWi
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useResponsive.ts
-=======
->>>>>>> main:hooks/useResponsive.ts
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useResponsive.ts
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

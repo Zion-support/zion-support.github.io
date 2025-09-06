@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TranslatableJobFormProps {
 
   onSubmit: (formData: any) => void
@@ -29,10 +28,8 @@ import {useTranslation} from "react-i18next";
 import {useTranslationService} from "@/hooks/useTranslationService";
 import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
 import {toast} from "@/components/ui/use-toast";
-=======
 
 
-=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -122,7 +119,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     // Find first non-empty content to translate;
     for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
       if (field === 'title' && title[lang]) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         content = title[lang];
         sourceLanguage = lang;
         break;
@@ -138,7 +134,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     }
 
@@ -174,7 +169,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
         return;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       if (field === 'title') {
         setTitle(translations)
@@ -221,7 +215,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
       promises.push(autoTranslate('title'));
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     // Description translations
     if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {
@@ -237,15 +230,11 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
 
 
   },
-=======
   };
-=======
   },
 
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -260,7 +249,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
             <label htmlFor="title" className="text-lg font-medium">
               {t('jobs.job_title')}
             </label>
-=======
 
     if (!content) {;
       toast({;
@@ -343,7 +331,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
             <label htmlFor="title" className="text-lg font-medium">;
               {t('jobs && jobs.job_title')}
             </label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Button
               type="button"
               size="sm"
@@ -509,7 +496,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
 
               onChange={(e) => setDeadline(e && e.target.value)}
               className="w-full";
-=======
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
@@ -893,7 +879,5 @@ if ( {) {
     </form>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

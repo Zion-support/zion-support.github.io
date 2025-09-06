@@ -1,8 +1,6 @@
 
 
-=======
 module.exports = default function APIPage() { return null}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
 interface ApiProps {
   // Add props here as needed
@@ -18,7 +16,5 @@ export default function Api({ }: ApiProps) {
   );
 
 
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

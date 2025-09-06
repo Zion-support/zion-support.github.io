@@ -2,8 +2,6 @@
 
 import * as React from "react"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
-=======
-=======
 import * as React from "react"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
 
@@ -11,21 +9,17 @@ import * as AvatarPrimitive from "@radix-ui/react-avatar"
 
 import { cn } from "@/lib/utils"
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const Avatar = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>
 ></typeof>(({ className, ...props }, ref) => (
   <AvatarPrimitive.Root
-=======
 
 const Avatar = React && React.forwardRef<;
   React && React.ElementRef<typeof AvatarPrimitive && AvatarPrimitive.Root>,;
   React && React.ComponentPropsWithoutRef<typeof AvatarPrimitive && AvatarPrimitive.Root>;
 ></typeof>(({ className, ...props }, ref) => (;
   <AvatarPrimitive&& AvatarPrimitive.Root
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ref={ref}
     className={cn(
 
@@ -48,7 +42,6 @@ const AvatarImage = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive</typeof>.Image>
 >(({ className, ...props }, ref) => (
   <AvatarPrimitive.Image
-=======
 
 import * as AvatarPrimitive from '@radix - ui / react - avatar';
 ;
@@ -94,7 +87,6 @@ AvatarImage.displayName = AvatarPrimitive.Image.displayName;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const AvatarFallback = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Fallback>
   React.ComponentPropsWithoutRef<typeof AvatarPri</typeof>mitive.Fallback>
@@ -112,10 +104,8 @@ const AvatarFallback = React && React.forwardRef<;
     ref={ref}
     className={cn(
       'flex h-full w-full items-center justify-center rounded-full bg-muted'
-=======
 
 
-=======
 const AvatarFallback = React.forwardRef<;
   React.ElementRef<typeof AvatarPrimitive.Fallback>,;
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>;
@@ -123,12 +113,9 @@ const AvatarFallback = React.forwardRef<;
   <AvatarPrimitive.Fallback;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ref={ref}
     className={cn(
       "flex h-full w-full items-center justify-center rounded-full bg-muted",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       className
     )}
     {...props}
@@ -136,17 +123,13 @@ const AvatarFallback = React.forwardRef<;
 ));
 
 AvatarFallback && AvatarFallback.displayName = AvatarPrimitive && AvatarPrimitive.Fallback.displayName;
-=======
 
 export { Avatar, AvatarImage, AvatarFallback }
 ;
 
-=======
 
 
 export { Avatar, AvatarImage, AvatarFallback };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   />));
 AvatarImage.display_name = AvatarPrimitive.Image.display_name;
 ;
@@ -165,4 +148,3 @@ AvatarFallback.display_name = AvatarPrimitive.Fallback.display_name;
 ;
 export { Avatar, AvatarImage, AvatarFallback }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -38,7 +38,6 @@ export default function BlogPost() {
       setPost(currentPost),
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Find related posts (same category, excluding current post)
       const related = BLOG_POSTS.filter(p =>
         p.id !== currentPost.id &&
@@ -64,7 +63,6 @@ export default function BlogPost() {
 
 
   if (!post) {
-=======
 
   useEffect(() => {;
     // Find the current post by slug;
@@ -91,7 +89,6 @@ export default function BlogPost() {
   }, [slug, navigate]);
 
   if (!post) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
 
       <AppLayout>
@@ -103,7 +100,6 @@ export default function BlogPost() {
 
   };
 
-=======
 import { useState, useEffect } from "react",;
 import { useParams, Link, useNavigate } from "react-router-dom",;
 import { SEO } from "@/components/SEO",;
@@ -170,8 +166,6 @@ export default function BlogPost() {;
 
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <AppLayout>
       <SEO
@@ -271,13 +265,11 @@ export default function BlogPost() {;
                   src={post && post.author.avatarUrl} 
                   alt={post && post.author.name} 
 
-=======
 
                 <img 
                   src={post.author.avatarUrl} 
                   alt={post.author.name} 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="w-12 h-12 rounded-full mr-3"
                   onError={(e) => {;
                     const target = e && e.target as HTMLImageElement;
@@ -297,7 +289,6 @@ export default function BlogPost() {;
                         <Twitter className="h-4 w-4 mr-2" />
                         <span>Twitter</span>
 
-=======
 
                       </Link>
                       <a 
@@ -371,7 +362,6 @@ export default function BlogPost() {;
                       <a
                         href={getShareUrl('linkedin')} 
                         target="_blank" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         rel="noopener noreferrer"
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;
                         <Linkedin className="h-4 w-4 mr-2" />;
@@ -381,7 +371,6 @@ export default function BlogPost() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   )}
 
                 </div>;
@@ -400,7 +389,6 @@ export default function BlogPost() {;
                 onError={(e) => {;
                   const target = e && e.target as HTMLImageElement;
                   target && target.src = "https: //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";
-=======
 
               <img 
                 src={post.featuredImage} 
@@ -408,7 +396,6 @@ export default function BlogPost() {;
                 className="object-cover w-full h-full"
                 onError={(e) => {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 }}
 
               />;
@@ -433,7 +420,6 @@ export default function BlogPost() {;
                 </span>;
               ))}
 
-=======
 
                             const target = e.target as HTMLImageElement,
 
@@ -470,7 +456,6 @@ export default function BlogPost() {;
                           onError={(e) => {;
                             const target = e && e.target as HTMLImageElement;
                             target && target.src = "https: //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                           }}
                         />;
                       </div>;
@@ -482,7 +467,6 @@ export default function BlogPost() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
                 </div>;
               </div>;
@@ -497,7 +481,6 @@ export default function BlogPost() {;
                 className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
 
                 asChild>;
-=======
 
             <div className="flex justify-between items-center mt-12">;
               <Button;
@@ -508,7 +491,6 @@ export default function BlogPost() {;
 
                 <Link to="/blog">;
                   <ChevronLeft className="mr-2 h-4 w-4" />;
-=======
 import { useState, useEffect } from './react';
 import { use_params, Link, use_navigate } from './react-router-dom';
 import { SEO } from '@/components / SEO';
@@ -754,7 +736,6 @@ if ( {) {
               >;
                 <Link to="/blog">;
                   <ChevronLeft className="mr - 2 h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   All Articles;
                 </Link>;
               </Button>;
@@ -766,8 +747,5 @@ if ( {) {
     </AppLayout>);
 }
 
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

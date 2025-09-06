@@ -2,24 +2,16 @@
 
 import React from 'react';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import Head from 'next/head';
 
 
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 import React from 'react';
 import Head from 'next/head';
 
 
-=======
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 import React from 'react';
 import Head from 'next / head';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {
   Check
   Star
@@ -282,12 +274,10 @@ export default function PricingPage() {
 
   // Enhanced service categories with pricing
   const serviceCategories = [
-=======
 
 
 
 
-=======
 import Button from '../components / ui / Button';
 import Card from '../components / ui / Card';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
@@ -326,7 +316,6 @@ function PricingPage() {
 ;
   // Enhanced service categories with pricing;
   const service_categories = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       name: 'Next - Generation AI',
       description: 'Revolutionary AI platforms',
@@ -574,7 +563,6 @@ export default function PricingPage() {;
       title: 'Time to Value',;
       description: 'Get up and running in under 24 hours',;
       icon: <Clock className='w-8 h-8' />,;
-=======
       services: [;
         'Zero Trust Architecture',
         'Edge Computing Orchestration',
@@ -861,7 +849,6 @@ export default function PricingPage() {;
             Transparent Pricing;
           </h1>;
           <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
-=======
         <meta;
           name='description';
           content='Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49 / month), Professional ($149 / month), or Enterprise ($499 / month) plans with generous free trials.';
@@ -938,7 +925,6 @@ export default function PricingPage() {;
           </div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {/* Billing Toggle */}
           <div className='flex items-center justify-center gap-4 mb-8'>;
             <span
@@ -948,7 +934,6 @@ export default function PricingPage() {;
             <button
 
 
-=======
 
 
               Monthly
@@ -960,7 +945,6 @@ export default function PricingPage() {;
                 )
               }
               className='relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50'            >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <span
                 className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-transform ${
                   billingCycle === 'yearly' ? 'translate-x-12' : 'translate-x-0'
@@ -1056,11 +1040,9 @@ export default function PricingPage() {;
                         {tier.period}
                       </span>;
                     </div>;
-=======
 
 
                     </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {tier.savings && (
                       <div className='text - green - 400 text - sm mt - 2'>;
                         {tier.savings}
@@ -1115,7 +1097,6 @@ export default function PricingPage() {;
 
                   <Button
 
-=======
                     href={tier.name === 'Enterprise' ? '/contact' : '/services'}
                     variant={tier.ctaVariant}
                     size="lg"
@@ -1127,7 +1108,6 @@ export default function PricingPage() {;
                 </div>
               </UltraFuturisticCard>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -1141,7 +1121,6 @@ export default function PricingPage() {;
           </h2>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {valuePropositions && valuePropositions.map((proposition, index) => (;
 
-=======
 
 
                   >
@@ -1152,10 +1131,8 @@ export default function PricingPage() {;
 
 
 
-=======
 
 
-=======
 
         {/* Value Propositions */}
         <div className="mb-20">
@@ -1165,23 +1142,19 @@ export default function PricingPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <UltraFuturisticCard
                 key={index}
                 variant={index % 2 === 0 ? 'quantum' : 'holographic'}
                 interactive={true}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
         </div>;
 
             {serviceCategoryPricing.map((category, index) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <UltraFuturisticCard
-=======
                       </div>)}
                   </div>;
                   <ul className='text - left space - y-3 mb - 8'>;
@@ -1240,7 +1213,6 @@ export default function PricingPage() {;
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
             {serviceCategoryPricing.map ((category, index) => (
               <UltraFuturisticCard;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={index}
                 variant={
                   index % 3 === 0;
@@ -1291,10 +1263,8 @@ export default function PricingPage() {;
 
 
                 </ul>
-=======
                 </ul>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Button
                   href='/services'
                   variant='secondary'
@@ -1304,7 +1274,6 @@ export default function PricingPage() {;
                   <ChevronRight className='ml-2 w-4 h-4' />                </Button>;
               </UltraFuturisticCard>;
 
-=======
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Category Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1347,13 +1316,10 @@ export default function PricingPage() {;
 
             ))}
 
-=======
 
 
 
-=======
 
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1363,7 +1329,6 @@ export default function PricingPage() {;
           </div>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Popular Services Pricing */}
         <div className='mb-20'>;
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>;
@@ -1371,7 +1336,6 @@ export default function PricingPage() {;
           </h2>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {popularServices && popularServices.slice(0, 6).map((service, index) => (;
 
-=======
 
         {/* Popular Services Pricing */}
         <div className="mb-20">
@@ -1379,10 +1343,7 @@ export default function PricingPage() {;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {popularServices.slice(0, 6).map((service, index) => (
 
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <UltraFuturisticCard
                 key={service && service.id}
                 variant={service && service.variant as any}
@@ -1392,7 +1353,6 @@ export default function PricingPage() {;
                         <Check className='w-3 h-3 text-green-400 mr-2' />                        {feature}
                       </li>;
 
-=======
                 className="p-6"
               >
                 <div className="text-center mb-4">
@@ -1417,7 +1377,6 @@ export default function PricingPage() {;
                 </div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <Button
                   href={service && service.link}
                   variant='primary'
@@ -1427,14 +1386,12 @@ export default function PricingPage() {;
                   <ExternalLink className='ml-2 w-4 h-4' />                </Button>;
               </UltraFuturisticCard>;
 
-=======
                 
                 <Button
                   href={service.link}
                   variant="primary"
                   size="sm"
                   className="w-full"
-=======
 
 
 
@@ -1447,7 +1404,6 @@ export default function PricingPage() {;
 
 
 
-=======
 
 
             </UltraFuturisticCard>
@@ -1478,7 +1434,6 @@ export default function PricingPage() {;
                 No setup fees for any plan. All services are designed for
                 instant deployment with our AI-powered setup wizards.
               </p>            </UltraFuturisticCard>
-=======
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>
           <div className="max-w-4xl mx-auto space-y-4">
@@ -1504,7 +1459,6 @@ export default function PricingPage() {;
               <h3 className="text-lg font-bold text-white mb-3">Is there a setup fee?</h3>
               <p className="text-gray-300">No setup fees for any plan. All services are designed for instant deployment with our AI-powered setup wizards.</p>
             </UltraFuturisticCard>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </div>
         </div>
         {/* Contact Information */}
@@ -1640,7 +1594,6 @@ export default function PricingPage() {;
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Ready to Get Started?
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -1654,7 +1607,6 @@ export default function PricingPage() {;
               Ready to Get Started?;
             </h2>;
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
-=======
                   </div>;
                 </div>;
                 <div className='mb - 4'>;
@@ -1813,7 +1765,6 @@ export default function PricingPage() {;
               <p className='mt-2'>;
                 ✓ 24/7 Support • ✓ 99 && 99.99% Uptime SLA • ✓ Global Infrastructure;
 
-=======
             <div className='flex flex - col sm:flex - row gap - 4 justify - center mb - 8'>;
               <Button;
                 href='/services';
@@ -1842,7 +1793,6 @@ export default function PricingPage() {;
               <p className='mt - 2'>;
                 ✓ 24 / 7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               </p>            </div>;
           </UltraFuturisticCard>;
         </div>;
@@ -1852,10 +1802,8 @@ export default function PricingPage() {;
 }
 
 
-=======
 
     </UltraFuturisticBackground>
-=======
 
 }
 
@@ -1864,27 +1812,10 @@ export default function PricingPage() {;
     </UltraFuturisticBackground>
   )
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 }
->>>>>>> origin/main
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
   );
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </UltraFuturisticBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

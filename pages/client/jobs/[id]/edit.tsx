@@ -7,12 +7,9 @@ import useSWR from 'swr';
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 export default function EditJobPage() {;
 
-=======
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useEffect, useState } from 'react';
@@ -21,8 +18,6 @@ export default function EditJobPage(req, res) {
   try {
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const router = useRouter();
   const { id } = router && router.query;
   const { data } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
@@ -37,7 +32,6 @@ export default function EditJobPage(req, res) {
   async function save() {
     await fetch(`/api/jobs/${id}`, {
 
-=======
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title, description, category })});
@@ -60,18 +54,12 @@ export default function EditJobPage(req, res) {
     });
     router && router.push('/client/dashboard');  }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!job) return <div>Loading…</div>;
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

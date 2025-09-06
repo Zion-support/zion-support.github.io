@@ -1,10 +1,8 @@
 
 
 export interface EmergingTechService {
-=======
 
 export interface EmergingTechService {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   id: string;
   name: string;
@@ -629,10 +627,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     launchDate: '2024-04-30', customers: 18,
     rating: 4.8,
     reviews: 11;
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechService2025 {;
   id: string,;
@@ -1293,8 +1289,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     reviews: 11;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 

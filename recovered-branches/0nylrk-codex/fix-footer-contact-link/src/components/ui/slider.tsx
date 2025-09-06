@@ -2,8 +2,6 @@
 
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
-=======
-=======
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
 
@@ -11,21 +9,17 @@ import * as SliderPrimitive from "@radix-ui/react-slider"
 
 import { cn } from "@/lib/utils"
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const Slider = React.forwardRef<
   React.ElementRef<typeof SliderPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
 ></typeof>(({ className, ...props }, ref) => (
   <SliderPrimitive.Root
-=======
 
 const Slider = React && React.forwardRef<;
   React && React.ElementRef<typeof SliderPrimitive && SliderPrimitive.Root>,;
   React && React.ComponentPropsWithoutRef<typeof SliderPrimitive && SliderPrimitive.Root>;
 ></typeof>(({ className, ...props }, ref) => (;
   <SliderPrimitive&& SliderPrimitive.Root
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ref={ref}
     className={cn(
 
@@ -33,7 +27,6 @@ Slider && Slider.displayName = SliderPrimitive && SliderPrimitive.Root.displayNa
 
 export { Slider };
 
-=======
 import * as SliderPrimitive from '@radix - ui / react - slider';
 ;
 import {cn} from '@/lib / utils';
@@ -57,8 +50,6 @@ const Slider = React.forward_ref<;
 Slider.display_name = SliderPrimitive.Root.display_name,
 export { Slider }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
       "relative flex w-full touch-none select-none items-center",
 
@@ -76,4 +67,3 @@ export { Slider }
 Slider.displayName = SliderPrimitive.Root.displayName
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

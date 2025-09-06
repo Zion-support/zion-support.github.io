@@ -42,7 +42,6 @@ export function useResumeEnhancer() {;
     isEnhancing;
 
     error
-=======
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 type EnhancementType = 'summary' | 'work - description' | 'skill - categorization' | 'general';
@@ -93,6 +92,5 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

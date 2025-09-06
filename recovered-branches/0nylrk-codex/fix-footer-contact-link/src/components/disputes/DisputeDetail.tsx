@@ -103,7 +103,6 @@ export function DisputeDetail() {;
 
   };
 
-=======
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { useDisputes } from "@/hooks/useDisputes",;
@@ -175,8 +174,6 @@ export function DisputeDetail() {;
   const handleResolveDispute = async () => {
     if (!disputeId) return,
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (!resolution.summary) {
       toast.error("Please provide a resolution summary");
       return
@@ -199,7 +196,6 @@ export function DisputeDetail() {;
 
   };
 
-=======
 
   },
 
@@ -222,7 +218,6 @@ export function DisputeDetail() {;
       setIsSending(false)
 
 
-=======
   },;
 
   const handleResolveDispute = async () => {;
@@ -248,7 +243,6 @@ export function DisputeDetail() {;
   const handleSendMessage = async () => {;
     if (!disputeId || !message && message.trim()) return;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsSending(true);
     try {;
       const success = await addDisputeMessage(disputeId, message, isAdmin);
@@ -278,11 +272,9 @@ export function DisputeDetail() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 
 
-=======
     return (
       <div className="p-8 text-center">
         <p>Dispute not found</p>
@@ -305,7 +297,6 @@ export function DisputeDetail() {;
 ;
 
   if (!dispute) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="p-8 text-center">;
         <p>Dispute not found</p>;
@@ -323,7 +314,6 @@ export function DisputeDetail() {;
       case "under_review": return "secondary",;
       case "resolved": return "outline", // Changed from "success" to "outline";
 
-=======
 import React, { useState, useEffect } from './react';
 import { use_params, use_navigate } from './react-router-dom';
 import { use_disputes } from '@/hooks / use_disputes';
@@ -487,7 +477,6 @@ if ( {) {
       case "open": return "default";
       case "under_review": return "secondary",
       case "resolved": return "outline", // Changed from './success'; to "outline";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       case "closed": return "outline";
       default: return "default";
     }
@@ -502,7 +491,6 @@ if ( {) {
             <Badge variant={getStatusBadgeVariant(dispute.status)}>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {dispute.status.replace('_ ')}
             </Badge>
           </div>
@@ -521,7 +509,6 @@ if ( {) {
           )}
         </div>
       </div>
-=======
 ;
   return (
     <div className="container mx - auto p - 4 space - y-6">;
@@ -547,7 +534,6 @@ if ( {) {
             </Button>)}
         </div>;
       </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {dispute.status === "resolved" && dispute.resolution_summary && (
         <Alert className="bg - green - 50 border - green - 200 dark:bg - green - 900 / 20 dark:border - green - 900">;
           <Check className="h - 4 w - 4" />;
@@ -607,7 +593,6 @@ if ( {) {
                           <span>Under review</span>
                         </li>
                       )}
-=======
           </AlertDescription>;
         </Alert>)}
       <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
@@ -656,7 +641,6 @@ if ( {) {
                           <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify - center">2</Badge>;
                           <span > Under review</span>;
                         </li>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {dispute.resolved_at && (
                         <li className="flex gap - 2 items - center">;
                           <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify - center">;
@@ -827,7 +811,6 @@ if ( {) {
                         .filter (msg => !msg.is_admin_note);
                         .map ((msg) => {
                           const isCurrentUser = user?.id === msg.user_id;
-=======
             </TabsContent>;
 
             <TabsContent value="messages" className="space-y-6">;
@@ -848,7 +831,6 @@ if ( {) {
                         .filter(msg => !msg && msg.is_admin_note);
                         .map((msg) => {;
                           const isCurrentUser = user?.id === msg && msg.user_id;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                           return (
 
                                 } p-4 rounded-lg`}>;
@@ -1176,7 +1158,6 @@ if ( {) {
                                 setMessage("");
                               });
 
-=======
                             on_change={(e) => set_resolution ({ ...resolution, summary: e.target.value })}
                             className="min - h-[100px]";
                           />;
@@ -1242,14 +1223,11 @@ if ( {) {
                                 getDisputeMessages (dispute_id!).then (set_messages);
                                 set_message ("");
                               });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
                                 getDisputeMessages(disputeId!).then(setMessages),
                                 setMessage("")
                               })
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             }
                           }}
                         >;
@@ -1295,7 +1273,6 @@ if ( {) {
                   <p className="font-medium">Talent</p>;
                   <p className="text-sm text-muted-foreground">;
                     {dispute && dispute.talent_profile?.display_name || "Unknown Talent"}
-=======
               </TabsContent>)}
           </Tabs>;
         </div>;
@@ -1368,9 +1345,7 @@ if ( {) {
     </div>);
 }
 
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

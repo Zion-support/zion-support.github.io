@@ -3,8 +3,6 @@
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -33,7 +31,6 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   buttonLabel?: string;
   title?: string;
   defaultPrompt: string;
@@ -44,8 +41,6 @@ export type AIAssistantProps = {;
 };
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   buttonLabel = "Generate with AI",
   title = "AI Writing Assistant",
@@ -55,7 +50,6 @@ export type AIAssistantProps = {;
   authorizationToken,
 }: AIAssistantProps) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");
@@ -68,13 +62,10 @@ export type AIAssistantProps = {;
   }, [output]);
 
   const onOpen = useCallback(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
   const onOpen = useCallback(() => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setIsOpen(true);
     setOutput("");
     setIsEditing(false);
@@ -98,7 +89,6 @@ export type AIAssistantProps = {;
           <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">
               <h3 className="text-base font-semibold">{title}</h3>
-=======
       </button>;
 
       {isOpen && (;
@@ -107,7 +97,6 @@ export type AIAssistantProps = {;
           <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">;
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">;
               <h3 className="text-base font-semibold">{title}</h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <button
                 onClick={onClose}
                 className="text-sm opacity-70 hover:opacity-100">;
@@ -166,7 +155,6 @@ export type AIAssistantProps = {;
                   disabled={!canAccept}
 
                   className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60";
-=======
 ;
   const on_open = useCallback (() => {
     setIsOpen (true);
@@ -262,7 +250,6 @@ export type AIAssistantProps = {;
               )}
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {error && <div className="text-red-600 text-sm">{error}</div>}
               <div>;
                 <label
@@ -292,7 +279,6 @@ export type AIAssistantProps = {;
     </>;
   );
 }
-=======
                   <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">{output || 'No content yet. Click Generate.'}</pre>
                 )}
               </div>
@@ -328,8 +314,6 @@ export type AIAssistantProps = {;
     </>);
 }
 
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

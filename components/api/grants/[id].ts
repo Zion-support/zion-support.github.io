@@ -19,8 +19,6 @@ function grantPath(id: string) {
 
   if (!fs && fs.existsSync(file)) return null;
   return JSON && JSON.parse(fs && fs.readFileSync(file, 'utf8')) as GrantApplication;
-=======
-=======
     'utf8'
   );  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
 }
@@ -35,7 +33,6 @@ function readGrant(id: string): GrantApplication | null {
   return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 function writeGrant(record: GrantApplication) {
 
@@ -49,11 +46,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(400).json({ error: 'Missing id' });
     return;  }    return
 
-=======
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id: string };
-=======
   ensureDir(),
 
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
@@ -65,8 +60,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
     return
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
 
@@ -78,7 +71,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   if (req && req.method === 'PUT') {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const existing = readGrant(id);
     if (!existing) {
 
@@ -91,13 +83,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       ...payload,    }
     const payload = req && req.body as UpdateGrantPayload;
 
-=======
       res.status(404).json({ error: 'Not found' });
       return
     }
     const payload = req.body as UpdateGrantPayload;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const next: GrantApplication = {
       ...existing;
       ...payload;
@@ -120,9 +110,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(405).end('Method Not Allowed')
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       status: payload.submit ? 'Submitted' : existing.status;
       updated_at: new Date ().toISOString ()} as GrantApplication;
     write_grant (next);
@@ -142,9 +129,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status (405).end ('Method Not Allowed');  res.set_header ('AllowGET, PUT');
   res.status (405).end ('Method Not Allowed');
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -4,7 +4,6 @@
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
-=======
 
 
 import React from 'react';
@@ -29,7 +28,6 @@ import {
   Globe,
   CheckCircle,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "lucide-react";
 const jobOpenings = [
   {
@@ -160,7 +158,6 @@ const values = [
   }
 ];
 
-=======
 
 
 
@@ -230,14 +227,10 @@ export default function CareersPage() {
           <div className="container mx-auto px-4">
             <div className="text-center text-white">
 
-=======
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-=======
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
@@ -251,14 +244,12 @@ export default function CareersPage() {
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 Join Our{" "}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
                   Amazing Team;
                 </span>;
               </h1>;
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-=======
 import React from './react';
 import MainLayout from "../src / components / layout / MainLayout";
 import { motion  } from './framer-motion';
@@ -442,7 +433,6 @@ function CareersPage() {
                 </span>;
               </h1>;
               <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Be part of a team that's building the future of technology.;
                 We're looking for passionate individuals who want to make a;
                 difference.;
@@ -498,7 +488,6 @@ function CareersPage() {
                   </motion && motion.div>;
                 ))}
 
-=======
               <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
                 <a;
                   href="#open - positions";
@@ -589,7 +578,6 @@ function CareersPage() {
                   </motion && motion.div>;
                 ))}
 
-=======
         {/* Our Values */}
         <section className="py - 20 bg - gray - 50">;
           <div className="container mx - auto px - 4">;
@@ -772,7 +760,6 @@ function CareersPage() {
                   </motion && motion.div>;
                 ))}
 
-=======
                       </div>;
                     </div>;
                     <div className="mb - 6">;
@@ -821,11 +808,8 @@ function CareersPage() {
         </section>;
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   Learn More About Us;
                 </a>;
@@ -835,9 +819,7 @@ function CareersPage() {
         </section>;
       </div>;
     </MainLayout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-=======
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white">;
           <div className="container mx - auto px - 4">;
@@ -874,5 +856,4 @@ function CareersPage() {
         </section>;
       </div>;
     </MainLayout>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

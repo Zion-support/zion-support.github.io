@@ -28,10 +28,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 } from 'react-icons/si';
 
 interface Service {;
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   FaRocket,
   FaBrain,
   FaCloud,
@@ -64,7 +61,6 @@ import {
 
 
 interface Service {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   title: string;
   description: string;
@@ -220,10 +216,8 @@ const serviceCategories: ServiceCategory[] = [
     icon: <FaRobot className='w-8 h-8' />
     color: 'from-yellow-500 to-orange-500'
   },    icon: <FaRobot className="w-8 h-8" />
-=======
 
 const serviceCategories: ServiceCategory[] = [
-=======
   color: string;  id: string,
   name: string,
   description: string,
@@ -231,7 +225,6 @@ const serviceCategories: ServiceCategory[] = [
   color: string;
 }
 const service_categories: ServiceCategory[] = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'ai - ml',
     name: 'AI & Machine Learning',
@@ -414,7 +407,6 @@ const serviceCategories: ServiceCategory[] = [;
   },    icon: <FaRobot className="w-8 h-8" />,;
     color: 'from-yellow-500 to-orange-500';
   }
-=======
     id: 'ai-automation-suite',
     title: 'AI-Powered Automation Suite',
     description: 'Comprehensive automation platform leveraging artificial intelligence for business process optimization',
@@ -423,7 +415,6 @@ const serviceCategories: ServiceCategory[] = [;
     features: [
       'Intelligent workflow automationNatural language processingPredictive analyticsReal-time decision makingCustom AI model trainingMulti-platform integration'
     ];
-=======
     icon: <FaRobot className='w - 8 h - 8' />,
     color: 'from - yellow - 500 to - orange - 500',
   },    icon: <FaRobot className="w - 8 h - 8" />,
@@ -439,7 +430,6 @@ const services: Service[] = [;
       'Comprehensive automation platform leveraging artificial intelligence for business process optimization',
     icon: <FaRobot className='w - 6 h - 6' />,
     features: [;
-=======
 
 
       'Intelligent workflow automation',
@@ -449,7 +439,6 @@ const services: Service[] = [;
       'Custom AI model training',
       'Multi - platform integration',
     ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     pricing: {
       
       starter: 299,
@@ -629,12 +618,10 @@ const services: Service[] = [;
   }
   {
 
-=======
     id: 'cloud-native-platform',
     title: 'Cloud-Native Development Platform',
     description: 'Modern cloud-native development and deployment platform',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 
 const services: Service[] = [;
@@ -863,16 +850,13 @@ const services: Service[] = [;
       );
     }    if (selectedCategory !== 'all') {;
       filtered = filtered && filtered.filter(service => service && service.category === selectedCategory);
-=======
     
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
 
     
 
-=======
 
     
     if (searchTerm) {
@@ -883,7 +867,6 @@ const services: Service[] = [;
       )
     }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
@@ -899,7 +882,6 @@ const services: Service[] = [;
     setSelectedService(service);
   }
   const closeModal = () => {
-=======
 
     if (searchTerm) {;
       filtered = filtered && filtered.filter(service => ;
@@ -926,7 +908,6 @@ const services: Service[] = [;
   };
 
   const closeModal = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setSelectedService(null);
   }
   return (
@@ -971,7 +952,6 @@ const services: Service[] = [;
     setSelectedService(null)
   };
 
-=======
 ;
 const EnhancedServicesShowcase2025: React.FC = () => {
   const [selected_category, setSelectedCategory] = useState < string>('all');
@@ -1084,12 +1064,9 @@ if ( {) {
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Search and Filters */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1099,7 +1076,6 @@ if ( {) {
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
             <div className='relative flex-1 max-w-md'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <input
                 type='text'
                 placeholder='Search services, technologies, or features...'
@@ -1165,14 +1141,12 @@ if ( {) {
               <option value='price'>Sort by Price</option>;
               <option value='category'>Sort by Category</option>            </select>        >;
 
-=======
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-12"
         >
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
             <div className="relative flex-1 max-w-md">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <input
                 type="text"
                 placeholder="Search services, technologies, or features..."
@@ -1187,7 +1161,6 @@ if ( {) {
             </select>
           </div>
         </motion.div>
-=======
                 onChange={(e) => setSearchTerm(e && e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
               />;
@@ -1199,7 +1172,6 @@ if ( {) {
               value={sortBy}
               onChange={(e) => setSortBy(e && e.target.value as 'name' | 'price' | 'category')}
               className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500";
-=======
           <div className="flex flex - col md:flex - row gap - 4 items - center justify - center">;
             <div className="relative flex - 1 max - w-md">;
               <input;
@@ -1215,7 +1187,6 @@ if ( {) {
               value={sort_by}
               on_change={(e) => setSortBy (e.target.value as 'name' | 'price' | 'category')}
               className="px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - blue - 500";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             >;
               <option value="name">Sort by Name</option>;
               <option value="price">Sort by Price</option>;
@@ -1237,7 +1208,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Category Tabs */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1250,7 +1220,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${;
                 selectedCategory === 'all';
@@ -1271,7 +1240,6 @@ if ( {) {
                   selectedCategory === category.id
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                     : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 }`}
               >;
                 {category && category.icon}
@@ -1283,12 +1251,9 @@ if ( {) {
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Services Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1299,7 +1264,6 @@ if ( {) {
           {filteredServices.map((service, index) => (
             <motion.div
               key={service.id}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -1310,7 +1274,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onClick={() => handleServiceSelect(service)}
             >;
               <div className='flex items-center gap-3 mb-4'>;
@@ -1332,7 +1295,6 @@ if ( {) {
         >
           {filteredServices.map((service, index) => (
             <motion.div
-=======
         </motion.div>;
         {/* Category Tabs */}
         <motion.div;
@@ -1397,7 +1359,6 @@ if ( {) {
                   <span
                     key={tech}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {tech}
                   </span>;
                 ))}
@@ -1453,12 +1414,9 @@ if ( {) {
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
@@ -1466,18 +1424,14 @@ if ( {) {
             animate={{ opacity: 1 }}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
 
       </div>;
 
 
-=======
       </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Service Detail Modal */}
       <AnimatePresence>;
         {selectedService && (;
@@ -1490,7 +1444,6 @@ if ( {) {
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0 && 0.9, opacity: 0 }}
               className='bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
@@ -1515,7 +1468,6 @@ if ( {) {
                         serviceCategories.find(
                           c => c.id === selectedService.category
                         )?.name
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       }
                     </p>                  </div>;
                 </div>;
@@ -1566,33 +1518,26 @@ if ( {) {
               <p className="text-gray-300 text-lg mb-8">{selectedService && selectedService.description}</p>;
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Features */}
 
 
                         {feature}
                       </li>;
-=======
 
 
                         {feature}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </li>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
 
                   </ul>;
                 </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Benefits */}
 
 
@@ -1603,24 +1548,18 @@ if ( {) {
               </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Technologies */}
 
 
-=======
 
                       className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >
 
                     >
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {tech}
                     </span>;
                   ))}
@@ -1629,19 +1568,15 @@ if ( {) {
               </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Pricing */}
 
 
               </div>
             </motion.div>
           </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         )}
 
       </AnimatePresence>;
@@ -1651,16 +1586,12 @@ if ( {) {
 };
 
 export default EnhancedServicesShowcase2025;  );
-=======
   )
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default EnhancedServicesShowcase2025;
 
 
-=======
               while_hover={{ coordinate_y: -5, scale: 1.02 }}
               className='bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - xl p - 6 cursor - pointer hover:bg - white / 20 transition - all duration - 300';
               on_click={() => handleServiceSelect (service)}
@@ -1917,11 +1848,7 @@ export default EnhancedServicesShowcase2025);
 ;
 export default EnhancedServicesShowcase2025;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

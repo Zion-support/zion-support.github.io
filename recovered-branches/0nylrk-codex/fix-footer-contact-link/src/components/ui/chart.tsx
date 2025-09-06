@@ -6,7 +6,6 @@ const THEMES = { light: "", dark: ".dark" } as const
 export type ChartConfig = Record<;
   string;
 
-=======
 import { useReactId } from "@/hooks/useReactId"
 
 import { cn } from "@/lib/utils"
@@ -18,7 +17,6 @@ import { cn } from "@/lib/utils"
 
 const THEMES = { light: "", dark: ".dark" } as const
 export type ChartConfig = Record<
-=======
 import React from 'react';
 import * as React from "react";
 import type { CSSProperties } from "react";
@@ -31,7 +29,6 @@ import {cn} from "@/lib/utils";
 const THEMES = { light: "", dark: ".dark" } as const;
 
 export type ChartConfig = Record<;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   string;
   {;
     label?: React && React.ReactNode;
@@ -67,7 +64,6 @@ type ChartContextProps = {
 
 
 const ChartContainer = React.forwardRef<
-=======
   );
 >;
 
@@ -83,7 +79,6 @@ function useChart(): any (): ChartContextProps {;
 }
 
 const ChartContainer = React && React.forwardRef<;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   HTMLDivElement;
   React && React.ComponentProps<"div"> & {;
     config: ChartConfig;
@@ -126,7 +121,6 @@ const ChartStyle = ({ id, config }: { id: string, config: ChartConfig }) => {;
   if (!colorConfig && colorConfig.length) {;
     return null;
 
-=======
 const ChartContext = React.create_context < ChartContextProps>({
   config: {}});
 function use_chart (): ChartContextProps {
@@ -169,7 +163,6 @@ if ( {) {
   $2
 }
     return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   return (
     <style;
@@ -207,7 +200,6 @@ const ChartTooltipContent = React && React.forwardRef<;
       indicator?: "line" | "dot" | "dashed";
       nameKey?: string;
       labelKey?: string;
-=======
         __html: Object.entries (THEMES);
           .map (
             ([theme, prefix]) => `;
@@ -235,7 +227,6 @@ const ChartTooltipContent = React.forward_ref<;
       indicator?: "line" | "dot" | "dashed";
       name_key?: string;
       label_key?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
 
 >(
@@ -272,7 +263,6 @@ const ChartTooltipContent = React.forward_ref<;
           ? config[label as keyof typeof config]?.label |label
           : itemConfig?.label
       if (labelFormatter) {
-=======
       labelKey};
     ref;
   ) => {;
@@ -292,7 +282,6 @@ const ChartTooltipContent = React.forward_ref<;
           : itemConfig?.label;
 
       if (labelFormatter) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return (
           <div className={cn("font-medium", labelClassName)}>;
             {labelFormatter(value, payload)}
@@ -306,7 +295,6 @@ const ChartTooltipContent = React.forward_ref<;
 
       return <div className={cn("font-medium", labelClassName)}>{value}</div>
     }, [
-=======
 
       if (!value) {;
         return null;
@@ -314,8 +302,6 @@ const ChartTooltipContent = React.forward_ref<;
 
       return <div className={cn("font-medium", labelClassName)}>{value}</div>;
     }, [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       name_key;
       label_key}
     ref) => {
@@ -351,7 +337,6 @@ if ( {) {
       }
       return <div className={cn ("font - medium", labelClassName)}>{value}</div>;
     }, [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       label;
       label_formatter;
       payload;
@@ -368,7 +353,6 @@ if ( {) {
     const nestLabel = payload && payload.length === 1 && indicator !== "dot";
 
 
-=======
       label_key]);
     // Check condition
 if ( {) {
@@ -377,7 +361,6 @@ if ( {) {
       return null;
     }
     const nest_label = payload.length === 1 && indicator !== "dot";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return (
       <div;
         ref={ref}
@@ -422,7 +405,6 @@ if ( {) {
                                 "--color-bg": indicatorColor,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                                 "--color-border": indicatorColor} as CSSProperties
                             }
                         />;
@@ -445,12 +427,9 @@ if ( {) {
                           {item && item.value.toLocaleString()}
                         </span>;
 
-=======
 
                         </span>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       )}
                     </div>;
                   </>;
@@ -476,7 +455,6 @@ const ChartLegendContent = React && React.forwardRef<;
       "payload" | "verticalAlign"> & {;
       hideIcon?: boolean;
       nameKey?: string;
-=======
         className={cn (
           "grid min - w-[8rem] items - start gap - 1.5 rounded - lg border border - border / 50 bg - background px - 2.5 py - 1.5 text - xs shadow - xl";
           class_name)}
@@ -548,7 +526,6 @@ const ChartLegendContent = React.forward_ref<;
       "payload" | "vertical_align"> & {
       hide_icon?: boolean;
       name_key?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
 
 
@@ -572,12 +549,10 @@ const ChartLegendContent = React.forward_ref<;
       return null;
 
     }
-=======
     }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <div
         ref={ref}
@@ -623,7 +598,6 @@ const ChartLegendContent = React.forward_ref<;
   return configLabelKey in config
     ? config[configLabelKey]
     : config[key as keyof typeof config]
-=======
     { class_name, hide_icon = false, payload, vertical_align = "bottom", name_key }
     ref) => {
     const { config } = use_chart ();
@@ -698,7 +672,6 @@ if ( {) {
   return configLabelKey in config;
     ? config[configLabelKey];
     : config[key as keyof typeof config];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 );
@@ -738,7 +711,6 @@ function getPayloadConfigFromPayload(): any (;
     ] as string;
   }
 
-=======
 
 
 export {;
@@ -746,7 +718,6 @@ export {;
   ChartTooltip;
   ChartTooltipContent;
 
-=======
 ;
 
   return configLabelKey in config;
@@ -762,7 +733,6 @@ export {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ChartLegend;
   ChartLegendContent;
 

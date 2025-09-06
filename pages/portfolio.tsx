@@ -90,7 +90,6 @@ import { motion } from 'framer-motion';
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Innovative technology solutions that drive business transformation and growth
             </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -121,7 +120,6 @@ import { motion } from 'framer-motion';
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Stats Section */}
       <section className='py-16 px-6'>;
         <div className='max-w-7xl mx-auto'>;
@@ -129,7 +127,6 @@ import { motion } from 'framer-motion';
               <motion&& motion.div
                 key={stat && stat.label}
 
-=======
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
@@ -151,8 +148,6 @@ import { motion } from 'framer-motion';
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -166,7 +161,6 @@ import { motion } from 'framer-motion';
           <div className='flex flex-wrap justify-center gap-4'>;
             {categories && categories.map(category => (              <button
 
-=======
 
       {/* Category Filter */}
       <section className="py-8 px-6">
@@ -175,7 +169,6 @@ import { motion } from 'framer-motion';
             {categories.map((category) => (
               <button
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${;
@@ -200,7 +193,6 @@ import { motion } from 'framer-motion';
               <motion&& motion.div
                 key={project && project.title}
 
-=======
 
       {/* Projects Grid */}
       <section className="py-20 px-6">
@@ -246,7 +238,6 @@ import { motion } from 'framer-motion';
                           className='text-xs bg-white/5 text-white/70 px-2 py-1 rounded'>                          {tech}
                         </span>;
 
-=======
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
               >
                 <div className="p-8">
@@ -262,7 +253,6 @@ import { motion } from 'framer-motion';
                   <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
                   <p className="text-white/70 mb-6">{project.description}</p>
                   
-=======
 
                   <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
                   <p className="text-white/70 mb-6">{project.description}</p>
@@ -285,16 +275,13 @@ import { motion } from 'framer-motion';
                       {project && project.results.map(result => (;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         <li
                           key={result}
                           className='text-sm text-white/80 flex items-center'>;
                           <div className='w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full mr-2' />                          {result}
                         </li>;
 
-=======
                   
-=======
                           {tech  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -317,7 +304,6 @@ import { motion } from 'framer-motion';
                           <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2" />
                           {result}
                         </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       ))}
 
                   
@@ -326,7 +312,6 @@ import { motion } from 'framer-motion';
                     <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105">
                       View Details
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </button>
                   </div>
                 </div>
@@ -346,23 +331,19 @@ import { motion } from 'framer-motion';
                 </div>;
               </motion && motion.div>;
             ))}
-=======
 
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>;
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
-=======
 
       {/* CTA Section */}
       <section className="py-20 px-6">
@@ -391,7 +372,6 @@ import { motion } from 'framer-motion';
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -435,7 +415,6 @@ import { motion } from 'framer-motion';
 }</div> </div> </li>) )
 }</ul> </div> View Details </button> </div> </div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
-=======
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
@@ -475,7 +454,6 @@ import { motion } from 'framer-motion';
 }</div> </div> </li>) ) ;
 }</ul> </div> View Details </button> </div> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -492,7 +470,6 @@ import { motion } from 'framer-motion';
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Start Your Project? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how we can help you achieve similar results with our innovative technology solutions. </p> Start Your Project </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
 
-=======
       title: 'AI - Powered Financial Analytics Platform',
       description:;
         'Revolutionary financial analytics platform using advanced AI algorithms for real - time market analysis and predictive modeling',
@@ -807,4 +784,3 @@ import { motion } from 'framer-motion';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

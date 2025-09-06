@@ -13,14 +13,12 @@ export default function ModerationModal(): any ({;
   onAction,;
 }: ModerationModalProps) {;
 
-=======
 
   flag,
   onClose,
   onAction,
 }: ModerationModalProps) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
 
@@ -126,8 +124,6 @@ export default function ModerationModal(): any ({;
 
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   on_close: () => void;
   on_action: (
     action: 'approve' | 'remove' | 'warn' | 'ban',
@@ -246,10 +242,6 @@ if (return null) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

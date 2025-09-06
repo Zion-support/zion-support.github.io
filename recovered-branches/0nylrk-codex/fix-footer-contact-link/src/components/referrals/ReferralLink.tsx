@@ -6,7 +6,6 @@ import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} f
 import {Input} from "@/components/ui/input";
 import {Copy, Facebook, Link, Share, Twitter} from "lucide-react";
 
-=======
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -16,8 +15,6 @@ import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ReferralLinkProps {
   referralLink: string;
   onCopy: () => void;
@@ -29,7 +26,6 @@ interface ReferralLinkProps {
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
   const [copied, setCopied] = useState(false);
 
-=======
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
   const [copied, setCopied] = useState(false),
 
@@ -39,8 +35,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
     setCopied(true),
     setTimeout(() => setCopied(false), 2000)
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Card className="mt-6">
@@ -57,7 +51,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
       <CardContent>
         <div className="flex flex-col space-y-3">
           <div className="flex space-x-2">
-=======
 interface ReferralLinkProps {;
   referralLink: string,;
   onCopy: () => void,;
@@ -87,7 +80,6 @@ export function ReferralLink(): any ({ referralLink, onCopy, onShare }: Referral
       <CardContent>;
         <div className="flex flex-col space-y-3">;
           <div className="flex space-x-2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Input
               value={referralLink}
               readOnly
@@ -136,7 +128,6 @@ export function ReferralLink(): any ({ referralLink, onCopy, onShare }: Referral
               onClick={() => onShare('linkedin')}
             >;
               <Share className="h-4 w-4" />;
-=======
 import { useState  } from './react';
 import { Button  } from '@/components / ui / button';
 import {
@@ -238,10 +229,7 @@ function ReferralLink() {
     </Card>);
 }
 
-=======
 
   )
-=======
   )
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -8,7 +8,6 @@ import type { UserProfile } from "@/types/auth",
 // declares `@supabase/supabase-js` as an untyped external module. Define
 // a minimal user shape that includes only the properties we actually use
 // in this file.
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export interface SupabaseUser {
 
   id: string,
@@ -34,7 +33,6 @@ export function mapProfileToUser (user: SupabaseUser, profile: any): UserProfile
     avatarUrl: profile && profile.avatar_url || undefined, // Add for compatibility
     role: profile && profile.user_type // Map user_type to role for backward compatibility
 
-=======
     email: user.email || "";
     display_name: profile.display_name || "";
     user_type: (profile.user_type as "creator" | "job_seeker" | "employer" | "buyer" | "admin" | null) || null;
@@ -46,12 +44,8 @@ export function mapProfileToUser (user: SupabaseUser, profile: any): UserProfile
     avatar_url: profile.avatar_url || undefined,
     avatar_url: profile.avatar_url || undefined, // Add for compatibility;
     role: profile.user_type // Map user_type to role for backward compatibility;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }
-=======
 
   return {
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

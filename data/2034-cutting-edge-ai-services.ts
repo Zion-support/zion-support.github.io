@@ -3,7 +3,6 @@
 
   {
 
-=======
     id: 'ai - product - spec - writer',
     name: 'AI Product Spec Writer',
     description:;
@@ -24,10 +23,8 @@
     real_service: true,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'ai - creative - studio',
     name: 'AI Creative Studio',
     description:;
@@ -48,14 +45,11 @@
     real_service: true,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];	id: string;
 
-=======
 	id: string, name: string,
 	description: string,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 	category:
 		| 'AI Consciousness'
 		| 'AI Emotional Intelligence'
@@ -120,7 +114,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 ];
 
 
-=======
 name: string;
 description: string;
 category:;
@@ -179,11 +172,8 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
   link: 'https://ziontechgroup.com / services / ai - creative - studio',
   real_service: true;
 }
-=======
 export type CuttingEdgeAIService = {;
 
 	}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

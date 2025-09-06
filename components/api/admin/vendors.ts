@@ -11,11 +11,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message })
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
-=======
   setVendorApproval,
   setVendorCommission,
   suspend_vendor,
@@ -63,8 +61,5 @@ function handler() {
     res.status (500).json ({ error: e.message });
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

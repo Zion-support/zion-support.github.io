@@ -5,14 +5,12 @@ import {;
   PopoverContent,;
   PopoverTrigger,;
 
-=======
 
 
   Popover,
   PopoverContent,
   PopoverTrigger,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 
@@ -20,8 +18,6 @@ import { FormControl } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
 
 
-=======
-=======
 
 
 import React from 'react',
@@ -43,8 +39,6 @@ interface DateFieldsProps {
 }
 
 export function DateFields({ startDate, setStartDate, endDate, setEndDate }: DateFieldsProps) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -65,7 +59,6 @@ export function DateFields(): any ({;
   setEndDate,;
 }: DateFieldsProps) {;
   return (
-=======
 
                   "w-full md:w-[240px] pl-3 text-left font-normal",
 
@@ -118,7 +111,6 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
                   format(startDate, "PPP");
                 ) : (;
                   <span>Pick a date</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
               </Button>;
             </FormControl>;
@@ -134,7 +126,6 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
               }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initialFocus
             />
           </PopoverContent>
@@ -149,7 +140,6 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
                 variant={"outline"}
                 className={cn(
 
-=======
 
                   "w-full md:w-[240px] pl-3 text-left font-normal",
 
@@ -171,7 +161,6 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
               onSelect={setEndDate}
 
 
-=======
               disabled={(date) =>;
                 date < new Date();
               }
@@ -268,9 +257,6 @@ function DateFields() {
     </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
-=======
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

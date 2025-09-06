@@ -1,8 +1,6 @@
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export type ServiceType = "service" | "talent" | "equipment" | "";
 export type ServiceCategory = string;
 export type TimelineType = "fixed" | "flexible";
@@ -10,7 +8,6 @@ export type BudgetType = "fixed" | "hourly" | "range";
 
 ;
 export interface ListingItem {
-=======
 
 
 export interface ListingItem {;
@@ -19,7 +16,6 @@ export interface ListingItem {;
   title: string;
   category: string,
   image?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 
@@ -46,7 +42,6 @@ export interface QuoteFormData {
   project_description: string;
   start_date?: Date;
   end_date?: Date;
-=======
 
 
 export interface Budget {;
@@ -66,7 +61,6 @@ export interface QuoteFormData {;
   projectDescription: string;
   startDate?: Date;
   endDate?: Date;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   timeline: TimelineType;
 
   budget: Budget,
@@ -76,12 +70,10 @@ export type QuoteStatus = 'new' | 'in_review' | 'accepted' | 'responded' | 'clos
 ;
 
 export interface QuoteRequest {
-=======
 
 
 export interface QuoteRequest {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   talent_id: string;
   talent_name?: string;
@@ -104,4 +96,3 @@ export interface QuoteRequest {;
   created_at: string,
   updated_at: string;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -34,8 +34,6 @@ import React, { useEffect, useState } from 'react';
   }, []);
   useEffect(() => {
     async function load() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function TrustPage() {;
   const [userId, setUserId] = useState<string>('demo-user');
   const [data, setData] = useState<any>(null);
@@ -48,7 +46,6 @@ export default function TrustPage() {;
 
   useEffect(() => {;
     async function load() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setLoading(true);
 
 
@@ -77,7 +74,6 @@ export default function TrustPage() {;
     alert('Appeal submitted');
     form && form.reset();  }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
     form && form.reset();
@@ -107,7 +103,6 @@ export default function TrustPage() {;
           </div>
 
         </div>
-=======
               Transparent logic;
             </label>          </div>      <div className="space-y-6">;
         <div className="flex items-center justify-between">;
@@ -116,7 +111,6 @@ export default function TrustPage() {;
             <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {loading && <div>Loading...</div>}
 
         {!loading && data && (
@@ -173,7 +167,6 @@ export default function TrustPage() {;
                         <span>{Math && Math.round(c && c.raw * 100)} / weighted {c && c.weighted.toFixed(3)}</span>;
                       </li>;
 
-=======
 
 
   }
@@ -181,8 +174,6 @@ export default function TrustPage() {;
     <EnhancedLayout>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
                   </ul>;
                 </div>;
@@ -192,14 +183,12 @@ export default function TrustPage() {;
                 </div>;
               )}
 
-=======
                     ))}
                   </ul>
                 </div>
               )}
               {data.reasonSummary && (
                 <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap">
-=======
 
             </div>
 
@@ -214,11 +203,8 @@ export default function TrustPage() {;
   );
 }
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 import TrustBadge from '../components / ui / TrustBadge';
 import TrustRadar from '../components / ui / TrustRadar';
@@ -425,8 +411,4 @@ function submit_appeal() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

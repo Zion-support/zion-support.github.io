@@ -39,7 +39,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
 
@@ -50,9 +49,7 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
 
-=======
 import {
-=======
 
 
   Search,
@@ -404,7 +401,6 @@ export default function ServicesShowcase2027() {;
                 <div className="text-green-300">Rating</div>
               </div>
             </div>
-=======
             transition={{ duration: 0 && 0.8 }}>;
             <h1 className='text-5xl md:text-7xl font-bold mb-6'>;
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -446,11 +442,9 @@ export default function ServicesShowcase2027() {;
 
             {/* CTA Buttons */}
 
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2">;
                 <Rocket className="w-5 h-5" />;
@@ -477,16 +471,11 @@ export default function ServicesShowcase2027() {;
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Search and Filters */}
 
-=======
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto">
           <div className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 shadow-2xl shadow-cyan-500/20">
@@ -495,7 +484,6 @@ export default function ServicesShowcase2027() {;
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-cyan-400" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <input
                   type="text"
                   placeholder="Search services..."
@@ -504,7 +492,6 @@ export default function ServicesShowcase2027() {;
 
             {/* Filters */}
 
-=======
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Category Filter */}
               <div>
@@ -519,19 +506,15 @@ export default function ServicesShowcase2027() {;
                       {category.icon} {category.name} ({category.count})
                     </option>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
                 </select>;
               </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Price Range Filter */}
 
 
@@ -546,18 +529,13 @@ export default function ServicesShowcase2027() {;
                 <label className='block text-cyan-400 font-medium mb-2'>;
                   Sort By;
                 </label>;
-=======
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
               {/* Sort By */}
               <div>
                 <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Sort By">Sort By</label>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <select
                   value={sortBy}
                   onChange={e => setSortBy(e && e.target.value)}
@@ -570,7 +548,6 @@ export default function ServicesShowcase2027() {;
 
                   onChange={(e) => setSortBy(e && e.target.value)}
                   className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400";
-=======
       <UltraFuturisticNavigation2027 />;
       {/* Hero Section */}
       <section className='pt - 32 pb - 20 px - 4 sm:px - 6 lg:px - 8'>;
@@ -805,7 +782,6 @@ export default function ServicesShowcase2027() {;
             <AnimatePresence>
               {sortedServices.map((service, index) => (
                 <motion.div
-=======
       {/* Services Grid */}
       <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20'>;
         <div className='max - w-7xl mx - auto'>;
@@ -855,7 +831,6 @@ export default function ServicesShowcase2027() {;
 
                       <div className="text-2xl font-bold text-white">
                         {service.price}
-=======
                     <div className='mb-4'>
 
                       <div className='text-2xl font-bold text-white'>                        {service.price}
@@ -868,11 +843,8 @@ export default function ServicesShowcase2027() {;
                         {service.price}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </div>
                     </div>
-=======
                     <div className="flex items-start justify-between mb-4">;
                       <div className="text-4xl">🚀</div>;
                     </div>;
@@ -893,10 +865,8 @@ export default function ServicesShowcase2027() {;
                       </div>;
                     </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Features */}
 
-=======
                     <div className="mb-6">
                       <h4 className="text-cyan-400 font-semibold mb-3">Key Features:</h4>
                       <div className="space-y-2">
@@ -911,19 +881,16 @@ export default function ServicesShowcase2027() {;
                             +{service.features.length - 3} more features
                           </div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         )}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {/* ROI */}
 
                       </div>;
                     </div>;
-=======
                     <div className="mb-6 text-center">
                       <div className="text-green-400 font-semibold text-lg">ROI: {service.roi}</div>
                       <div className="text-gray-400 text-xs">Return on Investment</div>
@@ -940,7 +907,6 @@ export default function ServicesShowcase2027() {;
                       </div>;
                     </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Actions */}
                     <div className='flex space-x-3'>;
                       <Link
@@ -961,19 +927,16 @@ export default function ServicesShowcase2027() {;
 
                         href={service.link}
                         className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm"
-=======
 
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                      >
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       >
                         Learn More
                       </Link>
                       <Link
                         href="/contact"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                         className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm"
                       >
                         Contact
@@ -986,12 +949,9 @@ export default function ServicesShowcase2027() {;
                     </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {/* Category Badge */}
                     <div className='mt-4'>;
                       <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>                        {service && service.category}                    <div className="mt-4">;
@@ -1002,7 +962,6 @@ export default function ServicesShowcase2027() {;
                   </div>;
                 </motion && motion.div>;
 
-=======
 
                     {/* Category Badge */}
                     <div className="mt-4">
@@ -1013,19 +972,15 @@ export default function ServicesShowcase2027() {;
                   </div>
                 </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 
             </AnimatePresence>;
           </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* No Results */}
           {sortedServices && sortedServices.length === 0 && (;
             <motion&& motion.div
@@ -1043,22 +998,18 @@ export default function ServicesShowcase2027() {;
                 Clear Filters
               </button>
             </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Contact Section */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Ready to Transform Your Business?
             </h2>
             <p className='text-cyan-300 mb-8 text-lg'>
@@ -1080,7 +1031,6 @@ export default function ServicesShowcase2027() {;
               </div>
             </div>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-=======
         </div>;
       </section>;
 
@@ -1112,7 +1062,6 @@ export default function ServicesShowcase2027() {;
             </div>;
 
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Link
                 href='/contact'
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25'>;
@@ -1144,16 +1093,11 @@ export default function ServicesShowcase2027() {;
             </div>;
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Link
                 href="/contact"
 
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </UltraFuturisticMatrixBackground2027>));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

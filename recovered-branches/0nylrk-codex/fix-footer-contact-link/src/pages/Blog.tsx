@@ -76,7 +76,6 @@ const BLOG_POSTS: BlogPost[] = [
     excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <h2>Energy-Efficient Hardware Selection</h2>
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
 <h2>Optimizing Cooling Systems</h2>
@@ -399,7 +398,6 @@ const BLOG_POSTS: BlogPost[] = [;
 // Categories for filtering;
 const CATEGORIES = [;
 
-=======
 import { useState } from './react';
 import { Link } from './react-router-dom';
 import { Header } from '@/components / Header';
@@ -581,7 +579,6 @@ const BLOG_POSTS: BlogPost[] = [;
 ;
 // Categories for filtering;
 const CATEGORIES = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   "All Categories";
   "Trends";
   "Marketing";
@@ -635,7 +632,6 @@ const CATEGORIES = [
           </div>
 
 
-=======
 
           
 import { useState } from "react",;
@@ -866,7 +862,6 @@ export default function Blog() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts && featuredPosts.length > 0 && (;
             <div className="mb-16">;
@@ -875,7 +870,6 @@ export default function Blog() {;
                 <div className="aspect-video overflow-hidden rounded-lg">;
                   <img
                     src={featuredPosts[0].featuredImage} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     alt={featuredPosts[0].title}
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                   />;
@@ -911,7 +905,6 @@ export default function Blog() {;
                     asChild
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit">;
                     <Link to={`/blog/${featuredPosts[0].slug}`}>;
-=======
 ;
 export default /**
  * Blog - Function description
@@ -992,7 +985,6 @@ function Blog() {
                     className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple w - fit";
                   >;
                     <Link to={`/blog/${featured_posts[0].slug}`}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       Read Article;
                     </Link>;
                   </Button>;
@@ -1136,7 +1128,6 @@ function Blog() {
                       className="text-zion-cyan p-0 hover:text-zion-purple"
                       asChild>;
                       <Link to={`/blog/${post && post.slug}`}>;
-=======
                     </p>;
                     <div className="flex items - center">;
                       <img;
@@ -1154,7 +1145,6 @@ function Blog() {
                       as_child;
                     >;
                       <Link to={`/blog/${post.slug}`}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         Read More →;
                       </Link>;
                     </Button>;
@@ -1165,7 +1155,6 @@ function Blog() {
 
 
                   setSelectedCategory("All Categories")
-=======
             </div>;
           ) : (;
             <div className="text-center py-16">;
@@ -1176,10 +1165,8 @@ function Blog() {
                 onClick={() => {;
                   setSearchQuery("");
                   setSelectedCategory("All Categories");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }}
 
-=======
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
                 Clear all filters
@@ -1187,7 +1174,6 @@ function Blog() {
             </div>
 
 
-=======
                     </p>;
                     <div className="flex items-center">;
                       <img;
@@ -1231,15 +1217,12 @@ function Blog() {
 
 
           )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>;
       </div>;
       <Footer />;
     </>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                 </Card>))}
             </div>) : (
             <div className="text - center py - 16">;
@@ -1261,4 +1244,3 @@ function Blog() {
       <Footer />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

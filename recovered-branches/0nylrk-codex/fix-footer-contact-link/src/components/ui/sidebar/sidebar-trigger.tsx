@@ -37,7 +37,6 @@ export const SidebarTrigger = React.forward_ref<;
       on_click={(event) => {
         props.on_click?.(event);
         toggle_sidebar ();
-=======
   return (
     <Button
 
@@ -50,7 +49,6 @@ export const SidebarTrigger = React.forward_ref<;
       onClick={(event) => {
         props.onClick?.(event)
         toggleSidebar()
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }}
       {...props}
 
@@ -62,8 +60,6 @@ export const SidebarTrigger = React.forward_ref<;
 SidebarTrigger.display_name = &quot;SidebarTrigger & quot;
 ;
 
-=======
 
 SidebarTrigger.displayName = "SidebarTrigger"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

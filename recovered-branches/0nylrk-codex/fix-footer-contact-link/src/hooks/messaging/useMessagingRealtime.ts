@@ -9,7 +9,6 @@ type UserWithProfile = UserProfile | UserDetails | null;
 ;
 export function useMessagingRealtime (
 
-=======
 
 import {useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
@@ -22,7 +21,6 @@ import {toast} from '@/hooks/use-toast';
 
 export function useMessagingRealtime(;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   user: UserWithProfile;
   active_conversation: Conversation | null;
   setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
@@ -57,7 +55,6 @@ export function useMessagingRealtime(;
       supabase && supabase.removeChannel(subscription)
     }
   }, [user, activeConversation, fetchConversations, setActiveMessages])
-=======
   fetch_conversations: () => Promise < void>) {
   // Setup real - time subscription when user is logged in;
   useEffect (() => {
@@ -101,8 +98,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }, [user, active_conversation, fetch_conversations, setActiveMessages]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

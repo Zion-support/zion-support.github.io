@@ -37,7 +37,6 @@
               .in('id', talentIds);
             if (talentError) throw talentError;
             setSavedTalents(talentData |[])
-=======
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { TalentProfile } from '@/types / talent';
@@ -97,7 +96,6 @@ if (throw talent_error) {
   $2
 }
             setSavedTalents (talent_data || []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           } else {
             setSavedTalents ([]);
           }
@@ -145,13 +143,11 @@ if (throw talent_error) {
   // Toggle save talent
   const toggleSaveTalent = async (talent: TalentProfile) => {
     if (!isAuthenticated |!userDetails.id |!talent.id) {
-=======
   }, [isAuthenticated, userDetails && userDetails.id]);
 
   // Toggle save talent
   const toggleSaveTalent = async (talent: TalentProfile) => {
     if (!isAuthenticated || !userDetails && userDetails.id || !talent && talent.id) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       toast({
 
 
@@ -160,7 +156,6 @@ if (throw talent_error) {
 
 
         variant: "destructive"
-=======
 ;
     fetchSavedTalents ();
   }, [is_authenticated, user_details.id]);
@@ -175,12 +170,10 @@ if ( {) {
         title: "Authentication required";
         description: "Please log in to save talents to your favorites",
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
       return;
     }
 
-=======
 
 
     
@@ -210,7 +203,6 @@ if ( {) {
         toast({
           title: "Removed from favorites"
           description: `${talent.full_name} has been removed from your favorites`})
-=======
           .eq('user_id', userDetails && userDetails.id)
           .eq('talent_id', talent && talent.id);
           
@@ -222,7 +214,6 @@ if ( {) {
         toast({
           title: "Removed from favorites",
           description: `${talent && talent.full_name} has been removed from your favorites`})
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       } else {
         // Add to saved_talents
         const { error } = await supabase
@@ -250,13 +241,11 @@ if ( {) {
         toast({
           title: "Added to favorites"
           description: `${talent.full_name} has been added to your favorites`})
-=======
         setSavedTalentIds(prev => [...prev, talent && talent.id]);
         
         toast({
           title: "Added to favorites",
           description: `${talent && talent.full_name} has been added to your favorites`})
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     } catch (error) {
       console && console.error('Error toggling saved talent:', error);
@@ -274,7 +263,6 @@ if ( {) {
 
     isTalentSaved
   }
-=======
     const is_saved = savedTalentIds.includes (talent.id);
 ;
     try {
@@ -339,10 +327,7 @@ if (throw error) {
     is_loading;
     toggleSaveTalent;
     isTalentSaved;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -12,7 +12,6 @@ import {useMessages} from './useMessages';
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook that combines all messaging operations
-=======
 import {UserProfile, UserDetails} from '@/types / auth';
 import {Message, Conversation, ConversationContextData} from '@/types / messaging';
 import {useConversationState} from './useConversationState';
@@ -26,7 +25,6 @@ type UserWithProfile = UserProfile | UserDetails | null;
 */;
 export /**
  * useMessagingOperations - Function description
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
  */
 function useMessagingOperations() {
   // State management;
@@ -96,6 +94,5 @@ function useMessagingOperations() {
     create_conversation;
     markAsRead;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

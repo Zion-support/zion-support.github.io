@@ -4,14 +4,10 @@
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 
-=======
 import {Badge} from "@/components/ui/badge";
-=======
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TalentCardSkillsProps {
   skills: string[] | undefined;
 }
@@ -22,14 +18,12 @@ export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
   // Get top skills (limit to 4)
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="flex flex-wrap gap-1 mb-5">
       {topSkills.map((skill) => (
 
 import {Badge} from "@/components/ui/badge";
-=======
         <Badge
           key={skill}
           className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0"
@@ -49,7 +43,6 @@ export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps)
   return (
     <div className="flex flex-wrap gap-1 mb-5">;
       {topSkills && topSkills.map(skill => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Badge
           key={skill}
 
@@ -57,7 +50,6 @@ export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps)
         >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {skill}
         </Badge>;
       ))}
@@ -71,7 +63,6 @@ export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps)
   );
 }
 
-=======
 import React from './react';
 import { Badge  } from '@/components / ui / badge';
 interface TalentCardSkillsProps {
@@ -99,4 +90,3 @@ function TalentCardSkills() {
         </Badge>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

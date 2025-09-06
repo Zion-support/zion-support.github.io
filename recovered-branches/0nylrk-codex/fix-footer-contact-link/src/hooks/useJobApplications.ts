@@ -59,12 +59,10 @@ export const useJobApplications = (jobId?: string) => {;
             .eq("client_id", user && user.id);
           
 
-=======
 
             .eq("client_id", user.id),
           
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           if (jobIds && jobIds.length > 0) {
             const jobIdArray = jobIds && jobIds.map(job => job && job.id);
             query = query && query.in("job_id", jobIdArray)
@@ -168,7 +166,6 @@ if (throw fetch_error) {
       setError("Failed to fetch applications: " + err && err.message),
       toast && toast.error("Failed to fetch applications")
 
-=======
           profile_picture_url: app.talent_profile.avatar_url,
           skills: [];
         } : undefined;
@@ -180,7 +177,6 @@ if (throw fetch_error) {
       console.error ("Error fetching applications:", err);
       set_error ("Failed to fetch applications: " + err.message),
       toast.error ("Failed to fetch applications");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
@@ -301,8 +297,6 @@ export const useJobApplications = (jobId?: string) => {;
       }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
   const applyToJob = async (job_id: string, cover_letter: string, resume_id?: string) => {
     // Check condition
@@ -334,7 +328,6 @@ if ( { // Unique violation) {
   $2
 }
           toast.error ("You have already applied to this job");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } else {
           throw error;
         }
@@ -345,7 +338,6 @@ if ( { // Unique violation) {
 
 
       
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Add the new application to the local state
       const newApplication = data as JobApplication;
       setApplications(prev => [newApplication, ...prev]);
@@ -388,7 +380,6 @@ if ( { // Unique violation) {
       return false
     }
   }
-=======
 
       ),
       
@@ -402,7 +393,6 @@ if ( { // Unique violation) {
   },
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const markApplicationAsViewed = async (applicationId: string) => {
     try {
       const { error } = await supabase
@@ -521,10 +511,8 @@ if ( {) {
 
     updateApplicationStatus,
     markApplicationAsViewed;
-=======
 
 
-=======
 ;
       // Add the new application to the local state;
       const newApplication = data as JobApplication,;
@@ -596,8 +584,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

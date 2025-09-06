@@ -19,7 +19,6 @@ export function useResumeActions() {;
 
 
 
-=======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Resume, ResumeBasicInfo } from '@/types/resume',;
@@ -41,8 +40,6 @@ export function useResumeActions() {;
     setIsLoading(true),
     setError(null),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       const { data, error } = await supabase
         .from('talent_resumes')
@@ -62,7 +59,6 @@ export function useResumeActions() {;
       
       return data && data.id
 
-=======
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Resume, ResumeBasicInfo} from '@/types / resume';
@@ -106,7 +102,6 @@ if (throw error) {
       showSuccessToast ("Resume created", "Your resume has been created successfully");
 ;
       return data.id;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (e: any) {
       return handleResumeError (e, 'Could not create resume') ? null : null;
     } finally {
@@ -135,7 +130,6 @@ if (throw error) {
       setIsLoading(false)
 
 
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -171,8 +165,6 @@ if (throw error) {
     setIsLoading(true),
     setError(null),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       const { error } = await supabase
         .from('talent_resumes')
@@ -181,7 +173,6 @@ if (throw error) {
           title: basicInfo && basicInfo.title;
           headline: basicInfo && basicInfo.headline,
           summary: basicInfo && basicInfo.summary
-=======
 
           title: basicInfo.title,
           headline: basicInfo.headline,
@@ -197,7 +188,6 @@ if (throw error) {
 
 
       return showSuccessToast("Resume updated", "Your resume information has been updated")
-=======
 ;
   const updateBasicInfo = async (resume_id: string, basic_info: ResumeBasicInfo): Promise < boolean> => {
     // Check condition
@@ -226,7 +216,6 @@ if (throw error) {
   $2
 }
       return showSuccessToast ("Resume updated", "Your resume information has been updated");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (e: any) {
       return handleResumeError (e, 'Could not update resume');
     } finally {
@@ -234,7 +223,6 @@ if (throw error) {
       setIsLoading(false)
 
 
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -268,8 +256,6 @@ if (throw error) {
     setIsLoading(true),
     setError(null),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       // First, set all user's resumes to inactive
       const { error: resetError } = await supabase
@@ -280,14 +266,12 @@ if (throw error) {
       
 
       if (resetError) throw resetError;
-=======
 
         .eq('user_id', user.id),
       
       if (resetError) throw resetError,
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Then, set the selected resume as active
       const { error } = await supabase
         .from('talent_resumes')
@@ -299,8 +283,6 @@ if (throw error) {
 
       if (error) throw error;
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
-=======
-=======
 
         .eq('user_id', user.id),
       
@@ -313,7 +295,6 @@ if (throw error) {
     } finally {
       setIsLoading(false)
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
   const setActiveResume = async (resume_id: string): Promise < boolean> => {
     // Check condition
@@ -349,7 +330,6 @@ if (throw error) {
   $2
 }
       return showSuccessToast ("Active resume set", "Your selected resume is now marked as active");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (e: any) {
       return handleResumeError (e, 'Could not set active resume');
     } finally {
@@ -366,13 +346,11 @@ if (throw error) {
 
     setActiveResume}
 }
-=======
   },;
   return {;
     isLoading,;
     error,;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     createResume;
     updateBasicInfo;
 
@@ -381,4 +359,3 @@ if (throw error) {
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

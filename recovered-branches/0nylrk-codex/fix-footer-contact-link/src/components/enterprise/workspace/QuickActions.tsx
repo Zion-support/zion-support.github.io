@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function QuickActions() {
 
   const actions = [
@@ -15,7 +14,6 @@ export function QuickActions() {
       description: "Create a new job posting",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       id: "add-member"
       label: "Add Team Member"
@@ -44,7 +42,6 @@ export function QuickActions() {
       icon: <Calendar className="h-5 w-5 mr-2" />
       description: "Set up candidate interviews"
       color: "bg-amber-100 dark:bg-amber-900/20"
-=======
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -79,8 +76,6 @@ export function QuickActions() {;
       icon: <Calendar className="h-5 w-5 mr-2" />,;
       description: "Set up candidate interviews",;
       color: "bg-amber-100 dark:bg-amber-900/20";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -117,13 +112,11 @@ function QuickActions() {
       icon: <Calendar className="h - 5 w - 5 mr - 2" />,
       description: "Set up candidate interviews",
       color: "bg - amber - 100 dark:bg - amber - 900 / 20";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   ];
 ;
   return (
 
-=======
 
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -188,8 +181,6 @@ export function QuickActions() {;
     </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     <Card>;
       <CardHeader>;
         <CardTitle > Quick Actions</CardTitle>;
@@ -220,4 +211,3 @@ export function QuickActions() {;
     </Card>
   )
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,6 +1,5 @@
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 
@@ -35,14 +34,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
-=======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state, write_state, upsert_event  } from '../../../utils / sync / storage';,
 import { computeMerkleRootFromVotes  } from '../../../utils / sync / merkle';,
@@ -94,11 +91,9 @@ if (headers["x - zion - signature"] = sig, ) {
       .map (async (peer) => {
         const url = new URL ("/api / sync / publish", peer.base_url).to_string (),
 
-=======
   return res.status(200).json({ status: "created", merkleRoot, version, eventId: event.eventId });
 };
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -160,7 +155,6 @@ export default async function handler(req, res) {
   const headers: Record<string, string> = {},
   const sig = signPayload(body),
   if (sig) headers["x-zion-signature"] = sig,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
@@ -168,21 +162,16 @@ export default async function handler(req, res) {
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         try {
           await axios.post (url, body, { headers, timeout: 5000 });
         } catch {
 
 }
 
-=======
       })),
   return res.status (200).json ({ status: "created", merkle_root, version, event_id: event.event_id });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
           // ignore
 
           } catch (error) {
@@ -295,5 +284,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

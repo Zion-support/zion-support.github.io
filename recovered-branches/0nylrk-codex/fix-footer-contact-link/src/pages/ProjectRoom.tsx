@@ -26,7 +26,6 @@
     }
   ]);
   const startVideoCall = () => {
-=======
 import {useParams} from 'react-router-dom';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
@@ -34,7 +33,6 @@ import {SEO} from '@/components/SEO';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
-=======
 import React, { useState } from 'react';
 import {use_params} from 'react-router-dom';
 import {Header} from '@/components / Header';
@@ -43,7 +41,6 @@ import {SEO} from '@/components / SEO';
 import {Button} from '@/components / ui / button';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components / ui / card';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components / ui / tabs';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {MessageSquare, FileText, Video, Calendar, Users, Settings, X} from 'lucide-react';
 import {VideoCallRoom} from '@/components / video / VideoCallRoom';
 import {toast} from 'sonner';
@@ -53,7 +50,6 @@ import {toast} from 'sonner';
 
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const startVideoCall = () => {
     setIsInCall(true),
     toast.success("Video call started", {
@@ -67,7 +63,6 @@ import {toast} from 'sonner';
   },
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const endVideoCall = () => {
     setIsInCall(false);
     toast.info("Video call ended", {
@@ -102,7 +97,6 @@ import {toast} from 'sonner';
   };
 
 
-=======
 
   },
   
@@ -113,8 +107,6 @@ import {toast} from 'sonner';
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />;
@@ -207,11 +199,9 @@ import {toast} from 'sonner';
                   <div className="space-y-4">;
 
                     <VideoCallRoom
-=======
 
                     <VideoCallRoom 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       roomId={`project-${projectId}`}
                       participants={callParticipants}
                       onLeave={endVideoCall}
@@ -255,7 +245,6 @@ import {toast} from 'sonner';
               <CardContent className="h-[400px]">;
                 <div className="flex items-center justify-center h-full">;
                   <p className="text-muted-foreground">Calendar will be implemented soon</p>;
-=======
 export default /**
  * ProjectRoom - Function description
  */
@@ -482,8 +471,6 @@ if ( {) {
     </>);
 }
 
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

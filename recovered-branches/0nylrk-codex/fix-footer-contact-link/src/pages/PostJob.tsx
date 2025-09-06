@@ -18,9 +18,7 @@ export default function PostJob() {;
 
 
   if (isLoading) {
-=======
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="flex items-center justify-center min-h-screen">;
         <div className="animate-pulse">Loading...</div>;
@@ -30,10 +28,8 @@ export default function PostJob() {;
 
 
   return (
-=======
 
 
-=======
 import { Header } from "@/components/header",;
 import { Footer } from "@/components/Footer",;
 import { JobPostingForm } from "@/components/jobs",;
@@ -65,7 +61,6 @@ export default function PostJob() {;
         <Card className="border shadow-md">;
           <CardHeader>;
             <CardTitle className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>Post a Job</CardTitle>;
-=======
 import { Header } from '@/components / header';
 import { Footer } from '@/components / Footer';
 import { JobPostingForm } from '@/components / jobs';
@@ -101,7 +96,6 @@ if ( {) {
         <Card className="border shadow - md">;
           <CardHeader>;
             <CardTitle className={`text-${is_mobile ? '2xl' : '3xl'} font - bold`}>Post a Job</CardTitle>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <CardDescription>;
               Fill out the form below to post your job and find the perfect talent.;
             </CardDescription>;
@@ -117,11 +111,7 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       {is_mobile && <div className="h - 16"></div>}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -34,17 +34,13 @@ import * as React from &quot;react & quot;
 import * as HoverCardPrimitive from &quot;@radix - ui / react - hover - card & quot;
 ;
 import { cn } from &quot;@/lib / utils & quot;
-=======
 
 export { HoverCard, HoverCardTrigger, HoverCardContent }
 ;
 
-=======
 export { HoverCard, HoverCardTrigger, HoverCardContent };
-=======
 export { HoverCard, HoverCardTrigger, HoverCardContent }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
 const HoverCard = HoverCardPrimitive.Root;
 const HoverCardTrigger = HoverCardPrimitive.Trigger;
@@ -62,5 +58,4 @@ const HoverCardContent = React.forward_ref<;
     {...props}
   />));
 HoverCardContent.display_name = HoverCardPrimitive.Content.display_name;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export { HoverCard, HoverCardTrigger, HoverCardContent }

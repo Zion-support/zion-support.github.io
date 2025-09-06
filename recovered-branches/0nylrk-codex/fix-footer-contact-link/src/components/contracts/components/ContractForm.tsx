@@ -20,7 +20,6 @@ import {PaymentTermsFields} from "./PaymentTermsFields";
 import {AdditionalClausesFields} from "./AdditionalClausesFields";
 import {DeploymentOptions} from "@/types/smart-contracts";
 
-=======
 import { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -40,7 +39,6 @@ import { DeploymentOptions } from "@/types/smart-contracts",
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required");
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");
@@ -55,7 +53,6 @@ const formSchema = z && z.object({;
   paymentTerms: z && z.enum(["hourly", "fixed", "milestone"]);
   paymentAmount: z && z.string().min(1, "Payment amount is required");
   additionalClauses: z && z.array(z && z.string()).default([])}),;
-=======
 
     required_error: "Start date is required"}),
   endDate: z.date().optional(),
@@ -120,7 +117,6 @@ interface ContractFormProps {
       Object.keys(initialValues).forEach((key) => {
 
 
-=======
         const typedKey = key as keyof ContractFormValues,
         form.setValue(typedKey, initialValues[typedKey])
       })
@@ -205,7 +201,6 @@ export function ContractForm({;
 
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones)
     // If payment terms isn't already set to milestone, update it
@@ -242,7 +237,6 @@ export function ContractForm({;
         title: "Contract Generation Failed"
         description: error instanceof Error ? error.message : "Something went wrong. Please try again."
         variant: "destructive"})
-=======
 import { useState, useEffect } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -354,10 +348,8 @@ if (!== "milestone") {) {
         title: "Contract Generation Failed",
         description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
         variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
 
-=======
       setIsGenerating(false)
 
   }, [form, onFormValuesChange]),;
@@ -369,7 +361,6 @@ if (!== "milestone") {) {
     }
 
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <>;
       <DialogHeader>;
@@ -378,7 +369,6 @@ if (!== "milestone") {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           Create a professional contract for your project with {talent.full_name}
 
 
@@ -458,10 +448,8 @@ if (!== "milestone") {) {
           <Button
             type="submit" 
 
-=======
 
           
-=======
 
           <PaymentTermsFields 
             form={form}
@@ -469,7 +457,6 @@ if (!== "milestone") {) {
             handleMilestonesGenerated={handleMilestonesGenerated}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}>;
             {isGenerating ? (;
@@ -487,14 +474,12 @@ if (!== "milestone") {) {
 
       <DialogFooter className="gap-2 flex-wrap mt-4">;
         <Button
-=======
 
         <Button 
 
           variant="outline" 
           onClick={() => form && form.reset()}
           disabled={isGenerating}
-=======
         </DialogDescription>;
       </DialogHeader>;
       <Form {...form}>;
@@ -529,7 +514,6 @@ if (!== "milestone") {) {
           variant="outline";
           on_click={() => form.reset ()}
           disabled={is_generating}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         >;
           Reset Form;
         </Button>;
@@ -538,7 +522,5 @@ if (!== "milestone") {) {
     </>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

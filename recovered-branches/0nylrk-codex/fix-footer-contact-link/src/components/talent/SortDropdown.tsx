@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 import React from './react';
@@ -88,7 +87,6 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
   );
 }
 
-=======
             on_click={() => setSortOption (option.value)}
             className={`text - white hover:bg - zion - blue - light / 30 cursor - pointer ${
               sort_option === option.value;
@@ -101,8 +99,6 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
       </DropdownMenuContent>;
     </DropdownMenu>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
               "Sort by"}
           </div>
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
@@ -125,5 +121,3 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
 
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

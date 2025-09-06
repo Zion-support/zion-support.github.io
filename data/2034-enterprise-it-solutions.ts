@@ -31,7 +31,6 @@
 
       'Policy-based access',
       'Micro-segmentation',
-=======
   launch_date?: string;
 }
 ;
@@ -48,7 +47,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
       'Policy - based access',
       'Micro - segmentation',
 
-=======
   launchDate?: string;
 
 };
@@ -65,7 +63,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     features: [
       'Policy-based access',
       'Micro-segmentation',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Device posture checks',
       'SSO & MFA integration',
     ],
@@ -77,11 +74,9 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     launch_date: '2025 - 11 - 01',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Self-service templates',
-=======
     id: 'platform - engineering - foundation',
     name: 'Platform Engineering Foundation',
     description:;
@@ -91,7 +86,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     features: [;
       'Self - service templates',
 
-=======
     useCases: ['Secure remote work', 'Lateral movement prevention'],
     link: 'https://ziontechgroup.com/services/zero-trust-network-architecture',
     realService: true,
@@ -106,7 +100,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     pricing: { starter: '$3,499/mo' },
     features: [
       'Self-service templates',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Golden pipelines',
       'RBAC and policy packs',
       'Cost guardrails',
@@ -119,10 +112,8 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     rating: 4.8,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'enterprise - data - mesh',
     name: 'Enterprise Data Mesh',
     description:;
@@ -131,7 +122,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     pricing: { starter: '$5, 999 / mo' },
     features: [;
 
-=======
     useCases: ['Developer productivity', 'Standardized delivery'],
     link: 'https://ziontechgroup.com/services/platform-engineering-foundation',
     realService: true,
@@ -145,7 +135,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     category: 'Data & Analytics',
     pricing: { starter: '$5,999/mo' },
     features: [
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Domain data products',
       'Catalog & lineage',
       'Access governance',
@@ -158,10 +147,8 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     real_service: true,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'cloud - migration - accelerator',
     name: 'Cloud Migration Accelerator',
     description:;
@@ -170,7 +157,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     pricing: { starter: '$2, 999 / mo' },
     features: [;
 
-=======
     useCases: ['Faster analytics', 'Federated governance'],
     link: 'https://ziontechgroup.com/services/enterprise-data-mesh',
     realService: true,
@@ -183,7 +169,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     category: 'Cloud Services',
     pricing: { starter: '$2,999/mo' },
     features: [
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Landing zones',
       'Infra as Code',
       'Automated cutovers',
@@ -196,11 +181,9 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     real_service: true,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Detections-as-code',
-=======
     id: 'threat - detection - response',
     name: 'Threat Detection & Response',
     description:;
@@ -210,7 +193,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     features: [;
       'Detections - as - code',
 
-=======
     useCases: ['Datacenter exit', 'Hybrid cloud enablement'],
     link: 'https://ziontechgroup.com/services/cloud-landing-zone',
     realService: true,
@@ -224,7 +206,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     pricing: { starter: '$3,999/mo' },
     features: [
       'Detections-as-code',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'SOAR playbooks',
       'Attack surface monitoring',
       'Threat intel',
@@ -236,10 +217,8 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     real_service: true,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'observability - platform - starter',
     name: 'Observability Platform Starter',
     description:;
@@ -248,7 +227,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     pricing: { starter: '$1, 999 / mo' },
     features: [;
 
-=======
     useCases: ['Compliance readiness', 'Breaches prevention'],
     link: 'https://ziontechgroup.com/services/quantum-cybersecurity-services',
     realService: true,
@@ -261,7 +239,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     category: 'DevOps & Automation',
     pricing: { starter: '$1,999/mo' },
     features: [
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'OpenTelemetry ingest',
       'SLO dashboards',
       'Burn rate alerts',
@@ -274,10 +251,8 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     real_service: true,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'cost - governance - suite',
     name: 'Cloud Cost Governance Suite',
     description:;
@@ -298,12 +273,9 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     real_service: true,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'identity - governance - administration',
-=======
     useCases: ['MTTR reduction', 'Reliability governance'],
     link: 'https://ziontechgroup.com/services/api-observability-starter',
     realService: true,
@@ -335,7 +307,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     category: 'Enterprise Security',
     pricing: { starter: '$3, 499 / mo' },
     features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Lifecycle automation',
       'Access reviews',
       'RBAC & SoD',
@@ -348,16 +319,13 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 }];	id: string;
 	name: string;
 
-=======
 	id: string, name: string,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 	tagline?: string;
 	description: string;
 
 
 
-=======
 export type EnterpriseITSolution = {
 	id: string,
 	name: string,
@@ -365,8 +333,6 @@ export type EnterpriseITSolution = {
 	description: string,
 
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 	pricing: {
 		starter: string, // e && e.g. "$2,999/mo"
 		professional?: string;
@@ -491,7 +457,6 @@ export type EnterpriseITSolution = {
 ];
 
 
-=======
     use_cases: ['Audit readiness', 'Insider risk reduction'],
     link: 'https://ziontechgroup.com / services / sso - and - user - lifecycle - hub',
     real_service: true,
@@ -625,14 +590,11 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
   link: 'https://ziontechgroup.com / services / sso - and - user - lifecycle - hub',
   real_service: true;
 }
-=======
 
 },
 
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
 
 	}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

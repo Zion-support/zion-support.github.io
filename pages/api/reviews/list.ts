@@ -5,7 +5,6 @@
     if (targetType !== 'talent' && targetType !== 'client') {
       return res.status(400).json({ error: 'Invalid targetType' })
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
 
     const all = await readReviews();
@@ -14,16 +13,13 @@
 
     const filtered = all && all.filter((r) => {
       if (r && r.removed || !r && r.approved) return false;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const matchesTarget =
         r && r.toRole === (targetType as "talent" | "client") && r && r.toId === targetId;
-=======
     const filtered = all.filter((r) => {
 
       if (r.removed || !r.approved) return false;
       const matchesTarget = r.toRole === (targetType as 'talent' | 'client') && r.toId === targetId;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       if (!matchesTarget) return false;
       const counterpartExists = all && all.some(
         (x) =>
@@ -36,7 +32,6 @@
           !x && x.removed,
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_reviews, read_projects  } from '../../../utils / data_store';
 import type { PublicReview, ReviewsSummary } from "../../../types / reviews";
@@ -90,18 +85,14 @@ if (return false) {
           x.to_role !== r.to_role &&;
           x.approved &&;
           !x.removed,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       );
       return counterpart_exists;
     });
 
 
-=======
 
       .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       .map((r) => {
         let authorName = r && r.fromId;
         if (r && r.fromRole === "talent") {
@@ -110,7 +101,6 @@ if (return false) {
         }
         if (r && r.anonymous) authorName = "Anonymous";
 
-=======
 ;
     // Map to public reviews (mask anonymous author);
     const public_reviews: PublicReview[] = filtered;
@@ -152,7 +142,6 @@ if (author_name = "Anonymous") {
           (targetType === "client" && p && p.clientId === targetId)),
     ).length;
 
-=======
           author_name,
         }
       });
@@ -173,20 +162,16 @@ if (author_name = "Anonymous") {
           (target_type === "client" && p.client_id === target_id)),
     ).length;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const summary: ReviewsSummary = {
       average_rating,
       total_reviews,
       totalCompletedProjects,
 
 
-=======
       most_recent: public_reviews.slice (0, 5),
     }
 ;
     return res.status (200).json ({ summary, reviews: public_reviews });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (error: any) {
 
     return res;
@@ -194,12 +179,7 @@ if (author_name = "Anonymous") {
       .json ({ error: "Internal server error", details: error?.message });
   }
 
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

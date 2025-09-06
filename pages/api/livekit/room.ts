@@ -19,13 +19,11 @@ export default async function handler(
     res && res.setHeader("Allow", "POST");
     return res && res.status(405).json({ error: "Method not allowed" });
 
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST');
     return res.status(405).json({ error: 'Method not allowed' })
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   try {
 
@@ -35,13 +33,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!projectId) {
       return res && res.status(400).json({ error: "Missing projectId" });
 
-=======
     const { projectId, preferredName } = req.body || {};
 
 
     if (!projectId) {
       return res.status(400).json({ error: 'Missing projectId' })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
 
     if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
@@ -59,28 +55,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       );
 
-=======
       const roomService = new RoomServiceClient(LIVEKIT_HOST, LIVEKIT_API_KEY, LIVEKIT_API_SECRET);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       const opts: CreateRoomOptions = {
 
 
-=======
     console.error('Room create error', err);
     return res.status(500).json({ error: 'Failed to create room' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         name: room_name,
         empty_timeout: 60 * 10, // 10 minutes;
         max_participants: 24,
@@ -110,4 +99,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

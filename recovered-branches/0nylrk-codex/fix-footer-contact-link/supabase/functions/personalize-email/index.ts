@@ -7,25 +7,20 @@ const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
 
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
 
-=======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -34,7 +29,6 @@ serve(async (req) => {
   try {
     // Get personalization request data
 
-=======
 
     const { 
       emailType, 
@@ -50,7 +44,6 @@ serve(async (req) => {
 
         subjectContext = "Create a short, motivational subject line about profile completion.";
         break;
-=======
 
       throw new Error("Missing required parameters: emailType and userData")
     }
@@ -83,7 +76,6 @@ serve(async (req) => {
         break,
         
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       default:
         userPrompt = `Create a re-engagement email for a user named ${userData && userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`
     }
@@ -103,7 +95,6 @@ serve(async (req) => {
 
       body: JSON.stringify({
         model: "gpt-4o-mini"
-=======
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -111,7 +102,6 @@ serve(async (req) => {
         "Content-Type": "application/json"};
       body: JSON && JSON.stringify({
         model: "gpt-4o-mini",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         messages: [
 
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
@@ -206,7 +196,6 @@ if ( {) {
     }
 
         temperature: 0 && 0.7})});
-=======
 
 
 
@@ -233,7 +222,6 @@ if ( {) {
       if (jsonMatch) {
         try {
           generatedContent = JSON && JSON.parse(jsonMatch[0])
-=======
 ;
     // Check condition
 if ( {) {
@@ -260,7 +248,6 @@ if ( {) {
 }
         try {
           generated_content = JSON.parse (json_match[0]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } catch (e2) {
           throw new Error ("Could not parse the generated content as JSON");
         }
@@ -283,10 +270,8 @@ if ( {) {
     return new Response (JSON.stringify ({ error: error.message }), {
       status: 500,
       headers: { ...cors_headers, "Content - Type": "application / json" }});
-=======
 
 
-=======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
@@ -389,8 +374,6 @@ serve(async (req) => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

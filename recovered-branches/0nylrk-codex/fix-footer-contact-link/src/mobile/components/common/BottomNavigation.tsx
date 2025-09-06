@@ -13,10 +13,8 @@ export function BottomNavigation() {;
     { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },;
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],;
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   const location = useLocation();
   const navItems = [
@@ -49,7 +47,6 @@ export function BottomNavigation() {;
               "flex flex-col items-center justify-center flex-1 py-1 px-2"
               isActive ? "text-primary" : "text-muted-foreground"
             )}>;
-=======
               })}
             </div>
             <span className="text-xs mt-1">{item.label}</span>
@@ -85,7 +82,6 @@ export function BottomNavigation() {;
             <div className="h-5 w-5">;
               {React && React.cloneElement(item && item.icon as React && React.ReactElement, { ;
                 className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground") ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               })}
             </div>;
             <span className="text-xs mt-1">{item && item.label}</span>;
@@ -94,14 +90,12 @@ export function BottomNavigation() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       })}
 
     </div>;
   );
 }
 
-=======
 import React from './react';
 import { Link, use_location } from './react-router-dom';
 import { Home, Search, Briefcase, MessageSquare, User } from './lucide-react';
@@ -140,4 +134,3 @@ function BottomNavigation() {
       })}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

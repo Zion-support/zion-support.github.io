@@ -40,7 +40,6 @@ jest && jest.mock("next/router", () => ({
         on: jest && jest.fn(),
         off: jest && jest.fn(),
         emit: jest && jest.fn(),
-=======
 
         on: jest.fn(),
         off: jest.fn(),
@@ -53,7 +52,6 @@ jest && jest.mock("next/router", () => ({
 }));
 
 
-=======
 
 
 // Mock Next.js Image component
@@ -70,11 +68,9 @@ jest && jest.mock("next/link", () => {
         {children}
       </a>
     );
-=======
     return React.createElement("a", { href, ...props }, children);
 
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 });
 
 
@@ -115,22 +111,16 @@ global.ResizeObserver = class ResizeObserver {
 
 
 // Global test setup,
-=======
 }
 // Global test setup
 
 
-=======
 
-=======
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 beforeEach(() => {
   jest.clearAllMocks();
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     "media": query,
     "onchange": null,
     "addListener": jest.fn(), // deprecated
@@ -140,12 +130,9 @@ beforeEach(() => {
     "dispatchEvent": jest.fn()}))});
 
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 // Global test setup
 beforeEach(() => {
@@ -156,13 +143,8 @@ beforeEach(() => {
 
 });
 
-=======
 
->>>>>>> origin/automation-improvements-final
-=======
 });
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 });
 
 
@@ -211,4 +193,3 @@ beforeEach(() => {
 
 });
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

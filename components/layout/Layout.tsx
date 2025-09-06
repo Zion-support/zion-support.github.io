@@ -1,35 +1,22 @@
 
 
 import React from 'react';
-=======
 
 import React, { ReactNode } from 'react';
 
->>>>>>> origin/automation-improvements-final
 import Header from '../Header';
 import Footer from '../Footer';
 
 
->>>>>>> origin/automation-improvements-final
-=======
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface LayoutProps {
   children: React.ReactNode;
-=======
 interface LayoutProps {;
   children: React && React.ReactNode;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   title?: string;
   description?: string;
   keywords?: string;
@@ -42,8 +29,6 @@ interface LayoutProps {;
 }
 
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function Layout({
 
   children
@@ -58,7 +43,6 @@ export default function Layout({
 
 }: LayoutProps) {
 
-=======
 const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 export default function Layout(): any ({;
@@ -73,22 +57,17 @@ export default function Layout(): any ({;
   noIndex = false;
 }: LayoutProps) {;
 
-=======
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min-h-screen bg-white">;
-=======
 export default /**
  * Layout - Function description
  */
 function Layout() {
   return (
     <div className="min - h-screen bg - white">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       <Header />;
       <main>;
         {children}
@@ -114,7 +93,6 @@ export default function Layout({ children }: LayoutProps) {;
     </div>;
   )"; type: LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " ;
 }}
-=======
 type LayoutProps = {children: React && React.ReactNode;
 };
   children: React && React.ReactNode}
@@ -152,7 +130,6 @@ function Layout() { return <div>{children}</div>; type LayoutProps = { children:
 function Layout() { return <div>{children}</div> } " ;
 }}
 
-=======
     <div className="min-h-screen bg-gray-50">
   } catch (error) {
     console.error("Error:", error);
@@ -200,5 +177,3 @@ export default function Layout({ children }: LayoutProps) {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

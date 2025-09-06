@@ -26,13 +26,10 @@ import React from 'react';
 
 import Head from 'next/head';
 
-=======
 import Head from 'next / head';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { motion } from 'framer-motion';
 
 
-=======
 
   Rocket,
   Brain,
@@ -46,13 +43,10 @@ import { motion } from 'framer-motion';
   Eye,;
   Timer,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from 'lucide-react';import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
 
-=======
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
@@ -67,8 +61,6 @@ import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services'
     ...spaceColonization2029Services
   ];    website: 'https://ziontechgroup.com'
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function UltraFuturistic2029InnovationsPage() {;
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -81,7 +73,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
   const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
   return (
 
@@ -105,7 +96,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
 
       {/* Navigation */}
       <UltraFuturisticNavigation2029 />
-=======
           href='https://ziontechgroup && ziontechgroup.com/2029-ultra-futuristic-innovations'
         />      </Head>;
 
@@ -120,9 +110,7 @@ export default function UltraFuturistic2029InnovationsPage() {;
 
       {/* Background */}
       <UltraFuturisticBackground2029 />;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       {/* Navigation */}
       <UltraFuturisticNavigation2029 />;
@@ -130,7 +118,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Hero Section */}
 
 
@@ -147,7 +134,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
             </h2>;
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
 
-=======
                   all2029Services.reduce ((sum, s) => sum + s.rating, 0) /;
                   all2029Services.length).to_fixed (1),
                 icon: TrendingUp,
@@ -188,7 +174,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
             </h2>;
             <p className='text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto'>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Join the future of technology with our revolutionary 2029;
               innovations. Contact us today to discover how we can transform;
               your business.;
@@ -196,8 +181,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
 
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             <div className='flex flex - col sm:flex - row items - center justify - center gap - 4'>;
               <a;
                 href='/contact';
@@ -381,16 +364,11 @@ export default function UltraFuturistic2029InnovationsPage() {;
   /* Footer */;
 }<UltraFuturisticFooter2029 /> </>)   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   /* Footer */ 
 }<UltraFuturisticFooter2029 /> </>)
 
-=======
   /* Footer */ 
 
 }<UltraFuturisticFooter2029 /> </>)
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -8,7 +8,6 @@ import type { GetServerSideProps } from 'next';
         <h1 className='text-2xl font-semibold'>Vendors</h1>;
         <Link href='/vendors/register'>;
           <a className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
-=======
 import type { Vendor } from '../../utils / vendor - types';
 ;
 type Props = { vendors: Vendor[] }
@@ -23,7 +22,6 @@ function VendorsPage() {
         <h1 className='text - 2xl font - semibold'>Vendors</h1>;
         <Link href='/vendors / register'>;
           <a className='px - 4 py - 2 rounded bg - black text - white dark:bg - white dark:text - black'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Apply as Vendor;
           </a>;
         </Link>;
@@ -34,7 +32,6 @@ function VendorsPage() {
                     Services: {v && v.servicesOffered?.join(', ') || '—'}
                   </div>                </div>export default function VendorsPage(): any ({ vendors }: Props) {;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -75,7 +72,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   return { props: { vendors } }
 };  return { props: { vendors } }
 
-=======
       {vendors.length === 0 && (
         <p className='text - gray - 500'>No vendors yet. Be the first to apply.</p>)}
       <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
@@ -151,10 +147,7 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
 }  return { props: { vendors } }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

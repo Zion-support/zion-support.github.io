@@ -22,10 +22,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
@@ -42,7 +40,6 @@ import {SEO} from "@/components/SEO";
 import {useNavigate} from "react-router-dom";
 import {cn} from "@/lib/utils";
 
-=======
 import React, { useState } from 'react',
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -87,17 +84,14 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const getNotificationTypeBadge = (type: NotificationType) => {
   switch (type) {
     case 'message':
-=======
 };
 
 const getNotificationTypeBadge = (type: NotificationType) => {;
   switch (type) {;
     case 'message':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return <Badge className="bg-blue-500">Message</Badge>;
     case 'quote_request':;
       return <Badge className="bg-purple-500">Quote Request</Badge>;
@@ -210,7 +204,6 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
       return <Bell className={cn(className, "text-gray-500")} />;
 
   }
-=======
     case 'system':;
       return <Badge className="bg-yellow-500">System</Badge>,;
     default:;
@@ -240,7 +233,6 @@ const NotificationCard: React.FC<{;
       onMarkAsRead(notification.id);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
     if (notification && notification.action_url) {;
@@ -249,15 +241,11 @@ const NotificationCard: React.FC<{;
 
 
   },
-=======
   };
-=======
   },
 
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <divclassName={cn(
       "border rounded-lg shadow-sm p-4 mb-3 group transition-colors"
@@ -334,7 +322,6 @@ export default function NotificationsPage() {;
 
     filteredNotifications;
     unreadCount;
-=======
     action_text?: string;
   }
   onMarkAsRead: (id: string) => Promise < void>,
@@ -423,7 +410,6 @@ function NotificationsPage() {
   const {
     filtered_notifications;
     unread_count;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     markAsRead;
     markAllAsRead;
     dismiss_notification;
@@ -522,7 +508,6 @@ export default function NotificationsPage() {
                 </div>;
               )}
 
-=======
     set_filter;
   } = use_notifications () as NotificationContextType;
 ;
@@ -585,9 +570,7 @@ export default function NotificationsPage() {
                     />))}
                 </div>)}
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </TabsContent>;
           </Tabs>;
         </div>;
@@ -597,7 +580,5 @@ export default function NotificationsPage() {
     </>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

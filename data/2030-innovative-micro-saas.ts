@@ -246,10 +246,8 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     launchDate: '2030-03-01', customers: 89,
     rating: 4.7,
     reviews: 52;
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaas2030 {;
   id: string,;
@@ -514,8 +512,6 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
     reviews: 52;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 

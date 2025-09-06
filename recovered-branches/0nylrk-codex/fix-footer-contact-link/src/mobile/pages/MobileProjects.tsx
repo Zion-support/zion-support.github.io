@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Mock data
 
 const projectData = {
@@ -139,7 +138,6 @@ export function MobileProjects() {
   );
 }
 
-=======
 import React from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
@@ -206,10 +204,7 @@ function MobileProjects() {
       <BottomNavigation />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

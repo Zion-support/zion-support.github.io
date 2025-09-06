@@ -1,7 +1,5 @@
 
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Accessibility utilities
 export const focusElement = (elementId) => {
   const element = document && document.getElementById(elementId);
@@ -55,7 +53,5 @@ export default function Accessibility({ }: AccessibilityProps) {
   );
 
 
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

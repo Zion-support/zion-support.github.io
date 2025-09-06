@@ -15,7 +15,6 @@ export default function FraudDetection() {
   const [flags, setFlags] = useState<FraudFlag[]>([]),
   const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [stats, setStats] = useState<FraudStats>({
 
     total_flags: 0
@@ -139,7 +138,6 @@ export default function FraudDetection() {;
       );
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     // Apply status filter
     if (statusFilter) {
@@ -154,7 +152,6 @@ export default function FraudDetection() {;
       result = result.filter((flag) => flag.content_type === contentTypeFilter)
     }
 
-=======
 
 
 
@@ -287,9 +284,7 @@ export default function FraudDetection() {;
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <TabsContent value="all" className="mt-6">
-=======
 
       toast({;
         title: "Flag updated",;
@@ -348,7 +343,6 @@ export default function FraudDetection() {;
         <FraudStatsCards stats={stats} />;
 
         <Tabs defaultValue="all" className="mb-8">;
-=======
 import React, { useState, useEffect } from './react';
 import { AppLayout } from '@/layout / AppLayout';
 import { SEO } from '@/components / SEO';
@@ -529,7 +523,6 @@ if (throw error) {
         {/* Stats Cards */}
         <FraudStatsCards stats={stats} />;
         <Tabs default_value="all" className="mb - 8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           <TabsList>;
             <TabsTrigger value="all">All Flags</TabsTrigger>;
             <TabsTrigger value="pending">Pending Review</TabsTrigger>;
@@ -563,7 +556,6 @@ if (throw error) {
                   resetFilters={resetFilters}
                   onAction={handleAction}
 
-=======
               reset_filters={reset_filters}
             />;
             {/* Flags Table */}
@@ -595,9 +587,7 @@ if (throw error) {
     </AppLayout>);
 }
 
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

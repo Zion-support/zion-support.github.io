@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Mock data for demonstration
 
 const mockConversations = [
@@ -168,7 +167,6 @@ export function MobileMessages() {;
             name: currentContact?.name |""
 
             status: "Online"
-=======
 import React, { useState } from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
@@ -275,8 +273,6 @@ function MobileMessages() {
             id: current_contact?.id || "",
             name: current_contact?.name || "",
             status: "Online";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
     id: "4",
     content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?",
@@ -303,7 +299,6 @@ function MobileMessages() {
             name: currentContact?.name || "",
             status: "Online"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }}
           messages={messages}
           on_back={handle_back}
@@ -325,7 +320,6 @@ function MobileMessages() {
   );
 }
 
-=======
         />) : (
         <>;
           <MobileHeader;
@@ -341,4 +335,3 @@ function MobileMessages() {
         </>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

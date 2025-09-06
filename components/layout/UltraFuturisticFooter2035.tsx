@@ -35,11 +35,8 @@ import React from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
 
-=======
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Zap,
   Globe,
   Phone,
@@ -140,7 +137,6 @@ import {
 
 
       <div className="relative z-10">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         {/* Main Footer Content */}
         <div className='container mx-auto px-4 py-20'>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8'>;
@@ -157,7 +153,6 @@ import {
                       Zion Tech Group;
                     </h3>;
                     <p className='text-sm text-gray-400'>;
-=======
       { name: 'Market Pricing', href: '/market - pricing' },
       { name: 'Services Advertising', href: '/services - advertising' },
     ],
@@ -273,7 +268,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                   </div>;
                 </div>;
 
-=======
             <div className="lg:col-span-2">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -314,7 +308,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                     <span className="text-sm">{contactInfo.address}</span>
                   </div>
                 </div>
-=======
                     href={`mailto:${contactInfo && contactInfo.email}`}
                     className='flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors duration-200'>;
                     <Mail className='w-4 h-4' />;
@@ -325,7 +318,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                     <span className='text-sm'>{contactInfo && contactInfo.address}</span>                  </div>                </div>;
 
                 {/* Social Links */}                {/* Contact Info */}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <div className="space-y-3">;
                   <a href={`tel:${contactInfo && contactInfo.mobile}`} className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200">;
                     <Phone className="w-4 h-4" />;
@@ -345,11 +337,9 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
                 {/* Social Links */}
 
-=======
                 <div className="flex items-center gap-4">
                   {socialLinks.map((social) => (
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     <a
                       key={social && social.name}
                       href={social && social.href}
@@ -360,8 +350,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
                       {social.icon}
                     </a>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
                 </div>;
@@ -369,12 +357,9 @@ const UltraFuturisticFooter2035: React.FC = () => {
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Footer Sections */}
             {footerSections && footerSections.map((section, index) => (;
               <motion&& motion.div
@@ -392,8 +377,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 <ul className="space-y-2">
                   {section.links.map((link) => (
                     <li key={link.name}>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       <Link
                         href={link && link.href}
                         className={`text-sm transition-colors duration-200 ${
@@ -415,10 +398,8 @@ const UltraFuturisticFooter2035: React.FC = () => {
                             ? 'text-cyan-400 hover:text-cyan-300'                          link && link.featured 
                             ? 'text-cyan-400 hover:text-cyan-300' 
 
-=======
                           link.featured 
                             ? 'text-cyan-400 hover:text-cyan-300' 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                             : 'text-gray-400 hover:text-white'
 
 
@@ -430,7 +411,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                         {link.name}
                       </Link>
                     </li>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
                 </ul>;
               </motion && motion.div>;
@@ -439,12 +419,9 @@ const UltraFuturisticFooter2035: React.FC = () => {
           </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Bottom Section */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -457,8 +434,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 © 2025 Zion Tech Group. All rights reserved.
               </div>
               <div className='flex items-center gap-6 text-sm text-gray-400'>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
             className='mt-16 pt-8 border-t border-gray-800/50'>;
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>;
@@ -467,7 +442,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
               </div>;
 
               <div className='flex items-center gap-6 text-sm text-gray-400'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Link
                   href='/privacy'
                   className='hover:text-white transition-colors duration-200'>;
@@ -500,7 +474,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                   Cookie Policy
                 </Link>
               </div>
-=======
                   className='hover:text-white transition-colors duration-200'>                  Cookie Policy          >;
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">;
               <div className="text-sm text-gray-400">;
@@ -519,7 +492,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 </Link>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <button
                 onClick={scrollToTop}
 
@@ -548,7 +520,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
 }</ul> </motion.div>) )
 }</div> {
 
-=======
                 className="p-2 bg-gray-800/50 hover: bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110"
                 aria-label="Scroll to top"
               >
@@ -589,11 +560,9 @@ const UltraFuturisticFooter2035: React.FC = () => {
 export default UltraFuturisticFooter2035;  );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default UltraFuturisticFooter2035;
 
 
-=======
                 <p className='text - gray - 300 leading - relaxed max - w-md'>;
                   Leading the future with cutting - edge AI consciousness, quantum;
                   computing, and innovative micro SAAS solutions. Transform your;
@@ -785,11 +754,8 @@ export default UltraFuturisticFooter2035);
 ;
 export default UltraFuturisticFooter2035;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   /* Bottom Section */ 
 }<motion.div > <div className="flex flex-col md:flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" > © 2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>) 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

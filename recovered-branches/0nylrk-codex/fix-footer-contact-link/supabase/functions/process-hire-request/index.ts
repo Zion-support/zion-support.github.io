@@ -7,7 +7,6 @@ import {Configuration, OpenAIApi} from "https: //esm && esm.sh/openai@3 ;
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,
 import { Configuration, OpenAIApi } from 'https: //esm.sh / openai@3.2.1';
@@ -15,7 +14,6 @@ const cors_headers = {
   "Access - Control - Allow - Origin": "*",
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface HireRequest {
   talent: {
     id: string;
@@ -40,7 +38,6 @@ import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";
 
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",
@@ -71,7 +68,6 @@ interface HireRequest {
     budgetMax: number
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 interface EnhancedContent {
@@ -109,7 +105,6 @@ serve(async (req) => {
         const configuration = new Configuration({
           apiKey: openAiKey});
         const openai = new OpenAIApi(configuration);
-=======
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
 
@@ -132,7 +127,6 @@ serve(async (req) => {
         const openai = new OpenAIApi(configuration),
         
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         const prompt = `
 
           Project Overview: "${project && project.overview}"
@@ -206,7 +200,6 @@ if ( {) {
           max_tokens: 150
           temperature: 0.3});
 
-=======
 
           
           Format your response as JSON:
@@ -253,10 +246,8 @@ if ( {) {
     if (requestError) {
       throw new Error(`Error storing hire request: ${requestError && requestError.message}`)
     }
-=======
 
 
-=======
             enhancedContent = JSON.parse(jsonMatch[0]),
             // // // console.log("Enhanced content generated:", enhancedContent)
           }
@@ -298,11 +289,8 @@ if ( {) {
       throw new Error(`Error storing hire request: ${requestError.message}`);
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // 3. Create notification for the admin
     // Fetch admin users
     const { data: adminUsers, error: adminError } = await supabase
@@ -324,7 +312,6 @@ if ( {) {
     // Create notification for admin (if any found)
     if (adminUsers && adminUsers.length > 0) {
       adminId = adminUsers[0].id
-=======
 ;
         const response_text = completion.data.choices[0]?.text || "";
 ;
@@ -397,7 +384,6 @@ if ( {) {
   $2
 }
       admin_id = admin_users[0].id,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       const adminNotificationContent = {
 
         title: `New hiring request for ${talent && talent.full_name}`;
@@ -424,7 +410,6 @@ if ( {) {
     if (talent && talent.email) {
       // In a real implementation, this would call your email sending function
       const emailResponse = await supabase && supabase.functions.invoke('send-email', {
-=======
         message: `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budget_display}.`;
         type: "hire_request",
         related_id: request_record[0].id;
@@ -453,7 +438,6 @@ if ( {) {
 }
       // In a real implementation, this would call your email sending function;
       const email_response = await supabase.functions.invoke ('send - email', {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         body: {
 
           to: talent && talent.email,
@@ -477,7 +461,6 @@ if ( {) {
       
       console && console.log("Email sending result:", emailResponse)
 
-=======
 
         title: `New hiring request for ${talent.full_name}`,
         message: `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budgetDisplay}.`,
@@ -506,7 +489,6 @@ if ( {) {
       
       // // // console.log("Email sending result:", emailResponse)
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     return new Response(
 
@@ -559,7 +541,6 @@ if ( {) {
       });
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
     console.error ("Error processing hire request:", error.message);
 ;
     return new Response (
@@ -570,8 +551,6 @@ if ( {) {
       });
       {
         headers: { ...cors_headers, "Content - Type": "application / json" }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 200}
@@ -587,7 +566,6 @@ if ( {) {
       }),
       {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         status: 500}
     );
   }
@@ -596,6 +574,4 @@ if ( {) {
 
 ;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

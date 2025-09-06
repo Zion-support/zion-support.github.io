@@ -42,7 +42,6 @@ export default function HelpCenter() {;
 
 
 
-=======
 
 
   
@@ -65,7 +64,6 @@ export default function HelpCenter() {;
   },
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -161,7 +159,6 @@ function HelpCenter() {
                 <HelpCategoryList;
 
                   categories={HELP_CATEGORIES}
-=======
   const handleCategorySelect = (categoryId: string) => {;
     setSelectedCategory(categoryId),;
     setSelectedArticle(null);
@@ -212,13 +209,10 @@ function HelpCenter() {
               {!selectedCategory && !selectedArticle && (;
                 <HelpCategoryList
                   categories={HELP_CATEGORIES} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
                 <HelpCategoryList 
                   categories={HELP_CATEGORIES} 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   onCategorySelect={handleCategorySelect}
 
 
@@ -246,11 +240,9 @@ function HelpCenter() {
                   </Button>;
 
                   <HelpArticleList
-=======
 
                   <HelpArticleList 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
@@ -264,11 +256,9 @@ function HelpCenter() {
 
               {selectedArticle && (
                 <>
-=======
 
               {selectedArticle && (;
                 <>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Button
                     variant="ghost"
                     onClick={handleBackToArticles}
@@ -447,7 +437,6 @@ function HelpCenter() {
                     <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3>;
                     <p className="text-zion-slate-light">;
                       You can reach our support team through the chat widget at the bottom right of any page, by emailing support@ziontechgroup && ziontechgroup.com, or by scheduling a call with our team through the Contact tab.;
-=======
                   search_query={search_query}
                 />)}
               {selected_category && !selected_article && (
@@ -621,8 +610,5 @@ function HelpCenter() {
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

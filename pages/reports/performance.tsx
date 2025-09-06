@@ -4,15 +4,12 @@ import Head from 'next / head';
 import Link from 'next / link';
 ;
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const PerformancePage: React.FC = () => {
   const performance_metrics = [;
     {
 
-=======
 
 
       category: 'System Performance',
@@ -86,7 +83,6 @@ const PerformancePage: React.FC = () => {
   };
 
 
-=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -98,8 +94,6 @@ const PerformancePage: React.FC = () => {
   };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
       <Head>
@@ -117,7 +111,6 @@ const PerformancePage: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="mb-8">
           <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Home
@@ -138,7 +131,6 @@ const PerformancePage: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-cyan-400">Overall Score</h3>
@@ -294,7 +286,6 @@ const PerformancePage: React.FC = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Recent Reports</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -310,8 +301,6 @@ const PerformancePage: React.FC = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{report.summary}</p>
@@ -321,7 +310,6 @@ const PerformancePage: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors"
                   >
                     View Report →
@@ -344,7 +332,6 @@ const PerformancePage: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Trends</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -356,13 +343,9 @@ const PerformancePage: React.FC = () => {
 
                 Our automated systems continuously monitor and optimize performance,
 
-=======
                 Our automated systems continuously monitor and optimize performance, 
-=======
                 Our automated systems continuously monitor and optimize performance,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ensuring consistent improvement across all metrics.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
@@ -391,7 +374,6 @@ const PerformancePage: React.FC = () => {
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
 
-=======
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -402,8 +384,6 @@ const PerformancePage: React.FC = () => {
           <Link
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             href="/reports"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
           >
@@ -505,9 +485,7 @@ const PerformancePage: React.FC = () => {
 }
 ;
 
-=======
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default PerformancePage;

@@ -40,8 +40,6 @@ const benefits = [
 export default function CybersecurityServices() {
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 export default function CybersecurityPage() {;
 const benefits = [;
   'Protection against cyber threats and attacks',;
@@ -52,10 +50,7 @@ const benefits = [;
   'Peace of mind with 24/7 monitoring';
 ];
 export default function CybersecurityServices() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/cybersecurity.tsx
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout
       title="Cybersecurity Services - Zion Tech Group"
@@ -138,10 +133,8 @@ export default function CybersecurityPage() {
                   animate={{ opacity: 1, y: 0 }}
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -161,7 +154,6 @@ export default function CybersecurityPage() {
                     <feature.icon className="w-6 h-6 text-red-600" />
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -176,8 +168,6 @@ export default function CybersecurityPage() {
         </section>
 
 
-=======
-=======
                   transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">;
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">;
@@ -225,7 +215,6 @@ export default function CybersecurityPage() {
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/cybersecurity.tsx
         {/* Benefits Section */}
         <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;

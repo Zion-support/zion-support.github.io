@@ -29,21 +29,15 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 
-=======
 
 
 
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface LayoutProps {
   children: React.ReactNode;
-=======
 interface LayoutProps {;
   children: React && React.ReactNode;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title?: string;
   description?: string;
   keywords?: string;
@@ -92,7 +86,6 @@ const Layout: React.FC<LayoutProps> = ({;
 
   return (
     <div className="min-h-screen bg-white">;
-=======
 const Layout: React.FC < LayoutProps> = ({
   children,
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
@@ -129,19 +122,15 @@ const Layout: React.FC < LayoutProps> = ({
 ;
   return (
     <div className="min - h-screen bg - white">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       <Head>;
         <title>{title}</title>;
         <meta name="description" content={description} />;
         <meta name="keywords" content={keywords} />;
         {canonical && <link rel="canonical" href={canonical} />}
 
-=======
 
 
-=======
 import React, { ReactNode } from "react";
-=======
         <meta property="og:title" content={ogTitle || title} />;
         <meta
           property="og:description"
@@ -173,7 +162,6 @@ import React, { ReactNode } from "react";
     </div>;
   );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 interface LayoutProps {
   children: ReactNode,
@@ -189,11 +177,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
 }
 export default Layout;
-=======
         {no_index && <meta name="robots" content="noindex, nofollow" />}
         {/* Open Graph */}
         <meta property="og:title" content={og_title || title} />;
@@ -251,7 +237,5 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   );
 };
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Layout;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

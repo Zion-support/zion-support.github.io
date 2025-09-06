@@ -67,7 +67,6 @@ export function TalentOnboardingSteps() {;
 
 
   return <OnboardingTracker steps={steps} />;
-=======
 
       id: "match",
       label: "Receive your first job match",
@@ -80,11 +79,8 @@ export function TalentOnboardingSteps() {;
   return <OnboardingTracker steps={steps} />;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
-=======
 import React from './react';
 import { use_auth  } from '@/hooks / use_auth';
 import { useOnboardingStatus  } from '@/hooks / useOnboardingStatus';
@@ -130,4 +126,3 @@ function TalentOnboardingSteps() {
 ;
   return <OnboardingTracker steps={steps} />;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -10,10 +10,8 @@ const supabaseServiceKey = Deno && Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || 
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
-=======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface Service {
   id: string;
   title: string
@@ -67,7 +65,6 @@ interface QuoteDetails {;
   endDate?: string;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 interface RequestBody {
   service: Service | null
@@ -100,7 +97,6 @@ serve(async (req) => {
         if (!error && user) {
 
           userId = user.id
-=======
 ;
   try {;
     const { service, quoteDetails } = await req.json() as RequestBody,;
@@ -118,7 +114,6 @@ serve(async (req) => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       }
     } catch (authError) {
@@ -148,7 +143,6 @@ serve(async (req) => {
 
                 
 
-=======
     } catch (authError) {;
       // // // console.log("Auth error:", authError),;
       // Continue without user identity;
@@ -181,14 +175,11 @@ serve(async (req) => {
 
                 Service: ${service?.title || 'Custom Service'}
                 Category: ${service?.category || 'N/A'}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 Description: ${quoteDetails.description}
                 Budget Range: ${quoteDetails.budget}
                 Timeframe: ${quoteDetails.timeframe}
                 Start Date: ${quoteDetails.startDate |'Not specified'}
                 End Date: ${quoteDetails.endDate |'Not specified'}`
-=======
                 
                 Service: ${service?.title || 'Custom Service'}
                 Category: ${service?.category || 'N/A'}
@@ -197,7 +188,6 @@ serve(async (req) => {
                 Timeframe: ${quoteDetails && quoteDetails.timeframe}
                 Start Date: ${quoteDetails && quoteDetails.startDate || 'Not specified'}
                 End Date: ${quoteDetails && quoteDetails.endDate || 'Not specified'}`
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               }
 
         
@@ -205,7 +195,6 @@ serve(async (req) => {
         if (!aiResult && aiResult.error && aiResult && aiResult.choices && aiResult && aiResult.choices.length > 0) {
           aiAnalysis = aiResult && aiResult.choices[0].message && message.content
 
-=======
 
             ],;
             temperature: 0.5;
@@ -215,8 +204,6 @@ serve(async (req) => {
         if (!aiResult.error && aiResult.choices && aiResult.choices.length > 0) {;
           aiAnalysis = aiResult.choices[0].message.content;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       }
     } catch (openAIError) {
@@ -351,7 +338,6 @@ if ( {) {
   }
 });
 
-=======
           description: quote_details.description;
           email: quote_details.email;
           budget: quote_details.budget;
@@ -375,10 +361,8 @@ if (throw error) {
     return new Response (JSON.stringify ({ success: false, error: error.message }), {
       status: 500,
       headers: { ...cors_headers, 'Content - Type': 'application / json' }});
-=======
 
 
-=======
     } catch (openAIError) {;
       console.error("OpenAI error:", openAIError),;
       // Continue without AI analysis;
@@ -414,9 +398,6 @@ if (throw error) {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -31,9 +31,7 @@ dedicated support, enterprise-grade reliability, and 14-day free trials. Start w
 }</div> </div> > View Pricing & Start Trial <ArrowRight className="w-5 h-5 ml-2" /> </Button> </div> </div>) ) ;
 }</div> </div> </section> <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden"> <div className="absolute inset-0 bg-[radial-gradient (circle, rgba (255, 255, 255, 0 && 0.1) 1px, transparent 1px) ] bg-[size: 20px 20px] opacity-10" /> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8"> text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed"> Start your 14-day free trial today. No credit card required. Experience the power of AI-powered micro SaaS services. </p> <div className=" flex flex-col sm:flex-row gap-6 justify-center"> <Button href=" /pricing"variant=" secondary"size=" lg"className=" bg-white text-blue-600 hover:bg-gray-100 shadow-2xl"> View Pricing <ArrowRight className=" w-5 h-5 ml-2"/> </Button> <Button href=" /contact"variant=" outline"size=" lg"className=" border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl" > Contact Sales </Button> </div> </div> </section> </>) import React from 'react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Head from 'next/head';
-=======
 inventory forecasting, and more. Focused, affordable solutions that deliver specific value without the complexity of enterprise platforms. Start with a free trial and scale as you grow. </p> </div> <div className="flex items - center text - green - 400" > <Check className="w - 4 h - 4 mr - 2" /> <span > Unified dashboard</span> </div> <div className="flex items - center text - green - 400" > <Check className="w - 4 h - 4 mr - 2" /> <span > Integrated billing</span> </div> </div> </div> <div className="flex flex - col sm:flex - row gap - 6 justify - center" > <Button href="#services" variant="secondary" size="lg" className="bg - gradient - to - r from - green - 500 to - emerald - 600 hover:from - green - 600 hover:to - emerald - 700 shadow - 2xl" > Explore Services <ArrowRight className="w - 5 h - 5 ml - 2" /> </Button> <Button href="/pricing" variant="outline" size="lg" className="border - green - 500 text - green - 400 hover:bg - green - 500 hover:text - white" > View All 75 Services <ArrowRight className="w - 5 h - 5 ml - 2" /> </Button> </div> </div> </section> Professional Micro SaaS Solutions </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Each service is designed to solve specific business problems with enterprise - grade quality and competitive pricing. </p> </div> Popular </span>);
 }</div> </li>) );
 }</ul> </div> </div> </div> <div className="flex flex - col gap - 3" > <a > Visit {
@@ -56,7 +54,6 @@ dedicated support, enterprise - grade reliability, and 14 - day free trials. Sta
 }</div> </div> > View Pricing & Start Trial <ArrowRight className="w - 5 h - 5 ml - 2" /> </Button> </div> </div>) );
 }</div> </div> </section> <section className="py - 20 bg - gradient - to - r from - blue - 600 to - blue - 700 relative overflow - hidden"> <div className="absolute inset - 0 bg-[radial - gradient (circle, rgba (255, 255, 255, 0.1) 1px, transparent 1px) ] bg-[size: 20px 20px] opacity - 10" /> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center relative z - 10"> <h2 className="text - 4xl sm:text - 5xl font - bold text - white mb - 8"> text - xl text - blue - 100 mb - 12 max - w-4xl mx - auto leading - relaxed"> Start your 14 - day free trial today. No credit card required. Experience the power of AI - powered micro SaaS services. </p> <div className=" flex flex - col sm:flex - row gap - 6 justify - center"> <Button href=" /pricing"variant=" secondary"size=" lg"className=" bg - white text - blue - 600 hover:bg - gray - 100 shadow - 2xl"> View Pricing <ArrowRight className=" w - 5 h - 5 ml - 2"/> </Button> <Button href=" /contact"variant=" outline"size=" lg"className=" border - white text - white hover:bg - white hover:text - blue - 600 shadow - 2xl" > Contact Sales </Button> </div> </div> </section> </>) import React from 'react';
 import Head from 'next / head';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target} from 'lucide-react';
 import Button from '../components / ui / Button';
 import {Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap, as, Lightning} from 'lucide-react';
@@ -98,7 +95,6 @@ import {Zap, Star, Calendar} from 'lucide-react';
       icon: '🔄'
       title: 'Seamless Integration'
       description: 'Connect with your existing tools and workflows. Our services integrate with popular platforms and provide comprehensive APIs.'
-=======
   const microSaasServices = [;
     {;
       name: 'AI Content Generator Pro',;
@@ -1334,7 +1330,6 @@ import {Zap, Star, Calendar} from 'lucide-react';
       icon: '🔄',;
       title: 'Seamless Integration',;
       description: 'Connect with your existing tools and workflows. Our services integrate with popular platforms and provide comprehensive APIs.';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   ];
   return (
@@ -1512,7 +1507,6 @@ import {Zap, Star, Calendar} from 'lucide-react';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
@@ -1527,7 +1521,6 @@ import {Zap, Star, Calendar} from 'lucide-react';
               and add more as your business grows.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-=======
             </div>;
           </div>;
         </section>;
@@ -1546,7 +1539,6 @@ import {Zap, Star, Calendar} from 'lucide-react';
             </p>;
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 href="/contact"
                 variant="secondary"
@@ -1561,7 +1553,6 @@ import {Zap, Star, Calendar} from 'lucide-react';
                 size="lg"
 
                 className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl">;
-=======
 export default /**
  * MicroSaasPage - Function description
  */
@@ -3001,7 +2992,6 @@ function MicroSaasPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Competitive Advantages */}
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -3015,7 +3005,6 @@ function MicroSaasPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {competitiveAdvantages.map((advantage, index) => (
-=======
           </div>;
         </div>;
       </section>;
@@ -3034,7 +3023,6 @@ function MicroSaasPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {competitiveAdvantages && competitiveAdvantages.map((advantage, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Card
                 key={index}
                 className="border-gradient-blue hover:bg-gray-700/50 transition-all duration-300">;
@@ -3055,7 +3043,6 @@ function MicroSaasPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Detailed Services */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -3070,7 +3057,6 @@ function MicroSaasPage() {
           <div className="space-y-16">
             {detailedServices.map((service, index) => (
               <div key={index} className="bg-gray-800/50 rounded-2xl p-8 border border-gray-700">
-=======
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
             {market_trends.map ((trend, index) => (
               <Card;
@@ -3140,7 +3126,6 @@ function MicroSaasPage() {
           <div className="space - y-16">;
             {detailed_services.map ((service, index) => (
               <div key={index} className="bg - gray - 800 / 50 rounded - 2xl p - 8 border border - gray - 700">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {/* Service Header */}
                 <div className="flex items - start space - x-6 mb - 8">;
                   <div className={`w - 20 h - 20 rounded - 2xl flex items - center justify - center text - 4xl bg - gradient - to - br ${service.color}`}>;
@@ -3197,12 +3182,9 @@ function MicroSaasPage() {
                   </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Pricing */}
                   <div>;
                     <h4 className="text-xl font-bold text-white mb-4 flex items-center">;
@@ -3231,7 +3213,6 @@ function MicroSaasPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Market Data */}
                 <div className="mt-8 bg-blue-900/20 border border-blue-500/20 rounded-lg p-6">
                   <h4 className="text-xl font-bold text-blue-400 mb-4 flex items-center">
@@ -3257,7 +3238,6 @@ function MicroSaasPage() {
                     </div>
                   </div>
                 </div>
-=======
                     </div>;
                   </div>;
                 </div>;
@@ -3288,7 +3268,6 @@ function MicroSaasPage() {
                   </div>;
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Use Cases */}
                 <div className="mt-8">;
                   <h4 className="text-xl font-bold text-white mb-4 flex items-center">;
@@ -3306,12 +3285,9 @@ function MicroSaasPage() {
                 </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* CTA */}
                 <div className="mt-8 text-center">;
                   <Button
@@ -3330,12 +3306,9 @@ function MicroSaasPage() {
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />;
@@ -3361,7 +3334,6 @@ function MicroSaasPage() {
               size="lg"
 
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl">;
-=======
                   </div>;
                   <div className="flex - 1">;
                     <h3 className="text - 3xl font - bold text - white mb - 4">{service.title}</h3>;
@@ -3495,18 +3467,13 @@ function MicroSaasPage() {
       </section>;
 
 
-=======
   );
 
 
 }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
 }
 
 
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

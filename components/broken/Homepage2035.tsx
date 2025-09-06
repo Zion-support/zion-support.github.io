@@ -38,7 +38,6 @@ import {
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
  } from 'lucide-react';
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -68,7 +67,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035';
 import { innovative2025MicroSaasBatch  } from '../data/innovative-2025-micro-saas-batch';
 import { innovative2025ITEnterpriseBatch  } from '../data/innovative-2025-it-enterprise-batch';
@@ -80,7 +78,6 @@ import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-servic
 const LoadingFallback = () => (;
   <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion&& motion.div
       initial={{ opacity: 0, scale: 0 && 0.5 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0 && 0.5 }}
       className='text-center'// Loading fallback component
@@ -265,7 +262,6 @@ const Homepage2035: React.FC = () => {;
     { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
   ];
   const allServices = [
-=======
               service && service.category.includes('Financial') ||;
               service && service.category.includes('Trading');
             );
@@ -291,8 +287,6 @@ const Homepage2035: React.FC = () => {;
   ];
 
   const allServices = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {
   ArrowRight,
   Play,
@@ -505,7 +499,6 @@ if ( {) {
   ];
 ;
   const all_services = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ...innovative2025MicroSaasBatch;
     ...innovative2025ITEnterpriseBatch;
     ...innovative2025AIServicesBatch;
@@ -528,16 +521,12 @@ if ( {) {
   if (isLoading) {;
     return <LoadingFallback />;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
-=======
 
 
 
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout>;
       <UltraFuturisticBackground2035>;
@@ -629,12 +618,9 @@ if ( {) {
             </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -658,7 +644,6 @@ if ( {) {
                   <div className="text-3xl font-bold text-white mb-1">{stat && stat.value}</div>;
                   <div className="text-gray-400 text-sm">{stat && stat.label}</div>;
 
-=======
               transition={{ duration: 0.8, delay: 0.2 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
             >
@@ -669,7 +654,6 @@ if ( {) {
                 { icon: <TrendingUp className="w-8 h-8" />, value: '99.9%', label: 'Uptime' }
               ].map((stat, index) => (
                 <motion.div
-=======
                   icon: <Users className='w - 8 h - 8' />,
                   value: '50K+',
                   label: 'Happy Clients',
@@ -714,7 +698,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
 
             </motion && motion.div>;
@@ -722,31 +705,24 @@ if ( {) {
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Services Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
 
-=======
 
         {/* Services Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -760,10 +736,8 @@ if ( {) {
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Discover our comprehensive portfolio of cutting-edge services
                 designed to transform your business              </p>            >
-=======
               className="text-center mb-16"
             >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                 Revolutionary Technology Solutions
               </h2>
@@ -788,13 +762,9 @@ if ( {) {
               </p>;
             </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Category Filter */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -811,8 +781,6 @@ if ( {) {
                     activeCategory === category.id
                       ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400'
                       : 'border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   }`}
                 >;
                   {category && category.icon}
@@ -823,12 +791,9 @@ if ( {) {
             </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Services Grid */}
             <motion&& motion.div
               variants={staggerContainer}
@@ -848,7 +813,6 @@ if ( {) {
                   <UltraFuturisticServiceCard2035 service={service} />;
                 </motion && motion.div>;
 
-=======
             </motion.div>
 
             {/* Services Grid */}
@@ -868,18 +832,14 @@ if ( {) {
                   <UltraFuturisticServiceCard2035 service={service} />
                 </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 
             </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* View All Services Button */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -888,7 +848,6 @@ if ( {) {
               viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -916,14 +875,12 @@ if ( {) {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Features Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
 
-=======
                 className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto"
               >
                 <span>View All Services</span>
@@ -938,12 +895,9 @@ if ( {) {
           <div className="max-w-7xl mx-auto">
             <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1025,10 +979,8 @@ if ( {) {
                   description:
                     'Focused on delivering measurable business outcomes and ROI'
                 },              ].map((feature, index) => (            >
-=======
               className="text-center mb-16"
             >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                 Why Choose Zion Tech Group?
               </h2>
@@ -1132,16 +1084,13 @@ if ( {) {
                   icon: <Target className="w-12 h-12" />,;
                   title: 'Results-Driven',;
                   description: 'Focused on delivering measurable business outcomes and ROI';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }
               ].map((feature, index) => (;
                 <motion&& motion.div
 
-=======
               ].map((feature, index) => (
                 <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1149,12 +1098,10 @@ if ( {) {
                   viewport={{ once: true }}
 
 
-=======
                   className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300'>
                     {feature.icon}
@@ -1168,8 +1115,6 @@ if ( {) {
                 </motion.div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
 
             </div>;
@@ -1182,11 +1127,9 @@ if ( {) {
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -1195,8 +1138,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1250,14 +1191,12 @@ if ( {) {
 
   animate: {
 
-=======
 };
 
 
   animate: {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   transition: {
   staggerChildren: 0.1, delayChildren: 0.2
 }
@@ -1302,7 +1241,6 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
   /* View All Services Button */
 }<motion.div > <span>View All Services</span> <ArrowRight className="w-5 h-5" /> </motion.button> </motion.div> </div> </section> > <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > We combine innovation, expertise, and cutting-edge technology to deliver exceptional results </p> </motion.div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
-=======
 };
 
   animate: {;
@@ -1354,7 +1292,6 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
   /* View All Services Button */ ;
 }<motion && motion.div > <span>View All Services</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> </motion && motion.div> </div> </section> > <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > We combine innovation, expertise, and cutting-edge technology to deliver exceptional results </p> </motion && motion.div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -1367,7 +1304,6 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
 
 }viewport= {
   {
-=======
 
 
   once: true 
@@ -1375,7 +1311,6 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
 }> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion && motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> <motion && motion.button ;
 };
 
-=======
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -1416,14 +1351,11 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
     </Layout>
   )
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Homepage2035;
 
 
-=======
                   className='text - center';
                 >;
                   <div className='text - cyan - 400 mb - 2 flex justify - center'>;
@@ -1779,7 +1711,4 @@ export default Homepage2035);
 ;
 export default Homepage2035;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

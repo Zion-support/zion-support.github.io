@@ -20,7 +20,6 @@ export default async function handler(
 
 
   if (req && req.method === "GET") {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const jobs = readJsonFile<Job[]>(FILE, []);
     res && res.status(200).json({ jobs });
     return;
@@ -66,7 +65,6 @@ if ( {) {
     } = req.body |{}
     if (!title |!description |!clientEmail) {
       res.status(400).json({ error: "Missing required fields" });
-=======
 
   if (req && req.method === "POST") {
     const {
@@ -81,14 +79,12 @@ if ( {) {
 
       return;
 
-=======
       clientEmail} = req.body || {};
 
     if (!title || !description || !clientEmail) {
       res.status(400).json({ error: 'Missing required fields' });
       return
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     const nowIso = new Date().toISOString();
     const job: Job = {
@@ -148,7 +144,6 @@ if ( {) {
 
     res.status(201).json({ job });
     return
-=======
 }
   } catch (error) {
     console.error("Error:", error);
@@ -167,18 +162,13 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 
-=======
       client_email,
     } = req.body || {}
     // Check condition
@@ -242,12 +232,9 @@ if (=>) {
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

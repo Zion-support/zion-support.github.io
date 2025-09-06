@@ -1,5 +1,4 @@
 
-=======
 
 
 
@@ -43,11 +42,9 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
       setIsLoading(false);
     }
   }
-=======
 
         setNewResumeTitle('')
 
-=======
 import { useState } from 'react',;
 import {;
   DropdownMenu,;
@@ -84,13 +81,11 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         setNewResumeTitle('');
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       setIsLoading(false);
     }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -142,7 +137,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             className="cursor-pointer";
           >;
             <Plus className="h-4 w-4 mr-2" />;
-=======
 import { useState  } from './react';
 import {
   DropdownMenu,
@@ -260,9 +254,7 @@ if ( {) {
     </div>);
 }
 
-=======
 
   )
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

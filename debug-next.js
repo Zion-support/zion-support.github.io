@@ -2,9 +2,7 @@
 const fs = require ('fs'),
 const path = require ('path'),
 console.log ('🔍 Debugging Next.js project structure...'),
-=======
 
-=======
 
 console.log('🔍 Debugging Next.js project structure...'),;
 
@@ -44,4 +42,3 @@ for (const file of allFiles) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

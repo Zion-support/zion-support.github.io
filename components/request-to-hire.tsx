@@ -31,7 +31,6 @@ import { useEffect, useMemo, useState } from 'react';
 
 
   const [form, setForm] = useState({
-=======
 import { use_router } from 'next / router';
 import { TALENT_PROFILES } from '../data / talent';
 ;
@@ -89,18 +88,15 @@ export default function RequestToHirePage() {;
     setError(null),;
 
     if (!form && form.name || !form && form.email || !form && form.description) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setError('Please fill in name, email, and description.');
       return;    }      return;
 
-=======
     setError(null);
 
     if (!form.name || !form.email || !form.description) {
       setError('Please fill in name, email, and description.');
       return
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
 
           ...form;
@@ -115,7 +111,6 @@ export default function RequestToHirePage() {;
     } finally {
       setSubmitting(false)
 
-=======
     }
 
   };
@@ -152,7 +147,6 @@ export default function RequestToHirePage() {;
       setSubmitting(false);
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
 
@@ -227,7 +221,6 @@ export default function RequestToHirePage() {;
           className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting…' : 'Submit Request'}      </div>;
     );
 
-=======
     }
   };
 
@@ -240,7 +233,6 @@ export default function RequestToHirePage() {;
       </div>
     )
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   return (
     <div className="max-w-xl mx-auto">;
@@ -277,11 +269,8 @@ export default function RequestToHirePage() {;
   );
 }
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     description: '',
   });
   const [submitting, set_submitting] = useState (false);
@@ -440,10 +429,7 @@ if ( {) {
       </form>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

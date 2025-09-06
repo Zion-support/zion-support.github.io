@@ -15,7 +15,6 @@ import Link from 'next/link';
   status: string,;
 };
 const COMPANY_ID = 'cmp_acme';
-=======
 
 
 
@@ -110,7 +109,6 @@ function CompanyAdmin() {
       <nav style={{ display: 'flex', gap: 8, margin_bottom: 16 }}>;
         {(['members', 'usage', 'activity', 'billing'] as const).map (t => (
           <button;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             key={t}
             on_click={() => set_tab (t)}
             style={{
@@ -124,7 +122,6 @@ function CompanyAdmin() {
         <div style={{ marginLeft: 'auto' }}>;
           <Link href='/workspace/acme'>Go to Workspace</Link>        </div>;
       </header>;
-=======
         {(['membersusageactivitybilling'] as const).map(t => (
           <button key={t} onClick={() => setTab(t)} style={{ padding: '0.5rem 0.75rem', borderRadius: 8, border: '1px solid #e5e7eb', background: tab === t ? '#111827' : 'white', color: tab === t ? 'white' : '#111827' }}>{t}</button>
         ))}
@@ -142,14 +139,11 @@ function CompanyAdmin() {
               border: '1px solid #e5e7eb',;
               background: tab === t ? '#111827' : 'white',;
               color: tab === t ? 'white' : '#111827',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
               padding: '0.5rem 0.75rem',
               border_radius: 8,
               border: '1px solid #e5e7eb',
               background: tab === t ? '#111827' : 'white',
               color: tab === t ? 'white' : '#111827',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             }}
           >;
             {t}
@@ -172,7 +166,6 @@ function CompanyAdmin() {
     setEmail('');
     setRole('viewer');
 
-=======
       {tab === 'activity' && (
         <ActivityTab events={activity} />
       )}
@@ -182,11 +175,9 @@ function CompanyAdmin() {
       )}
     </main>
   )
-=======
 
 
 
-=======
         {(['membersusageactivitybilling'] as const).map(t => (
           <button key={t} onClick={() => setTab(t)} style={{ padding: '0.5rem 0.75rem', borderRadius: 8, border: '1px solid #e5e7eb', background: tab === t ? '#111827' : 'white', color: tab === t ? 'white' : '#111827' }}>{t}</button>
         ))  } catch (error) {
@@ -243,13 +234,11 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const add = async () => {
     const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, email, role }) });
     const created = await r.json();
     setMembers([created, ...members]);
     setName(''), setEmail(''), setRole('viewer')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   };
 
   const remove = async (id: string) => {;
@@ -267,7 +256,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
   };
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
   set_members: (m: Member[]) => void;
@@ -465,14 +453,12 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
                   value={m && m.role}
                   onChange={e =>;
                     changeRole(m && m.id, e && e.target.value as Member['role']);
-=======
               </td>;
               <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
                 <select;
                   value={m.role}
                   on_change={e =>;
                     change_role (m.id, e.target.value as Member['role']);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   }
                 >;
                   <option value='recruiter'>Recruiter</option>;
@@ -504,14 +490,12 @@ function UsageTab ({
   seats_used,
 
 }: {
-=======
 
 function UsageTab(): any ({;
   usage,;
   setUsage,;
   seatsUsed,;
 }: {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   usage: Usage;
 
   const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage && usage.budgetCapUsd);
@@ -602,7 +586,6 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
             >
               Actions
             </th>          </tr>
-=======
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.name}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.email}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
@@ -672,7 +655,6 @@ function ActivityTab({ events }: { events: any[] }) {
 
 function BillingTab({ invoices }: { invoices: Invoice[] }) {
   return (
-=======
 
 
   const save = async () => {
@@ -697,7 +679,6 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
 
 function BillingTab({ invoices }: { invoices: Invoice[] }) {
   return (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <section>
       <h2>Billing & invoices</h2>
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
@@ -888,7 +869,6 @@ function BillingTab() {
                   textAlign: 'right'
                 }}
               >
-=======
                 textAlign: 'left',
                 padding: 8,
                 borderBottom: '1px solid #e5e7eb',
@@ -921,7 +901,6 @@ function BillingTab() {
             </th>;
             <th
               style={{
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 textAlign: 'right',
                 padding: 8,
                 borderBottom: '1px solid #e5e7eb',
@@ -951,7 +930,6 @@ function BillingTab() {
                 </a>              </td>;
             </tr>;
 
-=======
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.number}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.periodStartIso} → {inv.periodEndIso}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>${inv.amountUsd.toFixed(2)}</td>
@@ -960,7 +938,6 @@ function BillingTab() {
                 <a href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv.id}`} target="_blank" rel="noreferrer">Download PDF</a>
               </td>
 
-=======
                   border_bottom: '1px solid #f3f4f6',
                   text_align: 'right',
                 }}
@@ -977,9 +954,5 @@ function BillingTab() {
       </table>;
     </section>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

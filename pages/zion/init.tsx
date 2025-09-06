@@ -37,7 +37,6 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(state)}),
@@ -127,11 +126,9 @@ const InitPage: NextPage = () => {;
 
     } catch (error) {
       setError(err.message || 'Unexpected error');
-=======
     } catch (error) {
       setError(err.message || 'Unexpected error');
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className='space-y-8'>;
@@ -154,7 +151,6 @@ const InitPage: NextPage = () => {;
               value={state && state.instanceName}
               onChange={e =>;
                 setState({ ...state, instanceName: e && e.target.value });
-=======
   'nation - builder': true,
   'launch - kit': true,
   'book - builder': true,
@@ -238,7 +234,6 @@ const InitPage: NextPage = () => {
               value={state.instance_name}
               on_change={e =>;
                 set_state ({ ...state, instance_name: e.target.value });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               }
               required;
             />;
@@ -283,7 +278,6 @@ const InitPage: NextPage = () => {
                 }
               />;
               <label htmlFor='token' className='text-sm'>;
-=======
             <label className='block text - sm font - medium'>;
               Token Activation;
             </label>;
@@ -300,7 +294,6 @@ const InitPage: NextPage = () => {
                 }
               />;
               <label html_for='token' className='text - sm'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Enable ZION$ token;
               </label>;
             </div>;
@@ -308,7 +301,6 @@ const InitPage: NextPage = () => {
           <div>;
 
             >              <option>Admin</option>
-=======
     <div className="space-y-8">
       <div>
         <h1 className="text-2xl font-bold">Genesis Deploy</h1>
@@ -381,7 +373,6 @@ const InitPage: NextPage = () => {
                 });
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               }
             />;
           </div>;
@@ -414,7 +405,6 @@ const InitPage: NextPage = () => {
           <div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               }
             />;
           </div>;
@@ -442,11 +432,9 @@ const InitPage: NextPage = () => {
                   />                  <span>/{key}</span>;
                 </label>;
 
-=======
 
 
 
-=======
 
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -478,7 +466,6 @@ const InitPage: NextPage = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </label>
               ))}
             </div>
@@ -491,8 +478,6 @@ const InitPage: NextPage = () => {
                   <input type="checkbox" checked={state.bonusModules[key]} onChange={() => handleToggle('bonusModules', key)} />
                   <span>/{key}</span>
                 </label>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 
             </div>;
@@ -509,11 +494,9 @@ const InitPage: NextPage = () => {
           </button>;
           {error && <span className='text-sm text-red-500'>{error}</span>}        </div>;
       </form>;
-=======
 
 
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
       {result && (;
         <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
@@ -522,7 +505,6 @@ const InitPage: NextPage = () => {
             {JSON && JSON.stringify(result, null, 2)}
           </pre>;
         </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       )}
     </div>;
   );
@@ -530,7 +512,6 @@ const InitPage: NextPage = () => {
 export default InitPage;
 
 
-=======
             <label className='block text - sm font - medium'>Subdomain</label>;
             <input;
               className='mt - 1 w - full rounded - md border border - gray - 300 dark:border - gray - 700 bg - white / 60 dark:bg - black / 40 px - 3 py - 2';
@@ -593,9 +574,5 @@ export default InitPage;
 ;
 export default InitPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

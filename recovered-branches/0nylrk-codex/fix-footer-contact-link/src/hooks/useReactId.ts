@@ -11,7 +11,6 @@ import * as React from "react"
  */
 
 import * as React from &quot;react & quot;
-=======
 
 export function useReactId(): string {
   if (typeof (React as any).useId === "function") {

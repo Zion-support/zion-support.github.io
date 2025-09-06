@@ -20,7 +20,6 @@ const CardFooter = React && React.forwardRef<;
 >(({ className, ...props }, ref) => (;
 
   <div
-=======
   />));
 CardDescription.display_name = "CardDescription";
 ;
@@ -36,13 +35,11 @@ const CardFooter = React.forward_ref<;
   React.HTMLAttributes < HTMLDivElement>;
 >(({ class_name, ...props }, ref) => (
   <div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn ("flex items - center p - 6 pt - 0", class_name)}
     {...props}
 
 import React from 'react';
-=======
 
 import React from 'react',;
 
@@ -73,7 +70,6 @@ const Card: React.FC<CardProps> = ({
   const hoverClasses = hover ? 'hover: border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-gray-900/80 focus-within:border-blue-500/50 focus-within:shadow-lg focus-within:shadow-blue-500/20' : ''
   const clickableClasses = onClick ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black' : ''
   const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`
-=======
   />));
 CardFooter.display_name = "CardFooter";
 ;
@@ -95,7 +91,6 @@ const Card: React.FC < CardProps> = ({
   const hover_classes = hover ? 'hover: border - blue - 500 / 30 hover:shadow - 2xl hover:shadow - blue - 500 / 10 hover:-translate - y-1 hover:bg - gray - 900 / 80 focus - within:border - blue - 500 / 50 focus - within:shadow - lg focus - within:shadow - blue - 500 / 20' : '',
   const clickable_classes = on_click ? 'cursor - pointer focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:ring - offset - 2 focus:ring - offset - black' : '',
   const classes = `${base_classes} ${hover_classes} ${clickable_classes} ${class_name}`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div;
       className={classes}
@@ -111,27 +106,21 @@ const Card: React.FC < CardProps> = ({
         {children}
 
 
-=======
       </div>;
       {/* Hover glow effect */}
       {hover && (
         <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
     </div>);
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 },
 export default Card,
 ;
 
 
 
-=======
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 
 
-=======
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

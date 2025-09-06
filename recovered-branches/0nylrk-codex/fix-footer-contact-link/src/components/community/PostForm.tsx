@@ -10,11 +10,9 @@ import {Button} from "@/components/ui/button";
 import {Textarea} from "@/components/ui/textarea";
 import {ForumCategory} from "@/types/community";
 
-=======
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { 
   Card;
   CardContent;
@@ -52,7 +50,6 @@ export const PostForm = ({;
   initialValues;
   onSubmit;
 
-=======
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import {;
@@ -87,7 +84,6 @@ interface PostFormProps {;
   isEditing?: boolean;
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void
@@ -190,12 +186,9 @@ export const PostForm = ({
 
     }
   }
-=======
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card>;
       <CardHeader>;
@@ -210,7 +203,6 @@ export const PostForm = ({
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Title</FormLabel>;
-=======
       setIsSubmitting (false);
     }
   }
@@ -229,7 +221,6 @@ export const PostForm = ({
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Title</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <Input placeholder="Enter post title..." {...field} />;
                   </FormControl>;
@@ -301,7 +292,6 @@ export const PostForm = ({
 
             <Button type="submit" disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -369,9 +359,7 @@ export const PostForm = ({
 export default PostForm;
 ;
 
-=======
 
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

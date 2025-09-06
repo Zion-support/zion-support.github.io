@@ -40,9 +40,7 @@ import React, { useState } from 'react';
               <label key={i} className='flex items-center gap-2'>;
                 <input
 
-=======
 };
-=======
                   type='radio'                  name={q.id}
   function submit() {
     setSubmitted(true);
@@ -58,8 +56,6 @@ export default function Quiz({ questions, onComplete }: Props) {
 
   const score = questions.reduce((acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0), 0);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   function submit() {
 
     setSubmitted(true)
@@ -78,7 +74,6 @@ export default function Quiz({ questions, onComplete }: Props) {
                   type="radio"
 
 
-=======
             <div className='mt - 2 text - sm'>;
               {answers[q.id] === q.answer_index ? (
                 <span className='text - green - 600'>Correct</span>) : (
@@ -101,14 +96,9 @@ export default function Quiz({ questions, onComplete }: Props) {
       {submitted && <div className="text - sm">Score: {score} / {questions.length}</div>}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -86,7 +86,6 @@ import React from 'react';
 
 
 
-=======
           </div>;
         </div>;
       </CardContent>;
@@ -96,10 +95,7 @@ import React from 'react';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -221,4 +217,3 @@ if ( {) {
       </CardContent>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

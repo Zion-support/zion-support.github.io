@@ -15,7 +15,6 @@
 
 
 
-=======
 import { useState } from "react",;
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -57,8 +56,6 @@ export function useContractTemplates() {;
     enabled: isAuthenticated && !!user
   }),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Create a new template
   const createTemplate = useMutation({
     mutationFn: async ({
@@ -122,11 +119,9 @@ if ( {) {
         .select ('*');
         .order ('is_default', { ascending: false });
         .order ('created_at', { ascending: false });
-=======
 
     };
 
-=======
 
 ;
       // Check condition
@@ -185,7 +180,6 @@ if (throw error) {
   $2
 }
         return data as ContractTemplate;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
         setIsLoading (false);
       }
@@ -194,7 +188,6 @@ if (throw error) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
@@ -279,11 +272,9 @@ if (throw error) {
   $2
 }
       setIsLoading (true);
-=======
 
     };
 
-=======
     },;
     onSuccess: () => {;
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] }),;
@@ -358,7 +349,6 @@ if (throw error) {
   $2
 }
         return data as ContractTemplate;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
         setIsLoading (false);
       }
@@ -367,7 +357,6 @@ if (throw error) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
@@ -408,7 +397,6 @@ if (throw error) {
         
 
         if (error) throw error
-=======
     on_success: () => {
       query_client.invalidate_queries ({ query_key: ['contract_templates', user?.id] });
       toast ({
@@ -442,7 +430,6 @@ if (throw error) {
 if (throw error) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
         setIsLoading (false);
       }
@@ -512,7 +499,6 @@ if (throw error) {
         
 
         if (error) throw error
-=======
     on_success: () => {
       query_client.invalidate_queries ({ query_key: ['contract_templates', user?.id] });
       toast ({
@@ -554,7 +540,6 @@ if (throw error) {
 if (throw error) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
         setIsLoading (false);
       }
@@ -599,7 +584,6 @@ if (throw error) {
     deleteTemplate
 
     setDefaultTemplate
-=======
     on_success: () => {
       query_client.invalidate_queries ({ query_key: ['contract_templates', user?.id] });
       toast ({
@@ -627,6 +611,5 @@ if (throw error) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

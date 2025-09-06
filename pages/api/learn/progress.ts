@@ -12,11 +12,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   }
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
         course_progress.completed_lessons.push (lesson_id);
       }

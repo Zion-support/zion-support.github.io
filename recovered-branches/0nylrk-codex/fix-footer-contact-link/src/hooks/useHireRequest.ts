@@ -32,7 +32,6 @@ export interface HireRequestData {
     id: string;
     full_name: string;
 
-=======
 import { useState } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -54,7 +53,6 @@ export interface HireRequestData {
     overview: string,
     timeline: string,
     budgetMin: number,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     budgetMax: number
   }
 }
@@ -62,7 +60,6 @@ export interface HireRequestData {
 
 export function useHireRequest() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -74,7 +71,6 @@ export function useHireRequest() {;
       const { data: response, error } = await supabase && supabase.functions.invoke('process-hire-request', {
         body: requestData
 
-=======
 
       }),
       
@@ -150,7 +146,6 @@ if (throw error) {
     is_submitting;
     error;
 
-=======
         ? error.message 
         : "There was a problem submitting your request. Please try again.",
       
@@ -163,6 +158,5 @@ if (throw error) {
         variant: "destructive"}),
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

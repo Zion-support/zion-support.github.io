@@ -3,7 +3,6 @@ import React, { create_context, useState, useContext, useEffect, ReactNode } fro
 import {use_location} from 'react-router-dom';
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
-=======
 
 
   type: AnalyticsEventType,;
@@ -29,7 +28,6 @@ export interface AnalyticsContextType {;
 
 
 
-=======
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react',;
 import { useLocation } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -52,7 +50,6 @@ export type AnalyticsEventType =;
   | 'login';
 ;
 // Interface for analytics events;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface AnalyticsEvent {
   type: AnalyticsEventType
   path?: string;
@@ -254,12 +251,10 @@ function AnalyticsProvider() {
         events
         clearEvents
       }}>;
-=======
 
 
       }}
     >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {children}
     </AnalyticsContext && AnalyticsContext.Provider>;
   );
@@ -268,7 +263,6 @@ function AnalyticsProvider() {
 
 export const useAnalytics = (): AnalyticsContextType => {;
 
-=======
 
 
 export const useAnalytics = (): AnalyticsContextType => {;
@@ -282,10 +276,8 @@ export const useAnalytics = (): AnalyticsContextType => {;
   return context as AnalyticsContextType
 
 
-=======
 ;
 export const useAnalytics = (): AnalyticsContextType => {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const context = useContext(AnalyticsContext);
   if (!context) {;
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
@@ -296,8 +288,6 @@ export const useAnalytics = (): AnalyticsContextType => {;
   return context as AnalyticsContextType;
 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   }
 ;
   // Function to track conversion events;
@@ -342,4 +332,3 @@ if ( {) {
   return context as AnalyticsContextType;
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

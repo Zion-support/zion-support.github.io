@@ -7,10 +7,8 @@ export function MessageTab(): any ({;
   setProposalLink,;
 }: MessageTabProps) {;
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-4">;
       <div>;
@@ -32,14 +30,11 @@ export function MessageTab(): any ({;
           Link to Proposal/Portfolio (Optional);
         </Label>;
 
-=======
 
       
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div>
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Input
           id="proposalLink"
           type="url"
@@ -89,7 +84,6 @@ function MessageTab() {
     </div>);
 
 }
-=======
           onChange={(e) => setProposalLink(e.target.value)}
           className="bg-zion-blue-dark/20 border-zion-purple/30 text-white"
           placeholder="https: //..."
@@ -103,4 +97,3 @@ function MessageTab() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -89,12 +89,10 @@ function InterviewCard() {
     }),
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (success) {
       toast({
         title: `Interview ${status}`
         description: `You have successfully ${status} the interview request.`
-=======
 ;
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
     setIsLoading (true),
@@ -110,7 +108,6 @@ if ( {) {
       toast ({
         title: `Interview ${status}`,
         description: `You have successfully ${status} the interview request.`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
       setIsResponseDialogOpen (false);
       await on_refresh ();
@@ -129,12 +126,10 @@ if ( {) {
       toast({
         title: "Interview cancelled"
         description: "The interview has been cancelled successfully."
-=======
       toast ({
         title: "Error",
         description: "Failed to respond to the interview request. Please try again.",
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
     }
     setIsLoading (false);
@@ -192,7 +187,6 @@ if ( {) {
     }
   };
 
-=======
 
         return isInterviewLive ? 
           <Badge className="bg-green-500 animate-pulse">Live Now</Badge> : 
@@ -211,7 +205,6 @@ if ( {) {
 
   };
 
-=======
   },;
 
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {;
@@ -265,7 +258,6 @@ if ( {) {
       case 'confirmed':;
         return isInterviewLive ? ;
           <Badge className="bg-green-500 animate-pulse">Live Now</Badge> : ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Badge className="bg-green-600">Confirmed</Badge>;
       case 'declined':;
         return <Badge variant="destructive">Declined</Badge>;
@@ -293,7 +285,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
@@ -354,7 +345,6 @@ if ( {) {
               <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
                 <AlertDialogHeader>;
                   <AlertDialogTitle>Cancel Interview Request</AlertDialogTitle>;
-=======
       toast ({
         title: "Error",
         description: "Failed to cancel the interview. Please try again.",
@@ -469,17 +459,11 @@ if ( {) {
 
 
 
-=======
 
 ;
 
-=======
           
-=======
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* For talents with pending requests */}
           {isTalent && isInterviewPending && (;
             <div className="grid grid-cols-2 gap-2">;
@@ -525,12 +509,9 @@ if ( {) {
                 <Button className="w-full" disabled={!isInterviewLive}>;
                   <Video className="h-4 w-4 mr-2" /> ;
 
-=======
 
                   <Video className="h-4 w-4 mr-2" /> 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>;
               )}
@@ -556,7 +537,6 @@ if ( {) {
                     <AlertDialogCancel>Go Back</AlertDialogCancel>
                     <AlertDialogAction
                       onClick={handleCancelInterview}
-=======
 
               <AlertDialog>;
                 <AlertDialogTrigger asChild>;
@@ -567,7 +547,6 @@ if ( {) {
                 <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
                   <AlertDialogHeader>;
                     <AlertDialogTitle>Cancel Confirmed Interview</AlertDialogTitle>;
-=======
                 <Button className="w - full" as_child disabled={!isInterviewLive}>;
                   <a href={interview.meeting_link} target="_blank" rel="noopener noreferrer">;
                     <Video className="h - 4 w - 4 mr - 2" />;
@@ -588,7 +567,6 @@ if ( {) {
                 <AlertDialogContent className="bg - zion - blue - dark border - zion - blue - light text - white">;
                   <AlertDialogHeader>;
                     <AlertDialogTitle > Cancel Confirmed Interview</AlertDialogTitle>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     <AlertDialogDescription>;
                       Are you sure you want to cancel this interview? This action cannot be undone and the other party will be notified.;
                     </AlertDialogDescription>;
@@ -619,11 +597,9 @@ if ( {) {
           </DialogHeader>;
 
           <InterviewResponseForm
-=======
 
           <InterviewResponseForm 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             interview={interview}
             onConfirm={() => handleRespondToInterview('confirmed')}
             onClose={() => setIsResponseDialogOpen(false)}
@@ -656,7 +632,5 @@ if ( {) {
     </Card>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -33,10 +33,8 @@ function OnChainExport() {
   const { user } = use_auth ();
 ;
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleConnectWallet = async () => {
     try {
       // Check if wallet is available;
@@ -220,12 +218,10 @@ if ( {) {
     }
   };
 
-=======
     } finally {
       setIsExporting(false)
 
     }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Card>;
@@ -237,7 +233,6 @@ if ( {) {
             <Wallet className="h-5 w-5" />;
           )}
 
-=======
                 {isExporting ? "Processing..." : "Export Tokens"}
                 {!isExporting && <ArrowUpRight className="ml-2 h-4 w-4" />}
               </Button>
@@ -256,7 +251,6 @@ if ( {) {
 };
 ;
 
-=======
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -347,7 +341,6 @@ export function OnChainExport() {;
               </TooltipTrigger>;
               <TooltipContent>;
                 <p className="max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p>;
-=======
 ;
   return (
     <Card>;
@@ -364,7 +357,6 @@ export function OnChainExport() {;
               </TooltipTrigger>;
               <TooltipContent>;
                 <p className="max - w-xs">Export your ZION$ tokens to an external blockchain wallet</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </TooltipContent>;
             </Tooltip>;
           </TooltipProvider>;
@@ -375,9 +367,6 @@ export function OnChainExport() {;
   );
 }
 
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -39,10 +39,8 @@ interface Conversation {
 
 
 export function MobileConversationList({
-=======
 
 export function MobileConversationList(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   conversations;
   activeConversation;
   onSelectConversation;
@@ -112,7 +110,6 @@ export function MobileConversationList(): any ({;
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>
-=======
               "px-4"
               activeConversation === conversation && conversation.id && "bg-primary/5"
             )}
@@ -145,7 +142,6 @@ export function MobileConversationList(): any ({;
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
                       {conversation && conversation.unreadCount}
                     </Badge>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   )}
                 </div>;
               </div>;
@@ -159,7 +155,6 @@ export function MobileConversationList(): any ({;
   );
 }
 
-=======
 import React from './react';
 import { Card } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -245,4 +240,3 @@ function MobileConversationList() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

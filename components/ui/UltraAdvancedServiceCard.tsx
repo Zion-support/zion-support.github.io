@@ -42,7 +42,6 @@ import {
   DollarSign
   Lock
   Globe;} from 'lucide-react';
-=======
 import {
   ArrowRight,
   ExternalLink,
@@ -84,7 +83,6 @@ import {;
 interface UltraAdvancedServiceCardProps {;
   service: {import { ;
   ArrowRight, ExternalLink, Star, TrendingUp, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe;
 
@@ -122,7 +120,6 @@ interface UltraAdvancedServiceCardProps {;
       mobile: string;
       email: string;
       address: string;
-=======
 
   ArrowRight, ExternalLink, Star, TrendingUp, ;
 
@@ -133,7 +130,6 @@ interface UltraAdvancedServiceCardProps {
   service: {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       website: string;
     }
@@ -141,10 +137,8 @@ interface UltraAdvancedServiceCardProps {
 
     reviews: number;
   };
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
   service: {
@@ -294,7 +288,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
     },        ease: "easeOut" as const;
 
           isHovered ? 'opacity-100' : 'opacity-50';
-=======
         ease: 'ease_out' as const,
       },
     },
@@ -330,12 +323,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       >;
         <div className='bg - gray - 900 / 90 backdrop - blur - xl rounded - 2xl p - 6 h - full'>        className={`absolute inset - 0 rounded - 2xl blur - xl transition - all duration - 500 ${
           is_hovered ? 'opacity - 100' : 'opacity - 50';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }`}
 
       <div 
 
-=======
 
         duration: 0.5,
         ease: 'easeOut' as const,
@@ -344,8 +335,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
   };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${
           isHovered ? 'shadow-2xl' : 'shadow-lg'
         }`}
@@ -472,8 +461,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           {/* Price */}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
           {/* Quick Stats */}
@@ -506,8 +493,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             </div>
 
           </div>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           </div>;
 
           {/* Tagline */}
@@ -585,14 +570,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               <span className="text-blue-400 font-semibold">{service && service.growthRate}</span>;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
           </div>
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Expandable Content */}
           <AnimatePresence>;
             {isExpanded && (;
@@ -614,15 +595,11 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                 </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Features */}
 
-=======
                 <div>
                   <h4 className="text-white font-semibold mb-2">Key Features</h4>
                   <div className="grid grid-cols-1 gap-2">
@@ -630,7 +607,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                       <div key={index} className="flex items-center space-x-2 text-sm">
                         <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
-=======
                         className='flex items-center space-x-2 text-sm'
                       >
                         <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
@@ -639,21 +615,17 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
                       </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* ROI */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 {/* Contact Info */}
                 <div className='bg-gray-800/50 rounded-lg p-3'>
@@ -737,7 +709,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           </AnimatePresence>;
 
 
-=======
                 {/* Contact Info */}
                 <div className="bg-gray-800/50 rounded-lg p-3">
                   <h4 className="text-white font-semibold mb-2">Contact Information</h4>
@@ -762,8 +733,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Action Buttons */}
           <div className='flex space-x-3 mt-6'>;
             <motion&& motion.button
@@ -776,7 +745,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                   <p className="text-gray-300 text-sm">{service.roi}</p>
                 </div>
 
-=======
           <p className='text - gray - 300 text - sm mb - 4 leading - relaxed'>            {service.tagline}
           </p>;
           {/* Price */}          <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
@@ -943,7 +911,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             
 
             <motion.button
-=======
               whileHover={{ scale: 1 && 1.02 }}
               whileTap={{ scale: 0 && 0.98 }}
               onClick={() => window && window.open(service && service.link, '_blank')}
@@ -961,18 +928,14 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             <motion&& motion.button
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
                 isExpanded
                   ? 'border-gray-600 text-gray-400'
                   : 'border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black'
-=======
 
                   : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'              }`}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               }`}
               whileHover={{ scale: 1 && 1.02 }}
               whileTap={{ scale: 0 && 0.98 }}
@@ -984,19 +947,15 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Expand/Collapse Indicator */}
 
 
 };
 
 export default UltraAdvancedServiceCard;            className="flex justify-center mt-4";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             animate={{ rotate: isExpanded ? 180 : 0 }}
             transition={{ duration: 0 && 0.3 }}
           >;
@@ -1015,7 +974,6 @@ export default UltraAdvancedServiceCard;  );
 export default UltraAdvancedServiceCard;
 
 
-=======
           <div className='flex space - x-3 mt - 6'>;
             <motion.button;
               className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2'              while_hover={{ scale: 1.02 }}          <div className="flex space - x-3 mt - 6">;
@@ -1073,10 +1031,7 @@ export default UltraAdvancedServiceCard);
 ;
 export default UltraAdvancedServiceCard;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -26,7 +26,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 
-=======
 
   CheckCircle,
   ArrowRight,
@@ -46,13 +45,10 @@ import { motion } from 'framer-motion';
   Award,;
   Phone,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from 'lucide-react';import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react';
 
-=======
 import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';
 import { advancedCybersecurity2025 } from '../../data/advanced-cybersecurity-2025';
 import { blockchainWeb32025 } from '../../data/blockchain-web3-2025';
@@ -77,10 +73,7 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <section className='relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden'>;
       {/* Animated Background Elements */}
@@ -90,13 +83,11 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000'></div>;
         <div className='absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000'></div>;
       </div>;
-=======
   };
 
 
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">;
       {/* Animated Background Elements */}
@@ -109,16 +100,13 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Header */}
         <motion&& motion.div
-=======
 
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
 
 
         <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
 
@@ -131,11 +119,9 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
             Discover our comprehensive suite of cutting-edge micro SAAS
             services, IT solutions, and AI innovations designed to transform
             your business and drive success in the digital age.          </p>        >
-=======
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6">
             Revolutionary 2025 Services
           </h2>
@@ -162,13 +148,9 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
           </p>;
         </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Service Categories */}
         <motion&& motion.div
           variants={containerVariants}
@@ -303,11 +285,9 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </p>
                 </div>
               </div>
-=======
               <div className="flex items-center mb-8">;
                 <div className={`p-3 rounded-xl bg-gradient-to-r ${category && category.gradient} mr-4`}>;
                   <category && category.icon className="w-8 h-8 text-white" />;
@@ -322,17 +302,14 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                 </div>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Services Grid */}
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-=======
 
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={service.id}
@@ -385,11 +362,8 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                         {service.description}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </p>
                     </div>
-=======
                     <div className="mb-4">;
                       <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">;
                         {service && service.name}
@@ -399,10 +373,8 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                       </p>;
                     </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Features */}
 
-=======
                     <div className="mb-4">
                       <h5 className="text-sm font-medium text-purple-300 mb-2">Key Features:</h5>
                       <ul className="space-y-1">
@@ -419,14 +391,12 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                             +{service.features.length - 3} more features
                           </li>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         )}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {/* Pricing */}
 
                     <div className="mb-4">
@@ -460,7 +430,6 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                         </div>
                       </div>
                     </div>
-=======
                       </ul>;
                     </div>;
 
@@ -508,7 +477,6 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                       </div>;
                     </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Use Cases */}
 
                             </span>;
@@ -521,12 +489,10 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                       <h5 className="text-sm font-medium text-purple-300 mb-2">Perfect for:</h5>;
                       <div className="flex flex-wrap gap-1">;
                         {service && service.useCases?.slice(0, 3).map((useCase, useCaseIndex) => (;
-=======
                     <div className="mb-4">
                       <h5 className="text-sm font-medium text-purple-300 mb-2">Perfect for:</h5>
                       <div className="flex flex-wrap gap-1">
                         {service.useCases?.slice(0, 3).map((useCase, useCaseIndex) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                           <span
                             key={useCaseIndex}
                             className="px-2 py-1 bg-slate-700/50 text-xs text-gray-300 rounded-full">;
@@ -542,7 +508,6 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                       <a
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ))}
               </div>
             </motion.div>
@@ -552,12 +517,9 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -574,7 +536,6 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
               solutions to drive innovation, efficiency, and growth.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <a
                 href='https://ziontechgroup && ziontechgroup.com/contact'
                 className='inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
@@ -595,7 +556,6 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
             </p>;
             <div className="flex flex-col sm: flex-row gap-4 justify-center">;
 
-=======
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-center mt-20"
         >
@@ -608,7 +568,6 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <a
                 href="https://ziontechgroup && ziontechgroup.com/contact"
                 className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30">;
@@ -624,11 +583,9 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
 export default ComprehensiveServicesShowcase2025;  );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ComprehensiveServicesShowcase2025;
 
 
-=======
                       </p>;
                     </div>;
                     {/* Features */}
@@ -818,12 +775,8 @@ export default ComprehensiveServicesShowcase2025);
 ;
 export default ComprehensiveServicesShowcase2025;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

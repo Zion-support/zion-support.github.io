@@ -14,7 +14,6 @@ function CareersPage() {
       location: 'Remote / Global',
       type: 'Full - time',
       description: 'Lead cutting - edge research in AI consciousness, autonomous systems, and quantum neural networks.',
-=======
 
 export const metadata = {;
   title: 'Careers - Zion Tech Group',;

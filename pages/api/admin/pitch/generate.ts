@@ -32,7 +32,6 @@ export default async function handler(
     "Ask & Call to Action",
   ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
 Operator Prompt: ${operator_prompt}
@@ -61,7 +60,6 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
   }
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 function extractSection(body: string, title: string): string {
   if (!body) return "";
   // naive split by headings
@@ -76,7 +74,6 @@ function extractSection(body: string, title: string): string {
 
 }
 
-=======
   const lines = body.split('\n');
   const matchIdx = lines.findIndex((l) => l.toLowerCase().includes(title.toLowerCase()));
   if (matchIdx >= 0) {
@@ -86,8 +83,6 @@ function extractSection(body: string, title: string): string {
   return ''
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       content = chat.choices?.[0]?.message?.content || "";
 ;
     } catch (err) {
@@ -123,10 +118,7 @@ if ( {) {
   }
   return "";
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
@@ -137,8 +129,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-=======
-=======
 
     const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
@@ -179,5 +169,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

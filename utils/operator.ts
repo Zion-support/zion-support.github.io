@@ -17,7 +17,6 @@ export interface SupportEvent {
 }
 
 
-=======
 // Operator utilities;
 export const operator = {
   // Add operator functionality here;
@@ -25,5 +24,3 @@ export const operator = {
   get_events: () => [],
   getEventById: (id: string) => null;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

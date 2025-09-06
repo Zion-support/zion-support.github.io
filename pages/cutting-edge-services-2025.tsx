@@ -1,7 +1,6 @@
 
 
 
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -55,9 +54,7 @@ const serviceCategories = [
     color: 'from-teal-500 to-emerald-600',
     bgColor: 'from-teal-900/20 to-emerald-900/20',
     borderColor: 'border-teal-500/30'
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -76,7 +73,6 @@ import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-e
 };
 
 const serviceCategories = [
-=======
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -102,15 +98,12 @@ const service_categories = [;
     icon: Brain,
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     borderColor: 'border-violet-500/30'
   }
-=======
     color: 'from - violet - 500 to - purple - 600',
     bg_color: 'from - violet - 900 / 20 to - purple - 900 / 20',
     border_color: 'border - violet - 500 / 30';
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
 
     title: 'Quantum & Emerging Tech',
@@ -124,13 +117,11 @@ const service_categories = [;
     services: cuttingEdgeITServices2025,
     icon: Shield,
 
-=======
     color: 'from - blue - 500 to - cyan - 600',
     bg_color: 'from - blue - 900 / 20 to - cyan - 900 / 20',
     border_color: 'border - blue - 500 / 30';
   },
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   {
     title: 'Micro SAAS',
     description: 'Innovative business solutions for modern enterprises',
@@ -186,7 +177,6 @@ const serviceCategories = [;
 
 
   }
-=======
     color: 'from - teal - 500 to - emerald - 600',
     bg_color: 'from - teal - 900 / 20 to - emerald - 900 / 20',
     border_color: 'border - teal - 500 / 30';
@@ -200,7 +190,6 @@ const serviceCategories = [;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
@@ -223,13 +212,9 @@ const serviceCategories = [;
 
               Experience the future of technology with our revolutionary services that combine AI consciousness,
 
-=======
               Experience the future of technology with our revolutionary services that combine AI consciousness, 
-=======
               Experience the future of technology with our revolutionary services that combine AI consciousness,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               quantum computing, enterprise IT, and innovative micro SAAS solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -249,7 +234,6 @@ const serviceCategories = [;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Get Started Today
@@ -271,7 +255,6 @@ const serviceCategories = [;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 <Phone className="mr-2 w-5 h-5" />
@@ -282,7 +265,6 @@ const serviceCategories = [;
         </div>
       </section>
 
-=======
 ],
 export default /**
  * CuttingEdgeServices2025 - Function description
@@ -384,7 +366,6 @@ function CuttingEdgeServices2025() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
@@ -401,7 +382,6 @@ function CuttingEdgeServices2025() {
           <div className="space-y-16">
             {serviceCategories.map((category, index) => (
               <motion.div
-=======
             className="text - center mb - 16";
           >;
             <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - purple - 600 bg - clip - text text - transparent">;
@@ -415,7 +395,6 @@ function CuttingEdgeServices2025() {
           <div className="space - y-16">;
             {service_categories.map ((category, index) => (
               <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={category.title}
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -429,7 +408,6 @@ function CuttingEdgeServices2025() {
                         <div className="flex items-start justify-between mb-4">
                           <h4 className="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors">
 
-=======
               >;
                 <div className="text - center mb - 12">;
                   <div className={`inline - flex items - center justify - center w - 20 h - 20 rounded - 2xl bg - gradient - to - r ${category.color} p - 5 mb - 6`}>;
@@ -452,7 +430,6 @@ function CuttingEdgeServices2025() {
                       <div className={`bg - gradient - to - br ${category.bg_color} p - 8 rounded - 2xl border ${category.border_color} hover:border - cyan - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105`}>;
                         <div className="flex items - start justify - between mb - 4">;
                           <h4 className="text - xl font - semibold text - white group - hover:text - cyan - 400 transition - colors">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             {service.name}
                           </h4>;
                           <div className="text - right">;
@@ -475,7 +452,6 @@ function CuttingEdgeServices2025() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             </div>
                             <div className="text-sm text-gray-400">/month</div>
                           </div>
@@ -513,7 +489,6 @@ function CuttingEdgeServices2025() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 text-sm"
                           >
                             <Mail className="w-4 h-4 mr-2" />
@@ -529,7 +504,6 @@ function CuttingEdgeServices2025() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-gray-600 text-gray-300 font-semibold rounded-xl hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300 text-sm"
                           >
                             <ExternalLink className="w-4 h-4 mr-2" />
@@ -539,7 +513,6 @@ function CuttingEdgeServices2025() {
                       </div>
                     </motion.div>
 
-=======
                             </div>;
                             <div className="text - sm text - gray - 400">/month</div>;
                           </div>;
@@ -583,7 +556,6 @@ function CuttingEdgeServices2025() {
                         </div>;
                       </div>;
                     </motion.div>))}
-=======
 
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -627,7 +599,6 @@ function CuttingEdgeServices2025() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
@@ -646,7 +617,6 @@ function CuttingEdgeServices2025() {
               <motion.div
 
             className="text - center mb - 16";
-=======
 
             className="text-center mb-16";
 
@@ -664,19 +634,16 @@ function CuttingEdgeServices2025() {
               <motion.div;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="group"
               >
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan}</h3>
                   <div className="space-y-4 mb-8">
-=======
                 className="group";
               >;
                 <div className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 p - 8 rounded - 2xl border border - gray - 700 / 50 hover:border - cyan - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105">;
                   <h3 className="text - 2xl font - bold text - white mb - 4">{plan}</h3>;
                   <div className="space - y-4 mb - 8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {plan === 'Starter' && (
 
                       <>;
@@ -703,7 +670,6 @@ function CuttingEdgeServices2025() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
                     <div className="text-gray-400">per month</div>
                   </div>
@@ -733,7 +699,6 @@ function CuttingEdgeServices2025() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="max-w-4xl mx-auto text-center px-6">
           <motion.div
@@ -741,8 +706,6 @@ function CuttingEdgeServices2025() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-=======
-=======
                       <>;
                         <div className="text - sm text - gray - 400">For large enterprises and organizations</div>;
                         <div className="text - sm text - gray - 400">Full platform access and custom development</div>;
@@ -767,7 +730,6 @@ function CuttingEdgeServices2025() {
           </div>;
         </div>;
       </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Contact Section */}
       <section className="py - 20 bg - gradient - to - r from - cyan - 900 / 20 to - blue - 900 / 20">;
         <div className="max - w-4xl mx - auto text - center px - 6">;
@@ -816,7 +778,6 @@ function CuttingEdgeServices2025() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Get Started Today
@@ -838,7 +799,6 @@ function CuttingEdgeServices2025() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover: bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 <Phone className="mr-2 w-5 h-5" />
@@ -850,10 +810,8 @@ function CuttingEdgeServices2025() {
       </section>
     </Layout>
 
-=======
 }
 
-=======
           >;
             <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 600 bg - clip - text text - transparent">;
               Ready to Experience the Future?;
@@ -904,9 +862,5 @@ function CuttingEdgeServices2025() {
       </section>;
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

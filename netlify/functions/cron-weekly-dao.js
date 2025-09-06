@@ -16,7 +16,6 @@
         owner,
         repo,
         path: 'data/dao/metrics && metrics.json',
-=======
 const fs = require ('fs');
 const path = require ('path');
 const { upsert_file } = require ('./_lib / github');
@@ -46,7 +45,6 @@ if ( {) {
         content,
         message: 'chore (automation): weekly DAO metrics update',
         token,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     return {
@@ -68,7 +66,6 @@ exports.handler = async function() {
       await upsertFile({ owner, repo, path: 'data/dao/metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
 
     }
-=======
       status_code: 200,
       body: JSON.stringify ({ ok: true, updated_at: data.updated_at }),
     }
@@ -91,7 +88,6 @@ if ( {) {
       await upsert_file ({ owner, repo, path: 'data / dao / metrics.json', content, message: 'chore (automation): weekly DAO metrics update', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, updated_at: data.updated_at }) }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
@@ -128,9 +124,5 @@ if ( {) {
 
 }
 
-=======
 },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

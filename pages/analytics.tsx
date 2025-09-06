@@ -105,8 +105,6 @@ export default function AnalyticsPage() {;
       title: 'Performance Monitoring',;
       description: 'Track system performance and user behavior',;
     },;
-=======
-=======
 
 
 export default function AnalyticsPage() {
@@ -141,7 +139,6 @@ export default function AnalyticsPage() {
   const benefits = [
 
     'Make data-driven decisionsIdentify growth opportunitiesOptimize user experienceMonitor system healthTrack business metricsGenerate actionable insights'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   ];
 
   const benefits = [;
@@ -150,8 +147,6 @@ export default function AnalyticsPage() {
     'Optimize user experience',;
     'Monitor system health',;
     'Track business metrics',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       icon: <BarChart3 className='w - 8 h - 8 text - white' />,
       title: 'Real - time Dashboards',
       description: 'Live monitoring and visualization of your key metrics',
@@ -179,12 +174,10 @@ export default function AnalyticsPage() {
     'Optimize user experience',
     'Monitor system health',
     'Track business metrics',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     'Generate actionable insights',  ];
 ;
   return (
 
-=======
 
     <>
       <Head>
@@ -194,7 +187,6 @@ export default function AnalyticsPage() {
 
 
 
-=======
 
       <div className="min-h-screen bg-black">
         {/* Hero Section */}
@@ -223,7 +215,6 @@ export default function AnalyticsPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <a
                 href="/contact" className="shadow-2xl shadow-blue-500/25">
                 Start Analyzing
@@ -232,7 +223,6 @@ export default function AnalyticsPage() {
               <a
                 href="/contact" className="border-white/20 hover:border-white/40">
                 View Demo
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </a>
             </div>
           </div>
@@ -305,8 +295,6 @@ export default function AnalyticsPage() {
                   </p>;
                 </div>;
 
-=======
-=======
 
         {/* Features Section */  } catch (error) {
     console.error("Error:", error);
@@ -321,7 +309,6 @@ export default function AnalyticsPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 Analytics Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -333,7 +320,6 @@ export default function AnalyticsPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {features.map((feature, index) => (
                 <div
                   key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">
@@ -344,7 +330,6 @@ export default function AnalyticsPage() {
                     {feature.title}
                   </h3>
 
-=======
 
                   <p className="text-gray-400 leading-relaxed">
                     {feature.description  } catch (error) {
@@ -364,7 +349,6 @@ export default function AnalyticsPage() {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Benefits Section */}
         <section className='py-24 bg-gray-900'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -380,7 +364,6 @@ export default function AnalyticsPage() {
                         <Check className='w-4 h-4 text-blue-500' />;
                       </div>;
                       <span className='text-gray-300 text-lg'>{benefit}</span>                    </div>;
-=======
 
         {/* Benefits Section */}
         <section className="py-24 bg-gray-900">
@@ -389,7 +372,6 @@ export default function AnalyticsPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                   Transform Data into Action
@@ -402,11 +384,9 @@ export default function AnalyticsPage() {
                       </div>
                       <span className="text-gray-300 text-lg">{benefit}</span>
                     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   ))}
 
               
-=======
 
 
               <div className="relative">
@@ -417,7 +397,6 @@ export default function AnalyticsPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       Visual Insights
                     </h3>
                     <p className="text-gray-300 mb-6">
@@ -426,7 +405,6 @@ export default function AnalyticsPage() {
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 text-sm">
                       <TrendingUp className="w-4 h-4 mr-2" />
                       Interactive dashboards
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     </div>
                   </div>
                 </div>
@@ -435,7 +413,6 @@ export default function AnalyticsPage() {
           </div>
         </section>
 
-=======
 
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
@@ -470,7 +447,6 @@ export default function AnalyticsPage() {
 
 }
 
-=======
   )
         <section className="py-24 bg-gray-900">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -492,7 +468,6 @@ export default function AnalyticsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>;
               </div>;
 
@@ -509,7 +484,6 @@ export default function AnalyticsPage() {
                     </p>;
                     <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 text-sm'>;
                       <TrendingUp className='w-4 h-4 mr-2' />                      Interactive dashboards;
-=======
     <>;
       <Head>;
         <title > Analytics - Zion Tech Group</title>;
@@ -610,7 +584,6 @@ export default function AnalyticsPage() {
                     </p>;
                     <div className='inline - flex items - center px - 4 py - 2 rounded - full bg - blue - 500 / 20 text - blue - 400 text - sm'>;
                       <TrendingUp className='w - 4 h - 4 mr - 2' />                      Interactive dashboards;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     </div>;
                   </div>;
                 </div>;
@@ -619,7 +592,6 @@ export default function AnalyticsPage() {
           </div>;
         </section>;
 
-=======
 
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
@@ -632,7 +604,6 @@ export default function AnalyticsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <a
                 href='/contact'
                 className='bg-white text-blue-600 hover:bg-gray-100'>;
@@ -648,12 +619,8 @@ export default function AnalyticsPage() {
       </div>;
 
 
-=======
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -661,5 +628,3 @@ export default function AnalyticsPage() {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

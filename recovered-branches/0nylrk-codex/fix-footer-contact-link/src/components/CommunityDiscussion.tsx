@@ -14,7 +14,6 @@ interface DiscussionPost {
   avatar?: string;
   time: string;
   title: string;
-=======
 
 
 interface DiscussionPost {
@@ -23,8 +22,6 @@ interface DiscussionPost {
   avatar?: string,
   time: string,
   title: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   body: string
 }
 
@@ -46,7 +43,6 @@ const initial_posts: DiscussionPost[] = [;
   }
 ];
 export const CommunityDiscussion: React.FC = () => {
-=======
 
 const initialPosts: DiscussionPost[] = [;
   {;
@@ -84,7 +80,6 @@ const initialPosts: DiscussionPost[] = [;
     setShowNew(false);
   }
   return (
-=======
 
     id: 1,
     author: "Anna Zhou",
@@ -186,7 +181,6 @@ export const CommunityDiscussion: React.FC = () => {;
     setShowNew(false);
   };
   return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">;
       <div className="flex items-center gap-3 mb-4">;
         <MessageCircle size={28} className="text-zion-cyan" />;
@@ -225,7 +219,6 @@ export const CommunityDiscussion: React.FC = () => {;
               value={newBody}
               onChange={(e: React && React.ChangeEvent<HTMLTextAreaElement>) =>;
                 setNewBody(e && e.target.value);
-=======
 ;
 export const CommunityDiscussion: React.FC = () => {
   const [posts, set_posts] = useState (initial_posts);
@@ -294,7 +287,6 @@ export const CommunityDiscussion: React.FC = () => {
               value={newBody}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
               maxLength={400}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               rows={3}
             />;
 
@@ -308,9 +300,7 @@ export const CommunityDiscussion: React.FC = () => {
             </div>
           </CardContent>
         </Card>
-=======
                 disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
-=======
             <div className="flex gap - 3 justify - end">;
               <Button;
                 variant="secondary";
@@ -326,7 +316,6 @@ export const CommunityDiscussion: React.FC = () => {
                 on_click={handleAddPost}
                 disabled={!new_title.trim () || !new_body.trim ()}
               >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Post;
               </Button>;
             </div>;
@@ -335,7 +324,6 @@ export const CommunityDiscussion: React.FC = () => {
 
 );
 
-=======
 
                 </AvatarFallback>;
               </Avatar>;
@@ -411,10 +399,6 @@ export const CommunityDiscussion: React.FC = () => {
 }
 ;
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

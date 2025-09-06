@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Careers() {
   // Sample job listings
 
@@ -197,7 +196,6 @@ export default function Careers() {;
         location: "Remote",;
         type: "Full-time",;
         department: "Product",;
-=======
 import { SEO } from '@/components / SEO';
 import { GradientHeading } from '@/components / GradientHeading';
 import { Button } from '@/components / ui / button';
@@ -289,7 +287,6 @@ function Careers() {
 
   return (
 
-=======
 
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -497,7 +494,6 @@ export default function Careers() {;
                             <p className="text-zion-slate-light mb-4">{job && job.description}</p>;
                           </div>;
                           <Button className="w-full md:w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
-=======
       {
         title: "Community Manager",
         location: "Remote",
@@ -630,7 +626,6 @@ export default function Careers() {;
                             <p className="text - zion - slate - light mb - 4">{job.description}</p>;
                           </div>;
                           <Button className="w - full md:w - auto mt - 4 md:mt - 0 bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             Apply Now;
                           </Button>;
                         </div>;
@@ -639,7 +634,6 @@ export default function Careers() {;
                     </Card>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
                 </TabsContent>;
               ))}
@@ -647,7 +641,6 @@ export default function Careers() {;
 
 
 
-=======
             </Tabs>;
           </div>;
 
@@ -658,7 +651,6 @@ export default function Careers() {;
               Send us your resume and let's start a conversation.;
             </p>;
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
-=======
                     </Card>))}
                 </TabsContent>))}
             </Tabs>;
@@ -670,7 +662,6 @@ export default function Careers() {;
               Send us your resume and let's start a conversation.;
             </p>;
             <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Send General Application;
             </Button>;
           </div>;
@@ -680,10 +671,6 @@ export default function Careers() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

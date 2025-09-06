@@ -10,8 +10,5 @@ const React from "react"; ); export default function Authslice() { return; }; re
 
 import _React from "react"; ); export default function Authslice() {}; return null} }
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

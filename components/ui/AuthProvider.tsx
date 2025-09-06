@@ -7,14 +7,12 @@ type UserRole = 'talent' | 'client';
         setRoleState(stored);      }
 
 
-=======
       if (stored === 'talent' || stored === 'client') {
 
         setRoleState(stored);      }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } catch {}
   }, []);
@@ -27,7 +25,6 @@ type UserRole = 'talent' | 'client';
   return (    try {
       window.localStorage.setItem('userRole', r);
       document.cookie = `userRole=${r}, path=/, max-age=${60 * 60 * 24 * 365}`
-=======
 
 type AuthContextType = {;
   role: UserRole;
@@ -50,7 +47,6 @@ const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: ()
       if (stored === 'talent' || stored === 'client') {;
         setRoleState(stored);      }        setRoleState(stored);
 
-=======
 
 type AuthContextType = {
   role: UserRole,
@@ -67,7 +63,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (stored === 'talent' || stored === 'client') {
         setRoleState(stored)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     } catch {}
   }, []);
@@ -83,7 +78,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     try { 
       window.localStorage.setItem('userRole', r);
       document.cookie = `userRole=${r}, path=/, max-age=${60 * 60 * 24 * 365}`
-=======
 ;
 type AuthContextType = {
   role: UserRole;
@@ -138,7 +132,6 @@ export function useAuth() {;
   return useContext(AuthContext);
 }
 
-=======
     <AuthContext.Provider value={{ role, set_role }}>;
       {children}
     </AuthContext.Provider>);
@@ -155,8 +148,6 @@ export /**
 function use_auth() {
 return useContext (AuthContext);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 export function useAuth() {;
@@ -168,9 +159,6 @@ export function useAuth() {;
 
 return useContext(AuthContext);
 }
-=======
   return (
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

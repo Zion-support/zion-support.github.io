@@ -3,7 +3,6 @@ function HiringTrackerContent() {;
   const { jobId } = useParams() as { jobId?: string };
 
   const [activeTab, setActiveTab] = useState<string>("kanban");
-=======
 
 
 import { useState } from "react",
@@ -21,14 +20,10 @@ function HiringTrackerContent() {
   const [activeTab, setActiveTab] = useState<string>("kanban"),
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
-=======
 
 
-=======
 import { useState } from "react",;
 import { useParams } from "react-router-dom",;
 import { AppHeader } from "@/layout/AppHeader",;
@@ -98,7 +93,6 @@ import { Briefcase } from './lucide-react';
 function HiringTrackerContent() {
   const { job_id } = use_params () as { job_id?: string }
   const [active_tab, setActiveTab] = useState < string>("kanban");
-=======
 
 
 }
@@ -156,4 +150,3 @@ function HiringTracker() {
       <HiringTrackerContent />;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

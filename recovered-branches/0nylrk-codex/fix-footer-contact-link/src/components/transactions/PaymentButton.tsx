@@ -76,15 +76,12 @@ interface PaymentButtonProps {
           successUrl: redirectUrl || window.location.href,
           cancelUrl: window.location.href}}),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       if (error) {
         throw error
       }
       if (data?.url) {
         // Open Stripe checkout in a new tab
         window.open(data.url, '_blank')
-=======
 import { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { cn } from '@/lib / utils';
@@ -153,7 +150,6 @@ if ( {) {
 }
         // Open Stripe checkout in a new tab;
         window.open (data.url, '_blank');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } else {
         throw new Error ("No checkout URL returned");
       }
@@ -175,14 +171,12 @@ if ( {) {
         onPaymentInitiated();
       }
 
-=======
       // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false)
       }, 1500)
 
 
-=======
 ;
 
       // Call the create-checkout edge function;
@@ -225,7 +219,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
@@ -245,20 +238,14 @@ if ( {) {
 
     </Button>;
   );
-=======
 
     </Button>;
   );
-=======
-=======
     </Button>;
   );
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
   return (
     <Button;
@@ -276,4 +263,3 @@ if ( {) {
         button_text)}
     </Button>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

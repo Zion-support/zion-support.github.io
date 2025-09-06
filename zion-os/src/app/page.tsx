@@ -6,7 +6,6 @@
 
     }
   ]
-=======
 import FeatureCard from './components / FeatureCard',
 export default /**
  * HomePage - Function description
@@ -86,7 +85,6 @@ function HomePage() {
       gradient: &quot;bg - gradient - to - r from - indigo - 600 to - blue - 600 & quot;
     }
   ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div className=&quot;min - h-screen & quot;>;
       {/* Hero Section */}
@@ -101,7 +99,6 @@ function HomePage() {
               <span className="gradient-text">Launch Sovereign</span>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <br />
               <span className=&quot;text-white&quot;>AI-Powered Digital Economies</span>
             </h1>
@@ -115,7 +112,6 @@ function HomePage() {
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
               <a href=&quot;/multiverse/launch&quot; className=&quot;btn-primary hover-lift&quot;>
 
-=======
             
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
@@ -127,7 +123,6 @@ function HomePage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 🚀 Launch Your Economy
               </Link>
               <a href=&quot;/admin/instances&quot; className=&quot;btn-secondary hover-lift&quot;>
@@ -153,10 +148,8 @@ function HomePage() {
           </div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {features.map((feature, index) => (
               <FeatureCard
-=======
       <section className=&quot;relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8&quot;>;
         <div className=&quot;max - w-7xl mx - auto text - center & quot;>;
           <div className=&quot;hero - gradient absolute inset - 0 -z - 10 & quot;></div>;
@@ -196,7 +189,6 @@ function HomePage() {
           <div className=&quot;grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8&quot;>;
             {features.map ((feature, index) => (
               <FeatureCard;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={index}
                 icon={feature.icon}
                 title={feature.title}
@@ -216,7 +208,6 @@ function HomePage() {
             <h2 className="text-4xl font-bold mb-6">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Ready to Build the Future?
             </h2>
             <p className=&quot;text-xl text-white/70 mb-8 max-w-2xl mx-auto&quot;>
@@ -233,7 +224,6 @@ function HomePage() {
           </div>
         </div>
       </section>
-=======
 <section className=&quot;py - 20 px - 4 sm:px - 6 lg:px - 8&quot;>;
         <div className=&quot;max - w-4xl mx - auto text - center & quot;>;
           <div className=&quot;glass - effect rounded - 2xl p - 12 animate - slide - up & quot;>;
@@ -254,7 +244,6 @@ function HomePage() {
           </div>;
         </div>;
       </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Stats Section */}
       <section className=&quot;py - 16 px - 4 sm:px - 6 lg:px - 8 bg - white / 5&quot;>;
         <div className=&quot;max - w-7xl mx - auto & quot;>;

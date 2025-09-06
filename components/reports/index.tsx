@@ -1,14 +1,9 @@
 
 
 export default function ReportsIndex() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function ReportsIndex() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export default function ReportsIndex() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <main className='container mx-auto px-4 py-12 max-w-7xl'>;
@@ -36,9 +31,7 @@ export default function ReportsIndex() {
 
   );
 }
-=======
         <div className="mt-12 text-center">
-=======
 
         {/* Content Categorizer Component */  } catch (error) {
     console.error("Error:", error);
@@ -54,7 +47,6 @@ export default function ReportsIndex() {
         <div className="mt-12 text-center">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
             ← Back to home
           </Link>
@@ -64,8 +56,5 @@ export default function ReportsIndex() {
     </div>);
 }
 
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

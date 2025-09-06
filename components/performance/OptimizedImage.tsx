@@ -28,12 +28,10 @@ interface OptimizedImageProps {;
 
   src: string, alt: string,;
 
-=======
 import Image from 'next / image';
 ;
 interface OptimizedImageProps {
   src: string, alt: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   width?: number;
   height?: number;
   class_name?: string;
@@ -58,7 +56,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({;
 }) => {;
   if (fill) {;
 
-=======
 const OptimizedImage: React.FC < OptimizedImageProps> = ({
   src,
   alt,
@@ -75,7 +72,6 @@ const OptimizedImage: React.FC < OptimizedImageProps> = ({
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return (
       <Image;
         src={src}
@@ -95,7 +91,6 @@ if ( {) {
       width={width |800}
       height={height |600}
       className={className}
-=======
       />);
   }
     <Image;
@@ -104,13 +99,11 @@ if ( {) {
       width={width || 800}
       height={height || 600}
       className={class_name}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       priority={priority}
       sizes={sizes}
 
 
 
-=======
       quality={quality}
       style={style}
 
@@ -120,10 +113,7 @@ if ( {) {
   );
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default OptimizedImage;
-=======
 ;
 export default OptimizedImage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

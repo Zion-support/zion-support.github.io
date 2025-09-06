@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function TalentPool() {
   // Mock talent data
 
@@ -13,7 +12,6 @@ import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
-=======
 
       id: "talent-1",
       name: "Jessica Lee",
@@ -99,7 +97,6 @@ export function TalentPool() {;
 
   const getStatusBadge = (status: string) => {;
     switch (status) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       case "available": return <Badge className="bg-green-500">Available</Badge>;
       case "interviewing":;
         return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>;
@@ -119,7 +116,6 @@ export function TalentPool() {;
           <div>;
             <CardTitle>Dedicated Talent Pool</CardTitle>;
             <CardDescription>Candidates matched to your company</CardDescription>;
-=======
 import React from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -175,7 +171,6 @@ function TalentPool() {
           <div>;
             <CardTitle > Dedicated Talent Pool</CardTitle>;
             <CardDescription > Candidates matched to your company</CardDescription>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </div>;
           <Button size="sm">View All</Button>;
         </div>;
@@ -192,7 +187,6 @@ function TalentPool() {
 
 
                   <Badge key={index} variant="secondary" className="text-xs">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {skill}
                   </Badge>;
                 ))}
@@ -242,7 +236,5 @@ function TalentPool() {
     </Card>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

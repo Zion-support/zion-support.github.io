@@ -1,7 +1,6 @@
 
 
   if (loading) return <div>Loading episodes…</div>;
-=======
 
 
 useEffect ( () => {
@@ -11,7 +10,6 @@ useEffect ( () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='space-y-6'>;
       <div className='flex items-center justify-between'>;
@@ -98,7 +96,6 @@ useEffect ( () => {
             </div>;
           </li>;
 
-=======
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 type EpisodeListItem = {
@@ -174,7 +171,6 @@ export default function PodcastIndexPage() {
             </div>
           </li>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         ))}
       </ul>;
     </div>;
@@ -182,7 +178,6 @@ export default function PodcastIndexPage() {
 
 }
 
-=======
   // Check condition
 if (return <div > Loading episodes…</div>) {
   $2
@@ -275,9 +270,6 @@ if (return <div > Loading episodes…</div>) {
       </ul>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

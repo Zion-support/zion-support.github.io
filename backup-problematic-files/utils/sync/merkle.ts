@@ -4,7 +4,6 @@
   verifyProof: (proof: any[], leaf: string, root: string) => false;
 };
 
-=======
 
 import crypto from 'crypto';
 
@@ -135,4 +134,3 @@ export function verifyMerkleProof(leafData: any, proof: string[], rootHash: stri
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

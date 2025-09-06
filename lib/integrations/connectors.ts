@@ -1,8 +1,6 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
 async function mockProviderCall<T>(
@@ -36,7 +34,6 @@ export const ats = {
     return simulateAction(connection, 'ats.updateStatus', { change })
   }};
 
-=======
   async sync_contact (
     connection: ProviderConnection,
     contact: Record < string, any>,
@@ -67,9 +64,6 @@ export const ats = {
   },
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   async createCandidate(
     connection: ProviderConnection,
@@ -79,4 +73,3 @@ export const ats = {
   },
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

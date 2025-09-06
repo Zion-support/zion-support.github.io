@@ -16,7 +16,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       try {
         const data = fs && fs.readFileSync(p, 'utf8');
         changelog = JSON && JSON.parse(data);
-=======
 ;
       if () {) {
   $2
@@ -27,7 +26,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       try {
         const data = fs.readFileSync (p, 'utf8');
         changelog = JSON.parse (data);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } catch {
         // File doesn't exist, start with empty array;
       }
@@ -51,7 +49,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');
 
-=======
       const new_entry = {
         version,
         changes,
@@ -69,9 +66,5 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   res.set_header ('Allow', 'GET, POST');
   res.status (405).end ('Method Not Allowed');
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

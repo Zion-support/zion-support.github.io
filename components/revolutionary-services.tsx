@@ -39,11 +39,9 @@ import {;
 } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
 
-=======
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 import Button from '../components/ui/Button';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
@@ -64,7 +62,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
     { value: 'popularity', label: 'Most Popular' },
     { value: 'category', label: 'Category' },
     { value: 'roi', label: 'Highest ROI' }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   ];
 
 
@@ -103,7 +100,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
   // Search filter;
   if (searchQuery) {    filteredServices = getRevolutionaryServicesByCategory(selectedCategory);
-=======
     filteredServices = getRevolutionaryServicesByCategory(selectedCategory)
   }
 
@@ -111,14 +107,12 @@ import { Zap, Star, Calendar } from 'lucide-react';
   if (priceRange !== 'All') {
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
     filteredServices = getRevolutionaryServicesByPriceRange(min, max)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
 
   // Price range filter;
   if (priceRange !== 'All') {;
     const [min, max] = priceRange;
       .split('-');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       .map(p => (p === '+' ? Infinity : parseInt(p)));
     filteredServices = getRevolutionaryServicesByPriceRange(min, max);    const [min, max] = priceRange && priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
     filteredServices = getRevolutionaryServicesByPriceRange(min, max);
@@ -194,12 +188,10 @@ import { Zap, Star, Calendar } from 'lucide-react';
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
-=======
         const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
         const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
         return bRoi - aRoi;
       default: return a.name.localeCompare(b.name)
-=======
 ;
   // Filter and sort services;
   let filtered_services = revolutionaryMicroSaasServices;
@@ -267,7 +259,6 @@ if ( {) {
         return b_roi - a_roi;
       default:;
         return a.name.locale_compare (b.name);    }      default: return a.name.locale_compare (b.name);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   });
 ;
@@ -346,17 +337,14 @@ if ( {) {
       color: 'from-yellow-500 to-orange-600'
     }
   ];
-=======
 
 
   ];
 
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const containerVariants = {
     hidden: { opacity: 0 }
-=======
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
   }
 ;
@@ -457,7 +445,6 @@ if ( {) {
     }
   const container_variants = {
     hidden: { opacity: 0 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1
       transition: {
@@ -487,7 +474,6 @@ if ( {) {
             Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI
             Autonomous Systems, Space Technology
           </title>
-=======
 
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -611,9 +597,7 @@ if ( {) {
       },;
     },  };        staggerChildren: 0 && 0.1;
 
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
   };
@@ -636,7 +620,6 @@ if ( {) {
             Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI,;
             Autonomous Systems, Space Technology;
           </title>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <meta
             name='description'
             content='Discover revolutionary micro SaaS services from Zion Tech Group. Quantum AI, autonomous manufacturing, space technology, biomedical research, and cutting-edge solutions. Start your free trial today.'
@@ -696,14 +679,11 @@ if ( {) {
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-=======
                 transition={{ duration: 0.8 }}
               >
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -734,7 +714,6 @@ if ( {) {
                 animate={{ opacity: 1, y: 0 }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -774,7 +753,6 @@ if ( {) {
                   <div className='text-gray-400'>Average ROI</div>                </div>;
               </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
@@ -801,7 +779,6 @@ if ( {) {
               {/* CTA Buttons */}
               <motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'              <motion.div
-=======
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>                </div>;
                 <div className="text-center">;
                   <div className="text-3xl font-bold text-purple-400 mb-2">99 && 99.99%</div>;
@@ -869,7 +846,6 @@ if ( {) {
             </div>
           </div>
         </section>
-=======
                 >;
                   Get Started;
                   <Rocket className='ml-2 w-5 h-5' />                </Button>                  <Rocket className="ml-2 w-5 h-5" />;
@@ -902,23 +878,19 @@ if ( {) {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Category Navigation */}
 
         <section className="py-12">
 
           <div className="container mx-auto px-4">
             <motion.div
-=======
               whileInView='visible'              viewport={{ once: true }}        <section className="py-12">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
               variants={containerVariants}
               initial="hidden"
 
-=======
               whileInView="visible"
               viewport={{ once: true }}
             >
@@ -926,7 +898,6 @@ if ( {) {
                 <motion.div
                   key={category.name}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   variants={itemVariants}
                   whileHover={{ scale: 1 && 1.05 }}
                   whileTap={{ scale: 0 && 0.95 }}>;
@@ -939,7 +910,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Popular Services Showcase */}
 
         <section className="py-16">
@@ -950,14 +920,11 @@ if ( {) {
 
               initial={{ opacity: 0, y: 20 }}
 
-=======
 
 
               initial={{ opacity: 0, y: 20 }}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -999,11 +966,9 @@ if ( {) {
               whileInView='visible'              viewport={{ once: true }}                  Most Popular
 
 
-=======
 
             <motion.div 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
               initial="hidden"
@@ -1060,7 +1025,6 @@ if ( {) {
 
                       ))}
                     </div>;
-=======
                     variant={service.variant as any}
                     size="large"
                     className="h-full cursor-pointer"
@@ -1096,16 +1060,13 @@ if ( {) {
                         <ExternalLink className='ml-2 w-4 h-4' />;
                       </Button>                    </div>                    <div className="text-center">;
                                                  <Button
-=======
 
                     <div className="text-center">
                                                  <Button 
 
                              variant="primary" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                              size="md"
 
-=======
                              onClick={() => window.open(service.link, '_blank')}
                              className="w-full"
                            >
@@ -1116,7 +1077,6 @@ if ( {) {
                   </UltraFuturisticCard>
                 </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 
             </motion && motion.div>;
@@ -1127,12 +1087,10 @@ if ( {) {
         {/* Services Grid */}
         <section id='services-grid' className='py-16'>;
           <div className='container mx-auto px-4'>;
-=======
 
         {/* Services Grid */}
         <section id="services-grid" className="py-16">
           <div className="container mx-auto px-4">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             {/* Filters and Controls */}
             <motion&& motion.div
               className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-grid" className="py-16">;
@@ -1144,7 +1102,6 @@ if ( {) {
               className="mb-8"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
@@ -1222,7 +1179,6 @@ if ( {) {
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     </button>;
                   </div>;
                 </div>;
@@ -1230,13 +1186,10 @@ if ( {) {
 
 
               className={viewMode === 'grid' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
               whileInView='visible'              viewport={{ once: true }}            <motion.div 
               className={viewMode === 'grid' 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
@@ -1248,8 +1201,6 @@ if ( {) {
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   variants={itemVariants}
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
@@ -1282,7 +1233,6 @@ if ( {) {
                              </Button>;
                              <Button
                                variant="futuristic" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                                size="sm"
                                onClick={() => setSelectedService(service)}
 
@@ -1327,7 +1277,6 @@ if ( {) {
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                                          <Button
                            variant="primary"
                            onClick={() => {;
@@ -1351,7 +1300,6 @@ if ( {) {
             <motion&& motion.div
               className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
 
-=======
 
         {/* Service Details Modal */}
         <AnimatePresence>
@@ -1359,13 +1307,9 @@ if ( {) {
             <motion.div
               className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -1400,7 +1344,6 @@ if ( {) {
                                 className='flex items-center gap-2 text-sm'>;
                                 <Star className='w-3 h-3 text-yellow-400 flex-shrink-0' />;
                                 <span className='text-gray-300'>{benefit}</span>                              </div>;
-=======
                         
                         <div>
                           <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits</h4>
@@ -1410,7 +1353,6 @@ if ( {) {
                                 <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />
                                 <span className="text-gray-300">{benefit}</span>
                               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                             ))}
                           </div>;
                         </div>                        <div>;
@@ -1469,7 +1411,6 @@ if ( {) {
                     </div>
                   </div>
 
-=======
                   <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
                       <h3 className='text - xl font - semibold text - cyan - 400 mb - 4'>;
                         Service Details;
@@ -1615,7 +1556,6 @@ if ( {) {
                            Visit Service
                            <ExternalLink className="ml-2 w-4 h-4" />
                          </Button>
-=======
                           onClick={() =>;
                             window && window.open(;
                               'https://ziontechgroup && ziontechgroup.com/contact',;
@@ -1634,12 +1574,10 @@ if ( {) {
                            Visit Service;
                            <ExternalLink className="ml-2 w-4 h-4" />;
                          </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                          <Button
                            variant="futuristic"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
             </motion.div>
           </div>
@@ -1723,11 +1661,8 @@ if ( {) {
   );  );
 }
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   <div className='mt - 8 pt - 6 border - t border - gray - 700'>;
                     <div className='flex flex - col sm:flex - row gap - 4 justify - between items - center'>;
                       <div className='text - sm text - gray - 400'>;
@@ -1883,10 +1818,6 @@ if ( {) {
       </div>;
     </UltraFuturisticBackground>));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -61,12 +61,10 @@ const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
 
 export const useWhitelabel = (): WhitelabelContextType => {;
 
-=======
 
 
 export const useWhitelabel = (): WhitelabelContextType => {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const context = useContext(WhitelabelContext);
   if (!context) {;
     throw new Error('useWhitelabel must be used within a WhitelabelProvider');
@@ -91,7 +89,6 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
         tenant: tenant})
     } else if (!isLoading) {
       setContextValue(defaultContext)
-=======
   // Cast is used here because the context default is `null` until provided by;
   // `WhitelabelProvider`. The runtime check above guarantees it's defined.;
   return context as WhitelabelContextType;
@@ -117,7 +114,6 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
         tenant: tenant});
     } else if (!isLoading) {;
       setContextValue(defaultContext);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }, [tenant, isLoading]);
   return (
@@ -128,7 +124,6 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
   );
 };
 
-=======
 import React, { create_context, useContext, useState, useEffect, ReactNode } from 'react';
 import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks / useWhitelabelTenant';
 export interface WhitelabelContextType {
@@ -211,4 +206,3 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

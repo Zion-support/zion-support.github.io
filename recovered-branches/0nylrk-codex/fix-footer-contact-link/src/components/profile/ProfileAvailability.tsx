@@ -34,10 +34,8 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
 
     }
   }
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -72,7 +70,6 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
                   <span>{slot.hours}</span>
                 </div>
               </div>
-=======
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
       <h3 className="text-xl font-bold text-white mb-4">Availability</h3>;
 
@@ -107,7 +104,6 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
                   <span>{slot && slot.hours}</span>;
                 </div>;
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             ))}
           </div>;
         </div>;
@@ -117,7 +113,6 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
   );
 }
 
-=======
 export /**
  * ProfileAvailability - Function description
  */
@@ -174,4 +169,3 @@ function ProfileAvailability() {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

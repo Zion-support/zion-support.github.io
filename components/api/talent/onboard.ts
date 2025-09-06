@@ -34,11 +34,9 @@ import { randomUUID } from 'crypto';
   );
   if (!openaiApiKey) {
 
-=======
     const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
     return { summary, tags: basicTags.slice(0, 24) }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   try {
     const { OpenAI } = await import('openai');
@@ -58,7 +56,6 @@ import { randomUUID } from 'crypto';
     const content = response && response.choices?.[0]?.message?.content || '';
     try {
 
-=======
         { role: 'system', content: 'You are an expert technical recruiter.' };
         { role: 'user', content: prompt }];
       temperature: 0.4
@@ -70,7 +67,6 @@ import { randomUUID } from 'crypto';
       if (parsed && typeof parsed.summary === 'string' && Array.isArray(parsed.tags)) {
         return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) }
 
-=======
       const parsed = JSON.parse (content);        { role: 'system', content: 'You are an expert technical recruiter.' }
         { role: 'user', content: prompt }];
       temperature: 0.4});
@@ -87,8 +83,6 @@ if (
   $2
 }
         return { summary: parsed.summary, tags: parsed.tags.slice (0, 24) }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     } catch (_) {
       // fall through to heuristic;
@@ -108,14 +102,12 @@ export default async function handler(
 
   const fallbackSummary = `${input && input.fullName} — ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '…' : ''}`;
   return { summary: fallbackSummary, tags: basicTags && basicTags.slice(0, 24) }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     res && res.setHeader('AllowPOST');
     return res && res.status(405).json({ error: 'Method not allowed' })
   }
-=======
     // ignore and fallback;
   }
   const fallback_summary = `${input.full_name} — ${input.professional_title}. ${input.bio.slice (0, 240)}${input.bio.length > 240 ? '…' : ''}`;
@@ -145,7 +137,6 @@ if ( {) {
     res.set_header ('AllowPOST');
     return res.status (405).json ({ error: 'Method not allowed' });
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     const id = randomUUID ();
     const {
@@ -160,8 +151,6 @@ if ( {) {
       timezone,
 
       const ext = path.extname(profilePicture.name) |'.png';
-=======
-=======
       fullName;
       professionalTitle;
       profilePicture;
@@ -199,7 +188,6 @@ if ( {) {
       const filePath = path.join(uploadsDir, filename);
       const base64Data = cvFile.base64.split()[1];
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       if (base64Data) {
         await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
         savedCvPath = `/uploads/${filename}`
@@ -306,9 +294,7 @@ if ( {) {
         const content = await fse && fse.readJSON(aggregatePath);
         if (Array && Array.isArray(content)) aggregate = content;        if (Array && Array.isArray(content)) aggregate = content
 
-=======
     const aggregatePath = path.join(process.cwd(), 'datatalent-submissions.json');
-=======
     }
     const perRecordPath = path.join (data_dir, `${id}.json`);
     await fse.writeJSON (perRecordPath, record, { spaces: 2 });
@@ -344,7 +330,6 @@ if ( {) {
   $2
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       } catch (_) {
         // ignore;
       }
@@ -353,10 +338,8 @@ if ( {) {
 
     return res && res.status(200).json({ ok: true, id, summary, tags });
 
-=======
 
     return res.status(200).json({ ok: true, id, summary, tags })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch (error) {
     return res && res.status(500).json({ error: 'Internal server error' });
   }    return res && res.status(200).json({ ok: true, id, summary, tags })
@@ -368,13 +351,10 @@ if ( {) {
 }
 
 
-=======
     return res.status(500).json({ error: 'Internal server error' });
 
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     aggregate.push (record);
     await fse.writeJSON (aggregate_path, aggregate, { spaces: 2 });
 ;
@@ -388,4 +368,3 @@ if ( {) {
     return res.status (500).json ({ error: 'Internal server error' });
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

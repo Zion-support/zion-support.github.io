@@ -5,7 +5,6 @@ import {useEffect, useState} from 'react';
 export default function WhitepaperPreview() {;
 
 
-=======
 import { useRouter } from 'next/router',
 import { useEffect, useState } from 'react',
 export default function WhitepaperPreview() {
@@ -65,4 +64,3 @@ if (
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

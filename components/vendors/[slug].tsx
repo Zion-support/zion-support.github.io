@@ -1,12 +1,9 @@
 import type { GetServerSideProps } from 'next';
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function VendorProfilePage({ vendor }: Props) {
-=======
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },;
 export default function VendorProfilePage(): any ({ vendor }: Props) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -30,14 +27,12 @@ export default function VendorProfilePage(): any ({ vendor }: Props) {;
     } finally {;
       setLoading(false);
 
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ vendorId: vendor.id, title })});
       if (!res.ok) throw new Error('Failed to submit');
       setMessage('Thanks! We will contact you soon.');
       form.reset()
-=======
 import {FormEvent, useState} from 'react';
 import type { Vendor } from '../../utils / vendor - types';
 ;
@@ -153,7 +148,6 @@ function submit_lead() {
       )}
 
               </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
@@ -187,7 +181,6 @@ function submit_lead() {
             {loading ? 'Submitting...' : 'Send'}
           </button>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {message && <div className="text-sm">{message}</div>}
 
         </form>;
@@ -207,7 +200,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
 
 };
 
-=======
       set_loading (false);
     }
   }
@@ -351,8 +343,6 @@ export const getServerSideProps: GetServerSideProps < Props> = async (ctx) => {
   return { props: { vendor } }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
         </form>
       </div>
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
@@ -361,4 +351,3 @@ export const getServerSideProps: GetServerSideProps < Props> = async (ctx) => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

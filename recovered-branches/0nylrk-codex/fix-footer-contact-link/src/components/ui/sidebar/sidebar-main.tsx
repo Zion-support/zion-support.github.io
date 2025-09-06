@@ -20,7 +20,6 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
 ;
   if (props.collapsible === &quot;none&quot;) {
 
-=======
 
   if (props.collapsible === "none") {
 
@@ -28,11 +27,8 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
       <div
         className={cn(
           "flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           props.className
         )}
-=======
 import * as React from &quot;react & quot;
 import type { CSSProperties } from &quot;react & quot;
 import { Sheet, SheetContent } from &quot;@/components / ui / sheet & quot;
@@ -56,7 +52,6 @@ if ( {) {
         className={cn (
           &quot;flex h - full w-[--sidebar - width] flex - col bg - sidebar text - sidebar - foreground & quot;,
           props.class_name)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         ref={ref}
         {...props}
       >;
@@ -93,7 +88,6 @@ className=&quot;group peer hidden md:block text - sidebar - foreground & quot;
       data - collapsible={state === &quot;collapsed & quot; ? props.collapsible : ""}
       data - variant={props.variant}
       data - side={props.side}
-=======
 
 ;
   return (;
@@ -104,7 +98,6 @@ className=&quot;group peer hidden md:block text - sidebar - foreground & quot;
       data-collapsible={state === "collapsed" ? props.collapsible : ""}
       data-variant={props.variant}
       data-side={props.side}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     >;
       {/* This is what handles the sidebar gap on desktop */}
 
@@ -135,7 +128,6 @@ className=&quot;group peer hidden md:block text - sidebar - foreground & quot;
 
           props.className
         )}
-=======
 <div;
         className={cn (
           "duration - 200 relative h - svh w-[--sidebar - width] bg - transparent transition-[width] ease - linear & quot;,
@@ -156,7 +148,6 @@ className=&quot;group peer hidden md:block text - sidebar - foreground & quot;
             ? &quot;p - 2 group - data-[collapsible = icon]:w-[calc (var (--sidebar - width - icon)_ + _theme (spacing.4)_ + 2px)]&quot;
             : &quot;group - data-[collapsible = icon]:w-[--sidebar - width - icon] group - data-[side = left]:border - r group - data-[side = right]:border - l&quot;,
           props.class_name)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {...props}
       >;
         <div;
@@ -171,10 +162,8 @@ Sidebar.displayName = "Sidebar"
 export const SidebarRail = React.forwardRef<
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
-=======
         </div>;
       </div>;
     </div>);
@@ -186,7 +175,6 @@ export const SidebarRail = React.forward_ref<;
   React.ComponentProps<&quot;button & quot;>;
 >((props, ref) => {
   const { toggle_sidebar } = use_sidebar ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <button;
       ref={ref}
@@ -213,7 +201,6 @@ SidebarRail.displayName = "SidebarRail"
 export const SidebarInset = React.forwardRef<
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >((props, ref) => {
   return (
     <main
@@ -266,8 +253,6 @@ export const SidebarInset = React.forward_ref<;
 });
 SidebarInset.display_name = &quot;SidebarInset";
 
-=======
 
 SidebarInset.displayName = "SidebarInset"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

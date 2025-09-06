@@ -24,7 +24,6 @@ export default function ITOnsiteServicesPage() {;
 
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Show success toast if redirected from successful payment
   useEffect(() => {
     if (success === "true") {
@@ -70,7 +69,6 @@ export default function ITOnsiteServicesPage() {;
     }, 100)
 
 
-=======
 
   },
   
@@ -140,7 +138,6 @@ export default function ITOnsiteServicesPage() {;
       document && document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' });
     }, 100);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <AppLayout>;
@@ -149,7 +146,6 @@ export default function ITOnsiteServicesPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Hero Section with Features */}
 
           <PageHero />;
@@ -158,11 +154,9 @@ export default function ITOnsiteServicesPage() {;
           <div className="mb-12">;
 
             <CountryTabs
-=======
 
             <CountryTabs 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               popularCountries={popularCountries}
               filteredCountries={filteredCountries}
               handleCountrySelect={handleCountrySelect}
@@ -210,7 +204,6 @@ export default function ITOnsiteServicesPage() {;
   );
 }
 
-=======
 import { useState, useEffect } from './react';
 import { useSearchParams } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -325,9 +318,6 @@ if (return 1) {
       <QuoteFormSection />;
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

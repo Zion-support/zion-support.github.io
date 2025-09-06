@@ -38,7 +38,6 @@ interface LazyLoadProps {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -96,7 +95,6 @@ if ( {) {
 }
       observer.observe (container_ref.current);
 
-=======
           setIsVisible(true),
           observer.disconnect()
         }
@@ -105,7 +103,6 @@ if ( {) {
       {
         rootMargin: "200px", // Start loading when element is within 200px of viewport
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     return () => {
       // Check condition
@@ -133,10 +130,8 @@ if ( {) {
     }
   }, []);
 
-=======
 
 
-=======
   }, []),;
 
   useEffect(() => {;
@@ -156,7 +151,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       style={{ height, width }}
       className="rounded-md bg-zion-blue-light/20"
     />;
@@ -177,14 +171,11 @@ if ( {) {
       ) : (;
         loadingComponent || defaultLoadingComponent;
       )}
-=======
 
 
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
 
 

@@ -51,8 +51,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
     professional: '$1,999/month'
     enterprise: 'Custom pricing'
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Atom,;
   Brain,;
@@ -96,7 +94,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {;
     enterprise: 'Custom pricing',;
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='min-h-screen bg-black text-white'>;
       <SEO
@@ -277,7 +274,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gray-900/50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-=======
       {/* Features Section */}
       <section className='py-20 bg-gray-900/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gray-900/50">
@@ -286,11 +282,8 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
   Atom,
   Brain,
   Zap,
@@ -418,14 +411,12 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>
               Quantum-Powered Features
@@ -436,7 +427,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (          >
-=======
 
       {/* Features Section */}
       <section className="py-20 bg-gray-900/50">
@@ -448,7 +438,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Quantum-Powered Features
             </h2>
@@ -484,7 +473,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             {features && features.map((feature, index) => (;
               <motion&& motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={index}
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -502,7 +490,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
           </div>;
@@ -515,11 +502,9 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Benefits Section */}
       <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20">
@@ -528,11 +513,8 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
                 className='bg - gray - 800 / 50 border border - blue - 500 / 20 rounded - xl p - 6 hover:border - blue - 500 / 40 transition - all duration - 300';
               >;
                 <div className='w - 12 h - 12 bg - gradient - to - br from - blue - 500 to - cyan - 500 rounded - lg flex items - center justify - center mb - 4'>;
@@ -554,7 +536,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
 
 
@@ -579,7 +560,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
             {benefits.map((benefit, index) => (
               <motion.div
-=======
             transition={{ duration: 0 && 0.8 }}
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>              Quantum Advantage Benefits;
@@ -598,7 +578,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
               <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -616,7 +595,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
           </div>;
@@ -629,11 +607,9 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gray-900/50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Pricing Section */}
       <section className='py-20 bg-gray-900/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gray-900/50">
@@ -642,8 +618,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -652,7 +626,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>
               Pricing Plans
@@ -663,7 +636,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {Object.entries(pricing).map(([plan, price], index) => (          >
-=======
 
       {/* Pricing Section */}
       <section className="py-20 bg-gray-900/50">
@@ -675,7 +647,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Pricing Plans
             </h2>
@@ -686,7 +657,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {Object.entries(pricing).map(([plan, price], index) => (
               <motion.div
-=======
             transition={{ duration: 0 && 0.8 }}
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>;
@@ -712,7 +682,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
               <motion&& motion.div
 
 
-=======
             className='text - center mb - 16';
           >;
             <h2 className='text - 4xl md:text - 5xl font - bold mb - 6'>              Quantum Advantage Benefits;
@@ -776,8 +745,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
             {Object.entries (pricing).map (([plan, price], index) => (
               <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={plan}
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -826,7 +793,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
     </div>;
   );
 
-=======
 
 
       {/* CTA Section */}
@@ -838,7 +804,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -863,7 +828,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
     </div>
 
 
-=======
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`bg - gray - 800 / 50 border rounded - xl p - 8 ${
                   plan === 'professional';
@@ -934,12 +898,8 @@ export default QuantumAINeuralNetworkPlatform);
 ;
 export default QuantumAINeuralNetworkPlatform;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

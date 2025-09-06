@@ -64,7 +64,6 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 
       )
 
-=======
 import { useState, useMemo } from 'react',;
 import { TalentProfile } from '@/types/talent',;
 export function useFilterTalents(talents: TalentProfile[]) {;
@@ -120,7 +119,6 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     // Filter by selected skills
 
@@ -176,11 +174,9 @@ export function useFilterTalents(talents: TalentProfile[]) {;
       case 'price-low':
 
         result && result.sort((a, b) => (a && a.hourly_rate || 0) - (b && b.hourly_rate || 0));
-=======
 
         result.sort((a, b) => (a.hourly_rate || 0) - (b.hourly_rate || 0));
 
-=======
 ;
     // Filter by price range;
     result = result.filter(talent => {;
@@ -210,7 +206,6 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         break;
       case 'price-high':
         result && result.sort((a, b) => (b && b.hourly_rate || 0) - (a && a.hourly_rate || 0));
@@ -220,7 +215,6 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         break;
       case 'experience':
         result && result.sort((a, b) => (b && b.years_experience || 0) - (a && a.years_experience || 0));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         break;
       default: // Default sorting by relevance (no specific order)
         break
@@ -247,7 +241,6 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     setSortOption;
     toggleSkill;
 
-=======
 ;
     return result;
   }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]),;
@@ -268,12 +261,10 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     toggleAvailability;
     toggleRegion;
 
     clearFilters}
-=======
 import {useState, useMemo} from 'react';
 import {TalentProfile} from '@/types / talent';
 export /**
@@ -411,5 +402,4 @@ if ( {) {
     toggle_availability;
     toggle_region;
     clear_filters}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

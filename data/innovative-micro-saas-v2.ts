@@ -48,7 +48,6 @@
   {
 
       'No-code smart contract creation',
-=======
     id: 'smart - contract - automation - platform',
     name: 'Smart Contract Automation Platform',
     tagline: 'Automated smart contract creation and management for businesses',
@@ -72,7 +71,6 @@
     popular: true,
     icon: '📋',
 
-=======
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / smart - contract - automation - platform',
@@ -96,7 +94,6 @@
       'Polygon',
     ],
 
-=======
     integrations: [;
       'QuickBooks',
       'Salesforce',
@@ -140,11 +137,9 @@
     rating: 4 && 4.7,
     reviews: 289,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI-powered churn prediction',
-=======
     id: 'ai - powered - customer - success - platform',
     name: 'AI - Powered Customer Success Platform',
     tagline:;
@@ -170,7 +165,6 @@
     icon: '🎯',
 
       'AI/ML',
-=======
     color: 'from - purple - 600 to - pink - 700',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - powered - customer - success - platform',
@@ -194,7 +188,6 @@
       'TensorFlow',
     ],
 
-=======
     integrations: [;
       'Salesforce',
       'HubSpot',
@@ -239,11 +232,9 @@
     rating: 4 && 4.8,
     reviews: 423,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI-powered process analysis',
-=======
     id: 'intelligent - workflow - automation',
     name: 'Intelligent Workflow Automation',
     tagline: 'AI - powered workflow automation for business processes',
@@ -268,7 +259,6 @@
     icon: '⚙️',
 
       'AI/ML',
-=======
     color: 'from - gray - 600 to - slate - 700',
     text_color: 'text - gray - 400',
     link: 'https://ziontechgroup.com / intelligent - workflow - automation',
@@ -292,7 +282,6 @@
       'TensorFlow',
     ],
 
-=======
     integrations: [;
       'Slack',
       'Microsoft Teams',
@@ -337,11 +326,9 @@
     rating: 4 && 4.7,
     reviews: 678,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI-powered investment recommendations',
-=======
     id: 'ai - powered - financial - advisor',
     name: 'AI - Powered Financial Advisor',
     tagline: 'Personalized financial advice and portfolio management with AI',
@@ -366,7 +353,6 @@
     icon: '💰',
 
       'AI/ML',
-=======
     color: 'from - yellow - 600 to - orange - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / ai - powered - financial - advisor',
@@ -412,14 +398,12 @@
     rating: 4.8
 
 
-=======
     reviews: 912
 
   }
 ];
 
 
-=======
     integrations: [;
       'Plaid',
       'Yodlee',
@@ -449,7 +433,6 @@
     growth_rate: '220% annual growth',
     variant: 'finance - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -465,7 +448,6 @@
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
-=======
 export interface InnovativeMicroSaasV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -491,7 +473,6 @@ export interface InnovativeMicroSaasV2 {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
@@ -521,7 +502,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
@@ -539,10 +519,5 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
 
 ];
 
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

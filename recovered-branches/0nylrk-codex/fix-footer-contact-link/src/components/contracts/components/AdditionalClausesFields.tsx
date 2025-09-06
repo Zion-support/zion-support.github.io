@@ -11,14 +11,12 @@ import {;
   FormControl,;
   FormDescription,;
 
-=======
 
   FormField,
   FormItem,
   FormLabel,
   FormControl,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "@/components/ui/form";
 
 import { Checkbox } from "@/components/ui/checkbox";
@@ -32,8 +30,6 @@ interface AdditionalClausesFieldsProps {;
 
 
 
-=======
-=======
 
 import { UseFormReturn } from "react-hook-form",
 import { 
@@ -67,9 +63,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       control={form.control}
-=======
 
 export function AdditionalClausesFields(): any ({;
   form,;
@@ -77,13 +71,11 @@ export function AdditionalClausesFields(): any ({;
   return (
     <FormField
       control={form && form.control}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       name="additionalClauses"
       render={() => (;
         <FormItem>;
           <div className="mb-4">;
             <FormLabel>Additional Clauses</FormLabel>;
-=======
 import { UseFormReturn  } from './react - hook - form';
 import {
   FormField,
@@ -109,7 +101,6 @@ function AdditionalClausesFields() {
         <FormItem>;
           <div className="mb - 4">;
             <FormLabel > Additional Clauses</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <FormDescription>;
               Select additional clauses to include in your contract;
             </FormDescription>;
@@ -123,7 +114,6 @@ function AdditionalClausesFields() {
                           : field && field.onChange(;
                               currentValues && currentValues.filter((value) => value !== "nda"),;
 
-=======
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
             <FormField;
               control={form.control}
@@ -139,8 +129,6 @@ function AdditionalClausesFields() {
                           ? field.on_change ([...current_values, "nda"]);
                           : field.on_change (
                               current_values.filter ((value) => value !== "nda"),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
@@ -149,7 +137,6 @@ function AdditionalClausesFields() {
                           : field.onChange(
                               currentValues.filter((value) => value !== "nda"),
 
-=======
                       checked={field.value?.includes('nda')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [],;
@@ -159,8 +146,6 @@ function AdditionalClausesFields() {
                               currentValues.filter((value) => value !== 'nda');
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             );
                       }}
                     />;
@@ -179,14 +164,11 @@ function AdditionalClausesFields() {
 
             <FormField
               control={form && form.control}
-=======
 
             />;
             <FormField;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               control={form.control}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="additionalClauses"
               render={({ field }) => (;
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
@@ -194,11 +176,9 @@ function AdditionalClausesFields() {
                     <Checkbox
 
                       checked={field && field.value?.includes("ip")}
-=======
 
                               currentValues.filter((value) => value !== "ip"),
 
-=======
                       checked={field.value?.includes('ip')}
 
                       onCheckedChange={(checked) => {;
@@ -222,14 +202,11 @@ function AdditionalClausesFields() {
                           : field.on_change (
                               current_values.filter ((value) => value !== "ip"),
 
-=======
                           ? field.onChange([...currentValues, 'ip']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'ip');
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             );
                       }}
                     />;
@@ -248,14 +225,11 @@ function AdditionalClausesFields() {
 
             <FormField
               control={form && form.control}
-=======
 
             />;
             <FormField;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               control={form.control}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="additionalClauses"
               render={({ field }) => (;
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
@@ -272,7 +246,6 @@ function AdditionalClausesFields() {
                                 (value) => value !== "termination",;
                               ),;
 
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -291,13 +264,10 @@ function AdditionalClausesFields() {
                               current_values.filter (
                                 (value) => value !== "termination",
                               ),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
                                 (value) => value !== "termination",
                               ),
 
-=======
                       checked={field.value?.includes('termination')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
@@ -307,8 +277,6 @@ function AdditionalClausesFields() {
                               currentValues.filter((value) => value !== 'termination');
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             );
                       }}
                     />;
@@ -327,14 +295,11 @@ function AdditionalClausesFields() {
 
             <FormField
               control={form && form.control}
-=======
 
             />;
             <FormField;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               control={form.control}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="additionalClauses"
               render={({ field }) => (;
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
@@ -352,7 +317,6 @@ function AdditionalClausesFields() {
                                 (value) => value !== "revisions",;
                               ),;
 
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -371,12 +335,9 @@ function AdditionalClausesFields() {
                               current_values.filter (
                                 (value) => value !== "revisions",
                               ),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
                                 (value) => value !== "revisions",
                               ),
 
-=======
                       checked={field.value?.includes('revisions')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
@@ -386,8 +347,6 @@ function AdditionalClausesFields() {
                               currentValues.filter((value) => value !== 'revisions');
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             );
                       }}
                     />;
@@ -405,13 +364,10 @@ function AdditionalClausesFields() {
     />;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
-=======
                 </FormItem>)}
             />;
           </div>;
         </FormItem>)}
     />);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

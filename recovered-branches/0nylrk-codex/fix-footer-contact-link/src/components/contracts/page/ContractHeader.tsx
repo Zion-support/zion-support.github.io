@@ -14,7 +14,6 @@ export function ContractHeader(): any ({ onCreateClick }: ContractHeaderProps) {
       <Button size="lg" onClick={onCreateClick}>;
         Create New Contract;
       </Button>;
-=======
 
 import { Button } from "@/components/ui/button";
 interface ContractHeaderProps {
@@ -25,7 +24,6 @@ interface ContractHeaderProps {
 
 
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 
 import { Button  } from '@/components / ui / button';
@@ -50,8 +48,6 @@ function ContractHeader() {
     </div>);
 
 }
-=======
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

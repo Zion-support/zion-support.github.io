@@ -17,7 +17,6 @@ import { useRouter } from 'next/router';
 
       id: 'ai-automation-manufacturing',
       title: 'AI-Powered Manufacturing Automation',
-=======
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -117,7 +116,6 @@ function CaseStudyPage() {
       challenge: 'Cloud costs were spiraling out of control with poor resource utilization.',
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <h2>Background</h2>
         <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages.
         Their infrastructure was not scaling efficiently with their business growth.</p>
@@ -128,7 +126,6 @@ function CaseStudyPage() {
         <p>We designed and implemented a comprehensive cloud optimization system: </p>
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <ul>
           <li>Auto-scaling infrastructure with intelligent resource allocation</li>
           <li>Self-healing systems with automatic failure recovery</li>
@@ -150,10 +147,7 @@ function CaseStudyPage() {
 
 
 
-=======
 
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -284,11 +278,8 @@ export default function CaseStudyPage(req, res) {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (!caseStudy) {
     return (
       <>
@@ -350,7 +341,6 @@ export default function CaseStudyPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -482,7 +472,6 @@ export default function CaseStudyPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </ul>
                 </div>
 
@@ -520,10 +509,8 @@ export default function CaseStudyPage(req, res) {
       </div>
     </>
 
-=======
 }
 
-=======
       solution: 'Built self - healing, auto - scaling cloud infrastructure with intelligent cost optimization.',
       results: ['50% reduction in cloud costs99.9% uptime achieved3x improvement in performance'],
       duration: '8 months',
@@ -671,9 +658,5 @@ if ( {) {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

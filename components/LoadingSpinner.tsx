@@ -3,16 +3,12 @@ import React from 'react';
 ;
 
 interface LoadingSpinnerProps {
-=======
 
 interface LoadingSpinnerProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
 interface LoadingSpinnerProps {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'blue' | 'white' | 'gray' | 'slate';
   text?: string;
@@ -59,7 +55,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
   }
   return spinner;
 }
-=======
 const LoadingSpinner: React.FC < LoadingSpinnerProps> = ({
   size = 'md',
   text = 'Loading...',
@@ -98,7 +93,6 @@ if ( {) {
   return spinner;
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export default LoadingSpinner;
 import React from 'react;
 import { Loader2 } from 'lucide-react;
@@ -126,14 +120,10 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
         <p className="mt-2 text-sm text-gray-600 animate-pulse>{text}</p>      )}"    </div>);
 }
 export default LoadingSpinner;
-=======
 export default LoadingSpinner;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
-=======
 export default function LoadingSpinner() {
   return (
     <div className="min-h-screen bg-slate-950 flex items-center justify-center">
@@ -143,7 +133,6 @@ export default function LoadingSpinner() {
       </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </div>
   );
   } catch (error) {
@@ -153,4 +142,3 @@ export default function LoadingSpinner() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

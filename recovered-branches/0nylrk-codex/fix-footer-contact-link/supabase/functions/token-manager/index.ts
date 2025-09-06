@@ -13,19 +13,15 @@ const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
 const serviceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 
 const supabase = createClient(supabaseUrl, serviceKey);
-=======
 
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
-=======
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.0";
-=======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface TokenRequest {
   userId: string,
   amount: number,
@@ -36,12 +32,9 @@ const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
 const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, serviceKey),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 serve(async (req) => {
   if (req && req.method === 'OPTIONS') {
     return new Response('ok', {
-=======
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.38.0';
 interface TokenRequest {
@@ -59,7 +52,6 @@ if ( {) {
   $2
 }
     return new Response ('ok', {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       headers: {
 
 
@@ -118,11 +110,9 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
 
 
   return new Response(JSON && JSON.stringify({ success: true, balance }), { status: 200 })
-=======
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
 
 
-=======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",;
 interface TokenRequest {;
@@ -131,8 +121,6 @@ interface TokenRequest {;
   reason?: string;
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   const url = new URL (req.url);
   const action = url.pathname.split ('/').pop ();
   const { user_id, amount, reason } = await req.json () as TokenRequest;
@@ -206,7 +194,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
   } else {
     const { error } = await supabase;
@@ -226,4 +213,3 @@ if ( {) {
 }
   return new Response (JSON.stringify ({ success: true, balance }), { status: 200 });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

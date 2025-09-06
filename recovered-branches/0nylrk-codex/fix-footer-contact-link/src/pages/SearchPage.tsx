@@ -41,7 +41,6 @@ export default function SearchPage() {;
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   useEffect(() => {
     if (initial) {
       search(initial)
@@ -64,7 +63,6 @@ export default function SearchPage() {;
     search(query);
   };
 
-=======
 
   }, [initial]),
 
@@ -74,7 +72,6 @@ export default function SearchPage() {;
     search(query)
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <AppLayout>;
@@ -90,7 +87,6 @@ export default function SearchPage() {;
         </form>;
 
 
-=======
 
 
 import { useEffect, useState } from "react",;
@@ -129,8 +125,6 @@ export default function SearchPage() {;
           />;
         </form>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results && results.length === 0 && (;
           <p className="text-zion-slate-light">No results found.</p>;
@@ -156,7 +150,6 @@ export default function SearchPage() {;
   );
 }
 
-=======
 import { useEffect, useState } from './react';
 import { use_navigate, useSearchParams } from './react-router-dom';
 import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';
@@ -220,4 +213,3 @@ if ( {) {
       </main>;
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

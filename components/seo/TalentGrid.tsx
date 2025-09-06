@@ -11,7 +11,6 @@ type Props = {;
 };
 
 function matchesRegion(): any (profile: TalentProfile, region?: string) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!region) return true;
 
 
@@ -58,7 +57,6 @@ function matchesRegion(): any (profile: TalentProfile, region?: string) {;
           </div>;
         </div>;
 
-=======
   const r = region.toLowerCase();
   return profile.location.toLowerCase().includes(r)
 }
@@ -99,7 +97,6 @@ export default function TalentGrid({ region, service }: Props) {
           <div className="mt-3 text-sm">${p.hourlyRateUsd}/hr • {p.availability}</div>
         </div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       ))}
     </div>;
   );
@@ -108,7 +105,6 @@ export default function TalentGrid({ region, service }: Props) {
 
 }
 
-=======
 import React from './react';
 import { TALENT_PROFILES  } from '../../data / talent';
 import type { TalentProfile } from "../../data / talent";
@@ -198,7 +194,4 @@ if ( {) {
         </div>))}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

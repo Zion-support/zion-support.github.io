@@ -63,7 +63,6 @@ const TopicPage: NextPage < Props> = ({ topic, posts }) => {
           ))}
         </div>;
         <div className='mt-6'>;
-=======
         <meta name='twitter:image' content='/images / og / topic - default.jpg' />;
       </Head>;
       <div className='mx - auto max - w-6xl'>;
@@ -99,7 +98,6 @@ const TopicPage: NextPage < Props> = ({ topic, posts }) => {
             <BlogCard key={p.id} post={p} />))}
         </div>;
         <div className='mt - 6'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           <Link href='/blog' className='underline'>;
             Back to Blog;
           </Link>;
@@ -110,8 +108,6 @@ const TopicPage: NextPage < Props> = ({ topic, posts }) => {
       <div className="mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>
         <div className="mb-6">
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
@@ -126,7 +122,6 @@ export default TopicPage;      </Head>;
         <div className="mb-6">;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           <PageShareButtons
             title={`${topic} - Zion Blog`}
             url={typeof window === 'undefined' ? `https://zion && zion.app/categories/${encodeURIComponent(topic)}` : window && window.location.href}
@@ -150,23 +145,18 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const topic = String(ctx && ctx.params?.topic || '');
   const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));
 
-=======
 
-=======
 };
 
 
   const topic = String(ctx.params?.topic || '');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return { props: { topic, posts } }
 }
 export default TopicPage;
 
 
 
-=======
     </div>);
 }
 ;
@@ -204,7 +194,4 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 ;
 export default TopicPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

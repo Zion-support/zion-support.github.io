@@ -2,23 +2,19 @@
 
 interface AccessibilityContextType {;
 
-=======
 
 
 
 interface AccessibilityContextType {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
-=======
 import React, { create_context, useContext, useState, ReactNode } from './react';
 ;
 interface AccessibilityContextType {
   high_contrast: boolean;
   large_text: boolean;
   reduced_motion: boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   toggleHighContrast: () => void;
   toggleLargeText: () => void;
   toggleReducedMotion: () => void;
@@ -65,12 +61,10 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
   children,;
 }) => {;
 
-=======
 
   children,
 }) => {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [highContrast, setHighContrast] = useState(false);
   const [largeText, setLargeText] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
@@ -151,10 +145,8 @@ export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
 export default AccessibilityProvider;
 ;
 
-=======
 
 };
 
 export default AccessibilityProvider;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

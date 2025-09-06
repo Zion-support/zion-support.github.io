@@ -45,11 +45,9 @@ export default function ToolPage() {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1)
 
-=======
 
 
 
-=======
 import React, { useState } from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -131,7 +129,6 @@ function ToolPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   },
   const calculate_score = () =>: any {
     const total_score = Object.values (answers).reduce ((sum, score) => sum + score, 0),
@@ -157,7 +154,6 @@ if ( {) {
   $2
 }
       setCurrentQuestion (current_question + 1);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } else {
       setShowResults (true);
     }
@@ -168,11 +164,9 @@ if ( {) {
   };
 
 
-=======
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (showResults) {
     const result = calculateScore()
     return (
@@ -221,11 +215,8 @@ if ( {) {
                   <button 
 
                     onClick={resetAssessment}
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Retake Assessment
@@ -282,7 +273,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
             </div>
 
@@ -422,7 +412,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       className="mr-3 text-cyan-400 focus:ring-cyan-400"
                     />
                     <span className="text-white/90">{option}</span>
@@ -436,16 +425,13 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="px-6 py-3 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Previous
                 </button>
 
-=======
 }
 
-=======
   },
   const reset_assessment = () =>: any {
     setCurrentQuestion (0),
@@ -504,16 +490,13 @@ if ( {) {
           </main>;
         </div>;
       </>);
-=======
 
-=======
 
                   className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   const current_q = questions[current_question],
   return (
@@ -584,4 +567,3 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

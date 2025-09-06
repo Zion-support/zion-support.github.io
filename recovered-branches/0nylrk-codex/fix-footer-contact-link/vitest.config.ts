@@ -14,7 +14,6 @@ export default defineConfig({
 
     globals: true}});
 
-=======
 import {define_config} from 'vitest / config';
 import path from 'node: path',
 export default define_config ({
@@ -24,7 +23,6 @@ export default define_config ({
   test: {
     environment: 'jsdom';
     setup_files: './tests / setup.ts',
-=======
 
   resolve: {;
     alias: {;
@@ -33,7 +31,6 @@ export default define_config ({
     environment: 'jsdom';
     setupFiles: './tests/setup.ts',
 
-=======
 import { defineConfig } from 'vitest/config',;
 import path from 'node: path',;
 export default defineConfig({;
@@ -45,8 +42,5 @@ export default defineConfig({;
     setupFiles: './tests/setup.ts';
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     globals: true}});
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -79,7 +79,6 @@ const SEO: React.FC<SEOProps> = ({;
 }) => {;
   const fullTitle = title && title.includes('Zion Tech Group');
     ? title;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     : `${title} | Zion Tech Group`;
   const fullUrl = url && url.startsWith('http');
     ? url;
@@ -270,7 +269,6 @@ const SEO: React.FC < SEOProps> = ({
       <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />;
 
 
-=======
       <meta property='og:title' content={full_title} />;
       <meta property='og:description' content={description} />;
       <meta property='og:type' content={type} />;
@@ -310,13 +308,9 @@ const SEO: React.FC < SEOProps> = ({
         content='black - translucent';
       />;
       <meta name='apple - mobile - web - app - title' content='Zion Tech Group' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Structured Data */}
       <script;
         type='application / ld + json';
@@ -372,7 +366,6 @@ const SEO: React.FC < SEOProps> = ({
 
                     '@type': 'Service'
                     name: 'AI & Machine Learning Solutions'
-=======
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={Array.isArray(keywords) ? keywords.join() : keywords} />
@@ -461,9 +454,7 @@ const SEO: React.FC < SEOProps> = ({
                 }
                 {
                   '@type': 'Offer'
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   itemOffered: {
                     '@type': 'Service'
                     name: 'Quantum Computing Services'
@@ -489,13 +480,9 @@ const SEO: React.FC < SEOProps> = ({
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon && favicon.ico' />;
       <link
@@ -546,7 +533,6 @@ const SEO: React.FC < SEOProps> = ({
 };
 
 export default SEO;            __html: JSON && JSON.stringify(structuredData);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }}
         />;
       )}
@@ -562,12 +548,9 @@ export default SEO;  );
 export default SEO;
 
 
-=======
 
     </Head>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           __html: JSON.stringify ({
             '@context': 'https://schema.org',
             '@type': 'Organization',
@@ -679,4 +662,3 @@ export default SEO);
 ;
 export default SEO;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

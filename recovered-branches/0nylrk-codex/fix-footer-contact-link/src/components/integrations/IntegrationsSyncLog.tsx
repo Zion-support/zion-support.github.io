@@ -5,7 +5,6 @@ import {Card} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
 
-=======
 import React from "react",
 import { Card } from "@/components/ui/card",
 import {
@@ -19,7 +18,6 @@ import { Badge } from "@/components/ui/badge",
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Sample data for integration sync logs
 
 const syncLogs = [
@@ -83,7 +81,6 @@ const syncLogs = [
 import {Card} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
-=======
 
 ],
 
@@ -131,7 +128,6 @@ export function IntegrationsSyncLog() {
               </TableRow>
 
 
-=======
 import React from "react",;
 import { Card } from "@/components/ui/card",;
 import {;
@@ -190,7 +186,6 @@ const syncLogs = [;
 export function IntegrationsSyncLog() {;
   const getStatusBadge = (status: string) => {;
     switch (status) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       case "success": return <Badge className="bg-green-500">Success</Badge>;
       case "error":;
         return <Badge variant="destructive">Error</Badge>;
@@ -231,7 +226,6 @@ export function IntegrationsSyncLog() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
           </TableBody>;
@@ -241,7 +235,6 @@ export function IntegrationsSyncLog() {;
   );
 }
 
-=======
 import React from './react';
 import { Card } from '@/components / ui / card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -335,4 +328,3 @@ function IntegrationsSyncLog() {
       </div>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

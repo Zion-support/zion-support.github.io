@@ -7,12 +7,10 @@ import { useState } from 'react';
   defaultKind?: 'general' | 'bug' | 'feature';
   userHeaders?: Record<string, string>;}) {export default function FeedbackModal(): any ({;
 
-=======
 export type FeedbackContext = { actionType?: string, metadata?: any };
 
 export default function FeedbackModal({
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   isOpen;
   onClose;
   defaultContext;
@@ -53,7 +51,6 @@ export default function FeedbackModal({
 
 
 
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) };
         body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})
@@ -61,28 +58,22 @@ export default function FeedbackModal({
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setLoading(false);
     onClose(true)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
   return (
 
-=======
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
       <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">
         <div className="text-lg font-medium">Was this helpful?</div>
         <div className="flex gap-2">
           {[1,2,3,4,5].map(n => (
 
-=======
 
 
             <button
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
@@ -129,7 +120,6 @@ export default function FeedbackModal({
                 type='radio'
                 checked={kind === 'feature'}
                 onChange={() => setKind('feature')}
-=======
 ;
 export type FeedbackContext = { action_type?: string; metadata?: any }
 ;
@@ -243,7 +233,6 @@ function submit() {
                 type='radio';
                 checked={kind === 'feature'}
                 on_change={() => set_kind ('feature')}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               />;
               Suggest a feature;
             </label>;
@@ -260,11 +249,9 @@ function submit() {
   );
 }              aria-label={`${n} stars`}
             >★</button>;
-=======
               className={(hover >= n || rating >= n) ? 'text-yellow-500' : 'text-gray-300'}
               aria-label={`${n} stars`}
             >★</button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           ))}
 
         </div>;
@@ -287,16 +274,12 @@ function submit() {
       </div>;
     </div>;
 
-=======
           <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
         </div>
       </div>
     </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <div className='flex justify - end gap - 2'>;
           <button;
             on_click={() => on_close (false)}
@@ -335,4 +318,3 @@ function submit() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

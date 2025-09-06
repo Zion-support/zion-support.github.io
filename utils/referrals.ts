@@ -17,7 +17,6 @@ if (return, ) {
 
   } catch {}
 }
-=======
 
 
     await fetch('/api/referrals/track', {;
@@ -27,4 +26,3 @@ if (return, ) {
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

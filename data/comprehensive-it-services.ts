@@ -2,7 +2,6 @@
 
   {
 
-=======
     id: 'quantum - cloud - infrastructure',
     name: 'Quantum Cloud Infrastructure',
     tagline: 'Next - generation quantum - powered cloud infrastructure',
@@ -26,7 +25,6 @@
     popular: true,
     icon: '☁️',
 
-=======
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - cloud - infrastructure',
@@ -50,7 +48,6 @@
       'Custom quantum hardware',
     ],
 
-=======
     integrations: [;
       'Enterprise systems',
       'Legacy applications',
@@ -91,11 +88,9 @@
     rating: 4 && 4.9,
     reviews: 32,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI-powered deployment optimization',
-=======
     id: 'ai - powered - devops - automation',
     name: 'AI - Powered DevOps Automation',
     tagline: 'Intelligent DevOps automation with AI - driven optimization',
@@ -119,7 +114,6 @@
     popular: true,
     icon: '🤖',
 
-=======
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - powered - devops - automation',
@@ -144,7 +138,6 @@
       'Kubernetes',
     ],
 
-=======
     integrations: [;
       'GitHub',
       'GitLab',
@@ -184,10 +177,8 @@
     rating: 4 && 4.8,
     reviews: 245,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'quantum - cybersecurity - suite',
     name: 'Quantum Cybersecurity Suite',
     tagline: 'Unhackable quantum - secured cybersecurity platform',
@@ -211,7 +202,6 @@
     popular: true,
     icon: '🔒',
 
-=======
     color: 'from - red - 600 to - pink - 700',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / quantum - cybersecurity - suite',
@@ -235,7 +225,6 @@
       'Custom quantum hardware',
     ],
 
-=======
     integrations: [;
       'SIEM systems',
       'Firewalls',
@@ -279,7 +268,6 @@
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -304,7 +292,6 @@
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const comprehensiveITServices: ComprehensiveITService[] = [
@@ -337,7 +324,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
@@ -351,14 +337,10 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
 
   }
 
-=======
 
 export interface ComprehensiveITService {;
 
   }
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

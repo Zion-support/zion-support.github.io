@@ -80,7 +80,6 @@ const serviceHighlights = [
 ];
 
 const benefits = [
-=======
 import Head from 'next / head';
 import Link from 'next / link';
 import {motion} from 'framer-motion';
@@ -389,7 +388,6 @@ export default function AIAutomationServices() {
             className="max-w-4xl mx-auto"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-full px-6 py-3 mb-8'>
               <Zap className='w-5 h-5 text-emerald-400' />
@@ -403,14 +401,12 @@ export default function AIAutomationServices() {
               <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 AI Automation
               </span>
               <br />
               <span className='text-white'>Revolution</span>
             </h1>
 
-=======
 
 
 
@@ -426,7 +422,6 @@ export default function AIAutomationServices() {
                 <button className='border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2'>
                   <span>Get Started</span>
                   <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />                </button>
-=======
     <Layout>
       <Head>
         <title>AI Automation Services - Zion Tech Group | Advanced AI-Powered Automation Solutions</title>
@@ -491,7 +486,6 @@ export default function AIAutomationServices() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <span>Explore Services</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -502,11 +496,9 @@ export default function AIAutomationServices() {
                 <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <span>Get Started</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </Link>
             </div>
           </motion.div>
@@ -551,7 +543,6 @@ export default function AIAutomationServices() {
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>;
               Transform your business operations with cutting-edge AI;
 
-=======
     color: 'text - emerald - 400',
   },
   {
@@ -666,7 +657,6 @@ function AIAutomationServices() {
             <p className='text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-3xl mx - auto leading - relaxed'>;
               Transform your business operations with cutting - edge AI;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               automation. From code generation to customer support, automate;
               everything with intelligent AI that learns and adapts to your;
               needs.;
@@ -693,7 +683,6 @@ function AIAutomationServices() {
         <div className="absolute bottom-40 left-20 opacity-25 animate-float" style={{ animationDelay: '2s' }}>
           <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       </section>
 
 
@@ -705,12 +694,10 @@ function AIAutomationServices() {
 
       {/* Service Highlights */}
 
-=======
       <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
           <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -730,7 +717,6 @@ function AIAutomationServices() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceHighlights.map((service, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 
               <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>;
@@ -767,7 +753,6 @@ function AIAutomationServices() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
@@ -811,7 +796,6 @@ function AIAutomationServices() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {advancedAIAutomationServices2025.map((service, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 
 
@@ -828,7 +812,6 @@ function AIAutomationServices() {
                 key={service && service.id}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -903,14 +886,11 @@ function AIAutomationServices() {
                     <Link href="/contact" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
                       Get Started
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </Link>
                   </div>
                 </div>
               </motion.div>
 
-=======
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -922,12 +902,10 @@ function AIAutomationServices() {
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Benefits Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='container mx-auto px-4'>          <motion&& motion.div
 
-=======
 
       {/* Benefits Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
@@ -953,7 +931,6 @@ function AIAutomationServices() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 
               <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>;
@@ -992,7 +969,6 @@ function AIAutomationServices() {
                   {benefit && benefit.description}
                 </p>              </motion && motion.div>;
             ))}
-=======
 
                 <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
@@ -1007,12 +983,10 @@ function AIAutomationServices() {
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-emerald-900/20 via-teal-900/20 to-cyan-900/20'>;
         <div className='container mx-auto px-4 text-center'>          <motion&& motion.div
 
-=======
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-emerald-900/20 via-teal-900/20 to-cyan-900/20">
@@ -1025,7 +999,6 @@ function AIAutomationServices() {
             viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <span>Start Your Automation Journey</span>
                   <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
                 </button>
@@ -1051,13 +1024,11 @@ function AIAutomationServices() {
               
               <Link href="/comprehensive-services-showcase-2025" className="group">
                 <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
-=======
 
               <Link href="/comprehensive-services-showcase-2025" className="group">
                 <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <span>View All Services</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -1068,7 +1039,6 @@ function AIAutomationServices() {
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div>
                 <div className="text-3xl font-bold text-emerald-400 mb-2">24/7</div>
                 <div className="text-gray-300">AI Monitoring</div>
@@ -1081,7 +1051,6 @@ function AIAutomationServices() {
                 <div className="text-3xl font-bold text-emerald-400 mb-2">350%</div>
                 <div className="text-gray-300">Average ROI</div>
               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
           </motion.div>
         </div>
@@ -1090,7 +1059,6 @@ function AIAutomationServices() {
               Your Business?;
             </h2>;
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
-=======
                 </p>              </motion.div>))}
           </div>;
         </div>;
@@ -1119,11 +1087,8 @@ function AIAutomationServices() {
             </p>;
 
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
               <Link href='/contact' className='group'>;
                 <button className='bg - gradient - to - r from - emerald - 500 to - teal - 600 hover:from - emerald - 600 hover:to - teal - 700 text - white px - 8 py - 4 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center space - x-2'>;
@@ -1165,10 +1130,5 @@ function AIAutomationServices() {
       </section>;
     </Layout>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

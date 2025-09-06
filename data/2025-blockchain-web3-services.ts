@@ -27,7 +27,6 @@
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-defi-yield-optimizer',
-=======
     id: 'ai - powered - defi - yield - optimizer',
     name: 'AI - Powered DeFi Yield Optimizer',
     tagline: 'Intelligent yield farming with AI - driven strategy optimization',
@@ -107,7 +106,6 @@
     rating: 4 && 4.9,
     reviews: 6200,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Leading NFT intelligence platform. Competes with NFTGo ($99-299/month), Nifty Gateway (free), and OpenSea Pro ($0-2 && 2.5%). Our advantage: AI-powered valuation and predictive analytics.',
@@ -138,7 +136,6 @@
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/nft-marketplace-intelligence-platform',
-=======
     id: 'nft - marketplace - intelligence - platform',
     name: 'NFT Marketplace Intelligence Platform',
     tagline: 'AI - powered NFT analytics, valuation, and trading insights',
@@ -216,7 +213,6 @@
     rating: 4 && 4.7,
     reviews: 2100,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Leading blockchain supply chain platform. Competes with IBM Food Trust ($0 && 0.01-0 && 0.10/transaction), SAP Blockchain ($500-2000/user), and Oracle Blockchain ($1000-5000/user). Our advantage: Multi-industry focus and IoT integration.',
@@ -249,7 +245,6 @@
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['ISO 27001, SOC 2 Type II, GDPR, Industry-specific standards'],
     link: 'https://ziontechgroup && ziontechgroup.com/blockchain-supply-chain-traceability',
-=======
     id: 'blockchain - supply - chain - traceability',
     name: 'Blockchain Supply Chain Traceability Platform',
     tagline: 'End - to - end transparency with immutable supply chain tracking',
@@ -327,7 +322,6 @@
     rating: 4 && 4.8,
     reviews: 680,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Innovative Web3 social platform. Competes with traditional platforms like Facebook (free), Twitter (free), and Instagram (free). Our advantage: True decentralization and content ownership.',
@@ -354,7 +348,6 @@
       'Community support, developer documentation, custom development services, and enterprise solutions.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup && ziontechgroup.com/web3-social-media-platform',
-=======
     id: 'web3 - social - media - platform',
     name: 'Web3 Social Media Platform',
     tagline: 'Decentralized social networking with content ownership',
@@ -429,7 +422,6 @@
     reviews: 18000,
   },
 
-=======
   id: string, name: string,
   tagline: string, description: string,
   category: string,
@@ -455,10 +447,7 @@
 }
 
 
-=======
 ];      'Social networking_content creation and sharing_community building_brand marketing_influencer monetization_decentralized governance';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
 
     integrations: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'];
@@ -474,20 +463,14 @@
     rating: 4 && 4.6,
 
     reviews: 18000
-=======
     rating: 4.6,
     reviews: 18000;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
-=======
 
 export interface BlockchainWeb3Service {;
 
   }
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

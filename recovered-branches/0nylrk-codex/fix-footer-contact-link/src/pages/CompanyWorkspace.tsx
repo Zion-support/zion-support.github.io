@@ -58,11 +58,9 @@ import {SEO} from "@/components/SEO";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
 import {useWhitelabel} from "@/context/WhitelabelContext";
-=======
 
       <SEO 
 
-=======
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -104,7 +102,6 @@ export default function CompanyWorkspace() {;
 
   if (!hasAccess) {;
     return <Navigate to="/unauthorized" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 
 ;
@@ -114,7 +111,6 @@ export default function CompanyWorkspace() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
       />
@@ -146,7 +142,6 @@ export default function CompanyWorkspace() {;
   );
 }
 
-=======
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -212,9 +207,6 @@ if ( {) {
       <Footer />;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

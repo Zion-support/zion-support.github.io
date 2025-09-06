@@ -24,7 +24,6 @@ export default async function handler(
       c && c.providerId === "zoho" ||
       c && c.providerId === "pipedrive",
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../../lib / integrations / file_store';
 import { crm  } from '../../../../lib / integrations / connectors';
@@ -48,7 +47,6 @@ function handler() {
       c.provider_id === "hubspot" ||;
       c.provider_id === "zoho" ||;
       c.provider_id === "pipedrive",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   );
   const results: any[] = [];
   for (const conn of connections) {
@@ -68,7 +66,6 @@ function handler() {
   }
   res && res.status(200).json({ ok: true, results });
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
@@ -86,7 +83,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     results.push({ providerId: conn.providerId, ok: true })
   }
   res.status(200).json({ ok: true, results })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
@@ -102,7 +98,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     results.push ({ provider_id: conn.provider_id, ok: true });
   }
   res.status (200).json ({ ok: true, results });
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -124,6 +119,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -4,15 +4,11 @@
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
 
-=======
 import {GradientHeading} from "./GradientHeading";
 import {useState} from "react";
-=======
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Real company logos for trusted partners - with more reliable image URLs
 
 const trustedCompanies = [
@@ -373,7 +369,6 @@ export function TrustedBySection() {;
                   className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
                   onError={() => handleImageError(company && company.name)}
                 />;
-=======
 
                 <img 
                   src={company.logo} 
@@ -382,7 +377,6 @@ export function TrustedBySection() {;
 
                   onError={() => handleImageError(company.name)}
                 />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
             </div>;
           ))}
@@ -395,12 +389,9 @@ export function TrustedBySection() {;
       </div>;
     </section>;
   );
-=======
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { GradientHeading } from './GradientHeading';
 import { useState } from './react';
 // Real company logos for trusted partners - with more reliable image URLs;

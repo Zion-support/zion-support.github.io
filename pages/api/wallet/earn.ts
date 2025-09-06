@@ -1,6 +1,5 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
@@ -18,13 +17,10 @@ function handler() {
   $2
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   };
 };
 
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { earnTokens } from "../../../utils/token/service";
 export default function handler(req, res) {
@@ -79,5 +75,3 @@ export default function handler(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

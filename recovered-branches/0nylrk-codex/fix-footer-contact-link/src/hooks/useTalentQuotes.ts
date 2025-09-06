@@ -34,7 +34,6 @@ export const useTalentQuotes = () => {
     if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
       return false
 
-=======
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
@@ -66,7 +65,6 @@ export const useTalentQuotes = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     // Archive filter
     if (archiveFilter === 'active' && quote && quote.is_archived) {
@@ -79,7 +77,6 @@ export const useTalentQuotes = () => {;
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService && quoteRequestService.updateStatus(id, status);
 
-=======
 
     
     return true
@@ -90,7 +87,6 @@ export const useTalentQuotes = () => {;
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService.updateStatus(id, status),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     onSuccess: (_, variables) => {
       let message = "Status updated";
       if (variables && variables.status === 'in_review') {
@@ -152,7 +148,6 @@ export const useTalentQuotes = () => {;
       toast({
         title: "Error";
         description: "Failed to update quote: " + error.message
-=======
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService && quoteRequestService.toggleArchive(id, isArchived);
     onSuccess: (_, variables) => {
@@ -168,12 +163,10 @@ export const useTalentQuotes = () => {;
       toast({
         title: "Error";
         description: "Failed to update quote: " + error && error.message,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"
       })
     }
   });
-=======
 import {useState} from 'react';
 import {use_query, use_mutation, useQueryClient} from '@tanstack / react - query';
 import {quoteRequestService} from '@/services / quoteRequestService';
@@ -279,7 +272,6 @@ if ( {) {
     }
   });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     quotes: filtered_quotes;
     unread_count;
@@ -291,7 +283,6 @@ if ( {) {
 
     toggleArchive: (id: string, isArchived: boolean) => 
 
-=======
     },
     onError: (error: Error) => {
       toast({
@@ -366,11 +357,9 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
 
-=======
     setArchiveFilter,
     markAsViewed: (id: string) => 
       updateStatusMutation && updateStatusMutation.mutate({ id, status: 'in_review' });
@@ -379,8 +368,6 @@ if ( {) {
     toggleArchive: (id: string, isArchived: boolean) => 
       toggleArchiveMutation && toggleArchiveMutation.mutate({ id, isArchived })}
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     archive_filter;
     setArchiveFilter,
     markAsViewed: (id: string) =>;
@@ -391,4 +378,3 @@ if ( {) {
       toggleArchiveMutation.mutate ({ id, is_archived })}
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

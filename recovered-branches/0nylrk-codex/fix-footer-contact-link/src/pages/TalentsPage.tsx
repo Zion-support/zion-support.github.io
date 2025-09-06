@@ -2,10 +2,8 @@
 
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
-=======
 import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
-=======
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
 
@@ -20,8 +18,6 @@ const TALENT_LISTINGS: ProductListing[] = [
     price: 150,
     currency: "$",
     tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     author: {
       name: "Alexandra Chen"
       id: "alexandra-chen"
@@ -101,7 +97,6 @@ const TALENT_LISTINGS: ProductListing[] = [;
     price: 145
     currency: "$"
     tags: ["Statistical Analysis", "Python", "R", "Tableau"];
-=======
 
     id: "talent-3",
     title: "Data Scientist",
@@ -111,7 +106,6 @@ const TALENT_LISTINGS: ProductListing[] = [;
     currency: "$",
     tags: ["Statistical Analysis", "Python", "R", "Tableau"],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     author: {
 
       name: "Priya Sharma",
@@ -130,7 +124,6 @@ const TALENT_LISTINGS: ProductListing[] = [;
     price: 165
     currency: "$"
     tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"];
-=======
 
     id: "talent-4",
     title: "Cybersecurity Expert",
@@ -140,7 +133,6 @@ const TALENT_LISTINGS: ProductListing[] = [;
     currency: "$",
     tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     author: {
 
 
@@ -196,7 +188,6 @@ const TALENT_LISTINGS: ProductListing[] = [;
     price: 180
     currency: "$"
     tags: ["AI Ethics", "Governance", "Responsible AI", "Policy"];
-=======
 
     id: "talent-6",
     title: "AI Ethics Consultant",
@@ -206,12 +197,10 @@ const TALENT_LISTINGS: ProductListing[] = [;
     currency: "$",
     tags: ["AI Ethics", "Governance", "Responsible AI", "Policy"],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     author: {
 
 
 
-=======
 export default function TalentsPage() {
   return (
 
@@ -220,4 +209,3 @@ export default function TalentsPage() {
       description="Connect with highly skilled professionals in AI, software development, data science, and more."
       categorySlug="talents"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

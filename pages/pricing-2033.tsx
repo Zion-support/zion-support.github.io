@@ -4,7 +4,6 @@
 } from 'lucide-react'
 import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations';
 import { innovativeITServices2033 } from '../data/2033-innovative-it-services';
-=======
 
 import React, { useState } from 'react',;
 import Head from 'next/head',;
@@ -15,7 +14,6 @@ import {
 import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations',;
 import { innovativeITServices2033 } from '../data/2033-innovative-it-services',;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const contactInfo = {
 
   mobile: '+1 302 464 0950',
@@ -31,7 +29,6 @@ export default function Pricing2033Page() {
 
   // Enhanced service categories with pricing
   const serviceCategories = [
-=======
 import React, { useState } from 'react',
 import Head from 'next / head',
 import { motion } from 'framer-motion',
@@ -140,10 +137,8 @@ function Pricing2033Page() {
 
 
 
-=======
 
 
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -309,10 +304,7 @@ export default function Pricing2033Page(req, res) {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <Head>
@@ -341,7 +333,6 @@ export default function Pricing2033Page(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -361,7 +352,6 @@ export default function Pricing2033Page(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 transition={{ duration: 0.6 }} className="mb-6">
                 <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium">
                   <Crown className="w-4 h-4" />
@@ -383,7 +373,6 @@ export default function Pricing2033Page(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 transition={{ duration: 0.6, delay: 0.1 }} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   Revolutionary Technology
@@ -425,7 +414,6 @@ export default function Pricing2033Page(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 transition={{ duration: 0.6, delay: 0.3 }} className="flex items-center justify-center space-x-4 mb-8">
                 <span className={`text-sm ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
                   Monthly
@@ -435,8 +423,6 @@ export default function Pricing2033Page(req, res) {
                   <div
                     className={`w-6 h-6 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full transition-transform duration-200 ${
                       billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-0'
-=======
-=======
       avg_price: '$11, 499 / month',
       savings: 'Save 60 - 80% vs. competitors',
       icon: Brain,
@@ -614,7 +600,6 @@ export default function Pricing2033Page(req, res) {
                 transition={{ duration: 0.6, delay: 0.2 }} className="text - xl text - gray - 300 max - w-3xl mx - auto leading - relaxed mb - 8">;
                 Experience the future of technology with our revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions at competitive prices.;
               </motion.p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {/* Billing Toggle */}
               <motion.div;
                 initial={{ opacity: 0, coordinate_y: 20 }}
@@ -628,7 +613,6 @@ export default function Pricing2033Page(req, res) {
                   <div;
                     className={`w - 6 h - 6 bg - gradient - to - r from - purple - 500 to - cyan - 500 rounded - full transition - transform duration - 200 ${
                       billing_cycle === 'yearly' ? 'translate - x-8' : 'translate - x-0';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     }`}
 
                   />;
@@ -654,21 +638,18 @@ export default function Pricing2033Page(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
                 <motion.div
-=======
         <div className="relative py - 20">;
           <div className="absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 via - transparent to - cyan - 500 / 5"></div>;
           <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
               {pricing_tiers.map ((tier, index) => (
                 <motion.div;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   key={tier.name}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
@@ -680,7 +661,6 @@ export default function Pricing2033Page(req, res) {
                   {tier.popular && (
 
 
-=======
 
                   )  } catch (error) {
     console.error("Error:", error);
@@ -688,7 +668,6 @@ export default function Pricing2033Page(req, res) {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div className={`relative bg-gray-900/50 border border-purple-500/30 rounded-2xl p-8 h-full backdrop-blur-sm ${
                     tier.popular ? 'border-purple-500/50 shadow-2xl shadow-purple-500/25' : ''
                   }`}>
@@ -710,7 +689,6 @@ export default function Pricing2033Page(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
                     <ul className="space-y-4 mb-8">
                       {tier.features.map((feature, idx) => (
@@ -761,7 +739,6 @@ export default function Pricing2033Page(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -795,7 +772,6 @@ export default function Pricing2033Page(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-center space-x-3 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>
@@ -841,7 +817,6 @@ export default function Pricing2033Page(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -875,7 +850,6 @@ export default function Pricing2033Page(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
@@ -883,7 +857,6 @@ export default function Pricing2033Page(req, res) {
                       <p className="text-gray-400 text-sm mb-3">{service.description}</p>
                       <div className="inline-flex items-center px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">
 
-=======
                     <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
                       <div className="px - 4 py - 2 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white text - sm font - medium rounded - full">;
                         Most Popular;
@@ -997,7 +970,6 @@ export default function Pricing2033Page(req, res) {
                       <h3 className="text - xl font - bold text - white mb - 2">{service.name}</h3>;
                       <p className="text - gray - 400 text - sm mb - 3">{service.description}</p>;
                       <div className="inline - flex items - center px - 3 py - 1 bg - purple - 500 / 20 text - purple - 300 text - xs rounded - full">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         {service.category}
 
 
@@ -1008,7 +980,6 @@ export default function Pricing2033Page(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </div>
                     </div>
                     <div className="text-right ml-4">
@@ -1054,7 +1025,6 @@ export default function Pricing2033Page(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1079,7 +1049,6 @@ export default function Pricing2033Page(req, res) {
                 </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <a
                   href={`tel:${contactInfo.mobile}`} className="px-8 py-4 bg-gray-800/50 border border-purple-500/30 text-purple-300 font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200">
                   <Phone className="w-5 h-5 mr-2 inline" />
@@ -1095,7 +1064,6 @@ export default function Pricing2033Page(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="mt-12 pt-8 border-t border-purple-500/20">
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-300">
                   <div className="flex items-center space-x-2">
@@ -1118,10 +1086,8 @@ export default function Pricing2033Page(req, res) {
       </div>
     </>
 
-=======
 }
 
-=======
                       </div>;
                     </div>;
                     <div className="text - right ml - 4">;
@@ -1197,9 +1163,5 @@ export default function Pricing2033Page(req, res) {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

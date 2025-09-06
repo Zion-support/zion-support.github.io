@@ -14,7 +14,6 @@ import {Button} from "@/components/ui/button";
 import {toast} from "sonner";
 export type AppPlatform = "ios" | "android";
 
-=======
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -29,7 +28,6 @@ export type AppPlatform = "ios" | "android",
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export type AppMetadataValues = {
 
   appTitle: string,
@@ -38,7 +36,6 @@ export type AppMetadataValues = {
   keywords: string[],
   version: string,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleSaveMetadata = async (data: AppMetadataValues) => {
     setIsSaving(true)
     try {
@@ -172,10 +169,8 @@ export const MetadataManager: React.FC = () => {
   )
 
 
-=======
 
 
-=======
 },
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -279,7 +274,6 @@ export const MetadataManager: React.FC = () => {;
             <div className="space-y-6">;
               <ScreenshotManager platform="android" />;
               <ExportPanel platform="android" metadata={androidForm && androidForm.getValues()} />;
-=======
 ;
   return (
     <div className="bg - zion - blue - dark rounded - lg p - 6">;
@@ -321,7 +315,6 @@ export const MetadataManager: React.FC = () => {;
             <div className="space - y-6">;
               <ScreenshotManager platform="android" />;
               <ExportPanel platform="android" metadata={android_form.get_values ()} />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </TabsContent>;
@@ -330,11 +323,7 @@ export const MetadataManager: React.FC = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -9,26 +9,21 @@ interface VideoCallRoomProps {;
   serverUrl?: string;
   onDisconnect?: () => void;
   className?: string;
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface VideoCallRoomProps {
   room?: string,
   token?: string,
   serverUrl?: string,
   onDisconnect?: () => void,
   className?: string
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 
 export function VideoCallRoom(): any ({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
   return (
-=======
 
 
-=======
 import React from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -91,8 +86,6 @@ function VideoCallRoom() {
     </Card>);
 }
 
-=======
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

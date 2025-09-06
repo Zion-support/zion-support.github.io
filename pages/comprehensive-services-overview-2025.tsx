@@ -4,7 +4,6 @@
 } from 'lucide-react'
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
-=======
 
 import React, { useState } from 'react',;
 import Head from 'next/head',;
@@ -17,7 +16,6 @@ import {
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion',;
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025',;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function ComprehensiveServicesOverviewPage() {
 
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -79,10 +77,8 @@ export default function ComprehensiveServicesOverviewPage() {
 
   const totalCustomers = allServices.reduce((sum, service) => sum + service.customers, 0);
 
-=======
 
 
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -151,13 +147,11 @@ export default function ComprehensiveServicesOverviewPage(req, res) {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }),
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category),
     return categoryData?.icon || '🚀'
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Calculate market statistics
   const totalMarketSize = allServices.reduce((sum, service) => {
     const marketSize = service.marketSize.match(/\$([\d.]+)B/)
@@ -171,7 +165,6 @@ export default function ComprehensiveServicesOverviewPage(req, res) {
 
   }, 0) / allServices.length,
   const totalCustomers = allServices.reduce((sum, service) => sum + service.customers, 0),
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <>
@@ -191,15 +184,12 @@ export default function ComprehensiveServicesOverviewPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
-=======
 import React, { useState } from 'react',
 import Head from 'next / head',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -284,7 +274,6 @@ function ComprehensiveServicesOverviewPage() {
         <link rel="canonical" href="https://ziontechgroup.com / comprehensive - services - overview - 2025" />;
       </Head>;
       <div className="min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Hero Section */}
         <section className="py - 20 px - 6">;
           <div className="max - w-7xl mx - auto text - center">;
@@ -301,7 +290,6 @@ function ComprehensiveServicesOverviewPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
                 <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
                   <div className="text-3xl font-bold text-blue-400">{allServices.length}+</div>
@@ -329,7 +317,6 @@ function ComprehensiveServicesOverviewPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-2xl p-6 border border-blue-500/30">
                   <div className="text-4xl mb-4">🚀</div>
@@ -411,7 +398,6 @@ function ComprehensiveServicesOverviewPage() {
             >;
               {/* Search */}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="relative flex-1 max-w-md">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />
                 <input
@@ -451,7 +437,6 @@ function ComprehensiveServicesOverviewPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-400"
                 >
                   <option value="popularity">Most Popular</option>
@@ -465,7 +450,6 @@ function ComprehensiveServicesOverviewPage() {
                     className={`p-2 rounded-lg transition-all ${
                       viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white'
 
-=======
               <div className="relative flex - 1 max - w-md">;
                 <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - white / 40 w - 5 h - 5" />;
                 <input;
@@ -494,7 +478,6 @@ function ComprehensiveServicesOverviewPage() {
                     className={`p - 2 rounded - lg transition - all ${
                       view_mode === 'grid' ? 'bg - blue - 600 text - white' : 'text - white / 60 hover:text - white';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     }`}
                   >;
                     <Grid className="w - 5 h - 5" />;
@@ -542,7 +525,6 @@ function ComprehensiveServicesOverviewPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="flex flex-wrap justify-center gap-3"
             >
               {categories.map((category) => (
@@ -617,7 +599,6 @@ function ComprehensiveServicesOverviewPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="px-6 pb-20">
           <div className="max-w-7xl mx-auto">
             {viewMode === 'grid' ? (
@@ -668,12 +649,10 @@ function ComprehensiveServicesOverviewPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                     >
                       {/* Popular Badge */}
                       {service.popular && (
-=======
                       className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl";
                     >;
                       {/* Popular Badge */}
@@ -693,7 +672,6 @@ function ComprehensiveServicesOverviewPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <div className="p-6">
                         <div className="flex items-start justify-between mb-4">
                           <div className="text-4xl">{service.icon}</div>
@@ -731,7 +709,6 @@ function ComprehensiveServicesOverviewPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <div className="space-y-2 mb-6">
                           {service.features.slice(0, 3).map((feature, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
@@ -764,7 +741,6 @@ function ComprehensiveServicesOverviewPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                           <div>
                             <div className="text-lg font-bold text-blue-400">{service.rating}</div>
@@ -816,7 +792,6 @@ function ComprehensiveServicesOverviewPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           target="_blank"
                           rel="noopener noreferrer"
                           className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
@@ -828,7 +803,6 @@ function ComprehensiveServicesOverviewPage() {
                         </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </div>
                     </motion.div>
                   ))}
@@ -898,11 +872,9 @@ function ComprehensiveServicesOverviewPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <div className="flex-shrink-0">
                           <div className="text-6xl mb-4">{service.icon}</div>
                           {service.popular && (
-=======
                       className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - r from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 p - 6";
                     >;
                       <div className="flex flex - col lg:flex - row gap - 6">;
@@ -925,7 +897,6 @@ function ComprehensiveServicesOverviewPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <div className="flex-1">
                           <div className="flex items-start justify-between mb-4">
                             <div>
@@ -947,7 +918,6 @@ function ComprehensiveServicesOverviewPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <div className="grid grid-cols-2 gap-2 mb-4">
                             {service.features.slice(0, 6).map((feature, idx) => (
                               <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
@@ -969,7 +939,6 @@ function ComprehensiveServicesOverviewPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <div className="flex items-center gap-6 text-sm text-white/60">
                             <div className="flex items-center gap-2">
                               <Star className="w-4 h-4 text-yellow-400" />
@@ -994,7 +963,6 @@ function ComprehensiveServicesOverviewPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <div className="flex-shrink-0 flex flex-col items-end gap-4">
                           <div className="text-right">
                             <div className="text-sm text-white/60 mb-1">Category</div>
@@ -1013,7 +981,6 @@ function ComprehensiveServicesOverviewPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2"
@@ -1093,7 +1060,6 @@ function ComprehensiveServicesOverviewPage() {
                 animate={{ opacity: 1 }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="text-center py-20"
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -1101,7 +1067,6 @@ function ComprehensiveServicesOverviewPage() {
                 <p className="text-white/60">Try adjusting your search or filter criteria</p>
               </motion.div>
 
-=======
                 className="text - center py - 20";
               >;
                 <div className="text - 6xl mb - 4">🔍</div>;
@@ -1158,7 +1123,6 @@ function ComprehensiveServicesOverviewPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center"
             >
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
@@ -1180,7 +1144,6 @@ function ComprehensiveServicesOverviewPage() {
                   </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <a
                     href="tel:+13024640950"
                     className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
@@ -1195,10 +1158,8 @@ function ComprehensiveServicesOverviewPage() {
       </div>
     </>
 
-=======
 }
 
-=======
               className="text - center";
             >;
               <div className="bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20 rounded - 3xl p - 12 border border - blue - 500 / 30">;
@@ -1230,9 +1191,5 @@ function ComprehensiveServicesOverviewPage() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

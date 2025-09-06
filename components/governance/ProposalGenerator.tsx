@@ -33,18 +33,14 @@ export type ProposalType =;
 
 export type ProposalForm = {;
 
-=======
 
 
 export type ProposalForm = {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   targetInstitution: string;
-=======
 ;
 export type ProposalForm = {
   target_institution: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   type: ProposalType;
   regional_scope: string;
   budgetOrGoals: string;
@@ -63,14 +59,11 @@ export type ProposalForm = {
   language?: string;
   customPrompt?: string
 }
-=======
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
 export type ProposalForm = {
   targetInstitution: string,
-=======
   custom_prompt?: string;}export type ProposalForm = {
   target_institution: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   type: ProposalType,
   regional_scope: string,
   budgetOrGoals: string,
@@ -98,11 +91,9 @@ export default function ProposalGenerator() {;
     customPrompt:;
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
 
-=======
 
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
@@ -122,11 +113,9 @@ export default function ProposalGenerator() {;
 
     setForm(prev => ({ ...prev, [key]: value }));  }  const [isGenerating, setIsGenerating] = useState(false);
 
-=======
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'});
   const [isGenerating, setIsGenerating] = useState(false);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
   const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null);
@@ -153,19 +142,16 @@ export default function ProposalGenerator() {;
       setIsGenerating(false)
     }
   }
-=======
     } finally {
 
       setIsGenerating(false);    }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   async function handleExport() {
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {
@@ -186,21 +172,16 @@ export default function ProposalGenerator() {;
       setStatusMessage('Export failed')
     }
   }
-=======
 
 
-=======
       setStatusMessage('Export failed');    }
 
     }
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {
@@ -265,7 +246,6 @@ export default function ProposalGenerator() {;
       const data = await res && res.json();
       setStatusMessage(;
         `Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       );
     } catch (e) {;
       console && console.error(e);
@@ -385,7 +365,6 @@ export default function ProposalGenerator() {;
             <button
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
 
-=======
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-4">
@@ -404,7 +383,6 @@ export default function ProposalGenerator() {;
               className="w-full border rounded px-3 py-2"
               value={form.type}
               onChange={(e) => handleChange('type', e.target.value as ProposalType)}
-=======
 
 
     }
@@ -491,7 +469,6 @@ export default function ProposalGenerator() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onClick={handleGenerate}
               disabled={isGenerating}>;
               {isGenerating ? 'Generating...' : 'Generate Draft'}
@@ -506,12 +483,10 @@ export default function ProposalGenerator() {;
             <button
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
             </div>;
           )}
 
-=======
         </div>
         <div className="space-y-2">
           <label className="block text-sm font-medium" htmlFor="input-Draft (Markdown)">Draft (Markdown)</label>
@@ -527,20 +502,13 @@ export default function ProposalGenerator() {;
       </div>;
     </div>;
   );
-=======
 
   );
 
 }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   custom_prompt?: string;
 }
 ;
@@ -903,4 +871,3 @@ function handleSubmitBridge() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

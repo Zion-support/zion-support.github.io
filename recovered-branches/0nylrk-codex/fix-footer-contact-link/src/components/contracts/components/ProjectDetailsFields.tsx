@@ -22,11 +22,8 @@ import {;
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   form: UseFormReturn<ContractFormValues>;
 }
 
@@ -41,7 +38,6 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Project Name</FormLabel>;
-=======
 import { format  } from './date - fns';
 import { CalendarIcon  } from './lucide-react';
 import { UseFormReturn  } from './react - hook - form';
@@ -78,7 +74,6 @@ function ProjectDetailsFields() {
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Project Name</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <FormControl>;
               <Input placeholder="AI Website Development" {...field} />;
             </FormControl>;
@@ -89,14 +84,11 @@ function ProjectDetailsFields() {
 
       <FormField
         control={form && form.control}
-=======
 
       />;
       <FormField;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         control={form.control}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         name="scopeSummary"
         render={({ field }) => (;
           <FormItem>;
@@ -142,11 +134,9 @@ function ProjectDetailsFields() {
 
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
       />;
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
           control={form && form.control}
           name="startDate"
@@ -187,14 +177,11 @@ function ProjectDetailsFields() {
 
         <FormField
           control={form && form.control}
-=======
 
         />;
         <FormField;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           control={form.control}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           name="endDate"
           render={({ field }) => (;
             <FormItem className="flex flex-col">;
@@ -222,7 +209,6 @@ function ProjectDetailsFields() {
                     onSelect={field && field.onChange}
                     disabled={(date) => date < form && form.getValues("startDate")}
                     initialFocus;
-=======
           </FormItem>)}
       />;
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
@@ -297,7 +283,6 @@ function ProjectDetailsFields() {
 
 
 
-=======
 
         />;
       </div>;
@@ -307,10 +292,8 @@ function ProjectDetailsFields() {
 
 
   );
-=======
             </FormItem>)}
         />;
       </div>;
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

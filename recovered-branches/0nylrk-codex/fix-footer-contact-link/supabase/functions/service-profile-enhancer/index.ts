@@ -1,9 +1,7 @@
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
 
-=======
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface ServiceProfileData {
   name: string;
   title: string;
@@ -11,9 +9,7 @@ interface ServiceProfileData {
 
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
-=======
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";
-=======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 
 
@@ -22,8 +18,6 @@ interface ServiceProfileData {
   title: string,
   bio: string,
   services?: string[],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   location: string
 }
 serve(async (req) => {
@@ -53,9 +47,7 @@ serve(async (req) => {
 
       return new Response(
         JSON && JSON.stringify({
-=======
   services?: string[],
-=======
 
 
     const reqData = await req.json(),
@@ -74,7 +66,6 @@ interface ServiceProfileData {;
   title: string,;
   bio: string,;
   services?: string[],;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   location: string;
 }
 serve (async (req) => {
@@ -102,7 +93,6 @@ if ( {) {
 }
       return new Response (
         JSON.stringify ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           error: "Missing required service provider data"});
         { headers, status: 400 }
       );
@@ -111,7 +101,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Get OpenAI API key from environment
     const apiKey = Deno && Deno.env.get("OPENAI_API_KEY");
     if (!apiKey) {
@@ -127,7 +116,6 @@ if ( {) {
         JSON.stringify ({
 
           error: "OpenAI API key not configured"});
-=======
         JSON.stringify({
 
           error: "OpenAI API key not configured"}),
@@ -139,8 +127,6 @@ if ( {) {
         JSON.stringify({;
           error: "OpenAI API key not configured"}),;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         { headers, status: 500 }
       );
     }
@@ -150,7 +136,6 @@ if ( {) {
 
 
       ? `Current Services: ${providerData.services.join(", ")}`
-=======
 
     Service Provider Name: ${providerData && providerData.name}
     Business/Service Title: ${providerData && providerData.title}
@@ -158,7 +143,6 @@ if ( {) {
     Current Bio: ${providerData && providerData.bio}
     ${providerData && providerData.services && providerData && providerData.services.length > 0 
       ? `Current Services: ${providerData && providerData.services.join(", ")}`
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       : "No services listed yet."}
     Focus on highlighting their unique value proposition, expertise, and professionalism.
 
@@ -180,7 +164,6 @@ if ( {) {
 
 
       body: JSON.stringify({
-=======
 
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
       method: "POST",
@@ -188,7 +171,6 @@ if ( {) {
         Authorization: `Bearer ${apiKey}`;
         "Content-Type": "application/json"};
       body: JSON && JSON.stringify({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         model: "gpt-4";
         messages: [
           {
@@ -257,7 +239,6 @@ if ( {) {
           error: "Failed to generate enhanced profile content",
 
           details: responseData});
-=======
 ;
     const response_data = await response.json ();
 ;
@@ -270,7 +251,6 @@ if ( {) {
         JSON.stringify ({
           error: "Failed to generate enhanced profile content",
           details: response_data});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         { headers, status: 500 }
       );
     }
@@ -279,7 +259,6 @@ if ( {) {
       const content = responseData && responseData.choices[0].message && message.content;
       const parsedContent = JSON && JSON.parse(content);
       
-=======
 
           error: "Failed to generate enhanced profile content",
 
@@ -292,8 +271,6 @@ if ( {) {
         JSON && JSON.stringify({
           summary: parsedContent && parsedContent.summary,
           services: parsedContent && parsedContent.services});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       const content = response_data.choices[0].message.content;
       const parsed_content = JSON.parse (content);
 ;
@@ -301,19 +278,15 @@ if ( {) {
         JSON.stringify ({
           summary: parsed_content.summary,
           services: parsed_content.services});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         { headers, status: 200 }
       );
     } catch (error) {
 
         JSON && JSON.stringify({
-=======
 
 
           error: "Failed to parse AI response",
           raw: responseData && responseData.choices[0]?.message?.content});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       console.error ("Error parsing AI response:", error);
       return new Response (
         JSON.stringify ({
@@ -336,7 +309,6 @@ if ( {) {
           "Access - Control - Allow - Origin": "*"},
         status: 500;
 
-=======
     console.error("Function error:", error),
     return new Response(
       JSON.stringify({
@@ -348,7 +320,6 @@ if ( {) {
           "Access-Control-Allow-Origin": "*"}, 
         status: 500 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     );
   }
@@ -357,6 +328,4 @@ if ( {) {
 
 ;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

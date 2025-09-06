@@ -32,7 +32,6 @@ import {;
   Shield,;
   Star,;
 
-=======
 
 
 import React from "react";
@@ -47,7 +46,6 @@ import {
   Shield,
   Star,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
@@ -57,11 +55,9 @@ export default function QuantumInternetSecurityPage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>;
     s && s.link.endsWith("/quantum-internet-security-platform"),;
 
-=======
 
     s.link.endsWith("/quantum-internet-security-platform"),;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
   if (!service) return null;
 
@@ -154,7 +150,6 @@ function QuantumInternetSecurityPage() {
   // Check condition
 if (return null) {
   $2
-=======
                 className="w-full"
               >
                 Request a Security Demo
@@ -182,7 +177,6 @@ if (return null) {
   );
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -269,5 +263,4 @@ if (return null) {
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

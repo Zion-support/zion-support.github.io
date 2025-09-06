@@ -71,7 +71,6 @@
   }
 
   // ☁️ Quantum Cloud Infrastructure Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -84,7 +83,6 @@
   }
 ;
   // ☁️ Quantum Cloud Infrastructure Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'quantum - cloud - infrastructure';
     name: 'Quantum Cloud Infrastructure Platform';
@@ -96,7 +94,6 @@
 
     trialDays: 30;
     setupTime: '10 hours';
-=======
     tagline: 'Quantum - Enhanced Cloud Computing with Unlimited Processing Power',
     price: '$1, 199';
     period: '/month',
@@ -113,7 +110,6 @@
     target_audience: 'Enterprises, Research institutions, AI companies, Financial institutions, Healthcare organizations';
     trial_days: 30;
     setup_time: '10 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Quantum Cloud & Infrastructure';
     real_service: true;
     technology: ['Quantum ComputingCloud ComputingContainer OrchestrationPythonQiskitKubernetes'];
@@ -140,7 +136,6 @@
   }
 
   // 🚀 Autonomous DevOps & Infrastructure Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -153,7 +148,6 @@
   }
 ;
   // 🚀 Autonomous DevOps & Infrastructure Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'autonomous - devops - platform';
     name: 'Autonomous DevOps & Infrastructure Platform';
@@ -170,7 +164,6 @@
 
     trialDays: 30;
     setupTime: '6 hours';
-=======
     features: [;
       'Self - healing infrastructureAI - powered incident response_automated scaling_predictive maintenance_zero - downtime deployments_performance optimization_security automation_compliance management';
     ];
@@ -183,7 +176,6 @@
     target_audience: 'Enterprises, DevOps teams, Cloud - native companies, SaaS companies, IT operations';
     trial_days: 30;
     setup_time: '6 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Autonomous DevOps & Infrastructure';
     real_service: true;
     technology: ['AI / MLDevOpsKubernetesPythonTerraformAnsible'];
@@ -210,7 +202,6 @@
   }
 
   // 🧠 AI-Powered Data Management Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -223,7 +214,6 @@
   }
 ;
   // 🧠 AI - Powered Data Management Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'ai - data - management - platform';
     name: 'AI - Powered Data Management Platform';
@@ -240,7 +230,6 @@
 
     trialDays: 30;
     setupTime: '8 hours';
-=======
     features: [;
       '100% data quality assurance_zero data loss protectionAI - powered data governance_automated data cleaning_intelligent data classification_real - time data validation_data lineage tracking_compliance automation';
     ];
@@ -253,7 +242,6 @@
     target_audience: 'Enterprises, Data teams, Analytics companies, Financial institutions, Healthcare organizations';
     trial_days: 30;
     setup_time: '8 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'AI Data Management & Governance';
     real_service: true;
     technology: ['AI / MLData EngineeringBig DataPythonApache SparkData APIs'];
@@ -280,7 +268,6 @@
   }
 
   // 🌐 Edge Computing & IoT Orchestration Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -293,7 +280,6 @@
   }
 ;
   // 🌐 Edge Computing & IoT Orchestration Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'edge - computing - orchestrator';
     name: 'Edge Computing & IoT Orchestrator';
@@ -310,7 +296,6 @@
 
     trialDays: 30;
     setupTime: '8 hours';
-=======
     features: [;
       'Zero latency edge computing_unlimited IoT device scaling_intelligent edge orchestration_real - time edge analytics_edge AI deployment_automatic edge optimization_edge security management_multi - cloud edge integration';
     ];
@@ -323,7 +308,6 @@
     target_audience: 'IoT companies, Edge computing providers, Manufacturing companies, Smart cities, Transportation companies';
     trial_days: 30;
     setup_time: '8 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Edge Computing & IoT Orchestration';
     real_service: true;
     technology: ['Edge ComputingIoTAI / MLPythonKubernetesEdge APIs'];
@@ -350,7 +334,6 @@
   }
 
   // 🔐 Blockchain & Web3 Infrastructure Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -363,7 +346,6 @@
   }
 ;
   // 🔐 Blockchain & Web3 Infrastructure Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'blockchain - web3 - infrastructure';
     name: 'Blockchain & Web3 Infrastructure Platform';
@@ -382,7 +364,6 @@
     technology: ['BlockchainWeb3Smart ContractsSolidityWeb3 && ContractsSolidityWeb3.jsEthereum'];
     integrations: ['DeFi protocolsNFT marketplacesWeb3 walletsEnterprise systemsFinancial platforms'];
     useCases: ['Enterprise blockchainDeFi applicationsNFT marketplacesSmart contractsCross-chain applications'];
-=======
     period: '/month',
     description: 'Revolutionary blockchain infrastructure platform that provides enterprise - grade blockchain solutions with zero gas fees, infinite scalability, and seamless Web3 integration.';
     features: [;
@@ -402,7 +383,6 @@
     technology: ['BlockchainWeb3Smart ContractsSolidityWeb3.js_ethereum'];
     integrations: ['DeFi protocolsNFT marketplacesWeb3 wallets_enterprise systems_financial platforms'];
     use_cases: ['Enterprise blockchainDeFi applicationsNFT marketplaces_smart contracts_cross - chain applications'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     roi: 'Enterprises see 4000%+ ROI through zero gas fees and infinite scalability.';
     competitors: ['EthereumPolygonSolana'];
     market_size: '$100B blockchain market';
@@ -424,7 +404,6 @@
   }
 
   // 🎯 API Management & Integration Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -437,7 +416,6 @@
   }
 ;
   // 🎯 API Management & Integration Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'api - management - integration';
     name: 'API Management & Integration Platform';
@@ -451,7 +429,6 @@
 
     trialDays: 30;
     setupTime: '4 hours';
-=======
     period: '/month',
     description: 'Revolutionary API management platform that provides intelligent API governance, zero downtime, auto - scaling, and seamless integration across all enterprise systems.';
     features: [;
@@ -466,7 +443,6 @@
     target_audience: 'Enterprises, API providers, Integration companies, SaaS companies, Developer teams';
     trial_days: 30;
     setup_time: '4 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'API Management & Integration';
     real_service: true;
     technology: ['API ManagementMicroservicesKubernetesPythonGraphQLREST APIs'];
@@ -493,7 +469,6 @@
   }
 
   // 📊 Business Intelligence & Analytics Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -506,7 +481,6 @@
   }
 ;
   // 📊 Business Intelligence & Analytics Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'business - intelligence - analytics';
     name: 'Business Intelligence & Analytics Platform';
@@ -520,7 +494,6 @@
 
     trialDays: 30;
     setupTime: '6 hours';
-=======
     period: '/month',
     description: 'Revolutionary business intelligence platform that provides AI - powered analytics with 100% accuracy, real - time insights, and predictive modeling for data - driven decision making.';
     features: [;
@@ -535,7 +508,6 @@
     target_audience: 'Enterprises, Analytics teams, Business users, Data scientists, Executives';
     trial_days: 30;
     setup_time: '6 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Business Intelligence & Analytics';
     real_service: true;
     technology: ['AI / MLData AnalyticsBusiness IntelligencePythonTensorFlowAnalytics APIs'];
@@ -562,7 +534,6 @@
   }
 
   // 🚀 Digital Transformation & Innovation Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -575,7 +546,6 @@
   }
 ;
   // 🚀 Digital Transformation & Innovation Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'digital - transformation - innovation';
     name: 'Digital Transformation & Innovation Platform';
@@ -587,7 +557,6 @@
 
     trialDays: 30;
     setupTime: '12 hours';
-=======
     tagline: 'Complete Digital Transformation with AI - Powered Innovation',
     price: '$1, 299';
     period: '/month',
@@ -604,7 +573,6 @@
     target_audience: 'Enterprises, Government agencies, Non - profits, Educational institutions, Healthcare organizations';
     trial_days: 30;
     setup_time: '12 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Digital Transformation & Innovation';
     real_service: true;
     technology: ['AI / MLProcess AutomationDigital InnovationPythonRPAInnovation APIs'];
@@ -634,7 +602,6 @@ export default revolutionary2025ITServices;
     growthRate: '800% annual growth'
     contactInfo: {
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -665,7 +632,6 @@ export default revolutionary2025ITServices;
     reviews: 145,
   },
 
-=======
   // ☁️ Quantum Cloud Infrastructure Services;
   {
     id: 'quantum - cloud - infrastructure',
@@ -689,7 +655,6 @@ export default revolutionary2025ITServices;
     popular: true,
     icon: '☁️',
 
-=======
     color: 'from - blue - 600 to - cyan - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - cloud - infrastructure',
@@ -739,7 +704,6 @@ export default revolutionary2025ITServices;
 
       'Self-healing infrastructure',
       'AI-powered incident response',
-=======
   // 🚀 Autonomous DevOps & Infrastructure Services;
   {
     id: 'autonomous - devops - platform',
@@ -763,7 +727,6 @@ export default revolutionary2025ITServices;
     popular: true,
     icon: '🚀',
 
-=======
     color: 'from - purple - 600 to - indigo - 700',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / autonomous - devops - platform',
@@ -817,7 +780,6 @@ export default revolutionary2025ITServices;
     reviews: 198,
   },
 
-=======
   // 🧠 AI - Powered Data Management Services;
   {
     id: 'ai - data - management - platform',
@@ -841,7 +803,6 @@ export default revolutionary2025ITServices;
     popular: true,
     icon: '🧠',
 
-=======
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - data - management - platform',
@@ -895,7 +856,6 @@ export default revolutionary2025ITServices;
     reviews: 145,
   },
 
-=======
   // 🌐 Edge Computing & IoT Orchestration Services;
   {
     id: 'edge - computing - orchestrator',
@@ -919,7 +879,6 @@ export default revolutionary2025ITServices;
     popular: true,
     icon: '🌐',
 
-=======
     color: 'from - orange - 600 to - red - 700',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / edge - computing - orchestrator',
@@ -973,7 +932,6 @@ export default revolutionary2025ITServices;
     reviews: 95,
   },
 
-=======
   // 🔐 Blockchain & Web3 Infrastructure Services;
   {
     id: 'blockchain - web3 - infrastructure',
@@ -997,7 +955,6 @@ export default revolutionary2025ITServices;
     popular: true,
     icon: '🔐',
 
-=======
     color: 'from - yellow - 600 to - orange - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / blockchain - web3 - infrastructure',
@@ -1019,7 +976,6 @@ export default revolutionary2025ITServices;
       'Ethereum',
     ],
 
-=======
     integrations: [;
       'DeFi protocols',
       'NFT marketplaces',
@@ -1054,7 +1010,6 @@ export default revolutionary2025ITServices;
     reviews: 67,
   },
 
-=======
   // 🎯 API Management & Integration Services;
   {
     id: 'api - management - integration',
@@ -1078,7 +1033,6 @@ export default revolutionary2025ITServices;
     popular: true,
     icon: '🎯',
 
-=======
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / api - management - integration',
@@ -1132,7 +1086,6 @@ export default revolutionary2025ITServices;
     reviews: 178,
   },
 
-=======
   // 📊 Business Intelligence & Analytics Services;
   {
     id: 'business - intelligence - analytics',
@@ -1156,7 +1109,6 @@ export default revolutionary2025ITServices;
     popular: true,
     icon: '📊',
 
-=======
     color: 'from - teal - 600 to - cyan - 700',
     text_color: 'text - teal - 400',
     link: 'https://ziontechgroup.com / business - intelligence - analytics',
@@ -1210,7 +1162,6 @@ export default revolutionary2025ITServices;
     reviews: 234,
   },
 
-=======
   // 🚀 Digital Transformation & Innovation Services;
   {
     id: 'digital - transformation - innovation',
@@ -1234,7 +1185,6 @@ export default revolutionary2025ITServices;
     popular: true,
     icon: '🚀',
 
-=======
     color: 'from - violet - 600 to - purple - 700',
     text_color: 'text - violet - 400',
     link: 'https://ziontechgroup.com / digital - transformation - innovation',
@@ -1286,11 +1236,9 @@ export default revolutionary2025ITServices;
     rating: 4 && 4.9,
     reviews: 52,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 export default revolutionary2025ITServices;
 
-=======
 export interface Revolutionary2025ITService {
   id: string, name: string,
   tagline: string, price: string,
@@ -1316,7 +1264,6 @@ export interface Revolutionary2025ITService {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
@@ -1641,8 +1588,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default revolutionary2025ITServices;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

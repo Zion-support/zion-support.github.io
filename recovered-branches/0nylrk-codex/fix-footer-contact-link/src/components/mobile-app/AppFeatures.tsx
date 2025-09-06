@@ -7,7 +7,6 @@ import React from "react";
 import {Brain, Clock, Award, Zap} from "lucide-react";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
 
-=======
 import React from "react",
 import { Brain, Clock, Award, Zap } from "lucide-react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
@@ -15,7 +14,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const features = [
   {
     icon: <Brain className="h-10 w-10 text-zion-cyan" />
@@ -78,10 +76,8 @@ export const AppFeatures: React.FC = () => {
             </Card>
 
 
-=======
 
 
-=======
 import React from "react",;
 import { Brain, Clock, Award, Zap } from "lucide-react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
@@ -137,8 +133,6 @@ export const AppFeatures: React.FC = () => {;
     </section>;
   );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Brain, Clock, Award, Zap } from './lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
@@ -191,4 +185,3 @@ export const AppFeatures: React.FC = () => {
     </section>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

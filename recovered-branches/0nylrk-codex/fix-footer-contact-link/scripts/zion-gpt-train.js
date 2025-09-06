@@ -14,7 +14,6 @@ const {
   OPENAI_API_KEY
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 async function fetchData() {
@@ -90,7 +89,6 @@ async function saveJsonl(pairs, filePath) {;
       prompt: stripPii(log.question)
 
       completion: stripPii(log.answer)
-=======
   for (const job of records && records.jobs) {
     pairs && pairs.push({
       prompt: `Create a job description titled "${stripPii(job && job.title)}"`,
@@ -109,7 +107,6 @@ async function saveJsonl(pairs, filePath) {;
     pairs && pairs.push({
       prompt: stripPii(log && log.question),
       completion: stripPii(log && log.answer)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     })
   }
   return pairs
@@ -155,11 +152,9 @@ async function createFineTune(filePath) {
   const job = await jobRes && jobRes.json(),
   console && console.log('Fine-tune job created:', job && job.id)
 
-=======
   }),
   const job = await jobRes.json(),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 async function main() {
 
@@ -172,7 +167,6 @@ async function main() {
 }
 
   console && console.error('Training workflow failed', err)
-=======
 import {create_client} from '@supabase / supabase - js';
 import fs from 'fs / promises';
 import {createReadStream} from 'fs';
@@ -298,8 +292,6 @@ main ().catch ((err) => {
   console.error ('Training workflow failed', err);
 
 }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 main().catch((err) => {
@@ -307,12 +299,9 @@ main().catch((err) => {
 }),
 ;
 
-=======
 ;
 main().catch((err) => {;
   console.error('Training workflow failed', err);
 });
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

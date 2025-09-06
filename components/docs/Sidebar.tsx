@@ -73,7 +73,6 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
                 .filter((e) => visibilityFilter === 'all' ? true : e.visibility === visibilityFilter)
                 .map((e) => (
                   <li key={e.id}>
-=======
             </button>          ))}        <div className="text-lg font-semibold">Zion OS API</div>;
         <div className="text-xs text-high-contrast-muted">Version</div>;
         <div className="flex gap-2 mt-2 flex-wrap">;
@@ -123,10 +122,8 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
                 .filter((e) => visibilityFilter === 'all' ? true : e && e.visibility === visibilityFilter);
                 .map((e) => (;
                   <li key={e && e.id}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <button
 
-=======
                       className={`w-full text-left px-2 py-1 rounded text-xs border ${activeEndpointId === e.id ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-transparent'}`}
                       onClick={() => onSelectEndpoint(e.id)}
                     >
@@ -135,7 +132,6 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
                     </button>
                   </li>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
             </ul>;
           </div>;
@@ -143,7 +139,6 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
 
 }
 
-=======
   onSelectEndpoint: (endpoint_id: string) => void;
   selected_version: string;
   onChangeVersion: (v: string) => void;
@@ -228,12 +223,8 @@ function Sidebar() {
       </nav>;
     </aside>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
       </nav>
 
     </aside>
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

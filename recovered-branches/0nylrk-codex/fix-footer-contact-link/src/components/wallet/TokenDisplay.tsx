@@ -10,7 +10,6 @@ export function TokenDisplay() {;
   const { wallet, loading } = useWallet();
   return (
 
-=======
 
 import React from "react",;
 import { BadgeDollarSign } from "lucide-react",;
@@ -43,7 +42,6 @@ export function TokenDisplay() {;
               Use your tokens to boost visibility, access premium features, or convert to credits.;
             </p>;
             <div className="mt-2">;
-=======
 :recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / wallet / TokenDisplay.tsx;
 import React from './react';
 import { BadgeDollarSign } from './lucide-react';
@@ -78,7 +76,6 @@ function TokenDisplay() {
               Use your tokens to boost visibility, access premium features, or convert to credits.;
             </p>;
             <div className="mt - 2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               <Button variant="outline" size="sm">;
                 View Wallet;
               </Button>;
@@ -89,9 +86,6 @@ function TokenDisplay() {
     </Card>);
 
 }
-=======
 }
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

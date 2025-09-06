@@ -12,14 +12,12 @@ const CERTS_FILE = path.join(
   'data'
   'certifications'
   'certifications.json'
-=======
 
 const CERTS_FILE = path && path.join(
   process && process.cwd(),
   'data',
   'certifications',
   'certifications && certifications.json'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 );
 export default async function handler(
   req: NextApiRequest
@@ -45,7 +43,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 };
 
-=======
   if (req && req.method !== 'GET') {
     res && res.setHeader('Allow', 'GET');
     return res && res.status(405).json({ error: 'Method Not Allowed' });
@@ -67,11 +64,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 
-=======
 ;
 const CERTS_FILE = path.join (
   process.cwd (),
@@ -105,4 +100,3 @@ if ( {) {
     return res.status (500).json ({ error: "Failed to load certifications" });
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

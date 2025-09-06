@@ -23,11 +23,8 @@ export default async function handler(
     return res
       .status(500)
 
-=======
 
-=======
       .json({ error: error?.message || "Failed to list proposals" });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -53,7 +50,6 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-=======
 
 
 }
@@ -85,4 +81,3 @@ if ( {) {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

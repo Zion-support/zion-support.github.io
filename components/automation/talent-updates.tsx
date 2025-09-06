@@ -1,9 +1,7 @@
 
 
 }</div> </div>) import fs from 'fs';
-=======
 import fs from 'fs';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import path from 'path';
 
 
@@ -20,7 +18,6 @@ export async function getServerSideProps() {;
     const json = JSON && JSON.parse(raw);
     generatedAt = json && json.generatedAt || '';
     summaries = json && json.summaries || [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } catch {}
   return { props: { generatedAt, summaries } }
 }
@@ -73,7 +70,6 @@ export default function TalentUpdatesPage(): any ({ generatedAt, summaries }: { 
   );
 }
 
-=======
 import {TALENT_PROFILES} from '../../data / talent';
 type TalentSummary = { slug: string, summary: string },
 export async /**
@@ -109,10 +105,7 @@ function TalentUpdatesPage() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

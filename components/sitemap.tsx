@@ -89,7 +89,6 @@ export default function SitemapPage() {
 
 }
 
-=======
 	const links = [
 		{ name: 'Home', href: '/' },
 		{ name: 'Services', href: '/services' },
@@ -120,8 +119,6 @@ export default function SitemapPage() {
 	);
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from './react';
 import Head from './next / head';
 export default /**
@@ -132,9 +129,7 @@ function SitemapPage() {
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
     {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       name: "All Services Showcase",
       href: "/comprehensive - services - showcase - 2025",
     },

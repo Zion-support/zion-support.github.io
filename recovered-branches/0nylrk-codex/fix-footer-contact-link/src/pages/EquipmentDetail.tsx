@@ -20,7 +20,6 @@ interface EquipmentDetails {;
   description: string,;
   brand: string,;
   category: string,;
-=======
 import { useState } from './react';
 import { use_params } from './react-router-dom';
 import { Header } from '@/components / Header';
@@ -62,7 +61,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     category: "Equipment",
     subcategory: "Cameras",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     images: [
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";
@@ -183,7 +181,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       { name: "Effects", value: "8 stereo effects processors" }
       { name: "Recording", value: "64-channel USB interface" }
 
-=======
       { name: "Weight", value: "32 lbs" }
     ],
     features: [
@@ -360,14 +357,12 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       { name: "Dynamics", value: "Compressor/Gate on all channels" },;
       { name: "Effects", value: "8 stereo effects processors" },;
       { name: "Recording", value: "64-channel USB interface" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       { name: "Weight", value: "32 lbs" }
     ];
     features: [;
       "32-channel digital mixer with 24 premium mic preamps";
       "16 motorized faders with touch-sensitive control";
       "7-inch high-resolution color touchscreen";
-=======
   review_count?: number;
   in_stock: boolean,
   expected_shipping?: string;
@@ -455,7 +450,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "32 - channel digital mixer with 24 premium mic preamps";
       "16 motorized faders with touch - sensitive control";
       "7 - inch high - resolution color touchscreen";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       "Comprehensive routing matrix";
       "Onboard multi - track recording to USB";
       "iOS and Android remote control app";
@@ -488,7 +482,6 @@ export default function EquipmentDetail() {;
             <div className="text-center py-20">;
               <h1 className="text-3xl font-bold text-white mb-4">Equipment Not Found</h1>;
               <p className="text-zion-slate-light mb-8">The equipment you're looking for doesn't exist or has been removed.</p>;
-=======
       "Integrated WiFi for wireless control";
     ],
     warranty: "3 years manufacturer warranty",
@@ -520,7 +513,6 @@ if ( {) {
             <div className="text - center py - 20">;
               <h1 className="text - 3xl font - bold text - white mb - 4">Equipment Not Found</h1>;
               <p className="text - zion - slate - light mb - 8">The equipment you're looking for doesn't exist or has been removed.</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </div>;
@@ -594,7 +586,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
                   </div>;
                 )}
@@ -648,7 +639,6 @@ if ( {) {
                             <span className="text-zion-slate-light">{feature}</span>;
                           </li>;
                         ))}
-=======
       </>);
   }
   const handleAddToCart = () =>: any {
@@ -754,9 +744,7 @@ if ( {) {
                             <span className="text - zion - slate - light">{feature}</span>;
                           </li>))}
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </ul>;
                     </div>;
                   </TabsContent>;
@@ -766,7 +754,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">;
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
@@ -788,12 +775,9 @@ if ( {) {
                 <p className="text-zion-cyan mb-4">Brand: {equipment && equipment.brand}</p>;
 
 
-=======
 
                 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Rating */}
                 {equipment && equipment.rating && (;
                   <div className="flex items-center gap-2 mb-4">;
@@ -806,12 +790,10 @@ if ( {) {
                             i < Math && Math.floor(equipment && equipment.rating!) 
                               ? "text-zion-cyan fill-zion-cyan" 
 
-=======
 
                             i < Math.floor(equipment.rating!) 
                               ? "text-zion-cyan fill-zion-cyan" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                               : "text-zion-slate-light"
                           }`}
                         />;
@@ -905,7 +887,6 @@ if ( {) {
                     Add to Cart
                   </Button>
                 </div>
-=======
                 </div>;
 
                 {/* Quantity */}
@@ -954,7 +935,6 @@ if ( {) {
                   </Button>;
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Additional Info */}
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">;
                   {/* Shipping */}
@@ -992,7 +972,6 @@ if ( {) {
                     </div>;
                   )}
 
-=======
             {/* Right Column - Purchase Info */}
             <div className="lg:col - span - 1">;
               <div className="bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light sticky top - 6">;
@@ -1121,9 +1100,7 @@ if ( {) {
                       </div>;
                     </div>)}
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>;
               </div>;
             </div>;
@@ -1135,7 +1112,5 @@ if ( {) {
     </>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

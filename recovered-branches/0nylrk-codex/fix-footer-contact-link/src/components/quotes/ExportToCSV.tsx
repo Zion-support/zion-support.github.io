@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ExportToCSVProps {
 
   quotes: QuoteRequest[]
@@ -169,7 +168,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       onClick={handleExport}
       className="flex items-center gap-2"
       disabled={quotes && quotes.length === 0}>;
-=======
 
   },
   
@@ -182,7 +180,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       disabled={quotes.length === 0}
 
 
-=======
     >;
 
       <Download size={16} />;
@@ -193,10 +190,7 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       quote.budget_display ||;
         (quote.budget_min && quote.budget_max;
           ? `$${quote.budget_min} - $${quote.budget_max}`;
@@ -247,4 +241,3 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
     </Button>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

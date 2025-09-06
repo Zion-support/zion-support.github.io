@@ -10,7 +10,6 @@ export default function EnterpriseITPage() {;
 
 
     <div className="min-h-screen">;
-=======
 import Link from './next / link';,
 export const metadata = {
   title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",
@@ -22,7 +21,6 @@ export default /**
 function EnterpriseITPage() {
   return (
     <div className="min - h-screen">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -49,12 +47,10 @@ function EnterpriseITPage() {
                 <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
                   In today's digital - first world, enterprises need agile, scalable,
 
-=======
                 <p className="text-gray-300 text-lg mb-6 leading-relaxed">;
 
                   In today's digital-first world, enterprises need agile, scalable,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   and secure IT infrastructure to compete and thrive. Our comprehensive;
                   solutions help organizations modernize their technology stack while;
                   maintaining operational excellence.;
@@ -116,11 +112,9 @@ function EnterpriseITPage() {
               <p className="text - gray - 400 mb - 4">;
                 Seamless migration to cloud platforms with strategic planning,
 
-=======
 
                 Seamless migration to cloud platforms with strategic planning,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 cost optimization, and performance tuning.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -146,11 +140,9 @@ function EnterpriseITPage() {
               <p className="text - gray - 400 mb - 4">;
                 Streamline development and operations with automated CI / CD pipelines,
 
-=======
 
                 Streamline development and operations with automated CI/CD pipelines,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 infrastructure as code, and monitoring solutions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -175,11 +167,9 @@ function EnterpriseITPage() {
               <p className="text - gray - 400 mb - 4">;
                 Comprehensive infrastructure management including server provisioning,
 
-=======
 
                 Comprehensive infrastructure management including server provisioning,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 network configuration, and performance optimization.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -204,11 +194,9 @@ function EnterpriseITPage() {
               <p className="text - gray - 400 mb - 4">;
                 Enterprise data solutions including warehousing, analytics,
 
-=======
 
                 Enterprise data solutions including warehousing, analytics,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 and business intelligence platforms.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -255,11 +243,9 @@ function EnterpriseITPage() {
               <p className="text - gray - 400 mb - 4">;
                 24 / 7 managed IT services including monitoring, maintenance,
 
-=======
 
                 24/7 managed IT services including monitoring, maintenance,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 and support for enterprise infrastructure.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -347,11 +333,9 @@ function EnterpriseITPage() {
               <p className="text - gray - 400">;
                 Comprehensive evaluation of current infrastructure,
 
-=======
 
                 Comprehensive evaluation of current infrastructure,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 identifying opportunities and challenges.;
               </p>;
             </div>;

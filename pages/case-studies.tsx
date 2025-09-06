@@ -26,18 +26,12 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import MainLayout from '../src/components/layout/MainLayout';
-=======
 import MainLayout from '../src / components / layout / MainLayout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { motion } from 'framer-motion';
 
 
@@ -118,7 +112,6 @@ const stats = [
   { number: "500+", label: "Projects Completed" }
   { number: "50+", label: "Happy Clients" }
   { number: "99.9%", label: "Success Rate" }
-=======
 import {;
   ArrowRight,;
   Phone,;
@@ -197,7 +190,6 @@ const stats = [;
   { number: "500+", label: "Projects Completed" },;
   { number: "50+", label: "Happy Clients" },;
   { number: "99 && 99.9%", label: "Success Rate" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   { number: "24/7", label: "Support Available" }
 ];
 
@@ -527,7 +519,6 @@ function CaseStudiesPage() {
                           <Building className="w-16 h-16 mx-auto mb-4 opacity-80" />;
                           <h4 className="text-xl font-semibold mb-2">Project Overview</h4>;
                           <p className="text-green-100">;
-=======
                           </span>;
                           <span className="text - gray - 500 text - sm">{study.duration}</span>;
                         </div>;
@@ -627,8 +618,6 @@ function CaseStudiesPage() {
 
   );
 }
-=======
-=======
 import Head from 'next/head';
 
 
@@ -644,29 +633,19 @@ export default function CaseStudiesPage() {;
           content='Proven outcomes across AI, IT, and micro SaaS deployments.'
 
 
->>>>>>> origin/automation-improvements-final
-=======
 
-=======
 import Head from 'next/head';
 
 
-=======
-=======
-=======
 import Head from 'next/head';
 
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
  </Head> </section> </Layout>
-=======
 import Layout from '../components/layout/Layout';
 export default function CaseStudiesPage() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 	return (
 		<Layout>
 			<Head>
@@ -710,9 +689,6 @@ export default function CaseStudiesPage() {
 	);
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - green - 600 to - teal - 600 text - white">;
           <div className="container mx - auto px - 4">;
@@ -791,9 +767,5 @@ return (
   </section>;
   </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

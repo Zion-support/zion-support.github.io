@@ -48,7 +48,6 @@ export default function QuoteManager() {;
 
   const {;
 
-=======
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -74,7 +73,6 @@ function QuoteManager() {
   const [show_details, setShowDetails] = useState (false);
 ;
   const {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     quotes;
     is_loading;
     error;
@@ -142,7 +140,6 @@ function QuoteManager() {
 
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />
-=======
 
   // Count quotes by status;
   const statusCounts = {;
@@ -167,11 +164,9 @@ function QuoteManager() {
 
   if (!isAdmin) {;
     return <Navigate to="/unauthorized" replace />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
 
-=======
 
             
 import React, { useState } from "react",;
@@ -254,11 +249,9 @@ export default function QuoteManager() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Filters */}
             <QuotesFilter
               searchQuery={searchQuery}
@@ -311,11 +304,8 @@ export default function QuoteManager() {;
         </div>;
 
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
@@ -327,7 +317,6 @@ export default function QuoteManager() {;
             setSelectedQuote(null);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }}
         />
         <Footer />
@@ -335,7 +324,6 @@ export default function QuoteManager() {;
     </ProtectedRoute>
   )
 }
-=======
             setSelectedQuote(null);
           }}
         />;
@@ -345,8 +333,6 @@ export default function QuoteManager() {;
     </ProtectedRoute>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     update_status;
     toggle_archive;
     delete_quote;
@@ -454,4 +440,3 @@ if ( {) {
       </div>;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

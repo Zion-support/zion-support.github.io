@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ResumeStepContentProps {
 
   activeTab: string
@@ -73,11 +72,9 @@ export const ResumeStepContent = ({ ;
       <TabsContent value="work-experience">;
 
         <WorkExperienceForm
-=======
 
         <WorkExperienceForm 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           resumeId={resume?.id!}
           workExperiences={resume?.work_experience |[]}
           onComplete={onNextStep}
@@ -89,11 +86,9 @@ export const ResumeStepContent = ({ ;
       <TabsContent value="education">;
 
         <EducationForm
-=======
 
         <EducationForm 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           resumeId={resume?.id!}
           educationEntries={resume?.education |[]}
           onComplete={onNextStep}
@@ -116,11 +111,9 @@ export const ResumeStepContent = ({ ;
       <TabsContent value="certifications">;
 
         <CertificationsForm
-=======
 
         <CertificationsForm 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           resumeId={resume?.id!}
           certifications={resume?.certifications |[]}
           onComplete={onNextStep}
@@ -137,13 +130,10 @@ export const ResumeStepContent = ({ ;
       </TabsContent>;
     </>;
   );
-=======
 
 
 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { TabsContent } from '@/components / ui / tabs';
 import { Resume } from '@/types / resume';
 import {BasicInfoForm} from '../forms / basic - info';
@@ -218,4 +208,3 @@ export const ResumeStepContent = ({
     </>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

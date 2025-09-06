@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function FeatureHighlights() {
 
   const highlightsData = [
@@ -30,7 +29,6 @@ export function FeatureHighlights() {;
       title: "For Talent & Service Providers",;
       features: [;
 
-=======
 import React from './react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Check } from './lucide-react';
@@ -53,7 +51,6 @@ function FeatureHighlights() {
     {
       title: "For Talent & Service Providers",
       features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         "Create a professional profile showcasing your skills and experience";
         "Get matched with relevant projects that fit your expertise";
         "Secure payment processing with on - time disbursements";
@@ -101,12 +98,9 @@ function FeatureHighlights() {
 
         "Customizable workflow and approval processes"
       ]
-=======
         "API access for seamless integration with your HR systems",;
         "Customizable workflow and approval processes";
       ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
         "Access to enterprise clients and high - value projects",
         "Professional development resources and community support";
       ];
@@ -121,13 +115,11 @@ function FeatureHighlights() {
         "API access for seamless integration with your HR systems",
         "Customizable workflow and approval processes";
       ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   ];
 ;
   return (
 
-=======
 
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -193,7 +185,6 @@ export function FeatureHighlights() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
                 </ul>;
               </CardContent>;
@@ -206,7 +197,6 @@ export function FeatureHighlights() {;
   );
 }
 
-=======
     <section className="py - 16 bg - zion - blue">;
       <div className="container mx - auto px - 4">;
         <div className="text - center mb - 12">;
@@ -233,4 +223,3 @@ export function FeatureHighlights() {;
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

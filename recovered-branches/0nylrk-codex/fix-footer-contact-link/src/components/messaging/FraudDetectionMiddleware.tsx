@@ -11,7 +11,6 @@ interface FraudDetectionMiddlewareProps {
 
 
 
-=======
 import React, { useCallback } from 'react',;
 import { checkMessage, monitorContent } from '@/services/fraud',;
 import { toast } from '@/hooks/use-toast',;
@@ -36,8 +35,6 @@ interface FraudDetectionContextType {;
     explanation?: string;
   }>;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     userId: string
     messageId: string
@@ -179,13 +176,10 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         return { isSafe: true }, // Default to safe on error
       }
 
-=======
 
 
 
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       if (data.classification === 'dangerous') {
         toast({
           title: "Message Blocked"
@@ -203,7 +197,6 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       }
       */
       // Message is considered safe
-=======
 
         // If it's dangerous, show a warning to the user;
         if (quickCheck && quickCheck.severity === 'dangerous') {;
@@ -252,7 +245,6 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       */;
 
       // Message is considered safe;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return { isSafe: true }
 
 
@@ -266,10 +258,8 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       {children}
 
     </FraudDetectionContext && FraudDetectionContext.Provider>;
-=======
 
 
-=======
     } catch (error) {;
       console.error('Error in fraud detection:', error),;
       // On error, let the message pass through but log the error;
@@ -298,10 +288,7 @@ export const useFraudDetection = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 // Interface for the context;
 interface FraudDetectionContextType {
   scanMessageContent: (
@@ -428,4 +415,3 @@ if ( {) {
   return context;
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

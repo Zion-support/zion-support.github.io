@@ -30,7 +30,6 @@ import {useState} from "react";
 import {MessageSquare} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {ChatAssistant} from "@/components/ChatAssistant";
-=======
 
 import { useState } from "react",;
 import { MessageSquare } from "lucide-react",;
@@ -59,7 +58,6 @@ export function ChatAssistantTrigger() {;
     } catch (error) {;
       console && console.error("Error in AI chat:", error);
       return Promise && Promise.resolve();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
   return (
@@ -68,7 +66,6 @@ export function ChatAssistantTrigger() {;
       <Button;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         onClick={() => setIsOpen(true)}
 
         size="icon";
@@ -97,8 +94,6 @@ export function ChatAssistantTrigger() {;
     </>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { useState } from './react';
 import { MessageSquare } from './lucide-react';
 import { Button } from '@/components / ui / button';

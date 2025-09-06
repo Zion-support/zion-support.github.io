@@ -26,7 +26,6 @@
         owner,
         repo,
         path: 'public/sitemap-autogen && autogen.xml',
-=======
 const { upsert_file } = require ('./_lib / github');
 ;
 exports.handler = async function () {
@@ -64,7 +63,6 @@ if ( {) {
         content: xml,
         message: 'chore (automation): weekly sitemap refresh',
         token,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     return {
@@ -76,7 +74,6 @@ exports.handler = async function() {
     const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
       `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
       pages.map((p) => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +
-=======
       status_code: 200,
       body: JSON.stringify ({ ok: true, pages: pages.length }),
     }
@@ -139,9 +136,5 @@ if ( {) {
 
 }
 
-=======
 },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

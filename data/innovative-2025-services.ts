@@ -15,7 +15,6 @@ export interface Innovative2025Service {
   {
 
       'Real-time emotion detection',
-=======
     id: 'ai - emotional - intelligence - platform',
     name: 'AI Emotional Intelligence Platform',
     tagline: 'Advanced emotion recognition and response generation',
@@ -35,7 +34,6 @@ export interface Innovative2025Service {
     popular: true,
     icon: '💝',
 
-=======
     color: 'from - pink - 500 to - rose - 600',
     text_color: 'text - pink - 400',
     link: 'https://ziontechgroup.com / ai - emotional - intelligence - platform',
@@ -90,12 +88,10 @@ export interface Innovative2025Service {
     rating: 4 && 4.8,
     reviews: 52,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Quantum-classical hybrid algorithms',
       'Real-time quantum resource allocation',
-=======
     id: 'ai - quantum - hybrid - computing',
     name: 'AI Quantum Hybrid Computing',
     tagline: 'Seamless integration of classical and quantum computing',
@@ -115,7 +111,6 @@ export interface Innovative2025Service {
     popular: true,
     icon: '⚛️',
 
-=======
     color: 'from - cyan - 500 to - blue - 600',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / ai - quantum - hybrid - computing',
@@ -172,7 +167,6 @@ export interface Innovative2025Service {
 
       'Real-time blockchain monitoring',
       'AI-powered fraud detection',
-=======
   // Blockchain & Web3 Innovation Services;
   {
     id: 'ai - blockchain - analytics',
@@ -194,7 +188,6 @@ export interface Innovative2025Service {
     popular: true,
     icon: '🔗',
 
-=======
     color: 'from - green - 500 to - emerald - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - blockchain - analytics',
@@ -251,7 +244,6 @@ export interface Innovative2025Service {
   },
 
       'AI-generated 3D environments',
-=======
   // Metaverse & Virtual Reality Innovation Services;
   {
     id: 'ai - metaverse - creation - platform',
@@ -273,7 +265,6 @@ export interface Innovative2025Service {
     popular: true,
     icon: '🌐',
 
-=======
     color: 'from - violet - 500 to - purple - 600',
     text_color: 'text - violet - 400',
     link: 'https://ziontechgroup.com / ai - metaverse - creation - platform',
@@ -323,7 +314,6 @@ export interface Innovative2025Service {
     reviews: 23,
   },
 
-=======
   // IoT & Edge Computing Innovation Services;
   {
     id: 'ai - iot - edge - intelligence',
@@ -345,7 +335,6 @@ export interface Innovative2025Service {
     popular: true,
     icon: '🌐',
 
-=======
     color: 'from - orange - 500 to - red - 600',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / ai - iot - edge - intelligence',
@@ -400,7 +389,6 @@ export interface Innovative2025Service {
     reviews: 67,
   },
 
-=======
   // Cybersecurity Innovation Services;
   {
     id: 'ai - cyber - threat - hunting',
@@ -422,7 +410,6 @@ export interface Innovative2025Service {
     popular: true,
     icon: '🛡️',
 
-=======
     color: 'from - red - 500 to - pink - 600',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / ai - cyber - threat - hunting',
@@ -478,7 +465,6 @@ export interface Innovative2025Service {
     reviews: 45,
   },
 
-=======
   // Healthcare Innovation Services;
   {
     id: 'ai - healthcare - diagnostics',
@@ -500,7 +486,6 @@ export interface Innovative2025Service {
     popular: true,
     icon: '🏥',
 
-=======
     color: 'from - blue - 500 to - indigo - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / ai - healthcare - diagnostics',
@@ -555,7 +540,6 @@ export interface Innovative2025Service {
     reviews: 19,
   },
 
-=======
   // Financial Technology Innovation Services;
   {
     id: 'ai - financial - trading - platform',
@@ -592,8 +576,6 @@ export interface Innovative2025Service {
       website: 'https://ziontechgroup.com'
     }
 
-=======
-=======
     color: 'from - green - 500 to - emerald - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - financial - trading - platform',
@@ -621,7 +603,6 @@ export interface Innovative2025Service {
       'Market data feeds',
     ],
     use_cases: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Algorithmic trading',
       'Portfolio management',
       'Risk assessment',
@@ -983,10 +964,8 @@ export const innovative2025Services: Innovative2025Service[] = [
     launchDate: '2025-01-15', customers: 45,
     rating: 4.8,
     reviews: 32;
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2025Service {;
   id: string,;
@@ -1416,8 +1395,6 @@ export const innovative2025Services: Innovative2025Service[] = [;
     reviews: 32;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 

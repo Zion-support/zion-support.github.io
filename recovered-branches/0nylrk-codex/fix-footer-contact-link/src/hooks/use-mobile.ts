@@ -46,10 +46,8 @@ if ( {) {
     }
     return undefined;
   }, []);
-=======
 
 
-=======
 import { useState, useEffect } from 'react',;
 export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState(;
@@ -70,8 +68,6 @@ export function useIsMobile() {;
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
   return is_mobile;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

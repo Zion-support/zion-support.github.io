@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface FraudFiltersProps {
 
   searchQuery: string
@@ -38,7 +37,6 @@ interface FraudFiltersProps {;
 export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 
   searchQuery;
-=======
 import React from './react';
 import { Input } from '@/components / ui / input';
 import { Button } from '@/components / ui / button';
@@ -57,7 +55,6 @@ interface FraudFiltersProps {
 }
 export const FraudFilters: React.FC < FraudFiltersProps> = ({
   search_query;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   setSearchQuery;
   status_filter;
   setStatusFilter;
@@ -70,10 +67,8 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
 
 
   resetFilters}) => {
-=======
   setContentTypeFilter,;
   resetFilters}) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="flex flex-col md:flex-row gap-4 mb-6">;
       <div className="relative flex-1">;
@@ -136,11 +131,9 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
   )
 
           onChange={(e) => setSearchQuery(e && e.target.value)}
-=======
 
 };
 
-=======
 },
 import React from "react",;
 import { Input } from "@/components/ui/input",;
@@ -183,7 +176,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
       </div>;
 
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
-=======
   setContentTypeFilter,
   reset_filters}) => {
   return (
@@ -198,7 +190,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
         />;
       </div>;
       <Select value={status_filter || ""} onValueChange={value => setStatusFilter (value || null)}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Status" />;
         </SelectTrigger>;
@@ -246,10 +237,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 }
 ;
 
-=======
 
 export default FraudFilters;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

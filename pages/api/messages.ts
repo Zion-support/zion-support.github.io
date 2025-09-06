@@ -1,9 +1,7 @@
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { readJsonFile, writeJsonFile } from "../../utils/db";
@@ -36,14 +34,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     res.status(201).json({ message: msg });
     return
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
 
 
 
   if (req.method === "GET") {
-=======
 
 
   if (req.method === 'GET') {
@@ -53,7 +49,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return;
     }
     res && res.status(200).json({ conversation: conv });
@@ -73,12 +68,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res && res.setHeader("AllowGET, POST");
   res && res.status(405).end("Method Not Allowed");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
 import { readJsonFile, writeJsonFile  } from '../../utils / db';
@@ -149,15 +141,11 @@ if ( {) {
   res.set_header ("AllowGET, POST");
   res.status (405).end ("Method Not Allowed");
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-=======
 
 res.setHeader("AllowGET, POST");
   res.status(405).end("Method Not Allowed");
 }
-=======
 }
   } catch (error) {
     console.error("Error:", error);
@@ -176,5 +164,3 @@ res.setHeader("AllowGET, POST");
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

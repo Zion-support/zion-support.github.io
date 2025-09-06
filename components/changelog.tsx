@@ -45,7 +45,6 @@ function ChangelogPage() {
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
 
   } catch {
-=======
 
 export async function getStaticProps() {;
   try {;
@@ -61,12 +60,10 @@ export async function getStaticProps() {;
   } catch {;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }
 
 
-=======
 export async /**
  * getStaticProps - Function description
  */
@@ -85,11 +82,7 @@ function getStaticProps() {
     return { props: { content: null, generated_at: null }, revalidate: 300 }
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   } catch {
 
     return { props: { content: null, generatedAt: null }, revalidate: 300 };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

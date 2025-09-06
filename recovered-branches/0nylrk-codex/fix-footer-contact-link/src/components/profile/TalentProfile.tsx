@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TalentProfileProps {
 
   profile: TalentProfileType
@@ -97,14 +96,12 @@ export function TalentProfile(): any ({ ;
 
   return (
     <div className="container mx-auto px-4 py-8">;
-=======
 
   })) || [],
   
   return (
     <div className="container mx-auto px-4 py-8">
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Profile Header */}
       <ProfileHero
         name={profile && profile.full_name}
@@ -140,7 +137,6 @@ export function TalentProfile(): any ({ ;
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />
           {/* Ratings Section */}
@@ -159,7 +155,6 @@ export function TalentProfile(): any ({ ;
               ratingCount={profile.rating_count}
             />
           </div>
-=======
 import React from './react';
 import { Handshake, MessageSquare, Star } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -252,7 +247,6 @@ function TalentProfile() {
               rating_count={profile.rating_count}
             />;
           </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* Hire Now CTA */}
           {is_authenticated && (
             <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6 mb - 8">;
@@ -326,7 +320,6 @@ function TalentProfile() {
   );
 }
 
-=======
                 </p>;
                 <div className="flex flex - wrap gap - 4 justify - center">;
                   <Button;
@@ -354,4 +347,3 @@ function TalentProfile() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

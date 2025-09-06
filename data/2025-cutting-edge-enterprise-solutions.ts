@@ -2,7 +2,6 @@
 
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   // ENTERPRISE SOLUTIONS
   {
@@ -34,11 +33,9 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Industry-specific compliance',
-=======
     id: 'autonomous - business - process - optimization',
     name: 'Autonomous Business Process Optimization',
     tagline: 'AI - powered business process automation and optimization',
@@ -141,10 +138,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'ai - enterprise - knowledge - management',
     name: 'AI Enterprise Knowledge Management',
     tagline: 'Intelligent knowledge discovery and management for enterprises',
@@ -168,7 +163,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     popular: true,
     icon: '🧠',
 
-=======
     color: 'from - purple - 600 via - violet - 600 to - indigo - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - powered - enterprise - knowledge - management',
@@ -202,9 +196,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     roi: 'Improve knowledge discovery by 80%. Reduce information search time by 70%. Increase collaboration efficiency by 60%.',
     competitors: [;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Microsoft SharePoint',
       'Confluence',
       'Notion',
@@ -224,7 +216,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
 
   },];      'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard';
 
-=======
     id: 'ai-powered-enterprise-risk-management', name: 'AI-Powered Enterprise Risk Management',
     tagline: 'Intelligent risk assessment and mitigation for enterprise',
     price: {
@@ -314,7 +305,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     features: [
       'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       'Integration capabilitiesMobile access'
     ];
     popular: true;
@@ -326,7 +316,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     marketPosition: 'Leading AI enterprise knowledge management platform with intelligent discovery',
 
     targetAudience: 'Large enterprises, Consulting firms, Research organizations, Government agencies';
-=======
     contact_info: contact,
   }, ];      'AI knowledge discovery_intelligent categorization_semantic search_knowledge graphs_collaborative workspaces_version control_access control_analytics dashboard';
       'Integration capabilities_mobile access';
@@ -338,7 +327,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     link: 'https://ziontechgroup.com / ai - powered - enterprise - knowledge - management';
     market_position: 'Leading AI enterprise knowledge management platform with intelligent discovery',
     target_audience: 'Large enterprises, Consulting firms, Research organizations, Government agencies';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'AI Automation';
     real_service: true;
     technology: ['AI / MLNatural Language ProcessingKnowledge GraphsMachine LearningSemantic Search'];
@@ -355,8 +343,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     rating: 4 && 4.6;
     reviews: 41,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

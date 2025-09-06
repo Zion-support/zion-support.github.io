@@ -23,7 +23,6 @@ const AIPoweredITAssetManagement = () => {
       title: "Real-Time Monitoring",
       description: "Continuous monitoring and health assessment of all IT assets",
       color: "from-blue-500 to-cyan-500"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     },
     {
       icon: Shield,
@@ -39,7 +38,6 @@ const AIPoweredITAssetManagement = () => {
 
   ],
   const asset_types = [;
-=======
       description: "AI-driven insights for asset lifecycle management and optimization",
       color: "from-red-500 to-orange-500"
 
@@ -66,7 +64,6 @@ const AIPoweredITAssetManagement = () => {
       value: "35%",
 
 
-=======
       description: "Reduction in IT asset costs"
     },
     {
@@ -100,7 +97,6 @@ const AIPoweredITAssetManagement = () => {
     "Integration with existing IT tools"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <Head>
@@ -130,7 +126,6 @@ const AIPoweredITAssetManagement = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
@@ -138,8 +133,6 @@ const AIPoweredITAssetManagement = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
-=======
       description: "Reduction in IT asset costs";
     },
     {
@@ -183,7 +176,6 @@ const AIPoweredITAssetManagement = () => {
         <meta property="og:url" content="https://ziontechgroup.com / ai - powered - it - asset - management" />;
       </Head>;
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - indigo - 900 to - slate - 900">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Hero Section */}
         <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="absolute inset - 0 bg - gradient - to - r from - indigo - 600 / 20 to - purple - 600 / 20"></div>;
@@ -196,13 +188,9 @@ const AIPoweredITAssetManagement = () => {
 
                 Transform your IT operations with intelligent asset management that discovers,
 
-=======
                 Transform your IT operations with intelligent asset management that discovers, 
-=======
                 Transform your IT operations with intelligent asset management that discovers,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 monitors, and optimizes every piece of your technology infrastructure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -218,8 +206,6 @@ const AIPoweredITAssetManagement = () => {
           </div>
         </section>
 
-=======
-=======
 
         {/* Features Section */  } catch (error) {
     console.error("Error:", error);
@@ -439,7 +425,6 @@ const AIPoweredITAssetManagement = () => {;
             </motion.div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Features Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -499,7 +484,6 @@ const AIPoweredITAssetManagement = () => {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -533,7 +517,6 @@ const AIPoweredITAssetManagement = () => {;
                   viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-indigo-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
@@ -543,7 +526,6 @@ const AIPoweredITAssetManagement = () => {;
                   <p className="text-gray-400">{feature.description}</p>
                 </motion.div>
 
-=======
                   className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 p - 6 rounded - xl border border - slate - 700 / 50 hover:border - indigo - 500 / 50 transition - all duration - 300";
                 >;
                   <div className={`inline - flex p - 3 bg - gradient - to - r ${feature.color} rounded - lg mb - 4`}>;
@@ -652,7 +634,6 @@ const AIPoweredITAssetManagement = () => {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -688,14 +669,12 @@ const AIPoweredITAssetManagement = () => {;
                   viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
                   <span className="text-gray-300">{assetType}</span>
                 </motion.div>
 
-=======
                   className="flex items - center space - x-3";
                 >;
                   <CheckCircle className="w - 6 h - 6 text - indigo - 400 flex - shrink - 0" />;
@@ -801,7 +780,6 @@ const AIPoweredITAssetManagement = () => {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -835,7 +813,6 @@ const AIPoweredITAssetManagement = () => {;
                   viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="text-center"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
@@ -848,7 +825,6 @@ const AIPoweredITAssetManagement = () => {;
                   </div>
                 </motion.div>
 
-=======
                   className="text - center";
                 >;
                   <div className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 p - 6 rounded - xl border border - slate - 700 / 50">;
@@ -960,7 +936,6 @@ const AIPoweredITAssetManagement = () => {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -994,7 +969,6 @@ const AIPoweredITAssetManagement = () => {;
                   viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
@@ -1033,7 +1007,6 @@ const AIPoweredITAssetManagement = () => {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -1041,8 +1014,6 @@ const AIPoweredITAssetManagement = () => {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-=======
-=======
                   className="flex items - center space - x-3";
                 >;
                   <CheckCircle className="w - 6 h - 6 text - indigo - 400 flex - shrink - 0" />;
@@ -1051,7 +1022,6 @@ const AIPoweredITAssetManagement = () => {;
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* CTA Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-4xl mx - auto text - center">;
@@ -1066,7 +1036,6 @@ const AIPoweredITAssetManagement = () => {;
 
 export default AIPoweredITAssetManagement;
 
-=======
             >;
               <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
                 Ready to Transform Your IT Asset Management?;
@@ -1091,9 +1060,6 @@ export default AIPoweredITAssetManagement;
 },
 export default AIPoweredITAssetManagement,
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -52,7 +52,6 @@ interface GeneratedContent {
     switch(field) {
       case 'title':
         setTitle(e.target.value);
-=======
   const [title, setTitle] = useState(initialValues && initialValues.title || "");
   const [category, setCategory] = useState(initialValues && initialValues.category || "");
   const [keyFeatures, setKeyFeatures] = useState(initialValues && initialValues.keyFeatures || "");
@@ -64,7 +63,6 @@ interface GeneratedContent {
     switch(field) {;
       case 'title':;
         setTitle(e && e.target.value);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         break;
       case 'category':;
         setCategory(e && e.target.value);
@@ -88,7 +86,6 @@ interface GeneratedContent {
         description: "Please provide at least a title and category."
         variant: "destructive"
 
-=======
 
       }),
       return
@@ -125,7 +122,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         title: "Missing required fields",;
         description: "Please provide at least a title and category.",;
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
     }
@@ -217,7 +213,6 @@ if ( {) {
         throw new Error(error.message);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       if (data.error) {
         throw new Error(data.error)
@@ -302,7 +297,6 @@ if ( {) {
       }
 
       setGeneratedContent(data && data.generated);
-=======
     }
 
   },
@@ -365,7 +359,6 @@ if ( {) {
 
           <Button 
 
-=======
 ;
       setGeneratedContent(data.generated),;
 
@@ -392,7 +385,6 @@ if ( {) {
         title: "Content Applied",;
         description: "The generated content has been applied to your listing.";
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
@@ -458,7 +450,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             onClick={handleGenerate}
             disabled={isLoading |!title |!category}
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
@@ -484,7 +475,6 @@ if ( {) {
             <div className="flex flex-wrap gap-2">
               {[...Array(5)].map((_, i) => (
                 <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />
-=======
             />;
           </div>;
           <Button
@@ -513,7 +503,6 @@ if ( {) {
             <div className="flex flex-wrap gap-2">;
               {[...Array(5)].map((_, i) => (;
                 <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               ))}
             </div>;
             <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />;
@@ -557,7 +546,6 @@ if ( {) {
               <ul className="list-disc pl-5 text-white space-y-1">
                 {generatedContent.keyPoints.map((point, index) => (
                   <li key={index}>{point}</li>
-=======
 
       {generatedContent && !isLoading && (;
         <Card className="border border-zion-blue-light bg-zion-blue-dark">;
@@ -589,9 +577,7 @@ if ( {) {
               <ul className="list-disc pl-5 text-white space-y-1">;
                 {generatedContent && generatedContent.keyPoints.map((point, index) => (;
                   <li key={index}>{point}</li>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 ))}
-=======
 ;
   const handle_apply = () =>: any {
     // Check condition
@@ -721,7 +707,6 @@ if ( {) {
               <ul className="list - disc pl - 5 text - white space - y-1">;
                 {generated_content.key_points.map ((point, index) => (
                   <li key={index}>{point}</li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </ul>;
             </div>;
           </CardContent>;

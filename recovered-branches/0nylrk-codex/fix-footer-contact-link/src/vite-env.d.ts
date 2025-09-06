@@ -174,12 +174,10 @@ declare module '@livekit / components - react' {
   export const LiveKitRoom: React.FC < any>;
 }
 declare module '@livekit / components - styles' {
-=======
 
 ;
 
 declare module '@livekit/components-styles' {;
 
   // Empty stub for the styles;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

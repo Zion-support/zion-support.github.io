@@ -38,7 +38,6 @@ export function PortfolioBuilder() {;
 
   };
 
-=======
 import { useState, useEffect } from 'react',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -72,8 +71,6 @@ export function PortfolioBuilder() {;
 
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -169,7 +166,6 @@ export function PortfolioBuilder() {;
         <Card>;
           <CardContent className="pt-6">;
             <h2 className="text-xl font-semibold mb-6">;
-=======
 
 
               {editingProject ? 'Edit Project' : 'Add New Project'}
@@ -177,16 +173,13 @@ export function PortfolioBuilder() {;
 
             <ProjectForm
               project={editingProject || undefined}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {;
                 setShowAddProject(false);
                 setEditingProject(null);
 
 
-=======
 
-=======
             <ProjectForm 
               project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
@@ -195,8 +188,6 @@ export function PortfolioBuilder() {;
                 setShowAddProject(false);
                 setEditingProject(null);
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               }}
             />;
           </CardContent>;
@@ -233,7 +224,6 @@ export function PortfolioBuilder() {;
                 <Button
                   onClick={() => setShowAddProject(true)} ;
                   className="mt-2";
-=======
 import { useState, useEffect  } from './react';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';

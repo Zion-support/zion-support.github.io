@@ -3,11 +3,8 @@ import React, { useState } from './react';
 import { MapPin  } from './lucide-react';
 import { TalentCardSkills  } from './TalentCardSkills';
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
@@ -17,7 +14,6 @@ interface TalentCardContentProps {
 import React, { useState } from "react";
 import {MapPin} from "lucide-react";
 import {TalentCardSkills} from "./TalentCardSkills";
-=======
 
 export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {;
   const [isHovering, setIsHovering] = useState(false);
@@ -26,7 +22,6 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
   const [isHovering, setIsHovering] = useState(false);
   return (
     <div>
-=======
 import React, { useState } from "react",;
 import { MapPin } from "lucide-react",;
 import { TalentCardSkills } from "./TalentCardSkills",;
@@ -40,7 +35,6 @@ interface TalentCardContentProps {;
 
 export function TalentCardContent(): any ({ summary, bio, timezone, skills }: TalentCardContentProps) {;
   const [isHovering, setIsHovering] = useState(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   const [isHovering, setIsHovering] = useState(false);
   return (
@@ -49,7 +43,6 @@ export function TalentCardContent(): any ({ summary, bio, timezone, skills }: Ta
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Location */}
       {timezone && (;
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">;
@@ -75,7 +68,6 @@ export function TalentCardContent(): any ({ summary, bio, timezone, skills }: Ta
     </div>
   );
 }
-=======
 
       {/* Short bio or summary - longer on hover for desktop */}
       <div
@@ -94,8 +86,6 @@ export function TalentCardContent(): any ({ summary, bio, timezone, skills }: Ta
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export /**
  * TalentCardContent - Function description
  */
@@ -123,4 +113,3 @@ function TalentCardContent() {
       <TalentCardSkills skills={skills} />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

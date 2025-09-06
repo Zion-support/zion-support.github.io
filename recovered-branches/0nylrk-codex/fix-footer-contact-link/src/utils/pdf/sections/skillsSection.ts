@@ -38,10 +38,8 @@ export function addSkillsSection(;
   }, {} as Record<string, typeof skills>);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return yPos + 5
-=======
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
@@ -93,5 +91,4 @@ if ( {) {
     y_pos += (skill_lines.length * 5) + 10;
   }
   return y_pos + 5;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

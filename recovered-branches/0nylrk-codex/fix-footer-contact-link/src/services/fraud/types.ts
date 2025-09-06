@@ -10,7 +10,6 @@ export interface AnalysisResult {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export interface MessageAnalysisResult extends AnalysisResult {
   severity: FraudSeverity;
@@ -37,7 +36,5 @@ export interface FlagResult {
 export interface SignupCheckResult extends AnalysisResult {}
 ;
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

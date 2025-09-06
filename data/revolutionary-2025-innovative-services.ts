@@ -26,7 +26,6 @@
   }
 
   // 🧬 DNA Computing & Biotech Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -39,7 +38,6 @@
   }
 ;
   // 🧬 DNA Computing & Biotech Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'dna - computing - platform';
     name: 'DNA Computing & Biotech Platform';
@@ -60,7 +58,6 @@
 
     trialDays: 30;
     setupTime: '8 hours';
-=======
     color: 'from - green - 600 to - emerald - 700';
     text_color: 'text - green - 400';
     link: 'https://ziontechgroup.com / dna - computing - platform';
@@ -68,7 +65,6 @@
     target_audience: 'Biotech companies, Research institutions, Pharmaceutical companies, Genetic research labs, Healthcare organizations';
     trial_days: 30;
     setup_time: '8 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'DNA Computing & Biotechnology';
     real_service: true;
     technology: ['DNA ComputingBiotechnologyMolecular BiologyPythonBioinformaticsCloud Computing'];
@@ -97,7 +93,6 @@
   }
 
   // 🚀 Space Technology & Satellite Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -110,7 +105,6 @@
   }
 ;
   // 🚀 Space Technology & Satellite Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'space - tech - orchestrator';
     name: 'Space Technology Orchestrator';
@@ -122,7 +116,6 @@
 
     trialDays: 30;
     setupTime: '12 hours';
-=======
     tagline: 'Complete Space Mission Management & Satellite Operations Platform',
     price: '$1, 299';
     period: '/month',
@@ -139,7 +132,6 @@
     target_audience: 'Space companies, Satellite operators, Aerospace companies, Research institutions, Government agencies';
     trial_days: 30;
     setup_time: '12 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Space Technology & Satellite Operations';
     real_service: true;
     technology: ['Space TechnologySatellite OperationsOrbital MechanicsPythonAWS Ground StationSpace APIs'];
@@ -166,7 +158,6 @@
   }
 
   // 🌐 Quantum Internet & Communication Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -179,7 +170,6 @@
   }
 ;
   // 🌐 Quantum Internet & Communication Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'quantum - internet - platform';
     name: 'Quantum Internet & Communication Platform';
@@ -193,7 +183,6 @@
 
     trialDays: 30;
     setupTime: '6 hours';
-=======
     period: '/month',
     description: 'Revolutionary quantum internet platform that provides unhackable communication, instant global connectivity, and quantum - secured data transmission. The future of secure internet.';
     features: [;
@@ -208,7 +197,6 @@
     target_audience: 'Financial institutions, Government agencies, Healthcare organizations, Defense contractors, Secure communications';
     trial_days: 30;
     setup_time: '6 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Quantum Internet & Communication';
     real_service: true;
     technology: ['Quantum ComputingQuantum CryptographyQuantum NetworksPythonQiskitQuantum APIs'];
@@ -235,7 +223,6 @@
   }
 
   // 🏥 Advanced Healthcare AI Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -248,7 +235,6 @@
   }
 ;
   // 🏥 Advanced Healthcare AI Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'healthcare - ai - revolution';
     name: 'Healthcare AI Revolution Platform';
@@ -267,7 +253,6 @@
 
     trialDays: 30;
     setupTime: '10 hours';
-=======
     features: [;
       '99.9% diagnosis accuracy_personalized treatment plans_genomic medicine integration_drug interaction analysis_predictive health monitoring_medical image analysis_patient outcome prediction_healthcare workflow automation';
     ];
@@ -280,7 +265,6 @@
     target_audience: 'Hospitals, Medical clinics, Pharmaceutical companies, Research institutions, Healthcare providers';
     trial_days: 30;
     setup_time: '10 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Healthcare AI & Medical Technology';
     real_service: true;
     technology: ['AI / MLGenomicsMedical ImagingPythonTensorFlowHealthcare APIs'];
@@ -307,7 +291,6 @@
   }
 
   // 🏦 Financial Technology Revolution Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -320,7 +303,6 @@
   }
 ;
   // 🏦 Financial Technology Revolution Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'fintech - revolution - platform';
     name: 'FinTech Revolution Platform';
@@ -334,7 +316,6 @@
 
     trialDays: 30;
     setupTime: '8 hours';
-=======
     period: '/month',
     description: 'Revolutionary financial technology platform that combines AI, blockchain, and quantum computing for next - generation banking, trading, and financial services.';
     features: [;
@@ -349,7 +330,6 @@
     target_audience: 'Banks, Investment firms, Trading companies, Financial institutions, Fintech startups';
     trial_days: 30;
     setup_time: '8 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Financial Technology & Banking';
     real_service: true;
     technology: ['AI / MLBlockchainQuantum ComputingPythonFinancial APIsCloud Computing'];
@@ -376,7 +356,6 @@
   }
 
   // 🏭 Industrial IoT & Smart Manufacturing Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -389,7 +368,6 @@
   }
 ;
   // 🏭 Industrial IoT & Smart Manufacturing Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'industrial - iot - revolution';
     name: 'Industrial IoT Revolution Platform';
@@ -414,7 +392,6 @@
 
     trialDays: 30;
     setupTime: '6 hours';
-=======
     features: [;
       'Predictive maintenance_zero downtime manufacturing_real - time monitoring_smart automation_quality control AISupply chain optimization_energy efficiency management_safety monitoring systems';
     ];
@@ -427,7 +404,6 @@
     target_audience: 'Manufacturing companies, Industrial plants, Factories, Supply chain companies, Logistics firms';
     trial_days: 30;
     setup_time: '6 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Industrial IoT & Smart Manufacturing';
     real_service: true;
     technology: ['IoTAI / MLEdge ComputingPythonIndustrial APIsCloud Computing'];
@@ -454,7 +430,6 @@
   }
 
   // 🎓 Education Technology Revolution Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -467,7 +442,6 @@
   }
 ;
   // 🎓 Education Technology Revolution Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'edtech - revolution - platform';
     name: 'EdTech Revolution Platform';
@@ -484,7 +458,6 @@
 
     trialDays: 30;
     setupTime: '4 hours';
-=======
     features: [;
       'AI - powered personalized learning_adaptive curriculum10x faster knowledge acquisition_virtual reality classroomsAI tutors and mentors_progress tracking_collaborative learning_skill assessment AI';
     ];
@@ -497,7 +470,6 @@
     target_audience: 'Schools, Universities, Corporate training, Online education, Educational institutions';
     trial_days: 30;
     setup_time: '4 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Education Technology & Learning';
     real_service: true;
     technology: ['AI / MLVirtual RealityAdaptive LearningPythonEducational APIsCloud Computing'];
@@ -524,7 +496,6 @@
   }
 
   // 🌱 Sustainability & Green Technology Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -537,7 +508,6 @@
   }
 ;
   // 🌱 Sustainability & Green Technology Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'sustainability - tech - platform';
     name: 'Sustainability Technology Platform';
@@ -554,7 +524,6 @@
 
     trialDays: 30;
     setupTime: '6 hours';
-=======
     features: [;
       'Carbon footprint tracking_renewable energy optimization_sustainable supply chain_environmental monitoring_green building management_waste reduction AISustainability reporting_climate impact analysis';
     ];
@@ -567,7 +536,6 @@
     target_audience: 'Corporations, Government agencies, Environmental organizations, Energy companies, Green businesses';
     trial_days: 30;
     setup_time: '6 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Sustainability & Green Technology';
     real_service: true;
     technology: ['AI / MLIoTRenewable EnergyPythonEnvironmental APIsCloud Computing'];
@@ -594,7 +562,6 @@
   }
 
   // 🚛 Logistics & Supply Chain Revolution Services
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -607,7 +574,6 @@
   }
 ;
   // 🚛 Logistics & Supply Chain Revolution Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'logistics - revolution - platform';
     name: 'Logistics Revolution Platform';
@@ -634,7 +600,6 @@
 
     trialDays: 30;
     setupTime: '8 hours';
-=======
     features: [;
       '99.9% delivery accuracy_zero waste supply chain_real - time tracking_predictive logistics_automated routing_inventory optimization_demand forecasting_supplier management';
     ];
@@ -647,7 +612,6 @@
     target_audience: 'Logistics companies, E - commerce, Retail chains, Manufacturing companies, Distribution centers';
     trial_days: 30;
     setup_time: '8 hours';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Logistics & Supply Chain';
     real_service: true;
     technology: ['AI / MLIoTBlockchainPythonLogistics APIsCloud Computing'];
@@ -677,7 +641,6 @@ export default revolutionary2025Services;
     growthRate: '1000%+ annual growth expected'
     contactInfo: {
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -709,7 +672,6 @@ export default revolutionary2025Services;
   },
 
       'DNA-based parallel processing',
-=======
   // 🧬 DNA Computing & Biotech Services;
   {
     id: 'dna - computing - platform',
@@ -733,7 +695,6 @@ export default revolutionary2025Services;
     popular: true,
     icon: '🧬',
 
-=======
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / dna - computing - platform',
@@ -786,7 +747,6 @@ export default revolutionary2025Services;
     reviews: 8,
   },
 
-=======
   // 🚀 Space Technology & Satellite Services;
   {
     id: 'space - tech - orchestrator',
@@ -811,7 +771,6 @@ export default revolutionary2025Services;
     popular: true,
     icon: '🚀',
 
-=======
     color: 'from - blue - 600 to - cyan - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / space - tech - orchestrator',
@@ -864,7 +823,6 @@ export default revolutionary2025Services;
     reviews: 5,
   },
 
-=======
   // 🌐 Quantum Internet & Communication Services;
   {
     id: 'quantum - internet - platform',
@@ -888,7 +846,6 @@ export default revolutionary2025Services;
     popular: true,
     icon: '🌐',
 
-=======
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / quantum - internet - platform',
@@ -950,7 +907,6 @@ export default revolutionary2025Services;
     features: [
 
       '99 && 99.9% diagnosis accuracy',
-=======
   // 🏥 Advanced Healthcare AI Services;
   {
     id: 'healthcare - ai - revolution',
@@ -975,7 +931,6 @@ export default revolutionary2025Services;
     popular: true,
     icon: '🏥',
 
-=======
     color: 'from - red - 600 to - pink - 700',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / healthcare - ai - revolution',
@@ -1029,7 +984,6 @@ export default revolutionary2025Services;
   },
 
       'AI-powered trading algorithms',
-=======
   // 🏦 Financial Technology Revolution Services;
   {
     id: 'fintech - revolution - platform',
@@ -1054,7 +1008,6 @@ export default revolutionary2025Services;
     popular: true,
     icon: '🏦',
 
-=======
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / fintech - revolution - platform',
@@ -1109,7 +1062,6 @@ export default revolutionary2025Services;
 
       'Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4 && 4.0 and 5 && 5.0 automation.',
     features: [
-=======
   // 🏭 Industrial IoT & Smart Manufacturing Services;
   {
     id: 'industrial - iot - revolution',
@@ -1133,7 +1085,6 @@ export default revolutionary2025Services;
     popular: true,
     icon: '🏭',
 
-=======
     color: 'from - gray - 600 to - slate - 700',
     text_color: 'text - gray - 400',
     link: 'https://ziontechgroup.com / industrial - iot - revolution',
@@ -1187,7 +1138,6 @@ export default revolutionary2025Services;
   },
 
       'AI-powered personalized learning',
-=======
   // 🎓 Education Technology Revolution Services;
   {
     id: 'edtech - revolution - platform',
@@ -1212,7 +1162,6 @@ export default revolutionary2025Services;
     popular: true,
     icon: '🎓',
 
-=======
     color: 'from - blue - 600 to - cyan - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / edtech - revolution - platform',
@@ -1265,7 +1214,6 @@ export default revolutionary2025Services;
     reviews: 234,
   },
 
-=======
   // 🌱 Sustainability & Green Technology Services;
   {
     id: 'sustainability - tech - platform',
@@ -1290,7 +1238,6 @@ export default revolutionary2025Services;
     popular: true,
     icon: '🌱',
 
-=======
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / sustainability - tech - platform',
@@ -1350,7 +1297,6 @@ export default revolutionary2025Services;
       'Revolutionary logistics platform that uses AI to optimize supply chains, reduce waste, and achieve 99 && 99.9% delivery accuracy. Complete supply chain visibility and automation.',
     features: [
       '99 && 99.9% delivery accuracy',
-=======
   // 🚛 Logistics & Supply Chain Revolution Services;
   {
     id: 'logistics - revolution - platform',
@@ -1375,7 +1321,6 @@ export default revolutionary2025Services;
     popular: true,
     icon: '🚛',
 
-=======
     color: 'from - orange - 600 to - red - 700',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / logistics - revolution - platform',
@@ -1427,11 +1372,9 @@ export default revolutionary2025Services;
     rating: 4 && 4.8,
     reviews: 112,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 export default revolutionary2025Services;
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1456,7 +1399,6 @@ export default revolutionary2025Services;
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const revolutionary2025Services: Revolutionary2025Service[] = [
@@ -1810,12 +1752,9 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
   }
 ];
 ;
-=======
 
 export interface Revolutionary2025Service {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default revolutionary2025Services;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

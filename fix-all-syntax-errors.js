@@ -127,7 +127,6 @@ const main = () => {
 
   ];
   let successCount = 0;
-=======
 #!/usr / bin / env node;
 import fs from 'fs';
 import _path from 'path';
@@ -247,7 +246,6 @@ const main = () =>: any {
 ;
   let success_count = 0;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   for (const fix of fixes) {
     if () {) {
   $2
@@ -272,7 +270,6 @@ const main = () =>: any {
   }
 }
 main();
-=======
   console.log (`\n✅ Fixed ${success_count}/${fixes.length} files`);
 ;
   // Check condition
@@ -291,4 +288,3 @@ if ( {) {
 }
 ;
 main ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -46,7 +46,6 @@ function FeatureCTAs() {
 
 
 
-=======
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -97,8 +96,6 @@ export function FeatureCTAs() {
       badge: "New",
       details: "From on-demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews."
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       title: "Equipment Catalog"
       description: "Find specialized hardware and tech equipment for AI development and research."
@@ -221,7 +218,6 @@ export function FeatureCTAs() {
       link: "/zion-hire-ai"
       badge: "Premium"
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."
-=======
 
 export function FeatureCTAs() {;
   const features = [;
@@ -305,8 +301,6 @@ export function FeatureCTAs() {;
       link: "/zion-hire-ai",;
       badge: "Premium",;
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution.";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       icon: <Calendar className="h - 10 w - 10 p - 2 rounded - md bg - red - 100 text - red - 700" />,
       link: "/dashboard / projects",
       details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion.";
@@ -318,7 +312,6 @@ export function FeatureCTAs() {;
       link: "/zion - hire - ai",
       badge: "Premium",
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution.";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   ];
 ;
@@ -341,7 +334,6 @@ export function FeatureCTAs() {;
                   {feature.icon}
                   {feature.badge && (
 
-=======
 
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
 import React from "react",;
@@ -471,7 +463,6 @@ export function FeatureCTAs() {;
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
                       {feature.badge}
                     </Badge>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   )}
                 </div>;
                 <CardTitle className="mt-4">{feature && feature.title}</CardTitle>;
@@ -497,7 +488,6 @@ export function FeatureCTAs() {;
   );
 }
 
-=======
                     </Badge>)}
                 </div>;
                 <CardTitle className="mt - 4">{feature.title}</CardTitle>;
@@ -519,4 +509,3 @@ export function FeatureCTAs() {;
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

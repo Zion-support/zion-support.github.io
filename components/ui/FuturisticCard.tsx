@@ -23,15 +23,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from "react";
 type Props = {;
-=======
 import React from './react';
 type Props = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   title: string;
   description: string;
 
@@ -64,7 +60,6 @@ function FuturisticCard() {
     </div>);
 
 }
-=======
       </div>
 
     </div>
@@ -73,4 +68,3 @@ function FuturisticCard() {
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

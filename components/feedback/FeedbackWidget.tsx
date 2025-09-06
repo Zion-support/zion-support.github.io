@@ -37,9 +37,7 @@ import { v4 as uuidv4 } from 'uuid';
 
       setError('Please choose 👍 or 👎');
       return;      return;
-=======
       return
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
     setError(null);
     setSubmitting(true);
@@ -93,14 +91,11 @@ import { v4 as uuidv4 } from 'uuid';
     } finally {;
       setSubmitting(false);
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   }
 
   return (
 
-=======
     <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">
       <div className="text-sm font-medium mb-2">Was this answer useful?</div>
       {submitted ? (
@@ -109,7 +104,6 @@ import { v4 as uuidv4 } from 'uuid';
         <div className="space-y-3">
           <div className="flex items-center gap-2">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <button
               type="button"
               onClick={() => setRating(rating === 'up' ? null : 'up')}
@@ -143,20 +137,14 @@ import { v4 as uuidv4 } from 'uuid';
   );
 
 }
-=======
 
 }
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 export type FeedbackWidgetProps = {
   response_id?: string;
@@ -303,4 +291,3 @@ if ( {) {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

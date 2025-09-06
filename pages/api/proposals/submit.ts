@@ -19,9 +19,7 @@ async function submitByEmail(
   attachments: any[] = []
 ) {
 
-=======
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -34,7 +32,6 @@ import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils
 async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT |587);
   const user = process.env.EMAIL_USER;
@@ -47,7 +44,6 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
   const from = process && process.env.EMAIL_FROM || user;
   if (!host || !user || !pass) throw new Error("Email not configured");
   const transporter = nodemailer && nodemailer.createTransport({
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import nodemailer from './nodemailer';
 import crypto from './crypto';
@@ -74,7 +70,6 @@ function submitByEmail() {
     port,
     secure: port === 465,
     auth: { user, pass },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   });
 
   try {
@@ -93,7 +88,6 @@ function submitByEmail() {
       const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote || 'N/A'}`;
       await submitByEmail(to, subject, text)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     // ENS record hash (default: compute and store hash only)
     let ensRecordHash: string | undefined;
@@ -113,7 +107,6 @@ function submitByEmail() {
       .json({ error: error?.message |"Submission failed" });
   }
 }
-=======
       const hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
       ensRecordHash = `0x${hash}`;
       updateArtifacts(id, { ensRecordHash })
@@ -126,8 +119,6 @@ function submitByEmail() {
 
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     const updated = updateProposalMeta (id, (m) => ({
       ...m,
       status: "Submitted",
@@ -139,8 +130,6 @@ function submitByEmail() {
       .json ({ error: error?.message || "Submission failed" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   const from = process.env.EMAIL_FROM || user;
 
@@ -175,5 +164,3 @@ function submitByEmail() {
 
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

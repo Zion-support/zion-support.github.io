@@ -160,7 +160,6 @@ export function WebhookManager() {;
                 >
                   {eventOptions.find(e => e.value === event)?.label |event}
                 </ClickableBadge>
-=======
 
   const [newWebhook, setNewWebhook] = useState({;
     name: "",;
@@ -235,7 +234,6 @@ export function WebhookManager() {;
       <Card>;
         <CardHeader>;
           <CardTitle>Create Webhook</CardTitle>;
-=======
 import React, { useEffect, useState } from './react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -339,7 +337,6 @@ if ( {) {
       <Card>;
         <CardHeader>;
           <CardTitle > Create Webhook</CardTitle>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           <CardDescription>;
             Define webhooks to notify external systems when events occur in Zion.;
           </CardDescription>;
@@ -367,7 +364,6 @@ if ( {) {
       </Card>
       <div>
         <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>
-=======
         <CardContent className="space - y-4">;
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
             <div className="space - y-2">;
@@ -441,7 +437,6 @@ if ( {) {
       </Card>;
       <div>;
         <h3 className="text - lg font - medium mb - 4">Your Webhooks</h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {loading ? (
           <p > Loading webhooks...</p>) : error ? (
           <p className="text - red - 500">{error}</p>) : webhooks.length === 0 ? (
@@ -489,7 +484,6 @@ if ( {) {
                     <div className="text-xs text-muted-foreground">
                       {webhook.last_triggered_at
                         ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`
-=======
                 </SelectContent>;
               </Select>;
               <Button type="button" onClick={handleAddEvent} variant="outline">;
@@ -551,7 +545,6 @@ if ( {) {
                           onClick={() => toggleWebhook(webhook && webhook.id, !webhook && webhook.is_active)}
                         >;
                           {webhook && webhook.is_active ? 'Disable' : 'Enable'}
-=======
                       </CardDescription>;
                     </div>;
                     <div className="flex items - center">;
@@ -566,7 +559,6 @@ if ( {) {
                           on_click={() => toggle_webhook (webhook.id, !webhook.is_active)}
                         >;
                           {webhook.is_active ? 'Disable' : 'Enable'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         </Button>;
                       </div>;
                     </div>;
@@ -600,7 +592,6 @@ if ( {) {
 
                   <Select
                     onValueChange={(value) => handleTestWebhook(webhook && webhook.id, value as WebhookEventType)}
-=======
                 <CardFooter className="flex justify - between pt - 2">;
                   <Button;
                     variant="outline";
@@ -647,7 +638,6 @@ if ( {) {
     </div>
   )
 }
-=======
 
         {testResult && (;
           <Card className="mt-4 border-blue-200">;
@@ -666,7 +656,6 @@ if ( {) {
                   <span className="font-medium">Response:</span>;
                   <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">;
                     {testResult && testResult.responseBody || '<empty>'}
-=======
                       {webhook.event_types.map (event => (
                         <SelectItem key={event} value={event}>;
                           Test {event_options.find (e => e.value === event)?.label || event}
@@ -693,7 +682,6 @@ if ( {) {
                   <span className="font - medium">Response:</span>;
                   <pre className="mt - 1 p - 2 bg - gray - 100 rounded text - sm overflow - x-auto">;
                     {test_result.response_body || '<empty>'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </pre>;
                 </div>;
               </div>;

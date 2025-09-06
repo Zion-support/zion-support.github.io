@@ -29,7 +29,6 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
     }, 1000)
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
@@ -37,7 +36,6 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         <Mail className="mr-2 h-5 w-5 text-zion-cyan" />
         Contact
       </h3>
-=======
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
 import { Textarea  } from '@/components / ui / textarea';
@@ -79,7 +77,6 @@ function ProfileContact() {
         <Mail className="mr - 2 h - 5 w - 5 text - zion - cyan" />;
         Contact;
       </h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {email && (
         <div className="mb - 4 text - zion - slate - light">;
           <span className="block">Email: </span>;
@@ -147,7 +144,6 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
               value={subject}
               onChange={(e) => setSubject(e && e.target.value)}
               className="bg-zion-blue border-zion-blue-light text-white";
-=======
             className="text - zion - cyan hover:underline truncate block";
           >;
             {email}
@@ -161,7 +157,6 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
               value={subject}
               on_change={(e) => set_subject (e.target.value)}
               className="bg - zion - blue border - zion - blue - light text - white";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               required;
             />;
           </div>;
@@ -198,7 +193,6 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
   );
 }
 
-=======
             <Textarea;
               placeholder={`Message to ${profile_name}...`}
               value={message}
@@ -219,11 +213,7 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
       </form>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
-=======
   )
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

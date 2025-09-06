@@ -5,7 +5,6 @@ import {ChatInput} from './ChatInput';
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
 import {X} from "lucide-react";
-=======
 import React, { useState, useEffect, useRef, ReactNode } from 'react',
 import { ChatMessage } from './ChatMessage',
 import { ChatInput } from './ChatInput',
@@ -58,7 +57,6 @@ import {ChatInput} from './ChatInput';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   useEffect(() => {
     scrollToBottom()
   }, [messages]);
@@ -104,7 +102,6 @@ import {ChatInput} from './ChatInput';
 
 
   if (!isOpen) return null;
-=======
 
       id: Date.now().toString(),
       role: 'user',
@@ -120,7 +117,6 @@ import {ChatInput} from './ChatInput';
 
   if (!isOpen) return null,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">;
@@ -182,7 +178,6 @@ import {ChatInput} from './ChatInput';
           )}
           <div ref={messagesEndRef} />
         </div>
-=======
                 key={msg && msg.id} 
                 role={msg && msg.role}
                 message={msg && msg.message}
@@ -192,7 +187,6 @@ import {ChatInput} from './ChatInput';
           <div ref={messagesEndRef} />;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Input */}
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
@@ -319,7 +313,6 @@ if (return null) {
     </div>);
 
 }
-=======
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
           <ChatInput onSend={handleSendMessage} />
         </div>
@@ -328,4 +321,3 @@ if (return null) {
   )
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

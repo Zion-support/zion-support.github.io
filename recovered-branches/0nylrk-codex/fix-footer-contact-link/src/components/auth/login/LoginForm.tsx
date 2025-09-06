@@ -8,7 +8,6 @@ import { z } from "zod",
 import { LogIn, User, Eye, EyeOff } from "lucide-react",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
@@ -42,7 +41,6 @@ type LoginFormValues = z.infer<typeof loginSchema>,
     } finally {
       setIsSubmitting(false)
 
-=======
     }
 
   },
@@ -118,7 +116,6 @@ export function LoginForm() {;
       await login(data && data.email, data && data.password);
     } finally {;
       setIsSubmitting(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
@@ -152,7 +149,6 @@ export function LoginForm() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
 
         />;
@@ -201,7 +197,6 @@ export function LoginForm() {;
         <div className="flex items-center justify-between">;
           <div className="text-sm">;
             <Link to="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
-=======
 import { useState } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -328,9 +323,7 @@ if (return) {
     </Form>);
 }
 
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

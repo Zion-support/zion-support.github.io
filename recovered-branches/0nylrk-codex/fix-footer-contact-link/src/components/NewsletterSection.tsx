@@ -4,15 +4,11 @@
 import { GradientHeading } from "@/components/GradientHeading",
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
 
-=======
 import {GradientHeading} from "@/components/GradientHeading";
 import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
-=======
 import { GradientHeading } from "@/components/GradientHeading",
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function NewsletterSection() {
   return (
     <section className="py-20 bg-zion-blue-dark" id="newsletter">
@@ -42,7 +38,6 @@ export function NewsletterSection() {;
             Subscribe to our newsletter for the latest updates on Zion's services, Google trending tech news, and marketplace opportunities.;
           </p>;
           <div className="max-w-md mx-auto">;
-=======
 import { GradientHeading  } from '@/components / GradientHeading';
 import { EnhancedNewsletterForm  } from '@/components / EnhancedNewsletterForm';
 export /**
@@ -68,14 +63,11 @@ function NewsletterSection() {
     </section>);
 }
 
-=======
 
   )
-=======
   )
 
 }
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -72,7 +72,6 @@ const features = [
     color: 'from-indigo-500 to-blue-500'
   };
   {
-=======
 import Head from 'next / head';
 import Link from 'next / link';
 import {motion} from 'framer-motion';
@@ -183,7 +182,6 @@ const useCases = [
     description:
       'Optimize your content strategy based on real-time performance data and AI insights'
     icon: Target
-=======
       'Real-time content analyticsAI optimization suggestionsBasic performance trackingSEO content insightsEmail supportUp to 100 content pieces/month'
     ];
     popular: false,
@@ -339,8 +337,6 @@ const useCases = [;
     icon: ShoppingCart,;
     color: 'from-orange-500 to-red-500',;
   },;
-=======
-=======
 
 import React from 'react';
 import Head from 'next/head';
@@ -349,7 +345,6 @@ import Link from 'next/link';
 const integrations = [
 
   'WordPressShopifyHubSpotMailchimpGoogle AnalyticsFacebook AdsGoogle AdsLinkedIn', 'TwitterInstagramYouTubeTikTokSlackZapierAPI Access'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ];
 
 const integrations = [;
@@ -367,7 +362,6 @@ const integrations = [;
   'TikTok',;
   'Slack',;
   'Zapier',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   'API Access',];
 
 export default function AIContentIntelligencePlatform() {;
@@ -383,7 +377,6 @@ export default function AIContentIntelligencePlatform() {;
             Create, optimize, and manage content intelligently with our AI-powered content platform.;
           </p>;
         </div>;
-=======
     <Layout>
       <Head>
         <title>AI Content Intelligence Platform | Zion Tech Group</title>
@@ -447,7 +440,6 @@ export default function AIContentIntelligencePlatform() {;
                   <div className="flex items-center text-green-400">
                     <CheckCircle className="w-5 h-5 mr-3" />
                     <span>Real-time performance insights</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
                 </div>
               </div>
@@ -481,14 +473,10 @@ export default function AIContentIntelligencePlatform() {;
           </div>;
         </div>;
 
-=======
-=======
 
 
       </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Features Section */}
 
       <section className="py-20">
@@ -524,7 +512,6 @@ export default function AIContentIntelligencePlatform() {;
                 </div>
               </motion.div>
 
-=======
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -536,12 +523,10 @@ export default function AIContentIntelligencePlatform() {;
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Use Cases Section */}
       <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
 
       {/* Use Cases Section */}
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
@@ -577,7 +562,6 @@ export default function AIContentIntelligencePlatform() {;
                 </div>
               </motion.div>
 
-=======
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -589,12 +573,10 @@ export default function AIContentIntelligencePlatform() {;
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Pricing Section */}
       <section className='py-20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
 
       {/* Pricing Section */}
       <section className="py-20">
@@ -655,10 +637,8 @@ export default function AIContentIntelligencePlatform() {;
 
 
                   </ul>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Link
 
-=======
                     href="/contact"
                     className={`w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200`}
                   >
@@ -670,7 +650,6 @@ export default function AIContentIntelligencePlatform() {;
 
             ))}
 
-=======
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -682,7 +661,6 @@ export default function AIContentIntelligencePlatform() {;
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Integrations Section */}
 
 
@@ -1037,7 +1015,6 @@ function AIContentIntelligencePlatform() {
           <div className='grid grid - cols - 2 md:grid - cols - 5 gap - 6'>            {integrations.map ((integration, index) => (
               <motion.div;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={index}
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -1045,7 +1022,6 @@ function AIContentIntelligencePlatform() {
                 viewport={{ once: true }}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -1156,7 +1132,6 @@ function AIContentIntelligencePlatform() {
                 href="/2025-innovative-new-services-showcase"
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200"
               >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 View All Services
               </Link>
             </div>
@@ -1176,11 +1151,8 @@ function AIContentIntelligencePlatform() {
   );
 
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 className='bg - white / 10 backdrop - blur - sm border border - gray - 600 rounded - lg p - 4 text - center hover:bg - white / 20 transition - colors duration - 300';
               >;
                 <span className='text - white font - medium'>{integration}</span>              </motion.div>))}
@@ -1251,10 +1223,5 @@ function AIContentIntelligencePlatform() {
       </section>;
     </Layout>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

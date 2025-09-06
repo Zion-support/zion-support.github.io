@@ -16,7 +16,6 @@ const next_config = {
 module.exports = next_config;
 ;
 
-=======
 
     domains: ["localhost", "ziontechgroup.com"],
   },
@@ -25,4 +24,3 @@ module.exports = next_config;
   distDir: '.next',
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

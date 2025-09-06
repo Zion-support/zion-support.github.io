@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function ApiDocsHub() {
 
   const sections = [
@@ -24,7 +23,6 @@ export function ApiDocsHub() {
       icon: Webhook
       path: "/developers/docs/webhooks"
       color: "from-green-500 to-emerald-500"}
-=======
 import React from './react';
 import { Link } from './react-router-dom';
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from './lucide-react';
@@ -52,22 +50,18 @@ function ApiDocsHub() {
       icon: Webhook,
       path: "/developers / docs / webhooks",
       color: "from - green - 500 to - emerald - 500"},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
 
 
       title: "Sample Code",;
       description: "Examples in JavaScript, Python, and Node.js";
 
-=======
       title: "Sample Code",
       description: "Examples in JavaScript, Python, and Node.js",
 
       icon: Zap,
       path: "/developers/docs/samples",
       color: "from-yellow-500 to-orange-500"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       title: "Error Codes & Rate Limits"
       description: "Understanding API errors and rate limiting"
@@ -133,7 +127,6 @@ import React from "react";
 import {Link} from "react-router-dom";
 import {ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap} from "lucide-react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-=======
           <Link
             to="/developers/portal"
             className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover: bg-zion-purple/90 transition-colors"
@@ -147,7 +140,6 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
   )
 
 
-=======
 import React from "react",;
 import { Link } from "react-router-dom",;
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",;
@@ -249,11 +241,8 @@ export function ApiDocsHub() {;
 export default ApiDocsHub;
 ;
 
-=======
           {sections.map((section) => (;
             <Link;
               key={section.path} ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

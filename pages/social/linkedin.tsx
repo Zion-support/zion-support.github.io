@@ -30,7 +30,6 @@ export default function LinkedInRedirect() {;
     if (typeof window !== 'undefined') {;
       window && window.location.replace(;
         'https://www && www.linkedin.com/company/zion-tech-group';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       );
     }
   }, []);
@@ -58,13 +57,11 @@ export default function LinkedInRedirect() {;
     </>;
   );
 
-=======
 
 
 }
 
 
-=======
 export default function LinkedInRedirect() {
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
@@ -130,9 +127,5 @@ if ( {) {
     </>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

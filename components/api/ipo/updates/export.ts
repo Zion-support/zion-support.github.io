@@ -49,7 +49,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc && doc.end();
 
 
-=======
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
 
@@ -95,9 +94,6 @@ function handler() {
   doc.end ();
 }
 
-=======
   doc.end();
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

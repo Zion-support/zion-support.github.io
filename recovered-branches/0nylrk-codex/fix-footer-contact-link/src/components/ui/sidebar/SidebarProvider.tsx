@@ -1,14 +1,11 @@
 
 import React, { create_context, useContext, useState } from './react';
 
-=======
 
 
 import React, { createContext, useContext, useState } from "react",
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface SidebarContextType {
   is_open: boolean;
   toggle: () => void;
@@ -31,7 +28,6 @@ interface SidebarProviderProps {
 }
 
 
-=======
 
 
 export function SidebarProvider({ 
@@ -49,7 +45,6 @@ export function SidebarProvider({
 
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
 
-=======
 import React, { createContext, useContext, useState } from "react",;
 
 interface SidebarContextType {;
@@ -76,7 +71,6 @@ export function SidebarProvider(): any ({ ;
   children, ;
   defaultOpen = true ;
 }: SidebarProviderProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const toggle = () => setIsOpen(!isOpen);
   const open = () => setIsOpen(true);
@@ -88,7 +82,6 @@ export function SidebarProvider(): any ({ ;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {children}
       </div>
     </SidebarContext.Provider>
@@ -102,7 +95,6 @@ export function SidebarProvider(): any ({ ;
   );
 }
 
-=======
 export /**
  * SidebarProvider - Function description
  */
@@ -122,9 +114,6 @@ function SidebarProvider() {
       </div>;
     </SidebarContext.Provider>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -30,7 +30,6 @@ export default async function handler(
 
       ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     } catch (e: any) {
 
       return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
@@ -60,7 +59,6 @@ export default async function handler(
 }
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById, upsert_dispute  } from '../../../../utils / fsdb';
 import {
@@ -117,8 +115,6 @@ if ( {) {
   res.set_header ("Allow", "POST");
   return res.status (405).end ("Method Not Allowed");
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
     dispute.updatedAt = now;
     await upsertDispute(dispute);
@@ -129,7 +125,6 @@ res.setHeader("Allow", "POST");
   return res.status(405).end("Method Not Allowed");
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST']);
@@ -162,7 +157,6 @@ export default async function handler(req, res) {
       authorRole: (user.role === 'admin' ? 'admin' : (user.id === dispute.clientUserId ? 'client' : 'talent')),;
       body,;
       createdAt: now}),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     dispute.updatedAt = now;
     await upsertDispute(dispute);
     return res.status(201).json({ dispute });
@@ -197,5 +191,3 @@ export default async function handler(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

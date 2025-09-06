@@ -1,5 +1,4 @@
 
-=======
 
 
 
@@ -26,7 +25,6 @@ export function AIEnhancementButton(): any ({;
   const [generatedContent, setGeneratedContent] = useState<string | null>(null);
 
 
-=======
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',
@@ -42,13 +40,11 @@ interface AIEnhancementButtonProps {
   className?: string,
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link",
   size?: "default" | "sm" | "lg" | "icon",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   contentLength?: number
 }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
@@ -58,11 +54,9 @@ interface AIEnhancementButtonProps {
         variant: "destructive"
 
 
-=======
 
   };
 
-=======
       }),
       return
 import { useState } from 'react',;
@@ -100,7 +94,6 @@ export function AIEnhancementButton({;
         title: "Not enough content",;
         description: `Please enter at least ${contentLength} characters before enhancing.`,;
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
     }
@@ -119,8 +112,6 @@ export function AIEnhancementButton({;
 
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleAccept = () => {
     if (generatedContent) {
       onEnhanced(generatedContent);
@@ -146,7 +137,6 @@ export function AIEnhancementButton({;
 
   };
 
-=======
 
   },
   
@@ -219,7 +209,6 @@ export function AIEnhancementButton({;
   };
 
   if (showActions) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="flex gap-2 items-center">;
         <Button
@@ -260,7 +249,6 @@ export function AIEnhancementButton({;
 
 
 
-=======
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Sparkles, Loader2, RefreshCw, Check, X} from '@/components / icons';
@@ -370,14 +358,12 @@ if ( {) {
         </Button>;
       </div>);
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <Button;
       type="button";
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       variant={variant}
       size={size}
 
@@ -386,7 +372,6 @@ if ( {) {
   );
 }
 
-=======
       className={`gap - 1 ${class_name}`}
       on_click={handle_enhance}
       disabled={is_enhancing}
@@ -397,10 +382,7 @@ if ( {) {
       <span className="text - xs">{button_text}</span>;
     </Button>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

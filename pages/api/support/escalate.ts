@@ -62,7 +62,6 @@ function handler() {
 }
 
     created_at: Date.now (),
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -77,4 +76,3 @@ function handler() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

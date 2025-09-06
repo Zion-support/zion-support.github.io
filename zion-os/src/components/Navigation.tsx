@@ -11,7 +11,6 @@ export function Navigation() {;
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   return (;
-=======
 "use client",
 import { useState, useEffect, useRef  } from './react';,
 import Link from './next / link';,
@@ -24,7 +23,6 @@ function Navigation() {
   const [isServicesOpen, setIsServicesOpen] = useState (false);
   const [is_scrolled, setIsScrolled] = useState (false);
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     <nav;
       className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
         is_scrolled;
@@ -203,11 +201,9 @@ function Navigation() {
 
           </div>)}
 
-=======
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden animate - fade - in">;

@@ -4,7 +4,6 @@
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HELP_CATEGORIES} from "./help-content";
 
-=======
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HELP_CATEGORIES } from "./help-content",
@@ -19,8 +18,6 @@ interface HelpArticleListProps {
 
   }
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Filter articles based on search query
   const filteredArticles = searchQuery
     ? category.articles.filter(
@@ -50,7 +47,6 @@ interface HelpArticleListProps {
       ) : (
         <div className="space-y-4">
           {filteredArticles.map((article) => (
-=======
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HELP_CATEGORIES} from "./help-content";
 interface HelpArticleListProps {;
@@ -92,7 +88,6 @@ export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQue
       ) : (;
         <div className="space-y-4">;
           {filteredArticles && filteredArticles.map(article => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Card
               key={article && article.id}
               className="cursor-pointer hover:border-zion-purple/50 transition-colors"
@@ -137,7 +132,6 @@ function formatDate(): any (date: string): string {;
   });
 }
 
-=======
 import React from './react';
 import {
   Card,
@@ -215,11 +209,7 @@ function format_date (date: string): string {
     day: "numeric",
   });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   })
-=======
   })
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

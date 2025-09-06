@@ -38,7 +38,6 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
           ) : (
             <ArchiveIcon className="h-8 w-8 text-white" />
           )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>
         <h3 className="text-xl font-medium text-white mb-2">
           {isActive ? "No hire requests yet" : "No archived requests"}
@@ -58,18 +57,14 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
       </CardContent>;
     </Card>;
   );
-=======
 
           {isActive 
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
-=======
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
 
 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Card, CardContent  } from '@/components / ui / card';
 import { MessageSquare, ArchiveIcon  } from './lucide-react';
@@ -100,4 +95,3 @@ export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {
     </Card>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

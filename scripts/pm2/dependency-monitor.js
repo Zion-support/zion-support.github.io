@@ -5,7 +5,6 @@
     },
 
 
-=======
 class DependencyMonitor {;
   constructor() {;
     this.projectRoot = process.cwd();
@@ -365,8 +364,5 @@ const monitor = new DependencyMonitor ();
 monitor.run ().catch (error = > { process.exit (1)});
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 monitor.run().catch(error = > {; process.exit(1)});
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

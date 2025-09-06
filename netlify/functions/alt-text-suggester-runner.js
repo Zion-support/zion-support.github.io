@@ -16,7 +16,6 @@ function run_node() {
 exports.config = {
   schedule: '*/15 * * * *'
 }
-=======
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 
@@ -28,7 +27,6 @@ exports && exports.config = {
 
 }
 
-=======
     if (res && res.stdout) logs && logs.push(res && res.stdout);
     if (res && res.stderr) logs && logs.push(res && res.stderr);
     logs && logs.push(`exit=${res && res.status || 0}`);
@@ -44,7 +42,6 @@ exports && exports.config = {
 },
 
 
-=======
 }
 ;
 exports.handler = async () => {
@@ -71,4 +68,3 @@ function step() {
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

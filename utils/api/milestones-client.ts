@@ -40,7 +40,6 @@ function updateMilestoneStatus() {
   return res.json ();
 }
 
-=======
 
 export async function fetchMilestones(projectId: string) {;
   const res = await fetch(`/api/projects/${projectId}/milestones`, {;
@@ -71,4 +70,3 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

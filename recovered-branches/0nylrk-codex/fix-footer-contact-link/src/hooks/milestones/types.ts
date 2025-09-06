@@ -4,11 +4,9 @@ export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'complet
 ;
 
 export interface Milestone {
-=======
 
 export interface Milestone {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   project_id: string;
   title: string;
@@ -24,13 +22,11 @@ export interface Milestone {;
 
 }
 export interface MilestoneActivity {
-=======
 }
 
 
 export interface MilestoneActivity {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   milestone_id: string;
   user_id: string;
@@ -44,6 +40,5 @@ export interface MilestoneActivity {;
     display_name: string,
     avatar_url?: string;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

@@ -64,11 +64,9 @@ export const getPopularInnovativeMicroSaasServices2026 = () => {;
 
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
-=======
   return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service => service && service.popular);
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
@@ -77,7 +75,6 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
   })
 }
 
-=======
 export interface InnovativeMicroSaasService2026 {
   id: string, name: string,
   tagline: string, price: string,
@@ -380,12 +377,8 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number,
 
   })
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string) =>: any {
@@ -409,4 +402,3 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

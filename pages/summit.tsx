@@ -23,7 +23,6 @@ setForm ({;
 }) ;
 }finally {;
   setSubmitting (false) ;
-=======
 
 
 
@@ -44,7 +43,6 @@ export default function SummitPage() {;
     role: '',;
     country: '',;
 
-=======
   const [form, setForm] = React.useState({
 
     name: '',
@@ -52,7 +50,6 @@ export default function SummitPage() {;
     role: '',
     country: '',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   });
   const [submitting, setSubmitting] = React && React.useState(false);
   const [result, setResult] = React && React.useState<{;
@@ -92,7 +89,6 @@ export default function SummitPage() {;
   const onSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
 
-=======
 import Head from 'next/head';
 import React from 'react';
 type Speaker = {
@@ -148,7 +144,6 @@ export default function SummitPage() {
       title: 'Founder, Zion',
     avatarUrl: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
-=======
   'Content - Type': 'application / json';
 }
 body: JSON.stringify ({
@@ -232,11 +227,9 @@ function SummitPage() {
     } finally {;
       setSubmitting(false);    }
 
-=======
 
 
 
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...form, source: 'summit-page' })}),
@@ -328,7 +321,6 @@ function SummitPage() {
       </div>
 
               className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'>;
-=======
       twitter: 'https://twitter.com',
     },
   ];
@@ -414,7 +406,6 @@ if ( {) {
               className='inline - flex items - center px - 4 py - 2 rounded - md border border - white / 40 hover:bg - white / 10';
             >;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Agenda;
             </a>          </div>;
         </div>;
@@ -469,8 +460,6 @@ if ( {) {
                 )}              </div>;
             </div>;
 
-=======
-=======
 
 
       <section id="speakers" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
@@ -483,7 +472,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div>
                   <div className="font-semibold">{s.name}</div>
                   <div className="text-sm opacity-70">{s.title}</div>
@@ -495,8 +483,6 @@ if ( {) {
                 {s.linkedin && <a className="underline" href={s.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>}
               </div>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           ))}
 
         </div>;
@@ -525,12 +511,10 @@ if ( {) {
                 p && p.name;
               )}            </div>;
 
-=======
       <section id="partners" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold">Partners</h2>
           <a href="#register" className="px-4 py-2 rounded-md bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800">Become a Sponsor</a>
-=======
 
       <section id="partners" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex items-center justify-between">
@@ -538,15 +522,12 @@ if ( {) {
           <a href="#register" className="px-4 py-2 rounded-md bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800">Become a Sponsor</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
           {partners.map((p) => (
             <div key={p.name} className="h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70">
               {p.logoUrl ? <img src={p.logoUrl} alt={p.name} className="max-h-12" /> : p.name}
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           ))}
 
         </div>;
@@ -559,21 +540,17 @@ if ( {) {
         <div className='flex flex-col md:flex-row md:items-center md:justify-between gap-4'>;
           <h2 className='text-2xl font-bold'>Livestream</h2>;
           <div className='flex flex-wrap items-center gap-2'>;
-=======
 
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="text-2xl font-bold">Livestream</h2>
           <div className="flex flex-wrap items-center gap-2">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <select
               aria-label='Platform'
               className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               value={platform}
               onChange={e => setPlatform(e && e.target.value as any)}
-=======
       <section;
         id='speakers';
         className='mt - 8 p - 6 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - black';
@@ -655,7 +632,6 @@ if ( {) {
               className='px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
               value={platform}
               on_change={e => set_platform (e.target.value as any)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             >;
               <option value='youtube'>YouTube</option>;
               <option value='twitch'>Twitch</option>;
@@ -687,16 +663,13 @@ if ( {) {
         <form onSubmit={onSubmit} className='grid md:grid-cols-2 gap-4'>;
           <div>;
             <label className='block text-sm mb-1'>Name</label>;
-=======
 
       <section id="register" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <h2 className="text-2xl font-bold mb-4">Register</h2>
         <form onSubmit={onSubmit} className="grid md:grid-cols-2 gap-4">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div>
             <label className="block text-sm mb-1">Name</label>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <input
               required
               className='w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
@@ -762,7 +735,6 @@ if ( {) {
     </>;
   );
 
-=======
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="text-2xl font-bold">Livestream</h2>
@@ -857,8 +829,6 @@ if ( {) {
     </>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               value={embed_id}
               on_change={e => setEmbedId (e.target.value)}
             />;
@@ -951,4 +921,3 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

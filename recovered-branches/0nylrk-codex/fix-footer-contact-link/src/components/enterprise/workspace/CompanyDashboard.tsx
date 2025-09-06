@@ -8,7 +8,6 @@ export interface Company {
   theme?: {
 
 
-=======
 
 
     primaryColor: string,
@@ -50,8 +49,6 @@ export interface Company {;
   company: Company;
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function CompanyDashboard({ company }: CompanyDashboardProps) {
   return (
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">
@@ -61,7 +58,6 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
           <QuickActions />
@@ -73,7 +69,6 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="space-y-6">
           <TeamStats />
           <SharedInbox />
@@ -92,7 +87,6 @@ export function CompanyDashboard(): any ({ company }: CompanyDashboardProps) {;
 
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">;
         <div className="lg:col-span-2 space-y-6">;
-=======
 import React from './react';
 import { WorkspaceHeader  } from './WorkspaceHeader';
 import { SharedInbox  } from './SharedInbox';
@@ -145,9 +139,6 @@ function CompanyDashboard() {
 
 
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-=======
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

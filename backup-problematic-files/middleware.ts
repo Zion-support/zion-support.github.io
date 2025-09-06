@@ -7,7 +7,6 @@ export function middleware(request: NextRequest) {;
   const response = NextResponse.next();
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   // Security headers
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-Content-Type-Options', 'nosniff');
@@ -23,7 +22,6 @@ export function middleware(request: NextRequest) {;
 
 }
 
-=======
   
   // Security headers
   response.headers.set('X-Frame-Options', 'DENY');
@@ -39,15 +37,11 @@ export function middleware(request: NextRequest) {;
   
   return response;
 
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
-=======
 return response;
 }
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export const config = {
 
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],;

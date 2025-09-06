@@ -68,7 +68,6 @@
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="fixed inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
@@ -99,7 +98,6 @@
               <div;
                 key={i}
                 className="absolute w - 1 h - 1 bg - white rounded - full opacity - 20 animate - pulse";
-=======
 
           {/* Floating Particles */  } catch (error) {
     console.error("Error:", error);
@@ -115,9 +113,7 @@
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 style={{
 
                   left: `${Math.random () * 100}%`,
@@ -264,7 +260,6 @@
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Innovative 2025
@@ -277,7 +272,6 @@
 
 
 
-=======
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -298,8 +292,6 @@
 
           >
             Experience the future of technology with our revolutionary AI platforms, quantum computing solutions,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             autonomous systems, and innovative micro SAAS services that are transforming industries worldwide.
           </motion.p>
           <motion.div
@@ -361,7 +353,6 @@
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="mb-8">
                 <div className="relative max-w-2xl mx-auto">
                   <input
@@ -381,7 +372,6 @@
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     className="w-full px-6 py-4 bg-gray-900/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                   <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
@@ -481,8 +471,6 @@
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial="initial"
             animate="animate"
           >
@@ -519,7 +507,6 @@
 
 
 
-=======
                     key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -559,8 +546,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           </div>
                                                       {(service as any).popular && (
                             <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
@@ -599,10 +584,8 @@
                               <CheckCircle className="w - 5 h - 5 text - green - 400 mt - 0.5 flex - shrink - 0" />;
                               <span className="text - gray - 300 text - sm">{feature}</span>;
                             </div>))}
-=======
 
 
-=======
                           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -635,7 +618,6 @@
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <div className="flex items-baseline mb-6">
                           <span className="text-3xl font-bold text-white">{(service as any).price || (service as any).pricing?.starter || 'Contact Us'}</span>
                           <span className="text-gray-400 ml-2">{(service as any).period || ''}</span>
@@ -653,7 +635,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {service.features.length > 5 && (
 
                             <div className="text - gray - 500 text - sm">;
@@ -682,7 +663,6 @@
 
 
 
-=======
                           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -713,7 +693,6 @@
                         </div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
                         >
                           <span>Learn More</span>
@@ -729,7 +708,6 @@
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                   </motion.div>
@@ -740,7 +718,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   <div className="text-6xl mb-6">🔍</div>
                   <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
@@ -760,7 +737,6 @@
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
                   >
                     Clear Filters
@@ -799,7 +775,6 @@
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-8">
@@ -871,7 +846,6 @@
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
@@ -923,15 +897,11 @@
                   © 2025 Zion Tech Group. All rights reserved. |
                   <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> |
 
-=======
                   © 2025 Zion Tech Group. All rights reserved. | 
                   <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> | 
-=======
                   © 2025 Zion Tech Group. All rights reserved. |
                   <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> |
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Link href="/terms" className="hover:text-white transition-colors ml-2">Terms of Service</Link>
                 </p>
               </div>
@@ -947,7 +917,6 @@
 
 export default Innovative2025ServicesShowcase;
 
-=======
                           className="w - full bg - gradient - to - r from - purple - 500 to - pink - 500 text - white py - 3 px - 6 rounded - xl font - semibold hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center space - x-2";
                         >;
                           <span > Learn More</span>;
@@ -1095,9 +1064,6 @@ export default Innovative2025ServicesShowcase;
 },
 export default Innovative2025ServicesShowcase,
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -29,7 +29,6 @@ import Link from 'next/link';
 
 
 export type OnboardingStep = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
   label: string;
   completed: boolean;
@@ -66,7 +65,6 @@ function computePercentage(steps: OnboardingStep[]): number {
   const allDone = percentage === 100;
   const firstIncomplete = steps.find(
     s => !s.completed && s.ctaHref && s.ctaLabel
-=======
 };
 
 export type OnboardingProgressCardProps = {;
@@ -102,7 +100,6 @@ export default function OnboardingProgressCard(): any ({;
 
   const firstIncomplete = steps && steps.find(;
     s => !s && s.completed && s && s.ctaHref && s && s.ctaLabel;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
   return (
 
@@ -111,13 +108,11 @@ export default function OnboardingProgressCard(): any ({;
         <h3 className='text-lg font-semibold'>{title}</h3>;
         <div className='text-sm opacity-75'>{percentage}% complete</div>;
       </div>;
-=======
 import React from 'react';
 import Link from 'next/link';
 import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {/* Progress Bar */}
       <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>;
         <div
@@ -127,7 +122,6 @@ import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
       {/* Progress Bar */}
       <div className="mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden">;
         <div
-=======
   cta_label?: string;
   cta_href?: string;
 }
@@ -199,7 +193,6 @@ function OnboardingProgressCard() {
       {/* Progress Bar */}
       <div className="mt - 3 h - 2 w - full rounded - full bg - gray - 200 dark:bg - gray - 800 overflow - hidden">;
         <div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           className={
             `h - 2 rounded - full bg - gradient - to - r ${highlightColorClass}`;
           }
@@ -210,7 +203,6 @@ function OnboardingProgressCard() {
           <PartyPopper size={18} />
           <span className="text-sm">All steps completed — great job!</span>
         </div>
-=======
         />;
       </div>;
 
@@ -224,10 +216,8 @@ function OnboardingProgressCard() {
           <PartyPopper size={18} />;
           <span className="text-sm">All steps completed — great job!</span>;
         </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ) : null}
 
-=======
       <ul className="mt-4 space-y-2">
         {steps.map((step) => (
           <li key={step.id} className="flex items-center justify-between">
@@ -242,15 +232,12 @@ function OnboardingProgressCard() {
             {!step.completed && step.ctaHref && step.ctaLabel ? (
               <Link href={step.ctaHref}>
                 <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
-=======
 
 
 
                   {step.ctaLabel}
                 </a>
               </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ) : null}
           </li>;
         ))}
@@ -258,12 +245,9 @@ function OnboardingProgressCard() {
       </ul>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Primary CTA for next step */}
 
 
@@ -274,14 +258,10 @@ function OnboardingProgressCard() {
   );
 
 }
-=======
 }
-=======
 
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         />;
       </div>;
       {all_done ? (
@@ -327,4 +307,3 @@ function OnboardingProgressCard() {
         </div>) : null}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

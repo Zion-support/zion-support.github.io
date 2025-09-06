@@ -38,10 +38,7 @@ if ( {) {
 
       };
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     const project = await findProjectById(projectId);
     if (!project) {
@@ -50,12 +47,10 @@ if ( {) {
       });
     }
 
-=======
       return res.status(404).json({ error: 'Project not found' })
     }
     if (project.status !== 'Completed') {
       return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
-=======
 
     if (project.status !== 'Completed') {
       return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
@@ -69,24 +64,17 @@ if ( {) {
     const expectedFromId = fromRole === 'client' ? project.clientId : project.talentSlug;
     if (expectedFromId !== fromId) {
       return res.status(403).json({ error: 'Invalid reviewer for this project' })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     const existing = await hasExistingReview(projectId, fromRole, fromId);
     if (existing) {
 
 
         error: "You have already submitted a review for this project",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
-=======
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
       .json({ message: "Review submitted", reviewId: review && review.id });
@@ -97,14 +85,12 @@ if ( {) {
       .json({ error: "Internal server error", details: error?.message });
   }
 }
-=======
       id: uuidv4(),
       projectId,
       fromRole,
       fromId,
       toRole,
       toId,
-=======
     const now = new Date ().toISOString ();
     const review: Review = {
       id: uuidv4 (),
@@ -113,13 +99,11 @@ if ( {) {
       from_id,
       to_role,
       to_id,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       rating,
       text: String (text).trim (),
       categories,
 
       reported: false, reports: [],
-=======
 
       id: uuidv4(),
       projectId,
@@ -164,9 +148,6 @@ if ( {) {
   }
 }
 
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

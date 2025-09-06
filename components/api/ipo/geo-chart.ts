@@ -1,8 +1,6 @@
 
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
@@ -18,4 +16,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -3,7 +3,6 @@
     }
   } catch (error) {
     console && console.error('Error reading file:', error);
-=======
 // Mock file system database utility;
 export function read_json < T>(file_path: string, default_value: T): T {
   try {
@@ -22,7 +21,6 @@ export function read_json < T>(file_path: string, default_value: T): T {
 
     }
     fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2));
-=======
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
@@ -30,10 +28,8 @@ export function read_json < T>(file_path: string, default_value: T): T {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (error) {
     console && console.error('Error writing file:', error);
   }
@@ -56,12 +52,10 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   await mkdir(dir, { recursive: true });
   return dir;
 
-=======
 
 
 
 }
-=======
 // File system database utilities
 import * as fs from 'fs';
 import * as path from 'path';
@@ -263,8 +257,6 @@ export function createFSDatabase(basePath?: string): FSDatabase {
 export function generateId(): string {
   return `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export function write_json < T>(file_path: string, data: T): void {
   try {
     const fs = require ('fs');
@@ -293,5 +285,3 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
   await mkdir (dir, { recursive: true });
   return dir;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -9,7 +9,6 @@ import {;
   FormLabel,;
   FormMessage,;
 
-=======
 
 
   Form,
@@ -20,7 +19,6 @@ import {;
   FormLabel,
   FormMessage,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "@/components/ui/form";
 
 import { Badge } from "@/components/ui/badge";
@@ -34,7 +32,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
   const keywords = watch("keywords");
   const platform = watch("platform");
 
-=======
 
 
 
@@ -68,9 +65,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       const value = e.currentTarget.value.trim(),
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       if (value && !keywords.includes(value)) {
-=======
 
   const addKeyword = (e: React && React.KeyboardEvent<HTMLInputElement>) => {;
     if (e && e.key === "Enter" || e && e.key === ",") {;
@@ -78,7 +73,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       const value = e && e.currentTarget.value && value.trim();
 
       if (value && !keywords && keywords.includes(value)) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         setValue("keywords", [...keywords, value]);
         e && e.currentTarget.value = "";
       }
@@ -96,7 +90,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
   const longDescription = watch("longDescription");
   return (
-=======
 
   },
   
@@ -173,7 +166,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000,;
   const longDescription = watch("longDescription");
   return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle>App Metadata</CardTitle>;
@@ -191,7 +183,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                     <Input
                       placeholder="Enter app title"
                       maxLength={platform === "ios" ? 30 : 50}
-=======
 import React from './react';
 import { UseFormReturn  } from './react - hook - form';
 import { AppMetadataValues  } from './MetadataManager';
@@ -262,7 +253,6 @@ if ( {) {
                     <Input;
                       placeholder="Enter app title";
                       max_length={platform === "ios" ? 30 : 50}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {...field}
                     />;
                   </FormControl>;
@@ -283,7 +273,6 @@ if ( {) {
                     <Input
                       placeholder="Brief description of your app"
                       maxLength={platform === "ios" ? 170 : 80}
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -296,7 +285,6 @@ if ( {) {
                     <Input;
                       placeholder="Brief description of your app";
                       max_length={platform === "ios" ? 170 : 80}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {...field}
                     />;
                   </FormControl>;
@@ -318,7 +306,6 @@ if ( {) {
                       placeholder="Detailed description of your app"
                       className="min-h-32"
                       maxLength={maxDescriptionLength}
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -332,7 +319,6 @@ if ( {) {
                       placeholder="Detailed description of your app";
                       className="min - h-32";
                       max_length={maxDescriptionLength}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {...field}
                     />;
                   </FormControl>;
@@ -365,7 +351,6 @@ if ( {) {
             />;
             <FormField;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               control={control}
               name="longDescription"
               render={({ field }) => (
@@ -375,7 +360,6 @@ if ( {) {
 
                     <Textarea 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       placeholder="Detailed description of your app"
                       className="min-h-32"
                       maxLength={maxDescriptionLength}
@@ -391,15 +375,12 @@ if ( {) {
 
             
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div>
               <FormLabel htmlFor="keywords">Keywords</FormLabel>
-=======
             />;
 
             <div>;
               <FormLabel htmlFor="keywords">Keywords</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Input
                 id="keywords"
                 placeholder="Add keywords (press Enter or comma to add)"
@@ -410,15 +391,12 @@ if ( {) {
               
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
-=======
               />;
 
               <div className="flex flex-wrap gap-2 mt-2">;
                 {keywords && keywords.map((keyword, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Badge
                     key={index}
                     className="bg-zion-purple/60 hover:bg-zion-purple">;
@@ -428,7 +406,6 @@ if ( {) {
                     <button 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       type="button"
                       onClick={() => removeKeyword(keyword)}
                       className="ml-1 hover:text-red-300";
@@ -440,7 +417,6 @@ if ( {) {
 
               </div>;
               <FormDescription className="mt-2">;
-=======
                     {long_description.length}/{maxDescriptionLength} characters;
                   </FormDescription>;
                 </FormItem>)}
@@ -490,16 +466,13 @@ if ( {) {
 
 );
 
-=======
                     <Input 
                       placeholder="e.g., 1.0.0"
                       {...field}
                     />;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </FormControl>;
                 </FormItem>;
               )}
-=======
             <FormField;
               control={control}
               name="version";
@@ -510,7 +483,6 @@ if ( {) {
                     <Input placeholder="e.g., 1.0.0" {...field} />;
                   </FormControl>;
                 </FormItem>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             />;
           </div>;
         </Form>;
@@ -520,10 +492,6 @@ if ( {) {
 }
 ;
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

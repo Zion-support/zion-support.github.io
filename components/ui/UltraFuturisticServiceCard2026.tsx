@@ -18,7 +18,6 @@ interface Service {;
 
     setupTime?: string;
   };
-=======
     trial_days?: number;
     setup_time?: string;
   }
@@ -42,7 +41,6 @@ interface ServiceCardProps {
 }
 const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = 'default' }) => {
   const getVariantStyles = () => {
-=======
   category: string,
   icon: string,
   market_price?: string;
@@ -58,7 +56,6 @@ interface ServiceCardProps {
 }
 const UltraFuturisticServiceCard2026: React.FC < ServiceCardProps> = ({ service, variant = 'default' }) => {
   const getVariantStyles = () =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (variant) {
       case 'ai':;
         return {
@@ -185,12 +182,9 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
         <div className={`absolute inset-0 bg-gradient-to-br ${styles && styles.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>;
 
 
-=======
 
         
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Popular Badge */}
         {service && service.popular && (;
           <motion&& motion.div
@@ -327,11 +321,9 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             Popular;
           </motion.div>)}
 
-=======
 
         
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Service Header */}
         <div className="text - center mb - 8 relative z - 10">;
           <div className={`w - 24 h - 24 mx - auto mb - 6 rounded - full ${styles.icon_bg} flex items - center justify - center border ${styles.icon_border} text - 4xl backdrop - blur - sm`}>;
@@ -387,7 +379,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Enhanced Market Information */}
         {service.marketPrice && (
           <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
@@ -399,7 +390,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
               <div className="text-xs text-gray-500">
                 Competes with: {service.competitors.slice(0, 2).join()}
               </div>
-=======
         </div>;
 
         {/* Enhanced Market Information */}
@@ -414,7 +404,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
               <div className="text-xs text-gray-500">;
                 Competes with: {service && service.competitors.slice(0, 2).join()}
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             )}
           </div>;
         )}
@@ -435,7 +424,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
                 <div className="text-gray-400 mb-2">Use Cases:</div>
                 <div className="text-gray-300">{service.useCases.slice(0, 3).join()}</div>
               </div>
-=======
 
         {/* Target Market & Use Cases */}
         {service && service.targetMarket && (;
@@ -450,18 +438,15 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
                 <div className="text-gray-400 mb-2">Use Cases:</div>;
                 <div className="text-gray-300">{service && service.useCases.slice(0, 3).join()}</div>;
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             )}
           </div>;
         )}
 
 
 
-=======
 
         
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Benefits Section */}
         {service && service.benefits && (;
           <div className="border-t border-white/10 pt-4 mb-6 relative z-10">;
@@ -499,7 +484,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Enhanced Hover Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
       </div>
@@ -537,13 +521,8 @@ UltraFuturisticServiceCard2026 && UltraFuturisticServiceCard2026.displayName = '
 
 export default UltraFuturisticServiceCard2026;
 
-=======
 
 export default UltraFuturisticServiceCard2026;
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           </div>;
           <h3 className="text - 2xl font - bold text - white mb - 3 group - hover:text - gray - 100 transition - colors">;
             {service.name}
@@ -639,5 +618,3 @@ UltraFuturisticServiceCard2026.display_name = 'UltraFuturisticServiceCard2026';
 ;
 export default UltraFuturisticServiceCard2026;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

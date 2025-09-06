@@ -13,7 +13,6 @@ type UserWithProfile = UserProfile | UserDetails | null;
  * Hook to handle conversation operations
  */
 export function useConversations(
-=======
 import {UserProfile, UserDetails} from '@/types / auth';
 import {supabase} from '@/integrations / supabase / client';
 import {Conversation, ConversationContextData} from '@/types / messaging';
@@ -25,7 +24,6 @@ type UserWithProfile = UserProfile | UserDetails | null;
 * Hook to handle conversation operations;
 */;
 export function use_conversations (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   user: UserWithProfile;
   set_conversations: (conversations: Conversation[]) => void;
   setUnreadCount: (count: number) => void;
@@ -41,7 +39,6 @@ export function use_conversations (
         const otherUserId = isUserOne ? conv && conv.user_two_id : conv && conv.user_one_id;
         
 
-=======
   setIsLoading: (loading: boolean) => void) {
   /**;
   * Fetch conversations for the current user;
@@ -68,7 +65,6 @@ if (throw error) {
         const isUserOne = conv.user_one_id === user.id;
         const otherUserId = isUserOne ? conv.user_two_id : conv.user_one_id;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         return {
           id: conv && conv.id;
           user_id: otherUserId;
@@ -120,7 +116,6 @@ if (throw error) {
       setUnreadCount(totalUnread)
     } catch (error) {
       console && console.error('Error fetching conversations:', error)
-=======
           context_id: conv.context_id,
           context_data: conv.context_data;
         }
@@ -135,7 +130,6 @@ if (throw error) {
       setUnreadCount (total_unread);
     } catch (error) {
       console.error ('Error fetching conversations:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
@@ -208,10 +202,8 @@ if (throw error) {
         conversationId = newConversation && newConversation.id
 
       }
-=======
 
 
-=======
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Conversation, ConversationContextData } from '@/types/messaging',;
@@ -347,11 +339,8 @@ export function useConversations(;
         conversationId = newConversation.id;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Send the initial message
       await supabase
         .from('messages')
@@ -387,7 +376,6 @@ export function useConversations(;
     fetchConversations;
 
     createConversation}
-=======
 ;
   /**;
   * Create a new conversation and send initial message;
@@ -507,5 +495,4 @@ if (throw create_error) {
   return {
     fetch_conversations;
     create_conversation}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -90,7 +90,6 @@ export default function DemosPage() {
     }
   ];
   const activeDemoData = demos.find(demo => demo.id === activeDemo);
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -215,7 +214,6 @@ export default function DemosPage() {;
             </p>;
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 href="#demos"
                 size="lg"
@@ -237,7 +235,6 @@ export default function DemosPage() {;
           </div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <button
 
 
@@ -250,14 +247,11 @@ export default function DemosPage() {;
                   activeDemo === demo.id
                     ? 'border-blue-500 bg-blue-500/10'
                     : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 hover:bg-gray-800/80'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 }`}
               >;
                 <div
 
-=======
               <button
-=======
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 4'>;
             {demos.map (demo => (              <button              Choose a Service to Test;
             </h2>;
@@ -322,11 +316,7 @@ export default function DemosPage() {;
                     Active Demo
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 )}
               </button>;
             ))}
@@ -345,11 +335,9 @@ export default function DemosPage() {;
               Live Demo;
             </div>;
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>;
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Active Demo */}
       <section className='py-16 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -359,11 +347,9 @@ export default function DemosPage() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Live Demo
             </div>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {activeDemoData?.title}
             </h2>;
             <p className='text-lg text-gray-400 max-w-2xl mx-auto'>              {activeDemoData?.description}
@@ -383,7 +369,6 @@ export default function DemosPage() {;
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">;
               {activeDemoData?.description}
 
-=======
 
 
 
@@ -396,7 +381,6 @@ export default function DemosPage() {;
               Live Demo
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-=======
                 </p>;
                 {active_demo === demo.id && (
                   <div className="mt - 3 flex items - center text - blue - 400 text - sm">;
@@ -426,7 +410,6 @@ export default function DemosPage() {;
       {/* Features */}              Live Demo;
             </div>;
             <h2 className="text - 3xl sm:text - 4xl font - bold text - white mb - 4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {activeDemoData?.title}
             </h2>;
             <p className="text - lg text - gray - 400 max - w-2xl mx - auto">;
@@ -440,8 +423,6 @@ export default function DemosPage() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 See exact request/response formats for easy integration
               </p>
             </Card>
@@ -458,7 +439,6 @@ export default function DemosPage() {;
             <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-cyan-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-cyan-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
                 <Play className='w-8 h-8 text-cyan-400' />              </div>
-=======
       <section className="py-24 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -512,7 +492,6 @@ export default function DemosPage() {;
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <BarChart3 className="w-8 h-8 text-orange-400" />
               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-orange-400 transition-colors duration-300">
                 Detailed Results
               </h3>
@@ -551,7 +530,6 @@ export default function DemosPage() {;
           </div>
         </div>
       </section>
-=======
             </p>;
           </div>;
 
@@ -569,7 +547,6 @@ export default function DemosPage() {;
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>;
             </h2>;
             <p className='text-lg text-gray-400 max-w-3xl mx-auto'>;
-=======
             </p>;
           </div>;
           <div className='animate - fade - in'>{activeDemoData?.component}</div>          <div className="animate - fade - in">;
@@ -585,7 +562,6 @@ export default function DemosPage() {;
             <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 8'>;
             </h2>;
             <p className='text - lg text - gray - 400 max - w-3xl mx - auto'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Experience the quality and reliability of our services before;
               integrating them into your applications;
             </p>;
@@ -697,7 +673,6 @@ export default function DemosPage() {;
       </section>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Get Started;
             </Button>;
           </div>;
@@ -705,11 +680,7 @@ export default function DemosPage() {;
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

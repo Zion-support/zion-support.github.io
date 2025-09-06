@@ -1,12 +1,8 @@
 
 
 import React from 'react';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
@@ -147,14 +143,10 @@ export default function DigitalTransformationPage() {;
       <div className="min-h-screen bg-gray-50">";
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   ];
 
 
       <div className="min-h-screen bg-gray-50">
-=======
   return (
     <MainLayout
       title="Digital Transformation Solutions - Zion Tech Group"
@@ -171,7 +163,6 @@ export default function DigitalTransformationPage() {;
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
       <div className="min-h-screen bg-gray-50">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/digital-transformation.tsx
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 text-white py-20">";
           <div className="container mx-auto px-4">";
@@ -193,13 +184,8 @@ export default function DigitalTransformationPage() {;
         </section>;
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -225,7 +211,6 @@ export default function DigitalTransformationPage() {;
 
 
 :pages/solutions/digital-transformation.tsx
-=======
               className="text-center";
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -249,7 +234,6 @@ export default function DigitalTransformationPage() {;
           </div>;
         </section>;
 :pages/solutions/digital-transformation && transformation.tsx;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/digital-transformation.tsx
         {/* Transformation Process */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -277,11 +261,8 @@ export default function DigitalTransformationPage() {;
                     className="bg-gray-50 rounded-lg p-6 text-center"
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Services Section */}
 
                 
@@ -293,7 +274,6 @@ export default function DigitalTransformationPage() {;
                 const IconComponent = service.icon;
                 return (;
                   <motion.div);
-=======
         <section className="py-20">";
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
@@ -301,7 +281,6 @@ export default function DigitalTransformationPage() {;
                 const IconComponent = service && service.icon;
                 return (
                   <motion&& motion.div)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/digital-transformation.tsx
                     key={index}
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
                     initial={{ opacity: 0, y: 30 }}
@@ -310,10 +289,8 @@ export default function DigitalTransformationPage() {;
                     viewport={{ once: true }}
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 :pages/solutions/digital-transformation.tsx
                   >
                     <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
@@ -333,11 +310,7 @@ export default function DigitalTransformationPage() {;
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   >,
-=======
 :pages/solutions/digital-transformation && transformation.tsx>;
                     <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">;
                       {step && step.step}
@@ -355,7 +328,6 @@ export default function DigitalTransformationPage() {;
                         <li key={idx} className="flex items-center">;
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
                   >,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/digital-transformation.tsx
                     <div className="text-purple-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
                     </div>;
@@ -378,14 +350,10 @@ export default function DigitalTransformationPage() {;
               })}
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>,
-=======
             </div>,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/digital-transformation.tsx
           </div>;
         </section>;
             </div>;

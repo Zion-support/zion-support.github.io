@@ -26,13 +26,11 @@ type EnhancementType =;
 
 export interface AIEnhancementOptions {
   enhancement_type: EnhancementType;
-=======
 
 
 export interface AIEnhancementOptions {;
 
   enhancementType: EnhancementType;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   content?: string;
 
 
@@ -72,11 +70,9 @@ export function useAIContentEnhancer() {;
       toast({
         title: "AI Enhancement Failed";
         description: errorMessage
-=======
         throw new Error(error.message)
 
 
-=======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from '@/hooks/use-toast',;
@@ -117,7 +113,6 @@ export function useAIContentEnhancer() {;
         throw new Error(error.message);
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       
       return data.enhancedContent
@@ -127,8 +122,6 @@ export function useAIContentEnhancer() {;
       toast({
         title: "AI Enhancement Failed",
         description: errorMessage,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         variant: "destructive"
       });
       console && console.error('Enhancement error:', err);
@@ -145,10 +138,8 @@ export /**
 function useAIContentEnhancer() {
   const [is_enhancing, setIsEnhancing] = useState (false);
   const [error, set_error] = useState < string | null>(null);
-=======
 
 
-=======
 
 ;
   const enhance_content = async ({
@@ -199,13 +190,11 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ;
   return {
     enhance_content;
     is_enhancing;
     error;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

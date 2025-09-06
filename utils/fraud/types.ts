@@ -11,12 +11,10 @@ export type AdminActionType =;
 ;
 
 export interface AdminAction {
-=======
 
 
 export interface AdminAction {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   case_id: string;
   type: AdminActionType;
@@ -31,14 +29,12 @@ export interface AdminAction {;
 }
 export interface FraudDetectionResult {
   is_fraud: boolean;
-=======
 }
 
 
 export interface FraudDetectionResult {;
 
   isFraud: boolean;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   confidence: number;
   reasons: string[];
 
@@ -47,13 +43,11 @@ export interface FraudDetectionResult {;
 
 }
 export interface FraudDetectionConfig {
-=======
 }
 
 
 export interface FraudDetectionConfig {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   enabled: boolean;
   rules: {
     suspicious_activity: {
@@ -81,16 +75,10 @@ export interface FraudDetectionConfig {;
   }
 }
 
-=======
 
 
 
-=======
     confidenceThreshold: number,
   };
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

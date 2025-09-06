@@ -18,7 +18,6 @@
     reviews: 520
   }
 ];
-=======
   id: string, name: string,
   tagline: string, description: string,
   price: string, period: string,
@@ -38,7 +37,6 @@
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const comprehensiveRealServices: ComprehensiveService[] = [
@@ -352,11 +350,9 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     launchDate: '2024-01-10', customers: 950,
     rating: 4.9,
     reviews: 520;
-=======
 
 export interface ComprehensiveService {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 

@@ -35,11 +35,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-=======
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Menu,
   X,
   ChevronDown,
@@ -161,7 +158,6 @@ const companyLinks = [
   { name: '🎯 About Us', href: '/about', icon: Users }
   { name: '📞 Contact', href: '/contact', icon: MessageCircle }
   { name: '🔒 Support', href: '/support', icon: ShieldCheck },  { name: '🔒 Support', href: '/support', icon: ShieldCheck }
-=======
 ];
 
 const companyLinks = [
@@ -170,7 +166,6 @@ const companyLinks = [
   { name: '⭐ Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star },
   { name: '💰 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign },
   { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase },
-=======
     services: [;
       {
         name: 'Carbon Footprint Tracking',
@@ -222,12 +217,10 @@ const company_links = [;
   { name: '🔒 Support', href: '/support', icon: ShieldCheck }, ];  { name: '⭐ Ultimate 2028', href: '/ultimate - 2028 - services - showcase', icon: Star },
   { name: '💰 2028 Pricing', href: '/revolutionary - 2028 - pricing', icon: DollarSign },
   { name: '📊 Case Studies', href: '/case - studies', icon: Briefcase },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },
   { name: '🎯 About Us', href: '/about', icon: Users },
   { name: '📞 Contact', href: '/contact', icon: MessageCircle },
   { name: '🔒 Support', href: '/support', icon: ShieldCheck }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ];
 
 
@@ -255,11 +248,8 @@ const companyLinks = [;
   { name: '🎯 About Us', href: '/about', icon: Users },;
   { name: '📞 Contact', href: '/contact', icon: MessageCircle },;
   { name: '🔒 Support', href: '/support', icon: ShieldCheck },  { name: '🔒 Support', href: '/support', icon: ShieldCheck }
-=======
-=======
 ;
 const resource_links = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { name: '📖 Documentation', href: '/docs', icon: BookOpen },
   { name: '🎥 Video Tutorials', href: '/tutorials', icon: Video },
   { name: '💡 API Reference', href: '/api', icon: Code },
@@ -269,12 +259,9 @@ const resource_links = [;
   { name: '🔐 Security Center', href: '/security', icon: Shield },
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -284,7 +271,6 @@ const resource_links = [;
 
   const handleCategoryHover = (categoryTitle: string) => {;
     setActiveCategory(categoryTitle);
-=======
 
   const handleCategoryHover = (categoryTitle: string) => {
     setActiveCategory(categoryTitle)
@@ -300,18 +286,15 @@ const resource_links = [;
       service =>;
         service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
         service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase())    );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
   return (
 
 
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  };
-=======
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleCategoryLeave = () => {
     setActiveCategory(null)
   }
@@ -320,7 +303,6 @@ const resource_links = [;
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
       service.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
-=======
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  };
 
   const handleCategoryLeave = () => {;
@@ -332,7 +314,6 @@ const resource_links = [;
       service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
       service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 
   return (
@@ -388,7 +369,6 @@ const resource_links = [;
             <div className="flex items-center space-x-4">;
               <a href={contactInfo && contactInfo.website} className="text-purple-300 hover:text-white transition-colors">;
                 {contactInfo && contactInfo.website}
-=======
   { name: '📊 Analytics', href: '/analytics', icon: BarChart3 }, ];  { name: '📊 Analytics', href: '/analytics', icon: BarChart3 }
 ];
 ;
@@ -486,15 +466,12 @@ function UltraFuturisticNavigation2028() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
 
-=======
       {/* Main Navigation */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-20'>
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Logo */}
           <div className='flex items-center'>;
             <Link href='/' className='flex items-center space-x-3 group'>;
@@ -570,7 +547,6 @@ function UltraFuturisticNavigation2028() {
                 <span>Services</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
-=======
             <div className="relative group">;
               <button className="flex items-center space-x-2 text-purple-200 hover:text-white transition-colors py-2">;
                 <Sparkles className="w-5 h-5" />;
@@ -580,7 +556,6 @@ function UltraFuturisticNavigation2028() {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Mega Menu */}
               <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">;
                 <div className="p-6">;
@@ -598,8 +573,6 @@ function UltraFuturisticNavigation2028() {
 
 
                             </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           ))}
                         </div>;
                       </div>;
@@ -608,7 +581,6 @@ function UltraFuturisticNavigation2028() {
 
                         View All Services
 
-=======
                                   </h4>;
                                   <p className="text - xs text - purple - 300">{service.description}</p>;
                                 </div>;
@@ -644,7 +616,6 @@ function UltraFuturisticNavigation2028() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Company Links */}
             {companyLinks && companyLinks.slice(1, 5).map(link => (;
               <Link
@@ -680,7 +651,6 @@ function UltraFuturisticNavigation2028() {
             <div className="relative">;
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;
 
-=======
 
             {/* Company Links */}
             {companyLinks.slice(1, 5).map((link) => (
@@ -696,8 +666,6 @@ function UltraFuturisticNavigation2028() {
             {/* Search */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <input
                 type="text"
                 placeholder="Search services..."
@@ -732,12 +700,9 @@ function UltraFuturisticNavigation2028() {
       </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -749,7 +714,6 @@ function UltraFuturisticNavigation2028() {
 
           >
             <div className='px-4 py-6 space-y-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Mobile Search */}
               <div className='relative'>;
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400' />;
@@ -768,12 +732,10 @@ function UltraFuturisticNavigation2028() {
                 <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>          >;
             <div className="px-4 py-6 space-y-6">;
 
-=======
             className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30"
           >
             <div className="px-4 py-6 space-y-6">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Mobile Search */}
               <div className="relative">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;
@@ -785,7 +747,6 @@ function UltraFuturisticNavigation2028() {
 
               {/* Mobile Service Categories */}
 
-=======
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white border-b border-purple-500/30 pb-2">
                   Services
@@ -799,21 +760,17 @@ function UltraFuturisticNavigation2028() {
                     <div className="ml-8 space-y-2">
                       {category.services.map((service) => (
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         <Link
                           key={service && service.name}
                           href={service && service.href}
                           onClick={closeMenu}
 
 
-=======
 
 
                         </Link>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       ))}
                     </div>;
                   </div>;
@@ -822,16 +779,12 @@ function UltraFuturisticNavigation2028() {
               </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Mobile Company Links */}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
                 </div>;
@@ -841,7 +794,6 @@ function UltraFuturisticNavigation2028() {
               {/* Mobile CTA */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
                   href='/contact'
                   onClick={closeMenu}
@@ -849,7 +801,6 @@ function UltraFuturisticNavigation2028() {
                   href="/contact"
                   onClick={closeMenu}
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">;
-=======
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -971,13 +922,11 @@ function UltraFuturisticNavigation2028() {
                   on_click={close_menu}
                   className="block w - full text - center px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300";
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Get Started;
                 </Link>;
               </div>;
             </div>;
 
-=======
               <div className="pt-4 border-t border-purple-500/30">
                 <Link
                   href="/contact"
@@ -990,7 +939,6 @@ function UltraFuturisticNavigation2028() {
             </div>
           </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
 
       </AnimatePresence>;
@@ -999,10 +947,7 @@ function UltraFuturisticNavigation2028() {
       {/* Search Results Dropdown */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
             </div>;
           </div>;
@@ -1013,20 +958,14 @@ function UltraFuturisticNavigation2028() {
   );
 
 }
-=======
 
 }
-=======
     </nav>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </nav>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           </motion.div>)}
       </AnimatePresence>;
       {/* Search Results Dropdown */}
@@ -1069,4 +1008,3 @@ function UltraFuturisticNavigation2028() {
         </div>)}
     </nav>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface SmartContractDeploymentProps {
 
   solidityCode: string
@@ -15,7 +14,6 @@ interface SmartContractDeploymentProps {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   isDeploying
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
@@ -52,12 +50,10 @@ function SmartContractDeployment() {
   });
 ;
 
-=======
 
   }),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleDeployContract = async () => {
     // Check condition
 if ( {) {
@@ -176,7 +172,6 @@ export function SmartContractDeployment(): any ({ ;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <ShieldCheck className="h-5 w-5 text-primary" />;
-=======
 ;
   const handleDownloadSolidity = () =>: any {
     // Create a blob from the Solidity code;
@@ -229,10 +224,8 @@ export function SmartContractDeployment(): any ({ ;
 
                     ...deploymentOptions;
                     network: value as BlockchainNetwork;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   })}
 
                   className="flex flex-col space-y-1";
@@ -258,14 +251,12 @@ export function SmartContractDeployment(): any ({ ;
 
                     ...deploymentOptions;
                     walletAddress: e && e.target.value;
-=======
 
                 <Input 
                   id="wallet-address" 
                   placeholder="0x..." 
                   value={deploymentOptions.walletAddress || ''}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   })}
 
                 />;
@@ -281,13 +272,11 @@ export function SmartContractDeployment(): any ({ ;
 
                     useEscrow: checked;
 
-=======
 
                 <Switch 
                   id="use-escrow"
                   checked={deploymentOptions.useEscrow}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   })}
                 />;
                 <Label htmlFor="use-escrow">Use escrow for payments</Label>;
@@ -300,11 +289,9 @@ export function SmartContractDeployment(): any ({ ;
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>;
             <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">;
               <pre>{solidityCode && solidityCode.slice(0, 500)}...</pre>;
-=======
 
 
 
-=======
       <CardContent className="space - y-6">;
         <div className="space - y-4">;
           <div className="flex items - center space - x-2">;
@@ -368,7 +355,6 @@ export function SmartContractDeployment(): any ({ ;
             <h4 className="text - sm font - medium mb - 2">Smart Contract Preview</h4>;
             <div className="max - h-52 overflow - y-auto bg - background p - 3 rounded text - xs font - mono">;
               <pre>{solidity_code.slice (0, 500)}...</pre>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </div>;
@@ -377,10 +363,7 @@ export function SmartContractDeployment(): any ({ ;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       <CardFooter className="flex justify - between">;
         <Button variant="outline" on_click={handleDownloadSolidity}>;
           <Download className="mr - 2 h - 4 w - 4" />;
@@ -397,4 +380,3 @@ export function SmartContractDeployment(): any ({ ;
       </CardFooter>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

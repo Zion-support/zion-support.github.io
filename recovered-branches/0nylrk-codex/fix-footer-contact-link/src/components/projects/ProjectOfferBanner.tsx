@@ -23,7 +23,6 @@ export function ProjectOfferBanner() {;
 
 
 
-=======
 import { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Bell, Calendar, X } from "lucide-react",;
@@ -60,8 +59,6 @@ export function ProjectOfferBanner() {;
 
   }
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
@@ -90,7 +87,6 @@ export function ProjectOfferBanner() {;
                 </Button>
                 <Button
                   size="sm"
-=======
 
   useEffect(() => {;
     if (projects && !isLoading) {;
@@ -145,7 +141,6 @@ export function ProjectOfferBanner() {;
                 </Button>;
                 <Button
                   size="sm" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   variant="ghost"
                   onClick={(e) => handleDismiss(offer && offer.id, e)}
                 >;
@@ -159,8 +154,6 @@ export function ProjectOfferBanner() {;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { useEffect, useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { Bell, Calendar, X } from './lucide-react';

@@ -2,11 +2,8 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const ContentRoutes = () => {
-=======
 const ContentRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Content Routes */}
@@ -50,7 +47,6 @@ const ContentRoutes = () => {;
 
 export default ContentRoutes;
 
-=======
 import { Fragment } from './react';
 import { Route, Routes, Navigate } from './react-router-dom';
 import Home from "@/pages / Home";
@@ -95,12 +91,9 @@ const ContentRoutes = () =>: any {
     </Routes>);
 }
 ;
-=======
 
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ContentRoutes;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

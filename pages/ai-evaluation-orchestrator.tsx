@@ -21,7 +21,6 @@
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">AI Evaluation Orchestrator</h1>
             <p className="text-gray-300 text-lg">Automated LLM and prompt evaluations with dashboards, baselines, and CI gates.</p>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </header>
           <section className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             {[
@@ -62,7 +61,6 @@
               href='/contact'
 
               className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white'>;
-=======
         <title > AI Evaluation Orchestrator | Zion Tech Group</title>;
         <meta;
           name='description';
@@ -120,7 +118,6 @@
       </main>;
 
 
-=======
 
               'Create datasets and scoring functionsBatch runs across models and versionsTrack regressions and enforce quality gatesIntegrations: OpenAI, Anthropic, Groq, OpenRouter, LangfuseExport reports, share baselines, and diff resultsFrom $199/mo'
             ].map((f) => (
@@ -140,8 +137,6 @@
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import Button from '../components/ui/Button';
 export default function AIEvaluationOrchestratorPage() {
   return (
@@ -176,9 +171,5 @@ export default function AIEvaluationOrchestratorPage() {
     </Layout>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

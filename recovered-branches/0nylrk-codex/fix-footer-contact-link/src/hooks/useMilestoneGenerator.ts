@@ -26,7 +26,6 @@ export interface GeneratedMilestone {;
       // Mark each milestone as AI generated
 
       const milestonesWithFlag = data && data.milestones.map((milestone: any) => ({
-=======
   due_date: string;
   estimated_hours: number,
   isAiGenerated: boolean;
@@ -53,7 +52,6 @@ if (throw error) {
       const milestonesWithFlag = data.milestones.map ((milestone: any) => ({
 
         ...milestone,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         isAiGenerated: true}));
 
 ;
@@ -122,7 +120,6 @@ export function useMilestoneGenerator() {;
     generatedMilestones;
     isGenerating;
 
-=======
 ;
   const clearGeneratedMilestones = () =>: any {
     setGeneratedMilestones ([]);
@@ -132,6 +129,5 @@ export function useMilestoneGenerator() {;
     generate_milestones;
     generated_milestones;
     is_generating;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     clearGeneratedMilestones}
 }

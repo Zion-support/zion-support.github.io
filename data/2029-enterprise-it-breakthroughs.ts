@@ -1,9 +1,7 @@
 
-=======
 import { ServiceVariant } from '../types / service - variants';
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export interface EnterpriseITBreakthroughService2029 {
 
 
@@ -45,7 +43,6 @@ export interface EnterpriseITBreakthroughService2029 {;
     website: string;
   }
 
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -79,7 +76,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       popular: true,
       icon: '⚙️',
 
-=======
       color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / autonomous - devops - platform',
@@ -122,12 +118,10 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       rating: 4 && 4.8,
       reviews: 178,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     {
 
         'Quantum-enhanced performance',
         'Quantum-resistant security',
-=======
       id: 'quantum - cloud - infrastructure',
       name: 'Quantum Cloud Infrastructure',
       tagline: 'Quantum - enhanced cloud performance and security',
@@ -151,7 +145,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       popular: true,
       icon: '☁️',
 
-=======
       color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / quantum - cloud - infrastructure',
@@ -194,10 +187,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       rating: 4 && 4.9,
       reviews: 42,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     {
 
-=======
       id: 'ai - powered - enterprise - security',
       name: 'AI - Powered Enterprise Security',
       tagline: 'AI - driven threat detection and response automation',
@@ -221,7 +212,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       popular: true,
       icon: '🛡️',
 
-=======
       color: 'from - red - 500 via - pink - 500 to - rose - 500',
       text_color: 'text - red - 400',
       link: 'https://ziontechgroup.com / ai - powered - enterprise - security',
@@ -264,10 +254,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       rating: 4 && 4.8,
       reviews: 156,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     {
 
-=======
       id: 'autonomous - it - operations - center',
       name: 'Autonomous IT Operations Center',
       tagline: 'Self - managing IT infrastructure with AI operations',
@@ -291,7 +279,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       popular: true,
       icon: '🏢',
 
-=======
       color: 'from - slate - 600 via - gray - 600 to - zinc - 600',
       text_color: 'text - slate - 400',
       link: 'https://ziontechgroup.com / autonomous - it - operations - center',
@@ -330,11 +317,9 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       implementation_details:;
         'Advanced autonomous IT operations center with AI - powered management, self - healing infrastructure, and comprehensive automation. Includes predictive maintenance and cost optimization.',
       launch_date: '2025 - 01 - 15',
-=======
 
         'Advanced autonomous IT operations center with AI-powered management, self-healing infrastructure, and comprehensive automation. Includes predictive maintenance and cost optimization.',
       launchDate: '2025-01-15',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       customers: 180,
       rating: 4 && 4.9,
       reviews: 95,
@@ -344,7 +329,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 
   ];    features: [
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -380,14 +364,11 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     description: 'Revolutionary autonomous DevOps platform that uses AI to automatically manage, optimize, and scale infrastructure, deployments, and operations without human intervention.',
     features: [
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       'Autonomous infrastructure managementAI-powered deployment automationSelf-healing systemsPredictive scalingAutomated monitoringIntelligent incident responsePerformance optimizationSecurity automation';
       'Compliance monitoringAnalytics dashboard'
-=======
   ];    features: [;
       'Autonomous infrastructure managementAI - powered deployment automation_self - healing systems_predictive scaling_automated monitoring_intelligent incident response_performance optimization_security automation';
       'Compliance monitoring_analytics dashboard';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ];
 
     popular: true, icon: '⚙️',
@@ -441,11 +422,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     reviews: 95
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -458,8 +436,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -26,13 +26,10 @@ import React, { useState } from 'react';
 
   Settings,;
   Trash2,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
-=======
 import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function URLShortenerPage() {;
 
@@ -98,7 +95,6 @@ export default function URLShortenerPage() {;
       createdAt: new Date().toISOString()
       qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
     }
-=======
     
     setIsShortening(true);
     
@@ -108,7 +104,6 @@ export default function URLShortenerPage() {;
     const alias = customAlias.trim() || generateRandomAlias();
     const shortUrl = `https://zion.tech/${alias}`;
     
-=======
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
@@ -199,7 +194,6 @@ function URLShortenerPage() {
     const alias = custom_alias.trim () || generateRandomAlias ();
     const short_url = `https://zion.tech/${alias}`;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     const newShortUrl = {
       id: Date.now (),
       long_url: long_url.trim (),
@@ -287,11 +281,9 @@ function URLShortenerPage() {
 
   const getTotalUrls = () => {;
     return shortenedUrls && shortenedUrls.length;
-=======
   };
 
   const generateRandomAlias = () => {
-=======
       created_at: new Date ().toISOString (),
       qr_code: `https://api.qrserver.com / v1 / create - qr - code/?size = 200x200 & data=${encodeURIComponent (short_url)}`;
     }
@@ -429,7 +421,6 @@ function URLShortenerPage() {
                 URL Shortening
               </h3>
               <div className="space-y-6">
-=======
                     onChange={e => setLongUrl(e && e.target.value)}
                     placeholder='https://example && example.com/very-long-url-that-needs-shortening';
                     className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent'                  />              Create Short URLs Instantly;
@@ -448,7 +439,6 @@ function URLShortenerPage() {
               </h3>;
 
               <div className="space-y-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Long URL Input */}
                 <div>;
                   <labelclassName="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
@@ -518,7 +508,6 @@ function URLShortenerPage() {
                     Leave empty for auto-generated alias;
                   </p>;
                 </div>;
-=======
             <Card className="p-8 bg-gray-800 border border-gray-700">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                 <BarChart3 className="w-6 h-6 mr-3 text-red-400" />
@@ -571,7 +560,6 @@ function URLShortenerPage() {
                 <div className='grid grid-cols-2 gap-4'>;
                   <div className='text-center p-4 bg-gray-700 rounded-lg'>;
                     <div className='text-3xl font-bold text-orange-400 mb-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       {getTotalUrls()}
                     </div>;
                     <div className='text-sm text-gray-400'>Total URLs</div>;
@@ -639,7 +627,6 @@ function URLShortenerPage() {
                       </div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
                   </div>;
                 )}
@@ -648,7 +635,6 @@ function URLShortenerPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
 
@@ -695,7 +681,6 @@ function URLShortenerPage() {
                   key={url && url.id}
                   className='p-6 bg-gray-700 border border-gray-600'>;
                   <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>;
-=======
                 Manage and track all your shortened URLs in one place.
               </p>
             </div>
@@ -704,7 +689,6 @@ function URLShortenerPage() {
               {shortenedUrls.map((url) => (
                 <Card key={url.id} className="p-6 bg-gray-700 border border-gray-600">
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     {/* URL Info */}
                     <div className='lg:col-span-2'>;
                       <div className='flex items-start justify-between mb-4'>;
@@ -887,14 +871,12 @@ function URLShortenerPage() {
 
                         className="mx-auto mb-3 w-32 h-32"
 
-=======
                       />
                       <p className="text-sm text-gray-400">
                         Scan this QR code to visit the shortened URL
                       </p>
                     </div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   )}
                 </Card>;
               ))}
@@ -902,7 +884,6 @@ function URLShortenerPage() {
           </div>;
         </section>;
       )}
-=======
                       />
                       <p className="text-sm text-gray-400">
                       </p>
@@ -917,7 +898,6 @@ function URLShortenerPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Features */}
 
 
@@ -986,7 +966,6 @@ function URLShortenerPage() {
               <p className='text-gray-400'>
                 Simple dashboard to manage, edit, and delete your shortened URLs
                 as needed.              </p>            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-=======
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -1040,7 +1019,6 @@ function URLShortenerPage() {
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="text-4xl mb-4">🔧</div>
               <h3 className="text-xl font-bold text-white mb-4">Easy Management</h3>
               <p className="text-gray-400">
@@ -1132,8 +1110,6 @@ function URLShortenerPage() {
           </div>
         </div>
       </section>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <section className='py-20 bg-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>;
@@ -1226,7 +1202,6 @@ function URLShortenerPage() {
               Perfect For Every Business Need;
             </h2>;
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
-=======
     return result;
   }
 ;
@@ -1763,7 +1738,6 @@ function URLShortenerPage() {
               Perfect For Every Business Need;
             </h2>;
             <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               From marketing campaigns to social media, our URL shortener serves;
               all your link management needs.;
             </p>;
@@ -1866,7 +1840,6 @@ function URLShortenerPage() {
       </section>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               View Pricing;
             </Button>;
           </div>;
@@ -1874,11 +1847,7 @@ function URLShortenerPage() {
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

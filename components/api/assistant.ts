@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Your job is to:
@@ -52,16 +51,12 @@ Style: - Use bullets and short paragraphs
   }    return res && res.status(500).json({ error: 'Assistant request failed' })
 
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
-=======
 
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
     const prepared_messages = [;
       { role: 'system' as const, content: SYSTEM_PROMPT },
@@ -85,4 +80,3 @@ console.error ('Assistant API error:', error?.message || error);
   }    return res.status (500).json ({ error: 'Assistant request failed' });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

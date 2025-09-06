@@ -1,6 +1,5 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Please try again in a few moments.
             </p>
           </div>
@@ -45,10 +44,8 @@
     </>
   )
 
-=======
 }
 
-=======
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -57,7 +54,6 @@ export default /**
  */
 function Custom500() {
   return (
-=======
 
 import React from 'react';
 import Head from 'next/head';
@@ -65,7 +61,6 @@ import Link from 'next/link';
 export default function Custom500(req, res) {
   try {
   return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <>;
       <Head>;
         <title > 500 - Server Error | Zion Tech Group</title>;

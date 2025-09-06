@@ -22,7 +22,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     } 
   } = useJobSuggestions(currentTalentId),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   const currentTalentId = talentId |user?.id;
   const {
@@ -44,7 +43,6 @@ import {Badge} from "@/components/ui/badge";
 import {useJobSuggestions} from "@/hooks/useJobSuggestions";
 import {JobMatchesCard} from "./JobMatchesCard";
 import {NoJobsCard} from "./NoJobsCard";
-=======
 
   },
 
@@ -92,7 +90,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
   const handleDecline = (matchId: string) => {;
     updateJobMatchStatus(matchId, 'declined');
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   if (isLoading) {;
     return (
@@ -103,7 +100,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 
 
@@ -112,11 +108,9 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
   }
 
 
-=======
 
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-6">;
       {/* New Matches Section */}
@@ -193,7 +187,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
   );
 }
 
-=======
 import { use_auth } from '@/hooks / use_auth';
 import { Loader2 } from './lucide-react';
 import { Badge } from '@/components / ui / badge';
@@ -299,9 +292,5 @@ if ( {) {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

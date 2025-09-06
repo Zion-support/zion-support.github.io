@@ -1,16 +1,10 @@
 
 
-=======
 
  // All services combined const allServices = [ ...advancedAIMLServices;
 
-=======
 // All services combined const allServices = [ ...advancedAIMLServices;
-=======
  // All services combined const allServices = [ ...advancedAIMLServices;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ...advancedCybersecurityServices;
 ...advancedCloudDevOpsServices2025;
 ...industrySpecificSolutions;
@@ -153,7 +147,6 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
   {
 
   duration: 0 && 0.5, delay: index * 0 && 0.1 
-=======
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -259,7 +252,6 @@ import {
 }</div> </section> {;
   /* Why Choose Us */ ;
 }<section className="py-20 bg-white"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"> Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> We deliver innovative, enterprise-grade solutions that transform businesses and drive growth </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <motion&& motion.div initial= {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
   opacity: 0, y: 20
 }whileInView= {
@@ -345,17 +337,14 @@ import {
               </motion && motion.div>;
             ))}
           </div>;
-=======
 
 
-=======
 
 
           {/* Services Display */}
           <AnimatePresence mode="wait">;
             {viewMode === 'grid' ? (;
               <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 key="grid"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -383,12 +372,9 @@ import {
                       <p className="text-blue-100 text-sm">{service && service.tagline}</p>;
 
 
-=======
 
                       
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {/* Price */}
                       <div className="mt-4">;
                         <span className="text-2xl font-bold">;
@@ -694,7 +680,6 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                       </div>;
                       <h3 className="text - xl font - bold mb - 2">{service.name}</h3>;
                       <p className="text - blue - 100 text - sm">{service.tagline}</p>;
-=======
 
 
                     {/* Service Content */}
@@ -703,7 +688,6 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {/* Price */}
                       <div className="mt - 4">;
                         <span className="text - 2xl font - bold">;
@@ -714,7 +698,6 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                     {/* Service Content */}
                     <div className="p - 6">;
                       <p className="text - gray - 600 mb - 4 line - clamp - 3">{service.description}</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {/* Price */}
                       <div className="mb - 4">;
                         <span className="text - 3xl font - bold text - gray - 900">;
@@ -739,14 +722,11 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                       </div>;
 
 
-=======
 
                           {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
                         </span>
                       </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {/* Features */}
                       <div className="mb-6">;
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>;
@@ -762,7 +742,6 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {/* Category Badge */}
                       <div className="mb-4">
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
@@ -783,12 +762,9 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                       </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">;
                         <div>;
@@ -827,12 +803,9 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                         </div>;
                       </div>;
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {/* ROI and Popularity */}
                       <div className="flex items - center justify - between mb - 4">;
                         <div className="text - sm">;
@@ -849,12 +822,9 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                           </div>;
                         </div>;
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         {/* Price and Features */}
                         <div className="lg:w - 1/3">;
                           <div className="text - right mb - 4">;
@@ -867,14 +837,12 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                           </div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <div className="mb-4">
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
                               {service.features.slice(0, 4).map((feature, idx) => (
                                 <li key={idx} className="flex items-center">
                                   <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-=======
                         </div>;
                         <div>;
                           <span className="font-medium">Trial:</span> {getServiceTrialDays(service)} days;
@@ -913,7 +881,6 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                               {service && service.features.slice(0, 4).map((feature, idx) => (;
                                 <li key={idx} className="flex items-center">;
                                   <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                                   {feature}
                                 </li>;
                               ))}
@@ -922,7 +889,6 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {/* Category and Action */}
                           <div className="flex flex-col items-end space-y-3">
                             <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
@@ -941,12 +907,9 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                             </span>;
 
 
-=======
 
                             
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             <a
                               href={service && service.link}
                               target="_blank"
@@ -954,7 +917,6 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                               className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium flex items-center">;
                               Learn More;
                               <ArrowRight className="w-4 h-4 ml-2" />;
-=======
                             </span>;
                             <span className="text - gray - 500">;
                               {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
@@ -984,7 +946,6 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                             >;
                               Learn More;
                               <ArrowRight className="w - 4 h - 4 ml - 2" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             </a>;
                           </div>;
                         </div>;
@@ -994,12 +955,9 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
           </AnimatePresence>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* No Results */}
           {filteredServices && filteredServices.length === 0 && (;
             <div className="text-center py-12">;
@@ -1015,7 +973,6 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1032,7 +989,6 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -1053,7 +1009,6 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1073,7 +1028,6 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1096,7 +1050,6 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -1124,7 +1077,6 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
         </div>;
       </section>;
 
@@ -1215,7 +1167,6 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
           </div>;
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <a
               href="mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Business Transformation Consultation"
               className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">;
@@ -1227,7 +1178,6 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
               href="https://ziontechgroup && ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2">;
               <Globe className="w-5 h-5" />;
-=======
                   </motion.div>))}
               </motion.div>)}
           </AnimatePresence>;
@@ -1347,15 +1297,11 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
 
 
 export default ComprehensiveServicesShowcase;
-=======
 export default ComprehensiveServicesShowcase;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
     </div>);
 }
 ;
 export default ComprehensiveServicesShowcase;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

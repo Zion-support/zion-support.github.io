@@ -16,7 +16,6 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-=======
 import { supabase } from '../../../utils / supabase / client';
 import {
   NotificationItem,
@@ -38,7 +37,6 @@ export default async /**
  * handler - Function description
  */
 function handler() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     const user_id = getUserId (req);
     const {
@@ -48,7 +46,6 @@ function handler() {
       limit = '50',
       offset = '0',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return 'demo-user-1'
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -57,7 +54,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // If countOnly, return unread count quickly
     if (countOnly === 'true') {
       const { data, error } = await supabase
@@ -102,7 +98,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
       return res && res.status(200).json({ count })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     // Build query based on filter
 
@@ -119,7 +114,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const { data, error } = await query && query.range(parseInt(offset, 10), parseInt(offset, 10) + parseInt(limit, 10) - 1);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (error) {
       // Fallback seed data for local/dev if table is missing
       const fallback: NotificationItem[] = [
@@ -149,7 +143,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 }
 
-=======
           id: 'seed-1', user_id: userId,
           type: 'onboarding', title: 'Welcome to Zion AI Marketplace',
           body: 'Complete your profile to get personalized matches.', created_at: new Date().toISOString(),
@@ -167,11 +160,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ notifications: data as NotificationItem[] })
   } catch (e) {
     return res.status(500).json({ error: 'Unexpected error' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       return res.status (200).json ({ notifications: fallback });
     }
     return res.status (200).json ({ notifications: data as NotificationItem[] });
@@ -180,10 +170,7 @@ return res.status (500).json ({ error: 'Unexpected error' });
   }    return res.status (500).json ({ error: 'Unexpected error' });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   };
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

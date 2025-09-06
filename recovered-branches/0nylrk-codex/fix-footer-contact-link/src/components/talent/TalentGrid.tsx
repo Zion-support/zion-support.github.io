@@ -12,19 +12,15 @@ export interface TalentGridProps {;
 
   clearFilters?: () => void;
   handleRequestHire?: (talent: TalentProfile) => void;
-=======
 
 
 import { TalentCard } from "@/components/talent/TalentCard",
 import { TalentProfile } from "@/types/talent",
-=======
 import {TalentCard} from "@/components/talent/TalentCard";
 import {TalentProfile} from "@/types/talent";
-=======
 import { TalentCard } from "@/components/talent/TalentCard",
 import { TalentProfile } from "@/types/talent",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export interface TalentGridProps {
   talents: TalentProfile[],
   isLoading: boolean,
@@ -36,9 +32,7 @@ export interface TalentGridProps {
   viewProfile?: (id: string) => void,
   clearFilters?: () => void,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   handleRequestHire?: (talent: TalentProfile) => void
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export function TalentGrid({
   talents
@@ -56,14 +50,12 @@ export function TalentGrid({
   savedTalentIds, 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   handleRequestHire
 }: TalentGridProps) {
 
   const handleRequestHireInternal = (talent: TalentProfile) => {
     if (handleRequestHire) {
       handleRequestHire(talent)
-=======
 import { TalentCard } from '@/components / talent / TalentCard';
 import { TalentProfile } from '@/types / talent';
 export interface TalentGridProps {
@@ -87,7 +79,6 @@ if ( {) {
   $2
 }
       handleRequestHire (talent);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } else {
 
 ;
@@ -106,7 +97,6 @@ if ( {) {
 
   };
 
-=======
       // // // console.log("Request to hire:", talent.id)
 import { TalentCard } from "@/components/talent/TalentCard",;
 import { TalentProfile } from "@/types/talent",;
@@ -152,8 +142,6 @@ export function TalentGrid({;
 
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (isLoading) {
     return <div className="py-8 text-center">
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan mx-auto mb-4"></div>
@@ -183,7 +171,6 @@ export function TalentGrid(): any ({ ;
       // Default implementation;
       console && console.log("Request to hire:", talent && talent.id);
     }
-=======
         <button
           onClick={clearFilters}
           className="px-4 py-2 bg-zion-purple text-white rounded hover:bg-zion-purple-dark transition-colors"
@@ -213,7 +200,6 @@ export function TalentGrid(): any ({ ;
     return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">;
       <p className="text-zion-slate-light mb-4">No talents found matching your criteria</p>;
       {clearFilters && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <button
           onClick={clearFilters}
 
@@ -223,7 +209,6 @@ export function TalentGrid(): any ({ ;
         </button>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       )}
     </div>;
   }
@@ -249,8 +234,6 @@ export function TalentGrid(): any ({ ;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   }
 ;
 

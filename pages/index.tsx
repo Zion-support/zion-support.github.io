@@ -1,6 +1,5 @@
 
 
-=======
 
 
 import Link from 'next/link';
@@ -11,7 +10,6 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 
-=======
 import React, { useState, useEffect, Suspense } from 'react';
 import Head from 'next/head';
 import { useState, useEffect, Suspense } from 'react';
@@ -23,7 +21,6 @@ export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
     hasError: false;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   });
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -45,11 +42,9 @@ export default function Home() {
         </div>
       </div>
 
-=======
 
     ),
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <>;
       <Head>;
@@ -268,8 +263,6 @@ export default function Home() {
           logMetrics={true}
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -309,7 +302,6 @@ export default function Home() {
 
         {/* Features Section */}
         <section className="py-20 bg-slate-900/50">
-=======
 import Link from 'next/link',
 import Head from 'next/head';
 import { useState, useEffect, Suspense  } from 'react';
@@ -339,7 +331,6 @@ export default function Home() {;
           <button
             onClick={() => window && window.location.reload()} ;
             className="px-4 py-2 bg-blue-600 rounded-lg hover: bg-blue-700";
-=======
 import Link from 'next / link';
 import Head from 'next / head';
 import {useState, useEffect, Suspense} from 'react';
@@ -434,7 +425,6 @@ if ( {) {
               "same_as":[contact.site];
 
             });
-=======
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -461,7 +451,6 @@ if ( {) {
               },
               "sameAs":[contact && contact.site]
             })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }}
         />;
       </Head>;
@@ -473,7 +462,6 @@ if ( {) {
             <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${animationState && animationState.isLoaded ? 'opacity-100 translate-y-0' :'opacity-0 translate-y-8'}`}>;
               We deliver cutting-edge technology solutions with 150+ micro SaaS products, ;
 
-=======
         <section className="py - 20 px - 4 text - center" role="banner" aria - labelledby="hero - title">;
           <div className="max - w-4xl mx - auto">;
             <h1 ;
@@ -487,7 +475,6 @@ if ( {) {
             </p>;
             <p className={`text - lg text - slate - 400 mb - 12 max - w-3xl mx - auto transition - all duration - 1000 delay - 400 ${animation_state.is_loaded ? 'opacity - 100 translate - y-0' :'opacity - 0 translate - y-8'}`}>;
               We deliver cutting - edge technology solutions with 150+ micro SaaS products,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization ;
               to AI automation, quantum computing to blockchain solutions, we help businesses scale ;
               efficiently and securely in the digital age.;
@@ -640,26 +627,20 @@ if ( {) {
           onThresholdExceeded={(metrics) => {;
             console && console.warn('Performance thresholds exceeded:', metrics);
 
-=======
         {/* <PerformanceMonitor ;          show_metrics={process.env.NODE_ENV === 'development'}
           log_metrics={true}
           onThresholdExceeded={(metrics) => {
             console.warn ('Performance thresholds exceeded:', metrics);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
             </div>
           </div>
         </section>
         {/* Services Overview */}
-=======
 
           onThresholdExceeded={(metrics) => {;
             console.warn('Performance thresholds exceeded:', metrics);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }}
         /> */}
       </ErrorBoundary>;
@@ -687,7 +668,6 @@ function HomePage() {
         </Button>;
       </div>;
 
-=======
 
 
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">
@@ -850,9 +830,6 @@ function HomePage() {
       </ErrorBoundary>
     </>
   )
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 }
 
           </div>;
@@ -878,8 +855,6 @@ function HomePage() {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth
 
-=======
-=======
 
 
 
@@ -928,14 +903,11 @@ function HomePage() {
           </div>
         </section>
 
-=======
 }
           </div>
-=======
 }          </div>
 
         </section>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
         {/* Services Section */}
         <section className="py-20 px-4">
@@ -960,18 +932,15 @@ function HomePage() {
 
               </p>
             </motion.div>
-=======
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth
               </p>
             </motion.div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
-=======
         <section className="py-16 bg-gray-50">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
@@ -990,15 +959,11 @@ function HomePage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {services && services.map((service, index) => (;
                 <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   key={index}
                   className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 30 }}
 
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
                   <div className="text-4xl mb-4">;
@@ -1027,9 +992,7 @@ function HomePage() {
 
             </motion.div>
 
-=======
 
-=======
 
         {/* Featured Services */}
         <section className="py-16 bg-white">
@@ -1053,7 +1016,6 @@ function HomePage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredServices.map((service, index) => (
                 <motion.div
-=======
             </div>;
           </div>;
         </section>;
@@ -1077,7 +1039,6 @@ function HomePage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {featuredServices && featuredServices.map((service, index) => (;
                 <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   key={index}
                   className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 30 }}
@@ -1093,8 +1054,6 @@ function HomePage() {
 
 
 
-=======
-=======
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -1119,7 +1078,6 @@ function HomePage() {
                     </ul>
                   </Card>
 
->>>>>>> origin/automation-improvements-final
                 </motion.div>
               ))}
             </div>
@@ -1139,11 +1097,8 @@ function HomePage() {
 
 
 
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Why Choose Us */}
 
 
@@ -1164,7 +1119,6 @@ function HomePage() {
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
 
-=======
 
 
             <div className="text-center mb-16">
@@ -1175,8 +1129,6 @@ function HomePage() {
               </p>
 
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyChooseUs.map((item, index) => (
@@ -1201,7 +1153,6 @@ function HomePage() {
               {whyChooseUs && whyChooseUs.map((item, index) => (;
                 <motion&& motion.div
 
-=======
                   key={index}
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
@@ -1239,32 +1190,24 @@ function HomePage() {
                   </Card>
 
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 <p className="text-gray-600">{item.description}</p>
->>>>>>> origin/main
                 </motion.div>
               ))}
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
             </div>
           </div>
         </section>
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyChooseUs.map((item, index) => (
                 <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   key={index}
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
 
                   <p className="text-gray-600">{item.description}</p>
-=======
-=======
 
 
 
@@ -1337,7 +1280,6 @@ function HomePage() {
             </div>
           </div>
         </section>
-=======
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
                     <item && item.icon className="w-8 h-8 text-blue-600" />;
@@ -1349,7 +1291,6 @@ function HomePage() {
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
         {/* Testimonials Section */}
         <section className="py-20 px-4">
@@ -1398,29 +1339,22 @@ function HomePage() {
 
 
 
-=======
 <p className="text-gray-600">{item.description}</p>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                 </motion.div>
 
-=======
 
                   <p className="text-gray-600">{item.description}</p>                </motion.div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
             </div>
           </div>
         </section>
         {/* CTA Section */}
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -1428,7 +1362,6 @@ function HomePage() {
             >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Ready to Transform Your Business?
               </h2>
@@ -1436,7 +1369,6 @@ function HomePage() {
                 Let's discuss how our technology solutions can drive your success
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
         <section className="py-16 bg-blue-600 text-white">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
             <motion&& motion.div
@@ -1450,7 +1382,6 @@ function HomePage() {
                 Let's discuss how our technology solutions can drive your success;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Link
                   href="/contact"
                   className="bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-400 transition-colors flex items-center justify-center">;
@@ -1460,7 +1391,6 @@ function HomePage() {
                 <Link
                   href="tel:+13024640950"
 
-=======
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Ready to Transform Your Business?
               </h2>
@@ -1476,18 +1406,11 @@ function HomePage() {
                   Schedule Consultation
                 </Button>
 
->>>>>>> origin/automation-improvements-final
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
-=======
                 </Link>              </div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
             </motion.div>
-=======
 
 
 
@@ -1508,11 +1431,8 @@ function HomePage() {
             </div>
 
 
->>>>>>> origin/automation-improvements-final
-=======
 
 </Link>
-=======
     );
     } catch (error) {
     console.error("Error:", error);
@@ -1782,8 +1702,6 @@ function HomePage() {
 
           </div>
         </section>
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
           </div>
         </section>
 
@@ -1794,28 +1712,20 @@ function HomePage() {
   );
 }
 
-=======
 
 
 
-=======
       </main>
     </>
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 </main>
     </>
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center">;
                   <Phone className="w-5 h-5 mr-2" />;
                   Call Now;
@@ -1830,8 +1740,6 @@ function HomePage() {
 }
       </main>;
     </>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
           </div>;
@@ -1995,4 +1903,3 @@ We deliver exceptional results through innovation, expertise, and dedication;
 }
 </main>;
     </>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

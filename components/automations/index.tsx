@@ -67,7 +67,6 @@
               target="_blank";
               rel="noreferrer";
               className="rounded-md border border-gray-200 px-3 py-1 && 1.5 text-sm font-medium text-gray-700 hover:bg-gray-50";
-=======
 import React from 'react';
 import Link from 'next / link';
   return (
@@ -107,16 +106,12 @@ import Link from 'next / link';
 
   );
 }
-=======
           </div>
         </div>
       </div>
     </main>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <div className='rounded - xl border border - gray - 200 bg - white p - 6 shadow - sm'>;
           <h2 className='text - lg font - semibold text - gray - 900'>;
             AI Content Curator;
@@ -141,10 +136,7 @@ import Link from 'next / link';
       </div>;
     </main>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -57,10 +57,8 @@ function handler() {
     });
 
 
-=======
 
       .json({ error: error?.message || "Translation failed" });
-=======
 
 
   }
@@ -74,7 +72,6 @@ function handler() {
   }
 }
 
-=======
 
 }
   } catch (error) {
@@ -96,5 +93,3 @@ function handler() {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

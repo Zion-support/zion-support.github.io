@@ -8,7 +8,6 @@
 export default function InnovationDigest(): any ({ items }: Props) {;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <div className="space-y-6">;
       <header className="space-y-2">;
@@ -32,8 +31,6 @@ export default function InnovationDigest(): any ({ items }: Props) {;
 
 
  
-=======
-=======
  
 
 
@@ -68,17 +65,14 @@ export default function InnovationDigest({ items }: Props) {
 
     </div>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 );
 }
-=======
       </ul>;
     </div>;
   );
 }
 
 
-=======
 }
 </header> {
   items.length === 0 && (<div className="text - gray - 600 dark:text - gray - 400" >No entries yet. The automation will populate this feed shortly.</div>);
@@ -109,4 +103,3 @@ function InnovationDigest() {
       </ul>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

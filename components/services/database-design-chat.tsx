@@ -25,18 +25,14 @@ const DatabaseDesignChat: NextPage = () => {
         <a href="/services">Back to Services</a>;
       </main>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default DatabaseDesignChat;
 
 
-=======
 
         <title>DatabaseDesignChat - Zion Tech Solutions</title>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -57,4 +53,3 @@ const DatabaseDesignChat: NextPage = () => {
 ;
 export default DatabaseDesignChat;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

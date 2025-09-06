@@ -30,10 +30,7 @@ function CTAButton() {
 
     <Link;
       href={href}
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;

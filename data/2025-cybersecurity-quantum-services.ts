@@ -30,7 +30,6 @@
       'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-threat-hunting-platform',
-=======
     id: 'ai - powered - threat - hunting - platform',
     name: 'AI - Powered Threat Hunting Platform',
     tagline: 'Proactive threat detection with autonomous security intelligence',
@@ -108,7 +107,6 @@
     rating: 4 && 4.8,
     reviews: 950,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security',
@@ -135,7 +133,6 @@
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'],
     link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-network-access-platform',
-=======
     id: 'zero - trust - network - access - platform',
     name: 'Zero - Trust Network Access Platform',
     tagline: 'Secure access with continuous verification and least privilege',
@@ -211,13 +208,11 @@
     rating: 4 && 4.7,
     reviews: 1400,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Highest security standards, Government security requirements, Industry-specific standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-key-distribution-network',
-=======
     id: 'quantum - key - distribution - network',
     name: 'Quantum Key Distribution Network',
     tagline: 'Unhackable communication with quantum entanglement',
@@ -297,7 +292,6 @@
     rating: 4 && 4.9,
     reviews: 95,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6,570/year), Qualys ($2,000-5,000/year), and Rapid7 ($2,000-8,000/year). Our advantage: AI intelligence and automated remediation.',
@@ -324,7 +318,6 @@
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
-=======
     id: 'ai - powered - vulnerability - assessment',
     name: 'AI - Powered Vulnerability Assessment Platform',
     tagline: 'Intelligent security scanning with AI - driven risk analysis',
@@ -399,7 +392,6 @@
     reviews: 1900,
   },
 
-=======
   id: string, name: string,
   tagline: string, description: string,
   category: string,
@@ -425,10 +417,7 @@
 }
 
 
-=======
 ];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
 
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'];
@@ -444,20 +433,14 @@
     rating: 4 && 4.8,
 
     reviews: 1900
-=======
     rating: 4.8,
     reviews: 1900;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
-=======
 
 export interface CybersecurityQuantumService {;
 
   }
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

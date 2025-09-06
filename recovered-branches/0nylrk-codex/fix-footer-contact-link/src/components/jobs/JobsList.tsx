@@ -39,7 +39,6 @@ interface JobsListProps {
       if (!user) return,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       try {
         let query = supabase
           .from("jobs")
@@ -49,7 +48,6 @@ interface JobsListProps {
         if (filter) {
           query = query.eq("status", filter)
 
-=======
         }
 
 
@@ -76,14 +74,12 @@ interface JobsListProps {
 
 
   if (isLoading) {
-=======
     };
 
     fetchJobs();
   }, [user, filter]);
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="flex justify-center items-center p-8">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
@@ -94,7 +90,6 @@ interface JobsListProps {
 
   if (jobs && jobs.length === 0) {;
     return (
-=======
           }
         </p>
         <Button asChild className="mt-4">
@@ -209,7 +204,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
           {filter ;
             ? `No jobs with status "${filter}" found.` ;
             : "You haven't posted any jobs yet.";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }
         </p>;
         <Button asChild className="mt-4">;
@@ -272,7 +266,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {skill}
                 </Badge>;
               ))}
@@ -312,8 +305,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { useState, useEffect } from './react';
 import { use_auth } from '@/hooks / use_auth';
 import { supabase } from '@/integrations / supabase / client';

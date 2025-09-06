@@ -19,13 +19,11 @@ interface AIEnhancementPanelProps {;
 
 export function AIEnhancementPanel(): any ({;
 
-=======
 
 
 
 export function AIEnhancementPanel({;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title;
   defaultOptions;
   onApply;
@@ -42,7 +40,6 @@ export function AIEnhancementPanel({;
   const [copied, setCopied] = useState(false);
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
 
-=======
     const result = await enhanceContent(options);
     if (result) {
       setGeneratedContent(result)
@@ -50,7 +47,6 @@ export function AIEnhancementPanel({;
 
   };
 
-=======
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
 import { Textarea } from '@/components/ui/textarea',;
@@ -83,7 +79,6 @@ export function AIEnhancementPanel({;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
 
   const handleGenerate = async () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const result = await enhanceContent(options);
     if (result) {;
       setGeneratedContent(result);
@@ -94,8 +89,6 @@ export function AIEnhancementPanel({;
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions
@@ -145,11 +138,9 @@ export function AIEnhancementPanel({;
     setTimeout(() => setCopied(false), 2000);
   };
 
-=======
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Card className="w-full max-w-2xl mx-auto">;
@@ -228,7 +219,6 @@ export function AIEnhancementPanel({;
               <Button
                 variant="ghost"
                 size="sm"
-=======
           onClick={handleGenerate} 
           className="w-full" 
           disabled={isEnhancing || !options && options.content && !options && options.context}>;
@@ -253,7 +243,6 @@ export function AIEnhancementPanel({;
               <Button
                 variant="ghost" 
                 size="sm" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 onClick={handleCopy}
                 className="h-8">;
                 {copied ? (;
@@ -293,7 +282,6 @@ export function AIEnhancementPanel({;
   );
 }
 
-=======
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components / ui / card';
 import {Textarea} from '@/components / ui / textarea';
 import {Button} from '@/components / ui / button';
@@ -442,4 +430,3 @@ if ( {) {
         </CardFooter>)}
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

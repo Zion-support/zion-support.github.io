@@ -10,7 +10,6 @@ export const MobileFeatureShowcase: React.FC = () => {
 
 import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
 
-=======
 import React from "react",
 import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",
 
@@ -28,8 +27,6 @@ export const MobileFeatureShowcase: React.FC = () => {
 
     },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       icon: <Star className="h-8 w-8 text-zion-purple" />
       title: "AI-Match Instantly"
@@ -91,19 +88,15 @@ export const MobileFeatureShowcase: React.FC = () => {;
 
     }
   ];
-=======
     }
 
   ],
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
-=======
 
 
-=======
 import React from "react",;
 import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",;
 export const MobileFeatureShowcase: React.FC = () => {;
@@ -167,10 +160,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       icon: <Users className="h - 8 w - 8 text - zion - cyan" />,
       title: "Hire from Anywhere",
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface.";
@@ -225,4 +215,3 @@ export const MobileFeatureShowcase: React.FC = () => {;
     </section>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

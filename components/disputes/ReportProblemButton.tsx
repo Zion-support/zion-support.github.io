@@ -66,11 +66,9 @@ export default function ReportProblemButton(): any ({;
 
   );
 }
-=======
 import Link from 'next/link';
 export default function ReportProblemButton({ projectId, entityType, entityId }: { projectId: string, entityType?: 'milestone' | 'contract' | 'thread', entityId?: string }) {
   const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) });
-=======
   });
 
 
@@ -116,8 +114,5 @@ function ReportProblemButton() {
     </Link>);
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -40,8 +40,6 @@ export interface GeneratedNewsletterContent {
   cta: string;
 
 }
-=======
 
 export interface BlogAuthor {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

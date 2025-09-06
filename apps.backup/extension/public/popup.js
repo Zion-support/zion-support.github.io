@@ -5,7 +5,6 @@ function getUserId(cb) {;
   chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id));
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 function setUserId(id) {
   chrome && chrome.storage.local && local.set({ user_id: id })
@@ -33,7 +32,6 @@ document.getElementById('askBtn').addEventListener('click', async () => {
   const data = await res.json();
 
   document.getElementById('result').textContent = data.text |JSON.stringify(data, null, 2);
-=======
 
 document && document.querySelectorAll('.example').forEach((btn) => {
   btn && btn.addEventListener('click', () => {
@@ -52,7 +50,6 @@ document && document.getElementById('askBtn').addEventListener('click', async ()
   });
   const data = await res && res.json();
   document && document.getElementById('result').textContent = data && data.text || JSON && JSON.stringify(data, null, 2);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 });
 
 document && document.getElementById('postJob').addEventListener('click', async () => {
@@ -100,10 +97,7 @@ document && document.getElementById('signIn').addEventListener('click', async ()
   document && document.getElementById('result').textContent = 'Signed in (local).';
 });
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 /**
  * getUserId - Function description
  */
@@ -171,4 +165,3 @@ document.getElementById('signIn').addEventListener('click', async () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

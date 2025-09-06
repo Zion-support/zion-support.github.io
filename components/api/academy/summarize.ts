@@ -17,12 +17,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const fallback = () => res && res.status(200).json({
 
     summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`});
-=======
   const fallback = () => res.status(200).json({
 
     summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`});
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (!apiKey) return fallback();
   try {
     const client = new OpenAI({ apiKey });
@@ -90,13 +88,11 @@ function handler() {
       model: 'gpt-4o-mini',
       messages: [
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   } catch (err) {
     return fallback()
 }
 
 
-=======
     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status(200).json({ summary: text.trim() });
   } catch (err) {
@@ -104,11 +100,8 @@ function handler() {
 
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     return res.status (200).json ({ summary: text.trim () });
   } catch (err) {
     return fallback ();
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

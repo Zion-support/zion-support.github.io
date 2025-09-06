@@ -32,7 +32,6 @@
     technology: ['CRISPRGene editingDNA synthesisBioinformatics']
   }
   // Quantum Internet Protocol Suite
-=======
     link: 'https://ziontechgroup.com / services / synthetic - biology - platform';
     launch_date: '2036 - 04 - 05';
     rating: 4.8;
@@ -45,7 +44,6 @@
   }
 ;
   // Quantum Internet Protocol Suite;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'quantum - internet - protocol - suite';
     name: 'Quantum Internet Protocol Suite';
@@ -77,7 +75,6 @@
     description: 'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility and human augmentation.';
     category: 'Human-Computer Interaction'
     price: '$4,999';
-=======
     link: 'https://ziontechgroup.com / services / quantum - internet - protocol - suite';
     launch_date: '2036 - 04 - 10';
     rating: 4.9;
@@ -97,7 +94,6 @@
     description: 'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility and human augmentation.';
     category: 'Human - Computer Interaction',
     price: '$4, 999';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     period: '/month';
     features: [;
       'Neural signal processing_real - time brain monitoring_custom interface design_safety and compliance_performance optimization_user training tools_custom applications_expert consultation';
@@ -113,7 +109,6 @@
     technology: ['EEGNeural implantsSignal processingMachine learning']
   }
   // Metaverse Development Studio Pro
-=======
     link: 'https://ziontechgroup.com / services / brain - computer - interface - platform';
     launch_date: '2036 - 04 - 15';
     rating: 4.7;
@@ -126,7 +121,6 @@
   }
 ;
   // Metaverse Development Studio Pro;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'metaverse - development - studio - pro';
     name: 'Metaverse Development Studio Pro';
@@ -151,7 +145,6 @@
     technology: ['3D graphicsVirtual realityAugmented realityBlockchain']
   }
   // Autonomous Vehicle AI Platform
-=======
     link: 'https://ziontechgroup.com / services / metaverse - development - studio - pro';
     launch_date: '2036 - 04 - 20';
     rating: 4.6;
@@ -164,7 +157,6 @@
   }
 ;
   // Autonomous Vehicle AI Platform;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'autonomous - vehicle - ai - platform';
     name: 'Autonomous Vehicle AI Platform';
@@ -189,7 +181,6 @@
     technology: ['Computer visionMachine learningSensor fusionControl systems']
   }
   // Quantum Materials Discovery Platform
-=======
     link: 'https://ziontechgroup.com / services / autonomous - vehicle - ai - platform';
     launch_date: '2036 - 04 - 25';
     rating: 4.8;
@@ -202,7 +193,6 @@
   }
 ;
   // Quantum Materials Discovery Platform;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'quantum - materials - discovery - platform';
     name: 'Quantum Materials Discovery Platform';
@@ -227,7 +217,6 @@
     technology: ['Quantum computingMachine learningMaterials scienceSimulation']
   }
   // AI-Powered Climate Modeling Platform
-=======
     link: 'https://ziontechgroup.com / services / quantum - materials - discovery - platform';
     launch_date: '2036 - 04 - 30';
     rating: 4.9;
@@ -240,7 +229,6 @@
   }
 ;
   // AI - Powered Climate Modeling Platform;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'ai - climate - modeling - platform';
     name: 'AI Climate Modeling Platform';
@@ -265,7 +253,6 @@
     technology: ['Machine learningClimate modelsData analysisSimulation']
   }
   // Quantum Neural Network Platform
-=======
     link: 'https://ziontechgroup.com / services / ai - climate - modeling - platform';
     launch_date: '2036 - 05 - 05';
     rating: 4.7;
@@ -278,7 +265,6 @@
   }
 ;
   // Quantum Neural Network Platform;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'quantum - neural - network - platform';
     name: 'Quantum Neural Network Platform';
@@ -313,7 +299,6 @@
     period: '/month';
     features: [
 
-=======
   technology?: string[]
 };
 
@@ -490,7 +475,6 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
   // Space Tourism Platform
   {
     id: 'space-tourism-platform', name: 'Space Tourism Platform',
-=======
     link: 'https://ziontechgroup.com / services / quantum - neural - network - platform';
     launch_date: '2036 - 05 - 10';
     rating: 4.8;
@@ -523,7 +507,6 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
 ];
 
 
-=======
     price: '$6, 999';
     period: '/month';
     features: [;
@@ -538,11 +521,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     integration: ['Spacecraft systems_training facilities_booking systems_safety systems'];
     use_cases: ['Space tourism_training programs_safety management_customer experience'],
     technology: ['Space systems_safety protocols_training technology_customer management'];
-=======
 export type Real2036SpecializedService = {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

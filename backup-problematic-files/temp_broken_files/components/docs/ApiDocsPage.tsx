@@ -28,7 +28,6 @@ export default function ApiDocsPage() {
       <main className=&quot;p-6 space-y-6&quot;>
         <header className=&quot;flex items-center justify-between&quot;>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div>
             <div className="text-2xl font-bold">Zion OS API Documentation</div>
             <div className="text-sm text-high-contrast-muted">Developer-friendly API docs with live testing</div>
@@ -43,7 +42,6 @@ export default function ApiDocsPage() {
 
         {_activeEndpoint ? (
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <EndpointDetail endpoint={activeEndpoint} />
         ) : (
           <div className="text-sm text-high-contrast-muted">Select an endpoint from the sidebar</div>
@@ -82,11 +80,7 @@ function ChangelogWidget() {
       <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />    </div>
   )}
 
-=======
   );
 };
-=======
       <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />    </div>
   )}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

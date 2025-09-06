@@ -1,11 +1,8 @@
 
 
-=======
 
 password.toLowerCase () .includes (pattern) );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
 // Check condition
 if (strength = 'very - weak') {
@@ -50,10 +47,8 @@ if (feedback.push ('Password is too predictable')) {
 
 // Generate suggestions import type { NextApiRequest, NextApiResponse } from 'next';
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 interface PasswordStrengthResult {
   password: string;
   strength: 'very - weak' | 'weak' | 'medium' | 'strong' | 'very - strong';
@@ -122,7 +117,6 @@ export default async function handler(
     // Determine strength level
     let strength: PasswordStrengthResult['strength'];
     if (score < 30) strength = 'very-weak';    else if (score < 50) strength = 'weak';    else if (score < 70) strength = 'medium';
-=======
     score += Math.min(length * 2, 20), // Length contribution (max 20)
     score += hasUppercase ? 10 : 0;
     score += hasLowercase ? 10 : 0;
@@ -136,7 +130,6 @@ export default async function handler(
     else if (score < 50) strength = 'weak';
     else if (score < 70) strength = 'medium';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     else if (score < 90) strength = 'strong';
     else strength = 'very-strong';
     // Generate feedback
@@ -161,7 +154,6 @@ export default async function handler(
     if (entropy < 40) {
       suggestions && suggestions.push('Increase randomness by using more character types');
       suggestions && suggestions.push('Consider using a password generator')
-=======
         entropy: Math.round (entropy * 100) / 100,
       },
       suggestions,
@@ -187,7 +179,6 @@ if ( {) {
 }
       suggestions.push ('Increase randomness by using more character types');
       suggestions.push ('Consider using a password generator');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     const result: PasswordStrengthResult = {
       password;
@@ -216,7 +207,6 @@ if ( {) {
 
 }
 
-=======
         entropy: Math.round (entropy * 100) / 100}
       suggestions}
 ;
@@ -226,13 +216,9 @@ if ( {) {
     res.status (500).json ({ error: 'Internal server error' });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   } catch (error) {
     console.error('Password strength check error:', error);
     res.status(500).json({ error: 'Internal server error' });
 
   }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

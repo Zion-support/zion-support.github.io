@@ -9,7 +9,6 @@ import fs from 'fs';
 import path from 'path';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     role,
     fullLegalName,
     business_name,
@@ -17,10 +16,8 @@ import path from 'path';
 
 
     userId?: string;
-=======
   } = req.body as {
     user_id?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     role?: KycRole;
     fullLegalName?: string;
     business_name?: string;
@@ -67,13 +64,11 @@ import path from 'path';
 
 }
 
-=======
     documents: [], status: 'in_progress',
     amlStatus: 'unknown', createdAt: now,
     lastUpdatedAt: now,
     auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile;
 
-=======
 
 
 
@@ -160,7 +155,6 @@ export default function handler(req, res) {
     createdAt: now,;
     lastUpdatedAt: now,;
     auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   profile.role = role;
   if (fullLegalName) profile.fullLegalName = fullLegalName;
   if (businessName) profile.businessName = businessName;
@@ -173,14 +167,12 @@ export default function handler(req, res) {
     ok: true, profile,
     requiredDocuments: getRequiredDocuments(role),
     optionalDocuments: getOptionalDocuments(role)})
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
   }
   if (
     return res.status (400).json ({ error: 'Missing user_id or role' })) {
   $2
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -229,4 +221,3 @@ if (
 optional_documents: getOptionalDocuments (role),
   });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -27,7 +27,6 @@
 }</div> </span> <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1" > <span>Download</span> <Download className="w-4 h-4" /> </button> </div> </motion.article>) )
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" > Need Custom Research? </h2> <p className="text-xl text-gray-300 mb-8" > Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <span>Request Custom Research</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/services" className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200" > View Research Services </a> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>)
 }
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -78,14 +77,11 @@ class ErrorBoundary extends React.Component {
 }</div> </span> <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1" > <span>Download</span> <Download className="w-4 h-4" /> </button> </div> </motion && motion.article>) ) ;
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" > Need Custom Research? </h2> <p className="text-xl text-gray-300 mb-8" > Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <span>Request Custom Research</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/services" className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200" > View Research Services </a> </div> </motion && motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) ;
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ReportsPage;import React from 'react';
 
 
-=======
 import React from 'react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { FileText;
@@ -142,9 +138,7 @@ import {motion} from 'framer-motion';
 import {FileText, Download, Calendar, User, Tag, ArrowRight, TrendingUp, BarChart3, Brain, Atom, Globe, Shield, Zap, Eye, Clock, Award} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const ReportsPage: React.FC = () => {
   const reports = [;
     {
@@ -331,7 +325,6 @@ const ReportsPage: React.FC = () => {;
             </motion.div>
             {reports.filter(report => report.featured).map((report, index) => (
               <motion.div
-=======
     <UltraAdvancedFuturisticBackground>;
       <div className="min-h-screen">;
         <Head>;
@@ -394,7 +387,6 @@ const ReportsPage: React.FC = () => {;
 
             {reports && reports.filter(report => report && report.featured).map((report, index) => (;
               <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 key={index}
                 className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12 hover:border-cyan-400/40 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
@@ -542,7 +534,6 @@ const ReportsPage: React.FC = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Categories Filter */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -601,11 +592,9 @@ const ReportsPage: React.FC = () => {;
             {/* Category Pills */}
             <motion&& motion.div 
 
-=======
 
             <motion.div 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="flex flex-wrap justify-center gap-4 mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -626,12 +615,9 @@ const ReportsPage: React.FC = () => {;
             </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Reports Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {reports && reports.filter(report => !report && report.featured).map((report, index) => (;
@@ -787,12 +773,9 @@ const ReportsPage: React.FC = () => {;
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -834,7 +817,6 @@ const ReportsPage: React.FC = () => {;
 export default ReportsPage;
 
 
-=======
                   </div>;
                   <div className="flex items - center space - x-4 mb - 4">;
                     <span className="bg - cyan - 500 / 20 text - cyan - 400 px - 3 py - 1 rounded - full text - sm font - medium">;
@@ -911,11 +893,8 @@ export default ReportsPage;
 ;
 export default ReportsPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 export default ReportsPage;
 
 
 export default ReportsPage;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

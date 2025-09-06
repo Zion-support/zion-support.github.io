@@ -41,15 +41,11 @@ import React from 'react';
   FileText, ;
   BarChart3, ;
   Users, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Brain,
   MessageSquare,
   Image,
@@ -73,7 +69,6 @@ import {
   FileText,
   BarChart3,
   Users,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   Zap;
   ArrowRight;
   Star;
@@ -171,7 +166,6 @@ import {
 
       name: 'Synthesia',
       description: 'AI video generation platform that creates professional videos with AI avatars and voice synthesis.',
-=======
   Globe;
 export default /**
  * AIBusinessToolsPage - Function description
@@ -323,7 +317,6 @@ function AIBusinessToolsPage() {
     {
       name: 'Lumen5',
       description: 'AI video maker that transforms text content into engaging videos for social media and marketing.',
-=======
       icon: <Video className='w - 8 h - 8 text - red - 400' />,
       features: [;
         'AI avatar generation',
@@ -800,7 +793,6 @@ export default function AIBusinessToolsPage() {;
                 variant='outline'
                 size='lg'
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
-=======
 
   return (
     <>
@@ -851,7 +843,6 @@ export default function AIBusinessToolsPage() {;
               </Button>
               <Button
                 href="/contact"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 variant="outline"
                 size="lg"
 
@@ -868,7 +859,6 @@ export default function AIBusinessToolsPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {aiTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>AI Tools</div>
@@ -890,12 +880,10 @@ export default function AIBusinessToolsPage() {;
                 130M+
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {aiTools.length}+
-=======
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">
                 {aiTools.length}+
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
               <div className="text-gray-400 text-sm">AI Tools</div>
             </div>
@@ -974,7 +962,6 @@ export default function AIBusinessToolsPage() {;
                 130M+;
               </div>;
               <div className="text-gray-400 text-sm">Total Users</div>;
-=======
       icon: <TrendingUp className='w - 8 h - 8 text - green - 400' />,
       features: [;
         'Content optimization',
@@ -1134,7 +1121,6 @@ export default function AIBusinessToolsPage() {;
         </div>;
       </section>;
 
-=======
 
       {/* Category Filter */}
       <section className="py-16 bg-gray-900">
@@ -1142,14 +1128,11 @@ export default function AIBusinessToolsPage() {;
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
 
-=======
 
 
               <button
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1167,12 +1150,9 @@ export default function AIBusinessToolsPage() {;
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Tools Grid */}
 
 
@@ -1184,7 +1164,6 @@ export default function AIBusinessToolsPage() {;
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredTools.map((tool, index) => (
-=======
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
               {selectedCategory === 'All';
                 ? 'Discover the most powerful AI tools that are transforming how businesses operate and create content.';
@@ -1194,7 +1173,6 @@ export default function AIBusinessToolsPage() {;
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {filteredTools && filteredTools.map((tool, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Card
                 key={index}
                 className='group border border-gray-800 hover:border-green-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
@@ -1268,7 +1246,6 @@ export default function AIBusinessToolsPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -1277,7 +1254,6 @@ export default function AIBusinessToolsPage() {;
                         {tool.features
                           .slice(0, 4)
                           .map((feature, featureIndex) => (
-=======
                       className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool && tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
                       {tool && tool.icon}
                     </div>;
@@ -1315,7 +1291,6 @@ export default function AIBusinessToolsPage() {;
                         {tool && tool.features;
                           .slice(0, 4);
                           .map((feature, featureIndex) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                             <div
                               key={featureIndex}
                               className='flex items-center text-sm text-gray-400'>;
@@ -1348,7 +1323,6 @@ export default function AIBusinessToolsPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Why Choose AI Tools?
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1393,13 +1367,11 @@ export default function AIBusinessToolsPage() {;
               <p className='text-gray-400'>
                 AI-powered chatbots, personalization, and automation create
                 seamless, personalized experiences for your customers.              </p>              Why Choose AI Tools?
-=======
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Why Choose AI Tools?
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               AI-powered tools are revolutionizing how businesses operate, create content, and serve customers.
@@ -1436,8 +1408,6 @@ export default function AIBusinessToolsPage() {;
           </div>
         </div>
       </section>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         className='group-hover:border-green-500 group-hover:text-green-400'>;
                         Visit Website;
                         <ExternalLink className='w-4 h-4 ml-2' />;
@@ -1484,7 +1454,6 @@ export default function AIBusinessToolsPage() {;
                 10x Productivity;
               </h3>;
               <p className='text-gray-400'>;
-=======
                         </span>;
                       </div>;
                     </div>;
@@ -1569,7 +1538,6 @@ export default function AIBusinessToolsPage() {;
                 10x Productivity;
               </h3>;
               <p className='text - gray - 400'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 AI tools can automate repetitive tasks, generate content, and;
                 provide insights that would take humans hours or days to;
                 complete.;
@@ -1638,7 +1606,6 @@ export default function AIBusinessToolsPage() {;
       </section>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Explore More Tools;
             </Button>;
           </div>;
@@ -1646,11 +1613,7 @@ export default function AIBusinessToolsPage() {;
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

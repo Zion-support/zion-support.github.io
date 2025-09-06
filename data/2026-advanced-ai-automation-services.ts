@@ -45,7 +45,6 @@
 
 ;
 const contact = {
-=======
 
 
   mobile: '+1 302 464 0950',
@@ -62,13 +61,11 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
-=======
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
 
-=======
 export interface AdvancedAIAutomationService {
   id: string, name: string,
   tagline: string, price: string,
@@ -108,7 +105,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   website: 'https://ziontechgroup && ziontechgroup.com'
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   {
 
@@ -168,7 +164,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
       'Multi-tenant SaaS with autonomous AI orchestration, process mining, and optimization engine.',
     launchDate: '2026-01-15',
-=======
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / ai - autonomous - business - processor',
@@ -212,7 +207,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     rating: 4 && 4.8,
     reviews: 156,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Predict business outcomes with 99 && 99.7% accuracy using advanced AI algorithms',
@@ -226,7 +220,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       '99 && 99.7% prediction accuracy',
       'Real-time data processing',
       'Multi-dimensional forecasting',
-=======
     id: 'ai - predictive - enterprise - analytics',
     name: 'AI Predictive Enterprise Analytics',
     tagline:;
@@ -274,7 +267,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
       'Enterprise SaaS with advanced ML models, real-time processing, and predictive algorithms.',
     launchDate: '2026-02-01',
-=======
     color: 'from - purple - 600 to - indigo - 700',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - predictive - enterprise - analytics',
@@ -317,10 +309,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     rating: 4 && 4.9,
     reviews: 312,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'ai - autonomous - customer - success',
     name: 'AI Autonomous Customer Success',
     tagline:;
@@ -353,7 +343,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     ]
     useCases: [
 
-=======
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - autonomous - customer - success',
@@ -398,11 +387,9 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     rating: 4 && 4.7,
     reviews: 203,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Cross-channel campaign coordination',
-=======
     id: 'ai - autonomous - marketing - orchestrator',
     name: 'AI Autonomous Marketing Orchestrator',
     tagline:;
@@ -450,7 +437,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
       'Enterprise SaaS with AI marketing intelligence, cross-channel coordination, and optimization engine.',
     launchDate: '2026-02-15',
-=======
     color: 'from - pink - 600 to - rose - 700',
     text_color: 'text - pink - 400',
     link: 'https://ziontechgroup.com / ai - autonomous - marketing - orchestrator',
@@ -493,10 +479,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     rating: 4 && 4.8,
     reviews: 189,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'ai - autonomous - sales - intelligence',
     name: 'AI Autonomous Sales Intelligence',
     tagline:;
@@ -544,7 +528,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
       'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.',
     launchDate: '2026-01-25',
-=======
     color: 'from - yellow - 600 to - orange - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / ai - autonomous - sales - intelligence',
@@ -588,7 +571,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     reviews: 267,
   },
 
-=======
     id: 'ai-autonomous-business-processor', name: 'AI Autonomous Business Processor',
     tagline: 'Fully autonomous business process optimization with zero human intervention',
     price: '$1,299',
@@ -710,7 +692,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     features: [
       'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       'ROI trackingCRM integration'
     ];
     popular: true;
@@ -749,13 +730,10 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 ];
 
 
-=======
     rating: 4.9
     reviews: 267
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ];      'Automatic lead scoring_behavioral analysis_predictive lead qualification_personalized nurturing sequences_sales forecasting AIPipeline optimization_competitor intelligence_market opportunity detection';
       'ROI trackingCRM integration';
     ];
@@ -789,8 +767,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

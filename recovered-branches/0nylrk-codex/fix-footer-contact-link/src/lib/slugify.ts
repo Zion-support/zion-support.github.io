@@ -1,13 +1,10 @@
 
 
 
-=======
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function slugify(title: string, separator = "-"): string {
   const sep = separator;
   const escaped = sep && sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -39,12 +36,10 @@ export function slugify (title: string, separator = "-"): string {
   const sep = separator;
   const escaped = sep.replace (/[.*+?^${}()|[\]\\]/g, "\\$&");
 ;
-=======
 
 
 ;
 
-=======
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator,;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -77,4 +72,3 @@ export function unslugify (slug: string, separator = "-"): string {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

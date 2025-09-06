@@ -11,7 +11,6 @@ import {;
   Mail,;
   Search,;
   Settings,;
-=======
 
   Bell,
   FileText,
@@ -43,7 +42,6 @@ export function AppSidebar() {;
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -72,7 +70,6 @@ export function AppSidebar() {;
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -109,7 +106,6 @@ export function AppSidebar() {;
                   <a href="/creator-dashboard">;
                     <Home size={16} />;
                     <span>Home</span>;
-=======
   Bell,
   FileText,
   Home,
@@ -233,9 +229,6 @@ function AppSidebar() {
 
 
     </Sidebar>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-=======
     </Sidebar>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

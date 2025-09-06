@@ -36,7 +36,6 @@ export const mockNextRouter = () =>: any ({
   default_locale: 'en',
   domain_locales: [],
   is_preview: false;
-=======
 
   },
   isFallback: false,
@@ -50,7 +49,6 @@ export const mockNextRouter = () =>: any ({
 export const createMockProps = (overrides = {}) => ({
 
 
-=======
     </ThemeProvider>;
   );
 },;

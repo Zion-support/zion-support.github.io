@@ -1,9 +1,7 @@
 
 
-=======
 
 
-=======
 import type { NextPage } from 'next',;
 import Head from 'next/head',;
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground',;
@@ -108,9 +106,6 @@ const sampleServices: Service[] = [
     category: 'Space',
     features: ['Satellite OperationsMission ControlData AnalyticsGround Systems'],
     link: '/space-tech'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
@@ -233,7 +228,6 @@ const sampleServices: Service[] = [;
 }
 ],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function ServicesIndexPage() {
 
   const all = (enhancedRealMicroSaasServices as unknown[])
@@ -264,14 +258,10 @@ export default function ServicesIndexPage() {
 
   }, {} as Record<string Service[]>),
 
-=======
   }, {} as Record<string, Service[]>),
 
-=======
   }, {} as Record<string Service[]>),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -294,7 +284,6 @@ export default function ServicesIndexPage() {
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {featuredServices.length > 0 && (
               <section className="mb-20">
                 <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -308,7 +297,6 @@ export default function ServicesIndexPage() {
                       key={`${service.id || service.name}-${index}`}
                       service={service}
 
-=======
                       key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -342,8 +330,6 @@ export default function ServicesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {latestServices.length > 0 && (
               <section className="mb-20">
                 <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -366,7 +352,6 @@ export default function ServicesIndexPage() {
             )}
             {/* Services by Category */}
 
-=======
                       key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -400,7 +385,6 @@ export default function ServicesIndexPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-20">
               <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
                 Services by Category
@@ -653,7 +637,6 @@ if (return null, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <span className="px-3 py-1 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full text-sm text-gray-300">
                           {categoryServices.length} services
                         </span>
@@ -694,7 +677,6 @@ if (return null, ) {
                             key={`${service.id || service.name}-${index}`}
 
                             service={service}
-=======
                             key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -726,7 +708,6 @@ if (return null, ) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105"
                           >
                             View All {category} Services
@@ -756,8 +737,6 @@ if (return null, ) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="text-center">
               <div className="bg-gradient-to-r from-gray-900 to-black border border-gray-800 rounded-2xl p-12">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -820,7 +799,6 @@ if (return null, ) {
                 )
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {featuredServices.length > 0 && (
             <section className="mb-20">
               <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -834,7 +812,6 @@ if (return null, ) {
                     key={`${service.id || service.name}-${index}`}
                     service={service}
 
-=======
                     key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -868,8 +845,6 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {latestServices.length > 0 && (
             <section className="mb-20">
               <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -892,7 +867,6 @@ if (return null, ) {
           )}
           {/* Services by Category */}
 
-=======
                     key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -926,7 +900,6 @@ if (return null, ) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <section className="mb-20">
             <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
               Services by Category
@@ -1078,7 +1051,6 @@ if (return null, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full">
                         {categoryServices.length} services
                       </span>
@@ -1091,7 +1063,6 @@ if (return null, ) {
                           key={`${service.id || service.name}-${index}`}
 
                           service={service}
-=======
                           key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1105,7 +1076,6 @@ if (return null, ) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           variant="default"
                         />
                       ))}
@@ -1122,7 +1092,6 @@ if (return null, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg text-cyan-300 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all"
                         >
                           View All {category} Services ({categoryServices.length})
@@ -1132,7 +1101,6 @@ if (return null, ) {
 
 
 
-=======
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1141,7 +1109,6 @@ if (return null, ) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <div className="flex items-center justify-between mb-6">
                       <div className="text-cyan-400 group-hover:text-blue-400 transition-colors duration-300">
                         <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">
@@ -1174,7 +1141,6 @@ if (return null, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </p>
                     <div className="space-y-2 mb-6">
                       {service.features.slice(0, 3).map((feature, featureIndex) => (
@@ -1282,7 +1248,6 @@ if (return null, ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
             {filteredServices.length === 0 && (
               <div className="text-center py-12">
@@ -1307,7 +1272,6 @@ if (return null, ) {
         {/* Call to Action */}
         <section className="py - 20 px - 4">;
           <div className="container mx - auto max - w-4xl text - center">;
-=======
 
             )  } catch (error) {
     console.error("Error:", error);
@@ -1322,7 +1286,6 @@ if (return null, ) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-4xl text-center">
             <motion.div
@@ -1368,7 +1331,6 @@ if (return null, ) {
   )
         <section className="py-20 px-4">;
           <div className="container mx-auto max-w-4xl text-center">;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
@@ -1412,10 +1374,8 @@ if (return null, ) {
     </div>
   )
 
-=======
 }
 
-=======
       <QuoteRequestModal;
         open={modal_open}
         on_close={() => setModalOpen (false)}
@@ -1424,13 +1384,9 @@ if (return null, ) {
       />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 };
 
-=======
               animate={{ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1504,5 +1460,3 @@ if (return null, ) {
 
 
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

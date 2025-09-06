@@ -98,11 +98,9 @@ function SolutionsPage() {
 
   return (
     <div className=&quot;bg - black & quot;>;
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
@@ -120,7 +118,6 @@ function SolutionsPage() {
           </div>
         </div>
       </div>
-=======
               <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
                 Every Industry;
               </span>;
@@ -132,7 +129,6 @@ function SolutionsPage() {
           </div>;
         </div>;
       </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Flagship Solutions */}
       <div className=&quot;mx - auto max - w-7xl px - 6 sm:px - 6 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
@@ -172,7 +168,6 @@ function SolutionsPage() {
                 </Link>
               </div>
             ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>;
         </div>;
       </div>;
@@ -180,7 +175,6 @@ function SolutionsPage() {
 
 
 
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Industries</h2>
@@ -192,8 +186,6 @@ function SolutionsPage() {
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our AI solutions are designed to adapt and excel across diverse industries, 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             delivering measurable results and competitive advantages.
           </p>
         </div>
@@ -203,7 +195,6 @@ function SolutionsPage() {
               <div key={industry.name} className=&quot;flex flex-col group&quot;>
                 <dt className=&quot;flex items-center gap-x-3 text-base font-semibold leading-7 text-white&quot;>
                   <industry.icon className=&quot;h-5 w-5 flex-none text-blue-400&quot; aria-hidden=&quot;true&quot; />
-=======
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Industries</h2>;
@@ -221,7 +212,6 @@ function SolutionsPage() {
               <div key={industry.name} className=&quot;flex flex - col group & quot;>;
                 <dt className=&quot;flex items - center gap - x-3 text - base font - semibold leading - 7 text - white & quot;>;
                   <industry.icon className=&quot;h - 5 w - 5 flex - none text - blue - 400 & quot; aria - hidden=&quot;true & quot; />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {industry.name}
                 </dt>;
                 <dd className=&quot;mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray - 300 & quot;>;
@@ -242,7 +232,6 @@ function SolutionsPage() {
 
 
 
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Implementation</h2>
@@ -254,8 +243,6 @@ function SolutionsPage() {
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             From initial assessment to ongoing optimization, we guide you through every step 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             of your AI transformation journey.
           </p>
         </div>
@@ -276,7 +263,6 @@ function SolutionsPage() {
                 </div>
               </div>
             ))}
-=======
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Implementation</h2>;
@@ -303,7 +289,6 @@ function SolutionsPage() {
                   <p className=&quot;text - sm text - gray - 300 & quot;>{step.description}</p>;
                 </div>;
               </div>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </div>;
         </div>;
       </div>;
@@ -311,7 +296,6 @@ function SolutionsPage() {
 
 
 
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -322,8 +306,6 @@ function SolutionsPage() {
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Let's discuss how our AI solutions can accelerate your growth and give you a 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             competitive edge in your industry.
           </p>
           <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>
@@ -342,7 +324,6 @@ function SolutionsPage() {
     </div>
   )
 }
-=======
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl text - center & quot;>;
           <h2 className=&quot;text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
@@ -367,4 +348,3 @@ function SolutionsPage() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

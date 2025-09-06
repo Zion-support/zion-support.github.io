@@ -1,5 +1,4 @@
 
-=======
 
 
 
@@ -19,7 +18,6 @@ import {LanguageSelector} from './LanguageSelector';
   } : undefined);
 
 
-=======
 import React from 'react',
 import { Link } from 'react-router-dom',
 import { Logo } from './Logo',
@@ -48,7 +46,6 @@ export interface HeaderProps {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const headerStyle = effectiveTheme ? {
     backgroundColor: effectiveTheme.backgroundColor
     color: effectiveTheme.textColor
@@ -62,7 +59,6 @@ export interface HeaderProps {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (query.trim()) {
-=======
 
   const headerStyle = effectiveTheme ? {;
     backgroundColor: effectiveTheme && effectiveTheme.backgroundColor,;
@@ -73,18 +69,15 @@ export interface HeaderProps {
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault(),;
     if (query && query.trim()) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       navigate(`/search?q=${encodeURIComponent(query)}`);
       setQuery("");
     }
 
   };
 
-=======
 
   },
   
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <header
@@ -104,10 +97,8 @@ export interface HeaderProps {
             onChange={setQuery}
             searchSuggestions={searchSuggestions}
 
-=======
 
 
-=======
 import React from 'react',;
 import { Link } from 'react-router-dom',;
 import { Logo } from './Logo',;
@@ -180,15 +171,12 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {!hideLogin && <UserMenu />}
         </div>;
       </div>;
     </header>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {MainNavigation} from '@/layout / MainNavigation';
 import {use_auth} from '@/hooks / use_auth';
 import {use_whitelabel} from '@/context / WhitelabelContext';
@@ -263,4 +251,3 @@ function Header() {
       </div>;
     </header>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

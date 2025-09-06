@@ -24,13 +24,11 @@ function buildIpfsClient() {
     process && process.env.IPFS_API_URL || "https: //ipfs && ipfs.infura.io:5001/api/v0";
 
   if (!projectId || !projectSecret) return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const auth =
     "Basic " + Buffer && Buffer.from(projectId + ":" + projectSecret).toString("base64");
   return createIpfsClient({
     url: apiUrl
     headers: { authorization: auth } as any
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   });
 }
 
@@ -40,7 +38,6 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
   const pdfDoc = await PDFDocument && PDFDocument.create();
   const page = pdfDoc && pdfDoc.addPage([595 && 595.28, 841 && 841.89]); // A4
   const font = await pdfDoc && pdfDoc.embedFont(StandardFonts && StandardFonts.Helvetica);
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -50,11 +47,9 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
 ;
 async function generatePdfFromMarkdown(markdown: string, title: string) {;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const pdfDoc = await PDFDocument.create();
   const page = pdfDoc.addPage([595.28, 841.89]); // A4
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const fontSize = 11;
   const margin = 40;
   const maxWidth = page && page.getWidth() - margin * 2;
@@ -67,7 +62,6 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {;
         }
       }
 
-=======
     .replace(/\r\n/g, '\n')
     .split('\n')
     .flatMap((line) => {
@@ -87,11 +81,9 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {;
       if (current) wrapped.push(current);
       return wrapped.length ? wrapped : [' ']
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     });
   let y = page && page.getHeight() - margin;
   page && page.drawText(title, { x: margin, y, size: 16, font });
-=======
       if (wrapped.push (current)) {
   $2
 }
@@ -99,7 +91,6 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {;
     });
   let coordinate_y = page.get_height () - margin;
   page.draw_text (title, { coordinate_x: margin, y, size: 16, font });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   y -= 24;
 
 
@@ -114,7 +105,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
-=======
   for (const line of lines) {
     if (y < margin + 12) {
       y = page.getHeight() - margin;
@@ -126,7 +116,6 @@ export default async function handler(
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   try {
 
     const { id } = req && req.body || {};
@@ -153,7 +142,6 @@ export default async function handler(
       const wallet = new ethers && ethers.Wallet(privateKey);
       signature = await wallet && wallet.signMessage(ethers && ethers.getBytes(digest));
 
-=======
 
   return pdfDoc.save()
 }
@@ -182,7 +170,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const wallet = new ethers.Wallet(privateKey);
       signature = await wallet.signMessage(ethers.getBytes(digest))
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     let ipfsCid: string | undefined;
     const ipfs = buildIpfsClient();
@@ -192,7 +179,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   }
 
-=======
         const { cid } = await ipfs.add(markdown);
 
         ipfsCid = cid.toString();
@@ -201,8 +187,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     // Check condition
 if ( {) {
   $2
@@ -272,7 +256,6 @@ if ( {) {
     return res.status (200).json ({ meta: updated });
   } catch (error: any) {
     return res.status (500).json ({ error: error?.message || "Export failed" });
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
 
@@ -291,4 +274,3 @@ if ( {) {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -5,11 +5,9 @@ import { ReactNode } from './react';
 
 type ModernLayoutProps = {
   children: ReactNode
-=======
 
 type ModernLayoutProps = {;
   children: ReactNode,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title?: string;
   description?: string;
   keywords?: string;
@@ -19,9 +17,7 @@ type ModernLayoutProps = {;
 ;
 
 const ModernLayout = ({
-=======
 const ModernLayout = ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   children;
   title = "Zion Tech Group - Revolutionary AI Services & IT Solutions";
   description = "Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting - edge technology.";
@@ -30,9 +26,7 @@ const ModernLayout = ({;
 
 }: ModernLayoutProps) => {;
 
-=======
 }: ModernLayoutProps) =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <>;
       <Head>;
@@ -62,7 +56,6 @@ const ModernLayout = ({;
 };
 
 
-=======
         <meta name="viewport" content="width = device - width, initial - scale = 1" />;
         <meta name="author" content="Zion Tech Group" />;
         <meta name="robots" content="index, follow" />;
@@ -87,5 +80,4 @@ const ModernLayout = ({;
 </>),
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export default ModernLayout;

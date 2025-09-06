@@ -87,7 +87,6 @@ export async function generateMilestones(input: MilestoneSuggestionInput): Promi
   const ai = await callOpenAI(input);
 
   const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
-=======
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem  } from '../shared / types.js';,
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN,
 async function callOpenAI (input: MilestoneSuggestionInput): Promise < SuggestedMilestoneItem[] | null> {
@@ -185,6 +184,5 @@ function createHeuristicPlan (input: MilestoneSuggestionInput): SuggestedMilesto
 export async function generate_milestones (input: MilestoneSuggestionInput): Promise < MilestoneSuggestionResponse> {
   const ai = await callOpenAI (input);
   const milestones = ai && ai.length ? ai : createHeuristicPlan (input);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return { milestones }
 }

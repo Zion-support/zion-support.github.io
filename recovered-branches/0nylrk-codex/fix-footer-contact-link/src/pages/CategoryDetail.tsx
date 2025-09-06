@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: ""
     description: ""
@@ -319,7 +318,6 @@ export default function CategoryDetail() {;
             image: listing.images?.[0]
 
 
-=======
 
 import { useParams, Link } from "react-router-dom",;
 import { Header } from "@/components/header/Header",;
@@ -612,14 +610,11 @@ if ( {) {
             category: listing.category,
             image: listing.images?.[0];
 
-=======
             id: listing.id,;
             title: listing.title,;
             category: listing.category;
             image: listing.images?.[0];
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }
         }
       });
@@ -628,13 +623,9 @@ if ( {) {
 
   },
 
-=======
   };
-=======
   },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -670,7 +661,6 @@ if ( {) {
                   listing={listing}
                   onRequestQuote={handleRequestQuote}
                 />
-=======
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue">;
@@ -707,7 +697,6 @@ if ( {) {
                   listing={listing}
                   onRequestQuote={handleRequestQuote} 
                 />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               ))}
             </div>;
           )}
@@ -739,7 +728,5 @@ if ( {) {
     </>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

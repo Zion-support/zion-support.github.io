@@ -23,7 +23,6 @@ export async function createTestNotification(userId: string) {
   };
   
 
-=======
 import {NotificationType} from './types';
 import {create_notification} from './create_notification';
 /**;
@@ -43,7 +42,6 @@ function createTestNotification() {
     'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!';
   }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const actions = {
     'message': { url: '/messages', text: 'View Messages' }
     'quote_request': { url: '/quotes', text: 'View Quote' }
@@ -53,10 +51,8 @@ function createTestNotification() {
     'system': { url: '/dashboard', text: 'Learn More' }
   }
 
-=======
 
 
-=======
 import { NotificationType } from './types',;
 import { createNotification } from './createNotification',;
 /**;
@@ -92,7 +88,6 @@ export async function createTestNotification(userId: string) {;
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
   return create_notification ({
     user_id;
@@ -103,5 +98,4 @@ export async function createTestNotification(userId: string) {;
     action_url: actions[random_type].url,
     action_text: actions[random_type].text;
   });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

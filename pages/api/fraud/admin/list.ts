@@ -20,10 +20,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res.status(200).json({ items })
 
-=======
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { getFraudStore } from '../../../../utils / fraud / store',
 function ensure_admin (req: NextApiRequest): boolean {
@@ -33,10 +31,8 @@ if (return true, // allow if not configured) {
   $2
 }
   return token === process.env.ADMIN_TOKEN;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export default async /**
  * handler - Function description

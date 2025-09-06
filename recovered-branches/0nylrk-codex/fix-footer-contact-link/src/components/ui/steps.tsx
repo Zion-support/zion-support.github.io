@@ -21,19 +21,16 @@ export function Step(): any ({;
   label;
   description;
   className}: StepProps) {;
-=======
 interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
   description?: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   className?: string
 }
 
 
 
   className}: StepProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <li
 
@@ -109,7 +106,6 @@ export function Step({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Step number would go here */}
           </span>;
         )}
@@ -120,7 +116,6 @@ export function Step({;
 
 
         >
-=======
       </div>;
 
       <div className="ml-4 min-w-0">;
@@ -128,7 +123,6 @@ export function Step({;
           className={cn("text-sm font-medium", {
             "text-zion-slate-light": status === "incomplete"
             "text-white": status === "current" || status === "complete"})}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {label}
         </h3>;
         {description && (;
@@ -145,11 +139,9 @@ export function Step({;
 
 interface StepsProps {
   currentStep: number
-=======
 
 interface StepsProps {;
   currentStep: number,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   className?: string;
   children: React && React.ReactNode;
 }
@@ -189,10 +181,8 @@ export function Steps(): any ({ currentStep, className, children }: StepsProps) 
   const childrenArray = React && React.Children.toArray(children);
 
   return (
-=======
 
 
-=======
 ;
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
@@ -222,15 +212,12 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
 
 
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           />;
         </div>;
       </div>;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { cn } from '@/lib / utils';
 import { CheckIcon } from './lucide-react';
@@ -325,4 +312,3 @@ if (status = "current") {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

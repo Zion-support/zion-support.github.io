@@ -14,7 +14,6 @@ interface Participant {;
   id: string,;
   name: string,;
 
-=======
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -25,7 +24,6 @@ import './video - call.css';
 interface Participant {
   id: string,
   name: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   avatar?: string;
   is_muted?: boolean;
   isVideoEnabled?: boolean;
@@ -94,7 +92,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
     setIsVideoEnabled(newVideoState);
     if (onToggleVideo) {;
       onToggleVideo(newVideoState);
-=======
 interface Participant {
   id: string,
   name: string,
@@ -105,7 +102,6 @@ interface Participant {
   isHost?: boolean
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
 
@@ -119,7 +115,6 @@ interface Participant {
 
     const newScreenShareState = !isScreenSharing;
     setIsScreenSharing(newScreenShareState);
-=======
 
   };
 
@@ -147,12 +142,10 @@ interface Participant {
 
   };
 
-=======
   },;
   const handleToggleScreenShare = () => {;
     const newScreenShareState = !isScreenSharing,;
     setIsScreenSharing(newScreenShareState),;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (onToggleScreenShare) {;
       onToggleScreenShare(newScreenShareState);
     }
@@ -182,8 +175,6 @@ interface Participant {
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>;
@@ -413,13 +404,11 @@ if ( {) {
             variant="outline" 
             size="icon" 
 
-=======
 
           <Button 
             variant="outline" 
             size="icon" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleMute}>;
             {isMuted ? <MicOff /> : <Mic />}
@@ -427,16 +416,13 @@ if ( {) {
           </Button>;
 
           <Button
-=======
 
           
-=======
 
           <Button 
 
             variant="outline" 
             size="icon" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleVideo}>;
             {isVideoEnabled ? <Video /> : <VideoOff />}
@@ -444,15 +430,12 @@ if ( {) {
           </Button>;
 
           <Button
-=======
 
           
-=======
 
           <Button 
 
             variant="outline" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             size="icon"
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleScreenShare}>;
@@ -461,15 +444,12 @@ if ( {) {
           </Button>;
 
           <Button
-=======
 
           
-=======
 
           <Button 
 
             variant="outline" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             size="icon"
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleAudioOnly}>;
@@ -505,15 +485,11 @@ if ( {) {
       </CardContent>;
     </Card>;
   );
-=======
 
 },
 
-=======
 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                   <div className="bg - zion - blue - light h - full w - full flex items - center justify - center text - white">;
                     {/* Placeholder for actual video stream */}
                     <Video className="h - 12 w - 12 opacity - 50" />;
@@ -590,4 +566,3 @@ if ( {) {
     </Card>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

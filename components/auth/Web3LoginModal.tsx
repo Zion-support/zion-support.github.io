@@ -57,11 +57,9 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
       setError(null);
       setLoading(false);    }      setLoading(false);
 
-=======
       setError(null);
       setLoading(false)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }, [isOpen]);
 
@@ -217,7 +215,6 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
   }, [onClose, onLoggedIn]);
 
   const handlePhantomConnect = useCallback(async () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setError(null);
     setLoading(true);
     try {;
@@ -233,7 +230,6 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
 
 
       const statement =;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         'Sign in to Zion with your Solana wallet. No gas required.';
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`;      const encodedMessage = new TextEncoder().encode(message);        throw new Error('Phantom not found. Install the Phantom extension');
       }
@@ -264,15 +260,12 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message, signature: bs58.encode(signature), publicKey })});
       if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
-=======
 
-=======
       setLoading(false);    }
 
 
 
       onLoggedIn?.({ address: publicKey, chain: 'sol' }),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       onClose()
     } catch (e: any) {
       console.error(e);
@@ -308,7 +301,6 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
     } finally {;
       setLoading(false);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }, [onClose, onLoggedIn]);
   if (!isOpen) return null;
@@ -321,7 +313,6 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
       </div>;
 
 
-=======
 export default /**
  * Web3LoginModal - Function description
  */
@@ -332,11 +323,8 @@ if (return null) {
 }
   return <ModalInner {...props} />;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

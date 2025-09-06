@@ -6,25 +6,20 @@ import {Configuration, OpenAIApi} from "npm: openai@4 ;
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
 
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -42,7 +37,6 @@ serve(async (req) => {
         {
           status: 400
           headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
 const cors_headers = {
@@ -70,8 +64,6 @@ if ( {) {
         {
           status: 400,
           headers: { ...cors_headers, "Content - Type": "application / json" }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
     const { title, category, keyFeatures, targetAudience } = await req.json(),
 
@@ -84,7 +76,6 @@ if ( {) {
           status: 400, 
           headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       );
     }
@@ -101,7 +92,6 @@ if ( {) {
 
     
 
-=======
 ;
     const configuration = new Configuration({;
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
@@ -115,8 +105,6 @@ Category: ${category}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 Please create:
 1. A compelling, SEO-friendly description (100-150 words) that highlights benefits and use cases
 2. A list of 5-7 relevant tags for the listing
@@ -142,7 +130,6 @@ Format the response as a JSON object with the following structure: {
   "description": "The optimized description here..."
   "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
 
-=======
 
 
 
@@ -178,7 +165,6 @@ Format the response as a JSON object with the following structure: {
         description: "An error occurred while generating the optimized description. Please try again.";
         tags: []
         suggestedPrice: { min: 0, max: 0 }
-=======
 
       const jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || 
                         responseText.match(/({[\s\S]*})/) ||
@@ -196,7 +182,6 @@ Format the response as a JSON object with the following structure: {
         tags: [],
         suggestedPrice: { min: 0, max: 0 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         keyPoints: []
       }
     }
@@ -208,7 +193,6 @@ Format the response as a JSON object with the following structure: {
       });
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
   "suggested_price": { "min": number, "max": number }
   "key_points": ["point1", "point2", "point3"];
 }`;
@@ -248,7 +232,6 @@ Format the response as a JSON object with the following structure: {
       });
       {
         headers: { ...cors_headers, "Content - Type": "application / json" }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     );
   } catch (error) {
@@ -264,7 +247,6 @@ Format the response as a JSON object with the following structure: {
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
     console.error ("Error in AI listing generator:", error);
 ;
     return new Response (
@@ -275,7 +257,6 @@ Format the response as a JSON object with the following structure: {
       {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     );
   }
@@ -283,7 +264,6 @@ Format the response as a JSON object with the following structure: {
 
 ;
 
-=======
       JSON.stringify({
         generated: parsedResponse
 
@@ -306,5 +286,3 @@ Format the response as a JSON object with the following structure: {
 
   }
 });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

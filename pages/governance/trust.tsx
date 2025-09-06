@@ -41,7 +41,6 @@ export default function GovernanceTrustPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
             ))}
           </div>
@@ -52,7 +51,6 @@ export default function GovernanceTrustPage() {
 
                 risk registers, and post-mortems.
               </div>
-=======
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Governance</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
@@ -62,7 +60,6 @@ export default function GovernanceTrustPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <div className='font-medium mb-1'>Delegated Voting</div>
@@ -89,7 +86,6 @@ export default function GovernanceTrustPage() {
         </section>
 
 
-=======
 
         <section className="space-y-2">
           <h2 className="text-2xl font-semibold">Operator Prompt</h2>
@@ -134,7 +130,6 @@ export default function GovernanceTrustPage(req, res) {
               <div key={opt.title} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">;
                 <div className="font-medium">{opt.title}</div>;
                 <div className="text-sm text-gray-600 dark:text-gray-400">{opt.desc}</div>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>;
             ))}
           </div>;
@@ -178,7 +173,6 @@ export default function GovernanceTrustPage(req, res) {
           <h2 className='text-2xl font-semibold'>Operator Prompt</h2>;
           <p className='text-sm text-gray-600 dark:text-gray-400'>;
             Write a legal-neutral foundation charter for a decentralized AI;
-=======
 import Head from 'next / head';
 import Link from 'next / link';
               </div>))}
@@ -221,14 +215,12 @@ import Link from 'next / link';
           <h2 className='text - 2xl font - semibold'>Operator Prompt</h2>;
           <p className='text - sm text - gray - 600 dark:text - gray - 400'>;
             Write a legal - neutral foundation charter for a decentralized AI;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             protocol committed to sovereignty, open knowledge, and trust.;
             Include DAO integration and multiverse grant rights.;
           </p>;
           <Link href='/foundation#charter'>;
 
 
-=======
 
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Governance</h2>
@@ -261,22 +253,15 @@ import Link from 'next / link';
     </>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             <a className='underline text - sm'>Open Charter Generator</a>;
           </Link>;
         </section>;
       </div>;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

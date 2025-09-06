@@ -17,7 +17,6 @@ export function ThemeToggle() {;
 
               ? "bg-zion-blue text-white";
               : "text-zinc-400 hover:text-zinc-100";
-=======
 "use client",
 import { use_theme  } from '@/components / theme - provider';,
 import { Moon, Sun, Monitor  } from './lucide-react';,
@@ -36,7 +35,6 @@ function ThemeToggle() {
             theme === "light";
               ? "bg - zion - blue text - white";
               : "text - zinc - 400 hover:text - zinc - 100";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }`}
           aria - label="Switch to light theme";
           aria - pressed={theme === "light"}

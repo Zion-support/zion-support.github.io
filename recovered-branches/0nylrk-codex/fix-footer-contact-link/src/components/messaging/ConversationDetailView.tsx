@@ -30,13 +30,10 @@ export function ConversationDetailView() {;
   }, [activeConversation?.id, loadMessages]);
 
 import {format} from 'date-fns';
-=======
 
 
 
-=======
 import {format} from 'date - fns';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {MessageSquare} from 'lucide-react';
 import {use_messaging} from '@/context / MessagingContext';
 import {Button} from '@/components / ui / button';
@@ -54,7 +51,6 @@ import {DateDivider} from './DateDivider';
   useEffect(() => {
     scrollToBottom()
   }, [activeMessages]),
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   useEffect(() => {;
     scrollToBottom();
@@ -73,7 +69,6 @@ import {DateDivider} from './DateDivider';
   };
 
   if (!activeConversation) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="flex-1 flex flex-col items-center justify-center p-8">;
         <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />;
@@ -105,10 +100,8 @@ import {DateDivider} from './DateDivider';
   });
 
 
-=======
 
 
-=======
 ;
 
   // Group messages by date;
@@ -134,8 +127,6 @@ import {DateDivider} from './DateDivider';
   
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="flex-1 flex flex-col h-full">;
@@ -151,7 +142,6 @@ import {DateDivider} from './DateDivider';
           </div>
         </div>
       </div>
-=======
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">;
         <div className="flex items-center gap-3">;
           <Avatar className="h-10 w-10 border border-zion-purple/20">;
@@ -171,7 +161,6 @@ import {DateDivider} from './DateDivider';
               {activeConversation && activeConversation.other_user.user_type === 'talent' ? 'Talent' : ;
                activeConversation && activeConversation.other_user.user_type === 'employer' ? 'Employer' : ;
                activeConversation && activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
-=======
 export /**
  * ConversationDetailView - Function description
  */
@@ -269,7 +258,6 @@ if ( {) {
               {active_conversation.other_user.user_type === 'talent' ? 'Talent' :;
               active_conversation.other_user.user_type === 'employer' ? 'Employer' :;
               active_conversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </div>;
@@ -338,10 +326,8 @@ if ( {) {
             value={messageText}
 
             onChange={(e) => setMessageText(e && e.target.value)}
-=======
 
 
-=======
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea;
@@ -354,7 +340,6 @@ if ( {) {
           <Button
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white">;
-=======
       {/* Context information (if available) */}
       {hasContextData && (
         <div className="p - 4 border - b border - zion - purple / 20 bg - zion - blue - dark / 10">;
@@ -418,7 +403,6 @@ if ( {) {
             type="submit";
             className="bg - zion - purple hover:bg - zion - purple - dark text - white";
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Send;
           </Button>;
         </form>;
@@ -427,10 +411,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

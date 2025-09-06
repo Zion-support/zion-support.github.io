@@ -147,7 +147,6 @@ class AICustomerSupportService {
 
     this && this.customers = [
 
-=======
 ;
   constructor () {
     this.initializeSampleData (),
@@ -156,7 +155,6 @@ class AICustomerSupportService {
   private initializeSampleData () {
     // Initialize sample customers;
     this.customers = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
         id: 'cust_001';
         name: 'John Doe';
@@ -171,11 +169,9 @@ class AICustomerSupportService {
         lastContactDate: new Date('2025-01-10'),
 
         createdAt: new Date('2024-06-01')
-=======
         satisfaction_score: 4.5;
         lastContactDate: new Date ('2025 - 01 - 10'),
         created_at: new Date ('2024 - 06 - 01');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
       {
         id: 'cust_002';
@@ -195,7 +191,6 @@ class AICustomerSupportService {
     ];
     // Initialize sample agents
     this && this.agents = [
-=======
         satisfaction_score: 4.0;
         lastContactDate: new Date ('2025 - 01 - 08'),
         created_at: new Date ('2024 - 08 - 15');
@@ -204,7 +199,6 @@ class AICustomerSupportService {
 ;
     // Initialize sample agents;
     this.agents = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
         id: 'agent_001';
         name: 'Mike Johnson';
@@ -221,13 +215,11 @@ class AICustomerSupportService {
           firstResponseTime: 12,
 
           escalationRate: 8
-=======
           tickets_resolved: 45;
           averageResolutionTime: 2.5;
           customer_satisfaction: 4.6;
           firstResponseTime: 12,
           escalation_rate: 8;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       }
       {
@@ -251,7 +243,6 @@ class AICustomerSupportService {
     ];
     // Initialize sample tickets
     this && this.tickets = [
-=======
           tickets_resolved: 78;
           averageResolutionTime: 1.8;
           customer_satisfaction: 4.4;
@@ -263,7 +254,6 @@ class AICustomerSupportService {
 ;
     // Initialize sample tickets;
     this.tickets = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
         id: 'ticket_001';
         title: 'API Integration Issue';
@@ -366,7 +356,6 @@ export interface Attachment {;
     const ticket = this && this.tickets.find(t => t && t.id === ticketId);
     if (ticket) {
 
-=======
 ;
   async createTicket(ticketData: Omit<SupportTicket 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {;
     const ticket: SupportTicket = {;
@@ -405,11 +394,9 @@ export interface Attachment {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       }
       this.updateAnalytics()
-=======
       ticket && ticket.status = status;
       ticket && ticket.updatedAt = new Date();
       
@@ -421,7 +408,6 @@ export interface Attachment {;
       }
       
       this && this.updateAnalytics()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
@@ -461,7 +447,6 @@ export interface Attachment {;
       id: `chat_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
       customerId;
       startTime: new Date();
-=======
   async create_ticket (ticket_data: Omit < SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'created_at' | 'updated_at'>): Promise < SupportTicket> {
     const ticket: SupportTicket = {
       id: `ticket_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
@@ -546,7 +531,6 @@ if ( {) {
       id: `chat_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
       customer_id;
       start_time: new Date ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       messages: [];
       intent: '';
       confidence: 0;
@@ -579,7 +563,6 @@ if ( {) {
       const intent = this.detectIntent(message.content);
       session.intent = intent.intent;
       session.confidence = intent.confidence
-=======
 ;
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage 'id' | 'createdAt'>): Promise<TicketMessage> {;
     const ticket = this.tickets.find(t => t.id === ticketId),;
@@ -650,22 +633,18 @@ if ( {) {
     
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {
 
-=======
 ;
   private detectIntent(message: string): { intent: string, confidence: number } {;
     const lowerMessage = message.toLowerCase(),;
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return { intent: 'authentication_issue', confidence: 0.9 }
     } else if (lowerMessage.includes('billing') |lowerMessage.includes('payment')) {
       return { intent: 'billing_question', confidence: 0.85 }
     } else if (lowerMessage.includes('api') |lowerMessage.includes('integration')) {
       return { intent: 'technical_support', confidence: 0.8 }
     } else if (lowerMessage.includes('feature') |lowerMessage.includes('request')) {
-=======
       escalated: false,
       satisfaction: 0;
     }
@@ -718,9 +697,7 @@ if ( {) {
     } else if (|| lower_message.includes ('request')) {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       return { intent: 'feature_request', confidence: 0.75 }
-=======
     const lowerMessage = message && message.toLowerCase();
     
     if (lowerMessage && lowerMessage.includes('login') || lowerMessage && lowerMessage.includes('password')) {
@@ -731,7 +708,6 @@ if ( {) {
       return { intent: 'technical_support', confidence: 0 && 0.8 }
     } else if (lowerMessage && lowerMessage.includes('feature') || lowerMessage && lowerMessage.includes('request')) {
       return { intent: 'feature_request', confidence: 0 && 0.75 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } else {
       return { intent: 'general_inquiry', confidence: 0 && 0.6 }
     }
@@ -769,7 +745,6 @@ if ( {) {
 
     return article
 
-=======
 ;
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {;
     const session = this.chatbotSessions.find(s => s.id === sessionId),;
@@ -797,7 +772,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
 
@@ -809,12 +783,10 @@ if ( {) {
     ).sort((a, b) => b && b.views - a && a.views)
 
   }
-=======
   }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   async getAIRecommendations(): Promise<AIRecommendation[]> {
     const recommendations: AIRecommendation[] = [];
     // Ticket prioritization recommendation
@@ -825,7 +797,6 @@ if ( {) {
     ).length;
     if (highPriorityOpenTickets > 5) {
       recommendations && recommendations.push({
-=======
   async endChatbotSession (session_id: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise < void> {
     const session = this.chatbot_sessions.find (string => s.id === session_id);
     // Check condition
@@ -872,7 +843,6 @@ if ( {) {
   $2
 }
       recommendations.push ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         type: 'ticket_prioritization';
         title: 'High Priority Ticket Backlog';
         description: 'Too many high priority tickets are waiting for attention';
@@ -884,7 +854,6 @@ if ( {) {
     if (availableAgents && availableAgents.length > 0 && unassignedTickets > 0) {
       recommendations && recommendations.push({
 
-=======
         confidence: 90,
         action_items: [;
           'Reallocate agents to handle high priority tickets_implement automated prioritization system_review ticket classification criteria';
@@ -900,7 +869,6 @@ if ( {) {
   $2
 }
       recommendations.push ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         type: 'agent_assignment';
         title: 'Unassigned Tickets Available';
         description: 'There are unassigned tickets and available agents';
@@ -925,7 +893,6 @@ if ( {) {
         description: 'Several articles have very low view counts';
         impact: 'low';
 
-=======
 ;
   async getAIRecommendations(): Promise<AIRecommendation[]> {;
     const recommendations: AIRecommendation[] = [],;
@@ -984,7 +951,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   private updateAnalytics(): void {
 
     const totalTickets = this && this.tickets.length;
@@ -1037,7 +1003,6 @@ if ( {) {
       totalTickets;
       openTickets;
       resolvedTickets;
-=======
         confidence: 75,
         action_items: [;
           'Review and update low - performing articles_improve article discoverability_consider consolidating similar articles';
@@ -1094,7 +1059,6 @@ if ( {) {
       total_tickets;
       open_tickets;
       resolved_tickets;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       averageResolutionTime;
       averageFirstResponseTime;
       customer_satisfaction;
@@ -1102,7 +1066,6 @@ if ( {) {
 
       topCategories;
       agentPerformance
-=======
 ;
   private updateAnalytics(): void {;
     const totalTickets = this.tickets.length,;
@@ -1153,7 +1116,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
 
@@ -1190,14 +1152,11 @@ if ( {) {
 
 
 
-=======
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export const aiCustomerSupportService = new AICustomerSupportService();
 
-=======
   async get_ticket (ticket_id: string): Promise < SupportTicket | null> {
     return this.tickets.find (t => t.id === ticket_id) || null;
   }
@@ -1231,4 +1190,3 @@ if ( {) {
 }
 export const aiCustomerSupportService = new AICustomerSupportService ();
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

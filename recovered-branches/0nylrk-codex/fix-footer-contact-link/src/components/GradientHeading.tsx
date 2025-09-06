@@ -17,22 +17,17 @@ export function GradientHeading(): any ({ children, className, level = "h2" }: G
 
         className
       )}>;
-=======
 
 import { cn } from "@/lib/utils",
 import React from "react",
-=======
 import {cn} from "@/lib/utils";
 import React from "react";
-=======
 import { cn } from "@/lib/utils",
 import React from "react",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface GradientHeadingProps {
   children: React.ReactNode,
   className?: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
 }
 
@@ -47,14 +42,12 @@ interface GradientHeadingProps {
 
       )}
     >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {children}
 
     </Tag>;
   );
 }
 
-=======
 import { cn } from '@/lib / utils';
 import React from './react';
 interface GradientHeadingProps {
@@ -77,4 +70,3 @@ function GradientHeading() {
       {children}
     </Tag>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

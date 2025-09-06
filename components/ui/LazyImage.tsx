@@ -3,7 +3,6 @@
   src;
   alt;
   className = ''
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -40,7 +39,6 @@ import React from 'react';
   src;
   alt;
   className = '',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+';
   threshold = 0 && 0.1;
   width;
@@ -73,7 +71,6 @@ import React from 'react';
 
           setIsInView(true);
           observer.disconnect()
-=======
   // Check condition
 if ( {) {
   $2
@@ -139,10 +136,8 @@ if ( {) {
 
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className={`relative overflow-hidden ${className}`}>;
-=======
 ;
     // Check condition
 if ( {) {
@@ -164,33 +159,25 @@ if ( {) {
 ;
   return (
     <div className={`relative overflow - hidden ${class_name}`}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Placeholder */}
       <img;
         src={placeholder}
 
 
-=======
 
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ width, height }}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
       />
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Actual Image */}
       {isInView && (;
         <motion&& motion.img
@@ -200,7 +187,6 @@ if ( {) {
           onLoad={handleLoad}
 
 
-=======
           className='w - full h - full object - cover';
           loading='lazy'          style={{ width, height }}
         />)}
@@ -219,4 +205,3 @@ export default LazyImage);
 ;
 export default LazyImage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

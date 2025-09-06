@@ -53,7 +53,6 @@ export default function Marketplace() {;
   const filterOptions = generateFilterOptions(),
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Filter listings based on selected filters
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {
     // Search filter
@@ -96,7 +95,6 @@ export default function Marketplace() {;
       return false;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     // Product type filter
     if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
@@ -138,7 +136,6 @@ export default function Marketplace() {;
       case 'availability':
         setSelectedAvailability(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
-=======
 
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),;
   const filterOptions = generateFilterOptions();
@@ -191,7 +188,6 @@ export default function Marketplace() {;
       case 'availability':;
         setSelectedAvailability(prev => ;
           prev && prev.includes(value) ? prev && prev.filter(item => item !== value) : [...prev, value];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         );
         break;
     }
@@ -243,7 +239,6 @@ export default function Marketplace() {;
             category: listing.category
             image: listing.images?.[0]
 
-=======
 
 ;
     return true;
@@ -407,14 +402,11 @@ if ( {) {
             category: listing.category,
             image: listing.images?.[0];
 
-=======
             id: listing.id,;
             title: listing.title,;
             category: listing.category,;
             image: listing.images?.[0];
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }
         }
       });
@@ -422,15 +414,11 @@ if ( {) {
 
 
   },
-=======
   };
-=======
   },
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <AppLayout>;
@@ -438,7 +426,6 @@ if ( {) {
         <div className="max-w-4xl mx-auto mb-8">;
           <h1 className="text-3xl font-bold text-white mb-4">AI & Tech Marketplace</h1>;
           <p className="text-zion-slate-light">;
-=======
 ;
   return (
     <AppLayout>;
@@ -460,7 +447,6 @@ if ( {) {
               </Button>;
               <Button variant="ghost" size="icon" className="text-zion-slate-light">;
                 <ListFilter className="h-4 w-4" />;
-=======
         {/* Search and filter bar */}
         <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4 mb - 8">;
           <div className="flex flex - col md:flex - row gap - 4">;
@@ -496,19 +482,15 @@ if ( {) {
                 selectedLocations
                 selectedAvailability,
 
-=======
 
                 selectedProductTypes,
                 selectedLocations,
                 selectedAvailability,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 selectedRating
-=======
                 selected_locations;
                 selected_availability,
                 selected_rating;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               }}
               filter_options={filter_options}
               onFilterChange={handleFilterChange}
@@ -523,14 +505,12 @@ if ( {) {
           <div className="lg:col-span-3">;
             {/* Active filters display */}
             <ActiveFiltersBar
-=======
             />;
           </div>;
           {/* Main content */}
           <div className="lg:col - span - 3">;
             {/* Active filters display */}
             <ActiveFiltersBar;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               selectedProductTypes={selectedProductTypes}
               selected_locations={selected_locations}
               selected_availability={selected_availability}
@@ -551,7 +531,6 @@ if ( {) {
             
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredListings.length > 0 ? (
@@ -568,7 +547,6 @@ if ( {) {
                   <p className="text-zion-slate-light max-w-md mx-auto mb-8">
                     We couldn't find any listings matching your filters. Try adjusting your search criteria.
                   </p>
-=======
               </p>;
             </div>;
 
@@ -588,7 +566,6 @@ if ( {) {
                   <p className="text-zion-slate-light max-w-md mx-auto mb-8">;
                     We couldn't find any listings matching your filters. Try adjusting your search criteria.;
                   </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Button
                     onClick={clearAllFilters}
                     className="bg-zion-purple hover:bg-zion-purple-dark">;
@@ -597,7 +574,6 @@ if ( {) {
                 </div>;
               )}
 
-=======
               onRemoveRating={() => setSelectedRating (null)}
               onClearSearch={() => setSearchQuery ("")}
             />;
@@ -630,9 +606,7 @@ if ( {) {
                   </Button>;
                 </div>)}
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>;
           </div>;
         </div>;
@@ -641,7 +615,5 @@ if ( {) {
     </AppLayout>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

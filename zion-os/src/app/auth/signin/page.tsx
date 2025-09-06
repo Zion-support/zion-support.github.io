@@ -82,11 +82,9 @@ function SignInPage() {
                 <p className="text - red - 400 text - sm">{error}</p>;
               </div>)}
 
-=======
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div>;
               <label html_for="email" className="block text - sm font - medium text - zinc - 300 mb - 2">;
                 Email Address;

@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface CountrySelectorProps {
 
   onCountryChange: (country: CountryPricing | null) => void
@@ -61,7 +60,6 @@ import {Globe} from "lucide-react";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {CountryPricing, onsiteServicePricing} from "@/data/onsiteServicePricing";
 
-=======
 
 import { useState, useEffect } from "react",;
 import { Globe } from "lucide-react",;
@@ -125,22 +123,18 @@ export function CountrySelector(): any ({ onCountryChange, selectedCountry }: Co
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
             ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
         </SelectContent>
       </Select>
     </div>
   )
 }
-=======
           </div>;
         </SelectContent>;
       </Select>;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { useState, useEffect } from './react';
 import { Globe } from './lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
@@ -203,4 +197,3 @@ function CountrySelector() {
       </Select>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -75,7 +75,6 @@ export function ContactSection() {
                     <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">
                       Name
                     </label>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <input
                       type="text"
                       id="name"
@@ -208,7 +207,5 @@ export function ContactSection() {
 
     </section>;
   );
-=======
     </section>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

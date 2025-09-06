@@ -15,7 +15,6 @@ import {useAuth} from "@/hooks/useAuth";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {LoginContent} from "@/components/auth/login";
-=======
 
 import { Navigate } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -34,9 +33,7 @@ export default function Login() {;
   // Redirect to onboarding if user is authenticated but hasn't completed profile;
   if (isAuthenticated && !user?.profileComplete) {;
     return <Navigate to="/onboarding" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
-=======
 import { Navigate } from './react-router-dom';
 import { use_auth } from '@/hooks / use_auth';
 import { Header } from '@/components / Header';
@@ -62,7 +59,6 @@ if ( {) {
 }
     return <Navigate to="/onboarding" />;
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <>;
       <Header />;
@@ -72,8 +68,5 @@ if ( {) {
     </>);
 }
 
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

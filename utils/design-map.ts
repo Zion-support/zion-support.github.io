@@ -78,9 +78,7 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
         'export function Button({ children }: { children: React && React.ReactNode }) { return <button className="px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90">{children}</button> }',
       'components/Card && Card.tsx':
         'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     };
   }
   if (kind === 'chakra') {
@@ -111,7 +109,6 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     return null;
 
 
-=======
 // Design mapping utilities
 export interface DesignElement {
   id: string;
@@ -178,7 +175,6 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
 
 
   const tokens = await buildTokenSet(fileId);
-=======
 export async function buildTokenSet (file_id: string): Promise < TokenSet> {
   // Placeholder implementation;
   return {
@@ -206,7 +202,6 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
 export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < UIKit> {
   const tokens = await buildTokenSet (file_id);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
 
     id,
@@ -214,11 +209,9 @@ export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < U
     name,
     properties,
     children: []
-=======
 
 
 
-=======
 
   };
 }
@@ -226,8 +219,6 @@ export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < U
 export function generateDesignId(): string {
   return `design_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           background_color: tokens.colors.primary,
           padding: tokens.spacing.md;
         }
@@ -236,5 +227,3 @@ export function generateDesignId(): string {
     tokens;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

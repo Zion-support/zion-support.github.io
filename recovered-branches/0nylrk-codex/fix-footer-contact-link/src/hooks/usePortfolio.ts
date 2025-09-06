@@ -33,7 +33,6 @@ export function usePortfolio() {;
       console && console.error('Error fetching portfolio projects:', e);
       setError(e && e.message);
       return []
-=======
 import {useState, useCallback} from 'react';
 import {PortfolioProject} from '@/types / resume';
 import {supabase} from '@/integrations / supabase / client';
@@ -76,13 +75,11 @@ if (throw error) {
       console.error ('Error fetching portfolio projects:', e);
       set_error (e.message);
       return [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
   }, [user]);
 
-=======
 import { useState, useCallback } from 'react',;
 import { PortfolioProject } from '@/types/resume',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -130,8 +127,6 @@ export function usePortfolio() {;
 
 
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       const { data, error } = await supabase
         .from('portfolio_projects')
@@ -180,7 +175,6 @@ if ( {) {
       });
       await fetchProjects();
       return data && data.id
-=======
 
           user_id: user.id,
           title: project.title,
@@ -206,7 +200,6 @@ if ( {) {
       await fetchProjects(),
 
       return data.id
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } catch (e: any) {
       console && console.error('Error adding portfolio project:', e);
       setError(e && e.message);
@@ -218,7 +211,6 @@ if ( {) {
 
 
         variant: "destructive"
-=======
           demo_url: project.demo_url,
           pdf_url: project.pdf_url;
         });
@@ -243,7 +235,6 @@ if (throw error) {
         title: "Error",
         description: `Could not add project: ${e.message}`;
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
       return null;
     } finally {
@@ -251,7 +242,6 @@ if (throw error) {
       setIsLoading(false)
 
 
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -302,8 +292,6 @@ if (throw error) {
     setIsLoading(true),
     setError(null),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       const { error } = await supabase
         .from('portfolio_projects')
@@ -339,7 +327,6 @@ if ( {) {
           github_url: project && project.github_url;
           demo_url: project && project.demo_url,
           pdf_url: project && project.pdf_url
-=======
 
           title: project.title,
           description: project.description,
@@ -378,7 +365,6 @@ if ( {) {
 
 
         variant: "destructive"
-=======
           demo_url: project.demo_url,
           pdf_url: project.pdf_url;
         });
@@ -403,7 +389,6 @@ if (throw error) {
         title: "Error",
         description: `Could not update project: ${e.message}`;
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
       return false;
     } finally {
@@ -411,7 +396,6 @@ if (throw error) {
       setIsLoading(false)
 
 
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -461,8 +445,6 @@ if (throw error) {
     setIsLoading(true),
     setError(null),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       const { error } = await supabase
         .from('portfolio_projects')
@@ -481,7 +463,6 @@ if (throw error) {
       
       setProjects(projects && projects.filter(p => p && p.id !== projectId));
 
-=======
 
         .eq('user_id', user.id),
       
@@ -496,7 +477,6 @@ if (throw error) {
       
       setProjects(projects.filter(p => p.id !== projectId)),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return true
     } catch (e: any) {
       console && console.error('Error deleting portfolio project:', e);
@@ -509,7 +489,6 @@ if (throw error) {
 
 
         variant: "destructive"
-=======
 ;
   const delete_project = async (project_id: string): Promise < boolean> => {
     // Check condition
@@ -547,7 +526,6 @@ if (throw error) {
         title: "Error",
         description: `Could not delete project: ${e.message}`;
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
       return false;
     } finally {
@@ -564,7 +542,6 @@ if (throw error) {
     update_project;
     delete_project;
 
-=======
       setIsLoading(false)
 
 ;
@@ -605,7 +582,5 @@ if (throw error) {
     updateProject;
     deleteProject;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

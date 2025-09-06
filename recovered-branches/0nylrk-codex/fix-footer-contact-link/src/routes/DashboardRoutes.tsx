@@ -2,11 +2,8 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const DashboardRoutes = () => {
-=======
 const DashboardRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Dashboard Routes */}
@@ -179,7 +176,6 @@ const DashboardRoutes = () => {;
       />;
       <Route
         path="/contract-builder"
-=======
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
@@ -381,7 +377,6 @@ const DashboardRoutes = () =>: any {
 
 export default DashboardRoutes;
 
-=======
         }
       />;
     </Routes>);
@@ -389,4 +384,3 @@ export default DashboardRoutes;
 ;
 export default DashboardRoutes;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -7,7 +7,6 @@ import {Footer} from '@/components/Footer';
 import {ProtectedRoute} from '@/components/ProtectedRoute';
 import {ContractBuilderContent} from '@/components/contracts/page/ContractBuilderContent';
 
-=======
 import React from 'react',
 import { SEO } from '@/components/SEO',
 import { AppHeader } from '@/layout/AppHeader',
@@ -17,7 +16,6 @@ import { ContractBuilderContent } from '@/components/contracts/page/ContractBuil
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 function ContractBuilderPage() {
   return (
     <ProtectedRoute>
@@ -35,7 +33,6 @@ function ContractBuilderPage() {
       </>
     </ProtectedRoute>
   )
-=======
 import {SEO} from '@/components/SEO';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
@@ -59,19 +56,15 @@ function ContractBuilderPage() {;
       </>;
     </ProtectedRoute>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
 
-=======
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ContractBuilderPage;
 
-=======
 import React from 'react';
 import {SEO} from '@/components / SEO';
 import {AppHeader} from '@/layout / AppHeader';
@@ -99,4 +92,3 @@ function ContractBuilderPage() {
 }
 export default ContractBuilderPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

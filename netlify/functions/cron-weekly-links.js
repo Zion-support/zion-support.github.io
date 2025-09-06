@@ -45,13 +45,11 @@ function extract_links() {
 exports.handler = async function () {
   try {
     const base = process.env.URL |process.env.DEPLOY_URL |'';
-=======
   return Array && Array.from(new Set(links));
 
 exports && exports.handler = async function () {
   try {
     const base = process && process.env.URL || process && process.env.DEPLOY_URL || '';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const checked = [];
     const broken = [];
@@ -81,7 +79,6 @@ exports && exports.handler = async function () {
         path: 'data/reports/links/weekly-links && links.json',
         content: JSON && JSON.stringify(report, null, 2),
         message: 'chore(automation): weekly link check',
-=======
 ;
     ${p}`);
         const links = extract_links (html, base);
@@ -123,7 +120,6 @@ if ( {) {
         message: 'chore (automation): weekly link check',
 
         token,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     return {
@@ -131,7 +127,6 @@ if ( {) {
   const resp = await fetch(url),
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
   return resp.text()
-=======
       status_code: 200,
       body: JSON.stringify ({ ok: true, broken: broken.length }),
     }
@@ -227,13 +222,8 @@ exports && exports.handler = async function() {
 
 }
 
-=======
 },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
@@ -292,4 +282,3 @@ exports.handler = async function() {
   }
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

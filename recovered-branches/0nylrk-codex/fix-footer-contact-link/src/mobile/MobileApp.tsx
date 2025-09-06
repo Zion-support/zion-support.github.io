@@ -34,10 +34,8 @@ import {MobileMessages} from "./pages/MobileMessages";
 import {MobileResumeBuilder} from "./pages/MobileResumeBuilder";
 import {MobileJobPost} from "./pages/MobileJobPost";
 import {useAuth} from "@/hooks/useAuth";
-=======
 
 
-=======
 import React from "react",;
 import { Routes, Route, Navigate } from "react-router-dom",;
 import { MobileThemeProvider } from "./theme/MobileThemeProvider",;
@@ -62,7 +60,6 @@ export function MobileApp() {;
           element={
             isAuthenticated ? <MobileHome /> : <Navigate to="/onboarding" />;
           } ;
-=======
 import React from './react';
 import { Routes, Route, Navigate } from './react-router-dom';
 import { MobileThemeProvider } from './theme / MobileThemeProvider';
@@ -89,7 +86,6 @@ function MobileApp() {
           element={
             is_authenticated ? <MobileHome /> : <Navigate to="/onboarding" />;
           }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         />;
         <Route path="/browse" element={<MobileBrowse />} />;
         <Route path="/projects" element={<MobileProjects />} />;
@@ -99,14 +95,10 @@ function MobileApp() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
         <Route path="/post - job" element={<MobileJobPost />} />;
         <Route path="/profile" element={<div > Profile page</div>} />;
         <Route path="*" element={<Navigate to="/" replace />} />;
       </Routes>;
     </MobileThemeProvider>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

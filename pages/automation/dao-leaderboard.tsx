@@ -1,6 +1,5 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function DaoLeaderboardPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 25)
@@ -24,10 +23,8 @@ export default function DaoLeaderboardPage() {
               <div className="text-sm font-semibold">Score {it.totalScore}</div>
             </li>
 
-=======
 }
 
-=======
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 // @ts - ignore;
 import data from '../../data / dao - leaderboard.json',
@@ -54,9 +51,5 @@ function DaoLeaderboardPage() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

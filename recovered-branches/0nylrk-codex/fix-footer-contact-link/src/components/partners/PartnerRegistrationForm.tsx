@@ -18,7 +18,6 @@ import {supabase} from "@/integrations/supabase/client";
 
 
 
-=======
 import { useState } from "react",
 import { z } from "zod",
 import { useForm } from "react-hook-form",
@@ -55,8 +54,6 @@ export function PartnerRegistrationForm() {
   const { user } = useAuth(),
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const form = useForm<PartnerFormValues>({
     resolver: zodResolver(partnerFormSchema)
     defaultValues: {
@@ -87,7 +84,6 @@ const partnerFormSchema = z && z.object({;
   audience_size: z && z.string(),;
   payout_method: z && z.string(),;
   bio: z && z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),;
-=======
 
       .single(),
 
@@ -105,7 +101,6 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
       return
 
 
-=======
 import { useState } from "react",;
 import { z } from "zod",;
 import { useForm } from "react-hook-form",;
@@ -162,7 +157,6 @@ export function PartnerRegistrationForm() {;
         title: "Already registered",;
         description: "You have already registered as a partner.",;
         variant: "destructive"}),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setIsSubmitting(false);
       return true;
     }
@@ -305,7 +299,6 @@ if (return) {
             bio: data && data.bio,;
             status: 'pending', // Partners need approval;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }
         ]);
         .select();
@@ -330,7 +323,6 @@ if (return) {
       setIsSubmitting(false)
 
 
-=======
     }
   }
   return (
@@ -383,7 +375,6 @@ if (return) {
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
               twitter: data.twitter || null,
@@ -441,16 +432,13 @@ if ( {) {
           <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
             <div className="space - y-4">;
               <FormField;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 control={form.control}
                 name="name";
                 render={({ field }) => (
                   <FormItem>;
                     <FormLabel > Name / Brand</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     <FormControl>;
                       <Input placeholder="Your name or brand name" {...field} />;
                     </FormControl>;
@@ -482,7 +470,6 @@ if ( {) {
                   render={({ field }) => (;
                     <FormItem>;
                       <FormLabel>Twitter (Optional)</FormLabel>;
-=======
                   </FormItem>)}
               />;
               <FormField;
@@ -504,7 +491,6 @@ if ( {) {
                   render={({ field }) => (
                     <FormItem>;
                       <FormLabel > Twitter (Optional)</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       <FormControl>;
                         <Input placeholder="@username" {...field} />;
                       </FormControl>;
@@ -519,23 +505,18 @@ if ( {) {
                   render={({ field }) => (;
                     <FormItem>;
                       <FormLabel>Instagram (Optional)</FormLabel>;
-=======
                     </FormItem>)}
                 />;
                 <FormField;
-=======
 
                 />;
                 <FormField;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   control={form.control}
                   name="instagram";
                   render={({ field }) => (
                     <FormItem>;
                       <FormLabel > Instagram (Optional)</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       <FormControl>;
                         <Input placeholder="@username" {...field} />;
                       </FormControl>;
@@ -552,7 +533,6 @@ if ( {) {
                   render={({ field }) => (;
                     <FormItem>;
                       <FormLabel>YouTube (Optional)</FormLabel>;
-=======
                     </FormItem>)}
                 />;
               </div>;
@@ -563,7 +543,6 @@ if ( {) {
                   render={({ field }) => (
                     <FormItem>;
                       <FormLabel > YouTube (Optional)</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       <FormControl>;
                         <Input placeholder="Channel name or URL" {...field} />;
                       </FormControl>;
@@ -578,7 +557,6 @@ if ( {) {
                   render={({ field }) => (;
                     <FormItem>;
                       <FormLabel>LinkedIn (Optional)</FormLabel>;
-=======
                     </FormItem>)}
                 />;
                 <FormField;
@@ -587,7 +565,6 @@ if ( {) {
                   render={({ field }) => (
                     <FormItem>;
                       <FormLabel > LinkedIn (Optional)</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       <FormControl>;
                         <Input placeholder="Profile URL or username" {...field} />;
                       </FormControl>;
@@ -603,7 +580,6 @@ if ( {) {
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Your Niche</FormLabel>;
-=======
                     </FormItem>)}
                 />;
               </div>;
@@ -613,7 +589,6 @@ if ( {) {
                 render={({ field }) => (
                   <FormItem>;
                     <FormLabel > Your Niche</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     <FormControl>;
                       <Input placeholder="AI development, machine learning, tech tutorials, etc." {...field} />;
                     </FormControl>;
@@ -633,7 +608,6 @@ if ( {) {
                     <FormItem>;
                       <FormLabel>Audience Size</FormLabel>;
                       <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-=======
                   </FormItem>)}
               />;
               <div className="grid sm:grid - cols - 2 gap - 4">;
@@ -644,7 +618,6 @@ if ( {) {
                     <FormItem>;
                       <FormLabel > Audience Size</FormLabel>;
                       <Select onValueChange={field.on_change} default_value={field.value}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         <FormControl>;
                           <SelectTrigger>;
                             <SelectValue placeholder="Select audience size" />;
@@ -662,7 +635,6 @@ if ( {) {
                     <FormItem>;
                       <FormLabel>Preferred Payout Method</FormLabel>;
                       <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-=======
                           <SelectItem value="under1k">Under 1, 000</SelectItem>;
                           <SelectItem value="1k - 10k">1, 000 - 10, 000</SelectItem>;
                           <SelectItem value="10k - 50k">10, 000 - 50, 000</SelectItem>;
@@ -680,7 +652,6 @@ if ( {) {
                     <FormItem>;
                       <FormLabel > Preferred Payout Method</FormLabel>;
                       <Select onValueChange={field.on_change} default_value={field.value}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         <FormControl>;
                           <SelectTrigger>;
                             <SelectValue placeholder="Select payout method" />;
@@ -711,7 +682,6 @@ if ( {) {
                         placeholder="Tell us about yourself and how you plan to promote Zion AI"
                         rows={4} 
                         {...field} 
-=======
                     </FormItem>)}
                 />;
               </div>;
@@ -761,7 +731,6 @@ if ( {) {
     </Card>);
 
 }
-=======
             </Button>
           </form>
         </Form>
@@ -770,4 +739,3 @@ if ( {) {
   )
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

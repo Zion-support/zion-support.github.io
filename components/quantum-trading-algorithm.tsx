@@ -102,7 +102,6 @@ const pricingPlans = [
     popular: false
   },];    features: ['Quantum algorithmsWhite-label solutionAPI accessDedicated supportCustom integrations']
     popular: false
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -191,9 +190,7 @@ import Layout from '../components/layout/Layout';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <a
               href='#pricing'
               className='inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold text-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105'>;
@@ -205,12 +202,10 @@ import Layout from '../components/layout/Layout';
               className='inline-flex items-center px-8 py-4 rounded-full border-2 border-green-500/30 text-green-400 font-semibold text-lg hover:bg-green-500/10 transition-all duration-300'>;
               <Phone className='w-5 h-5 mr-2' />              Contact Sales          >;
 
-=======
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <a
               href="#pricing"
               className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold text-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105">;
@@ -227,19 +222,15 @@ import Layout from '../components/layout/Layout';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
 
-=======
 
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -256,10 +247,8 @@ import Layout from '../components/layout/Layout';
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {features.map((feature, index) => (          >
-=======
             className="text-center mb-16"
           >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Revolutionary Trading Technology
             </h2>
@@ -270,8 +259,6 @@ import Layout from '../components/layout/Layout';
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='text-center mb-16'>;
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Revolutionary Trading Technology;
@@ -296,7 +283,6 @@ import Layout from '../components/layout/Layout';
               <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -309,7 +295,6 @@ import Layout from '../components/layout/Layout';
                   <CheckCircle className='w-6 h-6 text-white' />
                 </div>
                 <h3 className='text-lg font-semibold text-white mb-2'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {feature}
                 </h3>              </motion && motion.div>              >;
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">;
@@ -318,7 +303,6 @@ import Layout from '../components/layout/Layout';
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>;
               </motion && motion.div>;
 
-=======
                 className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-2xl p-6 hover:border-green-500/40 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
@@ -327,12 +311,9 @@ import Layout from '../components/layout/Layout';
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
               </motion.div>
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
           </div>;
@@ -340,31 +321,24 @@ import Layout from '../components/layout/Layout';
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Pricing Section */}
       <section id='pricing' className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section id="pricing" className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
 
-=======
 
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -381,10 +355,8 @@ import Layout from '../components/layout/Layout';
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (          >
-=======
             className="text-center mb-16"
           >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Choose Your Plan
             </h2>
@@ -395,8 +367,6 @@ import Layout from '../components/layout/Layout';
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='text-center mb-16'>;
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Choose Your Plan;
@@ -421,7 +391,6 @@ import Layout from '../components/layout/Layout';
               <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -514,20 +483,17 @@ import Layout from '../components/layout/Layout';
                   ))}
 
                       {feature}
-=======
 
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </li>
                   ))}
                 </ul>
 
                 <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   Get Started
                 </button>
               </motion.div>
@@ -548,21 +514,15 @@ import Layout from '../components/layout/Layout';
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Contact Section */}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -579,10 +539,8 @@ import Layout from '../components/layout/Layout';
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div          >
-=======
             className="text-center mb-16"
           >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Trading?
             </h2>
@@ -617,13 +575,9 @@ import Layout from '../components/layout/Layout';
             <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
@@ -636,10 +590,8 @@ import Layout from '../components/layout/Layout';
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>
               <p className='text-gray-300'>{contactInfo.mobile}</p>            </motion.div>            >
-=======
               className="text-center"
             >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
               </div>
@@ -647,8 +599,6 @@ import Layout from '../components/layout/Layout';
               <p className="text-gray-300">{contactInfo.mobile}</p>
             </motion.div>
             <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className='text-center'>;
               <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
                 <Phone className='w-8 h-8 text-white' />;
@@ -663,7 +613,6 @@ import Layout from '../components/layout/Layout';
             </motion && motion.div>;
 
             <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -676,10 +625,8 @@ import Layout from '../components/layout/Layout';
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>
               <p className='text-gray-300'>{contactInfo.email}</p>            </motion.div>            >
-=======
               className="text-center"
             >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Mail className="w-8 h-8 text-white" />
               </div>
@@ -687,8 +634,6 @@ import Layout from '../components/layout/Layout';
               <p className="text-gray-300">{contactInfo.email}</p>
             </motion.div>
             <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className='text-center'>;
               <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
                 <Mail className='w-8 h-8 text-white' />;
@@ -703,7 +648,6 @@ import Layout from '../components/layout/Layout';
             </motion && motion.div>;
 
             <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
@@ -716,10 +660,8 @@ import Layout from '../components/layout/Layout';
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Address</h3>
               <p className='text-gray-300'>{contactInfo.address}</p>            </motion.div>            >
-=======
               className="text-center"
             >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-white" />
               </div>
@@ -749,12 +691,8 @@ import Layout from '../components/layout/Layout';
     </Layout>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                     </span>;
                   </div>;
                 </div>;
@@ -872,17 +810,12 @@ import Layout from '../components/layout/Layout';
       </section>;
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
 }
-=======
 
     </Layout>
   );
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

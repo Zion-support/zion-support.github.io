@@ -5,10 +5,8 @@
       <h1 className="text - 2xl font - semibold mb - 4">SEO Landing Pages</h1>;
       {slugs.length === 0 ? (
 
-=======
 }
 
-=======
         <div className="text - sm text - gray - 500">Generated pages will appear once deployed.</div>) : (
         <ul className="list - disc ml - 5">;
           {slugs.map ((s) => (
@@ -16,14 +14,10 @@
         </ul>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   );
 };
 
-=======
             <li key={s}><a className="text-cyan-600" href={`/seo/${s}`}>{s}</Link></li>
           ))  } catch (error) {
     console.error("Error:", error);
@@ -45,5 +39,3 @@
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

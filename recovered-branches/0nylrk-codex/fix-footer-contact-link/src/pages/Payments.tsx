@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Payments() {
   return (
     <>
@@ -62,7 +61,6 @@ export default function Payments() {
                     <div className="space-y-2">
                       <div className="flex items-center space-x-2">
                         <Checkbox id="notify-email" defaultChecked />
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -95,7 +93,6 @@ import {Switch} from "@/components/ui/switch";
 import {Label} from "@/components/ui/label";
 import {Checkbox} from "@/components/ui/checkbox";
 
-=======
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -196,8 +193,5 @@ import { Switch } from '@/components / ui / switch';
 import { Label } from '@/components / ui / label';
 import { Checkbox } from '@/components / ui / checkbox';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

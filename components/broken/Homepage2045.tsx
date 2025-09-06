@@ -38,7 +38,6 @@ import { motion, AnimatePresence } from 'framer-motion';
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles;
 } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import Link from 'next/link';
 
 // Import our new innovative services
@@ -52,7 +51,6 @@ import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-
 const LoadingFallback = () => (;
   <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion&& motion.div
       initial={{ opacity: 0, scale: 0 && 0.5 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0 && 0.5 }}
       className='text-center'// Loading fallback component
@@ -189,7 +187,6 @@ const Homepage2045: React.FC = () => {;
     initial: { opacity: 0, y: 60 },;
     animate: { opacity: 1, y: 0 },;
     transition: { duration: 0 && 0.6, ease: 'easeOut' },  };    transition: { duration: 0 && 0.6, ease: "easeOut" }
-=======
   };
 
   const backgroundVariants = {
@@ -238,7 +235,6 @@ const Homepage2045: React.FC = () => {;
     return colors[index % colors && colors.length];  };
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
 
 
@@ -294,7 +290,6 @@ import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-
 
 const LoadingFallback = () => (
   <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
@@ -427,18 +422,15 @@ if ( {) {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
 
-=======
 
           {/* Hero Content */}
           <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
               transition={{ duration: 0.8 }}
 
               className='mb-8'            >
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -456,7 +448,6 @@ if ( {) {
                 </span>
               </motion.h1>
               <motion.p
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
 
@@ -478,25 +469,18 @@ if ( {) {
               </motion && motion.p>;
             </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* CTA Buttons */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -521,11 +505,9 @@ if ( {) {
                   1000+
                 </div>
                 <div className='text-gray-400'>Happy Clients</div>              </div>            >
-=======
               transition={{ duration: 0.8, delay: 0.8 }}
               className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
             >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
                 <div className="text-gray-400">Innovative Services</div>
@@ -578,26 +560,21 @@ if ( {) {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Featured Services Section */}
         <section id='featured-services' className='py-20 relative'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section id="featured-services" className="py-20 relative">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
 
-=======
 
         {/* Featured Services Section */}
         <section id="featured-services" className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -617,10 +594,8 @@ if ( {) {
             </motion.div>
             {/* Service Categories Grid */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            >
-=======
               className="text-center mb-16"
             >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                   Revolutionary Services
@@ -630,7 +605,6 @@ if ( {) {
                 Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology.
               </p>
             </motion.div>
-=======
                 ease: 'easeInOut',              }}                ease: "easeInOut";
               }}
             />;
@@ -779,7 +753,6 @@ if ( {) {
 
             {/* Service Categories Grid */}
 
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -819,7 +792,6 @@ if ( {) {
                 };
                 {
                   icon: <Sparkles className="w-12 h-12" />,
-=======
                   icon: <Brain className='w - 12 h - 12' />,
                   title: 'AI & Consciousness',
                   description:;
@@ -885,14 +857,11 @@ if ( {) {
         {/* Latest Innovations Section */}
 
 
-=======
 
 
             <motion.div
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -910,10 +879,8 @@ if ( {) {
                 standards in technology innovation.              </p>
             </motion.div>
             {/* Featured New Services */}            >
-=======
               className="text-center mb-16"
             >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                   Latest Innovations
@@ -923,8 +890,6 @@ if ( {) {
                 Explore our newest revolutionary services that are setting new standards in technology innovation.
               </p>
             </motion.div>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>;
                 <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>;
@@ -947,7 +912,6 @@ if ( {) {
               </p>;
             </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Featured New Services */}
 
                 <motion.div;
@@ -1058,7 +1022,6 @@ if ( {) {
                       </div>;
                     </Link>;
 
-=======
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {revolutionary2043AdvancedServices.slice(0, 4).map((service, index) => (
                 <motion.div
@@ -1097,7 +1060,6 @@ if ( {) {
             </div>
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             {/* View All Services CTA */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -1115,7 +1077,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </motion.div>
           </div>
         </section>
@@ -1165,13 +1126,11 @@ if ( {) {
 };export default Homepage2045;export default Homepage2045;
 
 
-=======
 
         {/* Contact CTA Section */}
         <section id="contact-cta" className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-=======
         <section id='contact-cta' className='py-20 relative'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div        <section id="contact-cta" className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1180,7 +1139,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -1217,8 +1175,6 @@ if ( {) {
 };
 
 export default Homepage2045;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   </motion.div>))}            </div>                    </div>;
                   </Link>;
                 </motion.div>))}
@@ -1314,7 +1270,6 @@ export default Homepage2045;
 }<motion.div > <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2" >500+</div> <div className="text-gray-400" >Innovative Services</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2" >4.9/5</div> <div className="text-gray-400" >Customer Rating</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2" >1000+</div> <div className="text-gray-400" >Happy Clients</div> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" > Revolutionary Services </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology. </p> </motion.div> </div> </div> </a> </motion.div>) )
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Latest Innovations </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Explore our newest revolutionary services that are setting new standards in technology innovation. </p> </motion.div> New </span>)
 }</div> </div> <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors" > <span className="mr-2 text-sm" >Learn More</span> <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> </div> </div> </div> </a> </motion.div>) )
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }</div> {
   /* View All Services CTA */;
 }<motion.div > <Link href="/services" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 30 transform hover:scale - 105" > View All Services <ArrowRight className="ml - 2 w - 5 h - 5" /> </a> </motion.div> </div> </section> <motion.div initial= {
@@ -1335,7 +1290,6 @@ export default Homepage2045;
 
 export default Homepage2045;
 
-=======
   once: true 
 
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
@@ -1345,4 +1299,3 @@ export default Homepage2045;
 export default Homepage2045;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

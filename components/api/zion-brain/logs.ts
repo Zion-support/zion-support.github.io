@@ -35,7 +35,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 
-=======
 import { read_logs } from '@/utils / zion_brain';
 function is_authorized (req: NextApiRequest): boolean {
   const token = req.headers['x - admin - token'] || req.query.token;
@@ -89,11 +88,7 @@ if ( {) {
   }
 return res.status (200).json ({ entries: entries.slice (-200), by_module, by_type, total: entries.length });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
   const byModule: Record<string, number> = {};
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

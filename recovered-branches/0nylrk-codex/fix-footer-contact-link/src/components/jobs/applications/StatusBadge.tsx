@@ -9,7 +9,6 @@ interface StatusBadgeProps {;
 
 export function StatusBadge(): any ({ status }: StatusBadgeProps) {;
   switch (status) {;
-=======
 import { ApplicationStatus  } from '@/types / jobs';
 import { Badge  } from '@/components / ui / badge';
 interface StatusBadgeProps {
@@ -39,10 +38,7 @@ function StatusBadge() {
       return <Badge variant="outline">{status}</Badge>;
   }
 }
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 import { ApplicationStatus } from "@/types/jobs",
 import { Badge } from "@/components/ui/badge",

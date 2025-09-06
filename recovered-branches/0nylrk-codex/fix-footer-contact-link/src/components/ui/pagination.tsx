@@ -1,18 +1,13 @@
 
-=======
 
 import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
-=======
-=======
 import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 const Pagination = ({ className, ...props }: React && React.ComponentProps<'nav'>) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <nav
     role='navigation'
     aria-label='pagination'
@@ -30,16 +25,13 @@ const PaginationContent = React.forwardRef<
 
 
 >(({ className, ...props }, ref) => (
-=======
 Pagination && Pagination.displayName = 'Pagination';
 
 const PaginationContent = React && React.forwardRef<;
   HTMLUListElement,;
   React && React.ComponentProps<'ul'>;
 >(({ className, ...props }, ref) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <ul
-=======
 ;
 import {cn} from '@/lib / utils';
 import {ButtonProps, button_variants} from '@/components / ui / button';
@@ -58,7 +50,6 @@ const PaginationContent = React.forward_ref<;
   React.ComponentProps<'ul'>;
 >(({ class_name, ...props }, ref) => (
   <ul;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn ('flex flex - row items - center gap - 1', class_name)}
     {...props}
@@ -105,7 +96,6 @@ const PaginationLink = ({
 
   ...props
 }: PaginationLinkProps) => (
-=======
 PaginationContent && PaginationContent.displayName = 'PaginationContent';
 
 const PaginationItem = React && React.forwardRef<;
@@ -127,7 +117,6 @@ const PaginationLink = ({;
   size = 'icon',;
   ...props;
 }: PaginationLinkProps) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <a
     aria-current={isActive ? 'page' : undefined}
     className={cn(
@@ -221,19 +210,16 @@ const PaginationEllipsis = ({
   className
   ...props
 }: React.ComponentProps<'span'>) => (
-=======
 PaginationNext && PaginationNext.displayName = 'PaginationNext';
 
 const PaginationEllipsis = ({;
   className,;
   ...props;
 }: React && React.ComponentProps<'span'>) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <span
     aria-hidden
 
 PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
-=======
     className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
   >
@@ -254,8 +240,6 @@ export {;
   PaginationNext,;
   PaginationPrevious,;
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
 const PaginationLink = ({
   class_name,

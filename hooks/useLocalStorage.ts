@@ -10,10 +10,7 @@ interface UseLocalStorageProps {
   // Add props here as needed
 }
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 };
 
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
@@ -22,10 +19,8 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
 
 
 
-=======
 }
 export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {const [storedValue, setStoredValue] = useState<T>(() => {;
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     try {;
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) :initialValue} catch (error) {console.error(`Error reading localStorage key "${key}":`, error);
@@ -69,45 +64,32 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
 
   };
   return [storedValue, setValue] as const};
-=======
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 };
 };
 
 
 };
-=======
 
 
 
-=======
 }
 
 
-=======
 }
 
-=======
 
 
 }
 }
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
       console.error(`Error setting localStorage key "${key}":`, error)}
   }
   return [storedValue, setValue] as const}
-=======
 
 ;
 
-=======
       console.error(`Error setting localStorage key "${key}":`, error)};
   };
   return [storedValue, setValue] as const};
@@ -118,5 +100,3 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
 };
 export default useLocalStorage;
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

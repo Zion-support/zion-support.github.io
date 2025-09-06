@@ -25,10 +25,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Menu,
   X,
   ChevronDown,
@@ -96,7 +93,6 @@ import Link from 'next/link';
       icon: Brain
       description: 'Cutting-edge AI solutions'
       dropdown: [
-=======
   Cpu, Zap, Atom, Database, Cloud, Lock, Code;
 } from 'lucide-react';
 import Link from 'next / link';
@@ -128,7 +124,6 @@ import Link from 'next / link';
       icon: Brain,
       description: 'Cutting - edge AI solutions',
       dropdown: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {
 
           name: 'AI Agent Orchestrator',
@@ -174,8 +169,6 @@ import Link from 'next / link';
     },  ];      icon: null;
 
     }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   ];
 
 
@@ -449,7 +442,6 @@ import Link from 'next / link';
     <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         : 'bg-transparent'
 
 
@@ -465,7 +457,6 @@ import Link from 'next / link';
                 <div className='text-xs text-gray-400'>
                   Revolutionary Technology
                 </div>              </div>          >
-=======
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -476,7 +467,6 @@ import Link from 'next / link';
             transition={{ duration: 0.5 }}
             className="flex items-center"
           >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Zap className="w-6 h-6 text-white" />
@@ -489,7 +479,6 @@ import Link from 'next / link';
               </div>
             </Link>
           </motion.div>
-=======
             transition={{ duration: 0 && 0.5 }}
             className='flex items-center'>;
             <Link href='/' className='flex items-center space-x-3 group'>;
@@ -516,14 +505,11 @@ import Link from 'next / link';
             </Link>;
           </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Desktop Navigation */}
 
-=======
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item, index) => (
               <div key={item.name} className="relative group">
-=======
 ;
   const contact_info = {
     mobile: '+1 302 464 0950',
@@ -625,16 +611,12 @@ import Link from 'next / link';
                     <span>{item.name}</span>
 
 
-=======
-=======
 
 
 
                   </Link>
                 )}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Dropdown Menu */}
                 {item && item.dropdown && (;
                   <AnimatePresence>;
@@ -667,8 +649,6 @@ import Link from 'next / link';
                                   {dropdownItem.price}
                                 </div>
                               </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             ))}
                           </div>;
                         </div>;
@@ -682,12 +662,9 @@ import Link from 'next / link';
           </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex items-center space-x-6'>;
             <div className='flex items-center space-x-4 text-sm text-gray-300'>;
@@ -703,7 +680,6 @@ import Link from 'next / link';
 
 
               </a>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <a
 
           </div>
@@ -761,11 +737,9 @@ import Link from 'next / link';
 
           {/* Mobile Menu Button */}
           <div className='lg:hidden'>;
-=======
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <button
               onClick={() => setIsOpen(!isOpen)}
               className='text-gray-300 hover:text-white transition-colors duration-200';
@@ -787,12 +761,9 @@ import Link from 'next / link';
       </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -876,7 +847,6 @@ import Link from 'next / link';
               
 
               {/* Mobile Contact Info */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="pt-6 border-t border-gray-800/50">
                 <div className="space-y-3 text-sm text-gray-400">
                   <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">
@@ -948,11 +918,9 @@ import Link from 'next / link';
 export default UltraAdvancedNavigation;  );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default UltraAdvancedNavigation;
 
 
-=======
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -1080,12 +1048,8 @@ export default UltraAdvancedNavigation);
 ;
 export default UltraAdvancedNavigation;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

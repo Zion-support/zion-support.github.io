@@ -110,9 +110,7 @@ export default function EnhancedFooter() {
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github }
 
   ];
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -132,7 +130,6 @@ export default function EnhancedFooter() {
 
             </p>
             <div className="flex space-x-4">
-=======
     <footer className="bg-gray-900 text-white">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
@@ -147,7 +144,6 @@ export default function EnhancedFooter() {
               their digital presence.;
             </p>;
             <div className="flex space-x-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <a
                 href="#"
                 className="text-gray-400 hover:text-white transition-colors">;
@@ -162,7 +158,6 @@ export default function EnhancedFooter() {
                 href="#"
                 className="text-gray-400 hover:text-white transition-colors">;
                 <Github className="h-5 w-5" />;
-=======
 import React from './react';
 import Link from './next / link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github  } from './lucide-react';
@@ -299,7 +294,6 @@ function EnhancedFooter() {
                 className="text - gray - 400 hover:text - white transition - colors";
               >;
                 <Github className="h - 5 w - 5" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </a>;
             </div>;
           </div>;
@@ -411,7 +405,6 @@ function EnhancedFooter() {
               <div className="flex items-center space-x-2">;
                 <MapPin className="h-4 w-4 text-gray-400" />;
                 <span className="text-gray-300">New York, NY</span>;
-=======
           <div className="space - y-4">;
             <h3 className="text - lg font - semibold">Contact</h3>;
             <div className="space - y-2">;
@@ -456,20 +449,14 @@ function EnhancedFooter() {
         </div>;
       </div>;
 
-=======
 
-=======
     </footer>);
 }
 ;
 export default EnhancedFooter;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 };
 
 export default EnhancedFooter;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

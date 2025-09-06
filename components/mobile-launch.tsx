@@ -13,8 +13,6 @@ function StarIcon({
   );
 function AppleBadge({ href }: { href: string }) {
     >
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 // Simple icons using inline SVG to avoid external assets;
 function StarIcon(): any ({;
@@ -31,7 +29,6 @@ function StarIcon(): any ({;
 function AppleBadge(): any ({ href }: { href: string }) {;
 
     >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <svg
         width='24'
         height='24'
@@ -108,11 +105,9 @@ function SmartBanner(): any ({;
 }) {  const [visible, setVisible] = useState(false);// Simple icons using inline SVG to avoid external assets;
 function StarIcon(): any ({ className = 'w-5 h-5 text-yellow-500' }: { className?: string }) {;
 
-=======
 // Simple icons using inline SVG to avoid external assets
 function StarIcon({ className = 'w-5 h-5 text-yellow-500' }: { className?: string }) {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
 
 import Head from 'next / head';
@@ -340,7 +335,6 @@ function GoogleBadge(): any ({ href }: { href: string }) {;
 
 function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string, androidUrl: string, deepLink: string }) {;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [visible, setVisible] = useState(false);
   useEffect(() => {;
     if (typeof window === 'undefined') return;
@@ -387,14 +381,12 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
               }}
               className='text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800'            >  }, []);
 
-=======
     const ua = navigator.userAgent || '';
     const isMobile = /iPhone|iPad|iPod|Android/i.test(ua);
     if (isMobile) setVisible(true)
   }, []);
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (!visible) return null;
   const isIOS = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i && i.test(navigator && navigator.userAgent);
   const storeUrl = isIOS ? iosUrl : androidUrl;
@@ -425,7 +417,6 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
   'https://apps.apple.com/app/id0000000000';
@@ -486,7 +477,6 @@ export default function MobileLaunchPage() {;
     return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;  }, []);  }, []);
   const qrHref = useMemo(() => {
     const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window !== 'undefined' ? `${window.location.origin}/download` : '/download');
-=======
 const IOS_APP_URL =;
   process && process.env.NEXT_PUBLIC_IOS_APP_URL ||;
   'https://apps && apps.apple.com/app/id0000000000';
@@ -535,7 +525,6 @@ export default function MobileLaunchPage() {;
       4000;
     );
     return () => clearInterval(t);
-=======
               onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }}
               className="text-xs px-2 py-1 rounded-md hover: bg-gray-100 dark:hover:bg-gray-800"
             >
@@ -576,7 +565,6 @@ export default function MobileLaunchPage() {
     const encoded = encodeURIComponent(target);
     return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, []);
 
   const qrHref = useMemo(() => {;
@@ -590,7 +578,6 @@ export default function MobileLaunchPage() {
 
   const qrHref = useMemo(() => {;
     const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window !== 'undefined' ? `${window && window.location.origin}/download` : '/download');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const encoded = encodeURIComponent(target);
     return `https://chart && chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;
   }, []);
@@ -615,10 +602,8 @@ export default function MobileLaunchPage() {
 
       setError(err?.message || 'Something went wrong.');    }      if (!res && res.ok) throw new Error(await res && res.text());
 
-=======
       const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) }),
       if (!res.ok) throw new Error(await res.text());
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       setStatus('success');
       setEmail('');
     } catch (err: any) {;
@@ -626,18 +611,15 @@ export default function MobileLaunchPage() {
 
       setError(err?.message || 'Something went wrong.');
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    }
-  }
-=======
-
-
     }
   }
 
 
+    }
+  }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
   return (
 
 
@@ -717,7 +699,6 @@ export default function MobileLaunchPage() {
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Email opt-in */}
 
 
@@ -734,7 +715,6 @@ export default function MobileLaunchPage() {
 
 
           >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>;
         </form>;
@@ -790,7 +770,6 @@ export default function MobileLaunchPage() {
       <section className="mt-10 text-sm opacity-80">;
         <div className="flex flex-wrap items-center gap-4">;
           <Link href="/open-app"><a className="underline">Deep link: /open-app</a></Link>;
-=======
                   </div>                </div>        <h2 className="mt - 2 text - xl font - semibold">Why people love the Zion app</h2>;
         <div className="relative mt - 4 overflow - hidden">;
           <div className="flex transition - transform duration - 700" style={{ transform: `translate_x (-${idx * 100}%)`, width: `${testimonials.length * 100}%` }}>;
@@ -885,7 +864,6 @@ export default function MobileLaunchPage() {
   status === 'loading' ? 'Submitting…' : 'Notify me' ;
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
 
-=======
     </EnhancedLayout>);
 ;
 }return (<EnhancedLayout> <Head> <title > Zion Mobile App — iOS & Android</title> <meta name="description" content="Hire from anywhere, AI - match instantly, and track milestones on the go with the Zion app." /> <link rel="canonical" href="/download" /> <meta property="og:title" content="Zion Mobile App" /> <meta property="og:description" content="Hire from anywhere. AI - match instantly. Track milestones on the go." /> </Head> <SmartBanner ios_url= {
@@ -901,11 +879,6 @@ export default function MobileLaunchPage() {
 }</div> </div> </section> <input type="email" required > {
   status === 'loading' ? 'Submitting…' : 'Notify me';
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

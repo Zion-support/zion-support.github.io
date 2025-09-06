@@ -1,5 +1,4 @@
 
-=======
 
 
 import {useEffect, useState} from 'react';
@@ -76,12 +75,10 @@ if ( {) {
     } else {
 
 
-=======
     }
 
   };
 
-=======
 import { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -134,14 +131,12 @@ export default function TokenManager() {;
         description: err && err.error || 'Failed',;
         variant: 'destructive';
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -166,7 +161,6 @@ export default function TokenManager() {;
             </Card>;
 
             <Tabs defaultValue="history">;
-=======
       const err = await res.json ();
       toast ({
         title: 'Error',

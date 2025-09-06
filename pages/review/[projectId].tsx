@@ -28,7 +28,6 @@ type Props = {
 
 const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (!valid) {
     return (
       <main className="max-w-2xl mx-auto p-6">
@@ -62,7 +61,6 @@ const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid,
       valid,;
       reason: valid ? null : "Invalid reviewer for this project",;
     },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } as any;
 
 }
@@ -70,7 +68,6 @@ const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid,
 export default ReviewSubmitPage;
 
 
-=======
         project_id,
         from_role: role,
         from_id,
@@ -95,7 +92,6 @@ export default ReviewSubmitPage;
 
 };
 
-=======
   )
 },
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
@@ -137,7 +133,5 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ReviewSubmitPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

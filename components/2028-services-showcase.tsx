@@ -44,7 +44,6 @@ import {
   Building, Factory, Camera, Video, Music, Gamepad2
  } from 'lucide-react';
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -75,7 +74,6 @@ import { motion } from 'framer-motion';
 
 
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
@@ -109,7 +107,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
             </p>;
 
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Link
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2">;
@@ -120,14 +117,11 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                 href="/revolutionary-2028-pricing"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
             </div>
           </motion.div>
         </div>
       </section>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2">;
                 <span>View Pricing</span>;
                 <DollarSign className="w-5 h-5" />;
@@ -168,7 +162,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Services Categories */}
 
       <section className="py-20 bg-black/50">
@@ -187,7 +180,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.title}
-=======
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
                 Service Categories;
               </span>;
@@ -212,7 +204,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                 key={category && category.title}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -225,7 +216,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Link
 
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
@@ -238,7 +228,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                 </div>
               </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -246,12 +235,9 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Featured Services */}
 
 
@@ -296,7 +282,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
-=======
                         {service && service.growthRate}
                       </div>;
                     </div>;
@@ -304,7 +289,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                     <div className='flex items-center justify-between'>;
                       <Link
 
-=======
                         href={service.link}
                         className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                       >
@@ -319,7 +303,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                 </div>
               </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -327,21 +310,15 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Market Analysis */}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
@@ -370,7 +347,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
             </motion && motion.div>;
 
             <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -399,7 +375,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
             </motion && motion.div>;
 
             <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
@@ -412,19 +387,15 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion&& motion.div
 
-=======
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -433,7 +404,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Ready to{' '}
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
                 Transform;
@@ -459,11 +429,8 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                 href='/case-studies'
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div            </h2>;
             <p className="text - xl text - purple - 200 max - w-3xl mx - auto">;
               Understand the market dynamics and growth potential of our futuristic services.;
@@ -610,16 +577,11 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
       <UltraFuturisticFooter2028 />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
-=======
 
     </>
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

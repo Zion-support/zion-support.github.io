@@ -53,12 +53,10 @@ export function ZapierIntegration() {;
             
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="space-y-4">
               <div className="space-y-2">
                 <label className="text-sm font-medium">Your Zion API Key</label>
                 <div className="flex gap-2">
-=======
     toast && toast.success("API key copied to clipboard");
   };
 
@@ -70,7 +68,6 @@ export function ZapierIntegration() {;
             <div className="flex items-center justify-between">;
               <h3 className="text-lg font-semibold">Zapier Connection</h3>;
               <Badge variant="outline" className="bg-blue-100 text-blue-800">;
-=======
 import React, { useState } from './react';
 import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';
@@ -105,7 +102,6 @@ function ZapierIntegration() {
             <div className="flex items - center justify - between">;
               <h3 className="text - lg font - semibold">Zapier Connection</h3>;
               <Badge variant="outline" className="bg - blue - 100 text - blue - 800">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Active;
               </Badge>;
             </div>;
@@ -116,7 +112,6 @@ function ZapierIntegration() {
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Card>
           <CardHeader>
             <h3 className="text-lg font-semibold">Popular Zaps</h3>
@@ -154,7 +149,6 @@ function ZapierIntegration() {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>
         <CardHeader>
           <h3 className="text-lg font-semibold">Zapier Webhook Triggers</h3>
@@ -169,7 +163,6 @@ function ZapierIntegration() {
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div className="grid md: grid-cols-3 gap-4">
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Job Posted</h4>
@@ -185,7 +178,6 @@ function ZapierIntegration() {
             
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Application</h4>
               <p className="text-xs text-muted-foreground mb-3">
@@ -200,7 +192,6 @@ function ZapierIntegration() {
             
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">Contract Signed</h4>
               <p className="text-xs text-muted-foreground mb-3">
@@ -215,11 +206,9 @@ function ZapierIntegration() {
       </Card>
     </div>
 
-=======
 
 
 
-=======
             <p className="text - sm text - muted - foreground mb - 4">;
               Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
               to set up integrations.;
@@ -241,7 +230,6 @@ function ZapierIntegration() {
                     {copied ? (
                       <Check className="h - 4 w - 4" />) : (
                       <Copy className="h - 4 w - 4" />)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </Button>;
                 </div>;
               </div>;
@@ -343,9 +331,6 @@ function ZapierIntegration() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
-=======
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

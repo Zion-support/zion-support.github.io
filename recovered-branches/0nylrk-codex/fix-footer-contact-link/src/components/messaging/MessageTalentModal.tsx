@@ -1,5 +1,4 @@
 
-=======
 
 
 
@@ -13,7 +12,6 @@ import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
 
 
-=======
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -32,7 +30,6 @@ import { TalentProfile } from "@/types/talent",
 import { toast } from "@/components/ui/use-toast",
 import { useNavigate } from "react-router-dom",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export interface MessageTalentModalProps {
 
   talent: TalentProfile
@@ -50,7 +47,6 @@ export interface MessageTalentModalProps {
   const { createConversation } = useMessaging(),
   const navigate = useNavigate(),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [message, setMessage] = useState(
     jobTitle
       ? `Hi ${talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`
@@ -68,7 +64,6 @@ export interface MessageTalentModalProps {
         title: "Message required"
         description: "Please enter a message before sending."
         variant: "destructive"
-=======
   const [message, setMessage] = useState(;
     jobTitle ;
       ? `Hi ${talent && talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`;
@@ -82,7 +77,6 @@ export interface MessageTalentModalProps {
         title: "Message required",;
         description: "Please enter a message before sending.",;
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
     }
@@ -138,7 +132,6 @@ function MessageTalentModal() {
       await create_conversation (
 
         talent.user_id;
-=======
 
     try {;
       setIsSubmitting(true);
@@ -153,7 +146,6 @@ function MessageTalentModal() {
       // Create conversation with this talent;
       await createConversation(;
         talent && talent.user_id;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         message;
 
     try {
@@ -199,7 +191,6 @@ function MessageTalentModal() {
       setIsSubmitting(false)
 
 
-=======
     }
 
   },
@@ -294,7 +285,6 @@ export function MessageTalentModal({;
       });
     } finally {;
       setIsSubmitting(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
@@ -318,7 +308,6 @@ export function MessageTalentModal({;
             Send a direct message to start a conversation.
             {talent.professional_title && (
               <span className="block mt-1 text-zion-cyan">{talent.professional_title}</span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
 
           </DialogDescription>;
@@ -336,7 +325,6 @@ export function MessageTalentModal({;
               rows={5}
 
               className="w-full bg-zion-blue-dark/30 border-zion-purple/20 text-white focus:ring-zion-purple";
-=======
         job_title ? 'job' : 'talent';
         talent.id;
         context_data);
@@ -417,7 +405,5 @@ export function MessageTalentModal({;
     </Dialog>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

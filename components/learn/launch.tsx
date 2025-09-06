@@ -9,7 +9,6 @@ import { GetServerSideProps } from 'next';
 export default function LaunchRedirect() {;
   return null;
 }
-=======
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
@@ -39,9 +38,7 @@ function LaunchRedirect() {
   return null;
 }
 
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

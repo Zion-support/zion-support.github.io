@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Mock data for demonstration
 
 const jobsData = [
@@ -15,7 +14,6 @@ import {BrowseFilters} from "../components/browse/BrowseFilters";
 import {BrowseCards} from "../components/browse/BrowseCards";
 import {Button} from "@/components/ui/button";
 import {useAuth} from "@/hooks/useAuth";
-=======
 
     id: "1",
     title: "Senior React Developer",
@@ -206,7 +204,6 @@ const talentsData = [;
 ];
 
 export function MobileBrowse() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
@@ -241,7 +238,6 @@ export function MobileBrowse() {;
             className="rounded-full"
             onClick={() => setBrowseType("talents")}
 
-=======
 import React, { useState } from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
@@ -366,7 +362,6 @@ function MobileBrowse() {
         <BrowseCards;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           items={browseType === "jobs" ? jobsData : talentsData}
           type={browseType}
           onViewDetails={handleViewDetails}
@@ -379,7 +374,6 @@ function MobileBrowse() {
   );
 }
 
-=======
       <BrowseFilters type={browse_type} />;
       <div className="py - 4 px - 4">;
         <BrowseCards;
@@ -391,4 +385,3 @@ function MobileBrowse() {
       <BottomNavigation />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

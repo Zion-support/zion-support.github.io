@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ActiveFiltersBarProps {
 
   selectedProductTypes: string[]
@@ -82,14 +81,12 @@ export function ActiveFiltersBar(): any ({;
         <ClickableBadge
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={onClearSearch}>;
-=======
 
         <ClickableBadge 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
 
           onClick={onClearSearch}
         >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           Search: {searchQuery}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
@@ -149,7 +146,6 @@ export function ActiveFiltersBar(): any ({;
   );
 }
 
-=======
 import React from './react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';
 import { X } from './lucide-react';
@@ -226,4 +222,3 @@ if (return null) {
         </ClickableBadge>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

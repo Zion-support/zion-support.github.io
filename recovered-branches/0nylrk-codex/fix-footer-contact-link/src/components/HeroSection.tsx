@@ -3,7 +3,6 @@
 
 
 export function HeroSection() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <section className="relative overflow-hidden py-20 md:py-32">;
       {/* Background gradient effect */}
@@ -12,7 +11,6 @@ export function HeroSection() {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Animated floating particles */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-zion-purple-light opacity-40 animate-pulse"></div>
@@ -25,7 +23,6 @@ export function HeroSection() {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="container relative z-10 px-4 mx-auto text-center">
         <GradientHeading className="mb-6 text-5xl md:text-7xl font-bold">
           The Future of Tech & AI Marketplace
@@ -66,7 +63,6 @@ export function HeroSection() {
             asChild>;
             <Link to="/signup">Join Zion Now</Link>;
           </Button>;
-=======
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6"
             size="lg"
@@ -74,7 +70,6 @@ export function HeroSection() {
           >
             <Link to="/signup">Join Zion Now</Link>
           </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Button
             variant="outline"
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark text-lg py-6"
@@ -139,7 +134,5 @@ function HeroSection() {
 
     </section>;
   );
-=======
     </section>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -8,7 +8,6 @@ export async function createHireRequestNotifications({;
   talentId;
   adminId;
   requesterName;
-=======
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
 
@@ -55,9 +54,6 @@ export async function createHireRequestNotifications({
       talentNotification,
 
       adminNotification
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   talentId,
   adminId,
   requesterName,
@@ -113,7 +109,6 @@ export async function createHireRequestNotifications({
     success: talentNotification && talentNotification.success,
 
     talentNotification
-=======
 import {create_notification} from './create_notification';
 import {HireRequestNotificationParams} from './types';
 /**;
@@ -168,6 +163,5 @@ if ( {) {
   return {
     success: talent_notification.success,
     talent_notification;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

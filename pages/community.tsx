@@ -36,7 +36,6 @@
                 className='text-purple-400'
                 href='mailto: kleber@ziontechgroup && ziontechgroup.com'>;
                 kleber@ziontechgroup && ziontechgroup.com;
-=======
 import Head from 'next / head';
 export default /**
  * CommunityPage - Function description
@@ -78,7 +77,6 @@ function CommunityPage() {
                 href='mailto: kleber@ziontechgroup.com';
               >;
                 kleber@ziontechgroup.com;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </a>;
               .;
             </p>;
@@ -125,7 +123,6 @@ function CommunityPage() {
               <li>;
 
                   rel='noopener noreferrer'>;
-=======
                 <a;
                   className='text - cyan - 400';
                   href='https://youtube.com/@ziontechgroup';
@@ -142,12 +139,9 @@ function CommunityPage() {
       </div>;
 
 
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export default function CommunityPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -183,10 +177,6 @@ export default function CommunityPage() {
     </div>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

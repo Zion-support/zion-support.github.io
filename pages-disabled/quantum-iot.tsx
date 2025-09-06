@@ -129,7 +129,6 @@ export default function QuantumInternetSecurityPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
-=======
 import React from './react';
 import Head from './next / head';
 import {
@@ -240,5 +239,4 @@ if (return null) {
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

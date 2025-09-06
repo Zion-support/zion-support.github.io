@@ -24,13 +24,9 @@ const features = [
   {
 
 
-=======
 export default function GovernmentSolutions() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/government.tsx
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout
       title="Government Solutions - Zion Tech Group"
@@ -78,7 +74,6 @@ export default function GovernmentSolutions() {;
               </p>
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
@@ -93,7 +88,6 @@ export default function GovernmentSolutions() {;
                     {feature.description}
                   </p>
                 </div>
-=======
         <section className="bg-gradient-to-r from-gray-700 to-blue-800 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center">;
@@ -283,7 +277,6 @@ export default function GovernmentSolutions() {;
                     {feature && feature.description}
                   </p>;
                 </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/government.tsx
               ))}
             </div>,;
           </div>;
@@ -475,7 +468,6 @@ export default function GovernmentSolutions() {;
                 </button>;
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
                   Download Government Guide;
-=======
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-gray-700 to-blue-800 p-8 rounded-xl text-white">;
@@ -487,7 +479,6 @@ export default function GovernmentSolutions() {;
                 <button className="bg-white text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">;
                   Schedule Consultation;
                   <ArrowRight className="w-5 h-5 ml-2" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/government.tsx
                 </button>;
               </div>;
             </div>;
@@ -495,11 +486,8 @@ export default function GovernmentSolutions() {;
         </section>;
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
@@ -526,9 +514,7 @@ export default function GovernmentSolutions() {;
       </div>
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   );
-=======
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">;
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
@@ -560,4 +546,3 @@ export default function GovernmentSolutions() {;
     </>;
   ),;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/government.tsx

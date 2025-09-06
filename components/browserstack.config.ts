@@ -16,7 +16,6 @@
     {
       name: Mobile Chrome',      use: {
         browserName: chromium',        ...devices['Pixel 5']}
-=======
 import { define_config, devices } from @playwright / test';
 default define_config ({
   test_dir: tests / e2e',  use: {
@@ -36,7 +35,6 @@ default define_config ({
     {
       name: Mobile Chrome',      use: {
         browser_name: chromium',        ...devices['Pixel 5']}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     {
       name: Mobile Safari',      use: {
@@ -46,12 +44,8 @@ default define_config ({
 
 });
 
-=======
   reporter: [;
     ['list'],    ['html', { output_folder: playwright - logs / html - report', open: never' }]];
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

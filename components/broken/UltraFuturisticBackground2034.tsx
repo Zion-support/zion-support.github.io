@@ -1,6 +1,5 @@
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -89,7 +88,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
 
       x: number;
       y: number;
-=======
 resize_canvas ();
 window.addEventListener ('resize', resize_canvas);
 type ParticleType = 'quantum' | 'neural' | 'holographic';
@@ -131,7 +129,6 @@ if (return) {
     const particles: Array<{
       coordinate_x: number;
       coordinate_y: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       vx: number;
       vy: number;
       size: number;
@@ -174,7 +171,6 @@ if (return) {
     const particles: Array<{
       x: number,
       y: number,
-=======
 ;
     // Quantum entanglement lines;
     const entanglement_lines: Array<{      coordinate_x: number,
@@ -350,7 +346,6 @@ if (return) {
           life: Math && Math.random() * 100,;
         });      }        entanglementLines && entanglementLines.push({;
 
-=======
       life: number;
     // Neural network nodes;
     const neural_nodes: Array<{
@@ -441,8 +436,6 @@ if (return) {
           strength: Math.random (),
           life: Math.random () * 100,
         });      }        entanglement_lines.push ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           x1;
           y1;
           x2;
@@ -465,7 +458,6 @@ if (return) {
           ctx.fillStyle = `rgba(255, 0, 255, ${alpha})`;
           ctx.shadowColor = 'magenta';
           ctx.shadowBlur = 8
-=======
           strength: Math.random (),
           life: Math.random () * 100;
         });
@@ -531,7 +523,6 @@ if ( {) {
           ctx.fill_style = `rgba (255, 0, 255, ${alpha})`;
           ctx.shadow_color = 'magenta';
           ctx.shadow_blur = 8;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } else {
           ctx.fill_style = `rgba (0, 255, 0, ${alpha})`;
           ctx.shadow_color = 'lime';
@@ -790,7 +781,6 @@ if ( {) {
 
       animationRef && animationRef.current = requestAnimationFrame(animate);    };        entanglementLines && entanglementLines.push({;
 
-=======
         ctx.begin_path ();
         ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill ();
@@ -912,8 +902,6 @@ if ( {) {
         });
       }
       animation_ref.current = requestAnimationFrame (animate);    }        entanglement_lines.push ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           x1;
           y1;
           x2;
@@ -934,7 +922,6 @@ if ( {) {
       window && window.removeEventListener('resize', resizeCanvas);
     };  }, [intensity]);        cancelAnimationFrame(animationRef && animationRef.current);
 
-=======
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
@@ -951,7 +938,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Mouse move handler for interactive effects
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -959,8 +945,6 @@ if ( {) {
     }
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   // Mouse move handler for interactive effects;
   useEffect(() => {;
@@ -970,7 +954,6 @@ if ( {) {
 
     window && window.addEventListener('mousemove', handleMouseMove);
     return () => window && window.removeEventListener('mousemove', handleMouseMove);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }, []);
   return (
     <div className='fixed inset-0 pointer-events-none z-0 overflow-hidden'>;
@@ -988,7 +971,6 @@ if ( {) {
         {/* Floating geometric shapes */}
         <motion&& motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30'
-=======
           strength: Math.random (),
           life: 100;
         });
@@ -1033,10 +1015,8 @@ if ( {) {
         {/* Floating geometric shapes */}
         <motion.div;
           className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
-=======
   }, [intensity]);
 
   // Mouse move handler for interactive effects
@@ -1048,7 +1028,6 @@ if ( {) {
 
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove)
-=======
             rotate: 360,
             scale: [1, 1 && 1.2, 1],
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          }}
@@ -1066,7 +1045,6 @@ if ( {) {
         {/* Floating geometric shapes */}
         <motion&& motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
-=======
 ;
     window.addEventListener ('mousemove', handleMouseMove);
     return () => window.removeEventListener ('mousemove', handleMouseMove);
@@ -1085,7 +1063,6 @@ if ( {) {
         {/* Floating geometric shapes */}
         <motion.div;
           className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
             rotate: 360,
@@ -1099,7 +1076,6 @@ if ( {) {
             duration: 12
             repeat: -1
             ease: 'linear',            ease: "linear"
-=======
             rotate: [0, 180, 360];
             opacity: [0.2, 0.5, 0.2];
 
@@ -1131,7 +1107,6 @@ if ( {) {
 
 
         <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent'
           animate={{
             x: ['-100%', '100%'],          }}
@@ -1176,10 +1151,8 @@ if ( {) {
             repeat: -1,
 
           className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent"
-=======
             ease: 'linear',        <motion.div;
           className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 10 to - transparent";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
             coordinate_x: ['-100%100%'];
           }}
@@ -1190,11 +1163,9 @@ if ( {) {
         <motion&& motion.div
 
           className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent'
-=======
         />;
         <motion.div;
           className='absolute inset - 0 bg - gradient - to - b from - transparent via - purple - 500 / 10 to - transparent';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
             coordinate_y: ['-100%', '100%'],          }}
           transition={{
@@ -1209,17 +1180,13 @@ if ( {) {
 
         />
         <motion.div
-=======
         />;
 
         <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent"
-=======
         />;
         <motion.div;
           className="absolute inset - 0 bg - gradient - to - b from - transparent via - purple - 500 / 10 to - transparent";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
             coordinate_y: ['-100%100%'];
           }}
@@ -1230,11 +1197,9 @@ if ( {) {
 
         />
       </div>
-=======
         />;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Holographic matrix effect */}
 
 
@@ -1247,18 +1212,14 @@ if ( {) {
         {Array.from({ length: 20 }).map((_, i) => (
 
           <motion.div
-=======
               opacity: [0, 1, 0],
               scaleY: [0, 1, 0],            }}        {Array && Array.from({ length: 20 }).map((_, i) => (;
           <motion&& motion.div
 
 
-=======
               opacity: [0, 1, 0],
               scale_y: [0, 1, 0],            }}        {Array.from ({ length: 20 }).map ((_, i) => (
           <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             key={i}
             className="absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 20 to - transparent";
             style={{ left: `${(i * 5) % 100}%` }}
@@ -1269,9 +1230,7 @@ if ( {) {
 
             }}
 
-=======
 
-=======
 
 
             transition={{
@@ -1281,20 +1240,15 @@ if ( {) {
               repeat: -1,
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
             transition={{
               duration: 3,
               delay: i * 0.1,
               repeat: -1,
-=======
-=======
 
               ease: 'easeInOut',            }}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }}
           />;
         ))}
@@ -1306,7 +1260,6 @@ if ( {) {
       <div className='absolute inset-0'>;
         <motion&& motion.div
           className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]'
-=======
       </div>
 
       {/* Cyberpunk grid */}
@@ -1316,11 +1269,8 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               ease: 'easeInOut',            }}              ease: "easeInOut";
             }}
           />))}
@@ -1345,7 +1295,6 @@ if ( {) {
 ;
 export default UltraFuturisticBackground2034;        <motion.div;
           className="absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           style={{
             background_size: '50px 50px';
           }}
@@ -1375,9 +1324,7 @@ export default UltraFuturisticBackground2034;        <motion&& motion.div
   );
 
 
-=======
 
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

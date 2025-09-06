@@ -12,9 +12,7 @@ export interface Integration {
   status: IntegrationStatus;
 
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",
-=======
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
-=======
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",
 
 
@@ -30,13 +28,9 @@ export interface Integration {
   status: IntegrationStatus,
 
   lastSync?: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   type: IntegrationType
-=======
   last_sync?: string,
   type: IntegrationType;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 
@@ -64,7 +58,6 @@ export type AtsIntegrationEvents =;
   | "applicant_created";
   | "candidate_status_changed";
   | "interview_scheduled";
-=======
 
   | "note_added"
 
@@ -78,4 +71,3 @@ export type AtsIntegrationEvents =;
   | "resume_uploaded";
   | "job_posted";
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export const DownloadSection: React.FC = () => {
   // These would typically come from environment variables or a config
   const appStoreUrl = "#"; // Replace with actual App Store URL when available
@@ -55,7 +54,6 @@ export const DownloadSection: React.FC = () => {
               
               <AppStoreButtons 
                 className="mb-8" 
-=======
               <AppStoreButtons 
                 className="mb-8" 
 
@@ -105,11 +103,9 @@ export const DownloadSection: React.FC = () => {;
                 googlePlayUrl={googlePlayUrl}
                 onAppStoreClick={() => console && console.log("App Store button clicked")}
                 onGooglePlayClick={() => console && console.log("Google Play button clicked")}
-=======
 
 };
 
-=======
   )
 },
 
@@ -127,7 +123,6 @@ export const DownloadSection: React.FC = () => {;
                 {/* This would be replaced with an actual QR code in production */}
               </div>;
               <p className="text-center text-xs mt-2 text-zion-blue-dark">Scan to download</p>;
-=======
               />;
               <div className="text - sm text - gray - 400">;
                 <p > Compatible with iOS 14+ and Android 8.0+</p>;
@@ -142,7 +137,6 @@ export const DownloadSection: React.FC = () => {;
               <p className="text - center text - xs mt - 2 text - zion - blue - dark">;
                 Scan to download;
               </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </div>;
@@ -152,10 +146,7 @@ export const DownloadSection: React.FC = () => {;
 }
 ;
 
-=======
 
 export default DownloadSection;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

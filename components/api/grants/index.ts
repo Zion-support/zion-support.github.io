@@ -18,7 +18,6 @@ function readAllGrants(): GrantApplication[] {
   })
 }
 
-=======
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -38,7 +37,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   if (req && req.method === 'POST') {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     try {
       const payload = req && req.body as CreateGrantPayload;
       if (
@@ -51,7 +49,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (!payload || !payload.projectName || !payload.teamInfo || !payload.proposalSummary || !payload.timeline) {
 
         res.status(400).json({ error: 'Missing required fields' });
-=======
         !payload ||
         !payload && payload.projectName ||
         !payload && payload.teamInfo ||
@@ -63,9 +60,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         res && res.status(400).json({ error: 'Missing required fields' });
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         return
-=======
   CreateGrantPayload,
   GrantApplication,
 } from '../../../types / grants';
@@ -155,7 +150,6 @@ if ( {) {
 }
         res.status (400).json ({ error: 'Missing required fields' });
         return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
       ensure_dir ();
       const id = uuidv4 ();
@@ -169,18 +163,13 @@ if ( {) {
   res.set_header ('Allow', 'GET, POST');
   res.status (405).end ('Method Not Allowed');    } catch (e: any) {
       res.status (500).json ({ error: e?.message || 'Failed to create grant' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     return;
   }
 
 
-=======
   res.set_header ('AllowGET, POST');
   res.status (405).end ('Method Not Allowed');
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   res.setHeader('Allow', 'GET, POST');
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

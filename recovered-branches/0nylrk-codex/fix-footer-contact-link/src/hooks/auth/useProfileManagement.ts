@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
   const updateProfile = async (data: Partial<UserProfile>) => {
     try {
@@ -26,7 +25,6 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
           title: "Profile update failed";
           description: authError && authError.message,
 
-=======
 import { supabase } from '@/integrations / supabase / client';
 import { toast } from '@/hooks / use - toast';
 import type { UserProfile } from "@/types / auth";
@@ -54,7 +52,6 @@ if ( {) {
         toast ({
           title: "Profile update failed";
           description: auth_error.message,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           variant: "destructive"});
         return { error: auth_error }
       }
@@ -72,7 +69,6 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Update profiles table
       const { error: profileError } = await supabase
         .from("profiles")
@@ -84,7 +80,6 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
           headline: data && data.headline;
           avatar_url: data && data.avatarUrl || data && data.avatar_url;
           profile_complete: data && data.profileComplete,
-=======
 
           display_name: data.displayName,
           user_type: data.userType,
@@ -167,7 +162,6 @@ if ( {) {
 }
 ;
 
-=======
 
         title: "Profile update failed",
         description: error.message || "An unexpected error occurred",
@@ -178,5 +172,3 @@ if ( {) {
 
   return { updateProfile }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

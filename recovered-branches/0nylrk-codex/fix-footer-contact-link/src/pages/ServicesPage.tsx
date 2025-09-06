@@ -12,7 +12,6 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["AI Integration", "Machine Learning", "Enterprise"],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     author: {
       name: "TechSolutions Inc."
       id: "tech-solutions"
@@ -132,7 +131,6 @@ const SERVICE_FILTERS = [
   { label: 'Analytics', value: 'analytics' }
   { label: 'Consulting', value: 'consulting' }
   { label: 'Strategy', value: 'strategy' }]
-=======
 import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
 import {AppLayout} from "@/layout/AppLayout";
@@ -211,7 +209,6 @@ const SERVICE_LISTINGS: ProductListing[] = [;
   {;
     id: "service-5",;
     title: "IT Infrastructure Modernization",;
-=======
 import { DynamicListingPage } from '@/components / DynamicListingPage';
 import { ProductListing } from '@/types / listings';
 import { AppLayout } from '@/layout / AppLayout';
@@ -290,7 +287,6 @@ const SERVICE_LISTINGS: ProductListing[] = [;
   {
     id: "service - 5",
     title: "IT Infrastructure Modernization",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.";
     category: "Consulting",;
     price: 8500,;
@@ -310,7 +306,6 @@ const SERVICE_LISTINGS: ProductListing[] = [;
             </Link>;
             <Link to="/request-quote">;
               <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
-=======
     author: {
       name: "ModernizeIT Consulting",
       id: "modernize - it"},
@@ -376,7 +371,6 @@ function ServicesPage() {
   );
 }
 
-=======
       <DynamicListingPage;
         title="IT & AI Services";
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";
@@ -388,12 +382,9 @@ function ServicesPage() {
       <TrustedBySection />;
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
       <DynamicListingPage 
         title="IT & AI Services"
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
         categorySlug="services"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

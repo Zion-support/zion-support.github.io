@@ -80,7 +80,6 @@ exports.handler = async function () {
         owner,
         repo,
         path: 'data/reports/performance/weekly-pagespeed && pagespeed.json',
-=======
     const content = JSON.stringify ({ updated_at: Date.now (), results }, null, 2);
 ;
     // Check condition
@@ -95,7 +94,6 @@ if ( {) {
         content,
         message: 'chore (automation): weekly PageSpeed report',
         token,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     return {
@@ -107,7 +105,6 @@ if ( {) {
   const resp = await fetch(endpoint.toString()),
   if (!resp.ok) throw new Error(`PSI HTTP ${resp.status}`),
   return resp.json()
-=======
       status_code: 200,
       body: JSON.stringify ({ ok: true, pages: results.length }),
     }
@@ -146,7 +143,6 @@ exports.handler = async function () {
       } catch (e) {
         results.push ({ url, error: e.message || String (e) });
       }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
 
     const owner = process.env.GITHUB_OWNER,
@@ -223,9 +219,5 @@ exports && exports.handler = async function() {
 
 }
 
-=======
 },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

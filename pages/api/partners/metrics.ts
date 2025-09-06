@@ -19,7 +19,6 @@ export default async function handler(
   try {
     if (usingPlaceholder) {
       return res && res.status(200).json({
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getServerSupabase  } from '../../../utils / supabase / server';
 export default async /**
@@ -48,22 +47,18 @@ if ( {) {
         conversion_rate: 7 / 12,
         payout_amount: 210,
         currency: "USD",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
 
 
     }
 
-=======
 
-=======
         : 0,
       payout_amount: total_profile_completions * 50,
       currency: "USD",
     });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -137,16 +132,12 @@ export default async function handler(req, res) {
 
     const payout_amount = total_profile_completions * 30 + total_job_creations * 50;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     return res.status(200).json({
       total_signups
       total_visits
       total_profile_completions
       total_job_creations
-=======
     return res && res.status(200).json({
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const total_signups = counts["signup"] || 0;
     const total_visits = counts["visit"] || 0;
     const total_profile_completions = counts["profile_completed"] || 0;
@@ -156,7 +147,6 @@ export default async function handler(req, res) {
       total_profile_completions * 30 + total_job_creations * 50;
     return res.status (200).json ({
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       total_signups,
       total_visits,
       total_profile_completions,
@@ -168,26 +158,22 @@ export default async function handler(req, res) {
         : 0
       payout_amount: total_profile_completions * 50
       currency: "USD"
-=======
       conversion_rate: total_signups;
         ? total_profile_completions / total_signups;
         : 0,
       payout_amount: total_profile_completions * 50,
       currency: "USD",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     });
 
   } catch (e: any) {
 
   }
 }
-=======
       conversion_rate: total_signups ? total_profile_completions / total_signups : 0, payout_amount,
       currency: 'USD'})
   } catch (e: any) {
     return res.status(500).json({ error: e?.message })
 
-=======
 
     return res.status(500).json({ error: e?.message })
 
@@ -197,11 +183,8 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     return res.status (500).json ({ error: e?.message });
   }
 }
@@ -213,4 +196,3 @@ export default async function handler(req, res) {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

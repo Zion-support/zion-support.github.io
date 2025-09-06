@@ -21,7 +21,6 @@ export function ResumeBasicInfoSection(): any ({ basicInfo }: ResumeBasicInfoSec
   );
 }
 
-=======
 export /**
  * ResumeBasicInfoSection - Function description
  */
@@ -34,8 +33,6 @@ function ResumeBasicInfoSection() {
       {basic_info.summary && <p className="text - sm">{basic_info.summary}</p>}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 }
@@ -53,4 +50,3 @@ export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProp
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

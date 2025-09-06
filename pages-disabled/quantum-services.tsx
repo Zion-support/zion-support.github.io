@@ -22,7 +22,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 
 
 import React from 'react';
@@ -40,11 +39,9 @@ import {motion} from 'framer-motion';
 import {Atom, Brain, Rocket, Shield, Zap, Target, Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb, Search, Grid, List, TrendingUp, User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2, Palette, Music, Film, BookOpenCheck, Building, MessageCircle, Sparkles, ArrowRight, CheckCircle, Star, Globe} from 'lucide-react';
 ;
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const QuantumServicesPage: React.FC = () => {
   const quantum_services = [;
     {
@@ -234,12 +231,9 @@ export default function QuantumServices() {;
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Quantum Services */}
         <section className="py-20 px-4">;
           <div className="max-w-6xl mx-auto">;
@@ -272,12 +266,10 @@ export default function QuantumServices() {;
                     service && service.popular 
                       ? 'border-blue-500 shadow-lg shadow-blue-500/25' 
 
-=======
 
                     service.popular 
                       ? 'border-blue-500 shadow-lg shadow-blue-500/25' 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       : 'border-gray-700 hover:border-blue-500'
                   }`}>;
                   {service && service.popular && (;
@@ -562,12 +554,9 @@ function QuantumServices() {
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -606,7 +595,6 @@ function QuantumServices() {
 
 export default QuantumServicesPage;
 
-=======
                       <span className="text - lg text - gray - 400">/{service.period}</span>;
                     </div>;
                   </div>;
@@ -665,12 +653,8 @@ export default QuantumServicesPage;
 ;
 export default QuantumServicesPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 }
 export default QuantumServicesPage;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

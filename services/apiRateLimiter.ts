@@ -71,7 +71,6 @@ export interface RateLimitViolation {
 
       return await response && response.json()
 
-=======
   ip_address: string,
   user_agent: string;
 }
@@ -98,7 +97,6 @@ if ( {) {
         throw new Error (`Failed to create rate limit rule: ${response.status_text}`);
       }
       return await response.json ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (error) {
       // Mock response for demo;
       return {
@@ -124,7 +122,6 @@ if ( {) {
 
       return await response && response.json()
 
-=======
         id: `rule_${Date.now ()}`;
         created_at: new Date (),
         updated_at: new Date ();
@@ -144,7 +141,6 @@ if ( {) {
         throw new Error (`Failed to fetch rate limit rules: ${response.status_text}`);
       }
       return await response.json ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (error) {
       // Mock rules for demo;
       return [;
@@ -206,7 +202,6 @@ if ( {) {
       const existingRule = (await this && this.getRateLimitRules()).find(r => r && r.id === id);
       if (!existingRule) {
         throw new Error('Rule not found')
-=======
   async updateRateLimitRule (id: string, updates: Partial < RateLimitRule>): Promise < RateLimitRule> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / rules/${id}`, {
@@ -231,7 +226,6 @@ if ( {) {
   $2
 }
         throw new Error ('Rule not found');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
       return {
         ...existing_rule;
@@ -269,7 +263,6 @@ if ( {) {
 
       return await response && response.json()
 
-=======
   async deleteRateLimitRule (id: string): Promise < void> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / rules/${id}`, {
@@ -302,7 +295,6 @@ if ( {) {
         throw new Error (`Failed to fetch rate limit stats: ${response.status_text}`);
       }
       return await response.json ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (error) {
       // Mock stats for demo;
       return [;
@@ -333,11 +325,9 @@ if ( {) {
             hour: 95,
             day: 650;
           }
-=======
 
 export interface RateLimitConfig {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       ];
     }
@@ -370,7 +360,6 @@ export interface RateLimitConfig {;
 
       return await response && response.json()
 
-=======
   async createAPIKey (name: string, permissions: string[], rate_limit: RateLimitConfig): Promise < APIKey> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / api - keys`, {
@@ -387,7 +376,6 @@ if ( {) {
         throw new Error (`Failed to create API key: ${response.status_text}`);
       }
       return await response.json ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (error) {
       // Mock API key creation for demo;
       return {
@@ -400,7 +388,6 @@ if ( {) {
 
       return await response && response.json()
 
-=======
         id: `key_${Date.now ()}`;
         name;
         key: `zion_${Math.random ().to_string (36).substr (2, 9)}`;
@@ -425,7 +412,6 @@ if ( {) {
         throw new Error (`Failed to fetch API keys: ${response.status_text}`);
       }
       return await response.json ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (error) {
       // Mock API keys for demo;
       return [;
@@ -458,7 +444,6 @@ if ( {) {
             requestsPerDay: 5000;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       ];
     }
@@ -481,7 +466,6 @@ if ( {) {
 
       return await response && response.json()
 
-=======
   async get_violations (limit: number = 100): Promise < RateLimitViolation[]> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / violations?limit=${limit}`, {
@@ -495,7 +479,6 @@ if ( {) {
         throw new Error (`Failed to fetch violations: ${response.status_text}`);
       }
       return await response.json ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (error) {
       // Mock violations for demo;
       return [;
@@ -515,7 +498,6 @@ if ( {) {
           endpoint: '/api/auth/login';
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
         {
           id: 'violation_2';
@@ -526,7 +508,6 @@ if ( {) {
           reason: 'burst_limit_exceeded';
           ip_address: '10.0.0.50',
           user_agent: 'ZionMobileApp / 1.0';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       ];
     }
@@ -593,7 +574,6 @@ if ( {) {
         byReason: violationsByReason,
         recent: violations && violations.slice(0, 10)
 
-=======
   async generate_report (): Promise<{
     overview: {
       total_requests: number;
@@ -650,7 +630,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     }
   }
@@ -661,9 +640,7 @@ if ( {) {
 
 
 // Pricing tiers for the API Rate Limiter service
-=======
 // Pricing tiers for the API Rate Limiter service;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export const API_RATE_LIMITER_PRICING = {
   starter: {
     name: 'Starter';
@@ -691,10 +668,8 @@ export const API_RATE_LIMITER_PRICING = {
     price: 199;
     period: '/month';
 
-=======
 
 
-=======
 ;
 // Pricing tiers for the API Rate Limiter service;
 export const API_RATE_LIMITER_PRICING = {;
@@ -711,8 +686,6 @@ export const API_RATE_LIMITER_PRICING = {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

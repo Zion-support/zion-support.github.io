@@ -17,7 +17,6 @@ function writeEpisodes(episodes: any[]) {
 
 
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 1) 7-10 concise interview questions mixing visionary and technical angles
@@ -35,16 +34,12 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     console && console.error(error);
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
-=======
 
     const episode = {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       transcript: generated.transcript,
       youtube_description: generated.youtube_description || '',
       spotify_description: generated.spotify_description || '',
@@ -67,4 +62,3 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     return res.status (500).json ({ error: error?.message || 'Unknown error' });
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

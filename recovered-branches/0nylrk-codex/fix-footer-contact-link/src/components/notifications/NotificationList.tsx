@@ -15,7 +15,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
   notifications;
   onMarkAsRead;
 
-=======
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import { Skeleton } from '@/components/ui/skeleton',;
@@ -31,7 +30,6 @@ interface NotificationListProps {;
   onRetry: () => void;
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   loading: boolean
   error: string | null
@@ -59,7 +57,6 @@ interface NotificationListProps {;
 
 export const NotificationList: React.FC<NotificationListProps> = ({;
 
-=======
 import {ScrollArea} from '@/components / ui / scroll - area';
 import {Skeleton} from '@/components / ui / skeleton';
 import {Button} from '@/components / ui / button';
@@ -74,7 +71,6 @@ interface NotificationListProps {
   on_retry: () => void;
 }
 export const NotificationList: React.FC < NotificationListProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   loading;
   error;
   notifications;
@@ -88,12 +84,9 @@ export const NotificationList: React.FC < NotificationListProps> = ({
 
   onDismiss,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onRetry
-=======
   on_dismiss,
   on_retry;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }) => {
   return (
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
@@ -142,16 +135,11 @@ export const NotificationList: React.FC < NotificationListProps> = ({
     </ScrollArea>;
   );
 
-=======
-=======
     </ScrollArea>;
   );
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
         <div className="p - 8 text - center text - amber - 500">;
           <p>{error}</p>;
           <Button;
@@ -181,4 +169,3 @@ export const NotificationList: React.FC < NotificationListProps> = ({
     </ScrollArea>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

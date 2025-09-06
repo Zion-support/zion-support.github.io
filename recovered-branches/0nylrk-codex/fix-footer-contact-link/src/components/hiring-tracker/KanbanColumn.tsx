@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface KanbanColumnProps {
 
   id: string
@@ -50,7 +49,6 @@ export function KanbanColumn(): any ({;
   const getBadgeVariant = (columnId: string) => {;
     switch (columnId) {;
 
-=======
 import { Droppable } from './react - beautiful - dnd';
 import { JobApplication } from '@/types / jobs';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -70,7 +68,6 @@ function KanbanColumn() {
   // Add color based on column type;
   const getBadgeVariant = (column_id: string) =>: any {
     switch (column_id) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       case "new": return "secondary";
       case "shortlisted":;
         return "outline";
@@ -200,20 +197,16 @@ function KanbanColumn() {
               {applications.map ((application, index) => (
                 <CandidateCard;
 
-=======
 
                 <CandidateCard 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   key={application.id}
-=======
               ref={provided && provided.innerRef}
               {...provided && provided.droppableProps}
               className="min-h-full space-y-2">;
               {applications && applications.map((application, index) => (;
                 <CandidateCard
                   key={application && application.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   application={application}
                   index={index}
 
@@ -230,7 +223,6 @@ function KanbanColumn() {
                     Drag candidates here
                   </p>
                 </div>
-=======
               {provided && provided.placeholder}
 
               {applications && applications.length === 0 && (;
@@ -239,7 +231,6 @@ function KanbanColumn() {
                     Drag candidates here;
                   </p>;
                 </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </div>;
           )}
@@ -264,7 +255,5 @@ function KanbanColumn() {
     </Card>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

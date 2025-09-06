@@ -2,13 +2,11 @@
 
 export default function GrantsAdminPage() {;
 
-=======
 
 import {useEffect, useMemo, useState} from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [token, setToken] = useState('');
 
   const [items, setItems] = useState<GrantApplication[]>([]);
@@ -45,7 +43,6 @@ import type { GrantApplication, Milestone } from '../../types/grants';
     fetch('/api/grants?status=Submitted');
       .then(r => r && r.json());
       .then(d => setItems(d && d.items || []));
-=======
   };
 
   const saveMilestones = async () => {
@@ -292,7 +289,6 @@ if (return) {
                             : [...(selected && selected.milestones || [])];
                           copy[idx] = { ...copy[idx], title: e && e.target.value };
 
-=======
               </div>))}                  <div className="flex gap - 2">;
                     <button className="px - 2 py - 1 border rounded" on_click={() => set_status (g.id, 'Under Review')}>Under Review</button>;
                     <button className="px - 2 py - 1 bg - emerald - 600 text - white rounded" on_click={() => set_status (g.id, 'Approved')}>Approve</button>;
@@ -325,7 +321,6 @@ if (return) {
                             ? [...ms];
                             : [...(selected.milestones || [])];
                           copy[idx] = { ...copy[idx], title: e.target.value }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           return copy;
                         });
                       }
@@ -342,7 +337,6 @@ if (return) {
                             description: e && e.target.value,;
                           };
 
-=======
                     <textarea;
                       className='w - full border rounded p - 2 mb - 2';
                       placeholder='Description';
@@ -356,7 +350,6 @@ if (return) {
                             ...copy[idx],
                             description: e.target.value,
                           }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           return copy;
                         });
                       }
@@ -373,7 +366,6 @@ if (return) {
                               dueDate: e && e.target.value,;
                             };
 
-=======
                     <div className='grid grid - cols - 2 gap - 2'>;
                       <input;
                         className='border rounded p - 2';
@@ -388,7 +380,6 @@ if (return) {
                               ...copy[idx],
                               due_date: e.target.value,
                             }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             return copy;
                           });
                         }
@@ -405,7 +396,6 @@ if (return) {
                               trancheAmount: Number(e && e.target.value),;
                             };
 
-=======
                       <input;
                         className='border rounded p - 2';
                         placeholder='Tranche (amount)';
@@ -420,7 +410,6 @@ if (return) {
                               ...copy[idx],
                               tranche_amount: Number (e.target.value),
                             }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             return copy;
                           });
                         }
@@ -449,7 +438,6 @@ if (return) {
                         } as any,;
                       ]);
 
-=======
                   </div>))}
                 <div className='flex gap - 2 mt - 2'>;
                   <button;
@@ -464,7 +452,6 @@ if (return) {
                           tranche_currency: 'USDC',
                         } as any,
                       ]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     }
                   >;
                     Add Milestone;
@@ -524,15 +511,12 @@ if (return) {
             ) : (
               <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>
             )}
-=======
     <EnhancedLayout>
 
 
             )}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
         </div>
       </div>
@@ -579,20 +563,14 @@ if (return) {
       </div>;
     </EnhancedLayout>;
   );
-=======
 
   );
 
 }
-=======
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   <button;
                     className='px - 2 py - 1 bg - blue - 600 text - white rounded';
                     on_click={save_milestones}
@@ -633,4 +611,3 @@ if (return) {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

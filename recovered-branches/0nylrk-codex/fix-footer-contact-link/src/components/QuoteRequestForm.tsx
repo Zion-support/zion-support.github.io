@@ -29,7 +29,6 @@ export function QuoteRequestForm() {;
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-=======
 import { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { useNavigate } from "react-router-dom",
@@ -55,8 +54,6 @@ export function QuoteRequestForm() {
 
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
     serviceCategory: ""
@@ -99,7 +96,6 @@ export function QuoteRequestForm() {
 
   const handleNext = () => {
     switch (currentStep) {
-=======
 
   const [formData, setFormData] = useState<QuoteFormData>({;
     serviceType: "",;
@@ -131,7 +127,6 @@ export function QuoteRequestForm() {
 
   const handleNext = () => {;
     switch (currentStep) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       case "service": setCurrentStep("details");
         break;
       case "details":;
@@ -154,12 +149,10 @@ export function QuoteRequestForm() {
 
   const handleBack = () => {
     switch (currentStep) {
-=======
   };
 
   const handleBack = () => {;
     switch (currentStep) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       case "details": setCurrentStep("service");
         break;
       case "timeline":;
@@ -327,7 +320,6 @@ function QuoteRequestForm() {
   const renderStepContent = () => {
     switch (currentStep) {
       case "service":
-=======
   };
 
   const handleSubmit = async () => {;
@@ -359,7 +351,6 @@ function QuoteRequestForm() {
   const renderStepContent = () => {;
     switch (currentStep) {;
       case "service":;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />;
       case "details":;
         return <ProjectDetailsStep formData={formData} updateFormData={updateFormData} />;
@@ -399,7 +390,6 @@ function QuoteRequestForm() {
             <div className="flex justify-between mt-8">
               {currentStep !== "service" && (
 
-=======
                 <Button
                   variant="outline"
                   onClick={handleBack}
@@ -425,7 +415,6 @@ function QuoteRequestForm() {
                 </Button>
 
 
-=======
 import { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { useNavigate } from "react-router-dom",;
@@ -576,7 +565,6 @@ export function QuoteRequestForm() {;
 
             <div className="flex justify-between mt-8">;
               {currentStep !== "service" && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Button
                   variant="outline"
                   onClick={handleBack}
@@ -602,7 +590,6 @@ export function QuoteRequestForm() {;
                 </Button>;
               )}
 
-=======
 ;
   const renderStepContent = () =>: any {
     switch (current_step) {
@@ -671,10 +658,6 @@ export function QuoteRequestForm() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -31,7 +31,6 @@ export function FloatingCTA() {
 
 
       if (scrollPosition > threshold && !isClosed) {
-=======
 
   useEffect(() => {;
     const handleScroll = () => {;
@@ -39,7 +38,6 @@ export function FloatingCTA() {
       const threshold = 600; // Show CTA after scrolling 600px;
 
       if (scrollPosition > threshold && !isClosed) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         setIsVisible(true);
       } else {;
         setIsVisible(false);
@@ -61,7 +59,6 @@ export function FloatingCTA() {
   if (!isVisible) return null;
 
   return (
-=======
 
     },
 
@@ -135,7 +132,6 @@ export function FloatingCTA() {;
   };
   if (!isVisible) return null;
   return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">;
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">;
         <div className="mr-4">;
@@ -233,9 +229,6 @@ if (return null) {
     </div>);
 
 }
-=======
 }
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

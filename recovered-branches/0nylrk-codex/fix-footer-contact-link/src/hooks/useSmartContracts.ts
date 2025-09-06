@@ -36,7 +36,6 @@ export function useSmartContracts() {;
 
       });
       if (error) throw error;
-=======
 
           talentName: talent.full_name,
           clientName: clientName,
@@ -52,10 +51,8 @@ export function useSmartContracts() {;
       if (error) throw error,
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       if (data && data.solidityCode) {
         return data.solidityCode
-=======
 import {useState} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
@@ -99,7 +96,6 @@ if ( {) {
   $2
 }
         return data.solidity_code;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } else {
         throw new Error ("Failed to generate Solidity contract");
       }
@@ -176,7 +172,6 @@ if ( {) {
     isLoading;
 
     deploymentStatus
-=======
 ;
   const deploySmartContract = async (
     contract_code: string;
@@ -229,8 +224,6 @@ if ( {) {
     deploySmartContract;
     is_loading;
     deployment_status;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
       setDeploymentStatus('deploying'),
       
@@ -261,6 +254,5 @@ if ( {) {
       return mockSmartContractInfo
     } catch (err: any) {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

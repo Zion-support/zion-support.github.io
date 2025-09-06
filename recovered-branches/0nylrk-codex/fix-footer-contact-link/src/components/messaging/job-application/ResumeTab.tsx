@@ -36,7 +36,6 @@ export function ResumeTab(): any ({;
             onClick={onApply} 
             disabled={!selectedResumeId || isSubmitting}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="w-full"
           >
             {isSubmitting ? "Submitting..." : "Submit Application"}
@@ -46,12 +45,10 @@ export function ResumeTab(): any ({;
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {!selectedResumeId && (
             <p className="text-sm text-muted-foreground mt-2">
               Please select a resume to continue
             </p>
-=======
     <div className="space-y-4">;
       <ResumeSelector onResumeSelected={handleResumeSelected} />;
 
@@ -68,7 +65,6 @@ export function ResumeTab(): any ({;
             <p className="text-sm text-muted-foreground mt-2">;
               Please select a resume to continue;
             </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           )}
         </div>;
       )}
@@ -77,9 +73,7 @@ export function ResumeTab(): any ({;
     </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
-=======
   on_apply?: () => Promise < void>;
   is_submitting?: boolean;
 }
@@ -120,5 +114,4 @@ if ( {) {
             </p>)}
         </div>)}
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

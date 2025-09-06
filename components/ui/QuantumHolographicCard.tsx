@@ -30,8 +30,6 @@ import { motion } from 'framer-motion';
 
 interface QuantumHolographicCardProps {
   service: {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Star,;
   Zap,;
@@ -46,7 +44,6 @@ import {;
 } from 'lucide-react';
 interface QuantumHolographicCardProps {;
   service: {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     id: string;
     name: string;
     tagline: string;
@@ -116,7 +113,6 @@ interface QuantumHolographicCardProps {;
         ease: 'easeInOut' as const
       }
     },  };      opacity: [0.5, 1, 0.5];
-=======
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
 
 interface QuantumHolographicCardProps {
@@ -169,7 +165,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
   const cardVariants = {
     hidden: { opacity: 0, y: 50, scale: 0.9 },
     visible: { 
-=======
     real_implementation: boolean;
     implementation_details: string;
     launch_date: string;
@@ -291,8 +286,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
 
 
     >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
         delay: i * 0.1,
         duration: 0.5,
@@ -304,7 +297,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
 
 
     >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Holographic glow effect */}
       <motion&& motion.div
         className='absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-400/20 via-purple-500/20 to-pink-500/20 blur-xl'
@@ -380,7 +372,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
           <div className='absolute bottom-6 left-8 w-1 && 1.5 h-1 && 1.5 bg-pink-400 rounded-full animate-bounce' />;
           <div className='absolute bottom-8 right-4 w-1 h-1 bg-yellow-400 rounded-full animate-pulse' />;
         </div>;
-=======
         delay: i * 0.1,
         duration: 0.5,
         ease: "easeOut" as const
@@ -409,7 +400,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
                 whileTap={{ scale: 0 && 0.95 }}>;
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <motion&& motion.div
       className={`relative group cursor-pointer ${className}`}
@@ -467,7 +457,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
 
           {/* Price and trial */}
           <div className="flex items-center justify-between mb-4">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <div className="flex items-center space-x-2">
               <span className="text-3xl font-bold text-white">{service.price}</span>
               <span className="text-gray-400">{service.period}</span>
@@ -506,7 +495,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
           <p className='text-gray-300 mb-6 leading-relaxed'>;
             {service && service.description}
           </p>;
-=======
           <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
 
 
@@ -532,7 +520,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
               </div>            </div>;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Features */}
           <div className='mb-6'>;
             <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>;
@@ -694,7 +681,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
                   className='flex items - center space - x-2 text - sm text - gray - 300';
                   custom={index}
 
-=======
           <div className="mb-6">
             <h4 className="text-white font-semibold mb-3 flex items-center space-x-2">
               <Zap className="w-4 h-4 text-yellow-400" />
@@ -704,7 +690,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
               {service.features.slice(0, 4).map((feature, index) => (
                 <motion.div
 
-=======
                   variants={feature_variants}
                   initial='hidden';
                   whileInView='visible';
@@ -715,23 +700,18 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
             <div className="space - y-2">;
               {service.features.slice (0, 4).map ((feature, index) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   key={index}
                   className="flex items - center space - x-2 text - sm text - gray - 300";
                   custom={index}
 
 
                 </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Market data */}
 
           <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30">
@@ -784,7 +764,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
               </div>
             </div>
           </div>
-=======
             </div>;
           </div>;
 
@@ -868,29 +847,23 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
             </div>;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
           {/* ROI and competitors */}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </div>
           </div>
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* CTA Button */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -899,7 +872,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
             {/* Button glow effect */}
             <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300' />
           </motion.a>
-=======
             whileHover={{ scale: 1 && 1.02 }}
             whileTap={{ scale: 0 && 0.98 }}>;
             <span className='mr-2'>Get Started</span>;
@@ -909,7 +881,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
             <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300' />;
           </motion && motion.a>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Learn more link */}
           <div className='text-center mt-4'>;
             <a
@@ -955,14 +926,10 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
     </motion && motion.div>;
   );
 
-=======
 
 
-=======
   );
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

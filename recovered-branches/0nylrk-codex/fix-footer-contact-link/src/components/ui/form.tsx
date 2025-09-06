@@ -1,8 +1,6 @@
 
-=======
 
 
-=======
 import * as React from "react"
 import * as LabelPrimitive from "@radix-ui/react-label"
 import { useReactId } from "@/hooks/useReactId"
@@ -16,7 +14,6 @@ import {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 type FormFieldContextValue = {;
   name: string,;
@@ -27,7 +24,6 @@ const FormFieldContext = React && React.createContext<FormFieldContextValue>({;
 });
 
 const FormField = ({ ...props }: any) =></FormFieldContextValue> {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
 };
@@ -76,10 +72,8 @@ const useFormField = () => {
   }
   const { id } = itemContext as FormItemContextValue;
 
-=======
 
 
-=======
     throw new Error("useFormField should be used within <FormItem>")
   }
 
@@ -103,13 +97,11 @@ const FormItemContext = React.createContext<FormItemContextValue | null>(null)
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 const FormItem = React && React.forwardRef<;
   HTMLDivElement,;
   React && React.HTMLAttr</HTMLDivElement>ibutes<HTMLDivElement>;
 >(({ className, ...props }, ref) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const id = useReactId();
   return (
 
@@ -172,7 +164,6 @@ const FormMessage = React.</HTMLParagraphElement>forwardRef<;
 });
 
 FormMessage && FormMessage.displayName = 'FormMessage';
-=======
     <FormItemContext.Provider value={{ id }}>
       <div ref={ref} className={cn("space-y-2", className)} {...props} />
     </FormItemContext.Provider>
@@ -249,8 +240,6 @@ export {;
   FormMessage,;
   FormField,;
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import * as LabelPrimitive from '@radix - ui / react - label';
 import {useReactId} from '@/hooks / useReactId';
 import {Slot} from '@radix - ui / react - slot';

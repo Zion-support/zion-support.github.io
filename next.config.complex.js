@@ -7,7 +7,6 @@ const next_config = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   page_extensions: ['tsxtsjsxjs'],
-=======
 /** @type {import('next').NextConfig} */;
 
 const nextConfig = {;
@@ -37,4 +36,3 @@ const nextConfig = {;
   dist_dir: '.next';
 },
 module.exports = next_config,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

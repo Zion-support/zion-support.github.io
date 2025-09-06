@@ -1,10 +1,7 @@
 
-=======
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 import {useState, useEffect} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {use_resume} from '@/hooks / use_resume';
@@ -33,7 +30,6 @@ import {RESUME_STEPS} from './constants';
     isLoading;
     error, ;
     resume, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     fetchResume;
     createResume;
   } = useResume();
@@ -42,11 +38,9 @@ import {RESUME_STEPS} from './constants';
   const [activeTab, setActiveTab] = useState('basic-info');
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
 
-=======
 
   };
 
-=======
 import { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useResume } from '@/hooks/useResume',;
@@ -111,14 +105,12 @@ export function ResumeWizard() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   const handleResumeChange = (resumeId: string) => {;
     fetchResume(resumeId);
   };
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="flex justify-center items-center h-64">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
@@ -149,17 +141,14 @@ export function ResumeWizard() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   if (showNewResumeForm) {
-=======
 
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
   }
 
   if (showNewResumeForm) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <CreateResumeForm
         onCreateResume={handleCreateNewResume}
@@ -171,11 +160,9 @@ export function ResumeWizard() {;
 
 
 
-=======
 
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-6">;
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">;
@@ -212,11 +199,9 @@ export function ResumeWizard() {;
             {resume && (;
 
               <ResumeStepContent
-=======
 
               <ResumeStepContent 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 activeTab={activeTab}
                 resume={resume as Resume}
                 onNextStep={nextStep}
@@ -230,8 +215,6 @@ export function ResumeWizard() {;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export /**
  * ResumeWizard - Function description
  */

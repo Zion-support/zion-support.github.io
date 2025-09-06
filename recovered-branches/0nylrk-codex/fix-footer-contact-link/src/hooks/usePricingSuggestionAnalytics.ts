@@ -18,10 +18,8 @@ interface PricingSuggestionAnalytics {
 
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
-=======
 import {useState, useEffect} from 'react';
 import {supabase} from "@/integrations/supabase/client";
-=======
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 
@@ -42,14 +40,12 @@ interface PricingSuggestionAnalytics {
     type: 'client' | 'talent'
   }[],
   isLoading: boolean,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   error: string | null
 }
 export function usePricingSuggestionAnalytics(days = 30) {
 
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   useEffect(() => {
     // This would fetch actual data from the database in a real implementation
     // For now, let's simulate the data
@@ -82,7 +78,6 @@ export function usePricingSuggestionAnalytics(days = 30) {
           isLoading: false
           error: null
         });
-=======
 
         await new Promise(resolve => setTimeout(resolve, 1000)),
 
@@ -115,14 +110,12 @@ export function usePricingSuggestionAnalytics(days = 30) {
         }),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')
         //   .select(...)
 
     created_at: string,
-=======
 
         //   .gte('created_at', `now() - interval '${days} days'`),
         
@@ -133,7 +126,6 @@ export function usePricingSuggestionAnalytics(days = 30) {
 
 };
 
-=======
         console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
           ...analytics,
@@ -241,4 +233,3 @@ if (throw error) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

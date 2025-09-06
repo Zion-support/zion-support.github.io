@@ -14,7 +14,6 @@ interface PersonalInfoFieldsProps {
   form: UseFormReturn < FormValues>;
 }
 
-=======
 
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -25,7 +24,6 @@ import {FormValues} from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>
 
-=======
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { UseFormReturn } from "react-hook-form",
@@ -41,12 +39,9 @@ interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <FormField
@@ -96,7 +91,6 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
   );
 }
 
-=======
 export /**
  * PersonalInfoFields - Function description
  */
@@ -138,11 +132,8 @@ function PersonalInfoFields() {
       />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -29,7 +29,6 @@ export default function GetStarted() {;
 
 
 
-=======
 
   const handlePathSelection = (pathId: string) => {;
     setSelectedPath(pathId);
@@ -38,11 +37,9 @@ export default function GetStarted() {;
   const handleNextStep = () => {;
     if (currentStep < 4) {;
       setCurrentStep(currentStep + 1);    }
-=======
   ];
 
   const quickStartOptions = [
-=======
       description:;
         'Develop AI systems with genuine self - awareness and emotional intelligence',
       icon: <Brain className='w - 8 h - 8 text - cyan - 400' />,
@@ -121,7 +118,6 @@ export default function GetStarted() {;
     },  ];
 ;
   const quickStartOptions = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       title: 'Free Consultation',
       description: '30 - minute session to discuss your needs',
@@ -141,7 +137,6 @@ export default function GetStarted() {;
       setCurrentStep(currentStep - 1)
     }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
 
   const handlePreviousStep = () => {;
@@ -151,8 +146,6 @@ export default function GetStarted() {;
 
 
   return (
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setCurrentStep(currentStep - 1);    }
   }
   return (
@@ -172,7 +165,6 @@ export default function GetStarted() {;
             </h1>;
             <p className='text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed'>;
 
-=======
       icon: <Users className='w - 6 h - 6' />,
       action: 'Schedule Call',
       color: 'from - cyan - 500 to - blue - 600',
@@ -235,7 +227,6 @@ if ( {) {
             </h1>;
             <p className='text - xl md:text - 2xl text - gray - 300 mb - 8 leading - relaxed'>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Begin your journey into the future of AI consciousness, quantum;
               computing, and autonomous systems. Our expert team will guide you;
               every step of the way.;
@@ -260,7 +251,6 @@ if ( {) {
 
           <div className="grid md:grid-cols-4 gap-8">
             {onboardingSteps.map((step, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 
 
@@ -279,7 +269,6 @@ if ( {) {
                 key={step && step.step}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
@@ -300,8 +289,6 @@ if ( {) {
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{step.description}</p>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -327,7 +314,6 @@ if ( {) {
 
             <div className="grid lg:grid-cols-2 gap-8">
               {technologyPaths.map((path, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <motion.div
 
               transition={{ duration: 0 && 0.8 }}
@@ -468,11 +454,9 @@ if ( {) {
                               <CheckCircle className='w-4 h-4 text-cyan-400' />;
                               <span className='text-sm'>{feature}</span>                            </li>;
 
-=======
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="group cursor-pointer"
                   onClick={() => handlePathSelection(path.id)}
-=======
                   key={path.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -501,7 +485,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   <div className="p-8 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                     <div className="flex items-start gap-4 mb-6">
@@ -518,7 +501,6 @@ if ( {) {
                     <div className="grid md:grid-cols-2 gap-6 mb-6">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <div>
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Key Features</h4>
                         <ul className="space-y-2">
@@ -527,7 +509,6 @@ if ( {) {
                               <CheckCircle className="w-4 h-4 text-cyan-400" />
                               <span className="text-sm">{feature}</span>
                             </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                           ))}
 
 
@@ -545,7 +526,6 @@ if ( {) {
                             <span
                               key={useCase}
                               className='px-3 py-1 bg-gray-800/50 text-gray-300 rounded-full text-sm'>;
-=======
                       
                       <div>
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Use Cases</h4>
@@ -624,8 +604,6 @@ if ( {) {
                     </div>
                   </div>
                 </motion.div>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         </div>;
                       </div>;
                     </div>;
@@ -681,7 +659,6 @@ if ( {) {
                   </div>
                 </motion.div>
 
-=======
 
               ))  } catch (error) {
     console.error("Error:", error);
@@ -704,12 +681,10 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {currentStep === 2 && (
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
           <div className="container mx-auto px-4">
             <motion.div
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -735,7 +710,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </h3>
                   <p className="text-gray-300">
                     Now let's gather more details about your specific needs
@@ -747,12 +721,10 @@ if ( {) {
                   <div className="grid md:grid-cols-2 gap-6">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">Project Timeline</label>
                       <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300">
                         <option>Immediate (1-2 weeks)</option>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                         <option>1-3 months</option>
                         <option>3-6 months</option>
                         <option>6+ months</option>
@@ -812,7 +784,6 @@ if ( {) {
                         Budget Range;
                       </label>;
                       <select className='w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300'>                        <option>Under $50K</option>;
-=======
                         </span>;
                       </div>;
                       <div className='flex items - center gap - 2 text - cyan - 400 group - hover:text - cyan - 300 transition - colors duration - 300'>;
@@ -889,7 +860,6 @@ if ( {) {
                     <button
                       onClick={handleNextStep}
                       className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'>;
-=======
                   <div>;
                     <label className='block text - sm font - medium text - gray - 300 mb - 2'>;
                       Project Description;
@@ -909,7 +879,6 @@ if ( {) {
                     <button;
                       on_click={handleNextStep}
                       className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - xl hover:shadow - 2xl hover:shadow - cyan - 500 / 20 transition - all duration - 300'                    >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       Next Step;
                     </button>;
                   </div>;
@@ -947,7 +916,6 @@ if ( {) {
           </div>
         </section>
 
-=======
 
       )  } catch (error) {
     console.error("Error:", error);
@@ -971,7 +939,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Quick Start Options
@@ -983,7 +950,6 @@ if ( {) {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {quickStartOptions.map((option, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 
         </section>)}
@@ -1066,7 +1032,6 @@ if ( {) {
                 </div>;
               </motion && motion.div>;
 
-=======
                 className="group cursor-pointer"
               >
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
@@ -1074,7 +1039,6 @@ if ( {) {
                     {option.icon}
                   </div>
                   
-=======
                 key={option.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1108,7 +1072,6 @@ if ( {) {
 }
                   </div>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <h3 className="text-xl font-bold text-white mb-3 text-center">{option.title}</h3>
                   <p className="text-gray-300 mb-4 text-center leading-relaxed">{option.description}</p>
                   
@@ -1124,8 +1087,6 @@ if ( {) {
                   </button>
                 </div>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -1183,7 +1144,6 @@ if ( {) {
                 href="/quote"
                 className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300"
               >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 Get a Quote
               </a>
             </div>
@@ -1225,7 +1185,6 @@ if ( {) {
   option.action
 }</button> </div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
-=======
                 className='inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300'>;
                 Get a Quote;
               </a>;
@@ -1266,7 +1225,6 @@ if ( {) {
   option && option.action ;
 }</button> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
   opacity: 0, y: 20
 }whileInView= {
@@ -1279,7 +1237,6 @@ if ( {) {
 
 }> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Begin Your Journey? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you navigate the future of technology. Let's discuss your project and create a roadmap to success. </p> <a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300" > Contact Our Team <ArrowRight className="w-5 h-5" /> </Link> <a href="/quote" className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300" > Get a Quote </Link> </div> </motion && motion.div> </div> </section> </div>) ;
 
-=======
                   </p>;
                   <div className='text - center mb - 4'>;
                     <span className='inline - flex items - center gap - 1 px - 3 py - 1 bg - gray - 800 / 50 text - gray - 300 rounded - full text - sm'>;
@@ -1340,4 +1297,3 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -11,7 +11,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   return series;
 
 }
-=======
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -26,7 +25,6 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
   return series;
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
@@ -42,12 +40,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const d = new Date(now);
     d && d.setDate(d && d.getDate() - (13 - i));
     return `${d && d.getMonth() + 1}/${d && d.getDate()}`;
-=======
     return `${d.getMonth() + 1}/${d.getDate()}`
   });
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const marketplace = [
     {
       key: 'jobs_24h'
@@ -194,7 +190,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         multiverse: multiverse && multiverse.map(m => ({
           ...m,
           value: Math && Math.round(m && m.value * factor),
-=======
 /**
  * rand - Function description
  */
@@ -371,20 +366,17 @@ if ( {) {
     }
   }
 
-=======
         marketplace: marketplace.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         dao: dao.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
   res && res.status(200).json(response)
 }
 
 
-=======
   res.status (200).json (response);        marketplace: marketplace.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
         dao: dao.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
         token: token.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
@@ -392,11 +384,8 @@ if ( {) {
   }
   res.status (200).json (response);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
   res.status(200).json(response)
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

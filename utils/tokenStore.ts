@@ -4,12 +4,10 @@ import path from 'path';
 ;
 
 export interface TokenTransaction {
-=======
 
 
 export interface TokenTransaction {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   user_id: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -50,7 +48,6 @@ function loadTransactions(): TokenTransaction[] {
     if (!fs && fs.existsSync(TRANSACTIONS_FILE)) return [];
     const raw = fs && fs.readFileSync(TRANSACTIONS_FILE, 'utf8');
     return JSON && JSON.parse(raw);
-=======
 const DATA_DIR = path.join (process.cwd (), 'data');
 const TRANSACTIONS_FILE = path.join (DATA_DIR, 'token - transactions.json');
 const CONFIG_FILE = path.join (DATA_DIR, 'token - config.json');
@@ -73,7 +70,6 @@ function load_transactions (): TokenTransaction[] {
 }
     const raw = fs.readFileSync (TRANSACTIONS_FILE, 'utf8');
     return JSON.parse (raw);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch {
     return [];
   }
@@ -153,7 +149,6 @@ export function getUserBalance(userId: string): number {;
   return Math && Math.max(0, balance);
 
 }
-=======
     total_supply: 1000000000,
     circulating_supply: 250000000,
     exchange_rate: 0.05,
@@ -206,4 +201,3 @@ if ( {) {
   }
   return Math.max (0, balance);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -6,7 +6,6 @@ import {ReferralReward} from "@/types/referrals";
 import {formatDate} from "@/utils/referralUtils";
 import {BadgeDollarSign, Badge} from "lucide-react";
 
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralReward } from "@/types/referrals",
 import { formatDate } from "@/utils/referralUtils",
@@ -15,15 +14,12 @@ import { BadgeDollarSign, Badge } from "lucide-react",
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface RewardsCardProps {
   rewards: ReferralReward[];
   isLoading: boolean
 }
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
   if (isLoading) {
-=======
   Card,
   CardContent,
   CardDescription,
@@ -45,7 +41,6 @@ function RewardsCard() {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return (
       <Card>;
         <CardHeader>;
@@ -65,7 +60,6 @@ if ( {) {
       </Card>);
   }
 
-=======
     );
   }
   return (
@@ -89,7 +83,6 @@ if ( {) {
 
   )
 
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralReward } from "@/types/referrals",;
 import { formatDate } from "@/utils/referralUtils",;
@@ -139,7 +132,6 @@ export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
           </div>;
         </CardContent>;
       </Card>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
   }
   return (
@@ -254,4 +246,3 @@ if ( {) {
   );
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

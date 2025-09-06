@@ -49,12 +49,10 @@ export interface ExperienceFilterProps extends FilterComponentProps {
 export interface PriceFilterProps extends FilterComponentProps {
   price_range: [number, number];
   setPriceRange: (range: [number, number]) => void;
-=======
 
 
 export interface FilterSidebarProps {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export interface SearchFilterProps {
 
@@ -66,7 +64,6 @@ export interface SortFilterProps {
   setSortOption: (option: string) => void;
 
 }
-=======
 
 ;
 export interface SortFilterProps {;
@@ -75,7 +72,4 @@ export interface SortFilterProps {;
 }
 ;
 
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

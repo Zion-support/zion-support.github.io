@@ -345,10 +345,8 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     launchDate: '2026-05-01', customers: 40,
     rating: 4.9,
     reviews: 32;
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV4 {;
   id: string,;
@@ -745,8 +743,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
     reviews: 32;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 

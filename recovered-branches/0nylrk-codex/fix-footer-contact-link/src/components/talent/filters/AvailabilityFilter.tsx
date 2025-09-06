@@ -2,24 +2,20 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const AVAILABILITY_OPTIONS = [
   { id: "full_time", label: "Full-time" }
   { id: "part_time", label: "Part-time" }
-=======
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Checkbox} from "@/components/ui/checkbox";
 import {AvailabilityFilterProps} from "@/types/filters";
 const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   { id: "project", label: "Project-based" }
 
 export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {;
 
   return (
-=======
 
 ],
 
@@ -62,7 +58,6 @@ const AVAILABILITY_OPTIONS = [;
 ];
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {;
   return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button
         onClick={toggleSection}
@@ -97,21 +92,17 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 {option.label}
               </label>
             </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
         </div>;
       )}
 
     </div>;
   );
-=======
     </div>
 
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Checkbox  } from '@/components / ui / checkbox';
 import { AvailabilityFilterProps  } from '@/types / filters';

@@ -1,8 +1,6 @@
 
 
 export default function KnowledgeGraph({ report }: Props) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 ) ) ;
 }</ul> </section> <section>) ) ;
@@ -10,7 +8,6 @@ export default function KnowledgeGraph({ report }: Props) {
 export default function KnowledgeGraph(): any ({ report }: Props) {;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   if (!report) return <div>No knowledge graph yet.</div>;
 
   return (
@@ -47,7 +44,6 @@ export default function KnowledgeGraph(): any ({ report }: Props) {;
   );
 }
 
-=======
 }
 ) );
 }</ul> </section> <section>) );
@@ -89,10 +85,7 @@ if (return <div > No knowledge graph yet.</div>) {
       </section>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

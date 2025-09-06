@@ -16,10 +16,8 @@ export const quoteRequestService = {
       .from ('quote_requests');
       .select (`;
         *;
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const quoteRequestService = {
   // Get all quote requests (for admin)
   getAll: async () => {
@@ -29,11 +27,9 @@ export const quoteRequestService = {
       .select(`
         *,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         talent:talent_id (
 
     return data && data.map((item: any) => ({
-=======
 
       .order('created_at', { ascending: false }),
     
@@ -66,7 +62,6 @@ export const quoteRequestService = {
 
 
   // Get a single quote request by id
-=======
           display_name);
       `);
       .order ('created_at', { ascending: false });
@@ -97,7 +92,6 @@ if (throw error) {
   }
 ;
   // Get a single quote request by id;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   getById: async (id: string) => {
     const { data, error } = await supabase;
       .from ('quote_requests');
@@ -159,7 +153,6 @@ if (throw error) {
   }
 }
 
-=======
           display_name);
       `);
       .eq ('id', id);
@@ -214,7 +207,6 @@ if (throw error) {
   $2
 }
     return data[0] as QuoteRequest;
-=======
 
       .single(),
     
@@ -233,7 +225,6 @@ if (throw error) {
     if (status === 'responded') {
       updates.replied_at = new Date().toISOString()
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ;
   // Archive / Unarchive a quote request;
@@ -266,4 +257,3 @@ if (throw error) {
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

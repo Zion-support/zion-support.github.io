@@ -30,13 +30,11 @@ export function ThemeProvider({
   children,;
   defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
 
-=======
   children,
   defaultTheme = "system"}: ThemeProviderProps) {
 
   const [theme, setTheme] = useState<Theme>(
     () => (localStorage.getItem("theme") as Theme) || defaultTheme
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   )
   useEffect(() => {
     const root = window.document.documentElement
@@ -50,7 +48,6 @@ export function ThemeProvider({
         : "light"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       root.classList.add(systemTheme)
       return
     }
@@ -68,7 +65,6 @@ export function ThemeProvider({
 
 
   return (;
-=======
 import { create_context, useContext, useEffect, useState } from &quot;react & quot;
 ;
 type Theme = &quot;dark & quot; | &quot;light & quot; | &quot;system & quot;
@@ -115,7 +111,6 @@ if ( {) {
       set_theme (theme);
     }}
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     <ThemeProviderContext.Provider value={value}>;
       {children}
     </ThemeProviderContext.Provider>);
@@ -131,8 +126,6 @@ if (
   return context;
 
 }
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

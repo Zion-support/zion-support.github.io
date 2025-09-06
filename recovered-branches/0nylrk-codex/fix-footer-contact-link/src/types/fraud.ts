@@ -3,11 +3,9 @@ export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
 ;
 
 export interface FraudFlag {
-=======
 
 export interface FraudFlag {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   user_id: string;
   user_email?: string;
@@ -29,13 +27,11 @@ export interface FraudFlag {;
 
 }
 export interface FraudStats {
-=======
 }
 
 
 export interface FraudStats {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   total_flags: number;
   pending_flags: number;
   suspicious_count: number;
@@ -44,4 +40,3 @@ export interface FraudStats {;
   false_positives: number,
   actioned_count: number;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

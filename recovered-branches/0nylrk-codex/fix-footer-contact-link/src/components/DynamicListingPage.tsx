@@ -64,7 +64,6 @@ export function DynamicListingPage(): any ({;
       const min = Math.min(...listingsWithPrice.map(l => l.price || 0)),
       const max = Math.max(...listingsWithPrice.map(l => l.price || 0)),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       setPriceRange({ min, max })
     }
   }, [allListings]);
@@ -117,7 +116,6 @@ export function DynamicListingPage(): any ({;
               image: listing.images?.[0]
 
 
-=======
 
 }: DynamicListingPageProps) {;
   const navigate = useNavigate(),;
@@ -285,26 +283,21 @@ if ( {) {
               category: listing.category,
               image: listing.images?.[0];
 
-=======
               id: listing.id,;
               title: listing.title,;
               category: listing.category,;
               image: listing.images?.[0];
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }
           }
         });
       }
 
-=======
 
 
     }, 500);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="min-h-screen bg-zion-blue py-12 px-4">;
       <div className="container mx-auto">;
@@ -314,10 +307,8 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {description}
 
-=======
                   }}
                 >
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
@@ -348,7 +339,6 @@ if ( {) {
                   onValueChange={(value: string) => {;
                     console && console.log("Category selected:", value);
                     setSelectedCategory(value);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   }}
                 >;
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
@@ -363,7 +353,6 @@ if ( {) {
 
                         {filter.label}
                       </SelectItem>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
 
                   </SelectContent>;
@@ -409,7 +398,6 @@ if ( {) {
 
 
                     className="mb-4"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
                     <span>${currentPriceFilter[0].toLocaleString()}</span>
@@ -424,7 +412,6 @@ if ( {) {
                 <div className="flex flex-wrap gap-2">
                   {[null, 3, 4, 5].map((rating) => (
 
-=======
                     <Button
                       key={rating === null ? 'any' : rating}
                       variant="outline"
@@ -465,7 +452,6 @@ if ( {) {
                 </label>;
                 <div className="flex flex-wrap gap-2">;
                   {[null, 3, 4, 5].map((rating) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <Button
                       key={rating === null ? 'any' : rating}
                       variant="outline"
@@ -473,7 +459,6 @@ if ( {) {
                       onClick={() => {;
                         console && console.log("Rating selected:", rating);
                         setSelectedRating(rating);
-=======
     }, 500);
   }
 ;
@@ -548,7 +533,6 @@ if ( {) {
                       on_click={() => {
                         console.log ("Rating selected:", rating);
                         setSelectedRating (rating);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       }}
 
                       className={`${;
@@ -570,7 +554,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       )}
                     </Button>;
                   ))}
@@ -611,12 +594,10 @@ if ( {) {
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="relative flex-grow">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
-=======
                   setSelectedCategory("all"),;
                   setCurrentPriceFilter([priceRange && priceRange.min, priceRange && priceRange.max]);
                   setSelectedRating(null);
                 }}
-=======
                         selected_rating === rating;
                           ? "bg - zion - purple / 20 border - zion - purple text - zion - purple";
                           : "border - zion - blue - light text - zion - slate - light";
@@ -642,7 +623,6 @@ if ( {) {
                   setCurrentPriceFilter ([price_range.min, price_range.max]);
                   setSelectedRating (null);
                 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               >;
                 Reset Filters;
               </Button>;
@@ -734,7 +714,6 @@ if ( {) {
                   <ProductListingCard;
 
                     key={listing.id}
-=======
                   >;
                     <List className="h-4 w-4" />;
                   </Button>;
@@ -773,18 +752,14 @@ if ( {) {
                 {filteredListings && filteredListings.map((listing) => (;
                   <ProductListingCard
                     key={listing && listing.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
                   <ProductListingCard 
 
                     key={listing.id}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     listing={listing}
                     view={view}
                     onRequestQuote={handleRequestQuote}
 
-=======
 
                     setSearchQuery(""),
                     setSelectedCategory("all"),
@@ -803,7 +778,6 @@ if ( {) {
                     setSelectedCategory("all");
                     setCurrentPriceFilter([priceRange && priceRange.min, priceRange && priceRange.max]);
                     setSelectedRating(null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
                 >;
@@ -816,7 +790,6 @@ if ( {) {
       </div>;
     </div>;
   );
-=======
                   />))}
               </div>) : (
               <div className="text - center py - 20">;
@@ -832,7 +805,6 @@ if ( {) {
                     setSelectedRating(null);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   }}
                   className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
                 >;
@@ -843,5 +815,4 @@ if ( {) {
         </div>;
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

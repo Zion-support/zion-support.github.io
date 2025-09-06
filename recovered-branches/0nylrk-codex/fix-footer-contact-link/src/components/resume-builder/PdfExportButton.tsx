@@ -19,7 +19,6 @@ interface PdfExportButtonProps {
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
-=======
 
 
 export function PdfExportButton({ resume }: PdfExportButtonProps) {;
@@ -28,7 +27,6 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   const [includePortfolio, setIncludePortfolio] = useState(true);
   const [fontFamily, setFontFamily] = useState<FontFamily>('default');
 
-=======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import {;
@@ -53,7 +51,6 @@ interface PdfExportButtonProps {;
 }
 
 export function PdfExportButton(): any ({ resume }: PdfExportButtonProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [isExporting, setIsExporting] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
 
@@ -62,7 +59,6 @@ export function PdfExportButton(): any ({ resume }: PdfExportButtonProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -149,12 +145,10 @@ export function PdfExportButton(): any ({ resume }: PdfExportButtonProps) {;
 
     }
   }
-=======
     }
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -171,10 +165,8 @@ export function PdfExportButton(): any ({ resume }: PdfExportButtonProps) {;
             <FileText className="h-4 w-4" />;
           )}
 
-=======
 
 
-=======
 ;
 export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   const [isExporting, setIsExporting] = useState(false),;
@@ -272,10 +264,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components / ui / dropdown - menu';
@@ -387,4 +376,3 @@ if (return) {
       </DropdownMenuContent>;
     </DropdownMenu>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

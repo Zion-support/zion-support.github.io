@@ -13,7 +13,6 @@ export function ProjectMilestonesContent() {;
     activities;
     isLoading: milestonesLoading
 
-=======
 
 export function ProjectMilestonesContent() {;
   const { projectId } = useParams() as { projectId?: string };
@@ -23,7 +22,6 @@ export function ProjectMilestonesContent() {;
     milestones, ;
     activities;
     isLoading: milestonesLoading, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     createMilestone;
     updateMilestoneStatus;
     deleteMilestone;
@@ -53,7 +51,6 @@ export function ProjectMilestonesContent() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       } catch (error) {;
         console && console.error("Error loading project:", error);
@@ -68,7 +65,6 @@ export function ProjectMilestonesContent() {;
     refetch();
   }, [projectId, getProjectById, refetch]);
 
-=======
 
     
     loadProject(),
@@ -123,7 +119,6 @@ export function ProjectMilestonesContent() {;
       <div className="flex justify-between items-center my-6">;
         <h2 className="text-2xl font-bold">Payment Milestones</h2>;
         <ProjectActions
-=======
 
     },
     
@@ -145,7 +140,6 @@ export function ProjectMilestonesContent() {;
 
 
           projectId={projectId || ''}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           isUnderDispute={isUnderDispute}
           disputeId={disputeId}
           isTalent={isTalent}
@@ -167,12 +161,10 @@ export function ProjectMilestonesContent() {;
           <MilestoneManager
             projectId={projectId || ''}
 
-=======
 
           <MilestoneManager 
             projectId={projectId || ''}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             milestones={milestones}
             activities={activities}
             isLoading={milestonesLoading}
@@ -181,7 +173,6 @@ export function ProjectMilestonesContent() {;
             paymentTerms={project && project.payment_terms}
             isSubmitting={isSubmitting}
             onCreateMilestone={createMilestone}
-=======
 import {use_params} from 'react-router-dom';
 import {use_projects} from '@/hooks / use_projects';
 import {use_milestones} from '@/hooks / use_milestones';
@@ -316,7 +307,6 @@ if (return, ) {
             payment_terms={project.payment_terms}
             is_submitting={is_submitting}
             onCreateMilestone={create_milestone}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             onUpdateStatus={updateMilestoneStatus}
             onDeleteMilestone={delete_milestone}
             onUploadDeliverable={upload_deliverable}
@@ -333,12 +323,10 @@ if (return, ) {
           {(isClient || isTalent) && (;
 
             <MilestoneCreator
-=======
 
           {(isClient || isTalent) && (
             <MilestoneCreator 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onSubmit={handleMilestoneSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setActiveTab('milestones')}
@@ -376,7 +364,5 @@ if (return, ) {
     </div>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,10 +1,8 @@
 
 
 export interface CuttingEdge2029Service {
-=======
 
 export interface CuttingEdge2029Service {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   id: string;
   name: string;
@@ -51,7 +49,6 @@ export interface CuttingEdge2029Service {;
 
   {
 
-=======
     id: 'quantum - consciousness - computing',
     name: 'Quantum Consciousness Computing Platform',
     tagline: 'Quantum computing meets AI consciousness',
@@ -75,7 +72,6 @@ export interface CuttingEdge2029Service {;
     popular: true,
     icon: '⚛️',
 
-=======
     color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / quantum - consciousness - computing',
@@ -117,7 +113,6 @@ export interface CuttingEdge2029Service {;
     reviews: 5,
   },
 
-=======
   // Space Technology & Colonization;
   {
     id: 'space - colonization - automation - platform',
@@ -143,7 +138,6 @@ export interface CuttingEdge2029Service {;
     popular: true,
     icon: '🚀',
 
-=======
     color: 'from - teal - 600 via - emerald - 600 to - green - 600',
     text_color: 'text - teal - 400',
     link: 'https://ziontechgroup.com / space - colonization - automation - platform',
@@ -186,7 +180,6 @@ export interface CuttingEdge2029Service {;
   },
 
       'DNA-based algorithms',
-=======
   // Biotech & DNA Computing;
   {
     id: 'dna - computing - platform - 2029',
@@ -212,7 +205,6 @@ export interface CuttingEdge2029Service {;
     popular: true,
     icon: '🧬',
 
-=======
     color: 'from - green - 600 via - yellow - 600 to - orange - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / dna - computing - platform - 2029',
@@ -254,7 +246,6 @@ export interface CuttingEdge2029Service {;
     reviews: 7,
   },
 
-=======
   // Metaverse & Digital Reality;
   {
     id: 'metaverse - consciousness - platform',
@@ -280,7 +271,6 @@ export interface CuttingEdge2029Service {;
     popular: true,
     icon: '🌌',
 
-=======
     color: 'from - purple - 600 via - pink - 600 to - rose - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / metaverse - consciousness - platform',
@@ -322,7 +312,6 @@ export interface CuttingEdge2029Service {;
     reviews: 15,
   },
 
-=======
   // Autonomous Business & Operations;
   {
     id: 'autonomous - business - ecosystem - 2029',
@@ -369,12 +358,10 @@ export interface CuttingEdge2029Service {;
     rating: 4.9
 
 
-=======
     reviews: 6
 
 
 
-=======
     color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / autonomous - business - ecosystem - 2029',
@@ -401,7 +388,6 @@ export interface CuttingEdge2029Service {;
     growth_rate: '1200%+ annual growth potential',
     variant: 'business - futuristic',
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -417,7 +403,6 @@ export interface CuttingEdge2029Service {;
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
-=======
 export interface CuttingEdgeInnovation2029V2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -443,7 +428,6 @@ export interface CuttingEdgeInnovation2029V2 {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
@@ -475,7 +459,6 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
@@ -488,7 +471,4 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     reviews: 6;
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

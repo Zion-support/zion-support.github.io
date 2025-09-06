@@ -15,7 +15,6 @@ export function SuggestedTalents(): any ({ jobId, jobTitle }: SuggestedTalentsPr
           `;
           *;
           talent_profile: talent_id(;
-=======
 import { useEffect, useState  } from './react';
 import { supabase  } from '@/integrations / supabase / client';
 import { toast  } from '@/hooks / use - toast';
@@ -43,7 +42,6 @@ function SuggestedTalents() {
           `;
           *;
           talent_profile: talent_id (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             id;
             user_id;
             full_name;
@@ -134,7 +132,6 @@ interface SuggestedTalentsProps {
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleViewProfile = (talentId: string) => {
     // Implement logic to view talent profile
     console.log("View talent profile:", talentId);
@@ -201,7 +198,6 @@ interface SuggestedTalentsProps {
       skills: talent && talent.talent_profile?.skills || [],;
     };
 
-=======
             category,
             company_name);
         `,
@@ -273,10 +269,8 @@ if ( {) {
       match_percent: talent.match_score || 85,
       skills: talent.talent_profile?.skills || [],
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
 ;
-=======
 
       title: "Invite Talent",
       description: `Inviting talent: ${talentId}`})
@@ -295,19 +289,16 @@ if ( {) {
     if (jobId) {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <CardContent className="pt-6">
         {isLoading ? (
           <div>Loading suggested talents...</div>
         ) : talents.length === 0 ? (
-=======
         </CardTitle>;
       </CardHeader>;
 
@@ -315,7 +306,6 @@ if ( {) {
         {isLoading ? (;
           <div>Loading suggested talents...</div>;
         ) : talents && talents.length === 0 ? (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <EmptyMatchesCard
             onRefresh={handleRefresh}
             isProcessing={isProcessing}
@@ -345,7 +335,6 @@ if ( {) {
       </CardContent>;
     </Card>;
   );
-=======
     <Card className="border - zion - blue - light bg - zion - blue">;
       <CardHeader>;
         <CardTitle>;
@@ -389,4 +378,3 @@ if ( {) {
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

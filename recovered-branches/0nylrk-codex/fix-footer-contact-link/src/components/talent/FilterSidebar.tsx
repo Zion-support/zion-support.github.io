@@ -31,7 +31,6 @@ export function FilterSidebar(): any ({;
   clearFilters;
   isMobileFilterOpen;
 }: FilterSidebarProps) {;
-=======
 
 
 export function FilterSidebar({
@@ -52,10 +51,8 @@ export function FilterSidebar({
   sortOption,
   setSortOption,
   clearFilters,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   isMobileFilterOpen
 }: FilterSidebarProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       {/* Filter header */}
@@ -112,7 +109,6 @@ export function FilterSidebar({;
       </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
@@ -168,7 +164,6 @@ export function FilterSidebar({;
     </>
   )
 }
-=======
       <div className="flex items-center justify-between mb-6">;
         <h3 className="text-lg font-semibold text-white flex items-center">;
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />;
@@ -245,8 +240,6 @@ export function FilterSidebar({;
     </>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Filter } from './lucide-react';
@@ -332,4 +325,3 @@ function FilterSidebar() {
         </Button>)}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -24,15 +24,12 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 
 
-=======
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
-=======
 import {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Code,
   Zap,
   Shield,
@@ -42,18 +39,14 @@ import {
   Play,
   AlertTriangle,
 
-=======
 import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Zap, Star } from 'lucide-react';
 export default function APITestingSuitePage() {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   Clock,;
   Database,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [isTesting, setIsTesting] = useState(false);
   const [testResults, setTestResults] = useState(null);
   const [apiEndpoint, setApiEndpoint] = useState('');
@@ -103,13 +96,11 @@ export default function APITestingSuitePage() {
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',;
       gradient: 'from-blue-400 to-cyan-500',;
     },;
-=======
         '100 API tests/monthBasic test scenariosEmail notificationsBasic reporting5 API endpointsCommunity support'
       ];
       popular: false
     };
     {
-=======
 export default /**
  * APITestingSuitePage - Function description
  */
@@ -221,7 +212,6 @@ function APITestingSuitePage() {
       ];
       popular: false;
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       name: 'Professional',
       price: '$99',
       period: '/month',
@@ -307,8 +297,6 @@ function APITestingSuitePage() {
             value: '245ms'
             threshold: '<500ms'
           }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const handleTestAPI = async () => {;
     if (!apiEndpoint && apiEndpoint.trim()) return;
@@ -328,7 +316,6 @@ function APITestingSuitePage() {
             value: '245ms',;
             threshold: '<500ms',
           },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {
             name: 'Status Code'
             status: 'pass'
@@ -361,7 +348,6 @@ function APITestingSuitePage() {
 
         recommendations: [
 
-=======
             name: 'Rate Limiting',
             status: 'pass',
             value: 'Within limits',
@@ -376,7 +362,6 @@ function APITestingSuitePage() {
         ],
 
 
-=======
           { name: 'Response Time', status: 'pass', value: '245ms', threshold: '<500ms' },
           { name: 'Status Code', status: 'pass', value: '200', threshold: '200' },
           { name: 'Response Format', status: 'pass', value: 'JSON', threshold: 'Valid JSON' },
@@ -384,8 +369,6 @@ function APITestingSuitePage() {
           { name: 'Rate Limiting', status: 'pass', value: 'Within limits', threshold: 'No throttling' }
         ];
         recommendations: [
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           'Consider implementing response caching for better performanceMonitor response times during peak usageImplement rate limiting headers for better API documentation'
         ]
       })
@@ -426,9 +409,7 @@ function APITestingSuitePage() {
             secure.;
           </p>;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
           </p>
           {/* API Testing Form */}
@@ -489,7 +470,6 @@ function APITestingSuitePage() {
             </Button>;
             <Button
 
-=======
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
@@ -507,7 +487,6 @@ function APITestingSuitePage() {
               className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
             >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Schedule Demo
 
             </Button>;
@@ -523,7 +502,6 @@ function APITestingSuitePage() {
               Powerful Testing Features;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-=======
         <meta;
           name='description';
           content='Test, monitor, and optimize your APIs with our comprehensive testing suite. Functional, performance, and security testing for REST, GraphQL, and SOAP APIs.';
@@ -663,7 +641,6 @@ function APITestingSuitePage() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-=======
                       className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature && feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
                     />;
                   </div>;
@@ -680,7 +657,6 @@ function APITestingSuitePage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {features && features.map((feature, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Card
                 key={index}
                 className="card-hover group border-gradient-indigo"
@@ -690,22 +666,18 @@ function APITestingSuitePage() {
                   </div>
                 </div>
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Test Types Section */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Comprehensive Testing Coverage
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -715,7 +687,6 @@ function APITestingSuitePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {testTypes.map((type, index) => (
-=======
           </div>;
         </div>;
       </section>;
@@ -728,7 +699,6 @@ function APITestingSuitePage() {
               Comprehensive Testing Coverage;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-=======
                     </p>;
                   </div>;
                 </div>;
@@ -744,7 +714,6 @@ function APITestingSuitePage() {
               Comprehensive Testing Coverage;
             </h2>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               We cover all aspects of API testing to ensure your APIs meet the;
               highest standards of quality and reliability.;
             </p>;
@@ -763,7 +732,6 @@ function APITestingSuitePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testTypes.map((type, index) => (
-=======
                       className='flex items-center text-gray-300'>;
                       <CheckCircle className='w-4 h-4 text-indigo-400 mr-3 flex-shrink-0' />                      {test}              Comprehensive Testing Coverage;
             </h2>;
@@ -774,7 +742,6 @@ function APITestingSuitePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {testTypes && testTypes.map((type, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Card
                 key={index}
                 className="card-hover border-gradient-indigo"
@@ -791,7 +758,6 @@ function APITestingSuitePage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Demo Test Results */}
       {testResults && (
 
@@ -825,7 +791,6 @@ function APITestingSuitePage() {
                   </div>
                 </div>
               </Card>
-=======
           </div>;
         </div>;
       </section>;
@@ -892,10 +857,8 @@ function APITestingSuitePage() {
                 </div>;
               </Card>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Test Results */}
 
-=======
               <Card className="border-gradient-indigo">
                 <h3 className="text-2xl font-bold mb-6 text-white">Test Results</h3>
                 <div className="space-y-3">
@@ -910,7 +873,6 @@ function APITestingSuitePage() {
                         </span>
                         <span className="text-xs text-gray-400">{test.value}</span>
                       </div>
-=======
                           }`}
                         >
                           {test.status}
@@ -924,24 +886,19 @@ function APITestingSuitePage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Performance Metrics */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Throughput</span>
@@ -954,7 +911,6 @@ function APITestingSuitePage() {
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Uptime</span>
                     <span className='text-green-400 font-bold'>24/7</span>                  </div>                  </div>
-=======
               <Card className="border-gradient-indigo">
                 <h3 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h3>
                 <div className="space-y-4">
@@ -962,7 +918,6 @@ function APITestingSuitePage() {
                     <span className="text-gray-400">Response Time</span>
                     <span className="text-indigo-400 font-bold">{testResults.responseTime}</span>
                   </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   <div className="flex justify-between items-center">
                     <span className="text-gray-400">Throughput</span>
                     <span className="text-green-400 font-bold">High</span>
@@ -981,7 +936,6 @@ function APITestingSuitePage() {
 
                 </div>;
               </Card>;
-=======
 
             {/* Recommendations */}
             <Card className="border-gradient-indigo">
@@ -992,7 +946,6 @@ function APITestingSuitePage() {
                     <CheckCircle className="w-5 h-5 text-indigo-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{rec}</span>
                   </div>
-=======
             {/* Recommendations */}
             <Card className='border-gradient-indigo'>
               <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -1009,7 +962,6 @@ function APITestingSuitePage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ))}
               </div>
             </Card>
@@ -1026,13 +978,11 @@ function APITestingSuitePage() {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
-=======
       <section id="pricing" className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="text-center mb-20">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Simple Pricing
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the API testing plan that best fits your development and testing needs.
@@ -1040,8 +990,6 @@ function APITestingSuitePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <section id='pricing' className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -1049,7 +997,6 @@ function APITestingSuitePage() {
               Simple Pricing;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-=======
           <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
             {test_types.map ((type, index) => (
               <Card;
@@ -1256,7 +1203,6 @@ function APITestingSuitePage() {
               Simple Pricing;
             </h2>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Choose the API testing plan that best fits your development and;
               testing needs.;
             </p>;
@@ -1293,7 +1239,6 @@ function APITestingSuitePage() {
                     <span className='text - 4xl font - bold text - white'>;
                       {plan.price}
 
-=======
 
                 className={`card-hover border-gradient-indigo ${plan.popular ? 'ring-2 ring-indigo-500 scale-105' : ''}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -1342,15 +1287,12 @@ function APITestingSuitePage() {
 
                       {feature}
                     </li>;
-=======
 
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
 
                 </ul>;
@@ -1360,7 +1302,6 @@ function APITestingSuitePage() {
                   href='/contact'
                   size='lg'
 
-=======
                       {feature}
                     </li>
                   ))}
@@ -1374,7 +1315,6 @@ function APITestingSuitePage() {
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
-=======
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
@@ -1385,10 +1325,7 @@ function APITestingSuitePage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -1408,14 +1345,12 @@ function APITestingSuitePage() {
 
             Ready to Test Your APIs?
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-responsive-md text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of developers and businesses using our API testing
             suite to ensure their APIs are reliable and performant.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
               href='/contact'
               size='lg'
@@ -1429,7 +1364,6 @@ function APITestingSuitePage() {
               size='lg'
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Schedule Demo;
             </Button>;
           </div>;
@@ -1437,11 +1371,7 @@ function APITestingSuitePage() {
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

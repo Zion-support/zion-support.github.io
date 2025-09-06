@@ -41,7 +41,6 @@ export interface PerformanceMetrics {;
 
       }
       return await response.json()
-=======
       const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
         method: 'POST',
         headers: {
@@ -54,7 +53,6 @@ export interface PerformanceMetrics {;
       }
 
       return await response && response.json()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
       // Fallback to mock data for demo purposes
       return this && this.generateMockMetrics(url)
@@ -70,7 +68,6 @@ export interface PerformanceMetrics {;
       const response = await fetch(`${this && this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
         headers: {
 
-=======
 ;
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {;
     try {;
@@ -82,10 +79,8 @@ export interface PerformanceMetrics {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       return await response.json()
-=======
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -93,7 +88,6 @@ export interface PerformanceMetrics {;
       }
 
       return await response && response.json()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
       // Generate mock historical data
       return this && this.generateMockHistoricalData(url, days)
@@ -129,7 +123,6 @@ export interface PerformanceMetrics {;
       const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
         headers: {
 
-=======
 ;
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {;
     try {;
@@ -159,10 +152,8 @@ export interface PerformanceMetrics {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       return await response.json()
-=======
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -170,7 +161,6 @@ export interface PerformanceMetrics {;
       }
 
       return await response && response.json()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
       // Generate mock alerts
       return this && this.generateMockAlerts(url)
@@ -266,7 +256,6 @@ export interface PerformanceMetrics {;
 
       })
 
-=======
 ;
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{;
     summary: {;
@@ -354,10 +343,8 @@ export interface PerformanceMetrics {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   private generateMockAlerts(url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [
-=======
     largestContentfulPaint: number,
     cumulativeLayoutShift: number;
   }
@@ -536,7 +523,6 @@ if ( {) {
   }
   private generateMockAlerts (url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
         id: '1';
 
@@ -568,7 +554,6 @@ if ( {) {
   }
 }
 // Pricing tiers for the Performance Monitor
-=======
         current_value: 85;
         timestamp: new Date (),
         resolved: true;
@@ -579,7 +564,6 @@ if ( {) {
   }
 }
 // Pricing tiers for the Performance Monitor;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
     name: 'Starter';
@@ -606,10 +590,8 @@ export const PERFORMANCE_MONITOR_PRICING = {
     price: 149;
     period: '/month';
 
-=======
 
 
-=======
 ;
   private generateMockAlerts(url?: string): PerformanceAlert[] {;
     const alerts: PerformanceAlert[] = [;
@@ -654,7 +636,6 @@ export const PERFORMANCE_MONITOR_PRICING = {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     ];
   }
 
@@ -662,4 +643,3 @@ export const PERFORMANCE_MONITOR_PRICING = {;
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

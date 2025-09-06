@@ -1,5 +1,4 @@
 
-=======
 
 
 
@@ -9,7 +8,6 @@ import {ShieldAlert} from "lucide-react";
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
 
 
-=======
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { Link } from 'react-router-dom',
@@ -23,7 +21,6 @@ interface ProjectActionsProps {
   isUnderDispute: boolean,
   disputeId?: string,
   isTalent: boolean,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onAddMilestone: () => void
 }
 
@@ -31,10 +28,8 @@ interface ProjectActionsProps {
 
   onAddMilestone
 }: ProjectActionsProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
-=======
         <RaiseDisputeButton
           projectId={projectId}
           variant="outline"
@@ -71,7 +66,6 @@ export function ProjectActions({;
           </Link>;
         </Button>;
       ) : (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <RaiseDisputeButton
           projectId={projectId}
           variant="outline"
@@ -85,16 +79,12 @@ export function ProjectActions({;
           Add Milestone
         </Button>
       )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 }
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {Button} from '@/components / ui / button';
 import {Link} from 'react-router-dom';
 import { ShieldAlert } from './lucide-react';
@@ -129,4 +119,3 @@ function ProjectActions() {
         </Button>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

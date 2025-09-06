@@ -72,7 +72,6 @@ if ( {) {
       entityType: partner && partner.entityType,
       useCaseType: partner && partner.useCaseType,
     } as any,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     typeof ttlSeconds === 'number'
       ? Math && Math.max(300, Math && Math.min(86400, ttlSeconds))
       : 3600
@@ -100,9 +99,6 @@ if ( {) {
   return res && res.status(200).json({ token, partner: { id: partner && partner.id, name: partner && partner.name } })
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       sub: partner.id,
       apiKeyId: key.id,
       name: partner.name,
@@ -122,9 +118,5 @@ if ( {) {
     typeof ttl_seconds === "number" ? Math.max (300, Math.min (86400, ttl_seconds)) : 3600);
   return res.status (200).json ({ token, partner: { id: partner.id, name: partner.name } });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

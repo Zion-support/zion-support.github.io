@@ -36,7 +36,6 @@
 
         'Hybrid quantum-classical computing',
         'Quantum-resistant encryption',
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -72,7 +71,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       popular: true,
       icon: '⚛️',
 
-=======
       color: 'from - indigo - 600 to - purple - 700',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / quantum - enhanced - cloud',
@@ -143,7 +141,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     },
 
         'AI-powered edge orchestration',
-=======
     // Edge Computing Orchestration Platform;
     {
       id: 'edge - computing - orchestration',
@@ -170,7 +167,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       popular: true,
       icon: '🌐',
 
-=======
       color: 'from - teal - 500 to - cyan - 600',
       text_color: 'text - teal - 400',
       link: 'https://ziontechgroup.com / edge - computing - orchestration',
@@ -240,7 +236,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       reviews: 600,
     },
 
-=======
     // Zero - Trust Network Architecture;
     {
       id: 'zero - trust - network - architecture',
@@ -267,7 +262,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       popular: true,
       icon: '🔒',
 
-=======
       color: 'from - emerald - 600 to - green - 700',
       text_color: 'text - emerald - 400',
       link: 'https://ziontechgroup.com / zero - trust - network',
@@ -292,7 +286,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Kubernetes',
       ],
 
-=======
       integrations: [;
         'Active Directory',
         'LDAP',
@@ -343,7 +336,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     },
 
         'AI-powered CI/CD automation',
-=======
     // AI - Powered DevOps Platform;
     {
       id: 'ai - powered - devops - platform',
@@ -369,7 +361,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       popular: true,
       icon: '🚀',
 
-=======
       color: 'from - orange - 500 to - red - 600',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / ai - powered - devops',
@@ -394,7 +385,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Jenkins',
       ],
 
-=======
       integrations: [;
         'GitHub',
         'GitLab',
@@ -445,7 +435,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
         'Quantum-resistant encryption',
         'Multi-layer security',
-=======
     // Quantum - Safe Data Storage;
     {
       id: 'quantum - safe - data - storage',
@@ -472,7 +461,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       icon: '💾',
 
         'Post-Quantum Cryptography',
-=======
       color: 'from - violet - 600 to - purple - 700',
       text_color: 'text - violet - 400',
       link: 'https://ziontechgroup.com / quantum - safe - storage',
@@ -496,7 +484,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Docker',
       ],
 
-=======
       integrations: [;
         'AWS S3',
         'Azure Blob',
@@ -538,11 +525,9 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       implementation_details:;
         'Enterprise - grade quantum - safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24 / 7 support.',
       launch_date: '2025 - 11 - 20',
-=======
 
         'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.',
       launchDate: '2025-11-20',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       customers: 1100,
       rating: 4 && 4.8,
       reviews: 550,
@@ -552,7 +537,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
   ];    features: [
 
-=======
 export interface Innovative2026ITInfrastructureService {
   id: string, name: string,
   tagline: string, price: string,
@@ -605,7 +589,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     variant: 'quantum-futuristic',
     contactInfo: {
       
-=======
   ];    features: [;
       'Quantum - resistant encryption_multi - layer security_automated backup and recovery_global data distribution_compliance certifications_real - time monitoring_disaster recovery_data deduplication';
       'API access_mobile applications';
@@ -661,10 +644,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
   }
 
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026ITInfrastructureService {;
   id: string,;
@@ -931,9 +912,5 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

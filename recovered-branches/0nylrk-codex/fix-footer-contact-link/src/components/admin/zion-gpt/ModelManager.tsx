@@ -14,7 +14,6 @@ import { supabase } from '@/integrations/supabase/client',
 import { ModelConfig } from '@/utils/zion-gpt',
 
 
-=======
 import {useState, useEffect} from 'react';
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -35,14 +34,12 @@ interface ModelVersionData extends ModelConfig {
 export function ZionGPTModelManager() {;
   const [models, setModels] = useState<ModelVersionData[]>([]);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [isLoading, setIsLoading] = useState(true);
   const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),;
 
   // Fetch model data on component mount;
   useEffect(() => {;
     fetchModels();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }, []);
 
   const fetchModels = async () => {;
@@ -142,12 +139,9 @@ if (throw error) {
     }
   }
 
-=======
     }
 
-=======
   };
-=======
 import { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -268,14 +262,12 @@ export function ZionGPTModelManager() {;
       fetchModels();
     } catch (error) {;
       console && console.error('Error toggling model active state:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Card className="w-full">;
@@ -374,14 +366,11 @@ export function ZionGPTModelManager() {;
                     )}
                   </TableCell>;
                 </TableRow>;
-=======
                     )}
 
                   </TableCell>;
                 </TableRow>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
             </TableBody>;
           </Table>;
@@ -391,8 +380,6 @@ export function ZionGPTModelManager() {;
     </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
 
 

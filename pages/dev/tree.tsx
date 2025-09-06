@@ -117,21 +117,18 @@ export default function DevTreePage() {
       {nodes ? (
         <div className="rounded border p-3 bg-white">
           <Tree nodes={nodes} onDeploy={onDeploy} />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </div>
       ) : (
         <div>Loading...</div>
 
 
             onClick={handleSaveToken}>            Save Token;
-=======
 
 
 }
 }
 }
 
-=======
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
 interface ApiResponse {;
@@ -244,7 +241,6 @@ export default function DevTreePage(req, res) {
           />;
           <button className="px-3 py-1 text-sm bg-blue-600 text-white rounded" onClick={handleSaveToken}>;
             Save Token;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </button>;
         </div>;
       </div>;
@@ -261,11 +257,8 @@ export default function DevTreePage(req, res) {
   );
 
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       set_error (e.message || 'Failed to load');    }
   }
 ;
@@ -333,9 +326,6 @@ if ( {) {
         <div > Loading...</div>)}
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -343,5 +333,3 @@ if ( {) {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

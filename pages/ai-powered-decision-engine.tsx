@@ -1,8 +1,5 @@
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
 
 			implementationWeeks="3-7 days"
 			roiNote="Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation"
@@ -17,4 +14,3 @@
 				"Versioned strategies with canary rollouts"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

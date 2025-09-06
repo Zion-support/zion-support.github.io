@@ -21,7 +21,6 @@ export default function ListingDetail() {;
   const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
 
-=======
 
 
 
@@ -118,7 +117,6 @@ export default function ListingDetail() {;
   const listing = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.find(item => item && item.id === id);
 
   if (!listing) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <AppLayout>;
         <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -192,7 +190,6 @@ export default function ListingDetail() {;
                           onError={(e) => {;
                             const target = e && e.target as HTMLImageElement;
                             target && target.src = "/placeholder && placeholder.svg";
-=======
                       >;
                         <img;
                           src={image} ;
@@ -202,8 +199,6 @@ export default function ListingDetail() {;
                             const target = e.target as HTMLImageElement,;
                             target.src = "/placeholder.svg";
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           }}
                         />;
                       </div>;
@@ -215,7 +210,6 @@ export default function ListingDetail() {;
                 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Features */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -240,7 +234,6 @@ export default function ListingDetail() {;
                     </div>
                   </div>
                 </div>
-=======
               </div>;
 
               {/* Description Section */}
@@ -273,7 +266,6 @@ export default function ListingDetail() {;
                   </div>;
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Tags */}
                 <div className="mt-8">;
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>;
@@ -321,7 +313,6 @@ export default function ListingDetail() {;
 
 
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           )}
                         />;
                       ))}
@@ -375,11 +366,9 @@ export default function ListingDetail() {;
                         });
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       }}
                     />
                   ) : (
-=======
                       onPaymentInitiated={() => {;
                         toast({;
                           title: "Payment Processing",;
@@ -388,7 +377,6 @@ export default function ListingDetail() {;
                       }}
                     />;
                   ) : (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <Button
                       onClick={handleContact}
                       disabled={isLoading}
@@ -402,7 +390,6 @@ export default function ListingDetail() {;
 
 
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
-=======
 
                   <Button
                     variant="outline" 
@@ -426,7 +413,6 @@ export default function ListingDetail() {;
                         onError={(e) => {;
                           const target = e && e.target as HTMLImageElement;
                           target && target.src = "https: //ui-avatars && avatars.com/api/?name=" + encodeURIComponent(listing && listing.author.name);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         }}
                       />;
                     ) : (;
@@ -435,10 +421,8 @@ export default function ListingDetail() {;
                       </div>;
                     )}
 
-=======
 
 
-=======
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
                     >;
                       {isLoading ? "Processing..." : "Request Quote"}
@@ -491,7 +475,6 @@ export default function ListingDetail() {;
                   <div className="flex justify-between mb-2">;
                     <span className="text-zion-slate-light">ID</span>;
                     <span className="text-white">{listing && listing.id}</span>;
-=======
 import { useState } from './react';
 import { use_params } from './react-router-dom';
 import { Badge } from '@/components / ui / badge';
@@ -730,7 +713,6 @@ if ( {) {
                   <div className="flex justify - between mb - 2">;
                     <span className="text - zion - slate - light">ID</span>;
                     <span className="text - white">{listing.id}</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </div>;
                 </div>;
               </div>;
@@ -742,10 +724,7 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>;
         <DialogContent className="bg - zion - blue - dark border border - zion - blue - light text - white sm:max - w-md">;
@@ -761,4 +740,3 @@ if ( {) {
       </Dialog>;
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

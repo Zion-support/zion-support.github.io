@@ -2,14 +2,12 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const REGION_OPTIONS = [
   { id: "North America", label: "North America" }
   { id: "Europe", label: "Europe" }
   { id: "Asia", label: "Asia" }
   { id: "South America", label: "South America" }
   { id: "Australia", label: "Australia" }
-=======
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Checkbox} from "@/components/ui/checkbox";
 import {RegionFilterProps} from "@/types/filters";
@@ -19,13 +17,11 @@ const REGION_OPTIONS = [;
   { id: "Asia", label: "Asia" },;
   { id: "South America", label: "South America" },;
   { id: "Australia", label: "Australia" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   { id: "Africa", label: "Africa" }
 
 export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {;
 
   return (
-=======
 
 ],
 
@@ -71,7 +67,6 @@ const REGION_OPTIONS = [;
 ];
 export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {;
   return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button
         onClick={toggleSection}
@@ -106,21 +101,17 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
                 {region.label}
               </label>
             </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
         </div>;
       )}
 
     </div>;
   );
-=======
     </div>
 
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Checkbox  } from '@/components / ui / checkbox';
 import { RegionFilterProps  } from '@/types / filters';

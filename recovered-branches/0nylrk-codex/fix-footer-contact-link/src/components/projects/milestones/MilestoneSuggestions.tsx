@@ -16,7 +16,6 @@ export function MilestoneSuggestions({;
   endDate;
   projectType;
 
-=======
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
@@ -33,7 +32,6 @@ interface MilestoneSuggestionsProps {;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   projectName: string
   scopeSummary: string
@@ -44,7 +42,6 @@ interface MilestoneSuggestionsProps {;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
 }
 export function MilestoneSuggestions({
-=======
 import {Button} from '@/components/ui/button';
 import {GeneratedMilestone, MilestoneInput, useMilestoneGenerator} from '@/hooks/useMilestoneGenerator';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
@@ -62,7 +59,6 @@ interface MilestoneSuggestionsProps {;
 }
 
 export function MilestoneSuggestions(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   projectName;
   scopeSummary;
   startDate;
@@ -74,7 +70,6 @@ export function MilestoneSuggestions(): any ({;
   const [showSuggestions, setShowSuggestions] = useState(false);
 
 
-=======
 
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
@@ -92,7 +87,6 @@ export function MilestoneSuggestions(): any ({;
 
   };
 
-=======
 ;
 export function MilestoneSuggestions({;
   projectName,;
@@ -116,7 +110,6 @@ export function MilestoneSuggestions({;
     const milestones = await generateMilestones(input);
 
     if (milestones && milestones.length > 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setShowSuggestions(true);
       if (onMilestonesGenerated) {;
         onMilestonesGenerated(milestones);
@@ -188,7 +181,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="space-y-4">;
@@ -289,7 +281,6 @@ if ( {) {
 
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">;
                 <Check className="h-4 w-4 mr-1 text-green-500" />;
-=======
       return date_string;
     }
   }
@@ -353,11 +344,9 @@ if ( {) {
     </div>);
 }
 
-=======
 
     </div>;
   );
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,11 +1,9 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }function getAllServices () : Service[] {
 
 
 2) 
-=======
   service.name 
 }| Zion Tech Group</title> ;
 };
@@ -16,7 +14,6 @@ null;
 }</ul> </div>) ) 
 }</ul> </div> <div>) ) 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }</div> </div> </div> </div> </div> </div> </div> <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4" /><a href= {
   `tel:$ {
   contactInfo.mobile.replace (/[^+\\d]/g, '')
@@ -61,7 +58,6 @@ null;
   slug ;
 }) );
 fallback: false ;
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
@@ -131,13 +127,10 @@ null;
 };
 export default ServiceDetail ;
 export default ServiceDetail;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 export default ServiceDetail
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   service.name 
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
@@ -145,5 +138,3 @@ export default ServiceDetail
 export default ServiceDetail 
 export default ServiceDetail
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

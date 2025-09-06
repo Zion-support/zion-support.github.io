@@ -7,7 +7,6 @@ import {;
   CardHeader,;
   CardTitle,;
 
-=======
 
 import React from "react";
 import {
@@ -18,7 +17,6 @@ import {
   CardHeader,
   CardTitle,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
@@ -40,7 +38,6 @@ import { useToast } from "@/hooks/use-toast";
       }, 1500));
   }
 
-=======
 
 export function ExportPanel() {
 
@@ -59,8 +56,6 @@ export function ExportPanel() {
     toast({
       title: `Exporting as ${format.toUpperCase()}`,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardHeader>;
@@ -96,7 +91,6 @@ function ExportPanel() {
   const { toast } = use_toast ();
 ;
   const handle_export = (format: "csv" | "json") =>: any {
-=======
             onClick={() => handleExport('csv')}
           >
             Export as CSV
@@ -152,7 +146,6 @@ export function ExportPanel() {;
             variant="outline";
             className="border - zion - blue - light text - zion - slate - light";
             on_click={() => handle_export ("json")}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           >;
             Export as JSON;
           </Button>;
@@ -162,9 +155,6 @@ export function ExportPanel() {;
     </Card>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
-=======
     </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

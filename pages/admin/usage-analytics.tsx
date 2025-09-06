@@ -1,9 +1,7 @@
 
 
-=======
 
 
-=======
 import React, { useCallback, useEffect, useMemo, useState } from 'react',;
 import Head from 'next/head',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -42,9 +40,6 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
   return (
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>
   )
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -53,7 +48,6 @@ import { requireAdminRole } from '../../utils/auth';
 import DatePicker from 'react-datepicker';
 
   const total = Math.max(1, data.reduce((s, d) => s + d.value, 0));
-=======
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const result = await requireAdminRole(ctx);
@@ -91,7 +85,6 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {;
   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 function LineChart({ data, width = 360, height = 140 }: { data: { date: string, value: number }[], width?: number, height?: number }) {
@@ -118,11 +111,8 @@ function Funnel({ data }: { data: Datum[] }) {
       ))}
     </div>
   )
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />
   })
-=======
 import React, { useCallback, useEffect, useMemo, useState } from 'react',
 import Head from 'next / head',
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
@@ -135,7 +125,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   // Check condition
 if (return result, ) {
   $2
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
   return result;
 },
@@ -161,7 +150,6 @@ function PieChart() {
     const path = `M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${large_arc} 1 ${x2} ${y2} Z`,
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />;
   }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <svg width={size} height={size} view_box={`0 0 ${size} ${size}`}>{slices}</svg>);
 }
@@ -190,13 +178,11 @@ function Funnel() {
 
   return (
 
-=======
     <div className="flex flex-col gap-2">
       {data.map((d, i) => (
         <div key={d.label} className="bg-purple-500 text-white text-sm px-3 py-2 rounded" style={{ width: `${100 - i * 12}%` }}>
 
 
-=======
           {d.label}: {d.value  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -221,7 +207,6 @@ function Funnel() {
 ;
 export default function UsageAnalytics(req, res) {
   try {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [start, setStart] = useState<Date>(new Date(Date.now() - 29 * 24 * 3600 * 1000));
   const [end, setEnd] = useState<Date>(new Date());
   const [userType, setUserType] = useState<string>('all');
@@ -236,8 +221,6 @@ export default function UsageAnalytics(req, res) {
       setEvents(json.events || []);
       setLine(json.line || []);
       setFunnel(json.funnel || [])
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export default /**
  * UsageAnalytics - Function description
  */
@@ -260,7 +243,6 @@ function UsageAnalytics() {
       set_events (json.events || []),
       set_line (json.line || []),
       set_funnel (json.funnel || []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       set_loading (false);
     }
@@ -283,7 +265,6 @@ function UsageAnalytics() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </ul>
             </div>
           </div>
@@ -314,10 +295,8 @@ function UsageAnalytics() {
       </div>
     </EnhancedLayout>
 
-=======
 }
 
-=======
   }, [start, end, user_type]),
   useEffect (() => { refresh () }, []),
   return (
@@ -383,9 +362,5 @@ function UsageAnalytics() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

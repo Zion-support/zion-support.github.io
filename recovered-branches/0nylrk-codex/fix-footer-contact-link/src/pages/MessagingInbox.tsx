@@ -9,11 +9,9 @@ import {ConversationsList, ConversationDetailView} from '@/components / messagin
 import {useIsMobile} from '@/hooks / use - mobile';
 import {toast} from 'sonner';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   useEffect(() => {
     // Fetch conversations when component mounts
     const loadData = async () => {
-=======
 import {Button} from '@/components / ui / button';
 import {use_navigate} from 'react-router-dom';
 export default /**
@@ -35,7 +33,6 @@ function MessagingInbox() {
   useEffect (() => {
     // Fetch conversations when component mounts;
     const load_data = async () => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       try {
         await fetch_conversations ();
       } catch (error) {
@@ -85,7 +82,6 @@ function MessagingInbox() {
             {activeConversation && (
 
 
-=======
               <Button
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
@@ -170,7 +166,6 @@ export default function MessagingInbox() {;
             </h1>;
 
             {activeConversation && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">;
@@ -243,11 +238,8 @@ if ( {) {
                 </div>) : (
                 <ConversationsList;
 
-=======
                 <ConversationsList;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   conversations={conversations}
                   active_conversation={active_conversation}
                   setActiveConversation={setActiveConversation}
@@ -267,7 +259,6 @@ if ( {) {
   );
 }
 
-=======
                 />)}
               {/* Conversation Detail */}
               <ConversationDetailView />;
@@ -279,10 +270,7 @@ if ( {) {
       </div>;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

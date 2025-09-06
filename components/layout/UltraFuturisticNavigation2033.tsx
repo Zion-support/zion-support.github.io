@@ -140,7 +140,6 @@ const contactInfo = {
   /* Contact Button */
 }<motion.div whileHover= {  {  website: 'https://ziontechgroup.com'
 }
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -300,7 +299,6 @@ const service_categories = [;
         description: 'Creative AI solutions',
         price: '$1, 499 / month',
       },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
 
         name: 'AI Autonomous Business Manager',
@@ -313,7 +311,6 @@ const service_categories = [;
     title: '⚛️ Quantum & Emerging Tech',
     icon: Atom,
     color: 'from-indigo-500 to-blue-600',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     services: [
 
 
@@ -329,7 +326,6 @@ const service_categories = [;
     title: '🏙️ Enterprise IT Solutions',
     icon: Cpu,
     color: 'from-blue-500 to-cyan-600',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     services: [
 
 
@@ -345,7 +341,6 @@ const service_categories = [;
     title: '🌌 Space & Metaverse Tech',
     icon: Rocket,
     color: 'from-teal-500 to-emerald-600',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     services: [
 
 
@@ -369,19 +364,16 @@ const service_categories = [;
   { name: 'Quantum Tech', href: '/quantum-services', icon: Atom, color: 'from-indigo-500 to-blue-600' },
   { name: 'Space Tech', href: '/space-technology', icon: Rocket, color: 'from-teal-500 to-emerald-600' },
   { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   { name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }
 
 
 export default function UltraFuturisticNavigation2033() {
   const [isOpen, setIsOpen] = useState(false)
-=======
 
 
 export default function UltraFuturisticNavigation2033() {;
 
   const [isOpen, setIsOpen] = useState(false);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -399,7 +391,6 @@ export default function UltraFuturisticNavigation2033() {;
     document && document.addEventListener('keydown', handleEscape);
     return () => document && document.removeEventListener('keydown', handleEscape);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
     <>;
@@ -443,7 +434,6 @@ export default function UltraFuturisticNavigation2033() {;
               </Link>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Services Mega Menu */}
               <div className='relative group'>;
                 <button
@@ -459,7 +449,6 @@ export default function UltraFuturisticNavigation2033() {;
                   onMouseLeave={() => setActiveCategory(null)}
 
 
-=======
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {/* Services Mega Menu */}
@@ -476,8 +465,6 @@ export default function UltraFuturisticNavigation2033() {;
                 </button>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Mega Menu */}
                 <AnimatePresence>;
                   {activeCategory === 'services' && (;
@@ -495,7 +482,6 @@ export default function UltraFuturisticNavigation2033() {;
                         {serviceCategories.map(category => (
                           <div key={category.title} className='space-y-4'>
                             <div className='flex items-center space-x-3'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                               <div
                                 className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category && category.color} flex items-center justify-center`}>;
                                 <category && category.icon className='w-5 h-5 text-white' />;
@@ -508,7 +494,6 @@ export default function UltraFuturisticNavigation2033() {;
                               {category && category.services.map(service => (;
                                 <Link
 
-=======
                       className="absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4"
                     >
                       <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -523,7 +508,6 @@ export default function UltraFuturisticNavigation2033() {;
                             <div className="space-y-3">
                               {category.services.map((service) => (
                                 <Link
-=======
             </motion.div>;
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items - center space - x-8'>;
@@ -636,10 +620,7 @@ export default function UltraFuturisticNavigation2033() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                                 </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                               ))}
                             </div>;
                           </div>;
@@ -676,26 +657,22 @@ export default function UltraFuturisticNavigation2033() {;
                   href={link.href}
 
 
-=======
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
 
                 >
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {link.name}
                 </Link>
               ))}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Contact Button */}
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   href='/contact'
 
                   href="/contact"
@@ -718,11 +695,9 @@ export default function UltraFuturisticNavigation2033() {;
 
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>;
-=======
 
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <button
                 onClick={toggleMenu}
                 className='text-gray-300 hover:text-white transition-colors duration-200 p-2'>;
@@ -742,12 +717,9 @@ export default function UltraFuturisticNavigation2033() {;
         </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -785,7 +757,6 @@ export default function UltraFuturisticNavigation2033() {;
                             {service && service.name}
                           </Link>;
 
-=======
               transition={{ duration: 0.3 }}
               className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20"
             >
@@ -807,7 +778,6 @@ export default function UltraFuturisticNavigation2033() {;
                             {service.name}
                           </Link>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         ))}
                       </div>;
                     </div>;
@@ -816,12 +786,9 @@ export default function UltraFuturisticNavigation2033() {;
                 </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Mobile Quick Links */}
 
 
@@ -829,15 +796,12 @@ export default function UltraFuturisticNavigation2033() {;
 
                   </div>;
                 </div>;
-=======
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Mobile Contact Button */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Link
                     href='/contact'
                     onClick={closeMenu}
@@ -845,7 +809,6 @@ export default function UltraFuturisticNavigation2033() {;
                     href="/contact"
                     onClick={closeMenu}
                     className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200">;
-=======
         {/* Mobile Menu */}
         <AnimatePresence>;
           {is_open && (
@@ -919,13 +882,11 @@ export default function UltraFuturisticNavigation2033() {;
                     on_click={close_menu}
                     className="block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg text - center hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200";
                   >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     Get Started;
                   </Link>;
                 </div>;
               </div>;
 
-=======
                 <div className="pt-4">
                   <Link
                     href="/contact"
@@ -938,7 +899,6 @@ export default function UltraFuturisticNavigation2033() {;
               </div>
             </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
 
         </AnimatePresence>;
@@ -958,7 +918,6 @@ export default function UltraFuturisticNavigation2033() {;
 }</div> </div> > Get Started </a> </div> </div> </motion && motion.div>) ;
 }</AnimatePresence> </nav> </>) }
 
-=======
             </motion.div>)}
         </AnimatePresence>;
       </nav>;
@@ -974,9 +933,6 @@ export default function UltraFuturisticNavigation2033() {;
 }</div>) );
 }</div> </div> > Get Started </a> </div> </div> </motion.div>);
 }</AnimatePresence> </nav> </>) }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   /* Mobile Menu */ 
 }<AnimatePresence>) ) 
@@ -984,4 +940,3 @@ export default function UltraFuturisticNavigation2033() {;
 }</div>) ) 
 }</div> </div> > Get Started </a> </div> </div> </motion.div>) 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

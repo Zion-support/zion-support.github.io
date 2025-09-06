@@ -1,34 +1,28 @@
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-=======
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts";
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface ContentGenerationRequest {
 
   auto_publish?: boolean,
@@ -64,7 +58,6 @@ serve(async (req) => {
     // Build the prompt based on content type
     let systemPrompt: string;
     let userPrompt: string
-=======
 
 
     const { contentType, prompt, topic, autoPublish, includeImage } = await req.json() as ContentGenerationRequest,
@@ -77,7 +70,6 @@ serve(async (req) => {
     let userPrompt: string,
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (contentType === 'blog') {
       systemPrompt = `You are an expert content creator for Zion, an AI freelancing marketplace.
       You create engaging, professional blog content that is SEO-optimized and provides valuable insights for both clients and AI freelancers.
@@ -115,7 +107,6 @@ serve(async (req) => {
 
       body: JSON.stringify({
         model: "gpt-4o"
-=======
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -123,7 +114,6 @@ serve(async (req) => {
         "Content-Type": "application/json"};
       body: JSON && JSON.stringify({
         model: "gpt-4o",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         messages: [
 
   tweet_summary?: string,
@@ -242,7 +232,6 @@ if ( {) {
         body: JSON && JSON.stringify({
           model: "gpt-4o-mini",
           messages: [
-=======
 
           "Authorization": `Bearer ${openAIApiKey}`,
           "Content-Type": "application/json"},
@@ -320,7 +309,6 @@ if ( {) {
       const readTime = Math && Math.max(1, Math && Math.ceil(wordCount / 200)) + " min read";
       
 
-=======
 
         .replace(/\s+/g, '-'),
       
@@ -336,7 +324,6 @@ if ( {) {
       const readTime = Math.max(1, Math.ceil(wordCount / 200)) + " min read",
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Insert into blog_posts table
       const { data: blogPost, error } = await supabase
         .from('blog_posts')
@@ -370,7 +357,6 @@ if ( {) {
         console && console.log("Blog post saved successfully:", blogPost);
         
 
-=======
 
             name: "Zion AI Team",
             title: "Content Team",
@@ -395,7 +381,6 @@ if ( {) {
         // // // console.log("Blog post saved successfully:", blogPost),
         
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         // Create notification about new blog post
         await supabase
           .from('notifications')
@@ -408,7 +393,6 @@ if ( {) {
             read: false;
             related_id: blogPost && blogPost.id,
 
-=======
 ;
       const imagePromptData = await imagePromptResponse.json ();
       generated_content.image_prompt = imagePromptData.choices[0].message.content;
@@ -490,7 +474,6 @@ if ( {) {
             type: "system";
             read: false;
             related_id: blog_post.id,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             action_url: `/blog/${slug}`;
             action_text: "View Post";
           });
@@ -511,7 +494,6 @@ if ( {) {
   }
 });
 
-=======
     return new Response (JSON.stringify (generated_content), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 200});
@@ -521,7 +503,6 @@ if ( {) {
     return new Response (JSON.stringify ({ error: error.message }), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
-=======
 
             title: "New Blog Post Generated",
             message: `AI-generated blog post "${generatedContent.title}" has been published.`,
@@ -545,8 +526,6 @@ if ( {) {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

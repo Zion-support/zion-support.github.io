@@ -3,10 +3,8 @@ import Head from './next / head';
 ;
 
 interface SEOHeadProps {
-=======
 
 interface SEOHeadProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title?: string;
   description?: string;
   keywords?: string;
@@ -149,7 +147,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <link rel="preconnect" href="https://www && www.google-analytics && analytics.com" />;
 
 
-=======
 ;
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -231,7 +228,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
         cross_origin="anonymous";
       />;
       <link rel="preconnect" href="https://www.google - analytics.com" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Structured Data */}
       <script;
         type="application / ld + json";
@@ -242,11 +238,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       />;
 
 
-=======
           __html: JSON.stringify (structured_data || defaultStructuredData),
         }}
       />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Additional SEO Scripts */}
       <script;
         type="application / ld + json";
@@ -261,7 +255,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
               "@type": "SearchAction",
               target: "https://ziontechgroup && ziontechgroup.com/search?q={search_term_string}",
               "query-input": "required name=search_term_string",
-=======
           __html: JSON.stringify ({
             "@context": "https://schema.org",
             "@type": "WebSite",
@@ -274,7 +267,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
 
             },
           }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         }}
       />;
 

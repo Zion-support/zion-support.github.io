@@ -9,10 +9,8 @@ import {TalentProfile} from "@/types/talent";
 import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
 import {ContractFormValues} from "./ContractForm";
 
-=======
 import { UseFormReturn } from "react-hook-form",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { 
   FormField;
   FormItem;
@@ -41,7 +39,6 @@ import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "./ContractForm",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface PaymentTermsFieldsProps {
 
   form: UseFormReturn<ContractFormValues>
@@ -58,7 +55,6 @@ import {MilestoneSuggestions} from "@/components/projects/milestones/MilestoneSu
 import {TalentProfile} from "@/types/talent";
 import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
 import {ContractFormValues} from "./ContractForm";
-=======
 
 
 
@@ -120,7 +116,6 @@ export function PaymentTermsFields(): any ({ ;
   talent;
   handleMilestonesGenerated ;
 }: PaymentTermsFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
@@ -131,7 +126,6 @@ export function PaymentTermsFields(): any ({ ;
             <FormItem>;
               <FormLabel>Payment Terms</FormLabel>;
               <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-=======
 import { UseFormReturn } from './react - hook - form';
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from '@/components / ui / form';
 import { Input } from '@/components / ui / input';
@@ -175,7 +169,6 @@ function PaymentTermsFields() {
             </FormItem>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
 
         />;
@@ -221,14 +214,12 @@ function PaymentTermsFields() {
 
 
                         form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}
-=======
             projectName={form && form.getValues("projectName") || "Project"}
             scopeSummary={form && form.getValues("scopeSummary") || ""}
             startDate={form && form.getValues("startDate") || new Date()}
             endDate={form && form.getValues("endDate")}
             projectType={form && form.getValues("projectName").includes("AI") ? "AI/ML" : 
                         form && form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             onMilestonesGenerated={handleMilestonesGenerated}
           />;
         </div>;
@@ -238,7 +229,6 @@ function PaymentTermsFields() {
   );
 }
 
-=======
             </FormItem>)}
         />;
         <FormField;
@@ -276,4 +266,3 @@ function PaymentTermsFields() {
         </div>)}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

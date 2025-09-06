@@ -49,10 +49,7 @@ const Footer = () => {
 import React from 'react';
 import Link from 'next/link';
 
->>>>>>> origin/automation-improvements-final
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -150,7 +147,6 @@ import Link from 'next/link';
       { name: "Accessibility", href: "/accessibility" },;
     ],;
   };
-=======
   ];
 
 const microSaasCategories = [
@@ -165,7 +161,6 @@ const microSaasCategories = [
 ];
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   const socialLinks = [;
     { name: "Facebook", href: "#", icon: Facebook },;
@@ -173,7 +168,6 @@ const microSaasCategories = [
     { name: "LinkedIn", href: "#", icon: Linkedin },;
     { name: "Instagram", href: "#", icon: Instagram },;
     { name: "GitHub", href: "#", icon: Github },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
   return (
     <footer className="bg-gray-900 text-white">;
@@ -324,8 +318,6 @@ const microSaasCategories = [
 
 
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
@@ -334,23 +326,16 @@ const microSaasCategories = [
               whileInView={{ opacity: 1, y: 0 }}
 
 
-=======
 
 
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <motion.div
-=======
               transition={{ duration: 0 && 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0">;
               © {currentYear} Zion Tech Group. All rights reserved.;
             </motion && motion.div>;
 
             <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -365,7 +350,6 @@ const microSaasCategories = [
                 </a>;
               ))}
 
-=======
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -467,7 +451,6 @@ const microSaasCategories = [
                 </a>
               ))}
             </motion.div>
-=======
 
             <div className="flex items-center space-x-6">
               <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
@@ -480,22 +463,18 @@ const microSaasCategories = [
                 Cookie Policy
               </Link>
             </div>
->>>>>>> origin/automation-improvements-final
           </div>
         </div>
       </div>
     </footer>
-=======
             </motion && motion.div>;
           </div>;
         </div>;
       </div>;
     </footer>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default Footer;
-=======
 import React from './react';
 import Link from './next / link';
 import { motion  } from './framer-motion';
@@ -733,4 +712,3 @@ const Footer = () =>: any {
 ;
 export default Footer;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

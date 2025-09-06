@@ -4,22 +4,16 @@
 import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
 
-=======
 import {Toaster, as, SonnerToaster} from "sonner";
-=======
 import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function Toaster() {
   return (
 
-=======
 import {Toaster, as, SonnerToaster} from "sonner";
 export function Toaster() {;
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     <SonnerToaster
       position="top-right"
       toastOptions={{
@@ -32,10 +26,8 @@ export function Toaster() {;
 
         descriptionClassName: "text-zion-slate-light"}}
 
-=======
 
 
-=======
 import * as React from "react",;
 import { Toaster as SonnerToaster } from "sonner",;
 export function Toaster() {;
@@ -75,8 +67,6 @@ function Toaster() {
     />);
 }
 
-=======
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

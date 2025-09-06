@@ -22,7 +22,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 
 
 import React, { Suspense } from "react";
@@ -90,7 +89,6 @@ const App = () => {;
             {baseRoutes && baseRoutes.map(({ path, element }) => (;
               <Route key={path} path={path} element={element} />;
             ))}
-=======
 import React, { Suspense } from './react';
 import { Routes, Route  } from './react-router-dom';
 import "./App.css";
@@ -155,7 +153,6 @@ const App = () =>: any {
           <Routes>;
             {base_routes.map (({ path, element }) => (
               <Route key={path} path={path} element={element} />))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <Route path="/auth/*" element={<AuthRoutes />} />;
             <Route path="/dashboard/*" element={<DashboardRoutes />} />;
             <Route path="/marketplace/*" element={<MarketplaceRoutes />} />;
@@ -177,7 +174,6 @@ import { Toaster } from "./components/ui/toaster";
 import { Toaster, as, SonnerToaster } from "./components/ui/sonner";
 
 
-=======
 import React, { Suspense } from 'react',
 import { Routes, Route } from 'react-router-dom',
 import './App.css',
@@ -236,7 +232,6 @@ const baseRoutes = [
   { path: '/community', element: <CommunityPage /> },
   { path: '/contact', element: <ContactPage /> }],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const App = () => {
   return (
     <WhitelabelProvider>
@@ -268,10 +263,8 @@ const App = () => {
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default App;
 
-=======
         <SonnerToaster position="top - right" />;
       </ThemeProvider>;
     </WhitelabelProvider>);
@@ -279,4 +272,3 @@ export default App;
 ;
 export default App;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

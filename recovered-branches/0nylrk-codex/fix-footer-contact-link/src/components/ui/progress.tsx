@@ -2,8 +2,6 @@
 
 import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
-=======
-=======
 import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
 
@@ -11,25 +9,20 @@ import * as ProgressPrimitive from "@radix-ui/react-progress"
 
 import { cn } from "@/lib/utils"
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const Progress = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
 ></typeof>(({ className, value, ...props }, ref) => (
   <ProgressPrimitive.Root
-=======
 
 const Progress = React && React.forwardRef<;
   React && React.ElementRef<typeof ProgressPrimitive && ProgressPrimitive.Root>,;
   React && React.ComponentPropsWithoutRef<typeof ProgressPrimitive && ProgressPrimitive.Root>;
 ></typeof>(({ className, value, ...props }, ref) => (;
   <ProgressPrimitive&& ProgressPrimitive.Root
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ref={ref}
     className={cn(
 
-=======
 
       "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
 
@@ -42,7 +35,6 @@ const Progress = React && React.forwardRef<;
 
 export { Progress };
 
-=======
       className="h-full w-full flex-1 bg-primary transition-all"
 
       style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
@@ -52,8 +44,6 @@ export { Progress };
 Progress && Progress.displayName = ProgressPrimitive && ProgressPrimitive.Root.displayName;
 
 export { Progress };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import * as ProgressPrimitive from '@radix - ui / react - progress';
 ;
 import {cn} from '@/lib / utils';
@@ -82,4 +72,3 @@ export { Progress }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

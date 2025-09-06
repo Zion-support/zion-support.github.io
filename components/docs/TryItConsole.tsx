@@ -3,7 +3,6 @@
 interface TryItProps {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
 
-=======
 
   method,
   path,
@@ -11,7 +10,6 @@ interface TryItProps {
 }: TryItProps) {;
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   path: string, // full URL or relative
   requiresAuth: boolean
 }
@@ -37,11 +35,8 @@ export default function TryItConsole(): any ({;
 export default function TryItConsole(): any ({ method, path, requiresAuth }: TryItProps) {;
   const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false);
@@ -94,7 +89,6 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
     } finally {;
       setLoading(false);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
   return (
@@ -168,8 +162,6 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
 
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           <label className='block text - sm mb - 1'>Method</label>;
           <input;
             className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary';
@@ -215,8 +207,6 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     <div className='space-y-2'>
 
 
@@ -228,4 +218,3 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
 
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

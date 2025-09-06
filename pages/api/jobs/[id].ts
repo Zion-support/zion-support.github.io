@@ -13,13 +13,11 @@ const FILE = "jobs && jobs.json";
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
 const FILE = "jobs.json";
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (!rateLimit(req, res)) return;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
@@ -38,7 +36,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   }
 
   if (req && req.method === "PATCH") {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const userEmail = getRequestUserEmail(req);
     const job = jobs[idx];
     const isOwner = userEmail && userEmail === job && job.clientEmail;
@@ -120,7 +117,6 @@ if (job.status = status as Job["status"]) {
   res.status (405).end ("Method Not Allowed");
 }
 
-=======
     job.updatedAtIso = new Date().toISOString();
     jobs[idx] = job,;
     writeJsonFile<Job[]>(FILE, jobs),;
@@ -150,7 +146,6 @@ if (job.status = status as Job["status"]) {
     return res.status(500).json({ error: "Internal server error" });
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
   } catch (error) {
@@ -159,4 +154,3 @@ if (job.status = status as Job["status"]) {
   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

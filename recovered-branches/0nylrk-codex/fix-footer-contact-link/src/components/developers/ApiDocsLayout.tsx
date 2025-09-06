@@ -14,14 +14,12 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const navigationItems = [
     { title: "Getting Started", path: "/developers/docs/getting-started" }
     { title: "API Reference", path: "/developers/docs/reference" }
     { title: "Webhooks", path: "/developers/docs/webhooks" }
     { title: "Sample Code", path: "/developers/docs/samples" }
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }]
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -65,12 +63,10 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
     { title: "Sample Code", path: "/developers/docs/samples" },;
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="flex min-h-screen bg-zinc-950">;
       {/* Sidebar */}
 
-=======
                 <Link
                   to={item.path}
                   className={cn(
@@ -123,7 +119,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
           <ul className="space-y-1">;
             {navigationItems && navigationItems.map((item) => (;
               <li key={item && item.path}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Link
                   to={item && item.path}
                   className={cn(
@@ -155,7 +150,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
 
 export default ApiDocsLayout;
 
-=======
 import React from './react';
 import { Link, use_location } from './react-router-dom';
 import { Search } from './lucide-react';
@@ -222,4 +216,3 @@ function ApiDocsLayout() {
 }
 export default ApiDocsLayout;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

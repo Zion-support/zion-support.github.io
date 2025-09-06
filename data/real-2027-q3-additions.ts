@@ -6,11 +6,9 @@ export const real2027Q3Additions = [
   {
 
 
-=======
 export const real2027Q3Additions = [;
   {
     id: 'it - asset - discovery - agent',
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     name: 'IT Asset Discovery Agent',
     tagline: 'Agentless network - wide discovery and enrichment',
     price: '$149',
@@ -329,7 +327,6 @@ export const real2027Q3Additions = [;
     link: '/api - security - scanner';
     real_service: true,
     roi: 'Prevent high - severity API incidents and cut MTTR.';
-=======
       'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports';
     ],;
     category: 'Security & Identity',;
@@ -353,9 +350,6 @@ export const real2027Q3Additions = [;
     roi: 'Prevent high-severity API incidents and cut MTTR.';
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

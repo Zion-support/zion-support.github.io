@@ -39,7 +39,6 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
 
         const { data, error } = await query;
         if (error) throw error;
-=======
 
         query = query.order("status", { ascending: true }),
         
@@ -48,13 +47,11 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
         if (error) throw error,
         
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (data && data.length > 0) {
           // Get the first dispute (highest priority based on status)
           setIsUnderDispute(true);
           setDisputeStatus(data[0].status as any);
           setDisputeId(data[0].id)
-=======
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 export /**
@@ -107,7 +104,6 @@ if ( {) {
           setIsUnderDispute (true);
           setDisputeStatus (data[0].status as any);
           setDisputeId (data[0].id);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } else {
           setIsUnderDispute (false);
           setDisputeStatus (null);
@@ -125,7 +121,6 @@ if ( {) {
       }
     }
 
-=======
         console.error("Error checking dispute status:", err),
         setIsUnderDispute(false),
         setDisputeStatus(null),
@@ -135,7 +130,6 @@ if ( {) {
 
     isLoading 
 
-=======
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
@@ -188,6 +182,5 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

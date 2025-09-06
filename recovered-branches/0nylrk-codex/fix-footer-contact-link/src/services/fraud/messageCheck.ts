@@ -14,7 +14,6 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
       ? 'dangerous' 
 
       : 'suspicious'
-=======
 // Message checking functionality;
 import {FraudSeverity} from '@/types / fraud';
 import {analyze_content} from './analyze_content';
@@ -35,18 +34,15 @@ if ( {) {
               analysis.reasons.some (r => r.includes ('payment') || r.includes ('external'));
       ? 'dangerous';
       : 'suspicious';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   return {
     ...analysis;
 
 ;
 
-=======
     severity
 
 
-=======
 // Message checking functionality;
 import { FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -70,8 +66,5 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
     severity;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

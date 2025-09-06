@@ -16,7 +16,6 @@ import {useDisputes} from "@/hooks/useDisputes";
 import {toast} from "sonner";
 import {FileText} from "lucide-react";
 
-=======
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -44,7 +43,6 @@ import { FileText } from "lucide-react",
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const formSchema = z.object({
   reason_code: z.string()
     .min(1, { message: "Please select a reason for the dispute" })
@@ -165,7 +163,6 @@ export function DisputeForm(): any ({ ;
       toast.error("Failed to submit dispute. Please try again.")
     } finally {
       setIsSubmitting(false)
-=======
   };
 
   const removeFile = (index: number) => {;
@@ -203,12 +200,10 @@ export function DisputeForm(): any ({ ;
       toast && toast.error("Failed to submit dispute. Please try again.");
     } finally {;
       setIsSubmitting(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
   return (
 
-=======
           <FormField
             control={form.control}
             name="reason_code"
@@ -327,7 +322,6 @@ export function DisputeForm({;
 
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <FormField
             control={form && form.control}
             name="reason_code"
@@ -335,7 +329,6 @@ export function DisputeForm({;
               <FormItem>;
                 <FormLabel>Reason for dispute</FormLabel>;
                 <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-=======
 import React, { useState } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -448,7 +441,6 @@ if ( {) {
               <FormItem>;
                 <FormLabel > Reason for dispute</FormLabel>;
                 <Select onValueChange={field.on_change} default_value={field.value}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select a reason" />;
@@ -460,7 +452,6 @@ if ( {) {
                       <SelectItem key={value} value={value}>{label}</SelectItem>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
                   </SelectContent>;
                 </Select>;
@@ -481,7 +472,6 @@ if ( {) {
                   <Textarea
                     placeholder="Please provide specific details about the issue..."
                     className="min-h-[150px]"
-=======
                     {Object.entries (disputeReasonLabels).map (([value, label]) => (
                       <SelectItem key={value} value={value}>{label}</SelectItem>))}
                   </SelectContent>;
@@ -499,7 +489,6 @@ if ( {) {
                   <Textarea;
                     placeholder="Please provide specific details about the issue...";
                     className="min - h-[150px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {...field}
                   />;
                 </FormControl>;
@@ -530,14 +519,12 @@ if ( {) {
                             variant="ghost" 
                             size="sm" 
 
-=======
 
                           <Button 
                             type="button" 
                             variant="ghost" 
                             size="sm" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             onClick={() => removeFile(index)}
                           >;
                             Remove;
@@ -548,7 +535,6 @@ if ( {) {
                   </div>;
                 )}
 
-=======
               </FormItem>)}
           />;
           <FormItem>;
@@ -601,7 +587,6 @@ if ( {) {
     </div>);
 
 }
-=======
             </Button>
           </div>
         </form>
@@ -610,4 +595,3 @@ if ( {) {
   )
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

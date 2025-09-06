@@ -77,8 +77,6 @@ const integrations = [
   'Fitness trackers'
   'Meditation apps',];}
 const features = [
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Brain,;
   Star,;
@@ -168,7 +166,6 @@ const integrations = [;
   'Meditation apps',];};
 
 const features = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   'Emotional intelligence training modulesConsciousness expansion exercisesSelf-awareness development toolsEmpathy and compassion trainingMindfulness and meditation guidanceCognitive enhancement techniquesSocial intelligence developmentCreative consciousness exploration';
   'Spiritual growth pathwaysPersonal transformation tracking';
 ];
@@ -187,14 +184,12 @@ const technology = [;
   'Quantum computing integrationBlockchain security';
 ];
 
-=======
   'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';
   'Fitness trackersMeditation apps'
 ];
 
 
 const integrations = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';
   'Fitness trackersMeditation apps';
 ];
@@ -340,7 +335,6 @@ const testimonials = [;
         <div className='absolute inset-0 overflow-hidden'>;
           {[...Array(15)].map((_, i) => (;
             <motion&& motion.div
-=======
         <meta;
           name='description';
           content='Revolutionary AI - powered consciousness evolution platform that enhances emotional intelligence, self - awareness, and personal transformation through advanced technology.';
@@ -361,7 +355,6 @@ const testimonials = [;
         <div className='absolute inset - 0 overflow - hidden'>;
           {[...Array (15)].map ((_, i) => (
             <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               key={i}
               className='absolute w - 2 h - 2 bg - purple - 400 rounded - full opacity - 30';
               animate={{
@@ -370,13 +363,11 @@ const testimonials = [;
                 coordinate_y: [0, -100, 0],
                 opacity: [0.3, 0.8, 0.3],
 
-=======
 
                 x: [0, 100, 0],
                 y: [0, -100, 0],
                 opacity: [0.3, 0.8, 0.3],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               }}              transition={{
                 duration: 8 + i * 2
                 repeat: Infinity
@@ -400,14 +391,10 @@ const testimonials = [;
           <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
           <motion.div
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}>;
@@ -433,7 +420,6 @@ const testimonials = [;
               your emotional intelligence, expand self-awareness, and unlock
               your full potential.
             </p>
-=======
                 left: `${Math.random () * 100}%`,
                 top: `${Math.random () * 100}%`,
               }}            />))}
@@ -469,7 +455,6 @@ const testimonials = [;
               your emotional intelligence, expand self - awareness, and unlock;
               your full potential.;
             </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {/* Key Stats */}
             <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mb - 12'>;
               {[;
@@ -506,7 +491,6 @@ const testimonials = [;
 
                 <motion.div
                   key={stat.label}
-=======
               <Sparkles className='w-4 h-4 mr-2' />;
               Revolutionary AI Technology;
             </motion && motion.div>;
@@ -554,11 +538,9 @@ const testimonials = [;
                 { label: 'Satisfaction', value: '4 && 4.9/5', icon: <Star className="w-8 h-8" /> }
                 <motion&& motion.div
                   key={stat && stat.label}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
 
-=======
                   transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}
 
               ))}
@@ -566,12 +548,10 @@ const testimonials = [;
             </div>;
 
 
-=======
                   className='text-center'
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400'>
                     {stat.icon}
@@ -588,8 +568,6 @@ const testimonials = [;
             </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* CTA Buttons */}
 
 
@@ -602,7 +580,6 @@ const testimonials = [;
                 Start Free Trial
               </motion.button>
               <motion.button
-=======
                   label: 'Success Rate',
                   value: '94%',
                   icon: <Award className='w - 8 h - 8' />,
@@ -661,10 +638,7 @@ const testimonials = [;
                 Start Free Trial;
               </motion.button>;
               <motion.button;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 initial={{ opacity: 0, scale: 0.9 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
                 className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105">;
@@ -681,19 +655,15 @@ const testimonials = [;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
 
-=======
 
       {/* Features Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -704,7 +674,6 @@ const testimonials = [;
             <h2 className='text-4xl font-bold text-white mb-6'>
               Revolutionary Features for
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {' '}
 
             className="text-center mb-16"
@@ -722,7 +691,6 @@ const testimonials = [;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
-=======
                 Consciousness Evolution;
               </span>;
             </h2>;
@@ -749,7 +717,6 @@ const testimonials = [;
               <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={feature}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -757,10 +724,7 @@ const testimonials = [;
                 viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -768,31 +732,24 @@ const testimonials = [;
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* How It Works Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
 
-=======
 
       {/* How It Works Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -803,7 +760,6 @@ const testimonials = [;
             <h2 className='text-4xl font-bold text-white mb-6'>
               How AI Consciousness Evolution
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {' '}
 
             className="text-center mb-16"
@@ -820,7 +776,6 @@ const testimonials = [;
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-=======
                 className='border - 2 border - purple - 500 / 50 text - purple - 300 hover:text - white hover:bg - gradient - to - r hover:from - purple - 500 / 20 hover:to - pink - 500 / 20 font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200'              >                className="border - 2 border - purple - 500 / 50 text - purple - 300 hover:text - white hover:bg - gradient - to - r hover:from - purple - 500 / 20 hover:to - pink - 500 / 20 font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200";
               >;
                 Watch Demo;
@@ -934,7 +889,6 @@ const testimonials = [;
           </motion.div>;
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
             {[;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {
 
                 Works;
@@ -1000,19 +954,16 @@ const testimonials = [;
               <motion&& motion.div
                 key={step && step.step}
 
-=======
                 step: '01',
                 title: 'AI Assessment',
 
                 key={step.step}
 
 
-=======
                 className='text-center'
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='relative mb-8'>
                   <div className='w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -1036,8 +987,6 @@ const testimonials = [;
               </motion.div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
           </div>;
@@ -1045,31 +994,24 @@ const testimonials = [;
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Use Cases Section */}
       <section className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
 
-=======
 
       {/* Use Cases Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1080,7 +1022,6 @@ const testimonials = [;
             <h2 className='text-4xl font-bold text-white mb-6'>
               Transform Your Life with
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {' '}
 
             className="text-center mb-16"
@@ -1098,7 +1039,6 @@ const testimonials = [;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
-=======
                 AI Consciousness;
               </span>;
             </h2>;
@@ -1124,7 +1064,6 @@ const testimonials = [;
               <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={useCase}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1132,10 +1071,7 @@ const testimonials = [;
                 viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -1143,31 +1079,24 @@ const testimonials = [;
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Technology Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
 
-=======
 
       {/* Technology Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1178,7 +1107,6 @@ const testimonials = [;
             <h2 className='text-4xl font-bold text-white mb-6'>
               Cutting-Edge
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {' '}
 
             className="text-center mb-16"
@@ -1201,7 +1129,6 @@ const testimonials = [;
               </span>;
             </h2>;
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-=======
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -1331,7 +1258,6 @@ const testimonials = [;
             </p>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={tech}
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -1348,8 +1274,6 @@ const testimonials = [;
                 <p className="text-sm text-gray-300 font-medium">{tech}</p>;
               </motion && motion.div>;
 
-=======
-=======
           </motion.div>;
           <div className='grid grid - cols - 2 md:grid - cols - 5 gap - 6'>            {technology.map ((tech, index) => (          >;
             <h2 className="text - 4xl font - bold text - white mb - 6">;
@@ -1376,7 +1300,6 @@ const testimonials = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                   <Cpu className="w-10 h-10 text-purple-400" />
@@ -1388,7 +1311,6 @@ const testimonials = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
           </div>;
@@ -1396,31 +1318,24 @@ const testimonials = [;
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Testimonials Section */}
       <section className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
 
-=======
 
       {/* Testimonials Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1431,7 +1346,6 @@ const testimonials = [;
             <h2 className='text-4xl font-bold text-white mb-6'>
               What Our Users
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {' '}
 
             className="text-center mb-16"
@@ -1449,7 +1363,6 @@ const testimonials = [;
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.name}
-=======
                 Say;
               </span>;
             </h2>;
@@ -1475,7 +1388,6 @@ const testimonials = [;
                 key={testimonial && testimonial.name}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.2 }}
@@ -1499,14 +1411,12 @@ const testimonials = [;
                 </div>
                 <div className='flex items-center mb-4'>
                   {[...Array(testimonial.rating)].map((_, i) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Star
                       key={i}
                       className='w-5 h-5 text-yellow-400 fill-current'
                     />;
                   ))}
 
-=======
                 className="bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6"
               >
                 <div className="flex items-center mb-4">
@@ -1525,8 +1435,6 @@ const testimonials = [;
                 <p className="text-gray-300 italic">"{testimonial.content}"</p>
               </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
                 </div>
 
                 <p className='text-gray-300 italic'>"{testimonial.content}"</p>              </motion.div>
@@ -1534,8 +1442,6 @@ const testimonials = [;
               </motion.div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
           </div>;
@@ -1543,31 +1449,24 @@ const testimonials = [;
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Pricing Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
 
-=======
 
       {/* Pricing Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1578,7 +1477,6 @@ const testimonials = [;
             <h2 className='text-4xl font-bold text-white mb-6'>
               Choose Your
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {' '}
 
             className="text-center mb-16"
@@ -1701,7 +1599,6 @@ const testimonials = [;
                     ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20' 
 
                     : 'border-purple-500/20'
-=======
               <motion.div;
                 key={plan.name}
                 initial={{ opacity: 0, coordinate_y: 30 }}
@@ -1720,7 +1617,6 @@ const testimonials = [;
                   </div>)}                  plan.popular;
                     ? 'border - purple - 500 / 50 shadow - 2xl shadow - purple - 500 / 20';
                     : 'border - purple - 500 / 20';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 }`}
               >;
                 {plan.popular && (
@@ -1820,16 +1716,13 @@ const testimonials = [;
                 </button>;
               </motion && motion.div>;
 
-=======
                       {feature}
-=======
 
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </li>
                   ))}
                 </ul>
@@ -1842,8 +1735,6 @@ const testimonials = [;
                   Get Started
                 </button>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -1856,11 +1747,9 @@ const testimonials = [;
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">;
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion&& motion.div
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">
@@ -1869,8 +1758,6 @@ const testimonials = [;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1919,17 +1806,13 @@ const testimonials = [;
 
               ].map((contact, index) => (
 
-=======
 
                   icon: <MapPin className='w-6 h-6' />,
                   label: 'Visit Us',
                   value: contactInfo.address,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <motion.div
                   key={contact.label}
-=======
                 Consciousness?;
               </span>;
             </h2>;
@@ -1986,7 +1869,6 @@ const testimonials = [;
                   key={contact && contact.label}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: 0 && 0.4 + index * 0 && 0.1 }}
@@ -2006,8 +1888,6 @@ const testimonials = [;
                 </motion.div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
 
             </div>;
@@ -2018,11 +1898,8 @@ const testimonials = [;
   );  );
 }
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                     </span>;
                     <span className='text - gray - 400'>{plan.period}</span>;
                   </div>;
@@ -2150,10 +2027,6 @@ const testimonials = [;
       </section>;
     </Layout>));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

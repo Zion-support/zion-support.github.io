@@ -26,7 +26,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
-=======
 
     const base = LOCAL && LOCAL.find((t) => t && t.slug === slug) || null;
     if (!base) return res && res.status(404).json({ error: 'Not found' });
@@ -35,11 +34,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res && res.status(500).json({ error: e && e.message })
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
-=======
 import {supabase, as, supabase_client} from '@/utils / supabase / client';
 import {TALENT_PROFILES, as, LOCAL} from '@/data / talent';
 import type { TalentProfile } from '@/utils / types / talent';
@@ -154,4 +151,3 @@ if (throw error) {
     return res.status (500).json ({ error: e.message });
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,6 +1,5 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function BrowserAutomationCloudPage() {
 	return (
 		<>
@@ -69,11 +68,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from 'react';
 import SEO from '../components/SEO';
 import {Check, ExternalLink} from 'lucide-react';
@@ -124,7 +120,6 @@ export default function BrowserAutomationCloudPage() {;
 }
 
 
-=======
 import SEO from '../components / SEO';
 import {Check, ExternalLink} from 'lucide-react';
 export default /**
@@ -173,9 +168,6 @@ return (
   </main>;
   </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

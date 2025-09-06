@@ -31,13 +31,11 @@ export interface SmartContractInfo {
 
 }
 export interface EscrowContractDetails {
-=======
 }
 
 
 export interface EscrowContractDetails {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   client: string;
   talent: string;
   amount: number;
@@ -54,7 +52,6 @@ export interface DeploymentOptions {;
   useEscrow: boolean
 
   deployToChain: boolean
-=======
   completion_deadline: string,
   arbitrator?: string;
 }
@@ -69,4 +66,3 @@ export interface DeploymentOptions {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

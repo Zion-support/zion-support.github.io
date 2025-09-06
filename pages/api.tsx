@@ -4,7 +4,6 @@
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
-=======
 
 
 import React from 'react';
@@ -23,7 +22,6 @@ import {
   Cloud,
   XCircle,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "lucide-react";
 export default function APIPage() {
   const apiEndpoints = [
@@ -148,7 +146,6 @@ function APIPage() {
         },
       ],
     },
-=======
 
   }'`,
         },
@@ -159,7 +156,6 @@ function APIPage() {
   ];
 ;
   const response_examples = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     success: {
       status: 200
       data: {
@@ -408,7 +404,6 @@ export default function APIPage() {;
                     Create powerful applications with our APIs;
                   </p>;
                 </motion && motion.div>;
-=======
           field: "email",
           issue: "Invalid email format",
         },
@@ -580,7 +575,6 @@ export default function APIPage() {;
                     </pre>;
                   </div>;
                 </motion && motion.div>;
-=======
         {/* Response Examples */}
         <section className="py - 20 bg - gray - 50">;
           <div className="container mx - auto px - 4">;
@@ -671,7 +665,6 @@ export default function APIPage() {
       </div>
     </Layout>
 
-=======
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">;
                   View Documentation;
                 </a>;
@@ -681,15 +674,10 @@ export default function APIPage() {
         </section>;
       </div>;
     </MainLayout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
-=======
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;
           <div className="container mx - auto px - 4">;
@@ -726,5 +714,4 @@ export default function APIPage() {
         </section>;
       </div>;
     </MainLayout>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

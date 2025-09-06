@@ -75,9 +75,7 @@ export interface Resume {
   is_active: boolean;
 
 }
-=======
 
 
 export interface ResumeBasicInfo {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

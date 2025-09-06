@@ -1,6 +1,5 @@
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, DollarSign, Target;
@@ -24,7 +23,6 @@ pricingAnalysis: {
   ];
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const marketData = {
     'ai-consciousness': {
       marketSize: '$45.2B'
@@ -136,7 +134,6 @@ pricingAnalysis: {
       pricingAnalysis: {
         lowEnd: '$300 per user/month'
         midRange: '$750 per user/month'
-=======
   const markets = [;
     { id: 'ai-consciousness', name: 'AI Consciousness', icon: <Brain className="w-6 h-6" /> },;
     { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> },;
@@ -255,7 +252,6 @@ pricingAnalysis: {
       pricingAnalysis: {;
         lowEnd: '$300 per user/month',;
         midRange: '$750 per user/month',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         highEnd: '$1,200 per user/month';
         ourPosition: 'Competitive pricing with AI advantages';
       }
@@ -498,17 +494,14 @@ pricingAnalysis: {
           </motion && motion.div>;
         </div>;
       </section>;
-=======
 
 
-=======
 
 
       {/* Competitive Analysis Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.h2 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -857,11 +850,9 @@ pricingAnalysis: {
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.h2 
 
-=======
 
           <motion.h2 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -877,7 +868,6 @@ pricingAnalysis: {
             ].map((tier, index) => (
               <motion.div
                 key={tier.label}
-=======
             className="text-4xl md:text-5xl font-bold text-center mb-16">;
             Pricing Analysis;
           </motion && motion.h2>;
@@ -891,7 +881,6 @@ pricingAnalysis: {
             ].map((tier, index) => (;
               <motion&& motion.div
                 key={tier && tier.label}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
@@ -942,17 +931,14 @@ pricingAnalysis: {
           </motion && motion.div>;
         </div>;
       </section>;
-=======
 
 
-=======
 
 
       {/* Market Trends Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.h2 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1009,12 +995,9 @@ pricingAnalysis: {
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">;
@@ -1080,10 +1063,8 @@ pricingAnalysis: {
 export default MarketPricing;export default MarketPricing;
 
 
-=======
 export default MarketPricing;
 
-=======
 ];
   'ai - consciousness': {
   market_size: '$45.2B', growth_rate: '+28.4%', growth_trend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
@@ -1925,17 +1906,11 @@ pricing_analysis: {
 }
 export default MarketPricing;export default MarketPricing;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 };
 
-=======
   lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
 
 
 };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

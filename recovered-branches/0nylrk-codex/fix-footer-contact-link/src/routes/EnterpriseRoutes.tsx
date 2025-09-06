@@ -2,11 +2,8 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const EnterpriseRoutes = () => {
-=======
 const EnterpriseRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Enterprise Routes */}
@@ -25,7 +22,6 @@ const EnterpriseRoutes = () => {;
 };
 
 
-=======
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
 import EnterprisePlans from "../pages / EnterprisePlans";
@@ -48,12 +44,9 @@ const EnterpriseRoutes = () =>: any {
     </Routes>);
 }
 ;
-=======
 
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default EnterpriseRoutes;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

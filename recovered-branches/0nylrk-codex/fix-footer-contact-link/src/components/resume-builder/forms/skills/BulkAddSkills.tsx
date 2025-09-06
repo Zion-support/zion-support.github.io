@@ -1,8 +1,6 @@
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Loader2, Sparkles} from 'lucide-react';
@@ -112,20 +110,15 @@ if ( {) {
       }
     } catch (err: any) {;
       setError(err && err.message || 'Failed to categorize skills');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
 
   },
-=======
   };
-=======
   },
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className="bg-muted/40 p-6 rounded-lg">;
@@ -135,11 +128,9 @@ if ( {) {
           <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>;
 
           <Textarea
-=======
 
           <Textarea 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
             value={bulkSkills}
@@ -193,15 +184,11 @@ if ( {) {
       </div>;
     </div>;
   );
-=======
 
 },
 
-=======
 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       set_error (err.message || 'Failed to categorize skills');
     }
   }
@@ -237,4 +224,3 @@ if ( {) {
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

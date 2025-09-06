@@ -39,10 +39,7 @@ export default async function handler(
 
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
 const REQUESTS_PATH = path.join (process.cwd (), 'data', 'requests.json');
 ;
@@ -80,5 +77,3 @@ if (return res.status (404).json ({ error: 'Not found' })) {
   write_all (items);
   res.status (200).json ({ ok: true });  res.status (200).json ({ ok: true });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

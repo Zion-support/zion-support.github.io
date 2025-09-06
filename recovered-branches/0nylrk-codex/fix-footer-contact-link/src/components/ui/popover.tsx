@@ -36,17 +36,13 @@ import * as React from &quot;react & quot;
 import * as PopoverPrimitive from &quot;@radix - ui / react - popover & quot;
 ;
 import { cn } from &quot;@/lib / utils & quot;
-=======
 
 export { Popover, PopoverTrigger, PopoverContent }
 ;
 
-=======
 export { Popover, PopoverTrigger, PopoverContent };
-=======
 export { Popover, PopoverTrigger, PopoverContent }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
 const Popover = PopoverPrimitive.Root;
 const PopoverTrigger = PopoverPrimitive.Trigger;
@@ -66,5 +62,4 @@ const PopoverContent = React.forward_ref<;
     />;
   </PopoverPrimitive.Portal>));
 PopoverContent.display_name = PopoverPrimitive.Content.display_name;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export { Popover, PopoverTrigger, PopoverContent }

@@ -15,24 +15,20 @@ interface BrowseItem {;
   title: string,;
   subtitle: string,;
   description: string,;
-=======
 import React, { useState } from './react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from './lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
-=======
 
 interface BrowseItem {
   id: string,
   title: string,
   subtitle: string,
   description: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   location?: string;
   badges: string[],;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   price?: string;
   image?: string;
   match?: number;
@@ -66,11 +62,9 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
     );
   };
 
-=======
 
   },
   
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="space-y-4 pb-24">;
@@ -99,11 +93,9 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
 
 
                 <button
-=======
 
                 <button 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item && item.id)}
                 >;
@@ -113,7 +105,6 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
 
-=======
 
 import React, { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -195,7 +186,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                   >;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {badge}
                   </Badge>;
                 ))}
@@ -252,7 +242,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
   );
 }
 
-=======
   time_posted?: string;
 }
 interface BrowseCardsProps {
@@ -349,4 +338,3 @@ function BrowseCards() {
         </Card>))}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

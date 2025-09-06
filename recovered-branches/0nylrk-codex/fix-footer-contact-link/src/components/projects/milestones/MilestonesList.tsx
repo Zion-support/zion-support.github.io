@@ -35,7 +35,6 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({;
   onUploadDeliverable;
   isSubmitting;
 
-=======
 import React, { useState } from 'react',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -60,7 +59,6 @@ interface MilestonesListProps {;
   onReject?: (id: string) => Promise<void>;
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   milestones: Milestone[]
   activities: Record<string, MilestoneActivity[]>;
@@ -102,7 +100,6 @@ interface MilestonesListProps {;
 
 export const MilestonesList: React.FC<MilestonesListProps> = ({;
 
-=======
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks / use_milestones';
 import {use_auth} from '@/hooks / use_auth';
 import {MilestoneCard} from './MilestoneCard';
@@ -126,7 +123,6 @@ interface MilestonesListProps {
   on_reject?: (id: string) => Promise < void>;
 }
 export const MilestonesList: React.FC < MilestonesListProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   milestones;
   activities;
   is_loading;
@@ -160,9 +156,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (isLoading) {
-=======
   onApprove,;
   onReject;
 }) => {;
@@ -174,7 +168,6 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
   };
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="space-y-4">;
         {[1, 2, 3].map((i) => (;
@@ -227,7 +220,6 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
       />;
     );
   }
-=======
         }
       />
     )
@@ -235,7 +227,6 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-6">;
       {isClient && !showAddForm && (;
@@ -254,11 +245,9 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;
 
             <AddMilestoneForm
-=======
 
             <AddMilestoneForm 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
@@ -273,11 +262,9 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 
       <div className="space-y-4">
         {milestones.map((milestone) => (
-=======
 
       <div className="space-y-4">;
         {milestones && milestones.map((milestone) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <MilestoneCard
             key={milestone && milestone.id}
             id={milestone && milestone.id}
@@ -295,7 +282,6 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 
 
 
-=======
       </div>;
     </div>;
   );
@@ -303,10 +289,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   is_submitting;
   on_approve,
   on_reject;
@@ -391,4 +374,3 @@ if ( {) {
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

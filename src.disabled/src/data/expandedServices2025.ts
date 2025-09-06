@@ -14,8 +14,5 @@ export default function ExpandedServices2025({ }: ExpandedServices2025Props) {
 
 }
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

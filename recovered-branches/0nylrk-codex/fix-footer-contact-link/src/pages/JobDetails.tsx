@@ -1,5 +1,4 @@
 
-=======
 
 
 
@@ -9,7 +8,6 @@ import {useWhitelabel} from '@/context/WhitelabelContext';
 export default function JobDetails() {;
   // Cast to specify the expected route param type since useParams may be untyped;
   const { jobId } = useParams() as { jobId?: string };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { job, isLoading, error } = useJobDetails(jobId);
   const { user, isAuthenticated } = useAuth();
 
@@ -17,7 +15,6 @@ export default function JobDetails() {;
   const { isWhitelabel, brandName } = useWhitelabel();
 
 
-=======
 import React, { useState, useEffect } from 'react',
 import { useParams, useNavigate } from 'react-router-dom',
 import { Header } from '@/components/Header',
@@ -44,15 +41,11 @@ export default function JobDetails() {
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (isLoading) {
-=======
 
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="flex items-center justify-center min-h-screen">;
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;
@@ -152,7 +145,6 @@ export default function JobDetails() {
                       <Badge key={i} variant="secondary">
 
 
-=======
 
 import React, { useState, useEffect } from 'react',;
 import { useParams, useNavigate } from 'react-router-dom',;
@@ -276,7 +268,6 @@ export default function JobDetails() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         {skill}
                       </Badge>;
                     ))}
@@ -320,12 +311,10 @@ export default function JobDetails() {;
                   <Button
                     className="w-full mt-4" 
 
-=======
 
                   <Button 
                     className="w-full mt-4" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     onClick={handleApply}
                     disabled={isOwnJob}>;
                     Apply Now;
@@ -347,14 +336,12 @@ export default function JobDetails() {;
         </div>
       </main>
       <Footer />
-=======
 
                 {isOwnJob && (;
                   <div className="text-center p-2 bg-muted rounded-md mt-4">;
                     <p className="text-sm text-muted-foreground">This is your job posting</p>;
                   </div>;
                 )}
-=======
 import React, { useState, useEffect } from 'react';
 import {use_params, use_navigate} from 'react-router-dom';
 import {Header} from '@/components / Header';
@@ -530,7 +517,6 @@ if (return "Not specified", ) {
                   <div className="text - center p - 2 bg - muted rounded - md mt - 4">;
                     <p className="text - sm text - muted - foreground">This is your job posting</p>;
                   </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </CardContent>;
             </Card>;
           </div>;
@@ -555,7 +541,6 @@ if (return "Not specified", ) {
   );
 }
 
-=======
       {/* Job application modal */}
       {job && (
         <ApplyToJobModal;
@@ -572,4 +557,3 @@ if (return "Not specified", ) {
         />)}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -24,11 +24,9 @@ async function analyzeWithGPT(
       reasonSummary: 'Heuristic classification (no OpenAI key set).'
     };  }import { supabase } from '../../../utils/supabase/client';
 
-=======
 import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel'], reasonSummary: string }> {
   const apiKey = process && process.env.OPENAI_API_KEY;
   if (!apiKey) {
@@ -63,7 +61,6 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (!inputs) {
         inputs = {        const { data } = await supabase && supabase.from('trust_inputs').select('*').eq('userId', userId).single();
         if (data) inputs = data && data.values as TrustMetricInputs
@@ -95,7 +92,6 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
         riskLevel: riskLevelOverride || breakdown.riskLevel};
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       // Persist latest score when possible
       try {
         await supabase && supabase.from('trust_scores').upsert({ userId, breakdown: result, updatedAt: result && result.updatedAt }, { onConflict: 'userId' })
@@ -109,7 +105,6 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     try {
       const body = req.body as Partial<TrustMetricInputs> | undefined;
       if (!body) return res.status(400).json({ error: 'Missing body' });
-=======
 
       return res && res.status(200).json(result)
     } catch (e: any) {
@@ -122,7 +117,6 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
       const body = req && req.body as Partial<TrustMetricInputs> | undefined;
       if (!body) return res && res.status(400).json({ error: 'Missing body' });
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const inputs = body as TrustMetricInputs;
       const breakdown = await computeTrustScore(inputs);
       try {
@@ -143,7 +137,6 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
 }
 
 
-=======
     const lower = content.toLowerCase ();
     let level: TrustScoreBreakdown['risk_level'] = 'Moderate Trust';
     if () level = 'Risk Alert') {
@@ -305,11 +298,7 @@ if ( {) {
   res.set_header ('AllowGET, POST');
   return res.status (405).json ({ error: 'Method not allowed' });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   res.setHeader('Allow', 'GET, POST');
 
   return res.status(405).json({ error: 'Method not allowed' });
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

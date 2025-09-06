@@ -2,19 +2,15 @@
 import React from './react';
 import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
 
-=======
 
 
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
 
-=======
 import React from "react",
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface FraudTabContentProps {
   tab_value: string;
 }
@@ -81,10 +77,8 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       return null
 
 
-=======
 
 
-=======
 import React from "react",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
 interface FraudTabContentProps {;
@@ -131,11 +125,9 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 
-=======
 export const FraudTabContent: React.FC < FraudTabContentProps> = ({ tab_value }) => {
   switch (tab_value) {
     case 'pending':;
@@ -172,4 +164,3 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({ tab_value })
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -38,7 +38,6 @@ import React, { useState } from 'react';
   ) => {
     const { name, value } = e.target;
     setForm(f => ({ ...f, [name]: value }));  }
-=======
     title: 'Zion DAO x Digital Labor Initiative',
     targetInstitution: 'UN Development Programme',
     type: 'Workforce Dev',
@@ -56,7 +55,6 @@ import React, { useState } from 'react';
     setForm((f) => ({ ...f, [name]: value }))
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   async function generate() {
     setLoading(true);
     try {
@@ -65,7 +63,6 @@ import React, { useState } from 'react';
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
 
-=======
           ...form;
           supportingMultiverses: form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),
       const data = await res.json();
@@ -105,7 +102,6 @@ import React, { useState } from 'react';
             .map(s => s && s.trim());
             .filter(Boolean),;
         }),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       const data = await res && res.json();
       setResult(data);
@@ -119,7 +115,6 @@ import React, { useState } from 'react';
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ markdown: result && result.markdown, targetLanguage }),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       const data = await res && res.json();
       setTranslated(data && data.translated);
@@ -150,7 +145,6 @@ import React, { useState } from 'react';
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ id: result && result.meta.id, channels }),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       const data = await res && res.json();
       setResult((r: any) => ({ ...r, meta: data && data.meta }));
@@ -514,12 +508,10 @@ if (return) {
     } finally {
       set_loading (false);
     }
-=======
 
 
 }
 
-=======
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</Link></div>
               )  } catch (error) {
     console.error("Error:", error);
@@ -707,4 +699,3 @@ if (return) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

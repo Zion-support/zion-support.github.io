@@ -7,7 +7,6 @@
 };
 
 
-=======
 interface Project {
   id: string;
   title: string;
@@ -46,7 +45,6 @@ class DataStore {
 
 
 
-=======
 // Data store utilities;
 export const data_store = {
   // Add data store functionality here;
@@ -55,9 +53,6 @@ export const data_store = {
   update_data: (id: string, data: any) => null,
   delete_data: (id: string) => null;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 export const findProjectById = (id: string) => store.findProjectById(id);
 export const createProject = (data: Partial<Project>) => store.createProject(data);
 export const hasExistingReview = (projectId: string, fromRole: string, fromId: string) => store.hasExistingReview(projectId, fromRole, fromId);
@@ -67,5 +62,3 @@ export const getAllReviews = () => store.getAllReviews();
 export const counterpartRole = (role: 'client' | 'talent') => store.counterpartRole(role);
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

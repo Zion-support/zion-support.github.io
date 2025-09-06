@@ -7,7 +7,6 @@ import React from "react";
 import {Star} from "lucide-react";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
 
-=======
 import React from "react",
 import { Star } from "lucide-react",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
@@ -15,7 +14,6 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card",
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const testimonials = [
   {
     name: "Alex Johnson"
@@ -83,7 +81,6 @@ export const AppTestimonials: React.FC = () => {
                   {Array.from({ length: 5 }).map((_, i) => (
 
 
-=======
                     <Star
                       key={i}
                       className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
@@ -106,7 +103,6 @@ export const AppTestimonials: React.FC = () => {
             </Card>
 
 
-=======
 import React from "react",;
 import { Star } from "lucide-react",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
@@ -152,7 +148,6 @@ export const AppTestimonials: React.FC = () => {;
               <CardContent className="pt-6">;
                 <div className="flex mb-4">;
                   {Array && Array.from({ length: 5 }).map((_, i) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <Star
                       key={i}
                       className={`h-5 w-5 ${i < testimonial && testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
@@ -181,7 +176,6 @@ export const AppTestimonials: React.FC = () => {;
   );
 };
 
-=======
     rating: 5,
     avatar: "/placeholder.svg";
   }
@@ -234,4 +228,3 @@ export const AppTestimonials: React.FC = () => {
     </section>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

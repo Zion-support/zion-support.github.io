@@ -2,16 +2,12 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const CommunityRoutes = () => {
-=======
 const CommunityRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Public routes */}
 
-=======
       {/* Protected routes */}
       <Route
         path="/community/create"
@@ -29,7 +25,6 @@ const CommunityRoutes = () => {;
           </ProtectedRoute>
 
 
-=======
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "../components/ProtectedRoute",;
@@ -50,8 +45,6 @@ const CommunityRoutes = () => {;
       <Route path="/community/post/:postId" element={<ForumPostPage />} />;
       <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '../components / ProtectedRoute';
@@ -70,7 +63,6 @@ const CommunityRoutes = () =>: any {
       <Route path="/community / category/:category_id" element={<ForumCategoryPage />} />;
       <Route path="/community / post/:post_id" element={<ForumPostPage />} />;
       <Route path="/community / profile/:user_id" element={<CommunityProfilePage />} />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Protected routes */}
       <Route;
         path="/community / create";
@@ -94,10 +86,7 @@ const CommunityRoutes = () =>: any {
     </Routes>;
   );
 
-=======
 },;
 export default CommunityRoutes;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

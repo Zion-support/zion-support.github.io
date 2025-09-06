@@ -42,7 +42,6 @@ export default function TalentDirectory() {;
     filteredTalents;
     isLoading;
     searchTerm;
-=======
 import React, { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -65,7 +64,6 @@ function TalentDirectory() {
     filtered_talents;
     is_loading;
     search_term;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     setSearchTerm;
     selected_skills;
     selected_availability;
@@ -133,7 +131,6 @@ function TalentDirectory() {
   },
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -146,7 +143,6 @@ function TalentDirectory() {
           </div>
 
 
-=======
           {/* Main content */}
           <div className="flex flex-col lg:flex-row gap-6">
             {/* Sidebar - Desktop */}
@@ -276,9 +272,6 @@ export default function TalentDirectory() {;
             </div>;
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Mobile filter button */}
             <div className="lg:hidden mb-4">;
               <Button
@@ -286,7 +279,6 @@ export default function TalentDirectory() {;
 
                 variant="outline";
                 className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light";
-=======
                 clear_filters={clear_filters}
               />;
             </div>;
@@ -303,12 +295,9 @@ export default function TalentDirectory() {;
             </div>;
 
 
-=======
 
             
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Results */}
             <TalentResults;
               filtered_talents={filtered_talents}
@@ -328,7 +317,6 @@ export default function TalentDirectory() {;
 
                 setPriceRange;
                 experience_range;
-=======
               isAuthenticated={isAuthenticated}
 
               activeFiltersProps={{;
@@ -341,9 +329,7 @@ export default function TalentDirectory() {;
                 priceRange,;
                 setPriceRange,;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 experienceRange;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 setExperienceRange;
 
                 selectedSkills
@@ -378,7 +364,6 @@ export default function TalentDirectory() {;
                   </div>;
                   <FilterSidebar
                     searchTerm={searchTerm}
-=======
                 clear_filters}}
             />;
             {/* Mobile filter sidebar */}
@@ -399,7 +384,6 @@ export default function TalentDirectory() {;
                   </div>;
                   <FilterSidebar;
                     search_term={search_term}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     setSearchTerm={setSearchTerm}
                     selected_skills={selected_skills}
                     toggle_skill={toggle_skill}
@@ -427,7 +411,5 @@ export default function TalentDirectory() {;
     </AppLayout>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -38,7 +38,6 @@ export interface ConversationContextData {
   image_url?: string;
 }
 
-=======
 
 
 // Define the shape of a message;
@@ -114,4 +113,3 @@ export interface MessagingContextType {
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

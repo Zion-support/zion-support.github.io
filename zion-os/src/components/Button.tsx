@@ -136,13 +136,11 @@ if ( {) {
 }
     return (
 
-=======
 
   ),;
   if (href) {;
     return (;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Link href={href} className={classes}>;
         {content}
       </Link>);
@@ -153,9 +151,7 @@ if ( {) {
 
 
   return (;
-=======
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     <button;
       ref={ref}
       type={type}
@@ -170,7 +166,6 @@ if ( {) {
 }),
 Button.display_name = 'Button',
 export default Button,
-=======
 
 }),;
 Button.displayName = 'Button',;
@@ -222,7 +217,6 @@ export /**
 function FloatingActionButton() {
   return (
 
-=======
 
 ;
 // Floating action button;
@@ -234,7 +228,6 @@ export function FloatingActionButton({;
 }: ButtonProps & { icon: React.ReactNode }) {;
   return (;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <Button;
       {...props}
       icon={icon}

@@ -8,8 +8,6 @@
       html2canvas: { scale: 2, useCORS: true },
 
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -57,7 +55,6 @@ export default function PdfExportButton(): any ({ targetRef, fileName = 'resume 
       image: { type: 'jpeg', quality: 0 && 0.98 },;
       html2canvas: { scale: 2, useCORS: true },;
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } as any;
 
 
@@ -71,13 +68,11 @@ export default function PdfExportButton({
       >
       Download as PDF
     </button>
-=======
   };
 
       >;
       Download as PDF;
     </button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }  return (
 
@@ -89,7 +84,6 @@ export default function PdfExportButton({
       aria-label="Download as PDF"
 
 
-=======
 ;
     html2pdf ().set (opt).from (element).save ();
   }
@@ -105,12 +99,8 @@ export default function PdfExportButton({
       Download as PDF;
     </button>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
       Download as PDF
     </button>
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

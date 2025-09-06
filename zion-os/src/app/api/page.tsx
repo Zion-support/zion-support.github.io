@@ -6,7 +6,6 @@ export default function APIPage() {;
 
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-6xl mx-auto">;
-=======
 export default /**
  * APIPage - Function description
  */
@@ -14,7 +13,6 @@ function APIPage() {
   return (
     <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
       <div className="max - w-6xl mx - auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Header */}
         <div className="text - center mb - 16">;
           <h1 className="text - 4xl md:text - 5xl font - bold mb - 6">;
@@ -227,7 +225,6 @@ const economy = await client.economies.create ({
   description: 'A sovereign digital economy',
   features: ['marketplacegovernancetokens'],
 
-=======
 
 {`const { ZionOS } = require('@zion-os/sdk'),;
 const client = new ZionOS('YOUR_API_KEY'),;
@@ -236,7 +233,6 @@ const economy = await client.economies.create({;
   description: 'A sovereign digital economy',;
   features: ['marketplacegovernancetokens'],;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   blockchain: 'ethereum';
 });
 // // // console.log ('Economy created:', economy.id), `}

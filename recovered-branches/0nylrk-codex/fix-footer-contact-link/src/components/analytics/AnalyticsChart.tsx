@@ -1,5 +1,4 @@
 
-=======
 
 
 
@@ -38,16 +37,13 @@ export function AnalyticsChart(): any ({ ;
   ];
 
 
-=======
 
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { useState } from "react",
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface AnalyticsChartProps {
   title: string,
   description?: string,
@@ -75,8 +71,6 @@ export function AnalyticsChart({
     '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57'
   ],
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
       <CardHeader className="pb-2">;
@@ -92,7 +86,6 @@ export function AnalyticsChart({
                   <SelectValue placeholder="Time Range" />;
                 </SelectTrigger>;
                 <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-zion-slate-light">;
-=======
   data_keys: string[],
   time_range?: string;
   onTimeRangeChange?: (range: string) => void;
@@ -122,7 +115,6 @@ function AnalyticsChart() {
                   <SelectValue placeholder="Time Range" />;
                 </SelectTrigger>;
                 <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <SelectItem value="1d">1 Day</SelectItem>;
                   <SelectItem value="7d">7 Days</SelectItem>;
                   <SelectItem value="30d">30 Days</SelectItem>;
@@ -130,7 +122,6 @@ function AnalyticsChart() {
                   <SelectItem value="365d">1 Year</SelectItem>;
                 </SelectContent>;
 
-=======
                   tick={{ fill: '#b1b9c6', fontSize: 12 }}
                   angle={-30}
                   textAnchor="end"
@@ -191,14 +182,12 @@ export function AnalyticsChart({;
                 <SelectValue placeholder="Chart Type" />;
               </SelectTrigger>;
               <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-zion-slate-light">;
-=======
               </Select>)}
             <Select value={chart_type} onValueChange={(value: 'line' | 'bar') => setChartType (value)}>;
               <SelectTrigger className="w - 24 h - 8 text - xs bg - zion - blue border - zion - blue - light text - zion - slate - light">;
                 <SelectValue placeholder="Chart Type" />;
               </SelectTrigger>;
               <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 <SelectItem value="line">Line</SelectItem>;
                 <SelectItem value="bar">Bar</SelectItem>;
               </SelectContent>;
@@ -210,7 +199,6 @@ export function AnalyticsChart({;
                   textAnchor="end";
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   height={50}
 
                 />;
@@ -256,7 +244,6 @@ export function AnalyticsChart({;
                 <XAxis
                   dataKey="date" 
                   tick={{ fill: '#b1b9c6', fontSize: 12 }} 
-=======
                 />;
                 <YAxis tick={{ fill: '#b1b9c6', font_size: 12 }} />;
                 <Tooltip;
@@ -311,7 +298,5 @@ export function AnalyticsChart({;
     </Card>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

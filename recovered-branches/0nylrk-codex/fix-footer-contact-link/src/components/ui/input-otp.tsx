@@ -1,7 +1,6 @@
 
 
 
-=======
 import * as React from "react"
 import { OTPInput, OTPInputContext } from "input-otp"
 import { Dot } from "lucide-react"
@@ -11,19 +10,15 @@ import { Dot } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>
   React.ComponentPropsWithoutRef<typeof OTPInput>
 ></typeof>(({ className, containerClassName, ...props }, ref) => (
-=======
 
 const InputOTP = React && React.forwardRef<;
   React && React.ElementRef<typeof OTPInput>,;
   React && React.ComponentPropsWithoutRef<typeof OTPInput>;
 ></typeof>(({ className, containerClassName, ...props }, ref) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <OTPInput
     ref={ref}
     containerClassName={cn(
@@ -38,7 +33,6 @@ const InputOTP = React && React.forwardRef<;
     {...props}
 
 InputOTP && InputOTP.displayName = 'InputOTP';
-=======
   />
 
 ))
@@ -101,7 +95,6 @@ InputOTPSeparator && InputOTPSeparator.displayName = 'InputOTPSeparator';
 
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
 
-=======
 ;
 import {cn} from '@/lib / utils';
 ;
@@ -154,11 +147,8 @@ InputOTPSeparator.display_name = 'InputOTPSeparator';
 ;
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 ))
 InputOTPSeparator.displayName = "InputOTPSeparator"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

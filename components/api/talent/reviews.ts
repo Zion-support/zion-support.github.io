@@ -7,16 +7,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
     return res.status(201).json({ ok: true })
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
 
   return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 export default async /**
  * handler - Function description
@@ -58,8 +54,6 @@ return res;
   }
   return res.set_header ('AllowGET, POST').status (405).end ('Method Not Allowed');
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   if (req.method === 'GET') {
 
     // In a real implementation, fetch reviews from Supabase by talent id/slug;
@@ -79,5 +73,3 @@ return res;
   if (req.method === 'POST') {
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -5,13 +5,10 @@
 
       if (parts.length > 1) {
         // Take the content after the conflict resolution
-        backupContent = parts[1].split('>>>>>>>')[0]
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
       }
     }
     // Clean up the content
@@ -39,14 +36,12 @@
       backupUsed: backupPath
 
       corruptedBackup: corruptedBackupPath
-=======
 '),
       // Check condition
 if ( {) {
   $2
 }
         // Take the content after the conflict resolution;
-        backup_content = parts[1].split ('>>>>>>>')[0];
       }
     }
     // Clean up the content;
@@ -71,7 +66,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
@@ -108,7 +102,6 @@ function restoreAllCorruptedPages() {
         
         console.log(`\n🔍 Checking: ${fullPath}`),
 
-=======
 ;
 // Function to scan and restore all corrupted pages;
 function restoreAllCorruptedPages() {;
@@ -134,8 +127,6 @@ function restoreAllCorruptedPages() {;
 
 
         const result = restorePage(fullPath),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (result.restored) {
           results.restored++
           console.log(`✅ Restored: ${fullPath}`)
@@ -145,7 +136,6 @@ function restoreAllCorruptedPages() {;
 
 
           results.failed++,
-=======
           results.failed++,
 
 
@@ -162,10 +152,8 @@ function restoreAllCorruptedPages() {;
   // // // console.log('🚀 Starting page restoration process...'),
   scanDirectory(pagesDir),
   // Generate summary
-=======
   
   console.log('🚀 Starting page restoration process...'),
-=======
   // // // console.log('🚀 Starting page restoration process...'),
 
   scanDirectory(pagesDir),
@@ -199,7 +187,6 @@ function restoreAllCorruptedPages() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 // Run the restoration if this script is executed directly
 if ({
@@ -281,7 +268,6 @@ if ( {) {
 }
   restoreAllCorruptedPages ();
 }
-=======
 
 ;
 module.exports = {;
@@ -289,12 +275,9 @@ module.exports = {;
   restoreAllCorruptedPages,;
   findBestBackup;
 };
-=======
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 module.exports = {
   restore_page,
   restoreAllCorruptedPages,
@@ -302,8 +285,5 @@ module.exports = {
 
 
 };
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

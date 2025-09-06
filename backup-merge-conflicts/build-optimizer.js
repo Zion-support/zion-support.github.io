@@ -11,7 +11,6 @@ const dependencies = lockFile.dependencies || {};
 // Start the service;
 const buildOptimizer = new BuildOptimizer();
 buildOptimizer.start().catch(console.error);
-=======
 const dependencies = lock_file.dependencies || {}
 ; // This would need more sophisticated analysis; return []} return []} catch (error) { this.log (`Duplicate dependency check error: ${error.message}`); return []}}
 ; async start () { this.log ('Build optimizer service started');
@@ -22,7 +21,6 @@ const dependencies = lock_file.dependencies || {}
 const build_optimizer = new BuildOptimizer ();
 build_optimizer.start ().catch (console.error);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         // This would need more sophisticated analysis;
         return [];
       }
@@ -54,8 +52,6 @@ const build_optimizer = new BuildOptimizer ();
 build_optimizer.start ().catch (console.error);
 ;
 
-=======
 
 buildOptimizer.start().catch(console.error);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

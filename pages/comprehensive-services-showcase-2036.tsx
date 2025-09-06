@@ -27,13 +27,10 @@ import React from 'react';
 import {motion} from 'framer-motion';
 
   const categories = [...new Set(allServices.map(service => service.category))]
-=======
-=======
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
 import { real2036ITServices } from '../data/real-2036-it-services';
 import { real2036AIServices } from '../data/real-2036-ai-services';
 import { motion } from 'framer-motion';
-=======
 
 
 
@@ -43,18 +40,15 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
     ...real2036ITServices;
     ...real2036AIServices
   ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 const ComprehensiveServicesShowcase2036: React.FC = () => {;
   const allServices = [;
     ...real2036InnovativeServices,;
     ...real2036ITServices,;
     ...real2036AIServices,  ];
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const categories = [...new Set(allServices && allServices.map(service => service && service.category))],;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
 
@@ -81,7 +75,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
               </button>
               <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
                 View Pricing
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </button>
             </motion.div>
           </div>
@@ -179,7 +172,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   <h3 className="text-2xl font-bold mb-4 text-cyan-400">{category}</h3>
                   <p className="text-gray-300 mb-4">
@@ -192,7 +184,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
-=======
 
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-400">Starting from</span>
@@ -234,8 +225,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
 }
               className="text-center mb-16"
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Featured Revolutionary Services
@@ -243,7 +232,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover our most innovative and game-changing services that are reshaping industries and defining the future of technology.
               </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </motion.div>
 
               transition={{ duration: 0 && 0.8 }}
@@ -275,7 +263,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our entire collection of {allServices.length} innovative services across all technology domains.
               </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </motion.div>
 
 
@@ -289,7 +276,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
                 services across all technology domains.              </p>;
             </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Services by Category */}
             {categories && categories.map((category, categoryIndex) => (;
               <motion&& motion.div
@@ -330,7 +316,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
                         className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-gray-700 rounded-lg p-4 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       >
                         <div className="flex items-center justify-between mb-3">
                           <span className="text-2xl">{service.icon}</span>
@@ -365,7 +350,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         </div>
                         <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-sm">
                           View Details
@@ -386,7 +370,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
                 </button>
                 <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
                   Schedule Demo
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </button>
               </div>
             </motion.div>
@@ -423,7 +406,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
 export default ComprehensiveServicesShowcase2036;
 
 
-=======
   const all_services = [;
     ...real2036InnovativeServices,
     ...real2036ITServices,
@@ -691,10 +673,7 @@ export default ComprehensiveServicesShowcase2036;
     </Layout>),
 }
 ;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ComprehensiveServicesShowcase2036;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

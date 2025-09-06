@@ -5,7 +5,6 @@
 export function ConversationsList({ ;
   conversations;
 
-=======
 import React from 'react',;
 import { User } from 'lucide-react',;
 import { Conversation } from '@/types/messaging',;
@@ -23,8 +22,6 @@ export function ConversationsList({
   activeConversation, 
   setActiveConversation, 
   markAsRead 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }: ConversationsListProps) {
   return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
@@ -42,7 +39,6 @@ export function ConversationsList({
       ) : (
         <div>
           {conversations.map((conversation) => (
-=======
 import {User} from 'lucide-react';
 import {Conversation} from '@/types/messaging';
 import {ConversationItem} from './ConversationItem';
@@ -76,22 +72,18 @@ export function ConversationsList(): any ({ ;
       ) : (;
         <div>;
           {conversations && conversations.map((conversation) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <ConversationItem
               key={conversation && conversation.id}
               conversation={conversation}
 
                 markAsRead(conversation && conversation.id);
 
-=======
               isActive={activeConversation?.id === conversation.id}
 
               onClick={() => {;
                 setActiveConversation(conversation);
                 markAsRead(conversation.id);
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               }}
             />;
           ))}
@@ -102,7 +94,6 @@ export function ConversationsList(): any ({ ;
   );
 }
 
-=======
 import {User} from 'lucide-react';
 import {Conversation} from '@/types / messaging';
 import {ConversationItem} from './ConversationItem';
@@ -143,4 +134,3 @@ function ConversationsList() {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

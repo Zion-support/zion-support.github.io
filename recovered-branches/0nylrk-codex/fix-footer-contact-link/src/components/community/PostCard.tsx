@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface PostCardProps {
 
   post: ForumPost
@@ -30,7 +29,6 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
             </Link>
             {post.isAnswered && (
               <CheckCircle className="h-4 w-4 text-green-500 ml-2" />
-=======
 import {formatDistanceToNow} from "date-fns";
 import {Link} from "react-router-dom";
 import {ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle} from "lucide-react";
@@ -67,7 +65,6 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
             </Link>;
             {post && post.isAnswered && (;
               <CheckCircle className="h-4 w-4 text-green-500 ml-2" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             )}
             {post && post.isPinned && (;
               <Pin className="h-4 w-4 text-amber-500 ml-2" />;
@@ -128,7 +125,6 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {tag}
               </Badge>
             ))}
@@ -207,7 +203,6 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
             <Badge className="bg-zion-purple">Featured</Badge>;
           </div>;
         )}
-=======
 
 
       </CardFooter>;
@@ -219,7 +214,6 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
 
 export default PostCard;
 
-=======
 import { formatDistanceToNow } from './date - fns';
 import { Link } from './react-router-dom';
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from './lucide-react';
@@ -300,4 +294,3 @@ export const PostCard = ({ post, compact = false }: PostCardProps) =>: any {
 ;
 export default PostCard;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

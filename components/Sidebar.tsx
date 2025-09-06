@@ -54,7 +54,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
     setOpenDropdowns(prev =>
       prev.includes(title)
         ? prev.filter(item => item !== title)
-=======
 import { ;
   X, ;
   Building2, ;
@@ -85,7 +84,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
     setOpenDropdowns(prev =>;
       prev && prev.includes(title);
         ? prev && prev.filter(item => item !== title);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         : [...prev, title];
     );
 
@@ -372,10 +370,8 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
 export default Sidebar;
 ;
 
-=======
 
 };
 
 export default Sidebar;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

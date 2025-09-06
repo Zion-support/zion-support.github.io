@@ -102,13 +102,11 @@ export default function CareersPage() {;
       description: "Research and develop quantum algorithms and quantum-resistant cryptography solutions",;
       requirements: [;
 
-=======
       type: "Full - time",
       experience: "3+ years",
       salary: "$120, 000 - $180, 000";
       description: "Research and develop quantum algorithms and quantum - resistant cryptography solutions",
       requirements: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         "PhD in Physics, Computer Science, or related field";
         "Experience with quantum computing frameworks (Qiskit, Cirq)";
         "Knowledge of quantum algorithms and cryptography";
@@ -256,13 +254,11 @@ export default function CareersPage() {;
       description: "Lead product strategy and development for our technology solutions portfolio",;
       requirements: [;
 
-=======
       type: "Full - time",
       experience: "5+ years",
       salary: "$140, 000 - $190, 000";
       description: "Lead product strategy and development for our technology solutions portfolio",
       requirements: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         "Bachelor's degree in Business, Engineering, or related field";
         "Experience in B2B SaaS or technology products";
         "Strong analytical and strategic thinking skills";
@@ -419,12 +415,9 @@ export default function CareersPage() {;
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Open Positions */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
@@ -515,7 +508,6 @@ export default function CareersPage() {;
 
                   <div className="lg:flex-shrink-0">;
                     <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">;
-=======
       icon: Rocket,
       color: "from - orange - 500 to - red - 500";
     }
@@ -683,7 +675,6 @@ export default function CareersPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* CTA Section */}
       <section className="py-20 px-6">;
         <div className="max-w-4xl mx-auto text-center">;
@@ -719,7 +710,6 @@ export default function CareersPage() {;
   );
 }
 
-=======
               </motion.div>))}
           </div>;
         </div>;
@@ -756,9 +746,6 @@ export default function CareersPage() {;
       <EnhancedFooter />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

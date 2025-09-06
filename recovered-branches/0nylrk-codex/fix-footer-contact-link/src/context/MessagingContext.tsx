@@ -16,7 +16,6 @@ const defaultContext: MessagingContextType = {
   loadMessages: async () => {}
 };
 
-=======
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MessagingContextType } from '@/types/messaging',;
@@ -39,7 +38,6 @@ const defaultContext: MessagingContextType = {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 const defaultContext: MessagingContextType = {
   messages: []
@@ -95,7 +93,6 @@ export function useMessaging(): any (): MessagingContextType {;
   const context = useContext(MessagingContext) as MessagingContextType;
   if (context === undefined) {;
     throw new Error('useMessaging must be used within a MessagingProvider');
-=======
 
 ),
 
@@ -108,7 +105,6 @@ export function useMessaging(): MessagingContextType {
 
   if (context === undefined) {
     throw new Error('useMessaging must be used within a MessagingProvider')
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return context;
 }
@@ -160,21 +156,17 @@ function MessagingProvider() {
 ;
 
   const {
-=======
 
 // Provider component;
 export function MessagingProvider(): any ({ children }: { children: ReactNode }) {;
-=======
 
 
 
 // Provider component
 export function MessagingProvider({ children }: { children: ReactNode }) {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const { user } = useAuth();
 
   const {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     messages;
     active_messages;
     setActiveMessages;
@@ -200,7 +192,6 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
   // Create context value with all the methods and states;
   const contextValue: MessagingContextType = {;
 
-=======
     fetch_conversations;
     load_messages;
   } = useMessagingOperations (user);
@@ -234,7 +225,6 @@ if ( {) {
 ;
   // Create context value with all the methods and states;
   const context_value: MessagingContextType = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     messages;
     active_messages;
     conversations;
@@ -250,14 +240,12 @@ if ( {) {
     loadMessages;
   };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {children}
 
     </MessagingContext && MessagingContext.Provider>;
   );
 }
 
-=======
     fetch_conversations,
     load_messages;
   }
@@ -267,4 +255,3 @@ if ( {) {
       {children}
     </MessagingContext.Provider>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

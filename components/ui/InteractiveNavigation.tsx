@@ -6,11 +6,9 @@ import { motion } from 'framer-motion';
 
 ;
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface NavigationItem {
   name: string, href: string
   submenu?: NavigationItem[];
@@ -22,7 +20,6 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
   items
   className = ''
 }) => {
-=======
 
 interface NavigationItem {;
   name: string, href: string,;
@@ -162,9 +159,7 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href="/contact" className="text - gray - 600 hover:text - gray - 900: transition - colors">Contact</Link>", ';
 
 export default Component}
-=======
 
 export default Component}
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

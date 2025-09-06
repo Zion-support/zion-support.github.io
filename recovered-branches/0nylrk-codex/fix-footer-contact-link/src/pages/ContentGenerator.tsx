@@ -63,10 +63,8 @@ export default function ContentGenerator() {;
       navigate("/login?redirect=/content-generator")
 
 
-=======
 
 
-=======
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -114,7 +112,6 @@ export default function ContentGenerator() {;
           contentType,;
           prompt: customPrompt || undefined,;
           topic: topic || undefined,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           autoPublish;
           includeImage: contentType === 'blog' ? includeImage : false;
         }
@@ -140,7 +137,6 @@ export default function ContentGenerator() {;
       if (error) throw error,
       
       setPreviewContent(data),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)
     } catch (error) {
       console.error("Error generating content:", error),
@@ -152,7 +148,6 @@ export default function ContentGenerator() {;
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const sendTestNewsletter = async () => {
     if (!testEmail) {
       toast.error("Please enter a test email address");
@@ -164,10 +159,8 @@ export default function ContentGenerator() {;
 
   };
 
-=======
 
 
-=======
       }),;
       if (error) throw error,;
       setPreviewContent(data),;
@@ -208,7 +201,6 @@ export default function ContentGenerator() {;
       
       if (error) throw error,
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast.success(`Test newsletter sent to ${testEmail}!`)
     } catch (error) {
       console.error("Error sending test newsletter:", error),
@@ -217,7 +209,6 @@ export default function ContentGenerator() {;
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       if (error) throw error;
 
@@ -225,7 +216,6 @@ export default function ContentGenerator() {;
     } catch (error) {;
       console && console.error("Error sending test newsletter:", error);
       toast && toast.error("Failed to send test newsletter. Please try again.");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
@@ -243,7 +233,6 @@ export default function ContentGenerator() {;
   }
   return (
 
-=======
                     <Input
                       id="topic"
                       placeholder={contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g., May Platform Updates"}
@@ -331,7 +320,6 @@ export default function ContentGenerator() {;
 
                   <div className="space-y-2">;
                     <Label htmlFor="topic" className="text-white">Topic (Optional)</Label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <Input
                       id="topic"
                       placeholder={contentType === 'blog' ? "e && e.g., Hiring AI Freelancers" : "e && e.g., May Platform Updates"}
@@ -375,18 +363,15 @@ export default function ContentGenerator() {;
 
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         />
                       </div>
                       <div className="flex items-center justify-between">
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
-=======
                         />;
                       </div>;
 
                       <div className="flex items-center justify-between">;
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         <Switch
                           id="includeImage"
                           checked={includeImage}
@@ -403,12 +388,10 @@ export default function ContentGenerator() {;
                   {contentType === 'newsletter' && (
                     <div className="space-y-2">
                       <Label htmlFor="testEmail" className="text-white">Test Email</Label>
-=======
 
                   {contentType === 'newsletter' && (;
                     <div className="space-y-2">;
                       <Label htmlFor="testEmail" className="text-white">Test Email</Label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <Input
                         id="testEmail"
                         type="email"
@@ -607,7 +590,6 @@ export default function ContentGenerator() {;
                     </div>;
                   )}
 
-=======
 import React, { useState } from 'react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -977,9 +959,7 @@ if ( {) {
                       </p>;
                     </div>)}
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </CardContent>;
               </Card>;
             </div>;
@@ -991,7 +971,5 @@ if ( {) {
     </>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

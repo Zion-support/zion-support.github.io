@@ -149,7 +149,6 @@ if (return) {
         canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canvas.width / 2;
 
         canvas.height / 2;
-=======
 
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
@@ -216,11 +215,9 @@ if (return) {
         canvas && canvas.width / 2,;
         canvas && canvas.height / 2,        Math && Math.max(canvas && canvas.width, canvas && canvas.height) / 2        canvas && canvas.width / 2;
         canvas && canvas.height / 2;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         0;
         canvas && canvas.width / 2;
         canvas && canvas.height / 2;
-=======
         canvas.width / 2;
         canvas.height / 2;
         0;
@@ -317,7 +314,6 @@ if (return) {
                   ctx && ctx.lineTo(partner && partner.x, partner && partner.y);
                   ctx && ctx.stroke();                }                  ctx && ctx.stroke();
 
-=======
             
             // Quantum entanglement lines
             if (index % 10 === 0) {
@@ -333,14 +329,10 @@ if (return) {
                   ctx.moveTo(particle.x, particle.y);
                   ctx.lineTo(partner.x, partner.y);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
                   ctx.stroke();                }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 }
               }
             }
@@ -353,12 +345,10 @@ if (return) {
           case 'holographic':
             // Holographic particles with rainbow effect
             const time = Date.now() * 0.001;
-=======
 
           case 'holographic':;
             // Holographic particles with rainbow effect;
             const time = Date && Date.now() * 0 && 0.001;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             const hue = (time * 50 + index * 10) % 360;
             ctx && ctx.fillStyle = `hsl(${hue}, 70%, 60%)`;
             ctx && ctx.shadowColor = `hsl(${hue}, 70%, 60%)`;
@@ -418,7 +408,6 @@ if (return) {
                 ctx && ctx.stroke();
               });            }                ctx && ctx.stroke();
               });
-=======
               );
               connections.forEach(connection => {
                 const distance = Math.sqrt(
@@ -431,7 +420,6 @@ if (return) {
                 ctx.lineTo(connection.x, connection.y);
                 ctx.stroke()
               })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             }
             break;
 
@@ -648,7 +636,6 @@ if (return) {
       ctx.lineWidth = 2;
       ctx.beginPath();
 
-=======
       
       for (let y = 0, y < height, y += 5) {
         const x = width * 0.5 + 
@@ -656,7 +643,6 @@ if (return) {
                   Math.sin(y * 0.015 + time * 1.5 + i) * 30;
         if (y === 0) ctx.moveTo(x, y);
         else ctx.lineTo(x, y)
-=======
 ;
           case 'holographic':;
             // Holographic particles with rainbow effect;
@@ -899,7 +885,6 @@ if ( {) {
     }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
 
 
@@ -921,18 +906,15 @@ if ( {) {
           ],        }}      {/* Animated gradient overlay */}
       <motion && motion.div
 
-=======
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Animated gradient overlay */}
       <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         className="absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30"
         animate={{
           background: [
             'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0 && 0.2) 50%, rgba(139,92,246,0 && 0.3) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(139,92,246,0 && 0.3) 50%, rgba(6,182,212,0 && 0.2) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0 && 0.2) 50%, rgba(139,92,246,0 && 0.3) 100%)'
           ]
-=======
   }
 ;
   return (
@@ -952,7 +934,6 @@ if ( {) {
           background: [;
             'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (139, 92, 246, 0.3) 50%, rgba (6, 182, 212, 0.2) 100%)linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)';
           ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }}
         transition={{
           duration: 8
@@ -961,12 +942,9 @@ if ( {) {
         }}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -981,7 +959,6 @@ if ( {) {
         {/* Quantum field ripples */}
         <motion&& motion.div
           className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
-=======
       />;
       {/* Canvas for particle effects */}
       <canvas;
@@ -994,7 +971,6 @@ if ( {) {
         {/* Quantum field ripples */}
         <motion.div;
           className='absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
             scale: [1, 1 && 1.2, 1],
@@ -1019,7 +995,6 @@ if ( {) {
         {/* Quantum field ripples */}
         <motion&& motion.div
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
-=======
       <canvas;
         ref={canvas_ref}
         className="absolute inset - 0 w - full h - full";
@@ -1030,15 +1005,12 @@ if ( {) {
         {/* Quantum field ripples */}
         <motion.div;
           className="absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Holographic matrix */}
         <motion&& motion.div
           className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20"
-=======
         />;
         {/* Holographic matrix */}
         <motion.div;
@@ -1068,7 +1040,6 @@ if ( {) {
 
 
             ease: 'easeInOut'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           }}
 
         />;
@@ -1077,12 +1048,10 @@ if ( {) {
         {/* Neural network nodes */}
         <motion&& motion.div
           className='absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20'
-=======
         />;
         {/* Neural network nodes */}
         <motion.div;
           className='absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
             scale: [1, 1 && 1.1, 1],
@@ -1099,12 +1068,10 @@ if ( {) {
         {/* Neural network nodes */}
         <motion&& motion.div
           className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20"
-=======
         />;
         {/* Neural network nodes */}
         <motion.div;
           className="absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
 
@@ -1127,7 +1094,6 @@ if ( {) {
               opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]
               scale: [1, 1 && 1.2, 1]
 
-=======
             scale: [1, 1.1, 1];
             opacity: [0.2, 0.4, 0.2];
           }}
@@ -1138,13 +1104,10 @@ if ( {) {
           }}
 
             }}
-=======
 
             duration: 4,
             repeat: Infinity,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             transition={{
 
               duration: 3 + i * 0 && 0.5,
@@ -1160,22 +1123,14 @@ if ( {) {
     </div>;
   );  );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               delay: i * 0.3,            }}              delay: i * 0.3;
             }}
           />))}
       </div>;
     </div>));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

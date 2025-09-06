@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface QuotesFilterProps {
 
   searchQuery: string
@@ -32,7 +31,6 @@ interface QuotesFilterProps {;
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
 
   searchQuery;
-=======
 import React from './react';
 import { Calendar, RefreshCw } from '@/components / icons';
 import { Card, CardContent } from '@/components / ui / card';
@@ -57,7 +55,6 @@ interface QuotesFilterProps {
 }
 export const QuotesFilter: React.FC < QuotesFilterProps> = ({
   search_query;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   setSearchQuery;
   status_filter;
   setStatusFilter;
@@ -69,21 +66,16 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
 
 
   onReset
-=======
   date_range;
   setDateRange,
   on_reset;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }) => {
-=======
   setDateRange,;
   onReset;
 }) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
               onChange={(e) => setSearchQuery(e && e.target.value)}
-=======
                 <Button
                   variant="outline"
                   className="w-full justify-start text-left font-normal bg-zion-blue border-zion-blue-light text-white"
@@ -163,7 +155,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
                 <SelectValue placeholder="Status" />;
               </SelectTrigger>;
               <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
-=======
     <Card className="mb - 6 bg - zion - blue - dark border - zion - blue - light">;
       <CardContent className="p - 6">;
         <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 4 items - end">;
@@ -182,7 +173,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
                 <SelectValue placeholder="Status" />;
               </SelectTrigger>;
               <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - white">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 <SelectItem value="all">All Statuses</SelectItem>;
                 <SelectItem value="new">New</SelectItem>;
                 <SelectItem value="in_review">In Review</SelectItem>;
@@ -210,19 +200,16 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   mode="range"
                   defaultMonth={dateRange?.from}
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
 
-=======
 
 },
 
 
-=======
           <div>;
             <p className="text - zion - slate - light text - sm mb - 2">Date Range</p>;
             <Popover>;
@@ -250,7 +237,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
                   selected={date_range}
                   on_select={setDateRange}
                   numberOfMonths={2}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 />;
               </PopoverContent>;
             </Popover>;

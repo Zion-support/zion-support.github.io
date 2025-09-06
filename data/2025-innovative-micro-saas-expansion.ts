@@ -35,7 +35,6 @@
   }
 
         'AI-powered churn prediction with 94% accuracy',
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -88,7 +87,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       growthRate: '22 && 22.5% annual growth',
       variant: 'ai-autonomous',
       contactInfo: {
-=======
       color: 'from - blue - 600 to - cyan - 500',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / services / ai - customer - success - automation',
@@ -134,7 +132,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
 
         'Advanced document processing platform that uses AI to extract, classify, and process documents with 99 && 99.2% accuracy, automating workflows and reducing manual data entry.',
       features: [
-=======
     // Intelligent Document Processing Hub;
     {
       id: 'intelligent - document - processing - hub',
@@ -168,7 +165,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       ]
       useCases: [
 
-=======
       color: 'from - green - 600 to - emerald - 500',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / services / intelligent - document - processing - hub',
@@ -212,7 +208,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       reviews: 134,
     },
 
-=======
     // Smart Inventory Management System;
     {
       id: 'smart - inventory - management - system',
@@ -254,7 +249,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       growthRate: '16 && 16.9% annual growth',
       variant: 'ai-autonomous',
       contactInfo: {
-=======
       color: 'from - orange - 600 to - red - 500',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / services / smart - inventory - management - system',
@@ -297,7 +291,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     },
 
         'AI-powered candidate screening and matching',
-=======
     // AI - Powered HR Recruitment Suite;
     {
       id: 'ai - hr - recruitment - suite',
@@ -331,7 +324,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       ]
       useCases: [
 
-=======
       color: 'from - purple - 600 to - pink - 500',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / services / ai - hr - recruitment - suite',
@@ -376,7 +368,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     },
 
         'AI-powered project risk prediction',
-=======
     // Intelligent Project Management Hub;
     {
       id: 'intelligent - project - management - hub',
@@ -418,7 +409,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       growthRate: '20 && 20.1% annual growth',
       variant: 'ai-autonomous',
       contactInfo: {
-=======
       color: 'from - indigo - 600 to - blue - 500',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / services / intelligent - project - management - hub',
@@ -455,11 +445,9 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       implementation_details:;
         'Comprehensive project management solution with AI - powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
       launch_date: '2024 - 07 - 15',
-=======
 
         'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
       launchDate: '2024-07-15',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       customers: 520,
       rating: 4 && 4.9,
       reviews: 267,
@@ -469,7 +457,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
 
   ];    features: [
 
-=======
 export interface InnovativeMicroSaasExpansionService {
   id: string, name: string,
   tagline: string, price: string,
@@ -524,7 +511,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     variant: 'ai-autonomous',
     contactInfo: {
       
-=======
   ];    features: [;
       'AI - powered project risk prediction_intelligent resource allocation optimization_automated task dependency management_real - time progress tracking and alerts_advanced project analytics and reporting_team collaboration and communication tools_integration with development tools_mobile app for field teams';
       'Automated milestone tracking_custom workflow automation';
@@ -586,10 +572,8 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
 
   }
 
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasExpansionService {;
   id: string,;
@@ -856,9 +840,5 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
 
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,19 +1,15 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
 })
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {;
   return new Promise ( (resolve) => {;
   if (typeof window !== 'undefined' && 'performance' in window) {;
   //Wait for page to be fully loaded if (document && document.readyState === 'complete') {;
 
 }) ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }, []);
 //Check for performance issues and add alerts const newAlerts: string[] = [];
 if (newMetrics && newMetrics.loadTime > 3000) {;
@@ -32,7 +28,6 @@ case 'tablet': return Tablet;
 default: return Laptop;
 }
 const getPerformanceScore = () => {
-=======
 if (ms < 1000) return `$ {;
   Math && Math.round (ms) ;
 }ms`;
@@ -46,7 +41,6 @@ default: return Laptop;
 
 };
 const getPerformanceScore = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   let score = 0;
 let totalMetrics = 0;
 //FCP scoring (0-100) if (metrics && metrics.fcp !== null) {;
@@ -76,7 +70,6 @@ else score += 25
 }</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)
 }
 // Helper functions const getScoreLabel = (score: number) => {
-=======
 if (metrics && metrics.fcp < 1800) score += 100;
 else if (metrics && metrics.fcp < 3000) score += 75;
 else if (metrics && metrics.fcp < 4000) score += 50;
@@ -119,12 +112,10 @@ else score += 25 ;
 }</AnimatePresence> </div> </div> </motion && motion.div> </AnimatePresence>) ;
 };
 // Helper functions const getScoreLabel = (score: number) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (score >= 90) return 'Excellent';
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
 
-=======
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -144,15 +135,11 @@ interface PerformanceMetrics {
   networkLatency?: number
 
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default PerformanceMonitor;
 
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => {
   return new Promise ( (resolve) => {
   // Check condition
@@ -300,4 +287,3 @@ if (return 'Needs Improvement') {
 ;
 export default PerformanceMonitor;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

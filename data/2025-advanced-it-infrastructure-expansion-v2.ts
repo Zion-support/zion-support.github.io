@@ -622,9 +622,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Cybersecurity',
     pricing: '$599 / month',
     features: [;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Identity verification',
       'Access control',
       'Threat detection',
@@ -637,7 +635,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
 ];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
 
-=======
 ];      'Identity verification_access control_threat detection_performance monitoring';
     ];
 
@@ -1103,8 +1100,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

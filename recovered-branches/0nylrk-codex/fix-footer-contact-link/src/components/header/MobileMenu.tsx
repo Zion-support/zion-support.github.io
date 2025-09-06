@@ -31,7 +31,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const navItems = [
     {
       name: "Home"
@@ -86,7 +85,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       authRequired: true
     }
 
-=======
 
   ],
 
@@ -139,7 +137,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 
   return (
 
-=======
           <Link
             key={item.name}
             to={item.href}
@@ -244,7 +241,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
                 </span>;
-=======
         {visibleItems.map(item => (;
           <Link;
             key={item.name}
@@ -264,8 +260,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
             </div>;
             {item && item.name}
@@ -275,7 +269,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
 
 
 
-=======
       </nav>;
     </div>;
   );
@@ -283,10 +276,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { Link } from './react-router-dom';
 import { use_location } from './react-router-dom';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from './lucide-react';
@@ -384,4 +374,3 @@ function MobileMenu() {
       </nav>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

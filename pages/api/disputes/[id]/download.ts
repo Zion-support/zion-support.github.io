@@ -8,7 +8,6 @@ import {
 
   const { id, fileName } = req && req.query as { id?: string; fileName?: string };
 
-=======
 
   parseUserFromRequest,
   ensureInvolvedOrAdmin,;
@@ -20,7 +19,6 @@ export default async function handler(
 ) {;
   const { id, fileName } = req.query as { id?: string; fileName?: string };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (
     !id |
     !fileName |
@@ -28,7 +26,6 @@ export default async function handler(
     typeof fileName !== "string"
   ) {
 
-=======
     return res.status(400).json({ error: "Invalid parameters" });
   }
 
@@ -55,7 +52,6 @@ export default async function handler(
 
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -66,8 +62,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { id, fileName } = req.query as { id?: string, fileName?: string };
   if (!id || !fileName || typeof id !== 'string' || typeof fileName !== 'string') {
     return res.status(400).json({ error: 'Invalid parameters' })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
   const user = parseUserFromRequest(req);
@@ -76,4 +70,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

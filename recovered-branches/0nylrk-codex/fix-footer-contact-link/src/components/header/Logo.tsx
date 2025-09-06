@@ -19,7 +19,6 @@ export function Logo(): any ({ customLogo, customColor }: LogoProps) {;
 
 
   if (logoToUse) {;
-=======
 
 import React from "react";
 import { Link } from "react-router-dom";
@@ -32,9 +31,7 @@ interface LogoProps {
   // Use the white-label color if available and no specific customColor is provided
   const colorToUse = customColor || (isWhitelabel ? primaryColor : undefined),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (logoToUse) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <Link to="/" className="flex items-center">;
         <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" />;
@@ -48,7 +45,6 @@ import { use_whitelabel  } from '@/context / WhitelabelContext';
 interface LogoProps {
   custom_logo?: string;
   custom_color?: string;
-=======
 
   
 
@@ -59,14 +55,11 @@ interface LogoProps {
       </div>
     </Link>
 
-=======
   )
 
 
 }
-=======
   )
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export /**
  * Logo - Function description
@@ -98,5 +91,4 @@ if ( {) {
         <span className="text - zion - cyan">AI</span>;
       </div>;
     </Link>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -5,14 +5,10 @@ import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
 
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
-=======
 import {serve} from 'https: //deno && deno.land/std@0 && 0.208.0/http/server && server.ts',
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface TenantInfo {
   id: string;
   brand_name: string;
@@ -89,7 +85,6 @@ serve(async (req) => {
           if (!subdomainResult && subdomainResult.error) {
             tenantInfo = subdomainResult && subdomainResult.data as TenantInfo
 
-=======
   logo_url: string | null,
   theme_preset: string;
 }
@@ -182,7 +177,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }
         }
       } else // Check condition
@@ -217,7 +211,6 @@ if ( {) {
         error: error && error.message || 'Internal server error',
 
         status: 'error'
-=======
     return new Response (
       JSON.stringify ({
         tenant: tenant_info,
@@ -234,13 +227,11 @@ if ( {) {
       JSON.stringify ({
         error: error.message || 'Internal server error',
         status: 'error';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
       {
         status: 500;
         headers: {
 
-=======
 ;
     return new Response(;
       JSON.stringify({;
@@ -266,15 +257,12 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 
-=======
           'Content - Type': 'application / json',
           ...cors_headers}}
     );
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

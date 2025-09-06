@@ -13,7 +13,6 @@ import { JobMatchCard } from "@/components/jobs/JobMatchCard";
 
 import { useJobMatches } from "@/hooks/useJobMatches";
 import { Skeleton } from "@/components/ui/skeleton";
-=======
 
 interface JobMatchesProps {
   jobId: string
@@ -24,12 +23,10 @@ export function JobMatches({ jobId }: JobMatchesProps) {
 
     useJobMatches(jobId);
 
-=======
   const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),
   
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
     return (
       <Card>
@@ -53,14 +50,12 @@ export function JobMatches({ jobId }: JobMatchesProps) {
 
 
 
-=======
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",;
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",;
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",;
 import { useJobMatches } from "@/hooks/useJobMatches",;
 import { Skeleton } from "@/components/ui/skeleton",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface JobMatchesProps {;
   jobId: string;
 }
@@ -107,7 +102,6 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
       />;
     );
   }
-=======
 ;
   if (matches.length === 0) {;
     return <EmptyMatchesCard onRefresh={triggerAIMatching} isProcessing={isProcessing} />;
@@ -115,8 +109,6 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-4">;
       {matches && matches.map((match) => (;
@@ -138,7 +130,6 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
       ))}
     </div>;
   );
-=======
 import React from './react';
 import {
   Card,
@@ -204,10 +195,8 @@ if ( {) {
           key={match.id}
           match_id={match.id}
           talent_id={match.talent_profile?.id || ""}
-=======
 
           talentId={match.talent_profile?.id || ""}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           name={match.talent_profile?.full_name || ""}
           title={match.talent_profile?.professional_title || ""}
           company={match.talent_profile?.company_name || ""}

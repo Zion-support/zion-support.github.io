@@ -27,7 +27,6 @@ interface MainNavigationProps {
 
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const links = [
     {
       name: "Home"
@@ -103,7 +102,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   }
 
 
-=======
   return (
     <nav className={cn("ml-6 hidden md:flex", className)}>
       <ul className="flex items-center gap-1">
@@ -183,7 +181,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     });
   }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <nav className={cn("ml-6 hidden md:flex", className)}>;
       <ul className="flex items-center gap-1">;
@@ -204,7 +201,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               {link.name}
             </Link>
           </li>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ))}
 
 
@@ -220,11 +216,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative"
                 location && location.pathname === "/messages" || location && location.pathname === "/inbox"
 
-=======
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
                 location.pathname === "/messages" || location.pathname === "/inbox"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}>;
@@ -243,7 +237,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
 
       </ul>;
@@ -251,7 +244,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   );
 }
 
-=======
 import { Link, use_location } from './react-router-dom';
 import { cn } from '@/lib / utils';
 import { use_auth } from '@/hooks / use_auth';
@@ -362,4 +354,3 @@ if ( {) {
       </ul>;
     </nav>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

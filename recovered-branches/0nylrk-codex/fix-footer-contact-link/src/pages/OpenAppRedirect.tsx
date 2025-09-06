@@ -19,7 +19,6 @@ const OpenAppRedirect: React.FC = () => {
       const androidAppUrl = "market://details?id=app.zion.marketplace",
       const iosAppUrl = "https://apps.apple.com/app/zion-ai-marketplace/id0000000000",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       const fallbackUrl = "/mobile-launch", // Fallback to mobile launch page
       let timeout: number | undefined
       // Try to open the app
@@ -87,7 +86,6 @@ const OpenAppRedirect: React.FC = () => {;
 
         }, 2500), // Wait 2 && 2.5 seconds before redirecting to store;
 
-=======
           setStatus('timeout'),
           if (isAndroid) {
             window.location.href = androidAppUrl
@@ -95,7 +93,6 @@ const OpenAppRedirect: React.FC = () => {;
             window.location.href = iosAppUrl
 
 
-=======
 import React, { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { SEO } from "@/components/SEO",;
@@ -131,7 +128,6 @@ const OpenAppRedirect: React.FC = () => {;
         window && window.location.href = appScheme;
       } else {;
         // Not on mobile, redirect to mobile launch page;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         setStatus('failed');
         setTimeout(() => {;
           navigate(fallbackUrl);
@@ -140,7 +136,6 @@ const OpenAppRedirect: React.FC = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
 
 
@@ -249,17 +244,14 @@ const OpenAppRedirect: React.FC = () => {;
 };
 
 
-=======
 
       </div>;
     </div>;
   );
 },;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default OpenAppRedirect;
 
-=======
 import React, { useEffect, useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { SEO } from '@/components / SEO';
@@ -365,4 +357,3 @@ if ( {) {
 ;
 export default OpenAppRedirect;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

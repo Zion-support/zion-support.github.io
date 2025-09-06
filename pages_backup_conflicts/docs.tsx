@@ -13,7 +13,5 @@ export default function Docs({ }: DocsProps) {
   );
 
 
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

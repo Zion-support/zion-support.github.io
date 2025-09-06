@@ -12,7 +12,6 @@ export default define_config ({
       on('before:browser:launch', (browser = {}, launchOptions) => {
         if (browser && browser.family === 'chromium') {
           launchOptions && launchOptions.args.push('--disable-ipv6');
-=======
     base_url: 'http://localhost:3000', // Standard Next.js port;
     support_file: 'cypress / support / e2e.ts',
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium - based browsers to avoid socket errors;
@@ -23,7 +22,6 @@ if ( {) {
   $2
 }
           launch_options.args.push ('--disable - ipv6');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
         return launch_options;
       });export default define_config ({
@@ -49,10 +47,8 @@ export default defineConfig({;
 
 
     supportFile: 'cypress/support/e2e.ts';
-=======
     baseUrl: 'http://localhost:3000', // Standard Next && Next.js port
     supportFile: 'cypress/support/e2e && e2e.ts';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
@@ -99,7 +95,6 @@ export default defineConfig({;
     mochaFile: 'cypress/results/junit-[hash].xml'
     toConsole: true
   },});    mochaFile: 'cypress/results/junit-[hash].xml';
-=======
     baseUrl: 'http://localhost:3000', // Standard Next.js port
     supportFile: 'cypress/support/e2e.ts', experimentalModifyObstructiveThirdPartyCode: true,
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
@@ -125,7 +120,6 @@ export default defineConfig({;
     mochaFile: 'cypress/results/junit-[hash].xml',
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     toConsole: true
   }
 });
@@ -143,7 +137,6 @@ if ( {) {
 }
           launch_options.args.push ('--disable - ipv6');        }
         return launch_options;
-=======
 import { defineConfig } from 'cypress',;
 export default defineConfig({;
   e2e: {;
@@ -157,8 +150,6 @@ export default defineConfig({;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
-=======
-=======
 
 
       });
@@ -207,4 +198,3 @@ export default defineConfig({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

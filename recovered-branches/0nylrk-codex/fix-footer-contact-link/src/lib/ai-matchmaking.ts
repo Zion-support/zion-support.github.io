@@ -2,13 +2,11 @@
 // AI Matchmaking utility functions;
 
 export interface MatchResultItem {
-=======
 
 
 
 export interface MatchResultItem {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   title: string;
   description: string;
@@ -20,13 +18,11 @@ export interface MatchResultItem {;
 
 }
 export interface MatchResult {
-=======
 }
 
 
 export interface MatchResult {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   item: MatchResultItem;
   score: number;
 
@@ -65,7 +61,6 @@ const sample_data: MatchResultItem[] = [;
 
 
 
-=======
 // AI Matchmaking utility functions;
 export interface MatchResultItem {;
   id: string,;
@@ -121,8 +116,6 @@ export async function findMatches(
   query: string,
 
   type: string = "",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   limit: number = 5
 ): Promise<MatchResult[]> {
   try {
@@ -160,7 +153,6 @@ export async function findMatches(
     console && console.error("Error in matchmaking:", error);
 
     return []
-=======
     price: 15000,
     skills: ["GPU Computing", "High Performance", "AI Hardware"];
   }
@@ -182,7 +174,6 @@ export async function find_matches (
     // Check condition
 if ( {) {
   $2
-=======
 
       matchedSkills: item.skills?.slice(0, 2) || [],
       reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
@@ -195,7 +186,6 @@ if ( {) {
     return []
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
       filtered_items = sample_data.filter (item =>;
         item.category.toLowerCase ().includes (type.toLowerCase ()));
@@ -213,6 +203,5 @@ if ( {) {
   } catch (error) {
     console.error ("Error in matchmaking:", error);
     return [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

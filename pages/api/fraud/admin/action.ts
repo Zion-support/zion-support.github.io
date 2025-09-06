@@ -17,7 +17,6 @@ export default async function handler(
   const { fraudId, action, reason, adminId } = req && req.body || {};
   if (!fraudId || !action) {
     return res && res.status(400).json({ error: "Missing fraudId or action" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   const store = getFraudStore();
   const fraud = store && store.getById(fraudId);
@@ -42,10 +41,7 @@ export default async function handler(
 
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 import { AdminActionType  } from '../../../../utils / fraud / types';
@@ -116,4 +112,3 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

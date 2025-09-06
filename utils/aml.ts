@@ -10,13 +10,11 @@
 ;
 
 export type AmlCheckResult = {
-=======
 
 };
 
 export type AmlCheckResult = {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   status: 'clear' | 'match' | 'review' | 'unknown';
   matches: WatchlistMatch[];
   checked_at: string; // ISO;
@@ -54,7 +52,6 @@ class MockAmlProvider implements AmlProvider {
 
 
 
-=======
 
 // Singleton instance
 export const amlManager = new AmlManager();
@@ -91,8 +88,6 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
   };
   return colors[riskLevel];
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   async check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult> {
     // Mock implementation - in production, this would call a real AML service;
     const name = params.fullLegalName.toLowerCase ();
@@ -117,5 +112,3 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
 export function getAmlProvider (): AmlProvider {
   return new MockAmlProvider ();
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

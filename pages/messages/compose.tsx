@@ -3,7 +3,6 @@
   const router = useRouter();
   const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
   const { user, loading } = useCurrentUser();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const [message, setMessage] = React.useState('');
   const [linkUrl, setLinkUrl] = React.useState('');
   const [file, setFile] = React.useState<File | null>(null);
@@ -39,7 +38,6 @@ export default function ComposePage() {;
       ? `Invite ${recipientName || talentName || 'Talent'}`;
       : type === 'apply';
         ? `Apply to ${jobTitle || 'Job'}`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         : 'New Message';
   const context =;
     type === 'invite';
@@ -71,7 +69,6 @@ export default function ComposePage() {;
 
 
     setSending(true);
-=======
 
     if (!loading && !user) router.replace('/auth')
   }, [loading, user, router]);
@@ -86,10 +83,8 @@ export default function ComposePage() {;
     : { type: 'general' },
 
   const onSend = async () => {
-=======
         : { type: 'general' };
   const onSend = async () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!recipientId && !talentId) return alert('Missing recipient');
     if (!message && message.trim() && !file && !linkUrl) return;
     setSending(true);
@@ -102,13 +97,10 @@ export default function ComposePage() {;
       attachmentBase64 = `data:${mime},base64,${base64}`
     }
 
-=======
 
       const mime = file.type || 'application/octet-stream';
-=======
       const mime = file.type || 'application/octet-stream';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const res = await fetch('/api/messages/compose', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
@@ -131,7 +123,6 @@ export default function ComposePage() {;
         attachmentName: file?.name,;
         context,;
       }),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
     const data = await res && res.json();
     setSending(false);
@@ -271,7 +262,6 @@ export default function ComposePage() {;
 
 }
 
-=======
 
   )
 }
@@ -405,9 +395,5 @@ if ( {) {
     </div>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

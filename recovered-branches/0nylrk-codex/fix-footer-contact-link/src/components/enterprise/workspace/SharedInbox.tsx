@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function SharedInbox() {
   // Mock messages
 
@@ -17,7 +16,6 @@ export function SharedInbox() {
       timestamp: "2h ago",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       id: "msg-2"
       from: "Talent Support"
@@ -37,7 +35,6 @@ export function SharedInbox() {
       preview: "The contract with freelancer Michael Chen has been approved and signed."
       timestamp: "2d ago"
       unread: false
-=======
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -67,8 +64,6 @@ export function SharedInbox() {;
       preview: "The contract with freelancer Michael Chen has been approved and signed.",;
       timestamp: "2d ago",;
       unread: false;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -101,16 +96,13 @@ function SharedInbox() {
       preview: "The contract with freelancer Michael Chen has been approved and signed.",
       timestamp: "2d ago",
       unread: false;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   ];
 ;
   return (
 
-=======
 
 
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -178,7 +170,6 @@ export function SharedInbox() {;
 
         <div className="p-3 text-center border-t border-border">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
-=======
     <Card>;
       <CardHeader>;
         <div className="flex items - center justify - between">;
@@ -210,7 +201,6 @@ export function SharedInbox() {;
           </div>)}
         <div className="p - 3 text - center border - t border - border">;
           <button className="text - sm text - blue - 500 font - medium hover: text - blue - 700">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             View All Messages;
           </button>;
         </div>;
@@ -219,10 +209,6 @@ export function SharedInbox() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

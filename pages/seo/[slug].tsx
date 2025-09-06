@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 
-=======
 
 import { useRouter } from 'next/router';
 
@@ -33,14 +32,12 @@ import FAQ from '../../components/seo/FAQ';
 
 export type LandingPayload = {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   h1: string;
   body_html: string;
   region?: string;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const router = useRouter();
   const { slug } = router && router.query as { slug?: string };
 
@@ -54,21 +51,16 @@ export type LandingPayload = {
         setPayload(JSON && JSON.parse(decodeURIComponent(dataParam)));
         return;
 
-=======
         return
       } catch {}
     }
-=======
 
 
 
     // Fallback: render a basic placeholder until a generated page is deployed
     setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
   }, [router.isReady, slug]);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!payload) return null;
 
   return (
@@ -91,11 +83,8 @@ export type LandingPayload = {
   );
 
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   faq: Array<{ q: string; array: string }>;}
 ;
 export default /**
@@ -156,9 +145,6 @@ if (return null) {
       <FAQ items={payload.faq} />;
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   )
   } catch (error) {
     console.error("Error:", error);
@@ -167,5 +153,3 @@ if (return null) {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

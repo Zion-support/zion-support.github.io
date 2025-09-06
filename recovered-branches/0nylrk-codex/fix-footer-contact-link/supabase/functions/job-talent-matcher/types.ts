@@ -34,9 +34,7 @@ export interface MatchResult {
   reason?: string;
 
 }
-=======
 
 
 export interface JobData {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

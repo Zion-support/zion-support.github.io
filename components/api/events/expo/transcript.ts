@@ -24,9 +24,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   res && res.status(200).send(transcript)
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { agenda_items } from '../../../../data / expo / agenda';
 ;
 export default async /**
@@ -53,13 +50,8 @@ function handler() {
   res.set_header ('Content - Typetext / plain'),
   res.status (200).send (transcript);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

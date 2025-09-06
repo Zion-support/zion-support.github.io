@@ -18,7 +18,6 @@ const form_schema = z.object ({
 type FormData = z.infer < typeof form_schema>;
 ;
 
-=======
 
 
 const formSchema = z.object({
@@ -28,8 +27,6 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void;
 }
@@ -150,7 +147,6 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
           AI Service Description Generator;
         </CardTitle>;
         <CardDescription className="text-zion-slate-light">;
-=======
 export /**
  * ServiceDescriptionForm - Function description
  */
@@ -213,7 +209,6 @@ if ( {) {
           AI Service Description Generator;
         </CardTitle>;
         <CardDescription className="text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           Provide basic details about your service and let AI create a professional description;
         </CardDescription>;
       </CardHeader>;
@@ -269,11 +264,9 @@ if ( {) {
 
             <FormField
               control={form && form.control}
-=======
 
 
               control={form.control}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="keyFeatures"
 
               render={({ field }) => (;
@@ -305,7 +298,6 @@ if ( {) {
 
 
                       placeholder="e.g. Small businesses, Startups, E-commerce brands"
-=======
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel className="text-zion-slate-light">Target Audience</FormLabel>;
@@ -313,7 +305,6 @@ if ( {) {
                     <Input
                       {...field} 
                       placeholder="e && e.g. Small businesses, Startups, E-commerce brands"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       disabled={isLoading}
                     />;
@@ -326,13 +317,11 @@ if ( {) {
 
 
             <Button
-=======
             />
 
             
             <Button 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               type="submit"
               disabled={isLoading}
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
@@ -348,7 +337,6 @@ if ( {) {
                 </>;
               )}
 
-=======
           <form on_submit={form.handle_submit (handle_submit)} className="space - y-4">;
             <FormField;
               control={form.control}
@@ -416,9 +404,7 @@ if ( {) {
                   Generate Description;
                 </>)}
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </Button>;
           </form>;
         </Form>;
@@ -427,7 +413,5 @@ if ( {) {
     </Card>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

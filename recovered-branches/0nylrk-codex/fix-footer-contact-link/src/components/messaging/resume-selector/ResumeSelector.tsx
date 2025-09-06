@@ -110,7 +110,6 @@ if ( {) {
           type: "ai_resume"
           resume: resume
         }
-=======
 
   // Update resume options when resume data changes;
   useEffect(() => {;
@@ -122,7 +121,6 @@ if ( {) {
           type: "ai_resume",;
           resume: resume,;
         },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ];
 
 
@@ -160,7 +158,6 @@ if ( {) {
   };
 
 
-=======
         setIsLoading(false)
 import React, { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -242,8 +239,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0],
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Check if it's a PDF file
       if (file.type !== "application/pdf") {
         toast({
@@ -311,7 +306,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
         title: "Success!",
         description: "Your resume has been downloaded."})
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } catch (error) {
       console.error("Error downloading PDF:", error);
       toast({
@@ -358,7 +352,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
       });
     } finally {;
       setIsLoading(false);
-=======
 
         title: "Download failed",
         description: "There was an error downloading your resume.",
@@ -367,7 +360,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
     } finally {
       setIsLoading(false)
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
 
@@ -401,7 +393,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
       <h3 className="text-lg font-medium text-white">Attach Resume</h3>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         className="space-y-3"
       >
         <div className="flex items-center space-x-2">
@@ -415,7 +406,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="select" id="select" />
           <Label htmlFor="select" className="text-white">
@@ -427,7 +417,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="upload" id="upload" />
           <Label htmlFor="upload" className="text-white">
@@ -436,7 +425,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
         </div>
       </RadioGroup>
 
-=======
 
       
 ;
@@ -497,7 +485,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
         <div className="flex items-center space-x-2">;
           <RadioGroupItem value="upload" id="upload" />;
           <Label htmlFor="upload" className="text-white">;
-=======
 ;
       setResumeOptions (options);
 ;
@@ -650,7 +637,6 @@ if ( {) {
         <div className="flex items - center space - x-2">;
           <RadioGroupItem value="upload" id="upload" />;
           <Label html_for="upload" className="text - white">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Upload a custom resume (PDF);
           </Label>;
         </div>;
@@ -661,7 +647,6 @@ if ( {) {
         <ResumePreviewCard;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           resume={resume}
           onDownload={handleDownloadResume}
           isLoading={isLoading}
@@ -672,20 +657,16 @@ if ( {) {
       {selectedOption === "select" && (;
 
         <SelectResumeSection
-=======
 
 
 
       {selectedOption === "select" && (
         <SelectResumeSection
-=======
 ;
       {selectedOption === 'select' && (;
         <SelectResumeSection;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           resumeOptions={resumeOptions}
           selectedResume={selectedResume}
           handleResumeSelect={handleResumeSelect}
@@ -698,20 +679,16 @@ if ( {) {
       {selectedOption === "upload" && (;
 
         <UploadSection
-=======
 
 
 
       {selectedOption === "upload" && (
         <UploadSection
-=======
 ;
       {selectedOption === 'upload' && (;
         <UploadSection;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           customFile={customFile}
           onFileUpload={handleFileUpload}
         />;
@@ -720,13 +697,9 @@ if ( {) {
 
 ;
 
-=======
 
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Generate Resume Now button */}
       <div className="flex justify-between items-center pt-2">;
         <Button
@@ -767,7 +740,6 @@ if ( {) {
     </div>);
 
 }
-=======
           className="text-zion-purple border-zion-purple/20"
         >
           <Plus className="h-4 w-4 mr-2" />
@@ -780,5 +752,3 @@ if ( {) {
 }
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

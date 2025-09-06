@@ -6,7 +6,6 @@ function MyApp({ Component, pageProps }: AppProps) {;
 
 }
 export default MyApp;
-=======
 import type { AppProps } from 'next/app',
 import '../styles/globals.css',
 function MyApp({ Component, pageProps }: AppProps) {
@@ -15,4 +14,3 @@ function MyApp({ Component, pageProps }: AppProps) {
 export default MyApp,
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

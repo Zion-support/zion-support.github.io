@@ -24,11 +24,8 @@ function ReviewsModerationContent() {
   const [isLoading, setIsLoading] = useState(true),
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const fetchReviews = async () => {
-=======
   const fetchReviews = async () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsLoading(true);
     try {;
       // In a real application, you would fetch reviews from an API;
@@ -46,7 +43,6 @@ function ReviewsModerationContent() {
       setIsLoading(false);
     }
   };
-=======
 
   },
 
@@ -58,7 +54,6 @@ function ReviewsModerationContent() {
   const handleRefresh = () => {;
     fetchReviews();
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 
   const handleRefresh = () => {
@@ -107,10 +102,8 @@ function ReviewsModerationContent() {
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
 
-=======
 
 
-=======
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
@@ -221,7 +214,6 @@ function ReviewsModerationContent() {
   const [active_tab, setActiveTab] = useState ("pending");
   const [reviews, set_reviews] = useState ([]);
   const [is_loading, setIsLoading] = useState (true);
-=======
 
 
 }
@@ -323,4 +315,3 @@ function ReviewsModeration() {
       <ReviewsModerationContent />;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

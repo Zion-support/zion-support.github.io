@@ -22,10 +22,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
@@ -37,7 +35,6 @@ import {AppTestimonials} from "@/components/mobile-app/AppTestimonials";
 import {AppStoreBanner} from "@/components/mobile-app/AppStoreBanner";
 import {DownloadSection} from "@/components/mobile-app/DownloadSection";
 
-=======
 import React from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
@@ -51,7 +48,6 @@ import { DownloadSection } from "@/components/mobile-app/DownloadSection",
 
 
 const MobileAppPage: React.FC = () => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <AppLayout>;
@@ -81,7 +77,6 @@ const MobileAppPage: React.FC = () => {
 
 export default MobileAppPage;
 
-=======
 import React from './react';
 import { AppLayout } from '@/layout / AppLayout';
 import { SEO } from '@/components / SEO';
@@ -108,12 +103,9 @@ const MobileAppPage: React.FC = () => {
     </AppLayout>);
 }
 ;
-=======
 
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default MobileAppPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

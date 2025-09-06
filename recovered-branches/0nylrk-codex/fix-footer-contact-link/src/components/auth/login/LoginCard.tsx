@@ -3,7 +3,6 @@
 
 
 export function LoginCard() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="mx-auto w-full max-w-sm lg:w-96">;
       <div className="text-center mb-10">;
@@ -16,7 +15,6 @@ export function LoginCard() {
             to="/signup"
 
             className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
-=======
 import { Link  } from './react-router-dom';
 import { LoginForm  } from './LoginForm';
 import { SocialLogin  } from './SocialLogin';
@@ -47,13 +45,10 @@ function LoginCard() {
 
 
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-=======
       <div className="bg - zion - blue - dark rounded - lg p - 6">;
         <LoginForm />;
         <SocialLogin />;
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

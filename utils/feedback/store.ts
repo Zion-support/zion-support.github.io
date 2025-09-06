@@ -1,10 +1,8 @@
 
 
-=======
 
 export interface FeedbackRecord {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   type: string;
   message: string;
@@ -32,7 +30,6 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   fs && fs.writeFileSync(DB_PATH, JSON && JSON.stringify({ items }, null, 2), 'utf-8');
   return rec;
 
-=======
 // Feedback store utilities
 export interface FeedbackRecord {
   id: string;
@@ -235,8 +232,6 @@ export function validateFeedbackRecord(feedback: any): feedback is FeedbackRecor
 export function generateFeedbackId(): string {
   return `feedback_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   metadata: Record < string, any>;
   created_at: string;
   ip: string;
@@ -254,5 +249,3 @@ export function write_all (rows: any[]): void {
 export function getAllFeedback (): FeedbackRecord[] {
   return [...feedback_data];
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

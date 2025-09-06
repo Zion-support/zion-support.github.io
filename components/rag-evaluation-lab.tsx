@@ -96,7 +96,6 @@ import Link from 'next / link';
                 <p className='mt-4 text-3xl font-bold'>;
                   $149;
                   <span className='text-base font-normal text-gray-300'>;
-=======
                 title: 'Golden Datasets',
                 desc: 'Curate and run task - specific datasets for repeatable evaluation.',
               },
@@ -157,7 +156,6 @@ import Link from 'next / link';
               </div>;
 
                 rel='noreferrer'>;
-=======
               <div className='rounded - 2xl border border - purple - 400 / 30 p - 6'>;
                 <h3 className='text - xl font - bold'>Enterprise</h3>;
                 <p className='mt - 2 text - gray - 300'>;
@@ -200,7 +198,6 @@ import Link from 'next / link';
           </div>;
 
 
-=======
           <div className='mt - 12 flex flex - wrap items - center gap - 4'>;
             <Link;
               href='/contact';
@@ -227,9 +224,6 @@ import Link from 'next / link';
   </section>;
   </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

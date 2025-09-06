@@ -27,7 +27,6 @@ export function ProfileRatings(): any ({ userId, averageRating = 0, ratingCount 
       reviews && reviews.forEach((review) => {;
         if (review && review.rating >= 1 && review && review.rating <= 5) {;
           distribution[review && review.rating] = (distribution[review && review.rating] || 0) + 1;
-=======
 import { useState, useEffect  } from './react';
 import { Star  } from './lucide-react';
 import { ReviewStats  } from '@/components / reviews / ReviewStats';
@@ -92,7 +91,6 @@ interface ProfileRatingsProps {
   }, [userId]),
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-6">;
       <div className="flex flex-col md:flex-row gap-6">;
@@ -140,7 +138,6 @@ interface ProfileRatingsProps {
                 isLoading={isLoading}
                 onReportReview={reportReview}
 
-=======
 ;
   // Fetch reviews when component mounts;
   useEffect (() => {
@@ -195,8 +192,6 @@ interface ProfileRatingsProps {
     </div>);
 }
 
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

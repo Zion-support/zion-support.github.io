@@ -41,7 +41,6 @@
   }
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { create_partner  } from '../../../utils / api / partner_auth';
 ;
@@ -89,9 +88,6 @@ if ( {) {
     return res.status (500).json ({ error: "Failed to create partner" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

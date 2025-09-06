@@ -61,10 +61,7 @@ if ( {) {
     return NextResponse.json (
 
       { error: "Internal server error" }
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { NextRequest, NextResponse } from "next/server",;
 import bcrypt from "bcryptjs",;
 import { prisma } from "@/lib/prisma",;

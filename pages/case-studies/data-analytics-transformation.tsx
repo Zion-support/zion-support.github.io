@@ -20,7 +20,6 @@
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <header className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-purple-400/20 text-purple-400 text-sm rounded-full border border-purple-400/30 mb-6">
               Healthcare Industry
@@ -33,7 +32,6 @@
             </p>
           </header>
 
-=======
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -77,7 +75,6 @@ function CaseStudyPage() {
 
           {/* Case Study Content */}
           <div className="max - w-4xl mx - auto">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {/* Company Overview */}
 
 
@@ -94,7 +91,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -104,13 +100,9 @@ function CaseStudyPage() {
 
                   A large healthcare network serving multiple communities with hospitals,
 
-=======
                   A large healthcare network serving multiple communities with hospitals, 
-=======
                   A large healthcare network serving multiple communities with hospitals,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   clinics, and specialized medical services. The organization struggled to leverage data for patient care improvements.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
@@ -138,7 +130,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -172,7 +163,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Solution</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -182,13 +172,9 @@ function CaseStudyPage() {
 
                   We built a comprehensive data analytics platform that provides real-time insights,
 
-=======
                   We built a comprehensive data analytics platform that provides real-time insights, 
-=======
                   We built a comprehensive data analytics platform that provides real-time insights,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   predictive modeling, and automated reporting for improved patient care and operational efficiency.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -199,13 +185,9 @@ function CaseStudyPage() {
 
                       Advanced big data infrastructure processes millions of patient records,
 
-=======
                       Advanced big data infrastructure processes millions of patient records, 
-=======
                       Advanced big data infrastructure processes millions of patient records,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       lab results, and operational data points in real-time.
                     </p>
                   </div>
@@ -227,13 +209,9 @@ function CaseStudyPage() {
 
                       Live dashboards provide instant insights into patient conditions,
 
-=======
                       Live dashboards provide instant insights into patient conditions, 
-=======
                       Live dashboards provide instant insights into patient conditions,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       resource utilization, and operational metrics.
                     </p>
                   </div>
@@ -244,13 +222,9 @@ function CaseStudyPage() {
 
                       Advanced predictive models forecast patient outcomes, readmission risks,
 
-=======
                       Advanced predictive models forecast patient outcomes, readmission risks, 
-=======
                       Advanced predictive models forecast patient outcomes, readmission risks,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       and resource requirements.
                     </p>
                   </div>
@@ -266,7 +240,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Results & Impact</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -325,7 +298,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -573,7 +545,6 @@ export default function CaseStudyPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Timeline</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -618,7 +589,6 @@ export default function CaseStudyPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="text-center">
               <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Transform Your Data Analytics?</h2>
@@ -650,10 +620,8 @@ export default function CaseStudyPage(req, res) {
     </>
   )
 
-=======
 }
 
-=======
             <section className="mb - 16">;
               <h2 className="text - 3xl font - bold text - white mb - 6">Company Overview</h2>;
               <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20">;
@@ -768,7 +736,6 @@ export default function CaseStudyPage(req, res) {
                         <span className="text - white / 90">Predictive Accuracy</span>;
                         <span className="text - 2xl font - bold text - green - 400">85%</span>;
                       </div>;
-=======
 
             <section className="mb-16">;
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Timeline</h2>;
@@ -779,7 +746,6 @@ export default function CaseStudyPage(req, res) {
                     <div>;
                       <h4 className="text-lg font-semibold text-white">Data Assessment & Planning (Months 1-2)</h4>;
                       <p className="text-white/70">Comprehensive data audit and system architecture design</p>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>;
                   </div>;
                   <div>;

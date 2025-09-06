@@ -7,14 +7,12 @@ import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';
 type ContentType = 'job' | 'profile' | 'service' | 'general';
-=======
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_language, SupportedLanguage} from '@/context / LanguageContext';
 ;
 type ContentType = 'job' | 'profile' | 'service' | 'general';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface TranslationResponse {
   translations: Record < SupportedLanguage, string>;
   error?: string;
@@ -90,7 +88,6 @@ export function useTranslationService() {;
 
     getTranslation
   }
-=======
 export /**
  * useTranslationService - Function description
  */
@@ -139,8 +136,6 @@ if ( {) {
         en: content;
         es: '';
         pt: '',
-=======
-=======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',;
@@ -181,7 +176,6 @@ export function useTranslationService() {;
         initialTranslations[sourceLanguage] = content,;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         return { translations: initialTranslations, error: error.message }
       }
       return { translations: data.translations }
@@ -193,7 +187,6 @@ export function useTranslationService() {;
         en: content,;
         es: '',;
         pt: '',;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ar: '';
       }
       initial_translations[source_language] = content;
@@ -215,7 +208,6 @@ export function useTranslationService() {;
     getTranslation;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ;
   const get_translation = (translations: Record < SupportedLanguage, string>, fallback: string = '') =>: any {
@@ -231,5 +223,4 @@ if (return fallback, ) {
     is_translating;
     get_translation;
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -31,11 +31,9 @@ import React, { useState } from 'react';
   const [topic, setTopic] = useState('');
 
 
-=======
 
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
@@ -48,13 +46,11 @@ import React, { useState } from 'react';
   const [synthesizing, setSynthesizing] = useState(false);
   const [publishing, setPublishing] = useState(false);
 
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ persona, invitee: { name: inviteeName, bio: inviteeBio }, topic, operatorPrompt })});
       const data = await res.json();
       setEpisode(data.episode)
-=======
 }
 ;
 export default /**
@@ -135,13 +131,11 @@ function StudioHostPage() {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
           <div>;
             <label className='block text-sm font-medium'>Voice</label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <select
               className='mt-1 w-full border rounded p-2'
               value={persona && persona.voice}
               onChange={e =>;
                 setPersona({ ...persona, voice: e && e.target.value as any });
-=======
       set_publishing (false);
     }
   }
@@ -159,7 +153,6 @@ function StudioHostPage() {
               value={persona.voice}
               on_change={e =>;
                 set_persona ({ ...persona, voice: e.target.value as any });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               }
             >;
               <option value='Visionary'>Visionary</option>;
@@ -190,7 +183,6 @@ function StudioHostPage() {
 
           <div>
             <label className='block text-sm font-medium'>Invitee Name</label>
-=======
               value={persona && persona.cloneStyleText || ''}
               onChange={e =>;
                 setPersona({ ...persona, cloneStyleText: e && e.target.value });
@@ -210,7 +202,6 @@ function StudioHostPage() {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
           <div>;
             <label className='block text-sm font-medium'>Invitee Name</label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <input
               className='mt-1 w-full border rounded p-2'
               value={inviteeName}
@@ -301,7 +292,6 @@ function StudioHostPage() {
                 {episode.questions?.map((q: string, idx: number) => (
 
                   <li key={idx}>{q}</li>
-=======
               value={persona && persona.voice}
               onChange={(e) => setPersona({ ...persona, voice: e && e.target.value as any })}
             >;
@@ -360,10 +350,8 @@ function StudioHostPage() {
               <h4 className="font-semibold">Questions</h4>;
               <ol className="list-decimal list-inside space-y-1">;
                   <li key={idx}>{q}</li>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 ))}
 
-=======
               </ol>
             </div>
             <div>
@@ -386,7 +374,6 @@ function StudioHostPage() {
             </div>
             <div className="flex gap-3">
               <button className="px-4 py-2 bg-purple-600 text-white rounded" onClick={handleSynthesize} disabled={synthesizing}>
-=======
             <label className='block text - sm font - medium'>;
               Clone Style (optional);
             </label>;
@@ -582,7 +569,6 @@ function StudioHostPage() {
 
 }
 
-=======
               <div className='flex gap - 3'>;
                 {episode.audio.mp3Url && (
                   <a;
@@ -613,8 +599,6 @@ function StudioHostPage() {
         </section>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
                 disabled={publishing}
               >                {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
@@ -622,7 +606,6 @@ function StudioHostPage() {
 
 ;
 
-=======
             {episode.audio && (
 
                 {publishing ? 'Publishing…' : 'Update RSS'}
@@ -631,5 +614,3 @@ function StudioHostPage() {
             {episode.audio && (
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

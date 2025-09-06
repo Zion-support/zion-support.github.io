@@ -1,6 +1,5 @@
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
 
@@ -23,7 +22,6 @@
 
   const disabledClasses = disabled;
     ? 'opacity-50 cursor-not-allowed';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     : 'hover:scale-105 transform';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
 
@@ -39,7 +37,6 @@
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
 
-=======
   class_name?: string;
   on_click?: () => void;
   type?: 'button' | 'submit' | 'reset';
@@ -78,7 +75,6 @@ function Button() {
 }  const disabled_classes = disabled ? 'opacity - 50 cursor - not - allowed' : 'hover: scale - 105 transform',
   const classes = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${disabled_classes} ${class_name}`;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <button;
       type={type}
@@ -87,7 +83,6 @@ function Button() {
       disabled={disabled}
 
 
-=======
     >
       {children}
     </button>
@@ -96,8 +91,5 @@ function Button() {
     </button>);
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

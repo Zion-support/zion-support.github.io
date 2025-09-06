@@ -9,7 +9,6 @@
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
-=======
 export interface ModerationFlag {
   id: string;
   content_id: string;
@@ -19,7 +18,6 @@ export interface ModerationFlag {
   status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
   created_at: string;
   admin_notes?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 ;
@@ -42,7 +40,6 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
 
 }
 
-=======
 // Moderation database utilities
 export interface ModerationFlag {
   id: string, type: 'spam' | 'inappropriate' | 'harassment' | 'other',
@@ -52,9 +49,7 @@ export interface ModerationFlag {
   updatedAt: Date, moderatorId?: string,
   notes?: string;
 }
-=======
 
-=======
 
 
 
@@ -111,8 +106,6 @@ export async function createAction(action: Omit<ModerationAction, 'id' | 'create
 export async function getActionsForFlag(flagId: string): Promise<ModerationAction[]> {
   return actions.filter(action => action.flagId === flagId);
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     id: `flag_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
     content_id: data.content_id || '',
     content_type: data.content_type || 'post',
@@ -141,5 +134,3 @@ if (return undefined) {
   await upsert_flag (flag);
   return flag;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

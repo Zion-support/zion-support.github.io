@@ -1,22 +1,18 @@
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-=======
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
@@ -31,13 +27,11 @@ serve(async (req) => {
       throw new Error("OpenAI API key is not set in environment variables")
     }
 
-=======
 
 
 
     const { modelId, jobId } = await req && req.json();
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!modelId && !jobId) {
       throw new Error("Either modelId or jobId is required")
 
@@ -70,7 +64,6 @@ serve(async (req) => {
     
     switch(data && data.status) {
 
-=======
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts";
 const cors_headers = {
@@ -116,10 +109,8 @@ if ( {) {
       // Mock response for demonstration (in real code, fetch from DB);
       finetuneJobId = `ft - job-${model_id}-${Date.now ()}`;
     }
-=======
 
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Check the status from OpenAI API
     const response = await fetch(`https://api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`, {
       method: "GET"
@@ -138,9 +129,7 @@ if ( {) {
         )
 
 
-=======
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Check the status from OpenAI API;
     const response = await fetch (`https://api.openai.com / v1 / fine_tuning / jobs/${finetuneJobId}`, {
       method: "GET",
@@ -180,12 +169,10 @@ if ( {) {
         break;
       default:;
         status = "queued";
-=======
       const errorData = await response.json(),;
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
     const data = await response.json(),
@@ -194,7 +181,6 @@ if ( {) {
     let status,
     let error = null,
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     switch(data.status) {
       case "succeeded": status = "succeeded",
         break,
@@ -213,7 +199,6 @@ if ( {) {
         break,
       default:
         status = "queued"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
 
@@ -225,15 +210,12 @@ if ( {) {
         progress: data.trained_tokens ? {
           trainedTokens: data.trained_tokens
           trainingFiles: data.training_file} : null
-=======
       JSON && JSON.stringify({ 
         status, 
         error;
         progress: data && data.trained_tokens ? {
           trainedTokens: data && data.trained_tokens,
           trainingFiles: data && data.training_file} : null
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     return new Response (
       JSON.stringify ({
         status,
@@ -241,7 +223,6 @@ if ( {) {
         progress: data.trained_tokens ? {
           trained_tokens: data.trained_tokens,
           training_files: data.training_file} : null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
       { headers: { ...cors_headers, "Content - Type": "application / json" } }
     );
@@ -250,12 +231,10 @@ if ( {) {
     console && console.error("Error in check-training-status function:", error);
     
 
-=======
 
     console.error("Error in check-training-status function:", error),
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return new Response(
       JSON && JSON.stringify({ error: error && error.message });
       {
@@ -264,10 +243,8 @@ if ( {) {
     )
 
     console.error ("Error in check - training - status function:", error);
-=======
 
 
-=======
 
 ;
     return new Response (
@@ -288,8 +265,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -113,15 +113,11 @@ export default /**
  * ZionTechGroupPage - Function description
  */
 function ZionTechGroupPage() {
-=======
 
-=======
 
 export default function ZionTechGroupPage() {
 
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <>;
       <Head>;
         <title>;
@@ -142,7 +138,6 @@ export default function ZionTechGroupPage() {
               <div className='flex items-center'>;
                 <div className='flex-shrink-0'>;
                   <Link href='/' className='text-2xl font-bold text-white'>;
-=======
         <meta;
           name='description';
           content="Discover Zion Tech Group's mission to revolutionize technology with quantum AI, autonomous systems, and cutting - edge platforms. Learn about our innovative solutions and global impact.";
@@ -162,7 +157,6 @@ export default function ZionTechGroupPage() {
               <div className='flex items - center'>;
                 <div className='flex - shrink - 0'>;
                   <Link href='/' className='text - 2xl font - bold text - white'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     Zion Tech Group;
                   </Link>;
                 </div>;
@@ -199,7 +193,6 @@ export default function ZionTechGroupPage() {
                   </Link>
                   <Link href="/contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Contact
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </Link>
                 </div>
               </div>
@@ -207,7 +200,6 @@ export default function ZionTechGroupPage() {
           </div>
         </nav>
 
-=======
 
         {/* Breadcrumb */  } catch (error) {
     console.error("Error:", error);
@@ -222,7 +214,6 @@ export default function ZionTechGroupPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <li>
                   <div>
                     <Link href="/" className="text-gray-300 hover:text-white">
@@ -236,14 +227,12 @@ export default function ZionTechGroupPage() {
                     <ChevronRight className="h-4 w-4 text-gray-400" />
                     <span className="ml-4 text-sm font-medium text-white">About Zion Tech Group</span>
                   </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </li>
               </ol>
             </nav>
           </div>
         </div>
 
-=======
 
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -260,12 +249,10 @@ export default function ZionTechGroupPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </h1>
               <p className="mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
                 We are the architects of tomorrow, building revolutionary quantum AI solutions and autonomous systems that will define the next decade of innovation.
               </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
           </div>
         </div>
@@ -273,7 +260,6 @@ export default function ZionTechGroupPage() {
         <div className="py-16 bg-black/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-=======
 
         {/* Mission & Vision Section */  } catch (error) {
     console.error("Error:", error);
@@ -285,7 +271,6 @@ export default function ZionTechGroupPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div>
                 <div className="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
                   <Target className="h-8 w-8 text-white" />
@@ -320,10 +305,8 @@ export default function ZionTechGroupPage() {
           </div>
         </div>
 
-=======
 
 
-=======
         {/* Core Values Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -356,7 +339,6 @@ export default function ZionTechGroupPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Ethical Responsibility</h3>
                 <p className="text-gray-300">
@@ -370,7 +352,6 @@ export default function ZionTechGroupPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Human-Centric Design</h3>
                 <p className="text-gray-300">
@@ -384,7 +365,6 @@ export default function ZionTechGroupPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Global Impact</h3>
                 <p className="text-gray-300">
@@ -398,7 +378,6 @@ export default function ZionTechGroupPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Excellence</h3>
                 <p className="text-gray-300">
@@ -415,7 +394,6 @@ export default function ZionTechGroupPage() {
                   We don't just adapt to change; we anticipate it and create the
                   technologies that will define tomorrow.                </p>
 
-=======
 
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -425,13 +403,11 @@ export default function ZionTechGroupPage() {
                 <p className="text-gray-300">
                   We don't just adapt to change, we anticipate it and create the technologies that will define tomorrow.
                 </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
             </div>
           </div>
         </div>
 
-=======
 
         {/* Technology Stack Section */  } catch (error) {
     console.error("Error:", error);
@@ -455,7 +431,6 @@ export default function ZionTechGroupPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Quantum Computing</h3>
                 <p className="text-gray-300 text-sm">
@@ -469,7 +444,6 @@ export default function ZionTechGroupPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Artificial Intelligence</h3>
                 <p className="text-gray-300 text-sm">
@@ -483,7 +457,6 @@ export default function ZionTechGroupPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Cloud Infrastructure</h3>
                 <p className="text-gray-300 text-sm">
@@ -497,19 +470,16 @@ export default function ZionTechGroupPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Cybersecurity</h3>
                 <p className="text-gray-300 text-sm">
                   Quantum-resistant encryption and AI-powered threat detection systems.
                 </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
             </div>
           </div>
         </div>
 
-=======
 
         {/* Company Stats Section */  } catch (error) {
     console.error("Error:", error);
@@ -533,7 +503,6 @@ export default function ZionTechGroupPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
@@ -547,12 +516,10 @@ export default function ZionTechGroupPage() {
                 <div className="text-4xl font-bold text-purple-400 mb-2">10+</div>
                 <div className="text-gray-300">Years Experience</div>
               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
           </div>
         </div>
 
-=======
 
         {/* Team Section */  } catch (error) {
     console.error("Error:", error);
@@ -576,7 +543,6 @@ export default function ZionTechGroupPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Kleber</h3>
                 <p className="text-purple-400 mb-2">CEO & Founder</p>
@@ -591,7 +557,6 @@ export default function ZionTechGroupPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Dr. Sarah Chen</h3>
                 <p className="text-purple-400 mb-2">Chief Technology Officer</p>
@@ -606,14 +571,12 @@ export default function ZionTechGroupPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Marcus Rodriguez</h3>
                 <p className="text-purple-400 mb-2">Chief Security Officer</p>
                 <p className="text-gray-300 text-sm">
                   Cybersecurity specialist with expertise in quantum-resistant encryption and threat detection.
                 </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
             </div>
           </div>
@@ -926,7 +889,6 @@ export default function ZionTechGroupPage() {
                 Our Leadership Team;
               </h2>;
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-=======
                 <div className='ml - 10 flex items - baseline space - x-4'>;
                   <Link;
                     href='/';
@@ -1285,7 +1247,6 @@ export default function ZionTechGroupPage() {
           </div>;
         </div>;
 
-=======
 
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
@@ -1300,7 +1261,6 @@ export default function ZionTechGroupPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </h2>
             <p className="mt-4 text-lg leading-6 text-purple-100">
               Discover how Zion Tech Group can transform your business with revolutionary technology solutions.
@@ -1312,14 +1272,12 @@ export default function ZionTechGroupPage() {
               </Link>
               <Link href="/contact" className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-purple-700">
                 Schedule Consultation
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </Link>
             </div>
           </div>
         </div>
 
                 className='inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-purple-700'>                Schedule Consultation;
-=======
         {/* CTA Section */}
         <div className='bg - purple - 600'>;
           <div className='max - w-2xl mx - auto text - center py - 16 px - 4 sm:py - 20 sm:px - 6 lg:px - 8'>;
@@ -1431,7 +1389,6 @@ export default function ZionTechGroupPage() {
                       <li>
                         <Link href="/contact" className="text-base text-gray-300 hover:text-white">
                           Contact
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                         </Link>
                       </li>
                     </ul>
@@ -1452,7 +1409,6 @@ export default function ZionTechGroupPage() {
     </>
 
                           className='text-base text-gray-300 hover:text-white'>                          Contact;
-=======
                   <div className='mt - 12 md:mt - 0'>;
                     <h3 className='text - sm font - semibold text - gray - 400 tracking - wider uppercase'>;
                       Company;
@@ -1471,7 +1427,6 @@ export default function ZionTechGroupPage() {
                           className='text - base text - gray - 300 hover:text - white';
                         >                          Contact;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         </Link>;
                       </li>;
                     </ul>;
@@ -1481,7 +1436,6 @@ export default function ZionTechGroupPage() {
             </div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 &copy; 2025 Zion Tech Group. All rights reserved.              </p>;
             </div>;
           </div>;
@@ -1489,12 +1443,8 @@ export default function ZionTechGroupPage() {
       </div>;
 
 
-=======
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1502,5 +1452,3 @@ export default function ZionTechGroupPage() {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

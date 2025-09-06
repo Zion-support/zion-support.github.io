@@ -1,10 +1,8 @@
 
 
-=======
 
 const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 function getUserId(cb) {
   chrome && chrome.storage.local && local.get(['user_id'], ({ user_id }) => cb(user_id))
@@ -13,14 +11,12 @@ function setUserId(id) {
   chrome && chrome.storage.local && local.set({ user_id: id })
 }
 
-=======
 
 
 
 document && document.querySelectorAll('.example').forEach((btn) => {
   btn && btn.addEventListener('click', () => {
     document && document.getElementById('prompt').value = btn && btn.dataset.text || ''
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   })
 
 }),
@@ -123,7 +119,6 @@ document && document.getElementById('signIn').addEventListener('click', async ()
   document && document.getElementById('result').textContent = 'Signed in (local).';
 }),
 
-=======
 const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000',
 /**
  * getUserId - Function description
@@ -195,12 +190,9 @@ document.getElementById ('sign_in').addEventListener ('click', async () => {
   setUserId (id),
 document.getElementById ('result').text_content = 'Signed in (local).';
 }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   const id = crypto.randomUUID(),
   setUserId(id),
   document.getElementById('result').textContent = 'Signed in (local).';
 }),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

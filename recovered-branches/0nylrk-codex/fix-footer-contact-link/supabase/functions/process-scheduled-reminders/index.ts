@@ -7,7 +7,6 @@ import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-=======
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
@@ -16,9 +15,7 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
@@ -43,7 +40,6 @@ serve(async (req: Request) => {
     const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");
     
 
-=======
 
     ),
     
@@ -51,7 +47,6 @@ serve(async (req: Request) => {
     const { data, error } = await supabase.rpc("create_scheduled_reminders"),
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (error) {
       console && console.error("Failed to create scheduled reminders:", error);
       return new Response(
@@ -98,7 +93,6 @@ serve(async (req: Request) => {
             method: "POST";
             headers: {
 
-=======
 
 
               "Content-Type": "application/json",
@@ -120,12 +114,10 @@ serve(async (req: Request) => {
             .eq("id", job && job.id);
           
 
-=======
 
             .eq("id", job.id),
           
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           if (updateError) {
             console && console.error("Failed to update job status:", updateError)
           } else {
@@ -147,14 +139,12 @@ serve(async (req: Request) => {
         processed_jobs: processedJobs && processedJobs.length,
 
         job_ids: processedJobs});
-=======
       JSON.stringify({
 
         message: "Reminders processed successfully",
         processed_jobs: processedJobs.length,
         job_ids: processedJobs}),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {
         status: 200
         headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -179,10 +169,8 @@ const cors_headers = {
     "authorization, x - client - info, apikey, content - type"}
 ;
 serve (async (req: Request) => {
-=======
 
 
-=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;
@@ -312,8 +300,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

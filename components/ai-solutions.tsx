@@ -19,7 +19,6 @@ export default function AISolutionsPage() {
 
       complexity: 'Advanced'
     }
-=======
 
         'Predictive Analytics',
         'Pattern Recognition',
@@ -30,7 +29,6 @@ export default function AISolutionsPage() {
       complexity: 'Advanced';
     };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       id: 'natural-language-processing'
       title: 'Natural Language Processing'
@@ -68,7 +66,6 @@ export default function AISolutionsPage() {
       complexity: 'Intermediate'
 
     };
-=======
 import React from 'react';
 import Head from 'next / head';
 import Link from 'next / link';
@@ -342,7 +339,6 @@ export default function AISolutionsPage() {;
   const technologies = [;
     'TensorFlowPyTorchScikit-learnOpenAI GPTBERTYOLOKerasPandas';
 
-=======
   const use_cases = [;
     {
       industry: 'Manufacturing',
@@ -405,7 +401,6 @@ export default function AISolutionsPage() {;
 ;
   const technologies = [;
     'TensorFlowPyTorchScikit - learnOpenAI GPTBERTYOLOKerasPandas';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
 ;
   return (
@@ -523,14 +518,11 @@ export default function AISolutionsPage() {;
                       {solution && solution.features.map((feature, featureIndex) => (;
                         <li key={featureIndex} className="text-sm text-white/60 flex items-center">;
                           <span className="text-cyan-400 mr-2">•</span>;
-=======
                     </ul>
 
                     <Link
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {feature}
                         </li>;
                       ))}
@@ -545,8 +537,6 @@ export default function AISolutionsPage() {;
                     </Link>;
                   </div>;
 
-=======
-=======
         <meta;
           name='description';
           content="Explore Zion Tech Group's comprehensive AI solutions including machine learning, NLP, computer vision, and autonomous systems.";
@@ -639,10 +629,7 @@ export default function AISolutionsPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
 
               </div>;
@@ -661,9 +648,7 @@ export default function AISolutionsPage() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {useCases.map((useCase, index) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center'>;
@@ -683,7 +668,6 @@ export default function AISolutionsPage() {;
                       {useCase && useCase.solutions.map((solution, solutionIndex) => (;
                         <li key={solutionIndex} className="text-sm text-white/70">;
 
-=======
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Industry Applications</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -695,7 +679,6 @@ export default function AISolutionsPage() {;
                       {useCase.solutions.map((solution, solutionIndex) => (
                         <li key={solutionIndex} className="text-sm text-white/70">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           {solution}
                         </li>;
                       ))}
@@ -710,11 +693,9 @@ export default function AISolutionsPage() {;
             {/* Technologies */}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Technologies */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -732,8 +713,6 @@ export default function AISolutionsPage() {;
                     >
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {tech}
                     </span>;
                   ))}
@@ -743,12 +722,9 @@ export default function AISolutionsPage() {;
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Success Stories */}
 
 
@@ -770,10 +746,8 @@ export default function AISolutionsPage() {;
 
                   >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     Read Case Study →
 
-=======
                         </li>))}
                     </ul>;
                     <Link;
@@ -930,12 +904,7 @@ export default function AISolutionsPage() {;
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -40,7 +40,6 @@ export default function HolographicAICommunicationPage() {
   };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const features = [
     'AI-powered 3D holographic projection'
     'Real-time holographic rendering'
@@ -71,7 +70,6 @@ export default function HolographicAICommunicationPage() {;
 
   const features = [;
     'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -154,10 +152,8 @@ export default function HolographicAICommunicationPage() {;
     </UltraAdvancedFuturisticBackground>;
   );
 
-=======
 }
 
-=======
   ];
 
   return (
@@ -308,8 +304,5 @@ function HolographicAICommunicationPage() {
 }
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -46,7 +46,6 @@ import {Check, ExternalLink} from 'lucide-react';
               </div>;
 
                 rel='noreferrer'>;
-=======
               <div className='rounded - 2xl border border - emerald - 400 / 30 p - 6'>;
                 <h3 className='text - xl font - bold'>Enterprise</h3>;
                 <p className='mt - 2 text - gray - 300'>;
@@ -99,7 +98,6 @@ import {Check, ExternalLink} from 'lucide-react';
     </div>;
   );
 
-=======
 <div className='mt - 14 flex flex - wrap items - center gap - 4'>;
             <Link;
               href='/contact';
@@ -119,9 +117,5 @@ import {Check, ExternalLink} from 'lucide-react';
       </section>;
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

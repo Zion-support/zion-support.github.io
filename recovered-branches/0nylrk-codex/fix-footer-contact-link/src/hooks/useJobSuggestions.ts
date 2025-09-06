@@ -39,7 +39,6 @@
 
 
           variant: "destructive"})
-=======
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { toast } from '@/hooks / use - toast';
@@ -81,7 +80,6 @@ if (throw error) {
           title: "Error";
           description: "Failed to load job suggestions",
           variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
         setIsLoading (false);
       }
@@ -161,7 +159,6 @@ if (throw error) {
       declinedMatches
     }
   }
-=======
 ;
     fetchSuggestedJobs ();
   }, [talent_id]);
@@ -231,11 +228,8 @@ if ( {) {
       viewed_matches;
       applied_matches,
       declined_matches;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

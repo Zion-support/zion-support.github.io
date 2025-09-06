@@ -52,9 +52,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {
     res && res.status(401).json({ error: 'Unauthorized' });
     return;    return
-=======
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
-=======
   GrantApplication,
   MilestonesUpdatePayload,
 } from '../../../../types / grants';
@@ -113,7 +111,6 @@ function write_grant() {
     res.status(401).json({ error: 'Unauthorized' });
     return
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
 
@@ -148,7 +145,6 @@ function write_grant() {
     const payload = req && req.body as MilestonesUpdatePayload;
     existing && existing.milestones = payload && payload.milestones || [];
     existing && existing.updatedAt = new Date().toISOString();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     writeGrant(existing);
     return res && res.status(200).json({ record: existing });
   }
@@ -161,7 +157,6 @@ function write_grant() {
   res.status(405).end('Method Not Allowed');
 
 
-=======
 
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');    return res && res.status(200).json({ record: existing })
@@ -170,10 +165,6 @@ function write_grant() {
   res && res.setHeader('AllowGET, POST');
   res && res.status(405).end('Method Not Allowed')
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8');
 }
 /**
@@ -244,4 +235,3 @@ if ( {) {
   res.set_header ('AllowGET, POST');
   res.status (405).end ('Method Not Allowed');
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

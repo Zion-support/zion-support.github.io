@@ -169,7 +169,6 @@ export default function MarketResearchPage() {
       color: 'from-teal-500 to-cyan-600'
       icon: <Users className="w-8 h-8 text-white" />
     }
-=======
 
         'AI content generation tools',
         'Predictive analytics platforms',
@@ -179,7 +178,6 @@ export default function MarketResearchPage() {
       color: 'from-fuchsia-500 to-purple-600',
       icon: <Zap className='w-8 h-8 text-white' />,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ];
   const competitiveAnalysis = [
     {
@@ -240,7 +238,6 @@ import {;
   LineChart,;
   Activity,;
   Zap,;
-=======
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
@@ -259,7 +256,6 @@ import {
   LineChart,
   Activity,
   Zap,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 } from 'lucide-react';import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Zap } from 'lucide-react';
@@ -295,7 +291,6 @@ import { Zap } from 'lucide-react';
       timeline: '2024-2025',
       examples: [
         'Real-time dashboardsLive collaboration toolsInstant notificationsStreaming analytics'
-=======
 export default /**
  * MarketResearchPage - Function description
  */
@@ -582,7 +577,6 @@ function MarketResearchPage() {
       opportunities: 'Real-time platforms, streaming services, live collaboration tools';
     }
 
-=======
         'Higher profit marginsCustomer alignmentScalable pricing modelCompetitive differentiation'
       ];
       cons: [
@@ -609,7 +603,6 @@ function MarketResearchPage() {
       ];
       cons: [
         'Low conversion ratesRevenue per user challengesSupport cost managementFeature differentiation needed'
-=======
   const pricing_strategies = [;
     {
       strategy: 'Value - Based Pricing',
@@ -751,7 +744,6 @@ function MarketResearchPage() {
     },      description: 'Average time for SaaS companies to reach profitability';
 
 
-=======
       description:;
         'Average exit valuation multiple based on annual recurring revenue',
     },    {
@@ -782,8 +774,6 @@ function MarketResearchPage() {
       change: '-0.8 years YoY',
       description: 'Average time for SaaS companies to reach profitability',
     },      description: 'Average time for SaaS companies to reach profitability';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   ];
 ;
@@ -796,14 +786,12 @@ function MarketResearchPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Market Segments */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Market Segment Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -813,7 +801,6 @@ function MarketResearchPage() {
           </div>
           <div className='space-y-8'>
             {marketSegments.map((segment, index) => (
-=======
           </div>;
         </div>;
       </section>;
@@ -826,7 +813,6 @@ function MarketResearchPage() {
               Market Segment Analysis;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-=======
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
             {investment_insights.map ((insight, index) => (
               <Card;
@@ -865,7 +851,6 @@ function MarketResearchPage() {
               Market Segment Analysis;
             </h2>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Detailed analysis of key micro SaaS market segments with market;
               size, growth rates, trends, and opportunities.;
             </p>;
@@ -905,7 +890,6 @@ function MarketResearchPage() {
           </div>
           <div className="space-y-8">
             {marketSegments.map((segment, index) => (
-=======
                           className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${segment && segment.color} shadow-xl mx-auto lg:mx-0 mb-6`}>;
                           {segment && segment.icon}
                         </div>;
@@ -934,7 +918,6 @@ function MarketResearchPage() {
 
           <div className="space-y-8">;
             {marketSegments && marketSegments.map((segment, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Card
                 key={index}
                 className="card-hover border-gradient-blue overflow-hidden"
@@ -999,7 +982,6 @@ function MarketResearchPage() {
                           <div className="flex items-center justify-between">;
                             <span className="text-gray-400">Growth Rate:</span>;
                             <span className="text-green-400 font-semibold">{segment && segment.growthRate}</span>;
-=======
                         </h3>;
                         {/* Market Data */}
                         <div className="space - y-3 text - sm mb - 6">;
@@ -1016,7 +998,6 @@ function MarketResearchPage() {
                       </div>;
                     </div>;
 
-=======
                     <div className="lg:w-2/3">
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {/* Key Trends */}
@@ -1030,7 +1011,6 @@ function MarketResearchPage() {
                               <li key={trendIndex} className="flex items-start text-gray-300 text-sm">
                                 <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                                 {trend}
                               </li>;
                             ))}
@@ -1039,12 +1019,9 @@ function MarketResearchPage() {
                         </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         {/* Top Players */}
 
 
@@ -1057,12 +1034,9 @@ function MarketResearchPage() {
                       </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {/* Opportunities */}
 
 
@@ -1071,37 +1045,30 @@ function MarketResearchPage() {
                   </div>;
                 </div>;
 
-=======
                         </div>
-=======
 
 
                         </div>
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </div>
                     </div>
                   </div>
                 </div>
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Competitive Analysis */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Competitive Landscape Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1112,7 +1079,6 @@ function MarketResearchPage() {
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
             {competitiveAnalysis.map((analysis, index) => (
               <Card
-=======
               </Card>))}
           </div>;
         </div>;
@@ -1132,7 +1098,6 @@ function MarketResearchPage() {
           <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8'>;
             {competitive_analysis.map ((analysis, index) => (
               <Card;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={index}
                 className='card - hover border - gradient - blue';
                 style={{ animation_delay: `${index * 0.1}s` }}
@@ -1201,7 +1166,6 @@ function MarketResearchPage() {
                       <div className="text-white font-semibold">{analysis.pricing}</div>
                     </div>
                   </div>
-=======
           </div>;
         </div>;
       </section>;
@@ -1289,10 +1253,8 @@ function MarketResearchPage() {
                     </div>;
                   </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {/* Strengths */}
 
-=======
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Strengths:</h4>
                     <ul className="space-y-1 text-xs text-gray-300">
@@ -1300,29 +1262,22 @@ function MarketResearchPage() {
                         <li key={strengthIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
                           {strength}
-=======
 
 
                           {strength}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
 
                     </ul>;
                   </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Weaknesses */}
 
 
@@ -1337,14 +1292,12 @@ function MarketResearchPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Market Trends */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Emerging Market Trends
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1354,7 +1307,6 @@ function MarketResearchPage() {
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {marketTrends.map((trend, index) => (
-=======
           </div>;
         </div>;
       </section>;
@@ -1367,7 +1319,6 @@ function MarketResearchPage() {
               Emerging Market Trends;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-=======
                       </div>                    </div>;
                   </div>;
                   {/* Strengths */}              Competitive Landscape Analysis;
@@ -1447,7 +1398,6 @@ function MarketResearchPage() {
               Emerging Market Trends;
             </h2>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Key trends shaping the micro SaaS landscape and creating new;
               opportunities for innovation and growth.;
             </p>;
@@ -1459,7 +1409,6 @@ function MarketResearchPage() {
                       </span>;
                       <span className='px-2 py-1 rounded text-xs font-medium bg-blue-500/20 text-blue-400'>                        {trend && trend.timeline}
 
-=======
           <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
             {market_trends.map ((trend, index) => (
               <Card;
@@ -1486,7 +1435,6 @@ function MarketResearchPage() {
                       </span>;
                       <span className='px - 2 py - 1 rounded text - xs font - medium bg - blue - 500 / 20 text - blue - 400'>                        {trend.timeline}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       </span>;
                     </div>;
                   </div>              Emerging Market Trends;
@@ -1507,7 +1455,6 @@ function MarketResearchPage() {
                         'bg-green-500/20 text-green-400'
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         </li>
                       ))}
                     </ul>
@@ -1529,14 +1476,12 @@ function MarketResearchPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Pricing Strategies */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Pricing Strategy Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1547,7 +1492,6 @@ function MarketResearchPage() {
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
             {pricingStrategies.map((strategy, index) => (
               <Card
-=======
             <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
               Key trends shaping the micro SaaS landscape and creating new opportunities for innovation and growth.;
             </p>;
@@ -1623,7 +1567,6 @@ function MarketResearchPage() {
           <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8'>;
             {pricing_strategies.map ((strategy, index) => (
               <Card;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={index}
                 className='card - hover border - gradient - blue';
                 style={{ animation_delay: `${index * 0.1}s` }}
@@ -1699,9 +1642,7 @@ function MarketResearchPage() {
                 </div>;
               </Card>;
 
-=======
                   
-=======
                   </h3>;
                   <p className='text - gray - 300 mb - 6'>{strategy.description}</p>;
                   {/* Pros */}
@@ -1740,7 +1681,6 @@ function MarketResearchPage() {
                         </li>))}
                     </ul>;
                   </div>;
-=======
                   {/* Pros */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Pros:</h4>
@@ -1756,14 +1696,11 @@ function MarketResearchPage() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Cons */}
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Best For */}
                   <div>
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
@@ -1771,8 +1708,6 @@ function MarketResearchPage() {
                   </div>
                 </div>
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>;
         </div>;
@@ -1828,7 +1763,6 @@ function MarketResearchPage() {
                   <h3 className="text-xl font-bold text-white mb-3">{strategy && strategy.strategy}</h3>;
                   <p className="text-gray-300 mb-6">{strategy && strategy.description}</p>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {/* Pros */}
                   <div className="mb-4">;
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Pros:</h4>;
@@ -1893,7 +1827,6 @@ function MarketResearchPage() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Ready to Apply This Market Intelligence?
           </h2>
           <p className='text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1901,7 +1834,6 @@ function MarketResearchPage() {
             business strategy, pricing decisions, and market positioning.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
               href='/contact'
               size='lg'
@@ -1933,7 +1865,6 @@ function MarketResearchPage() {
               size="lg"
               className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"
 
-=======
       <section className="section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-dots opacity-10" />
         <div className="container-cursor text-center relative z-10">
@@ -1954,7 +1885,6 @@ function MarketResearchPage() {
 
               View Our Services
 
-=======
                   <div className='mb - 4'>;
                     <h4 className='text - sm font - semibold text - red - 400 mb - 2'>;
                       Cons:;
@@ -2037,13 +1967,8 @@ function MarketResearchPage() {
   );
 }
 
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
             <Button
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

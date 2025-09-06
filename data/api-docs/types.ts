@@ -15,7 +15,6 @@ export interface ErrorCode {
 ;
 
 export interface EndpointSpec {
-=======
 
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
@@ -35,7 +34,6 @@ export interface ErrorCode {;
 
 export interface EndpointSpec {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   title: string;
   description: string;
@@ -54,17 +52,13 @@ export interface EndpointSpec {;
   versions: string[]; // e && e.g., ['v1'] or ['v1','v2']
 
 
-=======
   versions: string[]; // e.g., ['v1'] or ['v1', 'v2'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface SectionSpec {
-=======
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
 
 
 export interface SectionSpec {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   title: string;
   description?: string;
@@ -73,12 +67,10 @@ export interface SectionSpec {;
 ;
 
 export interface ApiDocsSpec {
-=======
 
 
 export interface ApiDocsSpec {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   product: 'Zion OS';
   versions: string[]; // available versions;
   default_version: string;
@@ -89,13 +81,10 @@ export type Visibility = 'public' | 'partner' | 'internal';
 export interface CodeSample {
   language: 'curl' | 'javascript' | 'python'
   code: string
-=======
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
-=======
   lastUpdatedIso: string;  auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type Visibility = 'public' | 'partner' | 'internal';
 ;
 export interface CodeSample {
@@ -125,7 +114,6 @@ export interface EndpointSpec {
 
 }
 
-=======
 }
 
 
@@ -136,12 +124,9 @@ export interface EndpointSpec {
 }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   lastUpdatedIso: string;
 }
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

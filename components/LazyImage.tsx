@@ -5,10 +5,8 @@ import LoadingSpinner from "./LoadingSpinner";
 ;
 
 interface LazyImageProps {
-=======
 
 interface LazyImageProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   src: string;
   alt: string;
   width?: number;
@@ -39,7 +37,6 @@ export default function LazyImage(): any ({;
   onError,;
 }: LazyImageProps) {;
 
-=======
 export default function LazyImage({
 
   src,
@@ -58,7 +55,6 @@ export default function LazyImage({
   onError,
 }: LazyImageProps) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
@@ -126,7 +122,6 @@ export default function LazyImage({
       {isInView && (;
 
         <Image
-=======
   style?: React.CSSProperties;
   on_load?: () => void;
   on_error?: () => void;
@@ -204,7 +199,6 @@ if ( {) {
         </div>)}
       {isInView && (
         <Image;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           src={src}
           alt={alt}
           width={width}

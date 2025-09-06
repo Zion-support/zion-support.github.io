@@ -9,12 +9,10 @@
   document && document.getElementById('output').textContent = res && res.answer
 
 }
-=======
 }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Attach handlers once the DOM is fully loaded to avoid null element errors
 
 document && document.addEventListener('DOMContentLoaded', () => {
@@ -61,11 +59,9 @@ document.addEventListener ('DOMContentLoaded', () => {
 }),
 ;
 
-=======
 }),
 ;
 
-=======
 ;
 // Attach handlers once the DOM is fully loaded to avoid null element errors;
 document.addEventListener('DOMContentLoaded', () => {;
@@ -82,5 +78,3 @@ document.addEventListener('DOMContentLoaded', () => {;
 }),;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

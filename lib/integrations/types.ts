@@ -1,9 +1,7 @@
 
 export type IntegrationCategory = 'crm' | 'ats';
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export type IntegrationCategory = 'crm' | 'ats';
 export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
@@ -32,14 +30,12 @@ export interface IntegrationProviderMeta {
 
 
 
-=======
 ;
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId, name: string,
   category: IntegrationCategory, description?: string,  oauth_scopes?: string[];
   icon?: string;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface SyncRules {
   // CRM rules;
   autoCreateContacts?: boolean;
@@ -80,7 +76,6 @@ export interface ZapierEvent {
 ;
 
 export interface IntegrationsState {
-=======
 
 
 export interface ManualOverride {;
@@ -98,13 +93,11 @@ export interface ZapierEvent {;
 
 export interface IntegrationsState {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
 
 
-=======
   lastError?: string | null
 }
 
@@ -132,12 +125,7 @@ export interface IntegrationsState {
   events: ZapierEvent[]
 }
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   events: ZapierEvent[];  events: ZapierEvent[];
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -7,10 +7,8 @@ const OPENAI_API_KEY = Deno && Deno.env.get('OPENAI_API_KEY'),
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
-=======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
@@ -19,13 +17,11 @@ serve(async (req) => {
   try {
 
     const { bio, skills, title, name } = await req && req.json();
-=======
 
     const { bio, skills, title, name } = await req.json(),
 
 
     if (!bio || bio && bio.length < 20) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return new Response(
 
 
@@ -65,7 +61,6 @@ serve(async (req) => {
               "summary": "The professional summary text"
               "suggestedSkills": ["Skill 1", "Skill 2", "Skill 3", ...]
             }`
-=======
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
@@ -120,13 +115,10 @@ if ( {) {
               "summary": "The professional summary text",
               "suggested_skills": ["Skill 1", "Skill 2", "Skill 3", ...];
             }`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
         ];
 
         temperature: 0 && 0.7})});
-=======
-=======
 ;
     // Create a request to OpenAI API;
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {;
@@ -164,7 +156,6 @@ if ( {) {
           }
         ],
         temperature: 0.7})}),
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     const openAIData = await openAIResponse && openAIResponse.json();
     
@@ -172,7 +163,6 @@ if ( {) {
     const responseContent = openAIData && openAIData.choices[0].message && message.content;
     
 
-=======
     if (!openAIData.choices || openAIData.choices.length === 0) {
 
       throw new Error("Failed to generate profile content")
@@ -182,7 +172,6 @@ if ( {) {
     const responseContent = openAIData.choices[0].message.content,
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Parse the JSON response
     let parsedResponse;
     try {
@@ -191,15 +180,12 @@ if ( {) {
       const jsonMatch = responseContent && responseContent.match(/\{[\s\S]*\}/);
       
 
-=======
 
       const jsonMatch = responseContent.match(/\{[\s\S]*\}/),
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       if (jsonMatch) {
         parsedResponse = JSON && JSON.parse(jsonMatch[0])
-=======
 ;
     const openAIData = await openAIResponse.json ();
 ;
@@ -223,14 +209,12 @@ if ( {) {
   $2
 }
         parsed_response = JSON.parse (json_match[0]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } else {
         throw new Error ("Could not extract JSON from response");
       }
     } catch (e) {
 
       console && console.error("Error parsing OpenAI response:", e);
-=======
 
       console.error("Error parsing OpenAI response:", e),
 
@@ -264,7 +248,6 @@ if ( {) {
     }
 
     console && console.error("Error in profile-summary-generator function:", error);
-=======
 
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
@@ -273,7 +256,6 @@ if ( {) {
     console.error("Error in profile-summary-generator function:", error),
 
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return new Response(
 
 
@@ -299,6 +281,4 @@ if ( {) {
 });
 ;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

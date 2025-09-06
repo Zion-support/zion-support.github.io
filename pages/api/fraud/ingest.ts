@@ -33,7 +33,6 @@ export default async function handler(
     return;
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { evaluateHeuristics } from '../../../utils/fraud/heuristics';
 import { classifyWithGPT } from '../../../utils/fraud/gpt';
@@ -65,7 +64,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const metadata =
       body && body.metadata && typeof body && body.metadata === "object" ? body && body.metadata : null;
-=======
       res.status(400).json({ error: 'Invalid source' });
       return
     }
@@ -74,13 +72,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const content = typeof body.content === 'string' ? body.content : null;
     const metadata = (body.metadata && typeof body.metadata === 'object') ? body.metadata : null;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const ip = extractClientIp(req);
     const store = getFraudStore();
 
       countEventsByIp: (ip, s, m) => store && store.countEventsByIp(ip, s, m),
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { evaluate_heuristics  } from '../../../utils / fraud / heuristics';
 import { classifyWithGPT  } from '../../../utils / fraud / gpt';
@@ -139,7 +135,6 @@ if ( {) {
 ;
     const heuristic = await evaluate_heuristics (event, {
       countEventsByIp: (ip, s, m) => store.countEventsByIp (ip, s, m),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     });
     // Privacy opt - out check for content analysis;
     let gpt: GptClassification | undefined = undefined;
@@ -199,7 +194,6 @@ if ( {) {
       autoHidden: saved && saved.autoHidden,
       createdAt: saved && saved.createdAt,
 
-=======
     let combined_label: GptClassificationLabel =;
       gpt?.label || (heuristic.flagged ? "SUSPICIOUS" : "SAFE");
     // Check condition
@@ -246,7 +240,6 @@ if ( {) {
       gpt,
       auto_hidden: saved.auto_hidden,
       created_at: saved.created_at,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     });
 
   } catch (e: any) {
@@ -255,11 +248,9 @@ if ( {) {
       .json({ error: "Internal error", details: e?.message || String(e) });
 
 
-=======
       .json({ error: "Internal error", details: e?.message |String(e) });
   }
 }
-=======
       status: 'PENDING'};
 
     const saved = await store.saveEvent(stored);
@@ -281,14 +272,12 @@ if ( {) {
       createdAt: saved.createdAt})
   } catch (e: any) {
     res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
 
     res;
       .status (500);
       .json ({ error: "Internal error", details: e?.message || String (e) });
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -345,7 +334,5 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

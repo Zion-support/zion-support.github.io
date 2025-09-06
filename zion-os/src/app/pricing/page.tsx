@@ -252,7 +252,6 @@ export default function PricingPage() {;
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">Pricing & Plans</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
-=======
 "use client",
 import { useState  } from './react';,
 interface PricingTier {
@@ -506,7 +505,6 @@ function PricingPage() {
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">Pricing & Plans</h1>;
         <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           Choose the perfect plan for your business needs. All plans include our core features with transparent pricing and no hidden fees.;
         </p>;
       </div>;

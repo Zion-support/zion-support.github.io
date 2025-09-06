@@ -109,7 +109,6 @@ const stats = [;
   { number: "99.9%", label: "Uptime Guarantee" },
   { number: "24 / 7", label: "Support Available" },
   { number: "50+", label: "Countries Served" },
-=======
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -172,10 +171,8 @@ const serviceCategories = [
 
 ];
 const benefits = [
-=======
 ;
 const benefits = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
 
     title: "Expert Team"
@@ -217,15 +214,12 @@ const benefits = [;
     icon: Award
   }
 
-=======
     title: "Proven Results"
     description: "Track record of successful implementations"
     icon: Award
   }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
 export default function ServicesOverviewPage() {
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -355,15 +349,8 @@ const serviceCategories = [;
 
           
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -379,15 +366,12 @@ const serviceCategories = [;
                 Comprehensive technology services designed to transform your business operations, 
                 enhance security, and drive innovation across all technology domains.
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </p>
             </motion.div>
           </div>
         </section>
-=======
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
@@ -408,7 +392,6 @@ const serviceCategories = [;
                 </span>;
               </h1>;
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-=======
 ;
 export default /**
  * ServicesOverviewPage - Function description
@@ -442,7 +425,6 @@ function ServicesOverviewPage() {
                 </span>;
               </h1>;
               <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Comprehensive technology services designed to transform your;
                 business operations, enhance security, and drive innovation;
                 across all technology domains.;
@@ -471,7 +453,6 @@ function ServicesOverviewPage() {
                     {stat.label}
                   </div>
 
-=======
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
                 >
@@ -480,13 +461,11 @@ function ServicesOverviewPage() {
                   </div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
-=======
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   className="text-center">;
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">;
@@ -499,7 +478,6 @@ function ServicesOverviewPage() {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Service Categories */}
         <section className="py-16">;
           <div className="container mx-auto px-4">;
@@ -509,16 +487,13 @@ function ServicesOverviewPage() {
 
                 We offer a comprehensive range of technology services to meet all your business needs.
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {serviceCategories.map((category, index) => (
                 <motion.div
-=======
                   </div>;
                   <div className="text - gray - 600 font - medium">{stat.label}</div>;
                 </motion.div>))}
@@ -545,7 +520,6 @@ function ServicesOverviewPage() {
             <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
               {service_categories.map ((category, index) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
@@ -556,27 +530,16 @@ function ServicesOverviewPage() {
                   </div>
                   
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {category.title}
                     </h3>
 
 
-=======
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
                     </p>
@@ -593,7 +556,6 @@ function ServicesOverviewPage() {
 
 
 
-=======
                     
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
@@ -607,9 +569,7 @@ function ServicesOverviewPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-=======
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-12">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -653,7 +613,6 @@ function ServicesOverviewPage() {
                             key={idx}
                             className="flex items-center text-sm text-gray-600">;
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                             {service}
                           </li>;
                         ))}
@@ -662,18 +621,9 @@ function ServicesOverviewPage() {
                     </div>;
 
 
-=======
                     
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Link
                       href={category && category.link}
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">;
@@ -698,20 +648,15 @@ function ServicesOverviewPage() {
 
                 We deliver exceptional results through innovation, expertise
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 and unwavering commitment to your success.
-=======
                 We deliver exceptional results through innovation, expertise, and unwavering commitment to your success.
->>>>>>> origin/automation-improvements-final
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
-=======
                   className="bg - white rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 overflow - hidden group";
                 >;
                   <div;
@@ -773,7 +718,6 @@ function ServicesOverviewPage() {
             <div className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
               {benefits.map ((benefit, index) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
@@ -781,17 +725,14 @@ function ServicesOverviewPage() {
 
                   <h3 className="text-lg font-bold text-gray-900 mb-3">{benefit.title}</h3>
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <p className="text-gray-600">{benefit.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
-=======
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-12">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -824,7 +765,6 @@ function ServicesOverviewPage() {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
@@ -834,13 +774,10 @@ function ServicesOverviewPage() {
 
                 Let's discuss how our comprehensive services can help you achieve your business goals.
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl md:text-4xl font-bold mb-6">;
                 Ready to Transform Your Business?;
@@ -850,7 +787,6 @@ function ServicesOverviewPage() {
                 achieve your business goals.;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Link
                   href="/contact"
                   className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center">;
@@ -869,7 +805,6 @@ function ServicesOverviewPage() {
       </div>;
     </Layout>;
   );
-=======
                   className="text - center";
                 >;
                   <div className="w - 16 h - 16 bg - blue - 100 rounded - full flex items - center justify - center mx - auto mb - 4">;
@@ -918,5 +853,4 @@ function ServicesOverviewPage() {
         </section>;
       </div>;
     </Layout>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -1,7 +1,6 @@
 
 /** @type {import ('next').NextConfig} */;
 const next_config = {
-=======
 
 
   reactStrictMode: true,

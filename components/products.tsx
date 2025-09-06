@@ -1,13 +1,9 @@
 
 
-=======
 export default function Placeholder() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function Placeholder() {
   return (
     <main className='min-h-screen p-8'>
@@ -28,7 +24,6 @@ export default function Placeholder() {
     </main>
 
   );export default function Placeholder() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <main className='min-h-screen p-8'>;
       <Head>;
@@ -62,7 +57,6 @@ export default function Placeholder() {
 
 }
 
-=======
 import Head from 'next / head';
 import Link from 'next / link';
 export default /**
@@ -101,13 +95,8 @@ function Placeholder() {
       </div>;
     </main>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

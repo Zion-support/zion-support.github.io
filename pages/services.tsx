@@ -1,36 +1,23 @@
 
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 
 import React from 'react';
 
-=======
 
 
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Link from 'next/link';
-=======
 import Link from 'next / link';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 type Service = {
-=======
 type Service = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   name: string;
   summary: string;
   pricing: string;
@@ -1572,7 +1559,6 @@ export default function Services(): any (): React && React.JSX.Element {;
   );
   return (
 
-=======
 
   }, []);
 
@@ -1701,13 +1687,11 @@ export default function Services(): any (): React && React.JSX.Element {;
 
 
 
-=======
 
 
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
     icon: Brain,
 
-=======
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics"
     icon: Brain
 
@@ -1854,22 +1838,13 @@ function Services() {
 
 
 
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
         </section>
 
 
 
-=======
 
-=======
-=======
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -1888,7 +1863,6 @@ function Services() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
-=======
             </div>;
           </div>;
         </section>;
@@ -1911,7 +1885,6 @@ function Services() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1930,10 +1903,8 @@ function Services() {
               ))}
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Head from 'next/head';
 import Link from 'next/link';
 import Header from '../components/Header';
@@ -1987,7 +1958,6 @@ import Footer from '../components/Footer';
   };
 
 
-=======
 
       id: 'ai-automation',
       title: 'AI Automation Platform',
@@ -2022,21 +1992,16 @@ import Footer from '../components/Footer';
     },
     {
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <Head>
         <title>Our Services - Zion Tech Group</title>
 
-=======
 
-=======
 
 
       <ErrorBoundary level='page'>
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
-=======
 
 export default function Services() {;
   const serviceCategories = [;
@@ -2137,7 +2102,6 @@ export default function Services() {;
 
       <ErrorBoundary level='page'>;
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Hero Section */}
           <section className='py-20 px-4 text-center' role='banner'>;
             <div className='max-w-4xl mx-auto'>;
@@ -2146,7 +2110,6 @@ export default function Services() {;
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
 
-=======
       <div className="min-h-screen bg-slate-950 text-white">
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -2162,12 +2125,9 @@ export default function Services() {;
 
                 Our Services
               </h1>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <p
 
-=======
 
-=======
 
 
           </section>
@@ -2181,7 +2141,6 @@ export default function Services() {;
 
                     >
                       <div className='flex items-center justify-between mb-6'>                        <h3 className={`text-2xl font-bold ${colors.text}`}>
-=======
         <meta name="description" content="Explore our comprehensive range of micro SaaS products, AI services, and IT solutions. 350+ innovative services to transform your business." />
         <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -2224,7 +2183,6 @@ export default function Services() {;
                       <div className="flex items-center justify-between mb-6">
                         <h3 className={`text-2xl font-bold ${colors.text}`}>
 
-=======
                   </div>;
                   <button className="w - full bg - blue - 600 text - white px - 4 py - 2 rounded - lg hover:bg - blue - 700 transition - colors">;
                     Learn More;
@@ -2402,7 +2360,6 @@ function Services() {
 ;
                     >;
                       <div className='flex items - center justify - between mb - 6'>                        <h3 className={`text - 2xl font - bold ${colors.text}`}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           {category.title}
                         </h3>;
                         <span className={`text - 3xl font - bold ${colors.text}`}>;
@@ -2475,7 +2432,6 @@ function Services() {
                         View All {category && category.title}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         <svg
                           className='ml-2 w-4 h-4'
                           fill='none'
@@ -2586,9 +2542,7 @@ function Services() {
     </>
 
 
->>>>>>> origin/automation-improvements-final
   );
-=======
                       
                       <p className="text-slate-300 mb-6">
                         {category.description}
@@ -2701,12 +2655,10 @@ function Services() {
                   Email Us
                 </a>
               </div>
-=======
 
 
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </section>
         </main>
@@ -2716,8 +2668,6 @@ function Services() {
 
 
   )
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 
@@ -2735,7 +2685,6 @@ function Services() {
                 Get a Quote;
               </Link>;
               <Link href="/contact" className="btn-secondary">;
-=======
               <div className='flex flex - col sm:flex - row items - center justify - center gap - 4'>;
                 <Link;
                   href='/contact';
@@ -2784,20 +2733,13 @@ function Services() {
       <Footer />;
 
 
-=======
 
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

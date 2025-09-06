@@ -8,11 +8,9 @@ import {Button} from "@/components/ui/button";
 import {Eye, ChevronDown, Loader2} from "lucide-react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 
-=======
 import { useState } from "react",
 import { Link } from "react-router-dom",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { 
   DropdownMenu;
   DropdownMenuContent;
@@ -27,7 +25,6 @@ import { JobApplication, ApplicationStatus } from "@/types/jobs",
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ApplicationActionsProps {
 
   application: JobApplication
@@ -58,13 +55,11 @@ export function ApplicationActions(): any ({;
   onViewApplication;
   onStatusChange;
 }: ApplicationActionsProps) {;
-=======
 
 
 
   onStatusChange
 }: ApplicationActionsProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className="flex items-center justify-end gap-2">;
@@ -126,7 +121,6 @@ export function ApplicationActions(): any ({;
           <DropdownMenuItem
             onClick={() => onStatusChange(application && application.id, "rejected")}
             className="text-red-600";
-=======
 import { useState } from './react';
 import { Link } from './react-router-dom';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components / ui / dropdown - menu';
@@ -138,7 +132,6 @@ interface ApplicationActionsProps {
   processing_id: string | null,
   onViewApplication: (application_id: string) => Promise < void>,
   onStatusChange: (application_id: string, new_status: ApplicationStatus) => Promise < void>;
-=======
 
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
@@ -203,7 +196,6 @@ function ApplicationActions() {
           <DropdownMenuItem;
             on_click={() => onStatusChange (application.id, "rejected")}
             className="text - red - 600";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           >;
             Reject;
           </DropdownMenuItem>;
@@ -222,8 +214,5 @@ function ApplicationActions() {
     </div>);
 }
 
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

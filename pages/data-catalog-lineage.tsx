@@ -3,7 +3,6 @@
   if (!service) return null;
 
 
-=======
 
 import React from 'react',;
 import Head from 'next/head',;
@@ -11,7 +10,6 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Compass, Star } from 'lucide-re
 import Layout from '../components/layout/Layout',;
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
 
-=======
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Compass, Star } from 'lucide-react',
@@ -19,13 +17,9 @@ import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function DataCatalogLineagePage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/data-catalog-lineage'))
   if (!service) return null,
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout>
       <Head>
@@ -55,7 +49,6 @@ export default function DataCatalogLineagePage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6 h-fit">
@@ -71,7 +64,6 @@ export default function DataCatalogLineagePage() {
               <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Start Now<ArrowRight /></Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
@@ -87,8 +79,6 @@ export default function DataCatalogLineagePage() {
 }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -96,4 +86,3 @@ export default function DataCatalogLineagePage() {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

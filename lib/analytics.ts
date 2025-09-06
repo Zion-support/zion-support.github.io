@@ -1,7 +1,6 @@
 
   if (typeof window !== 'undefined' && window && window.gtag) {
     window && window.gtag('config', 'GA_MEASUREMENT_ID', {
-=======
 // Analytics utilities;
 export const track_event = (event: string, data?: any) =>: any {
   // Check condition
@@ -20,12 +19,9 @@ if ( {) {
     window.gtag ('config', 'GA_MEASUREMENT_ID', {
 
       page_path: url,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
       page_path: url,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     });
   }
 
@@ -36,19 +32,14 @@ if ( {) {
     });
   }
 }
-=======
 
       page_path: url,;
 
-=======
       page_path: url,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     });
   }
 };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export const measurePerformance = () => {
   if (typeof window !== 'undefined' && 'performance' in window) {
     const navigation = performance && performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -63,7 +54,6 @@ export const measurePerformance = () => {
   }
   return null;
 }
-=======
 };
 
 // Track events
@@ -74,7 +64,6 @@ export const trackEvent = (
 
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', eventName, properties);
-=======
 }
 ;
 // Track events;
@@ -113,7 +102,6 @@ if ( {) {
       first_paint: performance.getEntriesByName ('first - paint')[0]?.start_time || 0,
       firstContentfulPaint: performance.getEntriesByName ('first - contentful - paint')[0]?.start_time || 0,
     }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   return null;
 
@@ -129,7 +117,6 @@ interface WebVitalMetric {
 
       event_category: 'Web Vitals',
       event_label: metric.id,
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       non_interaction: true,
     });
   }
@@ -144,7 +131,6 @@ export const event = ({
   label
   value
 }: {
-=======
 
       value: Math.round(metric.value),
       event_category: 'Web Vitals',
@@ -163,7 +149,6 @@ export const event = ({
   value,
 }: {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   action: string;
   category: string;
   label?: string;
@@ -171,7 +156,6 @@ export const event = ({
 
   if (typeof window !== 'undefined' && window && window.gtag) {
     window && window.gtag('event', action, {
-=======
 }) =>: any {
   // Check condition
 if ( {) {
@@ -233,10 +217,8 @@ export const trackWebVitals = (metric: WebVitalMetric) => {;
   }
 }
 
-=======
 
 // Declare global types
-=======
         navigation.domContentLoadedEventStart,
       first_paint:;
         performance.getEntriesByName ('first - paint')[0]?.start_time || 0, ';
@@ -265,23 +247,14 @@ if ( {') {
 }
 ;
 // Declare global types;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 declare global {
   interface Window {
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
     gtag: (...args: unknown[]) => void;
     dataLayer: unknown[];
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

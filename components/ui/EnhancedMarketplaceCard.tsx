@@ -48,13 +48,11 @@ interface EnhancedMarketplaceCardProps {
   title: string, description: string
   price?: string;
   href: string, image?: string
-=======
 
 interface EnhancedMarketplaceCardProps {;
   title: string, description: string,;
   price?: string;
   href: string, image?: string,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   category?: string;
   rating?: number;
   reviews?: number;
@@ -75,7 +73,6 @@ const EnhancedMarketplaceCard: React.FC < EnhancedMarketplaceCardProps> = ({
   class_name = '';
 
 }) => {
-=======
 
 const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
   title,;
@@ -89,7 +86,6 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
   featured = false,;
   className = '';
 }) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
         <div className="flex items-start space-x-3 mb-4">;
@@ -221,7 +217,6 @@ interface MarketplaceCardProps {
   onFavorite?: () => void;
 }
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
-=======
           <div className="text-sm text-gray-500 group-hover:text-blue-600 transition-colors">;
             Learn more →;
           </div>;
@@ -278,7 +273,6 @@ const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
 
 }
 export default EnhancedMarketplaceCard;
-=======
   on_favorite;
 }) => {
   return (
@@ -315,4 +309,3 @@ export default EnhancedMarketplaceCard;
 ;
 export default EnhancedMarketplaceCard;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

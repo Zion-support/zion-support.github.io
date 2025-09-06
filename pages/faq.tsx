@@ -28,7 +28,6 @@ import Head from "next/head";
 import Link from "next/link";
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function FAQ() {
   const contact = {
     phone: "+1 302 464 0950"
@@ -87,7 +86,6 @@ export default function FAQ() {
       answer:
         "Yes, we work with businesses of all sizes, from startups to enterprises. Our micro SaaS products are particularly well-suited for small and medium businesses looking for cost-effective solutions."
     }
-=======
 
 import Head from 'next/head'
 import Link from 'next/link'
@@ -151,7 +149,6 @@ export default function FAQ() {
 }
   ]
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       <Head>;
@@ -233,8 +230,6 @@ export default function FAQ() {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -246,7 +241,6 @@ export default function FAQ() {
               business.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-=======
             </div>;
           </div>;
         </section>;
@@ -258,7 +252,6 @@ export default function FAQ() {
               Still Have Questions?;
             </h2>;
             <p className="text-lg text-slate-300 mb-8">;
-=======
 import Head from './next / head';
 import Link from './next / link';
 ;
@@ -380,16 +373,13 @@ function FAQ() {
               Still Have Questions?;
             </h2>;
             <p className="text - lg text - slate - 300 mb - 8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Our team is here to help. Contact us for personalized answers to;
               your specific questions and to discuss how we can help your;
               business.;
             </p>;
 
-=======
 
 
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
@@ -419,10 +409,7 @@ export default function FAQPage() {
 
   );
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                 className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">;
-=======
             <div className="flex flex - col sm:flex - row items - center justify - center gap - 4">;
               <a;
                 href={`tel:${contact.phone.replace (/[^\d+]/g, "")}`}
@@ -440,7 +427,6 @@ export default function FAQPage() {
                 href="/contact";
                 className="px - 8 py - 3 bg - slate - 800 hover:bg - slate - 700 border border - white / 10 rounded - lg font - semibold transition - colors";
               >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Contact Form;
               </Link>;
             </div>;

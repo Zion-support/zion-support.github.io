@@ -114,7 +114,4 @@ test.describe('"Security": Tests', () => {';
       expect(rel).toContain('noopener')}
   })})';
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
       /tokens*[:=]s*['"][^'"
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

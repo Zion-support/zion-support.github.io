@@ -48,7 +48,6 @@ exports && exports.handler = async () => {
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
 
-=======
 const { spawn_sync } = require ('child_process');
 /**
  * run_node - Function description
@@ -93,4 +92,3 @@ function log_step() {
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

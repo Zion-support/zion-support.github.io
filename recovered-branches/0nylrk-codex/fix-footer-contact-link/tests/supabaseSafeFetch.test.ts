@@ -16,9 +16,7 @@ it ('safe_fetch throws when fetch rejects', async () => {
   await expect (safe_fetch ('https: //example.com')).rejects.to_throw ('Failed to connect to Supabase');
 ;
 
-=======
 
 import { checkOnline, safeFetch } from '@/integrations/supabase/client',;
 import { vi } from 'vitest',;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

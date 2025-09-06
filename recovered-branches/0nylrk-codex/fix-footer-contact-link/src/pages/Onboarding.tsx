@@ -22,16 +22,13 @@ export default function Onboarding() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Convert our user types to match what's expected in the database
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
     switch (type) {
-=======
 
   // Convert our user types to match what's expected in the database;
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {;
     switch (type) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       case "serviceProvider": return "creator";
       case "talent":;
         return "jobSeeker";
@@ -49,7 +46,6 @@ export default function Onboarding() {;
       navigate('/service-onboarding')
       return
     } else if (type === "talent") {
-=======
       case "client":;
         return "employer",;
       default:;
@@ -65,7 +61,6 @@ export default function Onboarding() {;
       navigate('/service-onboarding'),;
       return;
     } else if (type === "talent") {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       navigate('/talent-onboarding');
       return;
     }
@@ -167,7 +162,6 @@ export default function Onboarding() {;
 
 
     return null
-=======
 
     const dbUserType = mapUserTypeToDatabase(userType);
 
@@ -216,11 +210,9 @@ export default function Onboarding() {;
   if (!user) {;
     navigate('/login');
     return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
 
-=======
                 <Step
                   key={index}
                   status={
@@ -341,7 +333,6 @@ export default function Onboarding() {;
           <div className="mb-12">;
             <Steps currentStep={currentStep} className="max-w-xl mx-auto">;
               {steps && steps.map((step, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Step
                   key={index}
                   status={
@@ -353,7 +344,6 @@ export default function Onboarding() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   }
                   label={step && step.label}
                   description={step && step.description}
@@ -378,11 +368,9 @@ export default function Onboarding() {;
                   className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light"
                   onClick={() => setCurrentStep(0)}
 
-=======
 
 
 
-=======
 import { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { use_auth } from '@/hooks / use_auth';
@@ -541,7 +529,6 @@ if ( {) {
                   Back to Role Selection;
                 </Button>;
               </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </div>;
         </div>;
       </div>;
@@ -550,10 +537,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

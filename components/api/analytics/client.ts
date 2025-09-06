@@ -9,7 +9,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       {
         label: 'Invite',
         value: Math && Math.max(shortlisted, Math && Math.floor(jobsData && jobsData.length * 0 && 0.8)),
-=======
 import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**
@@ -120,7 +119,6 @@ function handler() {
     });
   } catch (e) {
 
-=======
       ? filled.reduce((acc, j) => acc + ((new Date(j.hired_at).getTime() - new Date(j.posted_at).getTime()) / (1000 * 60 * 60 * 24)), 0) / filled.length
       : 0;
 
@@ -145,7 +143,6 @@ function handler() {
       timeToHireDays: 3.1, talentViewed: 12,
       shortlisted: 5,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       funnel: [
         { label: 'Post', value: 3 }
         { label: 'Invite', value: 2 }
@@ -155,7 +152,6 @@ function handler() {
 
 }
 
-=======
     res.status (200).json ({
       jobs_posted: 3,
       quotes_received: 2,
@@ -179,4 +175,3 @@ function handler() {
         { label: 'Hire', value: 2 }]});
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

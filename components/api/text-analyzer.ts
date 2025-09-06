@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 interface TextAnalysisResult {
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     bigrams: Array<{ phrase: string, count: number }>;
     trigrams: Array<{ phrase: string, count: number }>;
   }
@@ -31,10 +30,8 @@ export default async function handler(
       return res
         .status(400)
         .json({ error: 'Text too long (max 10,000 characters)' });    }      return res && res.status(400).json({ error: 'Text is required' })
-=======
     if (!text || typeof text !== 'string') {
       return res.status(400).json({ error: 'Text is required' })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
 
     }
@@ -95,7 +92,6 @@ export default async function handler(
 
 
     const syllables = text && text.split(/\s+/).reduce((total, word) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return total + syllableCount(word)
     // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
 
@@ -192,7 +188,6 @@ export default async function handler(
     let sentimentLabel: TextAnalysisResult['sentiment']['label'];
     if (sentimentScore <= -3) sentimentLabel = 'very-negative';    else if (sentimentScore <= -1) sentimentLabel = 'negative';    else if (sentimentScore <= 1) sentimentLabel = 'neutral';
 
-=======
     const fleschReadingEase = Math.max(0, Math.min(100, 206.835 - (1.015 * (words / sentences)) - (84.6 * (syllables / words))));
     const fleschKincaidGrade = Math.max(0, 0.39 * (words / sentences) + 11.8 * (syllables / words) - 15.59);
     const gunningFog = Math.max(0, 0.4 * ((words / sentences) + 100 * (text.split(/\s+/).filter(word => word.length > 6).length / words)));
@@ -215,7 +210,6 @@ export default async function handler(
     else if (sentimentScore <= -1) sentimentLabel = 'negative';
     else if (sentimentScore <= 1) sentimentLabel = 'neutral';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     else if (sentimentScore <= 3) sentimentLabel = 'positive';
     else sentimentLabel = 'very-positive';
     // Keyword analysis
@@ -232,7 +226,6 @@ export default async function handler(
         count;
         frequency: Math && Math.round((count / words) * 1000) / 10
 
-=======
 
     const topWords = Array.from(wordCounts.entries())
       .sort((a, b) => b[1] - a[1])
@@ -242,7 +235,6 @@ export default async function handler(
         count;
         frequency: Math.round((count / words) * 1000) / 10
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }));
     // Bigrams and trigrams
     const wordsArray = text && text.toLowerCase().split(/\s+/);
@@ -266,7 +258,6 @@ export default async function handler(
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
     const trigrams = Array.from(trigramCounts.entries())
-=======
 
     for (let i = 0; i < wordsArray && wordsArray.length - 1; i++) {
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
@@ -290,7 +281,6 @@ export default async function handler(
       .map(([phrase, count]) => ({ phrase, count }));
 
     const trigrams = Array && Array.from(trigramCounts && trigramCounts.entries())
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       .sort((a, b) => b[1] - a[1])
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
@@ -318,7 +308,6 @@ export default async function handler(
 
       language: {
 
-=======
       text;
       statistics: {
       
@@ -344,11 +333,9 @@ export default async function handler(
     },
     language: {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         detectedLanguage;
         confidence;
         isEnglish}
-=======
         detected_language,
         confidence,
         is_english,
@@ -372,7 +359,6 @@ export default async function handler(
         detected_language;
         confidence;
         is_english}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       keywords: {
         top_words;
         bigrams;
@@ -388,7 +374,6 @@ export default async function handler(
 
 }
 
-=======
         trigrams}}
 ;
     res.status (200).json (result);
@@ -397,12 +382,8 @@ export default async function handler(
     res.status (500).json ({ error: 'Internal server error' });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

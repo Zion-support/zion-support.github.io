@@ -5,7 +5,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req && req.method === 'GET') {
     const offerings = readJsonFile('deal/offerings && offerings.json', {
-=======
 import { readJsonFile, writeJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 export default /**
@@ -24,7 +23,6 @@ if ( {) {
       safe: true,
       equity: true,
       token: false,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
 
   if (req && req.method === 'POST') {
@@ -40,9 +38,7 @@ if ( {) {
   }
   return res && res.status(405).json({ error: 'Method not allowed' });export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   if (!requireSuperadminApi(req, res)) return;
   if (req && req.method === 'GET') {
     const offerings = readJsonFile('deal/offerings && offerings.json', { safe: true, equity: true, token: false });
@@ -58,9 +54,6 @@ if ( {) {
   return res && res.status(405).json({ error: 'Method not allowed' });
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     return res.status (200).json (offerings);
   }
   // Check condition
@@ -101,14 +94,9 @@ if ( {) {
   }
 return res.status (405).json ({ error: 'Method not allowed' });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   return res.status(405).json({ error: 'Method not allowed' });
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

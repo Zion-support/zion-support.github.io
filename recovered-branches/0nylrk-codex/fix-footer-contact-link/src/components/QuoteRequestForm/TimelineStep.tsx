@@ -11,7 +11,6 @@ import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
 import {cn} from "@/lib/utils";
 import {QuoteFormData} from "@/types/quotes";
 
-=======
 import { useState } from "react",
 import { format } from "date-fns",
 import { Calendar } from "@/components/ui/calendar",
@@ -24,7 +23,6 @@ import { QuoteFormData } from "@/types/quotes",
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TimelineStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -85,7 +83,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                       className={cn(
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark"
                         !formData.startDate && "text-zion-slate-light"
-=======
 import { useState  } from './react';
 import { format  } from './date - fns';
 import { Calendar  } from '@/components / ui / calendar';
@@ -155,7 +152,6 @@ function TimelineStep() {
                       className={cn (
                         "w - full justify - start text - left font - normal bg - zion - blue border border - zion - blue - light hover:bg - zion - blue - dark",
                         !form_data.start_date && "text - zion - slate - light",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       )}
                     >;
                       <CalendarIcon className="mr - 2 h - 4 w - 4" />;
@@ -281,7 +277,6 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
                     align="start"
                   >
 
-=======
                     <Calendar
                       mode="single"
                       selected={formData.endDate}
@@ -290,7 +285,6 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
                       className="p-3 pointer-events-auto"
 
 
-=======
 import { useState } from "react",;
 import { format } from "date-fns",;
 import { Calendar } from "@/components/ui/calendar",;
@@ -380,7 +374,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                     </Button>;
                   </PopoverTrigger>;
                   <PopoverContent className="w-auto p-0 bg-zion-blue-dark border border-zion-blue-light" align="start">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <Calendar
                       mode="single"
                       selected={formData && formData.endDate}
@@ -389,7 +382,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                       initialFocus;
                       className="p-3 pointer-events-auto";
                       disabled={(date) => date < (formData && formData.startDate || new Date())}
-=======
                     >;
                       <CalendarIcon className="mr - 2 h - 4 w - 4" />;
                       {form_data.end_date ? (
@@ -419,7 +411,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
 
   )
 
-=======
 
         </div>;
       </div>;
@@ -430,9 +421,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
         </div>;
       </div>;
     </div>);
-=======
 
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

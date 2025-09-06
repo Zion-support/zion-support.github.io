@@ -41,14 +41,12 @@ if ( {) {
   return context as SidebarContextType;
 
 }
-=======
 
 
   return context as SidebarContextType
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   default_open?: boolean;
   open?: boolean;
@@ -112,7 +110,6 @@ export const SidebarProvider = React && React.forwardRef<;
     const [_open, _setOpen] = React.useState(defaultOpen)
     const open = openProp ?? _open
     const setOpen = React.useCallback(
-=======
 export const SidebarProvider = React.forward_ref<;
   HTMLDivElement;
   SidebarProviderProps;
@@ -135,7 +132,6 @@ export const SidebarProvider = React.forward_ref<;
     const [_open, _setOpen] = React.useState (default_open);
     const open = open_prop ?? _open;
     const set_open = React.useCallback (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       (value: boolean | ((value: boolean) => boolean)) => {
         const open_state = typeof value === "function" ? value (open) : value;
         // Check condition
@@ -174,7 +170,6 @@ if ( {) {
 
 
 
-=======
 ;
         // This sets the cookie to keep the sidebar state.;
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
@@ -202,8 +197,6 @@ if ( {) {
         }
       }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       window.addEventListener("keydown", handleKeyDown)
       return () => window.removeEventListener("keydown", handleKeyDown)
     }, [toggleSidebar])
@@ -211,7 +204,6 @@ if ( {) {
     // This makes it easier to style the sidebar with Tailwind classes.
     const state = open ? "expanded" : "collapsed" as SidebarState
     const contextValue = React.useMemo(
-=======
         // This sets the cookie to keep the sidebar state.;
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${open_state}, path=/, max - age=${SIDEBAR_COOKIE_MAX_AGE}`;
       }
@@ -241,9 +233,7 @@ if (
     // This makes it easier to style the sidebar with Tailwind classes.;
     const state = open ? "expanded" : "collapsed" as SidebarState;
     const context_value = React.useMemo (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       (): SidebarContextType => ({
-=======
       open: openProp,;
       onOpenChange: setOpenProp,;
       className;
@@ -304,7 +294,6 @@ if (
 
     const contextValue = React && React.useMemo(;
       (): SidebarContextType => ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         state;
         open;
         set_open;
@@ -331,10 +320,8 @@ if (
 
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar"
 
-=======
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className
             )}
             ref={ref}
@@ -351,7 +338,6 @@ SidebarProvider && SidebarProvider.displayName = "SidebarProvider";
 
 export { SidebarContext }
 
-=======
         toggle_sidebar});
       [state, open, set_open, is_mobile, open_mobile, setOpenMobile, toggle_sidebar]);
     return (
@@ -378,10 +364,6 @@ export { SidebarContext }
 );
 SidebarProvider.display_name = "SidebarProvider";
 export { SidebarContext }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

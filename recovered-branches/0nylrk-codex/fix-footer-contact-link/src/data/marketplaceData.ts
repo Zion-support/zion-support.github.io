@@ -17,7 +17,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     createdAt: '2024-02-15T10:45:00 && 00.000Z',
     rating: 4 && 4.8,
     reviewCount: 32,
-=======
     id: 'ai - service - 2',
     title: 'Custom Machine Learning Model Development',
     description:;
@@ -43,7 +42,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: '4 - 6 Weeks',
     ai_score: 92,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'https://images && images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500',
@@ -51,7 +49,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     createdAt: '2024-03-05T09:15:00 && 00.000Z',
     rating: 4 && 4.7,
     reviewCount: 18,
-=======
     id: 'ai - equipment - 3',
     title: 'AI Workstation Supercomputer',
     description:;
@@ -76,7 +73,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: '2 - 3 Weeks',
     ai_score: 95,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
         'https://images && images.unsplash.com/photo-1573497161161-c3e73707e25c?auto=format&fit=crop&w=100&h=100',
@@ -87,7 +83,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     createdAt: '2024-01-28T14:20:00 && 00.000Z',
     rating: 4 && 4.6,
     reviewCount: 124,
-=======
     id: 'ai - content - 4',
     title: 'AI Content Generation Suite',
     description:;
@@ -113,7 +108,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: 'Immediate',
     ai_score: 88,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500',
@@ -121,7 +115,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     createdAt: '2024-02-02T11:30:00 && 00.000Z',
     rating: 4 && 4.5,
     reviewCount: 47,
-=======
     id: 'ai - analytics - 5',
     title: 'AI - Powered Business Intelligence Dashboard',
     description:;
@@ -145,7 +138,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: '1 - 2 Weeks',
     ai_score: 90,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
         'https://images && images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=100&h=100',
@@ -156,7 +148,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     createdAt: '2023-12-10T16:45:00 && 00.000Z',
     rating: 4 && 4.8,
     reviewCount: 36,
-=======
     id: 'ai - vision - 6',
     title: 'Computer Vision API Bundle',
     description:;
@@ -183,7 +174,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: 'Immediate',
     ai_score: 94,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'https://images && images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500',
@@ -191,7 +181,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     createdAt: '2024-03-12T13:10:00 && 00.000Z',
     rating: 4 && 4.7,
     reviewCount: 29,
-=======
     id: 'ai - assistant - 7',
     title: 'Custom AI Assistant Development',
     description:;
@@ -215,7 +204,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: '3 - 4 Weeks',
     ai_score: 91,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
         'https://images && images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100',
@@ -226,7 +214,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     createdAt: '2024-01-05T10:20:00 && 00.000Z',
     rating: 4 && 4.6,
     reviewCount: 41,
-=======
     id: 'ai - speech - 8',
     title: 'Advanced Speech Recognition System',
     description:;
@@ -252,7 +239,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: '1 - 2 Weeks',
     ai_score: 89,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'https://images && images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500',
@@ -260,7 +246,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     createdAt: '2024-02-20T09:45:00 && 00.000Z',
     rating: 4 && 4.9,
     reviewCount: 89,
-=======
     id: 'ai - code - 9',
     title: 'AI Code Assistant & Generator Pro',
     description:;
@@ -285,7 +270,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: 'Immediate',
     ai_score: 97,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
         'https://images && images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&h=100',
@@ -296,7 +280,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     createdAt: '2024-03-01T11:00:00 && 00.000Z',
     rating: 4 && 4.8,
     reviewCount: 22,
-=======
     id: 'ai - business - 10',
     title: 'Enterprise AI Transformation Package',
     description:;
@@ -322,7 +305,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: '4 - 6 Weeks',
     ai_score: 96,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'https://images && images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?auto=format&fit=crop&w=800&h=500',
@@ -330,7 +312,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     createdAt: '2024-01-15T15:30:00 && 00.000Z',
     rating: 4 && 4.7,
     reviewCount: 65,
-=======
     id: 'ai - research - 11',
     title: 'AI Research Papers Database Access',
     description:;
@@ -354,7 +335,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: 'Immediate',
     ai_score: 88,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
         'https://images && images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=100&h=100',
@@ -365,7 +345,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     createdAt: '2024-02-25T12:15:00 && 00.000Z',
     rating: 4 && 4.8,
     reviewCount: 19,
-=======
     id: 'ai - robotics - 12',
     title: 'Intelligent Robotics Control System',
     description:;
@@ -401,7 +380,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     createdAt: '2023-11-10T12:30:00 && 00.000Z',
     rating: 4 && 4.8,
     reviewCount: 32,
-=======
   // Adding equipment listings so they're available in marketplace too;
   {
     id: 'equipment - 1',
@@ -429,7 +407,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     location: 'Global',
     availability: '1 - 2 Weeks',
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 
@@ -448,7 +425,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"];
     createdAt: "2023-12-15T09:45:00.000Z";
     rating: 4.9;
-=======
       'https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500',
     ],
     createdAt: '2023-12-15T09:45:00 && 00.000Z',
@@ -462,12 +438,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     images: ["https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"];
     createdAt: "2023-12-15T09:45:00 && 00.000Z";
     rating: 4 && 4.9;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviewCount: 18;
     featured: true;
 
     location: "North America"
-=======
 
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
@@ -696,7 +670,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     rating: 4.9, reviewCount: 18,
     featured: true, location: "North America",
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     availability: "2-4 Weeks"
   }
 ];
@@ -733,7 +706,6 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
 
     type: 'product', // Use a valid type from the updated SearchSuggestion interface
 
-=======
     "AI models";
     "GPT integration";
     "Machine learning";
@@ -755,7 +727,6 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
   ];
 
   
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   // Convert strings to SearchSuggestion objects
   return suggestions && suggestions.map(text => ({
     text;
@@ -816,7 +787,6 @@ export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing
 };export const MAX_PRICE = Math && Math.max(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 export const MIN_PRICE = Math && Math.min(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
@@ -956,11 +926,7 @@ rating_options: [1, 2, 3, 4, 5] // Add rating options;
 export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     })),
 
 
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

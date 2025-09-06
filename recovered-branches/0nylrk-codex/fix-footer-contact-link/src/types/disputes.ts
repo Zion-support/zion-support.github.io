@@ -4,11 +4,9 @@ export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'd
 ;
 
 export interface Dispute {
-=======
 
 export interface Dispute {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   project_id: string;
   milestone_id?: string;
@@ -83,12 +81,10 @@ export type DisputeReason =;
 ;
 export const disputeReasonLabels: Record < DisputeReason, string> = {
 
-=======
 
 
 export const disputeReasonLabels: Record<DisputeReason, string> = {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   milestone_quality: 'Quality of Deliverable';
   delayed_delivery: 'Delayed Delivery';
   scope_change: 'Scope Change Disagreement';
@@ -99,7 +95,6 @@ export const disputeReasonLabels: Record<DisputeReason, string> = {;
 
 other: 'Other Issue'};
 
-=======
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed',;
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null,;
 export interface Dispute {;
@@ -173,4 +168,3 @@ export const disputeReasonLabels: Record<DisputeReason string> = {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

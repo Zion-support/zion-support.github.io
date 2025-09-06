@@ -19,7 +19,6 @@ export function useEducation() {;
 
 
 
-=======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Education } from '@/types/resume',;
@@ -41,8 +40,6 @@ export function useEducation() {;
     setIsLoading(true),
     setError(null),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       const { error } = await supabase
         .from('education')
@@ -60,7 +57,6 @@ export function useEducation() {;
 
         });
       if (error) throw error;
-=======
 
           resume_id: resumeId,
           institution: education.institution,
@@ -77,7 +73,6 @@ export function useEducation() {;
       if (error) throw error,
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return showSuccessToast("Education added", "Your education has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add education')
@@ -86,7 +81,6 @@ export function useEducation() {;
 
 
 
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -125,8 +119,6 @@ export function useEducation() {;
     setIsLoading(true),
     setError(null),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       const { error } = await supabase
         .from('education')
@@ -145,7 +137,6 @@ export function useEducation() {;
         })
         .eq('id', eduId);
       if (error) throw error;
-=======
 
           institution: education.institution,
           degree: education.degree,
@@ -162,7 +153,6 @@ export function useEducation() {;
       if (error) throw error,
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return showSuccessToast("Education updated", "Your education has been updated")
     } catch (e: any) {
       return handleResumeError(e, 'Could not update education')
@@ -171,7 +161,6 @@ export function useEducation() {;
 
 
 
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -210,8 +199,6 @@ export function useEducation() {;
     setIsLoading(true),
     setError(null),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       const { error } = await supabase
         .from('education')
@@ -233,7 +220,6 @@ export function useEducation() {;
 
 
 
-=======
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Education} from '@/types / resume';
@@ -268,7 +254,6 @@ if ( {) {
 
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
     try {
       const { error } = await supabase;
@@ -372,6 +357,5 @@ if (throw error) {
     add_education;
     update_education;
     delete_education;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

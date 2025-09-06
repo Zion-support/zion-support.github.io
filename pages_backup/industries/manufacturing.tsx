@@ -3,12 +3,8 @@
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -53,7 +49,6 @@ const services = [
       'Real-time production monitoring,',
       'Automated quality control',',
       'Predictive maintenance',',
-=======
     title: 'Smart Factory Solutions,',;
     description: 'IoT-enabled manufacturing systems for intelligent production management.,',;
 import Layout from '../../components/Layout';
@@ -66,7 +61,6 @@ const services = [;
       'Real-time production monitoring,',;
       'Automated quality control',',;
       'Predictive maintenance',',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/manufacturing.tsx
       'Supply chain integration'';
     ];
   },;
@@ -145,16 +139,9 @@ const benefits = [;
     icon: Activity;
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
     icon: Activity,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/manufacturing.tsx
 ];
 const benefits = [;
   {;
@@ -229,9 +216,6 @@ export default function ManufacturingPage() {;
         </section>;
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ];
 
 export default function ManufacturingPage() {;
@@ -287,9 +271,6 @@ export default function ManufacturingPage() {;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
@@ -309,11 +290,9 @@ export default function ManufacturingPage() {;
               ))}
 
 
-=======
             </div>,
           </div>;
         </section>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
           </div>
         </section>
@@ -341,9 +320,6 @@ export default function ManufacturingPage() {;
                 <motion.div}),
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -372,11 +348,9 @@ export default function ManufacturingPage() {;
               ))}
 
 
-=======
             </div>,
           </div>;
         </section>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
           </div>
         </section>
@@ -403,7 +377,6 @@ export default function ManufacturingPage() {;
                 </Link>;
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
                   Learn About Our Expertise;
-=======
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto">;
               <div className="flex items-center justify-center mb-6">;
@@ -425,7 +398,6 @@ export default function ManufacturingPage() {;
                 </Link>;
                 <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   View Manufacturing Case Studies;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/manufacturing.tsx
                 </Link>;
               </div>;
             </motion && motion.div>;
@@ -584,13 +556,8 @@ export default function ManufacturingPage() {;
     </Layout>;
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Manufacturing?
@@ -613,7 +580,6 @@ export default function ManufacturingPage() {;
       </div>
     </Layout>
   );
-=======
             >;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">;
                 Ready to Transform Manufacturing?;
@@ -637,4 +603,3 @@ export default function ManufacturingPage() {;
     </Layout>;
   ),;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/manufacturing.tsx

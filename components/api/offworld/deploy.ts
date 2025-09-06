@@ -22,7 +22,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   } catch (error: any) {
     return res.status(500).json({ error: error?.message |'Unknown error' })
-=======
     if (!cid) return res && res.status(500).json({ error: 'IPFS upload failed' });
 
     return res && res.status(200).json({ cid, provider });
@@ -32,11 +31,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   } catch (error: any) {
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
-=======
 import {exec_sync} from 'child_process';
 import path from 'path';
 import fs from 'fs';
@@ -99,10 +96,6 @@ function handler() {
     return res.status (500).json ({ error: error?.message || 'Unknown error' });
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
     return res.status(500).json({ error: error?.message || 'Unknown error' });
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

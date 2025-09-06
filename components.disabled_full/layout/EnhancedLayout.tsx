@@ -15,5 +15,3 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   );
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

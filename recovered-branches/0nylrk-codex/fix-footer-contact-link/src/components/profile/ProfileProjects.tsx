@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ProfileProjectsProps {
   projects: ProfileProject[];
 }
@@ -13,7 +12,6 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project) => (
           <Card
-=======
 import { Card, CardContent  } from '@/components / ui / card';
 import { Badge  } from '@/components / ui / badge';
 import { ProfileProject  } from '@/types / profile';
@@ -32,7 +30,6 @@ function ProfileProjects() {
       <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
         {projects.map ((project) => (
           <Card;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             key={project.id}
             className="bg - zion - blue border - zion - blue - light overflow - hidden hover:border - zion - purple / 40 transition - colors duration - 300";
           >;
@@ -102,7 +99,6 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
                   {project && project.tags.map((tag, i) => (;
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
 
-=======
                   className="w-full h-full object-cover"
                 />
               </AspectRatio>
@@ -122,7 +118,6 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
 
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {tag}
                     </Badge>;
                   ))}
@@ -154,7 +149,6 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
   );
 }
 
-=======
                       variant="outline";
                       className="text - xs border - zion - slate - dark text - zion - slate - light";
                     >;
@@ -169,11 +163,8 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

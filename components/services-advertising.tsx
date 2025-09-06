@@ -143,7 +143,6 @@ import React from 'react';
               </ul>;
               <div className='text-sm text-slate-400 mt-3'>;
                 Typical: $15–$99/agent/month.;
-=======
                   <a;
                     className='text - cyan - 400 underline';
                     href={`https://www.helpscout.com / pricing/`}
@@ -184,7 +183,6 @@ import React from 'react';
                 href='/services/podcast-transcription-insights'
                 className='text-cyan-400 underline'>;
                 ziontechgroup && ziontechgroup.com/services/podcast-transcription-insights;
-=======
         <section>;
           <h2 className='text - 3xl md:text - 4xl font - bold text - white mb - 6 text - center'>;
             Explore by Category;
@@ -1428,7 +1426,6 @@ import React from 'react';
           </ul>;
           <div>;
             <a className='text-cyan-400 underline' href='/ai-meeting-notes'>;
-=======
         <section id='ai - evaluation - orchestrator' className='space - y-6'>;
           <h2 className='text - 2xl font - semibold text - white'>;
             AI Evaluation Orchestrator;
@@ -3703,7 +3700,6 @@ import React from 'react';
             <a
               className='text-cyan-400 underline'
               href='/services/ai-contract-risk-analyzer'>;
-=======
         <section id='accessibility - scanner' className='space - y-6'>;
           <h2 className='text - 2xl font - semibold text - white'>;
             Accessibility Compliance Scanner;
@@ -4838,7 +4834,6 @@ import React from 'react';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <section id='data-residency-geo-router' className='space-y-2'>
             <h3 className='text-xl font-semibold text-white'>
               Data Residency & Geo Routing Proxy
@@ -4850,9 +4845,7 @@ import React from 'react';
             <ul className='list-disc list-inside text-slate-300 space-y-1'>
               <li>Typical SMB budget: $79–$499/mo</li>
               <li>
-=======
                 href='/services/multi-tenant-rate-limiter'>;
-=======
           <section id='multi - tenant - rate - limiter' className='space - y-2'>;
             <h3 className='text - xl font - semibold text - white'>;
               Multi‑tenant Rate Limiter & Quotas;
@@ -4874,14 +4867,12 @@ import React from 'react';
                 className='text - cyan - 400 underline';
                 href='/services / multi - tenant - rate - limiter';
               >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Learn more;
               </a>;
             </div>;
           </section>;
 
                 href='/services/data-residency-geo-router'>;
-=======
           <section id='data - residency - geo - router' className='space - y-2'>;
             <h3 className='text - xl font - semibold text - white'>;
               Data Residency & Geo Routing Proxy;
@@ -4910,7 +4901,6 @@ import React from 'react';
           </section>;
 
                 href='/services/api-contract-mock-sandbox'>;
-=======
           <section id='api - contract - mock - sandbox' className='space - y-2'>;
             <h3 className='text - xl font - semibold text - white'>;
               API Mock Server & Contract Sandbox;
@@ -8313,9 +8303,6 @@ export default function ServicesAdvertisingPage() {
 	),;
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);
 ;
   /* Quick contact */;
@@ -9975,10 +9962,6 @@ export default function ServicesAdvertisingPage() {
   </div>;
   </div>),
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 	),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

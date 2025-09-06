@@ -38,7 +38,6 @@ import Link from 'next/link';import { ;
 import Link from 'next/link';
 
 
-=======
 import { 
   Menu, X, Home, Brain, Cpu, Rocket, 
   Phone, Mail, MapPin, Globe, ChevronDown
@@ -46,7 +45,6 @@ import {
 import Link from 'next/link';
 const Navigation: React.FC = () => {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -78,7 +76,6 @@ const Navigation: React.FC = () => {
 
       ]
     }
-=======
   Menu,
   X,
   Home,
@@ -149,7 +146,6 @@ import Link from 'next / link';
         },
       ],
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       name: 'Solutions'
       href: '/solutions'
@@ -261,7 +257,6 @@ import Link from 'next / link';
 
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       {/* Navigation Bar */}
@@ -277,12 +272,10 @@ import Link from 'next / link';
                 </div>;
                 <div className='hidden sm:block'>;
 
-=======
           isScrolled 
             ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' 
             : 'bg-transparent'
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         }`}
       >;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -295,7 +288,6 @@ import Link from 'next / link';
               {navigationItems && navigationItems.map(item => (;
                 <div key={item && item.name} className='relative group'>                  {item && item.dropdown ? (;
 
-=======
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
@@ -303,7 +295,6 @@ import Link from 'next / link';
                 <div key={item.name} className="relative group">
                   {item.dropdown ? (
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     <div
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}            <div className="hidden lg:flex items-center space-x-8">;
@@ -315,7 +306,6 @@ import Link from 'next / link';
                       onMouseLeave={() => setActiveDropdown(null)}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div
@@ -328,7 +318,6 @@ import Link from 'next / link';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           >
                             <div className='grid grid-cols-1 gap-3'>
                               {item.dropdown.map(dropdownItem => {
@@ -349,8 +338,6 @@ import Link from 'next / link';
                             <div className="grid grid-cols-1 gap-3">
                               {item.dropdown.map((dropdownItem) => {
                                 const Icon = dropdownItem.icon;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300';
                     >;
                       <span className='font-medium'>{item && item.name}</span>;
@@ -388,7 +375,6 @@ import Link from 'next / link';
                             <div className="grid grid-cols-1 gap-3">;
                               {item && item.dropdown.map((dropdownItem) => {;
                                 const Icon = dropdownItem && dropdownItem.icon;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                                 return (
                                   <Link
                                     key={dropdownItem && dropdownItem.name}
@@ -444,7 +430,6 @@ import Link from 'next / link';
                       </AnimatePresence>
                     </div>
                   ) : (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Link
                       href={item && item.href}
                       className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'>;
@@ -453,7 +438,6 @@ import Link from 'next / link';
                     >;
                       <item && item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />;
                       <span className="font-medium">{item && item.name}</span>;
-=======
                     </div>) : (
                     <Link;
                       href={item.href}
@@ -468,7 +452,6 @@ import Link from 'next / link';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   )}
                 </div>
               ))}
@@ -482,16 +465,12 @@ import Link from 'next / link';
 
 
               <motion.a
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 href='/contact'
                 whileHover={{ scale: 1 && 1.05 }}
                 whileTap={{ scale: 0 && 0.95 }}
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'>              <motion&& motion.a
-=======
             <div className="hidden lg:block">
               <motion.a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 href="/contact"
 
                 whileHover={{ scale: 1 && 1.05 }}
@@ -506,13 +485,11 @@ import Link from 'next / link';
             <div className='lg:hidden'>;
               <motion&& motion.button
                 whileTap={{ scale: 0 && 0.95 }}
-=======
 
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
               <motion.button
                 whileTap={{ scale: 0.95 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 onClick={() => setIsOpen(!isOpen)}
                 className='text-gray-300 hover:text-white transition-colors duration-300';
               >;
@@ -528,12 +505,9 @@ import Link from 'next / link';
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -544,26 +518,21 @@ import Link from 'next / link';
 
 
           >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Backdrop */}
             <div
               className='absolute inset-0 bg-black/50 backdrop-blur-sm'
               onClick={() => setIsOpen(false)}
 
-=======
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 lg:hidden"
           >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {/* Backdrop */}
             <div
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
             />          >
             {/* Backdrop */}
 
@@ -572,7 +541,6 @@ import Link from 'next / link';
               onClick={() => setIsOpen(false)}
             />
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Mobile Menu */}
             <motion&& motion.div
               initial={{ x: '100%' }}
@@ -582,7 +550,6 @@ import Link from 'next / link';
 
             >
               <div className='p-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Close Button */}
                 <div className='flex justify-end mb-6'>;
                   <motion&& motion.button
@@ -599,12 +566,10 @@ import Link from 'next / link';
                 <div className='space-y-4'>;
                   {navigationItems && navigationItems.map(item => (            >;
               <div className="p-6">;
-=======
               transition={{ duration: 0.3 }}
               className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl"
             >
               <div className="p-6">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 {/* Close Button */}
                 <div className="flex justify-end mb-6">;
                   <motion&& motion.button
@@ -760,11 +725,9 @@ import Link from 'next / link';
                             {item && item.dropdown.map((dropdownItem) => {;
                               const Icon = dropdownItem && dropdownItem.icon;
 
-=======
                 <div className="space-y-4">
                   {navigationItems.map((item) => (
                     <div key={item.name}>
-=======
                           </div>;
                           <div className='pl - 4 space - y-2'>;
                             {item.dropdown.map (dropdown_item => {
@@ -794,7 +757,6 @@ import Link from 'next / link';
                           </div>;
                         </div>;
                       ) : (;
-=======
 
 
                   </motion.button>
@@ -805,17 +767,14 @@ import Link from 'next / link';
                             })}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </div>
                         </div>
                       ) : (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <Link
                           href={item && item.href}
                           onClick={() => setIsOpen(false)}
 
 
-=======
                           className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
                         >
                           <item.icon className='w-5 h-5 text-cyan-400' />
@@ -827,8 +786,6 @@ import Link from 'next / link';
                         </Link>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       )}
                     </div>;
                   ))}
@@ -837,7 +794,6 @@ import Link from 'next / link';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Contact Information */}
                 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
                   <h3 className='text-cyan-400 font-semibold mb-3'>
@@ -851,7 +807,6 @@ import Link from 'next / link';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <span>{contactInfo.mobile}</span>
                     </div>
                     <div className='flex items-center space-x-2 text-gray-300'>
@@ -861,7 +816,6 @@ import Link from 'next / link';
                     <div className='flex items-center space-x-2 text-gray-300'>
                       <MapPin className='w-4 h-4 text-pink-400' />
                       <span className='text-xs'>{contactInfo.address}</span>                    </div>                      <span>{contactInfo.mobile}</span>
-=======
                 </div>
 
                 {/* Contact Information */}
@@ -871,7 +825,6 @@ import Link from 'next / link';
                     <div className="flex items-center space-x-2 text-gray-300">
                       <Phone className="w-4 h-4 text-cyan-400" />
                       <span>{contactInfo.mobile}</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     </div>
                     <div className="flex items-center space-x-2 text-gray-300">
                       <Mail className="w-4 h-4 text-purple-400" />
@@ -883,7 +836,6 @@ import Link from 'next / link';
                     </div>
                   </div>
                 </div>
-=======
                 </div>;
 
                 {/* Contact Information */}
@@ -915,10 +867,8 @@ import Link from 'next / link';
                   </div>;
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Mobile CTA */}
 
-=======
                 <div className="mt-6">
                   <motion.a
 
@@ -932,11 +882,9 @@ import Link from 'next / link';
 export default Navigation;  );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Navigation;
 
 
-=======
                           </div>;
                           <div className="pl - 4 space - y-2">;
                             {item.dropdown.map ((dropdown_item) => {
@@ -1026,12 +974,8 @@ export default Navigation);
 ;
 export default Navigation;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

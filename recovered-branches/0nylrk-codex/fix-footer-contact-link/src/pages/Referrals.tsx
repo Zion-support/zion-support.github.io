@@ -1,5 +1,4 @@
 
-=======
 
 import {useEffect} from 'react';
 import {use_auth} from '@/hooks / use_auth';
@@ -54,7 +53,6 @@ export default function ReferralsPage() {;
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
 
-=======
 import { useEffect } from 'react',
 import { useAuth } from '@/hooks/useAuth',
 import { useReferrals } from '@/hooks/useReferrals',
@@ -84,8 +82,6 @@ export default function ReferralsPage() {
     copyReferralLink,
     shareOnSocialMedia} = useReferrals(),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   useEffect(() => {
     if (!isAuthenticated) {
       toast({
@@ -93,7 +89,6 @@ export default function ReferralsPage() {
         description: "Please login to access the referral program"
         variant: "destructive"})
       navigate("/login")
-=======
 
   useEffect(() => {;
     if (!isAuthenticated) {;
@@ -102,7 +97,6 @@ export default function ReferralsPage() {
         description: "Please login to access the referral program",;
         variant: "destructive"}),;
       navigate("/login");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
 
@@ -114,10 +108,8 @@ export default function ReferralsPage() {
 
   return (
 
-=======
 
 
-=======
 import { useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useReferrals } from '@/hooks/useReferrals',;
@@ -202,7 +194,6 @@ export default function ReferralsPage() {;
         </div>;
 
         <div className="space-y-6">;
-=======
     shareOnSocialMedia} = useReferrals ();
 ;
   useEffect (() => {
@@ -262,7 +253,6 @@ if ( {) {
           </Tabs>;
         </div>;
         <div className="space - y-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           <ReferralGuide />;
           <ReferralLeaderboard />;
         </div>;
@@ -271,10 +261,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

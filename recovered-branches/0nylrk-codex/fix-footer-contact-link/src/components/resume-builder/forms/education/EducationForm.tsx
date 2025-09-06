@@ -1,8 +1,6 @@
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Education} from '@/types / resume';
@@ -39,7 +37,6 @@ export function EducationForm({ ;
       is_current: data.is_current
       description: data.description
       location: data.location}
-=======
 export function EducationForm(): any ({ ;
   resumeId;
   educationEntries, ;
@@ -67,7 +64,6 @@ export function EducationForm(): any ({ ;
       description: data && data.description,;
       location: data && data.location},;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     let success;
     if (editingId) {;
       success = await updateEducation(editingId, educationData);
@@ -77,7 +73,6 @@ export function EducationForm(): any ({ ;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
 
@@ -99,7 +94,6 @@ export function EducationForm(): any ({ ;
       setEditingId(null)
     } else {
       onBack()
-=======
 
     if (success) {;
       setEditingId(null);
@@ -108,7 +102,6 @@ export function EducationForm(): any ({ ;
 
   };
 
-=======
   },;
 
   const handleEdit = (edu: Education) => {;
@@ -127,14 +120,12 @@ export function EducationForm(): any ({ ;
       setEditingId(null);
     } else {;
       onBack();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -149,12 +140,10 @@ export function EducationForm(): any ({ ;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>
-=======
     <div className="space-y-6">;
       <div>;
         <h2 className="text-xl font-semibold mb-2">Education</h2>;
@@ -174,7 +163,6 @@ export function EducationForm(): any ({ ;
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <EducationFormFields
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}
@@ -194,7 +182,6 @@ export function EducationForm(): any ({ ;
   );
 }
 
-=======
 export /**
  * EducationForm - Function description
  */
@@ -297,4 +284,3 @@ if ( {) {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -24,7 +24,6 @@
 }
 
 
-=======
 
 
   artifacts: {;
@@ -36,7 +35,6 @@
     ensRecordHash?: string,;
     signature?: string;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const publicProposalDir = path.join(publicDir, id);
   fs.mkdirSync(publicProposalDir, { recursive: true });
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');
@@ -44,8 +42,6 @@
   return `/proposals/${id}/proposal.pdf`;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -61,4 +57,3 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

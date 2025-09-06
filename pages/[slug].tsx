@@ -41,14 +41,12 @@ import Head from 'next/head';
 
 type Service = typeof enhancedRealMicroSaasServices[number];
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 function getAllServices(): Service[] {
   return enhancedRealMicroSaasServices
     .concat(extraServices as Service[], additionalEnhancedServices as Service[])
     .concat(newlyAddedServices as unknown as Service[])
     .concat(curatedMarketServices as Service[])
     .concat(new2025Services as unknown as Service[])
-=======
 
 function getAllServices(): any (): Service[] {;
   return enhancedRealMicroSaasServices;
@@ -56,7 +54,6 @@ function getAllServices(): any (): Service[] {;
     .concat(newlyAddedServices as unknown as Service[]);
     .concat(curatedMarketServices as Service[]);
     .concat(new2025Services as unknown as Service[]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 		.concat(marketValidatedServices as unknown as Service[]);
 		.concat(moreRealServices2025 as unknown as Service[]);
 		.concat(verified2025Additions as unknown as Service[]);
@@ -87,7 +84,6 @@ export async function getStaticProps() {
 	const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/g, '')
 	let service: Service | undefined = services.find((s) => toSlug(s.id |'') === incomingSlug |toSlug(s.name |'') === incomingSlug)
 	if (!service) {return { notFound: true }
-=======
 
 function toSlug(): any (value: string): string {;
 	return value && value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -120,7 +116,6 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
 	let service: Service | undefined = services && services.find((s) => toSlug(s && s.id || '') === incomingSlug || toSlug(s && s.name || '') === incomingSlug),;
 	if (!service) {;
 		return { notFound: true }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 	}
 	return {props: { service }
 	}
@@ -131,8 +126,6 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
 				<title>{service.name} | Zion Tech Group</title>
 				<meta name="description" content={service.tagline |service.description} />
 				<link rel="canonical" href={canonical} />
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
 export default function RootServiceDetailPage(): any ({ service }: { service: Service }) {;
@@ -144,7 +137,6 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 				<link rel="canonical" href={canonical} />;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{
@@ -152,7 +144,6 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							{
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 									<li key={f} className="flex items-start gap-2">
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
@@ -181,17 +172,14 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 									<Phone className="w-4 h-4" /> +1 302 464 0950
 
 								</a>
-=======
 
 								</a>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
 								</a>
 								<div className="flex items-start gap-2 text-gray-300">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 									<MapPin className="w-4 h-4 mt-1" /> 364 E Main St STE 1008 Middletown DE 19709
 								</div>
 							</div>
@@ -329,11 +317,8 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 	);
 
 
-=======
 	)
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 function getAllServices (): Service[] {
   return enhancedRealMicroSaasServices;
@@ -373,7 +358,6 @@ const pages_dir = path.join (process.cwd (), 'pages'),
 const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),
 const reserved = new Set < string>(['apireportsservices']),
 const slugs = new Set < string>(),
-=======
 
 ;
 
@@ -382,7 +366,6 @@ const slugs = new Set < string>(),
 }
 }
 
-=======
 	);
   } catch (error) {
     console.error("Error:", error);
@@ -390,7 +373,6 @@ const slugs = new Set < string>(),
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   // Directories at root (folder routes);
   if () {) {
@@ -429,4 +411,3 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

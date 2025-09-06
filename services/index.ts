@@ -12,12 +12,10 @@ export type {
 ;
 
 export type {
-=======
 
 
 export type {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   PasswordOptions;
   PasswordStrength;
   GeneratedPassword;
@@ -26,12 +24,10 @@ export type {;
 ;
 
 export type {
-=======
 
 
 export type {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   QRCodeOptions;
   QRCodeResult;
   QRCodeTemplate;
@@ -40,12 +36,10 @@ export type {;
 ;
 
 export type {
-=======
 
 
 export type {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ConversionOptions;
   ConversionResult;
   SupportedFormat;
@@ -55,12 +49,10 @@ export type {;
 ;
 
 export type {
-=======
 
 
 export type {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   TextAnalysisResult;
   BasicTextStats;
   ReadabilityMetrics;
@@ -96,11 +88,9 @@ export const SERVICES_METADATA = {
   url_shortener: {
     name: 'URL Shortener',
 
-=======
 
     name: 'URL Shortener',;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     description: 'Create short, trackable URLs with analytics';
     icon: '🔗';
     category: 'UTILITIES';
@@ -152,12 +142,10 @@ export const SERVICES_METADATA = {
     apiEndpoint: '/api/file-converter'
   }
   textAnalysis: {
-=======
     pricing: 'Free (Basic) / $9.99 / month (Pro)',
     api_endpoint: '/api / file - converter';
   }
   text_analysis: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     name: 'Text Analysis';
     description: 'Analyze text for insights and optimization';
     icon: '📊';
@@ -183,13 +171,11 @@ export const getServiceStatus = () => {
 
 
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-=======
     urlShortener: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
     passwordGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
     qrCodeGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
     fileConverter: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
     textAnalysis: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 }
 // Service usage statistics
@@ -202,14 +188,12 @@ export const getServiceStats = () => {
 
     pricing: 'Free (Basic) / $19.99 / month (Pro)',
     api_endpoint: '/api / text - analysis';
-=======
 
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 };
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 };
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 };
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 };
 
-=======
 // Export all micro SaaS services;
 export { urlShortenerService } from './urlShortenerService',;
 export { passwordGeneratorService } from './passwordGeneratorService',;
@@ -296,9 +280,7 @@ export const getServiceStats = () => {;
 
 
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

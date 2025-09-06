@@ -20,7 +20,6 @@
       'Mobile - responsive interface',
     ],
 
-=======
     link: 'https://ziontechgroup.com / services / ai - business - intelligence - platform - pro',
     launch_date: '2036 - 01 - 20',
     rating: 4.8,
@@ -65,7 +64,6 @@
     ],
 
       'AI-powered incident detection',
-=======
     link: 'https://ziontechgroup.com / services / quantum - secure - communication - enterprise',
     launch_date: '2036 - 01 - 25',
     rating: 4.9,
@@ -110,7 +108,6 @@
       'Comprehensive monitoring',
     ],
 
-=======
     link: 'https://ziontechgroup.com / services / autonomous - devops - platform - enterprise',
     launch_date: '2036 - 01 - 30',
     rating: 4.7,
@@ -157,7 +154,6 @@
     ],
 
       'AI-powered threat detection',
-=======
     link: 'https://ziontechgroup.com / services / space - technology - analytics - platform',
     launch_date: '2036 - 02 - 05',
     rating: 4.6,
@@ -200,7 +196,6 @@
       'Custom security policies',
     ],
 
-=======
     link: 'https://ziontechgroup.com / services / ai - cybersecurity - suite - enterprise',
     launch_date: '2036 - 02 - 10',
     rating: 4.8,
@@ -244,7 +239,6 @@
       'Expert consultation',
     ],
 
-=======
     link: 'https://ziontechgroup.com / services / quantum - machine - learning - platform',
     launch_date: '2036 - 02 - 15',
     rating: 4.9,
@@ -290,7 +284,6 @@
     ],
 
       'AI-powered personalization',
-=======
     link: 'https://ziontechgroup.com / services / edge - computing - orchestration - enterprise',
     launch_date: '2036 - 02 - 20',
     rating: 4.7,
@@ -335,7 +328,6 @@
     ],
 
       'Multi-chain support',
-=======
     link: 'https://ziontechgroup.com / services / ai - customer - experience - platform',
     launch_date: '2036 - 02 - 25',
     rating: 4.8,
@@ -381,7 +373,6 @@
     ],
 
       'AI-powered quality control',
-=======
     link: 'https://ziontechgroup.com / services / blockchain - infrastructure - enterprise',
     launch_date: '2036 - 03 - 01',
     rating: 4.6,
@@ -425,7 +416,6 @@
       'Performance analytics',
     ],
 
-=======
     link: 'https://ziontechgroup.com / services / autonomous - manufacturing - platform',
     launch_date: '2036 - 03 - 05',
     rating: 4.7,
@@ -470,7 +460,6 @@
     ],
 
       'AI-powered image analysis',
-=======
     link: 'https://ziontechgroup.com / services / quantum - internet - security - gateway',
     launch_date: '2036 - 03 - 10',
     rating: 4.9,
@@ -514,7 +503,6 @@
       'Expert consultation',
     ],
 
-=======
     link: 'https://ziontechgroup.com / services / ai - healthcare - diagnostics - platform',
     launch_date: '2036 - 03 - 15',
     rating: 4.8,
@@ -556,7 +544,6 @@
       'Custom mining strategies',
     ],
 
-=======
     link: 'https://ziontechgroup.com / services / space - resource - mining - platform',
     launch_date: '2036 - 03 - 20',
     rating: 4.7,
@@ -598,7 +585,6 @@
       'Performance analytics',
     ],
 
-=======
     link: 'https://ziontechgroup.com / services / quantum - financial - trading - platform',
     launch_date: '2036 - 03 - 25',
     rating: 4.9,
@@ -672,8 +658,6 @@
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']
   }
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform',
     launch_date: '2036 - 03 - 30',
     rating: 4.7,
@@ -709,11 +693,7 @@
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 export type Real2036InnovativeService = {;
 
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

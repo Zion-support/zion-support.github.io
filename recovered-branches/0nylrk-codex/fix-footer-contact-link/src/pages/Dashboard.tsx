@@ -15,10 +15,8 @@ export default function Dashboard() {;
   const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
   const handleTestNotification = async () => {;
@@ -35,13 +33,11 @@ export default function Dashboard() {;
 
     }
   }
-=======
     }
 
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       <Header />;
@@ -252,7 +248,6 @@ export default function Dashboard() {;
                 <div className="flex flex-col items-center text-center">;
                   <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4">;
                     {user && user.displayName.split(' ').map(name => name[0]).join('')}
-=======
 
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
@@ -474,7 +469,6 @@ export default function Dashboard() {;
                 {/* Community Section */}
                 <div>;
                   <h3 className="text-lg font-bold text-white mb-4">Community</h3>;
-=======
 import { use_auth } from '@/hooks / use_auth';
 import { Button } from '@/components / ui / button';
 import { Header } from '@/components / Header';
@@ -695,7 +689,6 @@ if ( {) {
                 {/* Community Section */}
                 <div>;
                   <h3 className="text - lg font - bold text - white mb - 4">Community</h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <CommunityDiscussion />;
                 </div>;
               </div>;
@@ -708,8 +701,5 @@ if ( {) {
     </>);
 }
 
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

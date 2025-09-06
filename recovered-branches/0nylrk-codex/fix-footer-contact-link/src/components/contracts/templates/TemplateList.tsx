@@ -37,7 +37,6 @@ export function TemplateList(): any ({;
       setTemplateToDelete(null);
     }
   };
-=======
 interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
@@ -50,7 +49,6 @@ interface TemplateListProps {
   const handleSetDefault = async (templateId: string) => {;
     await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   if (isLoading) {;
     return (
@@ -141,7 +139,6 @@ interface TemplateListProps {
               onClick={() => onSelect(template)} ;
               variant="outline" ;
               className="w-full";
-=======
 import { ContractTemplate } from '@/types / contracts';
 import { Button } from '@/components / ui / button';
 import { Loader2, Edit, Trash, Star, StarOff } from './lucide-react';
@@ -238,9 +235,7 @@ if ( {) {
               variant="outline";
               className="w - full";
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >;
               Use This Template;
             </Button>;
@@ -273,7 +268,5 @@ if ( {) {
     </div>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

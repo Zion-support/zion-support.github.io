@@ -1,7 +1,6 @@
 
 import * as React from &quot;react & quot;
 import { cn } from &quot;@/lib / utils & quot;
-=======
 
 
 import * as React from "react"
@@ -44,4 +43,3 @@ export interface BadgeProps;
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

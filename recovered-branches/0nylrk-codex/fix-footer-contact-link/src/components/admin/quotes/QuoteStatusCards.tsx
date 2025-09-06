@@ -24,7 +24,6 @@ interface QuoteStatusCardsProps {
 
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
@@ -46,7 +45,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -65,7 +63,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -84,7 +81,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -103,7 +99,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -132,7 +127,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
         </CardHeader>;
         <CardContent>;
           <p className="text-sm text-zion-slate-light">;
-=======
     closed: number;
   }
 }
@@ -220,7 +214,6 @@ export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
 }
 ;
 
-=======
 
     </div>
 
@@ -231,5 +224,3 @@ export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
 
 export default QuoteStatusCards;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

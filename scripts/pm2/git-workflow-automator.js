@@ -1,19 +1,13 @@
 
 
-=======
 #!/usr/bin/env node;
 /**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;
-=======
-
-=======
 
 
-=======
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 #!/usr/bin/env node;
 /**;
  * Git Workflow Automator Script;
@@ -202,11 +196,9 @@ if (require.main === module) {main();
 module.exports = GitWorkflowAutomator;#!/usr/bin/env node;
 
 
-=======
 #!/usr/bin/env node;
 /**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 #!/usr/bin/env node;
 /**;
  * Git Workflow Automator Script;
@@ -219,7 +211,6 @@ const path = require('path');const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-=======
 
 ;
 
@@ -784,15 +775,8 @@ module.exports = GitWorkflowAutomator,
 
 
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
   }
 }
@@ -828,16 +812,9 @@ async function main() {const automator = new GitWorkflowAutomator(); try {; awai
 if (require.main = = = module) {main()}
 module.exports = GitWorkflowAutomator;
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
 async function main() {const automator = new GitWorkflowAutomator(); try {; await automator.automateGitWorkflow(); process.exit(0)} catch (error) {automator.log(`Git workflow automation failed: ${error.message}`, 'ERROR'); process.exit(1)}}
 if (require.main = = = module) {main()}
 module.exports = GitWorkflowAutomator;
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 ; try {; await automator && automator.automateGitWorkflow(); process && process.exit(0)} catch (error) {; automator && automator.log(`Git workflow automation failed: ${error && error.message}`, 'ERROR'); process && process.exit(1)}};
 
 if (require && require.main = = = module) {; main()};
@@ -845,9 +822,6 @@ if (require && require.main = = = module) {; main()};
 module && module.exports = GitWorkflowAutomator;
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 
 module.exports = GitWorkflowAutomator;

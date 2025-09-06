@@ -21,10 +21,8 @@ interface BudgetFieldsProps {;
   talent?: TalentProfile;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export function BudgetFields({ form, talent }: BudgetFieldsProps) {
-=======
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
@@ -36,7 +34,6 @@ interface BudgetFieldsProps {;
 }
 
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <FormField
@@ -149,7 +146,6 @@ function BudgetFields() {
   );
 }
 
-=======
                 />;
               </div>;
             </FormControl>;
@@ -158,11 +154,8 @@ function BudgetFields() {
       />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

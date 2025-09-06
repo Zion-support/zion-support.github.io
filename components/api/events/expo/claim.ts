@@ -23,7 +23,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
   const { address, signature } = req && req.body || {};
-=======
 
   const { address, signature } = req.body || {};
 
@@ -51,7 +50,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 ;
 export default async /**
@@ -89,7 +87,4 @@ function handler() {
   );
   return res.status (200).json ({ ok: true });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

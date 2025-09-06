@@ -41,19 +41,15 @@ export default function WhitelabelManager() {;
   if (!isAdmin) {;
     return <Navigate to="/unauthorized" />;
 
-=======
 
 
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return (
 
-=======
 
 
-=======
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -91,7 +87,6 @@ export default function WhitelabelManager() {;
 
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
             <TabsList className="mb-8">;
-=======
 import React, { useState } from 'react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -134,7 +129,6 @@ if ( {) {
           </div>;
           <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">;
             <TabsList className="mb - 8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               <TabsTrigger value="tenants">Tenants</TabsTrigger>;
               <TabsTrigger value="create">Create New</TabsTrigger>;
               <TabsTrigger value="docs">Documentation</TabsTrigger>;
@@ -204,10 +198,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

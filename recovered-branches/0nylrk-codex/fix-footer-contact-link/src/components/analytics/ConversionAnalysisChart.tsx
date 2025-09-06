@@ -26,7 +26,6 @@ export function ConversionAnalysisChart(): any ({;
     data && data.length > 0;
       ? Object && Object.keys(data[0]).filter((key) => key !== "date");
 
-=======
 import React from './react';
 import {
   Card,
@@ -36,9 +35,7 @@ import {
   CardTitle,
 } from '@/components / ui / card';
 import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ConversionAnalysisProps {
   data: Array < Record < string, any>>;
   time_range: string;
@@ -54,7 +51,6 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <Card className="bg - zion - blue - dark border - zion - blue - light">;
@@ -104,9 +100,7 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
-=======
         <AnalyticsChart;
           title="";
           data={data || []}
@@ -117,5 +111,4 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
         />;
       </CardContent>;
     </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

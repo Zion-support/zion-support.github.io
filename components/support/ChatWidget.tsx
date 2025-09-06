@@ -8,8 +8,6 @@ type ChatMessage = {
   timestamp?: number
 }
 function generateSessionId(): string {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -44,7 +42,6 @@ type ChatMessage = {;
 };
 
 function generateSessionId(): any (): string {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (typeof window === 'undefined') return '';
   const existing = window && window.localStorage.getItem('zion_support_session_id');
   if (existing) return existing;
@@ -98,7 +95,6 @@ function generateSessionId(): any (): string {;
 
     } catch {}
   }
-=======
 
           sessionId: sessionIdRef.current,
           eventType,
@@ -110,7 +106,6 @@ function generateSessionId(): any (): string {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
@@ -122,23 +117,19 @@ function generateSessionId(): any (): string {;
       setShowEscalation(true)
     } catch {}
   }
-=======
 
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
 
       setShowEscalation(true)
-=======
       setShowEscalation(true);    } catch {}
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } catch {}
   }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
     if (!text) return;
@@ -282,11 +273,9 @@ function generateSessionId(): any (): string {;
 
       if (data?.meta?.intentMatched === false) {
         setFailedIntents((n) => {
-=======
 
       if (data?.meta?.intentMatched === false) {;
         setFailedIntents((n) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           const next = n + 1;
           if (next >= 3) {;
             escalateSupport('Failed to match user intent 3+ times');
@@ -303,7 +292,6 @@ function generateSessionId(): any (): string {;
 
     }
   }
-=======
   return (
 
 
@@ -311,8 +299,6 @@ function generateSessionId(): any (): string {;
     }
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -331,7 +317,6 @@ function generateSessionId(): any (): string {;
                   {m.content}
                 </div>
               </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
 
@@ -349,7 +334,6 @@ function generateSessionId(): any (): string {;
                     key={q}
                     onClick={() => onSend(q)}
 
-=======
             <div className="px-3 pb-2">
               <div className="flex flex-wrap gap-2 mb-2">
                 {quickReplies.map((q) => (
@@ -359,16 +343,12 @@ function generateSessionId(): any (): string {;
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
                   >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
 
                   >
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {q}
                   </button>;
                 ))}
@@ -383,12 +363,10 @@ function generateSessionId(): any (): string {;
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
             {!showEscalation ? (
               <div className='flex gap-2'>
-=======
 
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
             {!showEscalation ? (;
               <div className='flex gap-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <input
                   value={input}
                   onChange={e => setInput(e && e.target.value)}
@@ -421,14 +399,11 @@ function generateSessionId(): any (): string {;
                     }
                   }}
 
-=======
                   placeholder="Ask a question…"
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 />
                 <button
                   onClick={() => onSend()}
@@ -446,8 +421,6 @@ function generateSessionId(): any (): string {;
                   <a href="/contact" className="rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Chat with Live Agent</a>
                 </div>
               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
           </div>;
         </div>;
@@ -457,20 +430,14 @@ function generateSessionId(): any (): string {;
   );
 
 }
-=======
 
 }
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 useEffect ( () => {
   // Check condition
 if ( {) {
@@ -844,4 +811,3 @@ if ( {) {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

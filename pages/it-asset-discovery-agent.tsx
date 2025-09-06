@@ -64,7 +64,6 @@ import React from 'react';
                   href='https://aws && aws.amazon.com/config/pricing/'
                   target='_blank'
                   rel='noopener noreferrer'>;
-=======
 import Head from 'next / head';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
 import Card from '../components / ui / Card';
@@ -114,7 +113,6 @@ function ITAssetDiscoveryAgentPage() {
                   target='_blank';
                   rel='noopener noreferrer';
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   AWS Config;
                 </a>;
               </li>;
@@ -147,7 +145,6 @@ function ITAssetDiscoveryAgentPage() {
         </div>;
 
             className='px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>;
-=======
         <div className='mt - 8'>;
           <a;
             href='/contact';
@@ -160,7 +157,6 @@ function ITAssetDiscoveryAgentPage() {
       </div>;
 
 
-=======
 export default function ITAssetDiscoveryAgentPage() {
 	return (
 		<UltraFuturisticBackground variant="space" intensity="high">
@@ -197,13 +193,7 @@ export default function ITAssetDiscoveryAgentPage() {
 	)
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </UltraFuturisticBackground>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

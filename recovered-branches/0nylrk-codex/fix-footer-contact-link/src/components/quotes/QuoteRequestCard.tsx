@@ -7,11 +7,9 @@ import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";
 import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
 
-=======
 import React from "react",
 import { format } from "date-fns",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { 
   Card;
   CardContent;
@@ -71,7 +69,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
 
     }
   }
-=======
 
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react",
 import type { QuoteRequest } from "@/types/quotes",
@@ -82,7 +79,6 @@ type QuoteRequestCardProps = {
   onMarkAsResponded?: (id: string) => void,
   onToggleArchive: (id: string, isArchived: boolean) => void
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 
 
@@ -99,7 +95,6 @@ type QuoteRequestCardProps = {
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
@@ -134,7 +129,6 @@ type QuoteRequestCardProps = {
             size="sm"
             onClick={() => onViewDetails(quote)}
 
-=======
               <Button
                 variant="ghost"
                 size="sm"
@@ -157,7 +151,6 @@ type QuoteRequestCardProps = {
                 <ArchiveIcon className="h-4 w-4" />
 
 
-=======
 import React from "react",;
 import { format } from "date-fns",;
 import {;
@@ -228,7 +221,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
 
           <div className="flex items-center">;
             {quote && quote.status !== 'responded' && onMarkAsResponded && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 variant="ghost"
                 size="sm"
@@ -254,7 +246,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
                 <ArchiveIcon className="h-4 w-4" />;
               )}
 
-=======
       return date_string;
     }
   }
@@ -321,11 +312,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </Card>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

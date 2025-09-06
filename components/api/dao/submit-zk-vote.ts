@@ -9,7 +9,6 @@ if ( {) {
   $2
 }
     res.status (405).json ({ error: "Method not allowed" });
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -30,7 +29,6 @@ if ( {) {
 
     res.status (500).json ({ error: e?.message || "internal error" });
 
-=======
 
 
     // NOTE: For production, use a relayer or Batcher to aggregate votes off-chain;
@@ -41,6 +39,5 @@ if ( {) {
   } catch (e:any) {
     res.status(500).json({ error: e?.message || 'internal error' });
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

@@ -31,8 +31,6 @@ import React from 'react';
   Mail, ;
   Calendar, ;
   Shield, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
@@ -61,7 +59,6 @@ import {
   Mail,
   Calendar,
   Shield,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   Globe;
   ArrowRight;
   Star;
@@ -122,7 +119,6 @@ import {
 
       name: 'Calendly',
       description: 'Scheduling automation platform that eliminates the back-and-forth of scheduling meetings and calls.',
-=======
   BookOpen;
 export default /**
  * StartupToolsPage - Function description
@@ -203,7 +199,6 @@ function StartupToolsPage() {
 
       name: 'Canva',
       description: 'Graphic design platform that makes it easy to create professional designs without design skills.',
-=======
       icon: <Calendar className='w - 8 h - 8 text - blue - 400' />,
       features: [;
         'Automated scheduling',
@@ -299,7 +294,6 @@ function StartupToolsPage() {
     {
       name: 'Intercom',
       description: 'Customer messaging platform that helps businesses build better customer relationships through personalized experiences.',
-=======
       icon: <Lightbulb className='w - 8 h - 8 text - blue - 400' />,
       features: [;
         'Design templates',
@@ -563,7 +557,6 @@ function StartupToolsPage() {
                 130M+;
               </div>;
               <div className="text-gray-400 text-sm">Total Users</div>;
-=======
       icon: <BarChart3 className='w - 8 h - 8 text - purple - 400' />,
       features: [;
         'User behavior tracking',
@@ -755,7 +748,6 @@ function StartupToolsPage() {
         </div>;
       </section>;
 
-=======
 
       {/* Category Filter */}
       <section className="py-16 bg-gray-900">
@@ -764,7 +756,6 @@ function StartupToolsPage() {
             {categories.map((category) => (
               <button
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -890,7 +881,6 @@ function StartupToolsPage() {
           </div>
         </div>
       </section>
-=======
                 size='sm'>                Start Learning;
               </Button>;
             </Card>;
@@ -915,7 +905,6 @@ function StartupToolsPage() {
                 Growth Strategies;
               </h3>;
               <p className='text-gray-400 mb-4'>;
-=======
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>;
             <Card className='text - center'>;
               <div className='w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center bg - gradient - to - br from - blue - 500 to - indigo - 600'>;
@@ -993,7 +982,6 @@ function StartupToolsPage() {
                 Growth Strategies;
               </h3>;
               <p className='text - gray - 400 mb - 4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Learn proven growth strategies from successful entrepreneurs and;
                 growth hackers.;
               </p>;
@@ -1020,17 +1008,11 @@ function StartupToolsPage() {
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import React from 'react';
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

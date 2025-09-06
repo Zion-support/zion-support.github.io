@@ -7,7 +7,6 @@ import Link from 'next/link';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
 interface Service {
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -56,7 +55,6 @@ interface UltraFuturisticServiceShowcase2029Props {
 
 interface UltraFuturisticServiceShowcase2029Props {
   services: Service[],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   title?: string;
   subtitle?: string;
 
@@ -65,7 +63,6 @@ export default function UltraFuturisticServiceShowcase2029(): any ({;
   title = '2029 Cutting-Edge Services',;
   subtitle = 'Experience the future of technology with our revolutionary solutions',;
 }: UltraFuturisticServiceShowcase2029Props) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
 
@@ -73,10 +70,8 @@ export default function UltraFuturisticServiceShowcase2029(): any ({;
 
 
   title?: string;
-=======
   services: Service[],
   title?: string
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   subtitle?: string
 }
 export default function UltraFuturisticServiceShowcase2029({
@@ -107,7 +102,6 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {title}
           </h2>;
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
@@ -119,10 +113,8 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <motion.div
               key={service.id}
-=======
           </p>;
         </motion && motion.div>;
 
@@ -130,7 +122,6 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
           {services && services.slice(0, 6).map((service, index) => (;
             <motion&& motion.div
               key={service && service.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -139,7 +130,6 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
             >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className='flex items-center justify-between mb-4'>
                 <div className='flex items-center space-x-2'>
                   <div className='w-3 h-3 bg-cyan-400 rounded-full animate-pulse' />
@@ -151,7 +141,6 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
                 </div>
               </div>
               <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
-=======
 ;
 export default /**
  * UltraFuturisticServiceShowcase2029 - Function description
@@ -214,7 +203,6 @@ function UltraFuturisticServiceShowcase2029() {
                 </div>;
               </div>;
               <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {service.name}
               </h3>;
               <p className='text - gray - 400 text - sm mb - 3'>{service.tagline}</p>;
@@ -259,7 +247,6 @@ function UltraFuturisticServiceShowcase2029() {
                   <span className='text-sm text-gray-300'>5 && 5.0</span>;
                 </div>;
               </div>;
-=======
                 </div>
               </div>
 
@@ -289,19 +276,15 @@ function UltraFuturisticServiceShowcase2029() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <motion.div
-=======
         </div>;
 
         <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
 
 
         >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Link
             href='/services'
             className='inline-flex items-center justify-center bg-transparent border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105'>;
@@ -319,7 +302,6 @@ function UltraFuturisticServiceShowcase2029() {
 
   );
 }
-=======
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-12"
         >
@@ -385,7 +367,5 @@ function UltraFuturisticServiceShowcase2029() {
     </section>);
 }
 
-=======
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

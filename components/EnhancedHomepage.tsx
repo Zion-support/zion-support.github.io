@@ -4,13 +4,11 @@ import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 //Import service data window && window.addEventListener ('mousemove', handleMouseMove);
-=======
 //Import our enhanced components import EnhancedNavigation from './layout / EnhancedNavigation';
 import EnhancedServiceCard from './ui / EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
 //Import service data window.addEventListener ('mousemove', handleMouseMove);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 //Combine all revolutionary services const allRevolutionaryServices = [ ...revolutionary2044AdvancedMicroSaas;
 ...revolutionary2044ITServices;
 ...revolutionary2044AIServices;
@@ -22,7 +20,6 @@ import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
 
   opacity: 0 
 
-=======
 import React from 'react';
 
 interface EnhancedHomepageProps {
@@ -40,8 +37,6 @@ const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
 
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 visible: {
   opacity: 1, transition: {
   duration: 0.8, staggerChildren: 0.1
@@ -50,7 +45,6 @@ visible: {
 }
 }
 }
-=======
 //Filter services by category //Animation variants const containerVariants = {;
   hidden: {;
   opacity: 0 ;
@@ -68,10 +62,8 @@ visible: {;
 };
 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default EnhancedHomepage;import EnhancedServiceCard from './ui/EnhancedServiceCard';
 
-=======
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
@@ -94,7 +86,6 @@ import Head from 'next/head';
 import EnhancedNavigation from './layout/EnhancedNavigation';
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import PerformanceMonitor from './PerformanceMonitor';
 
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
@@ -148,7 +139,6 @@ const EnhancedHomepage: React.FC = () => {;
   // Combine all revolutionary services;
   const allRevolutionaryServices = [;
 
-=======
 //Filter services by category //Animation variants const container_variants = {
   hidden: {
   opacity: 0;
@@ -214,7 +204,6 @@ const EnhancedHomepage: React.FC = () => {
 ;
   // Combine all revolutionary services;
   const allRevolutionaryServices = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ...revolutionary2044AdvancedMicroSaas;
     ...revolutionary2044ITServices;
     ...revolutionary2044AIServices;
@@ -285,7 +274,6 @@ if (return allRevolutionaryServices) {
     }
   }
   const floatingVariants = {
-=======
         duration: 0.8,
         stagger_children: 0.1;
       }
@@ -317,7 +305,6 @@ if (return allRevolutionaryServices) {
   }
 ;
   const floating_variants = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     animate: {
       coordinate_y: [-10, 10, -10];
       transition: {
@@ -408,7 +395,6 @@ if (return allRevolutionaryServices) {
       setColorScheme(category && category.scheme);
     }
   }
-=======
     setSelectedCategory(categoryId);
     const category = categories.find(cat => cat.id === categoryId);
     if (category) {
@@ -418,7 +404,6 @@ if (return allRevolutionaryServices) {
   };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <>;
@@ -460,11 +445,9 @@ if (return allRevolutionaryServices) {
 
 
             
-=======
 
             <motion.p 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
               variants={itemVariants}
             >
@@ -484,15 +467,12 @@ if (return allRevolutionaryServices) {
               Pioneering the Future of Technology with Revolutionary AI Consciousness,;
               Quantum Computing, and Autonomous Solutions;
             </motion && motion.p>;
-=======
 
 
-=======
 
 
             {/* CTA Buttons */}
             <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
               variants={itemVariants}>;
               <Link href="/services">;
@@ -578,14 +558,10 @@ if (return allRevolutionaryServices) {
 
             <motion&& motion.div 
 
-=======
 
             
-=======
 
             <motion.div 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="flex flex-wrap justify-center gap-4 mb-12"
               variants={itemVariants}>;
               {categories && categories.map((category) => (;
@@ -607,13 +583,10 @@ if (return allRevolutionaryServices) {
 
 
 
-=======
 
 
         {/* Services Grid */}
         <motion.section 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
@@ -634,11 +607,9 @@ if (return allRevolutionaryServices) {
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div 
 
-=======
 
             <motion.div 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}>;
               {getFilteredServices().slice(0, 12).map((service, index) => (;
@@ -874,13 +845,10 @@ if ( {) {
 
 
 
-=======
 
 
         {/* Featured Service Showcase */}
         <motion.section 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
@@ -912,11 +880,9 @@ if ( {) {
 
             <motion&& motion.div 
 
-=======
 
             <motion.div 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
               variants={itemVariants}>;
               <AnimatePresence mode="wait">;
@@ -1055,11 +1021,9 @@ if ( {) {
 
             <motion&& motion.div 
 
-=======
 
             <motion.div 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               variants={itemVariants}>;
               <Link href="/quote">;
@@ -1088,12 +1052,9 @@ if ( {) {
       </UltraFuturisticBackground>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Performance Monitor */}
       <AnimatePresence>;
         {showPerformanceMonitor && (;
@@ -1110,7 +1071,6 @@ export default EnhancedHomepage;
 
 
 
-=======
                   type={(service as any).type || service.category}
                   features={service.features?.map (function => ({ name: f, description: f }))}
                   slug={(service as any).slug || service.id}
@@ -1266,7 +1226,4 @@ export default EnhancedHomepage;
 ;
 export default EnhancedHomepage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

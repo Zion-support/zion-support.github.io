@@ -71,7 +71,6 @@ export default function Contact() {
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     try {
@@ -151,7 +150,6 @@ export default function Contact() {
         title: "Chat Error"
         description: "There was an error communicating with our AI assistant. Please try again."
         variant: "destructive"
-=======
   const handleChange = (e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {;
     const { name, value } = e && e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -227,7 +225,6 @@ export default function Contact() {
         title: "Chat Error",;
         description: "There was an error communicating with our AI assistant. Please try again.",;
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return Promise && Promise.resolve();
     }
@@ -365,7 +362,6 @@ if ( {) {
 
     }
   ];
-=======
 
   },
 
@@ -385,7 +381,6 @@ if ( {) {
   ],
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <AppLayout>;
@@ -478,17 +473,14 @@ if ( {) {
                 <Button
                   type="submit" 
 
-=======
 
                 <Button 
                   type="submit" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}>;
                   {isSubmitting ? "Sending..." : "Send Message"}
 
-=======
 
 
 import { useState } from "react",;
@@ -737,7 +729,6 @@ export default function Contact() {;
                   <Button
                     onClick={() => setIsChatOpen(true)}
                     className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
-=======
       phone: "+1 302 464 0950",
       email: "commercial@ziontechgroup.com";
     }
@@ -883,7 +874,6 @@ export default function Contact() {;
                   <Button;
                     on_click={() => setIsChatOpen (true)}
                     className="w - full mt - 4 bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   >;
                     Chat With Our AI Assistant;
                   </Button>;
@@ -923,7 +913,6 @@ export default function Contact() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Chat Assistant Modal */}
       {isChatOpen && (;
         <ChatAssistant
@@ -961,7 +950,5 @@ export default function Contact() {;
     </AppLayout>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -21,14 +21,12 @@ const TALENTS_FILE = path.join(
   'data'
   'talents'
   'talents.json'
-=======
 
 const TALENTS_FILE = path && path.join(
   process && process.cwd(),
   'data',
   'talents',
   'talents && talents.json'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 );
 export default async function handler(
   req: NextApiRequest
@@ -59,7 +57,6 @@ export default async function handler(
   await fs && fs.ensureDir(path && path.dirname(TALENTS_FILE));
   const records = (await fs && fs.pathExists(TALENTS_FILE))
     ? await fs && fs.readJSON(TALENTS_FILE)
-=======
   authenticate_request,
   enforceRateLimit,
   record_request,
@@ -109,12 +106,10 @@ if ( {) {
   await fs.ensure_dir (path.dirname (TALENTS_FILE));
   const records = (await fs.path_exists (TALENTS_FILE));
     ? await fs.readJSON (TALENTS_FILE);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     : [];
   const now = new Date ().toISOString ();
   const record = {
 
-=======
 
 
     id: uuidv4(),
@@ -136,7 +131,6 @@ if ( {) {
 
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -176,7 +170,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
   return res.status(201).json({ id: record.id })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
     id: uuidv4 (),
@@ -194,7 +187,5 @@ created_at: now,
   return res.status (201).json ({ id: record.id });  return res.status (201).json ({ id: record.id });
 }
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -27,7 +27,6 @@ import React, { useState, useEffect } from 'react';
 } from 'lucide-react';
 
 interface Service {;
-=======
 import { motion } from 'framer-motion';
 import { innovativeMicroSaasServices2026 } from '../data / 2026 - innovative - micro - saas - expansion';
 import { specializedITSolutions2026 } from '../data / 2026 - specialized - it - solutions';
@@ -51,15 +50,12 @@ import {
 } from 'lucide-react';
 ;
 interface Service {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import { motion } from 'framer-motion';
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
 import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
 import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   name: string;
   tagline: string;
@@ -101,18 +97,15 @@ import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   customers: number;
   rating: number;
 
   reviews: number;
 const ComprehensiveServicesShowcase2026: React.FC = () => {;
 
-=======
 import { 
   Search, Filter, Star, Users, TrendingUp, 
   Clock, Zap, Shield, Cloud, Brain, 
@@ -210,7 +203,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     'AR/VR & Immersive Technology',;
     'Robotics & Automation',;
     'Digital Twin & Simulation',  ];
-=======
     'allBusiness Intelligence & AnalyticsContent Creation & MarketingCustomer Service & SupportE-commerce & RetailHR & RecruitmentFinancial ManagementProject Management';
     'Education & TrainingHealthcare & MedicalCloud Infrastructure & DevOpsCybersecurity & Threat IntelligenceData Engineering & AnalyticsAPI Management & IntegrationNetwork Monitoring & ManagementDatabase Management & Optimization';
     'IT Service ManagementBackup & Disaster RecoveryQuantum Computing & AIBlockchain & Web3Internet of Things (IoT)Edge Computing & 5GAR/VR & Immersive TechnologyRobotics & Automation';
@@ -273,14 +265,12 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         const price = parseInt(service && service.price.replace('$', ''));
         switch (selectedPriceRange) {;
           case '0-100':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             return price <= 100;
           case '100-200':;
             return price > 100 && price <= 200;
           case '200-400':;
             return price > 200 && price <= 400;
           case '400-600':;
-=======
   const [search_term, setSearchTerm] = useState ('');
   const [selected_category, setSelectedCategory] = useState ('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState ('all');
@@ -349,7 +339,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           case '200 - 400':;
             return price > 200 && price <= 400;
           case '400 - 600':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             return price > 400 && price <= 600;
           case '600+':;
             return price > 600;
@@ -359,12 +348,10 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         }
       })();
 
-=======
         return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''));
       case 'price-high':
         return parseInt(b.price.replace('$', '')) - parseInt(a.price.replace('$', ''));
       case 'rating':
-=======
 ;
     return matches_search && matches_category && matches_price;  });
 ;
@@ -436,7 +423,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
               </span>;
             </h1>;
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
-=======
       default:;
         return 0;    }
   });
@@ -1112,14 +1098,12 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
         </div>
       </div>
 
                 className='bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300'>;
-=======
 
   /* CTA Button */ 
 }<a > Learn More & Get Started </Link> </div> </div> </motion.div>) ) 
@@ -1127,7 +1111,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
 };
 
 
-=======
                   </div>;
                   <div className='text - xs text - gray - 400'>Customers</div>;
                 </div>;
@@ -1225,8 +1208,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 href='tel:+13024640950';
                 className='bg - white / 10 text - white px - 8 py - 3 rounded - lg font - semibold border border - white / 30 hover:bg - white / 20 transition - all duration - 300';
               >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 Call Us;
               </a>            </div>;
           </div>;
@@ -1234,17 +1215,13 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       </div>;
 
 
-=======
   );
 },;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ComprehensiveServicesShowcase2026;
 
 
-=======
     </div>),
 }
 ;
@@ -1264,4 +1241,3 @@ export default ComprehensiveServicesShowcase2026;
 }
 export default ComprehensiveServicesShowcase2026;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

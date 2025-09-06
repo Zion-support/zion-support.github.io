@@ -26,10 +26,8 @@ import React, { useState } from 'react';
 
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 
-=======
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
@@ -40,10 +38,8 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
-=======
 import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function InnovativeServicesPage() {;
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -207,7 +203,6 @@ export default function InnovativeServicesPage() {;
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
-=======
 ;
   // Filter and sort services;
   let filtered_services = innovativeMicroSaasServices;
@@ -262,7 +257,6 @@ if ( {) {
   filtered_services.sort ((a, b) => {
     switch (sort_by) {
       case 'price':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         return a.price.monthly - b.price.monthly;
       case 'popularity':;
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
@@ -289,10 +283,7 @@ if ( {) {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   // Search filter;
   if (searchQuery) {;
@@ -358,7 +349,6 @@ if ( {) {
             </div>;
           </section>;
 
-=======
           <section className="px-4 sm:px-6 lg:px-8 mb-12">
             <div className="max-w-7xl mx-auto">
               <div className="bg-black/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
@@ -368,7 +358,6 @@ if ( {) {
                     <div className="relative">
                       <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       <input
                         type="text"
                         placeholder="Search innovative services..."
@@ -377,7 +366,6 @@ if ( {) {
 
                   {/* Category Filter */}
 
-=======
                   <div className="flex-shrink-0">
                     <select
                       value={selectedCategory}
@@ -387,7 +375,6 @@ if ( {) {
                       <option value="All">All Categories</option>
                       {categories.map((category) => (
                         <option key={category.name} value={category.name}>
-=======
                       onChange={e => setSelectedCategory(e.target.value)}
                       className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                     >
@@ -399,45 +386,32 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {category.name} ({category.count})
                         </option>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
 
                     </select>;
                   </div>;
-=======
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {/* Price Range Filter */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {range.label}
                         </option>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
 
                     </select>;
                   </div>;
-=======
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {/* Sort Options */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {option.value}
                         </option>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
 
                     </select>;
@@ -447,13 +421,10 @@ if ( {) {
                   {/* View Mode Toggle */}
                   <div className='flex-shrink-0'>;
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>;
-=======
 
                   {/* View Mode Toggle */}
                   <div className="flex-shrink-0">
                     <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
 
                   {/* View Mode Toggle */}
@@ -461,8 +432,6 @@ if ( {) {
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <button
                         onClick={() => setViewMode('grid')}
                         className={`px-3 py-2 rounded-lg transition-all ${;
@@ -478,17 +447,14 @@ if ( {) {
                         onClick={() => setViewMode('list')}
                         className={`px-3 py-2 rounded-lg transition-all ${
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-=======
                       >;
                         <List className="w-5 h-5" />;
-=======
           {/* Filters and Search */}
           <section className='px - 4 sm:px - 6 lg:px - 8 mb - 12'>;
             <div className='max - w-7xl mx - auto'>;
@@ -603,7 +569,6 @@ if ( {) {
                         }`}
                       >;
                         <List className="w - 5 h - 5" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     </div>;
                   </div>;
                 </div>;
@@ -617,7 +582,6 @@ if ( {) {
 
 
 
-=======
                         <div className='flex items-start justify-between mb-4'>
                           <div className='flex items-center space-x-3'>
                             <div className='text-3xl'>{service.icon}</div>
@@ -641,7 +605,6 @@ if ( {) {
                         </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {/* Tagline */}
                         <p className='text-gray-300 mb-4 font-medium'>
                           {service.tagline}
@@ -649,14 +612,11 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         {/* Description */}
                         <p className='text-gray-400 text-sm mb-6 leading-relaxed'>;
                           {service && service.description}
                         </p>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         {/* Innovation Level */}
                         <div className='mb-4'>;
                           <div className='flex items-center space-x-2 mb-2'>;
@@ -681,7 +641,6 @@ if ( {) {
                           </div>
 
                         </div>
-=======
                         <p className="text-gray-400 text-sm mb-6 leading-relaxed">{service && service.description}</p>;
 
                         {/* Innovation Level */}
@@ -724,10 +683,8 @@ if ( {) {
                             <div className="text-xs text-gray-400">average ROI</div>;
                         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         {/* Key Features */}
 
-=======
                         <div className="mb-6">
                           <h4 className="text-sm font-semibold text-white mb-3">Key Features</h4>
                           <div className="space-y-2">
@@ -740,14 +697,12 @@ if ( {) {
                             {service.features.length > 3 && (
                               <div className="text-xs text-cyan-400 text-center pt-2">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             )}
 
                         <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <div>
                             <div className='text-gray-400'>Market Size</div>
                             <div className='text-white font-medium'>
@@ -762,10 +717,8 @@ if ( {) {
                         </div>
                         {/* CTA Buttons */}
                         <div className='flex space-x-3'>                          <div>
-=======
                         <div className="grid grid-cols-2 gap-4 mb-6 text-xs">
                           <div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                             <div className="text-gray-400">Market Size</div>
                             <div className="text-white font-medium">{service.marketSize}</div>
                           </div>
@@ -774,7 +727,6 @@ if ( {) {
                             <div className="text-white font-medium">{service.growthRate}</div>
                           </div>
                         </div>
-=======
                           </div>;
                         </div>;
 
@@ -803,12 +755,10 @@ if ( {) {
                         {/* Contact Info */}                          <Button
                             href={service && service.link}
 
-=======
                         <div className="flex space-x-3">
                           <Button
                             href={service.link}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             variant="primary"
                             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">;
                             Learn More;
@@ -831,7 +781,6 @@ if ( {) {
                       </div>;
                     </QuantumHolographicCard>;
 
-=======
 
                         {/* Contact Info */}
                         <div className="mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center">
@@ -841,7 +790,6 @@ if ( {) {
                       </div>
                     </QuantumHolographicCard>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
                 </div>;
               )}
@@ -850,14 +798,12 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Call to Action */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Ready to Lead the Future?
                 </h2>
                 <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -866,7 +812,6 @@ if ( {) {
                   and cutting-edge technology.
                 </p>
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-=======
             </div>;
           </section>;
 
@@ -883,7 +828,6 @@ if ( {) {
                   and cutting-edge technology.;
                 </p>;
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Button
                     href={`tel:${contactInfo && contactInfo.mobile}`}
                     variant='primary'
@@ -906,14 +850,12 @@ if ( {) {
                   Transform your business with quantum AI, autonomous systems, and cutting-edge technology.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
                 </h2>;
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
                   Join the revolution with our breakthrough micro SAAS services. ;
                   Transform your business with quantum AI, autonomous systems, and cutting-edge technology.;
                 </p>;
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Button
                     href={`tel:${contactInfo && contactInfo.mobile}`}
                     variant="primary"
@@ -921,7 +863,6 @@ if ( {) {
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-=======
 
                     className='px-8 py-4 text-lg'
 
@@ -934,7 +875,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </EnhancedFuturisticCard>
             </div>
@@ -958,7 +898,6 @@ if ( {) {
                 <div className="mt-8 text-sm text-gray-400">;
                   <div>Address: {contactInfo && contactInfo.address}</div>;
                   <div className="mt-1">Website: {contactInfo && contactInfo.website}</div>;
-=======
                         <p className='text - gray - 300 mb - 4 font - medium'>;
                           {service.tagline}
                         </p>;
@@ -1185,12 +1124,8 @@ if ( {) {
   );
 }
 
-=======
 
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

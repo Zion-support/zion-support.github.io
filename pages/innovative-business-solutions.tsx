@@ -100,11 +100,9 @@ const contactInfo = {;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
 };
-=======
 ];
 
 const testimonials = [
-=======
 import Head from 'next / head';
 import Link from 'next / link';
 import {motion} from 'framer-motion';
@@ -112,7 +110,6 @@ import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shiel
 import Layout from '../components / layout / Layout';
 import { innovativeBusinessSolutions2025 } from '../data / 2025 - innovative - business - solutions';
 const contact_info = {
-=======
 
 
 const contactInfo = {
@@ -229,7 +226,6 @@ export default function InnovativeBusinessSolutions() {
 
       {/* Hero Section */}
 
-=======
 
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -259,7 +255,6 @@ export default function InnovativeBusinessSolutions() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
 
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6">
@@ -267,7 +262,6 @@ export default function InnovativeBusinessSolutions() {
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your business operations with AI-powered intelligence, automation, and analytics that drive growth and efficiency
-=======
 
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your business operations with AI-powered intelligence, automation, and analytics that drive growth and efficiency
@@ -276,7 +270,6 @@ export default function InnovativeBusinessSolutions() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {heroStats.map((stat, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <motion.div
 
 
@@ -292,7 +285,6 @@ export default function InnovativeBusinessSolutions() {
                 <motion&& motion.div
 
 
-=======
     content:;
       'Their sales intelligence platform has increased our sales productivity by 200%. The AI - powered lead scoring and forecasting are game - changers.',
     rating: 5,
@@ -350,7 +342,6 @@ function InnovativeBusinessSolutions() {
             </p>;
             <div className='flex flex - wrap justify - center gap - 4 mb - 12'>              {hero_stats.map ((stat, index) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={index}
                   initial={{ opacity: 0, scale: 0 && 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -371,7 +362,6 @@ function InnovativeBusinessSolutions() {
               <Link href={`tel:${contactInfo.mobile}`} className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300">
                 <Phone className="mr-2 w-5 h-5" />
                 Get Started
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </Link>
             </div>
           </motion.div>
@@ -393,14 +383,11 @@ function InnovativeBusinessSolutions() {
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
-=======
 
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -431,7 +418,6 @@ function InnovativeBusinessSolutions() {
               <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -453,7 +439,6 @@ function InnovativeBusinessSolutions() {
                 </div>
               </motion.div>
 
-=======
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -465,12 +450,10 @@ function InnovativeBusinessSolutions() {
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-black">
@@ -510,7 +493,6 @@ function InnovativeBusinessSolutions() {
               <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -577,9 +559,7 @@ function InnovativeBusinessSolutions() {
                       </div>;
                     </motion && motion.div>;
 
-=======
                 className="relative"
-=======
               <motion.div
                 key={categoryIndex  } catch (error) {
     console.error("Error:", error);
@@ -609,7 +589,6 @@ function InnovativeBusinessSolutions() {
                 className="relative"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -651,7 +630,6 @@ function InnovativeBusinessSolutions() {
                       className="relative group"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -691,7 +669,6 @@ function InnovativeBusinessSolutions() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
@@ -712,7 +689,6 @@ function InnovativeBusinessSolutions() {
                       </div>
                     </motion.div>
 
-=======
 
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -731,12 +707,10 @@ function InnovativeBusinessSolutions() {
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Testimonials Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
 
       {/* Testimonials Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
@@ -776,7 +750,6 @@ function InnovativeBusinessSolutions() {
               <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -857,7 +830,6 @@ function InnovativeBusinessSolutions() {
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -867,7 +839,6 @@ function InnovativeBusinessSolutions() {
               <p className="text-gray-300 mb-2">📍 {contactInfo.address}</p>
               <p className="text-gray-300">🌐 {contactInfo.website}</p>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </motion.div>
         </div>
       </section>
@@ -931,11 +902,8 @@ function InnovativeBusinessSolutions() {
 }> <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link > <Mail className="mr-2 w-5 h-5" /> Email Us </Link> </div> </div> </motion && motion.div> </div> </section> </Layout>) ;
 
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                       className='relative group';
                     >;
                       <div className={`${service.color} p - 1 rounded - xl`}>;
@@ -1116,9 +1084,5 @@ function InnovativeBusinessSolutions() {
   {
   once: true;
 }> <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI - powered solutions </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <Link > <Mail className="mr - 2 w - 5 h - 5" /> Email Us </Link> </div> </div> </motion.div> </div> </section> </Layout>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

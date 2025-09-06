@@ -26,7 +26,6 @@ export function useJobDetails(jobId: string | undefined) {;
     } catch (err) {
       console && console.error('Error loading job details:', err);
       setError(err && err.message)
-=======
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 export /**
@@ -65,7 +64,6 @@ if (throw error) {
     } catch (err) {
       console.error ('Error loading job details:', err);
       set_error (err.message);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
@@ -88,7 +86,6 @@ if (throw error) {
 
 
 
-=======
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 export function useJobDetails(jobId: string | undefined) {;
@@ -136,9 +133,6 @@ export function useJobDetails(jobId: string | undefined) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default useJobDetails;
-=======
 export default useJobDetails;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

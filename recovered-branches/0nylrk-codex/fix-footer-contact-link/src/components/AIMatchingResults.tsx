@@ -42,7 +42,6 @@ interface AIMatchingResultsProps {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Group matches by category
   const categories = {
     all: matches
@@ -51,7 +50,6 @@ interface AIMatchingResultsProps {
     equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
 
 
-=======
 
   },
   
@@ -134,7 +132,6 @@ export function AIMatchingResults({;
   };
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="space-y-4">;
         <Skeleton className="h-10 w-full" />;
@@ -166,7 +163,6 @@ export function AIMatchingResults({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
         </CardContent>;
       </Card>;
@@ -196,7 +192,6 @@ export function AIMatchingResults({;
         </TabsList>
         {Object.entries(categories).map(([tab, items]) => (
           <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
-=======
 import { useState } from './react';
 import { MatchResultItem } from '@/lib / ai - matchmaking';
 import { Card, CardContent } from '@/components / ui / card';
@@ -292,7 +287,6 @@ if ( {) {
         </TabsList>;
         {Object.entries (categories).map (([tab, items]) => (
           <TabsContent key={tab} value={tab} className="mt - 4 space - y-3">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {items.length > 0 ? (
               items.map ((match) => {
                 const CategoryIcon = getCategoryIcon (match.category);
@@ -375,7 +369,6 @@ if ( {) {
                                   {skill}
                                 </Badge>;
                               ))}
-=======
                   <Card;
                     key={match.id}
                     className="bg - zion - blue - dark border - zion - blue - light overflow - hidden transition - all hover:border - zion - purple / 50 cursor - pointer";
@@ -418,7 +411,6 @@ if ( {) {
                                 <Badge key={i} variant="outline" className="text - xs bg - zion - blue - dark text - white border - zion - blue - light">;
                                   {skill}
                                 </Badge>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             </div>;
                           </div>;
                         </div>;

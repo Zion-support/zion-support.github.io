@@ -45,13 +45,11 @@ export default function ParticipantTile(): any ({;
 type Props = {;
   participant: RemoteParticipant | LocalParticipant,;
 
-=======
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
 
 type Props = {
   participant: RemoteParticipant | LocalParticipant,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   isLocal?: boolean;
   displayName?: string;
 };
@@ -67,7 +65,6 @@ type Props = {
         track && track.detach(videoRef && videoRef.current);
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.detach(audioRef && audioRef.current);      }        track && track.attach(videoRef && videoRef.current);
@@ -89,7 +86,6 @@ type Props = {
     participant.tracks.forEach(pub => {
       const track = pub.track;
       if (track) handleTrackSubscribed(pub, track)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     });
     participant.on('trackSubscribed', handleTrackSubscribed);
     participant.on('trackUnsubscribed', handleTrackUnsubscribed);
@@ -131,12 +127,10 @@ type Props = {
 
           (isLocal ? 'You' : 'Participant')}
 
-=======
       participant.off('trackUnsubscribed', handleTrackUnsubscribed)
     }
   }, [participant]);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
 
@@ -150,7 +144,6 @@ type Props = {
   );
 }
 
-=======
   RemoteParticipant,
   LocalParticipant,
   TrackPublication,
@@ -277,12 +270,8 @@ if ( {) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
       </div>
     </div>
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

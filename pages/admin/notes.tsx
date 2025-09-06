@@ -10,7 +10,6 @@
       try {
 
 
-=======
   id: string,
   target_type: string,
   target_id: string,
@@ -39,14 +38,12 @@ if (return, ) {
 }
         const data = await res.json (),
         set_notes (data.notes || []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
         set_loading (false);
       }
     }
 
 
-=======
 
 type Note = {
   id: string;
@@ -84,7 +81,6 @@ export default function AdminNotesConsole(req, res) {
     if (isAdmin) load()
   }, [isAdmin]),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -107,10 +103,8 @@ export default function AdminNotesConsole(req, res) {
               <div>{n.text}</div>
             </div>
 
-=======
 }
 
-=======
     if (load ()) {
   $2
 }
@@ -137,9 +131,5 @@ export default function AdminNotesConsole(req, res) {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

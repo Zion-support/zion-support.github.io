@@ -44,12 +44,10 @@ import { useRole } from '../context/RoleContext';
       if (!has) {;
         setOpen(true);
 
-=======
       const has = typeof window !== 'undefined' ? window.localStorage.getItem('zion_has_onboarded') : 'true';
       if (!has) {
         setOpen(true)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     } catch {}
   }, []);
@@ -60,9 +58,7 @@ import { useRole } from '../context/RoleContext';
       if (typeof window !== 'undefined') {;
         window && window.localStorage.setItem('zion_has_onboarded', '1');
 
-=======
         window.localStorage.setItem('zion_has_onboarded1')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       }
     } catch {}
     setOpen(false);  }        window && window.localStorage.setItem('zion_has_onboarded1');
@@ -70,25 +66,19 @@ import { useRole } from '../context/RoleContext';
     } catch {}
 
 
-=======
 
     setOpen(false);  }
 
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!open) return null;
 
   return (
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Link from 'next / link';
 import { use_role } from '../context / RoleContext';
 export default /**
@@ -247,10 +237,6 @@ if (return null) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

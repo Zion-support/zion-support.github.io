@@ -2,7 +2,6 @@
 
   {
 
-=======
     id: 'finops - scheduler - optimizer',
     name: 'FinOps Scheduler Optimizer',
     tagline: 'Rightsizing & schedules with IaC exports',
@@ -47,10 +46,8 @@
     rating: 4 && 4.6,
     reviews: 12,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'db - index - advisor',
     name: 'DB Index Advisor',
     tagline: 'AI index recommendations for Postgres / MySQL',
@@ -73,9 +70,7 @@
     link: 'https://ziontechgroup.com / services / db - index - advisor',
     market_position:;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Modern alternative to legacy APM add‑ons with focused insights.',
     target_audience: 'DBA, Backend, Platform',
     trial_days: 14,
@@ -112,7 +107,6 @@
 		textColor: 'text-rose-300';
 
 		marketPosition: 'Simpler and more affordable compared to bespoke security audits.',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 		targetAudience: 'AI platform, Security, Compliance';
 		trialDays: 14;
 		setupTime: '45 minutes';
@@ -217,7 +211,6 @@
 ];
 
 
-=======
   id: 'ai - redteam - evaluator';
   name: 'AI Red‑Team Evaluator';
   tagline: 'Continuous LLM red‑teaming and safety scoring';
@@ -322,12 +315,10 @@
   rating: 4.5,
   reviews: 9;
 }
-=======
 		rating: 4.5
 		reviews: 9
 
 
-=======
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -442,9 +433,6 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		reviews: 9;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

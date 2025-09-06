@@ -6,7 +6,6 @@ import {Card, CardContent, CardHeader, CardTitle, CardFooter} from "@/components
 import {Textarea} from "@/components/ui/textarea";
 import {Check, Pencil} from "lucide-react";
 
-=======
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -17,8 +16,6 @@ import { Check, Pencil } from "lucide-react",
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface GeneratedDescriptionDisplayProps {
   description: string;
   onSave: (editedDescription: string) => void
@@ -38,13 +35,11 @@ export function GeneratedDescriptionDisplay(): any ({ ;
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
-=======
 
 export function GeneratedDescriptionDisplay({ 
   description, 
   onSave 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   const handleSave = () => {;
     onSave(editedDescription);
@@ -65,7 +60,6 @@ export function GeneratedDescriptionDisplay({
             variant="outline"
             size="sm"
 
-=======
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white"
           >
@@ -116,7 +110,6 @@ export function GeneratedDescriptionDisplay({;
           <Button
             variant="outline" 
             size="sm" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white";
           >;
@@ -133,9 +126,7 @@ export function GeneratedDescriptionDisplay({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
-=======
 import React, { useState } from './react';
 import { use_toast  } from '@/hooks / use - toast';
 import { Button  } from '@/components / ui / button';
@@ -189,7 +180,6 @@ function GeneratedDescriptionDisplay() {
                 <Pencil className="h - 4 w - 4 mr - 1" />;
                 Edit;
               </>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </Button>;
         </CardTitle>;
       </CardHeader>;
@@ -211,7 +201,6 @@ function GeneratedDescriptionDisplay() {
   );
 }
 
-=======
         {is_editing ? (
           <Textarea;
             value={edited_description}
@@ -233,4 +222,3 @@ function GeneratedDescriptionDisplay() {
         </CardFooter>)}
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -7,7 +7,6 @@ import {v4, as, uuidv4} from 'uuid';
 function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
@@ -18,7 +17,6 @@ function grantPath(id: string) {
 
   if (!fs && fs.existsSync(p)) return null;
   return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication;
-=======
 
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
@@ -30,7 +28,6 @@ function writeGrant(record: GrantApplication) {
   fs && fs.writeFileSync(
     grantPath(record && record.id),
     JSON && JSON.stringify(record, null, 2),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     'utf8'
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -160,9 +157,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).json({ record: g })
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   // Check condition
 if ( {) {
   $2
@@ -220,10 +214,6 @@ if ( {) {
   write_grant (g);
   res.status (200).json ({ record: g });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

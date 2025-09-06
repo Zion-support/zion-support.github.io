@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface MobileFilterDrawerProps {
 
   isMobileFilterOpen: boolean
@@ -34,7 +33,6 @@ interface MobileFilterDrawerProps {
     </Drawer>
   )
 }
-=======
 import React from "react";
 import {Drawer} from "@/components/ui/drawer";
 import {FilterSidebar} from "@/components/talent/FilterSidebar";
@@ -60,8 +58,6 @@ export function MobileFilterDrawer(): any ({ ;
     </Drawer>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Drawer } from '@/components / ui / drawer';
 import { FilterSidebar } from '@/components / talent / FilterSidebar';
@@ -84,4 +80,3 @@ function MobileFilterDrawer() {
       </div>;
     </Drawer>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

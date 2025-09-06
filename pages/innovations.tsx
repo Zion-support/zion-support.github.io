@@ -6,7 +6,6 @@ import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFoo
 import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029';
 const contactInfo = {
 
-=======
 
 import React from 'react',;
 import Head from 'next/head',;
@@ -14,7 +13,6 @@ import { motion } from 'framer-motion',;
 import { 
   Brain, Rocket, Target, Cpu, Globe, Eye, 
 
-=======
 import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
@@ -32,14 +30,12 @@ import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFoo
 import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029',;
 
 const contactInfo = {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function InnovationsPage() {
   return (
     <UltraFuturisticBackground2029>
@@ -59,7 +55,6 @@ export default function InnovationsPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <meta property="og:title" content="2029 Innovations - Zion Tech Group" />
           <meta property="og:description" content="Discover our groundbreaking 2029 innovations in AI consciousness, quantum computing, space technology, and enterprise solutions." />
           <meta property="og:type" content="website" />
@@ -74,7 +69,6 @@ export default function InnovationsPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="2029 Innovations - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our groundbreaking 2029 innovations in AI consciousness, quantum computing, space technology, and enterprise solutions." />
@@ -95,13 +89,11 @@ export default function InnovationsPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <motion.div
 
-=======
 import React from 'react',
 import Head from 'next / head',
 import { motion } from 'framer-motion',
@@ -176,7 +168,6 @@ function InnovationsPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="mb-8"
               >
                 <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-6">
@@ -190,7 +181,6 @@ function InnovationsPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-=======
               <motion.h1
 
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
@@ -209,8 +199,6 @@ function InnovationsPage() {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="text-5xl md:text-7xl font-bold mb-8"
               >
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -231,11 +219,9 @@ function InnovationsPage() {
                 className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
               >
                 Experience the future today with our revolutionary innovations in AI consciousness
-=======
               <motion.p
 
 
-=======
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -253,12 +239,9 @@ function InnovationsPage() {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
               >
                 Experience the future today with our revolutionary innovations in AI consciousness,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 quantum computing, space technology, and enterprise solutions that are reshaping
                 industries and unlocking unprecedented possibilities.
               </motion.p>
@@ -282,7 +265,6 @@ function InnovationsPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center"
               >
                 <a
@@ -302,7 +284,6 @@ function InnovationsPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105 text-lg"
                 >
                   <Mail className="w-5 h-5 mr-2" />
@@ -313,7 +294,6 @@ function InnovationsPage() {
           </div>
         </section>
 
-=======
                 className="mb - 8";
               >;
                 <div className="inline - flex items - center justify - center w - 24 h - 24 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - full mb - 6">;
@@ -409,7 +389,6 @@ function InnovationsPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -442,7 +421,6 @@ function InnovationsPage() {
                   title: 'AI Consciousness'
                   description: 'Revolutionary AI consciousness development and emotional intelligence platforms'
                   color: 'from-violet-600 via-purple-600 to-indigo-600'
-=======
 
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
@@ -521,7 +499,6 @@ function InnovationsPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="group"
                 >
                   <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500 h-full hover:transform hover:scale-105 backdrop-blur-sm`}>
@@ -546,11 +523,9 @@ function InnovationsPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </p>
                     </div>
                     
-=======
                   className="group";
                 >;
                   <div className={`p - 8 rounded - 2xl bg - gradient - to - br ${category.color} bg - opacity - 10 border border - cyan - 500 / 20 hover:border - cyan - 500 / 40 transition - all duration - 500 h - full hover:transform hover:scale - 105 backdrop - blur - sm`}>;
@@ -564,7 +539,6 @@ function InnovationsPage() {
                       <p className="text - gray - 300 mb - 6 leading - relaxed">;
                         {category.description}
 
-=======
                       </p>;
                     </div>;
                     <div className="space - y-3">;
@@ -573,7 +547,6 @@ function InnovationsPage() {
                           <div className="w - 2 h - 2 bg - cyan - 400 rounded - full"></div>;
                           {feature}
                         </div>))}
-=======
 
                           {feature  } catch (error) {
     console.error("Error:", error);
@@ -632,7 +605,6 @@ function InnovationsPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -648,7 +620,6 @@ function InnovationsPage() {
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-=======
               className="text - center mb - 16";
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
@@ -661,7 +632,6 @@ function InnovationsPage() {
             </motion.div>;
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
               {[;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {
 
                   icon: TrendingUp,
@@ -726,7 +696,6 @@ function InnovationsPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="text-center p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500"
                 >
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-6">
@@ -749,8 +718,6 @@ function InnovationsPage() {
 
                     {item.stats}
 
-=======
-=======
 
                     {item.title  } catch (error) {
     console.error("Error:", error);
@@ -808,7 +775,6 @@ function InnovationsPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center"
             >
               <div className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl p-12 backdrop-blur-sm">
@@ -833,7 +799,6 @@ function InnovationsPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 text-lg"
                   >
                     <Mail className="w-5 h-5 mr-2" />
@@ -843,7 +808,6 @@ function InnovationsPage() {
                   </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div className="flex items-center space-x-6 text-gray-300">
                     <div className="flex items-center space-x-2">
                       <Phone className="w-5 h-5 text-cyan-400" />
@@ -864,7 +828,6 @@ function InnovationsPage() {
   );
 };
 
-=======
         {/* Enhanced Footer */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -872,10 +835,8 @@ function InnovationsPage() {
 
 }
 
-=======
 }
 
-=======
               className="text - center";
             >;
               <div className="bg - gradient - to - r from - gray - 900 / 80 to - gray - 800 / 80 border border - gray - 700 / 50 rounded - 2xl p - 12 backdrop - blur - sm">;
@@ -923,4 +884,3 @@ function InnovationsPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

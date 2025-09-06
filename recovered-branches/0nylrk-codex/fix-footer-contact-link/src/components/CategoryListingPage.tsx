@@ -21,7 +21,6 @@ interface Listing {;
   description: string,;
   category: string,;
 
-=======
 import { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -32,9 +31,7 @@ import { Input } from '@/components / ui / input';
 import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components / ui / select';
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
 // Example listing type;
-=======
 // Example listing type
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface Listing {
   id: string,
   title: string,
@@ -42,7 +39,6 @@ interface Listing {
   category: string,
 
 
-=======
   subcategory?: string,
   image?: string,
   tags?: string[],
@@ -127,7 +123,6 @@ interface CategoryListingPageProps {;
                       {option && option.label}
                     </SelectItem>;
                   ))}
-=======
   created_at: string;
 }
 interface CategoryListingPageProps {
@@ -253,13 +248,11 @@ if (return matches_search) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Listings Grid */}
           {processedListings.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {processedListings.map((listing) => (
                 <ListingScoreCard
-=======
           {/* Results Count */}
           <div className="mb - 6">;
             <p className="text - zion - slate - light">;
@@ -272,7 +265,6 @@ if (return matches_search) {
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
               {processed_listings.map ((listing) => (
                 <ListingScoreCard;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={listing.id}
                   title={listing.title}
                   description={listing.description}
@@ -305,7 +297,6 @@ if (return matches_search) {
                   reviewCount={listing && listing.reviewCount}
                 />;
               ))}
-=======
 
                   setSearchQuery(""),
 
@@ -328,7 +319,6 @@ if (return matches_search) {
                 onClick={() => {;
                   setSearchQuery("");
                   setSelectedFilter(filterOptions[0].value);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }}
 
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
@@ -338,14 +328,12 @@ if (return matches_search) {
             </div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
         </div>;
       </div>;
       <Footer />;
     </>;
   );
-=======
                   review_count={listing.review_count}
                 />))}
             </div>) : (
@@ -367,5 +355,4 @@ if (return matches_search) {
       </div>;
       <Footer />;
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

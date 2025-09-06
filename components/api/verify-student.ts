@@ -20,14 +20,12 @@ const TALENTS_FILE = path.join(
   'data'
   'talents'
   'talents.json'
-=======
 
 const TALENTS_FILE = path && path.join(
   process && process.cwd(),
   'data',
   'talents',
   'talents && talents.json'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 );
 export default async function handler(
   req: NextApiRequest
@@ -94,7 +92,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -103,7 +100,6 @@ import { authenticateRequest, enforceRateLimit, recordRequest } from "../../util
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -204,17 +200,13 @@ await record_request (req, res, auth.partner, auth.api_key, started, 400);
   return res.status (200).json ({ verified });  return res.status (200).json ({ verified });
 }
 
-=======
 
 }
 }
 }
 
-=======
   const { email, programTrack } = req.body || {};
   if (!email) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

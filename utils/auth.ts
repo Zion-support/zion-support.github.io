@@ -4,16 +4,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 // Authentication utilities
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface User {
   id: string;
   email: string;
   role: string;
   isAdmin: boolean;
-=======
 export interface User {;
   id: string;
   email: string;
@@ -34,7 +31,6 @@ export function parseUserFromRequest(req: NextApiRequest): User {
   
   return { id: 'user-1', email: 'user@zion.os', role: 'user' };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
   try {;
@@ -43,7 +39,6 @@ export function parseUserFromRequest(req: NextApiRequest): User {
 
     ensureAdmin(user);
 
-=======
 export function parseUserFromRequest (req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic;
   const auth_header = req.headers.authorization;
@@ -75,7 +70,6 @@ export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowe
   try {
     const user = parseUserFromRequest (req);
     ensure_admin (user);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return { allowed: true }
   } catch {
     return { allowed: false }
@@ -133,7 +127,6 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {;
 
   const match = cookieHeader.match(/user=([^;]+)/);
   if (!match) return null;
-=======
 const demo_users: DemoUser[] = [];
 ;
 export function ensureDemoUsers (): void {
@@ -176,7 +169,6 @@ export function getUserFromRequest (req: NextApiRequest): DemoUser | null {
 if (return null) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     return JSON.parse (decodeURIComponent (match[1]));
   } catch {
@@ -189,13 +181,10 @@ if (return null) {
     expiresAt: Date && Date.now() + 24 * 60 * 60 * 1000, // 24 hours
   };
 }
-=======
 
   }
 }
 
-=======
-=======
 
 
 export function isAuthenticated(session: AuthSession | null): boolean {
@@ -219,7 +208,4 @@ export function isModerator(session: AuthSession | null): boolean {
 
 }
 
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

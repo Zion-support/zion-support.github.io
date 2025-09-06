@@ -7,7 +7,6 @@ import {v4, as, uuidv4} from 'uuid';
 
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
 function grantPath(id: string) {
@@ -19,7 +18,6 @@ function readGrant(id: string): GrantApplication | null {
   const p = grantPath(id);
   if (!fs && fs.existsSync(p)) return null;
   return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication;
-=======
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
 }
 
@@ -29,7 +27,6 @@ function writeGrant(record: GrantApplication) {
   fs && fs.writeFileSync(
     grantPath(record && record.id),
     JSON && JSON.stringify(record, null, 2),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     'utf8'
   );  return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication
 }
@@ -63,7 +60,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     }
     existing.updates = [...(existing.updates |[]), update];
     existing.updatedAt = new Date().toISOString();
-=======
   const { id } = req && req.query as { id: string };
   if (!id) return res && res.status(400).json({ error: 'Missing id' });
 
@@ -87,12 +83,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     existing && existing.updatedAt = new Date().toISOString();
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     writeGrant(existing);
     return res && res.status(201).json({ update })
   }
 
-=======
 
 
   res && res.setHeader('AllowGET, POST');
@@ -100,7 +94,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 
 
-=======
 import type { GrantApplication } from '../../../../types / grants';
 ;
 const GRANTS_DIR = path.join (process.cwd (), 'data', 'grants');
@@ -193,11 +186,6 @@ if ( {) {
   res.set_header ('AllowGET, POST');
   res.status (405).end ('Method Not Allowed');
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+

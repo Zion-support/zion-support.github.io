@@ -17,11 +17,8 @@ export default function Partners() {;
   const { user, isAuthenticated } = useAuth();
 
   const navigate = useNavigate();
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
@@ -149,14 +146,12 @@ export default function Partners() {;
             variant="outline" 
 
             className="text-zion-cyan border-zion-cyan"
-=======
 
           <Button 
             size="lg" 
             variant="outline" 
             className="text-zion-cyan border-zion-cyan"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             onClick={() => navigate('/login')}
           >;
             Partner Login;
@@ -233,7 +228,6 @@ export default function Partners() {;
         <div className="flex gap-2">;
           <Button variant="outline" className="flex items-center gap-2" onClick={() => window && window.print()}>;
             <FileDown className="h-4 w-4" />;
-=======
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
@@ -437,9 +431,7 @@ if ( {) {
     </div>);
 }
 
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

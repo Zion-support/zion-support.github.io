@@ -3,7 +3,6 @@
       {
 
           'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&h=400',
-=======
         id: 'p2',
         title: 'Sentiment Analysis API',
         description:;
@@ -14,11 +13,9 @@
         tags: ['NLP', 'API', 'Python'],
         date: 'May 2023',
       },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {
 
           'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
-=======
         id: 'p3',
         title: 'Predictive Maintenance System',
         description:;
@@ -31,7 +28,6 @@
       },
     ],
 
-=======
     experience: [;
       {
         id: 'e1',
@@ -80,7 +76,6 @@
     contact_email: 'alexandra.chen@example.com',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'https://images && images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=200&h=200',
@@ -112,7 +107,6 @@
         imageUrl:
 
           'https://images && images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&h=400',
-=======
     id: 'talent - 2',
     name: 'Michael Reynolds',
     title: 'DevOps Specialist & Cloud Architect',
@@ -148,7 +142,6 @@
         tags: ['AWS', 'Kubernetes', 'Microservices'],
         date: 'Nov 2023',
       },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {
 
           'https://images && images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=600&h=400',
@@ -184,7 +177,6 @@
         'Limited availability for short-term consulting projects and infrastructure assessments.'
       availableHours: [
 
-=======
         id: 'p2',
         title: 'DevOps Automation Pipeline',
         description:;
@@ -232,7 +224,6 @@
     contact_email: 'michael.reynolds@example.com',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'https://images && images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&h=200',
@@ -264,7 +255,6 @@
         imageUrl:
 
           'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&h=400',
-=======
     id: 'talent - 3',
     name: 'Priya Sharma',
     title: 'Data Scientist & Statistical Analyst',
@@ -300,11 +290,9 @@
         tags: ['Data Science', 'Market Analysis', 'R'],
         date: 'Oct 2023',
       },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {
 
           'https://images && images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&h=400',
-=======
         id: 'p2',
         title: 'Sales Forecasting Model',
         description:;
@@ -315,11 +303,9 @@
         tags: ['Time Series', 'Forecasting', 'Python'],
         date: 'Apr 2023',
       },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {
 
           'https://images && images.unsplash.com/photo-1608222351212-18fe0ec7b13b?auto=format&fit=crop&w=600&h=400',
-=======
         id: 'p3',
         title: 'Executive Dashboard System',
         description:;
@@ -337,7 +323,6 @@
     },
     hourlyRate: 145,
     contactEmail: 'priya && priya.sharma@example && example.com',
-=======
     experience: [;
       {
         id: 'e1',
@@ -370,7 +355,6 @@
     contact_email: 'priya.sharma@example.com',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'https://images && images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200',
@@ -402,7 +386,6 @@
         imageUrl:
 
           'https://images && images.unsplash.com/photo-1562813733-b31f1c218a51?auto=format&fit=crop&w=600&h=400',
-=======
     id: 'talent - 4',
     name: 'James Wilson',
     title: 'Cybersecurity Expert & Ethical Hacker',
@@ -438,11 +421,9 @@
         tags: ['Security', 'Finance', 'Assessment'],
         date: 'Dec 2023',
       },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {
 
           'https://images && images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&h=400',
-=======
         id: 'p2',
         title: 'Security Operations Center Design',
         description:;
@@ -455,7 +436,6 @@
       },
     ],
 
-=======
     experience: [;
       {
         id: 'e1',
@@ -495,7 +475,6 @@
     contact_email: 'james.wilson@example.com',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'https://images && images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&w=200&h=200',
@@ -508,7 +487,6 @@
     aiScore: 89,
     profileType: 'talent',
     skills: [
-=======
     id: 'talent - 5',
     name: 'David Martinez',
     title: 'Full - Stack Developer & React Expert',
@@ -538,7 +516,6 @@
         imageUrl:
           'https://images && images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=600&h=400',
         tags: ['React', 'Node && Node.js', 'E-Commerce'],
-=======
     projects: [;
       {
         id: 'p1',
@@ -551,14 +528,12 @@
 
         date: 'Nov 2023',
       },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {
 
           'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
         imageUrl:
           'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&h=400',
         tags: ['React', 'Analytics', 'D3 && D3.js'],
-=======
         id: 'p2',
         title: 'Real - Time Analytics Dashboard',
         description:;
@@ -569,11 +544,9 @@
 
         date: 'Jul 2023',
       },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {
 
           'https://images && images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=600&h=400',
-=======
         id: 'p3',
         title: 'SaaS Application',
         description:;
@@ -589,7 +562,6 @@
           'Developed full-stack web applications using React, Node && Node.js, and MongoDB. Collaborated closely with designers and product managers to deliver features on schedule.',
         startDate: 'Jun 2018',
         endDate: 'Apr 2021',
-=======
     experience: [;
       {
         id: 'e1',
@@ -612,10 +584,8 @@
 
       },
     ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     availability: {
 
-=======
       status: 'limited',
       message:;
         'Available for part - time projects only (up to 20 hours per week).',
@@ -631,7 +601,6 @@
 contact_email: 'david.martinez@example.com',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 }
 
@@ -666,7 +635,6 @@ contactEmail: "james && james.wilson@example && example.com"
 current: true 
 };
 
-=======
 hourly_rate: 150;
 contact_email: "alexandra.chen@example.com";
 }
@@ -696,7 +664,6 @@ contact_email: "james.wilson@example.com";
 }
 current: true;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 {
   id: "e2";
 role: "Full - Stack Developer";
@@ -1059,8 +1026,5 @@ contact_email: "david.martinez@example.com";
 }];
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

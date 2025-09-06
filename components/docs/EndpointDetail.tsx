@@ -17,12 +17,10 @@ import TryItConsole from './TryItConsole';
   return (
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <div className='space-y-4'>
 
       <div>
         <div className='text-xl font-semibold text-high-contrast'>
-=======
 import { EndpointSpec } from '../../data / api - docs / types';
 ;
 export default /**
@@ -32,7 +30,6 @@ function EndpointDetail() {
     <div className='space - y-4'>;
       <div>;
         <div className='text - xl font - semibold text - high - contrast'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {endpoint.title}
         </div>;
         <div className='text - sm text - high - contrast - muted'>;
@@ -168,10 +165,8 @@ export default function EndpointDetail(): any ({;
           }
         />;
       </div>;
-=======
 
 
-=======
 
             ))}
 
@@ -181,7 +176,6 @@ export default function EndpointDetail(): any ({;
           </ul>
         </div>
       )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       {endpoint && endpoint.rateLimits && endpoint && endpoint.rateLimits.length > 0 && (;
         <div>;
@@ -201,13 +195,11 @@ export default function EndpointDetail(): any ({;
               <li key={idx}>{r && r.tier}: {r && r.limitPerMinute}/min{r && r.burst ? `, burst ${r && r.burst}` : ''}</li>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </ul>;
         </div>;
       )}
 
-=======
 
 
 
@@ -230,13 +222,11 @@ export default function EndpointDetail(): any ({;
     </div>;
   );
 }
-=======
             ))}
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </ul>
         </div>
       )}
@@ -250,7 +240,6 @@ export default function EndpointDetail(): any ({;
             ))}
           </ul>
         </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       )}
     </div>
   );
@@ -315,11 +304,9 @@ export default function EndpointDetail(): any ({;
     </div>);
 }
 
-=======
 
 }
 
 }
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

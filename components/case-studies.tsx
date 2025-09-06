@@ -26,14 +26,12 @@ import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
-=======
 
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
 export default function CaseStudiesPage() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <UltraFuturisticBackground intensity='high' variant='quantum'>;
       <SEO
@@ -54,15 +52,12 @@ export default function CaseStudiesPage() {
     </UltraFuturisticBackground>;
   );export default function CaseStudiesPage() {;
 
-=======
 export default function CaseStudiesPage() {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
 
 }
 
-=======
 import React from 'react';
 import SEO from '../components / SEO';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
@@ -100,8 +95,6 @@ function CaseStudiesPage() {
       </div>;
     </UltraFuturisticBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     <UltraFuturisticBackground intensity="high" variant="quantum">
       <SEO title="Case Studies | Zion Tech Group" description="Proven outcomes across AI, cloud, and automation projects." canonical="https: //ziontechgroup.com/case-studies/" />
       <div className="container mx-auto px-4 py-16 text-white">
@@ -112,5 +105,3 @@ function CaseStudiesPage() {
     </UltraFuturisticBackground>
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

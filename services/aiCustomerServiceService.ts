@@ -61,7 +61,6 @@ export interface CustomerServiceMetrics {
 
     customerSatisfaction: number
   }>
-=======
   customer_satisfaction: number;
   firstResponseTime: number,
   ticketVolumeByCategory: Record < string, number>;
@@ -70,7 +69,6 @@ export interface CustomerServiceMetrics {
     averageResolutionTime: number,
     customer_satisfaction: number;
   }>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface CustomerServiceRequest {
   customer_id: string;
@@ -326,7 +324,6 @@ export const aiCustomerServiceService = new AICustomerServiceService(process.env
 
 export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
 
-=======
   next_steps: string[],
   assigned_agent?: string;
 }
@@ -566,9 +563,6 @@ if ( {) {
 }
 export const aiCustomerServiceService = new AICustomerServiceService (process.env.CUSTOMER_SERVICE_API_KEY || '');
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export interface CustomerTicket {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

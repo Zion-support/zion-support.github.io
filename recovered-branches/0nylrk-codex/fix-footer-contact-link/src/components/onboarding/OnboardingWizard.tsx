@@ -70,7 +70,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const navigate = useNavigate();
   const { user } = useAuth();
 
-=======
 import { useState, useEffect } from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -106,7 +105,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -261,14 +259,12 @@ function OnboardingWizard() {
 
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
       <CardHeader>
         <CardTitle className="text-center text-white">
           {type === 'client' ?
             "Ready to find top IT talent?" :
-=======
 
   // Define steps based on user type;
   const clientSteps: WizardStep[] = [;
@@ -375,7 +371,6 @@ function OnboardingWizard() {
         <CardTitle className="text-center text-white">;
           {type === 'client' ? ;
             "Ready to find top IT talent?" : ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             "Let's build your professional profile"}
         </CardTitle>;
       </CardHeader>;
@@ -391,10 +386,8 @@ function OnboardingWizard() {
 
                   "h-2 w-2 rounded-full mx-1"
 
-=======
                   "h-2 w-2 rounded-full mx-1",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   index === currentStep
                     ? "bg-zion-purple scale-125"
                     : index < currentStep
@@ -439,7 +432,6 @@ function OnboardingWizard() {
   );
 }
 
-=======
       icon: <FileText className="h - 6 w - 6 text - zion - purple" />,
       action: {
         text: "Edit Profile",
@@ -560,4 +552,3 @@ if ( {) {
       </CardFooter>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

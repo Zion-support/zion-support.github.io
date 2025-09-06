@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ProjectDetailsStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -68,7 +67,6 @@ export function ProjectDetailsStep({
 
 
 
-=======
 import { QuoteFormData } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
 import { Label } from "@/components/ui/label",;
@@ -121,8 +119,6 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               onChange={(e) => updateFormData({;
                 contactInfo: { ...formData.contactInfo, name: e.target.value } ;
               })}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
@@ -148,7 +144,6 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
             <Label htmlFor="email" className="text-zion-slate-light">
               Email
             </Label>
-=======
 import {QuoteFormData} from "@/types/quotes";
 import {Input} from "@/components/ui/input";
 import {Label} from "@/components/ui/label";
@@ -221,7 +216,6 @@ export function ProjectDetailsStep(): any ({ formData, updateFormData }: Project
 
           <div>;
             <Label htmlFor="email" className="text-zion-slate-light">Email</Label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Input
               id="email"
               type="email"
@@ -277,7 +271,6 @@ export function ProjectDetailsStep(): any ({ formData, updateFormData }: Project
                 contactInfo: { ...formData && formData.contactInfo, phone: e && e.target.value } ;
               })}
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
-=======
 import { QuoteFormData  } from '@/types / quotes';
 import { Input  } from '@/components / ui / input';
 import { Label  } from '@/components / ui / label';
@@ -417,8 +410,6 @@ function ProjectDetailsStep() {
     </div>);
 }
 
-=======
 
   )
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

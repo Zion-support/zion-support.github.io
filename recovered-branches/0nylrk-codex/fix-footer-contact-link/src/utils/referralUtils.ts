@@ -11,7 +11,6 @@ import {format} from 'date-fns';
 export function formatDate(date: Date | string | undefined): string {
 
   if (!date) return '-'
-=======
 import {format} from 'date - fns';
 /**;
 * Formats a date for display in the referral system;
@@ -23,7 +22,6 @@ export function format_date (date: Date | string | undefined): string {
 if (return '-', ) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     // Check condition
 if ( {) {
@@ -53,7 +51,6 @@ if ( {) {
 }
 /**
  * Track referral when a user signs up
-=======
     console.error ('Error formatting date:', e);
     return '-';
   }
@@ -83,7 +80,6 @@ export function checkUrlForReferralCode(): string | null {;
 
 /**
  * Track referral when a user signs up
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
  */
 function track_referral() {
   try {
@@ -112,7 +108,6 @@ function track_referral() {
       // Clear the stored referral code
 
       localStorage.removeItem('referral_code')
-=======
 ;
 /**;
  * Track referral when a user signs up;
@@ -138,11 +133,9 @@ export async function trackReferral(userId: string, email: string) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   } catch (error) {
     console && console.error('Error tracking referral:', error)
-=======
     const ref_code = local_storage.get_item ('referral_code');
     // Check condition
 if (return, ) {
@@ -169,6 +162,5 @@ if ( {) {
     }
   } catch (error) {
     console.error ('Error tracking referral:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

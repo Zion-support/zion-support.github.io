@@ -1,6 +1,5 @@
 
 
-=======
 
 
 };
@@ -12,11 +11,9 @@
 };
 };
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 };
   return (;
@@ -25,7 +22,6 @@
 };
 };
 };
->>>>>>> origin/automation-improvements-final
 import React from 'react';
 
 
@@ -71,9 +67,7 @@ interface HTMLAnchorElement extends HTMLElement {;
   target: string;
 }
 
-=======
 
-=======
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
 
 };
@@ -85,13 +79,8 @@ interface HTMLAnchorElement extends HTMLElement {;
 };
 
 };
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 function resolveHref(href: Href): string {
-=======
 
 type Href = string | { pathname?: string; href?: string };
 
@@ -101,7 +90,6 @@ type LinkProps = React && React.AnchorHTMLAttributes<HTMLAnchorElement> & {;
 };
 
 function resolveHref(): any (href: Href): string {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (typeof href === 'string') return href;
   return href?.pathname |(href as { href?: string })?.href |'#';
 }
@@ -120,10 +108,8 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
   }
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from 'react';
 type Href = string | { pathname?: string; href?: string };
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
@@ -148,7 +134,6 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
       "href": resolved,
       "className": mergedClassName,
       ...rest});
-=======
 
 export default function Link(): any ({ href, children, className, ...rest }: LinkProps) {;
   const resolved = resolveHref(href);
@@ -162,20 +147,14 @@ export default function Link(): any ({ href, children, className, ...rest }: Lin
       className: mergedClassName,;
       ...rest,;
     });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
-=======
 
 
 
 
 
 
-=======
 
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   return (
     <a href={resolved} className={className} {...rest}>;
       {children}
@@ -183,31 +162,16 @@ export default function Link(): any ({ href, children, className, ...rest }: Lin
   );
 
 
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
-
-
-=======
 }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 
 }
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
+}
+
+}
+
 ;
 // Define HTMLAnchorElement if not available;
 interface HTMLElement {
@@ -259,4 +223,3 @@ function Link() {
       {children}
     </a>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

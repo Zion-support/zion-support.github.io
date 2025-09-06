@@ -3,7 +3,6 @@
 export default function EmergingTechPage() {
   const features = [
     'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'],
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const solutions = [
     { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
     { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
@@ -11,7 +10,6 @@ export default function EmergingTechPage() {
     { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }],
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <Layout>
       <Head>
@@ -34,7 +32,6 @@ export default function EmergingTechPage() {
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </header>
           <section>
@@ -60,7 +57,6 @@ export default function EmergingTechPage() {
   );
 };
 
-=======
                 </Link>
               ))  } catch (error) {
     console.error("Error:", error);
@@ -69,10 +65,8 @@ export default function EmergingTechPage() {
 
 }
 
-=======
 }
 
-=======
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -142,4 +136,3 @@ function EmergingTechPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

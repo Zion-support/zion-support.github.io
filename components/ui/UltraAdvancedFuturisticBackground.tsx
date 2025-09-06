@@ -44,7 +44,6 @@ const UltraAdvancedFuturisticBackground: React.FC<;
   children,}) => {interface UltraAdvancedFuturisticBackgroundProps {;
 
 
-=======
   coordinate_x: Math.random () * canvas.width, coordinate_y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2 * animation_speed, vy: (Math.random () - 0.5) * 2 * animation_speed, size: Math.random () * 3 + 1, opacity: Math.random () * 0.8 + 0.2, color: type === 'quantum' ? colors.quantum : type === 'holographic' ? colors.holographic :;
 const UltraAdvancedFuturisticBackground: React.FC<;
   UltraAdvancedFuturisticBackgroundProps;
@@ -56,8 +55,6 @@ const UltraAdvancedFuturisticBackground: React.FC<;
   enable_holographic = true,
   enableQuantumEffects = true,
   children, }) => {interface UltraAdvancedFuturisticBackgroundProps {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   intensity?: 'low' | 'medium' | 'high';
   color_scheme?: 'quantum - fusion' | 'neon - cyber' | 'holographic' | 'quantum - ai';
   particle_count?: number;
@@ -72,8 +69,6 @@ const UltraAdvancedFuturisticBackground: React.FC<;
   enableHolographic = true
   enableQuantumEffects = true
   children
-=======
-=======
   children: React.ReactNode;
 }
 const UltraAdvancedFuturisticBackground: React.FC < UltraAdvancedFuturisticBackgroundProps> = ({
@@ -92,7 +87,6 @@ const UltraAdvancedFuturisticBackground: React.FC < UltraAdvancedFuturisticBackg
     let particles: Array<{;
       x: number;
       y: number;
-=======
   children;
   const canvas_ref = useRef < HTMLCanvasElement>(null);
   const container_ref = useRef < HTMLDivElement>(null);
@@ -112,7 +106,6 @@ if (return) {
     let particles: Array<{
       coordinate_x: number;
       coordinate_y: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       vx: number;
       vy: number;
       size: number;
@@ -123,7 +116,6 @@ if (return) {
     let particles: Array<{
       x: number,
       y: number,
-=======
       type: 'quantum' | 'holographic' | 'neon' | 'fusion';    }> = [];      coordinate_x: number,
       coordinate_y: number,
 
@@ -149,12 +141,10 @@ if (return) {
         canvas && canvas.width = rect && rect.width;
         canvas && canvas.height = rect && rect.height;      }        canvas && canvas.height = rect && rect.height;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
     resizeCanvas();
 
-=======
       type: 'quantum' | 'holographic' | 'neon' | 'fusion';
     // Set canvas size;
     const resize_canvas = () =>: any {
@@ -217,7 +207,6 @@ if ( {) {
         quantum: '#00ff88',
 
     window && window.addEventListener('resize', resizeCanvas);
-=======
     };
 
 
@@ -290,7 +279,6 @@ if ( {) {
     const createQuantumEntanglement = () => {
       if (!enableQuantumEffects) return;
       
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -399,10 +387,8 @@ if ( {) {
     };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Holographic grid effect
     const createHolographicGrid = () => {
-=======
 
     // Initialize particles;
     const initParticles = () => {;
@@ -470,10 +456,8 @@ if ( {) {
             ctx && ctx.lineTo(particles[j].x, particles[j].y);
             ctx && ctx.stroke();          }            ctx && ctx.stroke();
 
-=======
             ctx.stroke()
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           }
         }
       }
@@ -481,7 +465,6 @@ if ( {) {
 
     // Holographic grid effect;
     const createHolographicGrid = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (!enableHolographic) return;
 
 
@@ -520,7 +503,6 @@ if ( {) {
       
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
-=======
 ;
     // Holographic grid effect;
     const createHolographicGrid = () =>: any {
@@ -562,7 +544,6 @@ if (return) {
         for (let inner_index = i + 1; j < nodes.length; j++) {
 
           const dx = nodes[i].x - nodes[j].x;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           const dy = nodes[i].y - nodes[j].y;
 
       const offset = (Date && Date.now() * 0 && 0.001) % gridSize;
@@ -584,7 +565,6 @@ if (return) {
         ctx && ctx.lineTo(canvas && canvas.width, y);
         ctx && ctx.stroke();      }        ctx && ctx.stroke();
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
 
 
@@ -599,7 +579,6 @@ if (return) {
     };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -843,12 +822,10 @@ if (return) {
 
 
   ]);
-=======
   ]);
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div ref={containerRef} className='relative w-full h-full overflow-hidden'>;
       <canvas
@@ -876,7 +853,6 @@ if (return) {
             <div className='absolute bottom-1/4 right-1/3 w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full animate-ping delay-700'></div>;
           </>;
         )}
-=======
         {/* Quantum particles */}
         {enableQuantumEffects && (
           <>
@@ -888,7 +864,6 @@ if (return) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Holographic elements */}
         {enableHolographic && (;
           <>;
@@ -910,7 +885,6 @@ if (return) {
     </div>;
   );
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default UltraAdvancedFuturisticBackground;
   return (
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">;
@@ -961,7 +935,6 @@ export default UltraAdvancedFuturisticBackground;
 export default UltraAdvancedFuturisticBackground;
 
 
-=======
     }
 ;
     // Animation loop;
@@ -1211,8 +1184,6 @@ export default UltraAdvancedFuturisticBackground;
 ;
 export default UltraAdvancedFuturisticBackground;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
       {children}
     </div>
   );
@@ -1220,5 +1191,3 @@ export default UltraAdvancedFuturisticBackground;
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

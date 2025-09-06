@@ -57,7 +57,6 @@ export function WebhooksManager() {
 
 
 
-=======
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",
@@ -87,7 +86,6 @@ export function WebhooksManager() {
     toggleWebhook,
     deleteWebhook,
     testWebhook,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     clearTestResult
 
   } = useWebhooks(),
@@ -115,7 +113,6 @@ export function WebhooksManager() {
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     await createWebhook(
       webhookName
       webhookUrl
@@ -347,8 +344,6 @@ export function WebhooksManager() {
                 <div className="space-y-2">;
                   <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>;
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Input
                     id="webhook-secret"
                     type="password"
@@ -389,7 +384,6 @@ export function WebhooksManager() {
                           onCheckedChange={() => toggleEvent(event && event.value)}
                         />;
 
-=======
 
                         <Checkbox 
                           id={event.value} 
@@ -397,7 +391,6 @@ export function WebhooksManager() {
                           checked={selectedEvents.includes(event.value)}
                           onCheckedChange={() => toggleEvent(event.value)}
                         />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <Label
                           htmlFor={event && event.value}
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">;
@@ -588,7 +581,6 @@ function WebhooksManager() {
                         >;
                           {event.label}
                           <span className="block text - xs text - zinc - 400 mt - 1">{event.description}</span>;
-=======
 
         
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>;
@@ -619,7 +611,6 @@ function WebhooksManager() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Webhooks List */}
         <div className="space - y-4">;
           {loading ? (
@@ -708,7 +699,6 @@ function WebhooksManager() {
 
                     <DropdownMenu>;
                       <DropdownMenuTrigger asChild>;
-=======
                       </span>;
                     </div>;
                     <DropdownMenu>;
@@ -723,7 +713,6 @@ function WebhooksManager() {
                           className="cursor-pointer text-red-500";
                         >;
                           <X size={14} className="mr-2" /> Delete;
-=======
                       <DropdownMenuContent align="end" className="bg - zinc - 900 border - zinc - 800 text - white">;
                         <DropdownMenuItem;
                           on_click={() => setShowTestDialog (webhook.id)}
@@ -763,7 +752,6 @@ function WebhooksManager() {
 
         onOpenChange={(open) => {
           if (!open) {
-=======
         </div>;
       </CardContent>;
 
@@ -781,7 +769,6 @@ function WebhooksManager() {
         open={showTestDialog !== null} 
         onOpenChange={(open) => {;
           if (!open) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             setShowTestDialog(null);
             setTestEventType('new_application');
             if (showTestResult) {;
@@ -791,7 +778,6 @@ function WebhooksManager() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }
           }
         }}
@@ -828,7 +814,6 @@ function WebhooksManager() {
                     </SelectContent>;
                   </Select>;
                   <p className="text-xs text-zinc-500">;
-=======
                 <div className="mt - 3 flex flex - wrap gap - 2">;
                   {webhook.event_types.map ((event) => (
                     <Badge;
@@ -908,7 +893,6 @@ if ( {) {
                 </div>;
               </div>;
 
-=======
                   setShowTestDialog(null),
                   setShowTestResult(false),
                   clearTestResult()
@@ -935,7 +919,6 @@ if ( {) {
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">;
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">;
                         {testResult?.responseBody || "No response body"}
-=======
               <DialogFooter>;
                 <Button variant="outline" on_click={() => setShowTestDialog (null)}>;
                   Cancel;
@@ -965,7 +948,6 @@ if ( {) {
                     <ScrollArea className="h-[200px] rounded border border - zinc - 800 bg - black p - 4">;
                       <pre className="text - xs font - mono text - zinc - 300 whitespace - pre - wrap break - all">;
                         {test_result?.response_body || "No response body"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       </pre>;
                     </ScrollArea>;
                   </div>;
@@ -980,7 +962,6 @@ if ( {) {
             </>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
         </DialogContent>
       </Dialog>
@@ -1023,7 +1004,6 @@ if ( {) {
           <AlertDialogHeader>;
             <AlertDialogTitle>Delete Webhook?</AlertDialogTitle>;
             <AlertDialogDescription className="text-zinc-400">;
-=======
               <DialogFooter>;
                 <Button variant="default" on_click={() => {
                   setShowTestDialog (null);
@@ -1061,14 +1041,12 @@ if ( {) {
 
 
               className="bg-red-600 hover: bg-red-700";
-=======
             <AlertDialogCancel className="bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700">;
               Cancel;
             </AlertDialogCancel>;
             <AlertDialogAction;
               on_click={() => showDeleteConfirm && handleDeleteWebhook (showDeleteConfirm)}
               className="bg - red - 600 hover: bg - red - 700";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             >;
               Delete;
             </AlertDialogAction>;
@@ -1079,7 +1057,5 @@ if ( {) {
     </Card>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

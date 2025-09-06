@@ -1,5 +1,4 @@
 
-=======
 
 
 import {useState} from 'react';
@@ -21,7 +20,6 @@ import {AIEnhancementButton} from "@/components/ai-enhancement/AIEnhancementButt
 import {AIEnhancementDialog} from "@/components/ai-enhancement/AIEnhancementDialog";
 
 
-=======
 import { useState } from 'react',
 
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -42,7 +40,6 @@ import { CalendarIcon, Loader2 } from "lucide-react",
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Define form schema
 
 const formSchema = z.object({
@@ -72,7 +69,6 @@ interface WorkExperienceItemFormProps {
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Set up form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
@@ -107,7 +103,6 @@ interface WorkExperienceItemFormProps {
       location: values.location,          // Optional
 
 
-=======
 
     },
     
@@ -217,7 +212,6 @@ export function WorkExperienceItemForm({;
     setIsEnhancementDialogOpen(false);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <Form {...form}>;
@@ -363,7 +357,6 @@ function WorkExperienceItemForm() {
                   </FormControl>;
                   <FormMessage />;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               control={form.control}
               name="role_title";
               render={({ field }) => (
@@ -390,7 +383,6 @@ function WorkExperienceItemForm() {
                 </FormItem>)}
             />;
             <FormField;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               control={form.control}
               name="is_current";
               render={({ field }) => (
@@ -416,12 +408,10 @@ function WorkExperienceItemForm() {
                       id="current-position"
                     />;
                     <label htmlFor="current-position" className="text-sm text-muted-foreground">;
-=======
                       onCheckedChange={field.on_change}
                       id="current - position";
                     />;
                     <label html_for="current - position" className="text - sm text - muted - foreground">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       I currently work here;
                     </label>;
                   </div>;
@@ -508,7 +498,6 @@ function WorkExperienceItemForm() {
                           fromYear={1990}
                           toYear={new Date().getFullYear()}
                           disabled={(date) => date > new Date()}
-=======
                 </FormItem>)}
             />;
             {!watchIsCurrent && (
@@ -544,7 +533,6 @@ function WorkExperienceItemForm() {
                           from_year={1990}
                           to_year={new Date ().getFullYear ()}
                           disabled={(date) => date > new Date ()}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         />;
                       </PopoverContent>;
                     </Popover>;
@@ -578,7 +566,6 @@ function WorkExperienceItemForm() {
                       size="sm"
                       onClick={() => setIsEnhancementDialogOpen(true)}
                       className="text-xs";
-=======
                   </FormItem>)}
               />)}
           </div>;
@@ -605,7 +592,6 @@ function WorkExperienceItemForm() {
                       size="sm";
                       on_click={() => setIsEnhancementDialogOpen (true)}
                       className="text - xs";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     >;
                       AI Writer;
                     </Button>;
@@ -637,7 +623,6 @@ function WorkExperienceItemForm() {
               ) : (;
                 <>Save</>;
               )}
-=======
               </FormItem>)}
           />;
           <div className="flex justify - end gap - 2">;
@@ -667,7 +652,6 @@ function WorkExperienceItemForm() {
   );
 }
 
-=======
       <AIEnhancementDialog;
         title="Enhance Work Experience Description";
         is_open={isEnhancementDialogOpen}
@@ -681,10 +665,7 @@ function WorkExperienceItemForm() {
       />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

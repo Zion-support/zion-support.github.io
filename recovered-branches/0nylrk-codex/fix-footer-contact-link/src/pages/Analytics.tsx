@@ -35,7 +35,6 @@ import {ExportPanel} from "@/components/analytics/ExportPanel";
 export default function Analytics() {;
   const [timeRange, setTimeRange] = useState('30d');
 
-=======
 
 
   const { data: pageViewTrends } = useQuery({
@@ -118,7 +117,6 @@ export default function Analytics() {;
       });
 
       // Fill in missing dates;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const result = [];
       for (let i = 0, i < days, i++) {;
 
@@ -131,7 +129,6 @@ export default function Analytics() {;
           result.push({ date: dateStr, views: 0 });
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       }
       return result.sort((a, b) => a.date.localeCompare(b.date))
@@ -180,7 +177,6 @@ export default function Analytics() {;
         if (!conversionsByType[conversionType]) {;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           conversionsByType[conversionType] = {}
         }
         if (!conversionsByType[conversionType][date]) {
@@ -194,7 +190,6 @@ export default function Analytics() {;
         conversionsByType[conversionType][date]++
       });
       // Get all dates in range
-=======
       startDate && startDate.setDate(startDate && startDate.getDate() - days);
 
       const { data, error } = await supabase;
@@ -223,7 +218,6 @@ export default function Analytics() {;
       });
 
       // Get all dates in range;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const dates = [];
       for (let i = 0, i < days, i++) {;
         const date = new Date();
@@ -250,7 +244,6 @@ export default function Analytics() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -276,7 +269,6 @@ export default function Analytics() {;
         <ConversionAnalysisChart
           data={conversionData || []} 
           timeRange={timeRange}
-=======
 import React, { useState } from './react';
 import { use_query } from '@tanstack / react - query';
 import { supabase } from '@/integrations / supabase / client';
@@ -430,8 +422,5 @@ if ( {) {
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </AnalyticsContainer>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

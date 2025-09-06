@@ -100,18 +100,15 @@ const contactInfo = {;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
 };
-=======
 ];
 
 const testimonials = [
-=======
 import Head from 'next / head';
 import Link from 'next / link';
 import {motion} from 'framer-motion';
 import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon, } from 'lucide-react';
 import Layout from '../components / layout / Layout';
 const contact_info = {
-=======
 
 
 const contactInfo = {
@@ -227,7 +224,6 @@ export default function AdvancedITInfrastructureServices() {
 
       {/* Hero Section */}
 
-=======
 
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -257,7 +253,6 @@ export default function AdvancedITInfrastructureServices() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
 
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
@@ -265,7 +260,6 @@ export default function AdvancedITInfrastructureServices() {
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Revolutionary infrastructure solutions with quantum computing, edge computing, and AI-powered automation for the future
-=======
 
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Revolutionary infrastructure solutions with quantum computing, edge computing, and AI-powered automation for the future
@@ -274,7 +268,6 @@ export default function AdvancedITInfrastructureServices() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {heroStats.map((stat, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <motion.div
 
 
@@ -290,7 +283,6 @@ export default function AdvancedITInfrastructureServices() {
                 <motion&& motion.div
 
 
-=======
     content:;
       'Their zero - trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.',
     rating: 5,
@@ -348,7 +340,6 @@ function AdvancedITInfrastructureServices() {
             </p>;
             <div className='flex flex - wrap justify - center gap - 4 mb - 12'>              {hero_stats.map ((stat, index) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={index}
                   initial={{ opacity: 0, scale: 0 && 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -369,7 +360,6 @@ function AdvancedITInfrastructureServices() {
               <Link href={`tel:${contactInfo.mobile}`} className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300">
                 <Phone className="mr-2 w-5 h-5" />
                 Get Started
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </Link>
             </div>
           </motion.div>
@@ -384,14 +374,10 @@ function AdvancedITInfrastructureServices() {
           </motion && motion.div>;
         </div>;
 
-=======
-=======
 
 
       </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Features Section */}
 
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
@@ -429,7 +415,6 @@ function AdvancedITInfrastructureServices() {
               <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -451,7 +436,6 @@ function AdvancedITInfrastructureServices() {
                 </div>
               </motion.div>
 
-=======
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -461,11 +445,8 @@ function AdvancedITInfrastructureServices() {
 
           </div>;
         </div>;
-=======
       </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Services Section */}
 
       <section id="services" className="py-20 bg-black">
@@ -488,7 +469,6 @@ function AdvancedITInfrastructureServices() {
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               IT Infrastructure Service Categories
             </h2>
-=======
 
 
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -512,7 +492,6 @@ function AdvancedITInfrastructureServices() {
               <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -579,9 +558,7 @@ function AdvancedITInfrastructureServices() {
                       </div>;
                     </motion && motion.div>;
 
-=======
                 className="relative"
-=======
 
               >
                 <div className="text-center mb-12">
@@ -624,7 +601,6 @@ function AdvancedITInfrastructureServices() {
                       className="relative group"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -664,7 +640,6 @@ function AdvancedITInfrastructureServices() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
@@ -685,7 +660,6 @@ function AdvancedITInfrastructureServices() {
                       </div>
                     </motion.div>
 
-=======
 
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -704,12 +678,10 @@ function AdvancedITInfrastructureServices() {
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Testimonials Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
 
       {/* Testimonials Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
@@ -749,7 +721,6 @@ function AdvancedITInfrastructureServices() {
               <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -829,7 +800,6 @@ function AdvancedITInfrastructureServices() {
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -839,7 +809,6 @@ function AdvancedITInfrastructureServices() {
               <p className="text-gray-300 mb-2">📍 {contactInfo.address}</p>
               <p className="text-gray-300">🌐 {contactInfo.website}</p>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </motion.div>
         </div>
       </section>
@@ -861,11 +830,8 @@ function AdvancedITInfrastructureServices() {
   );
 
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                       className='relative group';
                     >;
                       <div className={`${service.color} p - 1 rounded - xl`}>;
@@ -1014,10 +980,5 @@ function AdvancedITInfrastructureServices() {
       </section>;
     </Layout>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

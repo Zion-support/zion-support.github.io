@@ -3,7 +3,6 @@
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
 
-=======
 
 import { NewsletterForm } from "@/components/NewsletterForm",
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
@@ -11,7 +10,6 @@ import { Link } from "react-router-dom",
 
 
 export function Footer() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
@@ -76,7 +74,6 @@ export function Footer() {
                 <Link
                   to="/marketplace"
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
-=======
 import { NewsletterForm  } from '@/components / NewsletterForm';
 import { Twitter, Linkedin, Facebook, Instagram, Github  } from './lucide-react';
 import { Link  } from './react-router-dom';
@@ -151,7 +148,6 @@ function Footer() {
                   to="/marketplace";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Products;
                 </Link>;
               </li>;
@@ -198,7 +194,6 @@ function Footer() {
               <li>;
 
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
-=======
                 <Link;
                   to="/green - it";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
@@ -265,7 +260,6 @@ function Footer() {
               <li>;
 
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
-=======
                 <Link;
                   to="/sitemap - page";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
@@ -327,7 +321,5 @@ function Footer() {
 
     </footer>;
   );
-=======
     </footer>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

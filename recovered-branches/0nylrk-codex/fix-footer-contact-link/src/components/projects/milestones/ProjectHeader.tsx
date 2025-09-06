@@ -37,7 +37,6 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {;
   const navigate = useNavigate();
 
 
-=======
 import {useNavigate} from 'react-router-dom';
 import {Button} from '@/components/ui/button';
 import {ArrowLeft} from 'lucide-react';
@@ -62,7 +61,6 @@ export function ProjectHeader(): any ({ title }: ProjectHeaderProps) {;
     </div>);
 }
 
-=======
         >
           <ArrowLeft className="h-4 w-4 mr-1" />
           Back
@@ -77,4 +75,3 @@ export function ProjectHeader(): any ({ title }: ProjectHeaderProps) {;
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

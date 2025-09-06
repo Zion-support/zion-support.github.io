@@ -8,7 +8,6 @@ interface ApplicationProgressProps {
 
 export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Define the progress value based on status
 
   const getProgressValue = () => {
@@ -24,7 +23,6 @@ export function ApplicationProgress(): any ({;
     switch (status) {;
       case "new":;
 
-=======
 import { ApplicationStatus  } from '@/types / jobs';
 import { Progress  } from '@/components / ui / progress';
 import { CheckCircle2, Circle, CircleDot  } from './lucide-react';
@@ -41,7 +39,6 @@ function ApplicationProgress() {
   const getProgressValue = () =>: any {
     switch (status) {
       case "new":;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         return 20;
       case "viewed":;
         return 40;
@@ -78,7 +75,6 @@ function ApplicationProgress() {
       <Progress value={progressValue} className="h-2" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -105,7 +101,6 @@ function ApplicationProgress() {
   );
 }
 
-=======
 
 
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
@@ -203,7 +198,6 @@ function StatusIcon(): any ({;
     rejected: 5,;
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
 
@@ -283,9 +277,6 @@ if ( {) {
   }
 
 }
-=======
 }
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

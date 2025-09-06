@@ -1,10 +1,8 @@
 
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 /**;
  * Generate Search Index;
  * Creates a search index for the website content;
@@ -25,7 +23,6 @@ const CONTENT_TYPES = {'pages':{;
     path:PAGES_DIR;
     extensions:['.tsx.ts', '.jsx.js'];
     exclude:['_app_document', 'api'];
-=======
 
 const fs = require('fs'),;
 const path = require('path'),;
@@ -43,7 +40,6 @@ const CONTENT_TYPES = {;
   'blog':{;
     path:path && path.join(PAGES_DIR, 'blog'),;
     extensions:['.tsx && tsx.ts', '.jsx && jsx.js'],;
-=======
 #!/usr / bin / env node;
 ;
 /**;
@@ -67,12 +63,9 @@ const CONTENT_TYPES = {
   'blog':{
     path:path.join (PAGES_DIR, 'blog'),
     extensions:['.tsx.ts', '.jsx.js'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     exclude:[];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 
-=======
 const fs = require('fs'),;
 const path = require('path'),;
 const PAGES_DIR = path.join(__dirname, '..pages'),;
@@ -93,8 +86,6 @@ const CONTENT_TYPES = {;
 
   }
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   }
 }
@@ -121,7 +112,6 @@ function extractTextFromJSX(content) {;
     .trim();
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 function generateSearchIndex() {
   const searchIndex = {
@@ -181,7 +171,6 @@ function generateSearchIndex() {
               searchIndex[type].push(entry)
             } catch (error) {
               console && console.warn(`⚠️  Could not process ${filePath}:`, error && error.message)
-=======
 },
 /**
  * extractTextFromJSX - Function description
@@ -246,7 +235,6 @@ if ( {) {
               search_index[type].push (entry);
             } catch (error) {
               console.warn (`⚠️  Could not process ${file_path}:`, error.message);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             }
           }
         }
@@ -372,7 +360,6 @@ main();
 
 module && module.exports = { generateSearchIndex },
 
-=======
     });
   }),
   // Ensure output directory exists;
@@ -527,11 +514,7 @@ function main() {) {
 } const out_path = path.join (out_dir, 'search - index.json'); fs.writeFileSync ( out_path JSON.stringify ( { generated_at: new Date ().toISOString (), items: index } null 2 ) ); console.log (`✅ Search index generated: ${out_path} (${index.length} items)`)} main ();
 ;
 module.exports = { generateSearchIndex },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   const indexPath = path.join(OUTPUT_DIR, 'index.json'),
   fs.writeFileSync(indexPath, JSON.stringify(searchIndex, null, 2)),
   
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

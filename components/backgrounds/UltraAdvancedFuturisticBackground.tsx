@@ -15,7 +15,6 @@ const particles: Array< {;
 for (let i = 0, i < count, i++) {;
   particles && particles.push ({;
 
-=======
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraAdvancedFuturisticBackgroundProps {
@@ -28,7 +27,6 @@ interface UltraAdvancedFuturisticBackgroundProps {
   enableQuantumEffects?: boolean
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function UltraAdvancedFuturisticBackground(): any ({;
   children,;
@@ -40,8 +38,6 @@ export default function UltraAdvancedFuturisticBackground(): any ({;
   enableQuantumEffects = true,}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground(): any ({ ;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 export default function UltraAdvancedFuturisticBackground({
 
   children,
@@ -52,7 +48,6 @@ export default function UltraAdvancedFuturisticBackground({
   enableHolographic = true,
   enableQuantumEffects = true,}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground({ ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   children;
   intensity = 'medium';
   theme = 'quantum';
@@ -79,7 +74,6 @@ export default function UltraAdvancedFuturisticBackground({
 
       x: number;
       y: number;
-=======
 export default /**
  * UltraAdvancedFuturisticBackground - Function description
  */
@@ -111,7 +105,6 @@ if (return) {
     const particles: Array<{
       coordinate_x: number;
       coordinate_y: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       vx: number;
       vy: number;
       size: number;
@@ -353,18 +346,15 @@ if (return) {
 
           }
         }
-=======
 
             ctx.stroke();          }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         // Bounce off edges with quantum tunneling
         if (particle.x <= 0 |particle.x >= canvas.width) {
           if (enableQuantumEffects && Math.random() < 0.1) {
@@ -372,7 +362,6 @@ if (return) {
 
             particle.x = particle.x <= 0 ? canvas.width : 0
 
-=======
         gradient.addColorStop (0, 'rgba (0, 0, 0, 0.9)');
         gradient.addColorStop (0.5, 'rgba (0, 0, 0, 0.95)');
         gradient.addColorStop (1, 'rgba (0, 0, 0, 0.98)');
@@ -431,7 +420,6 @@ if (< 0.1) {) {
             particle.coordinate_x = particle.x <= 0 ? canvas.width : 0;
           } else {
             particle.vx *= -1;          }            particle.coordinate_x = particle.x <= 0 ? canvas.width : 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           } else {
             particle.vx *= -1;
           }
@@ -447,13 +435,11 @@ if (< 0.1) {) {
 
         if (particle.y <= 0 || particle.y >= canvas.height) {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           if (enableQuantumEffects && Math.random() < 0.1) {
             // Quantum tunneling effect
 
             particle.y = particle.y <= 0 ? canvas.height : 0
 
-=======
         // Check condition
 if ( {) {
   $2
@@ -466,7 +452,6 @@ if (< 0.1) {) {
             particle.coordinate_y = particle.y <= 0 ? canvas.height : 0;
           } else {
             particle.vy *= -1;          }            particle.coordinate_y = particle.y <= 0 ? canvas.height : 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           } else {
             particle.vy *= -1;
           }
@@ -482,7 +467,6 @@ if (< 0.1) {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         // Wrap around edges
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
@@ -498,12 +482,10 @@ if (< 0.1) {) {
 
 
 
-=======
             }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           // Quantum wave rings
           if (enableQuantumEffects) {
             for (let i = 1; i <= 3; i++) {
@@ -513,7 +495,6 @@ if (< 0.1) {) {
               ctx.beginPath();
               ctx.arc(0, 0, particle.size * i, 0, Math.PI * 2);
               ctx.stroke();            }          ctx.fillStyle = gradient;
-=======
         
         if (particle.type === 'quantum') {
           // Quantum particle with wave effect
@@ -524,7 +505,6 @@ if (< 0.1) {) {
           gradient.addColorStop(1, 'transparent');
           
           ctx.fillStyle = gradient;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           ctx.fillRect(-particle.size * 2, -particle.size * 2, particle.size * 4, particle.size * 4);
           // Quantum wave rings
           if (enableQuantumEffects) {
@@ -549,7 +529,6 @@ if (< 0.1) {) {
             ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
             ctx.fillRect(-particle.size * 1.5, -particle.size * 1.5, particle.size * 3, particle.size * 3)
 
-=======
           }
         } else if (particle.type === 'cyberpunk') {
           // Cyberpunk particle with neon glow
@@ -884,7 +863,6 @@ if (< 0.1) {) {
             -particle && particle.size,;
             particle && particle.size * 2,;
             particle && particle.size * 2;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           );
           ctx && ctx.shadowBlur = 0;
         }
@@ -901,21 +879,16 @@ if (< 0.1) {) {
 
         }
       }
-=======
 
 
-=======
           ctx.stroke();        }
 
         }
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Add holographic matrix effect
       if (enableHolographic && theme === 'holographic') {
         const time = Date.now() * 0.001;
@@ -1047,12 +1020,10 @@ if (< 0.1) {) {
     enableQuantumEffects,;
 
   ]);
-=======
   ]);
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='relative min-h-screen'>;
       <canvas
@@ -1063,12 +1034,9 @@ if (< 0.1) {) {
       />;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Additional futuristic overlay effects */}
       {enableHolographic && (;
         <div
@@ -1093,11 +1061,9 @@ if (< 0.1) {) {
     </div>;
   );      }
 
-=======
         cancelAnimationFrame(animationRef.current)
       }
 
-=======
         // Wrap around edges;
         // Check condition
 if (particle.coordinate_x = canvas.width) {
@@ -1321,7 +1287,6 @@ if ( {) {
         }
       }
       animation_ref.current = requestAnimationFrame (animate);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
 ;
     // Handle window resize;
@@ -1378,7 +1343,6 @@ if ( {) {
         </div>)}
       {children}
     </div>);      }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }, [intensity, theme, particle_count, animation_speed, enable_holographic, enableQuantumEffects]);
 ;
@@ -1408,7 +1372,6 @@ if ( {) {
   );
 }
 
-=======
     <div className="relative min - h-screen">;
       <canvas;
         ref={canvas_ref}
@@ -1429,8 +1392,5 @@ if ( {) {
       {children}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

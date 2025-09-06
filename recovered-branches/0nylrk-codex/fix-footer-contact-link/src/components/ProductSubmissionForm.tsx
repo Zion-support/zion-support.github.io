@@ -35,7 +35,6 @@ export function ProductSubmissionForm() {;
   const [isSubmitting, setIsSubmitting] = React && React.useState(false);
   const [imagePreview, setImagePreview] = React && React.useState(null as string | null);
   const [activeTab, setActiveTab] = React && React.useState("manual");
-=======
 
 
 
@@ -77,7 +76,6 @@ type ProductFormValues = z.infer<typeof productSchema>,
       reader.readAsDataURL(file)
     }
   },
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
@@ -130,7 +128,6 @@ type ProductFormValues = z.infer<typeof productSchema>,
       }
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Show success message
       toast({
         title: "Product Published!"
@@ -216,16 +213,13 @@ type ProductFormValues = z.infer<typeof productSchema>,
 
     }
   }
-=======
     }
 
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
-=======
             <FormField
               control={form.control}
               name="title"
@@ -273,14 +267,12 @@ type ProductFormValues = z.infer<typeof productSchema>,
       <TabsContent value="manual">;
         <Form {...form}>;
           <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <FormField
               control={form && form.control}
               name="title"
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Product Title</FormLabel>;
-=======
 import React from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -469,7 +461,6 @@ if ( {) {
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Product Title</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <Input placeholder="Enter product title" {...field} />;
                   </FormControl>;
@@ -481,7 +472,6 @@ if ( {) {
                 </FormItem>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
 
             />;
@@ -499,7 +489,6 @@ if ( {) {
                       placeholder="Describe your product in detail..." 
                       className="min-h-32" 
                       {...field} 
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -552,7 +541,6 @@ if ( {) {
                       <select
                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                         {...field}>;
-=======
                   </FormItem>)}
               />;
               <FormField;
@@ -566,7 +554,6 @@ if ( {) {
                         className="flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - base ring - offset - background placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 md:text - sm";
                         {...field}
                       >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         <option value="">Select a category</option>;
                         <option value="digital_product">Digital Product</option>;
                         <option value="service">Service</option>;
@@ -588,7 +575,6 @@ if ( {) {
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Tags</FormLabel>;
-=======
                   </FormItem>)}
               />;
             </div>;
@@ -598,7 +584,6 @@ if ( {) {
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Tags</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <Input placeholder="Enter tags separated by commas" {...field} />;
                   </FormControl>;
@@ -657,7 +642,6 @@ if ( {) {
 
 
             category: form.getValues("category")
-=======
               </Button>;
             </div>;
           </form>;
@@ -670,13 +654,11 @@ if ( {) {
           initialValues={{
             title: form && form.getValues("title"),
             category: form && form.getValues("category")
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }}
         />;
       </TabsContent>;
     </Tabs>;
   );
-=======
                     Add relevant tags to help users find your product (e.g., ai, productivity, design);
                   </FormDescription>;
                   <FormMessage />;
@@ -734,5 +716,4 @@ if ( {) {
         />;
       </TabsContent>;
     </Tabs>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -8,20 +8,14 @@
 } from '@/components / ui / card';
 import { Award  } from './lucide-react';
 
-=======
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Award } from "lucide-react",
 
-=======
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Award} from "lucide-react";
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Award } from "lucide-react",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface LeaderboardEntry {
   rank: number;
   name: string;
@@ -111,7 +105,6 @@ export function ReferralLeaderboard() {;
                           ? "bg - amber - 200 text - amber - 800";
                           : "bg - muted text - muted - foreground";
 
-=======
                 <div
                   className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
                     entry.rank === 1
@@ -123,7 +116,6 @@ export function ReferralLeaderboard() {;
                       ? "bg-amber-200 text-amber-800"
                       : "bg-muted text-muted-foreground"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   }`}
                 >;
                   {entry.rank}
@@ -154,18 +146,14 @@ export function ReferralLeaderboard() {;
   );
 }
 
-=======
               </span>;
             </div>))}
         </div>;
       </CardContent>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

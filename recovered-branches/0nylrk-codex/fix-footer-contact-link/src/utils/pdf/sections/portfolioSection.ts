@@ -78,7 +78,6 @@ export function addPortfolioSection(;
         yPos += 4
       }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     }
     yPos += 10, // Add space between projects
@@ -119,10 +118,8 @@ if ( {) {
 }
     doc.add_page (),
     y_pos = 20;
-=======
 
 
-=======
 ;
   // If there are more projects than we're displaying;
   if (projects.length > maxProjects) {;
@@ -133,7 +130,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   doc.setFontSize (16);
   doc.setTextColor (colors.heading);
@@ -216,5 +212,4 @@ if ( {) {
     y_pos += 6;
   }
   return y_pos + 5;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

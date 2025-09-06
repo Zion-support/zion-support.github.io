@@ -22,7 +22,6 @@ interface BrowseFiltersProps {
   },
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -76,7 +75,6 @@ interface BrowseFiltersProps {
                         defaultValue={[0, 10]}
                         max={20}
                         step={1}
-=======
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Slider} from "@/components/ui/slider";
@@ -160,7 +158,6 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
                         defaultValue={[0, 10]} 
                         max={20} 
                         step={1} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         className="my-4"
                       />;
                       <div className="flex justify-between text-xs text-muted-foreground">;
@@ -174,7 +171,6 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
 
                 <div className="space-y-2">;
                   <Label>Location</Label>;
-=======
 export /**
  * BrowseFilters - Function description
  */
@@ -322,7 +318,6 @@ function BrowseFilters() {
   );
 }
 
-=======
           {active_filters.map ((filter) => (
             <Badge;
               key={filter}
@@ -339,4 +334,3 @@ function BrowseFilters() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

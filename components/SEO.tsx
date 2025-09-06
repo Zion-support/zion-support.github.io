@@ -27,29 +27,22 @@ import React from "react";
 import Head from "next/head";
 
 
-=======
 
 import React from "react";
 import Head from "next/head";
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
-=======
 import React from './react';
 import Head from './next / head';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface SEOProps {
-=======
 interface SEOProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title?: string;
   description?: string;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   keywords?: string;
 }
 
@@ -59,14 +52,12 @@ const SEO: React.FC < SEOProps> = ({
   keywords = "AI services, IT solutions, micro SaaS, technology consulting",
 
 }) => {
-=======
 
 const SEO: React.FC<SEOProps> = ({;
   title = "Zion Tech Group - Technology Solutions",;
   description = "Leading provider of AI services, IT solutions, and micro SaaS development.",;
   keywords = "AI services, IT solutions, micro SaaS, technology consulting",;
 }) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Head>;
       <title>{title}</title>;
@@ -82,9 +73,7 @@ const SEO: React.FC<SEOProps> = ({;
 export default SEO;
 
 
-=======
 }
-=======
   image?: string;
   url?: string;
   type?: string;
@@ -105,14 +94,9 @@ export default function SEO({
 }
 export default SEO;
 
-=======
 
->>>>>>> origin/automation-improvements-final
-=======
 }
 export default SEO;
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
     <Head>;
       <title>{title}</title>;
       <meta name="description" content={description} />;
@@ -123,4 +107,3 @@ export default SEO;
 ;
 export default SEO;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

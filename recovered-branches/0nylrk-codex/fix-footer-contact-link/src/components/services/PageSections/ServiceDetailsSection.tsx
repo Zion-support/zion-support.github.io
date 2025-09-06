@@ -4,15 +4,11 @@
 import { CountryPricing } from "@/data/onsiteServicePricing",
 import { CountryServiceSelector } from "../CountryServiceSelector",
 
-=======
 import {CountryPricing} from "@/data/onsiteServicePricing";
 import {CountryServiceSelector} from "../CountryServiceSelector";
-=======
 import { CountryPricing } from "@/data/onsiteServicePricing",
 import { CountryServiceSelector } from "../CountryServiceSelector",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ServiceDetailsSectionProps {
   selectedCountry: CountryPricing | null;
   setSelectedCountry: (country: CountryPricing | null) => void
@@ -21,7 +17,6 @@ export function ServiceDetailsSection({
   selectedCountry
   setSelectedCountry
 }: ServiceDetailsSectionProps) {
-=======
 import { CountryPricing  } from '@/data / onsiteServicePricing';
 import { CountryServiceSelector  } from '../CountryServiceSelector';
 interface ServiceDetailsSectionProps {
@@ -32,7 +27,6 @@ export /**
  * ServiceDetailsSection - Function description
  */
 function ServiceDetailsSection() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div id="service - details" className="mt - 12">;
       {selected_country ? (
@@ -42,7 +36,6 @@ function ServiceDetailsSection() {
 
 import {CountryPricing} from "@/data/onsiteServicePricing";
 import {CountryServiceSelector} from "../CountryServiceSelector";
-=======
 
 import { CountryPricing } from "@/data/onsiteServicePricing",;
 import { CountryServiceSelector } from "../CountryServiceSelector",;
@@ -79,11 +72,9 @@ export function ServiceDetailsSection(): any ({ selectedCountry, setSelectedCoun
           </p>;
         </div>)}
     </div>);
-=======
 
       )}
     </div>
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

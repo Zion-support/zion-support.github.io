@@ -26,17 +26,14 @@ import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next / link';
 ;
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
 }
 const SearchBar: React.FC = () => {
-=======
 
 interface SearchResult {;
   title: string, description: string,;
@@ -392,10 +389,8 @@ if ( {) {
 }
 ;
 
-=======
 
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default SearchBar;

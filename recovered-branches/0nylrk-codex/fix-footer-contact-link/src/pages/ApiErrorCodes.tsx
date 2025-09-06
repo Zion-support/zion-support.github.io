@@ -5,7 +5,6 @@
 export function ApiErrorCodes() {
 
   const errorExample = `{
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -34,7 +33,6 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
 export function ApiErrorCodes() {;
   const errorExample = `{;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   "error": "validation_error";
   "message": "The request was invalid";
   "details": [;
@@ -48,13 +46,11 @@ export function ApiErrorCodes() {;
     {
       "field": "budget.min";
       "error": "Budget minimum must be greater than 0"
-=======
       "error": "Title is required";
     };
     {;
       "field": "budget && budget.min";
       "error": "Budget minimum must be greater than 0";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
 import React from './react';
@@ -81,10 +77,8 @@ function ApiErrorCodes() {
 ;
 
   const rateLimitExample = `{
-=======
 
   const rateLimitExample = `{;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   "error": "rate_limit_exceeded";
   "message": "Rate limit exceeded. Try again in 30 seconds";
   "retry_after": 30;
@@ -353,13 +347,11 @@ function ApiErrorCodes() {
 
     }
   ];
-=======
     }
 
   ],
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -372,7 +364,6 @@ function ApiErrorCodes() {
     </ApiDocsLayout>
   )
 
-=======
 
 import React from "react",;
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
@@ -563,7 +554,6 @@ export function ApiErrorCodes() {;
         <CodeBlock code={rateLimitExample} language="json" showLineNumbers={true} />;
 
         <h2>Rate Limits</h2>;
-=======
 ;
   const error_codes = [;
     {
@@ -720,7 +710,6 @@ export function ApiErrorCodes() {;
         </p>;
         <CodeBlock code={rateLimitExample} language="json" showLineNumbers={true} />;
         <h2 > Rate Limits</h2>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         <p>;
           To ensure fair usage and protect the API from abuse, we enforce rate limits on all endpoints.;
           The limits are based on the number of requests per minute per API key.;
@@ -731,7 +720,6 @@ export function ApiErrorCodes() {;
 
 export default ApiErrorCodes;
 
-=======
         <div className="overflow - x-auto mb - 8">;
           <table className="w - full border - collapse">;
             <thead>;
@@ -777,4 +765,3 @@ export default ApiErrorCodes;
 }
 export default ApiErrorCodes;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

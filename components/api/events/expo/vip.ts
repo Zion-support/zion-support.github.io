@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
-=======
 ;
 const allowlist = new Set < string>(
   [(process.env.EXPO_VIP_ADDRESS || '').toLowerCase ()].filter (Boolean));
@@ -25,8 +24,6 @@ function handler() {
 }
   res.status (200).json ({ allowed: allowlist.has (address) });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 ) {;
   const address = String(req.query.address || '').toLowerCase();
@@ -41,8 +38,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

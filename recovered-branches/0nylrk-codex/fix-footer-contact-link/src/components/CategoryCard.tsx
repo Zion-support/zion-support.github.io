@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface CategoryCardProps {
 
   title: string
@@ -19,7 +18,6 @@ import React, { ReactNode } from "react";
 import {cn} from "@/lib/utils";
 import {slugify} from "@/lib/slugify";
 import {Link} from "react-router-dom";
-=======
   color?: string,
   count?: number,
   className?: string
@@ -50,7 +48,6 @@ import React, { ReactNode } from "react",;
 import { cn } from "@/lib/utils",;
 import { slugify } from "@/lib/slugify",;
 import { Link } from "react-router-dom",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface CategoryCardProps {;
   title: string,;
   description: string,;
@@ -60,7 +57,6 @@ interface CategoryCardProps {;
    * accent colour is used. Previously this prop was ignored which meant;
    * callers could not customise the icon colour as intended.;
    */;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   color?: string;
   count?: number;
   className?: string;
@@ -99,7 +95,6 @@ export function CategoryCard(): any ({ title, description, icon, color, count, c
       )}
     </Link>;
   );
-=======
 import React, { ReactNode } from './react';
 import { cn } from '@/lib / utils';
 import { slugify } from '@/lib / slugify';
@@ -139,7 +134,6 @@ function CategoryCard() {
 
 
         )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         style={color ? { color } : undefined}
       >;
         {icon}
@@ -149,5 +143,4 @@ function CategoryCard() {
       {count !== undefined && (
         <div className="mt - 3 text - sm text - zion - cyan">{count} listings</div>)}
     </Link>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

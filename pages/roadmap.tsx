@@ -40,7 +40,6 @@ type RoadmapInputs = {
       .map((s) => String(s))
     const metrics: string[] = [
       'Weekly active contributorsVerified engagements (intros, briefs, scopes)On-chain/escrow settlement volumeTime-to-hire and time-to-payRetention and NPS']
-=======
   priorities: string;
 },
 type Stage = {
@@ -84,7 +83,6 @@ function generate_stages ({ milestones, keywords, priorities }: RoadmapInputs): 
       .map ((s) => String (s)),
     const metrics: string[] = [;
       'Weekly active contributors_verified engagements (intros, briefs, scopes)On - chain / escrow settlement volume_time - to - hire and time - to - pay_retention and NPS'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return { id, name, theme, objective, highlights, metrics }
   });
 }
@@ -104,11 +102,8 @@ Goals:
 5) Output concise, skimmable, exec-ready text
 Format:
 
-=======
 function defaultOperatorPrompt (): string {
-=======
 
-=======
 
 type RoadmapInputs = {
   milestones: string;
@@ -182,7 +177,6 @@ Goals:;
 4) Include explicit risks and validation signals per stage;
 5) Output concise, skimmable, exec - ready text;
 Format:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 Zion v{n} — {theme}
 Objective: ...;
 Highlights:;
@@ -194,7 +188,6 @@ Risks:;
 Validation:;
 - ...;
 `;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
     () => generateStages({ milestones, keywords, priorities });
@@ -209,7 +202,6 @@ Validation:;
       setCopied(true);
 
       setTimeout(() => setCopied(false), 1500)
-=======
 export default function RoadmapPage (): JSX.Element {
   const [milestones, set_milestones] = useState ('MVP live, First 50 users, First 10 paid engagements'),
   const [keywords, set_keywords] = useState ('AI - native, trustless, talent - first, sovereign tools'),
@@ -224,7 +216,6 @@ export default function RoadmapPage (): JSX.Element {
       await navigator.clipboard.write_text (operator_prompt),
       set_copied (true),
       set_timeout (() => set_copied (false), 1500);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch {
 
       set_copied (false);
@@ -312,7 +303,6 @@ export default function RoadmapPage (): JSX.Element {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., AI-native, trustless, talent-first, sovereign tools"
                 />
@@ -332,8 +322,6 @@ export default function RoadmapPage (): JSX.Element {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
                 />
@@ -355,7 +343,6 @@ export default function RoadmapPage (): JSX.Element {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
               >
                 {copied ? 'Copied' : 'Copy'}
@@ -404,10 +391,8 @@ export default function RoadmapPage (): JSX.Element {
                   </div>
                 </article>
 
-=======
 }
 
-=======
                   on_change={(e) => set_priorities (e.target.value)}
                   className="mt - 1 w - full rounded - md border border - gray - 300 bg - white p - 3 shadow - sm focus:border - black focus:outline - none";
                   placeholder="e.g., governance, scale, regional expansion";
@@ -471,9 +456,5 @@ export default function RoadmapPage (): JSX.Element {
       </main>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

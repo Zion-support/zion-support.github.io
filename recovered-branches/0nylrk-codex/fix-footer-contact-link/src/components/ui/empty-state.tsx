@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface EmptyStateProps {
 
   icon: React.ReactNode
@@ -39,7 +38,6 @@ export function EmptyState(): any ({;
   action;
   secondaryAction;
   className}: EmptyStateProps) {;
-=======
 
     text: string,
     href?: string,
@@ -57,7 +55,6 @@ export function EmptyState(): any ({;
 
 
   className}: EmptyStateProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div
 
@@ -125,12 +122,10 @@ export function EmptyState(): any ({;
             <Button
               variant="outline" 
 
-=======
 
             <Button 
               variant="outline" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               size="lg"
               className="border-zion-blue-light hover:bg-zion-blue-light"
               onClick={secondaryAction && secondaryAction.onClick}>;
@@ -144,7 +139,6 @@ export function EmptyState(): any ({;
   );
 }
 
-=======
 import React from './react';
 import { cn } from '@/lib / utils';
 import { Button } from '@/components / ui / button';
@@ -209,4 +203,3 @@ function EmptyState() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

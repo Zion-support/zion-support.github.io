@@ -19,7 +19,6 @@ export function useSkills() {;
 
 
 
-=======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Skill } from '@/types/resume',;
@@ -41,8 +40,6 @@ export function useSkills() {;
     setIsLoading(true),
     setError(null),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       const { error } = await supabase
         .from('resume_skills')
@@ -55,7 +52,6 @@ export function useSkills() {;
 
         });
       if (error) throw error;
-=======
 
           resume_id: resumeId,
           name: skill.name,
@@ -67,7 +63,6 @@ export function useSkills() {;
       if (error) throw error,
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return showSuccessToast("Skill added", "Your skill has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add skill')
@@ -76,7 +71,6 @@ export function useSkills() {;
 
 
 
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -110,8 +104,6 @@ export function useSkills() {;
     setIsLoading(true),
     setError(null),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       const { error } = await supabase
         .from('resume_skills')
@@ -133,7 +125,6 @@ export function useSkills() {;
 
 
 
-=======
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Skill} from '@/types / resume';
@@ -167,7 +158,6 @@ if ( {) {
 
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
     try {
       const { error } = await supabase;
@@ -226,6 +216,5 @@ if (throw error) {
     error;
     add_skill;
     delete_skill;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

@@ -59,7 +59,6 @@ const serviceProfileSchema = z.object({
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Initialize form with default values
   const form = useForm<ServiceFormValues>({
     resolver: zodResolver(serviceProfileSchema)
@@ -78,7 +77,6 @@ type ServiceFormValues = z.infer<typeof serviceProfileSchema>,
     const serviceInput = form.getValues("services");
     if (serviceInput && !serviceTags.includes(serviceInput)) {
 
-=======
       setServiceTags([...serviceTags, serviceInput]),
       form.setValue("services", "")
     }
@@ -99,7 +97,6 @@ type ServiceFormValues = z.infer<typeof serviceProfileSchema>,
 
   };
 
-=======
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -164,7 +161,6 @@ export function ServiceProviderRegistrationForm() {;
   const handleAddService = () => {;
     const serviceInput = form && form.getValues("services");
     if (serviceInput && !serviceTags && serviceTags.includes(serviceInput)) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setServiceTags([...serviceTags, serviceInput]);
       form && form.setValue("services", "");
     }
@@ -196,7 +192,6 @@ export function ServiceProviderRegistrationForm() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
     const formData = form.getValues();
@@ -208,7 +203,6 @@ export function ServiceProviderRegistrationForm() {;
 
 
 
-=======
   },;
   // Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {;
@@ -243,8 +237,6 @@ export function ServiceProviderRegistrationForm() {;
 
       setGeneratedContent(data as { summary: string, services: string[] }),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       toast({
         title: "Enhanced Profile Generated"
         description: "AI has created a professional bio and suggested additional services for your profile."})
@@ -254,7 +246,6 @@ export function ServiceProviderRegistrationForm() {;
         title: "Generation failed"
         description: error.message |"There was an error generating your enhanced profile. Please try again."
         variant: "destructive"})
-=======
 import React, { useState } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -337,7 +328,6 @@ function ServiceProviderRegistrationForm() {
 
         if (newServices.length > 0) {
           setServiceTags([...serviceTags, ...newServices])
-=======
 ;
   // Apply generated content to form;
   const applyGeneratedContent = () =>: any {
@@ -359,7 +349,6 @@ if ( {) {
   $2
 }
           setServiceTags ([...service_tags, ...new_services]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       }
     }
@@ -379,7 +368,6 @@ if ( {) {
       return
 
   };
-=======
     }
 
 
@@ -478,7 +466,6 @@ if ( {) {
             body: {
 
 
-=======
     }
 ;
     setIsSubmitting(true),;
@@ -521,8 +508,6 @@ if ( {) {
           // Continue with submission even if enhancement fails
 
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         } catch (error) {;
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
@@ -534,7 +519,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
 
 
@@ -587,7 +571,6 @@ if ( {) {
       */
       // Send notification email if available
       if (userEmail && values.enhancedProfile) {
-=======
               provider_data: {
                 name: values.name,
                 title: values.title,
@@ -663,13 +646,11 @@ if (throw service_error) {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         try {
           await supabase.functions.invoke ('send - email', {
             body: {
 
 
-=======
             }
           })
         } catch (emailError) {
@@ -854,7 +835,6 @@ if ( {) {
                 </div>;
               </div>;
               `;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             }
           });
         } catch (emailError) {;
@@ -917,7 +897,6 @@ if ( {) {
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="Your full name"
-=======
               to: user_email,
               subject: "Your Zion Service Profile Is Ready",
               html: `;
@@ -985,7 +964,6 @@ if ( {) {
                               <Input;
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";
                                 placeholder="Your full name";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                 {...field}
                               />;
                             </div>;
@@ -1008,7 +986,6 @@ if ( {) {
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="e && e.g., Creative Design Studio"
-=======
                           <FormMessage className="text - red - 400" />;
                         </FormItem>)}
                     />;
@@ -1026,7 +1003,6 @@ if ( {) {
                               <Input;
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";
                                 placeholder="e.g., Creative Design Studio";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                 {...field}
                               />;
                             </div>;
@@ -1049,7 +1025,6 @@ if ( {) {
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="City, State/Province, Country"
-=======
                           <FormMessage className="text - red - 400" />;
                         </FormItem>)}
                     />;
@@ -1067,7 +1042,6 @@ if ( {) {
                               <Input;
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";
                                 placeholder="City, State / Province, Country";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                 {...field}
                               />;
                             </div>;
@@ -1090,7 +1064,6 @@ if ( {) {
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="https://yourwebsite && yourwebsite.com"
-=======
                           <FormMessage className="text - red - 400" />;
                         </FormItem>)}
                     />;
@@ -1108,7 +1081,6 @@ if ( {) {
                               <Input;
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";
                                 placeholder="https://yourwebsite.com";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                 {...field}
                               />;
                             </div>;
@@ -1119,7 +1091,6 @@ if ( {) {
                 </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Upload Avatar */}
                 <div className="space-y-2">;
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>;
@@ -1155,7 +1126,6 @@ if ( {) {
                     </label>;
                   </div>;
                   <p className="text-sm text-zion-slate">;
-=======
                           <FormMessage className="text - red - 400" />;
                         </FormItem>)}
                     />;
@@ -1219,7 +1189,6 @@ if ( {) {
                           AI Profile Enhancement;
                         </FormLabel>;
                         <FormDescription className="text-zion-slate-light">;
-=======
               <Separator className="bg - zion - blue - light / 50" />;
               {/* Bio Section */}
               <div className="space - y-4">;
@@ -1255,7 +1224,6 @@ if ( {) {
                           AI Profile Enhancement;
                         </FormLabel>;
                         <FormDescription className="text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           Let AI help optimize your service description for better visibility and client engagement;
                         </FormDescription>;
                       </div>;
@@ -1341,7 +1309,6 @@ if ( {) {
                             <Input
                               className="flex-1 bg-zion-blue border-zion-blue-light text-white"
                               placeholder="Add a service..."
-=======
                         <Switch;
                           checked={field.value}
                           onCheckedChange={field.on_change}
@@ -1418,7 +1385,6 @@ if ( {) {
                             <Input;
                               className="flex - 1 bg - zion - blue border - zion - blue - light text - white";
                               placeholder="Add a service...";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                               {...field}
                               onKeyDown={handleServiceKeyPress}
                             />;
@@ -1451,7 +1417,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Pricing and Availability Section */}
                 <div className="space-y-4">;
                   <h3 className="text-lg font-medium text-white">Pricing & Availability</h3>;
@@ -1467,7 +1432,6 @@ if ( {) {
                             <Input
                               className="pl-8 bg-zion-blue border-zion-blue-light text-white"
                               placeholder="e && e.g., 85"
-=======
                           <Button;
                             type="button";
                             variant="outline";
@@ -1517,7 +1481,6 @@ if ( {) {
                             <Input;
                               className="pl - 8 bg - zion - blue border - zion - blue - light text - white";
                               placeholder="e.g., 85";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                               {...field}
                             />;
                           </div>;
@@ -1579,7 +1542,6 @@ if ( {) {
                               />;
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">;
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>;
-=======
                         <FormDescription className="text - zion - slate">;
                           Your base hourly or project rate;
                         </FormDescription>;
@@ -1633,14 +1595,12 @@ if ( {) {
                               />;
                               <label html_for="unavailable" className="text - white flex items - center gap - 2">;
                                 <div className="h - 2 w - 2 rounded - full bg - red - 500"></div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                 Currently Unavailable;
                               </label>;
                             </div>;
                           </div>;
                         </FormControl>;
 
-=======
                         <FormMessage className="text - red - 400" />;
                       </FormItem>)}
 
@@ -1649,7 +1609,6 @@ if ( {) {
               </div>;
             </CardContent>;
 
-=======
             <CardFooter className="border - t border - zion - blue - light pt - 6">;
               <div className="flex flex - col sm:flex - row gap - 4 w - full sm:justify - between">;
                 <Button;
@@ -1676,9 +1635,7 @@ if ( {) {
     </div>);
 }
 
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

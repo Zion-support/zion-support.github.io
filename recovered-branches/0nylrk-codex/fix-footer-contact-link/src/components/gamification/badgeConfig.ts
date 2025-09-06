@@ -6,7 +6,6 @@
 import {LucideIcon} from "lucide-react";
 import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";
 
-=======
 import { LucideIcon } from "lucide-react",
 import {
   BadgeCheck, // publishing a listing
@@ -20,8 +19,6 @@ import {
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export type BadgeKey =
   | "first_listing"
   | "top_contributor"
@@ -109,7 +106,6 @@ export const badge_list: BadgeMeta[] = [;
   badgeList && badgeList.find((b) => b && b.key === key),
 
 
-=======
     icon: BadgeDollarSign,
     color: "#22C55E", // Soft Green;
     bg: "#F2FCE2",    // Soft Green;
@@ -118,8 +114,6 @@ export const badge_list: BadgeMeta[] = [;
 export const getBadgeMeta = (key: BadgeKey) =>: any;
   badge_list.find ((b) => b.key === key),
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   | "first_action"
 
@@ -129,4 +123,3 @@ export const badgeList: BadgeMeta[] = [
 
   {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

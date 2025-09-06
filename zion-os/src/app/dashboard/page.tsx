@@ -21,7 +21,6 @@ export default function DashboardPage() {;
         <div className="text-center">;
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;
           <p className="text-zinc-400">Loading...</p>;
-=======
 "use client",
 import { use_auth  } from '@/contexts / AuthContext';,
 import { use_router  } from './next / navigation';,
@@ -50,7 +49,6 @@ if ( {) {
         <div className="text - center">;
           <div className="animate - spin rounded - full h - 12 w - 12 border - b-2 border - blue - 500 mx - auto mb - 4"></div>;
           <p className="text - zinc - 400">Loading...</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         </div>;
       </div>);
   }
@@ -82,11 +80,9 @@ if ( {) {
         <h1 className="text - 3xl font - bold text - white mb - 2">;
           Welcome back, {user?.name || "User"}! 👋;
 
-=======
 
           Welcome back, {user?.name || "User"}! 👋;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </h1>;
         <p className="text - zinc - 300 text - lg">;
           Ready to continue building your digital economy? Here's what you can do next.;
@@ -162,12 +158,10 @@ if ( {) {
             <label className="block text - sm font - medium text - zinc - 400 mb - 1">Name</label>;
             <p className="text - white">{user?.name || "Not provided"}</p>;
 
-=======
             <label className="block text-sm font-medium text-zinc-400 mb-1">Name</label>;
 
             <p className="text-white">{user?.name || "Not provided"}</p>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>;
           <div>;
             <label className="block text - sm font - medium text - zinc - 400 mb - 1">Email</label>;

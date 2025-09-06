@@ -23,7 +23,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 
 import {formatDate} from "@/utils/dateUtils";
 
-=======
 import React from "react",
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
 import { 
@@ -54,13 +53,11 @@ interface QuotesTableProps {
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
   deleteQuote: (id: string) => void,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onViewDetails: (quote: QuoteRequest) => void
 }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onViewDetails
 }) => {
   return (
@@ -102,7 +99,6 @@ interface QuotesTableProps {
                   {quote.talent_name |'Unknown Talent'}
                 </TableCell>
                 <TableCell className="text-white">
-=======
 import React from './react';
 import { Eye, MoreHorizontal, Archive, Trash2 } from './lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -166,7 +162,6 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                   {quote.talent_name || 'Unknown Talent'}
                 </TableCell>;
                 <TableCell className="text - white">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {quote.requester_name}
                 </TableCell>;
                 <TableCell className="text - white">;
@@ -269,7 +264,6 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                             }
                           }}
 
-=======
                               }
                             }}
                             className="text-red-500"
@@ -447,7 +441,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                             onClick={() => {;
                               if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
                                 deleteQuote(quote && quote.id);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                               }
                             }}
                             className="text-red-500";
@@ -460,7 +453,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
                   </div>;
                 </TableCell>;
@@ -471,7 +463,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 
 
 
-=======
         </TableBody>;
       </Table>;
     </div>;
@@ -480,10 +471,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                   </div>;
                 </TableCell>;
                 <TableCell className="text - white">;
@@ -586,4 +574,3 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

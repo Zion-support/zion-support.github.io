@@ -27,12 +27,10 @@ import React, { useEffect, useState } from 'react';
 } from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): any (): 'client' | 'talent' | 'admin' {;
 
-=======
 import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
 
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   if (typeof window === 'undefined') return 'client';
 
   const url = new URL(window && window.location.href);
@@ -57,7 +55,6 @@ export default function ProjectMilestonesPage() {;
 
   // Demo cookie-based auth to hit API successfully;
   useEffect(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!role) return;
 
 
@@ -67,21 +64,17 @@ export default function ProjectMilestonesPage() {;
   useEffect(() => {;
 
     if (!projectId) return;
-=======
 
 import {useRouter} from 'next/router';
-=======
 import { useRouter } from 'next/router';
 
 import Head from 'next/head';
 import MilestoneForm from '../../../components/monetization/MilestoneForm';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import MilestoneCard from '../../../components/monetization/MilestoneCard';
 
 import { Milestone } from '../../../utils/types/milestones';
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     let cancelled = false;
     (async () => {;
       setLoading(true);
@@ -90,16 +83,13 @@ import { Milestone } from '../../../utils/types/milestones';
         const data = await fetchMilestones(projectId as string);
 
 
-=======
 
         if (!cancelled) setMilestones(data.milestones || []);
       } catch (error) {
         if (!cancelled) setError(e?.message || 'Failed to load milestones');
       } finally {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (!cancelled) setLoading(false);
-=======
 import {use_router} from 'next / router';
 import Head from 'next / head';
 import MilestoneForm from '../../../components / monetization / MilestoneForm';
@@ -176,7 +166,6 @@ if (return) {
         if (set_loading (false)) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     })();
     return () => {;
@@ -211,12 +200,10 @@ if (return) {
     }
   }, [projectId]);
 
-=======
 
     setMilestones(prev => [res.milestone, ...prev]);  };
 
 
-=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -233,7 +220,6 @@ if (return) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleAction = async (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
@@ -278,8 +264,6 @@ if (return) {
             <div className='flex items-center justify-between mb-3'>
               <h2 className='text-lg font-semibold'>Add Milestone</h2>
               <span className='text-xs text-gray-500'>Role: {role}</span>            </div>
-=======
-=======
 
 
       in_progress: 'In Progress',
@@ -307,7 +291,6 @@ if (return) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>
 
         {role !== 'talent' && (
@@ -316,7 +299,6 @@ if (return) {
               <h2 className="text-lg font-semibold">Add Milestone</h2>
               <span className="text-xs text-gray-500">Role: {role}</span>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <MilestoneForm onSubmit={handleCreate} />
           </div>
 
@@ -345,11 +327,9 @@ if (return) {
         {loading && <div>Loading milestones...</div>}
 
   }, [project_id]);
-=======
 
 
 
-=======
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -381,7 +361,6 @@ if (return, ) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {!loading && !error && (
           <div className='space - y-4'>;
             {milestones.length === 0 && (
@@ -394,7 +373,6 @@ if (return, ) {
               <div className='text-gray-600'>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 No milestones yet.{' '}
                 {role !== 'talent' ? 'Create the first one.' : ''}
               </div>;
@@ -403,7 +381,6 @@ if (return, ) {
               <MilestoneCard
                 key={m && m.id}
 
-=======
               <div className='text - gray - 600'>;
                 No milestones yet.{' '}
                 {role !== 'talent' ? 'Create the first one.' : ''}
@@ -429,14 +406,11 @@ if (return, ) {
   );
 
 
-=======
 
 
 }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
         {error && <div className="text-red-600">{error}</div>}
 
         {!loading && !error && (
@@ -457,8 +431,6 @@ if (return, ) {
     </div>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           </div>)}
         <div className='mt - 12 text - xs text - gray - 500'>;
           Integration hooks ready: on Approved &rarr; trigger payout intent; on;
@@ -476,4 +448,3 @@ if (return, ) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

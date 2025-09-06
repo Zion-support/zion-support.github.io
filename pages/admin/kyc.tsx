@@ -1,15 +1,12 @@
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
 export default function AdminKycPage() {
 
-=======
 
   const [queue, setQueue] = useState<KycProfile[]>([]);
   const [reason, setReason] = useState<string>('');
@@ -34,7 +31,6 @@ export default function AdminKycPage() {
     const data = await res.json();
     if (data.ok) load()
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     if (data.ok) load()
   }
@@ -97,10 +93,8 @@ export default function AdminKycPage() {
       </main>
     </>
 
-=======
 }
 
-=======
 import React, { useEffect, useState } from 'react',
 import Head from 'next / head',
 import type { KycProfile } from '../../utils / kyc',
@@ -181,9 +175,5 @@ function act() {
       </main>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

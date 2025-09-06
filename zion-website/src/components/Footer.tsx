@@ -58,7 +58,6 @@ export default function Footer() {;
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">;
           <div className="space-y-8 xl:col-span-1">;
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">;
-=======
 const navigation = {
   main: [;
     { name: 'About', href: '/about' },
@@ -107,7 +106,6 @@ function Footer() {
         <div className="xl:grid xl:grid - cols - 3 xl:gap - 8">;
           <div className="space - y-8 xl:col - span - 1">;
             <div className="text - 2xl font - bold bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Zion Tech Group;
             </div>;
             <p className="text - gray - 400 text - base">;

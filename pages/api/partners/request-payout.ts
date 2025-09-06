@@ -15,14 +15,12 @@ export default async function handler(
   const usingPlaceholder =
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
-=======
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
   const { code, amount } = req && req.body || {};
   if (!code) return res && res.status($1).json({ $2 });
   const usingPlaceholder =
     (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       "placeholder-key";
   try {
     if (usingPlaceholder) {
@@ -30,7 +28,6 @@ export default async function handler(
     }
     const supabase = getServerSupabase();
 
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -68,22 +65,18 @@ export default async function handler(req, res) {
 
 
     return res.status(500).json({ error: e?.message });
-=======
     const { error } = await supabase.from('payout_requests').insert({
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       partner_code: String(code).toLowerCase(),
       amount: Number(amount) || null,
       status: "requested",
     });
     if (error) return res && res.status(500).json({ error: "Database error" });
     return res && res.status(200).json({ ok: true, status: "requested" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } catch (e: any) {
     return res && res.status(500).json({ error: e?.message });
 
   }
 }
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -110,8 +103,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getServerSupabase  } from '../../../utils / supabase / server';
 export default async /**
@@ -150,4 +141,3 @@ if ( {) {
     return res.status (500).json ({ error: e?.message });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function UsageOverview() {
   // Mock usage data
 
@@ -14,7 +13,6 @@ export function UsageOverview() {
       total: 100,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     interviews: {
       used: 45
       total: 150
@@ -68,19 +66,15 @@ export function UsageOverview() {;
 
     }
   }
-=======
     }
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
-=======
 
 
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Progress } from "@/components/ui/progress",;
@@ -174,7 +168,6 @@ export function UsageOverview() {;
 
           <TabsContent value="historical">;
             <div className="py-10 text-center text-muted-foreground">;
-=======
 import React from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Progress } from '@/components / ui / progress';
@@ -265,7 +258,6 @@ function UsageOverview() {
           </TabsContent>;
           <TabsContent value="historical">;
             <div className="py - 10 text - center text - muted - foreground">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Historical usage data will be available after your first full billing cycle.;
             </div>;
           </TabsContent>;
@@ -275,10 +267,6 @@ function UsageOverview() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

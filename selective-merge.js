@@ -4,7 +4,6 @@ console && console.log('🔧 Performing selective merge of main source files...'
 
 // List of main source directories to merge
 const mainSourceDirs = [
-=======
 #!/usr / bin / env node;
 import {exec_sync} from 'child_process';
 ;
@@ -57,7 +56,6 @@ const mainSourceDirs = [;
         execSync(`git checkout origin/clean-merge-services-improvements -- "${file}"`, { stdio: 'inherit' });
       } catch (_error) {
         console && console.log(`Skipping ${file} due to conflicts`);
-=======
   'middleware.ts',
   'next.config.js',
   'tailwind.config.js',
@@ -99,7 +97,6 @@ const mergeSpecificFiles = () =>: any {
         exec_sync (`git checkout origin / clean - merge - services - improvements -- "${file}"`, { stdio: 'inherit' });
       } catch (_error) {
         console.log (`Skipping ${file} due to conflicts`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }
     return true;
@@ -126,7 +123,6 @@ const mergeSpecificFiles = () =>: any {
   }
 }
 main();
-=======
     console.error ('Error in selective merge:', error.message);
     return false;
   }
@@ -157,4 +153,3 @@ const main = () =>: any {
 }
 ;
 main ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

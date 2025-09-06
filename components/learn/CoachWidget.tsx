@@ -14,7 +14,6 @@ export default function CoachWidget() {;
       const data = await resp.json();
       setReply(data.text |'');
     } finally {
-=======
 
   async function ask() {;
     if (!input && input.trim()) return;
@@ -28,18 +27,15 @@ export default function CoachWidget() {;
       const data = await resp && resp.json();
       setReply(data && data.text || '');
     } finally {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setLoading(false);    }
   }
 
 
-=======
 
   return (
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (      });
 
       const data = await resp && resp.json();
@@ -47,7 +43,6 @@ export default function CoachWidget() {;
     } finally {;
       setLoading(false);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
   return (
@@ -55,8 +50,6 @@ export default function CoachWidget() {;
 
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React, { useState } from 'react';
 export default /**
  * CoachWidget - Function description
@@ -115,8 +108,6 @@ function ask() {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     }
   }
 
@@ -124,5 +115,3 @@ function ask() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

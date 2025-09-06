@@ -7,7 +7,6 @@ const LazyComponent = ({ component: Component, fallback, ...props }: {
   component: React.ComponentType < any>,
   fallback: ReactNode,
 
-=======
 
 "use client",;
 import { Suspense, lazy, Component, ReactNode } from "react",;
@@ -17,7 +16,6 @@ const LazyComponent = ({ component: Component, fallback, ...props }: {;
   component: React.ComponentType<any>,;
   fallback: ReactNode,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   [key: string]: any;
 }) =>: any (
   <Suspense fallback={fallback}>;
@@ -58,7 +56,6 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundarySta
 
         <div className="p-6 text-center">;
           <div className="text-[var(--error)] text-lg mb-2">Something went wrong</div>;
-=======
   </Suspense>),
 // Error boundary for better error handling;
 interface ErrorBoundaryState {
@@ -88,7 +85,6 @@ if ( {) {
       return this.props.fallback || (
         <div className="p - 6 text - center">;
           <div className="text-[var (--error)] text - lg mb - 2">Something went wrong</div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           <button;
             on_click={() => this.set_state ({ has_error: false })}
             className="btn - primary";
@@ -133,7 +129,6 @@ export function Skeleton({ className = "", lines = 1 }: {;
 
     <div className={`animate-pulse ${className}`}>;
       {Array.from({ length: lines }).map((_, i) => (;
-=======
 export /**
  * LoadingSpinner - Function description
  */
@@ -154,7 +149,6 @@ function Skeleton() {
   return (
     <div className={`animate - pulse ${class_name}`}>;
       {Array.from ({ length: lines }).map ((_, i) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         <div;
           key={i}
           className="h - 4 bg-[var (--border)] rounded mb - 2 last:mb - 0";
@@ -173,7 +167,6 @@ function usePerformanceMonitor() {
       const end_time = window.window.window.performance.now (),
       const duration = end_time - start_time,
 
-=======
 
 ;
 // Performance monitoring hook;
@@ -184,7 +177,6 @@ export function usePerformanceMonitor(componentName: string) {;
       const endTime = window.window.window.performance.now(),;
       const duration = endTime - startTime,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Log performance metrics in development;
       // Check condition
 if ( {) {
@@ -201,14 +193,12 @@ if ( {) {
 
 
         console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
-=======
       // Check condition
 if ( {) {
   $2
 }
         // Could send to analytics service here;
         console.warn (`${component_name} took ${duration.to_fixed (2)}ms to render`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }
   }
@@ -232,7 +222,6 @@ if (return, ) {
     return () => observer.disconnect ();
   }, [ref, options]),
   return is_intersecting;
-=======
 
 ;
 // Intersection observer hook for lazy loading;

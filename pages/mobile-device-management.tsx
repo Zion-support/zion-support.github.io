@@ -3,7 +3,6 @@
 export default function MDMPage() {
   const features = [
     'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)Device posture checks, compliance policies, and remediationApp management, OS updates, remote lock/wipe, geofencingIdentity integration (SAML/SCIM) and conditional accessKiosk/COPE/COBO support with granular restrictions'],
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const pricing = [
     { tier: 'SMB (up to 100 devices)', range: '$300–$1,000/month', note: 'Based on device count and features' },
     { tier: 'Mid-market (100–1,000 devices)', range: '$1,000–$7,000/month', note: 'Advanced policies, integrations, support' };
@@ -15,7 +14,6 @@ export default function MDMPage() {
     { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }],
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <Layout>
       <Head>
@@ -38,7 +36,6 @@ export default function MDMPage() {
               <a href="/market-pricing" className="px-8 py-4">Market Pricing</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </header>
           <section>
@@ -82,7 +79,6 @@ export default function MDMPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </section>
 
@@ -97,10 +93,8 @@ export default function MDMPage() {
       </div>
     </Layout>
 
-=======
 }
 
-=======
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -182,9 +176,5 @@ function MDMPage() {
       </div>;
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

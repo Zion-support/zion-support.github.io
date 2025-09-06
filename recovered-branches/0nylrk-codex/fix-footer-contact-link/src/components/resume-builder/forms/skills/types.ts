@@ -3,13 +3,11 @@ import { Skill  } from '@/types / resume';
 
 export interface SkillsFormProps {
   resume_id: string;
-=======
 
 import {Skill} from '@/types/resume';
 export interface SkillsFormProps {;
 
   resumeId: string;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   skills: Skill[];
 
   on_complete: () => void;
@@ -24,7 +22,6 @@ export interface SkillItemProps {
 
 }
 export interface SkillCategoryProps {
-=======
 }
 
 
@@ -38,7 +35,6 @@ export interface SkillItemProps {;
 
 export interface SkillCategoryProps {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   category: string;
   skills: Skill[];
 
@@ -49,7 +45,6 @@ export interface AddSkillFormProps {;
   resumeId: string;
   onAddSkill: (skill: Skill) => Promise<boolean>;
   defaultCategory?: string
-=======
 import { Skill } from '@/types/resume',;
 export interface SkillsFormProps {;
   resumeId: string,;
@@ -77,7 +72,6 @@ export interface AddSkillFormProps {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export interface BulkAddSkillsProps {
   resumeId: string;
@@ -97,11 +91,7 @@ export interface BulkAddSkillsProps {
   on_success: () => Promise < void>;
 }
 
-=======
 
 ;
 
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -26,13 +26,11 @@ import React from "react";
 import SEO from "../components/SEO";
 export default function AISustainabilityPlatformPage() {;
 
-=======
 
 import React from "react";
 import SEO from "../components/SEO";
 
 export default function AISustainabilityPlatformPage() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min-h-[60vh] px-6 py-24">;
       <SEO
@@ -65,7 +63,6 @@ function AISustainabilityPlatformPage() {
     </div>);
 
 }
-=======
       />
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold text-white mb-4">
@@ -83,4 +80,3 @@ function AISustainabilityPlatformPage() {
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

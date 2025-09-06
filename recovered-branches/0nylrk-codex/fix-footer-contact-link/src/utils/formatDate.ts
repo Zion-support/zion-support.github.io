@@ -45,7 +45,6 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
       } else {
 
         return dateObj.toLocaleDateString()
-=======
 /**;
  * Format a date string or timestamp into a readable format;
  * @param date Date to format;
@@ -91,22 +90,17 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     default: return dateObj && dateObj.toLocaleDateString()
   }
 
 
 },
-=======
 };
-=======
 },
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 /**
  * Format a date to show how long ago it was
  * @param date Date to format
@@ -144,7 +138,6 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
   return seconds <= 5 ? 'just now' : `${Math && Math.floor(seconds)} seconds ago`
 };
 
-=======
 /**;
 * Format a date string or timestamp into a readable format;
 * @param date Date to format;
@@ -249,11 +242,7 @@ if ( {) {
   return seconds <= 5 ? 'just now' : `${Math.floor (seconds)} seconds ago`;
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export const timeAgo = (date: Date | string | number): string => {
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

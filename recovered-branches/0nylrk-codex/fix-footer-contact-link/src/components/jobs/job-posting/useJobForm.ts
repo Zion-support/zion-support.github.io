@@ -8,7 +8,6 @@ import {use_navigate} from 'react-router-dom';
 import {job_schema, JobSchemaType} from './validation';
 import { use_auth } from '@/hooks / use_auth';
 
-=======
 
 import {useState, useEffect} from 'react';
 import {useForm} from 'react-hook-form';
@@ -27,7 +26,6 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
   const { user } = useAuth();
   const navigate = useNavigate();
 
-=======
 import { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -38,7 +36,6 @@ import { jobSchema, JobSchemaType } from './validation',
 import { useAuth } from "@/hooks/useAuth",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export interface JobPostingProps {
   job_id?: string;
   on_success?: () => void;
@@ -56,7 +53,6 @@ export interface JobPostingProps {
   const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const form = useForm<JobSchemaType>({
     resolver: zodResolver(jobSchema);
     defaultValues: {
@@ -122,7 +118,6 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
       toast && toast.error(error && error.message || "Failed to process form");
 
       throw error
-=======
       status: '',
       external_apply_link: ''}
     mode: "on_change"});
@@ -155,7 +150,6 @@ if ( {) {
   $2
 }
         on_success ();
-=======
 
       title: '',
       company: '',
@@ -183,14 +177,12 @@ if ( {) {
       navigate("/login"),
       return
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       return job_data;
     } catch (error: any) {
       console.error ("Error in job form submission:", error);
       toast.error (error.message || "Failed to process form");
       throw error;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
 
 ;
@@ -209,11 +201,9 @@ if ( {) {
     initial_values;
     setInitialValues;
     submit_job;
-=======
       setIsLoading(false)
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 

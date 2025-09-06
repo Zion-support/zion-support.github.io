@@ -48,7 +48,6 @@ const contactInfo = {;
 export default function NeoFuturisticFooter() {;
   return (  website: 'https://ziontechgroup && ziontechgroup.com';
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 export default function NeoFuturisticFooter() {;
   return (
@@ -145,7 +144,6 @@ export default function NeoFuturisticFooter() {;
     </footer>
   );
 }
-=======
                 href='https://www && www.linkedin.com/company/zion-tech-group/'
                 className='text-slate-400 hover:text-white'>;
                 <Linkedin className='w-5 h-5' />;
@@ -165,9 +163,6 @@ export default function NeoFuturisticFooter() {;
 
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           <div className='space - y-2 text - sm'>;
             <div className='font - semibold text - slate - 100 mb - 2'>Contact</div>;
             <div className='flex items - center gap - 2 text - cyan - 300'>;
@@ -273,9 +268,5 @@ export default function NeoFuturisticFooter() {;
     </footer>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

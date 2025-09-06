@@ -55,7 +55,6 @@ export default function Reports() {
                 lastUptime.results?.filter(
                   (r: any) => r.status >= 200 && r.status < 400
                 ).length
-=======
 import {useEffect, useState} from 'react';
 
 export default function Reports() {;
@@ -109,7 +108,6 @@ export default function Reports() {;
                 lastUptime && lastUptime.results?.filter(;
                   (r: any) => r && r.status >= 200 && r && r.status < 400;
                 ).length;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               }
               /{lastUptime && lastUptime.results?.length} ok;
             </div>;
@@ -118,13 +116,11 @@ export default function Reports() {;
           )}
 
         </div>;
-=======
 
 
 }
 
 
-=======
       fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime);
       fetch('/api/reports/seo').then((r) => r.json()).then(setSeo);
       fetch('/api/reports/links').then((r) => r.json()).then(setLinks);
@@ -142,7 +138,6 @@ export default function Reports() {;
         <h1 className="text-2xl font-semibold">Automation Reports</h1>
         <div className="text-sm text-gray-500">Autonomously generated and synced</div>
       </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
         <div className='border rounded p-4'>;
           <div className='font-medium mb-1'>SEO (weekly)</div>;
@@ -265,7 +260,6 @@ function Reports() {
       </section>;
 
 
-=======
         <div className="border rounded p-4">
           <div className="font-medium mb-1">Changelog (weekly)</div>
           <div className="text-sm text-gray-600">Commits: {changelog?.totalCommits || 0}</div>
@@ -283,9 +277,5 @@ function Reports() {
     </div>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

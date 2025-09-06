@@ -13,7 +13,6 @@ type UserWithProfile = UserProfile | UserDetails | null;
  * Hook to handle message operations
  */
 export function useMessages(
-=======
 import {UserProfile, UserDetails} from '@/types / auth';
 import {supabase} from '@/integrations / supabase / client';
 import {Message, Conversation} from '@/types / messaging';
@@ -25,7 +24,6 @@ type UserWithProfile = UserProfile | UserDetails | null;
 * Hook to handle message operations;
 */;
 export function use_messages (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   user: UserWithProfile;
   active_conversation: Conversation | null;
   active_messages: Message[];
@@ -42,7 +40,6 @@ export function use_messages (
       }
     } catch (error) {
       console && console.error('Error fetching messages:', error)
-=======
   fetch_conversations: () => Promise < void>) {
   /**;
   * Fetch messages for a conversation;
@@ -79,7 +76,6 @@ if ( {) {
       }
     } catch (error) {
       console.error ('Error fetching messages:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
@@ -87,7 +83,6 @@ if ( {) {
 
       if (unreadMessages.length > 0) {
         await markAsRead(conversationId)
-=======
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Message, Conversation } from '@/types/messaging',;
@@ -142,7 +137,6 @@ export function useMessages(;
   };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   /**
    * Send a message to an existing conversation
    */
@@ -177,7 +171,6 @@ export function useMessages(;
 
 
 
-=======
   },;
   /**;
    * Send a message to an existing conversation;
@@ -215,8 +208,6 @@ export function useMessages(;
       // Update conversations list
       await fetchConversations(),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Return the sent message
       return data
     } catch (error) {
@@ -264,7 +255,6 @@ export function useMessages(;
 
     markAsRead
   }
-=======
 ;
   /**;
   * Send a message to an existing conversation;
@@ -319,10 +309,8 @@ if ( {) {
         variant: "destructive";
       });
     }
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ;
   /**;
@@ -378,5 +366,4 @@ if (throw error) {
     send_message;
     markAsRead;
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

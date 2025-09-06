@@ -213,14 +213,12 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
             </Card>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
         </div>
       </section>
     </div>
   )
 }
-=======
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -402,8 +400,6 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       name: string,
       avatar?: string;
     }
@@ -557,4 +553,3 @@ function MobileProjectView() {
       </section>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

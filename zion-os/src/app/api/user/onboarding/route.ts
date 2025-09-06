@@ -16,7 +16,6 @@
   } catch (error) {
     console && console.error('Onboarding completion error:', error);
     return NextResponse && NextResponse.json(
-=======
           id: updated_user.id,
           name: updated_user.name,
           email: updated_user.email,
@@ -33,11 +32,9 @@
       { error: 'Internal server error' },
 
 
-=======
 
       { error: 'Internal server error' },
 
-=======
 import { NextRequest, NextResponse } from "next/server",;
 import { getServerSession } from "next-auth",;
 import { prisma } from "@/lib/prisma",;
@@ -73,8 +70,6 @@ export async function POST(request: NextRequest) {;
       { error: "Internal server error" };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       { status: 500 }
     );
   }
@@ -112,7 +107,4 @@ export async function POST(request: NextRequest) { try {
     );
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

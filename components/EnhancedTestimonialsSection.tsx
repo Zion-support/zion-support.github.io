@@ -24,10 +24,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Star,
   Quote,
   Users,
@@ -59,7 +56,6 @@ import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react
   rating: number
   avatar: string
   category: string
-=======
   category: string;  id: string,
   name: string,
   title: string,
@@ -68,7 +64,6 @@ import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react
   rating: number,
   avatar: string,
   category: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 
@@ -80,7 +75,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
       title: 'CTO',
       company: 'Quantum Dynamics Inc.',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         key={i}
         className={`w - 4 h - 4 ${
           i < rating ? 'text - yellow - 400 fill - current' : 'text - gray - 400';
@@ -283,12 +277,10 @@ const EnhancedTestimonialsSection: React.FC = () => {
 
                   <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
                     {testimonial.category}
-=======
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {testimonials.map(testimonial => (
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div
               key={testimonial.id}
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
@@ -315,7 +307,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
                 {/* Testimonial Text */}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   "{testimonial.content}"
                 </p>
                 {/* Author Info */}
@@ -324,12 +315,9 @@ const EnhancedTestimonialsSection: React.FC = () => {
                     {testimonial.category}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </span>
                 </div>
               </div>
-=======
                 <div className="flex items-center gap-1 mb-4">;
                   {renderStars(testimonial && testimonial.rating)}
                 </div>;
@@ -373,7 +361,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
                 </div>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Hover Effect */}
 
         </div>;
@@ -391,7 +378,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
               innovation journey.;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-=======
               <div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />            </div>              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
             </div>
 
@@ -400,7 +386,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
         </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
@@ -408,7 +393,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Ready to Join Our Success Stories?
             </h3>
             <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
@@ -417,7 +401,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
               innovation journey.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <a
                 href='mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Client Success Story Discussion'
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
@@ -477,9 +460,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
             </div>
           </div>
         </div>
-=======
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
-=======
                     </div>                  </div>;
                 </div>;
                 {/* Category Badge */}
@@ -538,7 +519,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
                 className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'                href="tel:+13024640950";
                 className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10";
               >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Schedule a Call;
               </a>;
             </div>;
@@ -577,11 +557,9 @@ const EnhancedTestimonialsSection: React.FC = () => {
 export default EnhancedTestimonialsSection;  );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default EnhancedTestimonialsSection;
 
 
-=======
     </section>);
 }
 ;
@@ -590,12 +568,8 @@ export default EnhancedTestimonialsSection);
 ;
 export default EnhancedTestimonialsSection;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

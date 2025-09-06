@@ -29,7 +29,6 @@ declare module 'lovable - tagger' {
 }
 // Add Node.js globals;
 
-=======
 
 interface ImportMetaEnv {;
   readonly VITE_APP_TITLE: string,;
@@ -68,7 +67,6 @@ declare module 'lovable-tagger' {;
 
 
 
-=======
 declare let __dirname: string,
 declare let process: {
   env: {
@@ -85,7 +83,5 @@ declare let process: {;
     PORT?: string;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

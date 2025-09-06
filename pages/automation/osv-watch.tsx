@@ -1,6 +1,5 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function OsvWatchPage() {
 
   const results: any[] = (data?.results |[]).slice(0, 50)
@@ -37,10 +36,8 @@ export default function OsvWatchPage() {
       </div>
     </EnhancedLayout>
 
-=======
 }
 
-=======
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 // @ts - ignore;
 import data from '../../data / security / osv - report.json',
@@ -69,14 +66,10 @@ function OsvWatchPage() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   );
 };
 
-=======
                     <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</Link> — {v.summary || ''}</li>
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -106,5 +99,3 @@ function OsvWatchPage() {
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -14,7 +14,6 @@ export type Review = {
   fromRole: ReviewRole;
 
 
-=======
 
 
   fromId: string, // clientId or talentSlug depending on fromRole;
@@ -29,7 +28,6 @@ export type Review = {
 },;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export type ReviewsSummary = {
   averageRating: number;
   totalReviews: number;
@@ -76,12 +74,9 @@ export type ReviewsSummary = {
   most_recent: PublicReview[];
 
 }
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   mostRecent: PublicReview[];
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

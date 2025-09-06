@@ -15,14 +15,12 @@ export default async function handler(
   const usingPlaceholder =
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
-=======
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
   const { code, event, url, referrer } = req && req.body || {};
   if (!code || !event) return res && res.status($1).json({ $2 });
   const usingPlaceholder =
     (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       "placeholder-key";
   try {
     if (usingPlaceholder) {
@@ -49,7 +47,6 @@ export default async function handler(
 
   }
 }
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -76,7 +73,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ saved: true })
   } catch (e: any) {
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getServerSupabase  } from '../../../utils / supabase / server';
 export default async /**
@@ -94,17 +90,14 @@ function handler() {
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes ("placeholder") ||;
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder - key") ===;
       "placeholder - key";
-=======
 
     return res.status(200).json({ saved: false, error: e?.message });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req, res) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   try {
     // Check condition
 if ( {) {
@@ -177,4 +170,3 @@ if ( {) {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

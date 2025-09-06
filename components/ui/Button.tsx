@@ -11,7 +11,6 @@ interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
-=======
 interface ButtonProps {;
   children: React && React.ReactNode;
   variant?: "primary" | "secondary" | "outline" | "ghost";
@@ -56,7 +55,6 @@ const Button: React.FC<ButtonProps> = ({
       disabled
       type
       ...props
-=======
 
 const Button: React.FC<ButtonProps> = ({;
   children,;
@@ -85,14 +83,11 @@ const Button: React.FC<ButtonProps> = ({;
     lg: "h-12 px-8 text-lg",;
   };
 
-=======
   
   const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 active:scale-95';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   class_name?: string;
   on_click?: () => void;
   disabled?: boolean;
@@ -140,7 +135,6 @@ if ( {) {
       ...props,
     });
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <button;
       className={classes}
@@ -149,9 +143,6 @@ if ( {) {
       type={type}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 export { Button };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -24,14 +24,12 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     let priceMatch = true;
     if (selectedPriceRange !== 'All Prices') {;
       const price = parseInt(service && service.price.replace('$', ''));
@@ -105,7 +103,6 @@ import Link from 'next/link';
 
 
 
-=======
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
   // Filter services based on selections;
   const filteredServices = comprehensiveRealServices2025.filter(service => {;
@@ -182,7 +179,6 @@ import Link from 'next/link';
     ),
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -254,7 +250,6 @@ import Link from 'next/link';
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{comprehensiveRealServices2025.length}+</div>
                   <div className="text-gray-400">Real Services</div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-400 mb-2">$2.5B+</div>
@@ -267,7 +262,6 @@ import Link from 'next/link';
                 <div className="text-center">
                   <div className="text-3xl font-bold text-green-400 mb-2">400%</div>
                   <div className="text-gray-400">Average ROI</div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <div className='text-gray-400'>Real Services</div>
               </div>
@@ -432,7 +426,6 @@ import Link from 'next/link';
 
                 onChange={e => setSortBy(e && e.target.value as any)}
                 className='px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500';
-=======
       default:;
         return 0;    }
   });
@@ -974,7 +967,6 @@ if (return '$500 - $800') {
                           </div>;
                         </div>;
                       </div>;
-=======
     <>
       <Head>
         <title>Comprehensive Services Showcase 2025 | Zion Tech Group</title>
@@ -1664,7 +1656,6 @@ if (return '$500 - $800') {
   }
 }
                   className="px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-all duration-300"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   {contactInfo.website}
                 </a>
@@ -1675,7 +1666,6 @@ if (return '$500 - $800') {
       </section>
     </>
 );
-=======
                 href={`mailto:${contactInfo && contactInfo.email}`}
                 className='flex items-center px-6 py-3 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300'>;
                 <Mail className='w-5 h-5 mr-2' />;
@@ -1683,7 +1673,6 @@ if (return '$500 - $800') {
               </a>;
             </div>;
 
-=======
           <div className="relative z-10 container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -1884,8 +1873,6 @@ if (return '$500 - $800') {
                           ))}
                         </div>
                       </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
             <div className='text-center text-gray-400'>;
               <p className='mb-2'>{contactInfo && contactInfo.address}</p>;
@@ -1894,4 +1881,3 @@ if (return '$500 - $800') {
                 <a
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

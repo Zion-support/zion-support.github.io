@@ -86,7 +86,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           location: ''})
         setEditingId(null)
 
-=======
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -175,7 +174,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } catch (err: any) {
       setError(err.message |'An error occurred')
@@ -201,7 +199,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
   };
 
-=======
   },;
   const handleEdit = (work: WorkExperience) => {;
     setEditingId(work.id!),;
@@ -223,8 +220,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     form.setValue('description', enhancedContent)
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-6">
       <div>
@@ -254,7 +249,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     </p>
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
-=======
 import {useState} from 'react';
 import {use_form} from 'react - hook - form';
 import {zod_resolver} from '@hookform / resolvers / zod';
@@ -279,7 +273,6 @@ import {Loader2, Edit, Trash2} from 'lucide-react';
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-=======
 
       <div className="bg-muted/40 p-6 rounded-lg">;
         <h3 className="text-md font-medium mb-4">;
@@ -289,14 +282,12 @@ import {Loader2, Edit, Trash2} from 'lucide-react';
         <Form {...form}>;
           <form onSubmit={form && form.handleSubmit(handleAddOrUpdate)} className="space-y-4">;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <FormField
                 control={form && form.control}
                 name="company_name"
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Company Name</FormLabel>;
-=======
 import {use_resume} from '@/hooks / use_resume';
 import {Alert, AlertDescription} from '@/components / ui / alert';
 import {Card, CardContent} from '@/components / ui / card';
@@ -471,7 +462,6 @@ if ( {) {
                 render={({ field }) => (
                   <FormItem>;
                     <FormLabel > Company Name</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     <FormControl>;
                       <Input placeholder="Google, Microsoft, etc." {...field} />;
                     </FormControl>;
@@ -486,7 +476,6 @@ if ( {) {
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Job Title</FormLabel>;
-=======
                   </FormItem>)}
               />;
               <FormField;
@@ -495,7 +484,6 @@ if ( {) {
                 render={({ field }) => (
                   <FormItem>;
                     <FormLabel > Job Title</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     <FormControl>;
                       <Input placeholder="Software Engineer, Product Manager, etc." {...field} />;
                     </FormControl>;
@@ -524,7 +512,6 @@ if ( {) {
                 )}
               />
               <div className="space-y-4">
-=======
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Start Date</FormLabel>;
@@ -541,7 +528,6 @@ if ( {) {
               />;
 
               <div className="space-y-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <FormField
                   control={form && form.control}
                   name="is_current"
@@ -594,7 +580,6 @@ if ( {) {
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Location (Optional)</FormLabel>;
-=======
                   </FormItem>)}
               />;
             </div>;
@@ -657,7 +642,6 @@ if ( {) {
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Location (Optional)</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <Input placeholder="San Francisco, CA (Remote)" {...field} />;
                   </FormControl>;
@@ -686,7 +670,6 @@ if ( {) {
                     <Textarea
                       placeholder="Describe your responsibilities and accomplishments..."
                       className="min-h-[100px]"
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -707,7 +690,6 @@ if ( {) {
                     <Textarea;
                       placeholder="Describe your responsibilities and accomplishments...";
                       className="min - h-[100px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {...field}
                     />;
                   </FormControl>;
@@ -738,7 +720,6 @@ if ( {) {
                       location: ''})
                   } else {
                     onBack()
-=======
                     form && form.reset({;
                       company_name: '',;
                       role_title: '',;
@@ -748,7 +729,6 @@ if ( {) {
                       location: ''});
                   } else {;
                     onBack();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   }
                 }}
               >;
@@ -767,7 +747,6 @@ if ( {) {
                     Next;
                   </Button>;
                 )}
-=======
                 </FormItem>)}
             />;
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
@@ -805,9 +784,7 @@ if ( {) {
                     Next;
                   </Button>)}
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>;
             </div>;
           </form>;
@@ -817,7 +794,5 @@ if ( {) {
     </div>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

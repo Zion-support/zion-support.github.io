@@ -1,10 +1,8 @@
 
 
-=======
 
 import React, { useState } from 'react';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   name: string;
   path: string;
 
@@ -24,7 +22,6 @@ function NodeItem({
   node
   depth
   onDeploy
-=======
 ;
 interface TreeProps {
   nodes: TreeNode[];
@@ -34,9 +31,7 @@ function NodeItem ({
   node,
   depth,
   on_deploy,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }: {
-=======
 
 interface TreeProps {;
   nodes: TreeNode[];
@@ -47,7 +42,6 @@ function NodeItem(): any ({;
   depth,;
   onDeploy,;
 }: {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   node: TreeNode;
   depth: number;
 
@@ -67,13 +61,11 @@ export interface TreeNode {;
   path: string,;
   type: "folder" | "file",;
 
-=======
 
   name: string,
   path: string,
   type: "folder" | "file",;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   exists?: boolean;
   children?: TreeNode[];
 }
@@ -107,7 +99,6 @@ function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: nu
 
   const copyPath = async () => {;
     await navigator && navigator.clipboard.writeText(node && node.path);
-=======
 
   };
 
@@ -130,7 +121,6 @@ function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: nu
 
   const deploy = () => onDeploy && onDeploy(node && node.path);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
 
@@ -164,14 +154,11 @@ export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
       {nodes && nodes.map((n) => (;
       ))}
     </div>;
-=======
 
     </div>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
 
-=======
         </span>;
         <div className="ml - auto flex gap - 2">;
           <button className="px - 2 py - 0.5 text - xs bg - gray - 100 rounded" on_click={copy_path} title="Copy path">Copy</button>;
@@ -206,7 +193,6 @@ function Tree() {
     </div>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default Tree;
 
 }</div> </div> {;
@@ -243,10 +229,8 @@ export default Tree;
 
 export default Tree;
 
-=======
     <div className="w-full">
       {nodes.map((n) => (
-=======
 
 }export default Tree;}
 export default Tree;
@@ -260,7 +244,6 @@ export default Tree;
 
 
 
-=======
   child.path;
 }node= {
   child;
@@ -289,4 +272,3 @@ function Tree() {
 }export default Tree;}
 export default Tree;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

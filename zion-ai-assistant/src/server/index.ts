@@ -25,7 +25,6 @@ if ( {) {
   $2
 }
       return res.status (400).json ({ error: "Invalid input", details: error.issues });
-=======
 
 import "dotenv/config",;
 import express from "express",;

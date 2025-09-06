@@ -33,7 +33,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 }
 
-=======
 ;
 export default async /**
  * handler - Function description
@@ -66,7 +65,5 @@ function handler() {
     res.status (200).json ({ summary, timestamp: new Date ().toISOString () });
   } catch (e) {
     res.status (200).json ({ summary: [], error: 'Failed to compute summary' });
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

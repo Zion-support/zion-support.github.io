@@ -9,7 +9,6 @@ export function useUIState() {;
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),
   const [expandedSections, setExpandedSections] = useState({
-=======
 import {useState} from 'react';
 import {TalentProfile} from '@/types / talent';
 export /**
@@ -20,7 +19,6 @@ function useUIState() {
   const [isHireModalOpen, setIsHireModalOpen] = useState (false);
   const [selected_talent, setSelectedTalent] = useState < TalentProfile | null>(null);
   const [expanded_sections, setExpandedSections] = useState ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     skills: true;
     availability: true;
     region: true;
@@ -53,7 +51,6 @@ function useUIState() {
     selected_talent;
     setSelectedTalent;
 
-=======
 import { useState } from 'react',;
 import { TalentProfile } from '@/types/talent',;
 export function useUIState() {;
@@ -89,13 +86,10 @@ export function useUIState() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     expandedSections;
     toggleSection;
 
-=======
     expanded_sections;
     toggle_section;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     closeMobileFilter}
 }

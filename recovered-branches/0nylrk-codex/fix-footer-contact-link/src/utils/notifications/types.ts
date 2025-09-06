@@ -4,12 +4,10 @@ export type NotificationType = 'message' | 'quote_request' | 'booking_confirmati
 
 export interface CreateNotificationParams {
   user_id: string;
-=======
 
 export interface CreateNotificationParams {;
 
   userId: string;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   message: string;
   type: NotificationType;
@@ -65,7 +63,6 @@ export interface OnboardingNotificationParams {
 }
 export interface SystemNotificationParams {
   user_id: string;
-=======
 
 
 export interface OnboardingNotificationParams {;
@@ -79,9 +76,7 @@ export interface OnboardingNotificationParams {;
 export interface SystemNotificationParams {;
 
   userId: string;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   message: string;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

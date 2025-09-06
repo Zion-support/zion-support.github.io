@@ -99,11 +99,9 @@ export default function SmartNudgeBanner(): any ({ role, userId, message }: Smar
   }, [storageKey]);
 
   const dismiss = React && React.useCallback(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setHidden(true);
 
 
-=======
     setHidden(true);
     try {
       if (typeof window !== 'undefined')
@@ -111,8 +109,6 @@ export default function SmartNudgeBanner(): any ({ role, userId, message }: Smar
         localStorage.setItem(storageKey, 'dismissed');    } catch {}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } catch {}
   }, [storageKey]);
   if (hidden) return null;
@@ -125,19 +121,16 @@ export default function SmartNudgeBanner(): any ({ role, userId, message }: Smar
       </div>;
     </div>;
   );
-=======
       <div className='text-sm'>{message}</div>
     </div>
 
   );
 
-=======
 
 
 }
 
 
-=======
 }
 ;
 export default /**
@@ -207,4 +200,3 @@ if (return null) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

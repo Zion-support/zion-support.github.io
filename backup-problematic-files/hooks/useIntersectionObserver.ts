@@ -1,13 +1,11 @@
 
 import {useEffect, useRef, useState} from 'react';
 
-=======
 
 import {useEffect, useRef, useState} from 'react';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface UseIntersectionObserverProps {
   threshold?: number;
   root?: Element | null;
@@ -24,7 +22,6 @@ interface UseIntersectionObserverProps {
   return [setNode, entry] as const
 };
 
-=======
   return [setNode, entry] as const;
 }
 import { useEffect, useRef, useState } from 'react',;
@@ -70,7 +67,6 @@ export function useIntersectionObserver({;
   }, [node]);
   return [setNode, entry] as const;
 }
-=======
       observer.current?.unobserve(prevNode.current)
     }
     if (node) {
@@ -80,7 +76,5 @@ export function useIntersectionObserver({;
   }, [node]);
   return [setNode, entry] as const
 }
->>>>>>> main:hooks/useIntersectionObserver.ts
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -12,7 +12,6 @@
     const match = cookieHeader && cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res && res.status(400).json({ error: "Missing nonce" });
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const nonce = match[1];
     if (!String(message).includes(`Nonce: ${nonce}`))
       return res && res.status(400).json({ error: "Nonce mismatch" });
@@ -35,7 +34,6 @@
 
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import jwt from './jsonwebtoken';
 import { ethers  } from './ethers';
@@ -85,7 +83,6 @@ function handler() {
     return res.status (200).json ({ ok: true });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message || "Verify failed" });
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
 
@@ -97,4 +94,3 @@ function handler() {
 
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

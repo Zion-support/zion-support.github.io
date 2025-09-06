@@ -25,10 +25,8 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ai - governance - compliance - hub',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'ai - synthetic - data - factory',
     name: 'AI Synthetic Data Factory',
     category: 'AI & Data',
@@ -62,10 +60,8 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ai - synthetic - data - factory',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'ecommerce - returns - orchestrator',
     name: 'E‑commerce Returns Orchestrator',
     category: 'Developer Tools',
@@ -98,10 +94,8 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ecommerce - returns - orchestrator',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'ai - analytics - observability - kit',
     name: 'AI Analytics Observability Kit',
     category: 'Observability',
@@ -142,10 +136,8 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ai - analytics - observability - kit',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'cloud - cost - anomaly - guard',
     name: 'Cloud Cost Anomaly Guard',
     category: 'Cloud & FinOps',
@@ -178,10 +170,8 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / cloud - cost - anomaly - guard',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'secure - pdf - signing - api',
     name: 'Secure PDF Signing API',
     category: 'Developer Tools',
@@ -213,10 +203,8 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / secure - pdf - signing - api',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'status - slo - plus',
     name: 'Status Pages + SLO Pro',
     category: 'Quality & Monitoring',
@@ -249,11 +237,9 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / status - slo - plus',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Third-party risk programs',
-=======
     id: 'vendor - risk - automation - pro',
     name: 'Vendor Risk Automation Pro',
     category: 'Quality & Monitoring',
@@ -286,10 +272,8 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / vendor - risk - automation - pro',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'ai - docs - search - answers',
     name: 'AI Docs Search & Answers',
     category: 'Developer Tools',
@@ -321,10 +305,8 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ai - docs - search - answers',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'msp - remote - device - ops',
     name: 'MSP Remote Device Ops',
     category: 'Cloud & FinOps',
@@ -341,9 +323,7 @@ export const real2026Q2Additions = [
     ],
     use_cases: [;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'MSPs and IT providers',
       'Internal IT for SMBs',
       'BYOD governance',
@@ -359,7 +339,6 @@ export const real2026Q2Additions = [
 
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
 
-=======
     id: 'ai-governance-compliance-hub', name: 'AI Governance & Compliance Hub',
     category: 'AI & Data',
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',
@@ -367,7 +346,6 @@ export const real2026Q2Additions = [
     features: [
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO, HIPAA add-ons)'
 
-=======
     period: '/device / month',
     trial_days: 14,
     setup_time: 'Fast',
@@ -376,8 +354,6 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / msp - remote - device - ops',
   },
 ];      'Windows / macOS / Linux agent and lightweight mode_patch automation and health policies_remote scripts and secure sessions_inventory, software metering, and alerts_ticketing and customer portals';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     use_cases: ['MSPs and IT providers_internal IT for SMBsBYOD governance'];
     integrations: ['Azure ADOktaSlackServiceNow'];
@@ -391,17 +367,14 @@ export const real2026Q2Additions = [
 ];
 
 
-=======
     period: '/device / month';
     trial_days: 14;
     setup_time: 'Fast';
     market_position: 'Cost - effective RMM for partners and IT teams';
     roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com / services / msp - remote - device - ops';
-=======
 
 
-=======
 export const real2026Q2Additions = [;
   {;
     id: 'ai-governance-compliance-hub',;
@@ -606,9 +579,6 @@ export const real2026Q2Additions = [;
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

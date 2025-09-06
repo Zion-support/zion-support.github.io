@@ -4,7 +4,6 @@ import path from 'path';
 import axios from 'axios';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const { episodeId } = req && req.body || {};
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
@@ -35,7 +34,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const wavPath = path && path.join(PUBLIC_DIR, `${baseFilename}.wav`);
   const mp4Path = path && path.join(PUBLIC_DIR, `${baseFilename}.mp4`);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   let mp3Created = false;
   try {
     if (elevenKey) {
@@ -45,7 +43,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           text,
           model_id: process && process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2',
         },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {
 
       const resp = await axios && axios.post(
@@ -95,18 +92,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error(error)
     return res.status(500).json({ error: error?.message |'Synthesis failed' })
 
-=======
       .json({ error: error?.message || 'Synthesis failed' });
   }    return res && res.status(200).json({ episode })
   } catch (error: any) {
     console && console.error(error),
     return res && res.status(500).json({ error: error?.message || 'Synthesis failed' })
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
-=======
           response_type: 'arraybuffer',
           headers: {
             'xi - api - key': eleven_key,
@@ -174,9 +168,5 @@ if ( {) {
     return res.status (500).json ({ error: error?.message || 'Synthesis failed' });
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

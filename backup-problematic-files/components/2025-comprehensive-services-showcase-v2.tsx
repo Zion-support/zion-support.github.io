@@ -274,11 +274,9 @@ function ComprehensiveServicesShowcase2025V2() {
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
             className="text - 3xl md:text - 4xl font - bold text - white mb - 8";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
 
@@ -290,22 +288,18 @@ function ComprehensiveServicesShowcase2025V2() {
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
             className="grid md:grid - cols - 3 gap - 8";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
 
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
             className="text - 4xl md:text - 5xl font - bold text - white text - center mb - 16";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
 
@@ -318,7 +312,6 @@ function ComprehensiveServicesShowcase2025V2() {
                           {(service as any).pricing?.professional ?;
                             `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :;
                             `${service.price} ${service.period}`;
-=======
           >
             Our Comprehensive Service Portfolio
           </motion.h2>
@@ -377,7 +370,6 @@ function ComprehensiveServicesShowcase2025V2() {
                           {(service as any).pricing?.professional ? 
                             `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :
                             `${service.price} ${service.period}`
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                           }
                         </div>;
                       </div>;
@@ -397,9 +389,7 @@ function ComprehensiveServicesShowcase2025V2() {
                     </motion.div>
 
                   ))}
-=======
                     </motion.div>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </div>;
               </motion.div>))}
           </motion.div>;
@@ -410,14 +400,12 @@ function ComprehensiveServicesShowcase2025V2() {
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
       <section className="py - 20 px - 4 bg - black / 20">;
         <div className="max - w-7xl mx - auto">;
           <motion.h2;
             className="text - 4xl md:text - 5xl font - bold text - white text - center mb - 16";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
 
@@ -430,22 +418,18 @@ function ComprehensiveServicesShowcase2025V2() {
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
             className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
 
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
             className="text - 4xl md:text - 5xl font - bold text - white mb - 6";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
 
@@ -457,24 +441,19 @@ function ComprehensiveServicesShowcase2025V2() {
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
             className="text - xl text - gray - 300 mb - 8";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
 
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
             className="flex flex - col sm:flex - row gap - 4 justify - center";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

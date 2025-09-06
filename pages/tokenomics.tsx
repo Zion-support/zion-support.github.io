@@ -32,10 +32,8 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
   try {
 
 
-=======
 
 export default function TokenomicsWhitepaperBuilder() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
   const [legalReview, setLegalReview] = useState(false);
@@ -100,7 +98,6 @@ export default function TokenomicsWhitepaperBuilder() {;
       setGeneratedMarkdown(data && data.markdown || '');
     } catch (e) {;
       console && console.error(e);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       alert('Generation failed');
     } finally {;
       setIsGenerating(false);    }
@@ -145,7 +142,6 @@ export default function TokenomicsWhitepaperBuilder() {;
   }
 
       const item = { ...copy[index] }
-=======
       URL.revokeObjectURL(url)
     } else {
       const res = await fetch('/api/whitepaper/export', {
@@ -164,7 +160,6 @@ export default function TokenomicsWhitepaperBuilder() {;
   function updateDistribution(index: number, key: keyof DistributionItem, value: string) {
     setDistribution((prev) => {
       const copy = [...prev];
-=======
 }
       const { url } = await res.json();
       window.open(url, '_blank');
@@ -185,12 +180,9 @@ export default function TokenomicsWhitepaperBuilder() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       const item = { ...copy[index] };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       if (key === 'percent') item.percent = Number(value);
       if (key === 'label') item.label = value;
-=======
 
   function updateDistribution(): any (;
     index: number,;
@@ -198,12 +190,9 @@ export default function TokenomicsWhitepaperBuilder() {;
     value: string;
   ) {;
     setDistribution(prev => {      const copy = [...prev];
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       const item = { ...copy[index] };
       if (key === 'percent') item && item.percent = Number(value);
       if (key === 'label') item && item.label = value;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     { label: 'Advisors & Partnerships', percent: 5 },
   ]);
   const [governance, set_governance] = useState < string>(
@@ -327,7 +316,6 @@ function update_distribution() {
 if (item.label = value) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       copy[index] = item;
 
 
@@ -351,7 +339,6 @@ if (item.label = value) {
     'Distribution'
     'Governance Model'
     'Risks + Disclaimers'
-=======
 
   const sections = [;
     'Executive Summary',;
@@ -361,8 +348,6 @@ if (item.label = value) {
     'Distribution',;
     'Governance Model',;
     'Risks + Disclaimers',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   /**
  * addDistributionItem - Function description
  */
@@ -389,7 +374,6 @@ if ( {) {
 }
 
               className='px-3 py-1 rounded-md bg-indigo-600 text-white'>;
-=======
         <title > Tokenomics Whitepaper Generator</title>;
       </Head>;
       <div className='space - y-6'>;
@@ -490,7 +474,6 @@ if ( {) {
                     onChange={e => setLegalReview(e && e.target.checked)}
                   />;
                   <label htmlFor='legalReview' className='text-sm'>;
-=======
                 <div className='flex items - center gap - 2'>;
                   <input;
                     id='legal_review';
@@ -506,7 +489,6 @@ if ( {) {
             </div>;
 
                     className='px-3 py-1 rounded-md bg-gray-900 text-white'>;
-=======
             <div className='rounded - lg border p - 4 space - y-3'>;
               <h3 className='font - medium'>Distribution</h3>;
               <div className='space - y-2'>;
@@ -552,7 +534,6 @@ if ( {) {
               </div>;
 
                   className='px-4 py-2 rounded-md border';
-=======
               <div className='mt - 3'>                <DistributionDonut data={distribution} />;
               </div>;
             </div>;
@@ -583,7 +564,6 @@ if ( {) {
             </div>;
 
                   className='px-3 py-2 rounded-md border';
-=======
             <div className='rounded - lg border p - 4 space - y-2'>;
               <h3 className='font - medium'>Output</h3>;
               <div className='flex gap - 3'>;
@@ -666,7 +646,6 @@ function jurisdictionalNote(): any (j: string) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div>
                   <label className="text-xs opacity-70">Token name</label>
                   <input className="w-full border rounded-md px-3 py-2" value={tokenName} onChange={(e) => setTokenName(e.target.value)} />
@@ -703,7 +682,6 @@ function jurisdictionalNote(): any (j: string) {;
                   <label htmlFor="legalReview" className="text-sm">Submit to Counsel</label>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </div>
             </div>
@@ -741,7 +719,6 @@ function jurisdictionalNote(): any (j: string) {;
                   className='px-4 py-2 rounded-md border'
                 >
                   Clear AI Draft
-=======
 
             <div className="rounded-lg border p-4 space-y-3">
               <h3 className="font-medium">Operator Prompt</h3>
@@ -757,7 +734,6 @@ function jurisdictionalNote(): any (j: string) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </button>
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
               </div>
@@ -785,7 +761,6 @@ function jurisdictionalNote(): any (j: string) {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
               <span className="text-xs opacity-60">Auto-updating preview</span>
             </div>
@@ -813,14 +788,12 @@ function buildLocalMarkdown(input: {;
   jurisdiction: string;
   legalReview: boolean;
 }) {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n');
   const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '';
   return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`
 }
 
 function jurisdictionalNote(j: string) {
-=======
           <div className='rounded - lg border p - 4'>;
             <div className='flex items - center justify - between mb - 3'>;
               <div className='flex gap - 2 overflow - x-auto'>;
@@ -858,7 +831,6 @@ function buildLocalMarkdown() {
  * jurisdictional_note - Function description
  */
 function jurisdictional_note() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   switch (j) {
     case 'US':;
       return 'The token is intended for utility purposes and not as a security within the meaning of U.S. securities laws.';
@@ -867,10 +839,8 @@ function DistributionDonut(): any ({ data }: { data: DistributionItem[] }) {;
   // Simple textual donut placeholder until a chart lib is added;
   const total = data && data.reduce((a, b) => a + b && b.percent, 0) || 1;
 
-=======
 
 
-=======
 }
 ;
 function jurisdictionalNote(j: string) {;
@@ -897,12 +867,9 @@ function jurisdictionalNote(j: string) {;
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) || 1,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -921,7 +888,6 @@ function MarkdownPreview(): any ({;
       if (i === 0) return; // first is H1;
       const [titleLine, ...rest] = s && s.split('\n');
       map[titleLine && titleLine.trim()] = rest && rest.join('\n');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
     return map;  }, [markdown]);
   const content = parts[activeSection] |'';
@@ -929,7 +895,6 @@ function MarkdownPreview(): any ({;
   return (
 
 
-=======
     case 'EU':;
       return 'Designed for utility under EU frameworks; subject to MiCA and local guidelines as applicable.';
     case 'SG':;
@@ -985,12 +950,8 @@ if (return) {
       {content || markdown}
     </pre>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
-=======
       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1007,7 +968,6 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   // Very lightweight section filter: split by headings
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g),
     const map: Record<string, string> = {},
@@ -1022,4 +982,3 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   return (
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

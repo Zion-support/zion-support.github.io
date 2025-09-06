@@ -48,7 +48,6 @@ export default function ProgressBar(): any ({ value }: ProgressBarProps) {;
   );
 }
 
-=======
 ;
 type ProgressBarProps = { value: number }
 ;
@@ -70,14 +69,9 @@ function ProgressBar() {
       <div className="h - 3 bg - blue - 600 rounded" style={{ width: `${pct}%` }} />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

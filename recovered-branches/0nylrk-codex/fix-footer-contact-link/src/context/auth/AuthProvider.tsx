@@ -38,7 +38,6 @@ export const AuthProvider = ({ children }: { children: React && React.ReactNode 
 
 
 
-=======
 import React, { useEffect } from "react",
 import { supabase, getFromProfiles } from "../../integrations/supabase/client",
 import { useAuthOperations } from "../../hooks/useAuthOperations",
@@ -90,8 +89,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     // Clean up any potential stale auth state before setting up listeners
     cleanupAuthState(),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
         if (session?.user) {
@@ -101,7 +98,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
               .eq('id', session.user.id)
 
 
-=======
 
               .single(),
 
@@ -182,7 +178,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
               // Show welcome toast when user logs in;
               if (event === 'SIGNED_IN') {;
                 handleSignedIn(mappedUser);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               }
             } else if (error) {;
               console && console.error("Error fetching user profile:", error);
@@ -200,7 +195,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
           if (event === 'SIGNED_OUT') {;
             handleSignedOut();
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }
         }
         setIsLoading(false);
@@ -229,7 +223,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
     logout;
     resetPassword;
     updateProfile;
-=======
 import React, { useEffect } from './react';
 import { supabase, getFromProfiles } from '../../integrations / supabase / client';
 import { useAuthOperations } from '../../hooks / useAuthOperations';
@@ -256,7 +249,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: an
     logout;
     reset_password;
     update_profile;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     loginWithGoogle;
     loginWithFacebook;
     loginWithTwitter;
@@ -274,7 +266,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: an
   );
 };
 
-=======
   } = useAuthOperations (set_user, setIsLoading);
 ;
   // Wrapper for login to match the AuthContextType interface;
@@ -380,12 +371,9 @@ if ( {) {
     </AuthContext.Provider>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
-=======
     ),;
     // Initial session check;
     supabase.auth.getSession().then(({ data: { session } }) => {;
@@ -420,5 +408,3 @@ if ( {) {
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

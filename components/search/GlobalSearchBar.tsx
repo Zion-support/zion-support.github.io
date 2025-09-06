@@ -52,7 +52,6 @@ export default function GlobalSearchBar() {;
     }
     const id = setTimeout(run, 150);
 
-=======
         const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { signal: controller.current!.signal }),
         const j = await r.json();
         setSuggestions(j.suggestions || []);
@@ -62,7 +61,6 @@ export default function GlobalSearchBar() {;
     const id = setTimeout(run, 150);
     return () => clearTimeout(id)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, [query]);
 
     return () => clearTimeout(id)
@@ -168,7 +166,6 @@ export default function GlobalSearchBar() {;
     rec && rec.start();
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">;
       <input
@@ -386,9 +383,6 @@ if (return) {
     </form>));
 }
 
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

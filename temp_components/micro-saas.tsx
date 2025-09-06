@@ -1253,10 +1253,8 @@ export default function MicroSaasPage() {;
   ];
   const categories = [...new Set(microSaasServices.map(service => service.category))];
 
-=======
 
 
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target } from 'lucide-react',;
@@ -2481,7 +2479,6 @@ export default function MicroSaasPage() {;
       description: "Each of our 65+ services is designed for a specific business need, ensuring deep functionality and expertise without feature bloat.",
       icon: "🎯"
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
       icon: '💰'
       title: 'Transparent Pricing'
@@ -2519,7 +2516,6 @@ export default function MicroSaasPage() {;
   ],
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <>;
@@ -2581,7 +2577,6 @@ export default function MicroSaasPage() {;
             meeting transcription, invoice automation, churn prediction, lead scoring, real-time analytics, content optimization, ;
             predictive maintenance, email security, dynamic pricing, customer segmentation, sales intelligence, content calendar optimization, ;
 
-=======
 identity management, and enterprise analytics. Focused, affordable solutions that deliver specific value without the complexity of enterprise platforms. Start with a free trial and scale as you grow. </p> </div> <div className="flex items - center text - green - 400" > <Check className="w - 4 h - 4 mr - 2" /> <span > Unified dashboard</span> </div> <div className="flex items - center text - green - 400" > <Check className="w - 4 h - 4 mr - 2" /> <span > Integrated billing</span> </div> </div> </div> <div className="flex flex - col sm:flex - row gap - 6 justify - center" > <Button href="#services" variant="secondary" size="lg" className="bg - gradient - to - r from - green - 500 to - emerald - 600 hover:from - green - 600 hover:to - emerald - 700 shadow - 2xl" > Explore Services <ArrowRight className="w - 5 h - 5 ml - 2" /> </Button> <Button href="/pricing" variant="outline" size="lg" className="border - green - 500 text - green - 400 hover:bg - green - 500 hover:text - white" > View All 85+ Services <ArrowRight className="w - 5 h - 5 ml - 2" /> </Button> </div> </div> </section> Professional Micro SaaS Solutions </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Each service is designed to solve specific business problems with enterprise - grade quality and competitive pricing. </p> </div> Popular </span>);
 }</div> </li>) );
 }</ul> </div> </div> </div> <div className="flex flex - col gap - 3" > <a </div> </div>) );
@@ -3906,7 +3901,6 @@ function MicroSaasPage() {
             market research, financial planning, CRM systems, learning management, IoT management, analytics dashboards,
             meeting transcription, invoice automation, churn prediction, lead scoring, real - time analytics, content optimization,
             predictive maintenance, email security, dynamic pricing, customer segmentation, sales intelligence, content calendar optimization,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             email deliverability, landing page building, customer journey mapping, contract analysis, sales forecasting, customer service analytics;
             product recommendations, fraud detection, inventory forecasting, customer onboarding, social media automation, cybersecurity threat hunting;
             metaverse development, Web3 DeFi analytics, IoT edge computing, autonomous vehicle platforms, climate prediction, biotechnology;
@@ -3946,7 +3940,6 @@ function MicroSaasPage() {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-=======
             identity management, and enterprise analytics. Focused, affordable solutions that deliver specific value ;
             without the complexity of enterprise platforms. Start with a free trial and scale as you grow.;
           </p>;
@@ -3969,7 +3962,6 @@ function MicroSaasPage() {
             </div>;
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 href="#services"
                 variant="secondary"
@@ -4103,7 +4095,6 @@ function MicroSaasPage() {
                 size="lg"
 
                 className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl">;
-=======
             identity management, and enterprise analytics. Focused, affordable solutions that deliver specific value;
             without the complexity of enterprise platforms. Start with a free trial and scale as you grow.;
           </p>;
@@ -4649,10 +4640,8 @@ function MicroSaasPage() {
           </div>;
         </div>;
       </section>;
-=======
 
 
-=======
 
 
       {/* CTA Section */}
@@ -4662,12 +4651,7 @@ function MicroSaasPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   </div>;
                   <div className="flex - 1">;
                     <h3 className="text - 3xl font - bold text - white mb - 4">{service.title}</h3>;
@@ -4912,4 +4896,3 @@ function MicroSaasPage() {
       {/* CTA Section */}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

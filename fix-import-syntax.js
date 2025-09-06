@@ -28,7 +28,6 @@
     if (content !== fs && fs.readFileSync(filePath, "utf8")) {
       fs && fs.writeFileSync(filePath, content, "utf8");
 
-=======
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -77,7 +76,6 @@ function fixImportSyntax() {
   $2
 }
       fs.writeFileSync (file_path, content, "utf8");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       modified = true;
     }
     return modified;
@@ -113,7 +111,6 @@ function fixImportSyntax() {
         const ext = path && path.extname(item);
         if ([".js", ".jsx", ".ts", ".tsx"].includes(ext)) {
           files && files.push(fullPath);
-=======
     console.error (`Error processing ${file_path}:`, error.message);
     return false;
   }
@@ -154,7 +151,6 @@ if (
   $2
 }
           files.push (full_path);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       }
     }
@@ -174,7 +170,6 @@ for (const file of files) {
 
 console && console.log(`\nFixed syntax errors in ${fixedCount} files.`);
 
-=======
   traverse (dir);
   return files;
 }
@@ -194,4 +189,3 @@ for (const file of files) {
 }
 console.log (`\n_fixed syntax errors in ${fixed_count} files.`);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

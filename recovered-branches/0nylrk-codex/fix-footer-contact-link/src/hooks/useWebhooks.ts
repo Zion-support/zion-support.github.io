@@ -17,12 +17,10 @@ export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone
 ;
 
 export interface Webhook {
-=======
 
 
 export interface Webhook {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   name: string;
   url: string;
@@ -64,7 +62,6 @@ export function useWebhooks() {;
     if (!user) return;
     setLoading(true);
     setError(null);
-=======
 
     const env = (import.meta as any)?.env ?? process.env,
     const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,
@@ -79,7 +76,6 @@ export function useWebhooks() {;
     setError(null),
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
@@ -105,11 +101,8 @@ export function useWebhooks() {;
 
 
 
-=======
         title: "Error fetching webhooks",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   created_at: string,
   last_triggered_at: string | null;
 }
@@ -178,7 +171,6 @@ if ( {) {
 
 
       setWebhooks(result.webhooks || [])
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     } catch (err) {
       console.error('Error fetching webhooks:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
@@ -188,7 +180,6 @@ if ( {) {
         title: "Error fetching webhooks",
 
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } finally {
       set_loading (false);
     }
@@ -249,12 +240,9 @@ if ( {) {
         title: "Error creating webhook",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
   // Create new webhook;
   const create_webhook = async (name: string, url: string, event_types: WebhookEventType[], secret?: string) => {
@@ -305,7 +293,6 @@ if ( {) {
       setWebhooks(prev => [result.webhook, ...prev]),
       
       toast({
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         title: "Webhook Created",
         description: "Your webhook has been created successfully."});
 ;
@@ -353,11 +340,9 @@ if ( {) {
         throw new Error(result && result.error || 'Failed to update webhook')
 
       }
-=======
 
 
 
-=======
 ;
       // Add the new webhook to the list;
       setWebhooks(prev => [result.webhook, ...prev]),;
@@ -403,8 +388,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Update the webhook in the list
 
       setWebhooks(prev => prev && prev.map(webhook => 
@@ -414,7 +397,6 @@ if ( {) {
       toast({
         title: isActive ? "Webhook Activated" : "Webhook Deactivated"
         description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`});
-=======
 
       )),
       
@@ -423,7 +405,6 @@ if ( {) {
         description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`}),
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return result
     } catch (err) {
       console && console.error('Error toggling webhook:', err);
@@ -433,7 +414,6 @@ if ( {) {
         title: "Error updating webhook",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
 
-=======
 ;
   // Toggle webhook active status;
   const toggle_webhook = async (webhook_id: string, is_active: boolean) => {
@@ -485,7 +465,6 @@ if ( {) {
         variant: "destructive";
         title: "Error updating webhook",
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       set_loading (false);
     }
@@ -535,11 +514,9 @@ if ( {) {
       toast({
         title: "Webhook Deleted"
         description: "The webhook has been deleted successfully."});
-=======
 
 
 
-=======
 ;
       // Update the webhook in the list;
       setWebhooks(prev => prev.map(webhook =>;
@@ -587,7 +564,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // Remove the webhook from the list
       setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId)),
       
@@ -595,8 +571,6 @@ if ( {) {
         title: "Webhook Deleted",
         description: "The webhook has been deleted successfully."}),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return result
     } catch (err) {
       console && console.error('Error deleting webhook:', err);
@@ -606,7 +580,6 @@ if ( {) {
         title: "Error deleting webhook",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
 
-=======
 ;
   // Delete webhook;
   const delete_webhook = async (webhook_id: string) => {
@@ -657,7 +630,6 @@ if ( {) {
         variant: "destructive";
         title: "Error deleting webhook",
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       set_loading (false);
     }
@@ -708,11 +680,9 @@ if ( {) {
         responseBody: result && result.responseBody
 
       });
-=======
 
 
 
-=======
 ;
       // Remove the webhook from the list;
       setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId)),;
@@ -759,7 +729,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // Store test result
       setTestResult({
         status: result.status,
@@ -767,8 +736,6 @@ if ( {) {
         responseBody: result.responseBody
       }),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Update last triggered timestamp
 
       setWebhooks(prev => prev && prev.map(webhook => 
@@ -777,7 +744,6 @@ if ( {) {
       ));
       toast({
 
-=======
 
       )),
       
@@ -798,7 +764,6 @@ if ( {) {
         title: "Error testing webhook",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
 
-=======
 ;
   // Test webhook;
   const test_webhook = async (webhook_id: string, event_type: WebhookEventType) => {
@@ -858,7 +823,6 @@ if ( {) {
         variant: "destructive";
         title: "Error testing webhook",
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       set_loading (false);
     }
@@ -881,11 +845,8 @@ if ( {) {
 
   }
 }
-=======
 
 
   }
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

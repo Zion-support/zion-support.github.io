@@ -102,7 +102,6 @@ import { motion } from 'framer-motion';
           {[...Array(20)].map((_, i) => (;
             <motion&& motion.div
 
-=======
         stagger_children: 0.1,
       },
     },  }
@@ -154,7 +153,6 @@ import { motion } from 'framer-motion';
                 delay: Math && Math.random() * 2,
               }}            />;
 
-=======
     <Layout>
       <SEO 
         title="2036 Innovative Services Showcase | Zion Tech Group"
@@ -192,14 +190,12 @@ import { motion } from 'framer-motion';
         </div>;
 
 
-=======
         <div className="relative z-10 text-center max-w-6xl mx-auto">
           <motion.h1 
             className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
 
 
 const contactInfo = {
@@ -252,7 +248,6 @@ export default function InnovativeServicesShowcase2036() {
       case 'rating':
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             2036 Innovative Services
           </motion.h1>
@@ -268,7 +263,6 @@ export default function InnovativeServicesShowcase2036() {
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, y: 20 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             animate={{ opacity: 1, y: 0 }}
 
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
@@ -295,17 +289,14 @@ export default function InnovativeServicesShowcase2036() {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {/* Contact Information */}
       <section className='py-12 px-4 bg-gradient-to-r from-gray-900 to-gray-800'>;
         <div className='max-w-6xl mx-auto'>;
           <motion&& motion.div
             className='grid grid-cols-1 md:grid-cols-3 gap-8'            initial={{ opacity: 0, y: 20 }}
 
-=======
 
       {/* Contact Information */}
-=======
 
       {/* Contact Information */  } catch (error) {
     console.error("Error:", error);
@@ -340,7 +331,6 @@ export default function InnovativeServicesShowcase2036() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
 
 
@@ -366,7 +356,6 @@ export default function InnovativeServicesShowcase2036() {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {/* Services Section */}
       <section className='py-20 px-4'>;
         <div className='max-w-7xl mx-auto'>;
@@ -374,7 +363,6 @@ export default function InnovativeServicesShowcase2036() {
           <motion&& motion.div
             className='text-center mb-16'            initial={{ opacity: 0, y: 20 }}
 
-=======
             <div className="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
               <Phone className="w-8 h-8 mx-auto mb-4 text-cyan-400" />
               <h3 className="text-lg font-semibold mb-2">Phone</h3>
@@ -410,7 +398,6 @@ export default function InnovativeServicesShowcase2036() {
           </motion && motion.div>;
 
 
-=======
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Revolutionary Services
             </h2>
@@ -419,7 +406,6 @@ export default function InnovativeServicesShowcase2036() {
               AI platforms, and cutting-edge technology solutions designed for the future.
             </p>
           </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
           </motion.div>
           {/* Filters and Controls */}
@@ -428,7 +414,6 @@ export default function InnovativeServicesShowcase2036() {
             className="mb-12 space-y-6"
             initial={{ opacity: 0, y: 20 }}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}>;
@@ -461,7 +446,6 @@ export default function InnovativeServicesShowcase2036() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   >
                     <Grid className="w-5 h-5" />
                   </button>
@@ -477,7 +461,6 @@ export default function InnovativeServicesShowcase2036() {
 
 
 
-=======
             {/* Category Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -510,7 +493,6 @@ export default function InnovativeServicesShowcase2036() {
             </div>;
           </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Services Grid */}
           <motion&& motion.div
             variants={containerVariants}
@@ -655,16 +637,13 @@ export default function InnovativeServicesShowcase2036() {
                     <p className="text-gray-300 text-sm leading-relaxed">{service.description}</p>
                   </div>
 
-=======
 
 
 
                     {/* Features */}
 
-=======
                     <div className="flex items-center justify-between">
                       <span className="px-3 py-1 bg-gray-800 text-cyan-400 text-sm rounded-full border border-gray-700">
-=======
                     </p>;
                   </div>;
                   {/* Service Details */}
@@ -672,18 +651,15 @@ export default function InnovativeServicesShowcase2036() {
                     {/* Category and Rating */}
                     <div className='flex items - center justify - between'>;
                       <span className='px - 3 py - 1 bg - gray - 800 text - cyan - 400 text - sm rounded - full border border - gray - 700'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         {service.category}
                       </span>;
                       {service.rating && (
 
                     </div>;
-=======
 
                     {/* Market Size */}
 
                     {/* Market Size */}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     {service && service.marketSize && (;
                       <div className='text-sm text-gray-400'>;
                         Market Size:{' '}
@@ -693,8 +669,6 @@ export default function InnovativeServicesShowcase2036() {
                     )}
                     {/* Features */}
 
-=======
-=======
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -709,7 +683,6 @@ export default function InnovativeServicesShowcase2036() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <div>
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
                       <div className="grid grid-cols-1 gap-1">
@@ -731,13 +704,11 @@ export default function InnovativeServicesShowcase2036() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         {service.features.length > 4 && (
                           <div className="text-xs text-gray-500 mt-1">
                             +{service.features.length - 4} more features
                           </div>
 
-=======
 
                         )  } catch (error) {
     console.error("Error:", error);
@@ -748,7 +719,6 @@ export default function InnovativeServicesShowcase2036() {
                       </div>;
                     </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Target Audience */}
 
 
@@ -773,7 +743,6 @@ export default function InnovativeServicesShowcase2036() {
 
             ))}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             whileInView={{ opacity: 1 }}
 
             transition={{ duration: 0 && 0.6 }}
@@ -816,7 +785,6 @@ export default function InnovativeServicesShowcase2036() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-=======
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -886,7 +854,6 @@ export default function InnovativeServicesShowcase2036() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Ready to Transform Your Business?
@@ -906,7 +873,6 @@ export default function InnovativeServicesShowcase2036() {
                 href={`tel:${contactInfo.mobile}`}
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
               >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 Call Us Now
               </a>
             </div>
@@ -970,7 +936,6 @@ AI platforms, and cutting-edge technology solutions designed for the future. </p
 }<motion.div > {
   sortedServices.map ( (service, index) => (<motion.div key= {
   service.id
-=======
                 href={`tel:${contactInfo && contactInfo.mobile}`}
                 className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>;
                 Call Us Now;
@@ -1037,7 +1002,6 @@ AI platforms, and cutting-edge technology solutions designed for the future. </p
 }<motion && motion.div > {;
   sortedServices && sortedServices.map ( (service, index) => (<motion&& motion.div key= {
   service && service.id 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }variants= {
   itemVariants
 }className= {
@@ -1101,7 +1065,6 @@ visible: {
 
 }> <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Join the future of technology with our innovative services. Contact us today to discuss how we can help you achieve your goals. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a > Get Started Today </Link> <a ;
 
-=======
   opacity: 0, coordinate_y: 20;
 }whileInView= {
   {
@@ -1113,10 +1076,5 @@ visible: {
   {
   once: true;
 }> <h2 className="text - 3xl md:text - 4xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto" > Join the future of technology with our innovative services. Contact us today to discuss how we can help you achieve your goals. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <a > Get Started Today </Link> <a;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

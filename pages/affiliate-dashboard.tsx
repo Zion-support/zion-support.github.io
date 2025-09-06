@@ -24,7 +24,6 @@
   }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
 
-=======
 
 
   }
@@ -77,8 +76,6 @@ export default function AffiliateDashboard(req, res) {
   }
 }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (!code) {
     return (
       <div className="space-y-4">
@@ -126,7 +123,6 @@ export default function AffiliateDashboard(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </div>
     </div>
   )
@@ -138,10 +134,8 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-2xl font-semibold">{value}</div>
     </div>
 
-=======
 }
 
-=======
 import { useEffect, useMemo, useState } from 'react',
 ;
 function getRefCode (): string {
@@ -241,9 +235,5 @@ function Stat() {
       <div className="text - 2xl font - semibold">{value}</div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -7,14 +7,12 @@ import {GradientHeading} from "./GradientHeading";
 import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";
 import {Button} from "./ui/button";
 
-=======
 import { GradientHeading } from "./GradientHeading",
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",
 import { Button } from "./ui/button",
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const services = [
   {
     title: "Servers"
@@ -24,7 +22,6 @@ const services = [
     title: "Storage"
     description: "Scalable storage solutions from SSDs to large-scale enterprise storage systems"
     icon: <HardDrive className="h-10 w-10" />}
-=======
 import { GradientHeading } from './GradientHeading';
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from '@/components / icons';
 import { Button } from './ui / button';
@@ -37,7 +34,6 @@ const services = [;
     title: "Storage",
     description: "Scalable storage solutions from SSDs to large - scale enterprise storage systems",
     icon: <HardDrive className="h - 10 w - 10" />},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
 
 
@@ -58,7 +54,6 @@ const services = [;
     title: "Equipment Rentals"
     description: "Flexible rental options for temporary projects and scaling requirements"
     icon: <Truck className="h-10 w-10" />}]
-=======
 const services = [;
   {;
     title: "Servers",;
@@ -84,16 +79,13 @@ const services = [;
     title: "Equipment Rentals",;
     description: "Flexible rental options for temporary projects and scaling requirements",;
     icon: <Truck className="h-10 w-10" />}],;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 export function GlobalServiceSection() {;
   return (
 
-=======
 
 };
 
-=======
 import { GradientHeading } from "./GradientHeading",;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",;
 import { Button } from "./ui/button",;
@@ -186,10 +178,7 @@ function GlobalServiceSection() {
     </section>);
 }
 
-=======
 }
 
 
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

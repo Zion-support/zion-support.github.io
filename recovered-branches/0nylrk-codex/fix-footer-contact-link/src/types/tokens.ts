@@ -15,9 +15,7 @@ export interface TokenTransaction {
   created_at: string;
 
 }
-=======
 
 
 export interface Wallet {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

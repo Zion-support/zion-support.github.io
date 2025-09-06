@@ -8,7 +8,6 @@ export /**
 function SkipLink() {
   return (
 
-=======
 
 "use client",;
 import { useEffect, useRef, useState } from "react",;
@@ -16,7 +15,6 @@ import { useEffect, useRef, useState } from "react",;
 export function SkipLink({ targetId, children }: { targetId: string, children: React.ReactNode }) {;
   return (;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <a;
       href={`#${target_id}`}
       className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
@@ -31,7 +29,6 @@ export /**
 function LiveRegion() {
   return (
 
-=======
 
 ;
 // Live region for screen reader announcements;
@@ -46,7 +43,6 @@ export function LiveRegion({;
 }) {;
   return (;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <div;
       role={role}
       aria - live={aria_live}
@@ -177,7 +173,6 @@ export function ProgressIndicator({;
   return (;
     <div className="space-y-2">;
       <div className="flex justify-between text-sm">;
-=======
 export /**
  * useFocusTrap - Function description
  */
@@ -291,7 +286,6 @@ function ProgressIndicator() {
   return (
     <div className="space - y-2">;
       <div className="flex justify - between text - sm">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         <span>{label}</span>;
         <span>{percentage}%</span>;
       </div>;
@@ -327,7 +321,6 @@ export function CollapsibleSection({;
 
   return (;
     <div className="border border-[var(--border)] rounded-lg">;
-=======
 export /**
  * CollapsibleSection - Function description
  */
@@ -336,7 +329,6 @@ function CollapsibleSection() {
   const content_ref = useRef < HTMLDivElement>(null),
   return (
     <div className="border border-[var (--border)] rounded - lg">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       <button;
         className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";
         on_click={() => setIsExpanded (!is_expanded)}
@@ -355,12 +347,10 @@ function CollapsibleSection() {
         className={`overflow - hidden transition - all duration - 300 ${
           is_expanded ? "max - h-96 opacity - 100" : "max - h-0 opacity - 0";
 
-=======
 
         className={`overflow-hidden transition-all duration-300 ${;
           isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }`}
         aria - hidden={!is_expanded}
       >;
@@ -395,7 +385,6 @@ export function Tooltip({;
 
   return (;
     <div className="relative inline-block">;
-=======
 export /**
  * Tooltip - Function description
  */
@@ -410,7 +399,6 @@ function Tooltip() {
   }
   return (
     <div className="relative inline - block">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       <div;
         onMouseEnter={() => setIsVisible (true)}
         onMouseLeave={() => setIsVisible (false)}

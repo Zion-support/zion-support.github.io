@@ -79,7 +79,6 @@ export default function CookieConsent() {;
                   We use cookies to enhance your experience;
                 </h3>;
                 <p className="text-sm text-gray-600">;
-=======
 import React, { useState, useEffect } from './react';
 import { X, Cookie, Settings  } from './lucide-react';
 ;
@@ -291,7 +290,6 @@ if ( {) {
       </div>;
     </div>;
   );
-=======
             <div className="flex flex - col sm:flex - row gap - 2 w - full md:w - auto">;
               <button;
                 on_click={() => setShowSettings (true)}
@@ -425,5 +423,4 @@ if ( {) {
           </div>)}
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

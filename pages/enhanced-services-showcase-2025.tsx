@@ -121,7 +121,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
     >;
       <div className='min-h-screen'>;
 
-=======
         stagger_children: 0.1,
       },
     },  }
@@ -140,7 +139,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
     >;
       <div className='min - h-screen'>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <Head>;
           <title>;
             2025 Innovative Services Showcase - Zion Tech Group | Revolutionary;
@@ -196,7 +194,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Service Statistics */}
               <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
                 <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;
@@ -235,7 +232,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                   <div className="text-3xl font-bold text-pink-400">{spaceCount + cybersecurityCount}</div>
                   <div className="text-gray-400">Specialized</div>
                 </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
             </motion.div>
           </div>
@@ -260,7 +256,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
 
 
@@ -268,19 +263,16 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'                  />;
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Category Filter */}
                 <select
                   value={selectedCategory}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
                 </select>;
 
 
-=======
           <meta;
             name='description';
             content="Explore Zion Tech Group's revolutionary 2025 services: AI platforms, quantum computing, blockchain infrastructure, IoT solutions, and cutting - edge emerging technologies. Contact: +1 302 464 0950";
@@ -384,7 +376,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                       {category.name} ({category.count});
                     </option>))}
                 </select>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {/* Price Range Filter */}
                 <select;
                   value={selectedPriceRange}
@@ -402,7 +393,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
 
                   ))}
 
-=======
                   on_change={e => setSelectedPriceRange (e.target.value)}
                   className='px - 4 py - 3 bg - gray - 700 / 50 border border - gray - 600 rounded - xl text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent';
                 >;
@@ -448,7 +438,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
 
                     </h3>;
                     <p className='text - gray - 300 text - sm mb - 4 line - clamp - 2'>                      {service.description}
-=======
 
                       )  } catch (error) {
     console.error("Error:", error);
@@ -479,7 +468,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                     {/* Price and Customer Count */}
                     <div className='flex items - center justify - between mb - 4'>;
                       <div className='text - 2xl font - bold text - cyan - 400'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         {service.price}
                         <span className='text - gray - 400 text - lg'>;
                           {service.period}
@@ -492,7 +480,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                       <div className="flex items-center space-x-2 text-sm text-gray-400">
                         <Users className="w-4 h-4" />
                         <span>{service.customers}</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       </div>
                     </div>
 
@@ -521,8 +508,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
 
                     {/* Key Features */}
 
-=======
-=======
 
                     {/* Key Features */  } catch (error) {
     console.error("Error:", error);
@@ -538,8 +523,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             <span className="line-clamp-1">{feature}</span>
                           </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         ))}
 
                     <div className="mb-6 p-3 bg-gray-700/40 rounded-lg">
@@ -560,7 +543,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                       <div className="flex items-center space-x-1 text-blue-400">
                         <Clock className="w-4 h-4" />
                         <span>{service.setupTime}</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       </div>
                     </div>
 
@@ -599,7 +581,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                     <div className="flex gap-3">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <a
                         href={service && service.link}
                         target='_blank'
@@ -615,7 +596,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                         <div>✉️ {service.contactInfo.email}</div>
                         <div>🌐 {service.contactInfo.website}</div>
                       </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     </div>
 
 
@@ -625,7 +605,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     {/* Contact Information */}
                     <div className='mt-4 pt-4 border-t border-gray-700'>;
                       <div className='text-xs text-gray-400 mb-2'>;
@@ -657,9 +636,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                   Try adjusting your search criteria or filters;
                 </p>              </motion && motion.div>;
 
-=======
 
-=======
                         </span>;
                       </div>;
                       <div className='flex items - center space - x-2 text - sm text - gray - 400'>;
@@ -727,7 +704,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                       </div>;
                     </div>;
                   </motion.div>))}
-=======
                   </motion.div>
 
                 ))  } catch (error) {
@@ -738,7 +714,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
 
               </AnimatePresence>;
             </motion.div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {/* No Results Message */}
             {filtered_services.length === 0 && (
               <motion.div;
@@ -751,7 +726,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
         {/* Call to Action */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
-=======
 
         {/* Call to Action */}
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
@@ -775,7 +749,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
 
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -800,7 +773,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                   </div>
                   <span className="text-lg text-white">364 E Main St STE 1008 Middletown DE 19709</span>
                 </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
 
               transition={{ duration: 0 && 0.8 }}>;
@@ -849,7 +821,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <a
                   href='/contact'
                   className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline'>;
@@ -869,11 +840,8 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
   );
 
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 animate={{ opacity: 1 }}
                 className='text - center py - 16';
               >;
@@ -946,14 +914,9 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
       </div>;
     </EnhancedFuturisticBackground>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

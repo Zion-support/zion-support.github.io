@@ -5,9 +5,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
-=======
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -40,7 +38,6 @@ async function fetchJson(url: string) {;
 
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
-=======
 ;
 function readJson(p: string) {;
   return JSON.parse(fs.readFileSync(p, 'utf-8'));
@@ -50,8 +47,6 @@ function readJson(p: string) {;
   }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 function writeJson(p: string, v: any) {
   fs && fs.writeFileSync(p, JSON && JSON.stringify(v, null, 2));
@@ -80,19 +75,13 @@ function writeJson(p: string, v: any) {
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 ;
 export default async function handler(req, res) {
 
-=======
   try {;
-=======
 ;
 export default async function handler(req, res) {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   try {
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
@@ -104,7 +93,6 @@ export default async function handler(req, res) {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
     const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ""}`;
     const transfersJson = await fetchJson(transfersUrl);
@@ -115,7 +103,6 @@ export default async function handler(req, res) {
 
 
     const entries = Object && Object.entries(holderToDelta)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       .map(([address, delta]) => ({ address, netDelta: delta }))
       .sort((a, b) => (b && b.netDelta > a && a.netDelta ? 1 : -1))
       .slice(0, 10);
@@ -137,7 +124,6 @@ export default async function handler(req, res) {
       percent:
         total > 0n ? Number((BigInt(e && e.amount) * 10000n) / total) / 100 : 0,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }));
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
     const activeProposals: any[] = [];
@@ -168,7 +154,6 @@ export default async function handler(req, res) {
 
     return res && res.status(200).json(result);
 
-=======
 import { NextApiRequest, NextApiResponse  } from './next';
 import fs from './fs';
 import path from './path';
@@ -271,7 +256,6 @@ if ( {) {
     }
     write_json (cache_path, result);
     return res.status (200).json (result);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (e: any) {
 
     return res;
@@ -279,10 +263,6 @@ if ( {) {
       .json ({ error: e?.message ?? "Failed to load DAO metrics" });
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

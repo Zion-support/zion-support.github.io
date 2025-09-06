@@ -34,7 +34,6 @@
     website: string;
   }
 
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -70,7 +69,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       icon: '📝',
 
         'AI/ML',
-=======
       color: 'from - blue - 500 to - cyan - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / ai - content - factory',
@@ -93,7 +91,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Node && Node.js',
       ],
 
-=======
       integrations: [;
         'WordPress',
         'Shopify',
@@ -135,7 +132,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     },
 
         'AI-powered lead scoring',
-=======
     // CRM Intelligence Platform;
     {
       id: 'crm - intelligence - platform',
@@ -162,7 +158,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       icon: '📊',
 
         'AI/ML',
-=======
       color: 'from - green - 500 to - emerald - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / crm - intelligence - platform',
@@ -185,7 +180,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Node && Node.js',
       ],
 
-=======
       integrations: [;
         'Salesforce',
         'HubSpot',
@@ -225,7 +219,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
 
         'AI-powered analytics',
         'Automated decision-making',
-=======
     // Decision Engine Platform;
     {
       id: 'decision - engine - platform',
@@ -252,7 +245,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       popular: true,
       icon: '🧠',
 
-=======
       color: 'from - purple - 500 to - indigo - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / decision - engine - platform',
@@ -309,7 +301,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       reviews: 78,
     },
 
-=======
     // E - commerce Optimization Platform;
     {
       id: 'ecommerce - optimization - platform',
@@ -336,7 +327,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       icon: '🛒',
 
         'AI/ML',
-=======
       color: 'from - orange - 500 to - red - 600',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / ecommerce - optimization - platform',
@@ -359,7 +349,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Node && Node.js',
       ],
 
-=======
       integrations: [;
         'Shopify',
         'WooCommerce',
@@ -400,7 +389,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       reviews: 95,
     },
 
-=======
     // HR Automation Platform;
     {
       id: 'hr - automation - platform',
@@ -428,7 +416,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       icon: '👥',
 
         'AI/ML',
-=======
       color: 'from - teal - 500 to - cyan - 600',
       text_color: 'text - teal - 400',
       link: 'https://ziontechgroup.com / hr - automation - platform',
@@ -451,7 +438,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Node && Node.js',
       ],
 
-=======
       integrations: [;
         'ATS platforms',
         'HRIS systems',
@@ -488,7 +474,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       reviews: 58,
     },
 
-=======
     // Financial Analytics Platform;
     {
       id: 'financial - analytics - platform',
@@ -515,7 +500,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       popular: true,
       icon: '💰',
 
-=======
       color: 'from - yellow - 500 to - amber - 600',
       text_color: 'text - yellow - 400',
       link: 'https://ziontechgroup.com / financial - analytics - platform',
@@ -572,7 +556,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       reviews: 52,
     },
 
-=======
     // Supply Chain Intelligence Platform;
     {
       id: 'supply - chain - intelligence',
@@ -599,7 +582,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       popular: false,
       icon: '🚚',
 
-=======
       color: 'from - gray - 500 to - slate - 600',
       text_color: 'text - gray - 400',
       link: 'https://ziontechgroup.com / supply - chain - intelligence',
@@ -660,7 +642,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       reviews: 38,
     },
 
-=======
     // Marketing Automation Platform;
     {
       id: 'marketing - automation - platform',
@@ -688,7 +669,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       icon: '📢',
 
         'AI/ML',
-=======
       color: 'from - pink - 500 to - rose - 600',
       text_color: 'text - pink - 400',
       link: 'https://ziontechgroup.com / marketing - automation - platform',
@@ -711,7 +691,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Node && Node.js',
       ],
 
-=======
       integrations: [;
         'Email platforms',
         'Social media tools',
@@ -751,7 +730,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       reviews: 82,
     },
 
-=======
     // Project Management Intelligence Platform;
     {
       id: 'project - management - intelligence',
@@ -779,7 +757,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       icon: '📋',
 
         'AI/ML',
-=======
       color: 'from - indigo - 500 to - purple - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / project - management - intelligence',
@@ -802,7 +779,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Node && Node.js',
       ],
 
-=======
       integrations: [;
         'Project management tools',
         'Time tracking systems',
@@ -835,9 +811,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       },
       real_implementation: true,
       implementation_details:;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.',
       launch_date: '2025 - 03 - 05',
       customers: 75,
@@ -849,7 +823,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
 
   ];    features: [
 
-=======
 export interface InnovativeMicroSaasService2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -901,7 +874,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     growthRate: '250%+ annual growth', variant: 'saas-content',
     contactInfo: {
       
-=======
   ];    features: [;
       'AI project planning_resource optimization_risk assessment_performance tracking_automated reporting_team collaboration_timeline optimization_budget management';
       'Integration capabilities_custom dashboards';
@@ -955,10 +927,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
 
   }
 
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasService2025 {;
   id: string,;
@@ -1401,9 +1371,5 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
 
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

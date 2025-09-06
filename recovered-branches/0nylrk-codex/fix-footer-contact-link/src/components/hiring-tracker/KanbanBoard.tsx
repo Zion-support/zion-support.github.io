@@ -9,7 +9,6 @@ interface DropResult {;
   destination?: DnDLocation | null;
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   droppableId: string
 
@@ -98,10 +97,8 @@ interface DropResult {;
   destination?: DnDLocation | null;
 }
 
-=======
 
 
-=======
 ;
 
 // Define the kanban board columns based on application statuses;
@@ -182,7 +179,6 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
       [source.droppableId]: sourceColumn,
       [destination.droppableId]: destColumn}),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Update status in the database
     try {
       await updateApplicationStatus(draggableId, newStatus),
@@ -214,7 +210,6 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
           </Card>
 
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Get the application that was dragged;
     const application = applications && applications.find(app => app && app.id === draggableId);
     if (!application) return;
@@ -249,7 +244,6 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
   };
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>;
         {Array && Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
@@ -264,7 +258,6 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ))}
       </div>;
     );
@@ -273,12 +266,10 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
 
   if (!applications || applications && applications.length === 0) {;
 
-=======
 
   
   if (!applications || applications.length === 0) {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <Card className="text-center py-16">;
         <CardContent>;
@@ -460,7 +451,6 @@ if ( {) {
             applications={columns[column && column.id] || []}
             count={columns[column && column.id]?.length || 0}
           />;
-=======
 
             applications={columns[column.id] || []}
             count={columns[column.id]?.length || 0}
@@ -479,7 +469,5 @@ if ( {) {
     </DragDropContext>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

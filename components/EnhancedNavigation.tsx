@@ -55,7 +55,6 @@ import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
   }
   const closeAllDropdowns = () => {
-=======
 
 const EnhancedNavigation: React.FC = () => {;
   const [isOpen, setIsOpen] = useState(false);
@@ -93,7 +92,6 @@ const EnhancedNavigation: React.FC = () => {;
   };
 
   const closeAllDropdowns = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setActiveDropdown(null);
     setIsOpen(false);
   }
@@ -130,10 +128,8 @@ const EnhancedNavigation: React.FC = () => {;
               
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {activeDropdown === 'services' && (
                 <motion.div
-=======
                 className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors";
               >;
                 <span>Services</span>;
@@ -142,7 +138,6 @@ const EnhancedNavigation: React.FC = () => {;
 
               {activeDropdown === 'services' && (;
                 <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
@@ -172,12 +167,9 @@ const EnhancedNavigation: React.FC = () => {;
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Company Dropdown */}
             <div className="relative">;
               <button
@@ -227,12 +219,9 @@ const EnhancedNavigation: React.FC = () => {;
           </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -244,12 +233,9 @@ const EnhancedNavigation: React.FC = () => {;
         </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Mobile Menu */}
         {isOpen && (;
           <motion&& motion.div
@@ -308,7 +294,6 @@ const EnhancedNavigation: React.FC = () => {;
                   href="/contact"
                   className="block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
                   onClick={closeAllDropdowns}>;
-=======
 import Link from 'next / link';
 import {motion} from 'framer-motion';
 import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone} from 'lucide-react';
@@ -514,7 +499,6 @@ const EnhancedNavigation: React.FC = () => {
                   className="block w - full text - center px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white rounded - lg font - semibold transition - colors";
                   on_click={closeAllDropdowns}
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Get Started;
                 </Link>;
               </div>;
@@ -528,14 +512,8 @@ const EnhancedNavigation: React.FC = () => {
 export default EnhancedNavigation;
 ;
 
-=======
 
 export default EnhancedNavigation;
 
-=======
 export default EnhancedNavigation;
-=======
 export default EnhancedNavigation;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

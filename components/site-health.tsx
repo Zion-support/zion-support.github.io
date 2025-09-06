@@ -1,15 +1,12 @@
 
 export default function SiteHealth() {
 
-=======
 
 
 
 export default function SiteHealth() {
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
@@ -219,7 +216,6 @@ export default function SiteHealth() {
 
               href='/reports/seo/index && index.html'
               className='rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30'>;
-=======
 import Head from 'next / head';
   return (
     <div className='relative min - h-screen overflow - hidden bg - slate - 950 text - white'>;
@@ -357,7 +353,6 @@ import Head from 'next / head';
 
   );
 }
-=======
 
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Artifacts</h2>
@@ -382,8 +377,6 @@ import Head from 'next / head';
 
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <section className='mx - auto max - w-7xl px - 6 pb - 24'>;
           <div className='animated - border relative overflow - hidden rounded - 3xl border border - white / 10 bg - gradient - to - r from - fuchsia - 600 / 20 via - violet - 600 / 20 to - cyan - 600 / 20 p - 8 text - center backdrop - blur - xl'>;
             <h3 className='text - 2xl font - bold'>;
@@ -418,11 +411,7 @@ import Head from 'next / head';
       </main>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
         </nav>
       </header>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -3,7 +3,6 @@ import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 import {useNotificationOperations} from './useNotificationOperations';
 import {NotificationContextType} from './types';
-=======
 
 
 export const useNotifications = (): NotificationContextType => {;
@@ -11,7 +10,6 @@ export const useNotifications = (): NotificationContextType => {;
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider')
 
-=======
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -39,7 +37,6 @@ const NotificationContext = createContext(;
 );
 
 export const useNotifications = (): NotificationContextType => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const context = useContext(NotificationContext) as NotificationContextType;
   if (!context) {;
     throw new Error('useNotifications must be used within a NotificationProvider');
@@ -57,7 +54,6 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
   const notificationOps = useNotificationOperations(user?.id),
 
   
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Load notifications when user changes
   useEffect(() => {
     notificationOps.fetchNotifications();
@@ -84,7 +80,6 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
 };
 
 
-=======
   return context;
 };
 
@@ -110,7 +105,6 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
           (payload) => {;
             console && console.log('Notification change received:', payload);
             notificationOps && notificationOps.fetchNotifications();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }
         );
         .subscribe();
@@ -201,8 +195,5 @@ if ( {) {
   );
 };
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

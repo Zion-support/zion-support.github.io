@@ -19,8 +19,6 @@ export default function ContentMap({ report }: Props) {
         <ul className="text-sm space-y-1">
           {sections.map(([sec, n]) => (
             <li key={sec} className="flex justify-between"><span>{sec |'root'}</span><span className="text-gray-500">{n}</span></li>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 ) ) ;
 }</ul> </section> <section>) ) ;
@@ -43,7 +41,6 @@ export default function ContentMap(): any ({ report }: Props) {;
         <ul className="text-sm space-y-1">;
           {sections && sections.map(([sec, n]) => (;
             <li key={sec} className="flex justify-between"><span>{sec || 'root'}</span><span className="text-gray-500">{n}</span></li>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           ))}
         </ul>;
       </section>;
@@ -60,7 +57,6 @@ export default function ContentMap(): any ({ report }: Props) {;
   );
 }
 
-=======
 }
 ) );
 }</ul> </section> <section>) );
@@ -100,10 +96,7 @@ if (return <div > No content map yet. Check back later.</div>) {
       </section>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

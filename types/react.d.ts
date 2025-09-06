@@ -18,10 +18,8 @@ declare module "react" {
     type: T,
     props: P,
     key: React.Key | null;
-=======
 
 
-=======
   the code-base.  If you have `@types/react` available in `node_modules`,;
 
   TypeScript will prefer those and ignore this file, because paths declared in;
@@ -31,7 +29,6 @@ declare module "react" {;
   // Basic ReactElement stub (JSX trees ultimately compile into this).;
   export interface ReactElement<P = any, T extends string | React.JSXElementConstructor<any> = any> {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   // Function Component (very trimmed - down).;
   export interface FC < P = Record < string, unknown>> {
@@ -49,7 +46,6 @@ declare module "react" {;
 }
 
 ;
-=======
     type: T,;
     props: P,;
     key: React.Key | null;
@@ -96,4 +92,3 @@ declare namespace React {;
 
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

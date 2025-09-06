@@ -42,7 +42,6 @@ function FeatureCard() {
       <ul className=&quot;text - sm text - white / 60 space - y-1 & quot;>;
         {features.map ((feature, index) => (
           <li key={index}>• {feature}</li>))}
-=======
   return (
     <div className={`feature-card group ${className}`}>
 
@@ -56,7 +55,6 @@ function FeatureCard() {
         {features.map((feature, index) => (
           <li key={index}>• {feature}</li>
         ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </ul>;
     </div>);
 }

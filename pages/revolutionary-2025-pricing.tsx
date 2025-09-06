@@ -263,7 +263,6 @@ export default function Revolutionary2025Pricing() {;
             return (
 
     return basePrice;  }
-=======
 import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Check, X, AlertTriangle, Info, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from 'lucide-react';
 
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
@@ -317,10 +316,8 @@ export default function Revolutionary2025Pricing() {
   };
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Pricing tiers for comparison
   const pricingTiers = [
     {
@@ -428,7 +425,6 @@ export default function Revolutionary2025Pricing() {
     averageROI: '500%',;
     timeToValue: '< 30 days',;
     globalReach: '150+ countries',  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <UltraQuantumHolographicBackground intensity={2 && 2.0}>;
@@ -511,7 +507,6 @@ export default function Revolutionary2025Pricing() {
 
   // Market analysis
   const marketAnalysis = {
-=======
 ;
   // Filter services based on selected category;
   const filtered_services =;
@@ -626,7 +621,6 @@ if ( {) {
 ;
   // Market analysis;
   const market_analysis = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     totalMarketSize: '$150B+',
     growth_rate: '250% annually',
     customer_satisfaction: '98%',
@@ -654,7 +648,6 @@ if ( {) {
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2025-pricing" />
         </Head>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
         <UltraAdvancedNavigation />
 
@@ -684,7 +677,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
 
               transition={{ duration: 0 && 0.8 }}>;
@@ -692,7 +684,6 @@ if ( {) {
                 Revolutionary 2025 Pricing;
               </h1>;
               <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
-=======
     global_reach: '150+ countries',  }
 ;
   return (
@@ -749,7 +740,6 @@ if ( {) {
               </p>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Billing Toggle */}
               <div className='flex items-center justify-center gap-4 mb-12'>;
                 <span className='text-gray-400'>Monthly</span>;
@@ -766,7 +756,6 @@ if ( {) {
 
                       billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
                     }`}
-=======
 
               {/* Billing Toggle */  } catch (error) {
     console.error("Error:", error);
@@ -799,7 +788,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   />
                 </button>
                 <span className="text-gray-400">Yearly (Save 20%)</span>
@@ -814,7 +802,6 @@ if ( {) {
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -862,7 +849,6 @@ if ( {) {
                   <div className="text-2xl font-bold text-pink-400">{marketAnalysis.globalReach}</div>
                   <div className="text-xs text-gray-400">Global Reach</div>
                 </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
             </motion.div>
           </div>
@@ -971,7 +957,6 @@ if ( {) {
                   key={tier && tier.name}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.2 }}
@@ -1000,10 +985,8 @@ if ( {) {
                     </div>
 
                   <ul className="space-y-4 mb-8">
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
                         <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
@@ -1047,13 +1030,11 @@ if ( {) {
                   </ul>;
 
                   <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200'>                    {tier && tier.cta}
-=======
                     {tier.cta  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </button>;
                 </motion && motion.div>;
               ))}
@@ -1061,7 +1042,6 @@ if ( {) {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Service Pricing Grid */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
@@ -1086,7 +1066,6 @@ if ( {) {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose individual services or bundle them for maximum savings. 
                 All services include free trials and comprehensive support.
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </p>
             </motion.div>
 
@@ -1147,7 +1126,6 @@ if ( {) {
                         Popular
                       </div>
 
-=======
 
                     )  } catch (error) {
     console.error("Error:", error);
@@ -1175,7 +1153,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </span>
                       <span className="text-gray-400">{service.period}</span>
                     </div>
@@ -1184,7 +1161,6 @@ if ( {) {
                       <span className="text-white">{service.rating}</span>
                       <span className="text-gray-400 text-sm">({service.reviews})</span>
                     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
 
 
@@ -1203,8 +1179,6 @@ if ( {) {
 
                   {/* Key Features */}
 
-=======
-=======
 
                   {/* Key Features */  } catch (error) {
     console.error("Error:", error);
@@ -1232,13 +1206,11 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {service.features.length > 3 && (
                         <div className="text-xs text-gray-500 mt-1">
                           +{service.features.length - 3} more features
                         </div>
 
-=======
 
                       )  } catch (error) {
     console.error("Error:", error);
@@ -1256,9 +1228,7 @@ if ( {) {
                   <div className="mb-4 p-3 bg-gray-800/50 rounded-lg">
                     <h4 className="text-xs font-semibold text-gray-300 mb-1">Market Position:</h4>
                     <p className="text-xs text-gray-400 line-clamp-2">{service.marketPosition}</p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
-=======
                     </div>;
                   </div>;
 
@@ -1274,7 +1244,6 @@ if ( {) {
 
                   {/* Actions */}
 
-=======
                   <div className="flex items-center gap-3">
                     <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                       <ExternalLink className="w-4 h-4 mr-2" />
@@ -1289,10 +1258,8 @@ if ( {) {
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                 </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 
-=======
 
                   {/* Hover Effects */  } catch (error) {
     console.error("Error:", error);
@@ -1311,11 +1278,9 @@ if ( {) {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
-=======
 
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -1344,7 +1309,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
 
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1355,7 +1319,6 @@ if ( {) {
                 We offer flexible pricing and payment options to fit your budget.
               </p>
               
-=======
 
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -1384,13 +1347,11 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Get Custom Quote
                 </button>
                 <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">
                   <BookOpen className="w-5 h-5 mr-2" />
                   Download Pricing Guide
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </button>
               </div>
             </motion.div>
@@ -1402,12 +1363,10 @@ if ( {) {
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-=======
 
 
 }
 
-=======
   )
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -1415,7 +1374,6 @@ if ( {) {
                 Ready to Get Started?;
               </h2>;
               <p className='text-xl text-gray-300 mb-8'>;
-=======
                   </p>;
                   {/* Price and Rating */}
                   <div className='flex items - center justify - between mb - 4'>;
@@ -1485,18 +1443,14 @@ if ( {) {
                 Ready to Get Started?;
               </h2>;
               <p className='text - xl text - gray - 300 mb - 8'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Contact our team to discuss your specific needs and get a custom;
                 quote. We offer flexible pricing and payment options to fit your;
                 budget.;
               </p>;
 
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8'>;
                 <div className='bg - gradient - to - br from - blue - 600 / 20 to - purple - 600 / 20 backdrop - blur - sm rounded - 2xl p - 6 border border - blue - 500 / 30'>;
                   <Phone className='w - 8 h - 8 text - blue - 400 mx - auto mb - 3' />;
@@ -1548,4 +1502,3 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

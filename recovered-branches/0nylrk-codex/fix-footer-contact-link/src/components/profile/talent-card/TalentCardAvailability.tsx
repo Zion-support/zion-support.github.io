@@ -12,12 +12,10 @@ interface TalentCardAvailabilityProps {;
 }
 
 export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
-=======
 
 
   };
 
-=======
 import React from "react",
 import { Clock } from "lucide-react",
 interface TalentCardAvailabilityProps {
@@ -35,7 +33,6 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
     switch (status) {;
       case 'full-time':;
 
-=======
         return 'bg-green-500/20 text-green-400',;
       case 'part-time':;
         return 'bg-yellow-500/20 text-yellow-400',;
@@ -51,7 +48,6 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
   const getAvailabilityLabel = (status: string) => {;
     switch (status) {;
       case 'full-time':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return 'Full-time';
       case 'part-time':;
         return 'Part-time';
@@ -67,7 +63,6 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -76,12 +71,9 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       <span>{getAvailabilityLabel(availabilityType)}</span>;
     </div>;
   );
-=======
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export /**
  * TalentCardAvailability - Function description
  */

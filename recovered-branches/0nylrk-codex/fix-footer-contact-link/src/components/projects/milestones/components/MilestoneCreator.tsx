@@ -14,13 +14,11 @@ interface MilestoneCreatorProps {;
 
 export function MilestoneCreator(): any ({;
 
-=======
 
 
 
 export function MilestoneCreator({;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onSubmit;
   isSubmitting;
   onCancel;
@@ -34,7 +32,6 @@ export function MilestoneCreator({;
 
     <AddMilestoneForm 
 
-=======
 import React from 'react',;
 import { AddMilestoneForm } from '../AddMilestoneForm',;
 interface MilestoneCreatorProps {;
@@ -61,7 +58,6 @@ export function MilestoneCreator({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       onSubmit={onSubmit}
       isSubmitting={isSubmitting}
       onCancel={onCancel}
@@ -74,7 +70,6 @@ export function MilestoneCreator({;
   );
 }
 
-=======
   on_submit: (data: any) => Promise < void>,
   is_submitting: boolean,
   on_cancel: () => void,
@@ -98,4 +93,3 @@ function MilestoneCreator() {
       project_type={project_type}
     />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -45,7 +45,6 @@ import Layout from '../components/layout/Layout';
     </Layout>;
   );
 
-=======
 import React from 'react';
 import Head from 'next / head';
 import Layout from '../components / layout / Layout';
@@ -70,9 +69,5 @@ function APIDocumentationPage() {
       </section>;
     </Layout>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

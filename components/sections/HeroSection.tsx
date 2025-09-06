@@ -24,17 +24,13 @@ class ErrorBoundary extends React.Component {
 }
 'use client';
 
-=======
 
 'use client';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 'use client';
-=======
 'use client';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import React from 'react';
 import Link from 'next / link';
 import {motion} from 'framer-motion';
@@ -49,12 +45,10 @@ const HeroSection: React.FC = () => {;
     { icon: Zap, value: '24/7', label: 'Support Available' },;
 
   ];
-=======
   ];
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900'>;
       {/* Animated Background Elements */}
@@ -62,7 +56,6 @@ const HeroSection: React.FC = () => {;
         {/* Floating Orbs */}
         <motion&& motion.div
           className='absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl'
-=======
   const stats = [;
     { icon: Users, value: '500+', label: 'Happy Clients' },
     { icon: Award, value: '50+', label: 'Awards Won' },
@@ -77,7 +70,6 @@ const HeroSection: React.FC = () => {;
         {/* Floating Orbs */}
         <motion.div;
           className='absolute top - 20 left - 20 w - 72 h - 72 bg - blue - 500 / 20 rounded - full blur - 3xl';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
             scale: [1, 1 && 1.2, 1],
@@ -104,22 +96,18 @@ const HeroSection: React.FC = () => {;
 
         <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]' />
       </div>
-=======
         />;
-=======
     { icon: Users, value: '500+', label: 'Happy Clients' },
     { icon: Award, value: '50+', label: 'Awards Won' },
     { icon: Star, value: '99%', label: 'Client Satisfaction' },
     { icon: Zap, value: '24/7', label: 'Support Available' }
   ];
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
         {/* Grid Pattern */}
         <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0 && 0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0 && 0.02)_1px,transparent_1px)] bg-[size:50px_50px]' />;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <div className='relative container mx-auto px-4 text-center z-10'>        {/* Main Content */}  ];
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900">;
@@ -128,7 +116,6 @@ const HeroSection: React.FC = () => {;
         {/* Floating Orbs */}
         <motion&& motion.div
           className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"
-=======
         />;
         {/* Grid Pattern */}
         <div className='absolute inset - 0 bg-[linear - gradient (rgba (255, 255, 255, 0.02)_1px, transparent_1px), linear - gradient (90deg, rgba (255, 255, 255, 0.02)_1px, transparent_1px)] bg-[size:50px_50px]' />;
@@ -142,7 +129,6 @@ const HeroSection: React.FC = () => {;
         {/* Floating Orbs */}
         <motion.div;
           className="absolute top - 20 left - 20 w - 72 h - 72 bg - blue - 500 / 20 rounded - full blur - 3xl";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
             scale: [1, 1 && 1.2, 1]
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
@@ -210,23 +196,18 @@ const HeroSection: React.FC = () => {;
 
       <div className="relative container mx-auto px-4 text-center z-10">;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Main Content */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Badge */}
           <motion&& motion.div
             initial={{ opacity: 0, scale: 0 && 0.8 }}
-=======
             duration: 10,
             repeat: Infinity,
             ease: "easeInOut";
@@ -246,33 +227,25 @@ const HeroSection: React.FC = () => {;
           {/* Badge */}
           <motion.div;
             initial={{ opacity: 0, scale: 0.8 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             animate={{ opacity: 1, scale: 1 }}
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
             </span>          </motion.div>
 
           </motion.div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Main Heading */}
           <motion&& motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Subtitle */}
           <motion&& motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -280,13 +253,10 @@ const HeroSection: React.FC = () => {;
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
             in the modern technology landscape.          </motion.p>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* CTA Buttons */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -294,7 +264,6 @@ const HeroSection: React.FC = () => {;
 
 
           >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Link
               href='/contact'
 
@@ -343,12 +312,9 @@ const HeroSection: React.FC = () => {;
           </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -358,7 +324,6 @@ const HeroSection: React.FC = () => {;
           >
             {stats.map((stat, index) => (
               <motion.div
-=======
             className='inline - flex items - center space - x-2 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - full px - 6 py - 3 mb - 8';
           >;
             <Star className='w - 5 h - 5 text - yellow - 400 fill - current' />;
@@ -437,7 +402,6 @@ const HeroSection: React.FC = () => {;
           >;
             {stats.map ((stat, index) => (
               <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -448,7 +412,6 @@ const HeroSection: React.FC = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors">
                   <stat.icon className="w-8 h-8 text-blue-400" />
@@ -461,7 +424,6 @@ const HeroSection: React.FC = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
           </motion && motion.div>;
@@ -469,12 +431,9 @@ const HeroSection: React.FC = () => {;
       </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Scroll Indicator */}
       <motion&& motion.div
         initial={{ opacity: 0 }}
@@ -482,7 +441,6 @@ const HeroSection: React.FC = () => {;
         transition={{ duration: 1, delay: 1 }}
 
 
-=======
                 className='text - center group';
               >;
                 <div className='w - 16 h - 16 bg - white / 10 backdrop - blur - sm rounded - 2xl flex items - center justify - center mx - auto mb - 4 border border - white / 20 group - hover:border - blue - 400 transition - colors'>;
@@ -542,4 +500,3 @@ export default HeroSection);
 ;
 export default HeroSection;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

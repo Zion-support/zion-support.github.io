@@ -23,12 +23,10 @@ export const useResumeProgress = (resume: Resume | null) =>: any {
   const [progress, set_progress] = useState (0);
 ;
   useEffect (() => {
-=======
     if (resume.work_experience && resume.work_experience.length > 0) {
 
       completed += 1
 
-=======
 import { useState, useEffect } from 'react',;
 import { Resume } from '@/types/resume',;
 export const useResumeProgress = (resume: Resume | null) => {;
@@ -55,19 +53,15 @@ if ( {) {
 
 
     }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
     // Work experience (1 point if at least one entry);
     // Check condition
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       completed += 1;
-=======
     if (resume && resume.work_experience && resume && resume.work_experience.length > 0) {
       completed += 1
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
     // Education (1 point if at least one entry);
@@ -77,10 +71,8 @@ if ( {) {
 }
 
       completed += 1;
-=======
     if (resume && resume.education && resume && resume.education.length > 0) {
       completed += 1
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
     // Skills (1 point if at least one entry);
@@ -90,10 +82,8 @@ if ( {) {
 }
 
       completed += 1;
-=======
     if (resume && resume.skills && resume && resume.skills.length > 0) {
       completed += 1
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
     // Certifications (1 point if at least one entry);
@@ -103,10 +93,8 @@ if ( {) {
 }
 
       completed += 1;
-=======
     if (resume && resume.certifications && resume && resume.certifications.length > 0) {
       completed += 1
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
     const progress_percentage = (completed / 5) * 100;
@@ -117,9 +105,6 @@ if ( {) {
 }
 ;
 
-=======
 
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -3,22 +3,18 @@ import {Link} from 'react-router-dom';
 import { cn } from '@/lib / utils';
 import { NavLink } from './react-router-dom';
 
-=======
 
 
 import {Link} from 'react-router-dom';
 import {cn} from "@/lib/utils";
 import {NavLink} from "react-router-dom";
 
-=======
 import React from 'react',
 import { Link } from 'react-router-dom',
 import { cn } from "@/lib/utils",
 import { NavLink } from "react-router-dom",
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface MainNavigationProps {
   class_name?: string;
 }
@@ -41,7 +37,6 @@ export function MainNavigation(): any ({ className }: MainNavigationProps) {;
             isActive ? "text-zion-cyan" : "text-muted-foreground";
           );
 
-=======
 export /**
  * MainNavigation - Function description
  */
@@ -54,7 +49,6 @@ function MainNavigation() {
           cn (
             "text - sm font - medium transition - colors hover: text - primary",
             is_active ? "text - zion - cyan" : "text - muted - foreground");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       >;
         Home;
@@ -66,7 +60,6 @@ function MainNavigation() {
             isActive ? "text-zion-cyan" : "text-muted-foreground";
           );
 
-=======
       <Link to="/talent" className="text - zion - slate - light hover:text - white transition - colors">;
         Find Talent;
       </Link>;
@@ -88,7 +81,6 @@ function MainNavigation() {
           cn (
             "text - sm font - medium transition - colors hover: text - primary",
             is_active ? "text - zion - cyan" : "text - muted - foreground");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       >;
         Partner Program;
@@ -105,7 +97,6 @@ function MainNavigation() {
   );
 }
 
-=======
       <NavLink;
         to="/signup";
         className={({ is_active }) =>;
@@ -119,8 +110,6 @@ function MainNavigation() {
       </NavLink>;
     </nav>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
             "text-sm font-medium transition-colors hover:text-primary",
 
@@ -163,4 +152,3 @@ function MainNavigation() {
         className={({ isActive }) =>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

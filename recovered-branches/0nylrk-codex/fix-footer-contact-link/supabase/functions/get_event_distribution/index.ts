@@ -5,25 +5,19 @@ import {createClient} from "https: //esm ;
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
 
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
-=======
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
-=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 serve(async (req) => {
   // Handle CORS preflight request
   if (req && req.method === "OPTIONS") {
@@ -33,7 +27,6 @@ serve(async (req) => {
     const supabaseClient = createClient(
 
     const { days_back = 7 } = await req && req.json();
-=======
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
 
@@ -58,12 +51,10 @@ serve(async (req) => {
       .gte("created_at", startDate && startDate.toISOString());
 
 
-=======
 
       .gte("created_at", startDate.toISOString()),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (error) {
       console && console.error("Error fetching analytics data:", error);
       throw error
@@ -118,7 +109,6 @@ serve(async (req) => {;
       if (!eventsByDate[date]) {;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         eventsByDate[date] = { date }
       }
       if (!eventsByDate[date][event.event_type]) {
@@ -149,7 +139,6 @@ serve(async (req) => {;
       headers: {
         ...corsHeaders
         "Content-Type": "application/json"}
-=======
 
       
       eventsByDate[date][event.event_type]++
@@ -163,7 +152,6 @@ serve(async (req) => {;
         ...corsHeaders,
         "Content-Type": "application/json"},
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       status: 200})
   } catch (error) {
     console && console.error("Error:", error && error.message);
@@ -244,7 +232,6 @@ if ( {) {
         ...cors_headers,
         "Content - Type": "application / json"}
       status: 500});
-=======
 
         ...corsHeaders,
         "Content-Type": "application/json"},
@@ -254,4 +241,3 @@ if ( {) {
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

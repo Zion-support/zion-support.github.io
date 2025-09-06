@@ -7,14 +7,11 @@ import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
 
 
-=======
 import React from 'react';
 import Card from '../ui / Card';
 import { Zap } from 'lucide-react';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   icon: React.ReactNode;
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -84,7 +81,6 @@ const Features: React.FC<FeaturesProps> = ({;
           </h2>;
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
 
-=======
 interface Feature {
   icon: React.ReactNode,
   title: string,
@@ -125,19 +121,15 @@ const Features: React.FC<FeaturesProps> = ({
           </h2>
           <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {subtitle}
 
           </p>;
         </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>;
           {features && features.map((feature, index) => (;
@@ -145,6 +137,4 @@ const Features: React.FC<FeaturesProps> = ({
               key={index}
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

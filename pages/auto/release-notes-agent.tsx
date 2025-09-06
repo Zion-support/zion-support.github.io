@@ -12,19 +12,13 @@ const ReleaseNotesAgent: NextPage = () => {
         <p>Summarizes the last 24 hours of commits into human-friendly release notes.</p>
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
         <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</Link></Link>
-=======
-=======
         <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</Link></Link>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       </main>
     </div>
   )
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface InterviewRequestFormProps {
 
   talent: TalentProfile
@@ -140,7 +139,6 @@ const formSchema = z.object({
         title: "Failed to schedule interview"
         description: "An error occurred while scheduling the interview. Please try again."
         variant: "destructive"})
-=======
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components / ui / form';
@@ -236,7 +234,6 @@ if ( {) {
         title: "Failed to schedule interview",
         description: "An error occurred while scheduling the interview. Please try again.",
         variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsSubmitting (false);
     }
@@ -267,7 +264,6 @@ if ( {) {
             <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>
           </div>
         </div>
-=======
 
     try {;
       // Combine date and time;
@@ -328,14 +324,12 @@ if ( {) {
           </div>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
           control={form && form.control}
           name="title"
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Interview Title</FormLabel>;
-=======
   const time_slots = [;
     "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30",
@@ -364,7 +358,6 @@ if ( {) {
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Interview Title</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               <FormControl>;
                 <Input placeholder="Brief title for the interview" {...field} />;
               </FormControl>;
@@ -392,7 +385,6 @@ if ( {) {
 
 
                           !field.value && "text-muted-foreground"
-=======
                           "w-full pl-3 text-left font-normal"
                           !field && field.value && "text-muted-foreground"
                         )}>;
@@ -400,7 +392,6 @@ if ( {) {
                           format(field && field.value, "PPP");
                         ) : (;
                           <span>Pick a date</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         )}
                         <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                       </Button>;
@@ -412,7 +403,6 @@ if ( {) {
 
                       selected={field && field.value}
                       onSelect={field && field.onChange}
-=======
 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -572,7 +562,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;
                       className="p-3 pointer-events-auto";
-=======
             </FormItem>)}
         />;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
@@ -606,7 +595,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       disabled={(date) => date < new Date () || date > add_days (new Date (), 90)}
                       initial_focus;
                       className="p - 3 pointer - events - auto";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     />;
                   </PopoverContent>;
                 </Popover>;
@@ -615,11 +603,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               </FormItem>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
           />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <FormField
             control={form && form.control}
             name="time"
@@ -627,7 +613,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem>;
                 <FormLabel>Time</FormLabel>;
                 <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-=======
               </FormItem>)}
           />;
           <FormField;
@@ -637,7 +622,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem>;
                 <FormLabel > Time</FormLabel>;
                 <Select onValueChange={field.on_change} default_value={field.value}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select time" />;
@@ -656,7 +640,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem>;
                 <FormLabel>Duration</FormLabel>;
                 <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-=======
                   <SelectContent className="max - h-[300px]">;
                     {time_slots.map ((time) => (
                       <SelectItem key={time} value={time}>;
@@ -676,7 +659,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem>;
                 <FormLabel > Duration</FormLabel>;
                 <Select onValueChange={field.on_change} default_value={field.value}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select duration" />;
@@ -701,7 +683,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem>;
                 <FormLabel>Platform</FormLabel>;
                 <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-=======
               </FormItem>)}
           />;
           <FormField;
@@ -711,7 +692,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem>;
                 <FormLabel > Platform</FormLabel>;
                 <Select onValueChange={field.on_change} default_value={field.value}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select platform" />;
@@ -742,7 +722,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <FormControl>;
                   <Input
                     placeholder={`Add your ${form && form.watch('platform')} link here`}
-=======
               </FormItem>)}
           />;
         </div>;
@@ -756,7 +735,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <FormControl>;
                   <Input;
                     placeholder={`Add your ${form.watch ('platform')} link here`}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {...field}
                   />;
                 </FormControl>;
@@ -793,14 +771,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormControl>;
 
                 <Textarea
-=======
 
                 <Textarea 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   placeholder="Share what you'd like to discuss in this interview"
                   className="h-20"
-=======
               </FormItem>)}
           />)}
         <FormField;
@@ -813,7 +788,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <Textarea;
                   placeholder="Share what you'd like to discuss in this interview";
                   className="h - 20";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {...field}
                 />;
               </FormControl>;
@@ -834,7 +808,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
   );
 }
 
-=======
             </FormItem>)}
         />;
         <div className="flex justify - end gap - 4 pt - 4">;
@@ -848,10 +821,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       </form>;
     </Form>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

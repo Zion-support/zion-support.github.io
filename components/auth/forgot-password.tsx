@@ -17,7 +17,6 @@
 
 }
 
-=======
 import React from 'react';
 ;
 export default /**
@@ -40,8 +39,6 @@ function ForgotPasswordPage() {
       <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Enter your email to reset your password.</p>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
@@ -62,5 +59,3 @@ export default function ForgotPasswordPage() {
     </div>
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -76,9 +76,6 @@ import Layout from '../components/Layout';
       "Experience with databases (PostgreSQL, MongoDB)",
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       "Knowledge of cloud deployment and DevOps"
     ],
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
@@ -111,9 +108,6 @@ import Layout from '../components/Layout';
       "Experience with containerization (Docker, Kubernetes)",
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       "Strong understanding of security best practices"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
@@ -146,9 +140,6 @@ import Layout from '../components/Layout';
       "Experience with security tools and frameworks",
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       "Knowledge of compliance standards (SOC 2, ISO 27001)"
     ],
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
@@ -181,9 +172,6 @@ import Layout from '../components/Layout';
       "Experience with infrastructure as code (Terraform, CloudFormation)",
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       "Knowledge of monitoring and logging tools"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
@@ -216,9 +204,6 @@ import Layout from '../components/Layout';
       "Experience with user research and testing",
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       "Strong portfolio demonstrating design skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
@@ -245,7 +230,6 @@ const benefits = [{
     "title": "Professional Growth"
     "description": "Learning opportunities and career development support"
     "icon": ArrowRight
-=======
 const jobOpenings = [;
   {;
     id: 1,;
@@ -424,7 +408,6 @@ const benefits = [{;
     "title": "Professional Growth";
     "description": "Learning opportunities and career development support";
     "icon": ArrowRight;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.broken/talent.tsx
   }
 ];
 const values = ["Innovation and creativity";
@@ -482,7 +465,6 @@ const benefits = [{
     "title": "Professional Growth"
     "description": "Learning opportunities and career development support"
     "icon": ArrowRight
-=======
 const benefits = [{;
     "title": "Competitive Compensation";
     "description": "We offer competitive salaries and performance-based bonuses";
@@ -502,7 +484,6 @@ const benefits = [{;
     "title": "Professional Growth";
     "description": "Learning opportunities and career development support";
     "icon": ArrowRight;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.broken/talent.tsx
   }
 ];
 const values = ["Innovation and creativity";
@@ -534,10 +515,7 @@ const benefits = [;
 ];
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   "Client success focus"
 ];
 export default function TalentPage() {
@@ -561,13 +539,11 @@ export default function TalentPage() {;
         <title>Join Our Team - Zion Tech Group</title>
         <meta name="description" content="Join our team of talented professionals and help us build the future of technology." />
       </Head>
-=======
     <div className="min-h-screen bg-gray-50">;
       <Head>;
         <title>Join Our Team - Zion Tech Group</title>;
         <meta name="description" content="Join our team of talented professionals and help us build the future of technology." />;
       </Head>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.broken/talent.tsx
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">;
         <div className="container mx-auto px-4">;
@@ -597,9 +573,6 @@ export default function TalentPage() {;
       title="Careers - Zion Tech Group"
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect">;
       <div className="min-h-screen bg-gray-50">;
@@ -642,7 +615,6 @@ export default function TalentPage() {;
 
 
             <motion.div,
-=======
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -666,7 +638,6 @@ export default function TalentPage() {;
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.broken/talent.tsx
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
@@ -701,7 +672,6 @@ export default function TalentPage() {;
                       {benefit.description}
                     </p>
                   </motion.div>
-=======
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -732,7 +702,6 @@ export default function TalentPage() {;
                       {benefit && benefit.description}
                     </p>;
                   </motion && motion.div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.broken/talent.tsx
                 );
               })}
             </div>;
@@ -766,7 +735,6 @@ export default function TalentPage() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {values.map((value, index) => (
                 <motion.div,
-=======
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -779,7 +747,6 @@ export default function TalentPage() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
               {values && values.map((value, index) => (;
                 <motion&& motion.div,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.broken/talent.tsx
     key={index}
                   className="bg-white p-6 rounded-lg shadow-lg"
                   initial={{ opacity: 0, y: 30 }}
@@ -866,7 +833,6 @@ export default function TalentPage() {;
               {jobOpenings.map((job, index) => (
                 <motion.div,
     key={job.id}
-=======
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -880,7 +846,6 @@ export default function TalentPage() {;
               {jobOpenings && jobOpenings.map((job, index) => (;
                 <motion&& motion.div,
     key={job && job.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.broken/talent.tsx
                   className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1007,7 +972,6 @@ export default function TalentPage() {;
       </div>
     </MainLayout>
   );
-=======
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md: text-4xl font-bold mb-6">;
@@ -1026,4 +990,3 @@ export default function TalentPage() {;
     </MainLayout>;
   ),;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.broken/talent.tsx

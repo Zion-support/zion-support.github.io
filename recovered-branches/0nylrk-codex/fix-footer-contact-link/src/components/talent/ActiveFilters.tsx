@@ -52,7 +52,6 @@ interface ActiveFiltersProps {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   clearFilters
 }: ActiveFiltersProps) {
   // Check if any filters are active
@@ -76,7 +75,6 @@ interface ActiveFiltersProps {
       <span className="text-zion-slate-light text-sm">Active filters:</span>
       {selectedSkills.map(skill => (
 
-=======
         <ClickableBadge
           key={skill}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
@@ -130,14 +128,12 @@ export function ActiveFilters({;
       <span className="text-zion-slate-light text-sm">Active filters:</span>;
 
       {selectedSkills && selectedSkills.map(skill => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <ClickableBadge
           key={skill}
 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           onClick={() => toggleSkill(skill)}
         >;
           {skill}
@@ -201,10 +197,8 @@ export function ActiveFilters({;
       <Button
         variant="ghost" 
         size="sm" 
-=======
 
 
-=======
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
@@ -243,10 +237,7 @@ export function ActiveFilters({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';
 import { Button } from '@/components / ui / button';
@@ -340,4 +331,3 @@ if (return null) {
       </Button>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

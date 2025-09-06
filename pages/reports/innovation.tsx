@@ -4,10 +4,8 @@ import Head from 'next / head';
 import Link from 'next / link';
 ;
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const InnovationPage: React.FC = () => {
   const innovation_areas = [;
     {
@@ -43,7 +41,6 @@ const InnovationPage: React.FC = () => {
 
 ;
   const recent_innovations = [;
-=======
 
       category: 'AI Automation',
       innovations: [
@@ -139,7 +136,6 @@ const InnovationPage: React.FC = () => {
   };
 
 
-=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -148,13 +144,9 @@ const InnovationPage: React.FC = () => {
   };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const getImpactColor = (impact: string) => {
-=======
 ;
   const getImpactColor = (impact: string) =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (impact) {
 
       case 'critical': return 'bg-red-500/20 text-red-400';
@@ -166,7 +158,6 @@ const InnovationPage: React.FC = () => {
   };
 
 
-=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -176,7 +167,6 @@ const InnovationPage: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
       <Head>
@@ -194,7 +184,6 @@ const InnovationPage: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="mb-8">
           <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Home
@@ -215,7 +204,6 @@ const InnovationPage: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-purple-400">Active Innovations</h3>
@@ -367,7 +355,6 @@ const InnovationPage: React.FC = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </span>
                       </div>
                       <p className="text-gray-300 text-sm">{innovation.description}</p>
@@ -402,7 +389,6 @@ const InnovationPage: React.FC = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Recent Innovations</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -418,7 +404,6 @@ const InnovationPage: React.FC = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{innovation.summary}</p>
@@ -447,7 +432,6 @@ const InnovationPage: React.FC = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Upcoming Innovations</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -480,8 +464,6 @@ const InnovationPage: React.FC = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Innovation Metrics</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -521,7 +503,6 @@ const InnovationPage: React.FC = () => {
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
 
-=======
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -532,8 +513,6 @@ const InnovationPage: React.FC = () => {
           <Link
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             href="/reports"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50"
           >
@@ -625,9 +604,7 @@ const InnovationPage: React.FC = () => {
 }
 ;
 
-=======
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default InnovationPage;

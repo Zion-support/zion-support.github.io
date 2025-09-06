@@ -20,15 +20,12 @@ interface GeneratedContent {;
   description: string;
   tags: string[];
   suggestedPrice: {;
-=======
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
 import { ArrowRight  } from './lucide-react';
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Card,
   CardContent,
   CardFooter,
@@ -38,10 +35,7 @@ import {
 
 }
 interface GeneratedContentDisplayProps {
-=======
 interface GeneratedContentDisplayProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   CardTitle,;
 
 } from "@/components/ui/card";
@@ -56,7 +50,6 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -83,8 +76,6 @@ interface GeneratedContent {;
 ;
 interface GeneratedContentDisplayProps {;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   content: GeneratedContent;
 
 
@@ -109,7 +100,6 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Tags
@@ -145,12 +135,9 @@ export function GeneratedContentDisplay(): any ({;
               <Badge
                 key={index}
                 className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
-=======
 
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {tag}
               </Badge>;
             ))}
@@ -159,7 +146,6 @@ export function GeneratedContentDisplay(): any ({;
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Suggested Price Range
@@ -174,7 +160,6 @@ export function GeneratedContentDisplay(): any ({;
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Key Selling Points
@@ -182,7 +167,6 @@ export function GeneratedContentDisplay(): any ({;
           <ul className="list-disc pl-5 text-white space-y-1">
             {content.keyPoints.map((point, index) => (
               <li key={index}>{point}</li>
-=======
           </div>;
         </div>;
 
@@ -203,9 +187,7 @@ export function GeneratedContentDisplay(): any ({;
           <ul className="list-disc pl-5 text-white space-y-1">;
             {content && content.keyPoints.map((point, index) => (;
               <li key={index}>{point}</li>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             ))}
-=======
   on_apply: () => void;
 }
 export /**
@@ -254,7 +236,6 @@ function GeneratedContentDisplay() {
           <ul className="list - disc pl - 5 text - white space - y-1">;
             {content.key_points.map ((point, index) => (
               <li key={index}>{point}</li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </ul>;
         </div>;
       </CardContent>;
@@ -272,7 +253,6 @@ function GeneratedContentDisplay() {
 
     </Card>;
   );
-=======
         <Button;
           on_click={on_apply}
           className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover: from - zion - cyan - light hover:to - zion - cyan text - white";
@@ -282,5 +262,4 @@ function GeneratedContentDisplay() {
         </Button>;
       </CardFooter>;
     </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

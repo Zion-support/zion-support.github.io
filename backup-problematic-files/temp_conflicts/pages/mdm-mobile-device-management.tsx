@@ -1,6 +1,5 @@
 
 
-=======
 
 
 import React from "react";
@@ -13,7 +12,6 @@ import {
   ArrowRight,
   Shield,
   Star,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
@@ -115,11 +113,5 @@ export default function QuantumInternetSecurityPage() {
   );
 
 
-=======
-=======
->>>>>>> main:pages-disabled/quantum-metaverse.tsx
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx

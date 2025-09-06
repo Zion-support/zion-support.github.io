@@ -106,7 +106,6 @@ export default function DeploymentNotification({;
   return (;
     <div className="fixed top-4 right-4 z-50 space-y-3 max-w-md">;
       {updates.map((update) => (;
-=======
 "use client",
 import { useState  } from './react';,
 import {
@@ -222,7 +221,6 @@ if (return null, ) {
   return (
     <div className="fixed top - 4 right - 4 z - 50 space - y-3 max - w-md">;
       {updates.map ((update) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         <div;
           key={update.id}
           className={`group relative backdrop - blur - sm rounded - xl border p - 4 transition - all duration - 300 hover:shadow - lg ${getUpdateColor (update.type)}`}
@@ -255,11 +253,9 @@ if (return null, ) {
                 <div className="p - 1 bg - white / 20 rounded">;
                   {getVerticalIcon (update.vertical || 'GENERAL')}
 
-=======
 
                   {getVerticalIcon(update.vertical || 'GENERAL')}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>;
                 <span className="font - medium text - white text - sm">;
                   {update.instance_name}
@@ -282,11 +278,9 @@ if (return null, ) {
 
             </div>)}
 
-=======
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Progress Bar (for deployment updates) */}
           {update.progress !== undefined && (
             <div className="mb - 3 space - y-2">;
@@ -303,11 +297,9 @@ if (return null, ) {
 
             </div>)}
 
-=======
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Action Buttons */}
           {update.actions && update.actions.length > 0 && (
             <div className="flex gap - 2 pt - 2 border - t border - white / 20">;
@@ -322,12 +314,10 @@ if (return null, ) {
 
 
                       ? 'bg-blue-600 hover:bg-blue-700 text-white';
-=======
                   on_click={() => handle_action (update.id, action.action)}
                   className={`flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 text - xs font - medium rounded - lg transition - all duration - 200 ${
                     action.action === 'deploy' || action.action === 'retry';
                       ? 'bg - blue - 600 hover:bg - blue - 700 text - white';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       : action.action === 'view';
                       ? 'bg - green - 600 hover:bg - green - 700 text - white';
                       : 'bg - white / 20 hover:bg - white / 30 text - white / 80';
@@ -342,11 +332,9 @@ if (return null, ) {
                 </button>))}
             </div>)}
 
-=======
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Timestamp */}
           <div className="absolute bottom - 2 right - 4 text - xs text - white / 60">;
             {format_timestamp (update.timestamp)}
@@ -371,7 +359,6 @@ function DeploymentNotificationExample() {
       governance_type: "DAO_FULL",
       domain: "health.zion.network",
       progress: 25,
-=======
 
 ;
 // Example usage with mock data;

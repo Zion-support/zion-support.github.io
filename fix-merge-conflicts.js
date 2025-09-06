@@ -10,13 +10,11 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-    if (!content.includes('=======')) {
       return false;
     }
     
     console.log(`Fixing merge conflicts in: ${filePath}`);
     
-    // Remove merge conflict markers and keep the content after the last =======
     const lines = content.split('\n');
     const fixedLines = [];
     let inConflict = false;
@@ -25,18 +23,6 @@ function fixMergeConflicts(filePath) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.includes('<<<<<<<')) {
-        inConflict = true;
-        keepContent = false;
-        continue;
-      }
-      
-      if (line.includes('=======')) {
-        keepContent = true;
-        continue;
-      }
-      
-      if (line.includes('>>>>>>>')) {
         inConflict = false;
         keepContent = false;
         continue;
@@ -50,7 +36,6 @@ function fixMergeConflicts(filePath) {
     // If the file is mostly empty or corrupted, create a basic component
     const fixedContent = fixedLines.join('\n').trim();
     
-    if (fixedContent.length < 50 || fixedContent.includes('=======')) {
       // Create a basic React component
       const fileName = path.basename(filePath, path.extname(filePath));
       const isPage = filePath.includes('/pages/');

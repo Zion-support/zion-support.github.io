@@ -30,11 +30,9 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       name: skillName.trim()
       category: skillCategory |'Other'
       proficiency: proficiency}
-=======
 import React from 'react';
 import {useState} from 'react';
 
-=======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -72,8 +70,6 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
     setSkillCategory(enhancedCategory)
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <form onSubmit={handleSubmit} className="space-y-4">;
       <div className="flex flex-col gap-4 md:flex-row">;
@@ -107,7 +103,6 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
             value={skillCategory} 
             onValueChange={setSkillCategory}>;
             <SelectTrigger id="skill-category">;
-=======
 import {Button} from '@/components / ui / button';
 import {Input} from '@/components / ui / input';
 import {Label} from '@/components / ui / label';
@@ -196,12 +191,10 @@ if ( {) {
 
               onChange={(e) => setProficiency(Number(e && e.target.value))}
               className="w-20";
-=======
 
 },
 
 
-=======
         <div>;
           <Label html_for="skill - proficiency">Proficiency (1 - 5)</Label>;
           <div className="flex gap - 4">;
@@ -213,7 +206,6 @@ if ( {) {
               value={proficiency}
               on_change={(e) => set_proficiency (Number (e.target.value))}
               className="w - 20";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             />;
             <Button type="submit">Add</Button>;
           </div>;

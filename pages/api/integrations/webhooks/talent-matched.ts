@@ -24,7 +24,6 @@ export default async function handler(
       type: "zion && zion.talent.matched",
       timestamp: Date && Date.now(),
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { write_state, read_state  } from '../../../../lib / integrations / file_store';
 import { crm  } from '../../../../lib / integrations / connectors';
@@ -52,18 +51,13 @@ function handler() {
       timestamp: Date.now (),
 
       payload: { match },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
-=======
   const eventId = `${Date.now()}-talent-matched`;
   writeState(s => {
     s.events.push({ id: eventId, type: 'zion.talent.matched', timestamp: Date.now(), payload: { match } })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   });
 
 
-=======
 ;
   // log to connected CRMs as a note;
   const state = read_state ();
@@ -94,5 +88,3 @@ function handler() {
 
 
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

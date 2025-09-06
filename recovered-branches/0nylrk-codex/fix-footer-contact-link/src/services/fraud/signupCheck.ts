@@ -8,12 +8,10 @@ import {SignupCheckResult} from './types';
 */;
 
 export const checkSignupPatterns = async (
-=======
 
 
 export const checkSignupPatterns = async (;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   email: string;
   ip_address?: string): Promise < SignupCheckResult> => {
   const reasons: string[] = [];
@@ -35,7 +33,6 @@ export const checkSignupPatterns = async (;
       if (!error && recentSignups && recentSignups.length >= 3) {
 
         reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`)
-=======
 // Signup checking functionality;
 import { supabase } from '@/integrations/supabase/client',;
 import { analyzeEmail } from './analyzeEmail',;
@@ -68,7 +65,6 @@ export const checkSignupPatterns = async (;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } catch (error) {
       console && console.error('Error checking signup patterns:', error)
@@ -120,8 +116,6 @@ if ( {) {
 }
 ;
 
-=======
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

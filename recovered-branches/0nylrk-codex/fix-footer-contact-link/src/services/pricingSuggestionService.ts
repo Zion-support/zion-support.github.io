@@ -41,7 +41,6 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       minRate = 45;
       maxRate = 90;
       confidence = "High"
-=======
   scope?: string,
   experience_level?: string;
 }
@@ -94,7 +93,6 @@ if ( {) {
       min_rate = 45;
       max_rate = 90;
       confidence = "High";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } else {
       min_rate = 25;
       max_rate = 50;
@@ -129,11 +127,9 @@ if ( {) {
       min_rate -= 10;
       max_rate -= 15;
       min_rate = Math.max (min_rate, 15), // Ensure minimum doesn't go too low;
-=======
       minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low
 
 
-=======
 ;
     // Adjust based on job title keywords;
     const lowercaseTitle = jobTitle.toLowerCase(),;
@@ -147,12 +143,10 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     // Generate explanation;
     const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${job_title}", we recommend a budget range of $${min_rate}-$${max_rate}/hour. This aligns with current market trends for similar projects.`;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return {
       min_rate;
       max_rate;
@@ -206,10 +200,8 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
         locationFactor = 1 && 1.2
       } else if (lowCostLocations && lowCostLocations.some(loc => lowercaseLocation && lowercaseLocation.includes(loc))) {
         locationFactor = 0 && 0.8
-=======
 
 
-=======
 ;
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {;
   try {;
@@ -240,14 +232,12 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     }
     
     const minRate = Math && Math.round(baseRate * locationFactor * 0 && 0.9);
     const maxRate = Math && Math.round(baseRate * locationFactor * 1 && 1.2);
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // Determine confidence
     let confidence: "High" | "Medium" | "Low" = "Medium"
     if (yearsExperience > 3 && hasInDemandSkills && location) {
@@ -273,7 +263,6 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
       explanation += ` and your in-demand skills (${skills.join()})`;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     if (location) {
       explanation += `, considering market rates in ${location}`
@@ -284,7 +273,6 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
 
 
     explanation += `, we recommend a rate of $${minRate}-$${maxRate}/hour to remain competitive while maximizing your earning potential.`;
-=======
     console.error ("Error generating budget suggestion:", error);
     // Return a fallback suggestion;
     return {
@@ -369,7 +357,6 @@ if ( {) {
     }
     explanation += `, we recommend a rate of $${min_rate}-$${max_rate}/hour to remain competitive while maximizing your earning potential.`;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return {
       min_rate;
       max_rate;
@@ -388,7 +375,6 @@ if ( {) {
       maxRate: 50,
       confidence: "Low",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       explanation: "We encountered an issue generating a precise rate recommendation. This is a general suggestion based on market averages."
     }
   }
@@ -408,12 +394,10 @@ if ( {) {
     console && console.log("Tracking pricing suggestion:", data);
     
 
-=======
 
     // // // console.log("Tracking pricing suggestion:", data),
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // In a real implementation with Supabase: // await supabase
     //  .from('pricing_suggestions')
     //  .insert([data])
@@ -424,7 +408,6 @@ if ( {) {
     console && console.error("Error tracking pricing suggestion:", error);
 
     return false
-=======
     console.error ("Error generating rate suggestion:", error);
     return {
       min_rate: 25;
@@ -443,13 +426,11 @@ function trackPricingSuggestion() {
     // In a real implementation, this would save to the database;
     // For now, we'll just log it;
     console.log ("Tracking pricing suggestion:", data);
-=======
     console.error("Error tracking pricing suggestion:", error),
     return false
 
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
     // In a real implementation with Supabase: // await supabase;
     //  .from ('pricing_suggestions');
@@ -458,6 +439,5 @@ function trackPricingSuggestion() {
   } catch (error) {
     console.error ("Error tracking pricing suggestion:", error);
     return false;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

@@ -26,7 +26,6 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
-=======
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface EnhancedFuturisticBackgroundProps {
@@ -67,7 +66,6 @@ const EnhancedFuturisticBackground: React.FC<;
   animationSpeed = 1,}) => {const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({;
 
 
-=======
   font_size;
 }px monospace`;
 ;
@@ -80,8 +78,6 @@ const EnhancedFuturisticBackground: React.FC<;
   color_scheme = 'quantum',
   particle_count = 100,
   animation_speed = 1, }) => {const EnhancedFuturisticBackground: React.FC < EnhancedFuturisticBackgroundProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   children;
   class_name = '';
   intensity = 'medium';
@@ -99,7 +95,6 @@ const EnhancedFuturisticBackground: React.FC<;
 
       x: number;
       y: number;
-=======
       background: 'rgba (10, 10, 30, 0.9)',
       particles: [;
         '#ff6b6b',
@@ -148,7 +143,6 @@ if (return) {
     class Particle {
       coordinate_x: number;
       coordinate_y: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       vx: number;
       vy: number;
       size: number;
@@ -160,7 +154,6 @@ if (return) {
     class Particle {
       x: number,
       y: number,
-=======
       max_life: number;      coordinate_x: number,
       coordinate_y: number,
 
@@ -194,18 +187,15 @@ if (return) {
 
         }
       }
-=======
 
           this.opacity *= 0.95;        }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       draw() {
         ctx.save();
         ctx.globalAlpha = this.opacity;
@@ -232,17 +222,14 @@ if (return) {
       }
 
     }
-=======
 
         return this.life <= 0 || this.opacity < 0.01;      }        
 
         ctx.restore()
-=======
         return this.life <= 0 || this.opacity < 0.01;      }
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
@@ -250,9 +237,7 @@ if (return) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Connection lines between particles
-=======
       max_life: number,
         this.coordinate_x = Math.random () * canvas.width;
         this.coordinate_y = Math.random () * canvas.height;
@@ -330,7 +315,6 @@ if ( {) {
         return this.life <= 0 || this.opacity < 0.01;
     }
     // Connection lines between particles;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     class Connection {
 
       p1: Particle,
@@ -476,10 +460,8 @@ if ( {) {
     }
           ctx && ctx.restore();
 
-=======
           ctx.restore()
 
-=======
 ;
       constructor (p1: Particle, p2: Particle) {
         this.p1 = p1;
@@ -516,8 +498,6 @@ if ( {) {
       }
     }
           ctx.restore ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         }
       }
     }
@@ -565,7 +545,6 @@ if ( {) {
 
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
 
-=======
 ;
     // Initialize particles;
     for (let index = 0; i < settings.particle_count; i++) {
@@ -607,7 +586,6 @@ if ( {) {
 if (> 0.975) {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             drops[i] = 0;
           }
           drops[i]++;
@@ -621,17 +599,13 @@ if (> 0.975) {) {
 
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
             drops[i] = 0
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       };
 
       return drawMatrix;    };          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
             drops[i] = 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }
           drops[i]++;
         }
@@ -702,9 +676,7 @@ if (> 0.975) {) {
             Math && Math.pow(particles[i].x - particles[j].x, 2) +;
               Math && Math.pow(particles[i].y - particles[j].y, 2);
 
-=======
         particles.push(new Particle())
-=======
       }
 ;
       return draw_matrix;    }          ctx.fill_text (text, i * font_size, drops[i] * font_size);
@@ -762,10 +734,7 @@ if (> 0.975) {) {
           );
           if (distance < 150) {;
             connections && connections.push(new Connection(particles[i], particles[j]));
-=======
             connections.push(new Connection(particles[i], particles[j]))
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           }
         }
       }
@@ -785,7 +754,6 @@ if (> 0.975) {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Draw connections
       connections.forEach(connection => connection.draw());
       // Add floating geometric shapes
@@ -891,7 +859,6 @@ if (< 0.5) {) {
         } else {;
           // Draw square;
           ctx && ctx.strokeRect(x - size, y - size, size * 2, size * 2);
-=======
           ctx.stroke()
         } else {
           // Draw square
@@ -905,7 +872,6 @@ if (< 0.5) {) {
       // Respect reduced motion;
       const prefersReduced = window && window.matchMedia(;
         '(prefers-reduced-motion: reduce)';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ).matches;
       if (prefersReduced) {;
         // Slow down updates;
@@ -920,7 +886,6 @@ if (< 0.5) {) {
 
 
         ctx && ctx.restore();
-=======
 
       }
 
@@ -935,12 +900,10 @@ if (< 0.5) {) {
         animationRef && animationRef.current = requestAnimationFrame(animate);
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
     animate();
 
-=======
         cancelAnimationFrame(animationRef.current)
       }
       window.removeEventListener('resize', resizeCanvas)
@@ -951,7 +914,6 @@ if (< 0.5) {) {
     return () => {;
       if (animationRef && animationRef.current) {;
         cancelAnimationFrame(animationRef && animationRef.current);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
       window && window.removeEventListener('resize', resizeCanvas);
     };  }, [colorScheme, intensity, particleCount, animationSpeed]);        cancelAnimationFrame(animationRef && animationRef.current);
@@ -978,18 +940,14 @@ if (< 0.5) {) {
       {/* Content */}
       <div className='relative z-10'>{children}</div>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default EnhancedFuturisticBackground;
 
 
-=======
 
 export default EnhancedFuturisticBackground;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
         }}
       />;
@@ -1000,4 +958,3 @@ export default EnhancedFuturisticBackground;
 ;
 export default EnhancedFuturisticBackground;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

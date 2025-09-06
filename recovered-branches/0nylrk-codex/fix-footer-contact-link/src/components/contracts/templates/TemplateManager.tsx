@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TemplateManagerProps {
 
   isOpen: boolean
@@ -121,7 +120,6 @@ export function TemplateManager(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 disabled={!currentValues}
               >
                 Save Current as Template
@@ -138,7 +136,6 @@ export function TemplateManager(): any ({;
                 variant="outline" 
                 onClick={() => setMode("save")}
                 disabled={!currentValues}
-=======
 import { useState } from './react';
 import { useContractTemplates } from '@/hooks / useContractTemplates';
 import { ContractTemplate } from '@/types / contracts';
@@ -222,12 +219,10 @@ if ( {) {
               setMode("list");
               setSelectedTemplate(null);
 
-=======
 
               setMode("list"),
               setSelectedTemplate(null)
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }}
             onComplete={handleSaveComplete}
             editTemplate={selectedTemplate}
@@ -263,7 +258,5 @@ if ( {) {
     </Dialog>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

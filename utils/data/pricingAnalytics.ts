@@ -6,10 +6,7 @@ export const getPricingMetrics = async () => {
   // Placeholder implementation;
   return { metrics: {}, success: true }
 }
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 export const trackPricingRequest = async (data: any) => {;
   // Placeholder implementation;
@@ -29,4 +26,3 @@ export const getPricingMetrics = async () => {;
 }
 
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

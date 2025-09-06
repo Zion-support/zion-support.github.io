@@ -112,11 +112,9 @@ function ServicesPage() {
 
   return (
     <div className=&quot;bg - black & quot;>;
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
@@ -178,7 +176,6 @@ function ServicesPage() {
                 </div>
               </div>
             ))}
-=======
               <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
                 AI Services;
               </span>;
@@ -228,7 +225,6 @@ function ServicesPage() {
                   </Link>;
                 </div>;
               </div>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </div>;
         </div>;
       </div>;
@@ -236,7 +232,6 @@ function ServicesPage() {
 
 
 
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Process</h2>
@@ -248,8 +243,6 @@ function ServicesPage() {
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our proven methodology ensures successful project delivery and maximum value 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             from your AI investment.
           </p>
         </div>
@@ -270,7 +263,6 @@ function ServicesPage() {
                 </div>
               </div>
             ))}
-=======
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Our Process</h2>;
@@ -297,7 +289,6 @@ function ServicesPage() {
                   <p className=&quot;text - sm text - gray - 300 & quot;>{step.description}</p>;
                 </div>;
               </div>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </div>;
         </div>;
       </div>;
@@ -322,7 +313,6 @@ function ServicesPage() {
               <div key={reason.name} className="flex flex-col group">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
                   <reason.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {reason.name}
                 </dt>;
                 <dd className=&quot;mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray - 300 & quot;>;
@@ -363,4 +353,3 @@ function ServicesPage() {
 };
 
 export default Page;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

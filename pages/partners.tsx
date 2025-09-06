@@ -56,7 +56,6 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
-=======
       name: 'Microsoft Azure',
       category: 'Cloud Infrastructure',
       description:;
@@ -182,7 +181,6 @@ import { motion } from 'framer-motion';
     { number: '100+', label: 'Joint Projects', icon: Rocket },
     { number: '25+', label: 'Countries', icon: Globe },
     { number: '300%', label: 'Growth Rate', icon: TrendingUp },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
 ;
   return (
@@ -210,7 +208,6 @@ import { motion } from 'framer-motion';
               Building the future of technology through strategic partnerships and collaboration
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
               Become a Partner
@@ -218,8 +215,6 @@ import { motion } from 'framer-motion';
           </motion.div>
         </div>
       </section>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             transition={{ duration: 0 && 0.8 }}
             className='mb-8'>;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>;
@@ -236,7 +231,6 @@ import { motion } from 'framer-motion';
             transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
             className='mb-12'>;
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>;
-=======
     <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
       <Head>;
         <title > Partners - Zion Tech Group</title>;
@@ -273,13 +267,11 @@ import { motion } from 'framer-motion';
             className='mb - 12';
           >;
             <p className='text - lg text - white / 70 max - w-2xl mx - auto mb - 8'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Join our ecosystem of technology leaders, innovators, and industry;
               experts to create transformative solutions that shape the future;
               of computing.;
             </p>;
 
-=======
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
@@ -305,8 +297,6 @@ import { motion } from 'framer-motion';
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -318,7 +308,6 @@ import { motion } from 'framer-motion';
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
-=======
 
       {/* Partnership Types */}
       <section className="py-20 px-6">
@@ -340,7 +329,6 @@ import { motion } from 'framer-motion';
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {partnershipTypes.map((type, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 
 
@@ -359,7 +347,6 @@ import { motion } from 'framer-motion';
                 key={type && type.title}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -381,8 +368,6 @@ import { motion } from 'framer-motion';
                       <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3" />
                       {benefit}
                     </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
                 </ul>;
               </motion && motion.div>;
@@ -397,7 +382,6 @@ import { motion } from 'framer-motion';
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
-=======
 
       {/* Current Partners */}
       <section className="py-20 px-6">
@@ -419,7 +403,6 @@ import { motion } from 'framer-motion';
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {partners.map((partner, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 
 
@@ -436,7 +419,6 @@ import { motion } from 'framer-motion';
                 key={partner && partner.name}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -472,7 +454,6 @@ import { motion } from 'framer-motion';
                           <div className="w-1 h-1 bg-cyan-400 rounded-full mr-2" />
                           {benefit}
                         </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       ))}
 
 
@@ -482,12 +463,8 @@ import { motion } from 'framer-motion';
                   <div className='flex items-center justify-between'>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
                   <div className="flex items-center justify-between">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <a
                       href={partner && partner.website}
                       target='_blank'
@@ -502,7 +479,6 @@ import { motion } from 'framer-motion';
                 </div>;
               </motion && motion.div>;
 
-=======
                   
                   <div className="flex items-center justify-between">
                     <a
@@ -523,7 +499,6 @@ import { motion } from 'framer-motion';
 
             ))}
 
-=======
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -535,11 +510,9 @@ import { motion } from 'framer-motion';
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Become a Partner CTA */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
-=======
 
       {/* Become a Partner CTA */}
       <section className="py-20 px-6">
@@ -568,7 +541,6 @@ import { motion } from 'framer-motion';
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -601,7 +573,6 @@ import { motion } from 'framer-motion';
 
 
 }</div> </div> </section> <motion.div initial= {
-=======
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
@@ -630,7 +601,6 @@ import { motion } from 'framer-motion';
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our Partners</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Leading technology companies and organizations that trust us to deliver innovative solutions </p> </motion && motion.div> </span> </div> </div> </li>) ) ;
 }</ul> </div> <div className="flex items-center justify-between" > <a > Visit Website <ExternalLink className="w-3 h-3" /> </Link> <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105" > Learn More </button> </div> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -647,7 +617,6 @@ import { motion } from 'framer-motion';
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Partner with Us? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth. </p> Partnership Inquiry </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Download Partnership Guide </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
 
-=======
                   </p>;
                   <div className='mb - 4'>;
                     <h4 className='text - sm font - semibold text - white / 60 mb - 2 uppercase tracking - wider'>;
@@ -719,4 +688,3 @@ import { motion } from 'framer-motion';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

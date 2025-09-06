@@ -23,7 +23,6 @@ export function ErrorState(): any ({ error }: ErrorStateProps) {;
       </CardContent>;
     </Card>;
   );
-=======
 import { Card, CardContent  } from '@/components / ui / card';
 interface ErrorStateProps {
   error: string;
@@ -41,9 +40,7 @@ function ErrorState() {
         <p className="text - muted - foreground">{error}</p>;
       </CardContent>;
     </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-=======
   return (
     <Card className="border-red-200">
       <CardContent className="p-6 text-center">
@@ -58,4 +55,3 @@ function ErrorState() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -56,7 +56,6 @@ const updatePasswordSchema = z
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Initialize react-hook-form
   const form = useForm<UpdatePasswordFormValues>({
     resolver: zodResolver(updatePasswordSchema)
@@ -74,7 +73,6 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
 
     if (token) {
       setAccessToken(token)
-=======
 import { useState, useEffect } from './react';
 import { use_navigate, use_location } from './react-router-dom';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -129,7 +127,6 @@ if ( {) {
   $2
 }
       setAccessToken (token);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } else {
       set_error ("No access token found. Please request a new password reset link.");
     }
@@ -265,12 +262,10 @@ if ( {) {
 
     }
   }
-=======
     }
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -296,13 +291,11 @@ if ( {) {
                   <Button
                     className="mt-3 text-xs"
                     variant="outline"
-=======
 
                   <Button 
                     className="mt-3 text-xs"
                     variant="outline"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     onClick={() => navigate('/forgot-password')}
                   >;
                     Request new reset link;
@@ -330,7 +323,6 @@ if ( {) {
               ) : (
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-=======
 
               {success ? (;
                 <div className="text-center py-8">;
@@ -348,7 +340,6 @@ if ( {) {
               ) : (;
                 <Form {...form}>;
                   <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <FormField
                       control={form && form.control}
                       name="password"
@@ -405,7 +396,6 @@ if ( {) {
                         variant="link"
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0"
                         onClick={() => navigate("/login")}
-=======
     // Clean up auth state to prevent issues;
     cleanupAuthState ();
   }, [location]);
@@ -550,7 +540,6 @@ if ( {) {
                         variant="link";
                         className="text - sm font - medium text - zion - cyan hover:text - zion - cyan - light p - 0";
                         on_click={() => navigate ("/login")}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         type="button";
                       >;
                         Back to login;
@@ -558,10 +547,8 @@ if ( {) {
                     </div>;
                   </form>;
 
-=======
 
 
-=======
                       name="confirmPassword";
                       render={({ field }) => (;
                         <FormItem>;
@@ -590,7 +577,6 @@ if ( {) {
               <div className="max-w-md text-center">;
                 <h3 className="text-3xl font-bold text-white mb-4">Password Recovery</h3>;
                 <p className="text-lg text-white/80">;
-=======
                 </Form>)}
             </div>;
           </div>;
@@ -601,7 +587,6 @@ if ( {) {
               <div className="max - w-md text - center">;
                 <h3 className="text - 3xl font - bold text - white mb - 4">Password Recovery</h3>;
                 <p className="text - lg text - white / 80">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Set a strong password to secure your account and continue your journey in the Zion marketplace.;
                 </p>;
               </div>;
@@ -614,10 +599,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

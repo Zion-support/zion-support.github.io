@@ -27,7 +27,6 @@
       'Research ethics, Data privacy, Scientific standards, Industry regulations',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-bio-computing-platform',
-=======
     id: 'quantum - bio - computing - platform',
     name: 'Quantum Bio - Computing Platform',
     tagline: 'Quantum computing meets biological systems',
@@ -109,7 +108,6 @@
     market_size: '$12B quantum bio - computing market',
     growth_rate: '65% annually',
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Neural signal processing, AI/ML, React, Node && Node.js, PostgreSQL, Redis, AWS, Neural hardware',
@@ -137,7 +135,6 @@
       'Medical device regulations, Data privacy, Ethical guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/brain-computer-interface-platform',
-=======
     id: 'brain - computer - interface - platform',
     name: 'Brain - Computer Interface Platform',
     tagline: 'Direct neural interface for human - computer interaction',
@@ -219,7 +216,6 @@
     market_size: '$18B BCI market',
     growth_rate: '55% annually',
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Quantum computing, Energy algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Energy systems',
@@ -247,7 +243,6 @@
       'Energy regulations, Safety standards, Environmental regulations, Industry standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-energy-platform',
-=======
     id: 'quantum - energy - platform',
     name: 'Quantum Energy Platform',
     tagline: 'Quantum - enhanced energy optimization and fusion simulation',
@@ -329,7 +324,6 @@
     market_size: '$25B quantum energy market',
     growth_rate: '45% annually',
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Advanced AI/ML, Computer Vision, Robotics, React, Node && Node.js, PostgreSQL, Redis, AWS, Vehicle systems',
@@ -357,7 +351,6 @@
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/autonomous-vehicle-ai-platform',
-=======
     id: 'autonomous - vehicle - ai - platform',
     name: 'Autonomous Vehicle AI Platform',
     tagline: 'Advanced AI for self - driving vehicles and transportation',
@@ -440,7 +433,6 @@
     growth_rate: '75% annually',
   },
 
-=======
   id: string, name: string,
   tagline: string, description: string,
   category: string,
@@ -467,9 +459,7 @@
 }
 
 
-=======
 ];      'Autonomous driving_fleet management_safety systems_traffic optimization_transportation logistics_research and development';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ];
 
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
@@ -491,14 +481,9 @@
 
 ];
 
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export interface EmergingTechService {;
 
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -291,7 +291,6 @@ function ServiceDetailPage() {
 
                     className='text-xs hover:underline'>;
                     {contactInfo && contactInfo.address}
-=======
                 </span>;
               </div>;
               <div className='text - sm text - gray - 400 mt - 2'>;
@@ -354,7 +353,6 @@ function ServiceDetailPage() {
       </div>;
 
 
-=======
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
@@ -504,13 +502,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 		</UltraFuturisticBackground>
 	)
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </UltraFuturisticBackground>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

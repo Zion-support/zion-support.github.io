@@ -251,7 +251,6 @@ export default function PricingComparisonPage() {
       insight: 'Enterprise-grade reliability without enterprise pricing'
       icon: <Star className="w-6 h-6" />
       color: 'text-yellow-400'
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -331,7 +330,6 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
               </Button>;
               <Button
 
-=======
     <>
       <Head>
         <title>Pricing Comparison - Zion Tech Group | How We Stack Up Against the Competition</title>
@@ -374,10 +372,8 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                 className="border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white"
               >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 View Our Pricing
 
-=======
         <meta;
           name='description';
           content="See how Zion's micro SaaS services compare to market leaders. Detailed pricing analysis showing significant cost savings and better value.";
@@ -442,7 +438,6 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
           </div>;
         </section>;
 
-=======
 
         {/* Market Insights */}
         <section className="py-24 bg-gray-900">
@@ -458,7 +453,6 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {marketInsights.map((insight, index) => (
                 <Card
-=======
         {/* Market Insights */}
         <section className='py - 24 bg - gray - 900'>;
           <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
@@ -495,23 +489,19 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                     {insight.icon}
                   </div>;
                   <p className={`text - lg font - semibold ${insight.color}`}>;
-=======
 
 
                     {insight.icon}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                   <p className={`text-lg font-semibold ${insight.color}`}>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {insight.insight}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Detailed Comparison */}
 
         <section id="comparison" className="py-24 bg-gray-800">
@@ -571,7 +561,6 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                       Starter:{' '}
                       <span className='text-green-400 font-semibold'>;
                         {service && service.zionPricing.starter}
-=======
                   </p>;
                 </Card>))}
             </div>;
@@ -613,7 +602,6 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                       Starter:{' '}
                       <span className='text - green - 400 font - semibold'>;
                         {service.zion_pricing.starter}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       </span>;
                     </span>;
                     <span>;
@@ -629,7 +617,6 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
 
                       <span className='text-purple-400 font-semibold'>;
                         {service && service.zionPricing.enterprise}
-=======
                       <span className='text - purple - 400 font - semibold'>;
                         {service.zion_pricing.enterprise}
 
@@ -652,7 +639,6 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                   </div>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-=======
                         </div>;
                         <div className='text-center'>;
                           <p className='text-green-400 font-semibold mb-2'>;
@@ -671,7 +657,6 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                 </div>;
 
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {/* Zion Service */}
                   <div className="lg:col-span-1">;
                     <Card className="h-full border-2 border-green-500 bg-green-500/5">;
@@ -694,12 +679,10 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                     </Card>;
                   </div>;
 
-=======
 
                   {/* Competitors */}
                   {service.competitors.map((competitor, compIndex) => (
 
-=======
                     <div key={compIndex} className='lg:col-span-1'>
                       <Card className='h-full border border-gray-700'>
                         <div className='text-center p-6'>
@@ -712,8 +695,6 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                             {[...Array(5)].map((_, i) => (
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                               <Star
                                 key={i}
                                 className={`w-4 h-4 ${
@@ -738,7 +719,6 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                               </p>
                               <ul className='text-gray-300 space-y-1'>
                                 {competitor.pros.map((pro, proIndex) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                                   <li
                                     key={proIndex}
                                     className='flex items-center'>;
@@ -754,7 +734,6 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                                   <li key={proIndex} className="flex items-center">;
                                     <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />;
 
-=======
                             <span className="text-sm text-gray-400 ml-2">{competitor.rating}</span>
                           </div>
                           <div className="mb-4">
@@ -772,7 +751,6 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                                   </li>;
                                 ))}
 
-=======
                               </ul>
                             </div>
                             <div>
@@ -794,7 +772,6 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                       </Card>
                     </div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
                 </div>;
               </div>;
@@ -815,14 +792,12 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
 
               Ready to Save Money and Get Better Features?
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-indigo-100 mb-12'>
               Start your free trial today and see why thousands of businesses
               choose Zion.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Button
                 href='/ai-content-generator'
                 variant='secondary'
@@ -842,7 +817,6 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                 variant='secondary'
                 size='lg'
 
-=======
         <section className="py-24 bg-gradient-to-r from-indigo-600 to-purple-600">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
@@ -875,10 +849,8 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                 className="bg-white text-indigo-600 hover:bg-gray-100"
               >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 Try DevOps Automation
 
-=======
                   {/* Competitors */}
                   {service.competitors.map ((competitor, comp_index) => (
                     <div key={comp_index} className='lg:col - span - 1'>;
@@ -1032,11 +1004,8 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
   );
 }
 
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
                 className='bg-white text-indigo-600 hover:bg-gray-100'              >                href="/ai-content-generator"
                 variant="secondary"
                 size="lg"
@@ -1046,5 +1015,3 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
 
               <Button
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

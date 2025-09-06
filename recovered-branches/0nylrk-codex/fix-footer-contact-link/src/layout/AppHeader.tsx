@@ -1,10 +1,7 @@
 
-=======
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 import {useState} from 'react';
 import {use_messaging} from '@/context / MessagingContext';
 import {MainNavigation} from './MainNavigation';
@@ -36,12 +33,10 @@ function AppHeader() {
 
   } catch (error) {
     console.warn ('Messaging context not available');
-=======
   } catch (error) {
     console.warn('Messaging context not available')
 
 
-=======
 import { useState } from 'react',;
 import { useMessaging } from '@/context/MessagingContext',;
 import { MainNavigation } from './MainNavigation',;
@@ -63,8 +58,6 @@ export function AppHeader() {;
     console.warn('Messaging context not available');
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return (
 
@@ -127,12 +120,10 @@ export function AppHeader() {;
         </div>;
 
       )}
-=======
       )}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
 
@@ -140,7 +131,6 @@ export function AppHeader() {;
   );
 }
 
-=======
     <>;
       <header className="sticky top - 0 z - 50 w - full border - b border - zion - purple / 20 bg - zion - blue - dark / 90 backdrop - blur - md">;
         <div className="container flex h - 16 items - center px - 4 sm:px - 6">;
@@ -184,4 +174,3 @@ export function AppHeader() {;
       {is_mobile && <MobileBottomNav unread_count={unread_count} />}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

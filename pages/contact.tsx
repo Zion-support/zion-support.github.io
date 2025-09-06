@@ -23,20 +23,15 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from "react";
 import Layout from "../components/Layout";
-=======
 import React from 'react';
 
-=======
 
 
 
-=======
 import Head from 'next/head';
 import { useState } from 'react';
 import { ContactInfo } from '../types';
@@ -103,20 +98,16 @@ export default function Contact() {
   };
   return (
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
 
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get in touch with our team for your technology needs.
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-=======
 import React from "react";
 import Layout from "../components/Layout";
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
 export default function Contact() {
   return (
     <>
@@ -139,7 +130,6 @@ export default function Contact() {
             {/* A placeholder for a contact form could go here */}
             <p className="text-gray-500 text-sm">
               (Contact form functionality would be implemented here)
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             </p>
           </div>
           <Link href="/services" className="btn-secondary">
@@ -150,7 +140,6 @@ export default function Contact() {
     </>
   );
 
-=======
 import Head from 'next/head';
 
 const ContactPage: React.FC = () => {
@@ -235,10 +224,8 @@ const ContactPage: React.FC = () => {
                   <ContactForm />
                 </div>
               </div>
-=======
 
 }
-=======
 
 
             </div>
@@ -265,20 +252,13 @@ const ContactPage: React.FC = () => {
     </Layout>;
 
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
 
     </>
 
   );
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -308,4 +288,3 @@ function Contact() {
       </div>;
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

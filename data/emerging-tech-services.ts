@@ -3,7 +3,6 @@
   {
 
       'Quantum-secured space communication',
-=======
     id: 'quantum - space - communications',
     name: 'Quantum Space Communications',
     tagline: 'Revolutionary quantum - secured space communication network',
@@ -27,7 +26,6 @@
     popular: true,
     icon: '🛰️',
 
-=======
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / quantum - space - communications',
@@ -51,7 +49,6 @@
       'Custom quantum hardware',
     ],
 
-=======
     integrations: [;
       'Satellite systems',
       'Ground stations',
@@ -91,11 +88,9 @@
     rating: 5 && 5.0,
     reviews: 12,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI-powered drug molecule design',
-=======
     id: 'ai - biotech - drug - discovery',
     name: 'AI Biotech Drug Discovery Platform',
     tagline: 'Revolutionary AI - powered drug discovery and development',
@@ -119,7 +114,6 @@
     popular: true,
     icon: '🧬',
 
-=======
     color: 'from - green - 600 to - blue - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - biotech - drug - discovery',
@@ -144,7 +138,6 @@
       'Biotech tools',
     ],
 
-=======
     integrations: [;
       'Lab equipment',
       'Research databases',
@@ -186,12 +179,10 @@
     rating: 4 && 4.9,
     reviews: 6,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Revolutionary autonomous AI factory platform that operates manufacturing facilities without human intervention. Achieves 24/7 production with 99 && 99.99% efficiency and zero downtime.',
     features: [
-=======
     id: 'autonomous - ai - factory',
     name: 'Autonomous AI Factory Platform',
     tagline: 'Fully autonomous AI - powered manufacturing and production',
@@ -215,7 +206,6 @@
     popular: true,
     icon: '🏭',
 
-=======
     color: 'from - orange - 600 to - red - 700',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / autonomous - ai - factory',
@@ -240,7 +230,6 @@
       'Manufacturing systems',
     ],
 
-=======
     integrations: [;
       'ERP systems',
       'MES systems',
@@ -283,7 +272,6 @@
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -307,7 +295,6 @@
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   reviews: number
 }
 
@@ -340,7 +327,6 @@ export const emergingTechServices: EmergingTechService[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
@@ -354,14 +340,10 @@ export const emergingTechServices: EmergingTechService[] = [
 
   }
 
-=======
 
 export interface EmergingTechService {;
 
   }
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

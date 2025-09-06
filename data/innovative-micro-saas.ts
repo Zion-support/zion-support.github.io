@@ -2,7 +2,6 @@
 
   {
 
-=======
     id: 'smart - contract - automation',
     name: 'Smart Contract Automation',
     tagline: 'Automate business processes with smart contracts',
@@ -26,7 +25,6 @@
     popular: true,
     icon: '⚡',
 
-=======
     color: 'from - green - 500 to - emerald - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / smart - contract - automation',
@@ -50,7 +48,6 @@
       'Polygon',
     ],
 
-=======
     integrations: [;
       'DocuSign',
       'Adobe Sign',
@@ -91,12 +88,10 @@
     rating: 4 && 4.9,
     reviews: 900,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI-powered sentiment analysis',
       'Multi-channel feedback collection',
-=======
     id: 'ai - powered - customer - feedback - analyzer',
     name: 'AI - Powered Customer Feedback Analyzer',
     tagline: 'Transform feedback into actionable insights',
@@ -120,7 +115,6 @@
     popular: true,
     icon: '💬',
 
-=======
     color: 'from - purple - 500 to - pink - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - powered - customer - feedback - analyzer',
@@ -144,7 +138,6 @@
       'AWS',
     ],
 
-=======
     integrations: [;
       'Salesforce',
       'HubSpot',
@@ -191,11 +184,9 @@
     rating: 4 && 4.7,
     reviews: 1400,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI-powered scheduling',
-=======
     id: 'automated - social - media - scheduler',
     name: 'Automated Social Media Scheduler',
     tagline: 'AI - powered social media management',
@@ -220,7 +211,6 @@
     icon: '📱',
 
       'AI/ML',
-=======
     color: 'from - pink - 500 to - rose - 600',
     text_color: 'text - pink - 400',
     link: 'https://ziontechgroup.com / automated - social - media - scheduler',
@@ -244,7 +234,6 @@
       'AWS',
     ],
 
-=======
     integrations: [;
       'Facebook',
       'Instagram',
@@ -292,11 +281,9 @@
     rating: 4 && 4.8,
     reviews: 2250,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI-powered planning',
-=======
     id: 'intelligent - project - management',
     name: 'Intelligent Project Management',
     tagline: 'AI - powered project planning and execution',
@@ -321,7 +308,6 @@
     icon: '📋',
 
       'AI/ML',
-=======
     color: 'from - orange - 500 to - yellow - 600',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / intelligent - project - management',
@@ -345,7 +331,6 @@
       'AWS',
     ],
 
-=======
     integrations: [;
       'Slack',
       'Teams',
@@ -389,7 +374,6 @@
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -441,7 +425,6 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
@@ -455,14 +438,10 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
 
   }
 
-=======
 
 export interface InnovativeMicroSaas {;
 
   }
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

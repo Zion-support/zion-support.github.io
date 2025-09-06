@@ -40,7 +40,6 @@ const testimonials = [;
   },;
 
 ];
-=======
 
   Carousel,
   CarouselContent,
@@ -80,12 +79,10 @@ const testimonials = [
     company: "FutureTech Systems",
     image: "/placeholder.svg"}],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export function EnterpriseTestimonials() {;
   return (
 
-=======
                       <img
                         src={testimonial.image}
                         alt={testimonial.author}
@@ -97,7 +94,6 @@ export function EnterpriseTestimonials() {;
                       <p className="text-sm text-muted-foreground">
 
 
-=======
 import React from "react",;
 import { Quote } from "lucide-react",;
 import {;
@@ -160,13 +156,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components / ui / carousel';
-=======
                       <img;
 
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
 const testimonials = [;
   {
@@ -231,7 +225,6 @@ function EnterpriseTestimonials() {
                       <p className="font - bold">{testimonial.author}</p>;
                       <p className="text - sm text - muted - foreground">;
                         {testimonial.title}, {testimonial.company}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       </p>;
                     </div>;
                   </div>;

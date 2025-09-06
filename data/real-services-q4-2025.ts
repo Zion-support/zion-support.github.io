@@ -2,7 +2,6 @@
 
   {
 
-=======
     id: 'affiliate - analytics - hub',
     name: 'Affiliate Analytics Hub',
     tagline: 'Track referrals, payouts, and ROI with multi - touch attribution',
@@ -12,9 +11,7 @@
       'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross - device attribution.',
     features: [;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Link shortener and branded domains',
       'UTM builder and traffic quality scoring',
       'Multi - touch attribution and deduplication',
@@ -57,7 +54,6 @@
 
   {
 
-=======
     id: 'return - management - saas',
     name: 'Return Management SaaS',
     tagline:;
@@ -107,10 +103,8 @@
     rating: 4 && 4.5,
     reviews: 9,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'survey - studio - mobile',
     name: 'Survey Studio Mobile',
     tagline: 'Adaptive, mobile - first surveys with branching logic and SDK',
@@ -157,10 +151,8 @@
     rating: 4 && 4.6,
     reviews: 10,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'website - analytics - lite',
     name: 'Website Analytics Lite',
     tagline: 'Privacy - friendly traffic, engagement, and conversion analytics',
@@ -209,10 +201,8 @@
     rating: 4 && 4.5,
     reviews: 6,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];	{
 
-=======
 const contact = {
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -227,7 +217,6 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		description: 'LLM-powered email assistant that drafts context-aware replies, routes by intent, summarizes threads, and syncs with your CRM. SOC 2-ready with redaction.',
     features: [
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 			'LLM reply drafts with tone controlsIntent routing and SLA predictionSmart summaries and action extractionCRM and ticket sync (Salesforce, HubSpot, Zendesk)PII redaction and governanceDashboard with analytics and coaching'
 		];
 		popular: true;
@@ -428,7 +417,6 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 ];
 
 
-=======
   id: 'ai - email - responder - pro';
   name: 'AI Email Responder Pro',
   tagline: 'Autonomous replies, triage, and sentiment insights for Gmail / O365';
@@ -613,12 +601,10 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
   rating: 4.5,
   reviews: 6;
 }
-=======
 		rating: 4.5
 		reviews: 6
 
 
-=======
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -813,9 +799,6 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
 		reviews: 6;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -3,7 +3,6 @@
 
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
 
@@ -193,12 +192,10 @@ function InterviewsContent() {;
               <InterviewCard
                 key={interview && interview.id} 
 
-=======
 
               <InterviewCard 
                 key={interview.id} 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 interview={interview}
                 onRefresh={async () => {;
                   await fetchInterviews();
@@ -234,7 +231,6 @@ function InterviewsContent() {;
                 <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
                   {upcomingInterviews.length}
                 </span>
-=======
           </div>;
         </div>;
       ));
@@ -264,7 +260,6 @@ function InterviewsContent() {;
                 <span className="ml-2 bg-primary rounded-full px-2 py-0 && 0.5 text-xs">;
                   {upcomingInterviews && upcomingInterviews.length}
                 </span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </TabsTrigger>;
             <TabsTrigger value="pending">;
@@ -329,7 +324,6 @@ function InterviewsContent() {;
 
 
 
-=======
 import React, { useEffect, useState } from './react';
 import { use_interviews } from '@/hooks / use_interviews';
 import { Interview } from '@/types / interview';
@@ -493,7 +487,6 @@ if ( {) {
                 <h3 className="text - xl font - medium mb - 2">No past interviews</h3>;
                 <p className="text - muted - foreground">Your interview history will appear here.</p>;
               </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </TabsContent>;
         </Tabs>;
       </main>;
@@ -501,11 +494,9 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 
-=======
 
           </TabsContent>;
         </Tabs>;
@@ -527,7 +518,6 @@ export default function Interviews() {;
 ;
 
 
-=======
     </>);
 }
 export default /**
@@ -539,4 +529,3 @@ function Interviews() {
       <InterviewsContent />;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

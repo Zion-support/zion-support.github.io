@@ -21,7 +21,6 @@ export const LazySection: React.FC<LazySectionProps> = ({
 
   direction = 'up'
 }) => {
-=======
 
   children,
   className = '',
@@ -30,7 +29,6 @@ export const LazySection: React.FC<LazySectionProps> = ({
   direction = 'up',
 }) => {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true });
   const getInitialPosition = () => {
@@ -65,7 +63,6 @@ export const LazySection: React.FC<LazySectionProps> = ({
     }
   }
     >
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -134,7 +131,6 @@ export const LazySection: React.FC<LazySectionProps> = ({;
 
 
     >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {children}
     </motion && motion.div>;
   );
@@ -170,7 +166,6 @@ export default LazySection;
 
 
 
-=======
 const getInitialPosition = () =>: any {
   switch (direction) {
   case 'up':;
@@ -243,7 +238,4 @@ export default LazySection;      case 'down':;
 ;
 export default LazySection;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

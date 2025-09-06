@@ -1381,7 +1381,6 @@ competitors: ['TypeformSurveySparrowTally'];
 techStack: ['Next && Next.jsSupabaseVercel EdgeOpenAI'];
 realImplementation: true;
 implementationDetails: 'Template gallery, response store, analytics, export jobs.';
-=======
     rating: 4.6,
     reviews: 6;
   }
@@ -1395,7 +1394,6 @@ competitors: ['TypeformSurveySparrowTally'];
 tech_stack: ['Next.jsSupabaseVercel EdgeOpenAI'];
 real_implementation: true;
 implementation_details: 'Template gallery, response store, analytics, export jobs.';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 roi: 'Improves feedback volume 20–50%.';
 use_cases: ['NPSBeta feedback_lead qual'];
 integrations: ['HubSpotSegmentZapier'];
@@ -1419,7 +1417,6 @@ competitors: ['AsanaClickUpNotion'];
 techStack: ['Next && Next.jsPrismaPostgreSQL'];
 realImplementation: true;
 implementationDetails: 'Template JSON schemas, rules engine, import/export.';
-=======
 reviews: 22;
 }
 market_position: 'Alternative to Notion templates + Asana. Faster to start with curated flows.';
@@ -1427,7 +1424,6 @@ competitors: ['AsanaClickUpNotion'];
 tech_stack: ['Next.jsPrismaPostgreSQL'];
 real_implementation: true;
 implementation_details: 'Template JSON schemas, rules engine, import / export.';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 roi: 'Deliverables throughput +15–25%.';
 use_cases: ['Client delivery_editorial calendar_sprints'];
 integrations: ['Google CalendarSlackLinear'];
@@ -1475,7 +1471,6 @@ export const serviceCategories = [
   'Enterprise IT'
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
 
-=======
   return realMicroSaasServices.filter(service => service.category === category)
 };
 
@@ -1493,9 +1488,7 @@ export const getPopularServices = () => {
 export const serviceCategories = [
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
-=======
 reviews: 14;
 }
 ;
@@ -1527,17 +1520,12 @@ export const service_categories = [;
   'Enterprise IT',
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
   'Enterprise IT';
 ];
 
 
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export interface RealMicroSaasService {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

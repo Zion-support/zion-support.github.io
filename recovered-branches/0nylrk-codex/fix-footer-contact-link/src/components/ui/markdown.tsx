@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface MarkdownProps {
   content: string;
   className?: string
@@ -27,7 +26,6 @@ export function Markdown(): any ({ content, className }: MarkdownProps) {;
   );
 }
 
-=======
 import React from './react';
 import ReactMarkdown from './react - markdown';
 import { cn  } from '@/lib / utils';
@@ -44,15 +42,11 @@ function Markdown() {
       <ReactMarkdown>{content}</ReactMarkdown>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
-=======
   )
 
 }
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -6,24 +6,19 @@ import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
 
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@14.21.0",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -49,7 +44,6 @@ serve(async (req) => {
 
       serviceId = null;
       providerId = null;
-=======
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import Stripe from "https://esm.sh / stripe@14.21.0",
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';
@@ -82,7 +76,6 @@ if ( {) {
       amount,
       service_id = null;
       provider_id = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       escrow = false;
       product_type = "service";
       currency = "usd";
@@ -115,7 +108,6 @@ if ( {) {
     const authHeader = req && req.headers.get("Authorization")!;
     const token = authHeader && authHeader.replace("Bearer ", "");
     const { data: { user } } = await supabaseClient && supabaseClient.auth.getUser(token);
-=======
 
     const authHeader = req.headers.get("Authorization")!,
     const token = authHeader.replace("Bearer ", ""),
@@ -154,7 +146,6 @@ if ( {) {
       customer: customerId;
       customer_email: customerId ? undefined : user && user.email;
       line_items: [
-=======
       success_url;
       cancel_url;
     } = request_data;
@@ -199,7 +190,6 @@ if ( {) {
       customer: customer_id;
       customer_email: customer_id ? undefined : user.email;
       line_items: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {
           price_data: {
 
@@ -292,7 +282,6 @@ if ( {) {
   }
 });
 
-=======
               name: product_name,
               description: product_description;
             }
@@ -337,13 +326,10 @@ if ( {) {
     return new Response (JSON.stringify ({ error: error.message }), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
-=======
 
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,14 +1,11 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Head from 'next/head';
 
 import Link from 'next/link';
-=======
 import React from 'react';
 import Head from 'next / head';
 import Link from 'next / link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { motion } from 'framer-motion';
 
 
@@ -61,10 +58,8 @@ const it_services = [{
     category: 'Cloud',
     popular: true;
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
 
-=======
 
 
     title: 'Cybersecurity Solutions'
@@ -76,7 +71,6 @@ const it_services = [{
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     popular: true
   }
   {
@@ -579,7 +573,6 @@ const supportLevels = [{
     description: 'Dedicated support team and SLA guarantees'
     features: ['Dedicated Team', 'SLA Guarantees', 'Custom Monitoring', 'Real-time Reports']
     pricing: 'Custom Pricing'
-=======
 import {;
   Server,;
   Shield,;
@@ -1136,7 +1129,6 @@ const supportLevels = [{;
     description: 'Dedicated support team and SLA guarantees',;
     features: ['Dedicated Team', 'SLA Guarantees', 'Custom Monitoring', 'Real-time Reports'],;
     pricing: 'Custom Pricing';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 ];
 export default function ITServicesPage() {;
@@ -1144,7 +1136,6 @@ export default function ITServicesPage() {;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
                   <Head>;
                   <title>IT Services - Zion Tech Group</title>;
-=======
     pricing: '$5, 000 - $40, 000 / project',
     category: 'Security',
     popular: true;
@@ -1659,7 +1650,6 @@ function ITServicesPage() {
     <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">;
                   <Head>;
                   <title > IT Services - Zion Tech Group</title>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and system administration." />;
                   <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, network management, system administration" />;
                   </Head>;
@@ -1734,20 +1724,13 @@ import Head from 'next / head';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
 
-=======
 
-=======
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
-=======
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { 
   Server, 
   Shield, 
@@ -1770,7 +1753,6 @@ import {
   HardDrive, 
   Smartphone, 
   Building, 
-=======
 import {
   Server,
   Shield,
@@ -1793,7 +1775,6 @@ import {
   HardDrive,
   Smartphone,
   Building,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   BarChart3,
   Package,
   GraduationCap,
@@ -1806,7 +1787,6 @@ import {
   Star,
   Zap,
 
-=======
   Search, 
   ShoppingCart, 
   BookOpen, 
@@ -1852,10 +1832,7 @@ import {
 
 
 
-=======
   Rocket,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Laptop;
 } from 'lucide-react';
 
@@ -1877,7 +1854,6 @@ const itServices = [
     marketPrice: '$5,000/month'
     link: '/contact'
   }
-=======
 import Layout from '../components / Layout';
 ;
 const it_services = [;
@@ -1893,23 +1869,17 @@ const it_services = [;
     market_price: '$5, 000 / month',
     link: '/contact';
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
 
 
->>>>>>> origin/automation-improvements-final
-=======
 
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     category: 'Security',
     popular: true,
     benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection'],
     marketPrice: '$4,000/month',
-=======
     title: 'Cybersecurity Solutions'
     description: 'Comprehensive security services to protect your business from cyber threats'
     icon: Shield
@@ -1923,9 +1893,7 @@ const it_services = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     link: '/contact'
-=======
     pricing: '$1, 500 - $8, 000 / month',
     category: 'Security',
     popular: true,
@@ -1944,7 +1912,6 @@ const it_services = [;
     benefits: ['Improved performance', 'Data integrity', 'Reduced downtime', 'Scalability'],
     market_price: '$2, 500 / month',
     link: '/contact';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     title: 'Database Management'
@@ -1978,7 +1945,6 @@ export default function ITServices() {;
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   useEffect(() => {
-=======
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -1992,7 +1958,6 @@ export default function ITServices() {
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
   }, []);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);  }, []);
@@ -2012,9 +1977,7 @@ export default function ITServices() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState('all')
 
-=======
 
-=======
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -2311,7 +2274,6 @@ export default function ITServices(req, res) {
 
       <Head>
         <title>IT Services - Zion Tech Group</title>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <meta
           name='description'
           content='Explore our 100+ comprehensive IT services including cloud computing, cybersecurity, DevOps, blockchain solutions, and quantum computing consulting.'
@@ -2380,14 +2342,10 @@ export default function ITServices(req, res) {
                       </div>
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </div>
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Technology Stack Section */}
           <section className='py-16 px-4 bg-slate-900/40'>
             <div className='max-w-6xl mx-auto'>
@@ -2397,7 +2355,6 @@ export default function ITServices(req, res) {
               <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>
-=======
                       </div>;
                     </div>;
 
@@ -2428,7 +2385,6 @@ export default function ITServices(req, res) {
               <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>;
                 <div className='text-center'>;
                   <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -2586,10 +2542,8 @@ export default function ITServices(req, res) {
 
               <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>;
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>;
@@ -2787,7 +2741,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
-=======
     <Layout>
       <Head>
         <title>IT Services - Zion Tech Group</title>
@@ -2810,8 +2763,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           <section className='py-20 px-4 text-center' role='banner'>
             <div className='max-w-4xl mx-auto'>
               <h1
-=======
-=======
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2974,7 +2925,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
             <div className="max-w-4xl mx-auto">
               <h1 
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
               >
                 IT Services
               </h1>
@@ -2996,10 +2946,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
 
 }
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           </section>
 
           {/* Category Filter */}
@@ -3350,7 +3297,6 @@ function ITServices() {
                       selected_category === category.id;
                         ? 'bg - green - 600 text - white';
                         : 'bg - slate - 800 text - slate - 300 hover:bg - slate - 700';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     }`}
                   >;
                     {category.name} ({category.count});
@@ -3366,7 +3312,6 @@ function ITServices() {
                   {level.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-600">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-=======
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}>;
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">;
@@ -3382,7 +3327,6 @@ function ITServices() {
                   {level && level.features.map((feature, featureIndex) => (;
                     <li key={featureIndex} className="flex items-center text-gray-600">;
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       {feature}
                     </li>;
                   ))}
@@ -3399,7 +3343,6 @@ function ITServices() {
                   </Link>;
                   </motion && motion.div>;
             ))}
-=======
           <section className='py - 16 px - 4' role='main'>;
             <div className='max - w-7xl mx - auto'>;
               <div className='grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
@@ -3788,7 +3731,6 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
                   <ArrowRight className="w - 4 h - 4 ml - 2" />;
                   </Link>;
                   </motion.div>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </div>;
                   </div>;
                   </section>;
@@ -3798,11 +3740,9 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
       </div>
     </Layout>
 
->>>>>>> origin/automation-improvements-final
   );
 }
 
-=======
           <section className="py-16 px-4 bg-slate-900/40">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
@@ -3887,18 +3827,13 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
               </div>
             </div>
 
-=======
 
 
   );
 
             </div>
-=======
             </div>
 
-=======
->>>>>>> origin/main
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </section>
         </main>
       </ErrorBoundary>
@@ -3943,7 +3878,6 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
   );
 }
 
-=======
       <section className="py - 20 bg - gradient - to - r from - green - 600 to - emerald - 600 text - white">;
 <div className="container mx - auto px - 4 text - center">;
                   <motion.div;
@@ -4058,7 +3992,6 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
         </div>;
       </section>;
                   </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
           </section>;
         </main>;
@@ -4067,7 +4000,4 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
 }
 
 
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

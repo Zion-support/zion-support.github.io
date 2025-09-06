@@ -14,7 +14,6 @@ export const CreateResumeForm = ({ ;
   onCreateResume;
   onCancel;
 
-=======
 import { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -28,8 +27,6 @@ export const CreateResumeForm = ({
 }: CreateResumeFormProps) => {
   const [newResumeTitle, setNewResumeTitle] = useState(''),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleSubmit = async () => {
     if (!newResumeTitle.trim()) return;
     await onCreateResume(newResumeTitle)
@@ -51,7 +48,6 @@ export const CreateResumeForm = ({ ;
   onCreateResume;
   onCancel;
   isLoading ;
-=======
             <input
               type="text"
               placeholder="Resume Title (e.g. 'AI Engineer Resume')"
@@ -90,7 +86,6 @@ export const CreateResumeForm = ({;
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm";
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               value={newResumeTitle}
 
 
@@ -128,12 +123,10 @@ export const CreateResumeForm = ({;
             variant="ghost"
             onClick={onCancel}
             className="mt-4">;
-=======
 
 },
 
 
-=======
 import { useState } from './react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -180,7 +173,6 @@ export const CreateResumeForm = ({
             on_click={on_cancel}
             className="mt - 4";
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Cancel;
           </Button>;
         </div>;

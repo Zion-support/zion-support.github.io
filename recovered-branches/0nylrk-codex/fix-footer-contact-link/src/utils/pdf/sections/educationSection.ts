@@ -67,7 +67,6 @@
 
     } else {
       yPos += 20
-=======
 import { jsPDF } from 'jspdf',;
 import { Education } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -133,11 +132,9 @@ export function addEducationSection(;
       yPos += 20;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
   return yPos + 5
-=======
 import {jsPDF} from 'jspdf';
 import {Education} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
@@ -230,5 +227,4 @@ if ( {) {
     }
   }
   return y_pos + 5;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -64,7 +64,6 @@
 const monitor = new CodeQualityMonitor();
 
 
-=======
     };
   };
 ,
@@ -360,8 +359,6 @@ const monitor = new CodeQualityMonitor(),
 monitor.run().catch(error => {,
   process.exit(1),
 }),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }}
 ; async analyze_file (file_path) { try { const content = fs.readFileSync (file_path, 'utf8'); const stats = fs.stat_sync (file_path);
 ; const analysis = { file: file_path, size: stats.size, lines: content.split ('\n').length,
@@ -478,9 +475,5 @@ if ( {) {
 const monitor = new CodeQualityMonitor ();
 monitor.run ().catch (error = > { process.exit (1)});
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 monitor.run().catch(error = > {; process.exit(1)});
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

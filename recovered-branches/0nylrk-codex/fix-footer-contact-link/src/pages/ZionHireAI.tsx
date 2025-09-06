@@ -35,7 +35,6 @@ import {Link} from "react-router-dom";
 export default function ZionHireAI() {;
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
   const { isAuthenticated } = useAuth();
-=======
 
 
   return (
@@ -46,7 +45,6 @@ export default function ZionHireAI() {;
     <>;
       <SEO
         title="Zion Hire AI - White-labeled AI Recruiting Assistant" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience."
       />;
       <Header />;
@@ -82,7 +80,6 @@ export default function ZionHireAI() {;
                     className="bg-transparent border-white text-white hover:bg-white/10"
                     asChild>;
                     <Link to="/enterprise/demo">;
-=======
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -140,7 +137,6 @@ function ZionHireAI() {
                     as_child;
                   >;
                     <Link to="/enterprise / demo">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       Request Demo;
                     </Link>;
                   </Button>;
@@ -148,10 +144,8 @@ function ZionHireAI() {
               </div>;
               <div className="relative hidden md:block">;
 
-=======
 
 
-=======
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -407,7 +401,6 @@ export default function ZionHireAI() {;
               className="bg-zion-purple hover: bg-zion-purple-light text-white"
               asChild>;
               <Link to="/enterprise/demo">;
-=======
                 <div className="absolute -top - 8 -left - 8 w - 72 h - 72 bg - zion - purple / 20 rounded - full filter blur - 3xl"></div>;
                 <img;
                   src="https://placehold.co / 600x400 / 192134 / 9b87f5?text = Zion + Hire + AI";
@@ -596,7 +589,6 @@ export default function ZionHireAI() {;
               as_child;
             >;
               <Link to="/enterprise / demo">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Schedule a Demo;
               </Link>;
             </Button>;
@@ -608,10 +600,6 @@ export default function ZionHireAI() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

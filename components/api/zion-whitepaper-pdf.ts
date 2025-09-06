@@ -17,7 +17,6 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
   doc && doc.fontSize(20).fillColor('#111111').text(title, { underline: true });
   doc && doc.moveDown();
   doc && doc.fontSize(11).fillColor('#222222').text(content, {
-=======
   getWhitepaperSections,
   OPERATOR_PROMPT,
 } from '../../utils / whitepaper / zion_whitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils / whitepaper / zion_whitepaper';
@@ -38,12 +37,10 @@ function write_section() {
   try {
   const editionParam = (req && req.query.edition as string) || 'full';
 
-=======
 
 ) {;
   const editionParam = (req.query.edition as string) || 'full';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const edition =
     editionParam === 'investor' |editionParam === 'developer'
       ? editionParam
@@ -54,13 +51,11 @@ function write_section() {
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const editionParam = (req.query.edition as string) || 'full';
   const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   const editionParam = (req.query.edition as string) |'full';
   const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full';
@@ -73,7 +68,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
   doc.info.Author = 'Zion Protocol';
   doc.pipe(res);
-=======
 
   res && res.setHeader('Content-Type', 'application/pdf');
   res && res.setHeader(
@@ -94,7 +88,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   doc && doc.pipe(res);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Cover page
 
 
@@ -104,15 +97,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
   doc && doc.end()
-=======
 
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 export default async /**
  * handler - Function description
@@ -190,7 +178,6 @@ function handler() {
 }
 
 
-=======
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));
 
   doc.moveDown(0.5);
@@ -200,4 +187,3 @@ function handler() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

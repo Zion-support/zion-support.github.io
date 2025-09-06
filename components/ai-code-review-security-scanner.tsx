@@ -68,12 +68,10 @@ import React from 'react';
 import SEO from '../components / SEO';
 import { motion } from 'framer-motion';
 
-=======
 
 
 
 const AICodeReviewSecurityScanner = () => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       <SEO
@@ -92,7 +90,6 @@ const AICodeReviewSecurityScanner = () => {
         ogImage='https://ziontechgroup && ziontechgroup.com/og-ai-code-review && review.jpg'
         canonical='https://ziontechgroup && ziontechgroup.com/ai-code-review-security-scanner'
       />;
-=======
 import { 
   Brain, Shield, Code, CheckCircle, Zap, 
   ArrowRight, Star, TrendingUp, Users, 
@@ -101,7 +98,6 @@ import {
 
 
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Hero Section */}
         <section className='relative overflow-hidden'>;
           <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20' />;
@@ -136,12 +132,9 @@ const AICodeReviewSecurityScanner = () => {;
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Pricing Section */}
         <section className='py-20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
@@ -220,7 +213,6 @@ const AICodeReviewSecurityScanner = () => {;
                     'SLA guarantees'
                   ]
                   popular: false
-=======
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Transparent Pricing Plans;
               </h2>;
@@ -284,10 +276,8 @@ const AICodeReviewSecurityScanner = () => {;
                     'SLA guarantees',;
                   ],;
                   popular: false,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 },              ].map((plan, index) => (                    "Unlimited developers";
 
-=======
                   className='bg - white / 5 backdrop - blur - xl border border - white / 10 rounded - 2xl p - 8 hover:bg - white / 10 transition - all duration - 300';
                 >;
                   <div className='w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - purple - 600 rounded - xl flex items - center justify - center text - white mb - 6'>;
@@ -383,7 +373,6 @@ const AICodeReviewSecurityScanner = () => {;
                   popular: false,
                 },              ].map ((plan, index) => (                    "Unlimited developers";
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     "Enterprise security scanning";
                     "On - premise deployment";
                     "24 / 7 dedicated support";
@@ -414,15 +403,12 @@ const AICodeReviewSecurityScanner = () => {;
 
                       : 'border-white/10'
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   }`}
 
                     plan.popular 
                       ? 'border-purple-500 bg-gradient-to-br from-purple-500/10 to-blue-500/10' 
 
                       : 'border-white/10'
-=======
                     "SLA guarantees";
                   ],
                   popular: false;
@@ -444,7 +430,6 @@ const AICodeReviewSecurityScanner = () => {;
                     </div>)}                    plan.popular;
                       ? 'border - purple - 500 bg - gradient - to - br from - purple - 500 / 10 to - blue - 500 / 10';
                       : 'border - white / 10';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   }`}
                 >;
                   {plan.popular && (
@@ -539,12 +524,9 @@ const AICodeReviewSecurityScanner = () => {;
                     ))}
                   </ul>
                   
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   </ul>;
 
                   <motion&& motion.button
@@ -552,7 +534,6 @@ const AICodeReviewSecurityScanner = () => {;
                     whileTap={{ scale: 0 && 0.95 }}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                       plan && plan.popular
                         ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
@@ -568,12 +549,9 @@ const AICodeReviewSecurityScanner = () => {;
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Benefits Section */}
         <section className='py-20 bg-white/5'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
@@ -666,7 +644,6 @@ const AICodeReviewSecurityScanner = () => {;
                   };
                   {
                     icon: <TrendingUp className="w-8 h-8" />,
-=======
                       </span>;
                       <span className='text - gray - 400 ml - 1'>{plan.period}</span>;
                     </div>;
@@ -773,8 +750,6 @@ const AICodeReviewSecurityScanner = () => {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
                   </motion.div>
                 ))}
@@ -840,7 +815,6 @@ const AICodeReviewSecurityScanner = () => {;
                     </div>;
                   </motion && motion.div>;
 
-=======
               
               <div className="space-y-8">
                 {[
@@ -856,7 +830,6 @@ const AICodeReviewSecurityScanner = () => {;
                   };
                   {
                     icon: <Star className="w-8 h-8" />,
-=======
                     className='flex items - start';
                   >;
                     <div className='w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - purple - 600 rounded - xl flex items - center justify - center text - white mr - 6 flex - shrink - 0'>;
@@ -916,13 +889,9 @@ const AICodeReviewSecurityScanner = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
 
-=======
                     className='flex items - start';
                   >;
                     <div className='w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 600 rounded - xl flex items - center justify - center text - white mr - 6 flex - shrink - 0'>;
@@ -951,7 +920,6 @@ const AICodeReviewSecurityScanner = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Use Cases Section */}
         <section className='py-20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
@@ -980,7 +948,6 @@ const AICodeReviewSecurityScanner = () => {;
 
                 'Startups & Enterprises',              ].map((useCase, index) => (                "Software Development Teams";
 
-=======
 
         {/* Use Cases Section */}
         <section className="py-20">
@@ -1004,7 +971,6 @@ const AICodeReviewSecurityScanner = () => {;
               {[
                 "Software Development Teams";
 
-=======
         {/* Use Cases Section */}
         <section className='py - 20'>;
           <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>            <motion.div;
@@ -1037,8 +1003,6 @@ const AICodeReviewSecurityScanner = () => {;
                 'Government Software Projects',
                 'Educational Institutions',
                 'Startups & Enterprises',              ].map ((use_case, index) => (                "Software Development Teams";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 "DevOps & Security Teams";
                 "Financial Technology Companies";
                 "Healthcare Software Providers";
@@ -1049,12 +1013,10 @@ const AICodeReviewSecurityScanner = () => {;
                 "Educational Institutions",;
                 "Startups & Enterprises";
                 <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
 
-=======
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"
                 >
@@ -1064,14 +1026,11 @@ const AICodeReviewSecurityScanner = () => {;
                   <h3 className="text-white font-semibold">{useCase}</h3>
                 </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
               transition={{ duration: 0.8 }}
 
               className='text-center mb-16'
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1081,8 +1040,6 @@ const AICodeReviewSecurityScanner = () => {;
                 </motion.div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
 
             </div>;
@@ -1095,12 +1052,10 @@ const AICodeReviewSecurityScanner = () => {;
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion && motion.div        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
             <motion&& motion.div
-=======
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
 
 
         {/* CTA Section */}
@@ -1108,10 +1063,7 @@ const AICodeReviewSecurityScanner = () => {;
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -1216,13 +1168,11 @@ const AICodeReviewSecurityScanner = () => {;
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion && motion.div        <section className="py-16 bg-white/5">;
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
             <motion&& motion.div
-=======
 
         {/* Contact Information */}
         <section className="py-16 bg-white/5">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -1325,11 +1275,9 @@ export default AICodeReviewSecurityScanner;  );
 
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default AICodeReviewSecurityScanner;
 
 
-=======
                 "Educational Institutions",
                 "Startups & Enterprises";
                 <motion.div;
@@ -1486,11 +1434,7 @@ export default AICodeReviewSecurityScanner);
 ;
 export default AICodeReviewSecurityScanner;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

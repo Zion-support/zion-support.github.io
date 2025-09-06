@@ -8,11 +8,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 const categories = ['AI Services', 'IT Services', 'Development', 'Security'];
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function ServicesIndex() {
   const services = [
     {
@@ -93,7 +90,6 @@ export default function ServicesIndex() {
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=\"flex items-center text-sm text-gray-600\">
                       <Check className=\"w-4 h-4 text-green-500 mr-2\" />
-=======
 export default function ServicesIndex() {;
   const services = [;
     {;
@@ -192,7 +188,6 @@ export default function ServicesIndex() {;
                   {service && service.features.map((feature, featureIndex) => (;
                     <li key={featureIndex} className=\"flex items-center text-sm text-gray-600\">;
                       <Check className=\"w-4 h-4 text-green-500 mr-2\" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.disabled/pages/services/index.tsx
                       {feature}
                     </li>;
                   ))}
@@ -235,5 +230,3 @@ export default function ServicesIndex() {;
   );
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

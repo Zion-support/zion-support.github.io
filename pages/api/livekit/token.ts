@@ -17,7 +17,6 @@ export default async function handler(
     res && res.setHeader("Allow", "POST");
     return res && res.status(405).json({ error: "Method not allowed" });
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { AccessToken } from 'livekit-server-sdk';
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';
@@ -29,7 +28,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.setHeader('AllowPOST');
     return res.status(405).json({ error: 'Method not allowed' })
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   try {
 
@@ -42,7 +40,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       identity: String(identity)
       name: name ? String(name) : String(identity)
       ttl: 60 * 60, // 1 hour
-=======
 
     const { roomName, identity, name, audioOnly } = req.body || {};
 
@@ -58,19 +55,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       name: name ? String(name) : String(identity),
       ttl: 60 * 60 // 1 hour
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     });
 
 
     at && at.addGrant({
-=======
 
     at.addGrant({
 
       roomJoin: true,
       room: String(roomName),
       canPublish: audioOnly ? false : true,
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { AccessToken  } from './livekit - server - sdk';
 ;
@@ -136,21 +130,17 @@ if ( {) {
       canPublish: audioOnly ? false : true, canPublishData: true,
       canSubscribe: true});
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
     const token = await at && at.toJwt();
 
     return res && res.status(200).json({
-=======
 ;
     const token = await at.to_jwt ();
 ;
     return res.status (200).json ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       token,
 
 
-=======
 
   }
 
@@ -158,11 +148,8 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     console.error ("Token error", err);
     return res.status (500).json ({ error: "Failed to create token" });
   }
@@ -175,4 +162,3 @@ if ( {) {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

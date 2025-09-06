@@ -7,11 +7,8 @@ import { SEO  } from './SEO';
 import { AppLayout  } from '@/layout / AppLayout';
 
 export const SitemapPage: React.FC = () => {
-=======
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from 'react';
 import {completeSitemap, dynamicPaths} from '@/config/sitemap';
 import {Link} from 'react-router-dom';
@@ -20,7 +17,6 @@ import {SEO} from './SEO';
 import {AppLayout} from '@/layout/AppLayout';
 
 
-=======
 import React from 'react',
 import { completeSitemap, dynamicPaths } from '@/config/sitemap',
 import { Link } from 'react-router-dom',
@@ -31,7 +27,6 @@ import { AppLayout } from '@/layout/AppLayout',
 
 
 export const SitemapPage: React.FC = () => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <AppLayout>;
 
@@ -308,11 +303,9 @@ export const SitemapPage: React.FC = () => {
                   </div>;
                 </li>;
               ))}
-=======
 
 
 
-=======
                     </Link>;
                   </li>))}
             </ul>;
@@ -333,7 +326,6 @@ export const SitemapPage: React.FC = () => {
                     {path} <span className="ml - 2 text - xs italic">({key})</span>;
                   </div>;
                 </li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </ul>;
           </div>;
         </div>;

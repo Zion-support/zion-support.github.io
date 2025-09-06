@@ -80,7 +80,6 @@ if ( {) {
     fetchWallet();
     fetchTransactions()
   }, [user?.id]);
-=======
   async /**
  * fetch_transactions - Function description
  */
@@ -152,7 +151,6 @@ if (return) {
     fetch_transactions ();
   }, [user?.id]);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     wallet;
     transactions;
@@ -261,10 +259,8 @@ export function useWallet() {;
     earnTokens;
 
     spendTokens}
-=======
     fetch_wallet;
     fetch_transactions;
     earn_tokens;
     spend_tokens}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

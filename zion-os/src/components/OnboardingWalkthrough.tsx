@@ -7,7 +7,6 @@ interface WalkthroughStep {
   title: string,
   description: string,
   target?: string,
-=======
 
 "use client",;
 import { useState, useEffect } from "react",;
@@ -199,14 +198,12 @@ if ( {) {
               left: "50%",
               transform: "translate (-50%, -50%)",
 
-=======
 
             style={{;
               top: "50%",;
               left: "50%",;
               transform: "translate(-50%, -50%)",;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               width: "300px";
               height: "200px"}}
           />;
@@ -222,13 +219,11 @@ export function useWalkthroughTarget(id: string) {;
 
 
     "data-walkthrough-target": id;
-=======
 export /**
  * useWalkthroughTarget - Function description
  */
 function useWalkthroughTarget() {
   return {
     "data - walkthrough - target": id;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     id}
 }

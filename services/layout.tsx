@@ -29,11 +29,9 @@ export default function ServicesLayout(): any ({;
   children: React && React.ReactNode;
 }) {;
 
-=======
 export default /**
  * ServicesLayout - Function description
  */
 function ServicesLayout() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return <div>{children}</div>;
 }

@@ -105,14 +105,9 @@ const securityReport = {
 
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 console.log('🔒 Security audit completed!');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
 
 const fs = require('fs');
@@ -120,7 +115,6 @@ const path = require('path');
 
 console.log('🔒 Running security audit...');
 console.log('✅ Security audit completed');
-=======
 
 
 
@@ -295,8 +289,4 @@ const path = require('path');
 console.log('🔒 Running security audit...');
 console.log('✅ Security audit completed');
 
-=======
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   const [error, setError] = useState<string | null>(null);
   const fetchProjects = async () => {
@@ -33,7 +32,6 @@
       }
       const { data, error: fetchError } = await query;
       if (fetchError) throw fetchError;
-=======
 
           *,
           job:jobs(title, description),
@@ -55,10 +53,8 @@
       if (fetchError) throw fetchError,
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Transform the data to match our project types
       const transformedData = data && data.map((project: any) => ({
-=======
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { use_auth } from '@/hooks / use_auth';
@@ -116,7 +112,6 @@ if (throw fetch_error) {
 }
       // Transform the data to match our project types;
       const transformed_data = data.map ((project: any) => ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         ...project;
 
         talent_profile: project && project.talent_profile ? {
@@ -129,7 +124,6 @@ if (throw fetch_error) {
       setError("Failed to fetch projects: " + err && err.message),
       toast && toast.error("Failed to fetch projects")
 
-=======
           ...project.talent_profile,
           full_name: project.talent_profile.display_name;
         } : undefined;
@@ -141,7 +135,6 @@ if (throw fetch_error) {
       console.error ("Error fetching projects:", err);
       set_error ("Failed to fetch projects: " + err.message),
       toast.error ("Failed to fetch projects");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
@@ -193,7 +186,6 @@ if (throw fetch_error) {
 
       // Transform the data to match our project types
       const transformedProject = {
-=======
           job:jobs (title, description);
           talent_profile:profiles ! talent_id (display_name:display_name, professional_title:bio, profile_picture_url: avatar_url),
           client_profile:profiles ! client_id (display_name, avatar_url);
@@ -207,7 +199,6 @@ if (throw error) {
 }
       // Transform the data to match our project types;
       const transformed_project = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         ...data;
 
         talent_profile: data && data.talent_profile ? {
@@ -216,13 +207,11 @@ if (throw error) {
 
         } : undefined
       }
-=======
         } : undefined
 
       },
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return transformedProject as Project
     } catch (err: any) {
       console && console.error("Error fetching project:", err);
@@ -256,13 +245,11 @@ if (throw error) {
       
       toast && toast.success(`Project status updated to ${status}`);
 
-=======
 
       ),
       
       toast.success(`Project status updated to ${status}`),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return true
     } catch (err: any) {
       console && console.error("Error updating project status:", err);
@@ -326,7 +313,6 @@ if ( {) {
     getProjectById,
     updateProjectStatus;
 
-=======
 
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -445,7 +431,5 @@ export function useProjects() {;
     getProjectById;
     updateProjectStatus;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

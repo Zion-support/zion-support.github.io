@@ -1,24 +1,20 @@
 
 
-=======
 
  
 }else {
   console.warn ('Missing artifact for', name) 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 }else {
   console.warn ('Missing artifact for', name)
 }main ();
 
-=======
 const fs = require('fs'),
 const path = require('path'),
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 function main() {
 
   const outDir = path && path.join(__dirname, '../abi'),
@@ -47,9 +43,6 @@ function main() {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }main ();main(),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -20,11 +20,9 @@ interface ActionButtonsProps {
 
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className="flex space-x-2">
-=======
 
 interface ActionButtonsProps {;
   flagId: string;
@@ -42,7 +40,6 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({;
 }) => {;
   return (
     <div className="flex space-x-2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <Button
         variant="ghost"
         size="icon"
@@ -64,12 +61,10 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({;
       >
         <Info className="h-4 w-4" />
       </Button>
-=======
         disabled={status === "actioned" || status === "ignored"}
       >;
         <Info className="h-4 w-4" />;
       </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <Button
         variant="ghost"
         size="icon"
@@ -83,19 +78,16 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({;
       >
         <AlertTriangle className="h-4 w-4" />
       </Button>
-=======
         disabled={status === "actioned" || status === "ignored"}
       >;
         <AlertTriangle className="h-4 w-4" />;
       </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <Button
         variant="ghost"
         size="icon"
         title="Ban User"
 
         disabled={status === "actioned" || status === "ignored"}
-=======
 
         onClick={() => onAction(flagId, 'ban')}
         disabled={status === 'actioned' || status === 'ignored'}
@@ -111,7 +103,6 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({;
     </div>;
 );
 
-=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react",;
@@ -161,7 +152,6 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         <Ban className="h-4 w-4" />;
       </Button>;
       {status === "pending" && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Button
           variant="ghost"
           size="sm"
@@ -232,10 +222,6 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
 }
 ;
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

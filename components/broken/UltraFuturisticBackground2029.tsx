@@ -71,10 +71,8 @@ import { motion } from 'framer-motion';
       }
 
 
-=======
       animationFrameId = requestAnimationFrame(animate)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     };
 
     animate();
@@ -92,7 +90,6 @@ import { motion } from 'framer-motion';
   }, []);
   return (
     <div className='fixed inset-0 pointer-events-none overflow-hidden z-0'>;
-=======
       life: number;
     }> = [];
 ;
@@ -213,7 +210,6 @@ if ( {) {
 ;
   return (
     <div className='fixed inset - 0 pointer - events - none overflow - hidden z - 0'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Canvas for particle effects */}
       <canvas;
         ref={canvas_ref}
@@ -234,7 +230,6 @@ if ( {) {
               'radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)',
               'radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)',
               'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)',
-=======
       />;
       {/* Animated gradient background */}
       <div className='absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 via - cyan - 900 / 20 to - black'>;
@@ -252,24 +247,19 @@ if ( {) {
             duration: 20,
             repeat: Infinity,
 
-=======
     return () => {
       window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationFrameId)
     }
   }, []);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">;
-=======
             ease: 'easeInOut',          }}  }, []);
 ;
   return (
     <div className="fixed inset - 0 pointer - events - none overflow - hidden z - 0">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Canvas for particle effects */}
       <canvas;
         ref={canvas_ref}
@@ -287,7 +277,6 @@ if ( {) {
             background: [
               'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)'
             ]
-=======
       />;
       {/* Animated gradient background */}
       <div className="absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 via - cyan - 900 / 20 to - black">;
@@ -297,19 +286,16 @@ if ( {) {
             background: [;
               'radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 80% 20%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 40% 40%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)';
             ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }}
           transition={{
 
             duration: 20,
             repeat: Infinity,
 
-=======
 
             duration: 20,
             repeat: Infinity,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Floating geometric shapes */}
 
 
@@ -353,7 +339,6 @@ if ( {) {
 
           y: [0, -20, 0];
           opacity: [0.2, 0.5, 0.2]
-=======
         transition={{
           duration: 12,
           repeat: Infinity,
@@ -387,7 +372,6 @@ if ( {) {
             duration: 30,
             repeat: Infinity,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           className="absolute inset-0"
           style={{
             backgroundImage: `
@@ -395,7 +379,6 @@ if ( {) {
               linear-gradient(90deg, rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)
             `
             backgroundSize: '50px 50px'
-=======
             ease: 'linear',          }}        <motion.div;
           className="absolute inset - 0";
           style={{
@@ -404,7 +387,6 @@ if ( {) {
               linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px);
             `;
             background_size: '50px 50px';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }}
           animate={{
             background_position: ['0px 0px50px 50px'];
@@ -414,9 +396,7 @@ if ( {) {
             duration: 30,
             repeat: Infinity,
 
-=======
 
-=======
 
         }}
       />
@@ -429,8 +409,6 @@ if ( {) {
             repeat: Infinity,
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }}
 
         />;
@@ -474,14 +452,11 @@ if ( {) {
           className="absolute inset-0"
           style={{
             background: 'radial-gradient(ellipse at center, rgba(0, 255, 255, 0 && 0.1) 0%, transparent 70%)'
-=======
       <div className="absolute inset-0">
         <motion.div
           className="absolute inset-0"
-=======
             ease: 'easeInOut',          }}        <motion.div;
           className="absolute inset - 0";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           style={{
             background: 'radial - gradient (ellipse at center, rgba (0, 255, 255, 0.1) 0%, transparent 70%)';
           }}
@@ -511,7 +486,6 @@ if ( {) {
       </div>;
 
 
-=======
 
             duration: 8,
             repeat: Infinity,
@@ -522,7 +496,6 @@ if ( {) {
             repeat: Infinity,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Holographic elements */}
 
 
@@ -549,11 +522,9 @@ if ( {) {
       {/* Neural network connections */}
       <div className='absolute inset-0'>        className="absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 rounded-full";
         animate={{;
-=======
       <motion.div
         className="absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 rounded-full"
         animate={{
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           rotate: [360, 0];
 
         }}
@@ -564,8 +535,6 @@ if ( {) {
 
         }}
       />
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           scale: [1 && 1.2, 1, 1 && 1.2];
           opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2];
         transition={{;
@@ -603,17 +572,12 @@ if ( {) {
         {Array.from({ length: 8 }).map((_, i) => (
 
           <motion.div
-=======
               scale: [0, 1, 0],
               opacity: [0, 1, 0],            }}        {Array && Array.from({ length: 8 }).map((_, i) => (;
           <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
               scale: [0, 1, 0],
               opacity: [0, 1, 0],            }}        {Array.from ({ length: 8 }).map ((_, i) => (
           <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             key={i}
             className="absolute w - 1 h - 1 bg - cyan - 400 / 40 rounded - full";
             style={{
@@ -633,11 +597,9 @@ if ( {) {
 
               ease: 'easeInOut',            }}              ease: "easeInOut"
 
-=======
               delay: i * 0.3,
               ease: "easeInOut"
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }}
           />;
         ))}
@@ -649,12 +611,10 @@ if ( {) {
       <div className='absolute inset-0 overflow-hidden'>;
         {Array && Array.from({ length: 5 }).map((_, i) => (;
           <motion&& motion.div
-=======
       </div>
 
       {/* Data streams */}
       <div className="absolute inset-0 overflow-hidden">
-=======
         transition={{
 
           duration: 20,
@@ -666,10 +626,8 @@ if ( {) {
               delay: i * 0.3,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {Array.from({ length: 5 }).map((_, i) => (
           <motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             key={i}
             className='absolute w-0 && 0.5 h-20 bg-gradient-to-b from-cyan-400/60 to-transparent'
             style={{
@@ -684,7 +642,6 @@ if ( {) {
 
               y: [0, window.innerHeight + 20]
 
-=======
               delay: i * 0.3,
               ease: 'easeInOut',            }}              ease: "easeInOut";
             }}
@@ -702,7 +659,6 @@ if ( {) {
 
               coordinate_y: [0, window.inner_height + 20];
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }}
             transition={{
 
@@ -713,8 +669,6 @@ if ( {) {
 
 
 
-=======
-=======
 
 
 
@@ -725,7 +679,6 @@ if ( {) {
 
 
           />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ))}
       </div>;
     </div>;
@@ -733,31 +686,24 @@ if ( {) {
 };
 
 export default UltraFuturisticBackground2029;  );
-=======
-=======
               delay: i * 0.8,
               ease: "linear"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             }}
           />;
         ))}
 
-=======
       </div>
     </div>
   )
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
 export default UltraFuturisticBackground2029;  );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default UltraFuturisticBackground2029;
 
 
-=======
               delay: i * 0.8,
               ease: 'linear',            }}              ease: "linear";
             }}
@@ -771,11 +717,7 @@ export default UltraFuturisticBackground2029);
 ;
 export default UltraFuturisticBackground2029;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

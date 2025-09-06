@@ -25,7 +25,6 @@ if ( {) {
       </ul>;
     </div>);
 }
-=======
 
   if (!favorites.length) {
     return <EmptyState title="Nothing here yet..." message="Save profiles to revisit them easily." ctaLabel="Browse Talent" ctaHref="/talent" />
@@ -37,4 +36,3 @@ if ( {) {
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

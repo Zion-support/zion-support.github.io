@@ -35,7 +35,6 @@ export function EnterpriseTrustBadges() {;
       </div>;
     </section>;
   );
-=======
 import React from './react';
 import { Shield, Lock, Award, CheckCircle  } from './lucide-react';
 export /**
@@ -73,9 +72,7 @@ function EnterpriseTrustBadges() {
         </div>;
       </div>;
     </section>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-=======
 
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
@@ -98,6 +95,4 @@ function EnterpriseTrustBadges() {
         </div>
       </div>
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

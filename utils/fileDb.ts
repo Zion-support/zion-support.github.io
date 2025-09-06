@@ -6,10 +6,7 @@ export const readFromFile = async (filename: string) => {
   // Placeholder implementation;
   return { data: null, success: true }
 }
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 export const saveToFile = async (data: any, filename: string) => {;
   // Placeholder implementation;
@@ -29,4 +26,3 @@ export const readFromFile = async (filename: string) => {;
 }
 
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

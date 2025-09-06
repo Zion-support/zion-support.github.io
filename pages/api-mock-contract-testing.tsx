@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-=======
 import Head from 'next / head';
 import {FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check, } from 'lucide-react';
 import Layout from '../components / layout / Layout';
@@ -71,7 +70,6 @@ function ApiMockContractTestingPage() {
       name: 'Enterprise',
       price: 'Custom',
       items: ['SAML / SSO', 'RBAC', 'Private cloud / VPC', 'Premium support'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     },  ];
 ;
   return (
@@ -129,9 +127,7 @@ function ApiMockContractTestingPage() {
               <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </div>
         </div>
       </div>
@@ -158,7 +154,6 @@ function ApiMockContractTestingPage() {
               <a
                 href='/contact'
                 className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl'>;
-=======
     <Layout>;
       <Head>;
         <title > API Mock & Contract Testing | Zion Tech Group</title>;
@@ -230,23 +225,16 @@ function ApiMockContractTestingPage() {
       </div>;
 
 
-=======
 
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   )
 }
 
     </Layout>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

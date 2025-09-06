@@ -2,13 +2,11 @@
 import {Education} from '@/types / resume';
 import {format} from 'date - fns';
 
-=======
 
 
 import {Education} from '@/types/resume';
 import {format} from 'date-fns';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface EducationSectionProps {
   education: Education[];
 }
@@ -29,7 +27,6 @@ interface EducationSectionProps {
 
 
 
-=======
 import { Education } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface EducationSectionProps {;
@@ -58,8 +55,6 @@ export function EducationSection({ education }: EducationSectionProps) {;
 
   if (sortedEducation.length === 0) return null,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Education</h2>
@@ -76,7 +71,6 @@ export function EducationSection({ education }: EducationSectionProps) {;
               <p className="text-sm">{edu.institution}</p>
               {edu.location && (
                 <span className="text-sm">{edu.location}</span>
-=======
 import {Education} from '@/types/resume';
 import {format} from 'date-fns';
 interface EducationSectionProps {;
@@ -120,7 +114,6 @@ export function EducationSection(): any ({ education }: EducationSectionProps) {
               <p className="text-sm">{edu && edu.institution}</p>;
               {edu && edu.location && (;
                 <span className="text-sm">{edu && edu.location}</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </div>;
             {edu && edu.description && (;
@@ -134,7 +127,6 @@ export function EducationSection(): any ({ education }: EducationSectionProps) {
   );
 }
 
-=======
 export /**
  * EducationSection - Function description
  */
@@ -195,4 +187,3 @@ if (return null) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

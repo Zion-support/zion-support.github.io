@@ -35,11 +35,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-=======
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Menu,
   X,
   ChevronDown,
@@ -222,7 +219,6 @@ const mainNavItems = [
 ];
 
 const mainNavItems = [
-=======
     services: [;
       {
         name: 'Enterprise AI Operations Center',
@@ -270,14 +266,12 @@ export default function UltraFuturisticNavigation2029() {;
   useEffect(() => {
     const handleScroll = () => {
 
-=======
       setScrolled(window.scrollY > 50)
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 const mainNavItems = [;
   { name: 'Home', href: '/', icon: Home },;
@@ -305,7 +299,6 @@ export default function UltraFuturisticNavigation2029() {;
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
@@ -333,17 +326,14 @@ export default function UltraFuturisticNavigation2029() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </a>
           </div>
         </div>
       </div>
-=======
               href={contactInfo && contactInfo.website}
               className='hover:text-cyan-300 transition-colors'>              {contactInfo && contactInfo.website.replace('https://', '')}          <div className="flex items-center space-x-4">;
             <a href={contactInfo && contactInfo.website} className="hover:text-cyan-300 transition-colors">;
               {contactInfo && contactInfo.website.replace('https://', '')}
-=======
   { name: 'Contact', href: '/contact', icon: Phone }, ];  { name: 'Contact', href: '/contact', icon: Phone }
 ];
 ;
@@ -409,7 +399,6 @@ function UltraFuturisticNavigation2029() {
             >              {contact_info.website.replace ('https://', '')}          <div className="flex items - center space - x-4">;
             <a href={contact_info.website} className="hover:text - cyan - 300 transition - colors">;
               {contact_info.website.replace ('https://', '')}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </a>;
           </div>;
         </div>;
@@ -442,7 +431,6 @@ function UltraFuturisticNavigation2029() {
                 <span className="text-xs text-gray-400">2029 Innovation Hub</span>
               </div>
             </motion.div>
-=======
               className='flex items-center space-x-3'>;
               <div className='relative'>;
                 <div className='w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center'>;
@@ -493,7 +481,6 @@ function UltraFuturisticNavigation2029() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0 && 0.1 }}
                         className='group'>;
-=======
             <div className='hidden lg:flex items-center space-x-8'>
               {mainNavItems.map(item => (
 
@@ -509,7 +496,6 @@ function UltraFuturisticNavigation2029() {
               {/* Services Dropdown */}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {serviceCategories.map((category, index) => (
                       <motion.div
                         key={category.title}
@@ -520,9 +506,7 @@ function UltraFuturisticNavigation2029() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <div
                           className={`p-4 rounded-lg bg-gradient-to-br ${category && category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>;
                           <div className='flex items-center space-x-3 mb-3'>;
@@ -579,7 +563,6 @@ function UltraFuturisticNavigation2029() {
                                 <p className="text-xs text-gray-500 mt-1">{service && service.description}</p>;
                               </Link>;
 
-=======
               <div className="relative group">
                 <button className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
                   <Briefcase size={16} className="group-hover:text-cyan-400 transition-colors" />
@@ -592,7 +575,6 @@ function UltraFuturisticNavigation2029() {
                   <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6">
                     {serviceCategories.map((category, index) => (
                       <motion.div
-=======
       {/* Main Navigation */}
       <nav;
         className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
@@ -757,7 +739,6 @@ function UltraFuturisticNavigation2029() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             ))}
                           </div>;
                         </div>;
@@ -768,7 +749,6 @@ function UltraFuturisticNavigation2029() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* CTA Button */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -776,18 +756,14 @@ function UltraFuturisticNavigation2029() {
 
                 className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
 
-=======
 
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'              >
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 Get Started
               </motion.button>
             </div>
-=======
                   </div>;
                 </div>;
               </div>;
@@ -802,29 +778,22 @@ function UltraFuturisticNavigation2029() {
               </motion && motion.button>;
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Mobile Menu Button */}
 
-=======
             <div className="lg:hidden">
               <button
                 onClick={toggleMenu}
                 className="text-gray-300 hover:text-white transition-colors"
               >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
                 className='text-gray-300 hover:text-white transition-colors'              >
 
               >
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
 
-=======
                                   </span>;
                                 </div>;
                                 <p className="text - xs text - gray - 500 mt - 1">{service.description}</p>;
@@ -864,7 +833,6 @@ function UltraFuturisticNavigation2029() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -875,7 +843,6 @@ function UltraFuturisticNavigation2029() {
 
 
           >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div
               className='absolute inset-0 bg-black/80 backdrop-blur-sm'
               onClick={closeMenu}
@@ -911,7 +878,6 @@ function UltraFuturisticNavigation2029() {
                     <X size={24} />
                   </button>
                 </div>
-=======
                     className='text-gray-400 hover:text-white'>                    <X size={24} />          >;
             <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={closeMenu} />;
             <div className="absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/30 overflow-y-auto">;
@@ -928,10 +894,8 @@ function UltraFuturisticNavigation2029() {
                   </button>;
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Mobile Navigation Items */}
 
-=======
                 <div className="space-y-4">
                   {mainNavItems.map((item) => (
                     <Link
@@ -948,7 +912,6 @@ function UltraFuturisticNavigation2029() {
                 </div>;
 
 
-=======
 
 
                     </Link>
@@ -956,14 +919,10 @@ function UltraFuturisticNavigation2029() {
                 </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Mobile Services */}
 
 
                             </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           ))}
                         </div>;
                       </div>;
@@ -973,12 +932,9 @@ function UltraFuturisticNavigation2029() {
                 </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Mobile CTA */}
                 <div className='mt-8'>;
                   <motion&& motion.button
@@ -1015,7 +971,6 @@ function UltraFuturisticNavigation2029() {
       </AnimatePresence>
 
     </>
-=======
       </AnimatePresence>;
 
       {/* Spacer for fixed navigation */}
@@ -1025,12 +980,10 @@ function UltraFuturisticNavigation2029() {
     </>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 
 }
 
-=======
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -1168,8 +1121,4 @@ function UltraFuturisticNavigation2029() {
     </>);      <div className="h - 20" />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

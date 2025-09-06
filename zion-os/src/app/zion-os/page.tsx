@@ -10,7 +10,6 @@ export default function ZionOSPage() {;
 
 
     <div className="min-h-screen">;
-=======
 import Link from './next / link';,
 export const metadata = {
   title: "Zion OS - Sovereign AI - Powered Digital Economies Platform | Zion Tech Group",
@@ -22,7 +21,6 @@ export default /**
 function ZionOSPage() {
   return (
     <div className="min - h-screen">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -59,12 +57,10 @@ function ZionOSPage() {
               <p className="text - lg text - gray - 300 mb - 6 leading - relaxed">;
                 Zion OS is a revolutionary platform that enables anyone to create, deploy,
 
-=======
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">;
 
                 Zion OS is a revolutionary platform that enables anyone to create, deploy,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 and manage sovereign digital economies powered by artificial intelligence.;
                 Our unified deployment protocol makes it possible to launch complex;
                 economic systems in minutes, not months.;
@@ -73,12 +69,10 @@ function ZionOSPage() {
               <p className="text - lg text - gray - 300 leading - relaxed">;
                 Whether you're building a decentralized marketplace, launching a DAO,
 
-=======
               <p className="text-lg text-gray-300 leading-relaxed">;
 
                 Whether you're building a decentralized marketplace, launching a DAO,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 or creating a new token ecosystem, Zion OS provides all the tools you need;
                 to succeed in the digital economy revolution.;
               </p>;
@@ -217,11 +211,9 @@ function ZionOSPage() {
               <p className="text - gray - 400">;
                 Use our intuitive launch wizard to configure your economy's parameters,
 
-=======
 
                 Use our intuitive launch wizard to configure your economy's parameters,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 including governance rules, token economics, and marketplace settings.;
               </p>;
             </div>;
@@ -234,11 +226,9 @@ function ZionOSPage() {
               <p className="text - gray - 400">;
                 Click deploy and watch as Zion OS automatically creates your infrastructure,
 
-=======
 
                 Click deploy and watch as Zion OS automatically creates your infrastructure,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 smart contracts, and governance systems in minutes.;
               </p>;
             </div>;
@@ -251,11 +241,9 @@ function ZionOSPage() {
               <p className="text - gray - 400">;
                 Your economy is ready to go! Start inviting users, launching projects,
 
-=======
 
                 Your economy is ready to go! Start inviting users, launching projects,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 and building your digital community.;
               </p>;
             </div>;

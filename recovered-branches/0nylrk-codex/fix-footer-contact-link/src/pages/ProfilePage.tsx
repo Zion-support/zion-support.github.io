@@ -31,7 +31,6 @@ export default function ProfilePage() {
     const fetchProfile = async () => {
 
 
-=======
       setIsLoading(true),
       setIsError(false),
       try {
@@ -89,7 +88,6 @@ export default function ProfilePage() {;
 
   useEffect(() => {;
     const fetchProfile = async () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setIsLoading(true);
       setIsError(false);
       try {;
@@ -191,7 +189,6 @@ if ( {) {
       </div>;
     );
   }
-=======
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
@@ -201,7 +198,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       <SEO
@@ -215,14 +211,12 @@ if ( {) {
       <AppHeader />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
-=======
         title={`${profileData && profileData.full_name} | Talent Profile`}
         description={profileData && profileData.bio || "View the profile of this talented individual."}
       />;
       <AppHeader />;
       <div className="container mx-auto px-4 py-8">;
         <div className="grid grid-cols-12 gap-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Main Content Area */}
           <div className="col-span-12 lg:col-span-8">;
             {/* Profile Header */}
@@ -279,7 +273,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Skills */}
               {profileData && profileData.skills && profileData && profileData.skills.length > 0 && (;
                 <div className="mt-4">;
@@ -297,7 +290,6 @@ if ( {) {
 
 
             </div>
-=======
             </div>;
 
             {/* Bio Section */}
@@ -306,7 +298,6 @@ if ( {) {
               <p className="text-zion-slate-light">{profileData && profileData.bio || "No bio provided."}</p>;
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Portfolio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>;
@@ -332,7 +323,6 @@ if ( {) {
 
 
             </div>
-=======
               </div>;
             </div>;
 
@@ -342,7 +332,6 @@ if ( {) {
               <p className="text-zion-slate-light">{profileData && profileData.experience || "No experience provided."}</p>;
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>;
@@ -360,7 +349,6 @@ if ( {) {
                   </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
                 {profileData && profileData.twitter_link && (;
                   <a
@@ -375,7 +363,6 @@ if ( {) {
                   </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
                 {profileData && profileData.linkedin_link && (;
                   <a
@@ -390,7 +377,6 @@ if ( {) {
                   </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
 
               </div>;
@@ -403,7 +389,6 @@ if ( {) {
             <HireNowCTA
               talentProfile={{
 
-=======
     }
 ;
     // Check condition
@@ -563,7 +548,6 @@ if ( {) {
                 full_name: profile_data?.full_name || '',
                 professional_title: profile_data?.professional_title || '',
                 hourly_rate: profile_data?.hourly_rate || 0;
-=======
 
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
@@ -573,7 +557,6 @@ if ( {) {
               }}
             />;
             {/* Placeholder for other sidebar elements */}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </div>;
         </div>;
       </div>;
@@ -582,12 +565,8 @@ if ( {) {
     </>);
 }
 
-=======
 ;
 
-=======
 
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

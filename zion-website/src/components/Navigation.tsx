@@ -34,7 +34,6 @@ export default /**
 function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState (false);
 
-=======
 
 ;
   return (;
@@ -45,11 +44,8 @@ function Navigation() {
             <span className=&quot;sr-only&quot;>Zion Tech Group</span>
             <div className=&quot;text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200&quot;>
 
-=======
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <header className=&quot;fixed inset - x-0 top - 0 z - 50 bg - black / 80 backdrop - blur - md border - b border - white / 10 & quot;>;
       <nav className=&quot;flex items - center justify - between p - 6 lg:px - 8&quot; aria - label=&quot;Global & quot;>;

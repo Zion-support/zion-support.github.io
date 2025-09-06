@@ -12,9 +12,7 @@ import { motion  } from './framer-motion';
 import {
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   BookOpen,
   Brain,
   Building,
@@ -94,7 +92,6 @@ import {;
   Zap,;
 
 } from "lucide-react";
-=======
 
   Clock,
   DollarSign,
@@ -135,19 +132,15 @@ import {;
   DollarSign as Money;
 
 } from 'lucide-react';
->>>>>>> origin/automation-improvements-final
 
 
-=======
 
 
 } from 'lucide-react';
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ArrowRight
   Award
   BarChart3
@@ -194,7 +187,6 @@ import {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const navigationItems = [
   {
     title: "Services"
@@ -222,7 +214,6 @@ const navigationItems = [
         description: "40+ innovative micro SaaS solutions"
         popular: true
       }
-=======
 } from './lucide-react';
 ;
 const navigation_items = [;
@@ -252,7 +243,6 @@ const navigation_items = [;
         description: "40+ innovative micro SaaS solutions",
         popular: true,
       },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
         title: "Cybersecurity"
         href: "/cybersecurity"
@@ -657,7 +647,6 @@ export default function Navigation() {;
 
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-=======
 
 
 export default function Navigation() {;
@@ -668,7 +657,6 @@ export default function Navigation() {;
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}
@@ -695,7 +683,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 href="/pricing"
 
                 className="hover:text-blue-200 transition-colors">;
-=======
 ;
 const quick_links = [;
   { title: "Pricing", href: "/pricing", icon: DollarSign },
@@ -757,7 +744,6 @@ function Navigation() {
                 Zion Tech Group;
               </div>;
               <div className="text-sm text-gray-500">;
-=======
       {/* Main Navigation */}
       <div className="container mx - auto px - 4">;
         <div className="flex justify - between items - center py - 4">;
@@ -909,7 +895,6 @@ function Navigation() {
       </div>;
     </nav>;
   );
-=======
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items - center space - x-8">;
             {navigation_items.map ((item) => (
@@ -1038,5 +1023,4 @@ function Navigation() {
           </motion.div>)}
       </div>;
     </nav>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

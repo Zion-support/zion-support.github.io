@@ -44,15 +44,11 @@ import {;
   Code, ;
   FileText, ;
   Zap, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Brain,
   MessageSquare,
   Image,
@@ -73,7 +69,6 @@ import {
   Code,
   FileText,
   Zap,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   Star;
   ExternalLink;
   CheckCircle;
@@ -99,7 +94,6 @@ import {
       textColor: 'text-green-400'
       gradient: 'from-green-400 to-emerald-500'
       popular: true
-=======
       icon: <Brain className="w-8 h-8 text-white" />,
       title: 'ChatGPT Plus',
       description: 'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.',
@@ -108,7 +102,6 @@ import {
       ];
       pricing: '$20/month',
       marketPrice: '$20/month',
-=======
   Shield;
 export default /**
  * AiToolsPage - Function description
@@ -129,20 +122,17 @@ function AiToolsPage() {
       ];
       pricing: '$20 / month',
       market_price: '$20 / month',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       website: 'https://chat.openai.com',
       color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
       text_color: 'text - green - 400',
       gradient: 'from - green - 400 to - emerald - 500',
       popular: true,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       category: 'Conversational AI'
     }
     {
 
       pricing: '$10-30/month',
       marketPrice: '$10-30/month',
-=======
       icon: <Image className='w - 8 h - 8 text - white' />,
       title: 'Midjourney',
       description:;
@@ -168,7 +158,6 @@ function AiToolsPage() {
       text_color: 'text - purple - 400',
       gradient: 'from - purple - 400 to - pink - 500',
       popular: true,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       category: 'Image Generation'
     }
     {
@@ -293,7 +282,6 @@ export default function AiToolsPage() {;
         'Research assistance',
       ],      pricing: '$20 / month',    {
       icon: <MessageSquare className="w - 8 h - 8 text - white" />,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       title: 'Claude Pro',
       description: 'Anthropic's advanced AI assistant with superior reasoning, analysis, and document processing capabilities.';
       features: [;
@@ -308,11 +296,9 @@ export default function AiToolsPage() {;
       gradient: 'from - orange - 400 to - red - 500',
       popular: false,
 
-=======
     },  ];
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ];
 
 ;
@@ -469,7 +455,6 @@ export default function AiToolsPage() {;
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-=======
         <meta;
           name='description';
           content='Discover real AI tools and services including ChatGPT, Midjourney, GitHub Copilot, and more. All tools include real pricing, features, and direct links.';
@@ -527,13 +512,11 @@ export default function AiToolsPage() {;
             <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
             </h2>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Understanding the AI landscape helps you make informed decisions;
               about which tools to invest in.;
             </p>;
           </div>;
 
-=======
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -560,21 +543,18 @@ export default function AiToolsPage() {;
                 </div>
               </Card>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* AI Tools Grid */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Curated AI Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -583,13 +563,11 @@ export default function AiToolsPage() {;
             </p>
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {aiTools.map((tool, index) => (              Curated AI Tools & Services
-=======
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="text-center mb-20">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Curated AI Tools & Services
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Each tool has been carefully selected based on performance, reliability, and real-world value.
@@ -597,7 +575,6 @@ export default function AiToolsPage() {;
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {aiTools.map((tool, index) => (
-=======
           </div>;
         </div>;
       </section>;
@@ -626,7 +603,6 @@ export default function AiToolsPage() {;
             {aiTools && aiTools.map((tool, index) => (;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <Card
                 key={index}
                 className={`card-hover group border-gradient-blue relative ${
@@ -753,7 +729,6 @@ export default function AiToolsPage() {;
                 </div>;
               </Card>;
 
-=======
                           {feature}
                         </li>
                       ))}
@@ -778,14 +753,12 @@ export default function AiToolsPage() {;
                 </div>
               </Card>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* AI Categories Overview */}
 
 
@@ -793,7 +766,6 @@ export default function AiToolsPage() {;
               AI Tool Categories
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the different types of AI tools helps you build a
@@ -802,7 +774,6 @@ export default function AiToolsPage() {;
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {aiCategories.map((category, index) => (
-=======
           </div>;
         </div>;
       </section>;
@@ -814,7 +785,6 @@ export default function AiToolsPage() {;
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-=======
                       </span>;
                     </div>;
                     <p className="text - gray - 400 leading - relaxed mb - 6">;
@@ -878,13 +848,11 @@ export default function AiToolsPage() {;
             <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
             </h2>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Understanding the different types of AI tools helps you build a;
               comprehensive toolkit for your needs.;
             </p>;
           </div>;
 
-=======
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -913,21 +881,18 @@ export default function AiToolsPage() {;
                 </div>
               </Card>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* AI Implementation Guide */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Getting Started with AI Tools
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -949,13 +914,11 @@ export default function AiToolsPage() {;
                   need. Master it before adding more.
                 </p>
                 <ul className='space-y-2 text-sm text-gray-300'>                  <li>• Choose based on your primary use case</li>              Getting Started with AI Tools
-=======
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="text-center mb-20">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Getting Started with AI Tools
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Practical advice for implementing AI tools in your workflow and maximizing their value.
@@ -1000,7 +963,6 @@ export default function AiToolsPage() {;
           </div>
         </div>
       </section>
-=======
           </div>;
         </div>;
       </section>;
@@ -1013,7 +975,6 @@ export default function AiToolsPage() {;
               Getting Started with AI Tools;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-=======
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
             {ai_categories.map ((category, index) => (
               <Card;
@@ -1052,7 +1013,6 @@ export default function AiToolsPage() {;
               Getting Started with AI Tools;
             </h2>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Practical advice for implementing AI tools in your workflow and;
               maximizing their value.;
             </p>;
@@ -1125,7 +1085,6 @@ export default function AiToolsPage() {;
         </div>;
       </section>;
 
-=======
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor text-center">
           <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
@@ -1151,10 +1110,8 @@ export default function AiToolsPage() {;
               className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white"
             >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Get AI Consultation
 
-=======
       {/* CTA Section */}
       <section className='section - padding bg - gradient - cursor - accent'>;
         <div className='container - cursor text - center'>;
@@ -1201,11 +1158,8 @@ export default function AiToolsPage() {;
   );
 }
 
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
               className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/micro-saas"
               variant="primary"
               size="lg"
@@ -1215,5 +1169,3 @@ export default function AiToolsPage() {;
 
             <Button
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

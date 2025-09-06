@@ -1,7 +1,6 @@
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-=======
 
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
@@ -9,15 +8,12 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
 
-=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
@@ -29,11 +25,9 @@ serve(async (req) => {
     // Create the smart contract prompt for OpenAI
     let prompt = `
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
-=======
 
 
 
-=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -67,8 +61,6 @@ serve(async (req) => {;
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -112,7 +104,6 @@ serve(async (req) => {;
           {
             role: 'system'
             content: 'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.'}
-=======
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts",
 const cors_headers = {
@@ -190,7 +181,6 @@ if ( {) {
           {
             role: 'system',
             content: 'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well - commented, production - ready Solidity code.'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {
             role: 'user'
             content: prompt}];
@@ -209,7 +199,6 @@ if ( {) {
       success: true, 
       solidityCode 
 
-=======
 ;
     const data = await response.json ();
 ;
@@ -224,7 +213,6 @@ if ( {) {
     return new Response (JSON.stringify ({
       success: true,
       solidity_code;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }), {
       headers: { ...cors_headers, 'Content - Type': 'application / json' }});
   } catch (error) {
@@ -239,7 +227,6 @@ if ( {) {
       { 
         status: 500, 
 
-=======
 ;
     prompt += `;
     Format the code properly with comments explaining each section. Include a simple deployment script.;
@@ -282,7 +269,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }
@@ -303,6 +289,4 @@ if ( {) {
 });
 ;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

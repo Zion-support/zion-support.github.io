@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Revolutionary2026ServicesPage() {
   return (
     <>
@@ -101,7 +100,6 @@ import {Phone, Mail} from 'lucide-react';
         />;
 
 
-=======
 export default /**
  * Revolutionary2026ServicesPage - Function description
  */
@@ -160,7 +158,6 @@ function Revolutionary2026ServicesPage() {
           name='address';
           content='364 E Main St STE 1008 Middletown DE 19709';
         />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Structured Data */}
 
             __html: JSON && JSON.stringify({
@@ -417,7 +414,6 @@ function Revolutionary2026ServicesPage() {
             <div className="text-center">
               <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">
                 <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
-=======
 
               ))  } catch (error) {
     console.error("Error:", error);
@@ -435,7 +431,6 @@ function Revolutionary2026ServicesPage() {
                 <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Ready to Experience the Future?
                 </h3>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -456,7 +451,6 @@ function Revolutionary2026ServicesPage() {
                   >
                     <Mail className="w-5 h-5" />
                     Email Us
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </a>
                 </div>
               </div>
@@ -468,7 +462,6 @@ function Revolutionary2026ServicesPage() {
                     href='mailto:kleber@ziontechgroup && ziontechgroup.com'
                     className='border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2'>;
                     <Mail className='w-5 h-5' />                    Email Us;
-=======
             __html: JSON.stringify ({
               '@context': 'https://schema.org',
               '@type': 'Organization',
@@ -603,7 +596,6 @@ function Revolutionary2026ServicesPage() {
                   >;
                     <Mail className='w - 5 h - 5' />                    Email Us;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   </a>;
                 </div>;
               </div>;
@@ -613,13 +605,7 @@ function Revolutionary2026ServicesPage() {
       </main>;
 
 
-=======
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

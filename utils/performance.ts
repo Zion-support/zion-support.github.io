@@ -1,6 +1,5 @@
 
 
-=======
 ;
 export const measure_performance = (): PerformanceMetrics | null => {
   if () {) {
@@ -8,7 +7,6 @@ export const measure_performance = (): PerformanceMetrics | null => {
 }
     return null;
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     const navigation = performance.getEntriesByType ('navigation')[0] as PerformanceNavigationTiming;
     const paint_entries = performance.getEntriesByType ('paint');
@@ -26,7 +24,6 @@ export const measure_performance = (): PerformanceMetrics | null => {
       ttfb: navigation ? navigation.responseStart - navigation.requestStart : undefined
     }
 
-=======
     const fid = performance.getEntriesByType ('first - input')[0] as PerformanceEventTiming;
 ;
     return {
@@ -36,7 +33,6 @@ export const measure_performance = (): PerformanceMetrics | null => {
       cls: cls,
       ttfb: navigation ? navigation.response_start - navigation.request_start : undefined;
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (error) {
     console.warn ('Error measuring performance:', error);
     return null;
@@ -51,7 +47,6 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {
 
 }
 export const getPerformanceScore = (metrics: PerformanceMetrics): {
-=======
 
 };
 
@@ -76,7 +71,6 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
   }
   const getScore = (value: number | undefined, threshold: { good: number; needsImprovement: number }, reverse = false): 'good' | 'needs-improvement' | 'poor' => {
     if (value === undefined) return 'poor';
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
     const compareValue = reverse ? threshold.good / value : value / threshold.good;
     if (compareValue <= 1) return 'good';
     if (compareValue <= (reverse ? threshold.needsImprovement / threshold.good : threshold.needsImprovement / threshold.good)) return 'needs-improvement';
@@ -95,7 +89,6 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
 
   let overall: 'good' | 'needs-improvement' | 'poor';
   if (poorCount > 0) {
-=======
     fcp: 'good' | 'needs - improvement' | 'poor';
     lcp: 'good' | 'needs - improvement' | 'poor';
     fid: 'good' | 'needs - improvement' | 'poor';
@@ -143,7 +136,6 @@ if (return 'good') {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     overall = 'poor';
   } else // Check condition
 if ( {) {
@@ -164,7 +156,6 @@ if ( {) {
   return { overall, scores }
 }
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
-=======
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
 
 
@@ -186,11 +177,6 @@ import { PerformanceMetrics } from '../types'; export const measurePerformance =
 
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   return { overall, scores }
 }
 ;
@@ -213,5 +199,3 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
 }
   console.group_end ();
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

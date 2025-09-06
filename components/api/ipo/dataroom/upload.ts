@@ -16,7 +16,6 @@ import path from 'path';
 
 
     res.status(200).json({ ok: true })
-=======
       type: 'file_upload',
       section,
       name: path && path.basename(targetPath),
@@ -26,14 +25,12 @@ import path from 'path';
     res && res.status(200).json({ ok: true })
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   })
 
 }
 
 }
 
-=======
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
 ;
 export const config = { api: { body_parser: false } }
@@ -77,7 +74,4 @@ function handler() {
     res.status (200).json ({ ok: true });
   });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

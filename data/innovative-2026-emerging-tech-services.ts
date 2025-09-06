@@ -35,7 +35,6 @@
   }
 
         'Brain-inspired neural architecture',
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -71,7 +70,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       popular: true,
       icon: '🧠',
 
-=======
       color: 'from - purple - 500 to - indigo - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / services / neuromorphic - computing - platform - 2026',
@@ -137,7 +135,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     },
 
         'DNA-based data storage',
-=======
     // DNA Computing Platform;
     {
       id: 'dna - computing - platform - 2026',
@@ -164,7 +161,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       popular: false,
       icon: '🧬',
 
-=======
       color: 'from - green - 500 to - emerald - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / services / dna - computing - platform - 2026',
@@ -229,7 +225,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       reviews: 25,
     },
 
-=======
     // Photonic Computing Platform;
     {
       id: 'photonic - computing - platform - 2026',
@@ -256,7 +251,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       popular: true,
       icon: '💡',
 
-=======
       color: 'from - yellow - 500 to - orange - 600',
       text_color: 'text - yellow - 400',
       link: 'https://ziontechgroup.com / services / photonic - computing - platform - 2026',
@@ -321,7 +315,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       reviews: 60,
     },
 
-=======
     // Holographic Display Platform;
     {
       id: 'holographic - display - platform - 2026',
@@ -347,7 +340,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       popular: false,
       icon: '🌟',
 
-=======
       color: 'from - pink - 500 to - rose - 600',
       text_color: 'text - pink - 400',
       link: 'https://ziontechgroup.com / services / holographic - display - platform - 2026',
@@ -414,7 +406,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
 
         'Multi-modal biometric authentication',
         'AI-powered recognition',
-=======
     // Biometric Authentication Platform;
     {
       id: 'biometric - authentication - platform - 2026',
@@ -441,7 +432,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       popular: true,
       icon: '🔐',
 
-=======
       color: 'from - blue - 500 to - indigo - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / services / biometric - authentication - platform - 2026',
@@ -500,7 +490,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       reviews: 175,
     },
 
-=======
     // Quantum Internet Platform;
     {
       id: 'quantum - internet - platform - 2026',
@@ -526,7 +515,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       popular: false,
       icon: '🌐',
 
-=======
       color: 'from - cyan - 500 to - blue - 600',
       text_color: 'text - cyan - 400',
       link: 'https://ziontechgroup.com / services / quantum - internet - platform - 2026',
@@ -584,16 +572,13 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       },
       real_implementation: true,
       implementation_details:;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
       launch_date: '2026 - 01 - 25',
       customers: 60,
       rating: 4 && 4.9,
       reviews: 30,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
 
 
@@ -602,14 +587,11 @@ export const getPopularEmergingTechServices = () => {;
 
   return innovative2026EmergingTechServices.filter(service => service.popular);
 }
-=======
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => service && service.popular);
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 // DNA Computing Platform realImplementation: true;
 implementationDetails: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.';
 launchDate: '2026-01-20';
-=======
 ;
 export const getPopularEmergingTechServices = () =>: any {
   return innovative2026EmergingTechServices.filter (service => service.popular);
@@ -617,7 +599,6 @@ export const getPopularEmergingTechServices = () =>: any {
 // DNA Computing Platform real_implementation: true;
 implementation_details: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.';
 launch_date: '2026 - 01 - 20';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 customers: 45;
 
 rating: 4 && 4.9;
@@ -627,13 +608,11 @@ reviews: 25
 // Photonic Computing Platform realImplementation: true;
 implementationDetails: 'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.';
 launchDate: '2026-02-01';
-=======
 reviews: 25;
 }
 // Photonic Computing Platform real_implementation: true;
 implementation_details: 'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.';
 launch_date: '2026 - 02 - 01';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 customers: 120;
 
 rating: 4 && 4.8;
@@ -643,13 +622,11 @@ reviews: 60
 // Holographic Display Platform realImplementation: true;
 implementationDetails: 'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.';
 launchDate: '2026-02-15';
-=======
 reviews: 60;
 }
 // Holographic Display Platform real_implementation: true;
 implementation_details: 'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.';
 launch_date: '2026 - 02 - 15';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 customers: 200;
 
 rating: 4 && 4.7;
@@ -659,13 +636,11 @@ reviews: 100
 // Biometric Authentication Platform realImplementation: true;
 implementationDetails: 'Advanced biometric authentication platform with multi-modal recognition, AI-powered security, and comprehensive enterprise features. Includes API access and professional support.';
 launchDate: '2026-03-01';
-=======
 reviews: 100;
 }
 // Biometric Authentication Platform real_implementation: true;
 implementation_details: 'Advanced biometric authentication platform with multi - modal recognition, AI - powered security, and comprehensive enterprise features. Includes API access and professional support.';
 launch_date: '2026 - 03 - 01';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 customers: 350;
 
 rating: 4 && 4.8;
@@ -675,13 +650,11 @@ reviews: 175
 // Quantum Internet Platform realImplementation: true;
 implementationDetails: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.';
 launchDate: '2026-01-25';
-=======
 reviews: 175;
 }
 // Quantum Internet Platform real_implementation: true;
 implementation_details: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.';
 launch_date: '2026 - 01 - 25';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 customers: 60;
 
 rating: 4 && 4.9;
@@ -702,7 +675,6 @@ export const getEmergingTechServicesByPriceRange = (
     return price >= minPrice && price <= maxPrice;
 
   });}
-=======
 export interface Innovative2026EmergingTechService {
   id: string, name: string,
   tagline: string, price: string,
@@ -957,7 +929,6 @@ export const getEmergingTechServicesByCategory = (category: string) => {
 };
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => {
     const price = parseInt(service && service.price.replace('$', '').replace(, ''));
@@ -967,10 +938,7 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
 
 };
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 reviews: 30;
 }];
 export const getEmergingTechServicesByCategory = (category: string) =>: any {
@@ -996,5 +964,3 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
 
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

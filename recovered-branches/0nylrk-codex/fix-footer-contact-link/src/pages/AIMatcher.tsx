@@ -120,17 +120,14 @@ export default function AIMatcherPage() {;
             </div>;
 
             <AIMatchmaker
-=======
 
             
             <AIMatchmaker 
-=======
             <AIMatchmaker 
 
 
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
-=======
 import { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { Header } from '@/components / Header';
@@ -206,7 +203,6 @@ if (|| category === "hardware") {) {
             <AIMatchmaker;
               service_type={selected_category === "all" ? "" : selected_category}
               onMatchSelect={handleMatchSelect}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             />;
           </div>;
         </div>;
@@ -216,7 +212,5 @@ if (|| category === "hardware") {) {
     </>);
 }
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

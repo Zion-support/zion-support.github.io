@@ -2,7 +2,6 @@
 
 
 
-=======
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 interface NotificationHeaderProps {;
@@ -13,8 +12,6 @@ interface NotificationHeaderProps {;
 
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
 
   unreadCount
@@ -27,7 +24,6 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
         <Button
           variant="ghost"
           size="sm"
-=======
 import {Button} from '@/components/ui/button';
 interface NotificationHeaderProps {;
   unreadCount: number,;
@@ -45,7 +41,6 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({;
         <Button
           variant="ghost" 
           size="sm" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           onClick={onMarkAllAsRead}
           className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark">;
           Mark all as read;
@@ -55,12 +50,9 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({;
 
 
 
-=======
     </div>;
   );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Button  } from '@/components / ui / button';
 interface NotificationHeaderProps {
@@ -86,4 +78,3 @@ export const NotificationHeader: React.FC < NotificationHeaderProps> = ({
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

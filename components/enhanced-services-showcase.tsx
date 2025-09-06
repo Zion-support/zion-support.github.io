@@ -1,13 +1,9 @@
 
 
-=======
 
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 //Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ...cuttingEdgeITServices;
 ...innovativeMicroSaasV2Services;
 ...enhancedRealMicroSaasServices;
@@ -333,7 +329,6 @@ const Button = ({
   className = '';
   children, onClick
 }: {
-=======
   duration: 0 && 0.8 
 
 }viewport= {
@@ -360,7 +355,6 @@ const Button = ({
 const Button = ({ ;
   href,;
 
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -928,7 +922,6 @@ export default function EnhancedServicesShowcase() {
 
 // Button component (if not imported)
 const Button = ({ 
-=======
   > View All Services </Button> </div>);
 }</div> </section> {
   /* Contact Section */;
@@ -964,8 +957,6 @@ const Button = ({
 const Button = ({
 
   href,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   variant = 'primary';
   size = 'md';
 
@@ -994,7 +985,6 @@ const Button = ({
       </a>;
     );
   }
-=======
     return (
       <a href={href} className={classes}>
         {children}
@@ -1004,7 +994,6 @@ const Button = ({
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <button onClick={onClick} className={classes}>;
       {children}
@@ -1013,7 +1002,6 @@ const Button = ({
   );
 };
 
-=======
   class_name = '';
   children, on_click;
 }: {
@@ -1053,9 +1041,6 @@ if ( {) {
     </button>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

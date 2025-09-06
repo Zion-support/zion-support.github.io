@@ -3,7 +3,6 @@ import { ServiceVariant } from '../types / service - variants';
 
 export interface AdvancedCybersecurityService {
 
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -46,7 +45,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       ]
       useCases: [
 
-=======
       color: 'from - red - 600 to - pink - 600',
       text_color: 'text - red - 400',
       link: 'https://ziontechgroup.com / zero - trust - security - platform',
@@ -92,7 +90,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
         'Real-time threat detection and analysis',
         'AI-powered threat prediction and modeling',
-=======
     // AI - Powered Threat Intelligence;
     {
       id: 'ai - threat - intelligence',
@@ -136,7 +133,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       growthRate: '26% annual growth',
       variant: 'ai-threat-enterprise',
       contactInfo: {
-=======
       color: 'from - indigo - 600 to - purple - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / ai - threat - intelligence',
@@ -181,7 +177,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     },
 
         'Multi-cloud security monitoring (AWS, Azure, GCP)',
-=======
     // Cloud Security Posture Management;
     {
       id: 'cloud - security - posture',
@@ -228,7 +223,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       growthRate: '24% annual growth',
       variant: 'cloud-security-enterprise',
       contactInfo: {
-=======
       color: 'from - blue - 600 to - cyan - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / cloud - security - posture',
@@ -269,7 +263,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     },
 
         'Automated security testing in CI/CD',
-=======
     // DevSecOps Security Platform;
     {
       id: 'devsecops - security - platform',
@@ -311,7 +304,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       growthRate: '22% annual growth',
       variant: 'devsecops-enterprise',
       contactInfo: {
-=======
       color: 'from - green - 600 to - emerald - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / devsecops - security - platform',
@@ -353,7 +345,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       reviews: 28,
     },
 
-=======
     // IoT Security Platform;
     {
       id: 'iot - security - platform',
@@ -379,7 +370,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       popular: true,
       icon: '📱',
 
-=======
       color: 'from - purple - 600 to - violet - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / iot - security - platform',
@@ -392,7 +382,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       setup_time: '1 - 2 weeks',
       category: 'IoT Security & Protection',
 
-=======
       real_service: true,
       technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z - Wave'],
       integrations: [;
@@ -417,9 +406,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       },
       real_implementation: true,
       implementation_details:;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
       launch_date: '2024 - 09 - 25',
       customers: 43,
@@ -431,7 +418,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
   ];    features: [
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -485,7 +471,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     variant: 'zero-trust-enterprise',
     contactInfo: {
       
-=======
   ];    features: [;
       'IoT device authentication and management_network traffic monitoring and analysis_threat detection and response_device vulnerability assessment_secure firmware updates_data encryption and protection_compliance monitoring and reporting_real - time security alerts';
       'Integration with IoT platforms_mobile security management';
@@ -540,13 +525,11 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4 && 4.7,
 
     reviews: 21
-=======
     real_implementation: true,
     implementation_details: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
     launch_date: '2024 - 09 - 25', customers: 43,
     rating: 4.7,
     reviews: 21;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 ];
 
@@ -586,11 +569,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     reviews: 21
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -603,8 +583,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

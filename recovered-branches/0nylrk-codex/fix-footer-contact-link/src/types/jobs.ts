@@ -17,7 +17,6 @@ export interface JobBudget {
 
 }
 export interface Job {
-=======
 
 export type JobCategory = 
   | 'development' 
@@ -38,7 +37,6 @@ export interface JobBudget {;
 
 export interface Job {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   client_id: string;
   title: string;
@@ -54,13 +52,11 @@ export interface Job {;
 
 }
 export interface JobFormData {
-=======
 }
 
 
 export interface JobFormData {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   description: string;
   category: JobCategory;
@@ -119,12 +115,10 @@ export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' |
 ;
 
 export interface JobApplication {
-=======
 
 
 export interface JobApplication {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   job_id: string;
   talent_id: string;
@@ -155,10 +149,8 @@ export interface JobApplication {;
       score: number;
 
       matching: string[],
-=======
 
 
-=======
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed',;
 export type JobCategory =;
   | 'development';
@@ -286,5 +278,3 @@ export interface JobApplication {;
 
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

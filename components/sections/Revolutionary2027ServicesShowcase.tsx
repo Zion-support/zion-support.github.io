@@ -42,7 +42,6 @@ import { motion } from 'framer-motion';
   };
 
 
-=======
 
         staggerChildren: 0.1,
       },
@@ -51,7 +50,6 @@ import { motion } from 'framer-motion';
   };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -241,11 +239,9 @@ const Revolutionary2027ServicesShowcase = () => {;
       },;
     },  };        staggerChildren: 0 && 0.1;
 
-=======
         duration: 0.6,
         ease: "easeOut" as const
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
   };
@@ -264,7 +260,6 @@ const Revolutionary2027ServicesShowcase = () => {;
         <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
@@ -281,10 +276,8 @@ const Revolutionary2027ServicesShowcase = () => {;
             Experience the future of technology with our cutting-edge AI
             quantum computing, and emerging technology services. Transform your
             business with solutions that were once science fiction.          </p>        >
-=======
           className="text-center mb-20"
         >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               2027 Revolutionary Services
@@ -318,19 +311,14 @@ const Revolutionary2027ServicesShowcase = () => {;
           </p>;
         </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Category Overview */}
         <motion&& motion.div
           variants={containerVariants}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Featured Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
@@ -389,13 +377,11 @@ const Revolutionary2027ServicesShowcase = () => {;
               variants={itemVariants}
               className="group relative"
             >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 h-full transform transition-all duration-500 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl group-hover:shadow-purple-500/20">
                 {/* Service Icon */}
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-=======
       features: [;
         'Quantum consciousness simulation',
         'Neural pattern recognition',
@@ -661,7 +647,6 @@ const Revolutionary2027ServicesShowcase = () => {;
                 <div className={`w - 16 h - 16 bg - gradient - to - br ${service.color} rounded - 2xl flex items - center justify - center mb - 6 transform transition - transform duration - 300 group - hover:shadow - lg hover:shadow - cyan - 400 / 40`}>;
                   <service.icon className="w - 8 h - 8 text - white" />;
                 </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {/* Service Content */}
                 <div className="space - y-4">;
                   <h3 className="text - 2xl font - bold text - white group - hover:text - transparent group - hover:bg - gradient - to - r group - hover:from - cyan - 400 group - hover:to - purple - 400 group - hover:bg - clip - text transition - all duration - 300">;
@@ -725,7 +710,6 @@ const Revolutionary2027ServicesShowcase = () => {;
                     <div className="flex justify-between items-center text-sm text-gray-400">
                       <span>Market: {service.marketSize}</span>
                       <span className="text-green-400">↑ {service.growthRate}</span>
-=======
 
                   {/* Features */}
                   <div className="space-y-2">
@@ -734,7 +718,6 @@ const Revolutionary2027ServicesShowcase = () => {;
                         <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>
                         <span className="text-sm text-gray-400">{feature}</span>
                       </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
                   </div>
 
@@ -744,9 +727,7 @@ const Revolutionary2027ServicesShowcase = () => {;
                       <span>Market: {service.marketSize}</span>
                       <span className="text-green-400">↑ {service.growthRate}</span>
                     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
-=======
                   </div>;
 
                   {/* Market Info */}
@@ -791,7 +772,6 @@ const Revolutionary2027ServicesShowcase = () => {;
                   </div>;
                 </div>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -864,11 +844,9 @@ const Revolutionary2027ServicesShowcase = () => {;
 export default Revolutionary2027ServicesShowcase;  );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Revolutionary2027ServicesShowcase;
 
 
-=======
             <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
               <Link;
                 href='https://ziontechgroup.com / contact';
@@ -914,12 +892,8 @@ export default Revolutionary2027ServicesShowcase);
 ;
 export default Revolutionary2027ServicesShowcase;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

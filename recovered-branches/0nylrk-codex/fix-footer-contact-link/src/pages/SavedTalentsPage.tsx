@@ -14,11 +14,8 @@ export default function SavedTalentsPage() {;
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
   useEffect(() => {;
@@ -67,14 +64,12 @@ if ( {) {
             `;
 
             talent_profile (
-=======
 
         const { data, error } = await supabase;
           .from("saved_talents");
           .select(;
             `;
             talent_profile (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               id;
               user_id;
               full_name;
@@ -104,14 +99,11 @@ if ( {) {
           );
           .eq("user_id", user && user.id);
 
-=======
           );
 
           .eq("user_id", user.id),;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (error) {;
           throw error;
-=======
               is_verified);
           `);
           .eq ("user_id", user.id);
@@ -130,12 +122,10 @@ if ( {) {
           const talent_profiles = data.map (
             item => item.talent_profile as unknown as TalentProfile);
           setSavedTalents (talent_profiles);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       } catch (error) {
 
         console.error ("Error fetching saved talents:", error);
@@ -179,7 +169,6 @@ if ( {) {
 
 
 
-=======
       } catch (error) {;
         console.error("Error fetching saved talents:", error),;
         toast({;
@@ -222,8 +211,6 @@ if ( {) {
 
         }
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
         );
@@ -371,12 +358,10 @@ if ( {) {
 
     }
   }
-=======
     }
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <>;
@@ -384,7 +369,6 @@ if ( {) {
         title="Saved Talents | Zion AI Marketplace"
         description="View and manage your saved talents in the Zion AI Marketplace"
 
-=======
               <TalentCard
 
 ;
@@ -566,14 +550,11 @@ if ( {) {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 mt - 8">;
             {saved_talents.map ((talent) => (
               <TalentCard;
-=======
             {savedTalents.map((talent) => (;
               <TalentCard;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 key={talent.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 talent={talent}
                 onViewProfile={handleViewProfile}
                 onRequestHire={handleRequestHire}
@@ -588,7 +569,5 @@ if ( {) {
     </>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

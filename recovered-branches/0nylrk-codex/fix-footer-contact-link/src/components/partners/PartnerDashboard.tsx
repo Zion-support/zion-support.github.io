@@ -16,20 +16,17 @@ export function PartnerDashboard() {;
   };
 
 
-=======
 
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
 
-=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -43,8 +40,6 @@ export function PartnerDashboard() {
   },
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-6">;
       {/* Stats Overview */}
@@ -118,7 +113,6 @@ export function PartnerDashboard() {
             <Users className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />;
             <p className="text-zion-slate-light mb-4">No referrals yet</p>;
             <p className="text-xs text-zion-slate-light">;
-=======
   Card,
   CardContent,
   CardDescription,
@@ -241,8 +235,5 @@ function PartnerDashboard() {
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

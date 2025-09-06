@@ -5,7 +5,6 @@
 
 
 type Tx = {
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -32,7 +31,6 @@ import React, { useEffect, useMemo, useState } from 'react';
 import Badges from './Badges';
 
 type Tx = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
   type: 'earn' | 'burn' | 'issue' | 'revoke' | 'redeem';
   amount: number;
@@ -68,11 +66,9 @@ export default function WalletPanel() {;
   type: "earn" | "burn" | "issue" | "revoke" | "redeem"
   amount: number
   reason: string
-=======
 import React, { useEffect, useMemo, useState } from "react";
 import Badges from "./Badges";
 type Tx = {
-=======
   created_at: string;
 }
 ;
@@ -103,7 +99,6 @@ function WalletPanel() {
   const [summary, set_summary] = useState < Summary | null>(null);
   const [tab, set_tab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings');  const [eth_address, setEthAddress] = useState < string | null>(null);type Tx = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string,
   type: "earn" | "burn" | "issue" | "revoke" | "redeem",
   amount: number,
@@ -203,7 +198,6 @@ export default function WalletPanel() {;
   );
 
   const nextBadgeThreshold = useMemo(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (balance < 50) return 50;
     if (balance < 200) return 200;
     if (balance < 500) return 500;
@@ -226,7 +220,6 @@ export default function WalletPanel() {;
 
   const progress = Math.min(100, Math.floor((balance / nextBadgeThreshold) * 100));
   async function connectWallet() {
-=======
     try {;
       const accounts = await eth && eth.request({ method: 'eth_requestAccounts' });
       setEthAddress(accounts?.[0] || null);
@@ -240,12 +233,10 @@ export default function WalletPanel() {;
   const progress = Math && Math.min(100, Math && Math.floor((balance / nextBadgeThreshold) * 100));
 
   async function connectWallet() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (typeof window === "undefined") return;
     const eth = (window as any).ethereum;
     if (!eth) {;
       alert("No Ethereum wallet detected. Please install MetaMask.");
-=======
   async /**
  * redeem - Function description
  */
@@ -271,7 +262,6 @@ if ( {) {
   $2
 }
       alert ("No Ethereum wallet detected. Please install MetaMask.");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       return;
     }
 
@@ -289,7 +279,6 @@ if ( {) {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ userId, amount })
-=======
     try {;
       const accounts = await eth && eth.request({ method: "eth_requestAccounts" }),;
       setEthAddress(accounts?.[0] || null);
@@ -312,7 +301,6 @@ if ( {) {
             <span className='text-2xl'>⚡</span>;
               <div className='text-sm text-gray-500'>Balance</div>;
               <div className='text-2xl font-semibold'>;
-=======
       const accounts = await eth.request ({ method: "eth_requestAccounts" }),
       setEthAddress (accounts?.[0] || null);
     } catch (e) {
@@ -352,7 +340,6 @@ if ( {) {
             <span className='text - 2xl'>⚡</span>;
               <div className='text - sm text - gray - 500'>Balance</div>;
               <div className='text - 2xl font - semibold'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {balance} {symbol}
               </div>;
             </div>;
@@ -461,7 +448,6 @@ if ( {) {
               <button
                 className='px-3 py-1 rounded border'
                 onClick={() => redeem(500)}
-=======
           <button;
             on_click={connect_wallet}
             className='px - 3 py - 1 text - sm rounded border';
@@ -559,13 +545,11 @@ if ( {) {
               <button;
                 className='px - 3 py - 1 rounded border';
                 on_click={() => redeem (500)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               >;
                 Redeem 500;
               </button>;
             </div>;
 
-=======
           <div className="h-2 bg-gray-200 rounded">
             <div className="h-2 bg-yellow-400 rounded" style={{ width: `${progress}%` }} />
           </div>
@@ -616,8 +600,6 @@ if ( {) {
 }
 
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       </div>;
     </div>;
   );
@@ -625,7 +607,6 @@ if ( {) {
   );
 }
 
-=======
             <div className='text - xs text - gray - 500'>;
               Coming soon: Redeem for branded perks and courses.;
             </div>          </div>            <div className="text - xs text - gray - 500">Coming soon: Redeem for branded perks and courses.</div>;
@@ -633,10 +614,6 @@ if ( {) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

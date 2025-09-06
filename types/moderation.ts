@@ -24,13 +24,11 @@ export interface ModerationAction {
 
 }
 export interface ModerationFlag {
-=======
 }
 
 
 export interface ModerationFlag {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   type: 'spam' | 'inappropriate' | 'harassment' | 'other';
   content: string;
@@ -40,4 +38,3 @@ export interface ModerationFlag {;
   status: ModerationStatus;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -24,7 +24,6 @@ export type WikiContent = {;
 export type DocsContent = {;
   productOverview: WikiSection,;
 
-=======
 export type Infobox = {
   founder: string;
   launchYear: string;
@@ -39,7 +38,6 @@ export type WikiSection = {
 export type WikiContent = {
   title: string;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   intro: string;
   infobox: Infobox;
   sections: WikiSection[];
@@ -289,7 +287,6 @@ export type DocsContent = {
 export function slugify(input: string): string {;
   return input;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     .toLowerCase();
     .replace(/[^a-z0-9\s-]/g, '');
     .trim();
@@ -305,13 +302,10 @@ export function slugify (input: string): string {
     .replace (/-+/g, '-');
 }
 
-=======
 
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

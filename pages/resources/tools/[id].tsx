@@ -19,7 +19,6 @@ import { useRouter } from 'next/router';
       type: 'Interactive Tool',
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <ul>
           <li>A detailed readiness score and analysis</li>
           <li>Specific recommendations for improvement</li>
@@ -67,7 +66,6 @@ import { useRouter } from 'next/router';
         <p>To effectively use this framework: </p>
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <ol>
           <li>Assess your current state across all dimensions</li>
           <li>Identify gaps between current and target maturity levels</li>
@@ -142,7 +140,6 @@ import { useRouter } from 'next/router';
         <p>Based on benchmark results, develop action plans that include: </p>
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <ul>
           <li>Specific performance improvement targets</li>
           <li>Resource requirements and investment plans</li>
@@ -159,10 +156,7 @@ import { useRouter } from 'next/router';
 
 
 
-=======
 
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -341,11 +335,8 @@ export default function ToolResourcePage(req, res) {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const tool = tools.find(t => t.id === id),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (!tool) {
     return (
       <>
@@ -407,7 +398,6 @@ export default function ToolResourcePage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{tool.title}</h1>
@@ -423,7 +413,6 @@ export default function ToolResourcePage(req, res) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   />
                 </div>
               </div>
@@ -535,7 +524,6 @@ export default function ToolResourcePage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </ul>
                 </div>
 
@@ -573,10 +561,8 @@ export default function ToolResourcePage(req, res) {
       </div>
     </>
 
-=======
 }
 
-=======
       estimated_time: '15 minutes',
       full_content: `;
         <h2 > About This Tool</h2>;
@@ -838,9 +824,5 @@ if ( {) {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

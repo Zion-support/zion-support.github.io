@@ -25,11 +25,8 @@ export function TemplateSaveForm(): any ({;
   const { createTemplate, updateTemplate } = useContractTemplates();
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -44,7 +41,6 @@ import { Input } from "@/components/ui/input",
 import { Switch } from "@/components/ui/switch",
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
   isDefault: z.boolean().default(false)}),
@@ -98,18 +94,12 @@ interface TemplateSaveFormProps {
     }
   };
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   },
-=======
   };
-=======
   },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
@@ -167,7 +157,6 @@ interface TemplateSaveFormProps {
   );
 }
 
-=======
 import { useState } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -283,4 +272,3 @@ if ( {) {
       </form>;
     </Form>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

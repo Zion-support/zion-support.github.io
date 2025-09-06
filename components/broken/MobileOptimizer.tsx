@@ -1,7 +1,5 @@
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 setIsTablet (isTabletDevice);
 
 //Apply mobile - specific optimizations // Check condition
@@ -99,7 +97,6 @@ animationFrameId = requestAnimationFrame (measurePerformance);
   (navigator as any) .getBattery () .then ( (battery: unknown) => {;
   const updateBatteryLevel = () => {;
   setPerformanceMetrics (prev => ({;
-=======
 }animationFrameId = requestAnimationFrame (measure_performance);
 }
 animationFrameId = requestAnimationFrame (measure_performance);
@@ -112,7 +109,6 @@ if ( {) {
   (navigator as any) .get_battery () .then ( (battery: unknown) => {
   const updateBatteryLevel = () =>: any {
   setPerformanceMetrics (prev => ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   updateBatteryLevel ();
 
 battery && battery.addEventListener ('levelchange', updateBatteryLevel);
@@ -347,13 +343,11 @@ children ;
 export default MobileOptimizer;
 
 export default MobileOptimizer;
-=======
 export default MobileOptimizer;
 export default MobileOptimizer;
 
 
 
-=======
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -960,10 +954,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   )
 };
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default MobileOptimizer;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 images.for_each (img => {
   // Check condition
 if (img.loading = 'lazy') {
@@ -1026,4 +1017,3 @@ children;
 export default MobileOptimizer;
 export default MobileOptimizer;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

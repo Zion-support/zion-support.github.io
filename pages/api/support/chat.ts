@@ -37,7 +37,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         matchedArticleIds: intent && intent.matchedArticleIds,
         links: matchedArticles && matchedArticles.map((a) => ({ title: a && a.title, href: `/help/${a && a.slug}` }))}})
 
-=======
   const matchedArticles = articles.filter((a) => intent.matchedArticleIds.includes(a.id));
   const context = matchedArticles
     .map((a) => `- ${a.title}: /help/${a.slug}`)
@@ -58,7 +57,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json({
       assistantMessage,
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import OpenAI from './openai';
 import { read_json  } from '../../../utils / fs_db';
@@ -77,12 +75,10 @@ function handler() {
   const { session_id, messages } = req.body as {
     session_id?: string;
     messages: Array<{ role: "user" | "assistant" | "system"; content: string }>;
-=======
 
     return res.status(200).json({ assistantMessage: 'I could not reach the assistant right now. Please try again in a moment.' })
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   if ()) {
   $2
@@ -130,7 +126,6 @@ function handler() {
 ;
     return res.status (200).json ({
       assistant_message,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       meta: {
         intent_matched: intent.intent_matched,
         matchedArticleIds: intent.matchedArticleIds,
@@ -142,9 +137,6 @@ function handler() {
       },
 
     });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   } catch (e: any) {
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

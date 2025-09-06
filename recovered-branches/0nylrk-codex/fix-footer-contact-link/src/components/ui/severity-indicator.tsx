@@ -34,7 +34,6 @@ export function SeverityIndicator({
 
   className 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }: SeverityIndicatorProps) {
   const getSeverityIcon = () => {
     switch (severity) {
@@ -47,7 +46,6 @@ export function SeverityIndicator(): any ({ ;
   showText = true, ;
   size = "md";
   className ;
-=======
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
           "text-destructive"
         )} />,
@@ -74,7 +72,6 @@ export function SeverityIndicator(): any ({ ;
   )
 
 
-=======
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
@@ -99,7 +96,6 @@ export function SeverityIndicator({;
       case 'dangerous':;
         return <AlertCircleclassName={cn(
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           "text-destructive"
         )} />;
       case 'suspicious':;
@@ -125,8 +121,6 @@ export function SeverityIndicator({;
   );
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { cn } from '@/lib / utils';
 import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
@@ -163,4 +157,3 @@ function SeverityIndicator() {
       {show_text && <span className="capitalize text - sm">{severity}</span>}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

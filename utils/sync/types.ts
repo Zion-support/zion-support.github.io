@@ -14,10 +14,8 @@ export interface InstanceConfig {
   peers: Peer[],
   secret_configured: boolean;
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export type SyncEventType =;
   | "proposal";
@@ -57,7 +55,6 @@ export interface TalentMobilityPayload extends BaseEventPayload {;
   | "leaderboard_entry",
 export interface BaseEventPayload {
   id: string;
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -131,7 +128,6 @@ export interface MultiverseState {
 
   events: SyncEvent[];
 }
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -145,4 +141,3 @@ export interface MultiverseState {;
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -14,7 +14,6 @@ export async function createNotification({;
   sendEmail = false;
   actionUrl = null;
 
-=======
 import { supabase } from "@/integrations/supabase/client",
 import { CreateNotificationParams, CreateNotificationResult } from './types',
 
@@ -36,7 +35,6 @@ export async function createNotification({
   actionUrl = null,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   actionText = null
 }: CreateNotificationParams): Promise<CreateNotificationResult> {
   void actionUrl;
@@ -94,7 +92,6 @@ export async function createNotification({;
       await supabase.functions.invoke('send-notification-email', {;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         body: { user_id: userId, notification_id: notificationId }
       })
     }
@@ -104,13 +101,9 @@ export async function createNotification({;
   } catch (error) {;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     console.error('Error creating notification:', error);
 
-=======
     console && console.error('Error creating notification:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { supabase } from '@/integrations / supabase / client';
 import {CreateNotificationParams, CreateNotificationResult} from './types';
 /**;
@@ -155,7 +148,6 @@ if ( {) {
     return { success: true, notification_id: data }
   } catch (error) {
     console.error ('Error creating notification:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return { success: false, error }
   }
 

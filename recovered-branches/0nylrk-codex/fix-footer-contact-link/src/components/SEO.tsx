@@ -6,12 +6,10 @@ interface SEOProps {
   title: string
   description: string
 
-=======
 import {Helmet} from "react-helmet-async";
 interface SEOProps {;
   title: string,;
   description: string,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   keywords?: string;
   og_image?: string;
   og_url?: string;
@@ -32,15 +30,11 @@ export function SEO(): any ({;
 
   const siteTitle = "Zion - The Future of Tech & AI Marketplace";
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
-=======
 
 import { Helmet } from "react-helmet-async",
-=======
 import {Helmet} from "react-helmet-async";
-=======
 import { Helmet } from "react-helmet-async",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface SEOProps {
   title: string,
   description: string,
@@ -48,7 +42,6 @@ interface SEOProps {
   ogImage?: string,
   ogUrl?: string,
   canonical?: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   noindex?: boolean
 }
 
@@ -63,7 +56,6 @@ interface SEOProps {
   const siteTitle = "Zion - The Future of Tech & AI Marketplace",
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle,
   
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Helmet>;
@@ -111,10 +103,8 @@ function SEO() {
       {noindex && <meta name="robots" content="noindex" />}
 
 
-=======
 
 
-=======
 import { Helmet } from "react-helmet-async",;
 interface SEOProps {;
   title: string,;
@@ -169,10 +159,6 @@ export function SEO({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </Helmet>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

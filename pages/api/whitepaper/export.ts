@@ -1,8 +1,6 @@
 
-=======
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 export default async /**
@@ -32,9 +30,6 @@ function escape_html() {
     .replace (/>/g, '&gt, ');
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
@@ -44,4 +39,3 @@ function escape_html() {
   res.status(200).json({ url })
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

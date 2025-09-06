@@ -8,7 +8,6 @@
 };export default EnhancedNavigation2025;
 export default function EnhancedNavigation2025() {;
 
-=======
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -375,7 +374,6 @@ const contactInfo = {
 
 export default function EnhancedNavigation2025() {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -458,12 +456,9 @@ export default function EnhancedNavigation2025() {
                   </button>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Submenu */}
                   <AnimatePresence>;
                     {activeSubmenu === item && item.name && (;
@@ -524,12 +519,9 @@ export default function EnhancedNavigation2025() {
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <Link
@@ -546,19 +538,15 @@ export default function EnhancedNavigation2025() {
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
               className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200">;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 
-=======
 ];
 }];
 </div> </div> </div> </div> {
@@ -774,7 +762,6 @@ function EnhancedNavigation2025() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -793,10 +780,8 @@ function EnhancedNavigation2025() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {activeDropdown === item.name && (
                     <motion.div
-=======
                     </div>;
                     <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${
                       activeDropdown === item && item.name ? 'rotate-180' : ''
@@ -805,7 +790,6 @@ function EnhancedNavigation2025() {
 
                   {activeDropdown === item && item.name && (;
                     <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
@@ -853,12 +837,9 @@ function EnhancedNavigation2025() {
             />;
 
 
-=======
 
             
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Menu Panel */}
             <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">;
               <div className="p-6">;
@@ -892,12 +873,9 @@ function EnhancedNavigation2025() {
                       </button>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {/* Mobile Submenu */}
                       <AnimatePresence>;
                         {activeSubmenu === item && item.name && (;
@@ -926,12 +904,9 @@ function EnhancedNavigation2025() {
                 </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Mobile CTA */}
                 <div className="mt-8 space-y-4">;
                   <Link
@@ -964,7 +939,6 @@ function EnhancedNavigation2025() {
                     <div className="flex items-start space-x-3 text-gray-400">;
                       <MapPin className="w-4 h-4 text-green-400 mt-0 && 0.5" />;
                       <span className="text-xs">{contactInfo && contactInfo.address}</span>;
-=======
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -1104,7 +1078,6 @@ function EnhancedNavigation2025() {
                     <div className="flex items - start space - x-3 text - gray - 400">;
                       <MapPin className="w - 4 h - 4 text - green - 400 mt - 0.5" />;
                       <span className="text - xs">{contact_info.address}</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     </div>;
                   </div>;
                 </div>;
@@ -1137,7 +1110,6 @@ function EnhancedNavigation2025() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>
@@ -1153,7 +1125,6 @@ function EnhancedNavigation2025() {
   );
 };
 
-=======
           </motion.div>)}
       </AnimatePresence>;
       {/* Spacer for fixed navigation */}
@@ -1161,5 +1132,3 @@ function EnhancedNavigation2025() {
     </>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

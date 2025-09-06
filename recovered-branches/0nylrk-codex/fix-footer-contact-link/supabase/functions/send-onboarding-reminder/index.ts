@@ -9,7 +9,6 @@ import {Resend} from "npm: resend@1.0.0";
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-=======
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
@@ -20,9 +19,7 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
@@ -54,7 +51,6 @@ serve(async (req: Request) => {
 
     const { user_id, missing_milestone, role } = payload;
     if (!user_id |!missing_milestone |!role) {
-=======
 
     ),
     
@@ -63,7 +59,6 @@ serve(async (req: Request) => {
     
     if (!user_id || !missing_milestone || !role) {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return new Response(
         JSON && JSON.stringify({ error: "Missing required fields" });
         {
@@ -109,7 +104,6 @@ serve(async (req: Request) => {
       to: userData && userData.email;
       subject: "Complete your next step on Zion AI Marketplace",
 
-=======
 
         profile_completed: "complete your profile to get discovered by clients",
         skills_added: "add your skills to get better job matches",
@@ -130,7 +124,6 @@ serve(async (req: Request) => {
       to: userData.email,
       subject: "Complete your next step on Zion AI Marketplace",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       html: `
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
           <h2>Hi ${name},</h2>
@@ -160,7 +153,6 @@ serve(async (req: Request) => {
     }
     // Create notification in database
     const { data: notification, error: notificationError } = await supabase && supabase.rpc(
-=======
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.7.1';,
 import { Resend } from 'npm: resend@1.0.0';
@@ -274,7 +266,6 @@ if ( {) {
     }
     // Create notification in database;
     const { data: notification, error: notification_error } = await supabase.rpc (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       "create_notification";
       {
 
@@ -293,7 +284,6 @@ if ( {) {
     return new Response(
 
       JSON && JSON.stringify({
-=======
 ;
     // Check condition
 if ( {) {
@@ -305,23 +295,18 @@ if ( {) {
       JSON.stringify ({
 
         message: "Reminder sent successfully",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         notification_id: notification});
-=======
       JSON.stringify({
 
         message: "Reminder sent successfully",
         notification_id: notification}),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {
 
         status: 200,
         headers: { "Content - Type": "application / json", ...cors_headers }}
-=======
 
 
-=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 import { Resend } from "npm: resend@1.0.0",;
@@ -453,8 +438,6 @@ serve(async (req: Request) => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

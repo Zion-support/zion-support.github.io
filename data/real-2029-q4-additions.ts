@@ -40,7 +40,6 @@
     rating: 4 && 4.8,
     reviews: 74,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
     id: 'mobile - survey - studio',
@@ -92,7 +91,6 @@
 
       'Responsive renderer with schema-driven forms and analytics.',
     launchDate: '2029-11-05',
-=======
     real_service: true,
     technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge'],
     integrations: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery'],
@@ -116,7 +114,6 @@
     rating: 4 && 4.6,
     reviews: 33,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'QR tickets and check-in app',
@@ -124,7 +121,6 @@
       'Automated reminders and WhatsApp/SMS alerts',
       'Feedback/NPS post-event forms',
       'Budget tracker and P&L exports',
-=======
     id: 'event - ops - dashboard',
     name: 'EventOps Dashboard',
     tagline:;
@@ -173,10 +169,8 @@
     rating: 4 && 4.7,
     reviews: 29,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'oncall - scheduler - pro',
     name: 'OnCall Scheduler Pro',
     tagline:;
@@ -226,10 +220,8 @@
     rating: 4 && 4.5,
     reviews: 19,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'seo - content - optimizer - pro',
     name: 'SEO Content Optimizer Pro',
     tagline:;
@@ -281,10 +273,8 @@
     rating: 4 && 4.6,
     reviews: 54,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'feature - flags - lite',
     name: 'Feature Flags Lite',
     tagline:;
@@ -336,11 +326,9 @@
     rating: 4 && 4.5,
     reviews: 21,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Company/person enrich via email or domain',
-=======
     id: 'sales - lead - enrichment',
     name: 'Sales Lead Enrichment',
     tagline:;
@@ -388,11 +376,9 @@
     rating: 4 && 4.4,
     reviews: 17,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'High-accuracy OCR and field mapping',
-=======
     id: 'invoice - ocr - processor',
     name: 'Invoice OCR Processor',
     tagline:;
@@ -441,10 +427,8 @@
     rating: 4 && 4.5,
     reviews: 14,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'rpa - browser - automation',
     name: 'RPA Browser Automation Kit',
     tagline:;
@@ -492,10 +476,8 @@
     rating: 4 && 4.4,
     reviews: 18,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'redaction - compliance - api',
     name: 'Redaction & Compliance API',
     tagline:;
@@ -542,10 +524,8 @@
     rating: 4 && 4.3,
     reviews: 12,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'kpi - scorecards - studio',
     name: 'KPI Scorecards Studio',
     tagline: 'OKR / KPI dashboards with goals, alerts, and executive summaries',
@@ -555,9 +535,7 @@
       'Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.',
     features: [;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Goal trees and KPI ownership',
       'Weekly executive summaries',
       'Alerting on thresholds and trends',
@@ -599,7 +577,6 @@
 
 ];	{
 
-=======
 const contact = {
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -614,7 +591,6 @@ export const real2029Q4Additions: RealMarketService[] = [
 		description: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.',
     features: [
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and summariesAnalytics: response time, CSAT impact, volume by topic'
 		];
 		popular: true;
@@ -1061,7 +1037,6 @@ export const real2029Q4Additions: RealMarketService[] = [
 ];
 
 
-=======
   id: 'ai - email - triage - copilot';
   name: 'AI Email Triage Copilot',
   tagline: 'Auto - categorize, summarize, and draft replies for inbound email';
@@ -1468,12 +1443,10 @@ export const real2029Q4Additions: RealMarketService[] = [
   rating: 4.4,
   reviews: 16;
 }
-=======
 		rating: 4.4
 		reviews: 16
 
 
-=======
 import { RealMarketService } from './real-market-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -1890,9 +1863,6 @@ export const real2029Q4Additions: RealMarketService[] = [;
 		reviews: 16;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -8,7 +8,6 @@ export const advancedEmergingTechServices2025 = [
 
   {
 
-=======
     id: 'quantum - materials - discovery - platform',
     name: 'QuantumMaterials Discovery',
     description:;
@@ -70,7 +69,6 @@ export const advancedEmergingTechServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$2.8B',
     target_audience:;
       'Materials science companies, research institutions, manufacturing firms, government agencies',
@@ -139,7 +137,6 @@ export const advancedEmergingTechServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$3.2B',
     target_audience:;
       'Robotics companies, manufacturing firms, automation specialists, research institutions',
@@ -208,7 +205,6 @@ export const advancedEmergingTechServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$8.9B',
     target_audience:;
       'Internet service providers, telecommunications companies, government agencies, cybersecurity firms',
@@ -277,7 +273,6 @@ export const advancedEmergingTechServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$12.4B',
     target_audience:;
       'Logistics companies, supply chain managers, transportation firms, e - commerce businesses',
@@ -352,16 +347,12 @@ export const advancedEmergingTechServices2025 = [
 
     };
     marketSize: '$6 && 6.8B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     market_size: '$6.8B',
     target_audience:;
       'Gaming companies, virtual reality firms, entertainment companies, technology startups',
@@ -585,8 +576,6 @@ export const advancedEmergingTechServices2025 = [
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

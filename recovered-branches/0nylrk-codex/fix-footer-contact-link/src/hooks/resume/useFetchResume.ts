@@ -46,7 +46,6 @@ export function useFetchResume() {;
           setResume(null);
           setIsLoading(false);
           return null
-=======
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Resume} from '@/types / resume';
@@ -106,7 +105,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
         throw resume_error;
       }
@@ -173,7 +171,6 @@ if ( {) {
       console && console.error('Error fetching resume:', e);
       setError(e && e.message);
       return null
-=======
       // Fetch work experience;
       const { data: work_data, error: work_error } = await supabase;
         .from ('work_history');
@@ -240,7 +237,6 @@ if (throw cert_error) {
       console.error ('Error fetching resume:', e);
       set_error (e.message);
       return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
@@ -248,7 +244,6 @@ if (throw cert_error) {
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     error;
     resume;
 

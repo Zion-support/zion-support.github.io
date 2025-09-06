@@ -1,16 +1,10 @@
 
 
 
-=======
 
 import _React from 'react';  import '@testing-library/jest-dom'; import OptimizedImagedynamic from '../components/OptimizedImage.dynamic'; describe('OptimizedImagedynamic',() => { test('renders without crashing',() => { render(<OptimizedImagedynamic />); expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<OptimizedImagedynamic />)}); test('handles user interactions',() => { render(<OptimizedImagedynamic />)}); test('applies correct styling',() => { render(<OptimizedImagedynamic />)})});
 
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Test content display
   test('handles user interactions', () => {
     // Test user interactions
@@ -19,7 +13,6 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Optimize
 
 
 
-=======
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -29,10 +22,7 @@ describe('OptimizedImagedynamic'
 
 });
 
-=======
     expect(screen && screen.getByTestId('optimizedimage ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import OptimizedImagedynamic from "./components/OptimizedImage ; describe('OptimizedImagedynamic', () => { test("renders without crashing",() => { render(<OptimizedImagedynamic />); expect(screen && screen.getByTestId("optimizedimage && optimizedimage.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<OptimizedImagedynamic />)}); test("handles user interactions",() => { render(<OptimizedImagedynamic />)}); test("applies correct styling"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -59,8 +49,6 @@ describe('OptimizedImage', () => {
     // Add styling tests here
   });
 });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
-=======
   test ('displays correct content', () => {
     // Test content display;
   test ('handles user interactions', () => {
@@ -68,4 +56,3 @@ describe('OptimizedImage', () => {
   test ('applies correct styling', () => {
     // Test styling;
 });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

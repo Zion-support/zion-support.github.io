@@ -9,10 +9,8 @@ export default function AdminIndex() {
       </ul>
     </div>
 
-=======
 }
 
-=======
 import Link from 'next / link',
 export default /**
  * AdminIndex - Function description
@@ -26,9 +24,6 @@ function AdminIndex() {
       </ul>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   );
   } catch (error) {
@@ -37,4 +32,3 @@ function AdminIndex() {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

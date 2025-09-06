@@ -189,10 +189,7 @@ import { useRouter } from 'next/router';
 
 
 
-=======
 
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -381,11 +378,8 @@ export default function CaseStudyResourcePage(req, res) {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (!caseStudy) {
     return (
       <>
@@ -447,7 +441,6 @@ export default function CaseStudyResourcePage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -474,10 +467,8 @@ export default function CaseStudyResourcePage(req, res) {
       </div>
     </>
 
-=======
 }
 
-=======
       description: 'Building self - healing, auto - scaling cloud infrastructure.',
       full_content: `;
         <h2 > Executive Summary</h2>;
@@ -607,9 +598,5 @@ if ( {) {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

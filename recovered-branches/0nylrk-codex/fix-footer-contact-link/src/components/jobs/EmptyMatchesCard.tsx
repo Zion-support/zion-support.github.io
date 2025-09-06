@@ -14,7 +14,6 @@ export function EmptyMatchesCard(): any ({;
 }: EmptyMatchesCardProps) {;
 
   return (
-=======
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Sparkles, RefreshCcw } from "lucide-react";
@@ -22,7 +21,6 @@ import { Sparkles, RefreshCcw } from "lucide-react";
 }
 
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
       <div className="mb-4 flex justify-center">
@@ -49,7 +47,6 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
           </>
 
 
-=======
 import { Card } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Sparkles, RefreshCcw } from "lucide-react",;
@@ -60,7 +57,6 @@ export interface EmptyMatchesCardProps {;
 ;
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {;
   return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">;
       <div className="mb-4 flex justify-center">;
         <Sparkles className="h-12 w-12 text-muted-foreground" />;
@@ -119,8 +115,6 @@ function EmptyMatchesCard() {
     </Card>);
 
 }
-=======
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

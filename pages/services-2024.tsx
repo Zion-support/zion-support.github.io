@@ -23,17 +23,13 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 
 import React, { useState, useMemo } from 'react';
 import Head from 'next / head';
 import { motion } from 'framer-motion';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
@@ -139,12 +135,9 @@ import Link from 'next/link';
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
 
-=======
-=======
 
 
 
-=======
 const Services2024Page: React.FC = () => {;
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -243,10 +236,8 @@ const Services2024Page: React.FC = () => {;
     if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500',
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500',
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return 'from-gray-500 to-slate-500'
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   const categories = [;
     {;
@@ -326,13 +317,11 @@ const Services2024Page: React.FC = () => {;
     if (variant && variant.includes('customer')) return 'from-pink-500 to-rose-500';
     return 'from-gray-500 to-slate-500';  };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/services-2024' />;
       </Head>;
-=======
     <>
       <Head>
         <title>2024 Revolutionary Services - Zion Tech Group</title>
@@ -387,8 +376,6 @@ const Services2024Page: React.FC = () => {;
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Future-Ready
                 </span>
                 <br />
@@ -408,7 +395,6 @@ const Services2024Page: React.FC = () => {;
                 <span className="text-white">Solutions</span>
               </h1>
               
-=======
 
 
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
@@ -424,7 +410,6 @@ const Services2024Page: React.FC = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400 mb-2">17</div>
@@ -438,7 +423,6 @@ const Services2024Page: React.FC = () => {;
                   <div className="text-3xl font-bold text-green-400 mb-2">1000+</div>
                   <div className="text-gray-400">Happy Customers</div>
                 </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
             </motion.div>
           </div>
@@ -506,7 +490,6 @@ const Services2024Page: React.FC = () => {;
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200"
                     />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
                 </div>
 
@@ -516,20 +499,17 @@ const Services2024Page: React.FC = () => {;
                   </div>;
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Category Filter */}
                 <div>;
                   <select
                     value={selectedCategory}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
 
                   </select>;
                 </div>;
 
-=======
                 {/* Sort */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -537,13 +517,10 @@ const Services2024Page: React.FC = () => {;
 }
                 <div className="flex space-x-2">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <select
                     value={sortBy}
                     onChange={e => setSortBy(e && e.target.value as any)}
                     className='flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200';
-=======
         default:;
           a_value = a.name.toLowerCase ();
           b_value = b.name.toLowerCase ();
@@ -776,7 +753,6 @@ if ( {) {
                     value={sort_by}
                     on_change={e => setSortBy (e.target.value as any)}
                     className='flex - 1 px - 4 py - 3 bg - black / 50 border border - cyan - 500 / 30 rounded - lg text - white focus:outline - none focus:border - cyan - 400 focus:ring - 1 focus:ring - cyan - 400 transition - all duration - 200';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   >;
                     <option value='name'>Sort by Name</option>;
                     <option value='price'>Sort by Price</option>;
@@ -794,7 +770,6 @@ if ( {) {
           </div>
         </section>
 
-=======
                   <button;
                     on_click={() =>;
                       setSortOrder (sort_order === 'asc' ? 'desc' : 'asc');
@@ -802,7 +777,6 @@ if ( {) {
                     className='px - 4 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 200';
                   >                    {sort_order === 'asc' ? '↑' : '↓'}
 
-=======
 
                     onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')} className="px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200">
                     {sortOrder === 'asc' ? '↑' : '↓'  } catch (error) {
@@ -810,7 +784,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </button>;
                 </div>;
               </div>;
@@ -900,10 +873,8 @@ if ( {) {
 
 
                         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       </div>
 
-=======
 
                       {/* Service Info */  } catch (error) {
     console.error("Error:", error);
@@ -916,9 +887,7 @@ if ( {) {
                       </h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         {service.tagline}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       </p>
-=======
                       <div className='flex items-start justify-between mb-4'>;
                         <div className='w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center'>;
                           {React && React.createElement(;
@@ -928,7 +897,6 @@ if ( {) {
                             }
                           )}
                         </div>;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         <div className='text-right'>;
                           <div className='text-2xl font-bold text-cyan-400'>;
                             {service && service.price}
@@ -947,7 +915,6 @@ if ( {) {
 
                       {/* Features */}
 
-=======
                       <div className="mb-6">
                         <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Key Features</h4>
                         <div className="space-y-2">
@@ -992,7 +959,6 @@ if ( {) {
                           {service.features.length > 3 && (
                             <div className='text - sm text - cyan - 400'>                              +{service.features.length - 3} more features;
                             </div>)}
-=======
 
                           )  } catch (error) {
     console.error("Error:", error);
@@ -1008,7 +974,6 @@ if ( {) {
                           <div className='flex items - center justify - center space - x-1 mb - 1'>;
                             <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                             <span className='text - sm font - semibold text - white'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                               {service.rating}
                             </span>;
                           </div>;
@@ -1035,7 +1000,6 @@ if ( {) {
                           <div className="text-sm font-semibold text-white mb-1">{service.launchDate}</div>
                           <div className="text-xs text-gray-400">Launched</div>
                         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       </div>
 
                         </div>;
@@ -1068,9 +1032,7 @@ if ( {) {
 
                       {/* CTA */}
 
-=======
                       <div className="flex items-center justify-between">
-=======
 
                       {/* CTA */  } catch (error) {
     console.error("Error:", error);
@@ -1080,7 +1042,6 @@ if ( {) {
                       <div className="flex items-center justify-between">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <Link
                           href={service.link} className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group">
                           <span className="font-medium">Learn More</span>
@@ -1093,7 +1054,6 @@ if ( {) {
                     </div>
                   </motion.div>
 
-=======
 
                       <div className="grid grid-cols-3 gap-4 mb-6">;
                         <div className="text-center">;
@@ -1148,7 +1108,6 @@ if ( {) {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* CTA Section */}
         <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
@@ -1161,7 +1120,6 @@ if ( {) {
                 Ready to Transform Your Business?;
               </h2>;
               <p className='text-xl text-gray-300 mb-8 leading-relaxed'>;
-=======
                           </div>;
                           <div className='text - xs text - gray - 400'>Customers</div>;
                         </div>;
@@ -1203,7 +1161,6 @@ if ( {) {
                 Ready to Transform Your Business?;
               </h2>;
               <p className='text - xl text - gray - 300 mb - 8 leading - relaxed'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Join thousands of businesses already leveraging our;
                 revolutionary 2024 services. Get started today and experience;
                 the future of technology.;
@@ -1227,7 +1184,6 @@ if ( {) {
                   <span>View Pricing Plans</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
             </motion.div>
           </div>
@@ -1248,11 +1204,9 @@ if ( {) {
   ),;
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Services2024Page;
 
 
-=======
               <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>;
                 <Link;
                   href='/contact';
@@ -1275,10 +1229,7 @@ export default Services2024Page;
     </>),
 }
 ;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Services2024Page;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

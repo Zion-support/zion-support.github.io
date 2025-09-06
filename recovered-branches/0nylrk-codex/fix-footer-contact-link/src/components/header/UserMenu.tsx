@@ -5,7 +5,6 @@ import { use_auth  } from '@/hooks / use_auth';
 import { use_toast  } from '@/hooks / use - toast';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';
 import { Button  } from '@/components / ui / button';
-=======
 import { Link } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
@@ -52,7 +51,6 @@ export function UserMenu() {;
       });
     }
   }
-=======
       toast({
 
         title: "Error signing out",
@@ -61,7 +59,6 @@ export function UserMenu() {;
     }
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   if (!user) {;
     return (
@@ -125,7 +122,6 @@ export function UserMenu() {;
             <AvatarFallback>;
               {user && user.displayName?.charAt(0).toUpperCase() || "U"}
             </AvatarFallback>;
-=======
 
   )
 import { Link } from "react-router-dom",;
@@ -205,7 +201,6 @@ export function UserMenu() {;
         <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>;
       </DropdownMenuContent>;
     </DropdownMenu>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 
       toast ({
@@ -277,9 +272,6 @@ if ( {) {
     </DropdownMenu>);
 
 }
-=======
 }
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,13 +1,10 @@
 
 
       } catch {}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
     return rows;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch {
     return [];
   }
@@ -21,7 +18,6 @@
     .map(([label, value]) => ({ label, value }))
 
     .sort((a, b) => b.value - a.value);
-=======
 
 
     .sort((a, b) => b.value - a.value),
@@ -44,7 +40,6 @@
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 
 
-=======
 function featureFromPath (page?: string): string {
 // Check condition
 if (return 'other', ) {
@@ -95,12 +90,8 @@ function handler() {
   res.status (200).json ({ pagesMostUsed, events, line, funnel });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 };
 
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     await ensureAdminFromApi(req);
@@ -121,5 +112,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

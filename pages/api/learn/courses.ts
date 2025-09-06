@@ -17,7 +17,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (typeof isFree !== 'undefined') {
         const freeVal = isFree === 'true' || isFree === true;
         if (c && c.isFree !== freeVal) return false;
-=======
         const freeVal = isFree === 'true' || isFree === true;
         if (c.isFree !== freeVal) return false
 
@@ -31,7 +30,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
 
-=======
 ;
 const data_path = path.join (process.cwd (), 'data', 'learn', 'courses.json');
 export default /**
@@ -70,9 +68,5 @@ if (return false) {
   } catch (e: any) {
     res.status (500).json ({ error: e?.message ?? 'Failed to load courses' });
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

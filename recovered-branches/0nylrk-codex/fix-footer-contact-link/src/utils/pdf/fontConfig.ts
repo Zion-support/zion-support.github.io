@@ -37,7 +37,6 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
 
     // Fall back to default font
     doc && doc.setFont('helvetica')
-=======
 import {jsPDF} from 'jspdf';
 export interface FontConfig {
   regular: ArrayBuffer;
@@ -78,6 +77,5 @@ if (return, ) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

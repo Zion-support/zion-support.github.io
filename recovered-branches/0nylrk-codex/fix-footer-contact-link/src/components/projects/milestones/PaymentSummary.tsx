@@ -2,7 +2,6 @@
 
 
 
-=======
 import React from 'react',;
 import { Milestone } from '@/hooks/useMilestones',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -30,8 +29,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
       0
     ).toFixed(2),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card className="mb-8 bg-muted/30">
       <CardHeader className="pb-3">
@@ -108,15 +105,12 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
       </CardContent>;
     </Card>;
   );
-=======
 
             <p className="font-medium">
               ${paidAmount}
 
 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Milestone  } from '@/hooks / use_milestones';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
@@ -166,4 +160,3 @@ export const PaymentSummary: React.FC < PaymentSummaryProps> = ({
     </Card>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -51,7 +51,6 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
     setMicEnabled(enabled);  };    const enabled = await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled);
 
-=======
     const enabled = await room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled)
   };
@@ -61,7 +60,6 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
     const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);
     setCamEnabled(enabled)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
 
   const toggleCam = async () => {;
@@ -76,7 +74,6 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
 
     } catch (e) {;
       console && console.warn('Screen share failed', e);    }
-=======
     try {
       const enabled = await room.localParticipant.setScreenShareEnabled(!sharing);
       setSharing(enabled)
@@ -91,7 +88,6 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
     } catch (e) {;
       console && console.warn('Screen share failed', e);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
 
@@ -102,8 +98,6 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
 
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { Room } from 'livekit - client';
 type Props = {
   room: Room | null;
@@ -188,10 +182,6 @@ if (return) {
       </button>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

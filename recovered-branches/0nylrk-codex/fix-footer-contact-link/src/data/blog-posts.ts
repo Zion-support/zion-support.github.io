@@ -5,7 +5,6 @@
     title: '10 Emerging AI Trends to Watch in 2025'
     slug: 'ai-trends-2025'
     excerpt:
-=======
 
 import { BlogPost } from '@/types/blog';
 
@@ -18,7 +17,6 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'ai-trends-2025',
     excerpt:;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.',    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>    id: "ai-trends-2025";
     title: "10 Emerging AI Trends to Watch in 2025";
     slug: "ai-trends-2025"
@@ -38,7 +36,6 @@ export const BLOG_POSTS: BlogPost[] = [
     is_featured: true,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
     id: 'optimize - ai - listings',
@@ -52,9 +49,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.";
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
 <h2>Crafting an Irresistible Service Title</h2>
 <p>Your title is the first element potential clients see. It should be specific, include relevant keywords, and clearly communicate your unique value proposition. Avoid generic terms and focus on the specific problems you solve or results you deliver.</p>
@@ -77,7 +72,6 @@ export const BLOG_POSTS: BlogPost[] = [
       'https://images.unsplash.com / photo - 1508921340878 - ba53e1f016ec?auto = format & fit = crop & w=1200 & h=630',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
     id: 'green - it',
@@ -92,7 +86,6 @@ export const BLOG_POSTS: BlogPost[] = [
 
 
     content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>
-=======
 
 <p>Social proof is powerful. Actively request detailed reviews from satisfied clients, and feature the most compelling testimonials prominently in your listing. Respond professionally to all feedback, including any critical reviews.</p>`,
     author: {
@@ -110,8 +103,6 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "green-it",
     title: "Green IT: Reducing Your Data Center's Carbon Footprint",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <h2>Energy-Efficient Hardware Selection</h2>
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
 <h2>Optimizing Cooling Systems</h2>
@@ -133,7 +124,6 @@ export const BLOG_POSTS: BlogPost[] = [
       'https://images.unsplash.com / photo - 1473876637954 - 4b493d59fd97?auto = format & fit = crop & w=1200 & h=630',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
     id: 'ai - ethics - frameworks',
@@ -157,12 +147,9 @@ export const BLOG_POSTS: BlogPost[] = [
       'https://images.unsplash.com / photo - 1454165804606 - c3d57bc86b40?auto = format & fit = crop & w=1200 & h=630',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
 <p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`;
-=======
 
 <p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`,
 
@@ -207,7 +194,6 @@ export const BLOG_POSTS: BlogPost[] = [
       'https://images.unsplash.com / photo - 1581091226825 - a6a2a5aee158?auto = format & fit = crop & w=1200 & h=630',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
     id: 'ai - compute - optimization',
@@ -226,7 +212,6 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Infrastructure"
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
     featuredImage: "https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"
-=======
     content: `<p > As AI models grow in complexity, so do their computational requirements. This practical guide explores strategies for optimizing AI infrastructure for the optimal balance between performance, cost, and development efficiency.</p>;
 <h2 > Right - sizing Compute Resources</h2>;
 <p > Many organizations overprovision computing resources for AI workloads. Implementing proper benchmarking and profiling helps identify true requirements and eliminate waste. Consider different compute profiles for development, training, and inference stages.</p>;
@@ -252,12 +237,10 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Infrastructure",
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
     featured_image: "https://images.unsplash.com / photo - 1558494949 - ef010cbdcc31?auto = format & fit = crop & w=1200 & h=630";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 ];
 
       'https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630',
-=======
     },
     published_date: 'Mar 15, 2025',
     read_time: '6 min read',
@@ -272,16 +255,12 @@ export const BLOG_POSTS: BlogPost[] = [
       'https://images.unsplash.com / photo - 1558494949 - ef010cbdcc31?auto = format & fit = crop & w=1200 & h=630',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 
 }];
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
       name: "Michael Wong",
       title: "ML Infrastructure Architect",
       avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
@@ -460,5 +439,3 @@ export const BLOG_POSTS: BlogPost[] = [;
 ];
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

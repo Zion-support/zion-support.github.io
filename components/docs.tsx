@@ -88,7 +88,6 @@ export default function DocsPage() {;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
-=======
   });
 
   const getDifficultyColor = (difficulty: string) => {
@@ -98,7 +97,6 @@ export default function DocsPage() {;
       case 'Advanced': return 'bg-red-500/20 text-red-400';
       default: return 'bg-gray-500/20 text-gray-400'
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   };
 
   const sections = [;
@@ -184,7 +182,6 @@ export default function DocsPage() {;
   const getDifficultyColor = (difficulty: string) => {;
     switch (difficulty) {;
       case 'Beginner':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return 'bg-green-500/20 text-green-400';
       case 'Intermediate':;
         return 'bg-yellow-500/20 text-yellow-400';
@@ -196,11 +193,9 @@ export default function DocsPage() {;
 
 
   };
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
 
@@ -213,7 +208,6 @@ export default function DocsPage() {;
 
       case 'Advanced': return 'bg-red-500/20 text-red-400',;
       default: return 'bg-gray-500/20 text-gray-400';
-=======
 
   };
 
@@ -225,7 +219,6 @@ export default function DocsPage() {;
     });  };      day: 'numeric';
     });
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
 
@@ -259,15 +252,12 @@ export default function DocsPage() {;
                       <a
 
 
-=======
 
                       </a>                    </li>
 
                     </li>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
                 </ul>;
               </Card>;
@@ -347,7 +337,6 @@ export default function DocsPage() {;
 
   );
 }
-=======
               ))}
             </ul>
           </Card>
@@ -367,8 +356,6 @@ export default function DocsPage() {;
 
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                       </a>                    </li>      </Head>;
       <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-6xl mx - auto space - y-10">;
@@ -451,18 +438,13 @@ export default function DocsPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 ;
 }
 
-=======
 
               ))}
             </ul>
           </Card>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

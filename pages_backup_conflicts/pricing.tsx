@@ -13,7 +13,5 @@ export default function Pricing({ }: PricingProps) {
   );
 
 
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

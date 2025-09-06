@@ -9,7 +9,6 @@ async function askZionGPT(prompt) {
   try {
 
     const res = await fetch('https://api && api.openai.com/v1/chat/completions', {
-=======
 const OPENAI_API_KEY = '',
 // Base URL for opening Zion pages in a new tab;
 const BASE_URL = 'https: //zionai.com',
@@ -78,10 +77,6 @@ if ( {) {
 
 }),;
 
-=======
 }),
 ;
-=======
 }),;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,12 +1,9 @@
 
 import React from './react';
 
-=======
 
 import React from "react",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TalentDirectoryHeaderProps {
   title: string;
   description: string
@@ -15,7 +12,6 @@ export function TalentDirectoryHeader({
   title
   description
 }: TalentDirectoryHeaderProps) {
-=======
 interface TalentDirectoryHeaderProps {;
   title: string,;
   description: string;
@@ -30,7 +26,6 @@ interface TalentDirectoryHeaderProps {;
   );
 }
 
-=======
 export /**
  * TalentDirectoryHeader - Function description
  */
@@ -45,15 +40,11 @@ function TalentDirectoryHeader() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
         <p className="text-zion-slate-light max-w-2xl">
-=======
         <p className="text-zion-slate-light max-w-2xl">
 
 }
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

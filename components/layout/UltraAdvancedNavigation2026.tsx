@@ -326,7 +326,6 @@ const companyLinks = [
   { name: 'Blog & Resources', href: '/blog', icon: BookOpen }
   { name: 'Careers', href: '/careers', icon: Users }
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-=======
 ];
 
 const companyLinks = [
@@ -342,7 +341,6 @@ const companyLinks = [
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const UltraAdvancedNavigation2026 = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -558,7 +556,6 @@ const UltraAdvancedNavigation2026 = () => {;
         { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' },;
 
 
-=======
 
           name: 'DevOps',
           href: '/services?category=devops',
@@ -568,7 +565,6 @@ const UltraAdvancedNavigation2026 = () => {;
     },  ];        { name: 'Cloud Solutions', href: '/services?category=cloud', description: 'Cloud infrastructure and services' },
         { name: 'Cybersecurity', href: '/services?category=security', description: 'Advanced security solutions' },
         { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' },
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ];
     }
@@ -576,21 +572,17 @@ const UltraAdvancedNavigation2026 = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const contactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const contactInfo = {;
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
 
-=======
         { name: 'AI Autonomous Agents', href: '/services?category=ai-autonomous', description: 'Fully autonomous AI systems' },
         { name: 'AI Consciousness', href: '/services?category=ai-consciousness', description: 'Consciousness simulation and interfaces' },
         { name: 'AI Healthcare', href: '/services?category=ai-healthcare', description: 'Medical AI and diagnostics' },
@@ -600,7 +592,6 @@ const UltraAdvancedNavigation2026 = () => {;
       ]
     };
     {
-=======
     services: [;
       {
         name: 'Autonomous Supply Chain',
@@ -894,7 +885,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
                 <div className="text-xs text-gray-400">Revolutionary Technology Solutions</div>
               </div>
             </Link>
-=======
             <Link href='/' className='flex items-center space-x-3 group'>;
               <div className='relative'>;
                 <div className='w-12 h-12 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;
@@ -915,7 +905,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {/* Dropdown Menu */}
                   <AnimatePresence>;
                     {activeDropdown === item && item.name && (;
@@ -934,11 +923,9 @@ const UltraAdvancedNavigation2026 = () =>: any {
                                   {subItem.description}
                                 </div>
                               </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                             ))}
 
                           </div>;
-=======
                           
                           <Link
                             href={item.href}
@@ -960,7 +947,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
                             className='block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'                            onClick={() => setActiveDropdown(null)}                          ;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           <Link
                             href={item && item.href}
                             className="block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200">;
@@ -972,11 +958,9 @@ const UltraAdvancedNavigation2026 = () =>: any {
                   </AnimatePresence>;
                 </div>;
               ))}
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Quick Links */}
 
 
@@ -1001,14 +985,12 @@ const UltraAdvancedNavigation2026 = () =>: any {
                 </Link>
               </div>
             </div>
-=======
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'>                  Contact                  All Services;
                 </Link>;
                 <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">;
                   Pricing;
                 </Link>;
                 <Link href="/contact" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">;
-=======
                               </p>;
                             </div>;
                           </div>;
@@ -1086,13 +1068,11 @@ const UltraAdvancedNavigation2026 = () =>: any {
                   Pricing;
                 </Link>;
                 <Link href="/contact" className="text - gray - 300 hover:text - white transition - colors duration - 200 font - medium">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Contact;
                 </Link>;
               </div>;
             </div>;
 
-=======
             <div className="hidden lg:flex items-center space-x-4">
               <div className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
                 <Phone className="w-4 h-4" />
@@ -1103,19 +1083,15 @@ const UltraAdvancedNavigation2026 = () =>: any {
                 className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
               >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 Get Started
 
               </Link>;
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -1127,22 +1103,17 @@ const UltraAdvancedNavigation2026 = () =>: any {
       </nav>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
-=======
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>;
         {is_open && (
           <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -1151,23 +1122,19 @@ const UltraAdvancedNavigation2026 = () =>: any {
             onClick={() => setIsOpen(false)}
           >;
             <motion&& motion.div
-=======
 
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}
 
             onClick={() => setIsOpen(false)}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Mobile Menu Header */}
               <div className="flex items-center justify-between mb-8">;
                 <div className="flex items-center space-x-3">;
@@ -1210,7 +1177,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
                     className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'                    onClick={() => setIsOpen(false)}                    href="/pricing";
                     className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium";
 
-=======
                 <div className="space-y-3 pt-4">
                   <Link
                     href="/services"
@@ -1223,7 +1189,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
                     href="/pricing"
                     className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     onClick={() => setIsOpen(false)}
                   >;
                     Pricing;
@@ -1274,7 +1239,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
                     <span className="text-sm">{contactInfo.address}</span>
                   </div>
                 </div>
-=======
                     className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'                    onClick={() => setIsOpen(false)}                  </div>;
                   <div className="flex items-center space-x-3 text-gray-300">;
                     <Mail className="w-4 h-4" />;
@@ -1286,7 +1250,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
                   </div>;
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Get Started Button - Mobile */}
 
             className='fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 40 lg:hidden'            on_click={() => setIsOpen (false)}            className="fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 40 lg:hidden";
@@ -1441,13 +1404,11 @@ const UltraAdvancedNavigation2026 = () =>: any {
       <div className="h-20"></div>
     </>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }
 export default UltraAdvancedNavigation2026;
 
 
-=======
             </motion.div>;
           </motion.div>)}
       </AnimatePresence>;
@@ -1460,11 +1421,8 @@ export default UltraAdvancedNavigation2026;    </>);
 }
 export default UltraAdvancedNavigation2026;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
@@ -1473,5 +1431,3 @@ export default UltraAdvancedNavigation2026;
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

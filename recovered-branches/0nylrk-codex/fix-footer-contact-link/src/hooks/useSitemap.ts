@@ -48,7 +48,6 @@ export function useSitemap() {;
     findRouteByPath;
 
     canAccessRoute
-=======
 import {use_auth} from './use_auth';
 import {getAccessibleRoutes} from '@/config / sitemap';
 import type { SitemapItem } from '@/config / sitemap';
@@ -111,6 +110,5 @@ if (return false) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

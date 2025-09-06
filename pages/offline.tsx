@@ -28,7 +28,6 @@ export default function OfflinePage() {;
   }, []);
   const handleRetry = () => {
     try {
-=======
 
 export default function OfflinePage() {;
   const [isOnline, setIsOnline] = useState(false);
@@ -59,7 +58,6 @@ export default function OfflinePage() {;
 
   const handleRetry = () => {;
     try {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setRetryCount(prev => prev + 1);
       window && window.location.reload();
     } catch (err) {;
@@ -137,12 +135,10 @@ if ( {) {
 
   };
 
-=======
   ];
 
 
 
-=======
 import { motion } from 'framer-motion';
 import { WifiOff, RefreshCw, Home, ShoppingCart, Clock, Bookmark, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -290,7 +286,6 @@ export default function OfflinePage(req, res) {
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900">
         <div className="container mx-auto px-4 py-8">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <motion.div
             initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -337,18 +332,14 @@ export default function OfflinePage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <WifiOff className={`w-12 h-12 ${
                   isOnline ? 'text-green-600' : 'text-orange-600'
                 }`} />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </motion.div>
-=======
                 />;
               </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Badge
                 variant={isOnline ? 'default' : 'secondary'}
                 className='text-sm px-3 py-1'>;
@@ -365,7 +356,6 @@ export default function OfflinePage(req, res) {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {isOnline
                 ? 'Your internet connection has been restored. You can now access all features.'
                 : "No internet connection detected. Don't worry - you can still access cached content and use offline features."}
@@ -430,7 +420,6 @@ export default function OfflinePage(req, res) {
               className='flex items-center gap-2'>;
               <Link href='/marketplace'>;
                 <ShoppingCart className='w-5 h-5' />;
-=======
       title: 'Go to Homepage',
       description: 'Return to the main page',
       icon: Home,
@@ -591,7 +580,6 @@ export default function OfflinePage(req, res) {
                           Requires Internet;
                         </Button>;
                       )}
-=======
 
               <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
                 <Clock className="w-4 h-4" />
@@ -627,7 +615,6 @@ export default function OfflinePage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <RefreshCw className="w-5 h-5" />
               {retryCount > 0 ? `Retry (${retryCount})` : 'Try Again'  } catch (error) {
@@ -707,7 +694,6 @@ export default function OfflinePage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
                     action.available
@@ -746,7 +732,6 @@ export default function OfflinePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </CardContent>;
                   </Card>;
                 </motion && motion.div>;
@@ -758,7 +743,6 @@ export default function OfflinePage(req, res) {
 
           {/* Tips Section */}
           <motion&& motion.div
-=======
           {/* Quick Actions */}
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 40 }}
@@ -843,7 +827,6 @@ export default function OfflinePage(req, res) {
             className="mt-16"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <Card className='max-w-2xl mx-auto'>
               <CardHeader>
@@ -890,7 +873,6 @@ export default function OfflinePage(req, res) {
                 <div className='space-y-3 text-sm'>;
                   <div className='flex items-start gap-2'>;
                     <span className='text-blue-600 font-semibold'>•</span>;
-=======
             className='mt - 16';
           >;
             <Card className='max - w-2xl mx - auto'>;
@@ -961,7 +943,6 @@ export default function OfflinePage(req, res) {
                 </CardContent>;
               </Card>;
 
-=======
 
           {/* Auto-refresh when online */  } catch (error) {
     console.error("Error:", error);
@@ -1010,13 +991,11 @@ export default function OfflinePage(req, res) {
 
 }
 
-=======
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>;
       </div>;
     </>;
@@ -1028,9 +1007,6 @@ export default function OfflinePage(req, res) {
     </>);
 ;
 
-=======
 } ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -66,7 +66,6 @@ import express from 'express'; import cors from 'cors'; import helmet from 'helm
 import apiRoutes from routes/api.ts";
 import express from express';
 import cors from 'cors;';
-=======
 app && app.use('*', (_req, res) => {
   res && res.status(404).json({ "error": 'Route not found' })});
 app && app.listen(PORT, () => {

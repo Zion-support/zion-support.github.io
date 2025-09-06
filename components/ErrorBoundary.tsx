@@ -1,8 +1,5 @@
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 'use client';
 
 ;
@@ -10,10 +7,8 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 ;
 
 interface Props {
-=======
 
 interface Props {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   children: ReactNode;
   level?: string;
   fallback?: ReactNode;
@@ -22,7 +17,6 @@ interface Props {;
 }
 
 
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
@@ -43,20 +37,14 @@ interface Props {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface State {
-=======
 
 interface State {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   hasError: boolean;
   error?: Error;
 
-=======
 
 
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -69,7 +57,6 @@ interface Props {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -79,7 +66,6 @@ class ErrorBoundary extends Component<Props, State> {
   static getDerivedStateFromError(error: Error): State {
 
 
-=======
 class ErrorBoundary extends Component<Props, State> {;
   constructor(props: Props) {;
     super(props);
@@ -88,31 +74,22 @@ class ErrorBoundary extends Component<Props, State> {;
 
   static getDerivedStateFromError(error: Error): State {;
     // Update state so the next render will show the fallback UI;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return { hasError: true, error };
-=======
     return { hasError: true, error }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   }
 
 
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       error,
       error_info;
     });
 
-=======
 
-=======
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
@@ -120,16 +97,12 @@ class ErrorBoundary extends Component<Props, State> {;
     }
 
 
-=======
     console.error('Error caught by boundary:', error, errorInfo);    this.setState({
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       error
       errorInfo
     });
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     // Log error to external service (e.g., Sentry)
     if (typeof window !== 'undefined' && (window as any).Sentry) {
       (window as any).Sentry.captureException(error, { extra: errorInfo });    }
@@ -164,25 +137,19 @@ class ErrorBoundary extends Component<Props, State> {;
       console && console.error('Production error:', error, errorInfo);
 
     }
-=======
     }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     // You can also log the error to an error reporting service here
     // Example: logErrorToService(error, errorInfo);
-=======
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
->>>>>>> origin/automation-improvements-final
   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Fallback UI
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -221,7 +188,6 @@ class ErrorBoundary extends Component<Props, State> {;
               </details>
             )}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -258,7 +224,6 @@ class ErrorBoundary extends Component<Props, State> {
               </button>;
               <button
 
-=======
       return this.props.fallback || (
         <div className="min-h-screen bg-slate-950 flex items-center justify-center">
           <div className="text-center text-white max-w-md mx-auto p-6">
@@ -286,7 +251,6 @@ class ErrorBoundary extends Component<Props, State> {
 
 
 
-=======
                 onClick={() => this.setState({ hasError: false })  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -301,8 +265,6 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
                 className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 Try Again
               </button>
@@ -310,7 +272,6 @@ class ErrorBoundary extends Component<Props, State> {
             {process.env.NODE_ENV === 'development' && this.state.error && (
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <details className="mt-4 p-4 bg-gray-100 rounded-md">
                 <summary className="cursor-pointer font-medium text-gray-700">
                   Error Details (Development)
@@ -319,7 +280,6 @@ class ErrorBoundary extends Component<Props, State> {
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
 
-=======
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
                   Error Details (Development)
@@ -331,7 +291,6 @@ class ErrorBoundary extends Component<Props, State> {
 
 
 
-=======
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
                   Error Details (Development)
@@ -350,11 +309,8 @@ class ErrorBoundary extends Component<Props, State> {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </pre>
               </details>
-=======
                 onClick={() => this && this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
                 className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors";
               >;
@@ -371,7 +327,6 @@ class ErrorBoundary extends Component<Props, State> {
                   {this && this.state.errorInfo?.componentStack}
                 </pre>;
               </details>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             )}
           </div>;
     // Log the error to an error reporting service;
@@ -556,7 +511,6 @@ if ( {) {
             </details>;
           )}
         </div>;
-=======
 }
   } catch (error) {
     console.error("Error:", error);
@@ -589,11 +543,8 @@ if ( {) {
             </button>
           </div>
 
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       );
     }
 
@@ -632,7 +583,6 @@ class ErrorBoundary extends Component<Props, State> {;
           <div className="max-w-md w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">;
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;
               <AlertTriangle className="w-8 h-8 text-red-400" />;
-=======
             <details style={{ margin_top: '20px', text_align: 'left' }}>;
               <summary > Error Details (Development)</summary>;
               <pre style={{
@@ -682,7 +632,6 @@ if ( {) {
           <div className="max - w-md w - full bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - 2xl p - 8 text - center">;
             <div className="w - 16 h - 16 bg - red - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 6">;
               <AlertTriangle className="w - 8 h - 8 text - red - 400" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
             <h1 className="text - 2xl font - bold text - white mb - 4">;
               Something went wrong;
@@ -714,7 +663,6 @@ if ( {) {
               <button
                 onClick={() => window && window.location.reload()}
                 className="bg-transparent border border-white/20 text-white hover:bg-white/10 px-6 py-3 rounded-lg font-semibold transition-colors duration-200">;
-=======
 ;
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="text - left mb - 6">;
@@ -736,7 +684,6 @@ if ( {) {
               <button;
                 on_click={() => window.location.reload ()}
                 className="bg - transparent border border - white / 20 text - white hover:bg - white / 10 px - 6 py - 3 rounded - lg font - semibold transition - colors duration - 200">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Refresh Page;
               </button>;
             </div>;
@@ -747,13 +694,9 @@ if ( {) {
 
     return this && this.props.children;
 
-=======
     return this.props.children;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 }
 export default ErrorBoundary;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

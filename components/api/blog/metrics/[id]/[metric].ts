@@ -32,9 +32,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res && res.status(200).json({ ok: true, metrics: post && post.metrics })
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { increment_metric } from '@/utils / data / blog_store';
 export default /**
  * handler - Function description
@@ -76,13 +73,8 @@ function handler() {
 }
   return res.status (200).json ({ ok: true, metrics: post.metrics });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

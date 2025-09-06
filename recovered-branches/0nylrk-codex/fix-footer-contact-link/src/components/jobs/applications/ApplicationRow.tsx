@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ApplicationRowProps {
 
   application: JobApplication
@@ -38,18 +37,15 @@ export function ApplicationRow(): any ({;
   onStatusChange;
   onViewScore;
 }: ApplicationRowProps) {;
-=======
 }
 
 
 
   onViewScore
 }: ApplicationRowProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <TableRow key={application && application.id}>;
-=======
         )}
       </TableCell>
       <TableCell className="text-right">
@@ -134,12 +130,10 @@ export function ApplicationRow({;
           </Button>;
         ) : (;
           <span className="text-muted-foreground text-sm">No resume</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         )}
       </TableCell>;
       <TableCell className="text-right">;
         <ApplicationActions
-=======
 import { formatDistanceToNow } from './date - fns';
 import { Link } from './react-router-dom';
 import { Calendar, User, FileText, BarChart } from './lucide-react';
@@ -219,7 +213,6 @@ function ApplicationRow() {
         <ApplicationActions
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           application={application}
           processing_id={processing_id}
           onViewApplication={onViewApplication}
@@ -231,9 +224,7 @@ function ApplicationRow() {
   );
 }
 
-=======
         />;
       </TableCell>;
     </TableRow>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

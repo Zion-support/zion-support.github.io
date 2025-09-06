@@ -9,7 +9,6 @@ const v1: ApiDocsSpec = {
   defaultVersion: 'v1'
   lastUpdatedIso: new Date().toISOString()
   sections: [
-=======
 const base_url = 'https://api.zion.os';
 ;
 const v1: ApiDocsSpec = {
@@ -18,7 +17,6 @@ const v1: ApiDocsSpec = {
   default_version: 'v1',
   lastUpdatedIso: new Date ().toISOString (),
   sections: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
 
       id: 'auth',
@@ -73,7 +71,6 @@ const v1: ApiDocsSpec = {
           samples: [
 
 
-=======
 
 
 const baseUrl = 'https://api.zion.os';
@@ -103,7 +100,6 @@ const v1: ApiDocsSpec = {
             }
           }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       ];
     }
@@ -113,24 +109,15 @@ const v1: ApiDocsSpec = {
             { language: 'python', code: `import requests\nrequests ;
 
 
-=======
-=======
 
   ];
 
-=======
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 
 export default v1;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   ];
 }
 ;
 export default v1;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

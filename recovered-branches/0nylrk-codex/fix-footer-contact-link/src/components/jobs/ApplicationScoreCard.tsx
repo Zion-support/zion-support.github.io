@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ApplicationScoreCardProps {
 
   application: JobApplication
@@ -23,7 +22,6 @@ interface ApplicationScoreCardProps {
   // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined) => {
     switch (suggestion) {
-=======
 import {useState} from "react";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
@@ -51,15 +49,12 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
   // Get suggestion color;
   const getSuggestionColor = (suggestion: string | undefined) => {;
     switch (suggestion) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       case "Strongly Recommended": return "bg-green-100 text-green-800";
       case "Recommended for Review":;
         return "bg-blue-100 text-blue-800";
 
-=======
 
 
-=======
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -170,8 +165,6 @@ function ApplicationScoreCard() {
       const checkScore = async () => {
         attempts++,
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         const { data, error } = await supabase
           .from("job_applications")
           .select("*")
@@ -183,7 +176,6 @@ function ApplicationScoreCard() {
 
 
         if (error) {
-=======
 
       if (error) throw error;
 
@@ -203,7 +195,6 @@ function ApplicationScoreCard() {
           .single();
 
         if (error) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           setIsScoring(false);
           return toast && toast.error("Failed to check scoring status");
         }
@@ -227,11 +218,9 @@ function ApplicationScoreCard() {
         }
 
       };
-=======
 
   };
 
-=======
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
       ),;
@@ -275,14 +264,12 @@ function ApplicationScoreCard() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       setTimeout(checkScore, 3000);
 
     } catch (error: any) {;
       setIsScoring(false),;
       toast && toast.error(`Failed to score resume: ${error && error.message}`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
@@ -365,12 +352,9 @@ function ApplicationScoreCard() {
 
 
                       </div>;
-=======
-=======
                       </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
 
 
@@ -391,15 +375,12 @@ function ApplicationScoreCard() {
                   </div>;
                 </details>;
               </div>;
-=======
                     )}
 
                   </div>;
                 </details>;
               </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
 
           </div>;
@@ -429,8 +410,6 @@ function ApplicationScoreCard() {
     </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
 
 

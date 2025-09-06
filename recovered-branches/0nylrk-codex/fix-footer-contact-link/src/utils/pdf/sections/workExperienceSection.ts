@@ -5,7 +5,6 @@ import {PdfThemeColors} from '../theme_config';
 import {format_date} from '../formatters';
 export function addWorkExperienceSection (
 
-=======
 
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types/resume';
@@ -13,7 +12,6 @@ import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addWorkExperienceSection(;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   doc: jsPDF;
   work_experience: WorkExperience[];
   colors: PdfThemeColors;
@@ -86,7 +84,6 @@ export function addWorkExperienceSection(;
     } else {
       yPos += 20
 
-=======
 import { jsPDF } from 'jspdf',;
 import { WorkExperience } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -152,11 +149,9 @@ export function addWorkExperienceSection(;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
   return yPos + 5
-=======
   start_y: number): number {
   // Check condition
 if (return start_y) {
@@ -240,5 +235,4 @@ if ( {) {
     }
   }
   return y_pos + 5;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

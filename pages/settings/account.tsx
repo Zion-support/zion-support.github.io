@@ -30,24 +30,16 @@ import React, { useEffect, useMemo, useState } from 'react';
   } | null>(null);  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
 
 
-=======
 export default function AccountSettingsPage() {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
 export default function AccountSettingsPage(req, res) {
   try {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [ens, setEns] = useState('');
   const [lens, setLens] = useState('');
   const [ceramic, setCeramic] = useState('');
@@ -68,8 +60,6 @@ export default function AccountSettingsPage(req, res) {
 
 
   const linkDID = async () => {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const saveDisplayPref = (val: boolean) => {;
     setDisplayWeb3(val),;
@@ -100,8 +90,6 @@ export default function AccountSettingsPage(req, res) {
       };
       const msg = `Link Web3 identities to Zion account\n${JSON && JSON.stringify(payload)}`;
       // Sign message with connected wallet if possible (best effort);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import Head from 'next / head';
 export default /**
  * AccountSettingsPage - Function description
@@ -163,7 +151,6 @@ if (return) {
       }
       const msg = `Link Web3 identities to Zion account\n${JSON.stringify (payload)}`;
       // Sign message with connected wallet if possible (best effort);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       let signature: string | null = null;
       try {;
         if (user && user.chain === 'evm' && (window as any).ethereum) {;
@@ -235,7 +222,6 @@ if (return) {
     } finally {;
       setLinking(false);    }
 
-=======
         setEns(did.ens || '');
         setLens(did.lens || '');
         setCeramic(did.ceramic || '');
@@ -286,9 +272,7 @@ if (return) {
     } catch (e: any) {;
       setStatus(e?.message || 'Restore failed');    }
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
         setFarcaster(did.farcaster || '');
         } catch (error) {
     console.error("Error:", error);
@@ -297,7 +281,6 @@ if (return) {
 }
       setStatus('Profile restored from backup');
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
                   className={`absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform ${displayWeb3 ? 'translate-x-4' : ''}`}></span>              </span>;
@@ -374,7 +357,6 @@ if (return) {
               className='flex-1 rounded-md border px-3 py-2';
             />;
             <button onClick={doRestore} className='rounded-md border px-4 py-2'>;
-=======
       set_status (e?.message || 'Backup failed');    }
   }
 ;
@@ -512,7 +494,6 @@ if ( {) {
         </section>;
 
 
-=======
     <>
       <Head>
         <title>Account Settings — Zion</title>
@@ -559,7 +540,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
           <div className="mt-4 flex gap-2">
             <input value={restoreCid} onChange={(e) => setRestoreCid(e.target.value)} placeholder="Enter CID to restore" className="flex-1 rounded-md border px-3 py-2" />
@@ -571,7 +551,6 @@ if ( {) {
 
 }
 
-=======
         {status && <div className="text-sm text-gray-600">{status}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -588,9 +567,5 @@ if ( {) {
     </>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

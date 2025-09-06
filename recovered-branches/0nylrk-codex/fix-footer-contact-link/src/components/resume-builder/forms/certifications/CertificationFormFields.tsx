@@ -14,7 +14,6 @@ interface CertificationFormFieldsProps {
   form: UseFormReturn < CertificationFormValues>;
 }
 
-=======
 
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';
@@ -25,7 +24,6 @@ import {CertificationFormValues} from './types';
 interface CertificationFormFieldsProps {
   form: UseFormReturn<CertificationFormValues>
 
-=======
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',;
 import { Input } from '@/components/ui/input',;
 import { UseFormReturn } from 'react-hook-form',;
@@ -35,11 +33,9 @@ interface CertificationFormFieldsProps {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 export function CertificationFormFields(): any ({ form }: CertificationFormFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -135,7 +131,6 @@ function CertificationFormFields() {
               <FormLabel>Issue Date</FormLabel>;
               <FormControl>;
                 <Input
-=======
 
         />;
         <FormField;
@@ -162,7 +157,6 @@ function CertificationFormFields() {
           )}
         />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
           control={form && form.control}
           name="expiration_date"
@@ -191,7 +185,6 @@ function CertificationFormFields() {
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Credential ID (Optional)</FormLabel>;
-=======
                 />;
               </FormControl>;
               <FormMessage />;
@@ -231,7 +224,6 @@ function CertificationFormFields() {
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Credential ID (Optional)</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               <FormControl>;
                 <Input placeholder="ABC123XYZ" {...field} />;
               </FormControl>;
@@ -273,7 +265,6 @@ function CertificationFormFields() {
   );
 }
 
-=======
                 />;
               </FormControl>;
               <FormMessage />;
@@ -282,11 +273,8 @@ function CertificationFormFields() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

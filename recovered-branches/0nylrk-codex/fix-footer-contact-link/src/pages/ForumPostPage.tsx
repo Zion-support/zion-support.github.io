@@ -21,7 +21,6 @@ const mockPost: ForumPost = {
   isFeatured: true
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 const mockPost: ForumPost = {
   id: "1"
@@ -233,7 +232,6 @@ export default function ForumPostPage() {
 
   // For this demo, we'll assume the post is found
   if (!post) {
-=======
 
   // Check if this is the user's own post;
   const isAuthor = user?.id === post?.authorId;
@@ -243,7 +241,6 @@ export default function ForumPostPage() {
 
   // For this demo, we'll assume the post is found;
   if (!post) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <AppLayout>;
         <div className="container py-8">;
@@ -320,7 +317,6 @@ export default function ForumPostPage() {
         title: "Permission denied"
         description: "Only the original poster or moderators can mark answers"
         variant: "destructive"
-=======
 
   const handleUpvote = () => {;
     if (!user) {;
@@ -387,7 +383,6 @@ export default function ForumPostPage() {
         title: "Permission denied",;
         description: "Only the original poster or moderators can mark answers",;
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
     }
@@ -743,7 +738,6 @@ export default function ForumPostPage() {;
                     <Badge variant="outline" className="mt-1">;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {post.authorRole}
                     </Badge>
                   )}
@@ -760,7 +754,6 @@ export default function ForumPostPage() {;
             <div className="flex flex-wrap gap-2 mb-6">
               {post.tags.map(tag => (
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
-=======
 
     setReplies(updatedReplies);
     setPost({ ...post, isAnswered: true }),;
@@ -858,7 +851,6 @@ export default function ForumPostPage() {;
             <div className="flex flex-wrap gap-2 mb-6">;
               {post && post.tags.map(tag => (;
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {tag}
                 </Badge>;
               ))}
@@ -929,7 +921,6 @@ export default function ForumPostPage() {;
                   size="sm"
                   onClick={handleReportPost}>;
                   <Flag className="h-4 w-4 mr-1" />;
-=======
 import { useState } from './react';
 import { use_params, Link } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -1311,7 +1302,6 @@ if (return) {
                     Please <Link to="/login" className="font-medium text-zion-purple hover:underline">sign in</Link> to join the discussion.
                   </AlertDescription>
                 </Alert>
-=======
 
           {!post && post.isLocked && (;
             <div className="mb-8">;
@@ -1324,7 +1314,6 @@ if (return) {
                     Please <Link to="/login" className="font-medium text-zion-purple hover:underline">sign in</Link> to join the discussion.;
                   </AlertDescription>;
                 </Alert>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </div>;
           )}
@@ -1345,7 +1334,6 @@ if (return) {
             {replies
               .filter(reply => !reply.isAnswer)
               .map(reply => (
-=======
 
           {post && post.isLocked && (;
             <Alert className="mb-8">;
@@ -1360,7 +1348,6 @@ if (return) {
             {replies;
               .filter(reply => !reply && reply.isAnswer);
               .map(reply => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <ReplyCard
                   key={reply && reply.id}
                   reply={reply}
@@ -1368,7 +1355,6 @@ if (return) {
                   onMarkAnswer={() => handleMarkAsAnswer(reply && reply.id)}
                   canMarkAnswer={!post && post.isAnswered && (isAuthor || isAdminOrMod)}
                 />;
-=======
                   onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
 
                   canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
@@ -1427,7 +1413,5 @@ if (return) {
     </AppLayout>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

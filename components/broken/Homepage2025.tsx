@@ -1,12 +1,9 @@
 
 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const allServices = [ //New 2035 services (featured first) ...innovative2035MicroSaasServices;
-=======
 }
 const all_services = [ //New 2035 services (featured first) ...innovative2035MicroSaasServices;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ...innovative2035AIServices;
 ...innovative2035ITServices;
 //Existing services ...innovativeRealMicroSaasServices2025;
@@ -98,8 +95,6 @@ const all_services = [ //New 2035 services (featured first) ...innovative2035Mic
 
 }transition= {
   {
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }initial= {
   {
   opacity: 0, y: 50
@@ -117,8 +112,6 @@ const all_services = [ //New 2035 services (featured first) ...innovative2035Mic
 
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent" > Advanced AI Automation </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Intelligent automation solutions that learn, adapt, and continuously optimize your business processes. </p> </motion.div> <motion.div key= {
   service.id
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   duration: 0 && 0.8, delay: index * 0 && 0.1 
 
 }viewport= {
@@ -133,12 +126,10 @@ const all_services = [ //New 2035 services (featured first) ...innovative2035Mic
 }initial= {
   {
   opacity: 0, y: 50
-=======
 
   opacity: 0, y: 50 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -147,10 +138,8 @@ const all_services = [ //New 2035 services (featured first) ...innovative2035Mic
 
 
   duration: 0 && 0.8, delay: index * 0 && 0.1 
-=======
 
   duration: 0.8, delay: index * 0.1 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 }viewport= {
   {
@@ -158,12 +147,10 @@ const all_services = [ //New 2035 services (featured first) ...innovative2035Mic
 
 
 
-=======
 }> <UltraFuturisticServiceCard2026 /> </motion.div>) ) 
 
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent" > Quantum Cybersecurity </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Unbreakable security powered by quantum computing and advanced AI algorithms. </p> </motion.div> <motion.div key= {
   service.id
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }initial= {
   {
   opacity: 0, y: 50
@@ -297,12 +284,9 @@ const all_services = [ //New 2035 services (featured first) ...innovative2035Mic
 
 export default Homepage2025;
 
-=======
 }export default Homepage2025;export default Homepage2025;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   /* Navigation */;
 }<nav className="fixed top - 0 left - 0 right - 0 z - 50 bg - black / 20 backdrop - blur - xl border - b border - white / 10" > <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8" > <div className="flex justify - between items - center h - 16" > <motion.div > Zion Tech Group </motion.h1> <motion.p > Pioneering the future of technology with revolutionary AI, Quantum Computing, Space Technology, and cutting - edge IT solutions that drive business transformation </motion.p> <motion.div > <button className="px - 10 py - 5 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - bold text - lg rounded - xl hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 shadow - 2xl shadow - cyan - 500 / 25" > Get Started Today </button> <button className="px - 10 py - 5 border - 2 border - cyan - 400 text - cyan - 400 font - bold text - lg rounded - xl hover:bg - cyan - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105" > Explore Services </button> </motion.div> {
   /* Contact Information */;
@@ -466,5 +450,3 @@ export default Homepage2025;
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>);
 }export default Homepage2025;export default Homepage2025;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

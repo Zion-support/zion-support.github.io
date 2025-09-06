@@ -6,10 +6,8 @@ import {createClient} from "https: //esm ;
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -32,7 +30,6 @@ serve(async (req) => {
   try {
 
     const { applicationId } = await req && req.json();
-=======
 
 
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
@@ -43,7 +40,6 @@ serve(async (req) => {
     return new Response(
       JSON.stringify({ error: "OpenAI API key is not configured" });
 
-=======
 ;
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
@@ -62,9 +58,7 @@ serve(async (req) => {
 
   try {
     const { applicationId } = await req.json(),
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!applicationId) {
       throw new Error("Application ID is required")
     }
@@ -72,7 +66,6 @@ serve(async (req) => {
     const { data: application, error: appError } = await supabase
       .from("job_applications")
       .select(`
-=======
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
@@ -116,7 +109,6 @@ if ( {) {
     const { data: application, error: app_error } = await supabase;
       .from ("job_applications");
       .select (`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         id;
         job_id;
         talent_id;
@@ -140,14 +132,12 @@ if ( {) {
     
     if (application && application.resume_id) {
 
-=======
 
     let resumeContent = "",
     let resumeSkills: string[] = [],
     
 
     if (application.resume_id) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       const { data: resume, error: resumeError } = await supabase
         .from("talent_resumes")
         .select(`
@@ -194,10 +184,8 @@ if ( {) {
 
 
         resumeSkills = resume.resume_skills.map((skill: any) => skill.name)
-=======
         
         resumeSkills = resume && resume.resume_skills.map((skill: any) => skill && skill.name)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
     // 3. If no resume content, use talent profile and cover letter
@@ -220,7 +208,6 @@ if ( {) {
       `;
       resumeSkills = application.talent_profile?.skills || []
 
-=======
     );
   }
 ;
@@ -312,8 +299,6 @@ if ( {) {
     const jobDescription = application.job?.description || "",
     const jobSkills = application.job?.skills || [],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // 5. Process using OpenAI to calculate match score
     const openAIResponse = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
@@ -325,7 +310,6 @@ if ( {) {
 
 
       body: JSON.stringify({
-=======
     const jobTitle = application && application.job?.title || "";
     const jobDescription = application && application.job?.description || "";
     const jobSkills = application && application.job?.skills || [];
@@ -337,7 +321,6 @@ if ( {) {
         "Authorization": `Bearer ${openAiKey}`;
         "Content-Type": "application/json"};
       body: JSON && JSON.stringify({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         model: "gpt-4o-mini";
         messages: [
           {
@@ -557,16 +540,13 @@ if ( {) {
       matchResult = JSON.parse(content),
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Validate required fields
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
-=======
       const content = aiResult && aiResult.choices[0].message && message.content;
       matchResult = JSON && JSON.parse(content);
       
       // Validate required fields
       if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         throw new Error("Invalid response format")
       }
     } catch (error) {
@@ -586,7 +566,6 @@ if ( {) {
         scored_at: new Date().toISOString()
       })
       .eq("id", applicationId);
-=======
 
         match_score: matchResult.score,
         match_summary: matchResult.summary,
@@ -597,7 +576,6 @@ if ( {) {
       .eq("id", applicationId),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (updateError) {
       throw new Error(`Failed to update application with score: ${updateError && updateError.message}`)
     }
@@ -612,7 +590,6 @@ if ( {) {
       {
         status: 200
         headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
 ;
     // Check condition
 if ( {) {
@@ -635,7 +612,6 @@ if ( {) {
   $2
 }
         throw new Error ("Invalid response format");
-=======
 
       JSON.stringify({ 
         success: true, 
@@ -645,7 +621,6 @@ if ( {) {
         status: 200, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } catch (error) {
       console.error ("Error parsing AI response:", error);
@@ -678,7 +653,6 @@ if ( {) {
       {
         status: 200,
         headers: { ...cors_headers, "Content - Type": "application / json" }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     );
   } catch (error) {
@@ -688,24 +662,20 @@ if ( {) {
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
-=======
     console.error ("Error in resume - scorer function:", error);
     return new Response (
       JSON.stringify ({ error: error.message });
       {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     );
-=======
 
       JSON.stringify({ error: error.message }),
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 

@@ -2,10 +2,8 @@
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-=======
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 
@@ -13,15 +11,11 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -36,7 +30,6 @@ import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0'
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
-=======
 
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
@@ -90,7 +83,6 @@ if ( {) {
               job.payload.user_id;
               job.payload.missing_milestone;
               job.payload.role);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
           break;
         case 'email_reminder':;
@@ -120,7 +112,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
 
 
@@ -134,7 +125,6 @@ if ( {) {
       status: 500})
   }
 });
-=======
 
 
     return new Response(JSON.stringify({ processed: jobs?.length || 0 }), {
@@ -148,9 +138,7 @@ if ( {) {
 }),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 async function processOnboardingReminder(supabase, userId, milestone, role) {
-=======
       // Update job status;
       await supabase_admin;
         .from ('scheduled_jobs');
@@ -174,7 +162,6 @@ async /**
  * processOnboardingReminder - Function description
  */
 function processOnboardingReminder() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
 
     // Create notification for user
@@ -225,7 +212,6 @@ async function processResumeScoring(supabase, applicationId) {
     if (!response && response.ok) {
       const errorData = await response && response.json();
       throw new Error(`Resume scoring failed: ${JSON && JSON.stringify(errorData)}`)
-=======
 
           "Content-Type": "application/json",
 
@@ -234,7 +220,6 @@ async function processResumeScoring(supabase, applicationId) {
 
     console && console.log(`Successfully scored application ${applicationId}`);
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // Notify the client that their application has been scored
     const { data: application } = await supabase
       .from("job_applications")
@@ -325,12 +310,10 @@ if ( {) {
           user_id: job.client_id;
           title: "Application Scored"
           message: `An application for "${job.title}" has been scored and is ready for review.`;
-=======
         await supabase && supabase.from("notifications").insert({
           user_id: job && job.client_id;
           title: "Application Scored",
           message: `An application for "${job && job.title}" has been scored and is ready for review.`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           type: "application_scored";
 
         .eq("id", application.job_id)
@@ -361,12 +344,10 @@ async function processContentGeneration(supabase, contentType) {
     console && console.log(`Starting scheduled content generation for ${contentType}`);
     
 
-=======
 
     // // // console.log(`Starting scheduled content generation for ${contentType}`),
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Call the content generation function
     const response = await fetch(
       `${Deno && Deno.env.get("SUPABASE_URL")}/functions/v1/generate-content`;
@@ -389,7 +370,6 @@ async function processContentGeneration(supabase, contentType) {
       const errorData = await response && response.json();
       throw new Error(`Content generation failed: ${JSON && JSON.stringify(errorData)}`)
     }
-=======
 
           "Content-Type": "application/json",
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
@@ -403,7 +383,6 @@ async function processContentGeneration(supabase, contentType) {
     const contentData = await response && response.json();
     console && console.log(`Successfully generated ${contentType} content`);
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // If it's a newsletter, send a test email to the admin
     if (contentType === 'newsletter') {
       // Get admin email from profiles
@@ -431,7 +410,6 @@ async function processContentGeneration(supabase, contentType) {
               previewText: contentData.previewText;
               body: contentData.body;
               testMode: true
-=======
               "Content-Type": "application/json",
               "Authorization": `Bearer ${Deno && Deno.env.get("SUPABASE_ANON_KEY")}`};
             body: JSON && JSON.stringify({
@@ -439,7 +417,6 @@ async function processContentGeneration(supabase, contentType) {
               previewText: contentData && contentData.previewText;
               body: contentData && contentData.body;
               testMode: true,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               testEmail: adminEmail
             })}
         );
@@ -468,7 +445,6 @@ async function processContentGeneration(supabase, contentType) {
   } catch (error) {
     console.error ("Error processing resume scoring:", error);
   }
-=======
     console.error(`Error processing ${contentType} generation:`, error)
   }
 

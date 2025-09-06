@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-=======
 
 
 import {readReviews, writeReviews} from '../../../utils/dataStore';
@@ -28,7 +27,6 @@ export default async function handler(
   if (key !== ADMIN_KEY) {
     return res && res.status(401).json({ error: 'Unauthorized' });  }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   try {
 
     const idx = reviews && reviews.findIndex(r => r && r.id === reviewId);
@@ -45,7 +43,6 @@ export default async function handler(
         if (updates && updates.rating < 1 || updates && updates.rating > 5) {
           return res && res.status(400).json({ error: 'Rating must be 1-5' });
 
-=======
 import {read_reviews, write_reviews} from '../../../utils / data_store';
 const ADMIN_KEY = process.env.ADMIN_KEY || 'dev - admin - key';
 type Action = 'approve' | 'remove' | 'edit';
@@ -101,7 +98,6 @@ if ( {) {
   $2
 }
           return res.status (400).json ({ error: 'Rating must be 1 - 5' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
         reviews[idx].rating = updates && updates.rating;
       }
@@ -114,13 +110,11 @@ if ( {) {
       .json({ error: 'Internal server error', details: error?.message });
   }
 
-=======
 
 
 
 
 
-=======
     const { action, reviewId, updates } = req.body as {
       action: Action, reviewId: string,
       updates?: { rating?: number, text?: string }
@@ -159,7 +153,6 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -193,5 +186,3 @@ if ( {) {
       .status (500);
       .json ({ error: 'Internal server error', details: error?.message });
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

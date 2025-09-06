@@ -1,10 +1,8 @@
 
 
 export interface EnterpriseIt2026ServiceV2 {
-=======
 
 export interface EnterpriseIt2026ServiceV2 {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   id: string;
   name: string;
@@ -42,7 +40,6 @@ export interface EnterpriseIt2026ServiceV2 {;
 
   {
 
-=======
 export interface EnterpriseIT2026ServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -68,7 +65,6 @@ export interface EnterpriseIT2026ServiceV2 {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
@@ -99,7 +95,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
@@ -112,7 +107,4 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     reviews: 180;
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

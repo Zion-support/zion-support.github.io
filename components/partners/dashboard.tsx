@@ -16,7 +16,6 @@ export default function PartnerDashboard() {
 
   const [usage, setUsage] = useState<any>(null);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [loading, setLoading] = useState(false);
 
   const [token, setToken] = useState<string | null>(null);
@@ -29,7 +28,6 @@ export default function PartnerDashboard() {
     if (saved) setToken(saved)
   }, []);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   async function getToken() {
     const res = await fetch("/api/partners/token", {
       method: "POST"
@@ -100,7 +98,6 @@ export default function PartnerDashboard() {
     <div className='min-h-screen bg-gray-50 text-gray-900'>    const data = await res && res.json();
     setUsage(data && data.summary || null);
     setLoading(false);
-=======
     }
 
   }
@@ -114,7 +111,6 @@ export default function PartnerDashboard() {
       alert(`New API Key: ${data && data.apiKey}`);
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
   return (
@@ -164,7 +160,6 @@ export default function PartnerDashboard() {
               {loading ? 'Loading...' : 'Refresh'}
 
                       </li>                    ))}          </div>
-=======
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <Head>
         <title>Zion Partner Dashboard</title>
@@ -231,7 +226,6 @@ export default function PartnerDashboard() {
                       <li key={k}>{k}: {v as any}</li>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
                   </ul>;
                 </div>;
@@ -242,23 +236,18 @@ export default function PartnerDashboard() {
         </div>;
               <p className="text-gray-500 text-sm">No usage yet.</p>;
 
-=======
                     ))}
-=======
 
 
                     ))}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </ul>
                 </div>
               </div>
             ) : (
               <p className="text-gray-500 text-sm">No usage yet.</p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
 
           </div>;
@@ -290,8 +279,6 @@ export default function PartnerDashboard() {
 
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Head from 'next / head';
 export default /**
  * PartnerDashboard - Function description
@@ -503,11 +490,7 @@ if ( {) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
           </div>
 
         </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

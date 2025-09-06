@@ -2,7 +2,6 @@
 
   {
 
-=======
     id: 'synthetic - biology - platform',
     name: 'Synthetic Biology Platform',
     description:;
@@ -47,7 +46,6 @@
     implementation_time: '8 - 12 weeks',
     roi: '1500% within 24 months',
 
-=======
     link: 'https://ziontechgroup.com / services / synthetic - biology - platform',
     tags: [;
       'Synthetic Biology',
@@ -95,7 +93,6 @@
       'Industrial companies',
     ],
 
-=======
     market_size: '$16.5B by 2027',
     competitive_advantage:;
       'Only quantum sensors network with multi - application support',
@@ -148,7 +145,6 @@
       'Healthcare providers',
     ],
 
-=======
     market_size: '$28.9B by 2027',
     competitive_advantage: 'Most advanced brain - computer interface platform',
     implementation_time: '10 - 12 weeks',
@@ -207,7 +203,6 @@
     implementation_time: '4 - 6 weeks',
     roi: '1000% within 18 months',
 
-=======
     link: 'https://ziontechgroup.com / services / quantum - internet - security',
     tags: [;
       'Quantum Security',
@@ -266,10 +261,8 @@
 
     tags: ['Robotics', 'AI', 'Automation', 'Manufacturing', 'Logistics'],
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'quantum - materials - discovery',
     name: 'Quantum Materials Discovery Platform',
     description:;
@@ -314,7 +307,6 @@
     implementation_time: '8 - 10 weeks',
     roi: '1100% within 20 months',
 
-=======
     link: 'https://ziontechgroup.com / services / quantum - materials - discovery',
     tags: [;
       'Materials Science',
@@ -362,7 +354,6 @@
       'Regulatory bodies',
     ],
 
-=======
     market_size: '$18.9B by 2027',
     competitive_advantage:;
       'Only quantum financial modeling platform with real - time analysis',
@@ -415,7 +406,6 @@
       'Energy companies',
     ],
 
-=======
   id: string, name: string,
   description: string, category: string,
   price: string, features: string[],
@@ -427,7 +417,6 @@
 }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     marketSize: '$17 && 17.6B by 2027';
     competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions';
@@ -437,7 +426,6 @@
     link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-climate-modeling',
 
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']
-=======
     market_size: '$17.6B by 2027',
     competitive_advantage:;
       'Only quantum climate modeling platform with real - time predictions',
@@ -460,17 +448,12 @@
     roi: '800% within 18 months';
     link: 'https://ziontechgroup.com / services / quantum - climate - modeling',
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
-=======
 
 export interface Service {;
 
   }
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

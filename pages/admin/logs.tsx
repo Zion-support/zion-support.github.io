@@ -2,18 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
-=======
 import {useState, useEffect} from 'react';
 import {GetServerSideProps} from 'next';
-=======
 import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 
 
 import fs from 'fs';
 import path from 'path';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -31,7 +27,6 @@ import {;
   Search,;
   Download,;
   RefreshCw,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'lucide-react';
 
 
@@ -54,9 +49,7 @@ import {
   Search,
 
 interface LogEntry {
-=======
 interface LogEntry {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
   timestamp: string;
 
@@ -82,9 +75,7 @@ interface LogEntry {
   user_id?: string;
 
   error?: {
-=======
   error?: {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     name: string;
     message: string;
     stack?: string;
@@ -102,8 +93,6 @@ interface LogEntry {
   }
 
 interface LogsPageProps {;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   logs: LogEntry[];
   errorCount: number;
   warningCount: number;
@@ -111,7 +100,6 @@ interface LogsPageProps {;
 
   lastUpdated: string;
 
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -139,7 +127,6 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   lastUpdated,;
 
 }: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
-=======
       return <XCircle className="h-4 w-4 text-red-700" />,
     default: return <Info className="h-4 w-4 text-gray-500" />
 ;
@@ -162,7 +149,6 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {;
   }
 }
 },;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {;
   const colors = {;
     debug: 'bg-blue-100 text-blue-800',;
@@ -181,10 +167,8 @@ export default function LogsPage(): any ({;
   warningCount,;
   totalCount,;
   lastUpdated,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
 
-=======
     cause?: unknown
   };
   performance?: {
@@ -235,11 +219,8 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
 export default function LogsPage({ logs: initialLogs, errorCount, warningCount, totalCount, lastUpdated }: LogsPageProps) {
   const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);
   const [searchTerm, setSearchTerm] = useState('');
   const [levelFilter, setLevelFilter] = useState<string>('all');
@@ -253,11 +234,9 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(
     Boolean
-=======
 
   const categories = Array && Array.from(new Set(logs && logs.map(log => log && log.category))).filter(;
     Boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
   const sources = Array && Array.from(new Set(logs && logs.map(log => log && log.source))).filter(;
     Boolean;
@@ -321,7 +300,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 
 
 
-=======
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean);
   useEffect(() => {;
@@ -397,8 +375,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
@@ -455,7 +431,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
           <CardContent>
             <div className='text-2xl font-bold'>{totalCount}</div>
             <p className='text-xs text-muted-foreground'>All log entries</p>          </CardContent>
-=======
 
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean);
@@ -536,7 +511,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     }
     
     return parts.length > 0 ? parts.join() : null
-=======
 
   },;
   const formatTimestamp = (timestamp: string) => {;
@@ -568,7 +542,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Logs</CardTitle>
@@ -578,7 +551,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
             <div className="text-2xl font-bold">{totalCount}</div>
             <p className="text-xs text-muted-foreground">All log entries</p>
           </CardContent>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </Card>
         <Card>
 
@@ -677,10 +649,8 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
         </Card>;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Filters */}
 
-=======
 
       {/* Filters */  } catch (error) {
     console.error("Error:", error);
@@ -689,7 +659,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>
         <CardHeader>
           <CardTitle>Filters</CardTitle>
@@ -722,13 +691,11 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                 <SelectItem value="critical">Critical</SelectItem>
               </SelectContent>
 
-=======
             </Select>
             <Select value={categoryFilter} onValueChange={setCategoryFilter}>
 
 
               <SelectTrigger>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <SelectValue placeholder="All categories" />
               </SelectTrigger>
               <SelectContent>
@@ -736,7 +703,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                 {categories.map(category => (
                   <SelectItem key={category} value={category}>{category}</SelectItem>
                 ))}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </SelectContent>
             </Select>
             <Select value={sourceFilter} onValueChange={setSourceFilter}>
@@ -745,7 +711,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                 onChange={e => setSearchTerm(e && e.target.value)}
               />;
             </div>;
-=======
                 <SelectValue placeholder="All sources" />
               </SelectTrigger>
               <SelectContent>
@@ -1005,7 +970,6 @@ if ( {) {
               </SelectContent>;
             </Select>;
             <Select value={source_filter} onValueChange={setSourceFilter}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               <SelectTrigger>;
                 <SelectValue placeholder='All sources' />;
               </SelectTrigger>;
@@ -1113,7 +1077,6 @@ if ( {) {
                             </pre>;
                           </details>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>
         <CardHeader>
           <CardTitle>Log Entries ({filteredLogs.length})</CardTitle>
@@ -1142,7 +1105,6 @@ if ( {) {
                   <div className="text-sm font-medium">{log.message}</div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {log.context && Object.keys(log.context).length > 0 && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
@@ -1152,7 +1114,6 @@ if ( {) {
 
 
 
-=======
                       <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-x-auto">
                         {JSON.stringify(log.context, null, 2)  } catch (error) {
     console.error("Error:", error);
@@ -1169,7 +1130,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {log.error && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-red-600 hover:text-red-800">
@@ -1193,7 +1153,6 @@ if ( {) {
               </div>
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   )}
                 </div>;
               ));
@@ -1211,7 +1170,6 @@ if ( {) {
             }
           }
         } catch (fileError) {;
-=======
                             </pre>;
                           </details>)}
                         <div className="flex items - center justify - between text - xs text - gray - 500">;
@@ -1251,7 +1209,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
             }
           }
         } catch (file_error) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           // Skip problematic files;
         }
       }
@@ -1300,9 +1257,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
         lastUpdated: new Date().toISOString()
       }
     }
-=======
 
-=======
 
         logs: [],
         errorCount: 0,
@@ -1312,7 +1267,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
       },
     };
 
-=======
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1376,7 +1330,6 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   }
 }
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Sort logs by timestamp (newest first);
     logs && logs.sort(;
       (a, b) =>;
@@ -1408,12 +1361,10 @@ export const getServerSideProps: GetServerSideProps = async () => {;
         lastUpdated: new Date().toISOString(),;
       },;
     };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 
 }
 
-=======
         errorCount;
         warningCount;
         totalCount;
@@ -1424,9 +1375,6 @@ export const getServerSideProps: GetServerSideProps = async () => {;
       props: {
         logs: [],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

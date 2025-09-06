@@ -18,7 +18,6 @@ export function getSelectedLanguage (): string {
   return i18n.resolved_language || i18n.language || 'en';
 }
 
-=======
 
 
   const res = await fetch('/api/translate', {;
@@ -36,4 +35,3 @@ export function getSelectedLanguage(): string {;
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

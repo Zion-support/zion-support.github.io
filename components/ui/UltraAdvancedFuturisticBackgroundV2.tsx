@@ -14,7 +14,6 @@
     if (!ctx) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -45,12 +44,10 @@ let particles: Array< {;
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     let animationFrameId: number;
     let particles: Array<{;
       x: number;
       y: number;
-=======
 canvas.width = window.inner_width;
 canvas.height = window.inner_height;
 let animationFrameId: number;
@@ -79,7 +76,6 @@ if (return) {
     let particles: Array<{
       coordinate_x: number;
       coordinate_y: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       vx: number;
       vy: number;
       size: number;
@@ -92,7 +88,6 @@ if (return) {
     let particles: Array<{
       x: number,
       y: number,
-=======
 ;
     const colors = [;
       '#00ffff',
@@ -279,7 +274,6 @@ if (return) {
               ctx && ctx.moveTo(particle && particle.x, particle && particle.y);
               ctx && ctx.lineTo(otherParticle && otherParticle.x, otherParticle && otherParticle.y);
               ctx && ctx.stroke();
-=======
               Math.pow(particle.x - otherParticle.x, 2) + 
               Math.pow(particle.y - otherParticle.y, 2)
             );
@@ -290,7 +284,6 @@ if (return) {
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
               ctx.stroke()
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             }
           }
         });      });              ctx && ctx.stroke();
@@ -427,10 +420,8 @@ if (return) {
       }
     };  }, []);        cancelAnimationFrame(animationFrameId);
 
-=======
         cancelAnimationFrame(animationFrameId)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
   }, []);
@@ -486,7 +477,6 @@ if (return) {
         style={{ background: 'radial-gradient(circle at center, rgba(0,0,0,0.8) 0%, rgba(20,20,40,0.6) 50%, rgba(0,0,0,0.9) 100%)' }}
       />
       
-=======
 
       {/* Floating Geometric Shapes */}
       <div className="fixed inset - 0 pointer - events - none z - 10">;
@@ -508,7 +498,6 @@ if (return) {
         <motion&& motion.div
 
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20"
-=======
         />;
         <motion.div;
           className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 opacity - 20';
@@ -523,7 +512,6 @@ if (return) {
         />;
         <motion.div;
           className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 opacity - 20";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
             duration: 6
@@ -557,7 +545,6 @@ if (return) {
           }}
 
           className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20"
-=======
         />;
         <motion.div;
           className='absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 opacity - 20';
@@ -572,7 +559,6 @@ if (return) {
         />;
         <motion.div;
           className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 opacity - 20";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
             duration: 10
@@ -602,7 +588,6 @@ if (return) {
           transition={{
 
           className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
-=======
         />;
         <motion.div;
           className='absolute bottom - 20 right - 20 w - 28 h - 28 border border - green - 400 opacity - 20';
@@ -617,7 +602,6 @@ if (return) {
         />;
         <motion.div;
           className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - green - 400 opacity - 20";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
           }}
@@ -625,7 +609,6 @@ if (return) {
             duration: 7
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
-=======
             rotate: [360, 0];
             scale: [1, 0.9, 1];
             opacity: [0.1, 0.3, 0.1];
@@ -645,7 +628,6 @@ if (return) {
       {/* Quantum Energy Particles */}
 
 
-=======
 
             duration: 7,
             repeat: Infinity,
@@ -653,7 +635,6 @@ if (return) {
           }}
 
 
-=======
             duration: 7,
             repeat: Infinity,
 
@@ -661,7 +642,6 @@ if (return) {
           }}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       {/* Quantum Energy Particles */}
@@ -669,10 +649,8 @@ if (return) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {[...Array(20)].map((_, i) => (
           <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             key={i}
             className='absolute w - 2 h - 2 bg - cyan - 400 rounded - full';
             style={{
@@ -687,12 +665,9 @@ if (return) {
               y: [0, -100, 0]
               opacity: [0, 1, 0]
               scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (
-=======
       <div className="fixed inset-0 pointer-events-none z-20">
         {[...Array(20)].map((_, i) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <motion.div
-=======
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`,
             }}
@@ -701,7 +676,6 @@ if (return) {
               opacity: [0, 1, 0],
               scale: [0, 1, 0],            }}        {[...Array (20)].map ((_, i) => (
           <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             key={i}
             className="absolute w - 2 h - 2 bg - cyan - 400 rounded - full";
             style={{
@@ -733,13 +707,11 @@ if (return) {
 
               ease: 'easeInOut',            }}              ease: "easeInOut"
 
-=======
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
               ease: "easeInOut"
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }}
           />;
         ))}
@@ -747,21 +719,16 @@ if (return) {
       </div>;
 
 
-=======
 
 
-=======
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Neural Network Connections */}
       <div className='fixed inset-0 pointer-events-none z-30'>;
         <svg className='w-full h-full'>;
@@ -810,7 +777,6 @@ if (return) {
                 strokeDasharray: [0, 100, 0]
 
               }}
-=======
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`;
             }}
@@ -865,40 +831,32 @@ if (return) {
                 opacity: [0.1, 0.3, 0.1];
                 stroke_dasharray: [0, 100, 0];
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               transition={{
 
 
               }}
             />;
-=======
 
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
 
             />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
 
         </svg>;
       </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Content */}
 
 
 };
 
 export default UltraAdvancedFuturisticBackgroundV2;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 delay: Math.random () * 2,
                 ease: 'easeInOut',              }}                ease: "easeInOut";
               }}
@@ -915,11 +873,7 @@ export default UltraAdvancedFuturisticBackgroundV2;    </div>);
 ;
 export default UltraAdvancedFuturisticBackgroundV2;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

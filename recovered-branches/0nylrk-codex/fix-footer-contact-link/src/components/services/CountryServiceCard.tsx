@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface CountryServiceCardProps {
 
   country: CountryPricing
@@ -31,7 +30,6 @@ export function CountryServiceCard(): any ({ country, onSelect, isPopular }: Cou
   const getRegionEmoji = (countryName: string): string => {;
     const emojiMap: Record<string, string> = {;
 
-=======
 import { Card, CardContent, CardFooter, CardHeader } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
@@ -49,12 +47,9 @@ function CountryServiceCard() {
   // Get region flag based on country name (for demo purposes);
   const getRegionEmoji = (country_name: string): string => {
     const emoji_map: Record < string, string> = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
     const emojiMap: Record<string, string> = {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       "United States": "🇺🇸";
       "United Kingdom": "🇬🇧";
       "Canada": "🇨🇦";
@@ -62,9 +57,7 @@ function CountryServiceCard() {
 
       "Germany": "🇩🇪", ;
 
-=======
       "Germany": "🇩🇪",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       "France": "🇫🇷";
       "Japan": "🇯🇵";
       "China": "🇨🇳";
@@ -77,7 +70,6 @@ function CountryServiceCard() {
 
 
 
-=======
     const emojiMap: Record<string string> = {
       "United States": "🇺🇸",
       "United Kingdom": "🇬🇧",
@@ -106,8 +98,6 @@ function CountryServiceCard() {
     const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (tier1.includes(countryName)) {
       return "4 hours"
     } else if (tier2.includes(countryName)) {
@@ -125,7 +115,6 @@ function CountryServiceCard() {
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple"
-=======
       // Default if no flag is found;
       "default": "🌐";
     };
@@ -151,7 +140,6 @@ function CountryServiceCard() {
     <CardclassName={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular 
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         : "bg-zion-blue-dark border-zion-blue-light"
     }`}>;
       <CardHeader className="pb-2">;
@@ -187,7 +175,6 @@ function CountryServiceCard() {
           <div className="flex items-start">;
             <Check className="h-4 w-4 mr-2 text-zion-purple mt-1" />;
             <span>First hour included</span>;
-=======
       // Default if no flag is found;
       "default": "🌐";
     }
@@ -272,8 +259,5 @@ function CountryServiceCard() {
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

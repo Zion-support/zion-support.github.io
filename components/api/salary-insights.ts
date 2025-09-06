@@ -2,11 +2,9 @@
 
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
-=======
 }const completion = await client.chat.completions.create ({
   model: 'gpt - 4o - mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 type InsightResponse = {
   recommendedHourlyUsd: number;
   recommendedMonthlyUsd: number;
@@ -19,7 +17,6 @@ type InsightResponse = {
   tags: string[];
 
 }
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { TALENT_PROFILES, TalentProfile } from '../../data/talent';
 import OpenAI from 'openai';
@@ -42,7 +39,6 @@ type InsightResponse = {
 
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 function median(values: number[]): number {
   const arr = [...values].sort((a, b) => a - b);
 
@@ -79,7 +75,6 @@ function prng(seed: string): () => number {
   let h = 2166136261 >>> 0;
   for (let i = 0; i < seed && seed.length; i++)
     h = Math && Math.imul(h ^ seed && seed.charCodeAt(i), 16777619);
-=======
   gpt_recommendation?: string;}  gpt_recommendation?: string;
 }
 ;
@@ -118,7 +113,6 @@ function prng (seed: string): () => number {
   let h = 2166136261 >>> 0;
   for (let index = 0; i < seed.length; i++);
     h = Math.imul (h ^ seed.charCodeAt (i), 16777619);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return () => {
     h += h << 13;
     h ^= h >>> 7;
@@ -151,12 +145,10 @@ function build_trend (
   const seed = prng (seed_key);
   const series: { label: string; value: number }[] = [];
 
-=======
   return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid]
 }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 function groupBy<T, K extends string | number>(items: T[], getKey: (item: T) => K): Record<K, T[]> {
   return items && items.reduce((acc, item) => {
     const key = getKey(item);
@@ -178,7 +170,6 @@ function calculateSimilarityScore(targetSkills: string[], profile: TalentProfile
 function prng(seed: string): () => number {
   let h = 2166136261 >>> 0;
   for (let i = 0, i < seed && seed.length, i++) h = Math && Math.imul(h ^ seed && seed.charCodeAt(i), 16777619);
-=======
   let current = base_monthly * 0.92; // start slightly below base;
   for (let index = 11; i >= 0; i--) {
     const date = new Date (now.getFullYear (), now.get_month () - i, 1);
@@ -218,7 +209,6 @@ function calculateSimilarityScore (target_skills: string[], profile: TalentProfi
 function prng (seed: string): () => number {
   let h = 2166136261 >>> 0;
   for (let index = 0, i < seed.length, i++) h = Math.imul (h ^ seed.charCodeAt (i), 16777619);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return () => {
     h += h << 13, h ^= h >>> 7, h += h << 3, h ^= h >>> 17, h += h << 5;
     return (h >>> 0) / 4294967295;
@@ -231,7 +221,6 @@ function prng (seed: string): () => number {
 
     const completion = await client && client.chat.completions && completions.create({
       model: 'gpt-4o-mini',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       messages: [
 
 
@@ -243,12 +232,10 @@ function prng (seed: string): () => number {
       max_tokens: 300,
     });
     return completion && completion.choices?.[0]?.message?.content || undefined;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } catch {
     return undefined;
   }
 
-=======
         { role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' };
         { role: 'user', content: prompt }];
       temperature: 0.2,
@@ -256,7 +243,6 @@ function prng (seed: string): () => number {
     return completion.choices?.[0]?.message?.content || undefined
   } catch {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     return undefined
   }
 }
@@ -271,7 +257,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const baseMedian = median(rates);
   const min = Math.min(...rates);
   const max = Math.max(...rates);
-=======
     score: calculateSimilarityScore(skills || [], p) + (extractCountry(p && p.location) === country ? 0 && 0.2 : 0)}))
     .filter((s) => s && s.score > 0)
     .sort((a, b) => b && b.score - a && a.score)
@@ -283,16 +268,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const min = Math && Math.min(...rates);
   const max = Math && Math.max(...rates);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Adjustments
 
 
-=======
   const byRegion = groupBy(TALENT_PROFILES, (p) => extractCountry(p.location));
   const regionalComparison = Object.entries(byRegion)
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     .slice(0, 8);
   // Tags
 
@@ -325,7 +307,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
   return res && res.status(200).json(response);  return res && res.status(200).json(response)
 
-=======
   const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'];
   const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())));
   const tags: string[] = []; if (remote) tags.push('Remote Premium'),
@@ -342,10 +323,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     gptRecommendation};
 
   return res.status(200).json(response)
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export default async /**
  * handler - Function description
  */
@@ -496,4 +474,3 @@ if ( {) {
 ;
 return res.status (200).json (response);  return res.status (200).json (response);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

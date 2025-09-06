@@ -6,7 +6,6 @@
       </Head>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
             <CardTitle className=&quot;text-2xl font-bold&quot;>Authentication Error</CardTitle>
             <p className=&quot;text-sm text-muted-foreground&quot;>
@@ -31,7 +30,6 @@
                   <Link href="/auth/login">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     Try Again
                   </Link>
                 </Button>
@@ -47,7 +45,6 @@
                 Need help? <Link href="/contact" className="hover:text-primary">Contact Support</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
             </div>
           </CardContent>
@@ -115,11 +112,9 @@ function ErrorPage() {
     </>);
 
 }
-=======
 
 }
 
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -127,5 +122,3 @@ function ErrorPage() {
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -13,7 +13,6 @@ export default function GreenIT() {
 
       icon: Server},
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       title: "Optimized Cooling Systems"
       description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures."
@@ -21,7 +20,6 @@ export default function GreenIT() {
     {
       title: "Renewable Energy Integration"
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint."
-=======
 import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
@@ -41,8 +39,6 @@ export default function GreenIT() {;
     {;
       title: "Renewable Energy Integration",;
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { SEO } from '@/components / SEO';
 import { GradientHeading } from '@/components / GradientHeading';
 import { Button } from '@/components / ui / button';
@@ -65,7 +61,6 @@ function GreenIT() {
     {
       title: "Renewable Energy Integration",
       description: "Solutions for leveraging on - site renewable generation or virtual power purchase agreements to offset carbon footprint.",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       icon: Leaf}
   ];
 ;
@@ -170,10 +165,8 @@ function GreenIT() {
     </AppLayout>
   )
 
-=======
 
 
-=======
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -229,7 +222,6 @@ export default function GreenIT() {;
                   </p>;
                   <div className="mt-8">;
                     <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
-=======
     <AppLayout>;
       <SEO;
         title="Green IT Solutions - Sustainable Technology";
@@ -261,7 +253,6 @@ export default function GreenIT() {;
                   </p>;
                   <div className="mt - 8">;
                     <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       Explore Green IT Solutions;
                     </Button>;
                   </div>;
@@ -335,10 +326,6 @@ export default function GreenIT() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

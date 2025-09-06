@@ -1,7 +1,6 @@
 
 
 
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
@@ -30,9 +29,7 @@ export default function FuturisticServices2030Page() {
     ...spaceMetaverseTechServices2030,
     ...innovativeMicroSaasServices2030,
     ...researchDevelopmentServices2030
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -51,7 +48,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     {
       title: '🚀 Futuristic AI Services 2030',
       icon: Brain,
@@ -113,7 +109,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <meta property="og:title" content="2030 Futuristic Technology Services | Zion Tech Group" />
         <meta property="og:description" content="Experience the future with our revolutionary 2030 technology services. From AI consciousness to space mining, quantum computing to metaverse development." />
         <meta property="og:type" content="website" />
@@ -128,7 +123,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="2030 Futuristic Technology Services | Zion Tech Group" />
         <meta name="twitter:description" content="Experience the future with our revolutionary 2030 technology services. From AI consciousness to space mining, quantum computing to metaverse development." />
@@ -169,9 +163,7 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
                 "telephone": "+1-302-464-0950"
                 "contactType": "customer service"
                 "email": "kleber@ziontechgroup.com"
-=======
             __html: JSON.stringify ({
-=======
 
         {/* Additional Meta Tags */  } catch (error) {
     console.error("Error:", error);
@@ -192,7 +184,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               "@context": "https://schema.org",
               "@type": "Service",
               "name": "2030 Futuristic Technology Services",
@@ -229,7 +220,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               transition={{ duration: 0.8 }} className="text-center mb-16">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -258,7 +248,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-200">
                   Get Started Today
                 </motion.button>
@@ -272,7 +261,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
                   View Pricing
                 </motion.button>
@@ -359,7 +347,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {serviceCategories.map((category, categoryIndex) => (
           <section key={category.title} className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/10 to-gray-800/10"></div>
@@ -384,7 +371,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 viewport={{ once: true }} className="text-center mb-16">
                 <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
                   <category.icon className="w-10 h-10 text-white" />
@@ -392,7 +378,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
 
-=======
                   viewport={{ once: true }} className="text - center">;
                   <div className={`text - 4xl mb - 2 ${stat.color}`}>;
                     <stat.icon className="w - 12 h - 12 mx - auto mb - 4" />;
@@ -423,7 +408,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
                   </span>;
                 </h2>;
                 <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   {category.description}
 
 
@@ -442,7 +426,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </p>
               </motion.div>
 
@@ -464,7 +447,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
                     viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     whileHover={{ y: -5 }} className="group cursor-pointer">
                     <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 backdrop-blur-sm">
                       <div className="text-4xl mb-4">{service.icon}</div>
@@ -483,7 +465,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           </span>
                         </div>
                         <div className="flex items-center space-x-4 text-xs text-gray-400">
@@ -532,7 +513,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -540,8 +520,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-=======
-=======
                     while_hover={{ coordinate_y: -5 }} className="group cursor - pointer">;
                     <div className="p - 6 rounded - 2xl bg - gradient - to - br from - gray - 900 / 60 to - gray - 800 / 60 border border - cyan - 500 / 30 hover:border - cyan - 400 / 50 transition - all duration - 300 backdrop - blur - sm">;
                       <div className="text - 4xl mb - 4">{service.icon}</div>;
@@ -578,7 +556,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
               </div>;
             </div>;
           </section>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Contact CTA Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-4xl mx - auto text - center">;
@@ -604,7 +581,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">
                   Schedule Consultation
                 </motion.button>
@@ -618,7 +594,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
                   View Pricing
                 </motion.button>
@@ -647,7 +622,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
   );
 };
 
-=======
         {/* Footer */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -655,10 +629,8 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
 
 }
 
-=======
 }
 
-=======
             >;
               <h2 className="text - 3xl sm:text - 4xl lg:text - 5xl font - bold text - white mb - 6">;
                 Ready to Experience the;
@@ -713,4 +685,3 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

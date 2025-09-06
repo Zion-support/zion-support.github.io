@@ -2,13 +2,11 @@
 import {WorkExperience} from '@/types / resume';
 import {format} from 'date - fns';
 
-=======
 
 
 import {WorkExperience} from '@/types/resume';
 import {format} from 'date-fns';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface WorkExperienceSectionProps {
   work_experience: WorkExperience[];
 }
@@ -29,7 +27,6 @@ interface WorkExperienceSectionProps {
 
 
 
-=======
 import { WorkExperience } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface WorkExperienceSectionProps {;
@@ -58,8 +55,6 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
 
   if (sortedWorkExperience.length === 0) return null,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Professional Experience</h2>
@@ -76,7 +71,6 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
               <p className="text-sm">{work.company_name}</p>
               {work.location && (
                 <span className="text-sm">{work.location}</span>
-=======
 import {WorkExperience} from '@/types/resume';
 import {format} from 'date-fns';
 interface WorkExperienceSectionProps {;
@@ -120,7 +114,6 @@ export function WorkExperienceSection(): any ({ workExperience }: WorkExperience
               <p className="text-sm">{work && work.company_name}</p>;
               {work && work.location && (;
                 <span className="text-sm">{work && work.location}</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </div>;
             {work && work.description && (;
@@ -134,7 +127,6 @@ export function WorkExperienceSection(): any ({ workExperience }: WorkExperience
   );
 }
 
-=======
 export /**
  * WorkExperienceSection - Function description
  */
@@ -195,4 +187,3 @@ if (return null) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

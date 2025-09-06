@@ -1,5 +1,4 @@
 
-=======
 
 import { test, expect } from '@playwright/test';
 
@@ -48,7 +47,6 @@ test.describe('Performance Tests', () => {
     await page.waitForTimeout(2000);
 
 
-=======
     expect(consoleMessages.length).toBe(0);
   });
   
@@ -70,9 +68,7 @@ test.describe('Performance Tests', () => {
     }
   });
 });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
-=======
 const { test, expect } = require('@playwright/test')'
 test && test.describe('"Performance"
   test('"page"
@@ -85,4 +81,3 @@ test && test.describe('"Performance"
               "output"
           resolve({ "error"
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

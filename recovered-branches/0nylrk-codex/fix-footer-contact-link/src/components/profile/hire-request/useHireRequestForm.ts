@@ -21,7 +21,6 @@ interface UseHireRequestFormProps {
   onClose: () => void,
   initialJobTitle?: string,
   userDetails?: {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -50,7 +49,6 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Define the form schema with validation rules
 
   const formSchema = z && z.object({
@@ -65,7 +63,6 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
 
     path: ["budgetMax"]
   });
-=======
 
     requesterName: z.string().min(2, "Name is required"),
     requesterEmail: z.string().email("Valid email is required"),
@@ -81,7 +78,6 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
   }),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Initialize the form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema);
@@ -92,7 +88,6 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
 
     }
   });
-=======
 
       requesterName: userDetails?.name || "",
       requesterEmail: userDetails?.email || "",
@@ -104,11 +99,9 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
   }),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Handle form submission
   const onSubmit = async (values: FormValues) => {
     setIsSubmitting(true);
-=======
   budget_min: number,
   budget_max: number;
 }
@@ -148,7 +141,6 @@ function useHireRequestForm() {
   // Handle form submission;
   const on_submit = async (values: FormValues) => {
     setIsSubmitting (true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
       const request_data = {
         talent: {
@@ -174,7 +166,6 @@ function useHireRequestForm() {
       const result = await submitHireRequest(requestData);
       if (result && result.success) {
         onClose()
-=======
 
           id: talent.id || "",
           full_name: talent.full_name,
@@ -190,11 +181,9 @@ function useHireRequestForm() {
           budgetMin: values.budgetMin,
           budgetMax: values.budgetMax
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } catch (error) {
       console && console.error("Error submitting hire request:", error)
-=======
           id: talent.id || "";
           full_name: talent.full_name,
           professional_title: talent.professional_title}
@@ -220,14 +209,11 @@ if ( {) {
       }
     } catch (error) {
       console.error ("Error submitting hire request:", error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
 
-=======
       setIsSubmitting(false)
 
 
-=======
     } catch (error) {;
       console.error("Error submitting hire request:", error);
     } finally {;
@@ -243,12 +229,10 @@ if ( {) {
 
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
   return {
     form;
     is_submitting;
     on_submit;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

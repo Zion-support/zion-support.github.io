@@ -46,7 +46,6 @@ import {
   ExternalLink
   ChevronDown
   Cloud
-=======
 
 
 import {
@@ -64,7 +63,6 @@ import {
   ChevronDown,
   Cloud,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "lucide-react";
 const helpArticles = [
   {
@@ -158,7 +156,6 @@ const help_articles = [;
     icon: Cloud,
     color: "blue",
 
-=======
       {
 
 
@@ -180,7 +177,6 @@ const help_articles = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     articles: [
       {
         title: "Cloud Migration Guide"
@@ -207,12 +203,9 @@ const help_articles = [;
     ]
   }
 
-=======
-=======
       {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         title: "Cloud Security"
         description: "Best practices for securing your cloud infrastructure"
         readTime: "9 min read"
@@ -220,7 +213,6 @@ const help_articles = [;
       }
     ]
   }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
 
 ;
@@ -228,7 +220,6 @@ const help_categories = [;
 
   {
 
-=======
 
 
     title: "Getting Started"
@@ -240,7 +231,6 @@ const help_categories = [;
 
 ];
 
-=======
 
 
     color: 'blue',
@@ -339,7 +329,6 @@ export default function HelpPage() {;
 
     setExpandedCategory(expandedCategory === index ? null : index);
 
-=======
 
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
   const toggleCategory = (index: number) => {
@@ -348,7 +337,6 @@ export default function HelpPage() {;
 
 
   }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   const filteredCategories = helpCategories
     .map((category) => ({
       ...category
@@ -368,7 +356,6 @@ export default function HelpPage() {;
     )
   })).filter(category => category.articles.length > 0);
 
-=======
   const filteredCategories = helpCategories;
     .map((category) => ({;
       ...category,;
@@ -379,15 +366,9 @@ export default function HelpPage() {;
       ),;
     }));
     .filter((category) => category && category.articles.length > 0);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   return (
     <>;
       <Head>;
@@ -436,7 +417,6 @@ export default function HelpPage() {;
       </div>;
     </>;
   );
-=======
 ;
 export default /**
  * HelpPage - Function description
@@ -505,5 +485,4 @@ function HelpPage() {
         </section>;
       </div>;
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

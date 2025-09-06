@@ -30,10 +30,7 @@ import { motion } from 'framer-motion';
 
 interface EnhancedHero2026Props {;
   contactInfo: {;
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ArrowRight,
   Star,
   TrendingUp,
@@ -49,7 +46,6 @@ interface EnhancedHero2026Props {;
 } from 'lucide-react';
 interface EnhancedHero2026Props {
   contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     mobile: string;
     email: string;
     address: string;
@@ -98,7 +94,6 @@ interface EnhancedHero2026Props {
 ;
   const stats_variants = {
     hidden: { scale: 0.8, opacity: 0 },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     visible: {
       y: 0
       opacity: 1
@@ -147,7 +142,6 @@ export default function EnhancedHero2026(): any ({;
     },;
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
       {/* Enhanced Background Elements */}
@@ -161,7 +155,6 @@ export default function EnhancedHero2026(): any ({;
       <div className='absolute inset-0 pointer-events-none'>;
         {Array && Array.from({ length: 20 }).map((_, i) => (;
           <motion&& motion.div
-=======
         duration: 0.6,
         ease: 'ease_out' as const,
       },
@@ -178,7 +171,6 @@ export default function EnhancedHero2026(): any ({;
       <div className='absolute inset - 0 pointer - events - none'>;
         {Array.from ({ length: 20 }).map ((_, i) => (
           <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             key={i}
             className='absolute w - 2 h - 2 bg - cyan - 400 / 30 rounded - full';
             style={{
@@ -209,7 +201,6 @@ export default function EnhancedHero2026(): any ({;
               delay: Math && Math.random() * 2,            }}  }
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
       {/* Enhanced Background Elements */}
@@ -223,7 +214,6 @@ export default function EnhancedHero2026(): any ({;
       <div className="absolute inset-0 pointer-events-none">;
         {Array && Array.from({ length: 20 }).map((_, i) => (;
           <motion&& motion.div
-=======
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`,
             }}
@@ -247,7 +237,6 @@ export default function EnhancedHero2026(): any ({;
       <div className="absolute inset - 0 pointer - events - none">;
         {Array.from ({ length: 20 }).map ((_, i) => (
           <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             key={i}
             className="absolute w - 2 h - 2 bg - cyan - 400 / 30 rounded - full";
             style={{
@@ -260,7 +249,6 @@ export default function EnhancedHero2026(): any ({;
 
               opacity: [0.3, 0.8, 0.3];
               scale: [1, 1.5, 1];
-=======
 
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
@@ -268,7 +256,6 @@ export default function EnhancedHero2026(): any ({;
               delay: Math.random() * 2,            }}  };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }}
             transition={{
               duration: 3 + Math.random () * 2,
@@ -461,20 +448,16 @@ export default function EnhancedHero2026(): any ({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Enhanced CTA Section */}
 
               
               <Button 
                 href="/contact" 
 
-=======
 
               <Button 
                 href="/contact" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 variant="secondary"
                 size="xl"
                 className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"
@@ -565,12 +548,9 @@ export default function EnhancedHero2026(): any ({;
           </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Contact Information */}
 
           <motion.div 
@@ -649,11 +629,8 @@ export default function EnhancedHero2026(): any ({;
   );  );
 }
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           <motion.div variants={item_variants} className='space - y-6'>;
             <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
               <Button;
@@ -765,10 +742,6 @@ export default function EnhancedHero2026(): any ({;
       </div>;
     </section>));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

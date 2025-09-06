@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface PostFormValues {
 
   title: string
@@ -93,7 +92,6 @@ const mockPost: ForumPost = {
 
 
   if (isLoading) {
-=======
 
   useEffect(() => {;
     // In a real app, we would fetch the post data here;
@@ -102,7 +100,6 @@ const mockPost: ForumPost = {
   }, [postId]);
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <AppLayout>;
         <div className="container py-8">;
@@ -149,14 +146,12 @@ const mockPost: ForumPost = {
 
 
   if (!isAuthor && !isAdmin) {
-=======
 
   // Check if the user is the author or an admin;
   const isAuthor = user?.id === post && post.authorId;
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
 
   if (!isAuthor && !isAdmin) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <AppLayout>;
         <div className="container py-8">;
@@ -226,12 +221,10 @@ const mockPost: ForumPost = {
 
     }
   }
-=======
     }
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -254,10 +247,8 @@ const mockPost: ForumPost = {
     </AppLayout>
   )
 
-=======
 
 
-=======
 import { useState, useEffect } from "react",;
 import { Link, useNavigate, useParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -437,11 +428,9 @@ const mock_post: ForumPost = {
   reply_count: 12,
   is_answered: true,
   is_featured: true;
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 export default /**
@@ -562,4 +551,3 @@ if ( {) {
       </div>;
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

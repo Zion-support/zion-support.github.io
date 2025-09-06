@@ -4,15 +4,11 @@
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
 import { Briefcase } from "lucide-react",
 
-=======
 import {ProfileExperience, as, ProfileExperienceType} from "@/types/profile";
 import {Briefcase} from "lucide-react";
-=======
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
 import { Briefcase } from "lucide-react",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ProfileExperienceProps {
   experience: ProfileExperienceType[];
 }
@@ -42,7 +38,6 @@ import {ProfileExperience, as, ProfileExperienceType} from "@/types/profile";
 import {Briefcase} from "lucide-react";
 interface ProfileExperienceProps {;
   experience: ProfileExperienceType[];
-=======
 
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",;
 import { Briefcase } from "lucide-react";
@@ -107,8 +102,6 @@ export function ProfileExperience(): any ({ experience }: ProfileExperienceProps
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { ProfileExperience, as, ProfileExperienceType  } from '@/types / profile';
 import { Briefcase  } from './lucide-react';
 interface ProfileExperienceProps {
@@ -141,4 +134,3 @@ function ProfileExperience() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

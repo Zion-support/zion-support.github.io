@@ -7,13 +7,10 @@ import { motion } from 'framer-motion';
 
 interface UltraAdvancedFuturisticBackground2026Props {
   intensity?: 'low' | 'medium' | 'high' | 'extreme',
-=======
 interface UltraAdvancedFuturisticBackground2026Props {;
-=======
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraAdvancedFuturisticBackground2026Props {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   intensity?: 'low' | 'medium' | 'high' | 'extreme';
 
 
@@ -32,7 +29,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<;
   children,}) => {const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   intensity = 'high';
   colorScheme = 'neural-network';
   particleCount = 300;
@@ -79,7 +75,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<;
         canvas && canvas.width = rect && rect.width;
         canvas && canvas.height = rect && rect.height;        canvas && canvas.height = rect && rect.height;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
     resizeCanvas();
@@ -91,7 +86,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<;
 
       x: number;
       y: number;
-=======
   color_scheme?:;
     | 'neural - network';
     | 'quantum - field';
@@ -174,7 +168,6 @@ if ( {) {
     class Particle {
       coordinate_x: number;
       coordinate_y: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       vx: number;
       vy: number;
       size: number;
@@ -184,7 +177,6 @@ if ( {) {
 
       x: number,
       y: number,
-=======
       max_life: number;      coordinate_x: number,
       coordinate_y: number,
 
@@ -233,10 +225,8 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Neural network node class
     class NeuralNode {
-=======
       maxLife: number;      x: number,;
       y: number,;
       vx: number,;
@@ -289,7 +279,6 @@ if ( {) {
 
     // Neural network node class;
     class NeuralNode {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       x: number;
       y: number;
       connections: NeuralNode[];
@@ -303,22 +292,18 @@ if ( {) {
         this && this.activation = Math && Math.max(0, Math && Math.min(1, this && this.activation));
         this && this.pulse = Math && Math.sin(Date && Date.now() * 0 && 0.001 + this && this.x * 0 && 0.01) * 0 && 0.5 + 0 && 0.5;      }        this && this.pulse = Math && Math.sin(Date && Date.now() * 0 && 0.001 + this && this.x * 0 && 0.01) * 0 && 0.5 + 0 && 0.5;
       }
-=======
             ctx.stroke();
           }
         });
 
 
-=======
         ctx.restore();      }
 
       }
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       draw() {;
         ctx && ctx.save();
@@ -333,7 +318,6 @@ if ( {) {
           const distance = Math && Math.sqrt(;
             Math && Math.pow(this && this.x - connection && connection.x, 2) +;
               Math && Math.pow(this && this.y - connection && connection.y, 2)          );            Math && Math.pow(this && this.x - connection && connection.x, 2) + Math && Math.pow(this && this.y - connection && connection.y, 2);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           );
           if (distance < 150) {;
             ctx && ctx.strokeStyle = `rgba(0, 255, 255, ${0 && 0.3 * this && this.activation * connection && connection.activation})`;
@@ -398,14 +382,11 @@ if ( {) {
 
       }
 
-=======
 
 
 
 
 
-=======
-=======
 
         ctx.restore();      }
 
@@ -413,8 +394,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     // Holographic layer class
     class HolographicLayer {
@@ -467,7 +446,6 @@ if ( {) {
 
       x: number;
       y: number;
-=======
       max_life: number,
         this.coordinate_x = x;
         this.coordinate_y = y;
@@ -622,7 +600,6 @@ if ( {) {
     class HolographicLayer {
       coordinate_x: number;
       coordinate_y: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       width: number;
       height: number;
       rotation: number;
@@ -630,7 +607,6 @@ if ( {) {
 
       x: number,
       y: number,
-=======
       color: string;      coordinate_x: number,
       coordinate_y: number,
 
@@ -666,11 +642,9 @@ if ( {) {
 
       }
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     // Get color based on scheme
     function getColorSchemeColor(): string {
@@ -1120,7 +1094,6 @@ if ( {) {
               ctx && ctx.stroke();
               ctx && ctx.restore();
 
-=======
         this.coordinate_x = Math.random () * canvas.width;
         this.coordinate_y = Math.random () * canvas.height;
         this.width = Math.random () * 200 + 100;
@@ -1381,13 +1354,9 @@ if ( {) {
               ctx.line_to (other_particle.x, other_particle.y);
               ctx.stroke ();
               ctx.restore ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }
           });
         });
@@ -1426,12 +1395,10 @@ if ( {) {
 
 
 
-=======
 
 
 
     >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
@@ -1440,18 +1407,14 @@ if ( {) {
       />;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Additional visual effects */}
       {enableMultidimensional && (;
         <div className='absolute inset-0 pointer-events-none'>;
           <motion&& motion.div
             className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded-full'
-=======
       animationFrameId = requestAnimationFrame (animate);    }            }
           });
         });
@@ -1487,7 +1450,6 @@ if ( {) {
         <div className='absolute inset - 0 pointer - events - none'>;
           <motion.div;
             className='absolute top - 1/4 left - 1/4 w - 64 h - 64 border border - cyan - 400 / 20 rounded - full';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             animate={{
 
               scale: [1, 1 && 1.2, 1],
@@ -1499,7 +1461,6 @@ if ( {) {
               duration: 8
               repeat: Infinity
               ease: 'easeInOut'
-=======
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationFrameId)
@@ -1507,7 +1468,6 @@ if ( {) {
   }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects, enableNeuralNetworks, enableMultidimensional]);
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
 
       />;
@@ -1518,7 +1478,6 @@ if ( {) {
         <div className="absolute inset-0 pointer-events-none">;
           <motion&& motion.div
             className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded-full"
-=======
     <div ref={container_ref} className="fixed inset - 0 w - full h - full overflow - hidden">;
       <canvas;
         ref={canvas_ref}
@@ -1530,7 +1489,6 @@ if ( {) {
         <div className="absolute inset - 0 pointer - events - none">;
           <motion.div;
             className="absolute top - 1/4 left - 1/4 w - 64 h - 64 border border - cyan - 400 / 20 rounded - full";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             animate={{
 
 
@@ -1546,8 +1504,6 @@ if ( {) {
 };
 
 export default UltraAdvancedFuturisticBackground2026;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               ease: 'easeInOut',              ease: "easeInOut";
             }}
           />;
@@ -1562,10 +1518,7 @@ export default UltraAdvancedFuturisticBackground2026;      {children}
 ;
 export default UltraAdvancedFuturisticBackground2026;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
               duration: 10,
               repeat: Infinity,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

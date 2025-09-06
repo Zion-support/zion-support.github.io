@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [formData, setFormData] = useState({
 
     brand_name: ""
@@ -152,7 +151,6 @@ export default function TenantOnboarding() {;
 
     }
   }
-=======
 
   }),
   
@@ -247,7 +245,6 @@ export default function TenantOnboarding() {;
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -277,7 +274,6 @@ export default function TenantOnboarding() {;
               <form onSubmit={handleSubmit} className="space-y-6">;
                 <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
                   <TabsList className="mb-4 grid grid-cols-3 w-full">;
-=======
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -438,7 +434,6 @@ if (throw error) {
                         name="industry" 
                         value={formData && formData.industry} 
                         onValueChange={(value) => handleSelectChange("industry", value)}
-=======
                   <TabsContent value="company" className="space - y-4">;
                     <div className="space - y-2">;
                       <Label html_for="brand_name">Company Name</Label>;
@@ -535,7 +530,6 @@ if (throw error) {
                         name="theme_preset" 
                         value={formData && formData.theme_preset} 
                         onValueChange={(value) => handleSelectChange("theme_preset", value)}
-=======
                   <TabsContent value="branding" className="space - y-4">;
                     <div className="space - y-2">;
                       <Label html_for="logo_url">Logo URL</Label>;
@@ -627,10 +621,8 @@ if (throw error) {
                         onChange={handleInputChange}
 
                         placeholder="hire && hire.yourcompany.com"
-=======
 
 
-=======
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -829,7 +821,6 @@ export default function TenantOnboarding() {;
 
                       />;
                       <p className="text-xs text-muted-foreground">;
-=======
                     <div className="flex items - center justify - between">;
                       <div className="space - y-0.5">;
                         <Label html_for="is_co_branded">Co - branding</Label>;
@@ -874,7 +865,6 @@ export default function TenantOnboarding() {;
                         placeholder="hire.yourcompany.com";
                       />;
                       <p className="text - xs text - muted - foreground">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         If you want to use your own domain, enter it here. You'll need to configure DNS records.;
                       </p>;
                     </div>;
@@ -900,10 +890,6 @@ export default function TenantOnboarding() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

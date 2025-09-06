@@ -23,8 +23,6 @@ const { withErrorLogging } = require(
     // Authentication would normally be checked here;
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 
 async function handler(req, res) {
@@ -38,7 +36,6 @@ async function handler(req, res) {
   try {
     // Authentication would normally be checked here
     // This is a placeholder implementation
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     res.statusCode = 200;
     res.json({ "points": 0, "history": [] })} catch (err) {
     console.error(',
@@ -46,5 +43,3 @@ async function handler(req, res) {
     res.statusCode = 500;
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

@@ -14,17 +14,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     (e) => e && e.type === "zion && zion.job.posted" && e && e.timestamp > sinceTs,
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
   res && res.status(200).json({ events });
 }
 
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state  } from '../../../../lib / integrations / file_store';
 ;
@@ -48,4 +44,3 @@ function handler() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

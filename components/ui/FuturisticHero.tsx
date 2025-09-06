@@ -3,11 +3,8 @@ import AnimatedBackground from './AnimatedBackground';
 
 
 export default function FuturisticHero() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function FuturisticHero() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <section className='relative py-20 sm:py-28'>;
       <AnimatedBackground />;
@@ -22,7 +19,6 @@ export default function FuturisticHero() {;
         <div className='mt-8 flex items-center justify-center gap-3'>;
           <Link href='/partners'>;
             <a className='px-5 py-3 rounded-lg bg-indigo-600 text-white shadow hover:bg-indigo-500'>;
-=======
 export default /**
  * FuturisticHero - Function description
  */
@@ -41,7 +37,6 @@ function FuturisticHero() {
         <div className='mt - 8 flex items - center justify - center gap - 3'>;
           <Link href='/partners'>;
             <a className='px - 5 py - 3 rounded - lg bg - indigo - 600 text - white shadow hover:bg - indigo - 500'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Become a Partner;
             </a>;
           </Link>;
@@ -56,7 +51,6 @@ function FuturisticHero() {
 
   );
 }
-=======
 export default function FuturisticHero() {
   return (
     <section className="relative py-20 sm:py-28">
@@ -111,7 +105,4 @@ function FuturisticHero() {
     </section>);
 }
 
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

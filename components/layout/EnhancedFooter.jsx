@@ -24,11 +24,9 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const EnhancedFooter = () => {
 
 import Link from 'next / link';
@@ -45,12 +43,9 @@ const EnhancedFooter = () =>: any {
           {/* Company Info */}
 
   const currentYear = new Date().getFullYear()
-=======
 
   const currentYear = new Date().getFullYear(),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
-=======
           <div className='lg:col - span - 2'>;
             <div className='flex items - center space - x-2 mb - 4'>;
               <div className='w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center'>;
@@ -63,7 +58,6 @@ const EnhancedFooter = () =>: any {
               their digital presence with cutting - edge AI, cloud architecture,
               and innovative development services.            </p > const EnhancedFooter = () =>: any {
   const current_year = new Date ().getFullYear (),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <footer className="bg - gray - 900 text - white">;
       {/* Main Footer Content */}
@@ -215,6 +209,4 @@ export default EnhancedFooter;},
 export default EnhancedFooter;
 ;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

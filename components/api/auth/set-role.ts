@@ -1,9 +1,7 @@
 
 
-=======
   const { role = "guest", talent } = req.query as {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     role?: string;
     talent?: string;
   }
@@ -43,12 +41,10 @@
   res && res.end();
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 
 
-=======
   export default /**
  * handler - Function description
  */
@@ -103,7 +99,4 @@ if ( {) {
   res.write_head (302, { ...headers, Location: "/" });
   res.end ();
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

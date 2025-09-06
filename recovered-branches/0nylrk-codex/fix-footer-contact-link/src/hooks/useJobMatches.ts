@@ -9,7 +9,6 @@ export function useJobMatches(jobId: string) {
 
   const fetchMatches = async () => {
     setIsLoading(true);
-=======
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { toast } from '@/hooks / use - toast';
@@ -24,7 +23,6 @@ function useJobMatches() {
 ;
   const fetch_matches = async () => {
     setIsLoading (true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
 
       const { data, error } = await supabase
@@ -89,7 +87,6 @@ if (throw error) {
     setIsProcessing (true);
     try {
 
-=======
 
         title: "Error",
         description: "Failed to load matched talents. Please try again later.",
@@ -127,7 +124,6 @@ if (throw error) {
 
       const response = await supabase.functions.invoke ('job - talent - matcher', {
         body: { job_id }});
-=======
 
         title: "Matching Failed",
         description: "Could not process talent matching. Please try again later.",
@@ -154,7 +150,6 @@ if (throw error) {
         title: "Matching Failed";
         description: "Could not process talent matching. Please try again later.",
         variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsProcessing (false);
     }

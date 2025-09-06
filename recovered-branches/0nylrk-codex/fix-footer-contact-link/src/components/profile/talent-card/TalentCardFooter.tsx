@@ -108,8 +108,6 @@ if ( {) {
 
     }
   }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <>;
@@ -179,12 +177,9 @@ if ( {) {
       </div>;
 
 
-=======
 
       
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Hire Request Modal */}
       <HireRequestModal
         talent={profile}
@@ -196,8 +191,6 @@ if ( {) {
     </>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
 
 

@@ -144,7 +144,6 @@ export default function TalentProfilePage() {;
     return <ProfileLoadingState />;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   if (error |!profile) {
     return <ProfileErrorState error={error} />
@@ -205,7 +204,6 @@ export default function TalentProfilePage() {;
             <Handshake className="mr-2 h-4 w-4" />
             Hire Now
           </Button>
-=======
 
   // Create a compatible UserProfile from UserDetails or the authenticated user;
   const userProfile: UserProfile = user ? {;
@@ -289,7 +287,6 @@ export default function TalentProfilePage() {;
             <Handshake className="mr-2 h-4 w-4" />;
             Hire Now;
           </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Button
             size="sm"
             variant="outline"
@@ -297,7 +294,6 @@ export default function TalentProfilePage() {;
 
             onClick={handleMessageTalent}>;
             <MessageSquare className="mr-2 h-4 w-4" />;
-=======
 import React, { useState, useEffect } from './react';
 import { use_params, use_navigate } from './react-router-dom';
 import { TalentProfile } from '@/components / profile / TalentProfile';
@@ -439,7 +435,6 @@ if ( {) {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Request to Hire Modal */}
       <HireRequestModal
         talent={profile}
@@ -450,7 +445,6 @@ if ( {) {
       />;
 
 
-=======
       {/* Request to Hire Modal */}
       <HireRequestModal;
         talent={profile}
@@ -458,7 +452,6 @@ if ( {) {
         on_close={() => setIsHireModalOpen (false)}
         user_details={user_profile}
       />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Message Talent Modal */}
       <MessageTalentModal;
         talent={profile}
@@ -469,7 +462,5 @@ if ( {) {
     </div>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

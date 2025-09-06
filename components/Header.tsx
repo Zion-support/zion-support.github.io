@@ -23,14 +23,9 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 "use client";
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 
 "use client";
 import React, { useState, useEffect } from "react";
@@ -59,7 +54,6 @@ import {
   Factory,
   Truck,
 
-=======
 
 
 
@@ -79,8 +73,6 @@ import {
   Factory
   Truck
   CreditCard
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 import {;
   Menu,;
   X,;
@@ -98,7 +90,6 @@ import {;
   Factory,;
   Truck,;
   CreditCard,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from "lucide-react";
 
 export default function Header() {;
@@ -138,16 +129,13 @@ function Header() {
     {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
 
 
-=======
 
-=======
             <Link href="/" className="flex items-center">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
                 <Brain className="h-5 w-5 text-white" />
@@ -157,7 +145,6 @@ function Header() {
 
 
 
-=======
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
@@ -181,7 +168,6 @@ function Header() {
                 <a href="#" className="hover:text-blue-300"><Instagram className="w-4 h-4" /></a>
               </div>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
@@ -309,8 +295,6 @@ function Header() {
           <nav className="hidden lg:flex space-x-8">;
             {navigation && navigation.map((item) => (;
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link
                 key={item && item.name}
                 href={item && item.href}
@@ -321,18 +305,10 @@ function Header() {
 
           </div>
 
->>>>>>> origin/automation-improvements-final
-=======
           </nav>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">;
             <Link
@@ -349,19 +325,13 @@ function Header() {
 
         </div>
 
-=======
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">;
               Get Started;
             </Link>;
           </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -374,12 +344,10 @@ function Header() {
 
           </button>;
         </div>;
-=======
 
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isMenuOpen && (;
@@ -571,9 +539,7 @@ function Header() {
     </header>);
 
 }
-=======
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
-=======
                   )}
                 </div>
               ))}
@@ -584,7 +550,6 @@ function Header() {
                   onClick={() => setIsMenuOpen(false)}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   Get Started
                 </Link>
@@ -600,5 +565,3 @@ function Header() {
 
 export default Header;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

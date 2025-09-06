@@ -172,10 +172,8 @@ function useTalentDirectory() {
     handleToggleSave
 
     expanded_sections;
-=======
 
 
-=======
 import { useAuthStatus } from "./talent/useAuthStatus",;
 import { useTalentData } from "./talent/useTalentData",;
 import { useFilterTalents } from "./talent/useFilterTalents",;
@@ -264,7 +262,6 @@ export function useTalentDirectory() {;
 
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
     // Auth and user state;
     is_authenticated;
@@ -278,6 +275,5 @@ export function useTalentDirectory() {;
     clear_filters;
     toggle_section;
     handleToggleSave;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

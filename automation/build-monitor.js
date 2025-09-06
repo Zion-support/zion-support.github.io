@@ -279,9 +279,7 @@ if (require.main === module) {
   }
 }
 
-=======
 
-=======
 
 const fs = require('fs);
 const path = require('path'),
@@ -507,7 +505,6 @@ if (require.main === module) {
   const monitor = new BuildMonitor(),
   monitor.run().catch(console.error)}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 module.exports = BuildMonitor;

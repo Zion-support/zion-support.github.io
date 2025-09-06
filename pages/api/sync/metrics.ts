@@ -1,6 +1,5 @@
 
 
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
@@ -13,7 +12,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const events = filterEventsByScope(state.events, state.config.scope),
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
@@ -30,12 +28,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const events = filterEventsByScope(state.events, state.config.scope),
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const totalsByToken: Record<string, number> = {},
   const contributionsBySubject: Record<string, number> = {},
   let globalVotes = 0,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   for (const e of events) {
     if (e.type === "token_transfer") {
       const p = e.payload as any
@@ -46,9 +41,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     } else if (e.type === "proposal") {
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
       const p = e.payload as any,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

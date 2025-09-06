@@ -1,6 +1,5 @@
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   try {
     const {
       target_institution,
@@ -49,7 +48,6 @@
       .json({ error: error?.message |"Failed to generate proposal" });
   }
 }
-=======
       language = 'en'
     } = req.body || {};
 
@@ -85,8 +83,6 @@
 
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       supporting_multiverses,
       content_markdown,
       language,
@@ -99,11 +95,8 @@
       .json ({ error: error?.message || "Failed to generate proposal" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

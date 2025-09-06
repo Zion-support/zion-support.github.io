@@ -27,10 +27,7 @@ import React, { useState } from 'react';
 } from 'lucide-react';
 
 interface Service {;
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Brain,
   Shield,
   Rocket,
@@ -50,7 +47,6 @@ interface Service {;
 } from 'lucide-react';
 ;
 interface Service {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   name: string;
   tagline: string;
@@ -95,7 +91,6 @@ interface Service {
 
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <section id="services" className="py-24 px-6 relative overflow-hidden">;
       {/* Background */}
@@ -121,7 +116,6 @@ interface Service {
 
         {/* Filters */}
 
-=======
         <div className="flex flex-col md:flex-row gap-4 mb-12 justify-center items-center">
           {/* Category Filter */}
           <div className="relative">
@@ -133,12 +127,9 @@ interface Service {
               {categories.map((category) => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {category === 'all' ? 'All Categories' : category}
                 </option>;
               ))}
@@ -148,7 +139,6 @@ interface Service {
             <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Search */}
           <div className='relative'>;
             <input
@@ -166,7 +156,6 @@ interface Service {
         {/* Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Search */}
           <div className="relative">;
             <input
@@ -175,17 +164,13 @@ interface Service {
               value={searchTerm}
 
 
-=======
 
 
 
               {/* Service Content */}
               <div className='p-8'>
-=======
         </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {filteredServices && filteredServices.map((service, index) => (;
@@ -216,7 +201,6 @@ interface Service {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Icon and Category */}
                 <div className='flex items-center justify-between mb-4'>;
                   <div
@@ -407,7 +391,6 @@ interface Service {
                     <div className="text-xs text-white/40">{service.category}</div>
                   </div>
                 </div>
-=======
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 flex items-center justify-center text-2xl`}>;
                     <service && service.icon className='w-8 h-8 text-white' />;
                   </div>;
@@ -433,7 +416,6 @@ interface Service {
                   </div>;
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Service Info */}
 
                 <h3 className="text-xl font-bold mb-3 text-white">{service.name}</h3>
@@ -457,7 +439,6 @@ interface Service {
                     </span>
                   </div>
                 </div>
-=======
                 <div className='mb-6'>;
                   <div className='flex items-baseline gap-2 mb-2'>;
                     <span className='text-3xl font-bold text-white'>;
@@ -478,10 +459,8 @@ interface Service {
                   </div>;
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Key Features */}
 
-=======
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
                   <div className="space-y-2">
@@ -491,19 +470,15 @@ interface Service {
                         {feature}
                       </div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
 
                   </div>;
                 </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Benefits */}
 
 
@@ -513,7 +488,6 @@ interface Service {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* ROI and Market Info */}
 
                 <div className="mb-6 p-4 bg-white/5 rounded-lg">
@@ -524,7 +498,6 @@ interface Service {
 
                   </div>
                 </div>
-=======
                   </div>;
                 </div>;
 
@@ -543,7 +516,6 @@ interface Service {
                   </div>;
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Action Buttons */}
 
                     </div>                  </div>;
@@ -672,7 +644,6 @@ interface Service {
                 </div>;
               </div>;
 
-=======
                 <div className="flex gap-3">
                   <button
                     onClick={() => window.location.href = `mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
@@ -690,7 +661,6 @@ interface Service {
               </div>
             </div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           ))}
 
         </div>;
@@ -706,7 +676,6 @@ interface Service {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Ready to Transform Your Business?
             </h3>
             <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
@@ -714,7 +683,6 @@ interface Service {
               accelerate your digital transformation journey.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <a
                 href='mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Consultation Request'
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
@@ -737,7 +705,6 @@ interface Service {
                 href='tel:+13024640950'
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'                href="tel:+13024640950"
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
-=======
             </div>))}
         </div>;
         {/* CTA Section */}
@@ -775,7 +742,6 @@ interface Service {
                 className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'                href="tel:+13024640950";
                 className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10";
               >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Call Now;
               </a>;
             </div>;
@@ -789,11 +755,9 @@ interface Service {
 export default EnhancedServicesShowcase;  );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default EnhancedServicesShowcase;
 
 
-=======
     </section>);
 }
 ;
@@ -802,12 +766,8 @@ export default EnhancedServicesShowcase);
 ;
 export default EnhancedServicesShowcase;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

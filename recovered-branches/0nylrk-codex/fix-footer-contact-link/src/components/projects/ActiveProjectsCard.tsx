@@ -25,7 +25,6 @@ export function ActiveProjectsCard() {;
     }
 
 
-=======
 
   }, [projects, isLoading]),
   
@@ -67,7 +66,6 @@ export function ActiveProjectsCard() {;
   }, [projects, isLoading]);
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <Card>;
         <CardHeader>;
@@ -84,7 +82,6 @@ export function ActiveProjectsCard() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
           </div>;
         </CardContent>;
@@ -97,10 +94,8 @@ export function ActiveProjectsCard() {;
 
 
   if (activeProjects.length === 0) {
-=======
 
   if (activeProjects && activeProjects.length === 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <Card>;
         <CardHeader>;
@@ -163,8 +158,6 @@ export function ActiveProjectsCard() {;
     </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { useEffect, useState } from './react';
 import { Link } from './react-router-dom';
 import { BriefcaseIcon, Clock } from './lucide-react';

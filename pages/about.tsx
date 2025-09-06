@@ -3,19 +3,14 @@
 import React from "react";
 import Layout from "../components/Layout";
 
-=======
 import React from 'react';
 
-=======
 
 
-=======
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Brain, Zap, Shield, Users, Target, Globe, Heart, CheckCircle } from 'lucide-react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -98,7 +93,6 @@ const AboutPage: React.FC = () => {
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 
-=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -177,14 +171,10 @@ export default function AboutPage() {
 
 
 
-=======
-
->>>>>>> origin/automation-improvements-final
-
-=======
 
 
-=======
+
+
     { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500'   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -317,22 +307,16 @@ export default function AboutPage() {
   )
 },
 export default AboutPage,
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from "react";
 import Layout from "../components/Layout";
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function About() {
-=======
 export default function About() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <Layout
       title="About Us - Zion Tech Group"
 
@@ -360,10 +344,8 @@ export default function About() {;
   );
 }
 
-=======
 
 
-=======
     <>
       <Head>
         <title>About Us - Zion Tech Group</title>
@@ -533,9 +515,6 @@ export default function About() {;
       </div>
     </>
   );
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       name: 'Kleber',
       role: 'Founder & CEO',
       description: 'Visionary leader driving innovation in AI and quantum technologies',
@@ -661,18 +640,12 @@ export default function AboutPage() {
 };
 
 export default AboutPage;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
 
-=======
 
->>>>>>> origin/automation-improvements-final
-=======
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -703,5 +676,3 @@ function About() {
       </div>;
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

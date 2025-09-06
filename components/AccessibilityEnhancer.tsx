@@ -387,11 +387,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           </div>;
         </div>;
       </div>;
-=======
 
 
 export default AccessibilityEnhancer;
-=======
 };
 
 
@@ -411,14 +409,12 @@ export default AccessibilityEnhancer;
         </p>;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Main content */}
       <div id="main-content">{children}</div>;
     </>;
   );
 }
 export default AccessibilityEnhancer;
-=======
 ;
   const toggleHighContrast = () =>: any {
     const new_value = !isHighContrast;
@@ -486,4 +482,3 @@ export default AccessibilityEnhancer;
 ;
 export default AccessibilityEnhancer;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

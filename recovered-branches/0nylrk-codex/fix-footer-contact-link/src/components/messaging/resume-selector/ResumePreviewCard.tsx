@@ -1,5 +1,4 @@
 
-=======
 
 
 interface ResumePreviewCardProps {
@@ -14,7 +13,6 @@ export function ResumePreviewCard(): any ({;
   onDownload,;
   isLoading,;
 }: ResumePreviewCardProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">;
       <CardContent className="p-4">;
@@ -45,7 +43,6 @@ interface ResumePreviewCardProps {
   resume: Resume;
   on_download: () => void;
   is_loading: boolean;
-=======
 
         
         {resume.basic_info.summary && (
@@ -90,7 +87,6 @@ function ResumePreviewCard() {
             <span className="sr - only">Download Resume</span>;
           </Button>;
         </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {resume.basic_info.summary && (
           <p className="text - xs text - zion - slate line - clamp - 2 mb - 2">;
             {resume.basic_info.summary}
@@ -111,7 +107,6 @@ function ResumePreviewCard() {
         {resume && resume.skills && resume && resume.skills.length > 0 && (;
           <div className="flex flex-wrap gap-1 mt-2">;
             {resume && resume.skills.slice(0, 5).map((skill, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Badge
                 key={index}
                 variant="outline"
@@ -131,7 +126,6 @@ function ResumePreviewCard() {
 
 
 
-=======
 
       </CardContent>;
     </Card>;
@@ -140,7 +134,6 @@ function ResumePreviewCard() {
 
 
   );
-=======
           </p>)}
         {resume.skills && resume.skills.length > 0 && (
           <div className="flex flex - wrap gap - 1 mt - 2">;
@@ -162,5 +155,4 @@ function ResumePreviewCard() {
           </div>)}
       </CardContent>;
     </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

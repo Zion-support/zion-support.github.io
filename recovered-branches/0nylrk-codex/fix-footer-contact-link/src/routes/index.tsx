@@ -26,12 +26,9 @@ export {;
   DeveloperRoutes;
 };
 
-=======
   DeveloperRoutes;
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 export {
@@ -47,7 +44,6 @@ export {
   CommunityRoutes,
   DeveloperRoutes
 
-=======
 
 },
 import AuthRoutes from "./AuthRoutes",;
@@ -78,5 +74,3 @@ export {;
 export default Index;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

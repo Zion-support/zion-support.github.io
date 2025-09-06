@@ -15,13 +15,10 @@ export default async function handler(
     return !superToken || token === superToken;
   }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
     return !superToken || token === superToken;
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   }
   export default async function handler(
@@ -57,7 +54,6 @@ export default async function handler(
       });
 
 
-=======
 export default async /**
  * handler - Function description
  */
@@ -128,4 +124,3 @@ function handler() {
     return res.status (500).json ({ error: "Optimization failure" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

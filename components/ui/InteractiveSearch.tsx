@@ -27,9 +27,7 @@ import { motion } from 'framer-motion';
 
   placeholder?: string;
 }) {;
-=======
 export default function InteractiveSearch({ placeholder = 'Search talent, skills, or jobs...' }: { placeholder?: string }) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const [value, setValue] = useState('');
 
 
@@ -60,7 +58,6 @@ export default function InteractiveSearch() {;
     const query = formData && formData.get("search") as string,;
 
     onSearch?.(query)}
-=======
 ;
 export default /**
  * InteractiveSearch - Function description
@@ -114,7 +111,6 @@ function InteractiveSearch() {
     const form_data = new FormData (e.target as HTMLFormElement), ";
     const query = form_data.get ("search") as string,
     on_search?.(query)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (";
     <form on_submit = "{handle_submit}" className="{class_name}">";
       <div className="relative">";
@@ -132,7 +128,6 @@ function InteractiveSearch() {
   );
 }}
 
-=======
         className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
       {value && (
@@ -144,15 +139,12 @@ function InteractiveSearch() {
         </button>
       )}
     </motion.div>
-=======
     </motion.div>
 
 
 
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           className="w - full px - 4 py - 2 border border - gray - 300 rounded - lg focus: ring - 2 focus:ring - blue - 500 focus:border - transparent"  />";
         <button type="submit;
           className="absolute right - 2 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 hover:text - gray - 600">";
@@ -163,5 +155,3 @@ function InteractiveSearch() {
       </div>;
     </form>);
 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

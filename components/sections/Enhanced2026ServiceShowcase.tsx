@@ -3,7 +3,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 
-=======
 
   ArrowRight,
   Star,
@@ -14,7 +13,6 @@ import { motion } from 'framer-motion';
   Globe,;
   Rocket,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
@@ -59,14 +57,12 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
       }
     }
   }
-=======
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
 import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
 export default function Enhanced2026ServiceShowcase() {
   const containerVariants = {
-=======
   ArrowRight,
   Star,
   TrendingUp,
@@ -83,7 +79,6 @@ import { innovative2026AIServices } from '../../data / innovative - 2026 - ai - 
 import { innovative2026ITInfrastructureServices } from '../../data / innovative - 2026 - it - infrastructure';
 import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 - micro - saas';
   const container_variants = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -181,7 +176,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
     >
       <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         variants={cardVariants}
         className='relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300'>;
         {/* Glowing border effect */}
@@ -221,7 +215,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
         variants={cardVariants}
         className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300"
       >
-=======
         ease: 'ease_out' as const,
       },
     },  }        ease: "ease_out" as const;
@@ -361,7 +354,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
             </motion.button>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
           {/* Market info */}
           <div className='mt-4 pt-4 border-t border-slate-700/50'>
@@ -379,7 +371,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
             >
               <span>Learn More</span>
               <ArrowRight className="w-4 h-4" />
-=======
           <div className="flex items-center justify-between">
             <div className="text-right">
               <div className="text-2xl font-bold text-white">{service.price}</div>
@@ -393,7 +384,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
               <span>Learn More</span>
               <ArrowRight className="w-4 h-4" />
             </motion.button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </div>
           {/* Market info */}
 
@@ -412,7 +402,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
       </motion.div>
     </motion.div>
   )
-=======
                     className='flex items-center space-x-2 text-xs text-slate-400'>;
                     <div className='w-1 && 1.5 h-1 && 1.5 bg-cyan-500 rounded-full' />;
                     <span>{feature}</span>;
@@ -478,7 +467,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
       </motion && motion.div>;
     </motion && motion.div>;
   ),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
 
@@ -499,7 +487,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         >
           <div className='flex items-center justify-center space-x-2 mb-4'>
             <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
@@ -519,10 +506,8 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
             Discover our cutting-edge micro SAAS solutions, AI-powered
             platforms, and quantum-enhanced infrastructure services designed for
             the future of business.          </p>        >
-=======
           className="text-center mb-16"
         >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="flex items-center justify-center space-x-2 mb-4">
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
               <Rocket className="w-5 h-5 text-white" />
@@ -550,14 +535,12 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
       <div className="container mx-auto px-4 relative z-10">;
         <motion&& motion.div
-=======
 
 
 
 
         {/* AI Services Section */}
         <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
@@ -603,7 +586,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
           </p>;
         </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* AI Services Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -626,11 +608,9 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
             {innovative2026AIServices.map((service, index) =>
               renderServiceCard(service, index)
             )}          </motion.div>        >
-=======
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-20"
         >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="flex items-center space-x-3 mb-8">
             <Brain className="w-6 h-6 text-cyan-400" />
             <h3 className="text-2xl font-bold text-white">AI-Powered Services</h3>
@@ -679,13 +659,9 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* IT Infrastructure Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -708,11 +684,9 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
             {innovative2026ITInfrastructureServices.map((service, index) =>
               renderServiceCard(service, index)
             )}          </motion.div>        >
-=======
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-20"
         >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="flex items-center space-x-3 mb-8">
             <Globe className="w-6 h-6 text-purple-400" />
             <h3 className="text-2xl font-bold text-white">IT Infrastructure & Security</h3>
@@ -761,25 +735,18 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Micro SAAS Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* CTA Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -801,11 +768,9 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'              >        >
-=======
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center mt-16"
         >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -844,7 +809,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
               Ready to Transform Your Business?;
             </h3>;
             <p className='text-slate-300 mb-6 max-w-2xl mx-auto'>;
-=======
           <p className='text - slate - 300 text - sm mb - 4 leading - relaxed'>            {service.description}
           </p>;
           {/* Features */}          <p className="text - slate - 300 text - sm mb - 4 leading - relaxed">;
@@ -1080,7 +1044,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
               Ready to Transform Your Business?;
             </h3>;
             <p className='text - slate - 300 mb - 6 max - w-2xl mx - auto'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Join thousands of businesses already leveraging our innovative AI;
               and IT services to drive growth, efficiency, and competitive;
               advantage.;
@@ -1090,15 +1053,10 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
   );
 
 }
-=======
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-4'>;
               <motion.button;
                 while_hover={{ scale: 1.05 }}
@@ -1132,4 +1090,3 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,7 +1,5 @@
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
@@ -31,7 +29,6 @@ budgetRange: values.budgetRange;
   handleSubmit
 }/> </div>)
 };export default ServicesPage;
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
@@ -54,7 +51,6 @@ import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
 import { Star } from 'lucide-react';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const mapLocalToServiceItem = (item: any): ServiceItem => ({
   slug: item.slug
   title: item.name
@@ -72,7 +68,6 @@ const ServicesPage: NextPage = () => {
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
     .concat(
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -141,9 +136,7 @@ const ServicesPage: NextPage = () => {;
 export default function ServicesIndexPage() {;
   const all = (enhancedRealMicroSaasServices as unknown[]);
     .concat(;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       extraServices as any[];
-=======
   'Content - Type': 'application / json';
 }
 body: JSON.stringify ({
@@ -186,7 +179,6 @@ function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[]);
     .concat (
       extra_services as any[];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       additionalEnhancedServices as any[];
       newlyAddedServices as any[];
       curatedMarketServices as any[];
@@ -257,13 +249,11 @@ function ServicesIndexPage() {
 
     }
   }
-=======
     }
 
   };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -294,7 +284,6 @@ function ServicesIndexPage() {
               {filtered && filtered.map((service) => (;
                 <EnhancedMarketplaceCard key={service && service.slug || service && service.id} service={service} onRequestQuote={handleRequestQuote} />;
               ))}
-=======
       newVerifiedServicesQ22025 as any[]);
   const by_category: Record < string, unknown[]> = {}
   for (const c of categories) by_category[c] = [];
@@ -391,7 +380,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
@@ -405,12 +393,9 @@ if ( {) {
 
 
 export default ServicesPage;
-=======
 export default ServicesPage;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
       <QuoteRequestModal;
         open={modal_open}
         on_close={() => setModalOpen (false)}
@@ -422,4 +407,3 @@ export default ServicesPage;
 ;
 export default ServicesPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

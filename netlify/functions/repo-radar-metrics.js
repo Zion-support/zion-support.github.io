@@ -71,7 +71,6 @@ exports && exports.handler = async () => {
 },
 
 
-=======
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
@@ -143,4 +142,3 @@ exports.handler = async () => {
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n') }
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

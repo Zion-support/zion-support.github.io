@@ -5,13 +5,10 @@
 
       if (parts.length > 1) {
         // Take the content after the conflict resolution
-        backupContent = parts[1].split('>>>>>>>')[0]
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
       }
     }
     // Clean up the content
@@ -39,14 +36,12 @@
       backupUsed: backupPath
 
       corruptedBackup: corruptedBackupPath
-=======
 '),
       // Check condition
 if ( {) {
   $2
 }
         // Take the content after the conflict resolution;
-        backup_content = parts[1].split ('>>>>>>>')[0];
       }
     }
     // Clean up the content;
@@ -71,7 +66,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
@@ -110,16 +104,12 @@ function fixSpecificPages() {
 
 
     // // // console.log(`\n🔍 Checking: ${pagePath}`),
-=======
     
     console.log(`\n🔍 Checking: ${pagePath}`),
-=======
     // // // console.log(`\n🔍 Checking: ${pagePath}`),
 
 
     const result = restorePage(pagePath),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (result.restored) {
       results.restored++
       console.log(`✅ Restored: ${pagePath}`)
@@ -202,7 +192,6 @@ if ( {) {
 }
   fixSpecificPages ();
 }
-=======
 
 ;
 module.exports = {;
@@ -210,12 +199,9 @@ module.exports = {;
   fixSpecificPages,;
   findBestBackup;
 };
-=======
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 module.exports = {
   restore_page,
   fixSpecificPages,
@@ -223,8 +209,5 @@ module.exports = {
 
 
 };
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

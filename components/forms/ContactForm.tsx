@@ -22,18 +22,14 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 
 
 
 'use client';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 'use client';
-=======
 'use client';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -45,14 +41,12 @@ import {;
   Send,;
   CheckCircle,;
   AlertCircle,;
-=======
   Mail,
   Phone,
   MapPin,
   Send,
   CheckCircle,
   AlertCircle,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 } from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 const ContactForm: React.FC = () => {;
@@ -63,14 +57,12 @@ const ContactForm: React.FC = () => {;
     phone: '',;
     service: '',;
     message: '',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<;
     'idle' | 'success' | 'error';
   >('idle');
 
-=======
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 const ContactForm: React.FC = () => {
@@ -102,7 +94,6 @@ const ContactForm: React.FC = () => {
       setSubmitStatus('success');
       setFormData({
 
-=======
 ;
   const [is_submitting, setIsSubmitting] = useState (false);
   const [submit_status, setSubmitStatus] = useState<;
@@ -290,7 +281,6 @@ const ContactForm: React.FC = () => {
           </h2>;
 
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>;
-=======
       href: 'mailto:contact@ziontechgroup.com',
     },    {
       icon: Phone,
@@ -331,19 +321,14 @@ const ContactForm: React.FC = () => {
             </span>;
           </h2>;
           <p className='text - xl text - gray - 300 max - w-3xl mx - auto leading - relaxed'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Ready to transform your business? Get in touch with our team of;
             experts to discuss how we can help you achieve your technology;
             goals.;
           </p>;
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {/* Contact Information */}
           <motion&& motion.div
-=======
 
 
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>          {/* Contact Information */}
@@ -351,9 +336,7 @@ const ContactForm: React.FC = () => {
           {/* Contact Information */}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -367,7 +350,6 @@ const ContactForm: React.FC = () => {
               </h3>;
               <p className='text-gray-300 leading-relaxed mb-8'>;
 
-=======
         </motion.div>;
         <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 12 max - w-7xl mx - auto'>          {/* Contact Information */}        >;
           <h2 className="text - 4xl md: text - 6xl font - bold text - white mb - 6">;
@@ -396,7 +378,6 @@ const ContactForm: React.FC = () => {
               </h3>;
               <p className='text - gray - 300 leading - relaxed mb - 8'>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 Our team is here to help you navigate the complex world of;
                 technology and find the perfect solutions for your business;
                 needs. Reach out to us today.              </p>;
@@ -410,14 +391,12 @@ const ContactForm: React.FC = () => {
                   key={info && info.title}
                   href={info && info.href}
 
-=======
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <motion.a
                   key={info.title}
                   href={info.href}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
@@ -435,19 +414,14 @@ const ContactForm: React.FC = () => {
                     </p>
                   </div>
                 </motion.a>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Additional Info */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -456,12 +430,9 @@ const ContactForm: React.FC = () => {
               viewport={{ once: true }}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Contact Form */}
           <motion&& motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -508,7 +479,6 @@ const ContactForm: React.FC = () => {
                       className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors"
                       placeholder="Enter your full name"
                     />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>                      className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors"
@@ -524,7 +494,6 @@ const ContactForm: React.FC = () => {
 
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>                      className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors";
 
-=======
             {/* Contact Details */}
             <div className='space - y-6'>              {contact_info.map ((info, index) => (              <h3 className="text - 2xl font - bold text - white mb - 6">Get in Touch</h3>;
               <p className="text - gray - 300 leading - relaxed mb - 8">;
@@ -684,7 +653,6 @@ const ContactForm: React.FC = () => {
                 </div>;
                 <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 6'>                      className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors";
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       placeholder="Enter your email";
                     />;
                   </div>;
@@ -744,14 +712,12 @@ const ContactForm: React.FC = () => {
                         className='bg-gray-800 text-white'>                        {service}                    Service of Interest;
                   </label>;
 
-=======
                   <label htmlFor="service" className="block text-white font-medium mb-2" htmlFor="input-
                     Service of Interest
                   ">
                     Service of Interest
                   </label>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   <select
                     id="service"
                     name="service"
@@ -786,14 +752,11 @@ const ContactForm: React.FC = () => {
                 </div>
                 {submitStatus === 'error' && (
                   <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   />;
                 </div>;
 
                 {submitStatus === 'error' && (;
                   <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
 
@@ -801,7 +764,6 @@ const ContactForm: React.FC = () => {
                 )}
                 <button
 
-=======
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2"
@@ -817,7 +779,6 @@ const ContactForm: React.FC = () => {
                       <span>Send Message</span>
                     </>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   )}
                 </button>;
               </form>;
@@ -829,11 +790,9 @@ const ContactForm: React.FC = () => {
 export default ContactForm;  );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ContactForm;
 
 
-=======
                 <div>;
                   <label;
                     html_for='service';
@@ -946,12 +905,8 @@ export default ContactForm);
 ;
 export default ContactForm;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

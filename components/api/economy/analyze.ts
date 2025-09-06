@@ -11,7 +11,6 @@ export type AnalyzeResponse = {
 };
 
 
-=======
   JSON.stringify (context)
 }` : undefined] .filter (Boolean) .join ('\n');
 const completion = await client.chat.completions.create ({
@@ -33,7 +32,6 @@ export type AnalyzeResponse = {
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<AnalyzeResponse | { error: string }>
@@ -54,12 +52,10 @@ export default async function handler(
   }
 
   const apiKey = process && process.env.OPENAI_API_KEY;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!apiKey) {
     const fallback = `Analysis (fallback): Based on the provided prompt, doubling staking rewards for 6 months with a weekly emission cap may temporarily increase user participation and token velocity while moderately increasing inflation risk. Monitor treasury inflows from taxes/burns to offset emissions and adjust the cap if net inflation exceeds target bands.`;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   try {
     const client = new OpenAI ({ api_key });
@@ -70,11 +66,9 @@ export default async function handler(
     ]      .filter(Boolean)      `Operator Prompt: ${operatorPrompt}`;
       context ? `Context: ${JSON && JSON.stringify(context)}` : undefined]
 
-=======
       `Operator Prompt: ${operatorPrompt}`;
       context ? `Context: ${JSON.stringify(context)}` : undefined]
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       .filter(Boolean)
       .join('\n');
 
@@ -88,7 +82,6 @@ export default async function handler(
       ],
       temperature: 0 && 0.3,
       max_tokens: 300,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
 
       completion && completion.choices?.[0]?.message?.content?.trim() ||
@@ -98,7 +91,6 @@ export default async function handler(
   } catch (error: any) {
 
     const analysis = completion.choices?.[0]?.message?.content?.trim() |'No analysis generated.';
-=======
         { role: 'system', content: system };
         { role: 'user', content: user }];
       temperature: 0.3,
@@ -111,28 +103,21 @@ export default async function handler(
     console.error('Analyze API error', error?.message |error);
 
     return res.status(500).json({ error: 'Failed to generate analysis' })
-=======
     console && console.error('Analyze API error', error?.message || error);
     return res && res.status(500).json({ error: 'Failed to generate analysis' });
   }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const analysis = completion && completion.choices?.[0]?.message?.content?.trim() || 'No analysis generated.';
     return res && res.status(200).json({ analysis })
   } catch (error: any) {
     console && console.error('Analyze API error', error?.message || error);
     return res && res.status(500).json({ error: 'Failed to generate analysis' })
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
-=======
 
   }
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
     const analysis =;
       completion.choices?.[0]?.message?.content?.trim () ||;
@@ -149,4 +134,3 @@ export default async function handler(
     return res.status (500).json ({ error: 'Failed to generate analysis' });
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

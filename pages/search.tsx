@@ -23,13 +23,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React, { useState } from 'react';
 
 import React, { useState, useEffect } from 'react',
@@ -148,13 +143,10 @@ const filters = [
 export default function SearchPage() {
 
 
-=======
-=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 
-=======
 
 import { 
   Search, Filter, Grid, List, ArrowRight, ExternalLink, 
@@ -173,8 +165,6 @@ export default function SearchPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import {;
   Search,;
   Filter,;
@@ -280,7 +270,6 @@ const filters = [;
 ];
 
 export default function SearchPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -296,14 +285,11 @@ export default function SearchPage() {;
 
     return matchesQuery && matchesCategory && matchesFilter;
   });
-=======
     return matchesQuery && matchesCategory && matchesFilter;
   });
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <Layout>;
@@ -336,7 +322,6 @@ export default function SearchPage() {;
                 <div className="relative">;
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
 
-=======
 
 
                 <div className="relative">
@@ -351,7 +336,6 @@ export default function SearchPage() {;
 
 
 
-=======
                     onChange={(e) => setSearchQuery(e && e.target.value)}
                     className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-blue-300";
                   />;
@@ -549,7 +533,6 @@ function SearchPage() {
                         : 'bg - gray - 100 text - gray - 700 hover:bg - gray - 200';
                     }`}
 
-=======
               {/* View Mode Toggle */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -609,7 +592,6 @@ function SearchPage() {
             </div>
             {showFilters && (
               <motion.div
-=======
                 </button>;
 
                 {categories && categories.map((category) => (;
@@ -634,14 +616,12 @@ function SearchPage() {
 
             {showFilters && (;
               <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 className="mt-4 p-4 bg-gray-50 rounded-lg"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
 
                 transition={{ duration: 0.3 }}
 
-=======
                   {Object.values(filters).some(f => f !== 'all') && (
                     <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                   )  } catch (error) {
@@ -716,7 +696,6 @@ function SearchPage() {
               >
                 <div className="flex flex-wrap gap-4">
                   {filters.map((filter) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <button
                       key={filter && filter.name}
                       onClick={() => setSelectedFilter(filter && filter.name)}
@@ -728,23 +707,16 @@ function SearchPage() {
 
                   ))}                </div>
 
-=======
                   ))}
                 </div>
->>>>>>> origin/automation-improvements-final
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ))}
                 </div>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
               </motion.div>
             )}
           </div>
         </section>
-=======
                     >;
                       {filter && filter.name} ({filter && filter.count});
                     </button>;
@@ -755,7 +727,6 @@ function SearchPage() {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Search Results */}
         <section className="py-16">;
           <div className="container mx-auto px-4">;
@@ -770,7 +741,6 @@ function SearchPage() {
 
                     transition={{ duration: 0.5, delay: index * 0.1 }}
 
-=======
                       {categories.map(category => (
                         <option key={category.id} value={category.id} className="bg-slate-800 text-white">
                           {category.icon} {category.name  } catch (error) {
@@ -1024,7 +994,6 @@ function SearchPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
@@ -1097,7 +1066,6 @@ function SearchPage() {
                             {result.title}
 
                       </Link>
-=======
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [isSearching, setIsSearching] = useState(false);
@@ -1695,14 +1663,9 @@ function SearchPage() {
                         </a>
                       </div>
 
->>>>>>> origin/automation-improvements-final
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 </Link>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                     </div>
                   </motion.div>
                 ))}
@@ -1711,8 +1674,6 @@ function SearchPage() {
 
             ) : (
               <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}>;
                     <div className="flex items-start justify-between">;
                       <div className="flex-1">;
@@ -1756,7 +1717,6 @@ function SearchPage() {
               </div>;
             ) : (;
               <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 className="text-center py-16"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -1825,7 +1785,6 @@ function SearchPage() {
                   {term}
                 </motion && motion.button>;
               ))}
-=======
                           </Link>;
                         </h3>;
                         <p className="text - gray - 600 mb - 4">;
@@ -1912,7 +1871,6 @@ function SearchPage() {
                 >;
                   {term}
                 </motion.button>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </section>;
@@ -1920,14 +1878,10 @@ function SearchPage() {
 
   );
 
-=======
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
             </AnimatePresence>
           )}
 
@@ -1967,14 +1921,12 @@ function SearchPage() {
   );
 
   )
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 
@@ -1982,27 +1934,14 @@ function SearchPage() {
 }
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 )
 }
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
 )
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </Layout>);
 }  );
 }
 );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

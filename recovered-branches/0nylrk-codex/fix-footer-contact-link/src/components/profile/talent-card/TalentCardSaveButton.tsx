@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TalentCardSaveButtonProps {
 
   profileId: string
@@ -31,11 +30,9 @@ import React from "react";
 import {Heart} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {useToast} from "@/hooks/use-toast";
-=======
 
     
 
-=======
       }),
       return
 import React from "react",;
@@ -78,7 +75,6 @@ export function TalentCardSaveButton({;
       onToggleSave(profileId, !localIsSaved);
     }
 
-=======
       }),;
       return;
     }
@@ -99,7 +95,6 @@ export function TalentCardSaveButton({;
       variant: "default"
     })
   },
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     toast({;
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",;
@@ -110,7 +105,6 @@ export function TalentCardSaveButton({;
     });
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <button
       className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors"
@@ -128,10 +122,8 @@ export function TalentCardSaveButton({;
       />;
     </button>;
   );
-=======
 
 
-=======
 ;
     toast({;
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",;
@@ -158,10 +150,7 @@ export function TalentCardSaveButton({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Heart } from './lucide-react';
 import { cn } from '@/lib / utils';
@@ -223,4 +212,3 @@ if ( {) {
       />;
     </button>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -21,7 +21,6 @@ declare module 'path' {;
 }
 
 declare module '@vitejs/plugin-react - swc' {
-=======
 
 
 declare module 'lovable-tagger' {;
@@ -32,7 +31,6 @@ import {Plugin} from 'vite';
 
 ;
 
-=======
 ;
 declare module '@vitejs/plugin-react-swc' {;
   import { Plugin } from 'vite',;
@@ -53,4 +51,3 @@ declare module 'lovable-tagger' {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ApplyFormProps {
 
   job: Job
@@ -133,7 +132,6 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
       // Create conversation with the job client
       await createConversation(
         job.client_id;
-=======
 
     try {;
       setIsSubmitting(true);
@@ -175,7 +173,6 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
       // Create conversation with the job client;
       await createConversation(;
         job && job.client_id;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         fullMessage;
         'job';
         job && job.id;
@@ -184,7 +181,6 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
 
 
 
-=======
 ;
       // Create context data for the conversation;
       const contextData = {;
@@ -212,8 +208,6 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
 
       }
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       toast({
         title: "Application sent"
         description: `Your application for "${job.title}" has been sent.`})
@@ -251,12 +245,10 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
 
     }
   }
-=======
     }
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -274,7 +266,6 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
         <TabsContent value="message">;
 
           <MessageTab
-=======
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Loader2 } from './lucide-react';
@@ -407,12 +398,9 @@ if ( {) {
         </TabsList>;
         <TabsContent value="message">;
           <MessageTab;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
           <MessageTab 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             message={message}
             set_message={set_message}
             proposal_link={proposal_link}
@@ -493,7 +481,5 @@ if ( {) {
     </>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

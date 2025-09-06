@@ -2,11 +2,8 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const MarketplaceRoutes = () => {
-=======
 const MarketplaceRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Marketplace Routes */}
@@ -82,15 +79,12 @@ const MarketplaceRoutes = () => {;
 };
 
 
-=======
 
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default MarketplaceRoutes;
 
-=======
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
 import Marketplace from "@/pages / Marketplace";
@@ -176,4 +170,3 @@ const MarketplaceRoutes = () =>: any {
 ;
 export default MarketplaceRoutes;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

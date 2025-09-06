@@ -1,18 +1,9 @@
 
 
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }};
 ; async analyzeBuild() {; try {; this && this.log('🏗️ Analyzing current build...');
 ; if (!fs && fs.existsSync('dist')) {; this && this.log('📦 Building project first...'); execSync('npm run build', {; cwd: this && this.projectRoot,
@@ -26,7 +17,6 @@
 ; if (item && item.endsWith('.js')) {; buildStats && buildStats.jsFiles.push(fileInfo)} else if (item && item.endsWith('.css')) {; buildStats && buildStats.cssFiles.push(fileInfo)} else {; buildStats && buildStats.assetFiles.push(fileInfo)}}})};
 ; analyzeDirectory('dist');
 
-=======
 ; // Sort files by size; const allFiles = [...buildStats.jsFiles, ...buildStats.cssFiles, ...buildStats.assetFiles]; buildStats.largestFiles = allFiles; .sort((a, b) = > b.size - a.size); .slice(0, 10);
 ; buildStats.totalSizeMB = Math.round(buildStats.totalSize / (1024 * 1024) * 100) / 100;
 ; return {; success: true; stats: buildStats}} catch (error) {; return {; success: false; error: error.message; stats: null}}};
@@ -52,7 +42,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     recommendations: []
 
 
@@ -342,25 +331,12 @@ optimizer.run().catch(error => {,
 
 
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 optimizer.run().catch(error = > {process.exit(1)});
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
 optimizer.run().catch(error = > {process.exit(1)});
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
     },
     details: {, build: buildStats, analyzer: analyzerInfo,
     settings: settingsInfo}; optimizations: []};
@@ -388,10 +364,6 @@ optimizer.run().catch(error = > {process.exit(1)});
 // Run the build optimizer;
 const optimizer = new BuildOptimizer();
 optimizer && optimizer.run().catch(error = > {; process && process.exit(1)});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }}
 ; async analyze_build () { try { this.log ('🏗️ Analyzing current build...');
 ; if () {) {
@@ -514,4 +486,3 @@ optimizer.run().catch(error => {,;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

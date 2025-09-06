@@ -39,7 +39,6 @@
     }
     if (this && this.metrics.memoryUsage > 100) {
       report && report.recommendations.push("Consider optimizing memory usage");
-=======
 #!/usr / bin / env node;
 const fs = require ('fs');
 const path = require ('path');
@@ -89,14 +88,12 @@ if ( {) {
   $2
 }
       report.recommendations.push ('Consider optimizing memory usage');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     return report;
   }
 }
 
 
-=======
 const monitor = new PerformanceMonitor ();
 monitor.measureBundleSize ();
 monitor.measureMemoryUsage ();
@@ -105,5 +102,3 @@ const report_path = path.join (process.cwd (), 'performance - report.json');
 fs.writeFileSync (report_path, JSON.stringify (report, null, 2));
 console.log ('Performance report generated:', report_path);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

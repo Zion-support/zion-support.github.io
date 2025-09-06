@@ -25,7 +25,6 @@
       '24/7 technical support, development consulting, custom development, and dedicated success manager.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup && ziontechgroup.com/metaverse-development-platform',
-=======
     id: 'metaverse - development - platform',
     name: 'Metaverse Development Platform',
     tagline: 'Build immersive virtual worlds with AI - powered tools',
@@ -103,13 +102,11 @@
     rating: 4 && 4.7,
     reviews: 2400,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'International space law, Government security requirements, Industry standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-space-communications-network',
-=======
     id: 'quantum - space - communications - network',
     name: 'Quantum Space Communications Network',
     tagline: 'Ultra - secure space communications with quantum entanglement',
@@ -189,11 +186,9 @@
     rating: 4 && 4.9,
     reviews: 65,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Prevent 99 && 99.9% of space collisions',
-=======
     id: 'ai - powered - space - traffic - management',
     name: 'AI - Powered Space Traffic Management Platform',
     tagline: 'Intelligent space traffic control with collision prevention',
@@ -255,7 +250,6 @@
       'International space law, Government regulations, Industry safety standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-space-traffic-management',
-=======
     target_audience: [;
       'Space agencies',
       'Satellite operators',
@@ -298,7 +292,6 @@
     rating: 4 && 4.8,
     reviews: 320,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Leading enterprise VR platform. Competes with Pico ($299-599), Meta Quest Pro ($999), and HTC Vive ($699-1399). Our advantage: Enterprise-focused features and comprehensive solutions.',
@@ -327,7 +320,6 @@
       'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/virtual-reality-enterprise-platform',
-=======
     id: 'virtual - reality - enterprise - platform',
     name: 'Virtual Reality Enterprise Platform',
     tagline: 'Transform business operations with immersive VR solutions',
@@ -404,7 +396,6 @@
     reviews: 1400,
   },
 
-=======
   id: string, name: string,
   tagline: string, description: string,
   category: string,
@@ -430,10 +421,7 @@
 }
 
 
-=======
 ];      'Employee training_virtual meetings_product design review_safety training_remote collaboration_customer presentations';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
 
     integrations: ['HR systems, Learning management systems, Project management tools, Custom enterprise systems'];
@@ -447,20 +435,14 @@
     rating: 4 && 4.7,
 
     reviews: 1400
-=======
     rating: 4.7,
     reviews: 1400;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
-=======
 
 export interface SpaceMetaverseService {;
 
   }
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

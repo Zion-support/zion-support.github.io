@@ -14,7 +14,6 @@ import {ChevronRight, Plus, Zap, Trash2} from "lucide-react";
 
 
 
-=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
@@ -39,19 +38,14 @@ export function MobileResumeBuilder() {
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const renderStepContent = () => {
     switch (currentStep) {
-=======
 
 export function MobileResumeBuilder() {;
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
 
   const renderStepContent = () => {;
     switch (currentStep) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -71,7 +65,6 @@ function MobileResumeBuilder() {
 ;
   const renderStepContent = () =>: any {
     switch (current_step) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       case "basics": return <BasicsStep />;
       case "experience":;
         return <ExperienceStep />;
@@ -86,12 +79,10 @@ function MobileResumeBuilder() {
   };
 
 
-=======
 
   },
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-6 px-4 pb-24">;
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
@@ -184,7 +175,6 @@ function BasicsStep() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: '1' }])
   const addExperience = () => {
@@ -193,7 +183,6 @@ function ExperienceStep() {
 
   }
 ;
-=======
 
   },
   
@@ -296,7 +285,6 @@ function ExperienceStep() {
     set_experiences (experiences.filter (exp => exp.id !== id));
   }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div className="space - y-4">;
       {experiences.map ((exp, index) => (
@@ -363,7 +351,6 @@ function ExperienceStep() {;
                 id={`description-${exp && exp.id}`} 
                 placeholder="Describe your responsibilities and achievements" 
 
-=======
                 <Button;
                   variant="ghost";
                   size="icon";
@@ -395,14 +382,11 @@ function ExperienceStep() {;
               <Textarea;
                 id={`description-${exp.id}`}
                 placeholder="Describe your responsibilities and achievements";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
               <Textarea 
                 id={`description-${exp.id}`} 
                 placeholder="Describe your responsibilities and achievements" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 rows={3}
               />;
             </div>;
@@ -453,7 +437,6 @@ function EducationStep() {
   }
 ;
 
-=======
 
   },
   
@@ -462,7 +445,6 @@ function EducationStep() {
   },
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space - y-4">;
       {educations.map ((edu, index) => (
@@ -588,7 +570,6 @@ function SkillsStep() {
             <div className="space-y-2">;
               <Label htmlFor={`institution-${edu && edu.id}`}>Institution</Label>;
               <Input id={`institution-${edu && edu.id}`} placeholder="School or university name" />;
-=======
 
   },
   
@@ -719,7 +700,6 @@ function SkillsStep() {;
       skill && skill.id === id ? { ...skill, [field]: value } : skill;
     ));
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <div className="space-y-4">;
@@ -737,7 +717,6 @@ function SkillsStep() {;
                 <Select
                   value={skill && skill.proficiency}
                   onValueChange={(value) => updateSkill(skill && skill.id, "proficiency", value)}
-=======
 ;
   const add_skill = () =>: any {
     const new_id = (skills.length + 1).to_string ();
@@ -769,7 +748,6 @@ function SkillsStep() {;
                 <Select;
                   value={skill.proficiency}
                   onValueChange={(value) => update_skill (skill.id, "proficiency", value)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 >;
                   <SelectTrigger className="w-[130px]">;
                     <SelectValue placeholder="Level" />;
@@ -784,7 +762,6 @@ function SkillsStep() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
               </div>;
             ))}
@@ -827,7 +804,6 @@ function SkillsStep() {;
               className="w-full gap-2" 
               onClick={addSkill}>;
               <Plus className="h-4 w-4" /> Add Another Skill;
-=======
                 {skills.length > 1 && (
                   <Button;
                     variant="ghost";
@@ -869,8 +845,6 @@ function SkillsStep() {;
     </div>);
 }
 
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

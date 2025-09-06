@@ -1,10 +1,8 @@
 
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   type: "success" | "error" | "warning" | "info";
   title?: string;
@@ -14,10 +12,8 @@
 
 
 interface NotificationSystemProps {
-=======
 
 interface NotificationSystemProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   notifications: Notification[];
   on_dismiss?: (id: string) => void;
 }
@@ -29,7 +25,6 @@ const getNotificationStyles = (type: Notification["type"]): string => {;
     error: "bg-red-50 border-red-400 text-red-800",;
     warning: "bg-yellow-50 border-yellow-400 text-yellow-800",;
     info: "bg-blue-50 border-blue-400 text-blue-800",;
-=======
 
     success: "bg-green-50 border-green-400 text-green-800",
     error: "bg-red-50 border-red-400 text-red-800",
@@ -41,7 +36,6 @@ const getNotificationStyles = (type: Notification["type"]): string => {;
 };
 
 
-=======
 import React from 'react';
 
 interface Notification {
@@ -77,7 +71,6 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
     }
   };
 
-=======
 export default function NotificationSystem({
   notifications,
   onDismiss,
@@ -195,13 +188,8 @@ if (return null) {
     </div>);
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

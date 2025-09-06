@@ -1,9 +1,7 @@
 
 
 }</div>) import fs from 'fs';
-=======
 import fs from 'fs';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import path from 'path';
 
 
@@ -27,8 +25,6 @@ export async function getServerSideProps() {;
 
 
 export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string }) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 ) : (<div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50" > <tr> <th className="text-left p-2" >Package</th> <th className="text-left p-2" >Current</th> <th className="text-left p-2" >Latest</th> <th className="text-left p-2" >Type</th> </tr> </thead> <tbody> {;
   outdated && outdated.map (o => (</tr>) ) ;
 }</tbody> </table> </div>) ;
@@ -43,7 +39,6 @@ export async function getServerSideProps() {;
     const json = JSON && JSON.parse(raw);
     outdated = json && json.outdated || [];
     generatedAt = json && json.generatedAt || '';
-=======
 type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'dev_dependency' },
 export async /**
  * getServerSideProps - Function description
@@ -56,7 +51,6 @@ function getServerSideProps() {
     const json = JSON.parse (raw);
     outdated = json.outdated || [];
     generated_at = json.generated_at || '';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch {}
   return { props: { outdated, generated_at } }
 }
@@ -65,13 +59,11 @@ function getServerSideProps() {
 
 
 }
-=======
     </div>;
   );
 }
 
 
-=======
 export default /**
  * DepRadarPage - Function description
  */
@@ -105,4 +97,3 @@ function DepRadarPage() {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

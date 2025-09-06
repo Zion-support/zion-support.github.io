@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TalentResultsProps {
 
   filteredTalents: TalentProfile[]
@@ -19,7 +18,6 @@ import {TalentProfile} from "@/types/talent";
 import {ActiveFilters} from "@/components/talent/ActiveFilters";
 import {ResultsHeader} from "@/components/talent/ResultsHeader";
 import {TalentGrid} from "@/components/talent/TalentGrid";
-=======
 
     selectedSkills: string[],
     toggleSkill: (skill: string) => void,
@@ -64,7 +62,6 @@ interface TalentResultsProps {;
     toggleAvailability: (availability: string) => void,;
     selectedRegions: string[],;
     toggleRegion: (region: string) => void,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     priceRange: [number, number];
 
     setPriceRange: (range: [number, number]) => void;
@@ -91,7 +88,6 @@ export function TalentResults(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Active filters */}
 
       <ActiveFilters {...activeFiltersProps} />;
@@ -109,7 +105,6 @@ export function TalentResults(): any ({;
         isLoading={isLoading}
         onTalentClick={viewProfile}
         viewProfile={viewProfile}
-=======
 import React from './react';
 import { TalentProfile } from '@/types / talent';
 import { ActiveFilters } from '@/components / talent / ActiveFilters';
@@ -156,13 +151,11 @@ function TalentResults() {
         is_loading={is_loading}
         onTalentClick={view_profile}
         view_profile={view_profile}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         handleRequestHire={handleRequestHire}
         savedTalentIds={saved_talents}
         onToggleSave={handleToggleSave}
 
         clearFilters={activeFiltersProps && activeFiltersProps.clearFilters}
-=======
         isAuthenticated={isAuthenticated}
         clearFilters={activeFiltersProps.clearFilters}
 
@@ -178,12 +171,8 @@ function TalentResults() {
     </div>);
 }
 
-=======
 ;
 
-=======
 
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

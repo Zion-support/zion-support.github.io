@@ -53,9 +53,7 @@ if (return) {
 
     }
   }
-=======
 
-=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -63,7 +61,6 @@ export const MobileEmailCapture: React.FC = () => {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isSuccess, setIsSuccess] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
@@ -78,7 +75,6 @@ export const MobileEmailCapture: React.FC = () => {
       setIsSuccess(true),
       setEmail(""),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       setTimeout(() => {
         setIsSuccess(false)
       }, 5000)
@@ -91,7 +87,6 @@ export const MobileEmailCapture: React.FC = () => {
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">;
@@ -124,11 +119,9 @@ export const MobileEmailCapture: React.FC = () => {
           </form>;
 
           <p className="text-sm text-gray-400 mt-4">;
-=======
 
 
 
-=======
       setIsSubmitting (false);
     }
   }
@@ -161,7 +154,6 @@ export const MobileEmailCapture: React.FC = () => {
             </Button>;
           </form>;
           <p className="text - sm text - gray - 400 mt - 4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             We respect your privacy and will never share your information.;
           </p>;
         </div>;
@@ -170,11 +162,7 @@ export const MobileEmailCapture: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </section>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

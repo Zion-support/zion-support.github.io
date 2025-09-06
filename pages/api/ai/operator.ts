@@ -1,6 +1,5 @@
 
 
-=======
 
 
   if (!limited) {
@@ -14,8 +13,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP)
@@ -70,7 +67,6 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
 
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
@@ -146,18 +142,14 @@ const sys = system || 'You are a professional writing assistant. Write clear, co
 
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
     console.error('Operator error', err),
     return res.status(500).json({ error: 'Internal Server Error' })
   };
 };
 
-=======
     console.error('Operator error', err);
     return res.status(500).json({ error: 'Internal Server Error' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }
   ipToRequests[ip] = bucket;
@@ -208,5 +200,3 @@ export default async function handler(req, res) {
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

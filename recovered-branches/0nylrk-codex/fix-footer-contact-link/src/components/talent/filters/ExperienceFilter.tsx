@@ -7,11 +7,8 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
     setExperienceRange([values[0], values[1]]);
   };
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
@@ -35,11 +32,9 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
           </div>;
 
           <Slider
-=======
 
           <Slider 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             value={[experienceRange[0], experienceRange[1]]}
             min={0}
             max={15}
@@ -54,7 +49,6 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
   );
 }
 
-=======
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Slider  } from '@/components / ui / slider';
 import { ExperienceFilterProps  } from '@/types / filters';
@@ -94,4 +88,3 @@ function ExperienceFilter() {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

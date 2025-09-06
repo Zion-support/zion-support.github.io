@@ -4,7 +4,6 @@
 
   const chapterHtml = chapters;
     .map(;
-=======
 import type { BookProject } from '../book / book_types',
 export function buildPrintableHtml (project: BookProject): string {
   const { meta, chapters, visuals } = project,
@@ -13,7 +12,6 @@ export function buildPrintableHtml (project: BookProject): string {
     .join ('\n'),
   const chapter_html = chapters;
     .map (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       (c) => `;
       <section class="chapter">;
         <h2>${escape_html (c.title)}</h2>;
@@ -25,7 +23,6 @@ export function buildPrintableHtml (project: BookProject): string {
 
 
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
-=======
     .join ('\n\n'),
   const visuals_html = [;
     ...visuals.timeline_images,
@@ -34,7 +31,6 @@ export function buildPrintableHtml (project: BookProject): string {
     .map ((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join ('\n'),
   const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return `<!doctype html>;
 <html>;
 <head>;
@@ -47,7 +43,6 @@ export function buildPrintableHtml (project: BookProject): string {
 function escapeHtml(s: string): string {;
   return s;
 
-=======
   @page { margin: 1in   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -176,7 +171,6 @@ function paragraphize(text: string): string {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     .replace(/&/g, '&amp,');
     .replace(/</g, '<');
     .replace(/>/g, '>');
@@ -202,13 +196,10 @@ function escape_html (string: string): string {
     .replace (/'/g, '&#039, ');
 }
 
-=======
 
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

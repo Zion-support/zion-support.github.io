@@ -22,7 +22,6 @@
   export function forwardRef<T, P = {}>(
     render: (props: P, ref: Ref<T>) => ReactElement | null
   ): any;
-=======
   export default React,
   // Basic overloads for useRef to handle common cases;
   export function useRef < T>(initial_value: T): { current: T }
@@ -41,7 +40,6 @@
   // Generic definition to allow usage like forward_ref < HTMLDivElement, Props>();
   export function forward_ref < T, P = {}>(
     render: (props: P, ref: Ref < T>) => ReactElement | null): any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   export const Fragment: any;
   export const StrictMode: any;
   export const clone_element: any;
@@ -103,7 +101,6 @@ declare module 'react / jsx - runtime' {
   export const Fragment: any;
 
 }
-=======
 
 }
 
@@ -117,7 +114,6 @@ declare module 'react/jsx-runtime' {;
   export const Fragment: any;
 };
 
-=======
 declare module 'react' {;
   const React: any,;
   export default React,;
@@ -165,7 +161,6 @@ declare module 'react' {;
   export type ElementRef<T = any> = any,;
   export type CSSProperties = Record<string string | number | undefined>;
 
-=======
 }
 ;
 declare module 'react-dom' {;
@@ -180,5 +175,3 @@ declare module 'react/jsx-runtime' {;
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

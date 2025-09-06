@@ -60,7 +60,6 @@ return { props: {} };
 
 }
 
-=======
 
       <PdfExportButton targetRef={ref} fileName={`resume-${data.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
       <ResumePreview ref={ref} data={data} theme={theme} />
@@ -75,7 +74,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
     return { redirect: { destination: '/auth', permanent: false } } as any
   }
   return { props: {} }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
 import PdfExportButton from '../../../components / ui / PdfExportButton';
@@ -153,8 +151,5 @@ return { props: {} }
 }
 ;
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -26,8 +26,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 interface Service {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Star,;
   Users,;
@@ -51,7 +49,6 @@ import {;
 import Button from '../ui/Button';
 
 interface Service {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
   name: string;
   tagline: string;
@@ -105,7 +102,6 @@ interface EnhancedServiceShowcaseProps {
   show_filters?: boolean;
   services?: Service[];
 
-=======
 import { 
   Star, Users, TrendingUp, DollarSign, Clock, 
   CheckCircle, ArrowRight, Zap, Shield, Rocket;
@@ -178,7 +174,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   const [sortBy, setSortBy] = useState<string>('popular');
   const categories = [
 
-=======
   max_services?: number;
 ;
 const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
@@ -203,7 +198,6 @@ const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
     { id: 'blockchain', name: 'Blockchain', icon: '⛓️' },
     { id: 'enterprise', name: 'Enterprise', icon: '🏢' },
     { id: 'emerging', name: 'Emerging Tech', icon: '🌟' }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   ];
 
     { id: 'all', name: 'All Prices' },
@@ -357,7 +351,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
         filtered && filtered.sort((a, b) => {;
           const aROI = parseInt(a && a.roi.match(/\d+/)?.[0] || '0');
           const bROI = parseInt(b && b.roi.match(/\d+/)?.[0] || '0');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           return bROI - aROI;
         });
         break;
@@ -374,7 +367,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
             parseFloat(b && b.price.replace(/[$]/g, '')) -;
             parseFloat(a && a.price.replace(/[$]/g, ''));
         );
-=======
 ;
   const price_ranges = [;
     { id: 'all', name: 'All Prices' },
@@ -474,7 +466,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
           (a, b) =>;
             parse_float (b.price.replace (/[$]/g, '')) -;
             parse_float (a.price.replace (/[$]/g, '')));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         break;
       default:;
         break;
@@ -484,7 +475,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
           const bROI = parseInt(b.roi.match(/\d+/)?.[0] || '0');
           return bROI - aROI
         });
-=======
     return filtered.slice (0, max_services);
   }, [services, selected_category, selectedPriceRange, sort_by, max_services]);
 ;
@@ -567,12 +557,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
     },;
 
   ];
-=======
   ];
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <section className='py-20 px-4 sm:px-6 lg:px-8'>;
       <div className='max-w-7xl mx-auto'>;
@@ -609,12 +597,9 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
         {/* Header */}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {title}
           </motion && motion.h2>;
           <motion&& motion.p
@@ -627,7 +612,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
           </motion && motion.p>;
 
 
-=======
 
             className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >
 
@@ -637,8 +621,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
           </motion.p>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -659,7 +641,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
         </div>;
 
 
-=======
 
 
             ))}
@@ -667,8 +648,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
         </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Filters */}
         {showFilters && (;
           <motion&& motion.div
@@ -679,7 +658,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
           >
             <div className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Category Filter */}
                 <div>;
                   <label className='block text-sm font-medium text-gray-300 mb-3'>;
@@ -688,14 +666,12 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                   <select
                     value={selectedCategory}
 
-=======
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mb-12"
           >
             <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 {/* Category Filter */}
                 <div>;
                   <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Category">Category</label>;
@@ -705,43 +681,32 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
                         {category.icon} {category.name}
                       </option>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
 
                   </select>;
                 </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Price Range Filter */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         {range.name}
 
                   </select>;
                 </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Sort Options */}
 
 
                         {option.name}
                       </option>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
 
                       </option>))}
@@ -792,7 +757,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
           <AnimatePresence>
             {filteredServices.map((service, index) => (
               <motion.div
-=======
           </motion.div>)}
         {/* Services Grid */}
         <motion.div;
@@ -804,7 +768,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
           <AnimatePresence>;
             {filtered_services.map ((service, index) => (
               <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={service.id}
                 initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
                 whileInView={{ opacity: 1, coordinate_y: 0, scale: 1 }}
@@ -821,19 +784,15 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                   {service.popular && (
 
 
-=======
                     <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      ⭐ Most Popular
 
                       ⭐ Most Popular
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                   )}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Header */}
 
                 while_hover={{ coordinate_y: -5, scale: 1.02 }}
@@ -871,12 +830,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-=======
                     </h3>;
                     <p className='text - gray - 300 text - sm leading - relaxed'>                      {service.tagline}                      </div>;
                     </div>;
                     <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {service.name}
                     </h3>;
                     <p className="text - gray - 300 text - sm leading - relaxed">;
@@ -926,7 +883,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                       {service.tagline}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </p>
                   </div>
                   {/* Features */}
@@ -936,12 +892,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       Key Features
                     </h4>
                     <ul className='space-y-2'>
                       {service.features.slice(0, 4).map((feature, idx) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <li
                           key={idx}
                           className='text-sm text-gray-400 flex items-start'>;
@@ -952,7 +906,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                         <li key={idx} className="text-sm text-gray-400 flex items-start">;
                           <span className="text-cyan-400 mr-2">•</span>;
 
-=======
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">
                       <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
@@ -963,7 +916,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                         <li key={idx} className="text-sm text-gray-400 flex items-start">
                           <span className="text-cyan-400 mr-2">•</span>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           {feature}
                         </li>;
                       ))}
@@ -975,7 +927,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <div>
                       <div className='text-lg font-bold text-white'>
                         {service.rating}
@@ -995,10 +946,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                       <div className='text-xs text-gray-400'>Trial Days</div>                    </div>
                   </div>
                   {/* ROI Highlight */}                    <div>
-=======
                   <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                     <div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       <div className="text-lg font-bold text-white">{service.rating}</div>
                       <div className="text-xs text-gray-400">Rating</div>
                     </div>
@@ -1018,14 +967,11 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                     <div className="text-sm text-green-400 font-semibold mb-1">🚀 ROI Promise</div>
                     <div className="text-xs text-gray-300 leading-relaxed">
                       {service.roi}
-=======
 
 
                       {service.roi}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
                   </div>
                   {/* Market Position */}
@@ -1109,7 +1055,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Button
                       href={service && service.link}
                       variant='primary'
@@ -1122,11 +1067,9 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
                   {/* Contact Info */}                    <Button
                       href={service && service.link}
-=======
                   <div className="mt-auto">
                     <Button
                       href={service.link}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       variant="primary"
 
                       className="w-full group-hover:bg-cyan-500 transition-colors">;
@@ -1158,7 +1101,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                 </div>;
               </motion && motion.div>;
 
-=======
 
                   {/* Contact Info */}
                   <div className="mt-4 text-center">
@@ -1172,19 +1114,15 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                 </div>
               </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </AnimatePresence>;
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -1234,11 +1172,9 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 export default EnhancedServiceShowcase;  );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default EnhancedServiceShowcase;
 
 
-=======
                     </p>;
                   </div>;
                   {/* Features */}
@@ -1420,12 +1356,8 @@ export default EnhancedServiceShowcase);
 ;
 export default EnhancedServiceShowcase;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

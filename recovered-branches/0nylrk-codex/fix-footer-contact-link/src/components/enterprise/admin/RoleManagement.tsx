@@ -21,11 +21,9 @@ import {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
-=======
 import React from './react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
 import { Badge } from '@/components / ui / badge';
@@ -40,7 +38,6 @@ export /**
 function RoleManagement() {
   // Mock team members data;
   const team_members = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       id: 1
       name: "Alex Johnson"
@@ -156,11 +153,9 @@ export function RoleManagement() {;
     "Recruiter": "Can manage candidates and job postings";
     "Manager": "Can view candidates and create jobs";
     "Viewer": "Read-only access to candidates"}
-=======
 
       title: "Permission updated",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="space-y-6">;
@@ -371,12 +366,10 @@ export function RoleManagement() {;
                   />;
                 </TableCell>;
               </TableRow>;
-=======
 
                   <Switch 
                     checked={member.permissions.viewBilling} 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
           </TableBody>;
@@ -386,7 +379,6 @@ export function RoleManagement() {;
   );
 }
 
-=======
         view_candidates: true,
         edit_candidates: false,
         create_jobs: false,
@@ -569,4 +561,3 @@ export function RoleManagement() {;
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,9 +1,7 @@
 
 
 }</div> </div>) import fs from 'fs';
-=======
 import fs from 'fs';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import path from 'path';
 
 
@@ -19,7 +17,6 @@ export async function getServerSideProps() {;
     const json = JSON && JSON.parse(raw);
     items = json && json.items || [];
     generatedAt = json && json.generatedAt || '';
-=======
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
 export async /**
  * getServerSideProps - Function description
@@ -32,7 +29,6 @@ function getServerSideProps() {
     const json = JSON.parse (raw);
     items = json.items || [];
     generated_at = json.generated_at || '';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch {}
   return { props: { items, generated_at } }
 }
@@ -70,14 +66,12 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
 
 );
 }
-=======
       </div>;
     </div>;
   );
 }
 
 
-=======
 export default /**
  * NewsDigestPage - Function description
  */
@@ -101,4 +95,3 @@ function NewsDigestPage() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

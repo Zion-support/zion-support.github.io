@@ -75,7 +75,6 @@
 };  try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const endpoints = [
       '//learn/dao/certifications/api/learn/courses/api/dao/metrics'
     ]
@@ -125,7 +124,6 @@
 
 },
 
-=======
 const { upsert_file } = require ('./_lib / github');
 ;
 exports.handler = async function () {
@@ -249,4 +247,3 @@ if ( {) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

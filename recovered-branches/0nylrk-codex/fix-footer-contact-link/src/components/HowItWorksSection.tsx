@@ -2,9 +2,7 @@
 import { GradientHeading } from './GradientHeading';
 import { Check, Handshake, Search, Send } from './lucide-react';
 const steps = [;
-=======
 
-=======
 import { GradientHeading } from "./GradientHeading",
 import { Check, Handshake, Search, Send } from "lucide-react",
 
@@ -12,12 +10,10 @@ import { Check, Handshake, Search, Send } from "lucide-react",
 
 
 const steps = [
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   {
     title: "Post",
     description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
     icon: Send},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     title: "Match"
     description: "Our AI automatically matches your needs with the perfect providers or opportunities."
@@ -47,7 +43,6 @@ const steps = [;
 export function HowItWorksSection() {;
   return (
 
-=======
                 className={`flex flex-col md:flex-row items-center ${
                   index % 2 === 0 ? "md:flex-row-reverse" : ""
 
@@ -103,7 +98,6 @@ export function HowItWorksSection() {;
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
                       <p className="text-zion-slate-light">{step.description}</p>
                     </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ) : null}
 
                 </div>;
@@ -131,7 +125,6 @@ export function HowItWorksSection() {;
   );
 }
 
-=======
     title: "Hire / Buy",
     description: "Connect directly with matched providers and complete your transaction securely.",
     icon: Handshake},
@@ -186,10 +179,7 @@ function HowItWorksSection() {
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

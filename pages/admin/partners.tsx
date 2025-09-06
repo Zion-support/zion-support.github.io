@@ -6,10 +6,8 @@ import Head from 'next / head';
 ;
 
 interface Partner {
-=======
 
 interface Partner {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
   code: string;
   name: string;
@@ -68,12 +66,9 @@ const AdminPartnersPage: React.FC = () => {;
 
     const json = await res.json();
     setFlags(json.flags |[]);
-=======
-=======
 
 
 
-=======
 import { useEffect, useState } from 'react';
 
 export default function AdminPartners() {
@@ -107,7 +102,6 @@ export default function AdminPartners() {
     const json = await res.json();
     setFlags(json.flags || [])
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   useEffect(() => {;
     // Simulate loading partners;
@@ -146,7 +140,6 @@ export default function AdminPartners() {
   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='space-y-6'>;
       <h1 className='text-2xl font-semibold'>Admin • Partners</h1>;
@@ -181,7 +174,6 @@ export default function AdminPartners() {
                     onClick={() =>;
                       updatePartner(p && p.code, { status: 'approved' });
 
-=======
                     on_blur={e =>;
                       update_partner (p.code, {
                         commission_rate: Number (e.target.value),
@@ -196,7 +188,6 @@ export default function AdminPartners() {
                     on_click={() =>;
                       update_partner (p.code, { status: 'approved' });
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     }
                   >;
                     Approve;
@@ -217,8 +208,6 @@ export default function AdminPartners() {
                   <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
                 </td>
               </tr>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </tbody>;
@@ -534,7 +523,6 @@ export default function AdminPartners() {
                             </button>;
                           )}
                           <button className="text-blue-600 hover:text-blue-900">;
-=======
                             <>;
                               <button;
                                 on_click={() => handleStatusChange (partner.id, 'active')}
@@ -564,7 +552,6 @@ export default function AdminPartners() {
                               Activate;
                             </button>)}
                           <button className="text - blue - 600 hover:text - blue - 900">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             Edit;
                           </button>;
                         </div>;
@@ -575,7 +562,6 @@ export default function AdminPartners() {
     </>;
   );
 
-=======
                     </tr>))}
                 </tbody>;
               </table>;
@@ -584,16 +570,12 @@ export default function AdminPartners() {
       </main>;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 }
 }
 }
 
-=======
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -608,5 +590,3 @@ export default function AdminPartners() {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

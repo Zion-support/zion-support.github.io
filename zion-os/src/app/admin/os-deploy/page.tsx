@@ -17,10 +17,7 @@ ai: 'Advanced AI capabilities and automation'
     }
     return descriptions[key] |'Feature description';
   }
-=======
-=======
 'use client';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export default function OSDeployPage() {;
   const [loading, setLoading] = useState(false);
@@ -92,7 +89,6 @@ export default function OSDeployPage() {;
                   name="vertical"
 
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
-=======
   }
 ;
   const getFeatureDescription = (key: string) =>: any {
@@ -209,13 +205,11 @@ ai: 'Advanced AI capabilities and automation',
                 <label className="block text-sm font-medium text-white/90">Token System</label>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <select
                   id="tokenSystem"
                   name="tokenSystem"
 
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
-=======
               <div className="space - y-2">;
                 <label html_for="domain" className="block text - sm font - medium text - white / 90">Domain</label>;
                 <input;
@@ -281,7 +275,6 @@ ai: 'Advanced AI capabilities and automation',
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
                   <option value="ADMIN">Admin Control</option>;
                   <option value="DAO LITE">DAO-lite</option>;
-=======
               <div className="space - y-2">;
                 <label html_for="governance_type" className="block text - sm font - medium text - white / 90">Governance Type</label>;
                 <select;
@@ -332,7 +325,6 @@ ai: 'Advanced AI capabilities and automation',
                   className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
                   <input
-=======
               <div className="space - y-2">;
                 <label html_for="country" className="block text - sm font - medium text - white / 90">Country</label>;
                 <input;
@@ -373,7 +365,6 @@ ai: 'Advanced AI capabilities and automation',
                   className="flex items - center gap - 3 p - 4 rounded - lg border border - white / 10 hover:border - white / 20 transition - colors cursor - pointer group";
                 >;
                   <input;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     id={`feature-${k}`}
                     type="checkbox";
                     name="features";
@@ -459,7 +450,6 @@ ai: 'Advanced AI capabilities and automation',
                     Partnership Management;
                   </div>;
                   <div className="text-sm text-white/60">Institutional partnership management</div>;
-=======
                     aria - label={label_for (k)}
                     className="w - 4 h - 4 text - blue - 600 bg - zinc - 900 border - white / 20 rounded focus:ring - blue - 500 focus:ring - 2";
                   />;
@@ -555,7 +545,6 @@ ai: 'Advanced AI capabilities and automation',
 
                 }`}
               >
-=======
 "use client",;
 import { useState } from "react",;
 import { FeatureKeys } from "@/lib/zod",;
@@ -946,7 +935,6 @@ export default function AdminDeployPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {message}
               </div>;
             )}
@@ -1001,4 +989,3 @@ function getFeatureDescription(key: string) {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

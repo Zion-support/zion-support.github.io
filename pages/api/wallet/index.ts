@@ -1,6 +1,5 @@
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {getWalletSummary} from '../../../utils / token / service';
 export default /**
@@ -20,10 +19,6 @@ if ( {) {
   } catch (err: any) {
     return res.status (500).json ({ error: err.message || 'Unknown error' });
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

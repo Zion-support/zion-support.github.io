@@ -6,7 +6,6 @@ import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Admin Pages
 import QuoteManager from "@/pages/admin/QuoteManager",
 import ReviewsModeration from "@/pages/admin/ReviewsModeration",
@@ -22,7 +21,6 @@ import IntegrationsPage from "@/pages/admin/IntegrationsPage",
 
 
 const AdminRoutes = () => {
-=======
 // Admin Pages;
 import QuoteManager from "@/pages/admin/QuoteManager";
 import ReviewsModeration from "@/pages/admin/ReviewsModeration";
@@ -34,7 +32,6 @@ import FraudDetection from "@/pages/admin/FraudDetection";
 import TokenManager from "@/pages/admin/TokenManager";
 import IntegrationsPage from "@/pages/admin/IntegrationsPage";
 const AdminRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       <Route
@@ -137,11 +134,9 @@ const AdminRoutes = () => {;
 
 export default AdminRoutes;
 
-=======
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
-=======
           <ProtectedRoute adminOnly={true}>
             <IntegrationsPage />
           </ProtectedRoute>
@@ -149,7 +144,6 @@ import { ProtectedRoute } from '@/components / ProtectedRoute';
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Admin Pages;
 import QuoteManager from "@/pages / admin / QuoteManager";
 import ReviewsModeration from "@/pages / admin / ReviewsModeration";
@@ -243,4 +237,3 @@ const AdminRoutes = () =>: any {
 
 export default AdminRoutes;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

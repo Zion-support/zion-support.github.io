@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 /**
  * Custom hook for auth event handling
  */
@@ -93,7 +92,6 @@ export function useAuthEventHandlers(): any (;
     handleSignedIn;
     handleSignedOut;
 
-=======
 import { toast } from '@/hooks / use - toast';
 import type { UserProfile } from "@/types / auth";
 import { checkNewRegistration } from '@/utils / auth_utils';
@@ -145,8 +143,6 @@ if ( {) {
   return {
     handleSignedIn;
     handleSignedOut;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   },
 
@@ -154,6 +150,5 @@ if ( {) {
     handleSignedIn,
     handleSignedOut
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

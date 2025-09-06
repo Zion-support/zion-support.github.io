@@ -10,7 +10,6 @@ export default function Contact() {;
       </main>;
     </div>;
   );
-=======
 import React from './react';
 ;
 export default /**
@@ -24,5 +23,4 @@ function Contact() {
         <p > Get in touch with our team for your IT and AI service needs.</p>;
       </main>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

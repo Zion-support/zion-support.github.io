@@ -1,6 +1,5 @@
 
 
-=======
 
 import {useState} from 'react';
 
@@ -17,7 +16,6 @@ const categories: GrantCategory[] = [
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 export default function ApplyGrantPage() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState('');
@@ -134,20 +132,17 @@ function ApplyGrantPage() {
     } finally {;
       setLoading(false);    }          budgetAmount: Number(budgetAmount || 0),;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           budgetCurrency;
           supportingLinks: supportingLinks;
             .split('\n');
             .map((s) => s && s.trim());
             .filter(Boolean);
-=======
       set_loading (false);    }          budget_amount: Number (budget_amount || 0),
           budget_currency;
           supporting_links: supporting_links;
             .split ('\n');
             .map ((s) => s.trim ());
             .filter (Boolean);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           pitchDeckUrl;
           region;
 
@@ -161,23 +156,19 @@ function ApplyGrantPage() {
     } finally {;
       setLoading(false);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
-=======
     }
 
 
   };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
 
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <div className='flex gap-3'>
-=======
             onChange={e => setPitchDeckUrl(e && e.target.value)}
           />;
         </label>;
@@ -185,7 +176,6 @@ function ApplyGrantPage() {
         {error && <div className='text-sm text-red-600'>{error}</div>}
 
         <div className='flex gap-3'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <button
             disabled={loading}
             onClick={() => save(false)}
@@ -211,11 +201,8 @@ function ApplyGrantPage() {
           </label>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           <label className="text - sm">Region;
             <input className="mt - 1 w - full border rounded p - 2" value={region} on_change={(e) => set_region (e.target.value)} placeholder="e.g., LATAM, EU, Global" />;
           </label>;
@@ -234,10 +221,6 @@ function ApplyGrantPage() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

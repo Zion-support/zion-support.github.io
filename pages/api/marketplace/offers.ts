@@ -11,7 +11,6 @@ import {
   listOffers
   saveOffer
   saveProject
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
@@ -29,7 +28,6 @@ import {
   saveOffer,
   saveProject,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "../../../utils/marketplace/store";
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
 
@@ -102,7 +100,6 @@ if ( {) {
         createdAtIso: new Date().toISOString(),
         clientId: client && client.id,
         talentSlug,
-=======
     // Check condition
 if ( {) {
   $2
@@ -151,7 +148,6 @@ import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
         req,
         existing,
         req && req.headers["x-demo-talent-slug"] as string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       );
       if (action === "accept") {
 
@@ -175,15 +171,12 @@ import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
                   url: existing && existing.agreementUrl,
                   uploadedAtIso: new Date().toISOString(),
                 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               ]
 
             : []
           notes: []
         }
-=======
         if (user.role !== "talent") return bad(res, "Only talent can accept", 403);
-=======
       }
       save_offer (offer);
       return res.status (201).json ({ ok: true, offer });
@@ -253,7 +246,6 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-=======
 
 
 }
@@ -304,4 +296,3 @@ if ( {) {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

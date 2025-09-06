@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface OnboardingStatus {
 
   profileCompleted: boolean
@@ -98,7 +97,6 @@ export function useOnboardingStatus() {;
           return;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
         if (data) {
           setStatus({
@@ -110,7 +108,6 @@ export function useOnboardingStatus() {;
             inviteSent: data.talent_invited |false
             responseReceived: data.quote_received |false
           })
-=======
 import {useState, useEffect} from "react";
 import {useAuth} from "./useAuth";
 import {supabase} from "@/integrations/supabase/client";
@@ -153,7 +150,6 @@ export function useOnboardingStatus() {;
           return;
         }
 
-=======
       } catch (err) {
         console.error("Error in onboarding status hook:", err)
 
@@ -242,8 +238,5 @@ if ( {) {
   return status;
 }
 
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

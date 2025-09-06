@@ -54,17 +54,13 @@ import { GripVertical } from &quot;lucide-react & quot;
 import * as ResizablePrimitive from &quot;react - resizable - panels & quot;
 ;
 import { cn } from &quot;@/lib / utils & quot;
-=======
 
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 ;
 
-=======
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle };
-=======
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
 const ResizablePanelGroup = ({
   class_name,
@@ -95,5 +91,4 @@ const ResizableHandle = ({
         <GripVertical className=&quot;h - 2.5 w - 2.5 & quot; />;
       </div>)}
   </ResizablePrimitive.PanelResizeHandle>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }

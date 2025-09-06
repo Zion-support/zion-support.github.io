@@ -34,7 +34,6 @@ export interface OnboardingStep {
   title = "Complete Your Profile", 
   className 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length;
   const progress = Math.round((completedSteps / steps.length) * 100);
@@ -72,7 +71,6 @@ export function OnboardingTracker(): any ({ ;
       </div>;
 
 
-=======
 
         <div 
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
@@ -80,7 +78,6 @@ export function OnboardingTracker(): any ({ ;
           style={{ width: `${progress}%` }}
         ></div>
       </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Steps list */}
       <div className="space-y-3">;
         {steps && steps.map((step) => (;
@@ -115,8 +112,6 @@ export function OnboardingTracker(): any ({ ;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { CheckCircle, Circle, ArrowRight } from './lucide-react';
 import { cn } from '@/lib / utils';

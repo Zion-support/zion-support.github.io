@@ -1,13 +1,11 @@
 
 
-=======
 
 import React from "react";
 import Head from "next/head";
 
 
 export default function DiversityInclusionPage() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
       <Head>;
@@ -68,7 +66,6 @@ export default function DiversityInclusionPage() {
   );
 
 }
-=======
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
@@ -89,8 +86,6 @@ export default function DiversityInclusionPage() {
 	);
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from './react';
 import Head from './next / head';
 export default /**
@@ -154,9 +149,6 @@ function DiversityInclusionPage() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

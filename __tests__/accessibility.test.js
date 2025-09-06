@@ -123,7 +123,4 @@ test.describe('Accessibility Tests', () => {
     const focusedElement = page.locator(':focus');
     await expect(focusedElement).toBeVisible()})})';
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
     "await"
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

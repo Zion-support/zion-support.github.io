@@ -25,7 +25,6 @@ export function useFraudPreventionSignup() {;
 
   };
 
-=======
 import { useState, useCallback } from 'react',;
 import { checkSignupPatterns } from '@/services/fraud/signupCheck',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -47,8 +46,6 @@ export function useFraudPreventionSignup() {;
 
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Check if the signup attempt might be fraudulent
   const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {
     setIsCheckingFraud(true);
@@ -73,7 +70,6 @@ export function useFraudPreventionSignup() {;
           timestamp: new Date().toISOString()
           status: 'pending'
         });
-=======
 
       const fraudCheck = await checkSignupPatterns(email, ipAddress),
       
@@ -94,7 +90,6 @@ export function useFraudPreventionSignup() {;
         }),
         
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (error) {
           console && console.error('Error creating fraud flag:', error)
         }
@@ -196,10 +191,8 @@ if (||) {
 ;
 
   return {
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     isCheckingFraud;
 
     checkFraudBeforeSignup}

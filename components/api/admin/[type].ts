@@ -11,13 +11,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     pageSize: pageSize ? Number(pageSize) : 20, filters,
     format: (format as any) || undefined}
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     sort;
     order: (order as any) |'desc';
     page: page ? Number(page) : 0;
     pageSize: pageSize ? Number(pageSize) : 20;
-=======
 
     search,
     sort,
@@ -27,7 +25,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     filters,
     format: (format as any) || undefined,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     filters
     format: (format as any) |undefined}
@@ -66,10 +63,8 @@ export default async function handler(
 
   if (!ADMIN_TYPES.includes(type))
     return res.status(400).json({ error: 'Invalid type' });  }
-=======
     return '"' + s.replace(/"/g, '""') + '"'
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join()));
   return lines.join('\n')
 
@@ -100,7 +95,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const useSupabase = isSupabaseConfigured();
 
   if (req && req.method === 'GET') {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const params = parseListParams(req);
     if (useSupabase) {
       const table = type;
@@ -129,7 +123,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       }
       return res && res.status(200).json({ items: data || [], total: count || 0 });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } else {
       // fallback
       const all = (MOCK_DATA[type] |[]).slice();
@@ -138,7 +131,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       if (params.sort) {
         filtered.sort((a: any, b: any) => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           const av = (a as any)[params.sort!];
           const bv = (b as any)[params.sort!];
 
@@ -164,8 +156,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
       }
-=======
-=======
 
       }
 
@@ -174,15 +164,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (req.method === 'PATCH') {
     const { id, updates } = req.body as {
       id: string;
       updates: Record<string, any>;
     }
     if (!id) return res.status(400).json({ error: 'Missing id' });
-=======
 
   if (req && req.method === 'PATCH') {
     const { id, updates } = req && req.body as {
@@ -190,7 +177,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       updates: Record<string, any>;
     };
     if (!id) return res && res.status(400).json({ error: 'Missing id' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (useSupabase) {
       const { data, error } = await client
         .from(type)
@@ -212,13 +198,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       return res.status(200).json({ item: updated })
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
 
 
 
-=======
       return res.status(200).json({ item: updated });    }
 
     }
@@ -228,8 +212,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) |'';
     if (!id) return res.status(400).json({ error: 'Missing id' });
@@ -265,8 +247,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }return res && res.status (200) .send (toCsv (pageItems) );
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       const start = params.page * params.page_size;
       const end = start + params.page_size;
       const page_items = filtered.slice (start, end);
@@ -358,12 +338,8 @@ return res.status (405).json ({ error: 'Method not allowed' });
 }return res.status (200) .send (to_csv (data || []) );
 }return res.status (200) .send (to_csv (page_items) );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

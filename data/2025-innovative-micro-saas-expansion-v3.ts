@@ -57,7 +57,6 @@ const contact = {
 
   ];    features: [
 
-=======
 export interface InnovativeMicroSaasService {
   id: string, name: string,
   tagline: string, price: string,
@@ -614,19 +613,15 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     description: 'Cutting-edge platform that combines AI, robotics, and IoT to create autonomous supply chain operations, from warehouse automation to last-mile delivery.',
     features: [
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       'Autonomous warehouse robotsAI-powered route optimizationReal-time inventory trackingPredictive maintenanceMulti-robot coordinationSafety and collision avoidancePerformance analyticsScalable deployment';
       'API integration capabilities'
-=======
   ];    features: [;
       'Autonomous warehouse robotsAI - powered route optimization_real - time inventory tracking_predictive maintenance_multi - robot coordination_safety and collision avoidance_performance analytics_scalable deployment';
       'API integration capabilities';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ];
 
     popular: true, icon: '🤖',
 
-=======
     color: 'from - gray - 600 to - slate - 700', text_color: 'text - gray - 400',
     link: 'https://ziontechgroup.com / autonomous - supply - chain - robotics',
     market_position: 'Leading - edge platform competing with Amazon Robotics, Fetch Robotics, and Locus Robotics',
@@ -1077,8 +1072,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

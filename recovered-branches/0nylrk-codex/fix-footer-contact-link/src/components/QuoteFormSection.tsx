@@ -31,7 +31,6 @@ export function QuoteFormSection() {
     }, 1000)
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <section className="py-20 bg-zion-blue">
@@ -88,7 +87,6 @@ export function QuoteFormSection() {
                   >
                     Name
                   </label>
-=======
 
     // Simulate form submission;
     setTimeout(() => {;
@@ -134,7 +132,6 @@ export function QuoteFormSection() {
                   <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">;
                     Name;
                   </label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Input
                     id="name"
                     type="text"
@@ -178,7 +175,6 @@ export function QuoteFormSection() {
                     type="tel"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
 
-=======
                       <input
                         id={`interest-${index}`}
                         type="checkbox"
@@ -186,7 +182,6 @@ export function QuoteFormSection() {
                       />
 
 
-=======
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
 import { Button } from "./ui/button",;
 import { Input } from "./ui/input",;
@@ -288,7 +283,6 @@ export function QuoteFormSection() {;
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-2">;
                   {["AI Products/Services", "IT Equipment", "Server Solutions", "Storage Solutions", "Networking", "24/7 Support", "Recycling Services"].map((item, index) => (;
                     <div key={index} className="flex items-center">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <input
                         id={`interest-${index}`}
                         type="checkbox"
@@ -297,14 +291,10 @@ export function QuoteFormSection() {;
                       />;
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">;
 
-=======
                       />
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         {item}
                       </label>;
                     </div>;
@@ -339,7 +329,6 @@ export function QuoteFormSection() {;
   );
 }
 
-=======
 import { Button  } from './ui / button';
 import { Input  } from './ui / input';
 import { GradientHeading  } from './GradientHeading';
@@ -524,4 +513,3 @@ function QuoteFormSection() {
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

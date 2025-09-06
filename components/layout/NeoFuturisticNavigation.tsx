@@ -370,7 +370,6 @@ import React, { useState, useEffect } from 'react';
     { name: 'LLM Usage Governance', href: '/services/llm-usage-governance' }
   ];
     >
-=======
 
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -732,7 +731,6 @@ import React, { useState, useEffect } from 'react';
 
 
     >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Scroll Progress Bar */}
       <div className='absolute top-0 left-0 h-1 w-full bg-transparent'>;
         <div
@@ -759,7 +757,6 @@ import React, { useState, useEffect } from 'react';
                 Zion Tech Group;
               </div>;
               <div className='text-xs text-gray-400'>;
-=======
 import Link from 'next / link';
 import { use_router } from 'next / router';
 import {
@@ -1205,7 +1202,6 @@ function NeoFuturisticNavigation() {
                 Zion Tech Group;
               </div>;
               <div className='text - xs text - gray - 400'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Revolutionary Technology;
               </div>;
             </div>;
@@ -1453,18 +1449,15 @@ function NeoFuturisticNavigation() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
                     {serviceCategories.map((category, index) => (
-=======
                   />;
                 </button>;
 
                 {activeDropdown === 'mobile-services' && (;
                   <div className='ml-4 space-y-3'>;
                     {serviceCategories && serviceCategories.map((category, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <div
                         key={index}
                         className='border-l-2 border-gray-700 pl-4'>;
@@ -1503,12 +1496,9 @@ function NeoFuturisticNavigation() {
               </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Company Section */}
               <div>;
                 <button
@@ -1611,7 +1601,6 @@ function NeoFuturisticNavigation() {
                     variant='secondary'
                     size='lg'
                     className='w-full'>;
-=======
                         <ArrowRight className='w - 4 h - 4 ml - 2' />;
                       </Button>;
                     </div>;
@@ -1913,7 +1902,6 @@ function NeoFuturisticNavigation() {
                     size='lg';
                     className='w - full';
                   >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     Contact Us;
                   </Button>;
                 </div>;
@@ -1965,7 +1953,6 @@ function NeoFuturisticNavigation() {
 }</div>)
 }</div> </div> </div> <div className="mt-6 space-y-3" > <Button href="/services" variant="quantum" size="lg" className="w-full" > Explore Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/contact" variant="secondary" size="lg" className="w-full" > Contact Us </Button> </div> </div> </div> </div> </div>)
 }</nav>) 								<div className="mt-6 space-y-3">
-=======
 import { 
 	Menu;
 	X, 
@@ -2527,7 +2514,6 @@ export default function NeoFuturisticNavigation() {
 }
 
 
-=======
         </div>)}
     </nav>);
 ;
@@ -2584,10 +2570,7 @@ export default function NeoFuturisticNavigation() {
     </div>)}
   </nav>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 	);
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

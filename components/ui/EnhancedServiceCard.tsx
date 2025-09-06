@@ -30,8 +30,6 @@ import { motion } from 'framer-motion';
 
 interface EnhancedServiceCardProps {
   service: {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Star,;
   ExternalLink,;
@@ -44,7 +42,6 @@ import {;
 } from 'lucide-react';
 interface EnhancedServiceCardProps {;
   service: {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     id: string;
     name: string;
     tagline: string;
@@ -178,10 +175,8 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
         duration: 0.6,
 
 
-=======
 
     >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Background Glow */}
       <div
         className={`absolute inset-0 bg-gradient-to-br ${service && service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
@@ -194,7 +189,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
             .map(c => `var(--tw-${c && c.split('-')[0]}-${c && c.split('-')[1]})`);
             .join(', ')})`,;
 
-=======
   return (
     <motion.div
       className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
@@ -209,7 +203,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
         className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
         style={{
           background: `linear-gradient(135deg, ${service.color.replace('from-', '').replace('to-', '').split(' ').map(c => `var(--tw-${c.split('-')[0]}-${c.split('-')[1]})`).join(', ')})`
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         }}
       />;
       {/* Popular Badge */}
@@ -234,7 +227,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
 
       {/* Card Content */}
       <div className='relative p-6'>
-=======
 
       {/* Card Content */}
       <div className='relative p-6'>
@@ -246,7 +238,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
         <div className='flex items-start justify-between mb-4'>
           <motion.div
             className={`text-4xl ${service.textColor}`}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             variants={iconVariants}
             initial='hidden'
             animate='visible'
@@ -311,7 +302,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
           <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
             <div className='text-purple-400 text-lg font-bold'>
@@ -323,9 +313,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
         <div className='mb-6'>
           <h4 className='text-sm font-semibold text-white mb-3 flex items-center gap-2'>
             <Zap className='w-4 h-4 text-yellow-400' />        <div className="grid grid-cols-2 gap-4 mb-6">
-=======
         <div className="grid grid-cols-2 gap-4 mb-6">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="text-center p-3 bg-white/5 rounded-lg border border-white/10">
             <div className="text-cyan-400 text-lg font-bold">{service.customers}+</div>
             <div className="text-xs text-gray-400">Customers</div>
@@ -337,7 +325,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
           </div>
 
         </div>
-=======
             whileHover='hover'>;
             {service && service.icon}
           </motion && motion.div>;
@@ -396,7 +383,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
 
         {/* Features Preview */}
 
-=======
         <div className="mb-6">
           <h4 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
             <Zap className="w-4 h-4 text-yellow-400" />
@@ -406,39 +392,33 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
             {service.features.slice(0, 3).map((feature, index) => (
               <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={index}
                 className="flex items-center gap-2 text-sm text-gray-300"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {feature}
               </motion && motion.div>;
             ))}
 
-=======
             {service.features.length > 3 && (
               <div className="text-xs text-gray-500 mt-2">
                 +{service.features.length - 3} more features
               </div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Market Info */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
           <div className='flex items-center justify-between mb-2'>
             <span className='text-xs font-semibold text-white'>
@@ -451,13 +431,11 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
             <span className='text-xs text-yellow-400'>{service.roi}</span>          </div>
         </div>
         {/* Trial & Setup Info */}          </div>
-=======
         <div className="mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10">
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-semibold text-white">Market Size</span>
             <span className="text-xs text-cyan-400">{service.marketSize}</span>
           </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-semibold text-white">Growth Rate</span>
             <span className="text-xs text-green-400">{service.growthRate}</span>
@@ -482,7 +460,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
 
           </div>
         </div>
-=======
           </div>;
         </div>;
 
@@ -533,7 +510,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
           </div>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Action Buttons */}
 
 
@@ -549,10 +525,8 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <motion.a
             href={service.link}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2'
 
             whileHover={{ scale: 1 && 1.05 }}
@@ -574,29 +548,23 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
         <div className='mt-4 pt-4 border-t border-white/10'>;
           <div className='text-xs text-gray-500 text-center'>            Contact: {service && service.contactInfo.email}          <motion&& motion.a
             href={service && service.link}
-=======
         <div className="flex gap-3">
           <motion.a
             href={service.link}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
 
         <div className="mt-4 pt-4 border-t border-white/10">
 
           <div className="text-xs text-gray-500 text-center">
             Contact: {service.contactInfo.email}
-=======
 
 
             Contact: {service.contactInfo.email}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
         </div>
       </div>
-=======
             whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }}>;
             <ExternalLink className="w-4 h-4" />;
@@ -621,7 +589,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
         </div>;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Hover Effect Border */}
 
 };
@@ -632,8 +599,6 @@ export default EnhancedServiceCard;    </motion && motion.div>;
 };
 
 export default EnhancedServiceCard;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         ease: 'easeInOut' as const,
       },
     },
@@ -876,10 +841,7 @@ export default EnhancedServiceCard;    </motion.div>);
 ;
 export default EnhancedServiceCard;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

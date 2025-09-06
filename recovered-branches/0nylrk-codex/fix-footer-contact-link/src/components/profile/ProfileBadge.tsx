@@ -8,7 +8,6 @@ import {BadgeCheck, Star, Clock, Award} from "lucide-react";
 import {cn} from "@/lib/utils";
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
 
-=======
 import React from "react",
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",
 import { cn } from "@/lib/utils",
@@ -17,8 +16,6 @@ type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ProfileBadgeProps {
   type: BadgeType
   className?: string
@@ -40,7 +37,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
     "top-rated": {
 
 
-=======
 
       icon: Award,
       text: "Top Rated",
@@ -54,7 +50,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   )
 
 
-=======
 import React from "react",;
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -84,7 +79,6 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
       text: "Top Rated",;
       colors: "bg-purple-500/20 text-purple-400"}},;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { icon: Icon, text, colors } = badgeConfig[type];
   return (
 
@@ -99,8 +93,6 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
   );
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { BadgeCheck, Star, Clock, Award } from './lucide-react';
 import { cn } from '@/lib / utils';
@@ -142,4 +134,3 @@ function ProfileBadge() {
       <span>{text}</span>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

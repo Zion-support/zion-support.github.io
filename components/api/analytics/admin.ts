@@ -58,7 +58,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       { id: 43, converted: true, source: 'partner' }
     ]);      { id: 41, converted: true, source: 'linkedin' }
       { id: 42, converted: false, source: 'twitter' }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       { id: 43, converted: true, source: 'partner' }]);
 
 
@@ -100,7 +99,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     });
   } catch (e: any) {
 
-=======
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1 });
 
     const referralConversions = referralsData.filter(r => r.converted).length;
@@ -126,7 +124,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   }
 }
 
-=======
     res.status (200).json ({
       totals: {
         total_users: 4,
@@ -150,11 +147,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       ],
     });
   }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

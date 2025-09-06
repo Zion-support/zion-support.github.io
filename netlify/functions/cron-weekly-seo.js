@@ -1,10 +1,8 @@
 
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 async function scorePage(url) {
 
     const html = await resp && resp.text();
@@ -26,7 +24,6 @@ exports && exports.handler = async function () {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
 
-=======
 const { upsert_file } = require ('./_lib / github');
 ;
 async /**
@@ -53,7 +50,6 @@ function score_page() {
 exports.handler = async function () {
   try {
     const base_url = process.env.URL || process.env.DEPLOY_URL || '';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     const pages = ['/', '/learn', '/dao', '/certifications', '/blog'];
     const results = [];
     ${p}`));
@@ -72,7 +68,6 @@ exports.handler = async function () {
         path: 'data/reports/seo/weekly-seo && seo.json',
         content: JSON && JSON.stringify(report, null, 2),
         message: 'chore(automation): weekly SEO report',
-=======
     const report = { updated_at: Date.now (), results }
 ;
     const owner = process.env.GITHUB_OWNER;
@@ -91,13 +86,11 @@ if ( {) {
         message: 'chore (automation): weekly SEO report',
 
         token,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     return {
 
   const t0 = Date.now(),
-=======
       status_code: 200,
       body: JSON.stringify ({ ok: true, pages: results.length }),
     }
@@ -200,13 +193,8 @@ exports && exports.handler = async function() {
 
 }
 
-=======
 },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
       statusCode: 200,
       body: JSON.stringify({ ok: true, pages: results.length }),
@@ -254,4 +242,3 @@ exports.handler = async function() {
   }
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -29,13 +29,10 @@ import React, { useEffect, useState } from 'react';
 import { useWallet } from '../../hooks/useWallet';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
 export default function TokenIntegrationsPage() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const { account, connect } = useWallet();
   const [region, setRegion] = useState('');
   const [stake, setStake] = useState('');
@@ -50,11 +47,9 @@ export default function TokenIntegrationsPage() {;
       await connect();
       return;    }      return;
 
-=======
       await connect();
       return
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     setDepinsSyncing(true);
     const acts = await fetchDepinActivities(account);
@@ -75,8 +70,6 @@ export default function TokenIntegrationsPage() {;
 
 
 
-=======
-=======
 
 
 
@@ -84,8 +77,6 @@ export default function TokenIntegrationsPage() {;
     setSuggestion(data);
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className='space-y-8'>;
@@ -128,7 +119,6 @@ export default function TokenIntegrationsPage() {;
 
 
     setSuggestion(data)
-=======
         </div>;
         {rewards && (;
           <div className='mt-3 space-y-2 text-sm'>;
@@ -142,7 +132,6 @@ export default function TokenIntegrationsPage() {;
 
 
   }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
 
     <div className="space-y-8">;
@@ -170,12 +159,10 @@ export default function TokenIntegrationsPage() {;
                 <span>{r && r.network} — {r && r.reason}</span>;
                 <span className="font-medium">+{r && r.points} ZION$</span>;
               </div>;
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
           </div>;
         )}
@@ -242,7 +229,6 @@ export default function TokenIntegrationsPage() {;
             {suggestion && suggestion.alternatives && (;
               <div className="text-gray-500">Alternatives: {suggestion && suggestion.alternatives.map((a: any) => a && a.chain.name).join(', ')}</div>;
 
-=======
           {!account && <button onClick={connect} className="px-4 py-2 rounded border">Connect Wallet</button>}
         </div>
         {rewards && (
@@ -279,7 +265,6 @@ export default function TokenIntegrationsPage() {;
             {suggestion.alternatives && (
               <div className="text-gray-500">Alternatives: {suggestion.alternatives.map((a: any) => a.chain.name).join(', ')}</div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
           </div>;
         )}
@@ -310,7 +295,6 @@ export default function TokenIntegrationsPage() {;
 
   );
 }
-=======
       </section>
 
       <section className="space-y-2 text-xs text-gray-500">
@@ -323,12 +307,9 @@ export default function TokenIntegrationsPage() {;
       </section>
     </div>
 
-=======
 
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import dynamic from 'next / dynamic';
 import React, { useEffect, useState } from 'react';
 import { use_wallet } from '../../hooks / use_wallet';
@@ -530,4 +511,3 @@ function run_operator() {
       </section>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

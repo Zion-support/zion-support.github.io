@@ -29,7 +29,6 @@ interface UseIntersectionObserverProps {
   }, [node]);
 
   return [setNode, entry] as const
-=======
 export /**
  * useIntersectionObserver - Function description
  */
@@ -72,5 +71,4 @@ if ( {) {
     prev_node.current = node;
   }, [node]);
   return [set_node, entry] as const;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

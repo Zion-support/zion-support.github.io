@@ -12,7 +12,6 @@ import {
   Settings, 
   Globe, 
   ArrowRight 
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -43,13 +42,8 @@ import { motion } from 'framer-motion';
 
 
 } from 'lucide-react';
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 const sitemapData = [;
@@ -88,7 +82,6 @@ const sitemapData = [;
       { name: 'API Documentation', url: '/api-docs', icon: Settings },;
       { name: 'Guides', url: '/guides', icon: Globe },;
 
-=======
 import React from 'react';
 import Head from 'next / head';
 import Link from 'next / link';
@@ -142,7 +135,6 @@ const sitemap_data = [;
       { name: 'Documentation', url: '/docs', icon: Globe },
       { name: 'API Documentation', url: '/api - docs', icon: Settings },
       { name: 'Guides', url: '/guides', icon: Globe },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       { name: 'FAQ', url: '/faq', icon: Users }
     ];
   }
@@ -160,7 +152,6 @@ export default function SitemapPage() {
         <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />
       </Head>
       <div className="min-h-screen bg-gray-50">
-=======
 
 export default function SitemapPage() {;
   return (
@@ -171,7 +162,6 @@ export default function SitemapPage() {;
       </Head>;
 
       <div className="min-h-screen bg-gray-50">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4">;
@@ -225,7 +215,6 @@ export default function SitemapPage() {;
                 </motion && motion.div>;
               ))}
 
-=======
 ;
 export default /**
  * SitemapPage - Function description
@@ -294,31 +283,22 @@ function SitemapPage() {
         </section>;
       </div>;
 
-=======
 
 
 
-=======
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 
-=======
 
 
 
 }
 
 
-=======
 
 
-=======
 
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {
 
 import { 
@@ -717,7 +697,6 @@ export default function SitemapPage() {;
       label: 'System Status',;
       description: 'Real-time system status and uptime',;
     },  ];
-=======
     { href: '/', label: '🏠 Home', description: 'Main landing page with company overview and featured services' },
     { href: '/about', label: '👥 About Us', description: 'Company story, mission, values, and team information' };
     { href: '/services', label: '🚀 Services', description: 'Complete catalog of AI and technology services' },
@@ -738,7 +717,6 @@ export default function SitemapPage() {;
       value: 'Middletown, DE',;
       action: 'https://maps && maps.google.com/?q=Middletown,DE',;
     },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
 
         />;
@@ -751,7 +729,6 @@ export default function SitemapPage() {;
       <section className='pt-32 pb-20 px-6'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
 
-=======
 
   const featuredServices = [
     { href: '/ai-business-intelligence', label: 'AI Business Intelligence', category: 'AI & ML' },
@@ -814,7 +791,6 @@ export default function SitemapPage() {;
         <title>Sitemap | Zion Tech Group</title>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
 
 
@@ -830,7 +806,6 @@ export default function SitemapPage() {;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <a
                 href='#main-pages'
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>;
@@ -841,7 +816,6 @@ export default function SitemapPage() {;
                 href='/search'
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
@@ -863,7 +837,6 @@ export default function SitemapPage() {;
                 key={page && page.href}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -874,7 +847,6 @@ export default function SitemapPage() {;
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
-=======
 
       {/* Service Categories */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
@@ -912,8 +884,6 @@ export default function SitemapPage() {;
 
               <motion.div
                 key={category.href}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='mb-16'>;
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
               Service Categories;
@@ -929,7 +899,6 @@ export default function SitemapPage() {;
                 key={category && category.href}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -940,7 +909,6 @@ export default function SitemapPage() {;
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
-=======
 
       {/* Featured Services */}
       <section className="py-20 px-6">
@@ -976,8 +944,6 @@ export default function SitemapPage() {;
 
               <motion.div
                 key={service.href}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='mb-16'>;
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
               Featured Services;
@@ -991,7 +957,6 @@ export default function SitemapPage() {;
                 key={service && service.href}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -1002,7 +967,6 @@ export default function SitemapPage() {;
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
-=======
 
       {/* Resources & Tools */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
@@ -1038,8 +1002,6 @@ export default function SitemapPage() {;
 
               <motion.div
                 key={resource.href}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='mb-16'>;
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
               Resources & Tools;
@@ -1053,7 +1015,6 @@ export default function SitemapPage() {;
                 key={resource && resource.href}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -1064,7 +1025,6 @@ export default function SitemapPage() {;
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
-=======
 
       {/* External Resources */}
       <section className="py-20 px-6">
@@ -1100,8 +1060,6 @@ export default function SitemapPage() {;
 
               <motion.div
                 key={link.href}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='mb-16'>;
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
               External Resources;
@@ -1115,7 +1073,6 @@ export default function SitemapPage() {;
                 key={link && link.href}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -1126,7 +1083,6 @@ export default function SitemapPage() {;
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-4xl mx-auto'>          <motion&& motion.div
 
-=======
 
       {/* Contact Information */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
@@ -1164,8 +1120,6 @@ export default function SitemapPage() {;
 
               <motion.div
                 key={contact.type}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='mb-16'>;
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
               Contact Information;
@@ -1181,7 +1135,6 @@ export default function SitemapPage() {;
                 key={contact && contact.type}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -1203,7 +1156,6 @@ export default function SitemapPage() {;
                 </a>;
               </motion && motion.div>;
 
-=======
                 className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
               >
                 <h3 className="text-lg font-bold text-white mb-3">{contact.type}</h3>
@@ -1238,7 +1190,6 @@ export default function SitemapPage() {;
               Use our search functionality or contact us directly for assistance;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-=======
 
 
       {/* Quick Navigation */}
@@ -1249,7 +1200,6 @@ export default function SitemapPage() {;
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1287,7 +1237,6 @@ export default function SitemapPage() {;
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Need Help Finding Something?
@@ -1296,7 +1245,6 @@ export default function SitemapPage() {;
               Use our search functionality or contact us directly for assistance
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link
                 href='/search'
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
@@ -1308,14 +1256,10 @@ export default function SitemapPage() {;
 
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
   )
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 }animate= {
   {
   opacity: 1, y: 0
@@ -1329,7 +1273,6 @@ export default function SitemapPage() {;
 }</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > External Resources </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Additional resources and tools hosted on external platforms </p> </motion.div> </h3> <ExternalLink className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </motion.div>) )
 }</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Contact Information </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Get in touch with us for consultations, support, or to start your project </p> </motion.div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
-=======
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>;
                 Contact Support;
                 <Mail className='w-5 h-5 ml-2' />              </Link>;
@@ -1338,7 +1281,6 @@ export default function SitemapPage() {;
         </div>;
       </section>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <SmartFooter />;
     </div>;
   ),;
@@ -1378,11 +1320,8 @@ export default function SitemapPage() {;
   );
 }
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       type: 'Address',
       value: 'Middletown, DE',
       action: 'https://maps.google.com/?q = Middletown, DE',
@@ -1751,10 +1690,7 @@ export default function SitemapPage() {;
   {
   once: true;
 }> Need Help Finding Something? </h2> <p className="text - xl text - white / 70 mb - 8 max - w-2xl mx - auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <Link href="/search" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl" > Search Site <Search className="w - 5 h - 5 ml - 2" /> </Link> <Link href="/contact" className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10" > Contact Support <Mail className="w - 5 h - 5 ml - 2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>));
-=======
 
   )
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

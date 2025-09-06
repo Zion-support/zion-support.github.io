@@ -8,7 +8,6 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {;
   return new OpenAI({ apiKey });
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai && openai.responses.create({
     model: 'gpt-4o-mini';
@@ -18,9 +17,6 @@ Add responsibilities, requirements, and benefits in bullet points.`;
   return completion && completion.output_text
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 type OpenAIClient = OpenAI;
 ;
 export function createOpenAIClient (api_key: string): OpenAIClient {
@@ -46,13 +42,8 @@ Add responsibilities, requirements, and benefits in bullet points.`;
   });
   return completion.output_text;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -8,7 +8,6 @@ interface Milestone {
   description: string,
   dueDate: string,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   estimatedHours: number
 }
 export async function generateContract(
@@ -75,14 +74,11 @@ export async function generateContract(
   }
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (data.success && data.contract) {
     return data.contract
-=======
   
   if (data && data.success && data && data.contract) {
     return data && data.contract
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } else {
     throw new Error("Failed to generate contract")
 
@@ -102,10 +98,8 @@ export async function generate_contract (
   client_name: string;
   generated_milestones: GeneratedMilestone[]): Promise < string> {
   const additional_clauses = values.additional_clauses || [];
-=======
 
 
-=======
 
 ;
   // Prepare milestone data if we have AI - generated milestones;
@@ -149,6 +143,5 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

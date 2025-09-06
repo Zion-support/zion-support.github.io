@@ -25,7 +25,6 @@ interface CertificationsFormProps {
   onBack: () => void
 }
 
-=======
 
 import {useState} from 'react';
 import {use_form} from 'react - hook - form';
@@ -67,7 +66,6 @@ function CertificationsForm() {
 ;
   // Helper function to format dates as strings for form inputs;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
 
 
@@ -138,12 +136,10 @@ function CertificationsForm() {
     }
   };
 
-=======
     }
 
   };
 
-=======
   },;
 
   const handleEdit = (cert: Certification) => {;
@@ -157,7 +153,6 @@ function CertificationsForm() {
   const handleDelete = async (id: string) => {;
     if (confirm('Are you sure you want to delete this certification?')) {;
       await deleteCertification(id);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
@@ -165,8 +160,6 @@ function CertificationsForm() {
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className="space-y-6">;
@@ -229,11 +222,9 @@ function CertificationsForm() {
                 </Button>;
 
                 <Button type="button" onClick={onComplete}>;
-=======
       // Check condition
 if ( {) {
   $2
-=======
 
 
 }
@@ -255,6 +246,4 @@ if ( {) {
     </div>);
 }
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

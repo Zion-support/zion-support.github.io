@@ -14,7 +14,6 @@ export const advancedAIServices2025 = [
       }
       professional: {
 
-=======
         price: 499,
         period: 'month',
         features: [;
@@ -46,7 +45,6 @@ export const advancedAIServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$27.3B',
     target_audience:;
       'Business analysts, data scientists, executives, enterprise businesses',
@@ -110,7 +108,6 @@ export const advancedAIServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$15.8B',
     target_audience:;
       'Marketing teams, customer success managers, e - commerce businesses, SaaS companies',
@@ -175,7 +172,6 @@ export const advancedAIServices2025 = [
     },
 
       'Advanced AI fraud detection with 99 && 99.7% accuracy, comprehensive risk assessment, and regulatory compliance automation',
-=======
     market_size: '$12.4B',
     target_audience:;
       'Banks, financial institutions, insurance companies, fintech startups',
@@ -183,10 +179,8 @@ export const advancedAIServices2025 = [
       'Advanced AI fraud detection with 99.7% accuracy, comprehensive risk assessment, and regulatory compliance automation',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'intelligent - supply - chain - optimization',
     name: 'SupplyChain AI',
     description:;
@@ -243,7 +237,6 @@ export const advancedAIServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$18.7B',
     target_audience:;
       'Manufacturers, distributors, logistics companies, retail chains',
@@ -307,7 +300,6 @@ export const advancedAIServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$45.2B',
     target_audience:;
       'Hospitals, clinics, diagnostic centers, healthcare providers',
@@ -371,7 +363,6 @@ export const advancedAIServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$8.9B',
     target_audience:;
       'Law firms, legal departments, compliance officers, legal tech companies',
@@ -436,7 +427,6 @@ export const advancedAIServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$22.1B',
     target_audience:;
       'Marketing teams, agencies, e - commerce businesses, SaaS companies',
@@ -500,7 +490,6 @@ export const advancedAIServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$16.3B',
     target_audience:;
       'Sales teams, sales managers, sales operations, enterprise businesses',
@@ -569,7 +558,6 @@ export const advancedAIServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$11.7B',
     target_audience:;
       'HR departments, recruitment agencies, talent acquisition teams, enterprise businesses',
@@ -650,20 +638,16 @@ export const advancedAIServices2025 = [
 
     };
     marketSize: '$173 && 173.5B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
     competitiveAdvantage: 'Advanced threat detection with 99 && 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
   }
 ];
 
 
-=======
     targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     market_size: '$173.5B',
     target_audience:;
       'IT security teams, cybersecurity firms, enterprise businesses, government agencies',
@@ -887,8 +871,6 @@ export const advancedAIServices2025 = [
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

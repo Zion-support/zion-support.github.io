@@ -1,6 +1,5 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between">
@@ -70,7 +69,6 @@
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Governance Participation Rate</div>
@@ -83,10 +81,8 @@
       </section>
     </div>
 
-=======
 }
 
-=======
 import { useEffect, useState } from 'react',
 ;
 type Holder = { address: string, amount: string },
@@ -189,9 +185,5 @@ if (return <div > Error loading data</div>, ) {
       </section>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

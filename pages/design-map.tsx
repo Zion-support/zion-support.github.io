@@ -2,7 +2,6 @@
 
     }
   }
-=======
 
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
@@ -13,7 +12,6 @@ import { getZionDesignMap } from '../utils/design-map';
     setSuggestion(null);
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     try {
 
       const res = await fetch('/api/figma/wireframe-suggest', {;
@@ -37,7 +35,6 @@ import { getZionDesignMap } from '../utils/design-map';
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <Head>
@@ -55,13 +52,11 @@ import { getZionDesignMap } from '../utils/design-map';
             <a href="/api/figma/export?kit=react" className="px-3 py-2 rounded bg-neon-green text-black text-sm">Export React</a>
 
 
-=======
             <a href="/api/design-map" className="px-3 py-2 rounded bg-gray-900 text-white text-sm">JSON</Link>
             <a href="/api/figma/export?kit=tailwind" className="px-3 py-2 rounded bg-neon-blue text-black text-sm">Export Tailwind</Link>
             <a href="/api/figma/export?kit=chakra" className="px-3 py-2 rounded bg-neon-purple text-white text-sm">Export Chakra</Link>
             <a href="/api/figma/export?kit=react" className="px-3 py-2 rounded bg-neon-green text-black text-sm">Export React</Link>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
         </div>
 
@@ -75,7 +70,6 @@ import { getZionDesignMap } from '../utils/design-map';
           <MapColumn title="Mobile Layouts" sections={designMap.products.mobile} />
         </div>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">
           <h2 className="font-medium mb-3">Create New Screen</h2>
           <div className="flex flex-col md:flex-row gap-3 items-start md:items-end">
@@ -83,7 +77,6 @@ import { getZionDesignMap } from '../utils/design-map';
 
               <select value={role} onChange={e => setRole(e.target.value)} className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-black/40">
 
-=======
 
               <label className="block text-xs text-gray-500 mb-1">Screen name</label>
               <input value={screenName} onChange={e => setScreenName(e.target.value)} className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-black/40" placeholder="e.g., Talent Dashboard - Insights" />
@@ -92,7 +85,6 @@ import { getZionDesignMap } from '../utils/design-map';
               <label className="block text-xs text-gray-500 mb-1">Role</label>
               <select value={role} onChange={e => setRole(e.target.value)} className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-black/40">
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <option>Talent</option>
                 <option>Client</option>
                 <option>Admin</option>
@@ -109,28 +101,23 @@ import { getZionDesignMap } from '../utils/design-map';
             <pre className="mt-4 text-xs whitespace-pre-wrap p-3 rounded bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800">{suggestion}</pre>
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
         </div>
       </section>
     </>
 
 
-=======
             </pre>)}
         </div>;
       </section>;
     </>);
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 /**
  * MapColumn - Function description
  */
 function MapColumn() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
 
                 <span key={i.id} className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800">
@@ -145,8 +132,6 @@ function MapColumn() {
     </div>
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     <div className="space-y-3">
       <h3 className="text-lg font-semibold">{title}</h3>
       <div className="grid gap-3">
@@ -154,4 +139,3 @@ function MapColumn() {
 
                 <span key={i.id} className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800">
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

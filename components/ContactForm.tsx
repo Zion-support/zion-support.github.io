@@ -201,7 +201,6 @@ const ContactForm: React.FC = () => {;
             <option value="mobile-development">Mobile Development</option>;
             <option value="ai-services">AI Services</option>;
             <option value="cloud-solutions">Cloud Solutions</option>;
-=======
     setFormData (prev => ({
       ...prev,
       [name]: value,
@@ -380,10 +379,8 @@ const ContactForm: React.FC = () => {;
 }
 ;
 
-=======
 
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ContactForm;

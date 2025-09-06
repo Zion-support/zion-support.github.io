@@ -22,9 +22,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 
-=======
 
 
 import React from 'react';
@@ -129,23 +127,14 @@ const ProductsIndex: NextPage = () => {;
     return matchesCategory && matchesSearch;
   });
 
-=======
 
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 const Index: NextPage = () => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <Layout
       title="Products - Zion Tech Group"
       description="Discover our comprehensive suite of technology products designed to transform your business operations."
@@ -224,7 +213,6 @@ const Index: NextPage = () => {
                   }}
 
                   className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold";
-=======
 import Head from 'next / head';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
@@ -488,8 +476,6 @@ const ProductsIndex: NextPage = () => {
 
 
 
-=======
-=======
     <div>
       <Head>
         <title>Index - Zion Tech Solutions</title>
@@ -508,17 +494,13 @@ const ProductsIndex: NextPage = () => {
 
 
 
-=======
-=======
 
         <meta name="description" content="Index page" />
       </Head>
       
-=======
 
 import type { NextPage } from 'next';
 import Head from 'next/head';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <main>
         <h1>Index</h1>
         <p>This page is under construction.</p>
@@ -537,16 +519,13 @@ export default ProductsIndex;
 
 export default Index;
 
-=======
   )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
 export default Index;
 
 
 
-=======
         {/* Products Grid */}
         <section className="py - 16">;
           <div className="container mx - auto px - 4">;
@@ -661,9 +640,6 @@ export default ProductsIndex;
   )
 
 
-=======
 },
 export default Index,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

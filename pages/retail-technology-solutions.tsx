@@ -6,10 +6,8 @@
 			description="Optimize merchandising, pricing, demand forecasting, and omni-channel experiences with AI. Personalize at scale while reducing waste and stockouts."
 			subtitle="Higher margins and better experiences powered by AI."
 
-=======
 }
 
-=======
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -37,12 +35,8 @@ return (
     canonical="https: //ziontechgroup.com / retail - technology - solutions";
   />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
-=======
 			pricePerMonthUSD={1999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -50,7 +44,6 @@ return (
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Lift gross margin 2–4 pts and reduce stockouts 10–20%"
 			features={[
@@ -62,4 +55,3 @@ return (
 				"Integrations: POS, eCom, WMS, ESP, CDP"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

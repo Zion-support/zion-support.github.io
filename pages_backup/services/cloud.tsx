@@ -1,11 +1,7 @@
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -29,14 +25,12 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/cloud.tsx
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
@@ -85,10 +79,8 @@ const cloudServices = [;
 
 
 export default function CloudServicesPage() {
-=======
 export default function CloudServicesPage() {;
 export default function CloudServicesPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/cloud.tsx
   const cloudServices = [;
     {}
       title: "Cloud Migration",";
@@ -123,11 +115,8 @@ export default function CloudServicesPage() {;
   ];
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout
       title="Cloud Solutions - Zion Tech Group"
@@ -136,10 +125,8 @@ export default function CloudServicesPage() {;
 
     >
       <div className="min-h-screen bg-gray-50">
-=======
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services.">;
       <div className="min-h-screen bg-gray-50">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/cloud.tsx
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">";
           <div className="container mx-auto px-4">";
@@ -161,13 +148,8 @@ export default function CloudServicesPage() {;
         </section>;
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -182,8 +164,6 @@ export default function CloudServicesPage() {;
         </section>
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/cloud.tsx
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";
           <div className="container mx-auto px-4 text-center">";

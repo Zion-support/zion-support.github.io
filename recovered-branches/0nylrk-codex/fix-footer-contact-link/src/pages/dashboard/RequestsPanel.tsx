@@ -41,7 +41,6 @@ export default function RequestsPanel() {;
 
   const {;
 
-=======
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -63,7 +62,6 @@ function RequestsPanel() {
   const [show_details, setShowDetails] = useState (false);
 ;
   const {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     quotes;
     unread_count;
     is_loading;
@@ -102,7 +100,6 @@ function RequestsPanel() {
     }
 
 
-=======
 
   },
 
@@ -164,7 +161,6 @@ export default function RequestsPanel() {;
   const activeQuotes = quotes && quotes.filter(q => !q && q.is_archived);
   const archivedQuotes = quotes && quotes.filter(q => q && q.is_archived);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <ProtectedRoute>;
       <div>;
@@ -175,7 +171,6 @@ export default function RequestsPanel() {;
             <RequestsHeader;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
@@ -232,7 +227,6 @@ export default function RequestsPanel() {;
             setSelectedQuote(null);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }}
         />
         <Footer />
@@ -240,7 +234,6 @@ export default function RequestsPanel() {;
     </ProtectedRoute>
   )
 }
-=======
             setSelectedQuote(null);
           }}
         />;
@@ -250,8 +243,6 @@ export default function RequestsPanel() {;
     </ProtectedRoute>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     toggle_archive;
   } = useTalentQuotes ();
 ;
@@ -326,4 +317,3 @@ if ( {) {
       </div>;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

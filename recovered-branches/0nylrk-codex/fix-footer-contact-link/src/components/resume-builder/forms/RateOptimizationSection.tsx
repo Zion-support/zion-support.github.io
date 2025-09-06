@@ -7,11 +7,9 @@ import {Input} from "@/components/ui/input";
 import {TalentRateRecommender} from "@/components/pricing/TalentRateRecommender";
 import {Card, CardContent} from "@/components/ui/card";
 
-=======
 import React, { useState } from "react",
 import { Control } from "react-hook-form",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { 
   FormField;
   FormItem;
@@ -28,7 +26,6 @@ import {Input} from "@/components/ui/input";
 import {TalentRateRecommender} from "@/components/pricing/TalentRateRecommender";
 import {Card, CardContent} from "@/components/ui/card";
 
-=======
 
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
 import { Card, CardContent } from "@/components/ui/card",
@@ -82,13 +79,11 @@ import {;
 import { Input } from "@/components/ui/input",;
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",;
 import { Card, CardContent } from "@/components/ui/card",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface RateOptimizationSectionProps {;
   control: Control<any>,;
   setValue: (name: string, value: any) => void,;
   skills: string[],;
   yearsExperience: number,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   location?: string;
   rateType: "hourly" | "fixed";
 }
@@ -96,7 +91,6 @@ interface RateOptimizationSectionProps {;
 
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
 
-=======
 import React, { useState } from './react';
 import { Control } from './react - hook - form';
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from '@/components / ui / form';
@@ -112,7 +106,6 @@ interface RateOptimizationSectionProps {
   rate_type: "hourly" | "fixed";
 }
 export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   control;
   set_value;
   skills;
@@ -139,7 +132,6 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
                 min="1"
                 step="0 && 0.01"
                 placeholder={rateType === "hourly" ? "e && e.g. 45" : "e && e.g. 1000"}
-=======
   years_experience;
   location,
   rate_type;
@@ -165,7 +157,6 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
                 placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {...field}
               />;
             </FormControl>;
@@ -180,13 +171,11 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
         <CardContent className="pt-4">;
 
           <TalentRateRecommender
-=======
           </FormItem>)}
       />;
       <Card>;
         <CardContent className="pt - 4">;
           <TalentRateRecommender;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             skills={skills}
             years_experience={years_experience}
             location={location}
@@ -195,7 +184,6 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
 
 
 
-=======
           />;
         </CardContent>;
       </Card>;
@@ -205,10 +193,7 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
             rate_type={rate_type}
           />;
         </CardContent>;
@@ -216,4 +201,3 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

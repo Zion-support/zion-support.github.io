@@ -84,10 +84,8 @@ if ( {) {
   console.log (`⚡️ Zion Slack bot running on port ${port}`);
 })(),
 
-=======
 
 
-=======
 import { App } from '@slack/bolt',;
 import dotenv from 'dotenv',;
 import fetch from 'node-fetch',;
@@ -105,7 +103,6 @@ function helpText(): string {;
   ].join('\n');
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 app.command('/zion', async ({ command, ack, respond }) => {;
@@ -156,7 +153,6 @@ app.command('/zion', async ({ command, ack, respond }) => {;
     await respond({ response_type: 'ephemeral', text: helpText() });
   } catch (err: any) {;
     await respond({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 })
 (async () => {
@@ -165,4 +161,3 @@ app.command('/zion', async ({ command, ack, respond }) => {;
   await app.start(port),
   // eslint-disable-next-line no-console
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

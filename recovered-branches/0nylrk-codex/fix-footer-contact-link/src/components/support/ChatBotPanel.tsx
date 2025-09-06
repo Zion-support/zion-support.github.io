@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Define suggested quick replies
 
 const QUICK_REPLIES = [
@@ -122,7 +121,6 @@ export function ChatBotPanel() {
       } else {;
         // Reset failed attempts if successful;
         setFailedAttempts(0);
-=======
 import React, { useState, useRef, useEffect } from './react';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
@@ -220,7 +218,6 @@ if ( {) {
   $2
 }
           suggest_escalation ();
-=======
 
 import React, { useState, useRef, useEffect } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -271,7 +268,6 @@ export function ChatBotPanel() {;
   }, []),
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleSendMessage = async (text: string = inputValue) => {
     if (!text.trim()) return
     const userMessage: Message = {
@@ -305,12 +301,10 @@ export function ChatBotPanel() {;
         if (failedAttempts >= 2) {
           suggestEscalation()
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       } else {
         // Reset failed attempts if successful;
         setFailedAttempts (0);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
 
     } catch (error) {;
@@ -324,7 +318,6 @@ export function ChatBotPanel() {;
       setFailedAttempts((prev) => prev + 1);
       if (failedAttempts >= 2) {;
         suggestEscalation();
-=======
     } catch (error) {
       console.error("Error in AI chat:", error),
       toast({
@@ -337,7 +330,6 @@ export function ChatBotPanel() {;
       if (failedAttempts >= 2) {
         suggestEscalation()
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } finally {;
       setIsLoading(false);
@@ -345,15 +337,11 @@ export function ChatBotPanel() {;
 
 
   },
-=======
   };
-=======
   },
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const sendToAIAssistant = async (message: string) => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
@@ -383,7 +371,6 @@ export function ChatBotPanel() {;
       return {
         success: true
         message: data.message
-=======
       console.error ("Error in AI chat:", error);
       toast ({
         variant: "destructive",
@@ -428,7 +415,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } catch (error) {
       console.error ("Error in AI chat:", error);
@@ -437,7 +423,6 @@ if ( {) {
 
   };
 
-=======
       };
     }
   },
@@ -459,8 +444,6 @@ if ( {) {
     logSupportEscalation()
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const logSupportEscalation = async () => {
     try {
       // Send the conversation to the backend for logging
@@ -609,7 +592,6 @@ if ( {) {
     }
   };
 
-=======
 
   },
 
@@ -697,7 +679,6 @@ if ( {) {
     ]);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="flex flex-col h-full">;
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>;
@@ -716,7 +697,6 @@ if ( {) {
 
           
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {isLoading && (
             <div className="flex items-center justify-center py-2">
               <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />
@@ -731,7 +711,6 @@ if ( {) {
           </p>
           <div className="flex flex-wrap gap-2">
             {QUICK_REPLIES.map((reply) => (
-=======
 
           {isLoading && (;
             <div className="flex items-center justify-center py-2">;
@@ -748,7 +727,6 @@ if ( {) {
           </p>;
           <div className="flex flex-wrap gap-2">;
             {QUICK_REPLIES && QUICK_REPLIES.map((reply) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <QuickReplyButton
                 key={reply && reply.id}
                 text={reply && reply.text}
@@ -776,7 +754,6 @@ if ( {) {
             >
               Chat with Live Agent
             </Button>
-=======
 
       {failedAttempts >= 3 && (;
         <div className="px-4 py-3 border-t border-zion-purple/10">;
@@ -790,7 +767,6 @@ if ( {) {
               className="bg-zion-purple hover:bg-zion-purple-light text-white">;
               Chat with Live Agent;
             </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Button
               onClick={handleEmailSupport}
               size="sm"
@@ -845,10 +821,8 @@ if ( {) {
 
               theme === "dark" ;
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" ;
-=======
 
 
-=======
 ;
       {failedAttempts >= 3 && (;
         <div className="px-4 py-3 border-t border-zion-purple/10">;
@@ -913,10 +887,7 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
   const handleQuickReply = (text: string) =>: any {
     handleSendMessage (text);
@@ -1049,4 +1020,3 @@ if ( {) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

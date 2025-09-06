@@ -25,15 +25,12 @@
           const foundProfile = MOCK_TALENTS && MOCK_TALENTS.find(talent => talent && talent.id === id);
           
 
-=======
 
           const foundProfile = MOCK_TALENTS.find(talent => talent.id === id),
           
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           if (foundProfile) {
             setProfile(convertProfileToTalentProfile(foundProfile))
-=======
 import { useState, useEffect } from './react';
 import { TalentProfile, as, TalentProfileType } from '@/types / talent';
 import { ProfileData } from '@/types / profile';
@@ -73,7 +70,6 @@ if ( {) {
   $2
 }
             set_profile (convertProfileToTalentProfile (found_profile));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           } else {
             // Try fetching from ProfileData mock as fallback;
             // This is just for development purposes;
@@ -151,9 +147,7 @@ export function useTalentProfile(id: string | undefined) {;
   }, [id]);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return { profile, isLoading, error, mockProfileData }
-=======
         console.error ("Error fetching profile:", err);
         set_error ("Failed to load profile data");
         setIsLoading (false);
@@ -164,5 +158,4 @@ export function useTalentProfile(id: string | undefined) {;
   }, [id]);
 ;
   return { profile, is_loading, error, mockProfileData }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

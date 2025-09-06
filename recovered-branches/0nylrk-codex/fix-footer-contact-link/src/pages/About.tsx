@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function About() {
   return (
     <>
@@ -118,10 +117,8 @@ import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
-=======
 
 
-=======
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
@@ -232,7 +229,6 @@ export default function About() {;
                 </div>;
                 <h3 className="text-xl font-bold text-white mb-3">Trust</h3>;
                 <p className="text-zion-slate-light">;
-=======
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { SEO } from '@/components / SEO';
@@ -340,7 +336,6 @@ function About() {
                 </div>;
                 <h3 className="text - xl font - bold text - white mb - 3">Trust</h3>;
                 <p className="text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   We maintain the highest standards of integrity, transparency, and ethical practices in everything we do.;
                 </p>;
               </div>;
@@ -351,9 +346,7 @@ function About() {
       <Footer />;
 
     </>);
-=======
 
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

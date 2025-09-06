@@ -9,7 +9,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!id |typeof id !== 'string') {
     return res.status(400).json({ error: 'Missing id' })
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 export default /**
@@ -27,7 +26,6 @@ if ( {) {
   // In a real system, look up persisted deployment by id;
   const fake = {
 
-=======
 
 
     id,
@@ -37,7 +35,6 @@ if ( {) {
   return res.status(200).json(fake);
 };
 
-=======
 export default async function handler(req, res) {
   try {
   res.status(200).json({ message: 'Export endpoint' });
@@ -71,15 +68,11 @@ export default function handler(req, res) {
 }
 
 
-=======
     exported_at: new Date ().toISOString (),
     note: 'This is a stub export. Connect to persistence to return real deployment state.'},
   res.set_header ('Content - Typeapplication / json'),
   return res.status (200).json (fake);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -87,5 +80,3 @@ export default function handler(req, res) {
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

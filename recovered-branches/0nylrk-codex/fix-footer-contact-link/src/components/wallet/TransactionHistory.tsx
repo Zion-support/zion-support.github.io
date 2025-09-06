@@ -11,11 +11,9 @@ export function TransactionHistory() {;
 
   if (loading) {;
 
-=======
 
 
   if (loading) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <Card>;
         <CardHeader>;
@@ -31,7 +29,6 @@ export function TransactionHistory() {;
 
   return (
 
-=======
 
 import React from "react",;
 import { useWallet } from "@/hooks/useWallet",;
@@ -89,7 +86,6 @@ export function TransactionHistory() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
                 </div>;
               )}
@@ -119,7 +115,6 @@ export function TransactionHistory() {;
                 </div>;
               )}
 
-=======
 import React from './react';
 import { use_wallet } from '@/hooks / use_wallet';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';

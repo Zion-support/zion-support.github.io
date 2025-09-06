@@ -39,7 +39,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 
 
 import useSWR from 'swr';
@@ -124,7 +123,6 @@ import type { GetServerSideProps } from 'next';
                     </Link>                  </td>;
                 </tr>;
 
-=======
   return { props: {} }
 };
 
@@ -137,7 +135,6 @@ export default function AdminDisputesDashboard() {
     if (statusFilter === 'All') return list;
     return list.filter((d: any) => d.status === statusFilter)
   }, [data, statusFilter]);
-=======
 
 
   const disputes = useMemo(() => {
@@ -186,7 +183,6 @@ export default function AdminDisputesDashboard() {
                   </td>
                 </tr>
 
-=======
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../../components / layout / EnhancedLayout';
@@ -204,12 +200,10 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
     },
     {} as Record < string, string>);
   let role = 'guest';
-=======
 
 
 }
 
-=======
 },;
 export default function AdminDisputesDashboard(req, res) {
 
@@ -301,20 +295,14 @@ if (return list) {
                       </a>;
                     </Link>                  </td>;
                 </tr>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             </tbody>;
           </table>;
         </div>;
       </div>;
 
 
-=======
     </EnhancedLayout>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -322,5 +310,3 @@ if (return list) {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

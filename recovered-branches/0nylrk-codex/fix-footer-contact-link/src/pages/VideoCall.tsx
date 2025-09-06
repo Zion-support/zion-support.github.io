@@ -14,9 +14,6 @@ import {toast} from 'sonner';
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {useState, useEffect} from 'react';
 import {use_params, use_navigate} from 'react-router-dom';
 import {Header} from '@/components / Header';
@@ -65,7 +62,6 @@ function VideoCall() {
 
 
   const handleJoinCall = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsJoining(true);
     // Simulate connection delay;
     setTimeout(() => {;
@@ -126,7 +122,6 @@ function VideoCall() {
       toast(`${randomUser && randomUser.name} joined the call`);
     }
   }
-=======
 
   },
   
@@ -136,7 +131,6 @@ function VideoCall() {
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -164,7 +158,6 @@ function VideoCall() {
               participants={participants}
               onLeave={handleLeaveCall}
             />
-=======
             </Button>;
           </div>;
         ) : (;
@@ -175,7 +168,6 @@ function VideoCall() {
               onLeave={handleLeaveCall} 
             />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* This button is just for demo/testing purposes */}
             <div className="flex justify-center mt-4">;
               <Button variant="outline" onClick={simulateUserJoining} className="text-sm">;
@@ -185,7 +177,6 @@ function VideoCall() {
           </div>;
         )}
 
-=======
 
 
       </main>;
@@ -279,12 +270,8 @@ function VideoCall() {
     </>);
 }
 
-=======
 ;
 
-=======
 
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

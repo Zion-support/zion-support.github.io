@@ -45,7 +45,6 @@ const featuredPosts: ForumPost[] = [;
     replyCount: 8,;
     isPinned: true,;
     isFeatured: true;
-=======
 
 
 // Mock data for featured posts
@@ -143,7 +142,6 @@ export default function CommunityPage() {
 
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <AppLayout>;
@@ -153,10 +151,8 @@ export default function CommunityPage() {
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
         keywords="community, forum, discussion, AI marketplace, questions, answers"
 
-=======
 
 
-=======
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -274,7 +270,6 @@ export default function CommunityPage() {;
 
           <Button asChild>;
             <Link to={user ? "/community/create" : "/login?next=/community/create"}>;
-=======
 import { useState } from './react';
 import { Link } from './react-router-dom';
 import { Button } from '@/components / ui / button';
@@ -395,7 +390,6 @@ function CommunityPage() {
           </div>;
           <Button as_child>;
             <Link to={user ? "/community / create" : "/login?next=/community / create"}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Create New Post;
             </Link>;
           </Button>;
@@ -431,10 +425,6 @@ function CommunityPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

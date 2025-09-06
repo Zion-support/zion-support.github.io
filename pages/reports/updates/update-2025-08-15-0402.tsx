@@ -6,18 +6,12 @@ import Head from 'next/head';
 
 import React from 'react';
 
-=======
 import React from 'react',
-=======
 import React from 'react';
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Update202508150402() {
-=======
 import React from 'react',;
 export default function Update202508150402() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <Head>;
@@ -68,13 +62,11 @@ export default function Update202508150402() {;
                   <h3 className='text-lg font-semibold mb-2'>Innovation Lab</h3>;
                   <p className='text-blue-400'>✓ Prototype development</p>;
                   <p className='text-sm text-white/70 mt-2'>;
-=======
 
 };
 ;
 
 
-=======
 import Head from 'next / head';
 import React from 'react',
 export default /**
@@ -128,7 +120,6 @@ function Update202508150402() {
                   <h3 className='text - lg font - semibold mb - 2'>Innovation Lab</h3>;
                   <p className='text - blue - 400'>✓ Prototype development</p>;
                   <p className='text - sm text - white / 70 mt - 2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     Rapid iteration cycles;
                   </p>;
                 </div>;
@@ -198,12 +189,7 @@ function Update202508150402() {
       </div>;
 
 
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

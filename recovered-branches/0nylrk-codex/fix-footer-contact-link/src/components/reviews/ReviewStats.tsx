@@ -3,10 +3,8 @@
 
 import { Star } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
-=======
 import {Star} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
-=======
 import { Star } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 
@@ -15,13 +13,11 @@ interface ReviewStatsProps {
   averageRating: number,
   totalReviews: number,
   ratingDistribution?: Record<number number>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
 
   // Format the average rating to one decimal place
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Calculate percentages for distribution if available
   const getPercentage = (count: number) => {
     if (totalReviews === 0) return 0
@@ -29,7 +25,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
 
 import {Star} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
-=======
 
   },
   
@@ -65,7 +60,6 @@ export function ReviewStats(): any ({ averageRating, totalReviews, ratingDistrib
     if (totalReviews === 0) return 0,;
     return (count / totalReviews) * 100;
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <div className="bg-card border rounded-lg p-4">;
@@ -82,7 +76,6 @@ export function ReviewStats(): any ({ averageRating, totalReviews, ratingDistrib
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   }`}
                 />;
               ))}
@@ -90,7 +83,6 @@ export function ReviewStats(): any ({ averageRating, totalReviews, ratingDistrib
             <span className="text-sm text-muted-foreground">;
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
 
-=======
 import { Star } from './lucide-react';
 import { Progress } from '@/components / ui / progress';
 interface ReviewStatsProps {
@@ -169,7 +161,5 @@ if (return 0, ) {
     </div>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

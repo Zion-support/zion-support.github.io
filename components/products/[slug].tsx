@@ -52,7 +52,6 @@ const EquipmentDetail: NextPage = () => {;
       </EnhancedLayout>;
     );
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <EnhancedLayout>;
       <Head>;
@@ -120,12 +119,9 @@ const EquipmentDetail: NextPage = () => {;
 
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default EquipmentDetail;
 
-=======
 import Head from 'next / head';
 import {use_router} from 'next / router';
 import Link from 'next / link';
@@ -221,4 +217,3 @@ if ( {) {
 ;
 export default EquipmentDetail;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

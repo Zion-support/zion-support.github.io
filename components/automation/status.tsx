@@ -8,11 +8,7 @@
 export default function AutomationStatusPage() {;
 
 
-=======
-=======
 import { useEffect, useState } from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function AutomationStatusPage() {;
   const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null);
@@ -42,7 +38,6 @@ export default function AutomationStatusPage() {;
   );
 }
 
-=======
 </div>) : (<div className="text - sm text - gray - 500" >No status available yet.</div>);
 }</div>) import { useEffect, useState } from 'react';
 export default /**
@@ -70,10 +65,7 @@ function AutomationStatusPage() {
         <div className="text - sm text - gray - 500">No status available yet.</div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

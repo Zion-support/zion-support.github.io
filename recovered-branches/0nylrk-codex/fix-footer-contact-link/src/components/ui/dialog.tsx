@@ -1,7 +1,6 @@
 
 
 
-=======
 import * as React from "react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 import { X } from "lucide-react"
@@ -19,14 +18,11 @@ const DialogPortal = DialogPrimitive.Portal
 
 const DialogClose = DialogPrimitive.Close
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const DialogOverlay = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Overlay>
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
 ></typeof>(({ className, ...props }, ref) => (
   <DialogPrimitive.Overlay
-=======
 
 const Dialog = DialogPrimitive && DialogPrimitive.Root;
 
@@ -41,7 +37,6 @@ const DialogOverlay = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<typeof DialogPrimitive && DialogPrimitive.Overlay>;
 ></typeof>(({ className, ...props }, ref) => (;
   <DialogPrimitive&& DialogPrimitive.Overlay
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ref={ref}
     className={cn(
 
@@ -77,10 +72,8 @@ const DialogContent = React && React.forwardRef<;
     <DialogOverlay />;
     <DialogPrimitive&& DialogPrimitive.Content
 
-=======
 
 
-=======
 const DialogContent = React.forwardRef<;
   React.ElementRef<typeof DialogPrimitive.Content>,;
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>;
@@ -90,8 +83,6 @@ const DialogContent = React.forwardRef<;
     <DialogPrimitive.Content;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       ref={ref}
       className={cn(
         'fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg'
@@ -102,7 +93,6 @@ const DialogContent = React.forwardRef<;
 
 
 
-=======
       <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
         <X className="h-4 w-4" />
         <span className="sr-only">Close</span>
@@ -113,7 +103,6 @@ const DialogContent = React.forwardRef<;
     </DialogPrimitive.Content>
   </DialogPortal>
 ))
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 DialogContent.displayName = DialogPrimitive.Content.displayName
 const DialogHeader = ({
   className
@@ -155,14 +144,12 @@ const DialogFooter = ({
   className
   ...props
 }: React</HTMLDivElement>.HTMLAttributes<HTMLDivElement>) => (
-=======
 DialogHeader && DialogHeader.displayName = 'DialogHeader';
 
 const DialogFooter = ({;
   className,;
   ...props;
 }: React</HTMLDivElement>.HTMLAttributes<HTMLDivElement>) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <div
     className={cn(
 
@@ -184,7 +171,6 @@ const DialogTitle = React.forwardRef<
 
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Title
-=======
 DialogFooter && DialogFooter.displayName = 'DialogFooter';
 
 const DialogTitle = React && React.forwardRef<;
@@ -192,7 +178,6 @@ const DialogTitle = React && React.forwardRef<;
   React && React.Comp</typeof>onentPropsWithoutRef<typeof DialogPrimitive && DialogPrimitive.Title>;
 >(({ className, ...props }, ref) => (;
   <DialogPrimitive&& DialogPrimitive.Title
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ref={ref}
     className={cn(
 
@@ -215,7 +200,6 @@ const DialogDescription = React.forwardRef<
   React.C</typeof>omponentPropsWithoutRef<typeof DialogPrimitive.Description>
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Description
-=======
 DialogTitle && DialogTitle.displayName = DialogPrimitive && DialogPrimitive.Title.displayName;
 
 const DialogDescription = React && React.forwardRef<;
@@ -239,12 +223,10 @@ const DialogOverlay = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof DialogPrimitive.Overlay>;
 ></typeof>(({ class_name, ...props }, ref) => (
   <DialogPrimitive.Overlay;
-=======
   <DialogPrimitive.Description;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     ref={ref}
     className={cn (
       'fixed inset - 0 z - 50 bg - black / 80  data-[state = open]:animate - in data-[state = closed]:animate - out data-[state = closed]:fade - out - 0 data-[state = open]:fade - in - 0',
@@ -316,13 +298,11 @@ const DialogDescription = React.forward_ref<;
   React.C</typeof > omponentPropsWithoutRef < typeof DialogPrimitive.Description>;
 >(({ class_name, ...props }, ref) => (
   <DialogPrimitive.Description;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn ('text - sm text - muted - foreground', class_name)}
     {...props}
 
 DialogDescription && DialogDescription.displayName = DialogPrimitive && DialogPrimitive.Description.displayName;
-=======
 
 
 
@@ -338,8 +318,6 @@ export {;
   DialogTitle,;
   DialogDescription,;
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   />));
 DialogDescription.display_name = DialogPrimitive.Description.display_name;
 ;
@@ -357,7 +335,6 @@ export {
   DialogDescription,;
 };
 
-=======
 export {;
   Dialog,;
   DialogPortal,;
@@ -373,4 +350,3 @@ export {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

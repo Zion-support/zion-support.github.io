@@ -56,7 +56,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   const { id } = req && req.query as { id: string };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!id) {
 
 
@@ -73,7 +72,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     res && res.setHeader('AllowPOST');
     res && res.status(405).end('Method Not Allowed');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return
   }
   const existing = readGrant(id);
@@ -91,18 +89,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).json({ record: existing });  res && res.status(200).json({ record: existing })
 }
 
-=======
   writeGrant(existing);
 
   res.status(200).json({ record: existing });
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   writeGrant(existing);
   res.status(200).json({ record: existing })
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   // Check condition
 if ( {) {
   $2
@@ -125,4 +118,3 @@ const payload = req.body as StatusUpdatePayload;
   write_grant (existing);
   res.status (200).json ({ record: existing });  res.status (200).json ({ record: existing });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

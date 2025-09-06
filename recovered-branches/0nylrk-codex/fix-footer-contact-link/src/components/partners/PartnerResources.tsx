@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ResourceItem {
 
   id: string
@@ -95,7 +94,6 @@ export function PartnerResources() {
 
 
 
-=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from './lucide-react';
@@ -171,7 +169,6 @@ function PartnerResources() {
       variant: "default"});
   }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div className="space - y-6">;
       <Card className="bg - zion - blue - dark border - zion - blue - light">;
@@ -193,7 +190,6 @@ import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} f
 import {Button} from "@/components/ui/button";
 import {Download, FileImage, FileText, FileType, FileVideo, Link} from "lucide-react";
 import {toast} from "@/hooks/use-toast";
-=======
                   <Button
                     onClick={() => handleDownload(resource)}
                     size="sm"
@@ -295,7 +291,6 @@ export function PartnerResources() {;
                   </div>;
                   <h3 className="font-semibold text-white mb-1">{resource && resource.title}</h3>;
                   <p className="text-xs text-zion-slate-light mb-4">{resource && resource.description}</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Button
                     onClick={() => handleDownload(resource)}
                     size="sm";
@@ -310,14 +305,12 @@ export function PartnerResources() {;
                   </Button>
                 </CardContent>
               </Card>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
 
 };
 
 
-=======
           </div>;
         </CardContent>;
       </Card>;
@@ -325,7 +318,6 @@ export function PartnerResources() {;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
           <CardTitle>Promotion Guidelines</CardTitle>;
-=======
                   </div>;
                   <h3 className="font - semibold text - white mb - 1">{resource.title}</h3>;
                   <p className="text - xs text - zion - slate - light mb - 4">{resource.description}</p>;
@@ -346,7 +338,6 @@ export function PartnerResources() {;
       <Card className="bg - zion - blue - dark border - zion - blue - light">;
         <CardHeader>;
           <CardTitle > Promotion Guidelines</CardTitle>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           <CardDescription>;
             Best practices for promoting the Zion AI Marketplace;
           </CardDescription>;
@@ -401,9 +392,6 @@ export function PartnerResources() {;
     </div>);
 
 }
-=======
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

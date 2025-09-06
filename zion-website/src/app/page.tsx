@@ -1,7 +1,6 @@
 
 
 import React from 'react';
-=======
 import { 
   LightBulbIcon,
   CpuChipIcon, 
@@ -10,13 +9,10 @@ import {
   ChartBarIcon,
   UserGroupIcon;
 } from '@heroicons/react/24/outline';
-=======
 import React from 'react';
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const features = [
   {
     name: 'AI-Powered Research'
@@ -78,7 +74,6 @@ const solutions = [
   }
 ];
 export default function HomePage() {
-=======
   LightBulbIcon,
   CpuChipIcon,
   GlobeAltIcon,
@@ -154,7 +149,6 @@ export default /**
  * HomePage - Function description
  */
 function HomePage() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div className="bg - black">;
       {/* Hero section */}
@@ -184,7 +178,6 @@ function HomePage() {
               </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
         </div>
@@ -223,7 +216,6 @@ function HomePage() {
                     </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </p>
                 </dd>
               </div>
@@ -235,7 +227,6 @@ function HomePage() {
       </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Stats section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
@@ -330,14 +321,11 @@ function HomePage() {
         </div>;
       </div>;
 
-=======
 
           </dl>;
         </div>;
       </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Solutions showcase */}
       <div className="mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8">;
         <div className="mx - auto max - w-2xl lg:text - center">;
@@ -376,7 +364,6 @@ function HomePage() {
       </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -401,7 +388,6 @@ function HomePage() {
 
 
   );
-=======
                     </a>;
                   </h3>;
                   <p className="mt - 5 line - clamp - 3 text - sm leading - 6 text - gray - 300">{solution.description}</p>;
@@ -443,5 +429,4 @@ function HomePage() {
         </div>;
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

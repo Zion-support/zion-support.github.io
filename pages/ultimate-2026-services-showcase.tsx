@@ -1,7 +1,6 @@
 
 
 
-=======
 import React, { useState, useMemo } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -106,9 +105,7 @@ export default function Ultimate2026ServicesShowcase() {
       default: break
     }
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -181,7 +178,6 @@ export default function Ultimate2026ServicesShowcase() {
   const featuredServices = allServices.filter(service => service.popular).slice(0, 6);
 
 
-=======
 
 import {;
   Search, Star, DollarSign, CheckCircle,;
@@ -289,8 +285,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return filtered
   }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
   const featuredServices = allServices.filter(service => service.popular).slice(0, 6),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <Head>
@@ -377,7 +371,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
@@ -441,7 +434,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="absolute top-20 left-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-10 w-24 h-24 bg-pink-500/20 rounded-full blur-xl animate-pulse delay-500"></div>
@@ -455,7 +447,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 text-white py-4">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center space-x-6 mb-4 md:mb-0">
@@ -502,7 +493,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Revolutionary Services</span>
@@ -533,7 +523,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 transition={{ duration: 0.8, delay: index * 0.1 }} className="group relative">
                 <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -558,7 +547,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-2xl font-bold text-cyan-400">
                         {service.price}
-=======
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
 
                       {service.name  } catch (error) {
@@ -582,8 +570,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <span className="text-sm text-gray-400">{service.period}</span>
                       </div>
                       <div className="flex items-center text-yellow-400">
@@ -634,7 +620,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               All <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Revolutionary Services</span>
@@ -644,7 +629,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
             </p>
           </motion.div>
 
-=======
         <div className="absolute inset - 0">;
           <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 animate - pulse"></div>;
           <div className="absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (0, 255, 255, 0.1), transparent_50%)]"></div>;
@@ -807,7 +791,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
           {/* Filters and Search */}
           <div className="mb - 12 space - y-6">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {/* Search Bar */}
 
 
@@ -824,14 +807,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="relative max-w-2xl mx-auto">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search revolutionary services..."
 
-=======
             <div className="relative max - w-2xl mx - auto">;
               <Search className="absolute left - 4 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />;
               <input;
@@ -844,7 +825,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
             {/* Filters */}
             <div className="flex flex - wrap items - center justify - center gap - 4">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Category Filter */}
 
 
@@ -876,7 +856,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   onChange={(e) => setSelectedCategory(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
@@ -919,15 +898,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   onChange={(e) => setSelectedPriceRange(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
                   {priceRanges.map((range) => (
                     <option key={range.id} value={range.id}>
-=======
                   on_change={(e) => setSelectedPriceRange (e.target.value)} className="appearance - none bg - gray - 800 border border - gray - 700 rounded - lg px - 4 py - 2 text - white focus:outline - none focus:border - cyan - 500 focus:ring - 2 focus:ring - cyan - 500 / 20 transition - all">;
                   {price_ranges.map ((range) => (
                     <option key={range.id} value={range.id}>;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       {range.name}
 
 
@@ -945,7 +921,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   onChange={(e) => setSortBy(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
                   <option value="name">Sort by Name</option>
                   <option value="price">Sort by Price</option>
@@ -963,7 +938,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="flex bg-gray-800 border border-gray-700 rounded-lg p-1">
                 <button
                   onClick={() => setViewMode('grid')}
@@ -1025,7 +999,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                 transition={{ duration: 0.8, delay: index * 0.05 }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 {viewMode === 'grid' ? (
                   <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
@@ -1051,7 +1024,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                       <div className="flex items-center justify-between mb-4">
                         <div className="text-2xl font-bold text-cyan-400">
                           {service.price}
-=======
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
 
                         {service.name  } catch (error) {
@@ -1075,8 +1047,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <span className="text-sm text-gray-400">{service.period}</span>
                         </div>
                         <div className="flex items-center text-yellow-400">
@@ -1111,7 +1081,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         </h3>
                         {service.popular && (
                           <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center">
@@ -1130,7 +1099,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                     <div className="text-right">
                       <div className="text-2xl font-bold text-cyan-400 mb-2">
 
-=======
                 className={view_mode === 'grid' ? 'group relative' : 'group relative bg - gray - 800 rounded - 2xl p - 6 border border - gray - 700 hover:border - cyan - 500 / 50 transition - all duration - 300'}
               >;
                 {view_mode === 'grid' ? (
@@ -1196,7 +1164,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                     </div>;
                     <div className="text - right">;
                       <div className="text - 2xl font - bold text - cyan - 400 mb - 2">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         {service.price}
 
 
@@ -1207,7 +1174,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <span className="text-sm text-gray-400">{service.period}</span>
                       </div>
                       <Link
@@ -1240,7 +1206,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               animate={{ opacity: 1 }} className="text-center py-20">
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
@@ -1286,14 +1251,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section className="py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto text-center px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
       <section className="py - 20 bg - gradient - to - r from - cyan - 600 via - purple - 600 to - pink - 600">;
         <div className="max - w-4xl mx - auto text - center px - 6">;
           <motion.div;
@@ -1345,7 +1308,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -1410,10 +1372,8 @@ export default function Ultimate2026ServicesShowcase(req, res) {
       </section>
     </>
 
-=======
 }
 
-=======
           >;
             <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
               Ready to Transform Your Business with 2026 Innovations?;
@@ -1514,9 +1474,5 @@ export default function Ultimate2026ServicesShowcase(req, res) {
       </section>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

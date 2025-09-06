@@ -7,11 +7,9 @@ import {DisputeForm} from "./DisputeForm";
 import {useNavigate} from "react-router-dom";
 import {ShieldAlert} from "lucide-react";
 
-=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { 
   Dialog;
   DialogContent;
@@ -68,7 +66,6 @@ export function RaiseDisputeButton({
   },
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <Button
@@ -121,7 +118,6 @@ export function RaiseDisputeButton(): any ({ ;
         <DialogContent className="sm:max-w-[550px]">;
           <DialogHeader>;
             <DialogTitle>Raise a Dispute</DialogTitle>;
-=======
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay } from '@/components / ui / dialog';
@@ -171,7 +167,6 @@ function RaiseDisputeButton() {
 
           
           <DisputeForm 
-=======
           <DisputeForm 
 
 
@@ -187,7 +182,6 @@ function RaiseDisputeButton() {
   );
 }
 
-=======
           <DisputeForm;
             project_id={project_id}
             milestone_id={milestone_id}
@@ -198,4 +192,3 @@ function RaiseDisputeButton() {
       </Dialog>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -6,19 +6,15 @@ interface CreateWebhookRequest {
   name: string;
   url: string;
   eventTypes: string[]
-=======
 
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
-=======
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
-=======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface CreateWebhookRequest {
   name: string,
   url: string,
@@ -32,8 +28,6 @@ interface WebhookTestRequest {;
   webhookId: string,;
   eventType: string;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   secret?: string
 }
@@ -50,18 +44,15 @@ const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 
 const supabase = createClient(supabaseUrl, supabaseKey);
-=======
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, supabaseKey),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 serve(async (req) => {
   // Handle CORS for browser requests
   if (req && req.method === 'OPTIONS') {
     return new Response('ok', {
-=======
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';,
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.38.0';
 interface CreateWebhookRequest {
@@ -86,7 +77,6 @@ if ( {) {
   $2
 }
     return new Response ('ok', {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       headers: {
 
       return new Response(JSON && JSON.stringify({ error: 'Missing authorization header' }), {
@@ -193,7 +183,6 @@ serve(async (req) => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return new Response(JSON.stringify({ error: 'Invalid action' }), {
       status: 400
       headers: { 'Content-Type': 'application/json' }})
@@ -201,7 +190,6 @@ serve(async (req) => {;
     console.error('Error processing request:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500
-=======
 
     return new Response(JSON && JSON.stringify({ error: 'Invalid action' }), {
       status: 400,
@@ -210,12 +198,10 @@ serve(async (req) => {;
     console && console.error('Error processing request:', error);
     return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       headers: { 'Content-Type': 'application/json' }})
   }
 });
 async function createWebhook(userId: string, name: string, url: string, eventTypes: string[], secret?: string) {
-=======
     // Extract auth token from request;
     const auth_header = req.headers.get ('Authorization');
     // Check condition
@@ -298,7 +284,6 @@ async /**
  * create_webhook - Function description
  */
 function create_webhook() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     const { data, error } = await supabase;
       .from ('webhook_configs');
@@ -309,7 +294,6 @@ function create_webhook() {
 
       console && console.error('Error creating webhook:', error);
       return new Response(JSON && JSON.stringify({ error: 'Failed to create webhook' }), {
-=======
         event_types: event_types,
         secret;
       });
@@ -372,7 +356,6 @@ async function toggleWebhook(userId: string, webhookId: string, isActive: boolea
     if (error || !data || data && data.length === 0) {
       console && console.error('Error toggling webhook:', error);
       return new Response(JSON && JSON.stringify({ error: 'Failed to update webhook or webhook not found' }), {
-=======
     return new Response (JSON.stringify ({
       webhook: data[0],
       message: 'Webhook created successfully';
@@ -456,7 +439,6 @@ async function deleteWebhook(userId: string, webhookId: string) {
       .select('id');
     if (error) {
 
-=======
 ;
     return new Response(JSON.stringify({ error: 'Invalid action' }), {;
       status: 400,;
@@ -571,7 +553,6 @@ async function deleteWebhook(userId: string, webhookId: string) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     if (!data |data.length === 0) {
       return new Response(JSON.stringify({ error: 'Webhook not found' }), {
@@ -585,10 +566,8 @@ async function deleteWebhook(userId: string, webhookId: string) {;
 
     return new Response(JSON.stringify({
       message: 'Webhook deleted successfully'
-=======
       console && console.error('Error deleting webhook:', error);
       return new Response(JSON && JSON.stringify({ error: 'Failed to delete webhook' }), {
-=======
     return new Response (JSON.stringify ({
       message: `Webhook ${is_active ? 'activated' : 'deactivated'} successfully`;
       webhook: data[0];
@@ -620,7 +599,6 @@ if ( {) {
 }
       console.error ('Error deleting webhook:', error);
       return new Response (JSON.stringify ({ error: 'Failed to delete webhook' }), {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         status: 500,
         headers: { 'Content - Type': 'application / json' }});
     }
@@ -749,7 +727,6 @@ function createTestPayload(eventType: string) {
   // Create different test payload based on event type
   switch (eventType) {
     case 'new_application':
-=======
     return new Response (JSON.stringify ({
       message: 'Webhook deleted successfully',
       id: webhook_id;
@@ -871,7 +848,6 @@ function createTestPayload() {
   // Create different test payload based on event type;
   switch (event_type) {
     case 'new_application':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       return {
         event_type: 'new_application';
         event_id: event_id;
@@ -951,12 +927,10 @@ function createTestPayload() {
           client_id: crypto.randomUUID ();
           job_id: crypto.randomUUID ();
           created_at: timestamp,
-=======
         data: {
           message: 'This is a test webhook event'
 
 
-=======
 ;
     return new Response(JSON.stringify({;
       message: 'Webhook deleted successfully',;
@@ -1126,14 +1100,12 @@ function createTestPayload(eventType: string) {;
         event_type: 'test_event';
         event_id: event_id;
         timestamp,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         data: {
           message: 'This is a test webhook event';
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       }
   }

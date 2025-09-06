@@ -100,7 +100,6 @@ export const AppStoreBanner: React.FC = () => {;
   );
 };
 
-=======
 import React, { useState, useEffect } from './react';
 import { X  } from './lucide-react';
 import { useIsMobile  } from '@/hooks / use - mobile';
@@ -157,9 +156,6 @@ if (return null) {
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

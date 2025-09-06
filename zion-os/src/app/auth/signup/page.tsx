@@ -39,7 +39,6 @@ export default function SignUpPage() {;
           <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;
           <p className="text-zinc-400 mb-4">;
             Start your free trial and launch sovereign AI-powered digital economies;
-=======
 "use client",
 import { useState  } from './react';,
 import Link from './next / link';,
@@ -82,7 +81,6 @@ if ( {) {
           <h1 className="text - 3xl font - bold text - white mb - 2">Join Zion OS</h1>;
           <p className="text - zinc - 400 mb - 4">;
             Start your free trial and launch sovereign AI - powered digital economies;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </p>;
           {/* Free Trial Badge */}
           <div className="inline - flex items - center px - 4 py - 2 bg - green - 500 / 10 border border - green - 500 / 20 rounded - full">;
@@ -121,11 +119,9 @@ if ( {) {
                 <p className="text - red - 400 text - sm">{error}</p>;
               </div>)}
 
-=======
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div>;
               <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb - 2">;
                 Full Name;

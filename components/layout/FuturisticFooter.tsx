@@ -65,7 +65,6 @@ export default function FuturisticFooter() {;
     }
     { name: 'X', href: 'https://x.com/ziontechgroup', icon: '🐦' }
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: '💻' }
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -174,20 +173,15 @@ import Link from 'next/link';
           </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Quick Links */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Services */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Contact Info */}
           <div>;
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>;
@@ -379,7 +373,6 @@ import Link from 'next/link';
   );
 }
 
-=======
                   </Link>;
                 </li>))}
             </ul>;
@@ -487,14 +480,9 @@ import Link from 'next/link';
       <div className="absolute top - 1/2 left - 10 w - 1 h - 1 bg - green - 400 rounded - full animate - pulse delay - 500" />;
     </footer>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -12,7 +12,6 @@ import ContactPage from './src/pages/Contact';
 import ServicesPage from './src/pages/Services';
 import PricingPage from './src/pages/Pricing';
 
-=======
 import React, { JSX } from 'react';
 
   return (
@@ -21,7 +20,6 @@ import React, { JSX } from 'react';
       <h1>Hello App</h1>
     </main>
 
-=======
 export default function App() {;
   return (
     <ErrorBoundary>;
@@ -42,10 +40,8 @@ export default function App() {;
         </div>;
       </Router>;
     </ErrorBoundary>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
-=======
 ;
 export default /**
  * App - Function description
@@ -56,4 +52,3 @@ function App() {
       <h1 > Hello App</h1>;
     </main>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

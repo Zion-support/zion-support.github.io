@@ -14,11 +14,9 @@ import {
   Music, Film, BookOpenCheck, Building, MessageCircle
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
 } from 'lucide-react'
-=======
 import React from 'react',
 import Layout from '../components / layout / Layout',
 import SEO from '../components / SEO',
-=======
 
 import React from 'react',;
 import Layout from '../components/layout/Layout',;
@@ -33,11 +31,9 @@ import {
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
 
-=======
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion',
 import {
   Rocket, Brain, Shield, Zap, Target, Atom, Cpu,
@@ -150,12 +146,10 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Layout>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         title="Space Technology Solutions - Zion Tech Group"
         description="Revolutionary space technology solutions for the future. From resource mining to autonomous systems, explore the final frontier."
         keywords="space technology, space mining, AI space systems, brain-computer interface, autonomous vehicles, quantum space communications"
@@ -297,7 +291,6 @@ const SpaceTechnologyPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-orange-600 bg-clip-text text-transparent">
                 Space Technology
@@ -314,7 +307,6 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Demo
@@ -391,7 +383,6 @@ const SpaceTechnologyPage: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -468,8 +459,6 @@ const SpaceTechnologyPage: React.FC = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
                     <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
                   </div>
@@ -533,7 +522,6 @@ const SpaceTechnologyPage: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -573,7 +561,6 @@ const SpaceTechnologyPage: React.FC = () => {
 
                   }`}
                 >;
-=======
 
                   key={service.id  } catch (error) {
     console.error("Error:", error);
@@ -611,7 +598,6 @@ const SpaceTechnologyPage: React.FC = () => {
 }
 
                 >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {service.popular && (
 
                     <div className="absolute -top - 3 left - 1/2 transform -translate - x-1 / 2">;
@@ -655,8 +641,6 @@ const SpaceTechnologyPage: React.FC = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <span className="text-lg text-gray-400">/{service.period}</span>
                     </div>
                   </div>
@@ -670,7 +654,6 @@ const SpaceTechnologyPage: React.FC = () => {
                   <a 
                     href="/contact" 
 
-=======
                         {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -688,8 +671,6 @@ const SpaceTechnologyPage: React.FC = () => {
                     href="/contact"
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300"
                   >
                     Get Started
@@ -765,7 +746,6 @@ const SpaceTechnologyPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 Ready to Explore Space?
@@ -782,7 +762,6 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
@@ -795,7 +774,6 @@ const SpaceTechnologyPage: React.FC = () => {
     </Layout>
   )
 
-=======
             >;
               <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 500 bg - clip - text text - transparent">;
                 Ready to Explore Space?;
@@ -826,9 +804,6 @@ const SpaceTechnologyPage: React.FC = () => {
 export default SpaceTechnologyPage,
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function EnterprisePlans() {
   return (
     <>
@@ -56,10 +55,8 @@ import {EnterpriseCTA} from "@/components/enterprise/EnterpriseCTA";
 import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadges";
 import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";
 import {SEO} from "@/components/SEO";
-=======
 
 
-=======
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -80,7 +77,6 @@ export default function EnterprisePlans() {;
       />;
       <Header />;
       <main className="min-h-screen bg-background">;
-=======
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -103,7 +99,6 @@ function EnterprisePlans() {
       />;
       <Header />;
       <main className="min - h-screen bg - background">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         <EnterpriseHero />;
         <EnterprisePricingTable />;
         <EnterpriseFeatures />;
@@ -116,8 +111,6 @@ function EnterprisePlans() {
     </>);
 }
 
-=======
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

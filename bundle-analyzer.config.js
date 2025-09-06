@@ -47,33 +47,21 @@ module && module.exports = {
   }
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
       config.plugins.push(};
         new BundleAnalyzerPlugin({;
           "analyzerMode": 'static';
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 }
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 };
 
 
 }
 }
-=======
 
 
 ;
@@ -96,4 +84,3 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

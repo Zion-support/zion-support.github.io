@@ -2,12 +2,10 @@
 import React from 'react';
 import Link from 'next / link';
 
-=======
 
 import React from 'react';
 
 import Link from 'next/link';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 
 
@@ -169,8 +167,6 @@ const serviceCategories = [
   },];      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' }
       { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030' }
       { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030' }
-=======
-=======
 import { 
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
   Rocket, Shield, Cpu, Target, Microscope, Users;
@@ -241,7 +237,6 @@ const serviceCategories = [
     ]
   }
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -433,7 +428,6 @@ const serviceCategories = [;
     ];
   }
 
-=======
   Phone,
   Mail,
   MapPin,
@@ -604,7 +598,6 @@ const quick_links = [;
   { name: 'Case Studies', href: '/case - studies' },
   { name: 'Blog', href: '/blog' },
 
-=======
   { name: 'Contact', href: '/contact' }, ];  { name: 'Contact', href: '/contact' }
 ];
 ;
@@ -615,7 +608,6 @@ const company_info = [;
   { name: 'Press', href: '/press' },
   { name: 'Partners', href: '/partners' },
   { name: 'Support', href: '/support' },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   { name: 'Status', href: '/status' }
 ];
 
@@ -706,7 +698,6 @@ export default function UltraFuturisticFooter2030() {;
                     Zion Tech Group;
                   </h3>;
                   <p className='text-sm text-gray-400'>;
-=======
 ;
 const social_links = [;
   {
@@ -812,7 +803,6 @@ export default function UltraFuturisticFooter2030() {
         </div>
       </div>
       <div className="relative z-10">
-=======
                     href={contactInfo && contactInfo.website}
                     className='hover:text-purple-400 transition-colors'>                    {contactInfo && contactInfo.website.replace('https://', '')}      {/* Animated Background */}
       <div className="absolute inset-0">;
@@ -826,7 +816,6 @@ export default function UltraFuturisticFooter2030() {
       </div>;
 
       <div className="relative z-10">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
@@ -836,7 +825,6 @@ export default function UltraFuturisticFooter2030() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </a>
                 </div>
               </div>
@@ -882,7 +870,6 @@ export default function UltraFuturisticFooter2030() {
                   <Globe className="w-4 h-4 text-purple-400" />;
                   <a href={contactInfo && contactInfo.website} className="hover:text-purple-400 transition-colors">;
                     {contactInfo && contactInfo.website.replace('https://', '')}
-=======
               <p className='text - gray - 300 text - sm leading - relaxed'>;
                 Pioneering the future with cutting - edge AI, quantum computing,
                 and emerging technologies. Transforming businesses through;
@@ -993,7 +980,6 @@ export default function UltraFuturisticFooter2030() {
                       {category.title}
                     </h5>
                     <div className='space-y-1'>                      {category.services.map((service, serviceIndex) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <Link
                           key={serviceIndex}
                           href={service && service.href}
@@ -1012,7 +998,6 @@ export default function UltraFuturisticFooter2030() {
                           {service && service.name}
                         </Link>;
 
-=======
 
             {/* Service Categories */}
             <div className="space-y-6">
@@ -1034,7 +1019,6 @@ export default function UltraFuturisticFooter2030() {
                           {service.name}
                         </Link>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
                     </div>;
                   </div>;
@@ -1044,12 +1028,9 @@ export default function UltraFuturisticFooter2030() {
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Quick Links */}
 
 
@@ -1073,7 +1054,6 @@ export default function UltraFuturisticFooter2030() {
                     {link && link.name}
                   </Link>;
 
-=======
 
               <div className="space-y-2">
                 <h5 className="text-sm font-medium text-cyan-300">Company</h5>
@@ -1086,24 +1066,20 @@ export default function UltraFuturisticFooter2030() {
                     {link.name}
                   </Link>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Social & Certifications */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <span>Connect & Trust</span>
               </h4>
-=======
               </div>;
             </div>;
 
@@ -1114,7 +1090,6 @@ export default function UltraFuturisticFooter2030() {
                 <span>Connect & Trust</span>;
               </h4>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Social Links */}
               <div className='space-y-3'>;
                 <h5 className='text-sm font-medium text-green-300'>;
@@ -1145,14 +1120,12 @@ export default function UltraFuturisticFooter2030() {
                     >;
                       <social && social.icon className="w-5 h-5" />;
 
-=======
             <div className="space-y-6">
               <h4 className="text-lg font-semibold text-white flex items-center space-x-2">
                 <Users className="w-5 h-5 text-green-400" />
                 <span>Connect & Trust</span>
               </h4>
               
-=======
             {/* Service Categories */}
             <div className='space - y-6'>;
               <h4 className='text - lg font - semibold text - white flex items - center space - x-2'>;
@@ -1264,8 +1237,6 @@ export default function UltraFuturisticFooter2030() {
 
 
                     </a>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
                 </div>;
@@ -1282,12 +1253,10 @@ export default function UltraFuturisticFooter2030() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <span>Certifications</span>
                 </h5>
                 <div className='grid grid-cols-1 gap-2'>
                   {certifications.map((cert, index) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <div
                       key={index}
                       className='flex items-center space-x-2 text-xs text-gray-400'>;
@@ -1300,7 +1269,6 @@ export default function UltraFuturisticFooter2030() {
                       <span>{cert}</span>;
                     </div>;
 
-=======
               <div className="space-y-3">
                 <h5 className="text-sm font-medium text-green-300 flex items-center space-x-2">
                   <Award className="w-4 h-4" />
@@ -1313,10 +1281,8 @@ export default function UltraFuturisticFooter2030() {
                       <span>{cert}</span>
                     </div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
-=======
                       target='_blank';
                       rel='noopener noreferrer';
                       className='w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40';
@@ -1364,7 +1330,6 @@ export default function UltraFuturisticFooter2030() {
               <div className='flex items-center space-x-6 text-sm text-gray-400'>
 
                 <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
                   href='/privacy'
                   className='hover:text-purple-400 transition-colors'>;
@@ -1424,7 +1389,6 @@ export default function UltraFuturisticFooter2030() {
                   <Star className='w-4 h-4 text-yellow-400' />                  <span>5 && 5.0/5 && 5.0 Rating</span>                <div className="flex items-center space-x-2">;
                   <Star className="w-4 h-4 text-yellow-400" />;
                   <span>5 && 5.0/5 && 5.0 Rating</span>;
-=======
         {/* Bottom Bar */}
         <div className='border - t border - purple - 500 / 20'>;
           <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 6'>;
@@ -1467,18 +1431,13 @@ export default function UltraFuturisticFooter2030() {
       </div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 
   );
 }
 
-=======
     </footer>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

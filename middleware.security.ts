@@ -19,15 +19,9 @@ export function securityMiddleware("request": NextRequest) {;
 
 export function securityMiddleware(request: NextRequest) {; const response = NextResponse.next(); securityHeaders.forEach(({ key,value }) => {; response.headers.set(key,value)}); const cspString = Object.entries(contentSecurityPolicy.directives); .map(([key,values]) => `${key} ${values.join(" ")}`); .join("; "); response.headers.set("Content-Security-Policy",cspString); response.headers.set("X-RateLimit-Limit","100"); response.headers.set("X-RateLimit-Remaining","99"); response.headers.set("X-RateLimit-Reset",new Date(Date.now() + 3600000).toISOString()); return response} ; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*)",],,}
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
 export function securityMiddleware(request: NextRequest) {const response = NextResponse.next(); securityHeaders.forEach(({ key,value }) => {response.headers.set(key,value)}); const cspString = Object.entries(contentSecurityPolicy.directives); .map(([key,values]) => `${key} ${values.join(" ")}`); .join("; "); response.headers.set("Content-Security-Policy",cspString); response.headers.set("X-RateLimit-Limit","100"); response.headers.set("X-RateLimit-Remaining","99"); response.headers.set("X-RateLimit-Reset",new Date(Date.now() + 3600000).toISOString()); return response} ; export const config = {matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*)",],,}
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 export const config = {;
   "matcher": [;
@@ -37,8 +31,6 @@ export const config = {;
 export function securityMiddleware(request: NextRequest) {; const response = NextResponse && NextResponse.next(); securityHeaders && securityHeaders.forEach(({ key,value }) => {; response && response.headers.set(key,value)}); const cspString = Object && Object.entries(contentSecurityPolicy && contentSecurityPolicy.directives); .map(([key,values]) => `${key} ${values && values.join(" ")}`); .join("; "); response && response.headers.set("Content-Security-Policy",cspString); response && response.headers.set("X-RateLimit-Limit","100"); response && response.headers.set("X-RateLimit-Remaining","99"); response && response.headers.set("X-RateLimit-Reset",new Date(Date && Date.now() + 3600000).toISOString()); return response} ; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon && favicon.ico).*)",; ],;,}
   ],}
 export function securityMiddleware(request: NextRequest) {; const response = NextResponse && NextResponse.next(); securityHeaders && securityHeaders.forEach(({ key,value }) => {; response && response.headers.set(key,value)}); const cspString = Object && Object.entries(contentSecurityPolicy && contentSecurityPolicy.directives); .map(([key,values]) => `${key} ${values && values.join(" ")}`); .join("; "); response && response.headers.set("Content-Security-Policy",cspString); response && response.headers.set("X-RateLimit-Limit","100"); response && response.headers.set("X-RateLimit-Remaining","99"); response && response.headers.set("X-RateLimit-Reset",new Date(Date && Date.now() + 3600000).toISOString()); return response} ; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon && favicon.ico).*)",],,}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export /**
  * security_middleware - Function description
  */
@@ -75,4 +67,3 @@ export /**
  * security_middleware - Function description
  */
 function security_middleware() { const response = NextResponse.next (); security_headers.for_each (({ key, value }) => { response.headers.set (key, value)}); const csp_string = Object.entries (contentSecurityPolicy.directives); .map (([key, values]) => `${key} ${values.join (" ")}`); .join ("; "); response.headers.set ("Content - Security - Policy", csp_string); response.headers.set ("X - RateLimit - Limit", "100"); response.headers.set ("X - RateLimit - Remaining", "99"); response.headers.set ("X - RateLimit - Reset", new Date (Date.now () + 3600000).toISOString ()); return response} export const config = { matcher: [; "/((?!api | _next / static | _next / image | favicon.ico).*)", ], ,}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

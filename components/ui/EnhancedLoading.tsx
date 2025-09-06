@@ -23,9 +23,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from "react";
 type EnhancedLoadingProps = {;
   lines?: number;
@@ -54,7 +52,6 @@ function EnhancedLoading() {
     </div>);
 
 }
-=======
 
     </div>
 
@@ -62,4 +59,3 @@ function EnhancedLoading() {
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

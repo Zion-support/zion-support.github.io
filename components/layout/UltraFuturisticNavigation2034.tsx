@@ -35,11 +35,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-=======
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Menu,
   X,
   ChevronDown,
@@ -160,10 +157,8 @@ import {
   Laptop, Watch, Headphones, Speaker, Mic, ;
   Keyboard, Mouse, CpuIcon, DatabaseIcon, ;
 
-=======
   Laptop, Watch, Headphones, Speaker, Mic,
   Keyboard, Mouse, CpuIcon, DatabaseIcon,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
   ZapIcon, SparklesIcon, BrainIcon, AtomIcon;
   HeartIcon, RocketIcon, ShieldIcon as ShieldIcon2;
@@ -342,11 +337,9 @@ const quickLinks = [
   { name: 'Case Studies', href: '/case-studies', icon: FileText }
   { name: 'Blog', href: '/blog', icon: MessageCircle }
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
-=======
 ];
 
 const quickLinks = [
-=======
     services: [;
       {
         name: 'Quantum DNA Computing',
@@ -380,7 +373,6 @@ const quickLinks = [
     ];
   }
 const quick_links = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
   { name: 'Solutions', href: '/solutions', icon: Target },
@@ -389,7 +381,6 @@ const quick_links = [;
   { name: 'Case Studies', href: '/case - studies', icon: FileText },
   { name: 'Blog', href: '/blog', icon: MessageCircle },
 
-=======
   { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
 ;
@@ -400,7 +391,6 @@ const company_links = [;
   { name: 'News', href: '/news', icon: FileText },
   { name: 'Partners', href: '/partners', icon: Handshake },
   { name: 'Support', href: '/support', icon: LifeBuoy },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   { name: 'Status', href: '/status', icon: Activity }
 ];
 
@@ -506,8 +496,6 @@ export default function UltraFuturisticNavigation2034() {;
 
   const toggleDropdown = (category: string) => {;
     setActiveDropdown(activeDropdown === category ? null : category);
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   };
 
   const closeDropdown = () => {;
@@ -523,7 +511,6 @@ export default function UltraFuturisticNavigation2034() {;
   const closeDropdown = () => {;
     setActiveDropdown(null);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <>;
@@ -545,7 +532,6 @@ export default function UltraFuturisticNavigation2034() {;
               </span>
             </div>
           </div>                {contactInfo.mobile}
-=======
       <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
           <div className="flex items-center space-x-6">
@@ -553,7 +539,6 @@ export default function UltraFuturisticNavigation2034() {;
               <Phone className="w-4 h-4 text-cyan-400" />
               <span className="hover:text-cyan-400 transition-colors">
                 {contactInfo.mobile}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </span>
             </div>
             <div className="flex items-center space-x-2">
@@ -585,8 +570,6 @@ export default function UltraFuturisticNavigation2034() {;
           </div>
         </div>
       </div>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>;
         <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;
           <div className='flex items-center space-x-6'>;
@@ -644,25 +627,21 @@ export default function UltraFuturisticNavigation2034() {;
         </div>;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Main Navigation */}
 
         }`}>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='flex items-center justify-between h-20'>            {/* Logo */}      <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-=======
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 
         isScrolled 
           ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           : 'bg-transparent'
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <div className='relative'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
@@ -679,7 +658,6 @@ export default function UltraFuturisticNavigation2034() {;
                 </p>              </div>
             </motion.div>
             {/* Desktop Navigation */}            >
-=======
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
@@ -690,7 +668,6 @@ export default function UltraFuturisticNavigation2034() {;
               transition={{ duration: 0.5 }}
               className="flex items-center space-x-3"
             >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="relative">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
                   <Rocket className="w-7 h-7 text-white" />
@@ -704,7 +681,6 @@ export default function UltraFuturisticNavigation2034() {;
                 <p className="text-xs text-gray-400">Future Technology Solutions</p>
               </div>
             </motion.div>
-=======
               transition={{ duration: 0 && 0.5 }}
               className='flex items-center space-x-3'>;
               <div className='relative'>;
@@ -737,10 +713,8 @@ export default function UltraFuturisticNavigation2034() {;
               </div>;
             </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Desktop Navigation */}
 
-=======
             <div className="hidden lg:flex items-center space-x-8">
               {quickLinks.map((link) => (
                 <Link
@@ -770,7 +744,6 @@ export default function UltraFuturisticNavigation2034() {;
                         <div className="space-y-1">
                           {category.services.slice(0, 2).map((service) => (
                             <Link
-=======
 ;
 const social_links = [;
   {
@@ -1036,17 +1009,14 @@ function UltraFuturisticNavigation2034() {
                     ))}
                   </div>
                   <div className='mt-4 pt-4 border-t border-cyan-500/20'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Link
                       href='/services'
                       className='flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>;
                       View All Services;
                       <ArrowRight className='w-4 h-4 ml-2' />                    </Link>                    <Link
-=======
                   </div>
                   <div className="mt-4 pt-4 border-t border-cyan-500/20">
                     <Link
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       href="/services"
 
                 href="/contact"
@@ -1070,7 +1040,6 @@ function UltraFuturisticNavigation2034() {
                 href='/contact'
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium'>                href="/contact";
                 className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium";
-=======
                             </Link>))}
                         </div>;
                       </div>))}
@@ -1127,12 +1096,9 @@ function UltraFuturisticNavigation2034() {
         </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -1146,7 +1112,6 @@ function UltraFuturisticNavigation2034() {
                     <AnimatePresence>
                       {activeDropdown === category.title && (
                         <motion.div
-=======
         {/* Mobile Menu */}
         <AnimatePresence>;
           {is_open && (
@@ -1206,7 +1171,6 @@ function UltraFuturisticNavigation2034() {
                     <AnimatePresence>;
                       {active_dropdown === category.title && (
                         <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
@@ -1220,7 +1184,6 @@ function UltraFuturisticNavigation2034() {
                   href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center";
-=======
                           className='mt - 3 ml - 4 space - y-2';
                         >;
                           {category.services.map (service => (                            <Link;
@@ -1248,13 +1211,11 @@ function UltraFuturisticNavigation2034() {
                   href="/contact";
                   on_click={() => setIsOpen (false)}
                   className="block w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 font - medium text - center";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 >;
                   Get Started;
                 </Link>;
               </div>;
 
-=======
                 
                 <Link
                   href="/contact"
@@ -1266,18 +1227,14 @@ function UltraFuturisticNavigation2034() {
               </div>
             </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
 
       <div className="h-20"></div>
 
     </>
-=======
         </AnimatePresence>;
       </nav>;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>;
@@ -1286,12 +1243,10 @@ function UltraFuturisticNavigation2034() {
     </>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 
 }
 
-=======
             </motion.div>)}
         </AnimatePresence>;
       </nav>;
@@ -1300,8 +1255,4 @@ function UltraFuturisticNavigation2034() {
     </>);      <div className="h - 20"></div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

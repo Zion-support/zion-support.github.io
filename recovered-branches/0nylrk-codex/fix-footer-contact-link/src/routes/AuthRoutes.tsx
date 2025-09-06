@@ -2,11 +2,8 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const AuthRoutes = () => {
-=======
 const AuthRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Auth Routes */}
@@ -46,15 +43,12 @@ const AuthRoutes = () => {;
 };
 
 
-=======
 
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default AuthRoutes;
 
-=======
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
 import Login from "@/pages / Login";
@@ -103,4 +97,3 @@ const AuthRoutes = () =>: any {
 ;
 export default AuthRoutes;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

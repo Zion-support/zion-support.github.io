@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   const [error, setError] = useState<string | null>(null);
   const fetchDisputes = async () => {
@@ -75,7 +74,6 @@ if ( {) {
 
       // Transform data if needed
       const transformedData = data && data.map((dispute: any) => ({
-=======
             job:jobs (title)),
           client_profile:projects ! projects_client_id_fkey (client_profile:profiles ! projects_client_id_fkey (display_name, avatar_url));
           talent_profile:projects ! projects_talent_id_fkey (talent_profile:profiles ! projects_talent_id_fkey (display_name, avatar_url));
@@ -88,7 +86,6 @@ if (throw fetch_error) {
 }
       // Transform data if needed;
       const transformed_data = data.map ((dispute: any) => ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         ...dispute;
         client_profile: dispute && dispute.client_profile?.client_profile;
         talent_profile: dispute && dispute.talent_profile?.talent_profile;
@@ -103,7 +100,6 @@ if (throw fetch_error) {
       setError("Failed to fetch disputes: " + err && err.message),
       toast && toast.error("Failed to fetch disputes")
 
-=======
           ...dispute.project,
           title: dispute.project?.job?.title || 'Untitled Project';
         }
@@ -115,7 +111,6 @@ if (throw fetch_error) {
       console.error ("Error fetching disputes:", err);
       set_error ("Failed to fetch disputes: " + err.message),
       toast.error ("Failed to fetch disputes");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
@@ -147,7 +142,6 @@ if (throw error) {
   $2
 }
 
-=======
 
       })),
       
@@ -188,7 +182,6 @@ if (throw error) {
       if (error) throw error,
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return {
         ...data;
         client_profile: data && data.client_profile?.client_profile;
@@ -198,10 +191,8 @@ if (throw error) {
           ...data && data.project,
           title: data && data.project?.job?.title || 'Untitled Project'
 
-=======
           ...data.project,
           title: data.project?.job?.title || 'Untitled Project';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       } as Dispute;
     } catch (err: any) {
@@ -233,7 +224,6 @@ if (throw error) {
       
       toast && toast.success("Dispute submitted successfully");
 
-=======
 
         .single(),
 
@@ -241,7 +231,6 @@ if (throw error) {
       
       toast.success("Dispute submitted successfully"),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       fetchDisputes(), // Refresh the list
       return data as Dispute
     } catch (err: any) {
@@ -278,13 +267,11 @@ if (throw error) {
       
       toast && toast.success(`Dispute status updated to ${status}`);
 
-=======
 
       ),
       
       toast.success(`Dispute status updated to ${status}`),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return true
     } catch (err: any) {
       console && console.error("Error updating dispute status:", err);
@@ -293,11 +280,9 @@ if (throw error) {
 
       console.error ("Error fetching dispute:", err);
       toast.error ("Failed to fetch dispute details");
-=======
 
     disputeId: string, 
 
-=======
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -455,7 +440,6 @@ if (throw error) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     resolution: { summary: string, resolution_type: string }
   ): Promise < boolean> => {
     try {
@@ -513,13 +497,11 @@ if (throw error) {
       
       toast && toast.success("Dispute resolved successfully");
 
-=======
 
       ),
       
       toast.success("Dispute resolved successfully"),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return true
     } catch (err: any) {
       console && console.error("Error resolving dispute:", err);
@@ -533,7 +515,6 @@ if (throw error) {
 
 
   const getDisputeMessages = async (disputeId: string): Promise<DisputeMessage[]> => {
-=======
           resolved_at: new Date ().toISOString ();
           resolution_summary: resolution.summary,
           resolution_type: resolution.resolution_type;
@@ -567,7 +548,6 @@ if (throw error) {
   }
 ;
   const getDisputeMessages = async (dispute_id: string): Promise < DisputeMessage[]> => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
       const { data, error } = await supabase;
         .from ("dispute_messages");
@@ -636,14 +616,12 @@ if ( {) {
 
           user_id: user.id;
           message
-=======
           user_id: user && user.id;
           message,
 
       
       toast && toast.success("Message sent successfully");
 
-=======
 
           dispute_id: disputeId,
           user_id: user.id,
@@ -655,7 +633,6 @@ if ( {) {
       
       toast.success("Message sent successfully"),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return true
     } catch (err: any) {
       console && console.error("Error sending message:", err);
@@ -702,10 +679,8 @@ if ( {) {
     getDisputeMessages,
     addDisputeMessage;
 
-=======
 
 
-=======
   ): Promise<boolean> => {;
     try {;
       const { error } = await supabase;
@@ -801,7 +776,5 @@ if ( {) {
     addDisputeMessage;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

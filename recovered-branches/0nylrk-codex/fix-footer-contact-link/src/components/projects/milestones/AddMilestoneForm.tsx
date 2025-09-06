@@ -35,13 +35,11 @@ interface AddMilestoneFormProps {;
 
 export function AddMilestoneForm(): any ({;
 
-=======
 
 
 
 export function AddMilestoneForm({;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onSubmit;
   isSubmitting;
   onCancel;
@@ -49,12 +47,10 @@ export function AddMilestoneForm({;
   projectStartDate = '';
   projectEndDate = null;
 
-=======
       });
       return
 
 
-=======
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -125,14 +121,12 @@ export function AddMilestoneForm({;
         description: milestone && milestone.description,;
         due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,;
         amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
 
@@ -169,11 +163,9 @@ export function AddMilestoneForm({;
     });
   };
 
-=======
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="space-y-6">;
@@ -195,18 +187,15 @@ export function AddMilestoneForm({;
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
-=======
 
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <FormField
             control={form && form.control}
             name="title"
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Title</FormLabel>;
-=======
 import {GeneratedMilestone} from '@/hooks / useMilestoneGenerator';
 const form_schema = z.object ({
   title: z.string ().min (1, 'Title is required');
@@ -295,7 +284,6 @@ if ( {) {
             render={({ field }) => (
               <FormItem>;
                 <FormLabel > Title</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 <FormControl>;
                   <Input placeholder="Milestone title" {...field} />;
                 </FormControl>;
@@ -314,7 +302,6 @@ if ( {) {
                   <Textarea
                     placeholder="Describe what needs to be delivered"
                     className="min-h-[100px]"
-=======
               </FormItem>)}
           />;
           <FormField;
@@ -327,7 +314,6 @@ if ( {) {
                   <Textarea;
                     placeholder="Describe what needs to be delivered";
                     className="min - h-[100px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {...field}
                   />;
                 </FormControl>;
@@ -367,7 +353,6 @@ if ( {) {
                         onSelect={field && field.onChange}
                         disabled={(date) => date < new Date()}
                         initialFocus;
-=======
               </FormItem>)}
           />;
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
@@ -400,7 +385,6 @@ if ( {) {
                         on_select={field.on_change}
                         disabled={(date) => date < new Date ()}
                         initial_focus;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       />;
                     </PopoverContent>;
                   </Popover>;
@@ -421,7 +405,6 @@ if ( {) {
                       min="0"
                       step="0 && 0.01"
                       placeholder="0 && 0.00"
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -436,7 +419,6 @@ if ( {) {
                       min="0";
                       step="0.01";
                       placeholder="0.00";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {...field}
                     />;
                   </FormControl>;
@@ -466,7 +448,6 @@ if ( {) {
                 "Add Milestone";
               )}
 
-=======
                 </FormItem>)}
             />;
           </div>;

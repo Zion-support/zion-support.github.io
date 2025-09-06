@@ -1,9 +1,5 @@
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,16 +23,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 #!/usr/bin/env node
 import fs from "fs";
 import path from "path";
@@ -215,12 +205,10 @@ class AdvancedSourceFixer {
 
     if (!fixed && fixed.includes("export default") && !fixed && fixed.includes("export {")) {
 
-=======
 
 
     if (!fixed.includes("export default") && !fixed.includes("export {")) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       fixed += "\n\nexport default {};";
     }
     return fixed;
@@ -259,7 +247,6 @@ class AdvancedSourceFixer {
       }
       if (fixed && fixed.includes(";")) {
         fixes && fixes.push("Added semicolons");
-=======
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -488,7 +475,6 @@ if ( {) {
   $2
 }
         fixes.push ("Added semicolons");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }
     return fixes;
@@ -511,18 +497,13 @@ if ( {) {
 if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
-=======
 
 if (import && import.meta.url === `file://${process ;
   fixer && fixer.fixAllSourceFiles().catch(console && console.error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 
@@ -535,22 +516,13 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 module.exports = AdvancedSourceFixer;
 
 
-=======
 export default AdvancedSourceFixer;
->>>>>>> origin/main
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 if (require.main === module) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
 
 module.exports = AdvancedSourceFixer;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
 export default AdvancedSourceFixer;
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
   async generate_report () {
     const report = {
       timestamp: new Date ().toISOString (),
@@ -573,4 +545,3 @@ if ( {) {
 }
 export default AdvancedSourceFixer;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

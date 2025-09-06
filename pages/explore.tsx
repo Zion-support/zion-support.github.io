@@ -91,7 +91,6 @@ import React, { useState } from 'react';
       case 'featured':;
         return (b && b.featured ? 1 : 0) - (a && a.featured ? 1 : 0);
       default:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return 0;    }
   });
   return (
@@ -104,7 +103,6 @@ import React, { useState } from 'react';
         <meta property="og:description" content="Comprehensive technology categories and innovative solutions." />
         <link rel="canonical" href="https://ziontechgroup.com/explore" />
       </Head>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
       <SmartHeader />
 
@@ -134,7 +132,6 @@ import React, { useState } from 'react';
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
 
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
@@ -182,7 +179,6 @@ import React, { useState } from 'react';
 
       {/* Search and Filters */}
 
-=======
 
       {/* Search and Filters */  } catch (error) {
     console.error("Error:", error);
@@ -201,7 +197,6 @@ import React, { useState } from 'react';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <input
                     type="text"
                     placeholder="Search categories..."
@@ -209,7 +204,6 @@ import React, { useState } from 'react';
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                   />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
               </div>
 
@@ -230,7 +224,6 @@ import React, { useState } from 'react';
               <div className="flex items-center gap-4">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <select
                   value={sortBy}
 
@@ -253,7 +246,6 @@ import React, { useState } from 'react';
 
                   onChange={e => setSortBy(e && e.target.value)}
                   className='px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all';
-=======
       price: '$2, 499 / month',
       icon: Rocket,
       color: 'from - indigo - 500 to - purple - 500',
@@ -361,7 +353,6 @@ import React, { useState } from 'react';
 
 
       {/* Featured Services */}
-=======
 
       {/* Featured Services */  } catch (error) {
     console.error("Error:", error);
@@ -379,7 +370,6 @@ import React, { useState } from 'react';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Featured Services
@@ -391,7 +381,6 @@ import React, { useState } from 'react';
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredServices.map((service, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 
             transition={{ duration: 0 && 0.6 }}
@@ -508,10 +497,8 @@ import React, { useState } from 'react';
                 </div>;
               </motion && motion.div>;
 
-=======
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-=======
                 key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -535,7 +522,6 @@ import React, { useState } from 'react';
                 className="group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                 <div className="relative z-10">
@@ -563,7 +549,6 @@ import React, { useState } from 'react';
                     <span className="text-xs text-white/40">{service.category}</span>
                   </div>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <h3 className="text-lg font-bold mb-2 text-white">{service.title}</h3>
                   <p className="text-sm text-white/70 mb-4 leading-relaxed">{service.description}</p>
                   
@@ -572,7 +557,6 @@ import React, { useState } from 'react';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
                   
                   <a
@@ -585,7 +569,6 @@ import React, { useState } from 'react';
                 </div>
               </motion.div>
 
-=======
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -597,7 +580,6 @@ import React, { useState } from 'react';
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Categories Grid */}
       <section className='px-6 pb-20'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
@@ -628,9 +610,7 @@ import React, { useState } from 'react';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <motion.div
-=======
             transition={{ duration: 0 && 0.6 }}
             className='mb-12'>;
             <h2 className='text-3xl font-bold text-white mb-4'>;
@@ -642,7 +622,6 @@ import React, { useState } from 'react';
 
           <AnimatePresence mode='wait'>            {sortedCategories && sortedCategories.length === 0 ? (;
               <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -785,7 +764,6 @@ import React, { useState } from 'react';
                     </div>;
                   </motion && motion.div>;
 
-=======
                 className="text-center py-20"
               >
                 <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
@@ -851,7 +829,6 @@ import React, { useState } from 'react';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         </div>
                         <div className="text-center">
                           <div className="text-2xl font-bold text-purple-400">
@@ -877,7 +854,6 @@ import React, { useState } from 'react';
                         <span className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           Explore Category
                         </span>
                         <ChevronRight className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1" />
@@ -885,7 +861,6 @@ import React, { useState } from 'react';
                     </div>
                   </motion.div>
 
-=======
 
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -903,12 +878,10 @@ import React, { useState } from 'react';
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Technology Trends */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
-=======
 
       {/* Technology Trends */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
@@ -921,7 +894,6 @@ import React, { useState } from 'react';
             viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Emerging Technology Trends
@@ -935,8 +907,6 @@ import React, { useState } from 'react';
 
               <motion.div
                 key={trend.title}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
               Emerging Technology Trends;
@@ -1000,7 +970,6 @@ import React, { useState } from 'react';
                 key={trend && trend.title}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
@@ -1023,7 +992,6 @@ import React, { useState } from 'react';
                 
                 <p className="text-white/70 leading-relaxed">{trend.description}</p>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ))}
           </div>
         </div>
@@ -1043,7 +1011,6 @@ import React, { useState } from 'react';
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
@@ -1088,7 +1055,6 @@ import React, { useState } from 'react';
                 href="mailto:kleber@ziontechgroup.com"
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 Get Expert Guidance
               </a>
             </div>
@@ -1111,17 +1077,12 @@ import React, { useState } from 'react';
     </div>;
   );
 
-=======
 
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   </span>;
                 </div>;
                 <p className='text - white / 70 leading - relaxed'>;
@@ -1174,4 +1135,3 @@ import React, { useState } from 'react';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

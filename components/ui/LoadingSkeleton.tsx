@@ -56,7 +56,6 @@ export const ServiceCardSkeleton: React.FC < ServiceCardSkeletonProps> = ({ clas
       <Skeleton className="h - 4 w - 5/6 mb - 2" />;
       <Skeleton className="h - 4 w - 4/6" />;
     </div>);
-=======
 
   );
 };
@@ -67,7 +66,6 @@ interface HeroSkeletonProps {
 
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface HeroSkeletonProps {
   class_name?: string;
 }
@@ -85,7 +83,6 @@ export const HeroSkeleton: React.FC < HeroSkeletonProps> = ({ class_name = '' })
         </div>;
       </div>;
     </div>);
-=======
 
   );
 };
@@ -96,7 +93,6 @@ interface StatsSkeletonProps {
 
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface StatsSkeletonProps {
   class_name?: string;
 }
@@ -134,7 +130,6 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
       <Skeleton className="h-4 w-4/6" />;
     </div>;
   );
-=======
   )
 
 };
@@ -186,12 +181,10 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
 export default Skeleton;  );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Skeleton;
 
 
 
-=======
 export const StatsSkeleton: React.FC < StatsSkeletonProps> = ({ class_name = '' }) => {
   return (
     <div className={`py - 20 px - 6 ${class_name}`}>;
@@ -215,10 +208,7 @@ export default Skeleton);
 ;
 export default Skeleton;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-=======
 
 interface SkeletonProps {
   className?: string;
@@ -226,5 +216,3 @@ interface SkeletonProps {
   width?: string;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -58,16 +58,13 @@ export const MobileLaunchHero: React.FC = () => {
               
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Card className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3">
                 <CardContent className="p-0">
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
                     <Smartphone className="w-40 h-40 text-white opacity-40" />
 
-=======
 
 
-=======
 import React from "react",;
 import { Link } from "react-router-dom",;
 import { ArrowRight, Smartphone } from "lucide-react",;
@@ -127,7 +124,6 @@ export const MobileLaunchHero: React.FC = () => {;
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">;
                     <Smartphone className="w-40 h-40 text-white opacity-40" />;
                     {/* In production, replace with actual app screenshot */}
-=======
 import React from './react';
 import { Link  } from './react-router-dom';
 import { ArrowRight, Smartphone  } from './lucide-react';
@@ -190,7 +186,6 @@ export const MobileLaunchHero: React.FC = () => {
                   <div className="w - full h - full bg - gradient - to - br from - zion - blue - dark to - zion - purple / 60 flex items - center justify - center">;
                     <Smartphone className="w - 40 h - 40 text - white opacity - 40" />;
                     {/* In production, replace with actual app screenshot */}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </div>;
                 </CardContent>;
               </Card>;

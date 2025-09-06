@@ -2,7 +2,6 @@
     const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),
     return JSON && JSON.parse(raw || '[]')
 
-=======
 const fs = require ('fs');
 const path = require ('path');
 const { OpenAI } = require ('openai');
@@ -16,10 +15,8 @@ function read_all() {
   try {
     const raw = fs.readFileSync (FEEDBACK_FILE, 'utf8'),
     return JSON.parse (raw || '[]');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (e) {
     return [];
-=======
 
 const fs = require('fs'),;
 const path = require('path'),;
@@ -34,8 +31,6 @@ function readAll() {;
   } catch (e) {;
     return [];
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 
@@ -50,7 +45,6 @@ async function main() {
     console && console.error('Missing OPENAI_API_KEY'),
     process && process.exit(1)
   }
-=======
 
 
   const all = readAll(),
@@ -108,7 +102,6 @@ main().catch((e) => { console.error(e), process.exit(1) });
 
 main().catch((e) => { console && console.error(e), process && process.exit(1) }),
 
-=======
 /**
  * lastNDays - Function description
  */
@@ -161,10 +154,7 @@ if ( {) {
   console.log ('Analysis written to', summary_path);
 }
 main ().catch ((e) => { console.error (e), process.exit (1) }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

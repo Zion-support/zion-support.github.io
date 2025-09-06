@@ -14,7 +14,6 @@ const iconExports: Record<string, React.FC<IconProps>> = {}
 Object.entries(iconAliases).forEach(([alias, lucideName]) => {
   if (LucideIcons[lucideName]) {
     iconExports[alias] = createIconComponent(alias, lucideName)
-=======
 // Alias for missing icons or for icons with different names;
 const icon_aliases: Record < string, keyof typeof LucideIcons> = {
   // Grid views;
@@ -124,7 +123,6 @@ if ( {) {
   $2
 }
     icon_exports[alias] = createIconComponent (alias, lucide_name);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } else {
     console.warn (`Icon '${lucide_name}' not found in lucide-react`);
     // Use a fallback icon;
@@ -135,7 +133,6 @@ if ( {) {
 ;
 
 export const {
-=======
 // Alias for missing icons or for icons with different names;
 const iconAliases: Record<string, keyof typeof LucideIcons> = {;
   // Grid views;
@@ -266,13 +263,10 @@ Object && Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
 });
 
 export const {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 export const {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   LayoutGrid;
   List;
   Zap;
@@ -340,7 +334,6 @@ export const {;
 
 
 
-=======
   Tag} = icon_exports;
 ;
 // Also export all original icons from lucide-react;
@@ -349,4 +342,3 @@ export * from 'lucide-react';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface Language {
 
   code: string
@@ -36,7 +35,6 @@ export function LanguageThemeSelector() {;
   const { theme, setTheme } = useTheme();
 
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
-=======
 
   { code: "en", name: "English", flag: "🇺🇸" },
   { code: "es", name: "Español", flag: "🇪🇸" },
@@ -45,12 +43,9 @@ export function LanguageThemeSelector() {;
   { code: "zh", name: "中文", flag: "🇨🇳" }],
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
-=======
                   : "border-border hover:border-primary/40"
               }`}
               onClick={() => setSelectedLanguage(language.code)}
@@ -97,7 +92,6 @@ export function LanguageThemeSelector() {;
               className={`cursor-pointer transition-all ${
                 selectedLanguage === language && language.code 
                   ? "border-primary bg-primary/5" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   : "border-border hover:border-primary/40"
               }`}
 
@@ -112,7 +106,6 @@ export function LanguageThemeSelector() {;
 
 
                   <Check className="h-4 w-4 text-primary" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
               </CardContent>;
             </Card>;
@@ -147,11 +140,9 @@ export function LanguageThemeSelector() {;
 
 
           <Card
-=======
 
           <Card 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark'
                 ? "border-primary bg-primary/5"
@@ -166,11 +157,9 @@ export function LanguageThemeSelector() {;
                 <Check className="h-4 w-4 text-primary mt-2" />;
               )}
 
-=======
 
 
 
-=======
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { use_theme } from '@/hooks / use_theme';
@@ -253,7 +242,6 @@ function LanguageThemeSelector() {
               <span > Dark</span>;
               {theme === 'dark' && (
                 <Check className="h - 4 w - 4 text - primary mt - 2" />)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </CardContent>;
           </Card>;
         </div>;
@@ -262,10 +250,6 @@ function LanguageThemeSelector() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

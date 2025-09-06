@@ -34,7 +34,6 @@ const SelectTrigger = React.forwardRef<
       <ChevronDown className="h-4 w-4 opacity-50" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ))
@@ -111,7 +110,6 @@ const SelectContent = React.forwardRef<
 
 
         )}
-=======
 import * as React from &quot;react & quot;
 import * as SelectPrimitive from &quot;@radix - ui / react - select & quot;
 import { Check, ChevronDown, ChevronUp } from &quot;lucide-react & quot;
@@ -188,7 +186,6 @@ const SelectContent = React.forward_ref<;
           &quot;p - 1&quot;,
           position === &quot;popper & quot; &&;
             &quot;h-[var (--radix - select - trigger - height)] w - full min - w-[var (--radix - select - trigger - width)]&quot)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       >;
         {children}
       </SelectPrimitive.Viewport>;
@@ -201,14 +198,12 @@ const SelectContent = React.forward_ref<;
 
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>;
 >(({ className, ...props }, ref) => (;
-=======
   </SelectPrimitive.Portal>));
 SelectContent.display_name = SelectPrimitive.Content.display_name;
 const SelectLabel = React.forward_ref<;
   React.ElementRef < typeof SelectPrimitive.Label>,
   React.ComponentPropsWithoutRef < typeof SelectPrimitive.Label>;
 >(({ class_name, ...props }, ref) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   <SelectPrimitive.Label;
     ref={ref}
     className={cn (&quot;py - 1.5 pl - 8 pr - 2 text - sm font - semibold & quot;, class_name)}
@@ -227,14 +222,10 @@ const SelectLabel = React.forward_ref<;
     className={cn(
       "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
-=======
       &quot;relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
-=======
     className={cn(
       "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       className
     )}
     {...props}
@@ -253,7 +244,6 @@ const SelectSeparator = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.Separator
-=======
   />));
 SelectLabel.display_name = SelectPrimitive.Label.display_name;
 const SelectItem = React.forward_ref<;
@@ -280,7 +270,6 @@ const SelectSeparator = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof SelectPrimitive.Separator>;
 >(({ class_name, ...props }, ref) => (
   <SelectPrimitive.Separator;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn (&quot;-mx - 1 my - 1 h - px bg - muted & quot;, class_name)}
     {...props}
@@ -299,7 +288,6 @@ export {
   SelectSeparator;
   SelectScrollUpButton;
   SelectScrollDownButton}
-=======
 
 export {;
   Select,;
@@ -314,4 +302,3 @@ export {;
   SelectScrollDownButton}
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

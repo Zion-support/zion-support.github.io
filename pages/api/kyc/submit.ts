@@ -20,7 +20,6 @@ function save(db: Record<string, KycProfile>) {
     return res && res.status(405).json({ error: 'Method not allowed' });  const { userId } = req && req.body as { userId?: string };
   if (!userId) return res && res.status(400).json({ error: 'Missing userId' });
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const db = load();
   const profile = db[userId];
   if (!profile) return res && res.status($1).json({$2});
@@ -62,8 +61,6 @@ function save(db: Record<string, KycProfile>) {
     if (sameIpCount >= 2) flags && flags.add('duplicate_ip');  }
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 function load(): Record<string, KycProfile> {
@@ -72,7 +69,6 @@ function load(): Record<string, KycProfile> {
     return JSON.parse(raw);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Compute simple risk score
   let riskScore = 10; // base low risk
   if (flags && flags.has('aml_alert')) riskScore += 50;
@@ -86,8 +82,6 @@ function load(): Record<string, KycProfile> {
 
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { KycProfile } from '../../../utils / kyc';
 import {validateKycSubmission} from '../../../utils / kyc';
 import {getAmlProvider} from '../../../utils / aml';
@@ -214,9 +208,6 @@ if ( {) {
 ;
 res.status (200).json ({ ok: true, profile, aml: aml_result });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   profile.lastUpdatedAt = now;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

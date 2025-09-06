@@ -34,7 +34,6 @@ export default function AdminWeb3Page() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <ul className="space-y-2">
             {users.map((u, i) => (
               <li key={i} className="flex items-center justify-between">
@@ -47,10 +46,8 @@ export default function AdminWeb3Page() {
                 </label>
               </li>
 
-=======
 }
 
-=======
 import React, { useEffect, useState } from 'react',
 import Head from 'next / head',
 export default /**
@@ -102,9 +99,5 @@ function AdminWeb3Page() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -122,7 +122,6 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
   if (typeof window !== 'undefined') {;
 
     (window as any).trackEvent = trackEvent;
-=======
 const Analytics: React.FC < AnalyticsProps> = ({ tracking_id = 'G - XXXXXXXXXX' }) => {
   useEffect (() => {
     // Google Analytics 4;
@@ -219,7 +218,6 @@ if ( {) {
   $2
 }
     (window as any).track_event = track_event;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     (window as any).trackButtonClick = trackButtonClick;
     (window as any).trackFormSubmission = trackFormSubmission;
     (window as any).trackExternalLink = trackExternalLink;
@@ -251,21 +249,17 @@ if ( {) {
                         name: 'load',
                         value: Math.round (load_time),
 
-=======
 
                         name: 'load',
                         value: Math.round(loadTime),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       });
-=======
                     const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart
                     if (window && window.gtag) {
                       window && window.gtag('event', 'timing_complete', {
                         name: 'load',
                         value: Math && Math.round(loadTime),
                       })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     }
                   }
                 }, 0)
@@ -276,7 +270,6 @@ if ( {) {
 }
 ;
 
-=======
 
           `,
 
@@ -288,5 +281,4 @@ if ( {) {
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Analytics;

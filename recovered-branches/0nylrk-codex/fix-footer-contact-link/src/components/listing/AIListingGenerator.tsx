@@ -114,7 +114,6 @@ function AIListingGenerator() {
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
       })
-=======
 ;
       // Check condition
 if ( {) {
@@ -140,7 +139,6 @@ if ( {) {
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive";
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
@@ -200,12 +198,10 @@ if ( {) {
 
     }
   }
-=======
     }
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -224,7 +220,6 @@ if ( {) {
           <AIListingForm
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
-=======
 
           <AIListingForm 
             onSubmit={handleGenerate} 
@@ -247,8 +242,6 @@ if ( {) {
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
 
 

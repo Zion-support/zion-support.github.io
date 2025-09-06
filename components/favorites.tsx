@@ -81,7 +81,6 @@ export default function FavoritesPage() {;
           <div className='mt-4'>;
             <Link href='/talent'>;
               <a className='px-4 py-2 rounded-md bg-indigo-600 text-white'>;
-=======
 export default /**
  * FavoritesPage - Function description
  */
@@ -130,7 +129,6 @@ function FavoritesPage() {
           <div className='mt - 4'>;
             <Link href='/talent'>;
               <a className='px - 4 py - 2 rounded - md bg - indigo - 600 text - white'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Browse Talent;
               </a>;
             </Link>;
@@ -159,8 +157,6 @@ function FavoritesPage() {
                 </button>;
               </div>;
 
-=======
-=======
 
 
 
@@ -173,12 +169,9 @@ function FavoritesPage() {
   );
 }
 
-=======
     </div>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               <div className='mt - 3 text - xs text - gray - 500'>{t.location}</div>;
               <div className='mt - 3 flex flex - wrap gap - 2'>;
                 {t.skills.slice (0, 4).map (string => (
@@ -211,7 +204,3 @@ function FavoritesPage() {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

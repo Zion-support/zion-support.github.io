@@ -1,11 +1,8 @@
 
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export type ServiceVariant =
   | 'default'
   | 'holographic'
@@ -117,10 +114,7 @@ export type ServiceVariant =
 
   | 'neural-futuristic';
 
-=======
 
->>>>>>> origin/automation-improvements-final
-=======
   | 'quantum - hologographic';
   | 'quantum - advanced';
   | 'holographic - advanced';
@@ -221,4 +215,3 @@ export type ServiceVariant =
   | 'real - estate - futuristic';
   | 'industrial - futuristic';
   | 'neural - futuristic';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

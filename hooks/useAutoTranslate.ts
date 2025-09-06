@@ -8,7 +8,6 @@ export type UseAutoTranslateResult = {
   error?: string;
 }
 
-=======
 import { useEffect, useMemo, useState } from 'react';
 import { translateTextViaAI } from '../utils/translation';
 export type UseAutoTranslateResult = {
@@ -19,7 +18,6 @@ export type UseAutoTranslateResult = {
 
 export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
@@ -33,14 +31,12 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
       setTranslations({});
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     let cancelled = false;
     const timer = set_timeout (async () => {
       try {
 
 
-=======
         set_loading (true);
         set_error (undefined);
         const res = await translateTextViaAI (text, targets);
@@ -58,7 +54,6 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
         if (set_error (e?.message || 'Translation failed')) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
         if (set_loading (false)) {
   $2
@@ -73,10 +68,8 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
 
 }
 
-=======
     }
   }, [key, debounce_ms]);
 ;
   return { translations, loading, error }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

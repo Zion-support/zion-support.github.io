@@ -26,9 +26,7 @@ import React, { useState, useEffect } from 'react';
 
 import Link from 'next/link';
 
-=======
 import Link from 'next / link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { motion, AnimatePresence } from 'framer-motion';
 
 
@@ -67,8 +65,6 @@ import { motion, AnimatePresence } from 'framer-motion';
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Menu,;
   X,;
@@ -231,7 +227,6 @@ export default function UltraAdvancedNavigation2026V2() {;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
 
-=======
       setIsScrolled(window.scrollY > 20)
     };
     window.addEventListener('scroll', handleScroll);
@@ -286,7 +281,6 @@ export default function UltraAdvancedNavigation2026V2() {;
       name: 'Contact',
       href: '/contact',
       icon: <Mail className="w-4 h-4" />
-=======
   Menu,
   X,
   ChevronDown,
@@ -462,7 +456,6 @@ function UltraAdvancedNavigation2026V2() {
               </div>
             </div>
             <div className='flex items-center space-x-4'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link
                 href='/enhanced-services-showcase-2026-v2'
 
@@ -481,7 +474,6 @@ function UltraAdvancedNavigation2026V2() {
             <div className="flex items-center space-x-4">;
               <Link href="/enhanced-services-showcase-2026-v2" className="text-purple-400 hover:text-purple-300 transition-colors">;
 
-=======
     address: '364 E Main St STE 1008 Middletown DE 19709',  }    address: '364 E Main St STE 1008 Middletown DE 19709';
   }
 ;
@@ -523,7 +515,6 @@ function UltraAdvancedNavigation2026V2() {
             <div className="flex items - center space - x-4">;
               <Link href="/enhanced - services - showcase - 2026 - v2" className="text - purple - 400 hover:text - purple - 300 transition - colors">;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 🚀 New 2026 Services;
               </Link>;
             </div>;
@@ -554,7 +545,6 @@ function UltraAdvancedNavigation2026V2() {
               </div>;
             </Link>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Desktop Navigation */}
 
             <div className="hidden lg:flex items-center space-x-8">
@@ -568,8 +558,6 @@ function UltraAdvancedNavigation2026V2() {
 
 
                     </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   )}
                   {/* Dropdown Menu */}
                   {item && item.dropdown && activeDropdown === item && item.name && (;
@@ -578,11 +566,8 @@ function UltraAdvancedNavigation2026V2() {
                       onMouseLeave={() => setActiveDropdown(null)}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             </span>
                           </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         ))}
                       </div>;
                     </div>;
@@ -594,7 +579,6 @@ function UltraAdvancedNavigation2026V2() {
 
             {/* CTA Button */}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Get Started
                 </button>
               </Link>
@@ -609,7 +593,6 @@ function UltraAdvancedNavigation2026V2() {
                 <button className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>                  Get Started            <div className="hidden lg:flex items-center space-x-4">;
               <Link href="/contact">;
                 <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">;
-=======
       {/* Main Navigation */}
       <nav;
         className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
@@ -724,7 +707,6 @@ function UltraAdvancedNavigation2026V2() {
                 <button className='bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg'>                  Get Started            <div className="hidden lg:flex items - center space - x-4">;
               <Link href="/contact">;
                 <button className="bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Get Started;
                 </button>;
               </Link>;
@@ -734,7 +716,6 @@ function UltraAdvancedNavigation2026V2() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -746,12 +727,9 @@ function UltraAdvancedNavigation2026V2() {
       </nav>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -810,7 +788,6 @@ function UltraAdvancedNavigation2026V2() {
                           </div>;
                         )}
 
-=======
             transition={{ duration: 0.3 }}
             className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden"
           >
@@ -864,9 +841,7 @@ function UltraAdvancedNavigation2026V2() {
                         href={item && item.href}
                         onClick={() => setIsOpen(false)}
 
-=======
                         className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
-=======
                       </div>                    ) : (
                       <Link
                         href={item.href}
@@ -879,13 +854,10 @@ function UltraAdvancedNavigation2026V2() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       >
                         {item.icon}
                         <span>{item.name}</span>
                       </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     )}
                   </div>;
                 ))}
@@ -897,10 +869,8 @@ function UltraAdvancedNavigation2026V2() {
                 <div className='pt-6 border-t border-white/10'>
                   <Link href='/contact' onClick={() => setIsOpen(false)}>
                     <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'>                      Get Started                <div className="pt-6 border-t border-white/10">
-=======
 
                 <div className="pt-6 border-t border-white/10">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   <Link href="/contact" onClick={() => setIsOpen(false)}>
                     <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300">
                       Get Started
@@ -908,7 +878,6 @@ function UltraAdvancedNavigation2026V2() {
                   </Link>
                 </div>
 
-=======
 
                 {/* Mobile Contact Info */}
                 <div className="pt-6 border-t border-white/10 space-y-3 text-sm text-gray-400">
@@ -952,7 +921,6 @@ function UltraAdvancedNavigation2026V2() {
                   <div className="flex items-center space-x-2">;
                     <MapPin className="w-4 h-4 text-green-400" />;
                     <span className="text-xs">{contactInfo && contactInfo.address}</span>;
-=======
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {is_open && (
@@ -1051,7 +1019,6 @@ function UltraAdvancedNavigation2026V2() {
                   <div className="flex items - center space - x-2">;
                     <MapPin className="w - 4 h - 4 text - green - 400" />;
                     <span className="text - xs">{contact_info.address}</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </div>;
                 </div>;
               </div>;
@@ -1060,22 +1027,17 @@ function UltraAdvancedNavigation2026V2() {
       </AnimatePresence>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Overlay */}
       {isOpen && (;
         <motion&& motion.div
-=======
           </motion.div>)}
       </AnimatePresence>;
       {/* Overlay */}
       {is_open && (
         <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -1093,12 +1055,10 @@ function UltraAdvancedNavigation2026V2() {
     </>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 
 }
 
-=======
           className='fixed inset - 0 bg - black / 50 z - 40 lg:hidden'          on_click={() => setIsOpen (false)}          className="fixed inset - 0 bg - black / 50 z - 40 lg:hidden";
           on_click={() => setIsOpen (false)}
         />)}
@@ -1107,18 +1067,14 @@ function UltraAdvancedNavigation2026V2() {
     </>);      <div className="h - 32"></div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
-=======
           className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}
 
           onClick={() => setIsOpen(false)}
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       )}
 
@@ -1127,4 +1083,3 @@ function UltraAdvancedNavigation2026V2() {
     </>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

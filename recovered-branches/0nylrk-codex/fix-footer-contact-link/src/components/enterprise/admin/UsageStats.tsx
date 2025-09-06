@@ -40,12 +40,10 @@ export function UsageStats() {;
       title: "Limits updated",;
       description: "The new usage limits have been saved successfully.",;
 
-=======
 
       title: "Limits updated",
       description: "The new usage limits have been saved successfully.",;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     });
   }
 
@@ -55,7 +53,6 @@ export function UsageStats() {;
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -93,7 +90,6 @@ export function UsageStats() {;
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
@@ -129,7 +125,6 @@ export function UsageStats() {;
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -177,7 +172,6 @@ export function UsageStats() {;
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
@@ -195,10 +189,8 @@ export function UsageStats() {;
       </div>
     </div>
 
-=======
 
 
-=======
   )
 import React from "react",;
 import { Slider } from "@/components/ui/slider",;
@@ -227,7 +219,6 @@ export function UsageStats() {;
       <div>;
         <h3 className="text-xl font-medium mb-4">Usage Limits & Settings</h3>;
         <p className="text-muted-foreground mb-6">;
-=======
 import React from './react';
 import { Slider  } from '@/components / ui / slider';
 import { Badge  } from '@/components / ui / badge';
@@ -260,7 +251,6 @@ function UsageStats() {
       <div>;
         <h3 className="text - xl font - medium mb - 4">Usage Limits & Settings</h3>;
         <p className="text - muted - foreground mb - 6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           Configure usage limits for your team to manage your subscription;
           resources.;
         </p>;
@@ -449,11 +439,8 @@ function UsageStats() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
-=======
         <Button > Contact Us</Button>;
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

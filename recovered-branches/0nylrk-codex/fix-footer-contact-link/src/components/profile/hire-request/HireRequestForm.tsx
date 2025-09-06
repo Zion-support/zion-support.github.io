@@ -29,7 +29,6 @@ export interface HireRequestFormProps {;
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onSubmitSuccess?: () => void
 }
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
@@ -61,7 +60,6 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             Cancel
           </Button>
 
-=======
           <Button
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -130,7 +128,6 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
             disabled={isSubmitting}>;
             Cancel;
           </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Button
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -145,7 +142,6 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
 
           </Button>;
@@ -155,7 +151,6 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
   );
 }
 
-=======
 import React from './react';
 import { useHireRequestForm, FormValues } from './useHireRequestForm';
 import { Button } from '@/components / ui / button';
@@ -226,4 +221,3 @@ function HireRequestForm() {
       </form>;
     </Form>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

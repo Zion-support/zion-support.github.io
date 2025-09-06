@@ -3,13 +3,11 @@ export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' |
 
 
 export type ZionGPTUsage = {
-=======
 
 
 
 export type ZionGPTUsage = {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   modelId: string;
   tokensUsed: number;
   cost: number
@@ -84,7 +82,6 @@ export async function logModelUsage(
     console && console.error('Error logging model usage:', error);
     // Non-blocking - we don't want to fail the main operation
 
-=======
 // ZionGPT Utility Functions;
 // This file handles interaction with the fine-tuned ZionGPT model;
 import { supabase } from '@/integrations/supabase/client',;
@@ -158,7 +155,6 @@ export async function logModelUsage(;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 // Calculate approximate cost based on token usage
@@ -217,7 +213,6 @@ export async function callZionGPT({
     console && console.error('Error calling ZionGPT:', error);
 
     throw error
-=======
 // ZionGPT Utility Functions;
 // This file handles interaction with the fine - tuned ZionGPT model;
 import {supabase} from '@/integrations / supabase / client';
@@ -350,6 +345,5 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

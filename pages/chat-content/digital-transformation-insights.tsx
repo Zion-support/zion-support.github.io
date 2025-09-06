@@ -15,11 +15,9 @@
   ),;
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default DigitalTransformationInsights;
 
 
-=======
 import Head from 'next / head';
       <main>;
         <h1 > DigitalTransformationInsights</h1>;
@@ -30,9 +28,5 @@ import Head from 'next / head';
 ;
 export default DigitalTransformationInsights;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

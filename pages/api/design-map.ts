@@ -12,12 +12,10 @@ export default async function handler(
 ) {
   try {
 
-=======
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   try {;
 
-=======
 export default async function handler(req, res) {
   try {
     const base = getZionDesignMap();
@@ -75,8 +73,6 @@ export default async function handler(req, res) {
   try {
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const base = getZionDesignMap();
     const [localTokens, cmsTokens] = await Promise.all([;
       buildTokenSet();
@@ -86,5 +82,3 @@ export default async function handler(req, res) {
 
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

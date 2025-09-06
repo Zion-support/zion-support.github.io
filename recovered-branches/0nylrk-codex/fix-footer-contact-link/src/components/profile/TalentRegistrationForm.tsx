@@ -21,7 +21,6 @@ type TalentFormValues = z.infer<typeof talentProfileSchema>,
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface CategorizedSkills {
   programming: string[]
   devops: string[]
@@ -46,7 +45,6 @@ import {toast} from "@/components/ui/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {useAuth} from "@/hooks/useAuth";
-=======
 
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -107,7 +105,6 @@ interface EnhancedProfile {
 
 export function TalentRegistrationForm() {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Initialize form with default values
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentProfileSchema)
@@ -126,7 +123,6 @@ export function TalentRegistrationForm() {
     if (skillInput && !skillTags.includes(skillInput)) {
 
 
-=======
       setSkillTags([...skillTags, skillInput]),
       form.setValue("skills", "")
     }
@@ -147,7 +143,6 @@ export function TalentRegistrationForm() {
 
   };
 
-=======
 ;
 export function TalentRegistrationForm() {;
   // Remove the useToast() hook since we're importing the toast function directly;
@@ -175,7 +170,6 @@ export function TalentRegistrationForm() {;
   const handleAddSkill = () => {;
     const skillInput = form && form.getValues("skills");
     if (skillInput && !skillTags && skillTags.includes(skillInput)) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setSkillTags([...skillTags, skillInput]);
       form && form.setValue("skills", "");
     }
@@ -207,7 +201,6 @@ export function TalentRegistrationForm() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
     const formData = form.getValues();
@@ -244,10 +237,8 @@ export function TalentRegistrationForm() {;
     }
   };
 
-=======
 
 
-=======
   },;
 
   // Generate enhanced profile with AI;
@@ -282,11 +273,9 @@ export function TalentRegistrationForm() {;
 
 
       }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       if (error) {;
         throw new Error(error && error.message);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
       setGeneratedContent(data as EnhancedProfile);
 
@@ -367,7 +356,6 @@ function TalentRegistrationForm() {
       form.set_value ("skills", "");
     }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }
           });
         }
@@ -391,7 +379,6 @@ function TalentRegistrationForm() {
 
   };
 
-=======
       }),;
       if (newSkills.length > 0) {;
         setSkillTags([...skillTags, ...newSkills]);
@@ -413,11 +400,8 @@ function TalentRegistrationForm() {
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
-=======
 ;
       // Check condition
 if ( {) {
@@ -442,7 +426,6 @@ if ( {) {
 ;
   // Send notification email;
   const sendEnhancementNotification = async (user_id: string, email: string) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
       await supabase.functions.invoke ('send - email', {
         body: {
@@ -568,7 +551,6 @@ if ( {) {
                   if (typeof skill === 'string' && skill) {;
                     aiSkills && aiSkills.push(skill);
 
-=======
               talent_data: {
                 name: values.name,
                 title: values.title,
@@ -596,7 +578,6 @@ if ( {) {
                     aiSkills.push(skill);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   }
                 });
               }
@@ -606,20 +587,17 @@ if ( {) {
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
 
           }
-=======
 
             }),;
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         } catch (error) {
           console.error("Error enhancing profile:", error),
           // Continue with submission even if enhancement fails
           finalSummary = ""
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         } catch (error) {;
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
@@ -627,7 +605,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       } else if (generatedContent) {;
         finalSummary = generatedContent && generatedContent.summary;
@@ -743,7 +720,6 @@ if ( {) {
 
   return (
 
-=======
 
 ;
       // Get user email for notification;
@@ -806,7 +782,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Basic Information */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;
@@ -824,7 +799,6 @@ if ( {) {
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="Your full name"
-=======
 ;
             // Create a unique set of skills;
             final_skills = [...new Set ([...skill_tags, ...ai_skills])];
@@ -921,7 +895,6 @@ if (throw error) {
                               <Input;
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";
                                 placeholder="Your full name";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                 {...field}
                               />;
                             </div>;
@@ -944,7 +917,6 @@ if (throw error) {
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="e && e.g., Senior Software Developer"
-=======
                           <FormMessage className="text - red - 400" />;
                         </FormItem>)}
                     />;
@@ -962,7 +934,6 @@ if (throw error) {
                               <Input;
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";
                                 placeholder="e.g., Senior Software Developer";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                 {...field}
                               />;
                             </div>;
@@ -985,7 +956,6 @@ if (throw error) {
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="City, State/Province, Country"
-=======
                           <FormMessage className="text - red - 400" />;
                         </FormItem>)}
                     />;
@@ -1003,7 +973,6 @@ if (throw error) {
                               <Input;
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";
                                 placeholder="City, State / Province, Country";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                 {...field}
                               />;
                             </div>;
@@ -1026,7 +995,6 @@ if (throw error) {
                               <Input
                                 className="pl-8 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="e && e.g., 85"
-=======
                           <FormMessage className="text - red - 400" />;
                         </FormItem>)}
                     />;
@@ -1044,7 +1012,6 @@ if (throw error) {
                               <Input;
                                 className="pl - 8 bg - zion - blue border - zion - blue - light text - white";
                                 placeholder="e.g., 85";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                 {...field}
                               />;
                             </div>;
@@ -1090,7 +1057,6 @@ if (throw error) {
                     </label>;
                   </div>;
                   <p className="text-sm text-zion-slate">;
-=======
                           <FormMessage className="text - red - 400" />;
                         </FormItem>)}
                     />;
@@ -1154,7 +1120,6 @@ if (throw error) {
                           AI Profile Enhancement;
                         </FormLabel>;
                         <FormDescription className="text-zion-slate-light">;
-=======
               <Separator className="bg - zion - blue - light / 50" />;
               {/* Bio Section */}
               <div className="space - y-4">;
@@ -1190,7 +1155,6 @@ if (throw error) {
                           AI Profile Enhancement;
                         </FormLabel>;
                         <FormDescription className="text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           Let AI help optimize your profile for better visibility and engagement;
                         </FormDescription>;
                       </div>;
@@ -1291,7 +1255,6 @@ if (throw error) {
                             <Input
                               className="flex-1 bg-zion-blue border-zion-blue-light text-white"
                               placeholder="Add a skill..."
-=======
                         <Switch;
                           checked={field.value}
                           onCheckedChange={field.on_change}
@@ -1378,7 +1341,6 @@ if (throw error) {
                             <Input;
                               className="flex - 1 bg - zion - blue border - zion - blue - light text - white";
                               placeholder="Add a skill...";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                               {...field}
                               onKeyDown={handleSkillKeyPress}
                             />;
@@ -1466,7 +1428,6 @@ if (throw error) {
                               />;
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">;
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>;
-=======
                           <Button;
                             type="button";
                             variant="outline";
@@ -1551,7 +1512,6 @@ if (throw error) {
                               />;
                               <label html_for="unavailable" className="text - white flex items - center gap - 2">;
                                 <div className="h - 2 w - 2 rounded - full bg - red - 500"></div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                 Currently Unavailable;
                               </label>;
                             </div>;
@@ -1567,7 +1527,6 @@ if (throw error) {
                       className="mt-1 && 1.5 bg-zion-blue border-zion-blue-light text-white"
                     />;
                     <FormDescription className="text-zion-slate mt-1 && 1.5 text-sm">;
-=======
                         <FormMessage className="text - red - 400" />;
                       </FormItem>)}
                   />;
@@ -1586,7 +1545,6 @@ if (throw error) {
               </div>;
             </CardContent>;
 
-=======
             <CardFooter className="border - t border - zion - blue - light pt - 6">;
               <div className="flex flex - col sm:flex - row gap - 4 w - full sm:justify - between">;
                 <Button;
@@ -1613,9 +1571,7 @@ if (throw error) {
     </div>);
 }
 
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

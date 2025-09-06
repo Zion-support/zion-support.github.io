@@ -40,7 +40,6 @@ export function BasicInfoForm(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onComplete
 }: BasicInfoFormProps) {
   const form = useForm<BasicInfoFormData>({
@@ -67,7 +66,6 @@ export function BasicInfoForm(): any ({;
         if (value !== undefined) {
           form.setValue(key as keyof BasicInfoFormData, value as any)
 
-=======
 
 import React, { useState, useEffect } from "react",;
 import { useForm } from "react-hook-form",;
@@ -119,31 +117,26 @@ export function BasicInfoForm({;
           form.setValue(key as keyof BasicInfoFormData, value as any);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       });
     }
 
 
-=======
 
   };
 
-=======
   }, [initialData, form]),;
 
   const handleSubmit = (data: BasicInfoFormData) => {;
     onSave(data),;
     if (onComplete) {;
       onComplete();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -190,12 +183,9 @@ export function BasicInfoForm({;
       </form>;
     </Form>;
   );
-=======
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React, { useState, useEffect } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';

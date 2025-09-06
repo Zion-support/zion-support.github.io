@@ -9,7 +9,6 @@
       fetchReferralStats();
       fetchReferrals();
       fetchRewards()
-=======
 import { useState, useEffect } from './react';
 import { toast } from '@/hooks / use - toast';
 import { use_auth } from '@/hooks / use_auth';
@@ -39,7 +38,6 @@ if ( {) {
       fetchReferralStats ();
       fetch_referrals ();
       fetch_rewards ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }, [user]);
 ;
@@ -58,7 +56,6 @@ if ( {) {
       setReferralCode(data)
     } catch (error) {
       console && console.error("Error in fetchReferralCode:", error)
-=======
       setIsLoading (true);
       const { data, error } = await supabase;
         .from ('referral_codes');
@@ -76,7 +73,6 @@ if ( {) {
       setReferralCode (data);
     } catch (error) {
       console.error ("Error in fetchReferralCode:", error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
@@ -139,14 +135,12 @@ if ( {) {
       
 
       if (refError) throw refError;
-=======
 
         .eq('referrer_id', user.id),
       
       if (refError) throw refError,
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Get rewards
       const { data: rewards, error: rewardsError } = await supabase
         .from('referral_rewards')
@@ -166,7 +160,6 @@ if ( {) {
         return sum + (item && item.amount || 0)
 
       }, 0) : 0;
-=======
 
         .eq('user_id', user.id),
         
@@ -182,7 +175,6 @@ if ( {) {
       }, 0) : 0,
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       setStats({
         totalReferrals;
         pendingReferrals;
@@ -296,7 +288,6 @@ if ( {) {
           description: "You need to be logged in to generate a referral code"
           variant: "destructive"});
         return;
-=======
 
   },
 
@@ -311,7 +302,6 @@ if ( {) {
           variant: "destructive"}),
 
         return
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
 
 
@@ -321,7 +311,6 @@ if ( {) {
       });
       if (error) throw error;
       toast({
-=======
       const { data, error } = await supabase.rpc ('generate_referral_code', {
         user_id: user.id;
       });
@@ -331,7 +320,6 @@ if (throw error) {
   $2
 }
       toast ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         title: "Success!";
         description: "Your referral code has been generated"
         variant: "success"});
@@ -365,7 +353,6 @@ if (throw error) {
   const getReferralLink = () => {
     if (!referralCode) return "";
 
-=======
 
         title: "Error generating code",
         description: error.message || "There was a problem generating your referral code",
@@ -503,12 +490,10 @@ if ( {) {
   }
 ;
 
-=======
 
   };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return {
     referral_code;
     is_loading;
@@ -522,6 +507,5 @@ if ( {) {
     fetchReferralStats;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

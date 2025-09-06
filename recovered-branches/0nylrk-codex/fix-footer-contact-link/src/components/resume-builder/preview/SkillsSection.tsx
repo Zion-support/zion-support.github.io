@@ -39,7 +39,6 @@ if ( {) {
     }
     acc[category].push(skill);
 
-=======
 import { Skill } from '@/types/resume',;
 interface SkillsSectionProps {;
   skills: Skill[];
@@ -61,8 +60,6 @@ export function SkillsSection({ skills }: SkillsSectionProps) {;
 
   if (skills.length === 0) return null,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Skills</h2>
@@ -81,10 +78,8 @@ export function SkillsSection({ skills }: SkillsSectionProps) {;
         ))}
       </div>
     </div>
-=======
     },
     {} as Record < string, Skill[]>,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   );
 ;
   // Check condition
@@ -127,7 +122,6 @@ export function SkillsSection(): any ({ skills }: SkillsSectionProps) {;
   );
 }
 
-=======
   return (
     <div className="mb - 6">;
       <h2 className="text - lg font - semibold border - b mb - 3">Skills</h2>;
@@ -142,4 +136,3 @@ export function SkillsSection(): any ({ skills }: SkillsSectionProps) {;
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -7,7 +7,6 @@ export default config;
 
 
 
-=======
 import type { DefaultSeoProps } from 'next - seo';
   default_title: 'Zion Tech Solutions';
   title_template: '%s | Zion Tech Solutions',
@@ -27,7 +26,4 @@ import type { DefaultSeoProps } from 'next - seo';
 ;
 export default config;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

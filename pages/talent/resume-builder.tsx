@@ -9,7 +9,6 @@
   );
 
 
-=======
 
   const [role, setRole] = useState('Data Scientist'),
   const [experienceYears, setExperienceYears] = useState(5),
@@ -26,7 +25,6 @@
     `Improve the following resume ${sectionName} to be professional, concise, and results-focused. Keep markdown formatting.\n\n${content}`
   ),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div>
       <Head>
@@ -80,7 +78,6 @@
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             />
             <AIAssistant
               buttonLabel="Improve with AI"
@@ -90,13 +87,11 @@
 
               onAccept={setSummary}
               authorizationToken={operatorToken}
-=======
 
               defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')}
 
               onAccept={setSummary}
               authorizationToken={operatorToken}
-=======
               defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -114,8 +109,6 @@
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             />
           </div>
         </div>
@@ -132,13 +125,11 @@
 
             onAccept={setExperience}
             authorizationToken={operatorToken}
-=======
 
             defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')}
 
             onAccept={setExperience}
             authorizationToken={operatorToken}
-=======
             defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -156,8 +147,6 @@
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           />
         </div>
         <textarea value={experience} onChange={e => setExperience(e.target.value)} rows={10} className="w-full rounded-md border p-3" />
@@ -173,13 +162,11 @@
 
             onAccept={setSkillsText}
             authorizationToken={operatorToken}
-=======
 
             defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
 
             onAccept={setSkillsText}
             authorizationToken={operatorToken}
-=======
             defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -197,8 +184,6 @@
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           />
         </div>
         <textarea value={skillsText} onChange={e => setSkillsText(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
@@ -207,16 +192,11 @@
   )
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 },
 export default ResumeBuilder,
 
-=======
 },
 
 export default ResumeBuilder,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

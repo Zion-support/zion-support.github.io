@@ -326,7 +326,6 @@ export interface FinancialResponse {
     }
   }
   async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{
-=======
     analysis?: MarketAnalysis,
     goals?: FinancialGoal[];
   }
@@ -505,7 +504,6 @@ if ( {) {
     }
   }
   async getTaxOptimizationStrategies (user_id: string, tax_year: number): Promise<{
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     strategies: string[];
     estimated_savings: number;
     implementation: string[];
@@ -564,7 +562,6 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.e
 
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process && process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 
-=======
     risks: string[],
     deadlines: Record < string, Date>;
   }> {
@@ -621,11 +618,7 @@ if ( {) {
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService (process.env.FINANCIAL_ADVISOR_API_KEY || 'demo - key');
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export interface InvestmentPortfolio {;
 
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

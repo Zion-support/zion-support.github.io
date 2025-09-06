@@ -3,8 +3,6 @@
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const identity = requireRoles(req, res, ["admin", "maintainer"]),
   if (!identity) return,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (req.method === "GET") {
     const nodes = getSourceMapWithExistence()
     const git = getGitStatus()
@@ -12,13 +10,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
 
-=======
-=======
 
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';,
 import { getGitStatus, require_roles  } from '../../../utils / dev_access';,

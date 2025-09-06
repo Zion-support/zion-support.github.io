@@ -54,13 +54,11 @@ export function TalentCard(): any ({;
       onToggleSave(talent && talent.id, !isSaved);
     }
   };
-=======
 
 
   // Extract skills - limit to 5 for display;
   const skills = talent && talent.skills?.slice(0, 5) || [];
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>;
       <div className="p-6">;
@@ -108,12 +106,9 @@ export function TalentCard(): any ({;
             <p className="text-zion-cyan font-medium">{talent && talent.professional_title}</p>;
 
 
-=======
 
             
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent && talent.location && (;
@@ -129,7 +124,6 @@ export function TalentCard(): any ({;
                 </div>;
               )}
 
-=======
 
 
             </div>;
@@ -141,7 +135,6 @@ export function TalentCard(): any ({;
           <div className="mt-4">;
             <div className="flex flex-wrap gap-2">;
               {skills && skills.map((skill, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <span
                   key={index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
@@ -174,7 +167,6 @@ export function TalentCard(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
 
           </div>;
@@ -211,7 +203,6 @@ export function TalentCard(): any ({;
     </Card>
   )
 }
-=======
               onClick={(e) => {;
                 e && e.stopPropagation();
                 handleViewProfile();
@@ -219,7 +210,6 @@ export function TalentCard(): any ({;
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;
-=======
 import { Button } from '@/components / ui / button';
 import { Card } from '@/components / ui / card';
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from './lucide-react';
@@ -376,7 +366,6 @@ if ( {) {
               className="text - zion - cyan hover: text - white hover:bg - zion - blue - light";
             >;
               View <ArrowRight className="ml - 1 h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </Button>;
           </div>;
         </div>;

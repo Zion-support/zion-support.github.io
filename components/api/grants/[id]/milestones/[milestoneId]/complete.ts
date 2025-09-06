@@ -6,7 +6,6 @@ import path from 'path';
 
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
 function grantPath(id: string) {
@@ -72,7 +71,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!id || !milestoneId) {
     res && res.status(400).json({ error: 'Missing id or milestoneId' });
     return;
-=======
     return
 
   }
@@ -113,11 +111,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
 
-=======
   res.status(200).json({ record: existing })
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8');
 }
 /**
@@ -204,10 +199,6 @@ if ( {) {
 write_grant (existing);
   res.status (200).json ({ record: existing });  res.status (200).json ({ record: existing });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

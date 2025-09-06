@@ -1,10 +1,7 @@
 
-=======
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 import {useState} from 'react';
 import {Skill} from '@/types / resume';
 import {Button} from '@/components / ui / button';
@@ -36,7 +33,6 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
 
 
@@ -55,7 +51,6 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
   }
   const refreshSkills = async () => {
     try {
-=======
       return success;
     } catch (err: any) {;
       setError(err && err.message || 'An error occurred'),;
@@ -75,7 +70,6 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
   const refreshSkills = async () => {;
     try {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const resumeData = await fetchResume(resumeId);
       if (resumeData && resumeData.skills) {;
         setLocalSkills(resumeData.skills);
@@ -83,7 +77,6 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
 
     } catch (err: any) {;
@@ -94,13 +87,9 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
   },
 
-=======
   };
-=======
   },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -136,12 +125,9 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       </div>;
     </div>;
   );
-=======
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export /**
  * SkillsForm - Function description
  */

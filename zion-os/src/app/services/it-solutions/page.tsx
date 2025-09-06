@@ -292,7 +292,6 @@ export default function ITSolutionsPage() {;
   return (;
 
     <div className="space-y-8">;
-=======
 "use client",
 import { useState  } from './react';,
 interface ITService {
@@ -587,7 +586,6 @@ export default /**
 function ITSolutionsPage() {
   return (
     <div className="space - y-8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Header */}
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">IT Solutions & Services</h1>;

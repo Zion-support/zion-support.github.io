@@ -6,7 +6,6 @@ import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {ReviewForm} from "./ReviewForm";
 import {useReviews} from "@/hooks/useReviews";
-=======
 import { useState, useEffect } from "react",
 
 
@@ -71,7 +70,6 @@ export function LeaveReviewModal(): any ({;
       const success = await submitReview(formValues);
       if (success) {;
         handleOpenChange(false);
-=======
 
 import { ReviewForm } from "./ReviewForm",
 import { useReviews } from "@/hooks/useReviews",
@@ -84,7 +82,6 @@ interface LeaveReviewModalProps {
   onClose: () => void
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       return success;
     }
@@ -92,18 +89,12 @@ interface LeaveReviewModalProps {
   };
 
 
-=======
 
   },
-=======
   };
-=======
   },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>;
       <DialogContent className="max-w-md">;
@@ -131,8 +122,6 @@ interface LeaveReviewModalProps {
     </Dialog>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { useState, useEffect } from './react';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';
 import { Button } from '@/components / ui / button';

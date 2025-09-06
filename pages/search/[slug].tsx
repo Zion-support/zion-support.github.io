@@ -31,7 +31,6 @@ interface ProductSearchResult extends BaseSearchResult {
 ;
 
 interface TalentSearchResult extends BaseSearchResult {
-=======
 
 interface ProductSearchResult extends BaseSearchResult {;
   type: 'product' | 'equipment';
@@ -39,7 +38,6 @@ interface ProductSearchResult extends BaseSearchResult {;
   rating?: number;
 
 interface TalentSearchResult extends BaseSearchResult {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   type: 'talent';
   rating?: number;
 
@@ -49,10 +47,8 @@ interface BlogSearchResult extends BaseSearchResult {
 ;
 
 interface CategorySearchResult extends BaseSearchResult {
-=======
 
 interface CategorySearchResult extends BaseSearchResult {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   type: 'category';
 
 ;
@@ -77,15 +73,12 @@ const hasRating = (;
 
 interface SearchResultsPageProps {;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   initialResults: SearchResult[];
   query: string;
   slug: string;
   totalCount: number;
 
-=======
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
@@ -157,7 +150,6 @@ interface SearchResultsPageProps {
 
 interface OfflineFilters {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   sortBy?: string;
   category?: string;
   minPrice?: number;
@@ -174,11 +166,9 @@ interface OfflineFilters {
         break;
 
 
-=======
 
             b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
 
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -344,8 +334,6 @@ function offlineSearch(;
           const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           return bRating - aRating;
         });
         break;
@@ -355,7 +343,6 @@ function offlineSearch(;
   } else {;
     all && all.sort((a, b) => a && a.title.localeCompare(b && b.title));
 
-=======
           return aPrice - bPrice
         });
         break;
@@ -384,10 +371,8 @@ function offlineSearch(;
 
   const paginated = all && all.slice(start, start + limit);
   return { results: paginated, totalCount: all && all.length };
-=======
 
   return { results: paginated, totalCount: all.length };
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export default function SearchResultsPage(): any ({;
   initialResults,;
@@ -397,18 +382,13 @@ export default function SearchResultsPage(): any ({;
 
 
 }: SearchResultsPageProps) {  const router = useRouter();
-=======
   initialResults;
   query;
   slug;
   totalCount}: SearchResultsPageProps) {
   const router = useRouter();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }: SearchResultsPageProps) {  const router = useRouter();
-=======
   return { results: paginated, totalCount: all.length   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -425,8 +405,6 @@ export default function SearchResultsPage(req, res) {
   const router = useRouter();
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const { isAuthenticated } = useAuth();
   const [results, setResults] = useState<SearchResult[]>(initialResults);
   const [loading, setLoading] = useState(false);
@@ -449,7 +427,6 @@ export default function SearchResultsPage(req, res) {
         sort: sortBy}),
       if (categoryFilter !== 'all') params.append('category', categoryFilter);
 
-=======
 
   // Fetch search results;
   const fetchResults = async (searchTerm: string, page = 1) => {;
@@ -463,7 +440,6 @@ export default function SearchResultsPage(req, res) {
         sort: sortBy});
       if (categoryFilter !== 'all') params.append('category', categoryFilter);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       if (minPrice) params.append('minPrice', minPrice);
       if (maxPrice) params.append('maxPrice', maxPrice);
       if (minRating) params.append('minRating', minRating);
@@ -504,7 +480,6 @@ export default function SearchResultsPage(req, res) {
     } catch (error) {;
       logErrorToProduction('Error fetching search results:', { data: error });
 
-=======
 
       if (!response.ok) {;
         throw new Error(`Search API error: ${response.status}`);
@@ -537,7 +512,6 @@ export default function SearchResultsPage(req, res) {
 
 
 
-=======
         minRating: minRating ? Number(minRating) : undefined}),;
 
       setTotalResults(offline.totalCount);
@@ -559,7 +533,6 @@ export default function SearchResultsPage(req, res) {
   }
 }
   },;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Handle search input change;
   const handleSearch = (newQuery: string) => {;
     setSearchQuery(newQuery),;
@@ -588,7 +561,6 @@ export default function SearchResultsPage(req, res) {
     ) {
 
 
-=======
     if (debouncedQuery.trim()) {;
 
       fetchResults(debouncedQuery, 1);
@@ -619,13 +591,11 @@ export default function SearchResultsPage(req, res) {
       categoryFilter &&;
       r && r.category !== categoryFilter;
     ) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return false;
 
     if (minRating && (r && r.type === 'product' || r && r.type === 'talent')) {;
       if ((r && r.rating ?? 0) < Number(minRating)) {;
 
-=======
     date: b.published_date,
   }));
   let all = [...product_results, ...talent_results, ...blog_results];
@@ -854,7 +824,6 @@ if ( {) {
       if (< Number (min_rating)) {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         return false;
       }
     }
@@ -893,16 +862,13 @@ if ( {) {
     switch (result && result.type) {;
       case 'product':;
       case 'equipment':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return (
           <div key={result && result.id} data-testid='result-card'>            <ProductCard
 
-=======
         return (
           <div key={result.id} data-testid="result-card">
             <ProductCard
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               product={{
 
                 id: result && result.id,
@@ -915,7 +881,6 @@ if ( {) {
                 reviewCount: 0,
                 tags: result && result.tags || [],
                 category: result && result.category || '',
-=======
 ;
   // Group results by type for better display;
   const grouped_results = filtered_results.reduce (
@@ -936,7 +901,6 @@ if (acc[result.type] = []) {
         return (
           <div key={result.id} data - testid='result - card'>            <ProductCard;
               product={{
-=======
 
 
                 id: result.id,
@@ -949,7 +913,6 @@ if (acc[result.type] = []) {
                 review_count: 0,
                 tags: result.tags || [],
                 category: result.category || '',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 currency: '$',
                 created_at: new Date ().toISOString (),
                 updated_at: new Date ().toISOString (),
@@ -977,10 +940,8 @@ if (acc[result.type] = []) {
               onViewProfile={(id: string) => {;
                 router && router.push(`/talent/${id}`);
 
-=======
           <div key={result.id} data-testid="result-card">
             <TalentCard
-=======
                 in_stock: ((result as any).stock || 0) > 0,              }}
             />;
           </div>);
@@ -989,9 +950,7 @@ if (acc[result.type] = []) {
           <div key={result.id} data - testid='result - card'>            <TalentCard;
 
               talent={{
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 id: result.id,
                 user_id: result.id,
                 full_name: result.title,
@@ -1010,7 +969,6 @@ if (acc[result.type] = []) {
         );
       default:;
 
-=======
         return (
           <div
             key={result.id}
@@ -1026,7 +984,6 @@ if (acc[result.type] = []) {
     }
 
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
           >;
             <h3 className='font-semibold'>{result && result.title}</h3>;
@@ -1034,7 +991,6 @@ if (acc[result.type] = []) {
               {result && result.description}
             </p>;
           </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         );    }
   }
 
@@ -1043,7 +999,6 @@ if (acc[result.type] = []) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       <SEO
@@ -1072,15 +1027,12 @@ if (acc[result.type] = []) {
                   {filteredResults && filteredResults.length > 0;
                     ? `Found ${filteredResults && filteredResults.length} results for "${query}"`;
 
-=======
 
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-=======
 
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div
           className="container mx-auto px-4 py-8"
           data-testid="search-results"
@@ -1098,8 +1050,6 @@ if (acc[result.type] = []) {
                 >
                   {filteredResults.length > 0
                     ? `Found ${filteredResults.length} results for "${query}"`
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     : `No results found for "${query}"`}
 
                 </p>;
@@ -1116,7 +1066,6 @@ if (acc[result.type] = []) {
                   placeholder="Search marketplace..."
                   className="pl-10"
                 />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
             </div>
 
@@ -1140,7 +1089,6 @@ if (acc[result.type] = []) {
                 >
                   <Filter className="h-4 w-4" />
                   Filters
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </Button>
                 <select
 
@@ -1155,7 +1103,6 @@ if (acc[result.type] = []) {
                   className='px-3 py-1 border border-gray-300 rounded-md text-sm';
                   data-testid='sort-select';
 
-=======
                 router.push (`/talent/${id}`);
               }}
               onRequestHire={talent => {
@@ -1236,7 +1183,6 @@ if (acc[result.type] = []) {
                   className='px - 3 py - 1 border border - gray - 300 rounded - md text - sm';
                   data - testid='sort - select';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 >;
                   <option value='relevance'>Relevance</option>;
                   <option value='newest'>Newest</option>;
@@ -1264,7 +1210,6 @@ if (acc[result.type] = []) {
                 >
 
                 <div className="flex items-center gap-1">
-=======
 
                   <option value="all">All Categories</option>
                   {categories.map((c) => (
@@ -1284,7 +1229,6 @@ if (acc[result.type] = []) {
                 <div className="flex items-center gap-1">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <input
                     type="number"
                     placeholder="Min $"
@@ -1300,7 +1244,6 @@ if (acc[result.type] = []) {
                     onChange={(e) => setMaxPrice(e.target.value)}
                     className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
                   />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
                 <select
                   value={minRating}
@@ -1308,7 +1251,6 @@ if (acc[result.type] = []) {
                     onChange={e => setMaxPrice(e && e.target.value)}
                     className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'                  />;
                 </div>;
-=======
                   onChange={(e) => setMinRating(e.target.value)}
                   className="px-3 py-1 border border-gray-300 rounded-md text-sm"
                 >
@@ -1325,7 +1267,6 @@ if (acc[result.type] = []) {
                   onChange={e => setMinRating(e && e.target.value)}
                   className='px-3 py-1 border border-gray-300 rounded-md text-sm';
 
-=======
                 <select;
                   value={category_filter}
                   on_change={e => setCategoryFilter (e.target.value)}
@@ -1357,7 +1298,6 @@ if (acc[result.type] = []) {
                   on_change={e => setMinRating (e.target.value)}
                   className='px - 3 py - 1 border border - gray - 300 rounded - md text - sm';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 >;
                   <option value=''>All Ratings</option>;
                   <option value='4'>4★ & up</option>;
@@ -1384,11 +1324,9 @@ if (acc[result.type] = []) {
                   className={viewMode === 'list' ? 'active' : ''}
 
 
-=======
 
               <div className="flex items-center gap-2">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
     console.error("Error:", error);
@@ -1429,7 +1367,6 @@ if (acc[result.type] = []) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >;
                   <List className='h-4 w-4' />                </Button>;
               </div>;
@@ -1438,7 +1375,6 @@ if (acc[result.type] = []) {
 
 
 
-=======
               <div className='flex items - center gap - 2'>;
                 <Button;
                   variant={view_mode === 'grid' ? 'default' : 'outline'}
@@ -1460,7 +1396,6 @@ if (acc[result.type] = []) {
               </div>;
             </div>;
           </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* Loading State */}
 
           {loading && results.length === 0 && (
@@ -1478,8 +1413,6 @@ if (acc[result.type] = []) {
                     {type}s ({typeResults.length})
 
                   </h2>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {filteredResults && filteredResults.length > 0 && (;
             <div className='space-y-8'>;
               {Object && Object.entries(groupedResults).map(([type, typeResults]) => (;
@@ -1487,7 +1420,6 @@ if (acc[result.type] = []) {
                   <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults && typeResults.length});
                   </h2>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <div
                     className={
                       viewMode === 'grid'
@@ -1511,7 +1443,6 @@ if (acc[result.type] = []) {
 
       `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`    );
 
-=======
       process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',
     logInfo(`Fetching search results for slug: ${slug}, query: ${query}`),
     const response = await fetch(
@@ -1519,7 +1450,6 @@ if (acc[result.type] = []) {
     );
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     let results = [];
     let totalCount = 0;
 
@@ -1638,7 +1568,6 @@ if ( {) {
 
 }
 
-=======
       results = data.results || [];
       totalCount = data.totalCount || results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`)
@@ -1667,8 +1596,6 @@ if ( {) {
   }
 
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       total_count = offline.total_count;    }
     return {
       props: {
@@ -1692,11 +1619,8 @@ total_count: offline.total_count,
     }  }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
-=======
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1813,11 +1737,9 @@ export const getServerSideProps: GetServerSideProps<;
     if (response.ok) {;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       const data = await response.json();
       results = data.results || [];
       totalCount = data.totalCount || results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

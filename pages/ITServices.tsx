@@ -27,7 +27,6 @@ import React from "react";
 import Layout from "../components/Layout";
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function ITServices() {
   return (
     <Layout
@@ -52,7 +51,6 @@ export default function ITServices() {
         </div>
       </div>
     </Layout>
-=======
 export default function ITServices() {;
   return (
     <Layout
@@ -70,7 +68,6 @@ export default function ITServices() {;
           </div>;
           <div className="text-center">;
             <p className="text-gray-600">;
-=======
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -95,21 +92,17 @@ function ITServices() {
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               IT Services page is under construction.;
             </p>;
           </div>;
         </div>;
       </div>;
 
-=======
 
-=======
 
 }
 
 
-=======
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -725,10 +718,6 @@ export default function ITServices() {
 
 
 
-=======
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

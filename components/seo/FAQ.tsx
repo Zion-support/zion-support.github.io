@@ -44,13 +44,11 @@ export default function FAQ(): any ({ items }: Props) {;
             </div>;
           </div>;
 
-=======
 import React from 'react';
 type QA = { q: string, a: string };
 type Props = { items: QA[] };
 export default function FAQ({ items }: Props) {
   if (!items || items.length === 0) return null;
-=======
 type QA = { q: string; a: string };
 type Props = { items: QA[] };
 
@@ -64,8 +62,6 @@ type Props = { items: QA[] };
             <div className="font-medium">{it.q}</div>
             <div className="mt-1 text-sm text-gray-700 dark:text-gray-300">{it.a}</div>
           </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         ))}
       </div>;
     </div>;
@@ -75,7 +71,6 @@ type Props = { items: QA[] };
 
 }
 
-=======
 import React from './react';
 type QA = { q: string; array: string }
 type Props = { items: QA[] }
@@ -104,7 +99,4 @@ if (return null) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

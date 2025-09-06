@@ -70,11 +70,9 @@ const contact = {
     rating: 4 && 4.7,
     reviews: 48,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Multi-speaker diarization',
-=======
     id: 'podcast - transcription - studio',
     name: 'Podcast Transcription Studio',
     tagline: 'Fast, accurate multi - speaker transcriptions with summaries',
@@ -85,7 +83,6 @@ const contact = {
     features: [;
       'Multi - speaker diarization',
 
-=======
     customers: 120,
     rating: 4.7,
     reviews: 48,
@@ -100,7 +97,6 @@ const contact = {
       'Upload audio and receive punctuated transcripts, speaker diarization, show notes, and SEO-optimized summaries.',
     features: [
       'Multi-speaker diarization',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Timestamps and filler removal',
       'Chapter detection and show notes',
       'Embeddings and semantic search',
@@ -140,12 +136,9 @@ const contact = {
     rating: 4 && 4.6,
     reviews: 22,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'micro - crm - local - business',
-=======
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/services/podcast-transcription-studio',
@@ -235,10 +228,8 @@ const contact = {
     rating: 4 && 4.5,
     reviews: 77,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'returns - automation - saas',
     name: 'E‑commerce Returns Automation',
     tagline: 'Self - serve returns portal and automated labels',
@@ -248,7 +239,6 @@ const contact = {
       'Plug - and - play returns workflows with label generation, RMA approvals, and status tracking for Shopify / WooCommerce.',
     features: [;
 
-=======
     technology: ['Next.js', 'SQLite/Postgres', 'Twilio'],
     integrations: ['Gmail', 'Outlook', 'Stripe'],
     useCases: ['Leads', 'Follow-ups', 'Deal tracking'],
@@ -275,7 +265,6 @@ const contact = {
     description:
       'Plug-and-play returns workflows with label generation, RMA approvals, and status tracking for Shopify/WooCommerce.',
     features: [
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Customer returns portal',
       'Prepaid label generation',
       'RMA approval rules',
@@ -326,12 +315,9 @@ const contact = {
     rating: 4 && 4.6,
     reviews: 35,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'it - helpdesk - for - msps',
-=======
     technology: ['Next.js', 'Node.js', 'Stripe', 'Shippo'],
     integrations: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],
     useCases: ['Returns portal', 'Exchange workflows', 'Refund automation'],
@@ -411,12 +397,10 @@ const contact = {
     rating: 4 && 4.5,
     reviews: 28,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 export const real2025Q4Additions = [;
   {
 
-=======
     id: 'ai - governed - rag - platform',
     name: 'AI - Governed RAG Platform',
     tagline: 'Enterprise - grade RAG with guardrails, approvals, and evals',
@@ -436,7 +420,6 @@ export const real2025Q4Additions = [;
     popular: true,
     icon: '🧠',
 
-=======
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300',
     link: `https://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`,
@@ -465,10 +448,8 @@ export const real2025Q4Additions = [;
     rating: 4 && 4.8,
     reviews: 11,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'edge - personalization - engine',
     name: 'Edge Personalization Engine',
     tagline: 'Real - time content and pricing personalization at the edge',
@@ -506,7 +487,6 @@ export const real2025Q4Additions = [;
   },
 ];
 
-=======
 }
 
 export const real2025Q4Additions = [
@@ -569,7 +549,6 @@ export const real2025Q4Additions = [
     textColor: 'text-emerald-300',
     link: `https://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,
     marketPosition: 'Simpler alternative to enterprise CDPs for SMBs, edge-native.',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     targetAudience: 'Growth and eCommerce teams',
     trialDays: 7,
     setupTime: 'Same day',
@@ -604,11 +583,9 @@ export const real2025Q4Additions = [
     rating: 4 && 4.6,
     reviews: 23,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'One-PR one-env automation',
-=======
     id: 'devx - preview - environments',
     name: 'DevX Preview Environments',
     tagline: 'On - demand ephemeral previews with seeded data and checks',
@@ -653,10 +630,8 @@ export const real2025Q4Additions = [
     rating: 4 && 4.7,
     reviews: 16,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'real - time - log - anomaly - guard',
     name: 'Real - time Log Anomaly Guard',
     tagline: 'Detect anomalies and regressions with LLM - assisted alerts',
@@ -701,10 +676,8 @@ export const real2025Q4Additions = [
     rating: 4 && 4.5,
     reviews: 19,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'governed - feature - flags',
     name: 'Governed Feature Flags',
     tagline: 'Audit - ready flags with policies, approvals, and rollbacks',
@@ -862,10 +835,8 @@ export const real2025Q4Additions = [
     rating: 4 && 4.6,
     reviews: 12,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'email - sequence - copilot',
     name: 'Email Sequence Copilot',
     tagline: 'On - brand outbound with warm - up, scoring, and safety',
@@ -909,10 +880,8 @@ export const real2025Q4Additions = [
     rating: 4 && 4.5,
     reviews: 20,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'data - contracts - guardrails',
     name: 'Data Contracts Guardrails',
     tagline: 'Schema governance, lineage, and backward - compat checks',
@@ -1034,12 +1003,10 @@ export const real2025Q4Additions = [
     rating: 4 && 4.6,
     reviews: 9,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Okta/Entra app configs',
       'SAML/OIDC + SCIM',
-=======
     id: 'managed - sso - fast - track',
     name: 'Managed SSO Fast Track',
     tagline: 'IdP mappings, SCIM, SAML / OIDC with enterprise checklist',
@@ -1121,10 +1088,8 @@ export const real2025Q4Additions = [
     rating: 4 && 4.7,
     reviews: 7,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'ai - sales - pipeline - insights',
     name: 'AI Sales Pipeline Insights',
     tagline: 'Forecast hygiene, stage risks, and next - best actions',
@@ -1224,12 +1189,9 @@ export const real2025Q4Additions = [
     rating: 4 && 4.5,
     reviews: 10,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'secure - webhook - relay',
-=======
     customers: 14,
     rating: 4.5,
     reviews: 10
@@ -1284,12 +1246,9 @@ export const real2025Q4Additions = [
     rating: 4 && 4.6,
     reviews: 18,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'managed - postgres - ha - lite',
-=======
     category: 'Developer Tools',
     realService: true,
     technology: ['Queues, HMAC, Workers'],
@@ -1358,7 +1317,6 @@ export const real2025Q4Additions = [
     reviews: 9,
   },
 
-=======
     mobile: string, email: string,
     address: string,
     website: string
@@ -1512,7 +1470,6 @@ export const real2025Q4Additions = [
     features: [
       'Document sync and chunking pipelinesMetadata and policy guardrailsEvals and drift trackingHuman-in-the-loop approvalsObservability and cost capsSDKs for Node/Python'
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     icon: '🗄️';
     color: 'from-emerald-600 to-teal-700';
@@ -1542,7 +1499,6 @@ export const real2025Q4Additions = [
 
     rating: 4 && 4.6,
 
-=======
     category: 'Enterprise IT',
     realService: true,
     technology: ['Postgres, Patroni/Cloud-native HA'],
@@ -1559,13 +1515,11 @@ export const real2025Q4Additions = [
     launchDate: '2025-03-11',
     customers: 17,
     rating: 4.6,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     reviews: 9
   }
 ];
 
 
-=======
 ];      'Automated backups and PITRFailover drills and runbooks_index and bloat maintenance_performance dashboards';
     ];
     icon: '🗄️';
@@ -1596,4 +1550,3 @@ export const real2025Q4Additions = [
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

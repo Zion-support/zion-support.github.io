@@ -26,7 +26,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Users, AlertTriangle, CheckCircle, Clock } from 'lucide-react';
@@ -44,7 +43,6 @@ const securityStats = [
 ];
 export default function SecurityPage() {
 
-=======
 
 const securityFeatures = [;
   {;
@@ -93,7 +91,6 @@ const securityStats = [;
 ];
 
 export default function SecurityPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Layout
       title="Security - Zion Tech Group"
@@ -111,7 +108,6 @@ export default function SecurityPage() {;
           </div>
           <div className="container mx-auto px-4 relative z-10">
 
-=======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
@@ -273,7 +269,6 @@ export default function Security(req, res) {
             </motion.div>
           </div>
         </section>
-=======
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
@@ -297,7 +292,6 @@ export default function Security(req, res) {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Security Stats */}
 
             </div>;
@@ -541,7 +535,6 @@ function SecurityPage() {
                 </div>;
                 <h3 className="text-lg font-bold text-gray-900 mb-2">HIPAA</h3>;
                 <p className="text-gray-600 text-sm">Health Insurance Portability and Accountability Act</p>;
-=======
                   className="bg - white rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 p - 6";
                 >;
                   <div className="flex items - center mb - 4">;
@@ -618,7 +611,6 @@ function SecurityPage() {
         </section>;
 
 
-=======
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -647,25 +639,19 @@ function SecurityPage() {
 }
                   className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 </Link>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
               </div>
             </motion.div>
           </div>
         </section>
 
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   View Compliance Details;
                 </Link>;
@@ -681,31 +667,23 @@ function SecurityPage() {
   );
 
   )
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
   );
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }  )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
   );
 }
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white">;
           <div className="container mx - auto px - 4 text - center">;
@@ -743,4 +721,3 @@ function SecurityPage() {
 }
 );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

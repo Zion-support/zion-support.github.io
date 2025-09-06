@@ -3,7 +3,6 @@
 const fs = require ('fs');
 const path = require ('path');
 const { exec_sync } = require ('child_process');
-=======
 
 
 ;

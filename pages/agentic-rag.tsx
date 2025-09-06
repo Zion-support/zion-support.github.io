@@ -6,7 +6,6 @@ import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMat
 import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
 ;
 
-=======
 import React from 'react'
 import Head from 'next/head'
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground'
@@ -14,7 +13,6 @@ import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucid
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function AgenticRAGPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950'
@@ -37,7 +35,6 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 
 	return (_<UltraFuturisticMatrixBackground>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 			<Head>
 				<title>Agentic RAG Platform | Zion Tech Group</title>
 				<meta name="description" content="High-accuracy retrieval augmented generation with ingestion, indexing, reranking, and evaluation built-in." />
@@ -54,7 +51,6 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 						                                        <a href="/resources" className="border-gray-600 text-gray-200 border px-6 py-3 rounded-xl">Explore Docs</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 					</div>
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
@@ -81,7 +77,6 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 				</div>
 				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
@@ -112,16 +107,13 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 					</div>
 				</div>
 			</div>
 		</UltraFuturisticMatrixBackground>
 
-=======
 }
 
-=======
 import React from 'react',
 import Head from 'next / head',
 import UltraFuturisticMatrixBackground from '../components / ui / UltraFuturisticMatrixBackground',
@@ -198,9 +190,5 @@ return (
   </div>;
   </UltraFuturisticMatrixBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

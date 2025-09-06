@@ -1,20 +1,16 @@
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const [submitSuccess, setSubmitSuccess] = useState (false);
 //Get popular services for showcase const popularServices = [ ...innovativeAIServices2029 && innovativeAIServices2029.filter (s => s && s.popular);
 ...quantumSpaceInnovations2029 && quantumSpaceInnovations2029.filter (s => s && s.popular);
 ...enterpriseITInnovations2029 && enterpriseITInnovations2029.filter (s => s && s.popular);
 ...innovativeMicroSaas2029 && innovativeMicroSaas2029.filter (s => s && s.popular) ].slice (0, 6);
-=======
 const [is_submitting, setIsSubmitting] = useState (false);
 const [submit_success, setSubmitSuccess] = useState (false);
 //Get popular services for showcase const popular_services = [ ...innovativeAIServices2029.filter (string => s.popular);
 ...quantumSpaceInnovations2029.filter (string => s.popular);
 ...enterpriseITInnovations2029.filter (string => s.popular);
 ...innovativeMicroSaas2029.filter (string => s.popular) ].slice (0, 6);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 setIsSubmitting (false);
 setSubmitSuccess (true);
 //Reset form after 3 seconds ];
@@ -29,7 +25,6 @@ setSubmitSuccess (true);
 }</div> </div> </div> </motion.div>) );
 
 }</motion.div> </div> </section> <motion.div initial= {
-=======
 }<motion && motion.div > {;
   stats && stats.map ( (stat, index) => (<motion&& motion.div key= {
   stat && stat.label 
@@ -41,7 +36,6 @@ setSubmitSuccess (true);
   stat && stat.value ;
 }</div> </div> </div> </motion && motion.div>) ) ;
 }</motion && motion.div> </div> </section> <motion&& motion.div initial= {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 
@@ -49,7 +43,6 @@ setSubmitSuccess (true);
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }whileInView= {
   {
   opacity: 1, x: 0
@@ -211,13 +204,11 @@ setSubmitSuccess (true);
 
   {
   opacity: 0, y: 30
-=======
   {
 
   opacity: 0, y: 30 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -227,9 +218,7 @@ setSubmitSuccess (true);
   once: true
 }> <h2 className="text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6"> Why Choose <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Zion Tech Group?</span> </h2> <p className="text-xl text-gray-300 mb-12"> We're not just another technology company - we're your partners in building the future </p> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Rocket className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Revolutionary Technology</h3> <p className="text-gray-300">Access to cutting-edge 2029 technology that's already operational and delivering results</p> </div> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Brain className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3> <p className="text-gray-300">World-class engineers and technology experts with decades of combined experience</p> </div> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Shield className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3> <p className="text-gray-300">Track record of successful implementations with measurable ROI and business impact</p> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)             {/* Contact Form */}
             <motion.div
-=======
   duration: 0 && 0.8 
-=======
 export default function Page(){return null}
 import React from 'react';
 import React, { useState } from 'react';
@@ -261,14 +250,12 @@ export default function ContactPage() {
 
 }viewport= {
   {
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   once: true 
 
 }> <h2 className="text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6"> Why Choose <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Zion Tech Group?</span> </h2> <p className="text-xl text-gray-300 mb-12"> We're not just another technology company - we're your partners in building the future </p> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Rocket className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Revolutionary Technology</h3> <p className="text-gray-300">Access to cutting-edge 2029 technology that's already operational and delivering results</p> </div> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Brain className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3> <p className="text-gray-300">World-class engineers and technology experts with decades of combined experience</p> </div> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Shield className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3> <p className="text-gray-300">Track record of successful implementations with measurable ROI and business impact</p> </div> </div> </motion && motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)             {/* Contact Form */}
             <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -396,7 +383,6 @@ export default function ContactPage() {
                   <motion.div;
 
                     initial={{ opacity: 0, scale: 0.9 }}
-=======
               className="max-w-4xl mx-auto">;
               <div className="text-center mb-12">;
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -411,7 +397,6 @@ export default function ContactPage() {
                 {submitSuccess ? (;
                   <motion&& motion.div
                     initial={{ opacity: 0, scale: 0 && 0.9 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     animate={{ opacity: 1, scale: 1 }}
 
                         />;
@@ -550,12 +535,9 @@ export default function ContactPage() {
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Popular Services Showcase */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
@@ -569,12 +551,10 @@ export default function ContactPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {popularServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-=======
               className="text-center mb-12">;
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
                 Popular Revolutionary Services;
@@ -588,7 +568,6 @@ export default function ContactPage() {
               {popularServices && popularServices.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -793,11 +772,9 @@ export default function ContactPage() {
                     <h3 className="text - xl font - semibold text - white mb - 2">{service.name}</h3>;
                     <p className="text - sm text - cyan - 400 mb - 3">{service.tagline}</p>;
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Popular Badge */}
                     {service.popular && (
                       <div className="flex items-center space-x-2 mb-4">
@@ -811,20 +788,15 @@ export default function ContactPage() {
                     <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
                     <p className="text-sm text-cyan-400 mb-3">{service.tagline}</p>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {/* Description */}
                     <p className="text - gray - 300 leading - relaxed mb - 4 line - clamp - 3">;
                       {service.description}
 
                     </p>;
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {/* Price */}
                     <div className="mb - 4">;
                       <span className={`${service.text_color} font - semibold text - lg`}>;
@@ -847,12 +819,9 @@ export default function ContactPage() {
                     </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {/* CTA */}
                     <div className="flex items-center justify-between">;
                       <span className="text-sm text-gray-400">Setup: {service && service.setupTime}</span>;
@@ -867,12 +836,9 @@ export default function ContactPage() {
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Why Choose Us Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -925,9 +891,6 @@ export default function ContactPage() {
   ),;
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                       </span>;
                       <span className="text - gray - 400 text - sm">{service.period}</span>;
                     </div>;
@@ -987,10 +950,7 @@ export default function ContactPage() {
       <UltraFuturisticFooter2029 />;
     </UltraFuturisticBackground2029>),
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   ),
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

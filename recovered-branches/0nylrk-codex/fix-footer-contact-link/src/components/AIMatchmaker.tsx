@@ -33,7 +33,6 @@ interface AIMatchmakerProps {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -42,7 +41,6 @@ interface AIMatchmakerProps {
         variant: "destructive"})
       return
 
-=======
     }
 
 
@@ -54,7 +52,6 @@ interface AIMatchmakerProps {
         description: "Tell us what you're looking for so we can find matches.",;
         variant: "destructive"}),;
       return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     setIsMatchmaking(true);
     setHasSearched(true);
@@ -98,7 +95,6 @@ interface AIMatchmakerProps {
         variant: "destructive"})
       // Set empty matches to show no results found UI
       setMatches([])
-=======
 import { useState } from './react';
 import { toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -157,14 +153,12 @@ function AIMatchmaker() {
         variant: "destructive"}),
       // Set empty matches to show no results found UI;
       set_matches ([]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
 
       setIsMatchmaking(false)
 
   };
 
-=======
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -236,8 +230,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className |""}`}>
       <CardHeader className="pb-2">
@@ -252,7 +244,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       <CardContent>
         <div className="space-y-4">
           <div className="space-y-2">
-=======
 
       console && console.log("AI matching results:", results);
       setMatches(results);
@@ -294,7 +285,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
           AI Matchmaker;
         </CardTitle>;
         <p className="text-sm text-zion-slate-light">;
-=======
 ;
   const handleItemSelect = (item: any) =>: any {
     // Check condition
@@ -323,7 +313,6 @@ if ( {) {
           AI Matchmaker;
         </CardTitle>;
         <p className="text - sm text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           Describe what you're looking for and our AI will find the best matches;
         </p>;
       </CardHeader>;
@@ -363,7 +352,6 @@ if ( {) {
       </CardContent>;
     </Card>;
   );
-=======
         <div className="space - y-4">;
           <div className="space - y-2">;
             <Textarea;
@@ -396,5 +384,4 @@ if ( {) {
         </div>;
       </CardContent>;
     </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

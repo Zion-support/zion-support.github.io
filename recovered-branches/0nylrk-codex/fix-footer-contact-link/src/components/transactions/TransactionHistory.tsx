@@ -54,7 +54,6 @@ import { Badge } from '@/components / ui / badge';
 import { Skeleton } from '@/components / ui / skeleton';
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from './lucide-react';
 import { formatDistanceToNow } from './date - fns';
-=======
 
 interface Transaction {
   id: string,
@@ -79,7 +78,6 @@ interface Transaction {
 
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       toast({
         title: "Success"
         description: data.message |"Transaction updated successfully"})
@@ -152,7 +150,6 @@ interface Transaction {
 
 
   if (error) {
-=======
   const { data: transactions, isLoading, error, refetch } = useQuery({;
     queryKey: ['transactions', user?.id, filter];
     queryFn: async () => {;
@@ -254,7 +251,6 @@ interface Transaction {
   };
 
   if (error) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">;
         <div className="text-center text-zion-slate-light">;
@@ -299,7 +295,6 @@ interface Transaction {
                           ) : (
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>
 
-=======
 
       }),;
       if (error) throw error,;
@@ -502,7 +497,6 @@ interface Transaction {
                             transaction.completed_at |
                             transaction.refunded_at |
                             transaction.cancelled_at!
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           ).toLocaleDateString()}
                         </span>;
                       </div>;
@@ -568,8 +562,6 @@ interface Transaction {
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
 
 

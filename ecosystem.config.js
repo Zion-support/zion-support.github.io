@@ -1,23 +1,15 @@
 
 
 
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 module.exports = {;
-=======
 module && module.exports = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   apps:[;
-=======
 module.exports = {apps:[;
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {;
 
       name:'error-fixer',;
@@ -115,25 +107,18 @@ module.exports = {apps:[;
   ]
 
 
-=======
-
-=======
 
 
 
-=======
-=======
+
 
 }
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default {
   apps: [;
     {
 
       name: 'bolt-zion-app',
-=======
       name: 'bolt - zion - app',
 
       script: 'npm',
@@ -334,7 +319,6 @@ export default {
     }
   ],
 module && module.exports = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   apps: [{
 
     },
@@ -349,21 +333,13 @@ module && module.exports = {
 
 
 
-=======
-=======
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 }
 
-=======
 
->>>>>>> origin/automation-improvements-final
-=======
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
     name: "ziontechgroup - site",
     script: "npm",
     args: "start",
@@ -386,4 +362,3 @@ module && module.exports = {
   }];
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

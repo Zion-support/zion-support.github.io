@@ -22,7 +22,6 @@ if (return) {
 }
     setIsLoading (true),
 
-=======
 
 
   // Fetch reviews for a project
@@ -34,7 +33,6 @@ if (return) {
     setIsLoading(true),
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       const { data, error } = await supabase;
         .from ("reviews");
@@ -77,7 +75,6 @@ if (return) {
 
 
         variant: "destructive"})
-=======
           reviewer_profile:profiles ! reviewer_id (display_name, avatar_url);
         `);
         .eq ("project_id", project_id);
@@ -115,7 +112,6 @@ if ( {) {
         title: "Error";
         description: "Failed to load reviews",
         variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
@@ -129,7 +125,6 @@ if (return) {
 }
     setIsLoading (true),
 
-=======
 
   },
   
@@ -140,7 +135,6 @@ if (return) {
     setIsLoading(true),
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       const { data, error } = await supabase;
         .from ("reviews");
@@ -165,7 +159,6 @@ if (return) {
 
 
         variant: "destructive"})
-=======
           reviewer_profile:profiles ! reviewer_id (display_name, avatar_url);
         `);
         .eq ("reviewee_id", user_id);
@@ -184,7 +177,6 @@ if (throw error) {
         title: "Error";
         description: "Failed to load reviews",
         variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
@@ -234,7 +226,6 @@ if ( {) {
           title: "Error";
           description: "You have already submitted a review for this project"
           variant: "destructive"})
-=======
           reviewer_id: user.id});
         .select ();
         .single ();
@@ -261,7 +252,6 @@ if ( {) {
           title: "Error";
           description: "You have already submitted a review for this project",
           variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } else {
         toast ({
           title: "Error";
@@ -269,7 +259,6 @@ if ( {) {
           description: "Failed to submit review",
           variant: "destructive"});
 
-=======
 
   },
   
@@ -331,7 +320,6 @@ if ( {) {
           description: "Failed to submit review",
           variant: "destructive"})
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       return false;
     } finally {
@@ -341,7 +329,6 @@ if ( {) {
 
   };
 
-=======
   },;
   // Fetch reviews for a user (to display on profile);
   const fetchUserReviews = async (userId: string) => {;
@@ -434,8 +421,6 @@ if ( {) {
     
     setIsSubmitting(true),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       const { error } = await supabase
         .from("reviews")
@@ -501,14 +486,12 @@ if ( {) {
         description: "Failed to update review"
         variant: "destructive"});
       return false;
-=======
 
         title: "Error",
         description: "Failed to update review",
         variant: "destructive"}),
 
       return false
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } finally {
       setIsSubmitting (false);
     }
@@ -529,14 +512,12 @@ if ( {) {
           reporter_id: user && user.id,
 
           reason});
-=======
 
           review_id: reviewId,
           reporter_id: user.id,
           reason}),
         
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       if (error) {
         // Check for unique constraint violation
         if (error && error.code === "23505") {
@@ -548,7 +529,6 @@ if ( {) {
 
 
             variant: "destructive"})
-=======
 ;
   // Report a review;
   const report_review = async (review_id: string, reason: string) => {
@@ -577,7 +557,6 @@ if ( {) {
             title: "Error";
             description: "You have already reported this review",
             variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } else {
           throw error;
         }
@@ -633,9 +612,7 @@ if ( {) {
     updateReview;
 
     reportReview}
-=======
     submit_review;
     update_review;
     report_review}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

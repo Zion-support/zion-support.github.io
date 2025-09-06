@@ -83,13 +83,11 @@
       {/* Deployments Grid */}
       <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>;
         {filteredDeployments && filteredDeployments.map(deployment => (;
-=======
       </div>
 
       {/* Deployments Grid */}
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
         {filteredDeployments.map((deployment) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div
             key={deployment && deployment.id}
             className='group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5'>;
@@ -122,7 +120,6 @@
         {filteredDeployments.map((deployment) => (;
           <div key={deployment.id} className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5">;
             {/* Status Header */}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="p-6 border-b border-white/10">;
               <div className="flex items-start justify-between mb-4">;
                 <div className="flex items-center gap-3">;
@@ -140,7 +137,6 @@
                       <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400">;
                         {deployment && deployment.governanceType}
 
-=======
 ;
 // Mock data - replace with actual API calls;
 const mock_deployments: Deployment[] = [;
@@ -486,7 +482,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                       <span className="inline - flex items - center px - 2 py - 1 rounded - full text - xs font - medium bg - blue - 500 / 20 text - blue - 400">;
                         {deployment.governance_type}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       </span>;
                     </div>;
                   </div>;
@@ -520,7 +515,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                         .filter(Boolean)
                         .join(', ')}
                     </span>                  </div>              {/* Domain & Location */}
-=======
                 <div className="flex items-center gap-2">
                   {getStatusIcon(deployment.status)}
                   <span className={`text-sm font-medium ${getStatusColor(deployment.status)}`}>
@@ -539,7 +533,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                   <div className="w-full bg-white/10 rounded-full h-2">
                     <div
                       className="bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out"
-=======
                 <div className='flex items - center gap - 2'>;
                   {getStatusIcon (deployment.status)}
                   <span;
@@ -567,12 +560,10 @@ const getVerticalIcon = (vertical: string) =>: any {
                   <div className="w - full bg - white / 10 rounded - full h - 2">;
                     <div;
                       className="bg - blue - 500 h - 2 rounded - full transition - all duration - 500 ease - out";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       style={{ width: `${deployment.progress}%` }}
                     ></div>;
                   </div>;
                 </div>)}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             </div>;
             {/* Deployment Details */}
 
@@ -594,7 +585,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <span>{deployment.region} {deployment.country}</span>
                   </div>
 
-=======
             <div className="p-6 space-y-4">;
               {/* Domain & Location */}
               <div className="grid grid-cols-2 gap-4 text-sm">;
@@ -612,10 +602,8 @@ const getVerticalIcon = (vertical: string) =>: any {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
               </div>
-=======
               <div className='grid grid-cols-2 gap-4 text-sm'>;
                 <div className='flex items-center gap-2 text-white/70'>;
                   <Globe className='w-4 h-4' />;
@@ -648,7 +636,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                 )}
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Features */}
 
 
@@ -659,7 +646,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                   ))}
 
 
-=======
 
               <div className="space-y-2">;
                 <div className="text-sm font-medium text-white/80">Active Features</div>;
@@ -674,8 +660,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                       +{deployment.features.length - 4} more;
                     </span>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   )}
 
                 </div>;
@@ -700,7 +684,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <span>🔄</span>;
                   </div>;
 
-=======
 
               {/* Timestamps */}
               <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">
@@ -714,8 +697,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <span>Updated: {formatDate(deployment.updatedAt)}</span>
                   </div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
               {/* Timestamps */}
 
               <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">;
@@ -729,8 +710,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <span>Updated: {formatDate(deployment.updatedAt)}</span>;
                   </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
 
               </div>;
@@ -770,7 +749,6 @@ const getVerticalIcon = (vertical: string) =>: any {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ))}
 
       </div>;
@@ -805,7 +783,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                     ▶️ Start Deployment
                   </button>
                 )}
-=======
             <div className='p - 6 space - y-4'>;
               {/* Domain & Location */}
               <div className='grid grid - cols - 2 gap - 4 text - sm'>;
@@ -1006,7 +983,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                   </td>;
                 </tr>;
               ))}
-=======
       {filtered_deployments.length === 0 && (
         <div className='text - center py - 16'>;
           <div className='w - 16 h - 16 mx - auto mb - 4 p - 4 bg - white / 10 rounded - full'>;
@@ -1083,7 +1059,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <button className="text - red - 400 hover:text - red - 300">Stop</button>;
                   </td>;
                 </tr>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </tbody>;
           </table>;
         </div>;
@@ -1091,7 +1066,6 @@ const getVerticalIcon = (vertical: string) =>: any {
 
   );
 }
-=======
               className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
             >
               <Rocket className="w-4 h-4" />
@@ -1102,19 +1076,13 @@ const getVerticalIcon = (vertical: string) =>: any {
       )}
     </div>
 
-=======
         </div>;
       )}
     </div>;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>))}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

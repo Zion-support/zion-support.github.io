@@ -23,7 +23,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res && res.status(200).json({ ok: true, review });  }
 
 
-=======
     user_id,
     reviewer_id,
     type,
@@ -35,7 +34,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await supabase.from ('trust_peer_reviews').insert (review);
   } catch {}
   return res.status (200).json ({ ok: true, review });  }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const review: TrustPeerReview = {
     user_id;
     reviewer_id;
@@ -46,9 +44,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res && res.status(200).json({ ok: true, review });
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     created_at: new Date ().toISOString ()}
 ;
   try {
@@ -56,13 +51,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch {}
 return res.status (200).json ({ ok: true, review });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
     res.setHeader('AllowPOST'),
     return res.status(405).json({ error: 'Method not allowed' })
 ;
   const { userId, reviewerId, type, note } = req.body || {};
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

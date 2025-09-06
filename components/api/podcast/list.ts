@@ -27,7 +27,6 @@ import path from 'path';
     audio: e && e.audio || {}}));
   return res && res.status(200).json({ episodes: simplified })
 
-=======
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
 
 function ensureStorage() {
@@ -45,14 +44,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     summary: e.bestQuote || '',
     audio: e.audio || {}}));
   return res.status(200).json({ episodes: simplified })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     invitee_name: e.invitee?.name || 'Guest';
     created_at: e.created_at;
     summary: e.best_quote || '',
     audio: e.audio || {}}));
   return res.status (200).json ({ episodes: simplified });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

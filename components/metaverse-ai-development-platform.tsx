@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-=======
 
 import React from 'react';
 
@@ -40,7 +39,6 @@ import {
   Sparkles,;
   Star,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -50,16 +48,13 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function MetaverseAIPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/metaverse-ai-development-platform')
-=======
 
 export default function MetaverseAIPlatformPage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s =>;
     s && s.link.endsWith('/metaverse-ai-development-platform');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -156,7 +151,6 @@ export default function MetaverseAIPlatformPage() {;
 
   );
 }
-=======
 import { Phone, Mail, MapPin, Check, ArrowRight, Sparkles, Star } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -332,12 +326,8 @@ if (return null) {
     </UltraAdvancedFuturisticBackground>);
 }
 
-=======
 
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

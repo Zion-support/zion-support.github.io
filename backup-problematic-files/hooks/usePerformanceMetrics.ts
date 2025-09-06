@@ -2,14 +2,12 @@
 
 export function usePerformanceMetrics() {;
 
-=======
 
 import { useEffect, useState } from "react";
 import { PerformanceMetrics } from "../types";
 
 
 export function usePerformanceMetrics() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/usePerformanceMetrics.ts
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
@@ -38,7 +36,6 @@ export function usePerformanceMetrics() {
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/usePerformanceMetrics.ts
       setMetrics({
         loadTime: navigation.loadEventEnd - navigation.loadEventStart
         firstContentfulPaint: fcp ? fcp.startTime : 0
@@ -56,7 +53,6 @@ export function usePerformanceMetrics() {
   }, []);
   return { metrics, isSupported }
 
-=======
 
     // Wait for all performance entries to be available
     const timer = setTimeout(measurePerformance, 1000);
@@ -69,4 +65,3 @@ export function usePerformanceMetrics() {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

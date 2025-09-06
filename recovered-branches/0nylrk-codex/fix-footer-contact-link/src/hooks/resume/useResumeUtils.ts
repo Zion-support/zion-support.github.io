@@ -12,7 +12,6 @@ export const formatDateForDB = (date: Date | string | undefined) => {
 export const handleResumeError = (e: any, errorMessage: string) => {;
   console.error(`Error: ${errorMessage}`, e);
 
-=======
 import { format } from 'date-fns',
 import { toast } from '@/hooks/use-toast',
 // Utility function to format dates for DB operations
@@ -21,7 +20,6 @@ export const formatDateForDB = (date: Date | string | undefined) => {
   return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd')
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export const formatDateForDB = (date: Date | string | undefined) => {
   if (!date) return undefined
@@ -73,7 +71,6 @@ export const showSuccessToast = (title: string, description: string) =>: any {
 }
 ;
 
-=======
 
 },
 
@@ -82,7 +79,6 @@ export const showSuccessToast = (title: string, description: string) =>: any {
 export const showSuccessToast = (title: string, description: string) => {
   toast({
 
-=======
     title,
 
     description;
@@ -93,5 +89,3 @@ export const showSuccessToast = (title: string, description: string) => {
 
 export default UseResumeUtils;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -59,7 +59,6 @@ const SheetContent = React.forwardRef<
   <SheetPortal>
     <SheetOverlay />
     <SheetPrimitive.Content
-=======
 import * as SheetPrimitive from &quot;@radix - ui / react - dialog & quot;
 import { cva, type VariantProps } from &quot;class - variance - authority & quot;
 import { X } from &quot;lucide-react & quot;
@@ -107,7 +106,6 @@ const SheetContent = React.forward_ref<;
   <SheetPortal>;
     <SheetOverlay />;
     <SheetPrimitive.Content;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       ref={ref}
       className={cn (sheet_variants ({ side }), class_name)}
       {...props}
@@ -120,7 +118,6 @@ const SheetContent = React.forward_ref<;
         <span className="sr-only">Close</span>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>
   </SheetPortal>
@@ -175,7 +172,6 @@ const SheetTitle = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Title
-=======
 <SheetPrimitive.Close className=&quot;absolute right - 4 top - 4 rounded - sm opacity - 70 ring - offset - background transition - opacity hover:opacity - 100 focus:outline - none focus:ring - 2 focus:ring - ring focus:ring - offset - 2 disabled:pointer - events - none data-[state = open]:bg - secondary & quot;>;
         <X className=&quot;h - 4 w - 4&quot; />;
         <span className=&quot;sr - only & quot;>Close</span>;
@@ -212,7 +208,6 @@ const SheetTitle = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof SheetPrimitive.Title>;
 >(({ class_name, ...props }, ref) => (
   <SheetPrimitive.Title;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn (&quot;text - lg font - semibold text - foreground & quot;, class_name)}
     {...props}
@@ -223,14 +218,12 @@ const SheetTitle = React.forward_ref<;
 
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>;
 >(({ className, ...props }, ref) => (;
-=======
   />));
 SheetTitle.display_name = SheetPrimitive.Title.display_name;
 const SheetDescription = React.forward_ref<;
   React.ElementRef < typeof SheetPrimitive.Description>,
   React.ComponentPropsWithoutRef < typeof SheetPrimitive.Description>;
 >(({ class_name, ...props }, ref) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   <SheetPrimitive.Description;
     ref={ref}
     className={cn (&quot;text - sm text - muted - foreground & quot;, class_name)}
@@ -239,12 +232,10 @@ const SheetDescription = React.forward_ref<;
   />));
 SheetDescription.display_name = SheetPrimitive.Description.display_name;
 export {
-=======
 
 export {;
 
   Sheet, SheetClose;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger;
 
 }

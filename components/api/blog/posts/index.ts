@@ -2,22 +2,15 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
   if (req.method === 'GET') {
-=======
 
   if (req.method === 'GET') {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const { status, topic, tag, author, limit, offset } = req.query;
-=======
   if (req && req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req && req.query;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     let posts = readPosts();
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { v4 as uuidv4 } from 'uuid';
 import { BlogPost } from '@/utils / types / blog';
 import { read_posts, write_posts } from '@/utils / data / blog_store';
@@ -102,11 +95,9 @@ if ( {) {
       seo: {
         meta_title: body.seo?.meta_title || body.title!,
         meta_description: body.seo?.meta_description || '',
-=======
 
         metaTitle: body.seo?.metaTitle || body.title!,
         metaDescription: body.seo?.metaDescription || '',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '',
       },
       body: body.body || '',

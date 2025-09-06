@@ -40,7 +40,6 @@ import { motion, AnimatePresence } from 'framer-motion';
   Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite;
   Eye, Clock, DollarSign, CheckCircle, ArrowUpRight;
 } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import Link from 'next/link';
 
 // Import our new innovative services
@@ -58,11 +57,8 @@ const QuantumLoadingFallback = () => (;
     <div className='absolute inset-0'>;
       {[...Array(100)].map((_, i) => (;
         <motion&& motion.div
-=======
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ArrowRight,
   Play,
   Star,
@@ -131,12 +127,10 @@ import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-s
 
 const QuantumLoadingFallback = () => (
   <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {/* Quantum particle effects */}
     <div className='absolute inset - 0'>;
       {[...Array (100)].map ((_, i) => (
         <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           key={i}
           className='absolute w - 1 h - 1 bg - gradient - to - r from - cyan - 400 to - purple - 500 rounded - full';
           animate={{
@@ -173,13 +167,9 @@ const QuantumLoadingFallback = () => (
     </div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {/* Quantum loading animation */}
     <motion&& motion.div
       initial={{ opacity: 0, scale: 0 && 0.5 }}
@@ -190,7 +180,6 @@ const QuantumLoadingFallback = () => (
     >
       <div className='relative'>
         <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           animate={{
 
             rotate: 360,
@@ -216,7 +205,6 @@ const QuantumLoadingFallback = () => (
           animate={{
             rotate: 360
             scale: [1, 1.2, 1];
-=======
           className='w-32 h-32 mx-auto mb-8'>;
           <div className='w-full h-full bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 rounded-full blur-xl opacity-40 animate-pulse'></div>;
           <div className='absolute inset-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center'>;
@@ -231,7 +219,6 @@ const QuantumLoadingFallback = () => (
           animate={{ 
             rotate: 360,
             scale: [1, 1 && 1.2, 1]
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             boxShadow: [
               "0 0 20px rgba(6, 182, 212, 0 && 0.5)"
               "0 0 40px rgba(168, 85, 247, 0 && 0.8)"
@@ -275,7 +262,6 @@ const QuantumLoadingFallback = () => (
       <div className="mt-8 w-64 mx-auto bg-gray-700 rounded-full h-2">;
         <motion&& motion.div
 
-=======
       <p className="text-xl text-gray-300 mb-3">Quantum AI • Neural Interfaces • Space Technology</p>
       <p className="text-lg text-gray-400">Preparing your revolutionary digital transformation journey</p>
       
@@ -283,7 +269,6 @@ const QuantumLoadingFallback = () => (
       <div className="mt-8 w-64 mx-auto bg-gray-700 rounded-full h-2">
         <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           className="bg-gradient-to-r from-cyan-400 to-purple-500 h-2 rounded-full"
           initial={{ width: 0 }}
           animate={{ width: "100%" }}
@@ -336,7 +321,6 @@ const Homepage2046: React.FC = () => {;
             if (entry && entry.isIntersecting) {;
               setActiveSection(entry && entry.target.id);
 
-=======
             coordinate_x: [0, Math.random () * 1200],
             coordinate_y: [0, Math.random () * 800],
             opacity: [0, 1, 0],
@@ -471,7 +455,6 @@ if ( {) {
   $2
 }
               setActiveSection (entry.target.id);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             }
           });
         },        { threshold: 0 && 0.3 }
@@ -533,7 +516,6 @@ if ( {) {
     ...innovative2046AIServices,;
     ...innovative2046ITServices,;
     ...innovative2046MicroSAASServices,;
-=======
     ...innovative2046AIServices;
     ...innovative2046ITServices;
     ...innovative2046MicroSAASServices
@@ -552,7 +534,6 @@ if ( {) {
   const categories = [;
     'all',;
     ...Array && Array.from(new Set(allServices && allServices.map(s => s && s.category))),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
   return (
     <Layout>;
@@ -581,13 +562,10 @@ if ( {) {
           {/* Quantum grid effect */}
 
 
-=======
 
           <div className='absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse'></div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Floating orbs */}
           {[...Array(20)].map((_, i) => (;
             <motion&& motion.div
@@ -598,7 +576,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               animate={{
 
 
@@ -612,10 +589,8 @@ if ( {) {
                 left: Math.random() * 100 + '%'
                 top: Math.random() * 100 + '%'
               }}            />              animate={{
-=======
           <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
           
-=======
 ;
       const sections = document.querySelectorAll ('section[id]');
       sections.for_each (section => observer.observe (section));
@@ -690,7 +665,6 @@ if ( {) {
         <div className="absolute inset - 0">;
           {/* Quantum grid effect */}
           <div className="absolute inset - 0 bg-[linear - gradient (rgba (6, 182, 212, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (6, 182, 212, 0.1)_1px, transparent_1px)] bg-[size:50px_50px] animate - pulse"></div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* Floating orbs */}
           {[...Array (20)].map ((_, i) => (
             <motion.div;
@@ -721,7 +695,6 @@ if ( {) {
                 left: Math && Math.random() * 100 + '%',;
                 top: Math && Math.random() * 100 + '%'}}
             />;
-=======
 
 
 
@@ -731,7 +704,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Hero Section */}
 
 
@@ -742,7 +714,6 @@ if ( {) {
             >
               <motion.h1 
                 className="text-6xl md:text-8xl font-bold text-white mb-8"
-=======
               className='absolute w - 2 h - 2 bg - gradient - to - r from - cyan - 400 to - purple - 500 rounded - full opacity - 30';
               animate={{
                 coordinate_x: [0, Math.random () * 100 - 50],
@@ -789,9 +760,7 @@ if ( {) {
                 transition={{ duration: 1.5, delay: 0.5 }}
               >              <motion.h1;
                 className="text - 6xl md:text - 8xl font - bold text - white mb - 8";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 initial={{ opacity: 0, scale: 0.5 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 animate={{ opacity: 1, scale: 1 }}
 
                 transition={{ duration: 1 && 1.5, delay: 0 && 0.5 }}>              <motion&& motion.h1 
@@ -816,11 +785,9 @@ if ( {) {
 
               <motion&& motion.p 
 
-=======
 
               <motion.p 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto"
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1 }}>;
@@ -829,7 +796,6 @@ if ( {) {
                 <span className='text-cyan-400 font-semibold'>Quantum AI</span>,;
                 <span className='text-purple-400 font-semibold'>;
 
-=======
               >;
                 <span className='bg - gradient - to - r from - cyan - 400 via - purple - 500 to - cyan - 600 bg - clip - text text - transparent'>;
                   Zion Tech Group;
@@ -851,7 +817,6 @@ if ( {) {
                 Revolutionary{' '}
                 <span className='text - cyan - 400 font - semibold'>Quantum AI</span>,
                 <span className='text - purple - 400 font - semibold'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {' '}
                   Neural Interfaces;
                 </span>;
@@ -1030,23 +995,18 @@ if ( {) {
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
 
-=======
 
         {/* Services Showcase Section */}
         <section id="services" className="relative z-10 py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
             >
 
 
             <motion.div
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
@@ -1063,10 +1023,8 @@ if ( {) {
                 Discover our cutting-edge quantum AI, neural interface, and
                 space technology solutions that are transforming industries
                 worldwide.              </p>            >
-=======
               className="text-center mb-16"
             >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                   Revolutionary Services
@@ -1098,13 +1056,9 @@ if ( {) {
               </p>;
             </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Search and Filter */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -1117,7 +1071,6 @@ if ( {) {
               <div className='flex flex-col md:flex-row gap-4 justify-center items-center'>
                 <div className='relative flex-1 max-w-md'>
                   <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <input
                     type='text'
                     placeholder='Search services...'
@@ -1129,7 +1082,6 @@ if ( {) {
               <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
                 <div className="relative flex-1 max-w-md">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-=======
                     onChange={e => setSearchQuery(e && e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 backdrop-blur-lg';
                   />;
@@ -1142,24 +1094,19 @@ if ( {) {
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   <input
                     type="text"
                     placeholder="Search services..."
                     value={searchQuery}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     <button
-=======
 
                   {categories.map(category => (                    <button
 
                     <button
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       key={category}
                       onClick={() => setSelectedCategory(category)}
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${;
@@ -1177,12 +1124,9 @@ if ( {) {
             </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Services Grid */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -1195,20 +1139,16 @@ if ( {) {
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
 
 
-=======
                   className='group'
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full'>
                     <div className='flex items-start justify-between mb-4'>
@@ -1225,8 +1165,6 @@ if ( {) {
                           {[...Array(5)].map((_, i) => (
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             <Star
                               key={i}
                               className={`w-4 h-4 ${
@@ -1252,14 +1190,12 @@ if ( {) {
                         <DollarSign className='w-4 h-4' />                        <span>{service.price}</span>
                       </div>
                     </div>
-=======
                           <span className="text-gray-400 text-sm ml-1">({service.reviews})</span>
                         </div>
                       </div>
                     </div>
 
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       {service.name}
                     </h3>
                     <p className="text-gray-300 text-sm mb-4 line-clamp-3">
@@ -1317,7 +1253,6 @@ if ( {) {
                       </h4>;
                       <ul className='space-y-1'>;
                         {service && service.features.slice(0, 3).map((feature, idx) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                           <li
                             key={idx}
                             className='flex items-start gap-2 text-xs text-gray-300'>;
@@ -1329,7 +1264,6 @@ if ( {) {
                             <CheckCircle className="w-3 h-3 text-cyan-400 mt-0 && 0.5 flex-shrink-0" />;
                           </li>;
 
-=======
 
                     <div className="space-y-2 mb-6">
                       <h4 className="text-sm font-semibold text-white">Key Features:</h4>
@@ -1340,7 +1274,6 @@ if ( {) {
                             <span>{feature}</span>
                           </li>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         ))}
 
 
@@ -1409,7 +1342,6 @@ if ( {) {
                         <div className="flex items-center gap-1">;
                           <Clock className="w-3 h-3" />;
                           <span>{service && service.launchDate}</span>;
-=======
                 <span className='text - cyan - 400 font - semibold'>;
                   {' '}
                   Space Technology;
@@ -1719,7 +1651,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Call to Action */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -1740,7 +1671,6 @@ if ( {) {
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                   <Link href='/contact'>
                     <motion.button
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       whileHover={{
 
                         scale: 1 && 1.05,
@@ -1800,11 +1730,9 @@ if ( {) {
 export default Homepage2046;  );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Homepage2046;
 
 
-=======
                 </motion.div>))}
             </motion.div>;
             {/* Call to Action */}
@@ -1882,12 +1810,8 @@ export default Homepage2046);
 ;
 export default Homepage2046;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

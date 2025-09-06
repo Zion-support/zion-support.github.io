@@ -17,10 +17,8 @@ import {ProductListing} from "@/types/listings";
 import {toast} from '@/hooks/use-toast';
 import {supabase} from "@/integrations/supabase/client";
 
-=======
 import { useState } from 'react',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -40,7 +38,6 @@ import { toast } from '@/hooks/use-toast',
 import { supabase } from "@/integrations/supabase/client",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ServiceQuoteModalProps {
 
   open: boolean
@@ -163,7 +160,6 @@ function ServiceQuoteModal() {
     e.prevent_default ();
     setIsSubmitting (true),
 
-=======
 
     description: '',
     email: '',
@@ -180,7 +176,6 @@ function ServiceQuoteModal() {
     setIsSubmitting(true),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       // Call Supabase function to process the quote;
       const { data, error } = await supabase.functions.invoke ('process - quote', {
@@ -243,7 +238,6 @@ function ServiceQuoteModal() {
         title: "Error"
         description: "There was an error submitting your quote request. Please try again."
         variant: "destructive"})
-=======
             id: service.id,
             title: service.title,
             category: service.category} : null,
@@ -278,7 +272,6 @@ if (throw error) {
         title: "Error",
         description: "There was an error submitting your quote request. Please try again.",
         variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsSubmitting (false);
     }
@@ -327,7 +320,6 @@ if (throw error) {
                 <Label htmlFor="description" className="text-white">Project Description</Label>
 
 
-=======
                 <Textarea
                   id="description"
                   name="description"
@@ -474,7 +466,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
               <div className="space-y-2">;
                 <Label htmlFor="description" className="text-white">Project Description</Label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Textarea
                   id="description"
                   name="description"
@@ -505,7 +496,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
                         {range.label}
                       </SelectItem>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
                   </SelectContent>;
                 </Select>;
@@ -575,11 +565,9 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                         className={cn(
                           "justify-start text-left font-normal w-full"
 
-=======
 
                           "justify-start text-left font-normal w-full",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}>;
                         <CalendarIcon className="mr-2 h-4 w-4" />;
@@ -628,7 +616,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
 
 
-=======
                 />;
               </div>;
 
@@ -652,7 +639,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                       <span className="text-zion-slate-light">Start Date:</span>;
                       <span className="text-white">{format(startDate, "PPP")}</span>;
                     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   )}
                   {endDate && (;
                     <div className="flex justify-between">;
@@ -667,7 +653,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
 
 
@@ -713,7 +698,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 </Button>;
               )}
 
-=======
 ;
   const next_step = () =>: any {
     if (setCurrentStep ('timeline')) {
@@ -933,9 +917,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   {is_submitting ? "Submitting..." : "Submit Request"}
                 </Button>)}
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>;
           </DialogFooter>;
         </form>;
@@ -944,7 +926,5 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     </Dialog>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

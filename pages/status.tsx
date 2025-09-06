@@ -32,11 +32,8 @@ import Layout from '../components/Layout';
 
 
 
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Status() {
   return (
     <Layout
@@ -49,10 +46,8 @@ export default function Status() {
 
             <h1 className="text-4xl font-bold text-gray-900 mb-4">System Status</h1>
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               All systems are operational.
             </p>
@@ -63,7 +58,6 @@ export default function Status() {
         </div>
       </div>
     </Layout>
-=======
 export default function Status() {;
   return (
     <Layout
@@ -85,9 +79,7 @@ export default function Status() {;
         </div>;
       </div>;
     </Layout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-=======
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -116,5 +108,4 @@ function Status() {
         </div>;
       </div>;
     </Layout>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

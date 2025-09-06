@@ -46,7 +46,6 @@ import {useAuth} from "@/hooks/useAuth";
 import {AlertCircle} from "lucide-react";
 import {Alert, AlertDescription} from "@/components/ui/alert";
 
-=======
 
 import React, { useState } from "react",;
 import { Label } from "@/components/ui/label",;
@@ -156,10 +155,8 @@ if ( {) {
           throw new Error (error);
         }
         navigate ("/mobile");
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } catch (err: any) {
       set_error (err.message);
@@ -178,13 +175,10 @@ if ( {) {
   };
 
 
-=======
 
   };
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-4 px-4">;
       <h2 className="text-xl font-medium text-center">;
@@ -218,7 +212,6 @@ if ( {) {
         {signupMode && (
           <div className="space-y-2">
             <Label htmlFor="name">Full name</Label>
-=======
       </h2>;
 
       <div className="space-y-2">;
@@ -262,7 +255,6 @@ if ( {) {
         {signupMode && (;
           <div className="space-y-2">;
             <Label htmlFor="name">Full name</Label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Input
               id="name"
               name="name"
@@ -322,7 +314,6 @@ if ( {) {
         {signupMode
           ? "Already have an account? "
           : "Don't have an account? "
-=======
           />;
         </div>;
 
@@ -343,7 +334,6 @@ if ( {) {
         {signupMode;
           ? "Already have an account? ";
           : "Don't have an account? ";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         }
         <Button
           variant="link"
@@ -356,12 +346,9 @@ if ( {) {
       </p>;
     </div>;
   );
-=======
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
 
 

@@ -45,7 +45,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
     if (numPrice < 5000) return 'mid',
     return 'enterprise'
 
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -55,13 +54,11 @@ import {;
   Phone, Mail, MapPin;
 } from 'lucide-react',;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion';
 import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services';
 
-=======
 
 export default function Comprehensive2025InnovativeServicesShowcase(req, res) {
   try {
@@ -88,7 +85,6 @@ export default function Comprehensive2025InnovativeServicesShowcase(req, res) {
   const containerVariants = {
 
     hidden: { opacity: 0 }
-=======
 import React, { useState } from 'react',
 import Head from 'next / head',
 import { motion } from 'framer-motion',
@@ -177,20 +173,17 @@ if (return 'mid', ) {
 
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
-=======
   },
   const item_variants = {
     hidden: { opacity: 0, coordinate_y: 20 },
     visible: {
       opacity: 1,
       coordinate_y: 0,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       transition: {
 
         duration: 0.5;
@@ -211,15 +204,12 @@ if (return 'mid', ) {
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     website: 'https://ziontechgroup.com'
   }
-=======
     website: 'https://ziontechgroup.com'
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -261,14 +251,12 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
       <section className="relative py - 20 px - 6">;
         <div className="max - w-7xl mx - auto text - center">;
           <motion.div;
@@ -282,7 +270,6 @@ if (return 'mid', ) {
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>
             {/* Contact Information */}
-=======
               Discover our extensive collection of cutting-edge micro SAAS services, AI solutions,
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>
@@ -294,7 +281,6 @@ if (return 'mid', ) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="flex flex-wrap justify-center gap-6 mb-8 text-white/70">
               <div className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
@@ -318,7 +304,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400">{allServices.length}+</div>
@@ -399,7 +384,6 @@ if (return 'mid', ) {
           >;
             {/* Search Bar */}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="mb-6">
               <div className="relative max-w-2xl mx-auto">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5" />
@@ -420,13 +404,11 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all duration-300"
                 />
               </div>
             </div>
 
-=======
             <div className="mb - 6">;
               <div className="relative max - w-2xl mx - auto">;
                 <Search className="absolute left - 4 top - 1/2 transform -translate - y-1 / 2 text - white / 50 w - 5 h - 5" />;
@@ -442,7 +424,6 @@ if (return 'mid', ) {
 
             {/* Filters */}
             <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 4">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Category Filter */}
 
 
@@ -472,7 +453,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
                   {categories.map((category) => (
@@ -508,7 +488,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
                   <option value="all">All Prices</option>
@@ -539,7 +518,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
                   <option value="popularity">Popularity</option>
@@ -557,7 +535,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div>
                 <label className="block text-sm font-medium text-white/70 mb-2">View Mode</label>
                 <div className="flex gap-2">
@@ -568,7 +545,6 @@ if (return 'mid', ) {
 
                         : 'bg-white/10 text-white/70 hover:bg-white/20'
                     }`}
-=======
 
                     onClick={() => setViewMode('grid')  } catch (error) {
     console.error("Error:", error);
@@ -585,7 +561,6 @@ if (return 'mid', ) {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   >
                     <Grid className="w-4 h-4" />
                   </button>
@@ -594,7 +569,6 @@ if (return 'mid', ) {
 
                         : 'bg-white/10 text-white/70 hover:bg-white/20'
                     }`}
-=======
 
                     onClick={() => setViewMode('list')  } catch (error) {
     console.error("Error:", error);
@@ -611,7 +585,6 @@ if (return 'mid', ) {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   >
                     <List className="w-4 h-4" />
                   </button>
@@ -638,7 +611,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial="hidden"
             animate="visible"
             className="mb-8"
@@ -651,11 +623,9 @@ if (return 'mid', ) {
 
                 Showing results for &quot,{searchTerm || 'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
 
-=======
 
                 Showing results for &quot,{searchTerm || 'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
 
-=======
                 Showing results for "{searchTerm || 'all services'}" in {selectedCategory === 'all' ? 'all categories' : selectedCategory  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -663,8 +633,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </p>
             </div>
             {filteredServices.length === 0 ? (
@@ -688,7 +656,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
                 >
                   Clear Filters
@@ -703,7 +670,6 @@ if (return 'mid', ) {
                 {filteredServices.map((service, index) => (
                   <motion.div
 
-=======
               <div>;
                 <label className="block text - sm font - medium text - white / 70 mb - 2">Category</label>;
                 <select;
@@ -756,7 +722,6 @@ if (return 'mid', ) {
                         ? 'bg - cyan - 500 text - white';
                         : 'bg - white / 10 text - white / 70 hover:bg - white / 20';
                     }`}
-=======
 
 
                   >;
@@ -817,7 +782,6 @@ if (return 'mid', ) {
               }>;
                 {filtered_services.map ((service, index) => (
                   <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     key={service.id}
                     variants={item_variants}
                     className={`group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl ${
@@ -856,12 +820,10 @@ if (return 'mid', ) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             </h3>
                             <p className="text-sm text-white/60">{service.tagline}</p>
                           </div>
                         </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         {service.popular && (
 
                           <div className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white text - xs px - 2 py - 1 rounded - full">;
@@ -897,7 +859,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <div className="mb-4">
                         <h4 className="text-sm font-semibold text-white/70 mb-2">Key Features:</h4>
                         <div className="grid grid-cols-1 gap-1">
@@ -910,7 +871,6 @@ if (return 'mid', ) {
 
                               {feature}
                             </div>))}
-=======
 
                               {feature  } catch (error) {
     console.error("Error:", error);
@@ -924,14 +884,11 @@ if (return 'mid', ) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {service.features.length > 3 && (
 
 
                           {service.price}
 
-=======
                           <span className="text - sm text - white / 60">{service.period}</span>;
                         </div>;
                         <div className="flex items - center gap - 1">;
@@ -944,7 +901,6 @@ if (return 'mid', ) {
                       {/* Action Buttons */}
                       <div className="flex gap - 2">;
                         <a;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           href={service.link}
 
 
@@ -962,7 +918,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105"
@@ -979,7 +934,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           className="px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10"
                         >
                           Contact
@@ -994,7 +948,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <div className="mt-4 pt-4 border-t border-white/10">
                         <div className="grid grid-cols-2 gap-4 text-xs text-white/50">
                           <div>
@@ -1008,7 +961,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           </div>
                           <div>
                             <span className="block text-white/70">Trial:</span>
@@ -1027,7 +979,6 @@ if (return 'mid', ) {
                     </div>
                   </motion.div>
 
-=======
                           target="_blank";
                           rel="noopener noreferrer";
                           className="flex - 1 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 500 hover:from - cyan - 600 hover:to - blue - 600 rounded - lg text - white text - sm font - medium text - center transition - all duration - 300 transform hover:scale - 105";
@@ -1123,7 +1074,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-xl rounded-3xl p-12 border border-cyan-400/20"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -1147,7 +1097,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2"
               >
                 Schedule Consultation
@@ -1163,7 +1112,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="px-8 py-4 border border-white/20 hover:border-cyan-400/50 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2"
               >
                 <Phone className="w-5 h-5" />
@@ -1184,10 +1132,8 @@ if (return 'mid', ) {
       <EnhancedFooter />
     </div>
 
-=======
 }
 
-=======
             className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 backdrop - blur - xl rounded - 3xl p - 12 border border - cyan - 400 / 20";
           >;
             <h2 className="text - 4xl font - bold text - white mb - 6">;
@@ -1227,9 +1173,5 @@ if (return 'mid', ) {
       <EnhancedFooter />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

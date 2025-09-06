@@ -50,10 +50,8 @@ try {
                     } catch (e) {
                         exec_sync (`git checkout --theirs "${file}"`);
 
-=======
 #!/usr/bin/env node;
 
-=======
 
 console.log('🚀 Starting merge process for all open PRs...'),;
 try {;
@@ -89,7 +87,6 @@ try {;
         const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }),;
         if (conflictFiles.trim()) {;
             console.log('Found merge conflicts in:', conflictFiles.trim()),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             // Resolve conflicts by accepting our version;
 
 
@@ -102,7 +99,6 @@ try {;
                     } catch (e) {;
                         execSync(`git checkout --theirs "${file}"`);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     }
                     exec_sync (`git add "${file}"`);
                 }
@@ -180,10 +176,8 @@ try {;
 } catch (error) {;
     console.error('❌ Error during merge process:', error.message),;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     process.exit(1);
 }
-=======
     console.log ('📤 Pushing all changes to main...'),
     exec_sync ('git push origin main'),
     console.log ('🎉 All merge operations completed successfully!'),
@@ -194,4 +188,3 @@ try {;
     console.error ('❌ Error during merge process:', error.message),
     process.exit (1);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

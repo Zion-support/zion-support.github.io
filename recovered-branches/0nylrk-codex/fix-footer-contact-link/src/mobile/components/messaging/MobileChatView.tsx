@@ -17,7 +17,6 @@ interface Message {;
   timestamp: string,;
   isMe: boolean,;
 
-=======
 import React, { useState } from './react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 import { Button } from '@/components / ui / button';
@@ -26,8 +25,6 @@ import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from './
 import { cn } from '@/lib / utils';
 import { use_navigate } from './react-router-dom';
 import { toast } from './sonner';
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface Message {
   id: string,
   content: string,
@@ -107,7 +104,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`;
     toast.success("Starting video call", {
@@ -394,7 +390,6 @@ if ( {) {
                     {message && message.status === 'read' ? '✓✓' : '✓'}
                   </span>;
 
-=======
 
                 "text-xs mt-1 flex justify-end",
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
@@ -405,7 +400,6 @@ if ( {) {
                   <span className="ml-1">
                     {message.status === 'read' ? '✓✓' : '✓'}
                   </span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
               </div>;
             </div>;
@@ -443,7 +437,6 @@ if ( {) {
   );
 }
 
-=======
                   </span>)}
               </div>;
             </div>;
@@ -473,10 +466,7 @@ if ( {) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

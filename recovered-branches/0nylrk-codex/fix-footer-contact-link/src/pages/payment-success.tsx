@@ -7,7 +7,6 @@ import {CheckCircle2} from 'lucide-react';
 export default function PaymentSuccess() {;
   const navigate = useNavigate();
 
-=======
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useNavigate } from 'react-router-dom',
@@ -16,8 +15,6 @@ export default function PaymentSuccess() {
   const navigate = useNavigate(),
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -54,10 +51,8 @@ export default function PaymentSuccess() {
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {CheckCircle2} from 'lucide-react';
-=======
 
 
-=======
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { useNavigate } from 'react-router-dom',;
@@ -91,7 +86,6 @@ export default function PaymentSuccess() {;
             variant="outline"
             onClick={() => navigate('/')}
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
-=======
 import React from 'react';
 import {Button} from '@/components / ui / button';
 import {use_navigate} from 'react-router-dom';
@@ -123,7 +117,6 @@ function PaymentSuccess() {
             variant="outline";
             on_click={() => navigate ('/')}
             className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text - white";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           >;
             Return to Home;
           </Button>;
@@ -133,10 +126,6 @@ function PaymentSuccess() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

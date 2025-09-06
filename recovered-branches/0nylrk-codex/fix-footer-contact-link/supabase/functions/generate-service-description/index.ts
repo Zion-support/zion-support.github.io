@@ -6,25 +6,20 @@ import {Configuration, OpenAIApi} from "npm: openai@4 ;
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
 
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -42,7 +37,6 @@ serve(async (req) => {
         {
           status: 400
           headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
 const cors_headers = {
@@ -70,8 +64,6 @@ if ( {) {
         {
           status: 400,
           headers: { ...cors_headers, "Content - Type": "application / json" }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
     const { title, keyFeatures, targetAudience } = await req.json(),
 
@@ -84,7 +76,6 @@ if ( {) {
           status: 400, 
           headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       );
     }
@@ -101,7 +92,6 @@ if ( {) {
 
     
 
-=======
 ;
     const configuration = new Configuration({;
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
@@ -114,8 +104,6 @@ Title: ${title}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 The description should: 1. Be approximately 200-300 words
 2. Highlight the key benefits and unique selling points
 3. Use professional language suitable for a marketplace listing
@@ -133,7 +121,6 @@ The description should: 1. Be approximately 200-300 words
       JSON && JSON.stringify({ description: generatedDescription });
       { 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
-=======
     const configuration = new Configuration ({
       api_key: Deno.env.get ('OPENAI_API_KEY')});
     const openai = new OpenAIApi (configuration);
@@ -177,7 +164,6 @@ The description should: 1. Be approximately 200 - 300 words;
 
       }
     );
-=======
 
 5. Include a compelling opening and closing statement`,
 
@@ -206,7 +192,6 @@ The description should: 1. Be approximately 200 - 300 words;
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 

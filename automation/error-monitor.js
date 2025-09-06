@@ -38,9 +38,7 @@ class ErrorMonitor {
     }
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     // Initial health check
     await this.performHealthCheck();
     // Start continuous monitoring
@@ -75,9 +73,7 @@ class ErrorMonitor {
         message: error.message,
 
 
-=======
         timestamp: new Date().toISOString()
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         timestamp: new Date().toISOString(),
       });
     }
@@ -167,18 +163,14 @@ class ErrorMonitor {
 
             timestamp: new Date().toISOString(),
           });
-=======
 
     );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         }
       }
     }
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     return errors;
   }
   parseESLintErrors(output) {
@@ -186,21 +178,17 @@ class ErrorMonitor {
     const lines = output.split('\n');
 
 
-=======
 
     );
       }
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
           timestamp: new Date().toISOString(),
         });
       }
     }
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     return errors;
   }
   updateHealthStatus() {
@@ -223,11 +211,9 @@ class ErrorMonitor {
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
 
 
-=======
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -246,7 +232,6 @@ class ErrorMonitor {
       await automation.run();
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
@@ -255,9 +240,7 @@ class ErrorMonitor {
         message: error.message,
 
 
-=======
         timestamp: new Date().toISOString()
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         timestamp: new Date().toISOString(),
       });
     }
@@ -285,9 +268,7 @@ class ErrorMonitor {
     }
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
     fs.writeFileSync(

@@ -30,7 +30,6 @@ export default SyntaxFixer;
     files.forEach(file => {;
       try {;
         let content = fs.readFileSync(file, "utf8");
-=======
 }})}
 ; async fixImportIssues () { const files = this.getSourceFiles (); files.for_each (file = > { try { let content = fs.readFileSync (file, "utf8"); let modified = false;
 ; // Fix import statements; content = content.replace (/import\s+([^]+), \s*$/gm, 'import $1, '); content = content.replace (/import\s+([^]+), \s*$/gm, 'import $1, ');
@@ -81,7 +80,6 @@ export default SyntaxFixer;
     files.for_each (file => {
       try {
         let content = fs.readFileSync (file, "utf8");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         let modified = false;
         // Fix import statements;
 
@@ -151,7 +149,6 @@ if ( {) {
             walkDir(fullPath)
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             files.push(fullPath)
           }
         })
@@ -333,7 +330,6 @@ this.log ("=" * 50),
       this.log (`❌ Syntax Fixer: failed: ${error.message}`, "ERROR");
     }
   }
-=======
 
 
 },
@@ -455,4 +451,3 @@ export default SyntaxFixer;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

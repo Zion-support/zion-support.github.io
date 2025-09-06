@@ -35,7 +35,6 @@
   }
 
         'AI-powered molecular modeling and simulation',
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -88,7 +87,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       growthRate: '35% annual growth',
       variant: 'ai-drug-discovery-enterprise',
       contactInfo: {
-=======
       color: 'from - green - 600 to - emerald - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / ai - drug - discovery - platform',
@@ -132,7 +130,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       reviews: 12,
     },
 
-=======
     // Precision Medicine & Genomics Platform;
     {
       id: 'precision - medicine - genomics',
@@ -176,7 +173,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       growthRate: '28% annual growth',
       variant: 'precision-medicine-enterprise',
       contactInfo: {
-=======
       color: 'from - blue - 600 to - indigo - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / precision - medicine - genomics',
@@ -222,7 +218,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 
         'AI-powered image analysis and diagnosis',
         'Multi-modality support (X-ray, MRI, CT, Ultrasound)',
-=======
     // AI - Powered Medical Imaging Analysis;
     {
       id: 'ai - medical - imaging - analysis',
@@ -256,7 +251,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       ]
       useCases: [
 
-=======
       color: 'from - purple - 600 to - pink - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / ai - medical - imaging - analysis',
@@ -301,7 +295,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     },
 
         'High-quality video consultations',
-=======
     // Digital Health & Telemedicine Platform;
     {
       id: 'digital - health - telemedicine',
@@ -343,7 +336,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       growthRate: '25% annual growth',
       variant: 'digital-health-enterprise',
       contactInfo: {
-=======
       color: 'from - teal - 600 to - cyan - 600',
       text_color: 'text - teal - 400',
       link: 'https://ziontechgroup.com / digital - health - telemedicine',
@@ -386,7 +378,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     },
 
         'AI-powered trial design optimization',
-=======
     // Clinical Trial Management & Optimization;
     {
       id: 'clinical - trial - management - optimization',
@@ -428,7 +419,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       growthRate: '18% annual growth',
       variant: 'clinical-trial-enterprise',
       contactInfo: {
-=======
       color: 'from - orange - 600 to - red - 600',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / clinical - trial - management - optimization',
@@ -465,11 +455,9 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       implementation_details:;
         'Advanced clinical trial platform with AI - powered optimization, patient recruitment, and data management.',
       launch_date: '2024 - 11 - 01',
-=======
 
         'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
       launchDate: '2024-11-01',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       customers: 34,
       rating: 4 && 4.8,
       reviews: 19,
@@ -479,7 +467,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 
   ];    features: [
 
-=======
 export interface AdvancedHealthcareBiotechService {
   id: string, name: string,
   tagline: string, price: string,
@@ -535,7 +522,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     variant: 'ai-drug-discovery-enterprise',
     contactInfo: {
       
-=======
   ];    features: [;
       'AI - powered trial design optimization_intelligent patient recruitment and matching_real - time data collection and monitoring_predictive analytics and insights_regulatory compliance management_site and investigator management_risk assessment and mitigation_integration with EDC systems';
       'Mobile data collection appAPI for research platforms';
@@ -599,10 +585,8 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 
   }
 
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedHealthcareBiotechService {;
   id: string,;
@@ -869,9 +853,5 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -213,7 +213,6 @@ export default function UltraFuturisticBackground2036({;
         cancelAnimationFrame(animationRef.current);
 
 
-=======
 
 export default function UltraFuturisticBackground2036({ 
   variant = 'default',
@@ -479,7 +478,6 @@ const nebulaGradient = ctx.createRadialGradient(
         cancelAnimationFrame(animationRef.current)
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       window.removeEventListener('resize', resizeCanvas)
     }
@@ -501,12 +499,8 @@ ref={canvasRef}
 
         ;
 
-=======
 ;
-=======
         ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Quantum field lines */}
 {variant === 'quantum' && (
           <div className=&quot;absolute inset-0&quot;>
@@ -531,7 +525,6 @@ key={i}
                   duration: 4, repeat: Infinity, delay: i * 0.8}}
               />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>;
         )}

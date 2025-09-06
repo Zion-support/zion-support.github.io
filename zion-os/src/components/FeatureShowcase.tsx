@@ -100,7 +100,6 @@ export function FeatureShowcase() {;
       <div className="max-w-7xl mx-auto">;
         <div className="text-center mb-16">;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">;
-=======
 "use client",
 import { useState, useEffect  } from './react';,
 interface Feature {
@@ -190,7 +189,6 @@ function FeatureShowcase() {
       <div className="max - w-7xl mx - auto">;
         <div className="text - center mb - 16">;
           <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Explore Our Features;
           </h2>;
           <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
@@ -214,7 +212,6 @@ function FeatureShowcase() {
                 } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
                 onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}
-=======
                 className={`card cursor - pointer transform transition - all duration - 300 hover:scale - 105 ${
                   active_feature === feature.id;
                     ? `ring - 2 ring-${feature.color}-500 / 50 bg - white / 10`;
@@ -222,7 +219,6 @@ function FeatureShowcase() {
                 } ${is_visible ? 'opacity - 100 translate - x-0' : 'opacity - 0 translate - x-10'}`}
                 style={{ transition_delay: `${index * 100}ms` }}
                 on_click={() => setActiveFeature (active_feature === feature.id ? null : feature.id)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               >;
                 <div className="flex items - start space - x-4">;
                   <div className={`w - 12 h - 12 bg - gradient - to - r ${getColorClasses (feature.color)} rounded - lg flex items - center justify - center text - white flex - shrink - 0`}>;
@@ -248,12 +244,10 @@ function FeatureShowcase() {
                   <div className={`transform transition - transform duration - 300 ${
                     active_feature === feature.id ? 'rotate - 180' : 'rotate - 0';
 
-=======
 
                   <div className={`transform transition-transform duration-300 ${;
                     activeFeature === feature.id ? 'rotate-180' : 'rotate-0';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   }`}>;
                     <svg className="w - 5 h - 5 text - gray - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                       <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 9l - 7 7 - 7-7" />;

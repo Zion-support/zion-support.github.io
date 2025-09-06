@@ -6,18 +6,12 @@ import Head from 'next/head';
 
 import React from 'react';
 
-=======
 import React from 'react',
-=======
 import React from 'react';
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Update202508150404() {
-=======
 import React from 'react',;
 export default function Update202508150404() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <Head>;
@@ -37,7 +31,6 @@ export default function Update202508150404() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <h2 className='text-2xl font-bold mb-4 text-green-400'>
                 Quality Metrics
               </h2>
@@ -98,13 +91,11 @@ export default function Update202508150404() {;
                   <p className='text-blue-400'>✓ Lighthouse CI active</p>;
                   <p className='text-sm text-white/70 mt-2'>;
                     Real-time performance tracking;
-=======
 
 };
 ;
 
 
-=======
 import Head from 'next / head';
 import React from 'react',
 export default /**
@@ -161,7 +152,6 @@ function Update202508150404() {
                   <p className='text - blue - 400'>✓ Lighthouse CI active</p>;
                   <p className='text - sm text - white / 70 mt - 2'>;
                     Real - time performance tracking;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </p>;
                 </div>;
               </div>;
@@ -232,12 +222,7 @@ function Update202508150404() {
       </div>;
 
 
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

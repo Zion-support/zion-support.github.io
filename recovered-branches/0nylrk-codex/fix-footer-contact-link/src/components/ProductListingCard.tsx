@@ -47,7 +47,6 @@ export function ProductListingCard({
     : '/placeholder.svg',
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Format price display
   const formatPrice = () => {
     if (listing.price === null) return "Custom pricing";
@@ -61,7 +60,6 @@ import { Star, DollarSign } from './lucide-react';
 interface ProductListingCardProps {
   listing: ProductListing,
   view?: 'grid' | 'list';
-=======
 
   },
 
@@ -138,7 +136,6 @@ if ( {) {
   $2
 }
       onRequestQuote (listing.id);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } else {
       // Default behavior if no handler provided;
       navigate (`/request - quote?listing=${listing.id}`);
@@ -186,7 +183,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Image */}
 
       <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>;
@@ -261,12 +257,9 @@ if ( {) {
               </div>)}
           </div>;
 
-=======
 
           </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Title & Description */}
           <div on_click={handleViewListing} className="block">;
             <h3 className="text - lg font - semibold text - white mb - 2 hover:text - zion - cyan transition - colors">;
@@ -321,7 +314,6 @@ if ( {) {
               </span>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
 
 
@@ -335,7 +327,6 @@ if ( {) {
               Buy Now
             </Button>
             {onRequestQuote && (
-=======
           </div>;
 
           <div className="flex gap-2">;
@@ -351,7 +342,6 @@ if ( {) {
             </Button>;
 
             {onRequestQuote && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 size="sm"
                 variant="outline"
@@ -365,7 +355,6 @@ if ( {) {
       </div>;
     </div>;
   );
-=======
           </p>;
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
@@ -415,5 +404,4 @@ if ( {) {
         </div>;
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

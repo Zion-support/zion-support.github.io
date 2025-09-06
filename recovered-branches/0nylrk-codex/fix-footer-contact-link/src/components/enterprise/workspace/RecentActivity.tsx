@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function RecentActivity() {
   // Mock activity data
 
@@ -17,7 +16,6 @@ export function RecentActivity() {
       timestamp: "1h ago",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       id: "act-2"
       user: "Sarah Wilson"
@@ -54,7 +52,6 @@ export function RecentActivity() {
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
-=======
 
   ],
 
@@ -114,7 +111,6 @@ import {Badge} from "@/components/ui/badge";
   )
 
 
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -158,7 +154,6 @@ export function RecentActivity() {;
 
   const getBadgeForType = (type: string) => {;
     switch (type) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>;
       case "candidate":;
         return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;
@@ -206,7 +201,6 @@ export function RecentActivity() {;
 
         <div className="p-3 text-center border-t border-border">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
-=======
 import React from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -303,10 +297,6 @@ function RecentActivity() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

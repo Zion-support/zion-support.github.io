@@ -12,15 +12,9 @@ describe ('PerformanceEnhancer', () => {
 
   });
 });
-=======
 
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -30,7 +24,6 @@ describe('PerformanceEnhancerdynamic'
 
       screen && screen.getByTestId('performanceenhancer ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import PerformanceEnhancerdynamic from "./components/PerformanceEnhancer ; describe('PerformanceEnhancerdynamic', () => { test("renders without crashing",() => { render(<PerformanceEnhancerdynamic />); expect( screen && screen.getByTestId("performanceenhancer && performanceenhancer.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<PerformanceEnhancerdynamic />)}); test("handles user interactions",() => { render(<PerformanceEnhancerdynamic />)}); test("applies correct styling"
 
-=======
 
 describe('PerformanceEnhancer', () => {
   test('renders without crashing', () => {
@@ -53,8 +46,4 @@ describe('PerformanceEnhancer', () => {
     // Add styling tests here
   });
 });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
-=======
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

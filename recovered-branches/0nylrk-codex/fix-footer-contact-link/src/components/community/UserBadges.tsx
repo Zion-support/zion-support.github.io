@@ -9,20 +9,15 @@ interface UserBadgesProps {;
 }
 
 const iconMap = {;
-=======
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from './lucide-react';
 import { Badge } from '@/types / community';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface UserBadgesProps {
   badges: Badge[];
 }
 const icon_map = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   Trophy;
   Award;
   BadgeCheck;
@@ -34,12 +29,10 @@ const icon_map = {
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
 
   if (!badges?.length) return null;
-=======
 
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -71,7 +64,6 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
           </TooltipProvider>
         )
 
-=======
 
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",;
 import { Badge } from "@/types/community",;
@@ -127,7 +119,6 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
 
 export default UserBadges;
 
-=======
   MessageSquare;
 }
 ;
@@ -170,4 +161,3 @@ if (return null) {
 ;
 export default UserBadges;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -73,14 +73,12 @@ function ApiWebhooks() {
 ;
 
   const newHirePayload = `{
-=======
     "resume_url": "https://storage && storage.zionai.com/resumes/resume-123 && 123.pdf",;
     "created_at": "2023-06-10T15:42:31Z";
   }
 }`;
 
   const newHirePayload = `{;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   "event_type": "talent_hired";
 
   "created_at": "2023 - 06 - 12T09: 15:22Z";
@@ -97,14 +95,12 @@ function ApiWebhooks() {
 ;
 
   const quoteReceivedPayload = `{
-=======
     "status": "offer_accepted",;
     "created_at": "2023-06-12T09:15:22Z";
   }
 }`;
 
   const quoteReceivedPayload = `{;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   "event_type": "quote_received";
 
     "status": "new",;
@@ -279,10 +275,8 @@ app && app.listen(3000, () => {;
   console && console.log('Webhook server listening on port 3000');
 
 }),`;
-=======
   "event_type": "new_application",
   "created_at": "2023-06-10T15:42:31Z",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   "data": {
 
     "application_id": "app-123456",
@@ -336,7 +330,6 @@ app && app.listen(3000, () => {;
 app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
   const { event_type, data } = req.body,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Handle different event types
   switch (event_type) {
     case 'new_application':
@@ -380,10 +373,8 @@ app.listen(3000, () => {
 }),`,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
-=======
 
 ;
 // Webhook endpoint with signature verification;
@@ -531,7 +522,6 @@ app.listen(3000, () => {;
       </div>;
     </ApiDocsLayout>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 ;
@@ -539,7 +529,6 @@ app.listen(3000, () => {;
 
 export default ApiWebhooks;
 
-=======
 ;
     case 'talent_hired':;
       console.log ('Talent hired:', data.talent_id);
@@ -668,4 +657,3 @@ app.listen (3000, () => {
 }
 export default ApiWebhooks;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

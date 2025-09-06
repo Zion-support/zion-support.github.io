@@ -61,7 +61,6 @@ function ClientDashboardContent() {
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <>
@@ -124,7 +123,6 @@ function ClientDashboardContent() {
             <div className="sticky top-4 space-y-6">
 
 
-=======
 
 import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader",;
@@ -228,7 +226,6 @@ function ClientDashboardContent() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
 
@@ -250,9 +247,7 @@ function ClientDashboardContent() {;
                       Select a job to see AI-matched talent suggestions;
                     </p>;
                   </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
-=======
 import { useState, useEffect } from './react';
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
@@ -372,7 +367,6 @@ if ( {) {
                       Select a job to see AI - matched talent suggestions;
                     </p>;
                   </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </div>;
             </div>;
           </div>;
@@ -381,7 +375,6 @@ if ( {) {
       <Footer />;
 
 
-=======
 
 ;
 
@@ -396,7 +389,6 @@ export default function ClientDashboard() {;
 ;
 
 
-=======
     </>);
 }
 export default /**
@@ -408,4 +400,3 @@ function ClientDashboard() {
       <ClientDashboardContent />;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -26,11 +26,8 @@ import React, { useState } from 'react';
 
 } from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
 
-=======
 import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -51,7 +48,6 @@ import {
   Smartphone,;
   Zap,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export default function SEOAnalyzerToolPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -61,8 +57,6 @@ export default function SEOAnalyzerToolPage() {;
 
 
     }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   ];
 
 
@@ -178,13 +172,11 @@ export default function SEOAnalyzerToolPage() {;
       color: 'text-orange-400',;
     },  ];      color: 'text-orange-400';
     }
-=======
         '10 website analyses/monthBasic SEO metricsKeyword research (100 keywords)On-page SEO analysisEmail supportBasic reporting'
       ];
       popular: false
     };
     {
-=======
 ;
   const pricing = [;
     {
@@ -205,7 +197,6 @@ export default function SEOAnalyzerToolPage() {;
       ];
       popular: false;
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       name: 'Professional',
       price: '$89',
       period: '/month',
@@ -326,8 +317,6 @@ export default function SEOAnalyzerToolPage() {;
             difficulty: 'high'
           }
         ]
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const handleAnalyzeSEO = async () => {;
     if (!url && url.trim()) return;
@@ -378,7 +367,6 @@ export default function SEOAnalyzerToolPage() {;
             difficulty: 'high',;
           },;
         ],;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
 
           { type: 'error', message: 'Missing meta description', priority: 'high' },
@@ -400,12 +388,9 @@ export default function SEOAnalyzerToolPage() {;
 
       setIsAnalyzing(false);
     }, 4000);
-=======
 
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       setIsAnalyzing(false);
 
     }, 4000);  };
@@ -413,7 +398,6 @@ export default function SEOAnalyzerToolPage() {;
   };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
       setIsAnalyzing (false);
@@ -458,7 +442,6 @@ export default function SEOAnalyzerToolPage() {;
             SEO Analyzer Tool;
           </h1>;
           <p className='text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12'>;
-=======
         <meta;
           name='description';
           content="Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve search rankings.";
@@ -522,7 +505,6 @@ export default function SEOAnalyzerToolPage() {;
             Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.;
           </p>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* URL Input */}
           <div className="max-w-2xl mx-auto mb-8">;
             <div className="flex flex-col sm:flex-row gap-4">;
@@ -558,7 +540,6 @@ export default function SEOAnalyzerToolPage() {;
             </Button>;
             <Button
 
-=======
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
@@ -576,7 +557,6 @@ export default function SEOAnalyzerToolPage() {;
               className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
             >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Schedule Demo
 
             </Button>;
@@ -592,7 +572,6 @@ export default function SEOAnalyzerToolPage() {;
               Powerful SEO Features;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-=======
           {/* URL Input */}
           <div className='max - w-2xl mx - auto mb - 8'>;
             <div className='flex flex - col sm:flex - row gap - 4'>;
@@ -716,7 +695,6 @@ export default function SEOAnalyzerToolPage() {;
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-=======
                       className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature && feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
                     />;
                   </div>;
@@ -733,7 +711,6 @@ export default function SEOAnalyzerToolPage() {;
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {features && features.map((feature, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Card
                 key={index}
                 className="card-hover group border-gradient-green"
@@ -743,22 +720,18 @@ export default function SEOAnalyzerToolPage() {;
                   </div>
                 </div>
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* SEO Factors Section */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Comprehensive SEO Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -768,7 +741,6 @@ export default function SEOAnalyzerToolPage() {;
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {seoFactors.map((category, index) => (
-=======
           </div>;
         </div>;
       </section>;
@@ -781,7 +753,6 @@ export default function SEOAnalyzerToolPage() {;
               Comprehensive SEO Analysis;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-=======
                     </p>;
                   </div>;
                 </div>;
@@ -797,7 +768,6 @@ export default function SEOAnalyzerToolPage() {;
               Comprehensive SEO Analysis;
             </h2>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               We analyze every aspect of your website's SEO to provide;
               actionable insights and recommendations.;
             </p>;
@@ -816,7 +786,6 @@ export default function SEOAnalyzerToolPage() {;
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {seoFactors.map((category, index) => (
-=======
                       className='flex items-center text-gray-300'>;
                       <CheckCircle className='w-4 h-4 text-green-400 mr-3 flex-shrink-0' />                      {factor}              Comprehensive SEO Analysis;
             </h2>;
@@ -827,7 +796,6 @@ export default function SEOAnalyzerToolPage() {;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {seoFactors && seoFactors.map((category, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Card
                 key={index}
                 className="card-hover border-gradient-green"
@@ -844,7 +812,6 @@ export default function SEOAnalyzerToolPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Demo Analysis Results */}
       {analysisResults && (
 
@@ -861,7 +828,6 @@ export default function SEOAnalyzerToolPage() {;
                 SEO Analysis Results;
               </h2>;
               <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-=======
           <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
             {seo_factors.map ((category, index) => (
               <Card;
@@ -936,7 +902,6 @@ export default function SEOAnalyzerToolPage() {;
               </p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-=======
                     />;
                   </svg>;
                 </div>;
@@ -983,7 +948,6 @@ export default function SEOAnalyzerToolPage() {;
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Overall Score */}
               <Card className="border-gradient-green text-center">;
                 <h3 className="text-2xl font-bold mb-6 text-white">Overall SEO Score</h3>;
@@ -1062,7 +1026,6 @@ export default function SEOAnalyzerToolPage() {;
                       </div>;
                     </div>;
 
-=======
 
               {/* Issues */}
               <Card className="border-gradient-green">
@@ -1081,7 +1044,6 @@ export default function SEOAnalyzerToolPage() {;
                         <span className="text-gray-300">{issue.message}</span>
                         <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
                       </div>
-=======
               {/* Issues */}
               <Card className='border-gradient-green'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -1108,10 +1070,7 @@ export default function SEOAnalyzerToolPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
                 </div>;
@@ -1119,12 +1078,9 @@ export default function SEOAnalyzerToolPage() {;
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Recommendations and Keywords */}
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
               <Card className='border-gradient-green'>;
@@ -1144,7 +1100,6 @@ export default function SEOAnalyzerToolPage() {;
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />;
                       <span className="text-gray-300">{rec}</span>;
 
-=======
 
             {/* Recommendations and Keywords */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -1157,7 +1112,6 @@ export default function SEOAnalyzerToolPage() {;
                       <span className="text-gray-300">{rec}</span>
                     </div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
                 </div>;
@@ -1202,7 +1156,6 @@ export default function SEOAnalyzerToolPage() {;
                       </div>;
                     </div>;
 
-=======
 
               <Card className="border-gradient-green">
                 <h3 className="text-2xl font-bold mb-6 text-white">Keyword Opportunities</h3>
@@ -1224,10 +1177,7 @@ export default function SEOAnalyzerToolPage() {;
                         </span>
                       </div>
                     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
-=======
             <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
               {/* Overall Score */}
               <Card className='border - gradient - green text - center'>;
@@ -1420,7 +1370,6 @@ export default function SEOAnalyzerToolPage() {;
                         </span>;
                       </div>;
                     </div>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </div>;
               </Card>;
             </div>;
@@ -1435,13 +1384,11 @@ export default function SEOAnalyzerToolPage() {;
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
-=======
       <section id="pricing" className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="text-center mb-20">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Simple Pricing
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the SEO analysis plan that best fits your business needs and goals.
@@ -1449,8 +1396,6 @@ export default function SEOAnalyzerToolPage() {;
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <section id='pricing' className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -1458,7 +1403,6 @@ export default function SEOAnalyzerToolPage() {;
               Simple Pricing;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-=======
         </section>)}
       {/* Pricing Section */}
       <section id='pricing' className='section - padding bg - gradient - cursor'>;
@@ -1468,7 +1412,6 @@ export default function SEOAnalyzerToolPage() {;
               Simple Pricing;
             </h2>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Choose the SEO analysis plan that best fits your business needs;
               and goals.;
             </p>;
@@ -1505,7 +1448,6 @@ export default function SEOAnalyzerToolPage() {;
                     <span className='text - 4xl font - bold text - white'>;
                       {plan.price}
 
-=======
 
                 className={`card-hover border-gradient-green ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -1554,15 +1496,12 @@ export default function SEOAnalyzerToolPage() {;
 
                       {feature}
                     </li>;
-=======
 
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
 
                 </ul>;
@@ -1572,7 +1511,6 @@ export default function SEOAnalyzerToolPage() {;
                   href='/contact'
                   size='lg'
 
-=======
                       {feature}
                     </li>
                   ))}
@@ -1586,7 +1524,6 @@ export default function SEOAnalyzerToolPage() {;
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
-=======
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
@@ -1597,10 +1534,7 @@ export default function SEOAnalyzerToolPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -1620,14 +1554,12 @@ export default function SEOAnalyzerToolPage() {;
 
             Ready to Improve Your SEO Rankings?
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-responsive-md text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of businesses using our SEO analyzer to improve their
             search rankings and drive more organic traffic.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
               href='/contact'
               size='lg'
@@ -1641,7 +1573,6 @@ export default function SEOAnalyzerToolPage() {;
               size='lg'
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Schedule Demo;
             </Button>;
           </div>;
@@ -1649,11 +1580,7 @@ export default function SEOAnalyzerToolPage() {;
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

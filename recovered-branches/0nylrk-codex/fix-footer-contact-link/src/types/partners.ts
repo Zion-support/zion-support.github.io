@@ -2,12 +2,10 @@
 ;
 
 export interface PartnerProfile {
-=======
 
 
 export interface PartnerProfile {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   user_id: string;
   name: string;
@@ -33,13 +31,11 @@ export interface PartnerProfile {;
 
 }
 export interface PartnerSettings {
-=======
 }
 
 
 export interface PartnerSettings {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   commission_rate: number;
 
@@ -48,13 +44,11 @@ export interface PartnerSettings {;
 
 }
 export interface PartnerReferralLink {
-=======
 }
 
 
 export interface PartnerReferralLink {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   name: string;
   url: string;
@@ -67,13 +61,11 @@ export interface PartnerReferralLink {;
 
 }
 export interface PartnerPayout {
-=======
 }
 
 
 export interface PartnerPayout {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   partner_id: string;
   amount: number;
@@ -83,4 +75,3 @@ export interface PartnerPayout {;
   created_at: string,
   completed_at?: string;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

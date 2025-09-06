@@ -39,7 +39,6 @@ export function ContractBuilderContent() {;
 
 
 
-=======
 import { useState } from 'react',;
 import { SmartContractBuilder } from '@/components/contracts/SmartContractBuilder',;
 import { ContractBuilder } from '@/components/contracts/ContractBuilder',;
@@ -86,8 +85,6 @@ export function ContractBuilderContent() {;
     // // // console.log('Contract generated:', content.substring(0, 100) + '...')
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleViewContract = (contractId: string) => {
     console.log('Viewing contract:', contractId);
     // Future implementation: View specific contract details
@@ -114,9 +111,6 @@ export function ContractBuilderContent() {;
         onViewContract={handleViewContract}
       />
       {showBuilderType === 'standard' && (
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {useState} from 'react';
 import {SmartContractBuilder} from '@/components / contracts / SmartContractBuilder';
 import {ContractBuilder} from '@/components / contracts / ContractBuilder';
@@ -140,7 +134,6 @@ import {RecentContractsTable} from './RecentContractsTable';
   );
 }
 
-=======
 import {TalentProfile} from '@/types / talent';
 import {use_auth} from '@/hooks / use_auth';
 // Mock data for demo purposes;
@@ -215,4 +208,3 @@ function ContractBuilderContent() {
         />)}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

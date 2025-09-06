@@ -4,6 +4,4 @@ import React from';react' const ServiceCategory = ({ category,services }) => { c
 
 </Briefcase>)'
 
-=======
 </Briefcase>)'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

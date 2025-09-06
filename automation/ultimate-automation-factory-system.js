@@ -125,10 +125,7 @@ if ( {) {
 export default UltimateAutomationFactory;
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {; console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})};
 ;
 export default UltimateAutomationFactory;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

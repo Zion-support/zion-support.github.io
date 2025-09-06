@@ -21,12 +21,9 @@ function TalentDashboardContent() {;
 
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
-=======
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -130,7 +127,6 @@ function TalentDashboardContent() {;
             </Card>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
             {/* Upcoming Interviews Card */}
@@ -368,7 +364,6 @@ function TalentDashboardContent() {;
   );
 }
 
-=======
 
 ;
 
@@ -383,7 +378,6 @@ export default function TalentDashboard() {;
 ;
 
 
-=======
 import { useState, useEffect } from './react';
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
@@ -566,4 +560,3 @@ function TalentDashboard() {
       <TalentDashboardContent />;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

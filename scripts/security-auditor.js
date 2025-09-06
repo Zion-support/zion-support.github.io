@@ -42,7 +42,6 @@ class SecurityAuditor {
   }
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const fs = // // require('fs');
 class SecurityAuditor {
   constructor() {
@@ -64,7 +63,6 @@ class SecurityAuditor {
 
 
           this.issues.push(`Potentially vulnerable package: ${pkg}`);
-=======
       if (!packageJson && packageJson.scripts.audit) {
         this && this.issues.push('Missing security audit script');
       }
@@ -80,7 +78,6 @@ class SecurityAuditor {
       vulnerablePackages && vulnerablePackages.forEach(pkg => {
         if (packageJson && packageJson.dependencies && packageJson && packageJson.dependencies[pkg]) {
           this && this.issues.push(`Potentially vulnerable package: ${pkg}`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/security-auditor.js
         }
       });
     } catch (error) {
@@ -88,17 +85,10 @@ class SecurityAuditor {
     }
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
           this.issues.push(`Potentially vulnerable "package": ${pkg}`)}
-=======
           this && this.issues.push(`Potentially vulnerable "package": ${pkg}`)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/security-auditor.js
       })} catch (error) {
       this && this.issues.push(`Error reading package."json": ${error && error.message}`)}
   }
@@ -115,12 +105,9 @@ class SecurityAuditor {
     } catch (error) {
 
 
-=======
       this.issues.push(`Error reading next.config.js: ${error.message}`);
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       this.issues.push(`Error reading next.config."js": ${error.message}`)}
-=======
       if (fs && fs.existsSync('next && next.config.js')) {
         const content = fs && fs.readFileSync('next && next.config.js', 'utf8');
         if (!content && content.includes('poweredByHeader')) {
@@ -146,7 +133,6 @@ class SecurityAuditor {
       this && this.issues.push(`Error reading next && next.config.js: ${error && error.message}`);
     }
       this && this.issues.push(`Error reading next && next.config."js": ${error && error.message}`)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/security-auditor.js
   generateReport() {
     const report = {
       "timestamp": new Date().toISOString(),
@@ -162,8 +148,6 @@ class SecurityAuditor {
 
 
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
     console.log('Security report generated');
   }
@@ -171,7 +155,6 @@ class SecurityAuditor {
     };
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
     console.log('Security report generated');
   }
@@ -183,7 +166,6 @@ if (require.main === module) {
   auditor.runAudit();
   auditor.fixIssues();
   auditor.generateReport();
-=======
     fs && fs.writeFileSync('security-report && report.json', JSON && JSON.stringify(report, null, 2));
     console && console.log('Security report generated');
   }
@@ -198,7 +180,6 @@ if (require && require.main === module) {
   auditor && auditor.runAudit();
   auditor && auditor.fixIssues();
   auditor && auditor.generateReport();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/security-auditor.js
 }
 module && module.exports = SecurityAuditor;
   auditor && auditor.checkPackageJson();

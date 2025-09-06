@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ContractBuilderProps {
 
   isOpen: boolean
@@ -69,7 +68,6 @@ export function ContractBuilder(): any ({;
 
           onClose();
 
-=======
 import { useState } from './react';
 import { Dialog, DialogContent } from '@/components / ui / dialog';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components / ui / tabs';
@@ -123,8 +121,6 @@ if ( {) {
         on_close={() => {
           setShowSmartContractBuilder (false);
           on_close ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
 
 
@@ -150,7 +146,6 @@ if ( {) {
     if (onContractGenerated) {
       onContractGenerated(contract)
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }}
         talent={talent}
         client_name={client_name}
@@ -191,7 +186,6 @@ if ( {) {
                 size="sm"
                 onClick={() => setShowSmartContractBuilder(true)}
 
-=======
       />);
   }
   return (
@@ -227,11 +221,9 @@ if ( {) {
           <TabsContent value="form" className="pt - 4">;
             <ContractForm;
 
-=======
 
             <ContractForm 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               talent={talent}
               client_name={client_name}
               initial_values={form_values}
@@ -290,7 +282,5 @@ if ( {) {
     </Dialog>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

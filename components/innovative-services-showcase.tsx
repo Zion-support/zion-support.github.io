@@ -36,7 +36,6 @@ import Head from 'next / head';
 import { motion } from 'framer-motion';
 
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { emergingTechServicesEnhanced2025  } from '../data/emerging-tech-services';
 import { nextGenAIServices } from '../data/next-gen-ai-services';
@@ -89,7 +88,6 @@ export default function InnovativeServicesShowcase() {
 ;
   const container_variants = {
     hidden: { opacity: 0 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1
       transition: {
@@ -133,7 +131,6 @@ export default function InnovativeServicesShowcase() {
         'Zero-trust architecture'
       ]
       link: 'https://ziontechgroup.com/quantum-internet-security-platform'
-=======
         staggerChildren: 0.1,
         delayChildren: 0.2
       }
@@ -142,7 +139,6 @@ export default function InnovativeServicesShowcase() {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-=======
         stagger_children: 0.1,
         delay_children: 0.2,
       },
@@ -153,7 +149,6 @@ export default function InnovativeServicesShowcase() {
 ;
   const item_variants = {
     hidden: { opacity: 0, coordinate_y: 30 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1,
       coordinate_y: 0,
@@ -279,14 +274,11 @@ export default function InnovativeServicesShowcase() {;
       ],;
       link: 'https://ziontechgroup && ziontechgroup.com/neural-interface-development-platform',;
       color: 'from-purple-600 to-indigo-700',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     },  ];
-=======
     },  ];
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <UltraAdvancedFuturisticBackground>;
@@ -325,7 +317,6 @@ export default function InnovativeServicesShowcase() {;
       link: 'https://ziontechgroup && ziontechgroup.com/neural-interface-development-platform',;
       color: 'from-purple-600 to-indigo-700';
 
-=======
       description:;
         'ArrowRight - generation quantum - secured internet infrastructure with unbreakable encryption. Protect enterprise networks with quantum - resistant protocols.',
       price: '$8, 999 / month',
@@ -432,7 +423,6 @@ export default function InnovativeServicesShowcase() {;
       features: ['Neural signal processing_brain activity monitoringAI - powered interpretation_real - time communication_safety protocols'],
       link: 'https://ziontechgroup.com / neural - interface - development - platform',
       color: 'from - purple - 600 to - indigo - 700';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   ];
 
@@ -459,11 +449,8 @@ export default function InnovativeServicesShowcase() {;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
               className="text-center mb-16"
-=======
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -478,8 +465,6 @@ export default function InnovativeServicesShowcase() {;
               initial={{ opacity: 0, y: 30 }}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -510,7 +495,6 @@ export default function InnovativeServicesShowcase() {;
                 <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -521,7 +505,6 @@ export default function InnovativeServicesShowcase() {;
                 >
                   <div className='mb-6'>
                     <h3 className='text-2xl font-bold text-white mb-4'>
-=======
       <div className='min - h-screen'>;
           <title>;
             Innovative Services Showcase - Zion Tech Group | Cutting - Edge;
@@ -638,7 +621,6 @@ export default function InnovativeServicesShowcase() {;
                 >;
                   <div className='mb - 6'>;
                     <h3 className='text - 2xl font - bold text - white mb - 4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {service.title}
                     </h3>;
                     <p className='text - gray - 300 mb - 6 leading - relaxed'>;
@@ -724,9 +706,6 @@ export default function InnovativeServicesShowcase() {;
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             {feature}
                           </li>;
                         ))}
@@ -759,7 +738,6 @@ export default function InnovativeServicesShowcase() {;
                   </div>;
                 </motion && motion.div>;
 
-=======
 
                     <div className="flex flex-col sm:flex-row gap-3">
                       <a
@@ -779,7 +757,6 @@ export default function InnovativeServicesShowcase() {;
                   </div>
                 </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 
             </div>;
@@ -795,11 +772,9 @@ export default function InnovativeServicesShowcase() {;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
               className="text-center mb-16"
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Emerging Tech Services */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -810,8 +785,6 @@ export default function InnovativeServicesShowcase() {;
               initial={{ opacity: 0, y: 30 }}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -824,14 +797,12 @@ export default function InnovativeServicesShowcase() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {emergingTechServicesEnhanced2025
                 .slice(0, 6)
                 .map((service, index) => (
                   <motion.div
                     key={service.id}
-=======
                 Tech Services;
               </h2>;
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
@@ -846,7 +817,6 @@ export default function InnovativeServicesShowcase() {;
                 .map((service, index) => (;
                   <motion&& motion.div
                     key={service && service.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
@@ -880,7 +850,6 @@ export default function InnovativeServicesShowcase() {;
                   </motion && motion.div>;
                 ))}
 
-=======
 
         {/* Emerging Tech Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -906,12 +875,10 @@ export default function InnovativeServicesShowcase() {;
                               {emergingTechServicesEnhanced2025.slice(0, 6).map((service, index) => (
                 <motion.div
                   key={service.id}
-=======
             </div>;
 
             <motion&& motion.div
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}                  Emerging
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 </span> Tech Services;
               </h2>;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
@@ -923,7 +890,6 @@ export default function InnovativeServicesShowcase() {;
                               {emergingTechServicesEnhanced2025 && emergingTechServicesEnhanced2025.slice(0, 6).map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
@@ -952,13 +918,10 @@ export default function InnovativeServicesShowcase() {;
             <motion&& motion.div
 
               className="text-center mt-16"
-=======
 
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -996,7 +959,6 @@ export default function InnovativeServicesShowcase() {;
               {nextGenAIServices.slice(0, 6).map((service, index) => (
                 <motion.div
                   key={service.id}
-=======
                 AI Services;
               </h2>;
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
@@ -1017,7 +979,6 @@ export default function InnovativeServicesShowcase() {;
               {nextGenAIServices && nextGenAIServices.slice(0, 6).map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
 
@@ -1028,14 +989,12 @@ export default function InnovativeServicesShowcase() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <motion&& motion.a
                 href='/services'
-=======
 
             </div>;
 
@@ -1057,7 +1016,6 @@ export default function InnovativeServicesShowcase() {;
                     <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
                     <p className="text-gray-400 text-sm mb-4">{service.description}</p>
                     <div className="text-2xl font-bold text-cyan-400 mb-2">
-=======
                       </div>;
                     </div>;
                     <div className='mb - 6'>;
@@ -1249,20 +1207,16 @@ export default function InnovativeServicesShowcase() {;
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Call to Action */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
-=======
 
         {/* Call to Action */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         {/* Call to Action */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -1271,8 +1225,6 @@ export default function InnovativeServicesShowcase() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -1304,7 +1256,6 @@ export default function InnovativeServicesShowcase() {;
                 Join the revolution and transform your business with our cutting-edge services
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
                   className='border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300'>                Ready to Experience the Future?;
               </h2>;
               <p className="text-xl text-gray-300 mb-8">;
@@ -1312,16 +1263,12 @@ export default function InnovativeServicesShowcase() {;
               </p>;
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <a
                   href="/contact"
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             >;
               <motion.a;
                 href='/services';
@@ -1517,4 +1464,3 @@ export default function InnovativeServicesShowcase() {;
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,13 +1,11 @@
 
 
-=======
 
 import type { NextPage, GetServerSideProps } from 'next',
 import fs from 'fs',
 import path from 'path',
 type Props = { urlCount: number },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
   return (
     <main className="space-y-4">
@@ -17,7 +15,6 @@ const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
       <p className="text-sm text-gray-600">Nightly generated. <a className="text-blue-500 underline" href="/sitemap.xml">View sitemap</Link></p>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="enhanced-card">
         <div className="text-lg">Indexed URLs: {urlCount}</div>
       </div>
@@ -34,13 +31,9 @@ export const getServerSideProps: GetServerSideProps = async () => {
   try {
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
     const raw = fs.readFileSync(p, 'utf8'),
     urlCount = (raw.match(/<url>/g) || []).length
-=======
     const raw = fs.readFileSync(p, 'utf8'),
     urlCount = (raw.match(/<url>/g) || []).length
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,6 +1,5 @@
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const { upsertFile } = require('./_lib/github');
 async function psi(url, strategy = 'mobile', key) {
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed');
@@ -91,8 +90,5 @@ exports.handler = async function() {
   }
 },
 
-=======
 
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/cron-weekly-pagespeed.js
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

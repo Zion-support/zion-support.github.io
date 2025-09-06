@@ -26,10 +26,7 @@ import Head from 'next / head';
 import { motion } from 'framer-motion';
 
 
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Brain,
   Atom,
   Shield,
@@ -67,10 +64,7 @@ import { motion } from 'framer-motion';
 
   Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin;
 
-=======
 } from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
@@ -114,7 +108,6 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
   }, ];    count: cuttingEdgeMicroSaasServices2025.length;
 
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ];
 
     count: cuttingEdgeMicroSaasServices2025.length,
@@ -146,7 +139,6 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
 
   const containerVariants = {
     hidden: { opacity: 0 }
-=======
 ;
 export default /**
  * CuttingEdgeServicesShowcase2025 - Function description
@@ -178,7 +170,6 @@ function CuttingEdgeServicesShowcase2025() {
     return matches_search && matches_category;
   const container_variants = {
     hidden: { opacity: 0 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1
       transition: {
@@ -307,13 +298,11 @@ export default function CuttingEdgeServicesShowcase2025() {;
       },;
     },  };        staggerChildren: 0 && 0.1;
 
-=======
     }
   };
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
-=======
         stagger_children: 0.1,
       },
     },  }        stagger_children: 0.1;
@@ -330,11 +319,9 @@ export default function CuttingEdgeServicesShowcase2025() {;
       transition: {
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
   }
-=======
 
         duration: 0.5,
       },
@@ -343,7 +330,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
   };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -352,9 +338,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
-=======
                 <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   Showcase 2025
                 </span>
               </motion.h1>
@@ -375,7 +359,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
               </motion.p>
               {/* Hero Stats */}
               <motion.div
-=======
               transition={{ duration: 0 && 0.8 }}
               className='text-center'>;
               <motion&& motion.h1
@@ -415,7 +398,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
               {/* Hero Stats */}
               <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
 
 
@@ -428,9 +410,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
               {/* CTA Buttons */}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className="flex flex-col sm:flex-row gap-4 justify-center"
-=======
                   <div key={index} className='text-center'>
                     <div className='flex justify-center mb-2'>
                       <div className='p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30'>
@@ -444,7 +424,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
 
                 className="flex flex-col sm:flex-row gap-4 justify-center"
-=======
                     <div className='text-sm text-white/70'>{stat.label}</div>                  </div>
 
                   </div>
@@ -458,8 +437,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}>;
@@ -492,19 +469,16 @@ export default function CuttingEdgeServicesShowcase2025() {;
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
 
 
-=======
 
             <motion.div 
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}>;
               {/* Search */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <input
                   type='text'
                   placeholder='Search services...'
@@ -534,14 +508,11 @@ export default function CuttingEdgeServicesShowcase2025() {;
               {/* Category Filter */}
               <div className='flex flex-wrap gap-2'>              <div className="flex flex-wrap gap-2">;
 
-=======
 
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
-=======
 
               <div className='flex flex-wrap gap-2'>                <button
 
@@ -553,8 +524,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 <button
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   onClick={() => setSelectedCategory('all')}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
                     selectedCategory === 'all';
@@ -575,7 +544,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                       selectedCategory === category.title
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
                         : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     }`}
                   >;
                     {category && category.title} ({category && category.count});
@@ -588,22 +556,17 @@ export default function CuttingEdgeServicesShowcase2025() {;
               {/* View Mode Toggle */}
               <div className='flex items-center gap-2'>                <button              <div className="flex items-center gap-2">;
 
-=======
               </div>
-=======
 
 
 
               {/* View Mode Toggle */}
               <div className="flex items-center gap-2">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${;
                     viewMode === 'grid';
@@ -629,15 +592,12 @@ export default function CuttingEdgeServicesShowcase2025() {;
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Services Grid */}
 
-=======
         <section id="services" className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
@@ -651,7 +611,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   {/* Service Header */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {service.name}
                         </h3>;
                         <p className='text - white / 70 text - sm leading - relaxed'>;
@@ -674,7 +633,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                         </div>
                       </div>
                     </div>
-=======
                     className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}>;
                     <div className='flex items-start justify-between mb-4'>;
                       <div className='flex-1'>;
@@ -700,10 +658,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
                       </div>;
                     </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Tags */}
 
-=======
                     <div className="flex flex-wrap gap-2 mb-4">
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span
@@ -711,16 +667,12 @@ export default function CuttingEdgeServicesShowcase2025() {;
                           className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20"
                         >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
 
                         >
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {tag}
                         </span>;
                       ))}
@@ -729,12 +681,10 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
                       <span>Market: {service.marketSize}</span>
                       <span className='text-cyan-400'>{service.category}</span>                    </div>
-=======
                     </div>
 
                     {/* Market Info */}
@@ -742,7 +692,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                       <span>Market: {service.marketSize}</span>
                       <span className="text-cyan-400">{service.category}</span>
                     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
                   {/* Service Details */}
 
@@ -849,7 +798,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                       <div className="text-2xl font-bold text-white">
                         ${service.pricing.starter.price}
                         <span className="text-sm font-normal text-white/60">/{service.pricing.starter.period}</span>
-=======
                     className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}
                   >
 
@@ -860,11 +808,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   {/* Service Details */}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </div>
                     </div>
-=======
                     </div>;
 
                     {/* Pricing */}
@@ -881,7 +826,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
                     {/* CTA */}
 
-=======
                     <div className="flex items-center justify-between">
                       <a
                         href={service.website}
@@ -902,17 +846,13 @@ export default function CuttingEdgeServicesShowcase2025() {;
                     </div>;
                   </div>;
 
-=======
 
                   {/* Hover Effect Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </motion.div>
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {/* Hover Effect Overlay */}
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion && motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />;
                 </motion && motion.div>;
@@ -921,12 +861,9 @@ export default function CuttingEdgeServicesShowcase2025() {;
             </motion && motion.div>;
 
 
-=======
             </motion.div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
@@ -942,7 +879,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 <p className='text-white/70 mb-6'>
                   Try adjusting your search terms or category filter
                 </p>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <button
                   onClick={() => {;
                     setSearchTerm('');
@@ -953,14 +889,12 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
                 <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>;
 
-=======
                 className="text-center py-20"
               >
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
                   onClick={() => {;
                     setSearchTerm('');
@@ -976,18 +910,14 @@ export default function CuttingEdgeServicesShowcase2025() {;
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Contact CTA Section */}
         <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-=======
 
         {/* Contact CTA Section */}
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
@@ -998,7 +928,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -1032,7 +961,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 Let's discuss how we can help you achieve your goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-=======
                   href={`tel:${contactInfo && contactInfo.mobile}`}
                   className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105'>;
                   <Phone className='mr-2 w-5 h-5' />                  Call Now                Ready to Transform Your Business?;
@@ -1045,7 +973,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <a
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">;
@@ -1093,15 +1020,11 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
   );
-=======
-=======
   );
 
 
 
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   hidden: {
   opacity: 0
 }
@@ -1177,7 +1100,6 @@ visible: {;
 
 };}
 
-=======
                         </span>                      </div>;
                     </div>;
                     {/* CTA */}
@@ -1387,11 +1309,7 @@ visible: {
   coordinate_y: 0, opacity: 1, transition: {
   duration: 0.5;
 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   duration: 0.5 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

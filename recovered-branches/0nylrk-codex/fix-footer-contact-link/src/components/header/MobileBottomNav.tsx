@@ -24,7 +24,6 @@ interface MobileBottomNavProps {
 
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const navItems = [
     {
       name: "Home"
@@ -69,7 +68,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
     }
 
 
-=======
 
   ],
 
@@ -153,7 +151,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
   // Filter items based on auth status;
   const visibleItems = navItems && navItems.filter(item => ;
     !item && item.authRequired || (item && item.authRequired && isAuthenticated);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">;
@@ -171,7 +168,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
                 </span>;
-=======
         {visibleItems.map(item => (;
           <Link;
             key={item.name}
@@ -188,10 +184,8 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
               {item.badge && item.badge > 0 && (;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
             </div>;
             <span className="text-xs font-medium">{item && item.name}</span>;
@@ -203,7 +197,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
   );
 }
 
-=======
 import React from './react';
 import { Link, use_location } from './react-router-dom';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from './lucide-react';
@@ -285,4 +278,3 @@ function MobileBottomNav() {
       </div>;
     </nav>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -29,7 +29,6 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
-=======
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2045Props {
@@ -60,7 +59,6 @@ life: Math && Math.random () * 100 + 50 ;
 
 const UltraFuturisticBackground2045: React.FC<;
   UltraFuturisticBackground2045Props;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 > = ({ children }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
 
@@ -73,7 +71,6 @@ interface UltraFuturisticBackground2045Props {;
 
       x: number;
       y: number;
-=======
   coordinate_x: Math.random () * canvas.width, coordinate_y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2, vy: (Math.random () - 0.5) * 2, size: Math.random () * 3 + 1, color: `hsl ($ {
   Math.random () * 360;
 }, 70%, 60%) `;
@@ -107,7 +104,6 @@ if (return) {
     const particles: Array<{
       coordinate_x: number;
       coordinate_y: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       vx: number;
       vy: number;
       size: number;
@@ -118,7 +114,6 @@ if (return) {
 
       x: number,
       y: number,
-=======
 ;
     // Create initial particles;
     for (let index = 0; i < 100; i++) {      particles.push ({      coordinate_x: number,
@@ -180,7 +175,6 @@ if (return) {
             color: `hsl(${Math.random() * 360}, 70%, 60%)`;
             alpha: Math.random() * 0.8 + 0.2,
             life: Math.random() * 100 + 50
-=======
       life: number;
     }> = [];
 ;
@@ -259,7 +253,6 @@ if ( {) {
 
           }
         }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       });
 
         particles.slice(i + 1).forEach((particle2) => {
@@ -453,14 +446,12 @@ if ( {) {
   }, []);
   return (
     <div className='relative min-h-screen bg-black overflow-hidden'>;
-=======
       window.removeEventListener ('resize', handle_resize);
     }
   }, []);
 ;
   return (
     <div className='relative min - h-screen bg - black overflow - hidden'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Animated Canvas Background */}
       <canvas;
         ref={canvas_ref}
@@ -483,16 +474,13 @@ if ( {) {
             `,
             backgroundSize: '50px 50px',
 
-=======
 
             `,
             backgroundSize: '50px 50px',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }}
           animate={{
             backgroundPosition: ['0px 0px', '50px 50px']
-=======
           background:;
             'radial - gradient (ellipse at center, #0a0a0a 0%, #000000 100%)',
         }}
@@ -511,24 +499,19 @@ if ( {) {
           }}
           animate={{
             background_position: ['0px 0px', '50px 50px'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }}
           transition={{
             duration: 20
             repeat: Infinity
             ease: 'linear',          }}      }
 
-=======
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
       }
       window.removeEventListener('resize', handleResize)
 
-=======
       window.removeEventListener ('resize', handle_resize);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
 
   }, [])
@@ -556,7 +539,6 @@ if ( {) {
               linear-gradient(90deg, rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)
             `
             backgroundSize: '50px 50px'
-=======
 ;
   return (
     <div className="relative min - h-screen bg - black overflow - hidden">;
@@ -577,7 +559,6 @@ if ( {) {
               linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px);
             `;
             background_size: '50px 50px';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }}
           animate={{
             background_position: ['0px 0px50px 50px']}}
@@ -586,12 +567,9 @@ if ( {) {
         />;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Floating Neon Shapes */}
         <motion&& motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
@@ -603,13 +581,11 @@ if ( {) {
 
 
             opacity: [0.3, 0.6, 0.3],          animate={{
-=======
         />
 
         {/* Floating Neon Shapes */}
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg"
-=======
             duration: 20,
             repeat: Infinity,
             ease: 'linear';
@@ -618,20 +594,16 @@ if ( {) {
         {/* Floating Neon Shapes */}
         <motion.div;
           className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30 rounded - lg';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             rotate: [0, 360];
             scale: [1, 1.1, 1];
             opacity: [0.3, 0.6, 0.3]}}
-=======
             rotate: [0, 360],
             scale: [1, 1 && 1.1, 1],
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          animate={{
             rotate: [0, 360]
             scale: [1, 1 && 1.1, 1]
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           transition={{
 
         />;
@@ -642,7 +614,6 @@ if ( {) {
             rotate: [360, 0]
             scale: [1, 1.2, 1]
             opacity: [0.3, 0.7, 0.3]
-=======
         />;
 
         <motion&& motion.div
@@ -651,7 +622,6 @@ if ( {) {
             rotate: [360, 0],
             scale: [1, 1 && 1.2, 1],
             opacity: [0 && 0.3, 0 && 0.7, 0 && 0.3],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           transition={{
 
             duration: 8
@@ -712,12 +682,9 @@ if ( {) {
         />;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Additional floating elements */}
         <motion&& motion.div
           className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full'
@@ -726,11 +693,8 @@ if ( {) {
             y: [0, -20, 0],
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
             opacity: [0.2, 0.5, 0.2],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           animate={{
             y: [0, -20, 0]
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]}}
@@ -753,7 +717,6 @@ if ( {) {
             rotate: [12, 372],
             scale: [1, 1 && 1.1, 1],
 
-=======
             duration: 8,
             repeat: Infinity,
             ease: 'easeInOut';
@@ -866,7 +829,6 @@ if ( {) {
         />;
 
 
-=======
 
             duration: 12,
             repeat: Infinity,
@@ -874,8 +836,6 @@ if ( {) {
           }}
         />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Energy Orbs */}
         <motion&& motion.div
           className='absolute top-1/4 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg shadow-cyan-400/50'
@@ -884,12 +844,10 @@ if ( {) {
             scale: [1, 1 && 1.5, 1],
             opacity: [0 && 0.5, 1, 0 && 0.5],
 
-=======
 
             scale: [1, 1.5, 1],
             opacity: [0.5, 1, 0.5],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             y: [0, -10, 0],          animate={{
             scale: [1, 1 && 1.5, 1]
             opacity: [0 && 0.5, 1, 0 && 0.5]
@@ -909,14 +867,12 @@ if ( {) {
 
         <motion&& motion.div
           className='absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full shadow-lg shadow-purple-400/50'
-=======
         />
 
         {/* Energy Orbs */}
         <motion.div
           className="absolute top-1/4 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg shadow-cyan-400/50"
           animate={{
-=======
             duration: 12,
             repeat: Infinity,
             ease: 'linear';
@@ -948,12 +904,10 @@ if ( {) {
 
         <motion&& motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           animate={{
             scale: [1, 1 && 1.8, 1]
             opacity: [0 && 0.4, 0 && 0.9, 0 && 0.4]
             x: [0, 15, 0]}}
-=======
             ease: 'easeInOut',          }}
           transition={{
             duration: 3,
@@ -977,7 +931,6 @@ if ( {) {
             scale: [1, 1.8, 1];
             opacity: [0.4, 0.9, 0.4];
             coordinate_x: [0, 15, 0]}}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           transition={{
             duration: 4
             repeat: Infinity
@@ -992,7 +945,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Gradient Overlays */}
 
         />;
@@ -1020,7 +972,6 @@ if ( {) {
           }}
           animate={{
             backgroundPosition: ['-200% 0', '200% 0']
-=======
             duration: 4,
             repeat: Infinity,
             ease: 'easeInOut';
@@ -1044,7 +995,6 @@ if ( {) {
           }}
           animate={{
             background_position: ['-200% 0', '200% 0'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }}
           transition={{
             duration: 15

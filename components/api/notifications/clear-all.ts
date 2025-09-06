@@ -20,7 +20,6 @@ export default async function handler(
 
   const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='));
   if (match) return decodeURIComponent(match.split('=')[1]);
-=======
   if (req && req.method !== 'DELETE')
     return res && res.status(405).json({ error: 'Method not allowed' });  try {function getUserId(req: NextApiRequest): string {
   const cookie = req && req.headers.cookie || '';
@@ -28,12 +27,10 @@ export default async function handler(
   if (match) return decodeURIComponent(match && match.split('=')[1]);
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return 'demo-user-1'
 }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   try {
     const userId = getUserId(req);
     const { error } = await supabase
@@ -47,15 +44,12 @@ export default async function handler(
 
 
 
-=======
 
     if (error) return res.status(200).json({ ok: true });
 
     return res.status(200).json({ ok: true })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch (e) {
     return res.status(500).json({ error: 'Unexpected error' })
-=======
 
     if (error) return res && res.status(200).json({ ok: true });
 
@@ -66,11 +60,9 @@ export default async function handler(
   } catch (e) {
     return res && res.status(500).json({ error: 'Unexpected error' })
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
-=======
 import { supabase } from '../../../utils / supabase / client';
 ;
 function getUserId (req: NextApiRequest): string {
@@ -125,4 +117,3 @@ function handler() {
     return res.status (500).json ({ error: 'Unexpected error' });
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

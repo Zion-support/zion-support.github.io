@@ -23,9 +23,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -177,7 +175,6 @@ import Link from './next / link';
 import { motion  } from './framer-motion';
 import Layout from "./components / Layout";
 import {
-=======
 
 import React from 'react';
 import Head from 'next/head';
@@ -186,7 +183,6 @@ import Head from 'next/head';
 
 import {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   BookOpen,
   Clock,
   User,
@@ -626,7 +622,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                             : guide.difficulty === "Intermediate";
                               ? "bg - yellow - 100 text - yellow - 600";
                               : "bg - red - 100 text - red - 600";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         }`}
                       >;
                         {guide.difficulty}
@@ -756,15 +751,11 @@ export default function GuidesPage() {
           </div>
         </section>
 
-=======
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </div>
     </Layout>
-=======
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center">;
                   Request Custom Guide;
                   <ExternalLink className="ml-2 w-5 h-5" />;
@@ -775,9 +766,7 @@ export default function GuidesPage() {
         </section>;
       </div>;
     </Layout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-=======
                       </span>;
                     </div>;
                   </div>;
@@ -881,5 +870,4 @@ export default function GuidesPage() {
         </section>;
       </div>;
     </Layout>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

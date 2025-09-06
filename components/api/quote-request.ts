@@ -17,7 +17,6 @@ const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;
 const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey =
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from '@supabase/supabase-js';
 import OpenAI from 'openai';
@@ -26,9 +25,7 @@ const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PU
 const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const openaiApiKey = process.env.OPENAI_API_KEY;
-=======
   process && process.env.SUPABASE_SERVICE_ROLE_KEY ||
   process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const supabase =
@@ -90,8 +87,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { create_client  } from '@supabase / supabase - js';
 import OpenAI from './openai';
@@ -198,10 +193,6 @@ if (throw error) {
     return res.status (500).json ({ message: "Server error" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

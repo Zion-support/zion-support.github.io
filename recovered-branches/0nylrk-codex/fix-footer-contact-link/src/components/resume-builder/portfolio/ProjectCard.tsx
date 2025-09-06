@@ -45,7 +45,6 @@ if ( {) {
             src={project.image_url}
             alt={project.title}
 
-=======
 
 
 
@@ -74,7 +73,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 
       onDelete(project.id)
 
-=======
 import { useState } from 'react',;
 import { Card, CardContent, CardFooter } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -99,7 +97,6 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     setDeleteDialogOpen(false);
   };
@@ -111,7 +108,6 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
           <img
             src={project && project.image_url} 
             alt={project && project.title} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             className="w-full h-full object-cover"
           />;
         ) : (;
@@ -153,15 +149,12 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
                 </Badge>;
               ))}
             </div>;
-=======
                   {tech}
 
                 </Badge>;
               ))}
             </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
 
             </p>)}
@@ -236,7 +229,6 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
           <AlertDialogFooter>;
             <AlertDialogCancel>Cancel</AlertDialogCancel>;
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">;
-=======
               target="_blank";
               rel="noopener noreferrer";
             >;
@@ -283,10 +275,8 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
     </Card>);
 }
 
-=======
 
   )
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

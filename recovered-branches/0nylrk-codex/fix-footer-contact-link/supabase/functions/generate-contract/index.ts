@@ -8,7 +8,6 @@ interface Milestone {
   description: string;
   dueDate: string
   estimatedHours: number
-=======
 
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
@@ -16,12 +15,10 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
 
-=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 interface Milestone {
   title: string,
@@ -30,7 +27,6 @@ interface Milestone {
   estimatedHours: number
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -71,7 +67,6 @@ serve(async (req) => {
 
 
 
-=======
 ;
   try {;
     // Get the OpenAI API key from environment variables;
@@ -99,7 +94,6 @@ serve(async (req) => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -142,7 +136,6 @@ serve(async (req) => {
         messages: [
           {
             role: 'system'
-=======
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts",
 const cors_headers = {
@@ -228,7 +221,6 @@ if ( {) {
         `;
       });
 ;
-=======
         Milestone ${index + 1}: ${milestone.title}
         - Description: ${milestone.description}
         - Due Date: ${new Date(milestone.dueDate).toLocaleDateString()}
@@ -236,11 +228,9 @@ if ( {) {
       { 
         status: 500, 
 
-=======
         - Estimated Work: ${milestone.estimatedHours} hours;
         `;
       }),;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       prompt += `;
       Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.;
       `;
@@ -260,7 +250,6 @@ if ( {) {
       success: true, 
       contract 
 
-=======
 ;
     const data = await response.json ();
 ;
@@ -275,7 +264,6 @@ if ( {) {
     return new Response (JSON.stringify ({
       success: true,
       contract;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }), {
       headers: { ...cors_headers, 'Content - Type': 'application / json' }});
   } catch (error) {
@@ -287,7 +275,6 @@ if ( {) {
       });
       {
         status: 500
-=======
 ;
     prompt += `;
     Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.;
@@ -329,8 +316,6 @@ if ( {) {
         status: 500,;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }
@@ -351,6 +336,4 @@ if ( {) {
 });
 ;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

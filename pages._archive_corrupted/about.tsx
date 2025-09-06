@@ -1,11 +1,8 @@
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const \"About\": NextPage = () => {
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -30,7 +27,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 const \"About\": NextPage = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/about.tsx
 import React from 'react';
 import Link from 'next/link';
 import type { NextPage } from 'next';
@@ -66,7 +62,6 @@ import MainLayout from '../components/layout/MainLayout';
       \"title\": \'Results-Driven\',
       \"description\": \'We focus on delivering measurable outcomes that drive business growth.\',
       \"icon\": Target
-=======
 import {Users,, Target,, Award,, Globe,, Shield,, Zap} from 'lucide-react';
 const "About": NextPage = () => {;
   const values = [{;
@@ -98,7 +93,6 @@ const "About": NextPage = () => {;
       \"title\": \'Results-Driven\',;
       \"description\": \'We focus on delivering measurable outcomes that drive business growth.\',;
       \"icon\": Target;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/about.tsx
     }
   ];
   const team = [{;
@@ -128,18 +122,14 @@ const "About": NextPage = () => {;
   ];
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },
     { \"number\": \'5+\', \"label\": \'Years Experience\' },
-=======
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },;
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },;
     { \"number\": \'5+\', \"label\": \'Years Experience\' },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/about.tsx
     { \"number\": \'24/7\', \"label\": \'Support Available\' }
   ];
 export default function AboutPage() {;
@@ -180,12 +170,10 @@ export default function AboutPage() {;
               { "title": 'Collaboration', "desc": 'We partner closely with clients for success.' }
 
 
-=======
             ].map((v) => (;
               <div key={v && v.title} className="bg-white rounded-lg p-8 shadow text-center">;
                 <h3 className="text-xl font-semibold mb-3">{v && v.title}</h3>;
                 <p className="text-gray-600">{v && v.desc}</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/about.tsx
     <MainLayout
       title=\"About Us - Zion Tech Group\"
       description=\"Learn about Zion Tech Group\'s mission, values, and the team behind our innovative technology solutions.\">;
@@ -261,9 +249,6 @@ export default function AboutPage() {;
     </main>
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       {/* Values Section */}
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
@@ -275,12 +260,10 @@ export default function AboutPage() {;
           </div>
 
 
-=======
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             {values.map((value) => (
               <div key={value.title} className=\"text-center\">
                 <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
@@ -293,7 +276,6 @@ export default function AboutPage() {;
                   {value.description}
                 </p>
               </div>
-=======
       <section className=\"py-20 bg-gray-50\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\">;
@@ -353,7 +335,6 @@ export default function AboutPage() {;
                   {value && value.description}
                 </p>;
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/about.tsx
             ))}
           </div>;
         </div>;
@@ -380,7 +361,6 @@ export default function AboutPage() {;
                   </p>
                 </div>
               </div>
-=======
       <section className=\"py-20 bg-gray-50\" id=\"team\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
@@ -411,7 +391,6 @@ export default function AboutPage() {;
                   </p>;
                 </div>;
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/about.tsx
             ))}
           </div>;
         </div>;
@@ -479,7 +458,6 @@ export default function AboutPage() {;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 
-=======
 }
     <>;
       <Helmet>;
@@ -494,7 +472,6 @@ export default function AboutPage() {;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/about.tsx
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
           <div className=\"max-w-7xl mx-auto\">;
@@ -628,8 +605,6 @@ export default function AboutPage() {;
   );
 
 
-=======
 
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

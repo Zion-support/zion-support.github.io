@@ -17,7 +17,6 @@ import {
 
 
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
-=======
 import React from 'react';
 
 
@@ -118,11 +117,9 @@ const EnhancedFooter: React.FC = () => {;
     },;
 
 
-=======
 
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <footer className='bg-slate-950 border-t border-white/10'>;
       <div className='max-w-7xl mx-auto px-6 py-16'>;
@@ -178,7 +175,6 @@ const EnhancedFooter: React.FC = () => {;
 
           {/* Footer Sections */}
 
-=======
           {footerSections.map((section) => (
             <div key={section.title}>
               <h3 className="text-white font-semibold mb-4">{section.title}</h3>
@@ -186,7 +182,6 @@ const EnhancedFooter: React.FC = () => {;
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
-=======
 import Link from 'next / link';
 import {
   Brain,
@@ -328,12 +323,9 @@ const EnhancedFooter: React.FC = () => {
         </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Bottom Section */}
         <div className='pt-8 border-t border-white/10'>;
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
@@ -463,7 +455,6 @@ function EnhancedFooter() {
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">";
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">,;
 
-=======
   const footer_links = {}, ";
       { name: "IT Services", href: "/services / it - services" }, ";
       { name: "Micro SaaS", href: "/services / micro - saas" }, ";
@@ -498,7 +489,6 @@ function EnhancedFooter() {
     <footer className="bg - gray - 900 text - white">";
       <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 12">";
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 6 gap - 8">,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* comment */}";
           <div className="lg: col - span - 2">";
             <div className="flex items - center space - x-2 mb - 4">";
@@ -600,12 +590,10 @@ digital age.;
                   </Link>;
                 </li>;
               ))}
-=======
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
                 </li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </ul>;
           </div>;
           {/* comment */}
@@ -634,12 +622,10 @@ digital age.;
                   </Link>;
                 </li>;
               ))}
-=======
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
                 </li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </ul>;
           </div>;
           {/* comment */}
@@ -668,12 +654,10 @@ digital age.;
                   </Link>;
                 </li>;
               ))}
-=======
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
                 </li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </ul>;
           </div>;
           {/* comment */}
@@ -737,7 +721,6 @@ company updates.;
 
                 Subscribe,;
 
-=======
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
@@ -769,7 +752,6 @@ company updates.;
               <button type="submit;
                 className="bg - blue - 600 text - white px - 6 py - 2 rounded - lg font - semibold hover:bg - blue - 700 transition - colors">;
                 Subscribe,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </button>;
             </form>;
           </div>;
@@ -802,7 +784,6 @@ company updates.;
     </footer>,;
   )}"';
 
-=======
         <div className="border - t border - gray - 800 pt - 8">";
           <div className="flex flex - col md: flex - row justify - between items - center">";
             <div className="text - gray - 400 text - sm mb - 4 md:mb - 0">,
@@ -828,13 +809,9 @@ company updates.;
       </button>,
     </footer>,
   )}"';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 };export default EnhancedFooter;  )
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

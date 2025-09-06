@@ -4,14 +4,12 @@
 import {GradientHeading} from "@/components/GradientHeading";
 import {Clock, Map, DollarSign} from "lucide-react";
 
-=======
 import { GradientHeading } from "@/components/GradientHeading",
 import { Clock, Map, DollarSign } from "lucide-react",
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function PageHero() {
   return (
     <div className="text-center mb-12">
@@ -98,7 +96,6 @@ export function PageHero() {;
   );
 }
 
-=======
 import { GradientHeading  } from '@/components / GradientHeading';
 import { Clock, Map, DollarSign  } from './lucide-react';
 export /**
@@ -150,15 +147,11 @@ function PageHero() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
-=======
   )
 
 }
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

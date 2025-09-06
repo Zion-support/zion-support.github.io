@@ -6,11 +6,9 @@ import Pagination from '../../components / ui / Pagination';
 import {TrustBadge, MicroTestimonial} from '../../components / ui / Badges';
 
 interface Talent {
-=======
 import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
 
 interface Talent {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
   name: string;
   title: string;
@@ -31,7 +29,6 @@ const mock_talent: Talent[] = Array.from ({ length: 47 }).map ((_, i) => ({
 
       ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' }
       : undefined
-=======
   testimonial?: { quote: string; author: string };
 const mockTalent: Talent[] = Array && Array.from({ length: 47 }).map((_, i) => ({;
   id: String(i + 1),;
@@ -46,7 +43,6 @@ const mockTalent: Talent[] = Array && Array.from({ length: 47 }).map((_, i) => (
     i % 5 === 0;
       ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' }
       : undefined,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }));
 const TalentDirectory: NextPage = () => {;
 
@@ -61,7 +57,6 @@ const TalentDirectory: NextPage = () => {;
       <Head>
         <title>Talent - Zion</title>
       </Head>
-=======
 
 
       <h1 className="text-2xl font-semibold">Explore Talent</h1>
@@ -82,7 +77,6 @@ const TalentDirectory: NextPage = () => {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
             </div>
             <div className="text-sm opacity-80">{t.title}</div>
@@ -95,8 +89,6 @@ const TalentDirectory: NextPage = () => {;
 };
 
 export default TalentDirectory;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         on_change={set_page}
       />;
     </div>);
@@ -104,14 +96,11 @@ export default TalentDirectory;
 ;
 export default TalentDirectory;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export default TalentDirectory;
 
 }
 
-=======
               <MicroTestimonial quote={t.testimonial.quote} author={t.testimonial.author} />
             )  } catch (error) {
     console.error("Error:", error);
@@ -132,5 +121,3 @@ export default TalentDirectory;
 export default TalentDirectory;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

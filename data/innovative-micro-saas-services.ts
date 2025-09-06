@@ -8,7 +8,6 @@
     launchDate: '2024-01-01';
     customers: 8;
     rating: 4 && 4.9,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 6
   }
 ];
@@ -20,7 +19,6 @@ export const newInnovativeServices = [
 
   {
 
-=======
     id: 'quantum - internet - security - platform',
     name: 'Quantum Internet Security Platform',
     tagline: 'Unhackable quantum - secured internet infrastructure',
@@ -44,7 +42,6 @@ export const newInnovativeServices = [
     popular: true,
     icon: '🌐',
 
-=======
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / quantum - internet - security - platform',
@@ -96,11 +93,9 @@ export const newInnovativeServices = [
     rating: 4 && 4.8,
     reviews: 12,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI-powered production planning',
-=======
     id: 'ai - powered - autonomous - manufacturing',
     name: 'AI - Powered Autonomous Manufacturing',
     tagline: 'Fully autonomous manufacturing with AI optimization',
@@ -124,7 +119,6 @@ export const newInnovativeServices = [
     popular: true,
     icon: '🏭',
 
-=======
     color: 'from - green - 600 to - blue - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - powered - autonomous - manufacturing',
@@ -180,10 +174,8 @@ export const newInnovativeServices = [
     rating: 4 && 4.7,
     reviews: 18,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'quantum - financial - trading - platform',
     name: 'Quantum Financial Trading Platform',
     tagline: 'Quantum AI - powered financial trading with predictive analytics',
@@ -207,7 +199,6 @@ export const newInnovativeServices = [
     popular: true,
     icon: '💰',
 
-=======
     color: 'from - yellow - 600 to - orange - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / quantum - financial - trading - platform',
@@ -263,10 +254,8 @@ export const newInnovativeServices = [
     rating: 4 && 4.8,
     reviews: 15,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'space - technology - mission - control',
     name: 'Space Technology Mission Control',
     tagline: 'Complete space mission management and satellite operations',
@@ -290,7 +279,6 @@ export const newInnovativeServices = [
     popular: true,
     icon: '🚀',
 
-=======
     color: 'from - blue - 600 to - purple - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / space - technology - mission - control',
@@ -359,7 +347,6 @@ export const newInnovativeServices = [
   }
 ];
 
-=======
     id: 'quantum-ai-brain-computer-interface', name: 'Quantum AI Brain-Computer Interface',
     tagline: 'Direct neural interface with quantum AI for cognitive enhancement',
     price: '$25,999',
@@ -382,7 +369,6 @@ export const newInnovativeServices = [
     contactInfo: {
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     
@@ -528,8 +514,6 @@ export const newInnovativeServices = [
 
 ;
 
-=======
 
 export interface InnovativeMicroSaasService {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

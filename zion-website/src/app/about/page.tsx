@@ -9,7 +9,6 @@ const values = [
     name: 'Innovation First'
     description: 'We push the boundaries of what\'s possible, constantly exploring new frontiers in AI and technology.'
     icon: LightBulbIcon}
-=======
   UserGroupIcon,
   LightBulbIcon,
   GlobeAltIcon,
@@ -22,7 +21,6 @@ const values = [;
     name: 'Innovation First',
     description: 'We push the boundaries of what's possible, constantly exploring new frontiers in AI and technology.',
     icon: LightBulbIcon},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     name: 'Global Impact'
     description: 'Our solutions reach across borders, transforming industries and improving lives worldwide.'
@@ -64,11 +62,9 @@ function AboutPage() {
 
   return (
     <div className=&quot;bg - black & quot;>;
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
@@ -160,7 +156,6 @@ function AboutPage() {
           </div>
         </div>
       </div>
-=======
               <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
                 Zion Tech Group;
               </span>;
@@ -234,7 +229,6 @@ function AboutPage() {
           </div>;
         </div>;
       </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Values */}
       <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
@@ -291,7 +285,6 @@ function AboutPage() {
               <div className="max-w-xl">
                 <div className="group relative">
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {person.name}
                   </h3>;
                   <p className=&quot;mt - 2 text - sm text - blue - 400 & quot;>{person.role}</p>;
@@ -305,7 +298,6 @@ function AboutPage() {
 
 
 
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -316,8 +308,6 @@ function AboutPage() {
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Ready to be part of the AI revolution? Let's discuss how we can work together to 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             transform your organization.
           </p>
           <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>
@@ -336,7 +326,6 @@ function AboutPage() {
     </div>
   )
 }
-=======
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl text - center & quot;>;
           <h2 className=&quot;text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
@@ -361,4 +350,3 @@ function AboutPage() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

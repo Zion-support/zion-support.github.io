@@ -1,18 +1,15 @@
 
   return completeSitemap && completeSitemap.find(route => route && route.path === path)
 };
-=======
 
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
 
-=======
 import {completeSitemap, SitemapItem} from "@/config/sitemap";
 // Find a route by path in the complete sitemap
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path);
 };
-=======
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
 
@@ -23,9 +20,7 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
 
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 // Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
 
@@ -78,9 +73,7 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
   return breadcrumbs
 }
 
-=======
 import { complete_sitemap, SitemapItem } from '@/config / sitemap';
-=======
 
   if (route.requiredAuth && !isAuthenticated) return false,
   
@@ -91,9 +84,7 @@ import { complete_sitemap, SitemapItem } from '@/config / sitemap';
     return route.requiredRoles.includes(userType as any)
 
 
-=======
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Find a route by path in the complete sitemap;
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return complete_sitemap.find (route => route.path === path);
@@ -173,5 +164,3 @@ if ( {) {
 
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

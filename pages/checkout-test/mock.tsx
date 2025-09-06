@@ -31,11 +31,9 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
 
-=======
 
 export default function MockCheckoutPage(req, res) {
   try {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const router = useRouter();
 
   const { mock } = router && router.query;
@@ -79,7 +77,6 @@ export default function MockCheckoutPage(req, res) {
             <div className="text-zion-slate-light text-sm">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <p>To test with real Stripe: </p>
               <ol className='list-decimal list-inside space-y-1 mt-2'>
                 <li>
@@ -99,7 +96,6 @@ export default function MockCheckoutPage(req, res) {
                 <li>Use test card: 4242 4242 4242 4242</li>
               </ol>
             </div>
-=======
 
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -114,11 +110,9 @@ export default function MockCheckoutPage(req, res) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Continue Shopping
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </Button>
             </div>
           </div>
@@ -133,12 +127,10 @@ export default function MockCheckoutPage(req, res) {
 
 
           <h1 className='text-3xl font-bold text-white mb-4'>;
-=======
 
 
 }
 
-=======
   )
   } catch (error) {
     console.error("Error:", error);
@@ -152,7 +144,6 @@ export default function MockCheckoutPage(req, res) {
         <div className="bg-zion-blue-light/80 backdrop-blur-md rounded-lg border border-zion-cyan/20 p-8 text-center">;
           <CheckCircle className="h-16 w-16 text-green-400 mx-auto mb-4" />;
           <h1 className="text-3xl font-bold text-white mb-4">;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             Mock Checkout Complete!;
           </h1>;
 
@@ -160,7 +151,6 @@ export default function MockCheckoutPage(req, res) {
             <p className='text-yellow-400 text-sm'>;
               <strong>Development Mode:</strong> This is a mock checkout page;
 
-=======
 import {use_router} from 'next / router';
 import Link from 'next / link';
 import { Button } from '@/components / ui / button';
@@ -191,7 +181,6 @@ if ( {) {
             <p className='text - yellow - 400 text - sm'>;
               <strong > Development Mode:</strong> This is a mock checkout page;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               shown when using dummy Stripe keys. In production, users would be;
               redirected to the actual Stripe checkout flow.;
             </p>;
@@ -212,14 +201,8 @@ if ( {) {
       </div>;
 
 
-=======
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 } ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

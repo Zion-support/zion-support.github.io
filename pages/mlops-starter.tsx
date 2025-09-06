@@ -4,17 +4,14 @@
 						<a href="/contact" className="px-4 py-2 rounded-lg border border-white/10 text-gray-200">Contact Sales</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 					</div>
 				</div>
 			</section>
 		</>
 	)
 
-=======
 }
 
-=======
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -36,9 +33,6 @@ return (
   </section>;
   </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -46,4 +40,3 @@ return (
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

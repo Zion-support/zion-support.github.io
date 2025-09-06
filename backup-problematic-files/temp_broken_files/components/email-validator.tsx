@@ -69,7 +69,6 @@ export default function EmailValidatorPage() {;
       score = 0,;
       issues.push('Email too long');
 
-=======
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -151,7 +150,6 @@ if (email.length > 254) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     // Additional checks;
     if (email.length > 254) {status = 'invalid';
@@ -483,17 +481,14 @@ if (return null, ) {
                       value={emails}
                       on_change={(e) => set_emails (e.target.value)}
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
                   </Button>;
                   {validation_results.length > 0 && (
                     <Button;
 
-=======
                       placeholder="john@example.com&#10,jane@company.org&#10,user@domain.net"                      rows={8}
                       className=&quot;w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none&quot;
                     />
@@ -554,7 +549,6 @@ onClick={clearResults}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       className=&quot;border-gray-600 text-gray-300 hover:bg-gray-700&quot;
                     >
                       Clear
@@ -588,7 +582,6 @@ onClick={clearResults}
                   </Button>
                 )}
               </div>
-=======
                       on_click={clear_results}
 variant=&quot;outline & quot;
                       className=&quot;border - gray - 600 text - gray - 300 hover:bg - gray - 700 & quot;
@@ -622,7 +615,6 @@ variant=&quot;outline & quot;
                     Copy Results;
                   </Button>)}
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {stats && (
 
                       className={`p - 4 rounded - lg border ${
@@ -641,7 +633,6 @@ variant=&quot;outline & quot;
                           </span>;
                         </div>;
                         <span className={`text - sm font - medium ${getScoreColor (result.score)}`}>;
-=======
                 <div className=&quot;mb-6 p-4 bg-gray-900 rounded-lg border border-gray-700&quot;>
                   <div className=&quot;grid grid-cols-2 gap-4 text-sm&quot;>                    <div>
                       <span className=&quot;text-gray-400&quot;>Total:</span>
@@ -664,7 +655,6 @@ variant=&quot;outline & quot;
                   </div>
                 </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
 {validationResults.length > 0 ? (
                 <div className=&quot;space-y-3 max-h-96 overflow-y-auto&quot;>
@@ -685,8 +675,6 @@ key={index}
                         </div>
                         <span className={_`text-sm font-medium ${getScoreColor(result.score)}`}>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           Score: {result.score}
 
 </span>;
@@ -709,7 +697,6 @@ key={index}
 
 
                             ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           </ul>;
 
 
@@ -718,7 +705,6 @@ key={index}
                         <div className=&quot;mt-2 p-2 bg-orange-500/20 border border-orange-500/30 rounded text-sm text-orange-300&quot;>                          ⚠️ Disposable email domain detected
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         </div>
                       )}
                       {result.hasTypo && (
@@ -737,7 +723,6 @@ key={index}
                   </p>
                 </div>
               )}
-=======
                         </div>)}
 {result.is_disposable && (
                         <div className=&quot;mt - 2 p - 2 bg - orange - 500 / 20 border border - orange - 500 / 30 rounded text - sm text - orange - 300 & quot;>;
@@ -755,7 +740,6 @@ key={index}
                     Validation results will appear here. Enter an email address and click validate to get started.;
                   </p>;
                 </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </Card>;
           </div>;
         </div>;
@@ -765,7 +749,6 @@ key={index}
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Features */}
 
 <section className=&quot;py - 20 bg - gray - 800 & quot;>;
@@ -890,12 +873,10 @@ key={index}
       {/* CTA Section */}
 }
 
-=======
 
 
 
 }
-=======
       <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -931,5 +912,3 @@ href=&quot;/pricing&quot;
   )}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

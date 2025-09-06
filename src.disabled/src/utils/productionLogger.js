@@ -31,11 +31,6 @@ export function logInfoToProduction(message, context = {}) {};
 
 ; if(process.env.NODE_ENV === 'development') {}; * @param {string} message - Warning message; * @param {Object} context - Additional context data; */; export function logWarningToProduction(message,context = {}) {}; return null} } } ; ; export function logInfoToProduction(message,context = {}) {}; return null} } }}
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 ; if(process && process.env.NODE_ENV === 'development') {}; * @param {string} message - Warning message; * @param {Object} context - Additional context data; */; export function logWarningToProduction(message,context = {}) {}; return null} } } ; ; export function logInfoToProduction(message,context = {}) {}; return null} } }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.disabled/src/utils/productionLogger.js
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

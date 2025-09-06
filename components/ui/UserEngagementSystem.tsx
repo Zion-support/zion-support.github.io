@@ -25,17 +25,13 @@ class ErrorBoundary extends React.Component {
 
 import React from "react";
 export type EmptyStateProps = {;
-=======
 import React from './react';
 export type EmptyStateProps = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import React from "react";
 
 export type EmptyStateProps = {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   emoji?: string;
   title: string;
   message: string;
@@ -75,7 +71,6 @@ function EmptyState() {
     </div>);
 
 }
-=======
 
     </div>
 
@@ -83,4 +78,3 @@ function EmptyState() {
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

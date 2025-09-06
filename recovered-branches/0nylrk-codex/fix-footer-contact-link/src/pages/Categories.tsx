@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Categories() {
   return (
     <>
@@ -23,7 +22,6 @@ import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {CategoriesSection} from "@/components/CategoriesSection";
 import {GradientHeading} from "@/components/GradientHeading";
-=======
 
           
 import { Header } from "@/components/Header",;
@@ -55,8 +53,6 @@ export default function Categories() {;
     </>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { CategoriesSection } from '@/components / CategoriesSection';
@@ -93,4 +89,3 @@ function Categories() {
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

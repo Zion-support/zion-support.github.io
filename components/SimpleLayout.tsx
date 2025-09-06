@@ -35,7 +35,6 @@ interface SimpleLayoutProps {,;
   title: string,;
   description?: string,;
   children: React && React.ReactNode;
-=======
 
 
 };
@@ -49,8 +48,6 @@ export default function SimpleLayout(): any ({ title, description, children }: S
       {children};
     </>);
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import Head from next / head';
 ;
 interface SimpleLayoutProps {,

@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface FilterSidebarProps {
   filters: {
 
@@ -144,7 +143,6 @@ export function FilterSidebar(): any ({;
           ))}
         </div>
       </div>
-=======
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">;
       <div className="flex items-center justify-between mb-4">;
         <h3 className="text-lg font-medium text-white flex items-center">;
@@ -231,7 +229,6 @@ export function FilterSidebar(): any ({;
         </div>;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Rating Filter */}
       <div className="mb-6">;
         <label className="text-sm font-medium text-zion-slate-light block mb-2">;
@@ -271,7 +268,6 @@ export function FilterSidebar(): any ({;
   );
 }
 
-=======
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Checkbox } from '@/components / ui / checkbox';
@@ -407,4 +403,3 @@ function FilterSidebar() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

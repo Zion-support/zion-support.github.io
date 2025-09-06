@@ -34,7 +34,6 @@ export function ProfileHero(): any ({;
   aiScore;
   profileType;
 }: ProfileHeroProps) {;
-=======
 interface ProfileHeroProps {
   name: string,
   title: string,
@@ -44,7 +43,6 @@ interface ProfileHeroProps {
   rating?: number,
   reviewCount?: number,
   aiScore?: number,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   profileType: 'service' | 'talent'
 }
 
@@ -52,7 +50,6 @@ interface ProfileHeroProps {
 
   profileType
 }: ProfileHeroProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -107,7 +104,6 @@ export function ProfileHero({;
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
               )}
@@ -153,16 +149,10 @@ export function ProfileHero({;
                   className={cn(
                     "ml-2 border-zion-purple/50 text-zion-cyan"
 
-=======
 
                     "ml-2 border-zion-purple/50 text-zion-cyan",
 
-=======
-=======
                     "ml-2 border-zion-purple/50 text-zion-cyan",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}>;
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
@@ -188,12 +178,9 @@ export function ProfileHero({;
 
 
                   </div>;
-=======
-=======
                   </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
 
 
@@ -202,7 +189,6 @@ export function ProfileHero({;
                     AI Match: {aiScore}%;
                   </div>;
                 )}
-=======
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 import { AspectRatio } from '@/components / ui / aspect - ratio';
 import { Badge } from '@/components / ui / badge';

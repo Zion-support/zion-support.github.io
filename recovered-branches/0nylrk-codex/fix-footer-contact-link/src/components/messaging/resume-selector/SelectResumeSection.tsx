@@ -14,7 +14,6 @@ export function SelectResumeSection({;
   handleResumeSelect;
   handleDownloadResume;
 
-=======
 import React from 'react',;
 import { FileText } from 'lucide-react',;
 import { ResumeOption } from '../resume-selector/types',;
@@ -28,7 +27,6 @@ interface SelectResumeSectionProps {;
   isLoading: boolean;
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   resumeOptions: ResumeOption[]
   selectedResume: ResumeOption | null
@@ -38,7 +36,6 @@ interface SelectResumeSectionProps {;
   isLoading: boolean
 }
 export function SelectResumeSection({
-=======
 import {FileText} from 'lucide-react';
 import {ResumeOption} from '../resume - selector / types';
 import {ResumePreviewCard} from './ResumePreviewCard';
@@ -73,7 +70,6 @@ import {ResumePreviewCard} from './ResumePreviewCard';
   );
 }
 
-=======
 import {Resume} from '@/types / resume';
 interface SelectResumeSectionProps {
   resume_options: ResumeOption[],
@@ -115,4 +111,3 @@ function SelectResumeSection() {
         </>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

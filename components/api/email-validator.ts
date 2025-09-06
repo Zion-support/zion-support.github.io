@@ -1,13 +1,10 @@
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-=======
 
  import type { NextApiRequest, NextApiResponse } from 'next';
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface EmailValidationResult {
   email: string;
   is_valid: boolean;
@@ -62,7 +59,6 @@ export default async function handler(
     ];
     const isDisposable = disposableDomains && disposableDomains.some(d => domain?.includes(d));
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // Check for role-based emails
     const roleBasedPatterns = [
 
@@ -70,10 +66,8 @@ export default async function handler(
     // Check for free email providers
     const freeProviders = [
 
-=======
       'gmail.comyahoo.comhotmail.comoutlook.comaol.comicloud.comprotonmail.commail.com', 'yandex.com'
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
 
     const isFreeProvider = freeProviders && freeProviders.some(provider => domain === provider);
@@ -113,7 +107,6 @@ export default async function handler(
       isValid: score >= 70;
       score: Math && Math.max(0, score);
 
-=======
       suggestions.push('Check email format (should be user@domain.com)')
     }
     if (isDisposable) {
@@ -131,7 +124,6 @@ export default async function handler(
       isValid: score >= 70,
       score: Math.max(0, score);
 
-=======
         hasValidFormat,
         hasValidDomain,
         hasValidMX: true, // Simplified for demo;
@@ -148,8 +140,6 @@ export default async function handler(
   }      email;
       is_valid: score >= 70;
       score: Math.max (0, score);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       suggestions;
       details: {
         hasValidFormat;
@@ -170,7 +160,6 @@ export default async function handler(
 
 }
 
-=======
     }
 ;
     res.status (200).json (result);
@@ -179,4 +168,3 @@ export default async function handler(
     res.status (500).json ({ error: 'Internal server error' });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

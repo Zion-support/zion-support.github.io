@@ -16,7 +16,6 @@ import {
 } from 'lucide-react'
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
-=======
 
 import React from 'react',;
 import Layout from '../components/layout/Layout',;
@@ -31,8 +30,6 @@ import {
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import React from 'react',
 import Layout from '../components / layout / Layout',
 import SEO from '../components / SEO',
@@ -53,7 +50,6 @@ import {
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const Solutions: NextPage = () => {
   const industry_solutions = [;
     {
@@ -189,7 +185,6 @@ const Solutions: NextPage = () => {
 
   ],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <UltraAdvancedFuturisticBackground>
       <div className="min-h-screen">
@@ -367,7 +362,6 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">
                 Industry Solutions
@@ -384,7 +378,6 @@ const Solutions: NextPage = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Demo
@@ -459,7 +452,6 @@ const Solutions: NextPage = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
@@ -536,8 +528,6 @@ const Solutions: NextPage = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
                     <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
                   </div>
@@ -601,7 +591,6 @@ const Solutions: NextPage = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
@@ -641,7 +630,6 @@ const Solutions: NextPage = () => {
 
                   }`}
                 >;
-=======
 
                   key={solution.id  } catch (error) {
     console.error("Error:", error);
@@ -679,7 +667,6 @@ const Solutions: NextPage = () => {
 }
 
                 >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {solution.popular && (
 
                     <div className="absolute -top - 3 left - 1/2 transform -translate - x-1 / 2">;
@@ -723,8 +710,6 @@ const Solutions: NextPage = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <span className="text-lg text-gray-400">/{solution.period}</span>
                     </div>
                   </div>
@@ -738,7 +723,6 @@ const Solutions: NextPage = () => {
                   <a 
                     href="/contact" 
 
-=======
                         {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -756,8 +740,6 @@ const Solutions: NextPage = () => {
                     href="/contact"
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300"
                   >
                     Get Started
@@ -873,7 +855,6 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
                 Ready for Industry Transformation?
@@ -890,7 +871,6 @@ const Solutions: NextPage = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
@@ -908,7 +888,6 @@ const Solutions: NextPage = () => {
 
 export default Solutions;
 
-=======
             >;
               <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - orange - 400 to - red - 500 bg - clip - text text - transparent">;
                 Ready for Industry Transformation?;
@@ -938,9 +917,6 @@ export default Solutions;
 },
 export default Solutions,
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

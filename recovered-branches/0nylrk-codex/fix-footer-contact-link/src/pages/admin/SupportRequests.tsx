@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
@@ -142,7 +141,6 @@ import {Badge} from "@/components/ui/badge";
 import {Search, Filter} from "lucide-react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
-=======
 
 ],
 
@@ -265,7 +263,6 @@ export default function SupportRequests() {;
       return false;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
@@ -361,7 +358,6 @@ export default function SupportRequests() {;
             <TabsTrigger value="need-response">Need Response</TabsTrigger>
           </TabsList>
           <TabsContent value="all" className="mt-6">
-=======
 
   // Apply filters to the request data;
   const filteredRequests = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(request => {;
@@ -468,7 +464,6 @@ export default function SupportRequests() {;
           </TabsList>;
 
           <TabsContent value="all" className="mt-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Search and Filters */}
             <div className="flex flex-col md:flex-row gap-4 mb-6">;
               <div className="relative flex-1">;
@@ -561,7 +556,6 @@ export default function SupportRequests() {;
                           }>
 
                   onChange={(e) => setSearchQuery(e && e.target.value)}
-=======
 
 ;
     return true;
@@ -734,7 +728,6 @@ export default function SupportRequests() {;
                               ? 'destructive'
                               : request.priority === 'medium'
                               ? 'default'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                               : 'outline'
                           }>;
                             {request && request.status}
@@ -746,7 +739,6 @@ export default function SupportRequests() {;
                               ? 'destructive' 
                               : request && request.priority === 'medium' 
                               ? 'default' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                               : 'outline'
                           }>;
                             {request && request.priority}
@@ -762,7 +754,6 @@ export default function SupportRequests() {;
                       </TableRow>;
                     ))}
 
-=======
 import React, { useState } from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Input } from '@/components / ui / input';
@@ -1114,9 +1105,7 @@ if ( {) {
     </AppLayout>);
 }
 
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

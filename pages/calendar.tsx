@@ -107,7 +107,6 @@ const teamMembers = [
   }
 ];
 export default function CalendarPage() {
-=======
 import {;
   Calendar,;
   Clock,;
@@ -217,7 +216,6 @@ const teamMembers = [;
 ];
 
 export default function CalendarPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;
       <Head>;
@@ -397,7 +395,6 @@ export default function CalendarPage() {;
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">;
             {timeSlots && timeSlots.map((slot, index) => (;
               <motion&& motion.button
-=======
 import React from './react';
 import Head from './next / head';
 import Link from './next / link';
@@ -686,7 +683,6 @@ function CalendarPage() {
           <div className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 5 gap - 4">;
             {time_slots.map ((slot, index) => (
               <motion.button;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={index}
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -731,7 +727,6 @@ function CalendarPage() {
                   <div>;
                     <div className="font-semibold text-gray-900">Office</div>;
                     <div className="text-gray-600">;
-=======
                 transition={{ duration: 0.8, delay: index * 0.05 }}
                 disabled={!slot.available}
                 className={`p - 4 rounded - lg text - center transition - all ${
@@ -784,7 +779,6 @@ function CalendarPage() {
                   <div>;
                     <div className="font - semibold text - gray - 900">Office</div>;
                     <div className="text - gray - 600">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       123 Tech Street, San Francisco, CA;
                     </div>;
                   </div>;
@@ -875,7 +869,6 @@ function CalendarPage() {
       </section>;
     </div>;
   );
-=======
               <div className="mt - 8">;
                 <Link;
                   href="/contact";
@@ -923,5 +916,4 @@ function CalendarPage() {
         </div>;
       </section>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

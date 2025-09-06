@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   useEffect(() => {
     // In a real app, this would fetch data from an API based on the companySlug
@@ -21,7 +20,6 @@
           billingCycle: "Annual",
           workspaceUrl: "acme && acme.zion-ai && ai.com"});
 
-=======
 
             primaryColor: "#4f46e5",
             backgroundColor: "#ffffff",
@@ -32,7 +30,6 @@
           billingCycle: "Annual",
           workspaceUrl: "acme.zion-ai.com"}),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         setError(null)
       } else {
         // For any other slug, we could check if it's a valid company
@@ -53,7 +50,6 @@
   }, [companySlug]);
 
   return { company, isLoading, error }
-=======
 import { useState, useEffect } from './react';
 import { Company } from '@/components / enterprise / workspace / CompanyDashboard';
 export /**
@@ -111,8 +107,6 @@ if ( {) {
   }, [company_slug]);
 ;
   return { company, is_loading, error }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
             primaryColor: "#4f46e5",
             backgroundColor: "#ffffff",
@@ -123,5 +117,4 @@ if ( {) {
           billingCycle: "Monthly",
 
   return { company, isLoading, error }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

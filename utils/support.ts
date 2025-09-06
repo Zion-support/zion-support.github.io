@@ -40,9 +40,6 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch
 
 
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   // Add support functionality here;
   log_event: (event: any) => null,
   get_articles: () => [],
@@ -53,5 +50,3 @@ export const logSupportEventToOperator = (event: any) =>: any {
   // Add support event logging functionality here;
   return null;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

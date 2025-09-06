@@ -1,7 +1,6 @@
 
 
 
-=======
 
 
 
@@ -20,14 +19,10 @@ import { useJobs } from "@/hooks/useJobs",
 import { JobSchemaType } from './validation',
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface JobPostingFormProps {
-=======
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm && JobPostingForm.tsx;
 
-=======
 :recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / jobs / job - posting / JobPostingForm.tsx;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import React, { useState, useEffect, useCallback } from 'react';
 import {use_navigate} from 'react-router-dom';
 import { toast } from './sonner';
@@ -65,10 +60,8 @@ function JobPostingForm() {
 ;
 
   const {
-=======
 
   const {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     form;
     is_loading;
     start_date;
@@ -79,7 +72,6 @@ function JobPostingForm() {
     setIsRemote;
 
 
-=======
 
 
 
@@ -165,7 +157,6 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
 
   useEffect(() => {;
     if (jobId) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setIsFormLoading(true);
       getJobById(jobId);
         .then((job) => {;
@@ -239,11 +230,8 @@ if ( {) {
                 } catch (e) {
 
                   // Skip fields that don't exist in our form;
-=======
                   // Skip fields that don't exist in our form;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 }
               }
             });
@@ -310,7 +298,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
 
 
@@ -326,7 +313,6 @@ if ( {) {
     }
   }
   if (isLoading |isFormLoading) {
-=======
 
       console.error("Error creating/updating job:", error),
       toast.error(error.message || "Failed to post job")
@@ -335,7 +321,6 @@ if ( {) {
     }
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
   if (isLoading || isFormLoading) {;
@@ -356,7 +341,6 @@ if ( {) {
         <div>
           <Label htmlFor="isRemote">
 
-=======
             <Input
               type="checkbox"
               id="isRemote"
@@ -396,7 +380,6 @@ if ( {) {
 
         <div>;
           <Label htmlFor="isRemote">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Input
               type="checkbox"
               id="isRemote"
@@ -404,7 +387,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="mr-2"
 
 
@@ -423,7 +405,6 @@ if ( {) {
   )
 
               onChange={(e) => setIsRemote(e && e.target.checked)}
-=======
         .catch ((error) => {
           console.error ("Failed to load job:", error);
           toast.error ("Failed to load job");
@@ -518,8 +499,6 @@ if ( {) {
     </Form>);
 
 }
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

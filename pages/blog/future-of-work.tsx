@@ -4,8 +4,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react',;
 export default function FutureOfWork() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import Head from 'next / head';
 import Link from 'next / link';
 import React from 'react',
@@ -13,7 +11,6 @@ export default /**
  * FutureOfWork - Function description
  */
 function FutureOfWork() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <>;
       <Head>;
@@ -100,7 +97,6 @@ function FutureOfWork() {
                   </li>;
                 </ul>;
                 <p className='text-white/90 mb-4'>;
-=======
           The Future of Work: Human - AI Collaboration | Zion Tech Group;
         </title>;
         <meta;
@@ -296,7 +292,6 @@ function FutureOfWork() {
               </section>;
 
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'>;
-=======
               <section className='mb - 12'>;
                 <h2 className='text - 2xl font - semibold mb - 6 text - yellow - 400'>;
                   Measuring Success;
@@ -360,9 +355,5 @@ function FutureOfWork() {
       </div>;
 
 
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

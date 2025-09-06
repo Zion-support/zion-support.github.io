@@ -26,7 +26,6 @@ export function PartnerReferralLinks() {;
   const baseLink = getReferralLink(),
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleCopyLink = (link: string) => {
     navigator.clipboard.writeText(link)
     toast({
@@ -177,13 +176,11 @@ export function PartnerReferralLinks() {;
               variant="outline" 
               size="sm" 
 
-=======
 
             <Button 
               variant="outline" 
               size="sm" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onClick={handleDownloadLinks}
               className="flex items-center gap-2">;
               <Download className="h-4 w-4" />;
@@ -230,7 +227,6 @@ export function PartnerReferralLinks() {;
                 <Select
                   value={selectedCampaign}
                   onValueChange={setSelectedCampaign}>;
-=======
 import { useRef, useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
@@ -440,11 +436,9 @@ if ( {) {
               </p>;
 
               <Button
-=======
 
               <Button 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 variant="outline"
                 onClick={() => setIsDialogOpen(true)}
                 className="flex items-center gap-2";
@@ -458,7 +452,6 @@ if ( {) {
       </div>;
     </div>;
   );
-=======
       <div className="grid gap - 4">;
         {generated_links.length > 0 ? (
           generated_links.map ((item, index) => (
@@ -506,5 +499,4 @@ if ( {) {
           </Card>)}
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

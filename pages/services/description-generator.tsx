@@ -24,15 +24,12 @@ class ErrorBoundary extends React.Component {
 import React, { useMemo, useState } from 'react';
 
 
-=======
 
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
 
-=======
 
 export default function ServiceDescriptionGeneratorPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [title, setTitle] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
@@ -43,15 +40,10 @@ export default function ServiceDescriptionGeneratorPage() {;
     'professional' | 'friendly' | 'persuasive' | 'technical'
 
   >('professional');
-=======
 
   const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
   const [generated, setGenerated] = useState('');
@@ -99,7 +91,6 @@ export default function ServiceDescriptionGeneratorPage() {;
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           />
         </div>
         <div>
@@ -115,7 +106,6 @@ export default function ServiceDescriptionGeneratorPage() {;
           </label>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           <input
             type='text'
             className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
@@ -187,7 +177,6 @@ export default function ServiceDescriptionGeneratorPage() {;
                 onClick={handleAccept}
                 className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm"
               >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 Accept
               </button>
             </div>
@@ -219,7 +208,6 @@ export default function ServiceDescriptionGeneratorPage() {;
     </div>;
   );
 
-=======
             className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={generated}
             onChange={(e) => setGenerated(e.target.value)}
@@ -233,14 +221,10 @@ export default function ServiceDescriptionGeneratorPage() {;
     </div>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
         <div>;
           <label className='block text - sm font - medium mb - 1'>;
             Additional Notes (optional);
@@ -268,4 +252,3 @@ export default function ServiceDescriptionGeneratorPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

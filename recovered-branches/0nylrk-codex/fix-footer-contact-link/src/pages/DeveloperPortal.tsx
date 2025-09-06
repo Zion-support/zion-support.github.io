@@ -1,6 +1,5 @@
 
 
-=======
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { 
@@ -21,8 +20,6 @@ import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
 import { WebhooksManager } from "@/components/developers/WebhooksManager",
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
 import { ApiLogs } from "@/components/developers/ApiLogs",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TabDefinition {
   id: string
   label: string
@@ -39,9 +36,7 @@ interface TabDefinition {;
 export function DeveloperPortal() {;
 
   const { user } = useAuth();
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -64,7 +59,6 @@ export function DeveloperPortal() {;
           Access the Zion API, manage your API keys, and set up webhooks.
         </p>
       </div>
-=======
 import { useState } from './react';
 import { use_auth } from '@/hooks / use_auth';
 import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from './lucide-react';
@@ -103,10 +97,8 @@ function DeveloperPortal() {
           Access the Zion API, manage your API keys, and set up webhooks.;
         </p>;
       </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Tabs */}
 
-=======
       <div className="border-b border-zinc-800 mb-8">
         <div className="flex flex-wrap -mb-px">
           {tabs.map((tab) => {
@@ -192,7 +184,6 @@ export function DeveloperPortal() {;
                 {tab.label}
               </button>
             )
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           })}
 
         </div>;
@@ -211,7 +202,6 @@ export function DeveloperPortal() {;
 }
 
 
-=======
 
 ;
 
@@ -226,7 +216,6 @@ export default function ProtectedDeveloperPortal() {;
 ;
 
 
-=======
               <button;
                 key={tab.id}
                 className={`inline - flex items - center px - 4 py - 3 border - b-2 text - sm font - medium ${
@@ -260,4 +249,3 @@ function ProtectedDeveloperPortal() {
       <DeveloperPortal />;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

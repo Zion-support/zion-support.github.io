@@ -26,16 +26,13 @@ import React from 'react';
 
             { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' };
             { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
 
 
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ResourcesPage;
 
-=======
               name: 'Market Pricing',
               href: '/market - pricing',
               blurb: 'Vendor links and typical budgets.',
@@ -83,9 +80,6 @@ export default ResourcesPage;
 ;
 export default ResourcesPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import React from 'react';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

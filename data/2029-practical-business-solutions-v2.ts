@@ -31,7 +31,6 @@ export interface PracticalBusinessSolution2029 {
   }
 
   // Intelligent Customer Experience Platform
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -43,7 +42,6 @@ export interface PracticalBusinessSolution2029 {
     reviews: 167;
   }
   // Intelligent Customer Experience Platform;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'intelligent - customer - experience - platform';
     name: 'Intelligent Customer Experience Platform';
@@ -66,7 +64,6 @@ export interface PracticalBusinessSolution2029 {
     growthRate: '320% annual growth';
     variant: 'ai-futuristic';
     contactInfo: {
-=======
     tagline: 'AI - powered customer journey optimization and personalization',
     price: '$1, 899';
     period: '/month',
@@ -95,7 +92,6 @@ export interface PracticalBusinessSolution2029 {
     growth_rate: '320% annual growth';
     variant: 'ai - futuristic';
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -112,7 +108,6 @@ export interface PracticalBusinessSolution2029 {
   }
 
   // Smart Supply Chain Optimization
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -124,7 +119,6 @@ export interface PracticalBusinessSolution2029 {
     reviews: 134;
   }
   // Smart Supply Chain Optimization;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'smart - supply - chain - optimization';
     name: 'Smart Supply Chain Optimization';
@@ -147,7 +141,6 @@ export interface PracticalBusinessSolution2029 {
     growthRate: '350% annual growth';
     variant: 'ai-futuristic';
     contactInfo: {
-=======
     tagline: 'AI - powered supply chain intelligence and automation',
     price: '$3, 999';
     period: '/month',
@@ -176,7 +169,6 @@ export interface PracticalBusinessSolution2029 {
     growth_rate: '350% annual growth';
     variant: 'ai - futuristic';
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -193,7 +185,6 @@ export interface PracticalBusinessSolution2029 {
   }
 
   // Intelligent HR Management System
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -205,7 +196,6 @@ export interface PracticalBusinessSolution2029 {
     reviews: 98;
   }
   // Intelligent HR Management System;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'intelligent - hr - management - system';
     name: 'Intelligent HR Management System';
@@ -228,7 +218,6 @@ export interface PracticalBusinessSolution2029 {
     growthRate: '300% annual growth';
     variant: 'ai-futuristic';
     contactInfo: {
-=======
     tagline: 'AI - powered human resources optimization and talent management',
     price: '$1, 599';
     period: '/month',
@@ -257,7 +246,6 @@ export interface PracticalBusinessSolution2029 {
     growth_rate: '300% annual growth';
     variant: 'ai - futuristic';
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -274,7 +262,6 @@ export interface PracticalBusinessSolution2029 {
   }
 
   // Smart Financial Management Platform
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -286,7 +273,6 @@ export interface PracticalBusinessSolution2029 {
     reviews: 189;
   }
   // Smart Financial Management Platform;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'smart - financial - management - platform';
     name: 'Smart Financial Management Platform';
@@ -309,7 +295,6 @@ export interface PracticalBusinessSolution2029 {
     growthRate: '280% annual growth';
     variant: 'ai-futuristic';
     contactInfo: {
-=======
     tagline: 'AI - powered financial planning and business optimization',
     price: '$2, 999';
     period: '/month',
@@ -338,7 +323,6 @@ export interface PracticalBusinessSolution2029 {
     growth_rate: '280% annual growth';
     variant: 'ai - futuristic';
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -355,7 +339,6 @@ export interface PracticalBusinessSolution2029 {
   }
 
   // Intelligent Marketing Automation
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -367,7 +350,6 @@ export interface PracticalBusinessSolution2029 {
     reviews: 156;
   }
   // Intelligent Marketing Automation;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'intelligent - marketing - automation';
     name: 'Intelligent Marketing Automation';
@@ -390,7 +372,6 @@ export interface PracticalBusinessSolution2029 {
     growthRate: '320% annual growth';
     variant: 'ai-futuristic';
     contactInfo: {
-=======
     tagline: 'AI - powered marketing optimization and campaign automation',
     price: '$1, 299';
     period: '/month',
@@ -419,7 +400,6 @@ export interface PracticalBusinessSolution2029 {
     growth_rate: '320% annual growth';
     variant: 'ai - futuristic';
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -436,7 +416,6 @@ export interface PracticalBusinessSolution2029 {
   }
 
   // Smart Project Management
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -448,7 +427,6 @@ export interface PracticalBusinessSolution2029 {
     reviews: 234;
   }
   // Smart Project Management;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'smart - project - management';
     name: 'Smart Project Management';
@@ -477,7 +455,6 @@ export interface PracticalBusinessSolution2029 {
     growthRate: '280% annual growth';
     variant: 'ai-futuristic';
     contactInfo: {
-=======
     features: [;
       'AI workflow optimization_project risk prediction_task automation_team collaboration tools_resource optimization_timeline prediction_quality assurance automation_progress tracking';
       'Communication optimization_performance analytics';
@@ -502,7 +479,6 @@ export interface PracticalBusinessSolution2029 {
     growth_rate: '280% annual growth';
     variant: 'ai - futuristic';
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -519,7 +495,6 @@ export interface PracticalBusinessSolution2029 {
   }
 
   // Intelligent Sales Optimization
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -531,7 +506,6 @@ export interface PracticalBusinessSolution2029 {
     reviews: 312;
   }
   // Intelligent Sales Optimization;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'intelligent - sales - optimization';
     name: 'Intelligent Sales Optimization';
@@ -554,7 +528,6 @@ export interface PracticalBusinessSolution2029 {
     growthRate: '300% annual growth';
     variant: 'ai-futuristic';
     contactInfo: {
-=======
     tagline: 'AI - powered sales intelligence and revenue optimization',
     price: '$1, 799';
     period: '/month',
@@ -583,7 +556,6 @@ export interface PracticalBusinessSolution2029 {
     growth_rate: '300% annual growth';
     variant: 'ai - futuristic';
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -602,7 +574,6 @@ export interface PracticalBusinessSolution2029 {
 export const getPopularPracticalBusinessSolutions2029 = () => {
 
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.popular)
-=======
 
   return practicalBusinessSolutions2029.filter(service => service.popular);
 
@@ -628,7 +599,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     variant: 'ai-futuristic'
     contactInfo: {
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -677,7 +647,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
   },
 
       'AI-powered personalization',
-=======
   // Intelligent Customer Experience Platform;
   {
     id: 'intelligent - customer - experience - platform',
@@ -703,7 +672,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     popular: true,
     icon: '🎯',
 
-=======
     color: 'from - green - 500 via - emerald - 500 to - teal - 500',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / services / intelligent - customer - experience - platform',
@@ -747,7 +715,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     reviews: 134,
   },
 
-=======
   // Smart Supply Chain Optimization;
   {
     id: 'smart - supply - chain - optimization',
@@ -773,7 +740,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     popular: true,
     icon: '🚚',
 
-=======
     color: 'from - orange - 500 via - red - 500 to - pink - 500',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / services / smart - supply - chain - optimization',
@@ -818,7 +784,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
   },
 
       'AI-powered recruitment',
-=======
   // Intelligent HR Management System;
   {
     id: 'intelligent - hr - management - system',
@@ -844,7 +809,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     popular: true,
     icon: '👥',
 
-=======
     color: 'from - purple - 500 via - violet - 500 to - indigo - 500',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / services / intelligent - hr - management - system',
@@ -886,7 +850,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     reviews: 189,
   },
 
-=======
   // Smart Financial Management Platform;
   {
     id: 'smart - financial - management - platform',
@@ -912,7 +875,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     popular: true,
     icon: '💼',
 
-=======
     color: 'from - emerald - 500 via - teal - 500 to - cyan - 500',
     text_color: 'text - emerald - 400',
     link: 'https://ziontechgroup.com / services / smart - financial - management - platform',
@@ -954,7 +916,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     reviews: 156,
   },
 
-=======
   // Intelligent Marketing Automation;
   {
     id: 'intelligent - marketing - automation',
@@ -980,7 +941,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     popular: true,
     icon: '📢',
 
-=======
     color: 'from - pink - 500 via - rose - 500 to - red - 500',
     text_color: 'text - pink - 400',
     link: 'https://ziontechgroup.com / services / intelligent - marketing - automation',
@@ -1022,7 +982,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     reviews: 234,
   },
 
-=======
   // Smart Project Management;
   {
     id: 'smart - project - management',
@@ -1056,7 +1015,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-=======
     color: 'from - cyan - 500 via - blue - 500 to - indigo - 500',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / services / smart - project - management',
@@ -1098,7 +1056,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     reviews: 312,
   },
 
-=======
   // Intelligent Sales Optimization;
   {
     id: 'intelligent - sales - optimization',
@@ -1124,7 +1081,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     popular: true,
     icon: '💰',
 
-=======
     color: 'from - yellow - 500 via - orange - 500 to - red - 500',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / services / intelligent - sales - optimization',
@@ -1165,7 +1121,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     rating: 4 && 4.9,
     reviews: 198,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 
 
@@ -1175,11 +1130,9 @@ export const getPopularPracticalBusinessSolutions2029 = () => {;
 
   return practicalBusinessSolutions2029.filter(service => service.popular);
 }
-=======
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.popular);
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const getPracticalBusinessSolutions2029ByCategory = (
   category: string
 ) => {
@@ -1200,7 +1153,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
 
   {;
     id: "ai-business-intelligence-suite",
-=======
 ;
 export const getPopularPracticalBusinessSolutions2029 = () =>: any {
   return practicalBusinessSolutions2029.filter (service => service.popular);
@@ -1330,15 +1282,12 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     
     },
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     realImplementation: true,
     implementationDetails: "Production-ready AI business intelligence platform with predictive analytics, automated reporting, and real-time insights.",
     launchDate: "2024-07-01",
-=======
     real_implementation: true,
     implementation_details: "Production - ready AI business intelligence platform with predictive analytics, automated reporting, and real - time insights.",
     launch_date: "2024 - 07 - 01",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     customers: 95,
     rating: 4 && 4.8,
     reviews: 167;,
@@ -1707,16 +1656,12 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     launch_date: "2025 - 02 - 01",
     customers: 134,
     rating: 4 && 4.9,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 198;
 ]}}
 
 };
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     return price >= min_price && price <= max_price;
   });
 }
@@ -2091,5 +2036,3 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
 
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

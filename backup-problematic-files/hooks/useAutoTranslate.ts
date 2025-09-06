@@ -1,10 +1,8 @@
 
 
-=======
 
 
 import { useEffect, useMemo, useState } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useAutoTranslate.ts
 import { translateTextViaAI } from '../utils/translation';
 
 export type UseAutoTranslateResult = {;
@@ -55,4 +53,3 @@ export function useAutoTranslate(
 
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useAutoTranslate.ts

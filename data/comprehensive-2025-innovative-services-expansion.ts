@@ -44,10 +44,8 @@
 
 
   marketAdvantage: string
-=======
   capabilities: string[],
   market_advantage: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 const contact = {
   mobile: '+1 302 464 0950';
@@ -60,14 +58,12 @@ const contact = {
 
 export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
   // AI & Machine Learning Services
-=======
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com';
 }
 ;
 export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [;
   // AI & Machine Learning Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'ai - content - generation - platform';
     name: 'AI Content Generation Platform';
@@ -96,7 +92,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     realImplementation: true;
     implementationDetails: 'Cloud-native SaaS platform with enterprise SSO and custom integrations';
     launchDate: '2024-08-01';
-=======
     period: '/month',
     description: 'Advanced AI - powered content generation platform that creates high - quality, SEO - optimized content for blogs, social media, marketing materials, and more.';
     features: [;
@@ -126,7 +121,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     real_implementation: true;
     implementation_details: 'Cloud - native SaaS platform with enterprise SSO and custom integrations';
     launch_date: '2024 - 08 - 01';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     customers: 342;
     rating: 4 && 4.8;
     reviews: 267;
@@ -173,10 +167,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     real_service: true,
 
     technology: ['Python, Kubernetes, Redis, Elasticsearch, React, Node.js'];
-=======
     realService: true,
     technology: ['Python, Kubernetes, Redis, Elasticsearch, React, Node && Node.js'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: ['Active Directory, Okta, Azure AD, AWS IAM, Google Workspace'];
 
     use_cases: ['Enterprise security, Government compliance, Financial security, Healthcare security'];
@@ -223,7 +215,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack'];
     useCases: ['CI/CD automation, Testing automation, Infrastructure management, Performance optimization'];
     roi: 'Reduce deployment time by 70% and increase team productivity by 50%'
-=======
     period: '/month',
     description: 'AI - driven DevOps platform that automates deployment, testing, monitoring, and optimization using machine learning and predictive analytics.';
     features: [;
@@ -245,7 +236,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack'];
     use_cases: ['CI / CD automation, Testing automation, Infrastructure management, Performance optimization'];
     roi: 'Reduce deployment time by 70% and increase team productivity by 50%',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'];
     market_size: '$18B+ DevOps tools market';
     growth_rate: '160% YoY';
@@ -287,7 +277,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols'];
     useCases: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation'];
     roi: 'Reduce latency by 80% and improve operational efficiency by 45%'
-=======
     period: '/month',
     description: 'Advanced IoT edge computing platform that processes data locally, provides real - time analytics, and enables intelligent decision - making at the edge.';
     features: [;
@@ -309,7 +298,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols'];
     use_cases: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation'];
     roi: 'Reduce latency by 80% and improve operational efficiency by 45%',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry'];
     market_size: '$12B+ edge computing market';
     growth_rate: '220% YoY';
@@ -361,7 +349,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     integrations: ['PACS systems, EHR platforms, DICOM standards, Medical devices'];
     useCases: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies'];
     roi: 'Improve diagnostic accuracy by 25% and reduce reading time by 60%'
-=======
     color: 'from - emerald - 600 to - green - 600';
     text_color: 'text - emerald - 400';
     link: 'https://ziontechgroup.com / ai - medical - imaging';
@@ -375,7 +362,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     integrations: ['PACS systems, EHR platforms, DICOM standards, Medical devices'];
     use_cases: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies'];
     roi: 'Improve diagnostic accuracy by 25% and reduce reading time by 60%',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic'];
     market_size: '$28B+ medical imaging market';
     growth_rate: '190% YoY';
@@ -432,10 +418,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     real_service: true,
 
     technology: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node.js'];
-=======
     realService: true,
     technology: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node && Node.js'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: ['Bloomberg, Reuters, Banking systems, Trading platforms, Compliance tools'];
 
     use_cases: ['Risk assessment, Fraud detection, Compliance monitoring, Portfolio management'];
@@ -497,10 +481,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     real_service: true,
 
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'];
-=======
     realService: true,
     technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: ['Canvas, Blackboard, Moodle, Google Classroom, Microsoft Teams'];
 
     use_cases: ['K - 12 education, Higher education, Corporate training, Skills development'];
@@ -562,10 +544,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     real_service: true,
 
     technology: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node.js'];
-=======
     realService: true,
     technology: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node && Node.js'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: ['SAP, Oracle, Salesforce, Shopify, Shipping carriers'];
 
     use_cases: ['Inventory management, Demand forecasting, Logistics optimization, Supplier management'];
@@ -610,7 +590,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     integrations: ['Smart meters, Solar inverters, Battery systems, Grid management systems'];
     useCases: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting'];
     roi: 'Reduce energy costs by 25% and improve sustainability metrics by 40%'
-=======
     tagline: 'Intelligent energy management and sustainability',
     price: '$1, 299';
     period: '/month',
@@ -634,7 +613,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     integrations: ['Smart meters, Solar inverters, Battery systems, Grid management systems'];
     use_cases: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting'];
     roi: 'Reduce energy costs by 25% and improve sustainability metrics by 40%',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     competitors: ['Schneider Electric, Siemens, GE Digital, ABB'];
     market_size: '$18B+ energy management market';
     growth_rate: '180% YoY';
@@ -651,8 +629,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     ];
 
 
-=======
-=======
 
 import { ServiceVariant } from '../types/service-variants',;
 export interface ComprehensiveInnovativeService {;
@@ -747,7 +723,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     benefits: [;
       '80% faster content creation40% increase in engagementSEO optimization built-inMulti-language supportBrand voice consistency';
     ],;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     capabilities: [;
       'Renewable energy management_energy optimization_grid integration_sustainability reporting_predictive maintenance';
     ],
@@ -759,4 +734,3 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 
 export default comprehensiveInnovativeServices;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

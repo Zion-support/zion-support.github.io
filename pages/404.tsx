@@ -1,10 +1,8 @@
 import React from 'react';
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </Link>
         </main>
       </div>
@@ -18,12 +16,10 @@ export default /**
  * Custom404 - Function description
  */
 function Custom404() {
-=======
 
 }
 
 
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -50,4 +46,3 @@ const NotFoundPage: NextPage = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   try {
     // Basic validation
     const normalized = email && email.trim().toLowerCase();
@@ -14,7 +13,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
     const { data, error } = await supabase
       .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (isPlaceholder) {
       return res && res.status(200).json({ ok: true, simulated: true })
     }
@@ -31,7 +29,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 }
 
 
-=======
 import { supabase } from '../../utils / supabase / client';
 ;
 export default async /**
@@ -112,10 +109,6 @@ if ( {) {
     return res.status (500).send (e?.message || 'Unexpected error');
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
     return res.status(500).send(e?.message || 'Unexpected error');
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

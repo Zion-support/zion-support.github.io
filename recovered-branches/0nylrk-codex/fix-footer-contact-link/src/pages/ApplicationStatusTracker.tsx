@@ -7,7 +7,6 @@ function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <SEO
@@ -44,10 +43,8 @@ import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Briefcase, Inbox} from "lucide-react";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {useIsMobile} from "@/hooks/use-mobile";
-=======
 
 
-=======
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
 import { ApplicationsTracker } from "@/components/jobs/applications",;
@@ -143,9 +140,7 @@ function ApplicationStatusTracker() {
       </AppLayout>;
 
     </ProtectedRoute>);
-=======
 
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

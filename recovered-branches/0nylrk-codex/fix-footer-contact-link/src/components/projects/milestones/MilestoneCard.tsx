@@ -51,8 +51,6 @@ export function MilestoneCard(): any ({ ;
       case 'rejected':;
         return 'bg-red-500';
       default: return 'bg-gray-500';
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
 
@@ -104,10 +102,8 @@ export function MilestoneCard(): any ({ ;
             />;
           )}
 
-=======
 
 
-=======
           </div>;
           <div className="flex gap-2">;
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;
@@ -166,10 +162,7 @@ export function MilestoneCard(): any ({ ;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -266,4 +259,3 @@ function getStatusBadgeColor() {
       </CardFooter>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

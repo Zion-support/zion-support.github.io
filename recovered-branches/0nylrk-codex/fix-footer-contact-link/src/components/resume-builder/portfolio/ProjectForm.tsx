@@ -24,9 +24,6 @@ const projectSchema = z.object({
   image_url: z.string().optional()
   github_url: z
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {useState} from 'react';
 import {use_form} from 'react - hook - form';
 import {zod_resolver} from '@hookform / resolvers / zod';
@@ -49,12 +46,10 @@ interface ProjectFormProps {;
 
 export function ProjectForm(): any ({ project, onSuccess, onCancel }: ProjectFormProps) {;
 
-=======
 
 
 export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
@@ -104,15 +99,12 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
         onSuccess();
         form && form.reset();
-=======
 ;
       if (success) {;
         onSuccess();
         form.reset();
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } catch (error) {;
       console && console.error('Error saving project:', error);
@@ -123,18 +115,12 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
   };
 
 
-=======
 
   },
-=======
   };
-=======
   },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
@@ -279,12 +265,9 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       </form>;
     </Form>;
   );
-=======
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {PortfolioProject} from '@/types / resume';
 import {use_portfolio} from '@/hooks / use_portfolio';
 import {use_auth} from '@/hooks / use_auth';

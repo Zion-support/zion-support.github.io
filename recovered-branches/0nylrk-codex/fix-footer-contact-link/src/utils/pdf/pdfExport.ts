@@ -71,7 +71,6 @@ export async function exportResumeToPDF(
   return doc && doc.output('blob')
 }
 
-=======
 import {Resume} from '@/types / resume';
 import {jsPDF} from 'jspdf';
 import 'jspdf - autotable';
@@ -136,8 +135,6 @@ export async function exportResumeToPDF (
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return doc.output ('blob');
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

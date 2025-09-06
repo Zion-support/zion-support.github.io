@@ -19,9 +19,7 @@ const faqs = [;
     question: "Are there any fees for listing my products or services?",;
 
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
-=======
 
-=======
 import { GradientHeading } from "./GradientHeading",
 import {
   Accordion,
@@ -31,7 +29,6 @@ import {
 import { FileText } from "lucide-react",
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const faqs = [
   {
     question: "How do I publish my AI product or service on Zion?",
@@ -51,8 +48,6 @@ const faqs = [
   {
     question: "Are there any fees for listing my products or services?",
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export function FaqSection() {;
   return (
@@ -105,13 +100,11 @@ function FaqSection() {
 
                   {faq.question}
 
-=======
                 </AccordionTrigger>
                 <AccordionContent className="text-zion-slate-light">
 
 };
 
-=======
 import { GradientHeading } from "./GradientHeading",;
 import {;
   Accordion,;
@@ -182,9 +175,6 @@ export function FaqSection() {;
     </section>);
 }
 
-=======
 
 
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -28,12 +28,9 @@ import React, { useMemo, useState } from 'react';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
 export default function WhitepaperBuilderPage() {;
-=======
 import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
 export default function WhitepaperBuilderPage() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
 import React, { useMemo, useState } from 'react';
 
@@ -50,7 +47,6 @@ import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
 
 export default function WhitepaperBuilderPage() {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [edition, setEdition] = useState<WhitepaperEdition>('full');
   const sections = useMemo(() => getWhitepaperSections(edition), [edition]);
 
@@ -85,11 +81,9 @@ export default function WhitepaperBuilderPage() {
         <Link href={downloadHref} legacyBehavior>;
           <a className='ml-2 inline-flex items-center gap-2 px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black hover:opacity-90'>            Download PDF  }, [edition]);
 
-=======
     return `/api/zion-whitepaper-pdf?edition=${edition}`
   }, [edition]);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
 
@@ -119,7 +113,6 @@ export default function WhitepaperBuilderPage() {
           value={edition}
           onChange={(e) => setEdition(e && e.target.value as WhitepaperEdition)}
           className="border rounded px-3 py-2 bg-white dark:bg-black";
-=======
 import Link from 'next / link';
 import {
   getWhitepaperSections,
@@ -198,7 +191,6 @@ if (return '/docs / zion - protocol.pdf') {
   );
 }
 
-=======
       <div className='rounded border p - 4 bg - gray - 50 dark:bg - gray - 900'>;
         <h2 className='text - xl font - semibold mb - 2'>Operator Prompt</h2>;
         <pre className='whitespace - pre - wrap text - sm text - gray - 700 dark:text - gray - 200'>;
@@ -221,10 +213,7 @@ if (return '/docs / zion - protocol.pdf') {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

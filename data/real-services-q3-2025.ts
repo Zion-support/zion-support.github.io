@@ -12,7 +12,6 @@
   color: string;
 
   link: string;
-=======
 export interface Q3Service {
   id: string, name: string,
   tagline: string, price: string,
@@ -39,7 +38,6 @@ export interface Q3Service {
   competitors?: string[],
   marketSize?: string;
   growthRate?: string;
-=======
   text_color: string;
   link: string;  market_position?: string;
   target_audience?: string;
@@ -52,7 +50,6 @@ export interface Q3Service {
   competitors?: string[];
   market_size?: string;
   growth_rate?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   variant?: ServiceVariant;
   customers?: number;
   rating?: number;
@@ -75,15 +72,11 @@ const contact = {;
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
 
-=======
 
-=======
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const realServicesQ32025: Q3Service[] = [
   {
 
@@ -95,7 +88,6 @@ export const realServicesQ32025: Q3Service[] = [
       'Revenue forecasting models',
       'Weekly executive summaries',
 
-=======
     tagline: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth',
     price: '$599',
     period: '/month',
@@ -116,7 +108,6 @@ export const realServicesQ32025: Q3Service[] = [
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams';
     trialDays: 14;
     setupTime: '1–2 weeks';
-=======
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / subscription - analytics - revenue - optimization',
@@ -133,7 +124,6 @@ export const realServicesQ32025: Q3Service[] = [
     target_audience: 'SaaS startups, PLG companies, finance and growth teams';
     trial_days: 14;
     setup_time: '1–2 weeks';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'AI & Data';
     real_service: true;
     technology: ['dbt_snowflake / BigQuerySegment / GA4Python'];
@@ -158,10 +148,8 @@ export const realServicesQ32025: Q3Service[] = [
 
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
-=======
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_info: contact;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
 
@@ -183,7 +171,6 @@ export const realServicesQ32025: Q3Service[] = [
     targetAudience: 'Content sites, ecommerce, publishers on WordPress';
     trialDays: 7;
     setupTime: '2–4 days';
-=======
     color: 'from - purple - 600 to - pink - 600';
     text_color: 'text - purple - 200';
     link: 'https://ziontechgroup.com / services / wordpress - internal - linking - automation';
@@ -191,7 +178,6 @@ export const realServicesQ32025: Q3Service[] = [
     target_audience: 'Content sites, ecommerce, publishers on WordPress';
     trial_days: 7;
     setup_time: '2–4 days';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Growth & Marketing';
     real_service: true;
     technology: ['WordPressGA4Looker Studio'];
@@ -206,10 +192,8 @@ export const realServicesQ32025: Q3Service[] = [
 
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
-=======
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_info: contact;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
 
@@ -260,12 +244,10 @@ export const realServicesQ32025: Q3Service[] = [
 
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   },];    contactInfo: contact
   }
 ];
 
-=======
     color: 'from - amber - 600 to - rose - 600',
     text_color: 'text - amber - 200',
     link: 'https://ziontechgroup.com / services / ecommerce - reviews - ugc - activation',
@@ -286,7 +268,6 @@ export const realServicesQ32025: Q3Service[] = [
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_info: contact,
   }, ];    contact_info: contact;
-=======
       'Churn and retention analysisCohort and funnel dashboards',
       'Price testing and packaging experimentsRevenue leakage detection',
       'Revenue forecasting modelsWeekly executive summaries'
@@ -297,13 +278,10 @@ export const realServicesQ32025: Q3Service[] = [
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
-=======
     contactInfo: contact,
   },
-=======
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays: 14,
     setupTime: '1–2 weeks',
@@ -396,8 +374,6 @@ export const realServicesQ32025: Q3Service[] = [
     // @ts-expect-error augment common shape for UI components that expect contactInfo
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -107,10 +107,8 @@ export default function AIIoTPlatformPage() {;
                 <div className='flex items-center space-x-2 w-4 h-4 text-green-400 text-xs'>;
                   <MapPin />;
                   <span>{service && service.contactInfo.address}</span>;
-=======
 import Head from 'next / head';
 import {
-=======
 
 import React from 'react';
 
@@ -214,7 +212,6 @@ if (return null) {
                 <div className='flex items - center space - x-2 w - 4 h - 4 text - green - 400 text - xs'>;
                   <MapPin />;
                   <span>{service.contact_info.address}</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </div>              </div>;
             </div>;
           </div>;
@@ -238,7 +235,6 @@ if (return null) {
       </main>;
 
 
-=======
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -251,7 +247,6 @@ export default function AIIoTPlatformPage() {
 
 
 
-=======
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu } from 'lucide-react',
@@ -263,7 +258,6 @@ export default function AIIoTPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-iot-platform'))
   if (!service) return null,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout>
       <Head>
@@ -309,7 +303,6 @@ export default function AIIoTPlatformPage() {
 
 }
 
-=======
 
       </div>
     </Layout>
@@ -319,9 +312,5 @@ export default function AIIoTPlatformPage() {
     </Layout>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -16,7 +16,6 @@ export default function AIServicesPage() {;
 
 
             we deliver enterprise-grade AI solutions that drive real results.;
-=======
 export default /**
  * AIServicesPage - Function description
  */
@@ -30,7 +29,6 @@ function AIServicesPage() {
           <p className="text - xl text - blue - 100 max - w-3xl mx - auto">;
             Transform your business with cutting - edge artificial intelligence. From automation to predictive analytics,
             we deliver enterprise - grade AI solutions that drive real results.;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </p>;
           <div className="mt - 8">;
             <a href="tel:+13024640950" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - blue - 50 transition - colors mr - 4">;
@@ -62,11 +60,9 @@ function AIServicesPage() {
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Enterprise - grade AI assistant with custom knowledge base integration, workflow automation,
 
-=======
 
                 Enterprise-grade AI assistant with custom knowledge base integration, workflow automation,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 and seamless integration with your existing systems.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -111,14 +107,12 @@ function AIServicesPage() {
 
 
                 SEO-optimized content for blogs, social media, and marketing materials.;
-=======
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">✍️</div>;
               <h2 className="text - 3xl font - bold mb - 4">AI Content Generation</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Automate your content creation with AI - powered writing tools that generate high - quality,
                 SEO - optimized content for blogs, social media, and marketing materials.;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - blue - 400">Key Features:</h3>;
@@ -163,11 +157,9 @@ function AIServicesPage() {
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Transform your data into actionable insights with machine learning - powered analytics,
 
-=======
 
                 Transform your data into actionable insights with machine learning-powered analytics,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 predictive modeling, and intelligent business intelligence solutions.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -213,11 +205,9 @@ function AIServicesPage() {
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Provide 24 / 7 intelligent customer support with AI - powered chatbots, virtual assistants,
 
-=======
 
                 Provide 24/7 intelligent customer support with AI-powered chatbots, virtual assistants,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 and automated customer service solutions that never sleep.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -262,14 +252,12 @@ function AIServicesPage() {
 
 
                 document processing, and AI-powered business process optimization.;
-=======
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">⚙️</div>;
               <h2 className="text - 3xl font - bold mb - 4">AI Process Automation</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Streamline your business operations with intelligent workflow automation,
                 document processing, and AI - powered business process optimization.;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - blue - 400">Key Features:</h3>;
@@ -314,11 +302,9 @@ function AIServicesPage() {
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Protect your enterprise with AI - powered threat detection, compliance monitoring,
 
-=======
 
                 Protect your enterprise with AI-powered threat detection, compliance monitoring,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 and automated security solutions that adapt to evolving threats.;
               </p>;
               <div className="space - y-4 mb - 8">;

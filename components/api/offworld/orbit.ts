@@ -25,10 +25,8 @@ export default async function handler(
 
 
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
-=======
 import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { action } = req.query;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
@@ -49,13 +47,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (action === 'chat' && req && req.method === 'POST') {
       await appendChatMessage(stores, body);
       return res && res.status(200).json({ ok: true });
-=======
 
   try {
     if (action === 'chat' && req.method === 'POST') {
       await appendChatMessage(stores, body);
       return res.status(200).json({ ok: true })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
     if (action === 'vote' && req && req.method === 'POST') {
       await recordVote(stores, body);
@@ -88,7 +84,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 
-=======
 import {
   connect_orbit,
   appendChatMessage,
@@ -156,8 +151,5 @@ if ( {) {
     return res.status (500).json ({ error: e.message });
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

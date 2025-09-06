@@ -11,9 +11,7 @@ if ( {) {
     integrations: [];
     enabled: Boolean (process.env.NEXT_PUBLIC_SENTRY_DSN)});
 }
-=======
 
-=======
 
 if (typeof window !== 'undefined') {;
   Sentry.init({;
@@ -24,4 +22,3 @@ if (typeof window !== 'undefined') {;
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

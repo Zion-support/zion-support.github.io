@@ -27,10 +27,8 @@ import { motion } from 'framer-motion';
 
   x: number;
   y: number;
-=======
   coordinate_x: number;
   coordinate_y: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   vx: number;
   vy: number;
   size: number;
@@ -45,12 +43,10 @@ import { motion } from 'framer-motion';
 
 
   children: React.ReactNode;
-=======
 export default function UltraFuturisticBackground2029(): any ({;
   children,;
 }: {;
   children: React && React.ReactNode;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
@@ -80,12 +76,10 @@ interface EnergyField {;
 
 export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
 
-=======
 
 
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
@@ -95,7 +89,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
 interface Particle {
   x: number,
   y: number,
-=======
   max_life: number;
 ;
 interface EnergyField {
@@ -261,7 +254,6 @@ interface EnergyField {
 
         
 
-=======
 export default /**
  * UltraFuturisticBackground2029 - Function description
  */
@@ -473,7 +465,6 @@ if (particle.coordinate_y = 0) {
         // Draw particle with type - specific effects;
         ctx.save ();
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         switch (particle.type) {
           case 'energy':;
             // Energy particles with glow effect;
@@ -642,7 +633,6 @@ if (particle.coordinate_y = 0) {
           particle && particle.life = particle && particle.maxLife;
           particle && particle.x = Math && Math.random() * canvas && canvas.width;
           particle && particle.y = Math && Math.random() * canvas && canvas.height;        }          particle && particle.y = Math && Math.random() * canvas && canvas.height;
-=======
             break;
           case 'data':;
             // Data particles with digital effect;
@@ -827,11 +817,9 @@ if ( {) {
         });            ctx && ctx.stroke();
           }
         });
-=======
             ctx.stroke()
           }
         })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       });
 
       for (let i = 0, i < 5, i++) {
@@ -851,7 +839,6 @@ if ( {) {
           const y = waveY + amplitude * Math.sin(frequency * x + time + i) * Math.sin(frequency * x * 0.5 + time * 0.7);
           if (x === 0) {
             ctx.moveTo(x, y)
-=======
 ;
       // Draw quantum wave interference patterns;
       const time = Date.now () * 0.001;
@@ -901,7 +888,6 @@ if ( {) {
   $2
 }
             ctx.move_to (x, y);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           } else {
             ctx.line_to (x, y);
           }
@@ -1042,7 +1028,6 @@ if ( {) {
       <div className='absolute inset-0 pointer-events-none'>;
         <motion&& motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20'
-=======
         ctx.stroke ();      }
         ctx.stroke ();
       }
@@ -1100,7 +1085,6 @@ if ( {) {
       <div className='absolute inset - 0 pointer - events - none'>;
         <motion.div;
           className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 opacity - 20';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
             rotate: 360,
@@ -1112,11 +1096,9 @@ if ( {) {
             repeat: Infinity
             ease: 'easeInOut',      }
 
-=======
         cancelAnimationFrame(animationRef.current)
       }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
 
   }, [mousePosition])
@@ -1137,7 +1119,6 @@ if ( {) {
       <div className="absolute inset-0 pointer-events-none">;
         <motion&& motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20"
-=======
   }, [mouse_position]);
 ;
   return (
@@ -1152,7 +1133,6 @@ if ( {) {
       <div className="absolute inset - 0 pointer - events - none">;
         <motion.div;
           className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 opacity - 20";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
             rotate: 360,
@@ -1174,7 +1154,6 @@ if ( {) {
             repeat: Infinity
             ease: 'easeInOut',          }}
 
-=======
             opacity: [0.2, 0.4, 0.2];
 
           }}
@@ -1212,7 +1191,6 @@ if ( {) {
 
             y: [0, -20, 0];
             opacity: [0.2, 0.5, 0.2]
-=======
         />;
         <motion.div;
           className='absolute top - 40 right - 32 w - 24 h - 24 border border - pink - 400 opacity - 20 rounded - full';
@@ -1242,7 +1220,6 @@ if ( {) {
         <motion&& motion.div
 
           className="absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45"
-=======
         />;
         <motion.div;
           className='absolute bottom - 32 left - 1/4 w - 40 h - 40 border border - purple - 400 opacity - 20 transform rotate - 45';
@@ -1256,7 +1233,6 @@ if ( {) {
         />;
         <motion.div;
           className="absolute bottom - 32 left - 1/4 w - 40 h - 40 border border - purple - 400 opacity - 20 transform rotate - 45";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
             duration: 12
@@ -1284,7 +1260,6 @@ if ( {) {
           transition={{
 
           className="absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20"
-=======
         />;
         <motion.div;
           className='absolute bottom - 20 right - 20 w - 28 h - 28 border border - yellow - 400 opacity - 20';
@@ -1298,7 +1273,6 @@ if ( {) {
         />;
         <motion.div;
           className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - yellow - 400 opacity - 20";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 
           }}
@@ -1307,7 +1281,6 @@ if ( {) {
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
 
-=======
             rotate: [-45, 315];
             opacity: [0.2, 0.6, 0.2];
 
@@ -1336,11 +1309,9 @@ if ( {) {
       <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none' />;
 
 
-=======
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />
       
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       {/* Content */}
 
       </div>;
@@ -1348,9 +1319,6 @@ if ( {) {
   );
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             ease: 'easeInOut',            ease: "easeInOut";
           }}
         />;
@@ -1366,12 +1334,8 @@ if ( {) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
       <div className='relative z-10'>{children}</div>
     </div>
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -3,7 +3,6 @@
 
 import {format} from "date-fns";
 
-=======
 import React from "react",
 import { 
   Dialog,
@@ -22,18 +21,15 @@ import { format } from "date-fns",
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface QuoteDetailsProps {
   quote: QuoteRequest | null;
   isOpen: boolean;
   onClose: () => void
 
 import {format} from "date-fns";
-=======
 
   };
 
-=======
 import React from "react",;
 import {;
   Dialog,;
@@ -54,7 +50,6 @@ interface QuoteDetailsProps {;
   quote: QuoteRequest | null,;
   isOpen: boolean,;
   onClose: () => void;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
@@ -110,8 +105,6 @@ if (return "Not specified") {
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>;
@@ -195,7 +188,6 @@ if (return "Not specified") {
   );
 };
 
-=======
       return date_string;
     }
   }
@@ -275,9 +267,6 @@ if (return "Not specified") {
     </Dialog>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

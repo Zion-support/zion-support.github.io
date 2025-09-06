@@ -13,7 +13,6 @@ const benefits = [;
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.";
 
 
-=======
 import { GradientHeading } from "./GradientHeading",
 import { FeatureCard } from "./FeatureCard",
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",
@@ -30,8 +29,6 @@ const benefits = [
     title: "Global Availability",
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",
     icon: <Globe className="w-8 h-8" />},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   {
     title: "24/7 Support"
     description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey."
@@ -40,7 +37,6 @@ const benefits = [
     title: "Cost Reduction"
     description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors."
     icon: <TrendingDown className="w-8 h-8" />}]
-=======
 
 const benefits = [;
   {;
@@ -59,17 +55,14 @@ const benefits = [;
     title: "Cost Reduction",;
     description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.",;
     icon: <TrendingDown className="w-8 h-8" />}],;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 export function BenefitsSection() {;
   return (
 
-=======
             <FeatureCard
 
 };
 
-=======
 import { GradientHeading } from "./GradientHeading",;
 import { FeatureCard } from "./FeatureCard",;
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",;
@@ -110,7 +103,6 @@ export function BenefitsSection() {;
   );
 }
 
-=======
     icon: <Globe className="w - 8 h - 8" />},
   {
     title: "24 / 7 Support",
@@ -146,13 +138,9 @@ function BenefitsSection() {
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
           {benefits.map((benefit, index) => (;
             <FeatureCard;
 }
 
 
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

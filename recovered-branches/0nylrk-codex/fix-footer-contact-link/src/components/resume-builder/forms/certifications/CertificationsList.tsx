@@ -13,7 +13,6 @@ interface CertificationsListProps {
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void
 
-=======
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -26,7 +25,6 @@ interface CertificationsListProps {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export function CertificationsList({
   certifications
@@ -34,7 +32,6 @@ export function CertificationsList({
   onDelete
 }: CertificationsListProps) {
   if (certifications.length === 0) {
-=======
 import {Certification} from '@/types/resume';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
@@ -48,7 +45,6 @@ interface CertificationsListProps {;
 
 export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {;
   if (certifications && certifications.length === 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return null;
   }
 
@@ -110,7 +106,6 @@ if ( {) {
                       : format(cert && cert.expiration_date, 'MMM yyyy')}
                     </>;
 
-=======
                 </p>
                 <p className="text-xs text-muted-foreground mt-1">
 
@@ -123,7 +118,6 @@ if ( {) {
                       : format(cert.expiration_date, 'MMM yyyy')}
                     </>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   )}
                 </p>;
               </div>;
@@ -194,7 +188,6 @@ if ( {) {
   );
 }
 
-=======
                   target="_blank";
                   rel="noopener noreferrer";
                   className="text - primary hover:underline";
@@ -206,8 +199,6 @@ if ( {) {
         </Card>))}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
@@ -225,4 +216,3 @@ if ( {) {
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

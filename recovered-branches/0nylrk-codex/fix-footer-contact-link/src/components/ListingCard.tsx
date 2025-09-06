@@ -7,7 +7,6 @@ import {cn} from "@/lib/utils";
 import {Badge} from "@/components/ui/badge";
 import {Link} from "react-router-dom";
 interface ListingCardProps {;
-=======
 import { cn } from '@/lib / utils';
 import { Badge } from '@/components / ui / badge';
 import { Link } from './react-router-dom';
@@ -18,7 +17,6 @@ interface ListingCardProps {
   description: string,;
   image?: string;
   category: string,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   tags?: string[];
   author?: string;
 
@@ -46,7 +44,6 @@ export function ListingCard(): any ({ ;
       className={cn(
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer"
 
-=======
 interface ListingCardProps {
   id?: string,
   title: string,
@@ -63,8 +60,6 @@ interface ListingCardProps {
       to={`/profile/${profileId}`}
       className={cn(
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         className
 
       )}>;
@@ -109,7 +104,6 @@ interface ListingCardProps {
               <img src={authorImage} alt={author} className="h-8 w-8 rounded-full mr-2" />
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
-=======
 
         {author && (;
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">;
@@ -117,7 +111,6 @@ interface ListingCardProps {
               <img src={authorImage} alt={author} className="h-8 w-8 rounded-full mr-2" />;
             ) : (;
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             )}
             <span className="text-sm text-zion-slate-light">{author}</span>;
           </div>;
@@ -128,7 +121,6 @@ interface ListingCardProps {
   );
 }
 
-=======
   author_image?: string;
   class_name?: string;
   profile_type?: 'service' | 'talent';
@@ -181,4 +173,3 @@ function ListingCard() {
       </div>;
     </Link>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

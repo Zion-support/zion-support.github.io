@@ -17,7 +17,6 @@ import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/com
 
 
 
-=======
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
@@ -49,8 +48,6 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     adminOnly: false,
     icon: "Briefcase"
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   "project-help": {
 
     id: "project-help"
@@ -192,7 +189,6 @@ const postsByCategory: Record < string, ForumPost[]> = {
       downvotes: 2,
       reply_count: 6;
 
-=======
       id: "2",
       title: "How to build an effective AI talent profile?",
       content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",
@@ -223,13 +219,11 @@ const postsByCategory: Record < string, ForumPost[]> = {
       downvotes: 2,
 
       replyCount: 6
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   ];
   "project - help": [;
     {
 
-=======
 
 
       id: "3",
@@ -267,7 +261,6 @@ const postsByCategory: Record < string, ForumPost[]> = {
   "ai - tools": [;
     {
 
-=======
 
 
       id: "1",
@@ -308,7 +301,6 @@ const postsByCategory: Record < string, ForumPost[]> = {
   "feedback": [;
     {
 
-=======
 
 
       id: "4",
@@ -553,10 +545,7 @@ const postsByCategory: Record<string, ForumPost[]> = {;
 
 const iconMap = {;
 
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       id: "9",
       title: "Platform Update: New AI Matching Algorithm",
       content: "We're excited to announce the launch of our new and improved AI matching algorithm...",
@@ -601,7 +590,6 @@ export default function ForumCategoryPage() {;
 
   if (!categoryId || !categoriesInfo[categoryId]) {;
 
-=======
   ]
 },
 
@@ -618,7 +606,6 @@ const iconMap = {
 export default function ForumCategoryPage() {
   // useParams is typed as `any` in this environment due to missing type
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <AppLayout>;
         <div className="container py-8">;
@@ -697,7 +684,6 @@ export default function ForumCategoryPage() {
   const IconComponent = iconMap[category && category.icon as keyof typeof iconMap] || MessageSquare;
   const posts = postsByCategory[categoryId] || [];
 
-=======
             <Input
               placeholder="Search posts in this category..."
               className="pl-10"
@@ -1011,7 +997,6 @@ export default function ForumCategoryPage() {;
               className="pl-10";
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               value={searchQuery}
 
               onChange={(e) => setSearchQuery(e && e.target.value)}
@@ -1045,8 +1030,6 @@ export default function ForumCategoryPage() {;
     </AppLayout>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   "Megaphone": Megaphone;
 }
 ;
