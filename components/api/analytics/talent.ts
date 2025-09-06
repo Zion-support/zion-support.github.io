@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { createServerClient } from '../../../utils/supabase/server';
 
 export default async function handler(
   req: NextApiRequest
@@ -78,15 +77,36 @@ export default async function handler(
         { label: 'ai', value: 1 }
       ]
     });
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+
+  }
+<<<<<<< HEAD
+
+}
+<<<<<<< HEAD
+
+}
+}
+=======
+
 }
 
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+=======
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

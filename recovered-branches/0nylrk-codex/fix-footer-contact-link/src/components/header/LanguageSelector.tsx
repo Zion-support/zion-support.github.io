@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
@@ -15,6 +12,26 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 =======
+<<<<<<< HEAD
+=======
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components / ui / dropdown - menu';
+import { use_language, SupportedLanguage  } from '@/context / LanguageContext';
+export /**
+ * LanguageSelector - Function description
+ */
+function LanguageSelector() {
+  const { t } = use_translation ();
+  const { current_language, change_language, supported_languages } = use_language ();
+;
+=======
+import {
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -25,8 +42,11 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 export function LanguageSelector() {;
   const { t } = useTranslation();
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 import React from 'react',
 import { useTranslation } from 'react-i18next',
@@ -40,40 +60,48 @@ import {
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',
 
 export function LanguageSelector() {
-<<<<<<< HEAD
   const { t } = useTranslation();
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
-=======
   const { t } = useTranslation(),
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" className="text-white hover:bg-zion-purple/10">
-          <Globe className="h-5 w-5" />
-          <span className="sr-only">{t('general.select_language')}</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="bg-zion-blue-dark border border-zion-purple/20">
-        {supportedLanguages.map((lang) => (
-          <DropdownMenuItem
+    <DropdownMenu>;
+      <DropdownMenuTrigger as_child>;
+        <Button;
+          variant="ghost";
+          size="icon";
+          className="text - white hover:bg - zion - purple / 10";
+        >;
+          <Globe className="h - 5 w - 5" />;
+          <span className="sr - only">{t ("general.select_language")}</span>;
+        </Button>;
+      </DropdownMenuTrigger>;
+      <DropdownMenuContent;
+        align="end";
+        className="bg - zion - blue - dark border border - zion - purple / 20";
+      >;
+        {supported_languages.map ((lang) => (
+          <DropdownMenuItem;
             key={lang.code}
-<<<<<<< HEAD
             className={`cursor-pointer ${
               currentLanguage === lang.code
                 ? "bg-zion-purple/20 text-zion-cyan"
                 : "text-white hover:bg-zion-purple/10"
-=======
             className={`cursor-pointer ${;
               currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10';
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             }`}
             onClick={() => changeLanguage(lang.code)}
           >
@@ -83,16 +111,18 @@ export function LanguageSelector() {
             </div>
           </DropdownMenuItem>
         ))}
-<<<<<<< HEAD
       </DropdownMenuContent>
     </DropdownMenu>
-=======
       </DropdownMenuContent>;
     </DropdownMenu>;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   );
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

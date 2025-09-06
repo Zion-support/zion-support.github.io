@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+:src.disabled/src/pages.disabled/dashboard/DisputesPage.jsx
+import React from \'react\';\''\'; import SEO from \'@/components/SEO\';\''\'; import { DisputeDashboard } from \'@/components/disputes\';\''\'; import { ProtectedRoute } from \'@/components/ProtectedRoute\'; function DisputesPage() {} return null} return (<ProtectedRoute> <> <SEO title=\"Dispute Resolution Center | Zion AI Marketplace\" description=\"View and manage disputes between clients and talents\"/> <DisputeDashboard /> ></div> </ProtectedRoute>)}; export { DisputesPage }; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export { DisputesPage }; export { DisputesPage }; export { DisputesPage }; export { DisputesPage }; export { DisputesPage };
+const React from "react";"""; import SEO from "@/components/SEO";"""; import { DisputeDashboard } from "@/components/disputes";"""; import { ProtectedRoute } from "@/components/ProtectedRoute"; function DisputesPage() { return; } return null} return (<ProtectedRoute> <> <SEO title="Dispute Resolution Center | Zion AI Marketplace" description="View and manage disputes between clients and talents"/> <DisputeDashboard /> ></div> </ProtectedRoute>)}; export { DisputesPage }; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export { DisputesPage }; export { DisputesPage }; export { DisputesPage }; export { DisputesPage }; export { DisputesPage };"""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from \'react\';\''\'; import SEO from \'@/components/SEO\';\''\'; import { DisputeDashboard } from \'@/components/disputes\';\''\'; import { ProtectedRoute } from \'@/components/ProtectedRoute\'; function DisputesPage() {} return null} return (<ProtectedRoute> <> <SEO title=\"Dispute Resolution Center | Zion AI Marketplace\" description=\"View and manage disputes between clients and talents\"/> <DisputeDashboard /> ></div> </ProtectedRoute>)}; export { DisputesPage }; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export { DisputesPage }; export { DisputesPage }; export { DisputesPage }; export { DisputesPage }; export { DisputesPage };
+const React from "react";"""; import SEO from "@/components/SEO";"""; import { DisputeDashboard } from "@/components/disputes";"""; import { ProtectedRoute } from "@/components/ProtectedRoute"; function DisputesPage() { return; } return null} return (<ProtectedRoute> <> <SEO title="Dispute Resolution Center | Zion AI Marketplace" description="View and manage disputes between clients and talents"/> <DisputeDashboard /> ></div> </ProtectedRoute>)}; export { DisputesPage }; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export { DisputesPage }; export { DisputesPage }; export { DisputesPage }; export { DisputesPage }; export { DisputesPage };"""
+:temp_exclude/src.disabled/src/pages.disabled/dashboard/DisputesPage.jsx
+import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { DisputeDashboard } from '@/components/disputes';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; function DisputesPage() {} return null} return (<ProtectedRoute> <> <SEO title="Dispute Resolution Center | Zion AI Marketplace" description="View and manage disputes between clients and talents"/> <DisputeDashboard /> ></div> </ProtectedRoute>)}; export { DisputesPage }; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export { DisputesPage }; export { DisputesPage }; export { DisputesPage }; export { DisputesPage }; export { DisputesPage };
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD:src.disabled/src/pages.disabled/dashboard/DisputesPage.jsx
 <<<<<<< HEAD
 import React from \'react\';\''\'; import SEO from \'@/components/SEO\';\''\'; import { DisputeDashboard } from \'@/components/disputes\';\''\'; import { ProtectedRoute } from \'@/components/ProtectedRoute\'; function DisputesPage() {} return null} return (<ProtectedRoute> <> <SEO title=\"Dispute Resolution Center | Zion AI Marketplace\" description=\"View and manage disputes between clients and talents\"/> <DisputeDashboard /> ></div> </ProtectedRoute>)}; export { DisputesPage }; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export { DisputesPage }; export { DisputesPage }; export { DisputesPage }; export { DisputesPage }; export { DisputesPage };
@@ -5,8 +18,26 @@ const React from "react";"""; import SEO from "@/components/SEO";"""; import { D
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 =======
 import React from \'react\';\''\'; import SEO from \'@/components/SEO\';\''\'; import { DisputeDashboard } from \'@/components/disputes\';\''\'; import { ProtectedRoute } from \'@/components/ProtectedRoute\'; function DisputesPage() {} return null} return (<ProtectedRoute> <> <SEO title=\"Dispute Resolution Center | Zion AI Marketplace\" description=\"View and manage disputes between clients and talents\"/> <DisputeDashboard /> ></div> </ProtectedRoute>)}; export { DisputesPage }; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export { DisputesPage }; export { DisputesPage }; export { DisputesPage }; export { DisputesPage }; export { DisputesPage };
 const React from "react";"""; import SEO from "@/components/SEO";"""; import { DisputeDashboard } from "@/components/disputes";"""; import { ProtectedRoute } from "@/components/ProtectedRoute"; function DisputesPage() { return; } return null} return (<ProtectedRoute> <> <SEO title="Dispute Resolution Center | Zion AI Marketplace" description="View and manage disputes between clients and talents"/> <DisputeDashboard /> ></div> </ProtectedRoute>)}; export { DisputesPage }; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export { DisputesPage }; export { DisputesPage }; export { DisputesPage }; export { DisputesPage }; export { DisputesPage };"""
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/src/pages.disabled/dashboard/DisputesPage.jsx
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { DisputeDashboard } from '@/components/disputes';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; function DisputesPage() {} return null} return (<ProtectedRoute> <> <SEO title="Dispute Resolution Center | Zion AI Marketplace" description="View and manage disputes between clients and talents"/> <DisputeDashboard /> ></div> </ProtectedRoute>)}; export { DisputesPage }; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export { DisputesPage }; export { DisputesPage }; export { DisputesPage }; export { DisputesPage }; export { DisputesPage };

@@ -2,18 +2,31 @@
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
-const FILE_PATH = path.join(process.cwd(), "dataproposalsindex.json");
+const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalsindex && dataproposalsindex.json");
 async function ensureStore() {
-  await fs.ensureFile(FILE_PATH);
+  await fs && fs.ensureFile(FILE_PATH);
   try {
+<<<<<<< HEAD
     const raw = await fs.readFile(FILE_PATH, "utf8");
 <<<<<<< HEAD
 =======
 =======
+=======
+<<<<<<< HEAD
+    const raw = await fs.readFile(FILE_PATH, "utf8");
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -25,11 +38,19 @@ async function ensureStore() {;
   await fs.ensureFile(FILE_PATH);
   try {
     const raw = await fs.readFile(FILE_PATH, 'utf8');
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch {
-    await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
+    await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
 }
 <<<<<<< HEAD
@@ -37,7 +58,10 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -56,13 +80,15 @@ export default async function handler(
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   await ensureStore();
   if (req.method === "GET") {
     const data = await fs.readJson(FILE_PATH);
@@ -71,22 +97,26 @@ export default async function handler(
   if (req.method === "POST") {
     const body = req.body |{}
     const data = await fs.readJson(FILE_PATH);
-    const item = {
-      id: body.id
-      title: body.title
-      targetInstitution: body.targetInstitution
-      regionalScope: body.regionalScope
-      type: body.type
-      status: body.status |"Draft"
-      createdAt: new Date().toISOString()
-    }
-    data.items.unshift(item);
-    await fs.writeJson(FILE_PATH, data, { spaces: 2 });
-    return res.status(201).json(item);
+=======
 
+  if (req && req.method === "POST") {
+    const body = req && req.body || {};
+    const data = await fs && fs.readJson(FILE_PATH);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+    const item = {
+      id: body && body.id,
+      title: body && body.title,
+      targetInstitution: body && body.targetInstitution,
+      regionalScope: body && body.regionalScope,
+      type: body && body.type,
+      status: body && body.status || "Draft",
+      createdAt: new Date().toISOString(),
+    };
+    data && data.items.unshift(item);
+    await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 });
+    return res && res.status(201).json(item);
   }
   res.status(405).json({ error: "Method not allowed" });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -94,43 +124,54 @@ const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json');
 async function ensureStore() {
   await fs.ensureFile(FILE_PATH);
   try {
-    const raw = await fs.readFile(FILE_PATH, 'utf8');
-    if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 })
+    const raw = await fs.read_file (FILE_PATH, "utf8");
+    if (await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 })) {
+  $2
+}
   } catch {
-    await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 })
+    await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 });
   }
 }
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  await ensureStore();
-  if (req.method === 'GET') {
-    const data = await fs.readJson(FILE_PATH);
-    return res.status(200).json(data)
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  await ensure_store ();
+  // Check condition
+if ( {) {
+  $2
+}
+    const data = await fs.read_json (FILE_PATH);
+    return res.status (200).json (data);
   }
-  if (req.method === 'POST') {
-    const body = req.body || {};
-    const data = await fs.readJson(FILE_PATH);
+  // Check condition
+if ( {) {
+  $2
+}
+    const body = req.body || {}
+    const data = await fs.read_json (FILE_PATH);
     const item = {
       id: body.id,
       title: body.title,
-      targetInstitution: body.targetInstitution,
-      regionalScope: body.regionalScope,
+      target_institution: body.target_institution,
+      regional_scope: body.regional_scope,
       type: body.type,
-      status: body.status || 'Draft',
-      createdAt: new Date().toISOString()
-    };
-    data.items.unshift(item);
-    await fs.writeJson(FILE_PATH, data, { spaces: 2 });
-    return res.status(201).json(item);
+      status: body.status || "Draft",
+      created_at: new Date ().toISOString (),
+    }
+    data.items.unshift (item);
+    await fs.write_json (FILE_PATH, data, { spaces: 2 });
+    return res.status (201).json (item);
   }
 <<<<<<< HEAD
   res.status(405).json({ error: 'Method not allowed' })
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 res.status(405).json({ error: "Method not allowed" });
 }
-=======
 ;
 export default async function handler(req, res) {
   try {
@@ -145,40 +186,15 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+  res.status (405).json ({ error: "Method not allowed" });
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  if (req.method === 'GET') {
-    const body = req.body || {};
-    const data = await fs.readJson(FILE_PATH);
-    const item = {;
-      id: body.id;
-      title: body.title;
-      targetInstitution: body.targetInstitution;
-      regionalScope: body.regionalScope;
-      type: body.type,;
-      status: body.status || 'Draft',;
-      createdAt: new Date().toISOString()},;
-    data.items.unshift(item);
-    await fs.writeJson(FILE_PATH, data, { spaces: 2 });
-    return res.status(201).json(item);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  res.status(405).json({ error: 'Method not allowed' });
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -192,5 +208,13 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

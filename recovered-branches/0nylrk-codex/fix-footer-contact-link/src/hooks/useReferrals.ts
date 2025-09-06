@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {toast} from "@/hooks/use-toast";
@@ -13,12 +16,14 @@ export function useReferrals() {;
   const [isLoading, setIsLoading] = useState(true);
   const [referrals, setReferrals] = useState<Referral[]>([]);
   const [rewards, setRewards] = useState<ReferralReward[]>([]);
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState, useEffect } from "react",
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client";
 import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals";
 export function useReferrals() {
@@ -30,10 +35,12 @@ export function useReferrals() {
   const [stats, setStats] = useState<ReferralStats>({
     totalReferrals: 0;
     pendingReferrals: 0;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     completedReferrals: 0
     totalRewards: 0});
-=======
 import { supabase } from "@/integrations/supabase/client",
 import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals",
 
@@ -43,23 +50,52 @@ export function useReferrals() {
   const [isLoading, setIsLoading] = useState(true),
   const [referrals, setReferrals] = useState<Referral[]>([]),
   const [rewards, setRewards] = useState<ReferralReward[]>([]),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [stats, setStats] = useState<ReferralStats>({
     totalReferrals: 0,
     pendingReferrals: 0,
     completedReferrals: 0,
     totalRewards: 0}),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   useEffect(() => {
     if (user) {
-      fetchReferralCode(),
-      fetchReferralStats(),
-      fetchReferrals(),
+      fetchReferralCode();
+      fetchReferralStats();
+      fetchReferrals();
       fetchRewards()
+=======
+import { useState, useEffect } from './react';
+import { toast } from '@/hooks / use - toast';
+import { use_auth } from '@/hooks / use_auth';
+import { supabase } from '@/integrations / supabase / client';
+import { ReferralCode, ReferralStats, Referral, ReferralReward } from '@/types / referrals';
+export /**
+ * useReferrals - Function description
+ */
+function useReferrals() {
+  const { user } = use_auth ();
+  const [referral_code, setReferralCode] = useState < ReferralCode | null>(null);
+  const [is_loading, setIsLoading] = useState (true);
+  const [referrals, set_referrals] = useState < Referral[]>([]);
+  const [rewards, set_rewards] = useState < ReferralReward[]>([]);
+  const [stats, set_stats] = useState < ReferralStats>({
+    total_referrals: 0;
+    pending_referrals: 0;
+    completed_referrals: 0,
+    total_rewards: 0});
+;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      fetchReferralCode ();
+      fetchReferralStats ();
+      fetch_referrals ();
+      fetch_rewards ();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
-  }, [user]),
-
+  }, [user]);
+;
   const fetchReferralCode = async () => {
     try {
       setIsLoading(true),
@@ -67,14 +103,11 @@ export function useReferrals() {
         .from('referral_codes')
         .select('*')
         .eq('user_id', user?.id)
-<<<<<<< HEAD
         .single();
-=======
         .single(),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (error) {
-        console.error("Error fetching referral code:", error),
+        console && console.error("Error fetching referral code:", error);
         return
       }
       setReferralCode(data)
@@ -83,24 +116,20 @@ export function useReferrals() {
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
   }
   const fetchReferrals = async () => {
     try {
       if (!user) return;
-=======
   },
 
   const fetchReferrals = async () => {
     try {
       if (!user) return,
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       const { data, error } = await supabase
         .from('referrals')
         .select('*')
         .eq('referrer_id', user.id)
-<<<<<<< HEAD
         .order('created_at', { ascending: false });
       if (error) throw error;
       setReferrals(data |[])
@@ -111,7 +140,6 @@ export function useReferrals() {
   const fetchRewards = async () => {
     try {
       if (!user) return;
-=======
         .order('created_at', { ascending: false }),
         
       if (error) throw error,
@@ -126,12 +154,10 @@ export function useReferrals() {
     try {
       if (!user) return,
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       const { data, error } = await supabase
         .from('referral_rewards')
         .select('*')
         .eq('user_id', user.id)
-<<<<<<< HEAD
         .order('created_at', { ascending: false });
       if (error) throw error;
       setRewards(data |[])
@@ -142,7 +168,6 @@ export function useReferrals() {
   const fetchReferralStats = async () => {
     try {
       if (!user) return;
-=======
         .order('created_at', { ascending: false }),
         
       if (error) throw error,
@@ -157,35 +182,32 @@ export function useReferrals() {
     try {
       if (!user) return,
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Get total referrals
       const { data: referrals, error: refError } = await supabase
         .from('referrals')
         .select('id, status')
-<<<<<<< HEAD
         .eq('referrer_id', user.id);
       if (refError) throw refError;
-=======
         .eq('referrer_id', user.id),
       
       if (refError) throw refError,
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Get rewards
       const { data: rewards, error: rewardsError } = await supabase
         .from('referral_rewards')
         .select('amount')
-<<<<<<< HEAD
         .eq('user_id', user.id);
       if (rewardsError) throw rewardsError;
       // Calculate stats
-      const totalReferrals = referrals ? referrals.length : 0;
-      const pendingReferrals = referrals ? referrals.filter(r => r.status === 'pending').length : 0;
-      const completedReferrals = referrals ? referrals.filter(r => r.status === 'completed').length : 0;
-      const totalRewards = rewards ? rewards.reduce((sum, item) => {
-        return sum + (item.amount |0)
+
+      const totalReferrals = referrals ? referrals && referrals.length : 0;
+      const pendingReferrals = referrals ? referrals && referrals.filter(r => r && r.status === 'pending').length : 0;
+      const completedReferrals = referrals ? referrals && referrals.filter(r => r && r.status === 'completed').length : 0;
+      
+      const totalRewards = rewards ? rewards && rewards.reduce((sum, item) => {
+        return sum + (item && item.amount || 0)
+
       }, 0) : 0;
-=======
         .eq('user_id', user.id),
         
       if (rewardsError) throw rewardsError,
@@ -199,49 +221,74 @@ export function useReferrals() {
         return sum + (item.amount || 0)
       }, 0) : 0,
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       setStats({
-        totalReferrals,
-        pendingReferrals,
-        completedReferrals,
+        totalReferrals;
+        pendingReferrals;
+        completedReferrals;
         totalRewards
       })
     } catch (error) {
-      console.error("Error fetching referral stats:", error)
+      console && console.error("Error fetching referral stats:", error)
     }
-<<<<<<< HEAD
+
+;
+  const fetch_referrals = async () => {
+    try {
+      // Check condition
+if (return) {
+  $2
+}
+      const { data, error } = await supabase;
+        .from ('referrals');
+        .select ('*');
+        .eq ('referrer_id', user.id);
+        .order ('created_at', { ascending: false });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      set_referrals (data || []);
+    } catch (error) {
+      console.error ("Error fetching referrals:", error);
+    }
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const generateReferralCode = async () => {
     try {
       if (!user) {
         toast({
-<<<<<<< HEAD
           title: "Authentication required";
           description: "You need to be logged in to generate a referral code"
           variant: "destructive"});
-=======
           title: "Authentication required",
           description: "You need to be logged in to generate a referral code",
           variant: "destructive"}),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         return
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       const { data, error } = await supabase.rpc('generate_referral_code', {
         user_id: user.id
-<<<<<<< HEAD
       });
       if (error) throw error;
       toast({
+=======
+      const { data, error } = await supabase.rpc ('generate_referral_code', {
+        user_id: user.id;
+      });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      toast ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         title: "Success!";
         description: "Your referral code has been generated"
         variant: "success"});
       // Refresh the code
       fetchReferralCode();
-=======
       }),
 
       if (error) throw error,
@@ -254,12 +301,10 @@ export function useReferrals() {
       // Refresh the code
       fetchReferralCode(),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return data
     } catch (error: any) {
-      console.error("Error generating referral code:", error),
+      console && console.error("Error generating referral code:", error);
       toast({
-<<<<<<< HEAD
         title: "Error generating code";
         description: error.message |"There was a problem generating your referral code"
         variant: "destructive"})
@@ -271,7 +316,6 @@ export function useReferrals() {
     const baseUrl = window.location.origin;
     return `${baseUrl}/?ref=${referralCode.code}`
   }
-=======
         title: "Error generating code",
         description: error.message || "There was a problem generating your referral code",
         variant: "destructive"})
@@ -281,19 +325,13 @@ export function useReferrals() {
   // Get the referral link for the current user
   const getReferralLink = () => {
     if (!referralCode) return "",
-    
-    const baseUrl = window.location.origin,
-    return `${baseUrl}/?ref=${referralCode.code}`
-  },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Copy the referral link to clipboard
   const copyReferralLink = () => {
-    const link = getReferralLink(),
+    const link = getReferralLink();
     if (link) {
-      navigator.clipboard.writeText(link),
+      navigator && navigator.clipboard.writeText(link);
       toast({
-<<<<<<< HEAD
         title: "Copied!";
         description: "Referral link copied to clipboard"
         variant: "success"})
@@ -304,16 +342,54 @@ export function useReferrals() {
         variant: "destructive"})
     }
   }
-  // Share on social media platforms
-  const shareOnSocialMedia = (platform: 'twitter' | 'facebook' | 'linkedin') => {
-    const link = getReferralLink();
+;
+  // Get the referral link for the current user;
+  const getReferralLink = () =>: any {
+    // Check condition
+if (return "") {
+  $2
+}
+    const base_url = window.location.origin;
+    return `${base_url}/?ref=${referral_code.code}`;
+  }
+;
+  // Copy the referral link to clipboard;
+  const copyReferralLink = () =>: any {
+    const link = getReferralLink ();
+    // Check condition
+if ( {) {
+  $2
+}
+      navigator.clipboard.write_text (link);
+      toast ({
+        title: "Copied!";
+        description: "Referral link copied to clipboard",
+        variant: "success"});
+
+    } else {
+      toast ({
+        title: "Cannot copy link";
+
+        description: "Please generate a referral code first",
+        variant: "destructive"});
+    }
+  }
+;
+  // Share on social media platforms;
+  const shareOnSocialMedia = (platform: 'twitter' | 'facebook' | 'linkedin') =>: any {
+    const link = getReferralLink ();
     const text = "Join Zion AI marketplace for AI talent and opportunities!";
-    if (!link) {
-      toast({
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+
         title: "Cannot share";
         description: "Please generate a referral code first"
         variant: "destructive"});
-      return
+      return;
     }
     let shareUrl = '';
     switch (platform) {
@@ -326,7 +402,6 @@ export function useReferrals() {
       case 'linkedin':
         shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`;
         break
-=======
         title: "Copied!",
         description: "Referral link copied to clipboard",
         variant: "success"})
@@ -346,7 +421,10 @@ export function useReferrals() {
     if (!link) {
       toast({
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
         title: "Cannot share";
         description: "Please generate a referral code first",
@@ -366,8 +444,11 @@ export function useReferrals() {
       case 'linkedin':
         shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`;
         break
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         title: "Cannot share",
         description: "Please generate a referral code first",
         variant: "destructive"}),
@@ -415,36 +496,76 @@ export function useReferrals() {;
     } finally {;
       setIsLoading(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     }
     if (shareUrl) {
-      window.open(shareUrl, '_blank')
+      window && window.open(shareUrl, '_blank')
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
-  }
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+    let share_url = '';
+;
+    switch (platform) {
+      case 'twitter':;
+        share_url = `https://twitter.com / intent / tweet?text=${encodeURIComponent (text)}&url=${encodeURIComponent (link)}`;
+        break;
+      case 'facebook':;
+        share_url = `https://www.facebook.com / sharer / sharer.php?u=${encodeURIComponent (link)}`;
+        break;
+      case 'linkedin':;
+        share_url = `https://www.linkedin.com / sharing / share - offsite/?url=${encodeURIComponent (link)}`;
+        break;
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      window.open (share_url, '_blank');
+    }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+  }
   };
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   return {
-    referralCode;
-    isLoading;
+    referral_code;
+    is_loading;
     stats;
-    referrals, // Added this property
-    rewards,   // Added this property
+    referrals, // Added this property;
+    rewards,   // Added this property;
     generateReferralCode;
     getReferralLink;
     copyReferralLink;
     shareOnSocialMedia;
     fetchReferralStats;
 
+<<<<<<< HEAD
     fetchReferrals, // Added this method for refreshing referrals
     fetchRewards,   // Added this method for refreshing rewards
-=======
   },;
   const fetchRewards = async () => {;
     try {;
@@ -586,9 +707,16 @@ export function useReferrals() {;
     fetchReferrals, // Added this method for refreshing referrals;
     fetchRewards,   // Added this method for refreshing rewards;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 }

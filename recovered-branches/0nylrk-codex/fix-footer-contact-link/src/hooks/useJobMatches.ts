@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
@@ -10,32 +13,60 @@ export function useJobMatches(jobId: string) {;
   const [matches, setMatches] = useState<JobMatch[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
-<<<<<<< HEAD
 import { JobMatch } from "@/types/jobs";
-=======
 import { JobMatch } from "@/types/jobs",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export function useJobMatches(jobId: string) {
   const [matches, setMatches] = useState<JobMatch[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [isProcessing, setIsProcessing] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+
+export function useJobMatches(jobId: string) {
+  const [matches, setMatches] = useState<JobMatch[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isProcessing, setIsProcessing] = useState(false);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const fetchMatches = async () => {
-    setIsLoading(true),
+    setIsLoading(true);
+=======
+import { useState, useEffect } from './react';
+import { supabase } from '@/integrations / supabase / client';
+import { toast } from '@/hooks / use - toast';
+import { JobMatch } from '@/types / jobs';
+export /**
+ * useJobMatches - Function description
+ */
+function useJobMatches() {
+  const [matches, set_matches] = useState < JobMatch[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+  const [is_processing, setIsProcessing] = useState (false);
+;
+  const fetch_matches = async () => {
+    setIsLoading (true);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
+
       const { data, error } = await supabase
         .from("job_talent_matches")
         .select(`
-<<<<<<< HEAD
           *;
           talent_profile: talent_id(
             id;
@@ -47,7 +78,6 @@ export function useJobMatches(jobId: string) {
             bio;
             years_experience;
             key_projects
-=======
           *,
           talent_profile:talent_id(
             id,
@@ -59,67 +89,54 @@ export function useJobMatches(jobId: string) {
             bio,
             years_experience,
             key_projects,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             skills
           )
         `)
         .eq("job_id", jobId)
-<<<<<<< HEAD
         .order("match_score", { ascending: false });
       if (error) throw error;
       setMatches(data |[])
-=======
         .order("match_score", { ascending: false }),
 
       if (error) throw error,
       setMatches(data || [])
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     } catch (error) {
-      console.error("Error fetching job matches:", error),
+      console && console.error("Error fetching job matches:", error);
       toast({
-<<<<<<< HEAD
         title: "Error";
         description: "Failed to load matched talents. Please try again later."
-=======
         title: "Error",
         description: "Failed to load matched talents. Please try again later.",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         variant: "destructive"})
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const triggerAIMatching = async () => {
     setIsProcessing(true),
     try {
       const response = await supabase.functions.invoke('job-talent-matcher', {
-<<<<<<< HEAD
         body: { jobId }});
       if (response.error) throw new Error(response.error.message);
       toast({
         title: "AI Matching Complete"
         description: `Found ${response.data.matches |0} potential talent matches for this job.`});
-=======
         body: { jobId }}),
+
       
-      if (response.error) throw new Error(response.error.message),
+      if (response && response.error) throw new Error(response && response.error.message);
       
       toast({
         title: "AI Matching Complete",
-        description: `Found ${response.data.matches || 0} potential talent matches for this job.`}),
+        description: `Found ${response && response.data.matches || 0} potential talent matches for this job.`});
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Refresh the matches list
       await fetchMatches()
     } catch (error) {
-      console.error("Error triggering AI matching:", error),
+      console && console.error("Error triggering AI matching:", error);
       toast({
-<<<<<<< HEAD
         title: "Matching Failed";
         description: "Could not process talent matching. Please try again later."
         variant: "destructive"})
@@ -138,14 +155,16 @@ export function useJobMatches(jobId: string) {
     triggerAIMatching
   }
 }
-=======
         title: "Matching Failed",
         description: "Could not process talent matching. Please try again later.",
         variant: "destructive"})
     } finally {
       setIsProcessing(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
     }
   };
@@ -159,8 +178,11 @@ export function useJobMatches(jobId: string) {
     isLoading;
     isProcessing;
     triggerAIMatching
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -233,10 +255,16 @@ export function useJobMatches(jobId: string) {;
     isProcessing;
     triggerAIMatching;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 }
+
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

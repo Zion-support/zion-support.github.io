@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
 import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle",;
@@ -9,8 +12,15 @@ import axios from "axios",;
 import { v4 as uuidv4 } from "uuid",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 
@@ -46,40 +56,101 @@ merkleRoot}
   const headers: Record<string, string> = {}
   const sig = signPayload(body)
   if (sig) headers["x-zion-signature"] = sig
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     eventId: uuidv4(),
     type: "proposal" as const,
     payload: { id: proposalId, proposalId, title, votes },
     originInstanceId: state.config.instanceId,
     version,
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     timestamp: Date.now(),
-merkleRoot},
+    merkleRoot};
 
-  upsertEvent(state, event),
-  writeState(state),
+  upsertEvent(state, event);
+  writeState(state);
 
-  const body = { ...event, propagate: false },
-  const headers: Record<string, string> = {},
-  const sig = signPayload(body),
-  if (sig) headers["x-zion-signature"] = sig,
+  const body = { ...event, propagate: false };
+  const headers: Record<string, string> = {};
+  const sig = signPayload(body);
+  if (sig) headers["x-zion-signature"] = sig;
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
-        const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
-        try {
-          await axios.post(url, body, { headers, timeout: 5000 })
-        } catch {
-          // ignore
-        }
-      })
-  ),
 
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString()
+=======
+import type { NextApiRequest, NextApiResponse } from './next';,
+import { read_state, write_state, upsert_event  } from '../../../utils / sync / storage';,
+import { computeMerkleRootFromVotes  } from '../../../utils / sync / merkle';,
+import { sign_payload  } from '../../../utils / sync / signature';,
+import axios from './axios';,
+import { v4 as uuidv4  } from './uuid';,
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: "Method not allowed" }), ) {
+  $2
+}
+  const state = read_state (),
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (403).json ({ error: "Sync disabled for this instance" });
+  }
+  const { proposal_id, title, votes } = req.body as { proposal_id: string, title: string, votes: { voter_id: string, weight: number, choice: string }[] },
+  if () {) {
+  $2
+}
+    return res.status (400).json ({ error: "proposal_id, title, votes[] required" });
+  }
+  const merkle_root = computeMerkleRootFromVotes (votes),
+  const version = (state.latestVersionByEntityId[proposal_id] || 0) + 1,
+  const event = {
+    event_id: uuidv4 (),
+    type: "proposal" as const,
+    payload: { id: proposal_id, proposal_id, title, votes },
+    originInstanceId: state.config.instance_id,
+    version,
+    timestamp: Date.now (),
+merkle_root},
+  upsert_event (state, event),
+  write_state (state),
+  const body = { ...event, propagate: false },
+  const headers: Record < string, string> = {},
+  const sig = sign_payload (body),
+  // Check condition
+if (headers["x - zion - signature"] = sig, ) {
+  $2
+}
+  await Promise.all (
+    state.config.peers;
+      .filter ((p) => !p.paused);
+      .map (async (peer) => {
+        const url = new URL ("/api / sync / publish", peer.base_url).to_string (),
+
+=======
   return res.status(200).json({ status: "created", merkleRoot, version, eventId: event.eventId });
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -141,27 +212,21 @@ export default async function handler(req, res) {
   const headers: Record<string, string> = {},
   const sig = signPayload(body),
   if (sig) headers["x-zion-signature"] = sig,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
-<<<<<<< HEAD
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
-=======
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
         } catch {
           // ignore
-<<<<<<< HEAD
         }
       })
   )
 
   return res.status(200).json({ status: "created", merkleRoot, version, eventId: event.eventId })
-=======
           } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -272,9 +337,13 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
 }
 =======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

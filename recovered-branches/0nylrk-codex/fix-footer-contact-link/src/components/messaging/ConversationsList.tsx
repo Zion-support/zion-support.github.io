@@ -1,30 +1,43 @@
 
-<<<<<<< HEAD
 import React from 'react';
 import { User  } from 'lucide-react';
 import { Conversation  } from '@/types/messaging';
 import { ConversationItem } from './ConversationItem';
 interface ConversationsListProps {
 
-  conversations: Conversation[]
-  activeConversation: Conversation | null
-  setActiveConversation: (conversation: Conversation) => void
 
+<<<<<<< HEAD
   markAsRead: (conversationId: string) => Promise<void>
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export function ConversationsList({
   conversations;
 
   activeConversation
   setActiveConversation
   markAsRead
+<<<<<<< HEAD
 =======
 
 export function ConversationsList({ ;
   conversations;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+export function ConversationsList({ ;
+  conversations;
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+
+export function ConversationsList({ ;
+  conversations;
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import { User } from 'lucide-react',;
 import { Conversation } from '@/types/messaging',;
@@ -38,11 +51,9 @@ interface ConversationsListProps {;
 
 export function ConversationsList({ 
   conversations,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   activeConversation, 
   setActiveConversation, 
   markAsRead 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }: ConversationsListProps) {
   return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
@@ -64,25 +75,71 @@ export function ConversationsList({
               key={conversation.id}
               conversation={conversation}
               isActive={activeConversation?.id === conversation.id}
-<<<<<<< HEAD
               onClick={() => {
                 setActiveConversation(conversation);
 
                 markAsRead(conversation.id)
-=======
               onClick={() => {;
                 setActiveConversation(conversation);
                 markAsRead(conversation.id);
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
               }}
-            />
+            />;
           ))}
-        </div>
+        </div>;
       )}
-    </div>
-  )
+
+    </div>;
+  );
 }
+
+=======
+import {User} from 'lucide-react';
+import {Conversation} from '@/types / messaging';
+import {ConversationItem} from './ConversationItem';
+interface ConversationsListProps {
+  conversations: Conversation[],
+  active_conversation: Conversation | null,
+  setActiveConversation: (conversation: Conversation) => void,
+  markAsRead: (conversation_id: string) => Promise < void>;
+}
+export /**
+ * ConversationsList - Function description
+ */
+function ConversationsList() {
+  return (
+    <div className="w - full md:w - 80 border - r border - zion - purple / 20 overflow - y-auto">;
+      <div className="p - 3 border - b border - zion - purple / 20">;
+        <h3 className="font - medium text - white">Conversations</h3>;
+      </div>;
+      {conversations.length === 0 ? (
+        <div className="p - 8 text - center text - zion - slate">;
+          <User className="h - 10 w - 10 mx - auto mb - 2 text - zion - purple / 40" />;
+          <p > No conversations yet</p>;
+          <p className="text - sm mt - 1">;
+            Start a conversation from a job or talent profile.;
+          </p>;
+        </div>) : (
+        <div>;
+          {conversations.map ((conversation) => (
+            <ConversationItem;
+              key={conversation.id}
+              conversation={conversation}
+              is_active={active_conversation?.id === conversation.id}
+              on_click={() => {
+                setActiveConversation (conversation);
+                markAsRead (conversation.id);
+              }}
+            />))}
+        </div>)}
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

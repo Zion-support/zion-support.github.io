@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 // Define the shape of a message
 export interface Message {;
   id: string;
@@ -15,43 +14,41 @@ export interface Message {;
 
   attachment_name?: string
 }
-// Define the shape of a conversation
-export interface Conversation {;
+// Define the shape of a conversation;
+
+export interface Conversation {
   id: string;
   user_id: string;
   other_user: {
     id: string;
     name: string;
 
-    avatar_url?: string
-    user_type?: string
+    avatar_url?: string,
+    user_type?: string;
+
   }
   name: string;
   avatar_url?: string;
   last_message?: {
-    content: string
-    created_at: string
+
+    content: string,
+    created_at: string;
+
   }
   updated_at: string;
   unread_count: number;
   context_type?: 'job' | 'talent' | 'general';
-  context_id?: string
 
-  context_data?: ConversationContextData
+  context_id?: string,
+  context_data?: ConversationContextData;
 }
-// Context data for creating a conversation
-export interface ConversationContextData {;
+// Context data for creating a conversation;
+
+export interface ConversationContextData {
   title?: string;
   description?: string;
-  image_url?: string
+  image_url?: string;
 }
-// Define the shape of the messaging context
-export interface MessagingContextType {;
-  messages: Message[];
-  conversations: Conversation[];
-  unreadCount: number;
-  activeConversation: Conversation | null;
-  activeMessages: Message[];
 
   isLoading: boolean
   sendMessage: (conversationId: string, content: string) => Promise<void>
@@ -74,7 +71,6 @@ export interface MessagingContextType {;
 
   loadMessages: (conversationId: string) => Promise<void>
 }
-=======
 // Define the shape of a message;
 export interface Message {;
   id: string,;
@@ -119,24 +115,25 @@ export interface ConversationContextData {;
   image_url?: string;
 }
 ;
+
 // Define the shape of the messaging context;
-export interface MessagingContextType {;
-  messages: Message[],;
-  conversations: Conversation[],;
-  unreadCount: number,;
-  activeConversation: Conversation | null,;
-  activeMessages: Message[],;
-  isLoading: boolean,;
-  sendMessage: (conversationId: string, content: string) => Promise<void>,;
-  createConversation: (;
-    recipientId: string,;
-    initialMessage: string,;
-    contextType?: 'job' | 'talent' | 'general',;
-    contextId?: string,;
-    contextData?: ConversationContextData;
-  ) => Promise<void>,;
-  markAsRead: (conversationId: string) => Promise<void>,;
+export interface MessagingContextType {
+  messages: Message[];
+  conversations: Conversation[];
+  unread_count: number;
+  active_conversation: Conversation | null;
+  active_messages: Message[];
+  is_loading: boolean,
+  send_message: (conversation_id: string, content: string) => Promise < void>,
+  create_conversation: (
+    recipient_id: string,
+    initial_message: string,
+    context_type?: 'job' | 'talent' | 'general';
+    context_id?: string;
+    context_data?: ConversationContextData) => Promise < void>;
+  markAsRead: (conversation_id: string) => Promise < void>;
   /**;
+
    * Set the currently active conversation. Passing `null` will clear the;
    * selection.;
    */;
@@ -146,7 +143,13 @@ export interface MessagingContextType {;
 }
 ;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

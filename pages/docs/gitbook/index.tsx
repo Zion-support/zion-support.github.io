@@ -4,13 +4,29 @@
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
+<<<<<<< HEAD
 =======
 import fs from 'fs',;
 import path from 'path',;
 import Link from 'next/link',;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import fs from 'fs',;
+import path from 'path',;
+import Link from 'next/link',;
+=======
+
+
+import fs from 'fs',;
+import path from 'path',;
+import Link from 'next/link',;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 function list(dir: string, baseDir: string) {
-  const items = fs.readdirSync(dir)
+
+
   return items.map((name) => {
     const full = path.join(dir, name)
     const rel = path.relative(baseDir, full)
@@ -21,6 +37,10 @@ function list(dir: string, baseDir: string) {
 }
 export async function getStaticProps() {
   const base = path.join(process.cwd(), 'docs/gitbook')
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const sections = fs.existsSync(base)
     ? list(base, base).map((entry) => ({
         title: entry.name
@@ -28,9 +48,18 @@ export async function getStaticProps() {
     : []
 
   return { props: { sections }, revalidate: 600 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
@@ -46,8 +75,13 @@ function list(dir: string, baseDir: string) {;
   }
 <<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
   });
   } catch (error) {
@@ -72,7 +106,6 @@ export async function getStaticProps() {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
 export default function DocsIndex({ sections }: { sections: { title: string, items: { name: string, rel: string, isDir: boolean }[] }[] }) {
   return (
@@ -87,11 +120,21 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
               {s.items.map((it) => (
                 <li key={it.rel}>
                   <a className="underline" href={`https://github.com/Zion-Holdings/zion.app/blob/main/docs/gitbook/${it.rel}`} target="_blank" rel="noreferrer">
-<<<<<<< HEAD
                     {it.rel}
+<<<<<<< HEAD
                   </a>
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+<<<<<<< HEAD
+                  </a>
+=======
 <<<<<<< HEAD
 =======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                 </li>
               ))}
             </ul>
@@ -99,17 +142,38 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
         ))}
       </div>
     </div>
+
+=======
+}
+
+=======
+                  </a>;
+                </li>))}
+            </ul>;
+          </div>))}
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
   );
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {it.rel  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                   </Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </li>
               ))  } catch (error) {
     console.error("Error:", error);
@@ -132,7 +196,14 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
   }
 <<<<<<< HEAD
 }
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+}
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { prisma } from '@/lib/prisma';
@@ -17,24 +16,56 @@ if (!session?.user?.email) {
       {
         message: 'Onboarding completed successfully'
         user: {
-          id: updatedUser.id
-          name: updatedUser.name
-          email: updatedUser.email
-          role: updatedUser.role
-          onboardingCompleted: updatedUser.onboardingCompleted
-        }
-      }
+
+          id: updatedUser && updatedUser.id,
+          name: updatedUser && updatedUser.name,
+          email: updatedUser && updatedUser.email,
+          role: updatedUser && updatedUser.role,
+          onboardingCompleted: updatedUser && updatedUser.onboardingCompleted,
+        },
+      },
       { status: 200 }
     );
   } catch (error) {
+<<<<<<< HEAD
     console.error('Onboarding completion error:', error);
     return NextResponse.json(
-<<<<<<< HEAD
-      { error: 'Internal server error' }
 =======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+    console && console.error('Onboarding completion error:', error);
+    return NextResponse && NextResponse.json(
+          id: updated_user.id,
+          name: updated_user.name,
+          email: updated_user.email,
+          role: updated_user.role,
+          onboarding_completed: updated_user.onboarding_completed,
+        },
+      },
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error ('Onboarding completion error:', error);
+    return NextResponse.json (
+
       { error: 'Internal server error' },
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+
+=======
+
+      { error: 'Internal server error' },
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { NextRequest, NextResponse } from "next/server",;
 import { getServerSession } from "next-auth",;
 import { prisma } from "@/lib/prisma",;
@@ -69,11 +100,48 @@ export async function POST(request: NextRequest) {;
     return NextResponse.json(;
       { error: "Internal server error" };
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       { status: 500 }
     );
   }
+
+
+export async function POST(request: NextRequest) { try {
+    const body = await request.json();
+    const { userId, preferences  } = body;
+    // Mock user update - replace with actual database operation
+    const updatedUser = {
+      id: userId,
+      name: 'John Doe',
+      email: 'john@example.com',
+      role: 'user',
+      onboardingCompleted: true,
+      preferences
+    };
+    return NextResponse.json({
+      message: "Onboarding completed successfully",
+      user: {
+        id: updatedUser.id,
+        name: updatedUser.name,
+        email: updatedUser.email,
+        role: updatedUser.role,
+        onboardingCompleted: updatedUser.onboardingCompleted
+      }
+    });
+  } catch (_error) {
+    return NextResponse.json(
+      { error: 'Failed to complete onboarding' },
+
+      { status: 500 }
+    );
+  }
+}
 }

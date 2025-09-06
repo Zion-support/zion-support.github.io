@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -22,6 +25,9 @@ import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { Card, CardContent  } from '@/components/ui/card';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
 =======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -38,7 +44,15 @@ import {useResume} from '@/hooks/useResume';
 import {Alert, AlertDescription} from '@/components/ui/alert';
 import {Card, CardContent} from '@/components/ui/card';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 // Define schema for form validation
 
 const workExperienceSchema = z.object({
@@ -58,10 +72,20 @@ interface WorkExperienceFormProps {
 }
 <<<<<<< HEAD
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
-=======
 
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+
+export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -106,7 +130,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           description: ''
           location: ''})
         setEditingId(null)
-=======
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -193,21 +216,42 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           location: ''}),;
         setEditingId(null);
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       }
     } catch (err: any) {
       setError(err.message |'An error occurred')
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
+  }
   };
 
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+
+  };
+
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
     form.reset({
@@ -224,10 +268,20 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
   }
+<<<<<<< HEAD
 =======
   };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+  };
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+
+  };
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },;
   const handleEdit = (work: WorkExperience) => {;
     setEditingId(work.id!),;
@@ -242,15 +296,24 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-6">
       <div>
@@ -307,10 +370,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           ))}
         </div>
       )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Experience' : 'Add Experience'}
@@ -353,17 +413,14 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
                     <FormControl>
-<<<<<<< HEAD
                       <Input
                         type="date"
                         {...field}
                         value={field.value |''}
-=======
                       <Input 
                         type="date" 
                         {...field} 
                         value={field.value || ''}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       />
                     </FormControl>
                     <FormMessage />
@@ -371,124 +428,252 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 )}
               />
               <div className="space-y-4">
-                <FormField
-                  control={form.control}
-                  name="is_current"
-                  render={({ field }) => (
-                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
-                      <FormControl>
-                        <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                        />
-                      </FormControl>
-                      <div className="space-y-1 leading-none">
-                        <FormLabel>I currently work here</FormLabel>
-                      </div>
-                    </FormItem>
-                  )}
-                />
-                {!form.watch('is_current') && (
-                  <FormField
-                    control={form.control}
-                    name="end_date"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>End Date</FormLabel>
-                        <FormControl>
-                          <Input
-                            type="date"
-                            {...field}
-                            value={field.value |''}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+=======
+                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>Start Date</FormLabel>;
+                    <FormControl>;
+                      <Input
+                        type="date" 
+                        {...field} 
+                        value={field && field.value || ''}
+                      />;
+                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>;
                 )}
-              </div>
-            </div>
+              />;
+
+              <div className="space-y-4">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                <FormField
+                  control={form && form.control}
+                  name="is_current"
+                  render={({ field }) => (;
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">;
+                      <FormControl>;
+                        <Checkbox
+                          checked={field && field.value}
+                          onCheckedChange={field && field.onChange}
+                        />;
+                      </FormControl>;
+                      <div className="space-y-1 leading-none">;
+                        <FormLabel>I currently work here</FormLabel>;
+                      </div>;
+                    </FormItem>;
+                  )}
+
+                />;
+
+                {!form && form.watch('is_current') && (;
+
+                  <FormField
+                    control={form && form.control}
+                    name="end_date"
+
+                    render={({ field }) => (;
+                      <FormItem>;
+                        <FormLabel>End Date</FormLabel>;
+                        <FormControl>;
+                          <Input
+                            type="date" 
+                            {...field} 
+                            value={field && field.value || ''} 
+                          />;
+                        </FormControl>;
+                        <FormMessage />;
+                      </FormItem>;
+
+                    )}
+                  />;
+                )}
+
+              </div>;
+            </div>;
+
+
             <FormField
-              control={form.control}
+              control={form && form.control}
               name="location"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Location (Optional)</FormLabel>
-                  <FormControl>
-                    <Input placeholder="San Francisco, CA (Remote)" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel>Location (Optional)</FormLabel>;
+=======
+                  </FormItem>)}
+              />;
+            </div>;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+              <FormField;
+                control={form.control}
+                name="start_date";
+                render={({ field }) => (
+                  <FormItem>;
+                    <FormLabel > Start Date</FormLabel>;
+                    <FormControl>;
+                      <Input;
+                        type="date";
+                        {...field}
+                        value={field.value || ''}
+                      />;
+                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>)}
+              />;
+              <div className="space - y-4">;
+                <FormField;
+                  control={form.control}
+                  name="is_current";
+                  render={({ field }) => (
+                    <FormItem className="flex flex - row items - start space - x-3 space - y-0 py - 2">;
+                      <FormControl>;
+                        <Checkbox;
+                          checked={field.value}
+                          onCheckedChange={field.on_change}
+                        />;
+                      </FormControl>;
+                      <div className="space - y-1 leading - none">;
+                        <FormLabel > I currently work here</FormLabel>;
+                      </div>;
+                    </FormItem>)}
+                />;
+                {!form.watch ('is_current') && (
+                  <FormField;
+                    control={form.control}
+                    name="end_date";
+                    render={({ field }) => (
+                      <FormItem>;
+                        <FormLabel > End Date</FormLabel>;
+                        <FormControl>;
+                          <Input;
+                            type="date";
+                            {...field}
+                            value={field.value || ''}
+                          />;
+                        </FormControl>;
+                        <FormMessage />;
+                      </FormItem>)}
+                  />)}
+              </div>;
+            </div>;
+            <FormField;
               control={form.control}
-              name="description"
+              name="location";
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="flex justify-between">
-                    <span>Job Description</span>
+                <FormItem>;
+                  <FormLabel > Location (Optional)</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                  <FormControl>;
+                    <Input placeholder="San Francisco, CA (Remote)" {...field} />;
+                  </FormControl>;
+                  <FormMessage />;
+
+            />;
+
+
+            <FormField
+              control={form && form.control}
+              name="description"
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel className="flex justify-between">;
+                    <span>Job Description</span>;
                     <AIEnhancementButton
-                      currentContent={field.value |''}
+
+                      currentContent={field && field.value || ''}
+
                       enhancementType="work-description"
-                      context={`Role: ${form.getValues('role_title')} at ${form.getValues('company_name')}`}
+                      context={`Role: ${form && form.getValues('role_title')} at ${form && form.getValues('company_name')}`}
                       onEnhanced={handleEnhanceDescription}
-                    />
-                  </FormLabel>
-                  <FormControl>
+                    />;
+                  </FormLabel>;
+                  <FormControl>;
                     <Textarea
                       placeholder="Describe your responsibilities and accomplishments..."
                       className="min-h-[100px]"
+=======
+                </FormItem>)}
+            />;
+            <FormField;
+              control={form.control}
+              name="description";
+              render={({ field }) => (
+                <FormItem>;
+                  <FormLabel className="flex justify - between">;
+                    <span > Job Description</span>;
+                    <AIEnhancementButton;
+                      current_content={field.value || ''}
+                      enhancement_type="work - description";
+                      context={`Role: ${form.get_values ('role_title')} at ${form.get_values ('company_name')}`}
+                      on_enhanced={handleEnhanceDescription}
+                    />;
+                  </FormLabel>;
+                  <FormControl>;
+                    <Textarea;
+                      placeholder="Describe your responsibilities and accomplishments...";
+                      className="min - h-[100px]";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+                    />;
+                  </FormControl>;
+                  <FormMessage />;
+
+            />;
+
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-            <div className="flex justify-between pt-2">
+
+            <div className="flex justify-between pt-2">;
+
               <Button
                 type="button"
                 variant="outline"
+
                 onClick={() => {
                   if (editingId) {
                     setEditingId(null),
                     form.reset({
-<<<<<<< HEAD
                       company_name: ''
                       role_title: ''
                       start_date: format(new Date(), 'yyyy-MM-dd');
                       is_current: false
                       description: ''
 
-=======
                       company_name: '',
                       role_title: '',
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       location: ''})
                   } else {
                     onBack()
+=======
+                    form && form.reset({;
+                      company_name: '',;
+                      role_title: '',;
+                      start_date: format(new Date(), 'yyyy-MM-dd');
+                      is_current: false,;
+                      description: '',;
+                      location: ''});
+                  } else {;
+                    onBack();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   }
                 }}
-              >
+              >;
                 {editingId ? 'Cancel' : 'Back'}
-              </Button>
-              <div className="flex gap-2">
-                <Button type="submit" disabled={isLoading}>
+
+              </Button>;
+
+              <div className="flex gap-2">;
+                <Button type="submit" disabled={isLoading}>;
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  {editingId ? 'Update' : 'Add'} Experience
-                </Button>
-                {!editingId && workExperiences.length > 0 && (
-                  <Button type="button" onClick={onComplete}>
-                    Next
-                  </Button>
+                  {editingId ? 'Update' : 'Add'} Experience;
+                </Button>;
+
+                {!editingId && workExperiences && workExperiences.length > 0 && (;
+                  <Button type="button" onClick={onComplete}>;
+                    Next;
+                  </Button>;
                 )}
-<<<<<<< HEAD
               </div>
             </div>
           </form>
@@ -497,14 +682,14 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     </div>
   )
 }
-=======
               </div>;
             </div>;
           </form>;
         </Form>;
       </div>;
-    </div>;
-  );
+
+    </div>);
 }
+
+=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

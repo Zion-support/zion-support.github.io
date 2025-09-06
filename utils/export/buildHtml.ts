@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
 import type { BookProject } from '../book/bookTypes',;
 export function buildPrintableHtml(project: BookProject): string {;
@@ -7,22 +10,31 @@ export function buildPrintableHtml(project: BookProject): string {;
   const quotesHtml = visuals.quoteCallouts;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
     .join('\n'),;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import type { BookProject } from '../book/bookTypes';
-<<<<<<< HEAD
-export function buildPrintableHtml(project: BookProject): string {const { meta, chapters, visuals } = project;
 =======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+import type { BookProject } from '../book/bookTypes';
+export function buildPrintableHtml(project: BookProject): string {const { meta, chapters, visuals } = project;
 export function buildPrintableHtml(project: BookProject): string {;
   const { meta, chapters, visuals } = project;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const quotesHtml = visuals.quoteCallouts;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
     .join('\n');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const chapterHtml = chapters;
     .map(;
       (c) => `;
@@ -32,7 +44,10 @@ export function buildPrintableHtml(project: BookProject): string {;
       </section>;
     `);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
     .join('\n\n'),;
   const visualsHtml = [;
@@ -41,8 +56,11 @@ export function buildPrintableHtml(project: BookProject): string {;
     ...visuals.uiScreens];
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n'),;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     .join('\n\n');
   const visualsHtml = [;
     ...visuals.timelineImages;
@@ -51,10 +69,29 @@ export function buildPrintableHtml(project: BookProject): string {;
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+=======
+    .join ('\n\n'),
+  const visuals_html = [;
+    ...visuals.timeline_images,
+    ...visuals.daoVoteCharts,
+    ...visuals.ui_screens];
+    .map ((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
+    .join ('\n'),
+  const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return `<!doctype html>;
 <html>;
 <head>;
@@ -99,13 +136,27 @@ function paragraphize(text: string): string {if (!text) return '';
     .join('\n');
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 function escapeHtml(s: string): string {return s;
 =======
+function escapeHtml(s: string): string {return s;
 ;
 function escapeHtml(s: string): string {;
   return s;
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+
+;
+function escapeHtml(s: string): string {;
+  return s;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   @page { margin: 1in   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -176,10 +227,26 @@ function escapeHtml(s: string): string {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 </style>;
 </head>;
 <body>;
   <section class="cover">;
+
+    <div>${escape_html (meta.publisher || '')}</div>;
+    <h1>${escape_html (meta.title)}</h1>;
+    <h3>${escape_html (meta.subtitle || '')}</h3>;
+    <div class="by">By ${escape_html (meta.author)}</div>;
+
+    ${barcode}
+  </section>;
+  ${quotesHtml}
+  ${chapterHtml}
+  ${visualsHtml}
+</body>;
+</html>`;
+}
+
     <div>${escapeHtml(meta.publisher || '')}</div>;
     <h1>${escapeHtml(meta.title)}</h1>;
     <h3>${escapeHtml(meta.subtitle || '')}</h3>;
@@ -216,24 +283,35 @@ function escapeHtml(s: string): string {;
 function paragraphize(text: string): string {;
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     .replace(/&/g, '&amp,');
     .replace(/</g, '<');
     .replace(/>/g, '>');
     .replace(/"/g, '"');
     .replace(/'/g, '&#039,');
-<<<<<<< HEAD
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

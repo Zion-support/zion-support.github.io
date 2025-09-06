@@ -1,5 +1,4 @@
 
-import React from 'react';
 
 import SEO from '../components/SEO';
 import Link from 'next/link';
@@ -17,12 +16,9 @@ export default function LegalPage() {
 			</div>
 		</>
 	)
-<<<<<<< HEAD
 };
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

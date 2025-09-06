@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { Resume  } from '@/types/resume';
 import { jsPDF  } from 'jspdf';
 import 'jspdf-autotable';
@@ -14,6 +17,8 @@ import { addCertificationsSection  } from './sections/certificationsSection';
 import { addPortfolioSection } from './sections/portfolioSection';
 export interface ExportOptions {
 =======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Resume} from '@/types/resume';
 import {jsPDF} from 'jspdf';
 import 'jspdf-autotable';
@@ -26,7 +31,15 @@ import {addEducationSection} from './sections/educationSection';
 import {addCertificationsSection} from './sections/certificationsSection';
 import {addPortfolioSection} from './sections/portfolioSection';
 export interface ExportOptions {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   theme: 'light' | 'dark';
   includePortfolio?: boolean;
 
@@ -45,10 +58,20 @@ export async function exportResumeToPDF(
 <<<<<<< HEAD
 ): Promise<Blob> {
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options }
-=======
 ): Promise<Blob> {;
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+): Promise<Blob> {;
+  const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions;
   // Create new PDF document (A4)
   const doc = new jsPDF({
@@ -61,21 +84,24 @@ export async function exportResumeToPDF(
   // Set up colors based on theme
   const colors = getPdfThemeColors(theme);
   // Set background color
-  doc.setFillColor(colors.background);
-  doc.rect(0, 0, 210, 297, 'F'), // Fill entire page
+
+  doc && doc.setFillColor(colors && colors.background);
+  doc && doc.rect(0, 0, 210, 297, 'F'), // Fill entire page
+  
   // Set text color based on theme
-  doc.setTextColor(colors.text);
+  doc && doc.setTextColor(colors && colors.text);
+  
   // Add each section of the resume
-  let currentY = addBasicInfoSection(doc, resume.basic_info, colors);
-  currentY = addSkillsSection(doc, resume.skills, colors, currentY);
-  currentY = addWorkExperienceSection(doc, resume.work_experience, colors, currentY);
-  currentY = addEducationSection(doc, resume.education, colors, currentY);
-  currentY = addCertificationsSection(doc, resume.certifications, colors, currentY);
+  let currentY = addBasicInfoSection(doc, resume && resume.basic_info, colors);
+  currentY = addSkillsSection(doc, resume && resume.skills, colors, currentY);
+  currentY = addWorkExperienceSection(doc, resume && resume.work_experience, colors, currentY);
+  currentY = addEducationSection(doc, resume && resume.education, colors, currentY);
+  currentY = addCertificationsSection(doc, resume && resume.certifications, colors, currentY);
+  
 
   // Add portfolio projects if needed
   if (includePortfolio && resume.portfolio_projects && resume.portfolio_projects.length > 0) {
     currentY = addPortfolioSection(doc, resume.portfolio_projects, colors, currentY, maxProjects)
-=======
 import { Resume } from '@/types/resume',;
 import { jsPDF } from 'jspdf',;
 import 'jspdf-autotable',;
@@ -94,47 +120,56 @@ export interface ExportOptions {;
   fontFamily?: FontFamily;
 }
 ;
-const defaultOptions: ExportOptions = {;
-  theme: 'light',;
-  includePortfolio: true,;
-  maxProjects: 2,;
-  fontFamily: 'default';
-},;
-export async function exportResumeToPDF(;
-  resume: Resume,;
-  options: Partial<ExportOptions> = {}
-): Promise<Blob> {;
-  const mergedOptions: ExportOptions = { ...defaultOptions, ...options },;
-  const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions,;
+export async function exportResumeToPDF (
+  resume: Resume,
+  options: Partial < ExportOptions> = {}
+): Promise < Blob> {
+  const merged_options: ExportOptions = { ...default_options, ...options }
+  const { theme, include_portfolio, max_projects, font_family } = merged_options;
+;
   // Create new PDF document (A4);
-  const doc = new jsPDF({;
-    orientation: 'portrait',;
-    unit: 'mm',;
+  const doc = new jsPDF ({
+    orientation: 'portrait';
+    unit: 'mm',
     format: 'a4';
-  }),;
+  });
+;
   // Load custom fonts if specified;
-  await loadCustomFonts(doc, fontFamily),;
+  await loadCustomFonts (doc, font_family);
+;
   // Set up colors based on theme;
-  const colors = getPdfThemeColors(theme),;
+  const colors = getPdfThemeColors (theme);
+;
   // Set background color;
-  doc.setFillColor(colors.background),;
-  doc.rect(0, 0, 210, 297, 'F'), // Fill entire page;
+  doc.setFillColor (colors.background);
+  doc.rect (0, 0, 210, 297, 'F'), // Fill entire page;
   // Set text color based on theme;
-  doc.setTextColor(colors.text),;
+  doc.setTextColor (colors.text);
+;
   // Add each section of the resume;
-  let currentY = addBasicInfoSection(doc, resume.basic_info, colors),;
-  currentY = addSkillsSection(doc, resume.skills, colors, currentY),;
-  currentY = addWorkExperienceSection(doc, resume.work_experience, colors, currentY),;
-  currentY = addEducationSection(doc, resume.education, colors, currentY);
-  currentY = addCertificationsSection(doc, resume.certifications, colors, currentY);
+  let current_y = addBasicInfoSection (doc, resume.basic_info, colors);
+  current_y = addSkillsSection (doc, resume.skills, colors, current_y);
+  current_y = addWorkExperienceSection (doc, resume.work_experience, colors, current_y);
+  current_y = addEducationSection (doc, resume.education, colors, current_y);
+  current_y = addCertificationsSection (doc, resume.certifications, colors, current_y);
+;
   // Add portfolio projects if needed;
+
   if (includePortfolio && resume.portfolio_projects && resume.portfolio_projects.length > 0) {;
     currentY = addPortfolioSection(doc, resume.portfolio_projects, colors, currentY, maxProjects);
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
-  return doc.output('blob')
+  return doc.output ('blob');
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

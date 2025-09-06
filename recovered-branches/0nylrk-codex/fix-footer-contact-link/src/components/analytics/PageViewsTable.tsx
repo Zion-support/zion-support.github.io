@@ -2,8 +2,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -11,7 +20,6 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {useState} from "react";
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
-=======
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -20,42 +28,38 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useState } from "react",
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',
 <<<<<<< HEAD
+<<<<<<< HEAD
+
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const timeRangeToInterval = {
   '1d': { days: 1, interval: 'hour' }
   '7d': { days: 7, interval: 'day' }
   '30d': { days: 30, interval: 'day' }
   '90d': { days: 90, interval: 'week' }
   '365d': { days: 365, interval: 'month' }
-<<<<<<< HEAD
 }
 export function PageViewsTable() {
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');
-=======
 },
 
-<<<<<<< HEAD
 export function PageViewsTable() {;
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');
-=======
 export function PageViewsTable() {
   const [timeRange, setTimeRange] = useState<TimeRange>('7d'),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const { data: pageViews, isLoading } = useQuery({
     queryKey: ['page-views-data', timeRange],
     queryFn: async () => {
-<<<<<<< HEAD
       const { days } = timeRangeToInterval[timeRange];
-=======
       const { days } = timeRangeToInterval[timeRange],
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Get top pages by views
       const { data, error } = await supabase
         .from('analytics_events')
@@ -63,12 +67,10 @@ export function PageViewsTable() {
         .eq('event_typepage_view')
         .gte('created_at', new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString())
         .order('count', { ascending: false })
-<<<<<<< HEAD
         .limit(10);
       if (error) throw error;
       return data |[]
     }});
-=======
         .limit(10),
         
       if (error) throw error,
@@ -76,22 +78,18 @@ export function PageViewsTable() {
       return data || []
     }}),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Format path names for better display
   const formatPathName = (path: string) => {
     if (path === '/') return 'Home Page'
     return path.charAt(1).toUpperCase() + path.slice(2).replace(/-/g, ' ')
-<<<<<<< HEAD
   }
   // Calculate total views to determine percentages
   const totalViews = pageViews?.reduce((sum, page) => sum + page.count, 0) |0;
-=======
   },
   
   // Calculate total views to determine percentages
   const totalViews = pageViews?.reduce((sum, page) => sum + page.count, 0) || 0,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader className="pb-2">
@@ -128,13 +126,11 @@ export function PageViewsTable() {
             ))
           ) : pageViews && pageViews.length > 0 ? (
             pageViews.map((page, index) => {
-<<<<<<< HEAD
               const percentage = totalViews > 0 ? (page.count / totalViews * 100).toFixed(1) : '0';
 
-=======
+<<<<<<< HEAD
               const percentage = totalViews > 0 ? (page.count / totalViews * 100).toFixed(1) : '0',
               
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               return (
                 <div key={index} className="flex items-center justify-between">
                   <div className="text-zion-slate-light font-medium">
@@ -161,15 +157,21 @@ export function PageViewsTable() {
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           )}
         </div>
       </CardContent>
     </Card>
   )
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -177,85 +179,15 @@ import { Skeleton } from "@/components/ui/skeleton",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { useState } from "react",;
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const timeRangeToInterval = {;
   '1d': { days: 1, interval: 'hour' },;
   '7d': { days: 7, interval: 'day' },;
   '30d': { days: 30, interval: 'day' },;
   '90d': { days: 90, interval: 'week' },;
   '365d': { days: 365, interval: 'month' }
-},;
-export function PageViewsTable() {;
-  const [timeRange, setTimeRange] = useState<TimeRange>('7d'),;
-  const { data: pageViews, isLoading } = useQuery({;
-    queryKey: ['page-views-data', timeRange],;
-    queryFn: async () => {;
-      const { days } = timeRangeToInterval[timeRange],;
-      // Get top pages by views;
-      const { data, error } = await supabase;
-        .from('analytics_events');
-        .select('path, count');
-        .eq('event_typepage_view');
-        .gte('created_at', new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString());
-        .order('count', { ascending: false });
-        .limit(10),;
-      if (error) throw error,;
-      return data || [];
-    }}),;
-  // Format path names for better display;
-  const formatPathName = (path: string) => {;
-    if (path === '/') return 'Home Page',;
-    return path.charAt(1).toUpperCase() + path.slice(2).replace(/-/g, ' ');
-  },;
-  // Calculate total views to determine percentages;
-  const totalViews = pageViews?.reduce((sum, page) => sum + page.count, 0) || 0;
-  return (;
-    <Card className="bg-zion-blue-dark border-zion-blue-light">;
-      <CardHeader className="pb-2">;
-        <div className="flex flex-col sm:flex-row justify-between sm:items-center">;
-          <div>;
-            <CardTitle className="text-white text-lg">Top Pages</CardTitle>;
-            <CardDescription className="text-zion-slate-light">Most viewed pages on your platform</CardDescription>;
-          </div>;
-          <Select value={timeRange} onValueChange={(value: TimeRange) => setTimeRange(value)}>;
-            <SelectTrigger className="w-28 mt-2 sm:mt-0 bg-zion-blue border-zion-blue-light text-zion-slate-light">;
-              <SelectValue placeholder="Time Range" />;
-            </SelectTrigger>;
-            <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-zion-slate-light">;
-              <SelectItem value="1d">Last 24h</SelectItem>;
-              <SelectItem value="7d">Last 7 days</SelectItem>;
-              <SelectItem value="30d">Last 30 days</SelectItem>;
-              <SelectItem value="90d">Last 3 months</SelectItem>;
-              <SelectItem value="365d">Last year</SelectItem>;
-            </SelectContent>;
-          </Select>;
-        </div>;
-      </CardHeader>;
-      <CardContent>;
-        <div className="space-y-4">;
-          {isLoading ? (;
-            Array(5).fill(0).map((_, i) => (;
-              <div key={i} className="flex items-center justify-between">;
-                <Skeleton className="h-4 w-40 bg-zion-blue-light" />;
-                <div className="flex items-center gap-2">;
-                  <Skeleton className="h-4 w-10 bg-zion-blue-light" />;
-                  <Skeleton className="h-6 w-32 bg-zion-blue-light" />;
-                </div>;
-              </div>;
-            ));
-          ) : pageViews && pageViews.length > 0 ? (;
-            pageViews.map((page, index) => {;
-              const percentage = totalViews > 0 ? (page.count / totalViews * 100).toFixed(1) : '0';
-              return (;
-                <div key={index} className="flex items-center justify-between">;
-                  <div className="text-zion-slate-light font-medium">;
-                    {formatPathName(page.path)}
-                  </div>;
-                  <div className="flex items-center gap-3">;
-                    <span className="text-white font-medium">{page.count}</span>;
-                    <div className="w-32 flex items-center gap-2">;
-                      <div className="flex-1 h-2 bg-zion-blue-light rounded-full overflow-hidden">;
-                        <div;
-                          className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan";
+
                           style={{ width: `${percentage}%` }}
                         />;
                       </div>;
@@ -271,13 +203,25 @@ export function PageViewsTable() {;
             </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           )}
+
         </div>;
       </CardContent>;
     </Card>;
   );
 }
+
+=======
+}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

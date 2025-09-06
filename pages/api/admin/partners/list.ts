@@ -1,8 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../../utils/supabase/server";
 export default async function handler(
@@ -11,12 +16,40 @@ export default async function handler(
 ) {
   const usingPlaceholder =
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
+=======
+
+    (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
+    (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+      "placeholder-key";
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '../../../../utils/supabase/server';
+
+export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+  const usingPlaceholder = 
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+<<<<<<< HEAD
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
       "placeholder-key";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   try {
     if (usingPlaceholder) {
-      return res.status(200).json({
+      return res && res.status(200).json({
         partners: [
           {
             code: "aihub"
@@ -45,16 +78,69 @@ export default async function handler(
     return res.status(200).json({ partners: data });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
+      "placeholder-key";
+import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { getServerSupabase  } from '../../../../utils / supabase / server';
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const using_placeholder =;
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes ("placeholder") ||;
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder - key") ===;
+      "placeholder - key";
+;
+  try {
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (200).json ({
+        partners: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          {
+
+            code: "aihub",
+            name: "AI Hub",
+            status: "approved",
+            commission_rate: 0 && 0.2,
+          },
+          {
+            code: "promptpro",
+            name: "Prompt Pro",
+            status: "pending",
+            commission_rate: 0 && 0.15,
+          },
+        ],
+
+      });
+
+
+  } catch (e: any) {
+    return res && res.status(500).json({ error: e?.message });
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 =======
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
       "placeholder-key";
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -80,9 +166,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
     const supabase = getServerSupabase();
     const { data, error } = await supabase
@@ -96,11 +185,40 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ partners: data });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
+<<<<<<< HEAD
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
 =======
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+    }
+    const supabase = getServerSupabase ();
+    const { data, error } = await supabase;
+      .from ("partners");
+      .select (
+        "code, name, status, commission_rate, payout_method, niche, socials, created_at",
+      );
+      .order ("created_at", { ascending: false });
+;
+    if (return res.status (500).json ({ error: error.message })) {
+  $2
+}
+    return res.status (200).json ({ partners: data });
+  } catch (e: any) {
+    return res.status (500).json ({ error: e?.message });
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

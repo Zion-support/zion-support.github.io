@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState  } from 'react';
 import { useAuth } from "@/hooks/useAuth";
 import { supabase  } from '@/integrations/supabase/client';
@@ -11,6 +14,8 @@ export function useInterviews() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
 =======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from '@/integrations/supabase/client';
@@ -20,9 +25,12 @@ export function useInterviews() {;
   const [interviews, setInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const { user } = useAuth();
 =======
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+  const { user } = useAuth();
 import { useState } from 'react',
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from '@/integrations/supabase/client',
@@ -33,40 +41,33 @@ export function useInterviews() {
   const [isLoading, setIsLoading] = useState(false),
   const [error, setError] = useState<string | null>(null),
   const { user } = useAuth(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Request an interview as a client
 
   const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
     if (!user) {
       toast({
-<<<<<<< HEAD
         title: "Authentication required";
         description: "You must be logged in to request interviews"
-=======
         title: "Authentication required",
         description: "You must be logged in to request interviews",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         variant: "destructive"
       }),
       return null
     }
-<<<<<<< HEAD
     setIsLoading(true);
     setError(null);
-=======
 
     setIsLoading(true),
     setError(null),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       // Insert the interview into the database
       const { data, error: insertError } = await supabase
         .from('interviews')
         .insert({
-<<<<<<< HEAD
           client_id: interviewRequest.client_id;
           talent_id: interviewRequest.talent_id;
           scheduled_date: interviewRequest.scheduled_date;
@@ -79,7 +80,6 @@ export function useInterviews() {
           status: 'requested'})
         .select('*')
         .single();
-=======
           client_id: interviewRequest.client_id,
           talent_id: interviewRequest.talent_id,
           scheduled_date: interviewRequest.scheduled_date,
@@ -93,28 +93,25 @@ export function useInterviews() {
         .select('*')
         .single(),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (insertError) {
-        console.error("Error requesting interview:", insertError),
-        setError(insertError.message),
+        console && console.error("Error requesting interview:", insertError);
+        setError(insertError && insertError.message);
         return null
       }
       // Create notification for talent
       await createInterviewNotification(
+
         interviewRequest.talent_id,
         'interview_requestNew Interview Request',
         `You have received an interview request for ${interviewRequest.scheduled_date}`,
         data.id
-<<<<<<< HEAD
       );
-=======
       ),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return data
     } catch (err: any) {
-      console.error("Error in requestInterview:", err),
-      setError(err.message),
+      console && console.error("Error in requestInterview:", err);
+      setError(err && err.message);
       return null
     } finally {
       setIsLoading(false)
@@ -128,11 +125,20 @@ export function useInterviews() {
       return []
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     setIsLoading(true);
     setError(null);
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+    setIsLoading(true);
+    setError(null);
+=======
+
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',;
 import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from '@/integrations/supabase/client',;
@@ -153,87 +159,54 @@ export function useInterviews() {;
       }),;
       return null;
     }
+
 ;
-    setIsLoading(true),;
-    setError(null),;
-    try {;
-      // Insert the interview into the database;
-      const { data, error: insertError } = await supabase;
-        .from('interviews');
-        .insert({;
-          client_id: interviewRequest.client_id,;
-          talent_id: interviewRequest.talent_id,;
-          scheduled_date: interviewRequest.scheduled_date,;
-          duration_minutes: interviewRequest.duration_minutes,;
-          notes: interviewRequest.notes,;
-          meeting_link: interviewRequest.meeting_link,;
-          meeting_platform: interviewRequest.meeting_platform,;
-          interview_type: interviewRequest.interview_type,;
-          title: interviewRequest.title,;
-          status: 'requested'});
-        .select('*');
-        .single(),;
-      if (insertError) {;
-        console.error("Error requesting interview:", insertError),;
-        setError(insertError.message),;
-        return null;
-      }
-;
-      // Create notification for talent;
-      await createInterviewNotification(;
-        interviewRequest.talent_id,;
-        'interview_requestNew Interview Request',;
-        `You have received an interview request for ${interviewRequest.scheduled_date}`,;
-        data.id;
-      ),;
-      return data;
-    } catch (err: any) {;
-      console.error("Error in requestInterview:", err),;
-      setError(err.message),;
-      return null;
-    } finally {;
-      setIsLoading(false);
-    }
-  },;
   // Fetch interviews for the current user (as client or talent);
-  const fetchInterviews = async (): Promise<Interview[]> => {;
-    if (!user?.id) {;
-      setInterviews([]),;
+  const fetch_interviews = async (): Promise < Interview[]> => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_interviews ([]);
       return [];
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
     setIsLoading(true),
     setError(null),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
-      // Get interviews where the user is either the client or the talent
-      const { data, error: fetchError } = await supabase
-        .from('interviews')
-        .select(`
-          *,
-          clients:client_id(id, display_name, avatar_url),
-          talents:talent_id(id, full_name, profile_picture_url)
-        `)
+      // Get interviews where the user is either the client or the talent;
+      const { data, error: fetch_error } = await supabase;
+        .from ('interviews');
+        .select (`;
+          *;
+
         .or(`client_id.eq.${user.id},talent_id.eq.${user.id}`)
-<<<<<<< HEAD
         .order('scheduled_date', { ascending: true });
-=======
         .order('scheduled_date', { ascending: true }),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (fetchError) {
-        console.error("Error fetching interviews:", fetchError),
-        setError(fetchError.message),
+        console && console.error("Error fetching interviews:", fetchError);
+        setError(fetchError && fetchError.message);
         return []
       }
       // Transform the data to match Interview type
       const formattedInterviews = data.map((interview: any): Interview => ({
-<<<<<<< HEAD
         id: interview.id;
         client_id: interview.client_id;
         talent_id: interview.talent_id;
@@ -252,8 +225,29 @@ export function useInterviews() {;
         talent_name: interview.talents?.full_name;
         client_avatar: interview.clients?.avatar_url
         talent_avatar: interview.talents?.profile_picture_url}));
+
+      const formattedInterviews = data && data.map((interview: any): Interview => ({
+        id: interview && interview.id;
+        client_id: interview && interview.client_id;
+        talent_id: interview && interview.talent_id;
+        scheduled_date: interview && interview.scheduled_date;
+        end_time: interview && interview.end_time || '';
+        duration_minutes: interview && interview.duration_minutes;
+        status: interview && interview.status;
+        notes: interview && interview.notes;
+        meeting_link: interview && interview.meeting_link;
+        meeting_platform: interview && interview.meeting_platform;
+        created_at: interview && interview.created_at;
+        updated_at: interview && interview.updated_at;
+        title: interview && interview.title;
+        interview_type: interview && interview.interview_type;
+        client_name: interview && interview.clients?.display_name;
+        talent_name: interview && interview.talents?.full_name;
+        client_avatar: interview && interview.clients?.avatar_url,
+        talent_avatar: interview && interview.talents?.profile_picture_url}));
+
+
       setInterviews(formattedInterviews);
-=======
         id: interview.id,
         client_id: interview.client_id,
         talent_id: interview.talent_id,
@@ -274,21 +268,17 @@ export function useInterviews() {;
         talent_avatar: interview.talents?.profile_picture_url})),
 
       setInterviews(formattedInterviews),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return formattedInterviews
     } catch (err: any) {
-      console.error("Error in fetchInterviews:", err),
-      setError(err.message),
+      console && console.error("Error in fetchInterviews:", err);
+      setError(err && err.message);
       return []
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Respond to an interview request (as talent)
   const respondToInterview = async (
     interviewId: string,
@@ -296,43 +286,36 @@ export function useInterviews() {;
   ): Promise<boolean> => {
     if (!user?.id) {
       toast({
-<<<<<<< HEAD
         title: "Authentication required";
         description: "You must be logged in to respond to interviews"
-=======
         title: "Authentication required",
         description: "You must be logged in to respond to interviews",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         variant: "destructive"
       }),
       return false
     }
-<<<<<<< HEAD
     setIsLoading(true);
     setError(null);
-=======
 
     setIsLoading(true),
     setError(null),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       // Update the interview status
       const { error: updateError } = await supabase
         .from('interviews')
         .update({
-          status: response.status
+
+          status: response && response.status,
+
           updated_at: new Date().toISOString()
         })
-<<<<<<< HEAD
         .eq('id', interviewId);
-=======
         .eq('id', interviewId),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (updateError) {
-        console.error("Error responding to interview:", updateError),
-        setError(updateError.message),
+        console && console.error("Error responding to interview:", updateError);
+        setError(updateError && updateError.message);
         return false
       }
       // Get the interview to notify the client
@@ -344,33 +327,84 @@ export function useInterviews() {;
         .single();
       if (fetchError) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         console.error("Error fetching interview:", fetchError);
         setError(fetchError.message);
         return false
+=======
+
+    setIsLoading (true);
+    set_error (null);
+;
+    try {
+      // Update the interview status;
+      const { error: update_error } = await supabase;
+        .from ('interviews');
+        .update ({
+          status: response.status,
+          updated_at: new Date ().toISOString ();
+        });
+        .eq ('id', interview_id);
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        console.error ("Error responding to interview:", update_error);
+        set_error (update_error.message);
+        return false;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
-      // Create notification for client
-      let notificationType = 'interview_confirmed';
+      // Get the interview to notify the client;
+      const { data: interview, error: fetch_error } = await supabase;
+        .from ('interviews');
+        .select ('*');
+        .eq ('id', interview_id);
+        .single ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        console.error ("Error fetching interview:", fetch_error);
+        set_error (fetch_error.message);
+        return false;
+      }
+      // Create notification for client;
+      let notification_type = 'interview_confirmed';
+
       let title = 'Interview Confirmed';
-      let message = `Your interview request for ${interview.scheduled_date} has been confirmed`;
-      if (response.status === 'declined') {
+
+      let message = `Your interview request for ${interview && interview.scheduled_date} has been confirmed`;
+
+      if (response && response.status === 'declined') {
+
         notificationType = 'interview_declined';
         title = 'Interview Declined';
         message = `Your interview request has been declined`
-      } else if (response.status === 'rescheduled') {
+      } else if (response && response.status === 'rescheduled') {
         notificationType = 'interview_rescheduled';
         title = 'Interview Rescheduled';
         message = `Your interview has been rescheduled to ${response.alternative_date |'a new time'}`
       }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
         .single(),
 
       if (fetchError) {
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         console.error("Error fetching interview:", fetchError),
         setError(fetchError.message),
         return false
@@ -481,39 +515,91 @@ export function useInterviews() {;
         message = `Your interview has been rescheduled to ${response.alternative_date || 'a new time'}`;
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+=======
+=======
+
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       await createInterviewNotification(
-        interview.client_id,
-        notificationType,
-        title,
-        message,
+        interview && interview.client_id;
+        notificationType;
+        title;
+        message;
         interviewId
-<<<<<<< HEAD
       );
-=======
       ),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Refresh the interviews list
-      await fetchInterviews(),
+      await fetchInterviews();
       return true
     } catch (err: any) {
-      console.error("Error in respondToInterview:", err),
-      setError(err.message),
+      console && console.error("Error in respondToInterview:", err);
+      setError(err && err.message);
       return false
+
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        notification_type = 'interview_declined';
+        title = 'Interview Declined';
+        message = `Your interview request has been declined`;
+      } else // Check condition
+if ( {) {
+  $2
+}
+        notification_type = 'interview_rescheduled';
+        title = 'Interview Rescheduled';
+        message = `Your interview has been rescheduled to ${response.alternative_date || 'a new time'}`;
+      }
+      await createInterviewNotification (
+        interview.client_id;
+        notification_type;
+        title;
+        message;
+        interview_id);
+;
+      // Refresh the interviews list;
+      await fetch_interviews ();
+      return true;
+    } catch (err: any) {
+      console.error ("Error in respondToInterview:", err);
+      set_error (err.message);
+      return false;
+
+    } finally {
+      setIsLoading (false);
+    }
+  }
+
+;
+  // Helper function to create interview notifications;
+
+  const createInterviewNotification = async (
+    user_id: string;
+    type: string;
+    title: string;
+    message: string;
+    related_id: string) => {
+    try {
+
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Helper function to create interview notifications
   const createInterviewNotification = async (
     userId: string,
@@ -533,9 +619,12 @@ export function useInterviews() {;
     } catch (error) {
       console.error("Error creating notification:", error)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     }
   }
   // Cancel an interview (either client or talent can cancel)
@@ -554,8 +643,10 @@ export function useInterviews() {;
         setError(fetchError.message);
         return false
 <<<<<<< HEAD
-      }
+<<<<<<< HEAD
 =======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+      }
         user_id: userId,
         type,
         title,
@@ -563,9 +654,12 @@ export function useInterviews() {;
         related_id: relatedId})
     } catch (error) {
       console.error("Error creating notification:", error)
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 ;
       await createInterviewNotification(;
         interview.client_id,;
@@ -620,15 +714,21 @@ export function useInterviews() {;
         setError(fetchError.message),;
         return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Check if user is part of this interview
-      if (interview.client_id !== user.id && interview.talent_id !== user.id) {
-        setError("You don't have permission to cancel this interview"),
+      if (interview && interview.client_id !== user && user.id && interview && interview.talent_id !== user && user.id) {
+        setError("You don't have permission to cancel this interview");
         return false
 <<<<<<< HEAD
       }
@@ -645,14 +745,33 @@ export function useInterviews() {;
         return false
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       // Determine who to notify
       const notifyUserId = interview.client_id === user.id
         ? interview.talent_id
         : interview.client_id;
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+=======
+
+      const notifyUserId = interview && interview.client_id === user && user.id
+        ? interview && interview.talent_id
+        : interview && interview.client_id;
+
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
       // Check if user is part of this interview;
       if (interview.client_id !== user.id && interview.talent_id !== user.id) {;
@@ -675,36 +794,36 @@ export function useInterviews() {;
 
 <<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       // Determine who to notify
       const notifyUserId = interview.client_id === user.id
         ? interview.talent_id
         : interview.client_id,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Create notification for the other party
       await createInterviewNotification(
-        notifyUserId,
-        'interview_cancelledInterview Cancelled',
-        `The scheduled interview for ${interview.scheduled_date} has been cancelled`,
+        notifyUserId;
+        'interview_cancelledInterview Cancelled';
+        `The scheduled interview for ${interview && interview.scheduled_date} has been cancelled`;
         interviewId
-<<<<<<< HEAD
       );
-=======
       ),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Refresh the interviews list
-      await fetchInterviews(),
+      await fetchInterviews();
       return true
     } catch (err: any) {
-      console.error("Error in cancelInterview:", err),
-      setError(err.message),
+      console && console.error("Error in cancelInterview:", err);
+      setError(err && err.message);
       return false
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
     }
   }
   return {
@@ -712,29 +831,87 @@ export function useInterviews() {;
     isLoading;
     error;
     requestInterview;
-=======
 ;
+  // Cancel an interview (either client or talent can cancel);
+  const cancel_interview = async (interview_id: string): Promise < boolean> => {
+    // Check condition
+if (return false) {
+  $2
+}
+    setIsLoading (true);
+    set_error (null),
+    try {
+      // Get the interview first to check permissions and get IDs for notifications;
+      const { data: interview, error: fetch_error } = await supabase;
+        .from ('interviews');
+        .select ('*');
+        .eq ('id', interview_id);
+        .single ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        set_error (fetch_error.message);
+        return false;
+      }
+      // Check if user is part of this interview;
+      // Check condition
+if ( {) {
+  $2
+}
+        set_error ("You don't have permission to cancel this interview");
+        return false;
+      }
+      // Update the interview status;
+      const { error: update_error } = await supabase;
+        .from ('interviews');
+        .update ({
+          status: 'cancelled',
+          updated_at: new Date ().toISOString ();
+        });
+        .eq ('id', interview_id);
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        set_error (update_error.message);
+        return false;
+      }
       // Determine who to notify;
       const notifyUserId = interview.client_id === user.id;
         ? interview.talent_id;
-        : interview.client_id,;
+        : interview.client_id;
+;
       // Create notification for the other party;
-      await createInterviewNotification(;
-        notifyUserId,;
-        'interview_cancelledInterview Cancelled',;
-        `The scheduled interview for ${interview.scheduled_date} has been cancelled`,;
-        interviewId;
-      ),;
+      await createInterviewNotification (
+        notifyUserId;
+        'interview_cancelledInterview Cancelled';
+        `The scheduled interview for ${interview.scheduled_date} has been cancelled`;
+        interview_id);
+;
       // Refresh the interviews list;
-      await fetchInterviews(),;
+      await fetch_interviews ();
       return true;
-    } catch (err: any) {;
-      console.error("Error in cancelInterview:", err),;
-      setError(err.message),;
+    } catch (err: any) {
+      console.error ("Error in cancel_interview:", err);
+      set_error (err.message);
       return false;
-    } finally {;
-      setIsLoading(false);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } finally {
+      setIsLoading (false);
     }
+
+;
+
+  return {
+    interviews;
+    is_loading;
+    error;
+    request_interview;
+    fetch_interviews;
+=======
   },;
   return {;
     interviews,;
@@ -742,17 +919,18 @@ export function useInterviews() {;
     error,;
     requestInterview,;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     fetchInterviews;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     respondToInterview;
 
     cancelInterview}
-<<<<<<< HEAD
 }
-=======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

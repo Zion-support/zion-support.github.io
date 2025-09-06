@@ -1,11 +1,9 @@
 import React from 'react';
 interface CustomerExperienceProps {
   // Add props here as needed
-<<<<<<< HEAD
 }
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function CustomerExperience({ }: CustomerExperienceProps) {
   return (
     <div>
@@ -13,6 +11,7 @@ export default function CustomerExperience({ }: CustomerExperienceProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:src.pages.disabled/CustomerExperience.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21,9 +20,28 @@ export default function CustomerExperience({ }: CustomerExperienceProps) {
 }
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 =======
+<<<<<<< HEAD
+:src.pages.disabled/CustomerExperience.jsx
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
 
 
 
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+:src.pages.disabled/CustomerExperience.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/CustomerExperience.jsx
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 :src.pages.disabled/CustomerExperience.jsx
@@ -33,3 +51,11 @@ export default function CustomerExperience({ }: CustomerExperienceProps) {
 }
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.pages.disabled/CustomerExperience.jsx
+=======
+}
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

@@ -1,7 +1,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { Helmet } from "react-helmet-async";
+=======
+import { Helmet } from './react - helmet - async';
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface SEOProps {
 
   title: string
@@ -11,14 +18,21 @@ interface SEOProps {
   ogImage?: string;
   ogUrl?: string;
   canonical?: string;
-=======
 import { Helmet } from "react-helmet-async",
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {Helmet} from "react-helmet-async";
-=======
 import { Helmet } from "react-helmet-async",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+<<<<<<< HEAD
+=======
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 interface SEOProps {
   title: string,
   description: string,
@@ -26,26 +40,34 @@ interface SEOProps {
   ogImage?: string,
   ogUrl?: string,
   canonical?: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   noindex?: boolean
 }
 <<<<<<< HEAD
-=======
-
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+
 export function SEO({;
   title;
   description;
   keywords;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export function SEO({
   title,
   description,
   keywords,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Default to the Google Drive image URL
-<<<<<<< HEAD
 
   ogImage = "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
   ogUrl;
@@ -54,7 +76,6 @@ export function SEO({
   const siteTitle = "Zion - The Future of Tech & AI Marketplace";
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
 
-=======
   ogImage = "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
   ogUrl,
   canonical,
@@ -62,36 +83,70 @@ export function SEO({
   const siteTitle = "Zion - The Future of Tech & AI Marketplace",
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
-    <Helmet>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
+    <Helmet>;
+      <title>{fullTitle}</title>;
+      <meta name="description" content={description} />;
+      {keywords && <meta name="keywords" content={keywords} />}
+
+
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />;
+      <meta property="og:title" content={fullTitle} />;
+      <meta property="og:description" content={description} />;
+      <meta property="og:image" content={ogImage} />;
+      {ogUrl && <meta property="og:url" content={ogUrl} />}
+
+export /**
+ * SEO - Function description
+ */
+function SEO() {
+  const site_title = "Zion - The Future of Tech & AI Marketplace";
+  const full_title = title ? `${title} | ${site_title}` : site_title;
+;
+  return (
+    <Helmet>;
+      <title>{full_title}</title>;
+      <meta name="description" content={description} />;
       {keywords && <meta name="keywords" content={keywords} />}
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      {ogUrl && <meta property="og:url" content={ogUrl} />}
+      <meta property="og:type" content="website" />;
+      <meta property="og:title" content={full_title} />;
+      <meta property="og:description" content={description} />;
+      <meta property="og:image" content={og_image} />;
+      {og_url && <meta property="og:url" content={og_url} />}
       {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@lovable_dev" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:card" content="summary_large_image" />;
+      <meta name="twitter:site" content="@lovable_dev" />;
+      <meta name="twitter:title" content={full_title} />;
+      <meta name="twitter:description" content={description} />;
+      <meta name="twitter:image" content={og_image} />;
+
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
       {/* No index directive for search engines if needed */}
       {noindex && <meta name="robots" content="noindex" />}
+<<<<<<< HEAD
     </Helmet>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+}
+=======
+
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Helmet } from "react-helmet-async",;
 interface SEOProps {;
   title: string,;
@@ -127,23 +182,33 @@ export function SEO({;
       <meta property="og:image" content={ogImage} />
       {ogUrl && <meta property="og:url" content={ogUrl} />}
 ;
+
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />;
       <meta name="twitter:site" content="@lovable_dev" />;
       <meta name="twitter:title" content={fullTitle} />;
       <meta name="twitter:description" content={description} />;
       <meta name="twitter:image" content={ogImage} />;
+
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
-;
+
       {/* No index directive for search engines if needed */}
       {noindex && <meta name="robots" content="noindex" />}
     </Helmet>;
   );
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

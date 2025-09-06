@@ -1,10 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { Resume } from "@/types/resume";
 export interface ResumeOption {;
+=======
+
+
+import { Resume  } from '@/types / resume';
+
+export interface ResumeOption {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   title: string;
   type: 'ai_resume' | 'custom_upload';
@@ -12,13 +25,28 @@ export interface ResumeOption {;
   file?: File
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+<<<<<<< HEAD
 export interface ResumeSelectorProps {
+
+
 =======
-=======
+export interface ResumeSelectorProps {
+
+
 
 =======
 
+=======
+
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { Resume } from "@/types/resume",
 export interface ResumeOption {
   id: string,
@@ -35,11 +63,19 @@ export interface ResumeOption {;
   file?: File;
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export interface ResumeSelectorProps {;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   onResumeSelected: (resumeOption: ResumeOption) => void;
+=======
+  onResumeSelected: (resume_option: ResumeOption) => void;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

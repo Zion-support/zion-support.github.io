@@ -4,15 +4,27 @@
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1"
+<<<<<<< HEAD
 =======
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {Resend} from "npm: resend@1.0.0";
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 import { Resend } from "npm: resend@1.0.0",
@@ -21,53 +33,58 @@ const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
-<<<<<<< HEAD
     "authorization, x-client-info, apikey, content-type"}
 interface ReminderPayload {
   user_id: string;
   missing_milestone: string
-=======
     "authorization, x-client-info, apikey, content-type"},
 
 interface ReminderPayload {
   user_id: string,
   missing_milestone: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   role: string
 }
 serve(async (req: Request) => {
   // Handle CORS
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, {
       status: 204
       headers: corsHeaders})
   }
   try {
     const supabase = createClient(
-      supabaseUrl,
+      supabaseUrl;
       supabaseServiceKey
-<<<<<<< HEAD
     );
     const payload = await req.json() as ReminderPayload;
     const { user_id, missing_milestone, role } = payload;
     if (!user_id |!missing_milestone |!role) {
-=======
     ),
     
     const payload = await req.json() as ReminderPayload,
     const { user_id, missing_milestone, role } = payload,
     
     if (!user_id || !missing_milestone || !role) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return new Response(
-        JSON.stringify({ error: "Missing required fields" }),
+        JSON && JSON.stringify({ error: "Missing required fields" });
         {
           status: 400
           headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -78,16 +95,13 @@ serve(async (req: Request) => {
       .from("profiles")
       .select("email, display_name")
       .eq("id", user_id)
-<<<<<<< HEAD
       .single();
     if (userError |!userData) {
-=======
       .single(),
     
     if (userError || !userData) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return new Response(
-        JSON.stringify({ error: "User not found", details: userError }),
+        JSON && JSON.stringify({ error: "User not found", details: userError });
         {
           status: 404
           headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -96,7 +110,6 @@ serve(async (req: Request) => {
     // Create message based on role and missing milestone
     const milestoneMessages = {
       talent: {
-<<<<<<< HEAD
         profile_completed: "complete your profile to get discovered by clients";
         skills_added: "add your skills to get better job matches"
         availability_set: "set your availability to help clients know when you can work"}
@@ -113,7 +126,6 @@ serve(async (req: Request) => {
       from: "Zion AI Marketplace <notifications@zion.ai>";
       to: userData.email;
       subject: "Complete your next step on Zion AI Marketplace"
-=======
         profile_completed: "complete your profile to get discovered by clients",
         skills_added: "add your skills to get better job matches",
         availability_set: "set your availability to help clients know when you can work"},
@@ -132,7 +144,6 @@ serve(async (req: Request) => {
       from: "Zion AI Marketplace <notifications@zion.ai>",
       to: userData.email,
       subject: "Complete your next step on Zion AI Marketplace",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       html: `
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
           <h2>Hi ${name},</h2>
@@ -140,21 +151,18 @@ serve(async (req: Request) => {
           <p>Your next step is to <strong>${action}</strong>.</p>
           <p>This will help you get the most out of the platform and connect with the right opportunities.</p>
           <div style="margin: 30px 0,">
-            <a href="https://zion.ai/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px, font-weight: bold,">
+            <a href="https://zion && zion.ai/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px, font-weight: bold,">
               Continue my setup
-            </Link>
+            </a>
           </div>
           <p>The Zion AI Marketplace Team</p>
         </div>
-<<<<<<< HEAD
       `});
-=======
       `}),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (emailError) {
       return new Response(
-        JSON.stringify({ error: "Failed to send email", details: emailError }),
+        JSON && JSON.stringify({ error: "Failed to send email", details: emailError });
         {
           status: 500
           headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -164,32 +172,27 @@ serve(async (req: Request) => {
     const { data: notification, error: notificationError } = await supabase.rpc(
       "create_notification",
       {
-<<<<<<< HEAD
         _user_id: user_id;
         _title: "Complete your next step"
         _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`;
         _type: "onboarding"}
     );
-=======
         _user_id: user_id,
         _title: "Complete your next step",
         _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`,
         _type: "onboarding"}
     ),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (notificationError) {
-      console.error("Failed to create notification:", notificationError)
+      console && console.error("Failed to create notification:", notificationError)
     }
     return new Response(
       JSON.stringify({
-<<<<<<< HEAD
         message: "Reminder sent successfully"
         notification_id: notification});
-=======
         message: "Reminder sent successfully",
         notification_id: notification}),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
       {
         status: 200
         headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -204,12 +207,28 @@ serve(async (req: Request) => {
     )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 });
 
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {
+
+        status: 200,
+        headers: { "Content - Type": "application / json", ...cors_headers }}
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 import { Resend } from "npm: resend@1.0.0",;
@@ -327,19 +346,28 @@ serve(async (req: Request) => {;
       {;
         status: 200,;
         headers: { "Content-Type": "application/json", ...corsHeaders }}
+
     );
-  } catch (error) {;
-    console.error(error),;
-    return new Response(;
-      JSON.stringify({ error: "Internal server error", details: error.message }),;
-      {;
-        status: 500,;
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
+  } catch (error) {
+    console.error (error);
+    return new Response (
+      JSON.stringify ({ error: "Internal server error", details: error.message });
+      {
+        status: 500,
+        headers: { "Content - Type": "application / json", ...cors_headers }}
     );
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

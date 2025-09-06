@@ -1,16 +1,24 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../../lib/integrations/fileStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET");
-    return res.status(405).json({ error: "Method not allowed" });
-  const { since } = req.query as { since?: string }
+
+  if (req && req.method !== "GET")
+    return res && res.status(405).json({ error: "Method not allowed" });
+  const { since } = req && req.query as { since?: string };
+
   const state = readState();
   const sinceTs = since ? Number(since) : 0;
+<<<<<<< HEAD
   const events = state.events.filter(
     (e) => e.type === "zion.talent.matched" && e.timestamp > sinceTs
   );
@@ -21,6 +29,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+  const events = state && state.events.filter(
+    (e) => e && e.type === "zion && zion.talent.matched" && e && e.timestamp > sinceTs,
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  );
+  res && res.status(200).json({ events });
+}
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -36,6 +57,7 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
   } catch (error) {
     console.error("Error:", error);
@@ -47,3 +69,40 @@ export default function handler(req, res) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { read_state  } from '../../../../lib / integrations / file_store';
+;
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+}
+  const { since } = req.query as { since?: string }
+  const state = read_state ();
+  const since_ts = since ? Number (since) : 0;
+  const events = state.events.filter (
+    (e) => e.type === "zion.talent.matched" && e.timestamp > since_ts,
+  );
+  res.status (200).json ({ events });
+}
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

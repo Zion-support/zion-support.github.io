@@ -1,13 +1,11 @@
 
-<<<<<<< HEAD
 import React from "react";
 import { Clock } from "lucide-react";
 interface TalentCardAvailabilityProps {
-  availabilityType: string
+  availability_type: string;
 }
-export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {
-  // Format availability status
 
+<<<<<<< HEAD
   const getAvailabilityColor = (status: string) => {
     switch (status) {
       case 'full-time':;
@@ -33,11 +31,29 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
         return status
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+  }
+  };
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+import {Clock} from "lucide-react";
+interface TalentCardAvailabilityProps {;
+  availabilityType: string;
+}
+
+export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
+=======
+
+
+  };
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",
 import { Clock } from "lucide-react",
 interface TalentCardAvailabilityProps {
@@ -49,37 +65,54 @@ interface TalentCardAvailabilityProps {;
 }
 ;
 export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {;
+
   // Format availability status;
   const getAvailabilityColor = (status: string) => {;
     switch (status) {;
       case 'full-time':;
+
+=======
         return 'bg-green-500/20 text-green-400',;
       case 'part-time':;
         return 'bg-yellow-500/20 text-yellow-400',;
+
       case 'project-based':;
         return 'bg-blue-500/20 text-blue-400',;
       default:;
         return 'bg-gray-500/20 text-gray-400';
     }
-  },;
+  };
+
   // Format availability label;
   const getAvailabilityLabel = (status: string) => {;
     switch (status) {;
       case 'full-time':;
-        return 'Full-time',;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        return 'Full-time';
       case 'part-time':;
-        return 'Part-time',;
+        return 'Part-time';
+
       case 'project-based':;
-        return 'Project';
+        return 'Project',;
       default:;
         return status;
+
     }
+
   },
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
@@ -87,9 +120,25 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   )
-<<<<<<< HEAD
 }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
-}
+export /**
+ * TalentCardAvailability - Function description
+ */
+function TalentCardAvailability() {
+  // Format availability status;
+  const getAvailabilityColor = (status: string) =>: any {
+    switch (status) {
+      case 'full - time':;
+        return 'bg - green - 500 / 20 text - green - 400';
+      case 'part - time':;
+        return 'bg - yellow - 500 / 20 text - yellow - 400';
+      case 'project - based':;
+        return 'bg - blue - 500 / 20 text - blue - 400',
+      default:;
+        return 'bg - gray - 500 / 20 text - gray - 400';
+    }
+  }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

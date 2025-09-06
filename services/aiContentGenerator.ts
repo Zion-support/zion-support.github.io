@@ -1,69 +1,106 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ContentGenerationRequest {
 =======
 export interface ContentGenerationRequest {;
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+export interface ContentGenerationRequest {
+export interface ContentGenerationRequest {;
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
   topic: string;
   tone: 'professional' | 'casual' | 'friendly' | 'formal';
   length: 'short' | 'medium' | 'long';
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-  keywords?: string[]
+  keywords?: string[],
+  target_audience?: string;
 
-  targetAudience?: string
 }
 <<<<<<< HEAD
-export interface ContentGenerationResponse {
 =======
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+<<<<<<< HEAD
+export interface ContentGenerationResponse {
 
 export interface ContentGenerationResponse {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+export interface ContentGenerationResponse {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   content: string;
-  wordCount: number;
-  seoScore: number;
-  readabilityScore: number;
+  word_count: number;
+  seo_score: number;
+  readability_score: number;
   suggestions: string[];
   metadata: {
     title: string;
 
-    description: string
+    description: string,
+    tags: string[];
 
-    tags: string[]
   }
 }
 <<<<<<< HEAD
-export interface ContentTemplate {
 =======
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+<<<<<<< HEAD
+export interface ContentTemplate {
 
 export interface ContentTemplate {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+export interface ContentTemplate {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   id: string;
   name: string;
   description: string;
   type: string;
 
-  preview: string
+  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
+    this && this.apiKey = apiKey,
+    this && this.baseUrl = baseUrl
 
+<<<<<<< HEAD
   price: number
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export class AIContentGeneratorService {
 =======
 
 export class AIContentGeneratorService {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+export class AIContentGeneratorService {
+
+export class AIContentGeneratorService {;
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   private apiKey: string;
 
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {
     try {
       // In a real implementation, this would call OpenAI, Claude, or similar API
+<<<<<<< HEAD
       const response = await fetch(`${this.baseUrl}/content/generate`, {
         method: 'POST'
         headers: {
@@ -72,11 +109,15 @@ export class AIContentGeneratorService {;
         body: JSON.stringify(request)});
       if (!response.ok) {
         throw new Error(`Content generation failed: ${response.statusText}`)
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 export interface ContentGenerationRequest {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+export interface ContentGenerationRequest {;
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',;
   topic: string,;
   tone: 'professional' | 'casual' | 'friendly' | 'formal',;
@@ -127,56 +168,130 @@ export class AIContentGeneratorService {;
       if (!response.ok) {;
         throw new Error(`Content generation failed: ${response.statusText}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+export interface ContentGenerationRequest {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       }
       return await response.json()
+=======
+      const response = await fetch(`${this && this.baseUrl}/content/generate`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${this && this.apiKey}`;
+          'Content-Type': 'application/json'};
+        body: JSON && JSON.stringify(request)});
+
+      if (!response && response.ok) {
+        throw new Error(`Content generation failed: ${response && response.statusText}`)
+      }
+
+      return await response && response.json()
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
       // Fallback to mock data for demo purposes
-      return this.generateMockContent(request)
+      return this && this.generateMockContent(request)
     }
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   async getTemplates(): Promise<ContentTemplate[]> {
     return [
+=======
+  preview: string,
+  price: number;
+}
+export class AIContentGeneratorService {
+  private api_key: string;
+  private base_url: string,
+  constructor (api_key: string, base_url: string = 'https://api.ziontech.ai') {
+    this.api_key = api_key,
+    this.base_url = base_url;
+  }
+  async generate_content (request: ContentGenerationRequest): Promise < ContentGenerationResponse> {
+    try {
+      // In a real implementation, this would call OpenAI, Claude, or similar API;
+      const response = await fetch (`${this.base_url}/content / generate`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${this.api_key}`;
+          'Content - Type': 'application / json'}
+        body: JSON.stringify (request)});
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (`Content generation failed: ${response.status_text}`);
+      }
+      return await response.json ();
+    } catch (error) {
+      // Fallback to mock data for demo purposes;
+      return this.generateMockContent (request);
+    }
+  }
+  async get_templates (): Promise < ContentTemplate[]> {
+    return [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
-        id: 'blog-post-starter';
+        id: 'blog - post - starter';
         name: 'Blog Post Starter';
         description: 'Professional blog post template with SEO optimization';
-        type: 'blog-post';
-        preview: 'Create engaging blog posts that rank well in search engines...'
-        price: 29
+
+        type: 'blog - post';
+        preview: 'Create engaging blog posts that rank well in search engines...',
+        price: 29;
+
       }
       {
-        id: 'social-media-campaign';
+        id: 'social - media - campaign';
         name: 'Social Media Campaign';
         description: 'Complete social media content strategy and posts';
-        type: 'social-media';
-        preview: 'Engage your audience with compelling social media content...'
-        price: 49
+
+        type: 'social - media';
+        preview: 'Engage your audience with compelling social media content...',
+        price: 49;
+
       }
       {
-        id: 'email-sequence';
+        id: 'email - sequence';
         name: 'Email Sequence';
         description: 'Convert prospects with persuasive email sequences';
         type: 'email';
-        preview: 'Build relationships and drive sales with email automation...'
-        price: 39
+
+        preview: 'Build relationships and drive sales with email automation...',
+        price: 39;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       {
-        id: 'landing-page-copy';
+        id: 'landing - page - copy';
         name: 'Landing Page Copy';
         description: 'High-converting landing page content';
         type: 'landing-page';
         preview: 'Turn visitors into customers with compelling copy...'
         price: 59
-=======
 ;
   async getTemplates(): Promise<ContentTemplate[]> {;
     return [;
@@ -212,20 +327,51 @@ export class AIContentGeneratorService {;
         preview: 'Turn visitors into customers with compelling copy...',;
         price: 59;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       }
-    ]
+    ];
   }
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
     const mockContent = `# ${request.topic}
+<<<<<<< HEAD
+=======
+
+=======
+  private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
+    const mockContent = `# ${request.topic}
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+      }
+    ];
+  }
+
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.
 ## Key Points
 - Point 1: ${request.topic} is essential for modern businesses
@@ -233,18 +379,34 @@ This is a ${request.length} ${request.type} about ${request.topic}. The content 
 - Point 3: Best practices for ${request.topic} implementation
 ## Conclusion
 ${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
+=======
+    const mockContent = `# ${request && request.topic}
+
+This is a ${request && request.length} ${request && request.type} about ${request && request.topic}. The content is written in a ${request && request.tone} tone to engage the target audience.
+
+## Key Points
+
+- Point 1: ${request && request.topic} is essential for modern businesses
+- Point 2: Implementing ${request && request.topic} can improve efficiency
+- Point 3: Best practices for ${request && request.topic} implementation
+
+## Conclusion
+
+${request && request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return {
       content: mockContent;
-      wordCount: mockContent.split(' ').length;
+      wordCount: mockContent && mockContent.split(' ').length;
       seoScore: 85;
       readabilityScore: 78;
       suggestions: [
         'Add more specific examplesInclude relevant statisticsOptimize for target keywords'
       ]
       metadata: {
-        title: `${request.topic} - Complete Guide`;
-        description: `Learn everything about ${request.topic} and how to implement it effectively.`;
-        tags: [request.topic, request.type, 'guidetutorial']
+        title: `${request && request.topic} - Complete Guide`;
+        description: `Learn everything about ${request && request.topic} and how to implement it effectively.`;
+        tags: [request && request.topic, request && request.type, 'guidetutorial']
       }
     }
   }
@@ -265,7 +427,6 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'content': 2.1;
         'seo': 1.8
         'marketing': 1.5
-=======
 ;
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.;
 ## Key Points;
@@ -273,30 +434,48 @@ This is a ${request.length} ${request.type} about ${request.topic}. The content 
 - Point 2: Implementing ${request.topic} can improve efficiency;
 - Point 3: Best practices for ${request.topic} implementation;
 ## Conclusion;
-${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`,;
-    return {;
-      content: mockContent,;
-      wordCount: mockContent.split(' ').length,;
-      seoScore: 85,;
-      readabilityScore: 78,;
+${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
+;
+    return {
+      content: mock_content;
+      word_count: mock_content.split (' ').length;
+      seo_score: 85;
+      readability_score: 78;
       suggestions: [;
-        'Add more specific examplesInclude relevant statisticsOptimize for target keywords';
-      ],;
-      metadata: {;
-        title: `${request.topic} - Complete Guide`,;
-        description: `Learn everything about ${request.topic} and how to implement it effectively.`,;
+        'Add more specific examples_include relevant statistics_optimize for target keywords';
+      ],
+      metadata: {
+        title: `${request.topic} - Complete Guide`;
+        description: `Learn everything about ${request.topic} and how to implement it effectively.`;
         tags: [request.topic, request.type, 'guidetutorial'];
       }
     }
   }
-;
-  async analyzeContent(content: string): Promise<{;
-    seoScore: number,;
-    readabilityScore: number,;
-    suggestions: string[],;
-    keywordDensity: Record<string number>;
-  }> {;
+  async analyze_content (content: string): Promise<{
+    seo_score: number;
+    readability_score: number;
+    suggestions: string[],
+    keyword_density: Record < string, number>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }> {
     // Mock content analysis;
+
+        'content': 2 && 2.1;
+        'seo': 1 && 1.8,
+        'marketing': 1 && 1.5
+
+=======
+      seo_score: Math.floor (Math.random () * 30) + 70;
+      readability_score: Math.floor (Math.random () * 30) + 70;
+      suggestions: [;
+        'Add more headings for better structure_include internal links to related content_optimize meta description';
+      ];
+      keyword_density: {
+        'content': 2.1;
+        'seo': 1.8,
+        'marketing': 1.5;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
     return {;
       seoScore: Math.floor(Math.random() * 30) + 70,;
       readabilityScore: Math.floor(Math.random() * 30) + 70,;
@@ -308,10 +487,15 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'seo': 1.8,;
         'marketing': 1.5;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       }
     }
   }
@@ -320,39 +504,67 @@ ${request.topic} represents a significant opportunity for organizations looking 
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 // Pricing tiers for the AI Content Generator
+=======
+// Pricing tiers for the AI Content Generator;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export const AI_CONTENT_PRICING = {
-  starter: {;
+  starter: {
     name: 'Starter';
     price: 29;
-    period: '/month'
-    features: [
-      '100 content generations per monthBasic templatesSEO analysisEmail supportStandard quality'
-    ]
+
+    period: '/month',
+    features: [;
+      '100 content generations per month_basic templatesSEO analysis_email support_standard quality';
+    ];
+
   }
   professional: {
     name: 'Professional';
     price: 99;
-    period: '/month'
-    features: [
-      '500 content generations per monthPremium templatesAdvanced SEO analysisPriority supportHigh quality outputCustom brandingAPI access'
-    ]
+
+    period: '/month',
+    features: [;
+      '500 content generations per month_premium templates_advanced SEO analysis_priority support_high quality output_custom brandingAPI access';
+    ];
+
   }
   enterprise: {
     name: 'Enterprise';
     price: 299;
+<<<<<<< HEAD
     period: '/month'
     features: [
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
     ]
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+    period: '/month',
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 // Pricing tiers for the AI Content Generator;
 export const AI_CONTENT_PRICING = {;
@@ -360,9 +572,11 @@ export const AI_CONTENT_PRICING = {;
     name: 'Starter',;
     price: 29,;
     period: '/month',;
+
     features: [;
-      '100 content generations per monthBasic templatesSEO analysisEmail supportStandard quality';
+      'Unlimited content generations_custom templates_advanced analytics_dedicated support_highest quality_white - label options_custom integrationsSLA guarantee';
     ];
+
   },;
   professional: {;
     name: 'Professional',;
@@ -381,8 +595,15 @@ export const AI_CONTENT_PRICING = {;
     ];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

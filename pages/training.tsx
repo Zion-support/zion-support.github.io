@@ -1,28 +1,48 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+origin/automation-improvements-final
+
+import React from 'react';
+import Layout from '../components/Layout';
+import React from 'react';
+import Layout from '../components/Layout';
+
+export default function Training() {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
+
+
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from 'react';
+<<<<<<< HEAD
 import Layout from '../components/Layout';
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 import Layout from '../components/Layout';
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Training() {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   return (
     <Layout
       title="Training & Education - Zion Tech Group"
@@ -41,56 +61,42 @@ export default function Training() {
           </div>
         </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       </div>
     </Layout>
   );
 }
-<<<<<<< HEAD
+ursor/integrate-build-improve-and-re-verify-8f7d
 =======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+import React from 'react';
+import Layout from '../components/Layout';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function Training() {
+
+
 =======
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 =======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
-import {
-  GraduationCap,
-  Users,
-  Clock,
-  Award,
-  BookOpen,
-  Video,
-  Headphones,
-  Code,
-  Brain,
-  Atom,
-  Rocket,
-  Shield,
-  Zap,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  ChevronDown,
-  ChevronUp,
-  Play,
-  Download,
-  ExternalLink,
-  Calendar,
-  MapPin,
-  DollarSign,
-  TrendingUp,
-  Target,
-  Lightbulb,
-  Building,
-  Globe,
-  Server,;} from 'lucide-react';
+import { 
+  GraduationCap, Users, Clock, Award, BookOpen, Video, 
+  Headphones, Code, Brain, Atom, Rocket, Shield, Zap;
+  Star, CheckCircle, ArrowRight, ChevronDown, ChevronUp;
+  Play, Download, ExternalLink, Calendar, MapPin, DollarSign;
+  TrendingUp, Target, Lightbulb, Building, Globe, Server
+} from 'lucide-react';
 
 export default function TrainingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -101,237 +107,227 @@ export default function TrainingPage() {
     { id: 'ai-consciousness', name: 'AI Consciousness', count: 8 },
     { id: 'quantum-computing', name: 'Quantum Computing', count: 6 },
     { id: 'autonomous-ops', name: 'Autonomous Operations', count: 5 },
-    { id: 'enterprise-it', name: 'Enterprise IT', count: 5 },  ];
+    { id: 'enterprise-it', name: 'Enterprise IT', count: 5 }
+  ];
 
   const featuredPrograms = [
     {
       id: 1,
       title: 'AI Consciousness Developer Certification',
-      description:
-        'Master the fundamentals of AI consciousness development and earn industry-recognized certification.',      category: 'ai-consciousness',
+      description: 'Master the fundamentals of AI consciousness development and earn industry-recognized certification.',
+      category: 'ai-consciousness',
       duration: '12 weeks',
       level: 'Intermediate to Advanced',
       price: '$2,999',
-      rating: 4.9,
+    rating: 4.9,
       students: '1,247',
-      featured: true,
-      icon: <Brain className='w-12 h-12' />,
+    featured: true,
+      icon: <Brain className="w-12 h-12" />,
       highlights: [
-        'Hands-on AI consciousness platform development',
-        'Real-world project implementation',
-        'Expert mentorship and support',
-        'Industry-recognized certification',
-        'Lifetime access to course materials',
-      ],
-    },
+        'Hands-on AI consciousness platform developmentReal-world project implementationExpert mentorship and supportIndustry-recognized certificationLifetime access to course materials'
+      ]
+    };
     {
       id: 2,
       title: 'Quantum Computing Implementation Specialist',
-      description:
-        'Learn to implement quantum computing solutions in enterprise environments with practical applications.',      category: 'quantum-computing',
+      description: 'Learn to implement quantum computing solutions in enterprise environments with practical applications.',
+      category: 'quantum-computing',
       duration: '16 weeks',
       level: 'Advanced',
       price: '$3,499',
-      rating: 4.8,
+    rating: 4.8,
       students: '892',
       featured: true,
-      icon: <Atom className='w-12 h-12' />,
+      icon: <Atom className="w-12 h-12" />,
       highlights: [
-        'Quantum algorithm development',
-        'Enterprise integration strategies',
-        'Performance optimization techniques',
-        'Security and compliance considerations',
-        'Hands-on quantum simulator access',
-      ],
-    },
+        'Quantum algorithm developmentEnterprise integration strategiesPerformance optimization techniquesSecurity and compliance considerationsHands-on quantum simulator access'
+      ]
+    };
     {
       id: 3,
       title: 'Autonomous Business Operations Master',
-      description:
-        'Transform your organization with fully autonomous business operations and AI-driven automation.',      category: 'autonomous-ops',
+      description: 'Transform your organization with fully autonomous business operations and AI-driven automation.',
+      category: 'autonomous-ops',
       duration: '10 weeks',
       level: 'Intermediate',
       price: '$2,499',
-      rating: 4.9,
+    rating: 4.9,
       students: '1,156',
-      featured: true,
-      icon: <Rocket className='w-12 h-12' />,
+    featured: true,
+      icon: <Rocket className="w-12 h-12" />,
       highlights: [
-        'Business process automation design',
-        'AI-powered decision making systems',
-        'Change management strategies',
-        'ROI measurement and optimization',
-        'Industry best practices and case studies',
-      ],
-    },  ];
+        'Business process automation designAI-powered decision making systemsChange management strategiesROI measurement and optimizationIndustry best practices and case studies'
+      ]
+    }
+  ];
 
   const allPrograms = [
     // AI Consciousness Programs
     {
       id: 4,
       title: 'AI Consciousness Fundamentals',
-      description:
-        'Introduction to artificial consciousness concepts and basic implementation.',      category: 'ai-consciousness',
+      description: 'Introduction to artificial consciousness concepts and basic implementation.',
+      category: 'ai-consciousness',
       duration: '6 weeks',
       level: 'Beginner',
       price: '$1,299',
-      rating: 4.7,
+    rating: 4.7,
       students: '2,341',
-      icon: <Brain className='w-8 h-8' />,
-    },
+    icon: <Brain className="w-8 h-8" />
+    };
     {
       id: 5,
       title: 'Advanced AI Consciousness Architecture',
-      description:
-        'Deep dive into complex AI consciousness system design and optimization.',      category: 'ai-consciousness',
+      description: 'Deep dive into complex AI consciousness system design and optimization.',
+      category: 'ai-consciousness',
       duration: '14 weeks',
       level: 'Advanced',
       price: '$3,999',
-      rating: 4.9,
+    rating: 4.9,
       students: '567',
-      icon: <Brain className='w-8 h-8' />,
-    },
+      icon: <Brain className="w-8 h-8" />
+    };
     {
       id: 6,
       title: 'AI Ethics and Governance',
-      description:
-        'Learn responsible AI development practices and governance frameworks.',      category: 'ai-consciousness',
+      description: 'Learn responsible AI development practices and governance frameworks.',
+      category: 'ai-consciousness',
       duration: '8 weeks',
       level: 'Intermediate',
       price: '$1,899',
-      rating: 4.8,
+    rating: 4.8,
       students: '1,023',
-      icon: <Shield className='w-8 h-8' />,
-    },
+    icon: <Shield className="w-8 h-8" />
+    };
     {
       id: 7,
       title: 'AI Consciousness API Development',
-      description:
-        'Build robust APIs for AI consciousness applications and services.',      category: 'ai-consciousness',
+      description: 'Build robust APIs for AI consciousness applications and services.',
+      category: 'ai-consciousness',
       duration: '10 weeks',
       level: 'Intermediate',
       price: '$2,199',
-      rating: 4.7,
+    rating: 4.7,
       students: '789',
-      icon: <Code className='w-8 h-8' />,
-    },
+      icon: <Code className="w-8 h-8" />
+    };
+
     // Quantum Computing Programs
     {
       id: 8,
       title: 'Quantum Computing Basics',
-      description:
-        'Foundation course covering quantum mechanics and computing principles.',      category: 'quantum-computing',
+      description: 'Foundation course covering quantum mechanics and computing principles.',
+      category: 'quantum-computing',
       duration: '8 weeks',
       level: 'Beginner',
       price: '$1,599',
-      rating: 4.6,
+    rating: 4.6,
       students: '1,456',
-      icon: <Atom className='w-8 h-8' />,
-    },
+    icon: <Atom className="w-8 h-8" />
+    };
     {
       id: 9,
       title: 'Quantum Machine Learning',
-      description:
-        'Combine quantum computing with machine learning for breakthrough applications.',      category: 'quantum-computing',
+      description: 'Combine quantum computing with machine learning for breakthrough applications.',
+      category: 'quantum-computing',
       duration: '12 weeks',
       level: 'Advanced',
       price: '$3,299',
-      rating: 4.8,
+    rating: 4.8,
       students: '423',
-      icon: <Atom className='w-8 h-8' />,
-    },
+      icon: <Atom className="w-8 h-8" />
+    };
     {
       id: 10,
       title: 'Quantum Security and Cryptography',
-      description:
-        'Implement quantum-resistant security solutions and cryptographic protocols.',      category: 'quantum-computing',
+      description: 'Implement quantum-resistant security solutions and cryptographic protocols.',
+      category: 'quantum-computing',
       duration: '10 weeks',
       level: 'Intermediate',
       price: '$2,399',
-      rating: 4.7,
+    rating: 4.7,
       students: '678',
-      icon: <Shield className='w-8 h-8' />,
-    },
+      icon: <Shield className="w-8 h-8" />
+    };
+
     // Autonomous Operations Programs
     {
       id: 11,
       title: 'Business Process Automation',
-      description:
-        'Learn to automate complex business processes with AI and robotics.',      category: 'autonomous-ops',
+      description: 'Learn to automate complex business processes with AI and robotics.',
+      category: 'autonomous-ops',
       duration: '8 weeks',
       level: 'Intermediate',
       price: '$1,999',
-      rating: 4.8,
+    rating: 4.8,
       students: '945',
-      icon: <Zap className='w-8 h-8' />,
-    },
+      icon: <Zap className="w-8 h-8" />
+    };
     {
       id: 12,
       title: 'Autonomous Decision Systems',
-      description:
-        'Design and implement AI-powered autonomous decision-making systems.',      category: 'autonomous-ops',
+      description: 'Design and implement AI-powered autonomous decision-making systems.',
+      category: 'autonomous-ops',
       duration: '12 weeks',
       level: 'Advanced',
       price: '$2,999',
-      rating: 4.9,
+    rating: 4.9,
       students: '567',
-      icon: <Target className='w-8 h-8' />,
-    },
+      icon: <Target className="w-8 h-8" />
+    };
+
     // Enterprise IT Programs
     {
       id: 13,
       title: 'Enterprise AI Integration',
-      description:
-        'Integrate AI solutions into existing enterprise infrastructure and systems.',      category: 'enterprise-it',
+      description: 'Integrate AI solutions into existing enterprise infrastructure and systems.',
+      category: 'enterprise-it',
       duration: '10 weeks',
       level: 'Intermediate',
       price: '$2,299',
-      rating: 4.7,
+    rating: 4.7,
       students: '823',
-      icon: <Building className='w-8 h-8' />,
-    },
+      icon: <Building className="w-8 h-8" />
+    };
     {
       id: 14,
       title: 'Cloud-Native AI Development',
-      description:
-        'Build and deploy AI applications using cloud-native technologies and practices.',      category: 'enterprise-it',
+      description: 'Build and deploy AI applications using cloud-native technologies and practices.',
+      category: 'enterprise-it',
       duration: '8 weeks',
       level: 'Intermediate',
       price: '$1,899',
-      rating: 4.6,
+    rating: 4.6,
       students: '1,134',
-      icon: <Server className='w-8 h-8' />,
-    },
+    icon: <Server className="w-8 h-8" />
+    };
     {
       id: 15,
       title: 'DevOps for AI Systems',
-      description:
-        'Implement DevOps practices specifically for AI and machine learning systems.',      category: 'enterprise-it',
+      description: 'Implement DevOps practices specifically for AI and machine learning systems.',
+      category: 'enterprise-it',
       duration: '6 weeks',
       level: 'Intermediate',
       price: '$1,599',
-      rating: 4.8,
+    rating: 4.8,
       students: '756',
-      icon: <Zap className='w-8 h-8' />,
-    },
+      icon: <Zap className="w-8 h-8" />
+    }
   ];
 
-  const filteredPrograms = allPrograms.filter(
-    program =>
-      selectedCategory === 'all' || program.category === selectedCategory  );
+  const filteredPrograms = allPrograms.filter(program => 
+    selectedCategory === 'all' || program.category === selectedCategory
+  );
 
   const getCategoryIcon = (category: string) => {
     const icons = {
-      'ai-consciousness': <Brain className='w-6 h-6' />,
-      'quantum-computing': <Atom className='w-6 h-6' />,
-      'autonomous-ops': <Rocket className='w-6 h-6' />,
-      'enterprise-it': <Building className='w-6 h-6' />,
+      'ai-consciousness': <Brain className="w-6 h-6" />;
+      'quantum-computing': <Atom className="w-6 h-6" />;
+      'autonomous-ops': <Rocket className="w-6 h-6" />;
+      'enterprise-it': <Building className="w-6 h-6" />
     };
-    return (
-      icons[category as keyof typeof icons] || (
-        <GraduationCap className='w-6 h-6' />
-      )
-    );  };
+    return icons[category as keyof typeof icons] || <GraduationCap className="w-6 h-6" />
+  };
 
   const getCategoryColor = (category: string) => {
     const colors = {
@@ -341,45 +337,39 @@ export default function TrainingPage() {
       'autonomous-ops': 'green',
       'enterprise-it': 'blue',
 =======
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
-    },
+    };
     return colors[category as keyof typeof colors] || 'gray'
-  },
+  };
+
   const toggleProgram = (id: number) => {
     setExpandedProgram(expandedProgram === id ? null : id)
+
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
+
     <Layout>
-      <SEO
+      <SEO 
         title="Training & Certification - Zion Tech Group"
         description="Master AI consciousness, quantum computing, and autonomous operations with our comprehensive training programs. Earn industry-recognized certifications and advance your career."
       />
+      
       <div className="min-h-screen">
-        {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+        {/* Hero Section */}
         <section className="relative py-20 lg:py-32 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 Training & Certification
@@ -403,7 +393,6 @@ export default function TrainingPage() {
               </div>
             </motion.div>
           </div>
-<<<<<<< HEAD
           <div className="text-center">
             <p className="text-gray-600">Training page is under construction.</p>
           </div>
@@ -416,9 +405,9 @@ export default function TrainingPage() {
   )
 };
 
+<<<<<<< HEAD
 export default Training;
 };export default Training;
-=======
         </section>
         {/* Category Filters */  } catch (error) {
     console.error("Error:", error);
@@ -654,7 +643,10 @@ export default Training;
   const getCategoryColor = (category: string) => {;
     const colors = {;
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     };
     return colors[category as keyof typeof colors] || 'gray';
   };
@@ -703,6 +695,9 @@ export default Training;
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
         {/* Category Filters */}
         <section className='py-10'>
@@ -1150,6 +1145,7 @@ export default Training;
         </section>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
@@ -1158,36 +1154,46 @@ export default Training;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       </div>
     </Layout>
   ),
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
       </div>
     </Layout>
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
-=======
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 export default Training;
 };export default Training;
-<<<<<<< HEAD
+ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+      </div>
+    </Layout>
+
+
+}
+
+  )
+
 =======
 =======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   {
   opacity: 0, y: 20 
@@ -1238,51 +1244,39 @@ export default Training;
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Career? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Get Personalized Guidance </Link> <a href="/resources" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Explore Free Resources </Link> </div> </motion.div> </div> </section> </div> </Layout>) 
-<<<<<<< HEAD
 };
-=======
-<<<<<<< HEAD
-=======
 }
->>>>>>> origin/main
+origin/main
   )
 }
 export default Training;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 };export default Training;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+origin/cursor/integrate-build-improve-and-re-verify-242d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 };export default Training;
 
->>>>>>> origin/main
-=======
+origin/main
   )
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 export default Training;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
 }  )
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+ursor/fix-lint-push-and-merge-to-main-ae4e
 };
 
 export default Training;
 };export default Training;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 },
 export default Training,
             >;
@@ -1308,11 +1302,26 @@ export default Training,
               </div>;
             </motion.div>;
           </div>;
-        </section>;
+          <div className="text - center">;
+            <p className="text - gray - 600">Training page is under construction.</p>;
+          </div>;
+        </div>;
       </div>;
-    </Layout>;
+    </Layout>);
+}
+}
   );
-};
+}
+;
 export default Training;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+=======
+}export default Training;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

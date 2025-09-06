@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume, ResumeBasicInfo  } from '@/types/resume';
@@ -8,13 +11,23 @@ import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useResumeActions() {
 =======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume, ResumeBasicInfo} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useResumeActions() {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -28,8 +41,15 @@ export function useResumeActions() {;
     setIsLoading(true);
     setError(null);
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Resume, ResumeBasicInfo } from '@/types/resume',;
@@ -45,19 +65,24 @@ export function useResumeActions() {;
       return null;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     }
     
     setIsLoading(true),
     setError(null),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       const { data, error } = await supabase
         .from('talent_resumes')
         .insert({
-<<<<<<< HEAD
           user_id: user.id;
           title: basicInfo.title;
           headline: basicInfo.headline
@@ -67,7 +92,6 @@ export function useResumeActions() {;
         .single();
       if (error) throw error;
       showSuccessToast("Resume created", "Your resume has been created successfully");
-=======
           user_id: user.id,
           title: basicInfo.title,
           headline: basicInfo.headline,
@@ -80,7 +104,6 @@ export function useResumeActions() {;
       
       showSuccessToast("Resume created", "Your resume has been created successfully"),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return data.id
     } catch (e: any) {
       return handleResumeError(e, 'Could not create resume') ? null : null
@@ -94,12 +117,21 @@ export function useResumeActions() {;
       setError('You must be logged in to update a resume')
       return false
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     }
     setIsLoading(true);
     setError(null);
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setIsLoading(true),;
     setError(null),;
@@ -129,19 +161,24 @@ export function useResumeActions() {;
       return false;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     }
     
     setIsLoading(true),
     setError(null),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       const { error } = await supabase
         .from('talent_resumes')
         .update({
-<<<<<<< HEAD
           title: basicInfo.title;
           headline: basicInfo.headline
           summary: basicInfo.summary
@@ -149,17 +186,17 @@ export function useResumeActions() {;
         .eq('id', resumeId)
         .eq('user_id', user.id);
       if (error) throw error;
-=======
           title: basicInfo.title,
           headline: basicInfo.headline,
           summary: basicInfo.summary
+
         })
         .eq('id', resumeId)
-        .eq('user_id', user.id),
+        .eq('user_id', user && user.id);
       
+
       if (error) throw error,
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return showSuccessToast("Resume updated", "Your resume information has been updated")
     } catch (e: any) {
       return handleResumeError(e, 'Could not update resume')
@@ -173,12 +210,21 @@ export function useResumeActions() {;
       setError('You must be logged in to set active resume')
       return false
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     }
     setIsLoading(true);
     setError(null);
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setIsLoading(true),;
     setError(null),;
@@ -206,93 +252,121 @@ export function useResumeActions() {;
       return false;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     }
     
     setIsLoading(true),
     setError(null),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       // First, set all user's resumes to inactive
       const { error: resetError } = await supabase
         .from('talent_resumes')
         .update({ is_active: false })
-<<<<<<< HEAD
         .eq('user_id', user.id);
       if (resetError) throw resetError;
-=======
         .eq('user_id', user.id),
       
       if (resetError) throw resetError,
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Then, set the selected resume as active
       const { error } = await supabase
         .from('talent_resumes')
         .update({ is_active: true })
         .eq('id', resumeId)
-<<<<<<< HEAD
         .eq('user_id', user.id);
       if (error) throw error;
-=======
         .eq('user_id', user.id),
       
       if (error) throw error,
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
     } catch (e: any) {
       return handleResumeError(e, 'Could not set active resume')
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
     }
   }
   return {
     isLoading;
     error;
-=======
 ;
-    setIsLoading(true),;
-    setError(null),;
-    try {;
+  const setActiveResume = async (resume_id: string): Promise < boolean> => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_error ('You must be logged in to set active resume'),
+      return false;
+    }
+    setIsLoading (true);
+    set_error (null);
+;
+    try {
       // First, set all user's resumes to inactive;
-      const { error: resetError } = await supabase;
-        .from('talent_resumes');
-        .update({ is_active: false });
-        .eq('user_id', user.id),;
-      if (resetError) throw resetError,;
+      const { error: reset_error } = await supabase;
+        .from ('talent_resumes');
+        .update ({ is_active: false });
+        .eq ('user_id', user.id);
+;
+      // Check condition
+if (throw reset_error) {
+  $2
+}
       // Then, set the selected resume as active;
       const { error } = await supabase;
-        .from('talent_resumes');
-        .update({ is_active: true });
-        .eq('id', resumeId);
-        .eq('user_id', user.id),;
-      if (error) throw error,;
-      return showSuccessToast("Active resume set", "Your selected resume is now marked as active");
-    } catch (e: any) {;
-      return handleResumeError(e, 'Could not set active resume');
-    } finally {;
-      setIsLoading(false);
+        .from ('talent_resumes');
+        .update ({ is_active: true });
+        .eq ('id', resume_id);
+        .eq ('user_id', user.id);
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      return showSuccessToast ("Active resume set", "Your selected resume is now marked as active");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } catch (e: any) {
+      return handleResumeError (e, 'Could not set active resume');
+    } finally {
+      setIsLoading (false);
     }
+
+;
+
+  return {
+    is_loading;
+    error;
+    create_resume;
+    updateBasicInfo;
+
+    setActiveResume}
+}
+=======
   },;
   return {;
     isLoading,;
     error,;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     createResume;
     updateBasicInfo;
 
     setActiveResume}
-<<<<<<< HEAD
 }
-=======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

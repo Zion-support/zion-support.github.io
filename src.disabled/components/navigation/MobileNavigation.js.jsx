@@ -1,12 +1,29 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/components/navigation/MobileNavigation.js.jsx
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+:src.disabled/components/navigation/MobileNavigation.js.jsx
 import React,{ useState } from react\' import { Link } from\';\';react-router-dom\' import { Menu,X,Search,User,Briefcase,HardDrive,Users,Lightbulb } from\';\';lucide-react\' import { Button } from\';\';@/components/ui/button\' const mobileMenuItems = [{ \"name\": \'Service,s,\"icon\": <Briefcase: className=\'w-5 h-5\'/,>,\"href\": \'; /services\' },\''\' { \"name\": \'Talen,t,\"icon\": <Users: className=\'w-5 h-5\'/,>,\"href\": \'; /talent\' },\''\' { \"name\": \'Equipmen,t,\"icon\": <HardDrive: className=\'w-5 h-5\'/,>,\"href\": \'; /equipment\' },\''\' { \"name\": \'Innovatio,n,\"icon\": <Lightbulb: className=\'w-5 h-5\'/,>,\"href\": \';\';/category/innovation\'}] \"export\": function MobileNavigation() { const [isOpen,setIsOpen] = useState(false) const toggleMenu = () => { setIsOpen(!isOpen)\'';
 const React,{ useState } from react" import { Link } from";";react-router-dom" import { Menu,X,Search,User,Briefcase,HardDrive,Users,Lightbulb } from";";lucide-react" import { Button } from";";@/components/ui/button" const mobileMenuItems = [{ name: "Service,s,icon: <Briefcase: className="w-5 h-5"/,>,href: "; /services" },""" { name: "Talen,t,icon: <Users: className="w-5 h-5"/,>,href: "; /talent" },""" { name: "Equipmen,t,icon: <HardDrive: className="w-5 h-5"/,>,href: "; /equipment" },""" { name: "Innovatio,n,icon: <Lightbulb: className="w-5 h-5"/,>,href: ";";/category/innovation"}] export: function MobileNavigation() { const [isOpen,setIsOpen] = useState(false) const toggleMenu = () => { setIsOpen(!isOpen)"";'"'"
-<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+import React,{ useState } from react\' import { Link } from\';\';react-router-dom\' import { Menu,X,Search,User,Briefcase,HardDrive,Users,Lightbulb } from\';\';lucide-react\' import { Button } from\';\';@/components/ui/button\' const mobileMenuItems = [{ \"name\": \'Service,s,\"icon\": <Briefcase: className=\'w-5 h-5\'/,>,\"href\": \'; /services\' },\''\' { \"name\": \'Talen,t,\"icon\": <Users: className=\'w-5 h-5\'/,>,\"href\": \'; /talent\' },\''\' { \"name\": \'Equipmen,t,\"icon\": <HardDrive: className=\'w-5 h-5\'/,>,\"href\": \'; /equipment\' },\''\' { \"name\": \'Innovatio,n,\"icon\": <Lightbulb: className=\'w-5 h-5\'/,>,\"href\": \';\';/category/innovation\'}] \"export\": function MobileNavigation() { const [isOpen,setIsOpen] = useState(false) const toggleMenu = () => { setIsOpen(!isOpen)\'';
+const React,{ useState } from react" import { Link } from";";react-router-dom" import { Menu,X,Search,User,Briefcase,HardDrive,Users,Lightbulb } from";";lucide-react" import { Button } from";";@/components/ui/button" const mobileMenuItems = [{ name: "Service,s,icon: <Briefcase: className="w-5 h-5"/,>,href: "; /services" },""" { name: "Talen,t,icon: <Users: className="w-5 h-5"/,>,href: "; /talent" },""" { name: "Equipmen,t,icon: <HardDrive: className="w-5 h-5"/,>,href: "; /equipment" },""" { name: "Innovatio,n,icon: <Lightbulb: className="w-5 h-5"/,>,href: ";";/category/innovation"}] export: function MobileNavigation() { const [isOpen,setIsOpen] = useState(false) const toggleMenu = () => { setIsOpen(!isOpen)"";'"'"
+:temp_exclude/src.disabled/components/navigation/MobileNavigation.js.jsx
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 =======
 import React,{ useState } from react\' import { Link } from\';\';react-router-dom\' import { Menu,X,Search,User,Briefcase,HardDrive,Users,Lightbulb } from\';\';lucide-react\' import { Button } from\';\';@/components/ui/button\' const mobileMenuItems = [{ \"name\": \'Service,s,\"icon\": <Briefcase: className=\'w-5 h-5\'/,>,\"href\": \'; /services\' },\''\' { \"name\": \'Talen,t,\"icon\": <Users: className=\'w-5 h-5\'/,>,\"href\": \'; /talent\' },\''\' { \"name\": \'Equipmen,t,\"icon\": <HardDrive: className=\'w-5 h-5\'/,>,\"href\": \'; /equipment\' },\''\' { \"name\": \'Innovatio,n,\"icon\": <Lightbulb: className=\'w-5 h-5\'/,>,\"href\": \';\';/category/innovation\'}] \"export\": function MobileNavigation() { const [isOpen,setIsOpen] = useState(false) const toggleMenu = () => { setIsOpen(!isOpen)\'';
 const React,{ useState } from react" import { Link } from";";react-router-dom" import { Menu,X,Search,User,Briefcase,HardDrive,Users,Lightbulb } from";";lucide-react" import { Button } from";";@/components/ui/button" const mobileMenuItems = [{ name: "Service,s,icon: <Briefcase: className="w-5 h-5"/,>,href: "; /services" },""" { name: "Talen,t,icon: <Users: className="w-5 h-5"/,>,href: "; /talent" },""" { name: "Equipmen,t,icon: <HardDrive: className="w-5 h-5"/,>,href: "; /equipment" },""" { name: "Innovatio,n,icon: <Lightbulb: className="w-5 h-5"/,>,href: ";";/category/innovation"}] export: function MobileNavigation() { const [isOpen,setIsOpen] = useState(false) const toggleMenu = () => { setIsOpen(!isOpen)"";'"'"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/navigation/MobileNavigation.js.jsx
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import _React,{ useState } from react' import { Link } from';';react-router-dom' import { Menu,X,Search,User,Briefcase,HardDrive,Users,Lightbulb } from';';lucide-react' import { Button } from';';@/components/ui/button' const mobileMenuItems = [{ "name": 'Service,s,"icon": <Briefcase: className='w-5 h-5'/,>,"href": '; /services' },''' { "name": 'Talen,t,"icon": <Users: className='w-5 h-5'/,>,"href": '; /talent' },''' { "name": 'Equipmen,t,"icon": <HardDrive: className='w-5 h-5'/,>,"href": '; /equipment' },''' { "name": 'Innovatio,n,"icon": <Lightbulb: className='w-5 h-5'/,>,"href": ';';/category/innovation'}] "export": function MobileNavigation() { const [isOpen,setIsOpen] = useState(false) const toggleMenu = () => { setIsOpen(!isOpen)'';

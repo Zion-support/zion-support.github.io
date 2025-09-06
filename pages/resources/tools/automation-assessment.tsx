@@ -1,6 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -8,15 +15,23 @@ export default function ToolPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0),
   const [answers, setAnswers] = useState<{ [key: string]: number }>({}),
   const [showResults, setShowResults] = useState(false),
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 export default function ToolPage() {
-  const [currentQuestion, setCurrentQuestion] = useState(0)
-  const [answers, setAnswers] = useState<{ [key: string]: number }>({})
-  const [showResults, setShowResults] = useState(false)
+
+
   const questions = [
     {
       id: 'current-automation'
@@ -31,24 +46,8 @@ export default function ToolPage() {
       options: [
         'No expertise - team needs trainingBeginner - some basic knowledgeIntermediate - can implement basic solutionsAdvanced - can build complex systemsExpert - can innovate and lead'
       ]
-    }
-    {
-      id: 'data-quality'
-      question: 'How would you assess your data quality and accessibility?'
-      options: [
-        'Poor - data is scattered and unreliableFair - some data available but needs cleaningGood - most data is accessible and cleanVery good - comprehensive data with good structureExcellent - real-time, high-quality data streams'
-      ]
-    }
-    {
-      id: 'budget-commitment'
-      question: 'What is your budget commitment for automation initiatives?'
-      options: [
-        'No budget allocatedLimited budget - under $50KModerate budget - $50K to $200KSignificant budget - $200K to $1MUnlimited budget - whatever it takes'
-      ]
-    }
-    {
-      id: 'executive-support'
-      question: 'How strong is executive support for automation?'
+
+
       options: [
         'No support - resistance to changeWeak support - some interest but no actionModerate support - willing to try pilot projectsStrong support - actively championing automationFull support - automation is strategic priority'
       ]
@@ -74,9 +73,12 @@ export default function ToolPage() {
       setShowResults(true)
     }
   }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -85,41 +87,65 @@ export default function ToolPage(req, res) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<{ [key: string]: number }>({});
   const [showResults, setShowResults] = useState(false);
+=======
+
+
+  const nextQuestion = () => {
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1)
+
+=======
+
+
+
+=======
+import React, { useState } from 'react',
+import Head from 'next / head',
+import Link from 'next / link',
+export default /**
+ * ToolPage - Function description
+ */
+function ToolPage() {
+  const [current_question, setCurrentQuestion] = useState (0),
+  const [answers, set_answers] = useState<{ [key: string]: number }>({}),
+  const [show_results, setShowResults] = useState (false),
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const questions = [;
-    {;
-      id: 'current-automation';
-      question: 'What is your current level of automation?';
+    {
+      id: 'current - automation',
+      question: 'What is your current level of automation?',
       options: [;
-        'No automation - everything is manualBasic automation - some repetitive tasks automatedModerate automation - multiple processes automatedAdvanced automation - most processes automatedFully automated - autonomous systems in place';
+        'No automation - everything is manual_basic automation - some repetitive tasks automated_moderate automation - multiple processes automated_advanced automation - most processes automated_fully automated - autonomous systems in place';
       ];
-    };
-    {;
-      id: 'team-expertise';
-      question: 'How would you rate your team\'s AI/automation expertise?',;
+    },
+    {
+      id: 'team - expertise',
+      question: 'How would you rate your team's AI / automation expertise?',
       options: [;
-        'No expertise - team needs trainingBeginner - some basic knowledgeIntermediate - can implement basic solutionsAdvanced - can build complex systemsExpert - can innovate and lead';
+        'No expertise - team needs training_beginner - some basic knowledge_intermediate - can implement basic solutions_advanced - can build complex systems_expert - can innovate and lead';
       ];
-    },;
-    {;
-      id: 'data-quality',;
-      question: 'How would you assess your data quality and accessibility?',;
+    },
+    {
+      id: 'data - quality',
+      question: 'How would you assess your data quality and accessibility?',
       options: [;
-        'Poor - data is scattered and unreliableFair - some data available but needs cleaningGood - most data is accessible and cleanVery good - comprehensive data with good structureExcellent - real-time, high-quality data streams';
+        'Poor - data is scattered and unreliable_fair - some data available but needs cleaning_good - most data is accessible and clean_very good - comprehensive data with good structure_excellent - real - time, high - quality data streams';
       ];
-    },;
-    {;
-      id: 'budget-commitment',;
-      question: 'What is your budget commitment for automation initiatives?',;
+    },
+    {
+      id: 'budget - commitment',
+      question: 'What is your budget commitment for automation initiatives?',
       options: [;
-        'No budget allocatedLimited budget - under $50KModerate budget - $50K to $200KSignificant budget - $200K to $1MUnlimited budget - whatever it takes';
+        'No budget allocated_limited budget - under $50KModerate budget - $50K to $200KSignificant budget - $200K to $1MUnlimited budget - whatever it takes';
       ];
-    },;
-    {;
-      id: 'executive-support',;
-      question: 'How strong is executive support for automation?',;
+    },
+    {
+      id: 'executive - support',
+      question: 'How strong is executive support for automation?',
       options: [;
-        'No support - resistance to changeWeak support - some interest but no actionModerate support - willing to try pilot projectsStrong support - actively championing automationFull support - automation is strategic priority';
+        'No support - resistance to change_weak support - some interest but no action_moderate support - willing to try pilot projects_strong support - actively championing automation_full support - automation is strategic priority';
       ];
+
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -154,19 +180,23 @@ export default function ToolPage(req, res) {
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const resetAssessment = () => {
     setCurrentQuestion(0)
     setAnswers({})
     setShowResults(false)
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (showResults) {
     const result = calculateScore()
     return (
@@ -183,6 +213,8 @@ export default function ToolPage(req, res) {
                   ← Back to Resources
                 </Link>
               </nav>
+
+
               <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold text-white mb-4">Assessment Results</h1>
                 <p className="text-white/80 text-lg">Your automation readiness evaluation is complete</p>
@@ -194,53 +226,83 @@ export default function ToolPage(req, res) {
                   {questions.map((q, index) => (
                     <div key={q.id} className="bg-white/10 rounded-lg p-4 border border-white/20">
                       <h3 className="font-semibold text-cyan-400 mb-2">{q.question}</h3>
-<<<<<<< HEAD
                       <p className="text-white/80 text-sm">Score: {answers[q.id] |0}/5</p>
-=======
                       <p className="text-white/80 text-sm">Score: {answers[q.id] || 0}/5</p>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     </div>
-                  ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                  ))}
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
                   <button 
+
                     onClick={resetAssessment}
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                  <button
-<<<<<<< HEAD
-                    onClick={resetAssessment}
 =======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+                  <button
+                    onClick={resetAssessment}
                     onClick={resetAssessment  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+                      <p className="text-white/80 text-sm">Score: {answers[q.id] || 0}/5</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                  <button 
+
+                    onClick={resetAssessment}
+=======
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Retake Assessment
                   </button>
 <<<<<<< HEAD
                   <Link
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
-                  <Link 
 =======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+                  <Link 
+                  <Link
+=======
+<<<<<<< HEAD
                   <Link
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                     href="/contact"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
                   >
@@ -253,17 +315,11 @@ export default function ToolPage(req, res) {
         </div>
       </>
     )
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
   const currentQ = questions[currentQuestion]
 
-=======
 }
   const currentQ = questions[currentQuestion],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -278,25 +334,33 @@ export default function ToolPage(req, res) {
                 ← Back to Resources
               </Link>
             </nav>
+
+
             <div className="text-center mb-12">
               <h1 className="text-4xl font-bold text-white mb-4">Automation Readiness Assessment</h1>
               <p className="text-white/80 text-lg">Evaluate your organization's readiness for AI automation</p>
               <div className="mt-4 text-cyan-400">
-<<<<<<< HEAD
                 Question {currentQuestion + 1} of {questions.length}
-=======
                 Question {currentQuestion + 1} of {questions.length  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
               </div>
             </div>
+
+
             <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
               <h2 className="text-2xl font-bold mb-6 text-white">{currentQ.question}</h2>
               <div className="space-y-4 mb-8">
@@ -304,12 +368,10 @@ export default function ToolPage(req, res) {
                   <label key={index} className="flex items-center p-4 bg-white/10 rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer">
                     <input
                       type="radio"
-<<<<<<< HEAD
                       name={currentQ.id}
                       value={index + 1}
                       checked={answers[currentQ.id] === index + 1}
                       onChange={() => handleAnswer(currentQ.id, index + 1)}
-=======
   },;
   const resetAssessment = () => {;
     setCurrentQuestion(0);
@@ -435,34 +497,42 @@ export default function ToolPage(req, res) {
   }
 }
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                       className="mr-3 text-cyan-400 focus:ring-cyan-400"
                     />
                     <span className="text-white/90">{option}</span>
                   </label>
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                ))}
               </div>
+
+
               <div className="flex justify-between">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
                 <button 
                   onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
                   disabled={currentQuestion === 0}
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                 <button
-<<<<<<< HEAD
                   onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
                   disabled={currentQuestion === 0}
-=======
                   onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -474,22 +544,34 @@ export default function ToolPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                   className="px-6 py-3 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Previous
                 </button>
 <<<<<<< HEAD
                 <button
-<<<<<<< HEAD
                   onClick={nextQuestion}
                   disabled={!answers[currentQ.id]}
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                 <button 
                   onClick={nextQuestion}
                   disabled={!answers[currentQ.id]}
@@ -505,33 +587,98 @@ export default function ToolPage(req, res) {
     </>
   );
 };
-=======
                 <button
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                   onClick={nextQuestion  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
-                  disabled={!answers[currentQ.id]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+
+=======
+  },
+  const reset_assessment = () =>: any {
+    setCurrentQuestion (0),
+    set_answers ({}),
+    setShowResults (false);
+  },
+  // Check condition
+if ( {) {
+  $2
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
-}
+  const current_q = questions[current_question],
+  return (
+    <>;
+      <Head>;
+        <title > Automation Readiness Assessment | Zion Tech Group</title>;
+        <meta name="description" content="Evaluate your organization's readiness for AI automation implementation with our interactive assessment tool." />;
+      </Head>;
+      <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white">;
+        <main className="container mx - auto px - 6 py - 12">;
+          <div className="max - w-4xl mx - auto">;
+            <nav className="mb - 8">;
+              <Link href="/resources" className="text - cyan - 400 hover:text - cyan - 300 transition - colors">;
+                ← Back to Resources;
+              </Link>;
+            </nav>;
+            <div className="text - center mb - 12">;
+              <h1 className="text - 4xl font - bold text - white mb - 4">Automation Readiness Assessment</h1>;
+              <p className="text - white / 80 text - lg">Evaluate your organization's readiness for AI automation</p>;
+              <div className="mt - 4 text - cyan - 400">;
+                Question {current_question + 1} of {questions.length}
+              </div>;
+            </div>;
+            <div className="bg - gradient - to - r from - cyan - 500 / 10 to - fuchsia - 500 / 10 rounded - 2xl p - 8 border border - cyan - 500 / 20">;
+              <h2 className="text - 2xl font - bold mb - 6 text - white">{current_q.question}</h2>;
+              <div className="space - y-4 mb - 8">;
+                {current_q.options.map ((option, index) => (
+                  <label key={index} className="flex items - center p - 4 bg - white / 10 rounded - lg border border - white / 20 hover:border - cyan - 400 / 50 transition - all duration - 300 cursor - pointer">;
+                    <input;
+                      type="radio";
+                      name={current_q.id}
+                      value={index + 1}
+                      checked={answers[current_q.id] === index + 1}
+                      on_change={() => handle_answer (current_q.id, index + 1)}
+                      className="mr - 3 text - cyan - 400 focus:ring - cyan - 400";
+                    />;
+                    <span className="text - white / 90">{option}</span>;
+                  </label>))}
+              </div>;
+              <div className="flex justify - between">;
+                <button;
+                  on_click={() => setCurrentQuestion (Math.max (0, current_question - 1))}
+                  disabled={current_question === 0}
+                  className="px - 6 py - 3 border border - white / 20 rounded - lg text - white hover:border - cyan - 400 / 50 transition - all duration - 300 disabled:opacity - 50 disabled:cursor - not - allowed";
+                >;
+                  Previous;
+                </button>;
+                <button;
+                  on_click={next_question}
+                  disabled={!answers[current_q.id]}
+                  className="bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300 disabled:opacity - 50 disabled:cursor - not - allowed";
+                >;
+                  {current_question === questions.length - 1 ? 'Get Results' : 'Next'}
                 </button>;
               </div>;
             </div>;
           </div>;
         </main>;
       </div>;
+
     </>;
   );
   } catch (error) {
@@ -540,7 +687,16 @@ export default function ToolPage(req, res) {
   }
 <<<<<<< HEAD
 }
-=======
 }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

@@ -3,7 +3,10 @@ import Link from 'next/link';
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+<<<<<<< HEAD
       {/* Hero Section */}
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       <section className="text-center py-12 md:py-20">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
           Build and scale with{' '}
@@ -13,8 +16,12 @@ export default function HomePage() {
           <span className="text-purple-600">Enterprise IT</span>
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+<<<<<<< HEAD
           We design, build and operate production-grade platforms: AI copilots, data/ML pipelines, 
           automation, cloud infrastructure, and secure micro SaaS products. Trusted by 500+ companies worldwide.
+=======
+          We design, build and operate production-grade platforms: AI copilots, data/ML pipelines, automation, cloud infra, and secure micro SaaS products.
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
@@ -32,9 +39,14 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Services Grid */}
       <section className="py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+=======
+      <section className="py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           <Card
             title="Micro SaaS"
             href="/services/micro-saas"
@@ -52,11 +64,56 @@ export default function HomePage() {
             href="/services/it-services"
             description="Cloud migration, DevOps, SRE, security hardening and cost optimization."
             icon="⚙️"
+<<<<<<< HEAD
+=======
+          />
+          <Card
+            title="Blockchain"
+            href="/services/blockchain"
+            description="Smart contracts, DeFi protocols, NFT platforms and Web3 solutions."
+            icon="⛓️"
+          />
+          <Card
+            title="Cybersecurity"
+            href="/services/cybersecurity"
+            description="Penetration testing, security audits, compliance and incident response."
+            icon="🔒"
+          />
+          <Card
+            title="Data Analytics"
+            href="/services/data-analytics"
+            description="Business intelligence, predictive analytics and data science solutions."
+            icon="📊"
+<<<<<<< HEAD
+=======
+          />
+          <Card
+            title="Digital Transformation"
+            href="/services/digital-transformation"
+            description="Complete digital transformation solutions and legacy system modernization."
+            icon="🔄"
+          />
+          <Card
+            title="Cybersecurity"
+            href="/services/cybersecurity"
+            description="Comprehensive security solutions, threat detection, and compliance management."
+            icon="🔒"
+          />
+          <Card
+            title="Cloud Services"
+            href="/services/cloud-services"
+            description="Cloud migration, architecture, and optimization across AWS, Azure, and GCP."
+            icon="☁️"
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           />
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Why Choose Us */}
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
@@ -83,6 +140,7 @@ export default function HomePage() {
           />
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Contact CTA */}
       <section className="py-12">
@@ -113,6 +171,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     </div>
   );
 }
@@ -124,9 +184,13 @@ function Card({ title, description, href, icon }: { title: string; description: 
       className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
       <div className="text-4xl mb-4">{icon}</div>
+<<<<<<< HEAD
       <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
         {title}
       </h3>
+=======
+      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{title}</h3>
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       <p className="text-gray-600 leading-relaxed">{description}</p>
     </Link>
   );

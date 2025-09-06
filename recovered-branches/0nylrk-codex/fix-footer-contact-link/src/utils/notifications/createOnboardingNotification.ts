@@ -1,20 +1,36 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createNotification  } from './createNotification';
 import { OnboardingNotificationParams } from './types';
 =======
+import { createNotification  } from './createNotification';
+import { OnboardingNotificationParams } from './types';
 import {createNotification} from './createNotification';
 import {OnboardingNotificationParams} from './types';
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+import {createNotification} from './createNotification';
+import {OnboardingNotificationParams} from './types';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 /**
  * Creates an onboarding notification for a user
  */
-export async function createOnboardingNotification({;
+export async function createOnboardingNotification({
   userId;
   missingMilestone;
   userRole
 }: OnboardingNotificationParams) {
+
+  try {
 
   let title = '';
   let message = '';
@@ -23,61 +39,97 @@ export async function createOnboardingNotification({;
   if (userRole === 'talent') {
     switch (missingMilestone) {
       case 'profile_completed':
+=======
+import {create_notification} from './create_notification';
+import {OnboardingNotificationParams} from './types';
+/**;
+* Creates an onboarding notification for a user;
+*/;
+export async /**
+ * createOnboardingNotification - Function description
+ */
+function createOnboardingNotification() {
+  let title = '';
+  let message = '';
+  let action_url = '';
+  let action_text = '';
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    switch (missing_milestone) {
+      case 'profile_completed':;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         title = 'Complete your profile';
         message = 'Complete your profile to get discovered by clients';
-        actionUrl = '/profile';
-        actionText = 'Complete Profile';
+        action_url = '/profile';
+        action_text = 'Complete Profile';
         break;
-      case 'skills_added':
+      case 'skills_added':;
         title = 'Add your skills';
         message = 'Add your skills to get better job matches';
-        actionUrl = '/profile/skills';
-        actionText = 'Add Skills';
+        action_url = '/profile / skills';
+        action_text = 'Add Skills';
         break;
-      case 'availability_set':
+      case 'availability_set':;
         title = 'Set your availability';
         message = 'Set your availability to help clients know when you can work';
-        actionUrl = '/profile/settings';
-        actionText = 'Set Availability';
-        break
+        action_url = '/profile / settings';
+        action_text = 'Set Availability';
+        break;
     }
   } else {
-    switch (missingMilestone) {
-      case 'job_posted':
+    switch (missing_milestone) {
+      case 'job_posted':;
         title = 'Post your first job';
         message = 'Post your first job to start finding talent';
-        actionUrl = '/post-job';
-        actionText = 'Post Job';
+        action_url = '/post - job';
+        action_text = 'Post Job';
         break;
-      case 'match_viewed':
+      case 'match_viewed':;
         title = 'View your AI matches';
-        message = 'Check out your AI-matched talent suggestions';
-        actionUrl = '/client-dashboard';
-        actionText = 'View Matches';
+        message = 'Check out your AI - matched talent suggestions';
+        action_url = '/client - dashboard';
+        action_text = 'View Matches';
         break;
-      case 'talent_invited':
+      case 'talent_invited':;
         title = 'Invite talent';
         message = 'Invite talent to speed up your hiring process';
-        actionUrl = '/talent';
-        actionText = 'Find Talent';
-        break
+        action_url = '/talent';
+        action_text = 'Find Talent';
+        break;
     }
   }
-  return createNotification({
-    userId;
+
+  return create_notification ({
+    user_id;
     title;
     message;
     type: 'onboarding';
-    sendEmail: false;
-    actionUrl
+    send_email: false;
+    action_url,
+    action_text;
+  });
 
+<<<<<<< HEAD
     actionText
   })
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+}
+=======
+}
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { createNotification } from './createNotification',;
 import { OnboardingNotificationParams } from './types',;
 /**;
@@ -147,8 +199,12 @@ export async function createOnboardingNotification({;
   });
 <<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

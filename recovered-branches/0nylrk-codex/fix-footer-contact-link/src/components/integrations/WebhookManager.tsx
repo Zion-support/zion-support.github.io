@@ -2,6 +2,15 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useEffect, useState } from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -12,11 +21,15 @@ import {PlusCircle, Save, Trash, Play} from "lucide-react";
 import {useWebhooks, WebhookEventType} from "@/hooks/useWebhooks";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {toast} from "sonner";
-export function WebhookManager() {
+export function WebhookManager() {;
   const { ;
     webhooks;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -25,7 +38,6 @@ import { Label } from "@/components/ui/label",
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { PlusCircle, Save, Trash, Play } from "lucide-react",
 import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
-<<<<<<< HEAD
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
 export function WebhookManager() {
@@ -33,6 +45,9 @@ export function WebhookManager() {
     webhooks;
 
     loading
+=======
+    loading, ;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     error;
     testResult;
@@ -40,15 +55,13 @@ export function WebhookManager() {
     createWebhook;
     toggleWebhook;
     deleteWebhook;
-    testWebhook
+    testWebhook;
   } = useWebhooks();
-=======
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { toast } from "sonner",
 export function WebhookManager() {
   const { 
     webhooks,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     loading, 
     error,
     testResult,
@@ -59,7 +72,6 @@ export function WebhookManager() {
     testWebhook
   } = useWebhooks(),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [newWebhook, setNewWebhook] = useState({
 
     name: ""
@@ -68,18 +80,14 @@ export function WebhookManager() {
     eventTypes: [] as WebhookEventType[]
 
     secret: ""
-<<<<<<< HEAD
   });
-=======
   }),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const eventOptions: { value: WebhookEventType, label: string }[] = [
     { value: "new_application", label: "New Application Received" }
     { value: "quote_received", label: "Quote Request Received" }
     { value: "milestone_approved", label: "Milestone Approved" }
     { value: "talent_hired", label: "Talent Hired" }
-<<<<<<< HEAD
   ];
   useEffect(() => {
     fetchWebhooks()
@@ -87,7 +95,6 @@ export function WebhookManager() {
 
   const handleAddEvent = () => {
     if (!newWebhook.selectedEvent) return;
-=======
   ],
   
   useEffect(() => {
@@ -97,56 +104,46 @@ export function WebhookManager() {
   const handleAddEvent = () => {
     if (!newWebhook.selectedEvent) return,
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
-      toast.error("This event is already added"),
+      toast.error("This event is already added");
       return
     }
     setNewWebhook({
-      ...newWebhook,
-      eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
+      ...newWebhook;
+      eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent];
       selectedEvent: "" as WebhookEventType
     })
-<<<<<<< HEAD
   }
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleRemoveEvent = (event: WebhookEventType) => {
     setNewWebhook({
       ...newWebhook
       eventTypes: newWebhook.eventTypes.filter(e => e !== event)
     })
-<<<<<<< HEAD
   }
   const handleCreateWebhook = async () => {
     if (!newWebhook.name |!newWebhook.url |newWebhook.eventTypes.length === 0) {
       toast.error("Please fill in all required fields");
-=======
   },
   
   const handleCreateWebhook = async () => {
     if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
       toast.error("Please fill in all required fields"),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return
     }
     await createWebhook(
-<<<<<<< HEAD
       newWebhook.name
       newWebhook.url
       newWebhook.eventTypes
       newWebhook.secret |undefined
     );
-=======
       newWebhook.name, 
       newWebhook.url, 
       newWebhook.eventTypes, 
       newWebhook.secret || undefined
     ),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Reset form
     setNewWebhook({
       name: ""
@@ -155,20 +152,17 @@ export function WebhookManager() {
       eventTypes: []
       secret: ""
     })
-<<<<<<< HEAD
   }
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType)
   }
 
-=======
   },
   
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType)
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-8">
       <Card>
@@ -191,19 +185,20 @@ export function WebhookManager() {
             </div>
             <div className="space-y-2">
               <Label htmlFor="webhook-url">URL</Label>
-<<<<<<< HEAD
               <Input
                 id="webhook-url"
                 placeholder="https://example.com/webhook"
-=======
               <Input 
                 id="webhook-url" 
                 placeholder="https://example.com/webhook"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -311,10 +306,17 @@ export function WebhookManager() {;
                 id="webhook-url";
                 placeholder="https://example.com/webhook";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                 value={newWebhook.url}
                 onChange={(e) => setNewWebhook({...newWebhook, url: e.target.value})}
               />
@@ -355,13 +357,10 @@ export function WebhookManager() {;
           </div>
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret (optional)</Label>
-<<<<<<< HEAD
             <Input
               id="webhook-secret"
-=======
             <Input 
               id="webhook-secret" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               placeholder="A secret key to verify the webhook source"
               value={newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
@@ -403,13 +402,10 @@ export function WebhookManager() {;
                         <span className="text-sm">{webhook.is_active ? 'Active' : 'Inactive'}</span>
                       </div>
                       <div className="flex-shrink-0">
-<<<<<<< HEAD
                         <Button
                           variant="outline"
-=======
                         <Button 
                           variant="outline" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           size="sm"
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >
@@ -426,11 +422,8 @@ export function WebhookManager() {;
                       <div className="flex flex-wrap gap-2 mt-1">
                         {webhook.event_types.map(event => (
                           <ClickableBadge key={event} variant="secondary">
-<<<<<<< HEAD
                             {eventOptions.find(e => e.value === event)?.label |event}
-=======
                             {eventOptions.find(e => e.value === event)?.label || event}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           </ClickableBadge>
                         ))}
                       </div>
@@ -460,20 +453,17 @@ export function WebhookManager() {;
                       <SelectItem value="test_event">Test (generic)</SelectItem>
                       {webhook.event_types.map(event => (
                         <SelectItem key={event} value={event}>
-<<<<<<< HEAD
                           Test {eventOptions.find(e => e.value === event)?.label |event}
                         </SelectItem>
-=======
                           Test {eventOptions.find(e => e.value === event)?.label || event}
                         </SelectItem>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       ))}
-                    </SelectContent>
-                  </Select>
-                </CardFooter>
-              </Card>
+                    </SelectContent>;
+                  </Select>;
+                </CardFooter>;
+              </Card>;
             ))}
-          </div>
+          </div>;
         )}
         {testResult && (
           <Card className="mt-4 border-blue-200">
@@ -491,11 +481,8 @@ export function WebhookManager() {;
                 <div>
                   <span className="font-medium">Response:</span>
                   <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">
-<<<<<<< HEAD
                     {testResult.responseBody |'<empty>'}
-=======
                     {testResult.responseBody || '<empty>'}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </pre>
                 </div>
               </div>
@@ -506,3 +493,60 @@ export function WebhookManager() {;
     </div>
   )
 }
+=======
+
+        {testResult && (;
+          <Card className="mt-4 border-blue-200">;
+            <CardHeader>;
+              <CardTitle className="text-lg">Webhook Test Result</CardTitle>;
+            </CardHeader>;
+            <CardContent>;
+              <div className="space-y-2">;
+                <div className="flex justify-between">;
+                  <span className="font-medium">Status:</span>;
+                  <span className={testResult && testResult.status >= 200 && testResult && testResult.status < 300 ? 'text-green-600' : 'text-red-600'}>;
+                    {testResult && testResult.status} {testResult && testResult.statusText}
+                  </span>;
+                </div>;
+                <div>;
+                  <span className="font-medium">Response:</span>;
+                  <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">;
+                    {testResult && testResult.responseBody || '<empty>'}
+=======
+                      {webhook.event_types.map (event => (
+                        <SelectItem key={event} value={event}>;
+                          Test {event_options.find (e => e.value === event)?.label || event}
+                        </SelectItem>))}
+                    </SelectContent>;
+                  </Select>;
+                </CardFooter>;
+              </Card>))}
+          </div>)}
+        {test_result && (
+          <Card className="mt - 4 border - blue - 200">;
+            <CardHeader>;
+              <CardTitle className="text - lg">Webhook Test Result</CardTitle>;
+            </CardHeader>;
+            <CardContent>;
+              <div className="space - y-2">;
+                <div className="flex justify - between">;
+                  <span className="font - medium">Status:</span>;
+                  <span className={test_result.status >= 200 && test_result.status < 300 ? 'text - green - 600' : 'text - red - 600'}>;
+                    {test_result.status} {test_result.status_text}
+                  </span>;
+                </div>;
+                <div>;
+                  <span className="font - medium">Response:</span>;
+                  <pre className="mt - 1 p - 2 bg - gray - 100 rounded text - sm overflow - x-auto">;
+                    {test_result.response_body || '<empty>'}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                  </pre>;
+                </div>;
+              </div>;
+            </CardContent>;
+
+          </Card>)}
+      </div>;
+    </div>);
+}
+

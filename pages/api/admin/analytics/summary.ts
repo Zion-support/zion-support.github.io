@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
@@ -13,36 +16,21 @@ type EventRow = {
   at: string
 },
 
-const LOG_FILE = path.join(process.cwd(), 'dataanalyticsevents.log.jsonl'),
 
-function parseLines(startIso?: string, endIso?: string): EventRow[] {
-  try {
-    if (!fs.existsSync(LOG_FILE)) return [],
-    const raw = fs.readFileSync(LOG_FILE, 'utf8'),
-    const lines = raw.split('\n').filter(Boolean),
-    const start = startIso ? new Date(startIso) : null,
-    const end = endIso ? new Date(endIso) : null,
-    const rows: EventRow[] = [],
-    for (const line of lines) {
-      try {
-        const obj = JSON.parse(line),
-        if (!obj.at) continue,
-        const t = new Date(obj.at),
-        if (start && t < start) continue,
-        if (end && t > end) continue,
-        rows.push(obj)
       } catch {}
     }
     return rows
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 
 type EventRow = {
-<<<<<<< HEAD
 
   name: string
   page?: string
@@ -69,7 +57,6 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         rows.push(obj)
       } catch {}
 
-=======
   name: string;
   page?: string;
   userType?: string;
@@ -99,19 +86,32 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
       } catch {
         // Skip invalid JSON lines
       }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
     return rows;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+      } catch {}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+    }
+    return rows;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   } catch {
     return [];
   }
 }
 
-<<<<<<< HEAD
 function featureFromPath(page?: string): string {
 if (!page) return 'other'
   const p = page.toLowerCase()
@@ -150,11 +150,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     .sort((a, b) => b.value - a.value),
 
-  const days = Object.keys(byDay).sort(),
-  const line = days.map((d) => ({ date: d, value: byDay[d] })),
 
+<<<<<<< HEAD
   const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent'],
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 })),
 ;
@@ -162,6 +165,95 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+    .sort((a, b) => b.value - a.value);
+=======
+
+
+    .sort((a, b) => b.value - a.value),
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  const days = Object.keys(byDay).sort();
+  const line = days.map((d) => ({ date: d, value: byDay[d] }));
+
+  const funnelStages = [
+    'Visit',
+    'AI Prompt Used',
+    'Post Created',
+    'Message Sent',
+  ];
+  const funnel = funnelStages.map((stage) => ({ 
+    label: stage, 
+    value: byEvent[stage] || 0 
+  }));
+
+  res.status(200).json({ pagesMostUsed, events, line, funnel });
+
+
+=======
+function featureFromPath (page?: string): string {
+// Check condition
+if (return 'other', ) {
+  $2
+}
+  const p = page.toLowerCase (),
+  if (|| p.includes ('ai')) return 'AI services', ) {
+  $2
+}
+  if (|| p.includes ('job')) return 'job board', ) {
+  $2
+}
+  if () return 'rentals', ) {
+  $2
+}
+  return 'other';
+}
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const { allowed } = await ensureAdminFromApi (req),
+  if (return res.status (403).json ({ error: 'Forbidden' }), ) {
+  $2
+}
+  const { start, end, user_type } = req.query as { start?: string, end?: string, user_type?: string },
+  const rows = parse_lines (start, end).filter ((r) => !user_type || user_type === 'all' || (r.user_type || 'guest') === user_type),
+  const by_feature: Record < string, number> = {},
+  const by_event: Record < string, number> = {},
+  const by_day: Record < string, number> = {},
+  for (const r of rows) {
+    const function = featureFromPath (r.page),
+    by_feature[f] = (by_feature[f] || 0) + 1,
+    by_event[r.name] = (by_event[r.name] || 0) + 1,
+    const day = r.at.slice (0, 10),
+    by_day[day] = (by_day[day] || 0) + 1;
+  }
+  const pagesMostUsed = Object.entries (by_feature);
+    .map (([label, value]) => ({ label, value }));
+.sort ((a, b) => b.value - a.value),
+  const events = Object.entries (by_event);
+    .map (([label, value]) => ({ label, value }));
+    .sort ((a, b) => b.value - a.value),
+  const days = Object.keys (by_day).sort (),
+  const line = days.map ((d) => ({ date: d, value: by_day[d] })),
+  const funnel_stages = ['VisitAI Prompt UsedPost CreatedMessage Sent'],
+  const funnel = funnel_stages.map ((stage) => ({ label: stage, value: by_event[stage] || 0 })),
+  res.status (200).json ({ pagesMostUsed, events, line, funnel });
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+};
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     await ensureAdminFromApi(req);
@@ -181,7 +273,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

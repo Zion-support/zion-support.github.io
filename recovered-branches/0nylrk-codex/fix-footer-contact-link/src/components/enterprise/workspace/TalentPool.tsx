@@ -1,32 +1,44 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-=======
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export function TalentPool() {
   // Mock talent data
 
   const talents = [
     {
-<<<<<<< HEAD
       id: "talent-1"
       name: "Jessica Lee"
       role: "UI/UX Designer"
@@ -51,16 +63,12 @@ export function TalentPool() {
       match: 88
     }
   ];
-=======
       id: "talent-1",
       name: "Jessica Lee",
-<<<<<<< HEAD
       role: "UI/UX Designer",;
       skills: ["Figma", "Sketch", "User Testing"];
-=======
       role: "UI/UX Designer",
       skills: ["Figma", "Sketch", "User Testing"],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       status: "available",
       match: 95
     },
@@ -82,7 +90,6 @@ export function TalentPool() {
     }
   ],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getStatusBadge = (status: string) => {
     switch (status) {
       case "available": return <Badge className="bg-green-500">Available</Badge>,
@@ -93,11 +100,8 @@ export function TalentPool() {
       default:
         return <Badge variant="outline">{status}</Badge>
     }
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Card>
@@ -128,13 +132,12 @@ export function TalentPool() {
               </div>
               <div className="mt-2 flex flex-wrap gap-1">
                 {talent.skills.map((skill, index) => (
-<<<<<<< HEAD
-=======
                   <Badge key={index} variant="secondary" className="text-xs">
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
+
 export function TalentPool() {;
   // Mock talent data;
   const talents = [;
@@ -142,59 +145,112 @@ export function TalentPool() {;
       id: "talent-1",;
       name: "Jessica Lee",;
       role: "UI/UX Designer",;
-      skills: ["Figma", "Sketch", "User Testing"],;
+      skills: ["Figma", "Sketch", "User Testing"];
       status: "available",;
       match: 95;
-    },;
+    };
     {;
       id: "talent-2",;
       name: "Marcus Wright",;
       role: "Full Stack Developer",;
-      skills: ["React", "Node.js", "MongoDB"],;
+      skills: ["React", "Node && Node.js", "MongoDB"];
       status: "interviewing",;
       match: 92;
-    },;
+    };
     {;
       id: "talent-3",;
       name: "Aisha Patel",;
       role: "Product Manager",;
-      skills: ["Agile", "Roadmapping", "User Research"],;
+      skills: ["Agile", "Roadmapping", "User Research"];
       status: "available",;
       match: 88;
     }
-  ],;
+  ];
+
   const getStatusBadge = (status: string) => {;
     switch (status) {;
-      case "available": return <Badge className="bg-green-500">Available</Badge>,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      case "available": return <Badge className="bg-green-500">Available</Badge>;
       case "interviewing":;
-        return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>,;
+        return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>;
+
       case "hired":;
-        return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Hired</Badge>;
+        return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Hired</Badge>,;
       default:;
         return <Badge variant="outline">{status}</Badge>;
+
     }
-  };
-  return (;
+  }
+
+  return (
     <Card>;
       <CardHeader>;
         <div className="flex items-center justify-between">;
           <div>;
             <CardTitle>Dedicated Talent Pool</CardTitle>;
             <CardDescription>Candidates matched to your company</CardDescription>;
+=======
+import React from './react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+export /**
+ * TalentPool - Function description
+ */
+function TalentPool() {
+  // Mock talent data;
+  const talents = [;
+    {
+      id: "talent - 1",
+      name: "Jessica Lee",
+      role: "UI / UX Designer",
+      skills: ["Figma", "Sketch", "User Testing"];
+      status: "available",
+      match: 95;
+    }
+    {
+      id: "talent - 2",
+      name: "Marcus Wright",
+      role: "Full Stack Developer",
+      skills: ["React", "Node.js", "MongoDB"];
+      status: "interviewing",
+      match: 92;
+    }
+    {
+      id: "talent - 3",
+      name: "Aisha Patel",
+      role: "Product Manager",
+      skills: ["Agile", "Roadmapping", "User Research"];
+      status: "available",
+      match: 88;
+    }
+  ];
+;
+  const getStatusBadge = (status: string) =>: any {
+    switch (status) {
+      case "available": return <Badge className="bg - green - 500">Available</Badge>;
+      case "interviewing":;
+        return <Badge variant="outline" className="bg - amber - 100 text - amber - 800 border - amber - 200">Interviewing</Badge>;
+      case "hired":;
+        return <Badge variant="outline" className="bg - blue - 100 text - blue - 800 border - blue - 200">Hired</Badge>,
+      default:;
+        return <Badge variant="outline">{status}</Badge>;
+    }
+  }
+;
+  return (
+    <Card>;
+      <CardHeader>;
+        <div className="flex items - center justify - between">;
+          <div>;
+            <CardTitle > Dedicated Talent Pool</CardTitle>;
+            <CardDescription > Candidates matched to your company</CardDescription>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </div>;
           <Button size="sm">View All</Button>;
         </div>;
       </CardHeader>;
-      <CardContent className="p-0">;
-        <div className="divide-y divide-border">;
-          {talents.map((talent) => (;
-            <div key={talent.id} className="p-4">;
-              <div className="flex items-center justify-between">;
-                <div>;
-                  <p className="font-semibold">{talent.name}</p>;
-                  <p className="text-sm text-muted-foreground">{talent.role}</p>;
-                </div>;
-                <div className="flex items-center gap-2">;
+
                   {getStatusBadge(talent.status)}
                   <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">
                     {talent.match}% Match
@@ -204,32 +260,69 @@ export function TalentPool() {;
               <div className="mt-2 flex flex-wrap gap-1">
                 {talent.skills.map((skill, index) => (
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                   <Badge key={index} variant="secondary" className="text-xs">
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {skill}
-                  </Badge>
+                  </Badge>;
                 ))}
-              </div>
-              <div className="mt-3 flex gap-2">
-                <Button size="sm" variant="outline">View Profile</Button>
-                <Button size="sm">Contact</Button>
-              </div>
-            </div>
+              </div>;
+              <div className="mt-3 flex gap-2">;
+                <Button size="sm" variant="outline">View Profile</Button>;
+                <Button size="sm">Contact</Button>;
+              </div>;
+            </div>;
           ))}
-<<<<<<< HEAD
         </div>
       </CardContent>
     </Card>
   )
 }
-=======
         </div>;
       </CardContent>;
     </Card>;
   );
 }
+
+      <CardContent className="p - 0">;
+        <div className="divide - y divide - border">;
+          {talents.map ((talent) => (
+            <div key={talent.id} className="p - 4">;
+              <div className="flex items - center justify - between">;
+                <div>;
+                  <p className="font - semibold">{talent.name}</p>;
+                  <p className="text - sm text - muted - foreground">{talent.role}</p>;
+                </div>;
+                <div className="flex items - center gap - 2">;
+                  {getStatusBadge (talent.status)}
+                  <Badge variant="outline" className="bg - purple - 100 text - purple - 800 border - purple - 200">;
+                    {talent.match}% Match;
+                  </Badge>;
+                </div>;
+              </div>;
+              <div className="mt - 2 flex flex - wrap gap - 1">;
+                {talent.skills.map ((skill, index) => (
+                  <Badge key={index} variant="secondary" className="text - xs">;
+                    {skill}
+                  </Badge>))}
+              </div>;
+              <div className="mt - 3 flex gap - 2">;
+                <Button size="sm" variant="outline">View Profile</Button>;
+                <Button size="sm">Contact</Button>;
+              </div>;
+            </div>))}
+        </div>;
+      </CardContent>;
+    </Card>);
+}
+
+=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

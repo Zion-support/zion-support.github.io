@@ -1,6 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React, { useEffect, useState } from 'react',;
 import Head from 'next/head',;
 import type { KycProfile } from '../../../utils/kyc',;
@@ -9,7 +16,16 @@ export default function IdentitySettingsPage() {
   const [userId, setUserId] = useState('demo-user'),
   const [profile, setProfile] = useState<KycProfile | null>(null),
   const [error, setError] = useState(''),
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 import React, { useEffect, useState } from 'react';
 
@@ -32,9 +48,12 @@ export default function IdentitySettingsPage() {
       setError('Failed to fetch')
     }
   }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../../utils/kyc';
@@ -46,10 +65,18 @@ export default function IdentitySettingsPage(req, res) {
   const [error, setError] = useState('');
   async function load() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     try {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`);
       const data = await res.json();
       if (data.ok) setProfile(data.profile);
@@ -66,16 +93,12 @@ export default function IdentitySettingsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
     load()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-<<<<<<< HEAD
   }, [])
 
-=======
   }, []),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -85,7 +108,6 @@ export default function IdentitySettingsPage(req, res) {
       <main className="max-w-3xl mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold mb-4">Identity</h1>
         <div className="mb-4">
-<<<<<<< HEAD
           <ProfileBadges profile={profile |undefined} />
         </div>
         <div className="mb-4 text-sm text-gray-600">
@@ -95,17 +117,32 @@ export default function IdentitySettingsPage(req, res) {
         <a href="/verify" className="inline-block rounded bg-blue-600 text-white px-4 py-2">Go to verification</a>
         {error && <div className="mt-3 text-sm text-red-600">{error}</div>}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           <ProfileBadges profile={profile || undefined} />
         </div>
         <div className="mb-4 text-sm text-gray-600">
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       </main>
     </>
   );
 };
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -118,7 +155,6 @@ export default function IdentitySettingsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       </main>
     </>
   )
@@ -128,7 +164,14 @@ export default function IdentitySettingsPage(req, res) {
   }
 <<<<<<< HEAD
 }
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+}
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

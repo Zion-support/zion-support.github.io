@@ -2,6 +2,9 @@
 <<<<<<< HEAD
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {
   Card
   CardContent
@@ -11,19 +14,41 @@ import {
 } from "@/components/ui/card";
 
 import { HelpCategory } from "./types";
+<<<<<<< HEAD
 =======
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HelpCategory} from "./types";
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {HelpCategory} from "./types";
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HelpCategory } from "./types",
+=======
+
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {HelpCategory} from "./types";
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { HelpCategory } from "./types",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 interface HelpCategoryListProps {
   categories: HelpCategory[];
   onCategorySelect: (categoryId: string) => void;
@@ -48,22 +73,33 @@ export function HelpCategoryList({
               article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
               article.content.toLowerCase().includes(searchQuery.toLowerCase())
           )
-<<<<<<< HEAD
       );
     : categories;
-=======
       )
     : categories,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
-  if (filteredCategories.length === 0) {
+
+
+export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {;
+  // Filter categories based on search query;
+  const filteredCategories = searchQuery;
+    ? categories && categories.filter(;
+        category =>;
+          category && category.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+          category && category.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+          category && category.articles.some(;
+            article =>;
+              article && article.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+              article && article.content.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+          );
+      );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    : categories;
+
+  if (filteredCategories && filteredCategories.length === 0) {;
     return (
-      <div className="text-center py-8">
-        <h3 className="text-lg font-medium mb-2">No results found</h3>
-        <p className="text-zion-slate-light">
-          Try adjusting your search query or browse all categories.
-        </p>
-      </div>
+
+=======
     );
   }
   return (
@@ -87,8 +123,6 @@ export function HelpCategoryList({
             </p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HelpCategory } from "./types",;
@@ -114,16 +148,40 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
     : categories;
   if (filteredCategories.length === 0) {;
     return (;
+
       <div className="text-center py-8">;
         <h3 className="text-lg font-medium mb-2">No results found</h3>;
         <p className="text-zion-slate-light">;
           Try adjusting your search query or browse all categories.;
         </p>;
       </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
   }
-
   return (
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+      {filteredCategories && filteredCategories.map(category => (;
+
+        <Card
+          key={category && category.id}
+          className="cursor-pointer hover:border-zion-purple/50 transition-colors"
+          onClick={() => onCategorySelect(category && category.id)}
+        >;
+          <CardHeader className="pb-2">;
+            <div className="w-10 h-10 rounded-full bg-zion-purple/10 flex items-center justify-center mb-3">;
+              {category && category.icon}
+            </div>;
+            <CardTitle>{category && category.name}</CardTitle>;
+            <CardDescription>{category && category.description}</CardDescription>;
+          </CardHeader>;
+          <CardContent>;
+            <p className="text-sm text-zion-slate-light">;
+              {category && category.articles.length} articles;
+            </p>;
+          </CardContent>;
+        </Card>;
+=======
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map(category => (
         <Card
@@ -145,11 +203,88 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
           </CardContent>
         </Card>
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       ))}
-    </div>
+
+    </div>;
   );
 }
+
+=======
+import React from './react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import { HelpCategory  } from './types';
+interface HelpCategoryListProps {
+  categories: HelpCategory[];
+  onCategorySelect: (category_id: string) => void;
+  search_query: string;
+}
+export /**
+ * HelpCategoryList - Function description
+ */
+function HelpCategoryList() {
+  // Filter categories based on search query;
+  const filtered_categories = search_query;
+    ? categories.filter (
+        (category) =>;
+          category.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+          category.description;
+            .toLowerCase ();
+            .includes (search_query.toLowerCase ()) ||;
+          category.articles.some (
+            (article) =>;
+              article.title.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+              article.content.toLowerCase ().includes (search_query.toLowerCase ()),
+          ),
+      );
+    : categories;
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="text - center py - 8">;
+        <h3 className="text - lg font - medium mb - 2">No results found</h3>;
+        <p className="text - zion - slate - light">;
+          Try adjusting your search query or browse all categories.;
+        </p>;
+      </div>);
+  }
+  return (
+    <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+      {filtered_categories.map ((category) => (
+        <Card;
+          key={category.id}
+          className="cursor - pointer hover:border - zion - purple / 50 transition - colors";
+          on_click={() => onCategorySelect (category.id)}
+        >;
+          <CardHeader className="pb - 2">;
+            <div className="w - 10 h - 10 rounded - full bg - zion - purple / 10 flex items - center justify - center mb - 3">;
+              {category.icon}
+            </div>;
+            <CardTitle>{category.name}</CardTitle>;
+            <CardDescription>{category.description}</CardDescription>;
+          </CardHeader>;
+          <CardContent>;
+            <p className="text - sm text - zion - slate - light">;
+              {category.articles.length} articles;
+            </p>;
+          </CardContent>;
+        </Card>))}
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 import React from "react";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import React from "react";
 export default function CertificatePreview({
@@ -9,19 +6,26 @@ export default function CertificatePreview({
   courseId
   userId = "demo-user"
 }: {
-=======
   courseId,
   userId = "demo-user",
 }: {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+  courseId,
+  userId = "demo-user",
+}: {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   courseId: string;
   userId?: string;
-}) {
+}) {;
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="border rounded p-4">
       <div className="text-sm text-gray-600">Zion Certificate</div>
@@ -38,6 +42,88 @@ export default function CertificatePreview({
         Download PDF
       </a>
     </div>
+<<<<<<< HEAD
+  );
+);
+  );
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
+  return (
+    <div className="border rounded p-4">;
+      <div className="text-sm text-gray-600">Zion Certificate</div>;
+      <div className="mt-2 h-40 bg-gradient-to-br from-slate-800 to-slate-900 text-white flex items-center justify-center rounded">;
+        <div className="text-center">;
+          <div className="text-xl font-semibold">Certificate of Completion</div>;
+          <div className="text-xs opacity-80">Preview</div>;
+        </div>;
+      </div>;
+      <a
+        href={url}
+        className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded">;
+        Download PDF;
+      </a>;
+    </div>;
+  );
+}
+}
+
+=======
+import React from './react';
+;
+export default /**
+ * CertificatePreview - Function description
+ */
+function CertificatePreview() {
+  const url = `/api / learn / certificates/${course_id}?user_id=${encodeURIComponent (user_id)}`;
+  return (
+    <div className="border rounded p - 4">;
+      <div className="text - sm text - gray - 600">Zion Certificate</div>;
+      <div className="mt - 2 h - 40 bg - gradient - to - br from - slate - 800 to - slate - 900 text - white flex items - center justify - center rounded">;
+        <div className="text - center">;
+          <div className="text - xl font - semibold">Certificate of Completion</div>;
+          <div className="text - xs opacity - 80">Preview</div>;
+        </div>;
+      </div>;
+      <a;
+        href={url}
+        className="mt - 3 inline - block px - 4 py - 2 bg - indigo - 600 text - white rounded";
+      >;
+        Download PDF;
+      </a>;
+    </div>);
+  const url = `/api / learn / certificates/${course_id}?user_id=${encodeURIComponent (user_id)}`;
+  return (
+    <div className="border rounded p - 4">;
+      <div className="text - sm text - gray - 600">Zion Certificate</div>;
+      <div className="mt - 2 h - 40 bg - gradient - to - br from - slate - 800 to - slate - 900 text - white flex items - center justify - center rounded">;
+        <div className="text - center">;
+          <div className="text - xl font - semibold">Certificate of Completion</div>;
+          <div className="text - xs opacity - 80">Preview</div>;
+        </div>;
+      </div>;
+      <a;
+        href={url}
+        className="mt - 3 inline - block px - 4 py - 2 bg - indigo - 600 text - white rounded";
+      >;
+        Download PDF;
+      </a>;
+    </div>);
+  return (
+    <div className=&quot;border rounded p-4&quot;>
+      <div className=&quot;text-sm text-gray-600&quot;>Zion Certificate</div>
+      <div className=&quot;mt-2 h-40 bg-gradient-to-br from-slate-800 to-slate-900 text-white flex items-center justify-center rounded&quot;>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;text-xl font-semibold&quot;>Certificate of Completion</div>
+          <div className=&quot;text-xs opacity-80&quot;>Preview</div>
+        </div>
+      </div>
+      <a href={url} className=&quot;mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded&quot;>Download PDF</a>
+    </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 =======
@@ -66,7 +152,12 @@ export default function CertificatePreview({
     </div>
   );
 <<<<<<< HEAD
-}
 =======
+  )
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

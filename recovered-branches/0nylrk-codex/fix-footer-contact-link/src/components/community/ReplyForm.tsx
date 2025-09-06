@@ -1,32 +1,38 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { useForm } from "react-hook-form",
-=======
 import { useState } from "react";
 import { useForm } from "react-hook-form";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
   Form
   FormControl
   FormField
   FormItem
   FormMessage
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   Form,
   FormControl,
   FormField,
   FormItem,
 FormMessage,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 } from "@/components/ui/form";
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-<<<<<<< HEAD
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
@@ -50,11 +56,16 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
       setIsSubmitting(false);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+  }
+  };
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 import { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -76,70 +87,118 @@ import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { Button } from "@/components/ui/button",;
 import { Textarea } from "@/components/ui/textarea",;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {;
   Form,;
   FormControl,;
   FormField,;
   FormItem,;
-  FormMessage;
-} from "@/components/ui/form",;
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+  FormMessage,;
+} from "@/components/ui/form";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+
 interface ReplyFormProps {;
-  onSubmit: (content: string) => Promise<void>,;
-  parentId?: string;
+
+  onSubmit: (content: string) => Promise<void>;
+  parentId?: string
 }
-;
+
+import { useState  } from './react';
+import { use_form  } from './react - hook - form';
+import { Button  } from '@/components / ui / button';
+import { Textarea  } from '@/components / ui / textarea';
+import {
+=======
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+
+
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+
+
 interface ReplyFormValues {;
+
   content: string;
 }
-;
-export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
+
+FormMessage,;
+
+} from "@/components/ui/form";
+
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+
+  };
+
+
+=======
+
   const form = useForm<ReplyFormValues>({;
     defaultValues: {;
-      content: "";
-    }
-  }),;
+      content: "",;
+    },;
+  });
+
   const handleSubmit = async (values: ReplyFormValues) => {;
-    setIsSubmitting(true),;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    setIsSubmitting(true);
     try {;
-      await onSubmit(values.content),;
-      form.reset();
+      (await onSubmit(values && values.content), form && form.reset());
     } finally {;
       setIsSubmitting(false);
     }
+
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
-    <Card>
-      <CardContent className="pt-6">
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleSubmit)}>
+    <Card>;
+      <CardContent className="pt-6">;
+        <Form {...form}>;
+          <form onSubmit={form && form.handleSubmit(handleSubmit)}>;
             <FormField
-              control={form.control}
+              control={form && form.control}
               name="content"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormControl>;
                     <Textarea
-<<<<<<< HEAD
                       placeholder={
-                        parentId
-                          ? "Write your reply..."
-                          : "Join the discussion..."
+                        parent_id;
+                          ? "Write your reply...";
+                          : "Join the discussion...";
                       }
-=======
                       placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                       className="min-h-[100px] resize-y"
                       {...field}
                     />
@@ -157,22 +216,30 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
         </Form>
       </CardContent>
     </Card>
-<<<<<<< HEAD
   );
 }
 export default ReplyForm;
 
-=======
   )
 },
 
 <<<<<<< HEAD
 export default ReplyForm,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 <<<<<<< HEAD
-export default ReplyForm;
 =======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+export default ReplyForm;
+export default ReplyForm,
+=======
+<<<<<<< HEAD
 export default ReplyForm,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

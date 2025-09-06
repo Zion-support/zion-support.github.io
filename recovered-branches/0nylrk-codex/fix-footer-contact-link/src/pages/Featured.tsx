@@ -1,26 +1,39 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {FeaturedListingsSection} from "@/components/FeaturedListingsSection";
 import {GradientHeading} from "@/components/GradientHeading";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
-<<<<<<< HEAD
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { GradientHeading } from "@/components/GradientHeading";
-=======
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
 import { GradientHeading } from "@/components/GradientHeading",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export default function Featured() {
   return (
     <>
@@ -36,15 +49,14 @@ export default function Featured() {
               These featured listings represent the best that the Zion Marketplace has to offer.
             </p>
           </div>
-<<<<<<< HEAD
-=======
           
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",;
 import { GradientHeading } from "@/components/GradientHeading";
+
 export default function Featured() {;
-  return (;
+  return (
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue">;
@@ -54,15 +66,54 @@ export default function Featured() {;
               Featured Listings;
             </GradientHeading>;
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">;
+              Discover our handpicked selection of premium AI products and services. ;
+              These featured listings represent the best that the Zion Marketplace has to offer.;
+            </p>;
+          </div>;
+
+          {/* Reuse the FeaturedListings component */}
+          <FeaturedListingsSection showTitle={false} />;
+        </div>;
+      </div>;
+      <Footer />;
+    </>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+import { FeaturedListingsSection } from '@/components / FeaturedListingsSection';
+import { GradientHeading } from '@/components / GradientHeading';
+export default /**
+ * Featured - Function description
+ */
+function Featured() {
+  return (
+    <>;
+      <Header />;
+      <div className="min - h-screen bg - zion - blue">;
+        <div className="container mx - auto px - 4 py - 12">;
+          <div className="text - center mb - 12">;
+            <GradientHeading level="h1" className="text - 4xl md:text - 5xl font - bold mb - 4">;
+              Featured Listings;
+            </GradientHeading>;
+            <p className="text - zion - slate - light text - lg max - w-3xl mx - auto">;
               Discover our handpicked selection of premium AI products and services.;
               These featured listings represent the best that the Zion Marketplace has to offer.;
             </p>;
           </div>;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           {/* Reuse the FeaturedListings component */}
           <FeaturedListingsSection showTitle={false} />
         </div>
@@ -72,7 +123,16 @@ export default function Featured() {;
   )
 <<<<<<< HEAD
 }
-=======
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

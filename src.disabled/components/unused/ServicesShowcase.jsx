@@ -1,11 +1,9 @@
 import React from 'react';
 interface ServicesShowcaseProps {
   // Add props here as needed
-<<<<<<< HEAD
 }
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function ServicesShowcase({ }: ServicesShowcaseProps) {
   return (
     <div>
@@ -13,15 +11,29 @@ export default function ServicesShowcase({ }: ServicesShowcaseProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/components/unused/ServicesShowcase.jsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-}
 =======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+<<<<<<< HEAD
+:src.disabled/components/unused/ServicesShowcase.jsx
 }
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+}
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/components/unused/ServicesShowcase.jsx
+=======
+
+}
+
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/unused/ServicesShowcase.jsx
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 export default function Reports() {
   return (
@@ -8,52 +9,63 @@ export default function Reports() {
         <div className="border rounded p-5">
           <h3 className="font-semibold">Performance (Lighthouse)</h3>
           <p className="text-sm opacity-80">Weekly summary of core categories.</p>
-<<<<<<< HEAD
           <Link href="/metrics/performance.json"><a className="text-blue-600">Open JSON →</a></Link>
-=======
           <Link href="/metrics/window.window.window.performance.json"><a className="text-blue-600">Open JSON →</a></Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         </div>
         <div className="border rounded p-5">
           <h3 className="font-semibold">External Link Health</h3>
           <p className="text-sm opacity-80">Daily check of outbound links.</p>
           <div className="flex gap-3">
-<<<<<<< HEAD
             <Link href="/metrics/links.json"><a className="text-blue-600">Summary →</a></Link>
             <Link href="/automation_logs/link-report.json"><a className="text-blue-600">Full report →</a></Link>
-=======
             <Link href="/metrics/links.json"><a className="text-blue-600">Summary →</Link></Link>
             <Link href="/automation_logs/link-report.json"><a className="text-blue-600">Full report →</Link></Link>
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           </div>
         </div>
         <div className="border rounded p-5">
           <h3 className="font-semibold">Automations Catalog</h3>
           <p className="text-sm opacity-80">List of GitHub Action workflows.</p>
-<<<<<<< HEAD
           <Link href="/automation-catalog.json"><a className="text-blue-600">Catalog JSON →</a></Link>
-=======
           <Link href="/automation-catalog.json"><a className="text-blue-600">Catalog JSON →</Link></Link>
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         </div>
       </div>
     </div>
   )
-<<<<<<< HEAD
 };
-=======
 import Link from 'next/link';
 export default function Reports(req, res) {
   try {
@@ -66,26 +78,21 @@ export default function Reports(req, res) {
           <h3 className="font-semibold">Performance (Lighthouse)</h3>;
           <p className="text-sm opacity-80">Weekly summary of core categories.</p>;
           <Link href="/metrics/window.window.window.performance.json"><a className="text-blue-600">Open JSON →</a></Link>;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>;
-        <div className="border rounded p-5">;
-          <h3 className="font-semibold">External Link Health</h3>;
-          <p className="text-sm opacity-80">Daily check of outbound links.</p>;
-          <div className="flex gap-3">;
-            <Link href="/metrics/links.json"><a className="text-blue-600">Summary →</a></Link>;
-            <Link href="/automation_logs/link-report.json"><a className="text-blue-600">Full report →</a></Link>;
+        <div className="border rounded p - 5">;
+          <h3 className="font - semibold">External Link Health</h3>;
+          <p className="text - sm opacity - 80">Daily check of outbound links.</p>;
+          <div className="flex gap - 3">;
+            <Link href="/metrics / links.json"><a className="text - blue - 600">Summary →</a></Link>;
+            <Link href="/automation_logs / link - report.json"><a className="text - blue - 600">Full report →</a></Link>;
           </div>;
         </div>;
-        <div className="border rounded p-5">;
-          <h3 className="font-semibold">Automations Catalog</h3>;
-          <p className="text-sm opacity-80">List of GitHub Action workflows.</p>;
-          <Link href="/automation-catalog.json"><a className="text-blue-600">Catalog JSON →</a></Link>;
+        <div className="border rounded p - 5">;
+          <h3 className="font - semibold">Automations Catalog</h3>;
+          <p className="text - sm opacity - 80">List of GitHub Action workflows.</p>;
+          <Link href="/automation - catalog.json"><a className="text - blue - 600">Catalog JSON →</a></Link>;
         </div>;
       </div>;
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+    </div>);
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

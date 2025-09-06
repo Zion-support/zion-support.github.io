@@ -1,44 +1,76 @@
 <<<<<<< HEAD
-
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+
 import React from "react";
 import {
   Card
   CardHeader
   CardTitle
   CardDescription
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React from "react";
 import {
   Card,
   CardHeader,
   CardTitle,
   CardDescription,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+import {;
+  Card,;
+  CardHeader,;
+  CardTitle,;
+  CardDescription,;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 } from "@/components/ui/card";
 
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
 import { FraudStats } from "@/types/fraud";
-=======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React from "react",
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react",
 import { FraudStats } from "@/types/fraud",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+interface FraudStatsCardsProps {;
+  stats: FraudStats;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 interface FraudStatsCardsProps {
   stats: FraudStats
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
-export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
-  return (
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
       <Card>
@@ -47,14 +79,18 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           <CardDescription>Total Flags</CardDescription>
         </CardHeader>
       </Card>
-<<<<<<< HEAD
-=======
       
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -64,71 +100,95 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           {stats.pending_flags > 0 && <ShieldAlert className="h-5 w-5 text-amber-500" />}
         </CardHeader>
       </Card>
-<<<<<<< HEAD
-=======
       
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
-            <CardTitle className="text-2xl font-bold text-amber-500">{stats.suspicious_count}</CardTitle>
+            <CardTitle className="text-2xl font-bold text-amber-500">
+              {stats.suspicious_count}
+            </CardTitle>
             <CardDescription>Suspicious</CardDescription>
           </div>
           <AlertTriangle className="h-5 w-5 text-amber-500" />
         </CardHeader>
       </Card>
-<<<<<<< HEAD
-=======
       
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
-            <CardTitle className="text-2xl font-bold text-red-500">{stats.dangerous_count}</CardTitle>
+            <CardTitle className="text-2xl font-bold text-red-500">
+              {stats.dangerous_count}
+            </CardTitle>
             <CardDescription>Dangerous</CardDescription>
           </div>
           <AlertCircle className="h-5 w-5 text-red-500" />
         </CardHeader>
       </Card>
-<<<<<<< HEAD
-=======
       
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       <Card>
         <CardHeader className="pb-2">
-          <CardTitle className="text-2xl font-bold">{stats.actioned_count}</CardTitle>
+          <CardTitle className="text-2xl font-bold">
+            {stats.actioned_count}
+          </CardTitle>
           <CardDescription>Actions Taken</CardDescription>
         </CardHeader>
       </Card>
-<<<<<<< HEAD
-=======
       
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       <Card>
         <CardHeader className="pb-2">
-          <CardTitle className="text-2xl font-bold">{stats.false_positives}</CardTitle>
+          <CardTitle className="text-2xl font-bold">
+            {stats.false_positives}
+          </CardTitle>
           <CardDescription>False Positives</CardDescription>
         </CardHeader>
       </Card>
 <<<<<<< HEAD
-=======
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -137,6 +197,11 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  );
+}
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   )
 },
 import React from "react",;
@@ -147,64 +212,94 @@ interface FraudStatsCardsProps {;
   stats: FraudStats;
 }
 ;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
-  return (;
+  return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">;
       <Card>;
         <CardHeader className="pb-2">;
-          <CardTitle className="text-2xl font-bold">{stats.total_flags}</CardTitle>;
+          <CardTitle className="text-2xl font-bold">;
+            {stats && stats.total_flags}
+          </CardTitle>;
           <CardDescription>Total Flags</CardDescription>;
         </CardHeader>;
       </Card>;
+
       <Card>;
         <CardHeader className="pb-2 flex flex-row items-center justify-between">;
           <div>;
-            <CardTitle className="text-2xl font-bold">{stats.pending_flags}</CardTitle>;
+            <CardTitle className="text-2xl font-bold">;
+              {stats && stats.pending_flags}
+            </CardTitle>;
             <CardDescription>Pending Review</CardDescription>;
           </div>;
-          {stats.pending_flags > 0 && <ShieldAlert className="h-5 w-5 text-amber-500" />}
+          {stats && stats.pending_flags > 0 && (;
+            <ShieldAlert className="h-5 w-5 text-amber-500" />;
+          )}
         </CardHeader>;
       </Card>;
+
       <Card>;
         <CardHeader className="pb-2 flex flex-row items-center justify-between">;
           <div>;
-            <CardTitle className="text-2xl font-bold text-amber-500">{stats.suspicious_count}</CardTitle>;
+            <CardTitle className="text-2xl font-bold text-amber-500">;
+              {stats && stats.suspicious_count}
+            </CardTitle>;
             <CardDescription>Suspicious</CardDescription>;
           </div>;
           <AlertTriangle className="h-5 w-5 text-amber-500" />;
         </CardHeader>;
       </Card>;
+
       <Card>;
         <CardHeader className="pb-2 flex flex-row items-center justify-between">;
           <div>;
-            <CardTitle className="text-2xl font-bold text-red-500">{stats.dangerous_count}</CardTitle>;
+            <CardTitle className="text-2xl font-bold text-red-500">;
+              {stats && stats.dangerous_count}
+            </CardTitle>;
             <CardDescription>Dangerous</CardDescription>;
           </div>;
           <AlertCircle className="h-5 w-5 text-red-500" />;
         </CardHeader>;
       </Card>;
+
       <Card>;
         <CardHeader className="pb-2">;
-          <CardTitle className="text-2xl font-bold">{stats.actioned_count}</CardTitle>;
+          <CardTitle className="text-2xl font-bold">;
+            {stats && stats.actioned_count}
+          </CardTitle>;
           <CardDescription>Actions Taken</CardDescription>;
         </CardHeader>;
       </Card>;
+
       <Card>;
         <CardHeader className="pb-2">;
-          <CardTitle className="text-2xl font-bold">{stats.false_positives}</CardTitle>;
+          <CardTitle className="text-2xl font-bold">;
+            {stats && stats.false_positives}
+          </CardTitle>;
           <CardDescription>False Positives</CardDescription>;
         </CardHeader>;
       </Card>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </div>;
 );
 };
+
+export default FraudStatsCards;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 export default FraudStatsCards;
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

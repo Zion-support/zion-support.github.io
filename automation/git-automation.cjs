@@ -172,6 +172,13 @@ class GitAutomation {}
   log(message) {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const logMessage = `[${timestamp}] ${message}\n`;
+    );
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
     const logMessage = `[${timestamp}] ${message}\n`;
     );
 =======

@@ -1,27 +1,40 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {FileText, Plus, Users, Search, Calendar} from "lucide-react";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { FileText, Plus, Users, Search, Calendar } from "lucide-react";
-=======
 import { Button } from "@/components/ui/button",
 import { FileText, Plus, Users, Search, Calendar } from "lucide-react",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export function QuickActions() {
 
   const actions = [
@@ -32,6 +45,12 @@ export function QuickActions() {
       icon: <FileText className="h-5 w-5 mr-2" />
       description: "Create a new job posting"
 =======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       id: "post-job",
       label: "Post New Job",
       icon: <FileText className="h-5 w-5 mr-2" />,
@@ -39,40 +58,43 @@ export function QuickActions() {
 <<<<<<< HEAD
       color: "bg-blue-100 dark:bg-blue-900/20";
     };
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      color: "bg-blue-100 dark:bg-blue-900/20"
-<<<<<<< HEAD
-    }
 =======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+      color: "bg-blue-100 dark:bg-blue-900/20"
+    }
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     {
       id: "add-member"
       label: "Add Team Member"
       icon: <Plus className="h-5 w-5 mr-2" />
       description: "Invite someone to your team"
       color: "bg-green-100 dark:bg-green-900/20"
-<<<<<<< HEAD
     }
-=======
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
       id: "find-talent"
       label: "Find Talent"
       icon: <Search className="h-5 w-5 mr-2" />
       description: "Search the talent pool"
       color: "bg-purple-100 dark:bg-purple-900/20"
-<<<<<<< HEAD
     }
-=======
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
       id: "schedule"
       label: "Schedule Interview"
@@ -104,8 +126,6 @@ export function QuickActions() {
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
-<<<<<<< HEAD
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -142,6 +162,7 @@ export function QuickActions() {;
     }
   ];
   return (;
+
     <Card>;
       <CardHeader>;
         <CardTitle>Quick Actions</CardTitle>;
@@ -149,28 +170,63 @@ export function QuickActions() {;
       </CardHeader>;
       <CardContent>;
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
-          {actions.map(action => (;
+          {actions && actions.map(action => (;
+            <Button
+              key={action && action.id}
+              variant="outline" 
+              className={`h-auto justify-start p-4 ${action && action.color}`}>;
+              <div className="flex flex-col items-start text-left">;
+                <div className="flex items-center">;
+                  {action && action.icon}
+                  <span>{action && action.label}</span>;
+                </div>;
+                <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
+              </div>;
+            </Button>;
+          ))}
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    <Card>;
+      <CardHeader>;
+        <CardTitle > Quick Actions</CardTitle>;
+        <CardDescription > Fast access to common tasks</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 4">;
+          {actions.map (action => (
             <Button;
               key={action.id}
               variant="outline";
-              className={`h-auto justify-start p-4 ${action.color}`}
-            >
-              <div className="flex flex-col items-start text-left">
-                <div className="flex items-center">
+              className={`h - auto justify - start p - 4 ${action.color}`}
+            >;
+              <div className="flex flex - col items - start text - left">;
+                <div className="flex items - center">;
                   {action.icon}
+
                   <span>{action.label}</span>
                 </div>
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           ))}
         </div>
       </CardContent>
     </Card>
   )
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

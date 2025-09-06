@@ -1,3 +1,5 @@
+
+
   return (
     <div className="py-10">
       <h1 className="text-2xl font-semibold text-white">Broken Links Report</h1>
@@ -5,8 +7,5 @@
       <p className="text-white/70 mt-2">This runs twice daily and auto-PRs updates.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

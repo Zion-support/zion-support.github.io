@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState } from "react";
 import {
   DropdownMenu
@@ -21,8 +24,16 @@ import {
 import { Save, ChevronDown, Plus, Loader2 } from "lucide-react";
 import { Resume } from "@/types/resume";
 import { useResume } from "@/hooks/useResume";
+<<<<<<< HEAD
 
 =======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import {useState} from 'react';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
 import {Button} from '@/components/ui/button';
@@ -31,7 +42,15 @@ import {Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle} from '@/
 import {Save, ChevronDown, Plus, Loader2} from 'lucide-react';
 import {Resume} from '@/types/resume';
 import {useResume} from '@/hooks/useResume';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 interface ResumeVersionSelectorProps {
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void
@@ -43,33 +62,59 @@ export function ResumeVersionSelector({
   onResumeChange
 }: ResumeVersionSelectorProps) {
 
+<<<<<<< HEAD
 =======
 export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
+=======
+
+export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const { createResume, fetchResume } = useResume();
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
   const [newResumeTitle, setNewResumeTitle] = useState('');
   const [existingResumes, setExistingResumes] = useState<Resume[]>([]),
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleCreateNewVersion = async () => {
-    if (newResumeTitle.trim()) {
+
+  const handleCreateNewVersion = async () => {;
+    if (newResumeTitle && newResumeTitle.trim()) {;
       setIsLoading(true);
-      const resumeId = await createResume({ title: newResumeTitle.trim() });
-      if (resumeId) {
+      const resumeId = await createResume({ title: newResumeTitle && newResumeTitle.trim() }),;
+      if (resumeId) {;
         await fetchResume(resumeId);
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
 <<<<<<< HEAD
         setNewResumeTitle("");
+=======
+        setNewResumeTitle('');
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       setIsLoading(false);
     }
   }
+<<<<<<< HEAD
 =======
         setNewResumeTitle('')
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+<<<<<<< HEAD
+        setNewResumeTitle('')
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+=======
+
+        setNewResumeTitle('')
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',;
 import {;
   DropdownMenu,;
@@ -105,6 +150,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         setSaveDialogOpen(false);
         setNewResumeTitle('');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -116,11 +162,31 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 <<<<<<< HEAD
-  };
 =======
+      }
+      setIsLoading(false);
+    }
+  },
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+  };
+  },
+=======
+<<<<<<< HEAD
   },
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      }
+      setIsLoading(false);
+    }
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
   return (
     <div className="flex items-center gap-2">
@@ -165,14 +231,12 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             />
           </div>
           <DialogFooter>
-<<<<<<< HEAD
             <Button variant="outline" onClick={() => setSaveDialogOpen(false)}>
               Cancel
             </Button>
             <Button
               onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() |isLoading}
-=======
             <Button 
               variant="outline" 
               onClick={() => setSaveDialogOpen(false)}
@@ -182,7 +246,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             <Button;
               onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="gap-2"
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
@@ -193,14 +256,13 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         </DialogContent>
       </Dialog>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
   )
 }
 <<<<<<< HEAD
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 <<<<<<< HEAD
@@ -208,3 +270,10 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 ;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

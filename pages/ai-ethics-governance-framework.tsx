@@ -3,17 +3,17 @@ import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIEthicsGovernanceFramework() {
 	return (
 		<ServiceLanding
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
 			title="AI Ethics & Governance Framework"
 			slug="ai-ethics-governance-framework"
 			description="Operationalize responsible AI with policies, risk assessments, model monitoring, and documentation. Align with global standards and regulatory expectations."
 			subtitle="Ship trustworthy AI with auditable controls and continuous oversight."
-<<<<<<< HEAD
 			pricePerMonthUSD={1599}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 			implementationWeeks="Implementation: 3–6 weeks"
 			roiNote="Reduce compliance risk and accelerate approvals"
 			features={[
@@ -27,8 +27,17 @@ export default function AIEthicsGovernanceFramework() {
 			]}
 			industries={["Finance", "Healthcare", "Public Sector", "SaaS"]}
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 			pricePerMonthUSD={1599  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -36,8 +45,13 @@ export default function AIEthicsGovernanceFramework() {
 }
 <<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 			implementationWeeks="Implementation: 3–6 weeks"
 			roiNote="Reduce compliance risk and accelerate approvals"
 			features={[
@@ -48,7 +62,10 @@ export default function AIEthicsGovernanceFramework() {
 				"Regulatory mapping (EU AI Act, NIST AI RMF)",
 				"Training and incident response runbooks"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
 			]}
 			industries={["Finance", "Healthcare", "Public Sector", "SaaS"]}
@@ -56,8 +73,11 @@ export default function AIEthicsGovernanceFramework() {
 		/>
 	)
 };
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -69,9 +89,12 @@ export default function AIEthicsGovernanceFramework() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework"
 		/>
 	)
@@ -83,4 +106,8 @@ export default function AIEthicsGovernanceFramework() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

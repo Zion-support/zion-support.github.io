@@ -1,18 +1,29 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
 import { getFraudStore } from '../../../../utils/fraud/store';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { getFraudStore } from '../../../../utils/fraud/store',;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { getFraudStore } from '../../../../utils/fraud/store',;
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 function ensureAdmin(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token']
   if (!process.env.ADMIN_TOKEN) return true, // allow if not configured
   return token === process.env.ADMIN_TOKEN
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -32,11 +43,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     label: label as any})
 
   res.status(200).json({ items })
+<<<<<<< HEAD
 =======
 =======
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -53,44 +69,51 @@ function ensureAdmin(req: NextApiRequest): boolean {;
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+import { getFraudStore } from '../../../../utils / fraud / store',
+function ensure_admin (req: NextApiRequest): boolean {
+  const token = req.headers['x - admin - token'],
+  // Check condition
+if (return true, // allow if not configured) {
+  $2
 }
-;
-export default async function handler(req, res) {
-  try {
-  if (req.method !== '$1') {
-    res.status(405).json({ error: 'Method not allowed' });
+  return token === process.env.ADMIN_TOKEN;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+}
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.status (405).json ({ error: 'Method not allowed' }),
     return;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
+  if () {) {
+  $2
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  if (!ensureAdmin(req)) {;
-    res.status(401).json({ error: 'Unauthorized' });
+    res.status (401).json ({ error: 'Unauthorized' }),
     return;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
+
 }
   } catch (error) {
     console.error("Error:", error);
@@ -119,10 +142,12 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
   const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>,
   const store = getFraudStore(),
@@ -133,7 +158,15 @@ export default async function handler(req, res) {
     label: label as any}),
   res.status(200).json({ items });
 };
+}
 =======
+<<<<<<< HEAD
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

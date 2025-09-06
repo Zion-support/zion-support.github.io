@@ -1,9 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ModerationFlag {
 =======
 export interface ModerationFlag {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+export interface ModerationFlag {
+export interface ModerationFlag {;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   id: string;
   contentId: string;
   contentType: string;
@@ -13,6 +22,7 @@ export interface ModerationFlag {;
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
@@ -25,39 +35,66 @@ export async function getFlagById(id: string): Promise<ModerationFlag | null> {
 export async function readAllFlags(): Promise<ModerationFlag[]> {
   // Mock implementation - replace with actual database logic
   return [];
+=======
+<<<<<<< HEAD
+=======
+=======
+export interface ModerationFlag {
+  id: string;
+  content_id: string;
+  content_type: 'post' | 'comment' | 'user';
+  reason: string;
+  user_email: string;
+  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+  created_at: string;
+  admin_notes?: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 
-export async function createFlag(data: Partial<ModerationFlag>): Promise<ModerationFlag> {
-  const flag: ModerationFlag = {
-    id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    contentId: data.contentId |''
-    contentType: data.contentType |'post'
-    reason: data.reason |''
-    userEmail: data.userEmail |''
-    status: 'pending'
-    createdAt: new Date().toISOString()
-    ...data
-  }
-  flags.push(flag);
-  return flag;
+;
+export async function getFlagById (id: string): Promise < ModerationFlag | null> {
+  return flags.find (flag => flag.id === id) || null;
 }
-export async function updateFlagStatus(
-  id: string
-  status: ModerationFlag['status']
-  adminNotes?: string
-): Promise<FlaggedContent | undefined> {
-  const flag = await getFlagById(id);
-  if (!flag) return undefined;
-  flag.status = status;
-  flag.adminNotes = adminNotes |flag.adminNotes;
-  flag.updatedAt = new Date().toISOString();
+export async function readAllFlags (): Promise < ModerationFlag[]> {
+  return [...flags];
+
+}
+export async function create_flag (data: Partial < ModerationFlag>): Promise < ModerationFlag> {
+  const flag: ModerationFlag = {
+
+  flag && flag.status = status;
+  flag && flag.adminNotes = adminNotes || flag && flag.adminNotes;
+  flag && flag.updatedAt = new Date().toISOString();
+
   await upsertFlag(flag);
   return flag;
+
 }
 
+<<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+// Moderation database utilities
+export interface ModerationFlag {
+  id: string, type: 'spam' | 'inappropriate' | 'harassment' | 'other',
+  content: string, reporterId: string,
+  reportedUserId?: string;
+  status: 'pending' | 'reviewed' | 'resolved' | 'dismissed', createdAt: Date,
+  updatedAt: Date, moderatorId?: string,
+  notes?: string;
+}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+=======
+
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 // Mock data storage - replace with actual database
 let flags: ModerationFlag[] = [];
@@ -103,4 +140,3 @@ export async function updateFlagStatus(
   return flag;
 
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

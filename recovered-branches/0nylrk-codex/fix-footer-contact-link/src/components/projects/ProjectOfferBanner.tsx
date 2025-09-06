@@ -2,6 +2,15 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {Bell, Calendar, X} from "lucide-react";
@@ -10,27 +19,31 @@ import {Card, CardContent} from "@/components/ui/card";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ProjectOfferBanner() {;
+<<<<<<< HEAD
   const navigate = useNavigate();
   const { projects, isLoading } = useProjects();
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
   const [dismissed, setDismissed] = useState<Set<string>>(new Set());
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useEffect, useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Bell, Calendar, X } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
-<<<<<<< HEAD
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
 export function ProjectOfferBanner() {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const navigate = useNavigate();
   const { projects, isLoading } = useProjects();
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
   const [dismissed, setDismissed] = useState<Set<string>>(new Set());
-=======
 import { useProjects } from "@/hooks/useProjects",
 import { Project } from "@/types/projects",
 export function ProjectOfferBanner() {
@@ -38,12 +51,10 @@ export function ProjectOfferBanner() {
   const { projects, isLoading } = useProjects(),
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]),
   const [dismissed, setDismissed] = useState<Set<string>>(new Set()),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
     if (projects && !isLoading) {
-      const offers = projects.filter(p => p.status === 'offer_sent'),
+      const offers = projects.filter(p => p.status === 'offer_sent');
       setPendingOffers(offers)
 <<<<<<< HEAD
     }
@@ -63,10 +74,19 @@ export function ProjectOfferBanner() {
 
     return null
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+  }
+=======
+
+
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Bell, Calendar, X } from "lucide-react",;
@@ -100,11 +120,17 @@ export function ProjectOfferBanner() {;
     return null;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
@@ -142,13 +168,27 @@ export function ProjectOfferBanner() {;
             </CardContent>
           </Card>
         ))}
-<<<<<<< HEAD
     </div>
   )
 }
-=======
     </div>;
   );
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import { useEffect, useState } from './react';
+import { use_navigate } from './react-router-dom';
+import { Bell, Calendar, X } from './lucide-react';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent } from '@/components / ui / card';
+import { use_projects } from '@/hooks / use_projects';
+import { Project } from '@/types / projects';
+export /**
+ * ProjectOfferBanner - Function description
+ */
+function ProjectOfferBanner() {
+  const navigate = use_navigate ();
+  const { projects, is_loading } = use_projects ();
+  const [pending_offers, setPendingOffers] = useState < Project[]>([]);
+  const [dismissed, set_dismissed] = useState < Set < string>>(new Set ());
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

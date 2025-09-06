@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Fraud detection types
 export type AdminActionType =
   | 'ban_user'
@@ -9,14 +8,32 @@ export type AdminActionType =
   | 'dismiss';
   | 'escalate';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export interface AdminAction {
+
+
+export interface AdminAction {;
+=======
+;
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export interface AdminAction {
 =======
 
+
 export interface AdminAction {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   id: string;
-  caseId: string;
+  case_id: string;
   type: AdminActionType;
+<<<<<<< HEAD
   adminId: string;
   reason: string
   details: Record<string, any>;
@@ -24,52 +41,115 @@ export interface AdminAction {;
   executedAt?: string;
   status: 'pending' | 'executed' | 'failed'
 }
-<<<<<<< HEAD
-export interface FraudDetectionResult {
 =======
 
+  admin_id: string;
+  reason: string,
+  details: Record < string, any>;
+  created_at: string;
+  executed_at?: string;
+  status: 'pending' | 'executed' | 'failed',
+
+}
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+<<<<<<< HEAD
+export interface FraudDetectionResult {
+
 export interface FraudDetectionResult {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+export interface FraudDetectionResult {
+  is_fraud: boolean;
+=======
+}
+
+
+export interface FraudDetectionResult {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   isFraud: boolean;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   confidence: number;
   reasons: string[];
+<<<<<<< HEAD
   suggestedActions: AdminActionType[]
   metadata: Record<string, any>;
 }
+=======
+<<<<<<< HEAD
+
+  suggested_actions: AdminActionType[],
+  metadata: Record < string, any>;
+
+}
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
 export interface FraudDetectionConfig {
-=======
 
 export interface FraudDetectionConfig {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+export interface FraudDetectionConfig {
+=======
+}
+
+
+export interface FraudDetectionConfig {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   enabled: boolean;
   rules: {
     suspiciousActivity: {
       enabled: boolean;
-      threshold: number
+
+      threshold: number,
     }
-    fakeProfile: {
+    fake_profile: {
       enabled: boolean;
-      threshold: number
+      threshold: number,
     }
-    paymentFraud: {
+    payment_fraud: {
       enabled: boolean;
-      threshold: number
+      threshold: number,
     }
     spam: {
       enabled: boolean;
-      threshold: number
+      threshold: number,
     }
   }
-  autoActions: {
+  auto_actions: {
     enabled: boolean;
     actions: AdminActionType[];
 <<<<<<< HEAD
     confidenceThreshold: number
   }
+
+    confidenceThreshold: number,
+  };
+
+}
+=======
+    confidence_threshold: number,
+  }
+}
+
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 =======
     confidenceThreshold: number,
   };
@@ -77,4 +157,10 @@ export interface FraudDetectionConfig {;
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

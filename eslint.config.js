@@ -1,10 +1,51 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -15,6 +56,7 @@ import react from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
@@ -23,35 +65,39 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import js from '@eslint/js';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import next from '@next/eslint-plugin-next';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+import js from '@eslint/js';
+
+import js from '@eslint/js';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 export default [
   js.configs.recommended,
   {
-<<<<<<< HEAD
     files: ['**/*.{js,jsx,ts,tsx}'],
-=======
     files: ["**/*.{js,jsx,ts,tsx}"],
->>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
     ignores: [
       '.next/**',
       'out/**',
       'dist/**',
       'build/**',
       'node_modules/**',
-<<<<<<< HEAD
       '.eslintrc.js',
-=======
       'coverage/**',
->>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
@@ -66,7 +112,6 @@ export default [
       '**/*.temp.*',
       '**/*.test.*',
       '**/*.spec.*',
-<<<<<<< HEAD
       '**/test-utils.*',
       '**/jest.setup.*',
       '**/jest.config.*',
@@ -200,12 +245,9 @@ export default [
       '**/performance-*.sh',
       '**/performance-*.html',
       '**/performance-*.md',
-<<<<<<< HEAD
       '**/performance-*.txt',
       'backup-problematic-files/**'
-=======
       '**/performance-*.txt'
-=======
       '**/zion-os/**',
       '**/zion-website/**',
       '**/zion-academy/**',
@@ -215,8 +257,6 @@ export default [
       '**/*.bundle.js',
       '**/public/**',
       '**/static/**',
->>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
->>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358
     ],
     languageOptions: {
       parser: typescriptParser,
@@ -229,7 +269,6 @@ export default [
       },
       globals: {
         // Browser globals
-<<<<<<< HEAD
         window: 'readonly',
         document: 'readonly',
         console: 'readonly',
@@ -258,7 +297,6 @@ export default [
         performance: 'readonly',
         IntersectionObserver: 'readonly',
         IntersectionObserverEntry: 'readonly',
-=======
         window: "readonly",
         document: "readonly",
         console: "readonly",
@@ -303,13 +341,10 @@ export default [
         LayoutShift: "readonly",
         IntersectionObserver: "readonly",
         IntersectionObserverEntry: "readonly",
->>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
         // React
         React: 'readonly',
         // Jest/Testing globals
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -317,9 +352,8 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
->>>>>>> origin/automation-improvements-final
+origin/automation-improvements-final
 
-=======
 <<<<<<< HEAD
 import js from "@eslint/js";
 import globals from "globals";
@@ -329,6 +363,7 @@ import tseslint from "@typescript-eslint/eslint-plugin";
 import tsparser from "@typescript-eslint/parser";
 import react from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -336,9 +371,11 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+origin/main
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export default [
   {
-<<<<<<< HEAD
     ignores: [
       "node_modules/",
       ".next/",
@@ -379,16 +416,28 @@ export default [
       "*.spec.ts",
       "*.spec.tsx"
     ]
+=======
+=======
+
+      "*.test && test.js",
+      "*.test && test.ts",
+      "*.test && test.tsx",
+      "*.spec && spec.js",
+      "*.spec && spec.ts",
+      "*.spec && spec.tsx",
+    ],
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },
-  js.configs.recommended,
+  js && js.configs.recommended,
   {
     files: ["**/*.{js,jsx}"],
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: "module",
       globals: {
-        ...globals.browser,
-        ...globals.node,
+        ...globals && globals.browser,
+        ...globals && globals.node,
         React: "readonly",
         jest: "readonly",
         describe: "readonly",
@@ -418,13 +467,22 @@ export default [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       react,
       "react-hooks": reactHooks
     },
     rules: {
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
+      ...react && react.configs.recommended && recommended.rules,
+      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
       "no-unused-vars": "warn",
       "no-console": "warn",
       "prefer-const": "error",
@@ -441,9 +499,6 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.node,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         React: "readonly",
         jest: "readonly",
         describe: "readonly",
@@ -453,6 +508,9 @@ export default [
         beforeEach: "readonly",
         afterEach: "readonly",
         beforeAll: "readonly",
+        afterAll: "readonly",
+        React: 'readonly',
+=======
 <<<<<<< HEAD
         afterAll: "readonly",
 =======
@@ -461,25 +519,33 @@ export default [
 <<<<<<< HEAD
 =======
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+=======
 
+
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default [
-  js.configs.recommended,
   {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
     files: ['**/*.{js,jsx,ts,tsx}'],
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     languageOptions: {
       parser: typescriptParser,
+
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
           jsx: true
         }
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       },
       globals: {
         React: 'readonly',
@@ -496,24 +562,18 @@ export default [
         performance: 'readonly',
         module: 'readonly',
         require: 'readonly',
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
         jest: 'readonly',
         describe: 'readonly',
         it: 'readonly',
         test: 'readonly',
         expect: 'readonly',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly'
-<<<<<<< HEAD
-=======
         React: "readonly",
         jest: "readonly",
         describe: "readonly",
@@ -524,13 +584,12 @@ export default [
         afterEach: "readonly",
         beforeAll: "readonly",
         afterAll: "readonly"
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
+origin/main
+origin/automation-improvements-final
         afterAll: "readonly"
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       },
       parser: tsparser,
       parserOptions: {
@@ -540,28 +599,23 @@ export default [
       }
     },
     plugins: {
-
       "@typescript-eslint": tseslint,
       react,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
       "jsx-a11y": jsxA11y
-
     },
     rules: {
-      ...tseslint.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      ...jsxA11y.configs.recommended.rules,
+
+      ...tseslint && tseslint.configs.recommended && recommended.rules,
+      ...react && react.configs.recommended && recommended.rules,
+      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
+      ...jsxA11y && jsxA11y.configs.recommended && recommended.rules,
 
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true }
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
       "react-hooks/exhaustive-deps": "warn",
@@ -569,11 +623,9 @@ export default [
       "no-unused-vars": "off",
       "no-console": "warn",
       "react/prop-types": "off",
-<<<<<<< HEAD
-      "react/react-in-jsx-scope": "off",
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 =======
-=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         describe: 'readonly',
         it: 'readonly',
         beforeEach: 'readonly',
@@ -581,40 +633,22 @@ export default [
       }
     },
     plugins: {
-=======
-        jest: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly'
-      }
-    },
-    plugins: {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks
     },
     rules: {
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       'react-hooks/exhaustive-deps': 'warn',
       'no-undef': 'off',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
       'no-unused-vars': 'off',
       'no-console': 'warn',
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off'
-<<<<<<< HEAD
-=======
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
       "react-hooks/exhaustive-deps": "warn",
@@ -624,14 +658,13 @@ export default [
       "react/prop-types": "off",
       "react/react-in-jsx-scope": "off"
 
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
+origin/main
+origin/automation-improvements-final
       "react/react-in-jsx-scope": "off"
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     settings: {
       react: {
@@ -650,7 +683,7 @@ export default [
       ecmaVersion: 2021,
       sourceType: "script",
       globals: {
-        ...globals.node,
+        ...globals && globals.node,
         console: "readonly",
         process: "readonly",
         require: "readonly",
@@ -667,23 +700,24 @@ export default [
       "no-unused-vars": "warn",
       "no-console": "warn",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
       "no-undef": "error"
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       "no-undef": "error",
     },
   },;
 ];
-=======
       '@typescript-eslint': typescript,
       react: react,
       'react-hooks': reactHooks,
@@ -694,24 +728,30 @@ export default [
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...next.configs.recommended.rules,
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'no-undef': 'error'
     }
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 =======
+
 =======
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react/no-unescaped-entities': 'off',
-      'react-hooks/exhaustive-deps': 'warn',
-      'no-undef': 'off',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }
+];
+
+
+=======
       'no-unused-vars': 'warn'
     }
   },
-  {
+{
     ignores: [
       'node_modules/',
       '.next/',
@@ -740,18 +780,31 @@ export default [
       'working-automation-suite.cjs'
     ]
 <<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+  }
+];
+origin/automation-improvements-final
+
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
+
+=======
+
+
+  }
+];
+
+
+
 =======
   }
 ];
@@ -759,3 +812,8 @@ export default [
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

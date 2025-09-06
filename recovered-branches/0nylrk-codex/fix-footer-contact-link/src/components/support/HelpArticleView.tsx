@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
@@ -8,33 +11,49 @@ import {Card} from "@/components/ui/card";
 import {ThumbsUp, ThumbsDown} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
 import {HELP_CATEGORIES} from "./help-content";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { ThumbsUp, ThumbsDown } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
-<<<<<<< HEAD
 import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleViewProps {
-=======
 import { HELP_CATEGORIES } from "./help-content",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+import React, { useState } from './react';
+import { Button  } from '@/components / ui / button';
+import { Card  } from '@/components / ui / card';
+import { ThumbsUp, ThumbsDown  } from './lucide-react';
+import { toast  } from '@/components / ui / use - toast';
+import { HELP_CATEGORIES  } from './help - content';
+
+interface HelpArticleViewProps {
+  article_id: string;
+}
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 interface HelpArticleViewProps {
   articleId: string
 }
 
-<<<<<<< HEAD
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
-=======
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   // Find the article in all categories
   let article,
@@ -44,10 +63,13 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
       article = found,
       break
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
@@ -55,9 +77,13 @@ import { ThumbsUp, ThumbsDown } from "lucide-react",;
 import { toast } from "@/components/ui/use-toast",;
 import { HELP_CATEGORIES } from "./help-content",;
 interface HelpArticleViewProps {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   articleId: string;
 }
+
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
   const [feedbackGiven, setFeedbackGiven] = useState<
@@ -70,18 +96,64 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
     const found = category.articles.find((a) => a.id === articleId);
     if (found) {
+=======
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {Card} from "@/components/ui/card";
+import {ThumbsUp, ThumbsDown} from "lucide-react";
+import {toast} from "@/components/ui/use-toast";
+import {HELP_CATEGORIES} from "./help-content";
+interface HelpArticleViewProps {;
+  articleId: string;
+}
+
+export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
+  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
+
+  // Find the article in all categories;
+  let article;
+  for (const category of HELP_CATEGORIES) {;
+    const found = category && category.articles.find(a => a && a.id === articleId);
+    if (found) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+export /**
+ * HelpArticleView - Function description
+ */
+function HelpArticleView() {
+  const [feedback_given, setFeedbackGiven] = useState<;
+    "helpful" | "not - helpful" | null;
+  >(null);
+;
+  // Find the article in all categories;
+  let article;
+  for (const category of HELP_CATEGORIES) {
+    const found = category.articles.find ((a) => a.id === article_id);
+    // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       article = found;
       break;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     }
   }
   if (!article) {
     return <div>Article not found</div>;
   }
-<<<<<<< HEAD
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     (setFeedbackGiven(type)
       // In a real implementation, this would send feedback to the server
@@ -93,7 +165,6 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
             : "We'll work on improving this article."
       }));
   }
-=======
   
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type),
@@ -106,7 +177,6 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
         : "We'll work on improving this article."})
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div>
       <Card className="p-6">
@@ -168,8 +238,6 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
                 Contact Support
               </Button>
             </div>
-<<<<<<< HEAD
-=======
 ;
   const handleFeedback = (type: "helpful" | "not-helpful") => {;
     setFeedbackGiven(type),;
@@ -214,12 +282,14 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
                 className={feedbackGiven === "not-helpful" ? "bg-red-100 dark:bg-red-900/30" : ""}
                 onClick={() => handleFeedback("not-helpful")}
                 disabled={feedbackGiven !== null}
+
               >;
                 <ThumbsDown className="h-4 w-4 mr-2" />;
                 No;
               </Button>;
             </div>;
           </div>;
+
           {feedbackGiven === "not-helpful" && (;
             <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">;
               <p className="text-sm text-zion-slate-light mb-2">;
@@ -229,6 +299,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
                 Contact Support;
               </Button>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -240,10 +311,22 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
     </div>
   );
 }
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+          )}
+        </div>;
+      </Card>;
+    </div>;
+  );
+}
+
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric"
@@ -251,17 +334,27 @@ function formatDate(date: string): string {
     day: "numeric"
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+<<<<<<< HEAD
   });
 }
-
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   })
+<<<<<<< HEAD
 =======
   })
 <<<<<<< HEAD
 }
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  })
+<<<<<<< HEAD
+}
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 ;
 function formatDate(date: string): string {;
   return new Date(date).toLocaleDateString("en-US", {;
@@ -272,7 +365,14 @@ function formatDate(date: string): string {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

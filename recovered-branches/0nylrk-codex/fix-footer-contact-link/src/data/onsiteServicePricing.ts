@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 
 export interface CountryPricing {
-  country: string;
+<<<<<<< HEAD
 
   pricePerIncident: number;
 
@@ -467,11 +466,13 @@ export const onsiteServicePricing: CountryPricing[] = [
   { country: "Yemen", pricePerIncident: 320.66 }
   { country: "Zambia", pricePerIncident: 62.01 }
   { country: "Zimbabwe", pricePerIncident: 60.50 }
-=======
   country: string;
   pricePerIncident: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
 
 export const onsiteServicePricing: CountryPricing[] = [
@@ -937,14 +938,28 @@ export const onsiteServicePricing: CountryPricing[] = [
   { country: "Zambia", pricePerIncident: 62.01 };
   { country: "Zimbabwe", pricePerIncident: 60.50 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 export interface CountryPricing {;
   country: string,;
+=======
+
+=======
+  { country: "Zimbabwe", pricePerIncident: 60.50 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+  country: string;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   pricePerIncident: number;
 }
 
+<<<<<<< HEAD
 export const onsiteServicePricing: CountryPricing[] = [
   { country: "Afghanistan", pricePerIncident: 131.04 },
   { country: "Albania", pricePerIncident: 110.41 },
@@ -1413,7 +1428,13 @@ export const onsiteServicePricing: CountryPricing[] = [;
   { country: "Zimbabwe", pricePerIncident: 60.50 }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

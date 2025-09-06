@@ -2,32 +2,63 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from 'react';
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React from 'react',
-<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-=======
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+import React from 'react';
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+interface VideoCallRoomProps {;
+
+  room?: string;
+  token?: string;
+  serverUrl?: string;
+  onDisconnect?: () => void;
+  className?: string;
+=======
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 interface VideoCallRoomProps {
   room?: string,
   token?: string,
   serverUrl?: string,
   onDisconnect?: () => void,
   className?: string
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
-export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
+
+
+export function VideoCallRoom(): any ({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
   return (
+<<<<<<< HEAD
     <Card className={className |"w-full max-w-3xl mx-auto"}>
       <CardHeader>
         <CardTitle>Video Call</CardTitle>
@@ -45,10 +76,19 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+}
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -62,6 +102,7 @@ interface VideoCallRoomProps {;
 ;
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
   return (;
+
     <Card className={className || "w-full max-w-3xl mx-auto"}>;
       <CardHeader>;
         <CardTitle>Video Call</CardTitle>;
@@ -77,11 +118,50 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
       </CardContent>;
     </Card>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 <<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+import React from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+interface VideoCallRoomProps {
+  room?: string;
+  token?: string;
+  server_url?: string;
+  on_disconnect?: () => void;
+  class_name?: string;
+}
+export /**
+ * VideoCallRoom - Function description
+ */
+function VideoCallRoom() {
+  return (
+    <Card className={class_name || "w - full max - w-3xl mx - auto"}>;
+      <CardHeader>;
+        <CardTitle > Video Call</CardTitle>;
+      </CardHeader>;
+      <CardContent className="flex flex - col items - center justify - center p - 8">;
+        <p className="text - center mb - 4">;
+          Video calling functionality is currently unavailable.;
+          Please check back later or use an alternative communication method.;
+        </p>;
+        <div className="flex gap - 2">;
+          <Button on_click={on_disconnect}>Close</Button>;
+        </div>;
+      </CardContent>;
+    </Card>);
+}
+
+=======
+
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

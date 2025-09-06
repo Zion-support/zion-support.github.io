@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import {
@@ -15,12 +15,14 @@ export default async function handler(
 ) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { v4 as uuidv4 } from 'uuid';
 import { findProjectById, hasExistingReview, upsertReview, counterpartRole } from '../../../utils/dataStore';
 import type { Review } from '../../../types/reviews';
@@ -28,33 +30,50 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   }
   try {
-<<<<<<< HEAD
 
-    const { projectId, fromRole, fromId, rating, text, categories, anonymous } =
+
+import type { NextApiRequest, NextApiResponse } from './next';
+import { v4 as uuidv4  } from './uuid';
+import {
+  findProjectById,
+  hasExistingReview,
+  upsert_review,
+  counterpart_role,
+} from '../../../utils / data_store';
+import type { Review } from "../../../types / reviews";
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (405).json ({ error: "Method not allowed" });
+  }
+  try {
+    const { project_id, from_role, from_id, rating, text, categories, anonymous } =;
       req.body as {
-        projectId: string;
-        fromRole: "client" | "talent";
-        fromId: string;
+        project_id: string;
+        from_role: "client" | "talent";
+        from_id: string;
+
         rating: number;
         text: string;
         categories?: Review["categories"];
         anonymous?: boolean;
-      }
-    if (!projectId |!fromRole |!fromId) {
 
-      return res.status(400).json({ error: "Missing required fields" });
-    }
-    if (!rating |rating < 1 |rating > 5) {
-      return res.status(400).json({ error: "Rating must be between 1 and 5" });
-    }
+      };
 
+<<<<<<< HEAD
     if (!text |String(text).trim().length === 0) {
       return res.status(400).json({ error: "Review text is required" });
-=======
     const {
       projectId,
     fromRole,
@@ -62,6 +81,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     rating,
       text,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     categories,
       anonymous} = req.body as {
       projectId: string,
@@ -71,7 +93,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       text: string,
       categories?: Review['categories'];
       anonymous?: boolean
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       categories,
       anonymous
     } = req.body as {
@@ -79,7 +104,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       fromId: string, rating: number,
       text: string, categories?: Review['categories'],
       anonymous?: boolean;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     };
     if (!projectId || !fromRole || !fromId) {
       return res.status(400).json({ error: 'Missing required fields' })
@@ -89,41 +117,49 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     if (!text || String(text).trim().length === 0) {
       return res.status(400).json({ error: 'Review text is required' })
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     const project = await findProjectById(projectId);
     if (!project) {
+
+
+      });
+    }
+
+=======
       return res.status(404).json({ error: 'Project not found' })
     }
-<<<<<<< HEAD
     if (project.status !== "Completed") {
       return res.status(400).json({
         error: "Reviews can only be submitted after project completion"
       });
-=======
     if (project.status !== 'Completed') {
       return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
+
     const toRole = counterpartRole(fromRole);
     const toId = toRole === 'talent' ? project.talentSlug : project.clientId;
+
     const expectedFromId = fromRole === 'client' ? project.clientId : project.talentSlug;
     if (expectedFromId !== fromId) {
       return res.status(403).json({ error: 'Invalid reviewer for this project' })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     const existing = await hasExistingReview(projectId, fromRole, fromId);
     if (existing) {
-<<<<<<< HEAD
       return res.status(409).json({
         error: "You have already submitted a review for this project"
       });
-=======
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
     const now = new Date().toISOString();
     const review: Review = {
-<<<<<<< HEAD
       id: uuidv4()
       projectId
       fromRole
@@ -149,7 +185,29 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res
       .status(500)
       .json({ error: "Internal server error", details: error?.message });
+      id: uuidv4(),
+      projectId,
+      fromRole,
+      fromId,
+      toRole,
+      toId,
 =======
+    const now = new Date ().toISOString ();
+    const review: Review = {
+      id: uuidv4 (),
+      project_id,
+      from_role,
+      from_id,
+      to_role,
+      to_id,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      rating,
+      text: String (text).trim (),
+      categories,
+
+      reported: false, reports: [],
+=======
+
       id: uuidv4(),
       projectId,
     fromRole,
@@ -163,17 +221,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       approved: false, // requires admin approval
       reported: false,
       reports: [],
+
       removed: false,
-      createdAt: now
-    };
+      createdAt: now};
+
     await upsertReview(review);
+
     return res.status(201).json({ message: 'Review submitted', reviewId: review.id })
   } catch (error: any) {
     return res.status(500).json({ error: 'Internal server error', details: error?.message })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export default async function handler(req, res) {
   try {
   res.status(200).json({ message: 'Review submitted' });
@@ -342,16 +405,35 @@ export default async function handler(req, res) {
       text: String(text).trim(),;
       categories,;
       anonymous: Boolean(anonymous);
+=======
+
+      anonymous: Boolean (anonymous),
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       approved: false, // requires admin approval;
-      reported: false,;
-      reports: [],;
-      removed: false,;
-      createdAt: now};
-    await upsertReview(review);
-    return res.status(201).json({ message: 'Review submitted', reviewId: review.id });
+      reported: false,
+      reports: [],
+      removed: false,
+      created_at: now,
+    }
+;
+    await upsert_review (review);
+;
+    return res;
+      .status (201);
+      .json ({ message: "Review submitted", review_id: review.id });
+  } catch (error: any) {
+    return res;
+      .status (500);
+      .json ({ error: "Internal server error", details: error?.message });
+  }
+}
   } catch (error) {
-    return res.status(500).json({ error: 'Internal server error', details: error?.message });
-    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -364,6 +446,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -379,3 +462,8 @@ export default async function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

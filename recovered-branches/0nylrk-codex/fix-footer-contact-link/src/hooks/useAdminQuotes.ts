@@ -1,22 +1,33 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState  } from 'react';
 import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
 import { quoteRequestService  } from '@/services/quoteRequestService';
 =======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 import { useToast } from '@/components/ui/use-toast';
 import type { DateRange } from '@/types/dateRange';
-<<<<<<< HEAD
 
 export const useAdminQuotes = () => {
-=======
 export const useAdminQuotes = () => {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all');
@@ -26,14 +37,15 @@ export const useAdminQuotes = () => {;
   // Fetch all quote requests
   const { data: allQuotes = [], isLoading, error } = useQuery({
     queryKey: ['quotesadmin'];
-    queryFn: () => quoteRequestService.getAll()
+
+    queryFn: () => quoteRequestService && quoteRequestService.getAll(),
+
     enabled: true});
   // Filter quotes based on selected filters
-  const filteredQuotes = allQuotes.filter((quote) => {
+  const filteredQuotes = allQuotes && allQuotes.filter((quote) => {
     // Status filter
-    if (statusFilter !== 'all' && quote.status !== statusFilter) {
+    if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
       return false
-=======
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
@@ -58,46 +70,65 @@ export const useAdminQuotes = () => {;
     if (statusFilter !== 'all' && quote.status !== statusFilter) {;
       return false;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     }
     // Archive filter
-    if (archiveFilter === 'active' && quote.is_archived) {
+    if (archiveFilter === 'active' && quote && quote.is_archived) {
       return false
     }
-    if (archiveFilter === 'archived' && !quote.is_archived) {
+    if (archiveFilter === 'archived' && !quote && quote.is_archived) {
       return false
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
     
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+
+    
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     // Search filter
     if (searchQuery) {
-      const query = searchQuery.toLowerCase();
+      const query = searchQuery && searchQuery.toLowerCase();
       if (
-        !quote.requester_name.toLowerCase().includes(query) &&
-        !quote.project_name.toLowerCase().includes(query) &&
-        !quote.project_summary.toLowerCase().includes(query) &&
-        !(quote.talent_name && quote.talent_name.toLowerCase().includes(query))
+        !quote && quote.requester_name.toLowerCase().includes(query) &&
+        !quote && quote.project_name.toLowerCase().includes(query) &&
+        !quote && quote.project_summary.toLowerCase().includes(query) &&
+        !(quote && quote.talent_name && quote && quote.talent_name.toLowerCase().includes(query))
       ) {
         return false
       }
     }
     // Date range filter
     if (dateRange?.from) {
-      const createdAt = new Date(quote.created_at);
-      if (createdAt < dateRange.from) {
+      const createdAt = new Date(quote && quote.created_at);
+      if (createdAt < dateRange && dateRange.from) {
         return false
       }
     }
     if (dateRange?.to) {
-      const createdAt = new Date(quote.created_at);
-      const endDate = new Date(dateRange.to);
-      endDate.setHours(23, 59, 59, 999), // End of day
+      const createdAt = new Date(quote && quote.created_at);
+      const endDate = new Date(dateRange && dateRange.to);
+      endDate && endDate.setHours(23, 59, 59, 999), // End of day
       if (createdAt > endDate) {
         return false
       }
@@ -109,10 +140,21 @@ export const useAdminQuotes = () => {;
   const updateStatusMutation = useMutation({
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>
       quoteRequestService.updateStatus(id, status);
+<<<<<<< HEAD
 =======
     
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+    
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+=======
+
+    
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     // Search filter;
     if (searchQuery) {;
@@ -146,28 +188,35 @@ export const useAdminQuotes = () => {;
     
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     return true
   }),
 
   // Update quote status mutation
   const updateStatusMutation = useMutation({
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService.updateStatus(id, status),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     onSuccess: () => {
       toast({
         title: "Status updated"
         description: "The quote request status has been updated"
       }),
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
-<<<<<<< HEAD
     }
     onError: (error: Error) => {
       toast({
         title: "Error";
-        description: "Failed to update status: " + error.message
+        description: "Failed to update status: " + error && error.message,
+
         variant: "destructive"
       })
     }
@@ -176,7 +225,6 @@ export const useAdminQuotes = () => {;
   const toggleArchiveMutation = useMutation({
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>
       quoteRequestService.toggleArchive(id, isArchived);
-=======
     },
     onError: (error: Error) => {
       toast({
@@ -191,26 +239,24 @@ export const useAdminQuotes = () => {;
   const toggleArchiveMutation = useMutation({
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService.toggleArchive(id, isArchived),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     onSuccess: (_, variables) => {
       toast({
         title: variables.isArchived ? "Quote archived" : "Quote unarchived"
         description: variables.isArchived
           ? "The quote request has been archived"
           : "The quote request has been moved back to active quotes"
-      }),
+      });
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
-<<<<<<< HEAD
     }
     onError: (error: Error) => {
       toast({
         title: "Error";
-        description: "Failed to update quote: " + error.message
+        description: "Failed to update quote: " + error && error.message,
+
         variant: "destructive"
       })
     }
   });
-=======
     },
     onError: (error: Error) => {
       toast({
@@ -221,26 +267,48 @@ export const useAdminQuotes = () => {;
     }
   }),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Delete mutation
   const deleteMutation = useMutation({
-    mutationFn: (id: string) => quoteRequestService.delete(id),
+    mutationFn: (id: string) => quoteRequestService && quoteRequestService.delete(id);
     onSuccess: () => {
       toast({
         title: "Quote deleted"
         description: "The quote request has been permanently deleted"
+<<<<<<< HEAD
       }),
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 =======
+    }
     };
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+      });
+
+
+    };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     onError: (error: Error) => {
       toast({
         title: "Error";
         description: "Failed to delete quote: " + error.message
+=======
+      queryClient && queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
+    };
+    onError: (error: Error) => {
+      toast({
+        title: "Error";
+        description: "Failed to delete quote: " + error && error.message,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"
       })
     }
@@ -255,16 +323,28 @@ export const useAdminQuotes = () => {;
     setArchiveFilter;
     searchQuery;
     setSearchQuery;
+<<<<<<< HEAD
     dateRange;
     setDateRange
     updateStatus: (id: string, status: QuoteStatus) =>
       updateStatusMutation.mutate({ id, status });
+<<<<<<< HEAD
 <<<<<<< HEAD
     toggleArchive: (id: string, isArchived: boolean) =>
 =======
     toggleArchive: (id: string, isArchived: boolean) => 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+    toggleArchive: (id: string, isArchived: boolean) =>
+    toggleArchive: (id: string, isArchived: boolean) => 
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+
+    toggleArchive: (id: string, isArchived: boolean) => 
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },
     onError: (error: Error) => {
       toast({
@@ -349,11 +429,38 @@ export const useAdminQuotes = () => {;
       updateStatusMutation.mutate({ id, status }),;
     toggleArchive: (id: string, isArchived: boolean) =>;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
 }
 
+=======
+    setDateRange,
+    updateStatus: (id: string, status: QuoteStatus) => 
+      updateStatusMutation && updateStatusMutation.mutate({ id, status });
+    toggleArchive: (id: string, isArchived: boolean) => 
+      toggleArchiveMutation && toggleArchiveMutation.mutate({ id, isArchived });
+    deleteQuote: (id: string) => deleteMutation && deleteMutation.mutate(id)}
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    date_range;
+    setDateRange,
+    update_status: (id: string, status: QuoteStatus) =>;
+      updateStatusMutation.mutate ({ id, status });
+    toggle_archive: (id: string, is_archived: boolean) =>;
+      toggleArchiveMutation.mutate ({ id, is_archived });
+    delete_quote: (id: string) => delete_mutation.mutate (id)}
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,12 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import fs from 'fs';
 import path from 'path';
+=======
 
-<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 const p = path.join(
   process.cwd()
   'data'
@@ -23,7 +28,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res.status(500).json({ error: 'Failed to read pagespeed report' });
     }
 
-=======
 const p = path.join(process.cwd(), 'datareportspagespeedweekly-pagespeed.json');
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -32,31 +36,39 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')));
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Failed to read pagespeed' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 if (req.method === 'POST') {
     try {
-      const { performance, accessibility, bestPractices, seo } = req.body;
+      const { performance, accessibility, bestPractices, seo } = req && req.body;
+      
+
       const report = {
         performance: performance |0
         accessibility: accessibility |0
         bestPractices: bestPractices |0
         seo: seo |0
         generatedAt: new Date().toISOString()
-      }
-      fs.writeFileSync(p, JSON.stringify(report, null, 2));
-      return res.status(201).json(report);
+
+      };
+
+      fs && fs.writeFileSync(p, JSON && JSON.stringify(report, null, 2));
+      return res && res.status(201).json(report);
+
     } catch (error) {
-      return res.status(500).json({ error: 'Failed to update pagespeed report' });
+      return res && res.status(500).json({ error: 'Failed to update pagespeed report' });
     }
   }
+<<<<<<< HEAD
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
-}
 =======
+}
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+}
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -69,6 +81,26 @@ export default function handler(req, res) {
     res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')));
   } catch (error) {
     res.status(500).json({ error: e?.message || 'Failed to read PageSpeed report' });
+=======
+
+
+  res && res.setHeader('Allow', 'GET, POST');
+  res && res.status(405).end('Method Not Allowed');
+
+=======
+      const { performance, accessibility, best_practices, seo } = req.body;
+;
+      const report = {
+        performance: performance || 0,
+        accessibility: accessibility || 0,
+        best_practices: best_practices || 0,
+        seo: seo || 0,
+        generated_at: new Date ().toISOString ();
+      }
+;
+      fs.writeFileSync (p, JSON.stringify (report, null, 2));
+      return res.status (201).json (report);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -77,6 +109,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -95,5 +128,16 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

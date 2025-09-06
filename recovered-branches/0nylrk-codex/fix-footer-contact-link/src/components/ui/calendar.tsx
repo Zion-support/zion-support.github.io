@@ -2,14 +2,25 @@
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+import React from 'react';
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import * as React from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
 import {DayPicker} from "react-day-picker";
 import {cn} from "@/lib/utils";
 import {buttonVariants} from "@/components/ui/button";
+
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
-=======
 import * as React from "react",
 import { ChevronLeft, ChevronRight } from "lucide-react",
 import { DayPicker } from "react-day-picker",
@@ -17,11 +28,21 @@ import { cn } from "@/lib/utils",
 import { buttonVariants } from "@/components/ui/button",
 export type CalendarProps = React.ComponentProps<typeof DayPicker>,
 <<<<<<< HEAD
+<<<<<<< HEAD
+
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function Calendar({
   className,
   classNames,
@@ -39,7 +60,6 @@ function Calendar({
         caption_label: "text-sm font-medium"
         nav: "space-x-1 flex items-center"
         nav_button: cn(
-<<<<<<< HEAD
           buttonVariants({ variant: "outline" })
           "h-7 w-7 bg-transparent p-0 opacity-50 hover: opacity-100"
         )
@@ -64,14 +84,19 @@ function Calendar({
         ...classNames}}
       components={{
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />
-=======
           buttonVariants({ variant: "outline" }),
           "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
+
         ),
         nav_button_previous: "absolute left-1",
         nav_button_next: "absolute right-1",
         table: "w-full border-collapse space-y-1",
         head_row: "flex",
+
+        IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
+
+        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+=======
         head_cell:
           "text-muted-foreground rounded-md w-9 font-normal text-[0.8rem]",
         row: "flex w-full mt-2",
@@ -95,10 +120,13 @@ function Calendar({
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import * as React from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
 import { DayPicker } from "react-day-picker",;
@@ -150,28 +178,40 @@ function Calendar({;
         ...classNames}}
       components={{;
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
 <<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      {...props}
-    />
-  )
-}
 <<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+      {...props}
+    />;
+  );
+}
 Calendar.displayName = "Calendar";
 export { Calendar }
 
-=======
 Calendar.displayName = "Calendar",
 
 export { Calendar },
 Calendar.displayName = "Calendar";
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export { Calendar };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

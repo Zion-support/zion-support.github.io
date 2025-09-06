@@ -1,26 +1,27 @@
-
 ;
-<<<<<<< HEAD
 interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
   readonly VITE_SUPABASE_URL: string;
   readonly VITE_SUPABASE_ANON_KEY: string;
   // add more env variables as needed;
 }
-interface ImportMeta {readonly env: ImportMetaEnv;
+interface ImportMeta {
+  readonly env: ImportMetaEnv,
   readonly url?: string;
 }
 // Type declarations for modules used in Vite configuration;
-declare module 'vitest/config' {export { defineConfig } from 'vite';
+declare module 'vitest / config' {
+  export { define_config } from 'vite';
 }
-declare module '@vitejs/plugin-react-swc' {import { Plugin } from 'vite';
-  export default function reactSWC(): Plugin;
+declare module '@vitejs/plugin-react - swc' {
+  import { Plugin } from 'vite',
+  export default function reactSWC (): Plugin;
 }
-declare module 'path' {export function resolve(...paths: string[]): string;
-  export function join(...paths: string[]): string;
-  export function dirname(path: string): string;
+declare module 'path' {
+  export function resolve (...paths: string[]): string,
+  export function join (...paths: string[]): string,
+  export function dirname (path: string): string;
 }
 declare module 'lovable-tagger' {import { Plugin } from 'vite';
-=======
 interface ImportMetaEnv {;
   readonly VITE_APP_TITLE: string,;
   readonly VITE_SUPABASE_URL: string,;
@@ -51,18 +52,27 @@ declare module 'path' {;
 ;
 declare module 'lovable-tagger' {;
   import { Plugin } from 'vite',;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   export function componentTagger(): Plugin;
 }
 // Add Node.js globals
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 }
+
 =======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 declare let __dirname: string,
 declare let process: {
   env: {
@@ -79,8 +89,13 @@ declare let process: {;
     PORT?: string;
 <<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

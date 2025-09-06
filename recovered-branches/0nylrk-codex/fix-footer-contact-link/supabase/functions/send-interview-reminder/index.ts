@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
@@ -11,36 +14,62 @@ const corsHeaders = {
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") |"";
+<<<<<<< HEAD
 =======
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {Resend} from "npm: resend@2.0.0";
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
+import {Resend} from "npm: resend@2.0.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+import { Resend } from "npm: resend@2.0.0",
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
+import {Resend} from "npm: resend@2 ;
+=======
+
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
+import {Resend} from "npm: resend@2.0.0";
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { Resend } from "npm: resend@2.0.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
-const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
-const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "",
+const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
     // Use service role key for admin privileges
-<<<<<<< HEAD
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
     // Get upcoming interviews in the next hour
     const now = new Date();
@@ -50,7 +79,6 @@ serve(async (req) => {
       .select(`
         *;
         clients: client_id(*)
-=======
     const supabase = createClient(supabaseUrl, supabaseServiceKey),
     
     // Get upcoming interviews in the next hour
@@ -62,13 +90,11 @@ serve(async (req) => {
       .select(`
         *,
         clients:client_id(*),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         talents:talent_id(*)
       `)
       .eq('statusconfirmed')
       .gte('scheduled_date', now.toISOString())
       .lt('scheduled_date', thirtyMinutesFromNow.toISOString())
-<<<<<<< HEAD
       .is('reminder_sent', null);
     if (error) throw error;
     console.log(`Found ${interviews?.length |0} interviews to send reminders for`);
@@ -85,7 +111,6 @@ serve(async (req) => {
               from: "Zion Marketplace <onboarding@resend.dev>";
               to: [clientEmail]
               subject: `Your interview with ${talentName} is starting soon!`;
-=======
       .is('reminder_sent', null),
     
     if (error) throw error,
@@ -95,95 +120,121 @@ serve(async (req) => {
     const results = [],
     
     if (interviews && interviews.length > 0) {
+
       for (const interview of interviews) {
-        // Send email to client
-        const clientEmail = interview.clients?.email,
-        const talentName = interview.talents?.display_name || interview.talents?.full_name || "Talent",
-        const interviewDate = new Date(interview.scheduled_date),
+        // Send email to client;
+        const client_email = interview.clients?.email;
+        const talent_name = interview.talents?.display_name || interview.talents?.full_name || "Talent";
+        const interview_date = new Date (interview.scheduled_date);
+;
+        // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          try {
+            await resend.emails.send ({
+              from: "Zion Marketplace <onboarding@resend.dev>";
+
+        const clientEmail = interview && interview.clients?.email;
+        const talentName = interview && interview.talents?.display_name || interview && interview.talents?.full_name || "Talent";
+        const interviewDate = new Date(interview && interview.scheduled_date);
         
         if (clientEmail) {
           try {
-            await resend.emails.send({
-              from: "Zion Marketplace <onboarding@resend.dev>",
+            await resend && resend.emails.send({
+              from: "Zion Marketplace <onboarding@resend && resend.dev>";
               to: [clientEmail],
               subject: `Your interview with ${talentName} is starting soon!`,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               html: `
                 <h1>Interview Reminder</h1>
                 <p>Your scheduled interview with ${talentName} is starting in 30 minutes.</p>
-                <p><strong>Time:</strong> ${interviewDate.toLocaleTimeString()}</p>
-                <p><strong>Duration:</strong> ${interview.duration_minutes} minutes</p>
-                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</Link></p>` : ''}
+                <p><strong>Time:</strong> ${interviewDate && interviewDate.toLocaleTimeString()}</p>
+                <p><strong>Duration:</strong> ${interview && interview.duration_minutes} minutes</p>
+                ${interview && interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview && interview.meeting_link}">${interview && interview.meeting_link}</a></p>` : ''}
                 <p>Please be ready on time!</p>
-<<<<<<< HEAD
               `});
-=======
               `}),
             
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             results.push(`Reminder sent to client: ${clientEmail}`)
+=======
+            
+            results && results.push(`Reminder sent to client: ${clientEmail}`)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           } catch (emailError) {
-            console.error(`Error sending reminder to client ${clientEmail}:`, emailError)
+            console && console.error(`Error sending reminder to client ${clientEmail}:`, emailError)
           }
         }
         // Send email to talent
-<<<<<<< HEAD
         const talentEmail = interview.talents?.email;
         const clientName = interview.clients?.display_name |"Client";
         if (talentEmail) {
           try {
-            await resend.emails.send({
+            await resend.emails.send ({
               from: "Zion Marketplace <onboarding@resend.dev>";
               to: [talentEmail]
               subject: `Your interview with ${clientName} is starting soon!`;
-=======
         const talentEmail = interview.talents?.email,
         const clientName = interview.clients?.display_name || "Client",
+
         
         if (talentEmail) {
           try {
-            await resend.emails.send({
-              from: "Zion Marketplace <onboarding@resend.dev>",
+            await resend && resend.emails.send({
+              from: "Zion Marketplace <onboarding@resend && resend.dev>";
               to: [talentEmail],
+
               subject: `Your interview with ${clientName} is starting soon!`,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               html: `
                 <h1>Interview Reminder</h1>
                 <p>Your scheduled interview with ${clientName} is starting in 30 minutes.</p>
-                <p><strong>Time:</strong> ${interviewDate.toLocaleTimeString()}</p>
-                <p><strong>Duration:</strong> ${interview.duration_minutes} minutes</p>
-                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</Link></p>` : ''}
+                <p><strong>Time:</strong> ${interviewDate && interviewDate.toLocaleTimeString()}</p>
+                <p><strong>Duration:</strong> ${interview && interview.duration_minutes} minutes</p>
+                ${interview && interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview && interview.meeting_link}">${interview && interview.meeting_link}</a></p>` : ''}
                 <p>Please be ready on time!</p>
-<<<<<<< HEAD
               `});
             results.push(`Reminder sent to talent: ${talentEmail}`)
           } catch (emailError) {
+<<<<<<< HEAD
             console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+            console && console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           }
         }
         // Mark the interview as reminder sent
         await supabase
           .from('interviews')
           .update({ reminder_sent: new Date().toISOString() })
+<<<<<<< HEAD
           .eq('id', interview.id)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          .eq('id', interview.id)
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       }
     }
     return new Response(JSON.stringify({ success: true, results }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
               `}),
             
             results.push(`Reminder sent to talent: ${talentEmail}`)
           } catch (emailError) {
             console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import { Resend } from "npm: resend@2.0.0",;
@@ -274,33 +325,44 @@ serve(async (req) => {;
           .update({ reminder_sent: new Date().toISOString() });
           .eq('id', interview.id);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+          .eq('id', interview && interview.id)
+      }
+    }
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       }
     }
     
     return new Response(JSON.stringify({ success: true, results }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       status: 200})
   } catch (error) {
-    console.error("Error in send-interview-reminder function:", error),
+    console.error("Error in send-interview-reminder function:", error);
     return new Response(JSON.stringify({ error: error.message }), {
-<<<<<<< HEAD
       headers: { ...corsHeaders, "Content-Type": "application/json" }
       status: 500})
   }
 });
 
-=======
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 ;
     return new Response(JSON.stringify({ success: true, results }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
@@ -311,9 +373,15 @@ serve(async (req) => {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -2,25 +2,39 @@
 <<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
-<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
 interface HiringAnalyticsProps {
-  jobId?: string
+  job_id?: string;
 }
 export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from './react';
+import { useJobApplications } from '@/hooks / useJobApplications';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
+
+interface HiringAnalyticsProps {
+  job_id?: string;
+}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {useState, useEffect} from "react";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
-interface HiringAnalyticsProps {
-  jobId?: string
-}
 
+<<<<<<< HEAD
 export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const { applications, isLoading } = useJobApplications(jobId);
   const [analyticsData, setAnalyticsData] = useState<{
 
@@ -75,6 +89,7 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
   if (isLoading) {
     return <div>Loading analytics data...</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   if (!applications |applications.length === 0) {
 =======
@@ -83,6 +98,12 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
 import { useState, useEffect } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  }
+  if (!applications |applications.length === 0) {
+import { useState, useEffect } from "react",
+import { useJobApplications } from "@/hooks/useJobApplications",
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts',
 
@@ -92,12 +113,14 @@ import { useState, useEffect } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts',;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface HiringAnalyticsProps {;
   jobId?: string;
 }
-;
-export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
-  const { applications, isLoading } = useJobApplications(jobId),;
+
+export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
+  const { applications, isLoading } = useJobApplications(jobId);
   const [analyticsData, setAnalyticsData] = useState<{;
     statusDistribution: any[],;
     timeToHire: number,;
@@ -108,56 +131,95 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
     timeToHire: 0,;
     conversionRate: 0,;
     funnelData: []}),;
+
   useEffect(() => {;
     if (applications && applications.length > 0) {;
       // Calculate status distribution;
-      const statusCounts: Record<string number> = {},;
-      applications.forEach(app => {;
-        statusCounts[app.status] = (statusCounts[app.status] || 0) + 1;
-      }),;
-      const statusDistribution = Object.entries(statusCounts).map(([status, count]) => ({;
-        status,;
-        count})),;
+      const statusCounts: Record<string, number> = {};
+      applications && applications.forEach(app => {;
+        statusCounts[app && app.status] = (statusCounts[app && app.status] || 0) + 1;
+      });
+
+      const statusDistribution = Object && Object.entries(statusCounts).map(([status, count]) => ({;
+        status;
+        count}));
+
       // Calculate time to hire (in days);
-      const hiredApplications = applications.filter(app => app.status === 'hired'),;
-      let avgTimeToHire = 0,;
-      if (hiredApplications.length > 0) {;
-        const totalDays = hiredApplications.reduce((sum, app) => {;
-          const hireDate = new Date(app.updated_at),;
-          const applyDate = new Date(app.created_at),;
-          const daysDiff = (hireDate.getTime() - applyDate.getTime()) / (1000 * 3600 * 24),;
+      const hiredApplications = applications && applications.filter(app => app && app.status === 'hired');
+      let avgTimeToHire = 0;
+
+      if (hiredApplications && hiredApplications.length > 0) {;
+        const totalDays = hiredApplications && hiredApplications.reduce((sum, app) => {;
+          const hireDate = new Date(app && app.updated_at);
+          const applyDate = new Date(app && app.created_at);
+          const daysDiff = (hireDate && hireDate.getTime() - applyDate && applyDate.getTime()) / (1000 * 3600 * 24);
           return sum + daysDiff;
-        }, 0),;
-        avgTimeToHire = Math.round(totalDays / hiredApplications.length);
+        }, 0);
+
+        avgTimeToHire = Math && Math.round(totalDays / hiredApplications && hiredApplications.length);
       }
-;
+
       // Calculate conversion rate;
-      const conversionRate = hiredApplications.length > 0;
-        ? Math.round((hiredApplications.length / applications.length) * 100);
-        : 0,;
+      const conversionRate = hiredApplications && hiredApplications.length > 0;
+        ? Math && Math.round((hiredApplications && hiredApplications.length / applications.length) * 100);
+        : 0;
+
       // Funnel data;
       const funnelData = [;
         { name: 'Applied', value: applications.length },;
-        { name: 'Shortlisted', value: applications.filter(app => app.status === 'shortlisted').length },;
-        { name: 'Interview', value: applications.filter(app => app.status === 'interview').length },;
-        { name: 'Hired', value: applications.filter(app => app.status === 'hired').length }],;
+        { name: 'Shortlisted', value: applications && applications.filter(app => app && app.status === 'shortlisted').length },;
+        { name: 'Interview', value: applications && applications.filter(app => app && app.status === 'interview').length },;
+        { name: 'Hired', value: applications && applications.filter(app => app && app.status === 'hired').length }],;
+
       setAnalyticsData({;
-        statusDistribution,;
+        statusDistribution;
         timeToHire: avgTimeToHire,;
-        conversionRate,;
+
+        conversionRate;
         funnelData});
     }
   }, [applications]);
+
+
   if (isLoading) {;
     return <div>Loading analytics data...</div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  }
+
+  if (!applications || applications.length === 0) {;
+
+    return (
+      <Card className="text-center py-16">;
+        <CardContent>;
+          <h3 className="text-lg font-semibold mb-2">No data available</h3>;
+          <p className="text-muted-foreground mb-6">;
+            You need applications to generate analytics;
+          </p>;
+        </CardContent>;
+      </Card>;
+    );
+  }
+
+
+
+  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
   
   if (!applications || applications.length === 0) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return (
       <Card className="text-center py-16">
         <CardContent>
@@ -169,26 +231,23 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
       </Card>
     )
   }
-<<<<<<< HEAD
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
 
-=======
   
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
       {/* Status Distribution */}
-      <Card>
-        <CardHeader>
-          <CardTitle>Application Status Distribution</CardTitle>
-        </CardHeader>
-        <CardContent className="h-64">
-          <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
+      <Card>;
+        <CardHeader>;
+          <CardTitle>Application Status Distribution</CardTitle>;
+        </CardHeader>;
+        <CardContent className="h-64">;
+          <ResponsiveContainer width="100%" height="100%">;
+            <PieChart>;
               <Pie
-                data={analyticsData.statusDistribution}
+                data={analyticsData && analyticsData.statusDistribution}
                 cx="50%"
                 cy="50%"
                 labelLine={false}
@@ -196,63 +255,66 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
                 fill="#8884d8"
                 dataKey="count"
                 label={({name, percent}) => `${name}: ${(percent * 100).toFixed(0)}%`}
-              >
-                {analyticsData.statusDistribution.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+              >;
+                {analyticsData && analyticsData.statusDistribution.map((entry, index) => (;
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS && COLORS.length]} />;
                 ))}
-              </Pie>
-              <Tooltip />
-            </PieChart>
-          </ResponsiveContainer>
-        </CardContent>
-      </Card>
+
+              </Pie>;
+              <Tooltip />;
+            </PieChart>;
+          </ResponsiveContainer>;
+        </CardContent>;
+      </Card>;
+
       {/* Time to Hire */}
-      <Card>
-        <CardHeader>
-          <CardTitle>Time to Hire</CardTitle>
-        </CardHeader>
-        <CardContent className="flex flex-col items-center justify-center h-64">
-          <div className="text-5xl font-bold text-primary">
-            {analyticsData.timeToHire |"N/A"}
-          </div>
-          <div className="text-sm text-muted-foreground mt-2">
-            Average days from application to hire
-          </div>
-        </CardContent>
-      </Card>
+      <Card>;
+        <CardHeader>;
+          <CardTitle>Time to Hire</CardTitle>;
+        </CardHeader>;
+        <CardContent className="flex flex-col items-center justify-center h-64">;
+          <div className="text-5xl font-bold text-primary">;
+            {analyticsData && analyticsData.timeToHire || "N/A"}
+          </div>;
+          <div className="text-sm text-muted-foreground mt-2">;
+            Average days from application to hire;
+          </div>;
+        </CardContent>;
+      </Card>;
+
       {/* Conversion Rate */}
-      <Card>
-        <CardHeader>
-          <CardTitle>Application Conversion Rate</CardTitle>
-        </CardHeader>
-        <CardContent className="flex flex-col items-center justify-center h-64">
-          <div className="text-5xl font-bold text-primary">
-            {analyticsData.conversionRate}%
-          </div>
-          <div className="text-sm text-muted-foreground mt-2">
-            Applications to hired ratio
-          </div>
-        </CardContent>
-      </Card>
+      <Card>;
+        <CardHeader>;
+          <CardTitle>Application Conversion Rate</CardTitle>;
+        </CardHeader>;
+        <CardContent className="flex flex-col items-center justify-center h-64">;
+          <div className="text-5xl font-bold text-primary">;
+            {analyticsData && analyticsData.conversionRate}%;
+          </div>;
+          <div className="text-sm text-muted-foreground mt-2">;
+            Applications to hired ratio;
+          </div>;
+        </CardContent>;
+      </Card>;
+
+
       {/* Hiring Funnel */}
-      <Card className="lg:col-span-3">
-        <CardHeader>
-          <CardTitle>Hiring Funnel</CardTitle>
-        </CardHeader>
-        <CardContent className="h-80">
-          <ResponsiveContainer width="100%" height="100%">
+      <Card className="lg:col-span-3">;
+        <CardHeader>;
+          <CardTitle>Hiring Funnel</CardTitle>;
+        </CardHeader>;
+        <CardContent className="h-80">;
+          <ResponsiveContainer width="100%" height="100%">;
             <BarChart
-              data={analyticsData.funnelData}
-              layout="vertical"
-            >
-              <XAxis type="number" />
-              <YAxis dataKey="name" type="category" width={100} />
-              <Tooltip />
-              <Bar dataKey="value" fill="#8884d8" radius={[0, 4, 4, 0]}>
-                {analyticsData.funnelData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+              data={analyticsData && analyticsData.funnelData}
+              layout="vertical">;
+              <XAxis type="number" />;
+              <YAxis dataKey="name" type="category" width={100} />;
+              <Tooltip />;
+              <Bar dataKey="value" fill="#8884d8" radius={[0, 4, 4, 0]}>;
+                {analyticsData && analyticsData.funnelData.map((entry, index) => (;
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS && COLORS.length]} />;
                 ))}
-<<<<<<< HEAD
               </Bar>
             </BarChart>
           </ResponsiveContainer>
@@ -261,14 +323,14 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
     </div>
   )
 }
-=======
               </Bar>;
             </BarChart>;
           </ResponsiveContainer>;
         </CardContent>;
       </Card>;
-    </div>;
-  );
+
+    </div>);
 }
+
+=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

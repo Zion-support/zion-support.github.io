@@ -1,13 +1,22 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import OpenAI from 'openai';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import OpenAI from 'openai',;
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import OpenAI from 'openai',;
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -29,10 +38,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const completion = await openai.chat.completions.create({
         model: 'gpt-4o-mini'
         messages: [
-          { role: 'system', content: system }
-          { role: 'user', content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}` }]
-        temperature: 0.2})
-      const translated = completion.choices?.[0]?.message?.content?.trim() |''
+
+
       results[lng] = translated
     }
     return res.status(200).json(results)
@@ -41,13 +48,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(500).json({ error: 'Translation failed' })
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   };
 };
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ translation: 'Translated content' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -65,31 +77,47 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
+
+=======
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+import OpenAI from 'openai',
+const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
+  $2
+}
+  const { text, targets } = req.body as { text: string, targets: string[] },
+  // Check condition
+if (|| targets.length === 0) {) {
+  $2
+}
+    return res.status (400).json ({ error: 'Invalid input' });
   }
-}
-;
   try {
-    const system = 'You are a professional localization specialist. Maintain meaning, tone, and formatting. Output only the translated text.',;
-    const results: Record<string, string> = {};
-    for (const lng of targets) {;
-      const langName = (;
-        lng.startsWith('pt') ? 'Portuguese' :;
-        lng.startsWith('es') ? 'Spanish' :;
-        lng.startsWith('ar') ? 'Arabic' :;
-        'English';
-      );
-      const completion = await openai.chat.completions.create({;
-        model: 'gpt-4o-mini';
+    const system = 'You are a professional localization specialist. Maintain meaning, tone, and formatting. Output only the translated text.',
+    const results: Record < string, string> = {},
+    for (const lng of targets) {
+      const lang_name = (
+        lng.starts_with ('pt') ? 'Portuguese' :;
+        lng.starts_with ('es') ? 'Spanish' :;
+        lng.starts_with ('ar') ? 'Arabic' :;
+        'English'),
+      const completion = await openai.chat.completions.create ({
+        model: 'gpt - 4o - mini',
         messages: [;
-          { role: 'system', content: system },;
-          { role: 'user', content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}` }],;
-        temperature: 0.2});
-      const translated = completion.choices?.[0]?.message?.content?.trim() || '';
+          { role: 'system', content: system },
+          { role: 'user', content: `Translate this into ${lang_name} in a business - appropriate tone.\n\n${text}` }],
+        temperature: 0.2}),
+      const translated = completion.choices?.[0]?.message?.content?.trim () || '',
       results[lng] = translated;
       } catch (error) {
     console.error("Error:", error);
@@ -99,6 +127,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -134,6 +163,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }
@@ -142,3 +172,17 @@ export default async function handler(req, res) {
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  }
+}
+  }
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

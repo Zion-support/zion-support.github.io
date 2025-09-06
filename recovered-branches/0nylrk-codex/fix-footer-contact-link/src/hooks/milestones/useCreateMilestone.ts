@@ -3,10 +3,18 @@
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {useState} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations / supabase / client';
+import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone} from './types';
 import {useRecordActivity} from './useRecordActivity';
@@ -25,34 +33,88 @@ export const useCreateMilestone = (projectId?: string) => {
           ...milestoneData;
           project_id: projectId
           created_by: user.id})
+=======
+
+          project_id: projectId,
+          created_by: user && user.id})
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         .select()
         .single();
       if (error) throw error;
       // Create activity record
-      await recordMilestoneActivity(data.id, 'created', null, 'pendingMilestone created');
-      toast.success("Milestone created successfully");
+
+      await recordMilestoneActivity(data && data.id, 'created', null, 'pendingMilestone created');
+      
+      toast && toast.success("Milestone created successfully");
+      
       return data
     } catch (err: any) {
-      console.error("Error creating milestone:", err);
-      toast.error("Failed to create milestone: " + err.message)
-      return null
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-  return {
-    createMilestone;
-    isSubmitting
-  }
-}
+      console && console.error("Error creating milestone:", err);
+      toast && toast.error("Failed to create milestone: " + err && err.message),
 
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+      return null
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+export const useCreateMilestone = (project_id?: string) =>: any {
+  const { user } = use_auth ();
+  const [is_submitting, setIsSubmitting] = useState (false);
+  const { recordMilestoneActivity } = useRecordActivity ();
+;
+  const create_milestone = async (milestone_data: Omit < Milestone, 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {
+    // Check condition
+if (return null) {
+  $2
+}
+    try {
+      setIsSubmitting (true);
+;
+      const { data, error } = await supabase;
+        .from ('project_milestones');
+        .insert ({
+          ...milestone_data;
+          project_id: project_id,
+          created_by: user.id});
+        .select ();
+        .single ();
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      // Create activity record;
+      await recordMilestoneActivity (data.id, 'created', null, 'pending_milestone created');
+;
+      toast.success ("Milestone created successfully");
+;
+      return data;
+    } catch (err: any) {
+      console.error ("Error creating milestone:", err);
+      toast.error ("Failed to create milestone: " + err.message),
+      return null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } finally {
+      setIsSubmitting (false);
+    }
+
 export const useCreateMilestone = (projectId?: string) => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -63,7 +125,6 @@ export const useCreateMilestone = (projectId?: string) => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const createMilestone = async (milestoneData: Omit<Milestone 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {
     if (!user || !projectId) return null,
@@ -95,7 +156,10 @@ export const useCreateMilestone = (projectId?: string) => {
     } finally {
       setIsSubmitting(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
     }
   };
@@ -103,8 +167,11 @@ export const useCreateMilestone = (projectId?: string) => {
   return {
     createMilestone;
     isSubmitting
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -144,9 +211,16 @@ export const useCreateMilestone = (projectId?: string) => {;
     createMilestone;
     isSubmitting;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

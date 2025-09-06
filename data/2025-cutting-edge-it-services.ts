@@ -1,6 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+
+
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const cuttingEdgeITServices2025 = [
@@ -420,29 +426,70 @@ export const cuttingEdgeITServices2025 = [
     ]
     compliance: [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       'DevOps Best Practices'
       'Security Standards'
       'Quality Assurance Protocols'
     ]
   }
 =======
+export const cuttingEdgeITServices2025 = [
+  {
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'DevOps Best Practices',
       'Security Standards',
       'Quality Assurance Protocols',
     ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+
   },;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+  },;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
+=======
+];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
-    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
 <<<<<<< HEAD
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+<<<<<<< HEAD
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
   }
 ];
 
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const cuttingEdgeITServices2025 = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;
@@ -650,8 +697,12 @@ export const cuttingEdgeITServices2025 = [;
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
 <<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

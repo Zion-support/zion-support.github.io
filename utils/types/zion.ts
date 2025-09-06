@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export interface Branding {logoUrl?: string;
   primaryColor?: string;
   secondaryColor?: string;
@@ -8,15 +12,21 @@ export interface Branding {logoUrl?: string;
 }
 export interface DeployModules {marketplace: boolean;
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export interface Branding {;
-<<<<<<< HEAD
   logoUrl?: string;
   primaryColor?: string;
   secondaryColor?: string;
   subdomain?: string;
-=======
   logoUrl?: string,;
   primaryColor?: string,;
   secondaryColor?: string,;
@@ -25,12 +35,10 @@ export interface Branding {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 export interface DeployModules {;
   marketplace: boolean;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -50,6 +58,9 @@ export interface DeployModules {;
   trailer?: boolean;
   bookStore?: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 export interface DeployInput {instanceName: string;
   defaultLanguage: string;
@@ -71,8 +82,15 @@ export interface GeneratedAsset {kind: "file" | "page" | "config" | "job" | "eve
 }
 export interface DeployResult {success: boolean;
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   globalMap?: boolean,;
   franchiseOnboarding?: boolean,;
   referralAmbassadors?: boolean,;
@@ -83,7 +101,6 @@ export interface DeployResult {success: boolean;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 export interface DeployInput {;
@@ -92,7 +109,10 @@ export interface DeployInput {;
   deploymentRegion: string;
   tokenActivation: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 <<<<<<< HEAD
   governanceMode: GovernanceMode;
   branding: Branding;
@@ -111,8 +131,11 @@ export interface GeneratedAsset {;
   kind: "file" | "page" | "config" | "job" | "event";
   path: string;
   description?: string;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   governanceMode: GovernanceMode,;
   branding: Branding,;
   modules: DeployModules,;
@@ -142,12 +165,14 @@ export interface GeneratedAsset {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 export interface DeployResult {;
   success: boolean;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
@@ -156,37 +181,126 @@ export interface DeployResult {;
   version: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
   adminKeyConfigured: boolean;
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+export type GovernanceMode = "Admin" | "DAO" | "Hybrid",
+export interface Branding {
+  logo_url?: string,
+  primary_color?: string,
+  secondary_color?: string,
+  subdomain?: string;
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
-;
-export interface AccessControlConfig {;
-  allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
+export interface DeployModules {
+  marketplace: boolean,
+  gpt: boolean,
+  academy: boolean,
+  token: boolean,
+  dao: boolean,
+  nation_builder: boolean,
+  launch_kit: boolean,
+  book_builder: boolean,
+  roadmap_whitepaper: boolean,
+  apiDocsWiki: boolean,
+  zion_brain: boolean,
+  // Bonus;
+  global_map?: boolean,
+  franchise_onboarding?: boolean,
+  referral_ambassadors?: boolean,
+  grant_portal?: boolean,
+  trailer?: boolean,
+  book_store?: boolean;
+}
+export interface DeployInput {
+  instance_name: string,
+  default_language: string,
+  deployment_region: string,
+  token_activation: boolean,
+  governance_mode: GovernanceMode,
+  branding: Branding,
+  modules: DeployModules,
+  requested_routes?: string[];
+}
+export interface DeployLogEntry {
+  timestamp: string,
+  level: "info" | "warn" | "error",
+  action: string,
+  details?: Record < string unknown> | string;
+}
+export interface GeneratedAsset {
+  kind: "file" | "page" | "config" | "job" | "event",
+  path: string,
+  description?: string;
+}
+export interface DeployResult {
+  success: boolean,
+  instance_slug: string,
+  config_path: string,
+  assets: GeneratedAsset[],
+  logs: DeployLogEntry[],
+  summary: string,
+  version: string;
+}
+export interface AccessControlConfig {
+  allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   adminKeyConfigured: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+=======
+}
+=======
+
+
+
+}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

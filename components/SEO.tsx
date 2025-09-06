@@ -1,52 +1,51 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+
 import React from "react";
 import Head from "next/head";
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-=======
-import Head from "next/head";
-import { useRouter } from "next/router";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+origin/automation-improvements-final
 
-=======
-import React from "react";
-import Head from "next/head";
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 interface SEOProps {
+interface SEOProps {;
   title?: string;
   description?: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
   keywords?: string;
 }
-const SEO: React.FC<SEOProps> = ({
-  title = "Zion Tech Group - Technology Solutions"
-  description = "Leading provider of AI services, IT solutions, and micro SaaS development."
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting"
+
+const SEO: React.FC < SEOProps> = ({
+  title = "Zion Tech Group - Technology Solutions",
+  description = "Leading provider of AI services, IT solutions, and micro SaaS development.",
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting",
+
 }) => {
+=======
+
+const SEO: React.FC<SEOProps> = ({;
+  title = "Zion Tech Group - Technology Solutions",;
+  description = "Leading provider of AI services, IT solutions, and micro SaaS development.",;
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting",;
+}) => {;
   return (
     <Head>
       <title>{title}</title>
@@ -55,22 +54,18 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Head>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 };
 
 export default SEO;
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
-=======
   image?: string;
   url?: string;
   type?: string;
-
 export default function SEO({
   title = "Zion Tech Group - Advanced AI Solutions",
   description = "Leading provider of AI-powered automation, blockchain solutions, and enterprise software development.",
@@ -80,7 +75,6 @@ export default function SEO({
 }: SEOProps) {
   const router = useRouter();
   const canonicalUrl = url || `https://zion.app${router.asPath}`;
-
   return (
     <Head>
       <title>{title}</title>
@@ -97,17 +91,11 @@ export default function SEO({
       <link rel="canonical" href={canonicalUrl} />
     </Head>
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 }
 export default SEO;
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
+origin/main
+origin/automation-improvements-final
 }
 export default SEO;
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

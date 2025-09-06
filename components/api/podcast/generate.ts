@@ -4,50 +4,32 @@ import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
 
-const EPISODES_PATH = path.join(
-  process.cwd()
-  'data'
-  'podcast'
-  'episodes.json'
-);
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-}
-episodes.unshift (episode);
-writeEpisodes (episodes);
-function writeEpisodes(episodes: any[]) {
-  ensureStorage();
-  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
+
 function readEpisodes(): any[] {
   ensureStorage();
-  return JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8'))
+  return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8'))
 }
 function writeEpisodes(episodes: any[]) {
   ensureStorage();
-  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')
+  fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')
 }
 <<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { persona, invitee, topic, operatorPrompt } = req.body |{}
+=======
+
+
+
+  const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 1) 7-10 concise interview questions mixing visionary and technical angles
@@ -112,7 +94,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     const episode = {      return res.status(500).json({ error: 'Failed to generate structured content' });
     }
     const episodes = readEpisodes();
-<<<<<<< HEAD
     const episode = {
       id
       createdAt: new Date().toISOString()
@@ -145,6 +126,9 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     console.error(error);
     return res.status(500).json({ error: error?.message |'Unknown error' })
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 }
 <<<<<<< HEAD
 }
@@ -152,10 +136,38 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     const episode = {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+    writeEpisodes(episodes);
+    return res && res.status(200).json({ episode })
+  } catch (error: any) {
+    console && console.error(error);
+    return res && res.status(500).json({ error: error?.message || 'Unknown error' })
+  };
+}
+}
+    const episode = {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 }
+  }
+
 }
-=======
+<<<<<<< HEAD
     const episode = {
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

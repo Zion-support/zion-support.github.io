@@ -1,14 +1,28 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from "next";
 import { buildPressRelease } from "../../../utils/mediaKit";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { buildPressRelease  } from '../../../utils / media_kit';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     const {
 <<<<<<< HEAD
@@ -20,6 +34,12 @@ export default async function handler(
       contactEmail = "press@zion.com"
     } = req.body |{}
 =======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       type = "launch",
       companyName = "Zion",
       date = new Date().toISOString().substring(0, 10),
@@ -28,30 +48,39 @@ export default async function handler(
       contactEmail = "press@zion.com",;
     } = req.body || {};
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     if (req.method !== "POST") {
       res.setHeader("Allow", "POST");
       return res.status(405).json({ error: "Method not allowed" });
-    }
-    const pressRelease = await buildPressRelease({
-      type
-      companyName
-      date
-      raiseAmount
-      description
-      contactEmail
-    });
-    return res.status(200).json({
-      ok: true
-      pressRelease
-      downloadUrl: `/api/media/download/${pressRelease.id}`
+=======
+      type = "launch",
+      company_name = "Zion",
+      date = new Date ().toISOString ().substring (0, 10),
+      raise_amount,
+      description = "Innovative technology company",
+
+
+    return res && res.status(200).json({
+      ok: true,
+      pressRelease,
+      downloadUrl: `/api/media/download/${pressRelease && pressRelease.id}`,
     });
   } catch (error: any) {
+<<<<<<< HEAD
     console.error("Press release generation error:", error);
     return res.status(500).json({
       ok: false
       error: "Failed to generate press release"
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -61,6 +90,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { buildPressRelease } from '../../../utils/mediaKit';
 
@@ -91,17 +126,42 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       } catch (_) {
         // fall through to template
       }
+=======
+    console && console.error("Press release generation error:", error);
+    return res && res.status(500).json({
+=======
+      contact_email = "press@zion.com",
+    } = req.body || {}
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      res.set_header ("Allow", "POST");
+      return res.status (405).json ({ error: "Method not allowed" });
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 
     const text = buildPressRelease(type, { companyName, date, raiseAmount, tokenName } as any);
     res.status(200).json({ ok: true, text, fallback: true });
   } catch (e: any) {
     res.status(500).json({ ok: false, error: e?.message || 'Unknown error' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 <<<<<<< HEAD
 }
 =======
+<<<<<<< HEAD
+=======
+
+
+  }
+
+}
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
   } catch (error) {
     console.error("Error:", error);
@@ -119,7 +179,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

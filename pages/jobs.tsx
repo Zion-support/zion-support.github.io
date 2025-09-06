@@ -1,6 +1,3 @@
-import type { NextPage } from 'next';
-import Seo from '../components/seo/Seo';
-import { JobPostingJsonLd } from 'next-seo';
 
 const Jobs: NextPage = () => {
   const job = {
@@ -14,46 +11,32 @@ const Jobs: NextPage = () => {
       value: 160000
       unitText: 'YEAR'}
     hiringOrganization: {
-<<<<<<< HEAD
       name: 'Zion Tech Solutions'
       sameAs: 'https://ziontechgroup.netlify.app'
       logo: 'https://ziontechgroup.netlify.app/logo.png'}
     jobLocationType: 'TELECOMMUTE'} as const
-=======
       name: 'Zion Tech Solutions',
-      sameAs: 'https://ziontechgroup.netlify.app',
-      logo: 'https://ziontechgroup.netlify.app/logo.png'},
+      same_as: 'https://ziontechgroup.netlify.app',
+      logo: 'https://ziontechgroup.netlify.app / logo.png'},
     jobLocationType: 'TELECOMMUTE'} as const,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div>
       <Seo title="Jobs" description="Open roles at Zion Tech Solutions." />
       <JobPostingJsonLd
-<<<<<<< HEAD
         datePosted={job.datePosted}
         description={job.description}
-        employmentType={job.employmentType}
-        hiringOrganization={job.hiringOrganization}
+        employment_type={job.employment_type}
+        hiring_organization={job.hiring_organization}
         jobLocationType={job.jobLocationType}
         title={job.title}
-        validThrough={job.validThrough}
-        baseSalary={job.baseSalary}
-      />
-      <main>
-        <h1>Jobs</h1>
-        <p>{job.title}</p>
-        <p>{job.description}</p>
-      </main>
-    </div>
-  )
-}
-export default Jobs;
 
 <<<<<<< HEAD
-=======
 export default Jobs,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         datePosted={job.datePosted  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -94,18 +77,32 @@ export default Jobs,;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+=======
+        valid_through={job.valid_through}
+        base_salary={job.base_salary}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       />;
       <main>;
-        <h1>Jobs</h1>;
+        <h1 > Jobs</h1>;
         <p>{job.title}</p>;
         <p>{job.description}</p>;
       </main>;
+
     </div>;
   );
 },;
 export default Jobs;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

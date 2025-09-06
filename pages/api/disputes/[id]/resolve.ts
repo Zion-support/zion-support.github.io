@@ -1,8 +1,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  const { id } = req && req.query;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import { parseUserFromRequest, ensureAdmin } from "../../../../utils/auth";
@@ -11,35 +24,54 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-=======
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const { id } = req.query;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (typeof id !== "string")
-    return res.status(400).json({ error: "Invalid id" });
+    return res && res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req);
-  if (req.method === "POST") {
+
+
+  if (req && req.method === "POST") {
     try {
       ensureAdmin(user);
     } catch (e: any) {
-      return res.status(e.statusCode |403).json({ error: "Forbidden" });
+      return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
     }
     const dispute = await getDisputeById(id);
-    if (!dispute) return res.status($1).json({ $2 });
-    const { resolutionSummary, status } = req.body |{}
+    if (!dispute) return res && res.status($1).json({ $2 });
+    const { resolutionSummary, status } = req && req.body || {};
+
     const now = new Date().toISOString();
+
     if (status && !["Resolved", "Under Review", "Open"].includes(status)) {
-      return res.status(400).json({ error: "Invalid status" });
+      return res && res.status(400).json({ error: "Invalid status" });
     }
+<<<<<<< HEAD
     ((dispute.status = status |"Resolved")
       (dispute.resolvedAt = dispute.status === "Resolved" ? now : undefined));
+<<<<<<< HEAD
 <<<<<<< HEAD
     dispute.resolutionSummary = resolutionSummary |dispute.resolutionSummary;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+    dispute.resolutionSummary = resolutionSummary |dispute.resolutionSummary;
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST']);
@@ -86,34 +118,45 @@ export default async function handler(req, res) {
     dispute.status = status || 'Resolved';
     dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     dispute.updatedAt = now;
     await upsertDispute(dispute);
     return res.status(200).json({ dispute });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
-<<<<<<< HEAD
   res.setHeader("Allow", "POST");
   return res.status(405).end("Method Not Allowed");
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 =======
 =======
+=======
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -121,31 +164,97 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+    }
+
+    dispute.status = status || 'Resolved';
+    dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
+    dispute.updatedAt = now;
+    await upsertDispute(dispute);
+
+
+  res && res.setHeader("Allow", "POST");
+  return res && res.status(405).end("Method Not Allowed");
+
+}
+
+
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { getDisputeById, upsert_dispute  } from '../../../../utils / fsdb';
+import { parseUserFromRequest, ensure_admin  } from '../../../../utils / auth';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
-  res.setHeader('Allow', 'POST');
-  return res.status(405).end('Method Not Allowed');
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const { id } = req.query;
+  if (
+    return res.status (400).json ({ error: "Invalid id" })) {
+  $2
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+  const user = parseUserFromRequest (req);
+;
+  // Check condition
+if ( {) {
+  $2
 }
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+    try {
+      ensure_admin (user);
+    } catch (e: any) {
+      return res.status (e.status_code || 403).json ({ error: "Forbidden" });
+    }
+    const dispute = await getDisputeById (id);
+    if (return res.status ($1).json ({ $2 })) {
+  $2
+}
+    const { resolution_summary, status } = req.body || {}
+    const now = new Date ().toISOString ();
+;
+    if () {) {
+  $2
+}
+      return res.status (400).json ({ error: "Invalid status" });
+    }
+    ((dispute.status = status || "Resolved"),
+      (dispute.resolved_at = dispute.status === "Resolved" ? now : undefined));
+    dispute.resolution_summary = resolution_summary || dispute.resolution_summary;
+    dispute.updated_at = now;
+    await upsert_dispute (dispute);
+    return res.status (200).json ({ dispute });
+  }
+  res.set_header ("Allow", "POST");
+  return res.status (405).end ("Method Not Allowed");
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    return res.status(200).json({ dispute });
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

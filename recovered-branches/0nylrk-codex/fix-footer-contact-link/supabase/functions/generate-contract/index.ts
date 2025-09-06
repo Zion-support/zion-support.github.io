@@ -1,28 +1,46 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts"
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+
 interface Milestone {
   title: string;
   description: string;
   dueDate: string
   estimatedHours: number
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 interface Milestone {
   title: string,
@@ -30,10 +48,13 @@ interface Milestone {
   dueDate: string,
   estimatedHours: number
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -44,24 +65,40 @@ interface Milestone {;
   dueDate: string,;
   estimatedHours: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === 'OPTIONS') {
+  if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   try {
     // Get the OpenAI API key from environment variables
-    const apiKey = Deno.env.get('OPENAI_API_KEY');
+    const apiKey = Deno && Deno.env.get('OPENAI_API_KEY');
     if (!apiKey) {
       throw new Error('OPENAI_API_KEY is not set')
     }
@@ -77,15 +114,27 @@ serve(async (req) => {
       paymentAmount;
       additionalClauses;
       milestones
-    } = await req.json();
+
+    } = await req && req.json();
+
+
     // Create the contract prompt for OpenAI
     let prompt = `
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:
 <<<<<<< HEAD
+<<<<<<< HEAD
+
 =======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+
+
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   try {;
     // Get the OpenAI API key from environment variables;
@@ -111,10 +160,17 @@ serve(async (req) => {
     let prompt = `;
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -130,22 +186,25 @@ serve(async (req) => {
     if (additionalClauses && additionalClauses.length > 0) {
       prompt += `
       Please also include the following additional clauses:
-      ${additionalClauses.includes('nda') ? '- Confidentiality/Non-disclosure agreement' : ''}
-      ${additionalClauses.includes('ip') ? '- Intellectual Property rights transfer to the client' : ''}
-      ${additionalClauses.includes('termination') ? '- Termination conditions and process' : ''}
-      ${additionalClauses.includes('revisions') ? '- Revision and amendment procedures' : ''}
+      ${additionalClauses && additionalClauses.includes('nda') ? '- Confidentiality/Non-disclosure agreement' : ''}
+      ${additionalClauses && additionalClauses.includes('ip') ? '- Intellectual Property rights transfer to the client' : ''}
+      ${additionalClauses && additionalClauses.includes('termination') ? '- Termination conditions and process' : ''}
+      ${additionalClauses && additionalClauses.includes('revisions') ? '- Revision and amendment procedures' : ''}
       `
     }
     // Add milestone information if available
     if (milestones && milestones.length > 0) {
       prompt += `
-      The project will be divided into the following milestones: `
-      milestones.forEach((milestone: Milestone, index: number) => {
+
+      
+      The project will be divided into the following milestones: `,
+      
+      milestones && milestones.forEach((milestone: Milestone, index: number) => {
+
         prompt += `
         Milestone ${index + 1}: ${milestone.title}
         - Description: ${milestone.description}
         - Due Date: ${new Date(milestone.dueDate).toLocaleDateString()}
-<<<<<<< HEAD
         - Estimated Work: ${milestone.estimatedHours} hours
         `
       });
@@ -160,8 +219,9 @@ serve(async (req) => {
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
       headers: {
-        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`}
-      body: JSON.stringify({
+        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`};
+      body: JSON && JSON.stringify({
+
         model: 'gpt-4o';
         messages: [
           {
@@ -191,18 +251,75 @@ serve(async (req) => {
 <<<<<<< HEAD
       {
         status: 500
-=======
       { 
         status: 500, 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+;
+=======
+        Milestone ${index + 1}: ${milestone.title}
+        - Description: ${milestone.description}
+        - Due Date: ${new Date(milestone.dueDate).toLocaleDateString()}
+
+      { 
+        status: 500, 
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         - Estimated Work: ${milestone.estimatedHours} hours;
         `;
       }),;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       prompt += `;
       Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.;
       `;
     }
+
+        temperature: 0 && 0.7})});
+
+    const data = await response && response.json();
+    
+    if (!response && response.ok) {
+      throw new Error(data && data.error?.message || 'Failed to generate contract')
+    }
+
+    const contract = data && data.choices[0].message && message.content.trim();
+    
+    return new Response(JSON && JSON.stringify({ 
+      success: true, 
+      contract 
+
+=======
+;
+    const data = await response.json ();
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error (data.error?.message || 'Failed to generate contract');
+    }
+    const contract = data.choices[0].message.content.trim ();
+;
+    return new Response (JSON.stringify ({
+      success: true,
+      contract;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    }), {
+      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+  } catch (error) {
+
+      JSON && JSON.stringify({ 
+        success: false, 
+        error: error && error.message || 'Failed to generate contract' 
+
+      });
+      {
+        status: 500
+=======
 ;
     prompt += `;
     Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.;
@@ -243,15 +360,17 @@ serve(async (req) => {
       {;
         status: 500,;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }
 });
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

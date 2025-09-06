@@ -9,7 +9,14 @@ import { AIEnhancementPanel  } from './AIEnhancementPanel';
 import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 interface AIEnhancementDialogProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   title: string,
   isOpen: boolean,
   onClose: () => void,
@@ -24,8 +31,15 @@ export function AIEnhancementDialog({;
   onClose;
   onApply;
   defaultOptions;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import {;
   Dialog,;
@@ -42,7 +56,6 @@ interface AIEnhancementDialogProps {;
   defaultOptions: AIEnhancementOptions,;
   initialContent?: string;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   title: string
   isOpen: boolean
@@ -58,32 +71,67 @@ export function AIEnhancementDialog({
   onClose,
   onApply,
   defaultOptions,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   initialContent
 }: AIEnhancementDialogProps) {
 
   const handleApply = (content: string) => {
     onApply(content)
     onClose()
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
-    <Dialog open={isOpen} onOpenChange={() => onClose()}>
-      <DialogContent className="max-w-3xl">
-        <DialogHeader>
-          <DialogTitle>{title}</DialogTitle>
-        </DialogHeader>
+    <Dialog open={isOpen} onOpenChange={() => onClose()}>;
+      <DialogContent className="max-w-3xl">;
+        <DialogHeader>;
+          <DialogTitle>{title}</DialogTitle>;
+        </DialogHeader>;
         <AIEnhancementPanel
           title={title}
           defaultOptions={defaultOptions}
           onApply={handleApply}
           initialContent={initialContent}
-        />
-      </DialogContent>
-    </Dialog>
-  )
+
+        />;
+      </DialogContent>;
+    </Dialog>;
+  );
 }
+
+=======
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components / ui / dialog';
+import {AIEnhancementPanel} from './AIEnhancementPanel';
+import {AIEnhancementOptions} from '@/hooks / useAIContentEnhancer';
+interface AIEnhancementDialogProps {
+  title: string,
+  is_open: boolean,
+  on_close: () => void,
+  on_apply: (content: string) => void,
+  default_options: AIEnhancementOptions,
+  initial_content?: string;
+}
+export /**
+ * AIEnhancementDialog - Function description
+ */
+function AIEnhancementDialog() {
+  const handle_apply = (content: string) =>: any {
+    on_apply (content),
+    on_close ();
+  }
+;
+  return (
+    <Dialog open={is_open} onOpenChange={() => on_close ()}>;
+      <DialogContent className="max - w-3xl">;
+        <DialogHeader>;
+          <DialogTitle>{title}</DialogTitle>;
+        </DialogHeader>;
+        <AIEnhancementPanel;
+          title={title}
+          default_options={default_options}
+          on_apply={handle_apply}
+          initial_content={initial_content}
+        />;
+      </DialogContent>;
+    </Dialog>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

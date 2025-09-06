@@ -1,24 +1,45 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../../utils/api/auth";
 import {
+<<<<<<< HEAD
   getProject
   updateMilestone
   assertParticipantOrAdmin
   isClient
   isTalent
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../../utils/api/auth";
 import {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   getProject,
   updateMilestone,
   assertParticipantOrAdmin,
   isClient,
   isTalent,;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 } from "../../../../../utils/api/projects";
 import { isMilestoneStatus } from "../../../../../utils/types/milestones";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -28,7 +49,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     projectId: string;
     milestoneId: string;
   }
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../../utils/api/auth';
 import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent } from '../../../../../utils/api/projects';
@@ -37,48 +57,41 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
   const { projectId, milestoneId } = req.query as { projectId: string, milestoneId: string };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const project = getProject(projectId);
   if (!project) {
-    res.status(404).json({ error: 'Project not found' });
+    res && res.status(404).json({ error: "Project not found" });
     return;
   }
   if (!assertParticipantOrAdmin(project, user)) {
-    res.status(403).json({ error: 'Forbidden' });
+    res && res.status(403).json({ error: "Forbidden" });
     return;
   }
-<<<<<<< HEAD
   if (req.method === "PATCH") {
-=======
 
   if (req.method === 'PATCH') {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const body = req.body as any;
     if (body.status && !isMilestoneStatus(body.status)) {
       res.status(400).json({ error: 'Invalid status' });
       return;
     }
     // Enforce status transition rules
-    if (body.status) {
+    if (body && body.status) {
       const isClientUser = isClient(project, user);
       const isTalentUser = isTalent(project, user);
-      const status: string = body.status;
+      const status: string = body && body.status;
       const allowed =
-<<<<<<< HEAD
         (status === "In Progress" && isClientUser) |
         (status === "Submitted" && isTalentUser) |
         (status === "Approved" && isClientUser) |
         (status === "Paid" && isClientUser);
       if (!allowed && user.role !== "admin") {
         res.status(403).json({ error: "Not allowed to set this status" });
-=======
         (status === 'In Progress' && isClientUser) ||
         (status === 'Submitted' && isTalentUser) ||
         (status === 'Approved' && isClientUser) ||
         (status === 'Paid' && isClientUser);
       if (!allowed && user.role !== 'admin') {
         res.status(403).json({ error: 'Not allowed to set this status' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         return;
       }
       // Add side-effects
@@ -96,11 +109,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!updated) {
 <<<<<<< HEAD
       res.status(404).json({ error: "Milestone not found" });
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       res.status(404).json({ error: 'Milestone not found' });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+=======
+      res.status(404).json({ error: 'Milestone not found' });
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'PATCH') {
@@ -273,34 +290,47 @@ export default function handler(req, res) {
     const updated = updateMilestone(project, milestoneId, body);
     if (!updated) {;
       res.status(404).json({ error: 'Milestone not found' });
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       return;
     }
-    res.status(200).json({ milestone: updated });
+    res && res.status(200).json({ milestone: updated });
     return;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   res.setHeader("AllowPATCH");
   res.status(405).end("Method Not Allowed");
 }
 
-=======
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 res.setHeader("AllowPATCH");
   res.status(405).end("Method Not Allowed");
 }
+}
+=======
+
+
 =======
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   res.setHeader('AllowPATCH');
   res.status(405).end('Method Not Allowed')
@@ -308,10 +338,36 @@ res.setHeader("AllowPATCH");
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+=======
+
+  res.setHeader('AllowPATCH');
+  res.status(405).end('Method Not Allowed')
+}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+;
+  res.setHeader('AllowPATCH');
+  res.status(405).end('Method Not Allowed')
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

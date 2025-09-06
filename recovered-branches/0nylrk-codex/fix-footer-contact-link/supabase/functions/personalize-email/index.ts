@@ -1,37 +1,56 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
+const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 
-import "https: //deno.land/x/xhr@0.1.0/mod.ts"
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
 =======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+<<<<<<< HEAD
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+=======
+
+
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
     // Get personalization request data
-<<<<<<< HEAD
     const {
       emailType
       userData
@@ -39,20 +58,18 @@ serve(async (req) => {
       template = {}
     } = await req.json();
     if (!emailType |!userData) {
-=======
     const { 
       emailType, 
       userData, 
       activityData,
+
       template = {} 
-    } = await req.json(),
+    } = await req && req.json();
     
     if (!emailType || !userData) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       throw new Error("Missing required parameters: emailType and userData")
     }
     // Create a prompt based on the email type and user data
-<<<<<<< HEAD
     let systemPrompt = "You are an AI assistant that creates personalized email content for a marketplace platform called Zion AI that connects AI professionals with clients. Create content that is friendly, professional, and encouraging.";
     let userPrompt = "";
     // Subject line context
@@ -73,7 +90,6 @@ serve(async (req) => {
         userPrompt = `Create an email for ${userData.firstName} reminding them to complete their profile. They have completed ${userData.profileCompletion |0}% of their profile. Focus on how a complete profile increases visibility.`;
         subjectContext = "Create a short, motivational subject line about profile completion.";
         break;
-=======
     let systemPrompt = "You are an AI assistant that creates personalized email content for a marketplace platform called Zion AI that connects AI professionals with clients. Create content that is friendly, professional, and encouraging.",
     let userPrompt = "",
     
@@ -100,75 +116,98 @@ serve(async (req) => {
         subjectContext = "Create a short, motivational subject line about profile completion.",
         break,
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       default:
-        userPrompt = `Create a re-engagement email for a user named ${userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`
+        userPrompt = `Create a re-engagement email for a user named ${userData && userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`
     }
     // Add subject line request to the prompt
-<<<<<<< HEAD
     userPrompt += `\n\n${subjectContext |"Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`;
-=======
     userPrompt += `\n\n${subjectContext || "Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Call OpenAI API to generate personalized content
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
-<<<<<<< HEAD
         "Authorization": `Bearer ${openAIApiKey}`;
         "Content-Type": "application/json"}
-=======
         "Authorization": `Bearer ${openAIApiKey}`,
         "Content-Type": "application/json"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       body: JSON.stringify({
         model: "gpt-4o-mini"
         messages: [
-<<<<<<< HEAD
           { role: "system", content: systemPrompt }
           { role: "user", content: userPrompt }
         ];
         temperature: 0.7})});
-=======
           { role: "system", content: systemPrompt },
           { role: "user", content: userPrompt }
         ],
         temperature: 0.7})}),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (!response.ok) {
-      const errorData = await response.json(),
+      const errorData = await response.json();
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
-<<<<<<< HEAD
     const data = await response.json();
     const generatedContentText = data.choices[0].message.content;
-=======
 
-    const data = await response.json(),
-    const generatedContentText = data.choices[0].message.content,
+
+
+    if (!response && response.ok) {
+      const errorData = await response && response.json();
+      throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
+    }
+
+    const data = await response && response.json();
+    const generatedContentText = data && data.choices[0].message && message.content;
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Parse the JSON response from OpenAI
-    let generatedContent,
+    let generatedContent;
     try {
-      generatedContent = JSON.parse(generatedContentText)
+      generatedContent = JSON && JSON.parse(generatedContentText)
     } catch (e) {
-      console.error("Failed to parse GPT response as JSON:", e),
-      // // // console.log("Raw response:", generatedContentText),
+      console && console.error("Failed to parse GPT response as JSON:", e);
+      console && console.log("Raw response:", generatedContentText);
       // Try to extract JSON using regex as fallback
-      const jsonMatch = generatedContentText.match(/\{[\s\S]*\}/),
+      const jsonMatch = generatedContentText && generatedContentText.match(/\{[\s\S]*\}/);
       if (jsonMatch) {
         try {
-          generatedContent = JSON.parse(jsonMatch[0])
+          generatedContent = JSON && JSON.parse(jsonMatch[0])
+=======
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      const error_data = await response.json ();
+      throw new Error (`OpenAI API error: ${JSON.stringify (error_data)}`);
+    }
+    const data = await response.json ();
+    const generatedContentText = data.choices[0].message.content;
+;
+    // Parse the JSON response from OpenAI;
+    let generated_content;
+    try {
+      generated_content = JSON.parse (generatedContentText);
+    } catch (e) {
+      console.error ("Failed to parse GPT response as JSON:", e);
+      console.log ("Raw response:", generatedContentText);
+      // Try to extract JSON using regex as fallback;
+      const json_match = generatedContentText.match (/\{[\s\S]*\}/);
+      // Check condition
+if ( {) {
+  $2
+}
+        try {
+          generated_content = JSON.parse (json_match[0]);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } catch (e2) {
-          throw new Error("Could not parse the generated content as JSON")
+          throw new Error ("Could not parse the generated content as JSON");
         }
       } else {
-        throw new Error("Could not extract JSON from the generated content")
+        throw new Error ("Could not extract JSON from the generated content");
       }
     }
+<<<<<<< HEAD
     // Apply the generated content to the template or return it directly
     return new Response(JSON.stringify(generatedContent), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }})
@@ -179,12 +218,37 @@ serve(async (req) => {
       headers: { ...corsHeaders, "Content-Type": "application/json" }})
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 });
 
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+
+    console && console.error("Error in personalize-email function:", error);
+    return new Response(JSON && JSON.stringify({ error: error && error.message }), {
+      status: 500,
+
+      headers: { ...corsHeaders, "Content-Type": "application/json" }})
+
+    // Apply the generated content to the template or return it directly;
+    return new Response (JSON.stringify (generated_content), {
+      headers: { ...cors_headers, "Content - Type": "application / json" }});
+  } catch (error) {
+    console.error ("Error in personalize - email function:", error);
+    return new Response (JSON.stringify ({ error: error.message }), {
+      status: 500,
+      headers: { ...cors_headers, "Content - Type": "application / json" }});
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
@@ -286,8 +350,15 @@ serve(async (req) => {;
       headers: { ...corsHeaders, "Content-Type": "application/json" }});
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

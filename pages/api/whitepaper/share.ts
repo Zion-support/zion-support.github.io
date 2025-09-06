@@ -1,15 +1,22 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { randomUUID } from 'crypto',;
 // In-memory store for demo purposes. Replace with persistent storage in production.
 const store: Record<string, { markdown: string, createdAt: number, public: boolean }> = {},
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 import { randomUUID } from 'crypto';
-<<<<<<< HEAD
 
 // In-memory store for demo purposes. Replace with persistent storage in production.
 const store: Record<string, { markdown: string, createdAt: number, public: boolean }> = {}
@@ -26,16 +33,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 export function getShared(id: string) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return store[id]
+
+=======
 }
+<<<<<<< HEAD
 =======
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   return store[id];
 };
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 // In-memory store for demo purposes. Replace with persistent storage in production.;
 const store: Record<string { markdown: string, createdAt: number, public: boolean }> = {};
 export default async function handler(req, res) {
@@ -60,7 +81,47 @@ export function getShared(id: string) {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+import { randomUUID } from 'crypto',
+// In - memory store for demo purposes. Replace with persistent storage in production.;
+const store: Record < string, { markdown: string, created_at: number, public: boolean }> = {},
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
+  $2
+}
+  const { markdown, public_preview } = req.body || {},
+  if (return res.status (400).json ({ error: 'Missing markdown' }), ) {
+  $2
+}
+  const id = randomUUID (),
+  store[id] = { markdown, created_at: Date.now (), public: !!public_preview },
+  const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper / preview/${id}`,
+  res.status (200).json ({ id, url });
+}
+export /**
+ * get_shared - Function description
+ */
+function get_shared() {
+  return store[id];
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
