@@ -1,223 +1,124 @@
-import React, { useState, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-<<<<<<< HEAD
-import { HelmetProvider } from 'react-helmet-async';
-=======
-import Header from './components/Header';
-import { Footer } from './components/Footer';
-import Sidebar from './components/layout/Sidebar';
-import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Pricing from './pages/Pricing';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
->>>>>>> 46ebcd4bae20034d704ddf3bff01504bb44c7d4a
-import ErrorBoundary from './components/ErrorBoundary';
+import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Button from './components/Button';
-import Card from './components/Card';
 import ServiceCard from './components/ServiceCard';
-import LoadingSpinner from './components/LoadingSpinner';
-<<<<<<< HEAD
+import TestimonialCarousel from './components/TestimonialCarousel';
+import ContactSection from './components/ContactSection';
+import BenefitsSection from './components/BenefitsSection';
+import HowItWorksSection from './components/HowItWorksSection';
+import FaqSection from './components/FaqSection';
+import ChatAssistant from './components/ChatAssistant';
 import ScrollToTop from './components/ScrollToTop';
-import SEOHead from './components/SEOHead';
-import Pricing from './pages/Pricing';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
+import ParticleBackground from './components/ParticleBackground';
 
-const Home = () => (
-  <>
-    <SEOHead 
-      title="Zion Tech Group - Leading AI & Technology Solutions"
-      description="Transform your business with cutting-edge AI solutions, cybersecurity, and cloud infrastructure. Expert technology services for modern enterprises."
-      keywords="AI services, cybersecurity, cloud infrastructure, technology solutions, machine learning, automation"
-    />
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-    <div className="container mx-auto px-4 py-16">
-      <div className="text-center mb-12">
-        <h1 className="text-6xl font-extrabold mb-4 animate-fade-in">
-          Zion Tech Group
-        </h1>
-        <p className="text-2xl text-gray-300 mb-8 animate-slide-up">
-          Leading AI & Technology Solutions for a Smarter Future
-        </p>
-        <div className="animate-fade-in-delay">
-          <Button variant="primary" size="lg" onClick={() => window.location.href = '/services'}>
-            Explore Our Services
-          </Button>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-          <ServiceCard
-            title="AI Services"
-            description="Transform your business with cutting-edge AI solutions."
-            icon="✨"
-            features={['Machine Learning', 'NLP', 'Computer Vision', 'AI Consulting']}
-          />
-        </div>
-        <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          <ServiceCard
-            title="Cybersecurity"
-            description="Protect your digital assets with advanced security solutions."
-            icon="🔒"
-            features={['Security Audits', 'Threat Detection', 'Compliance', 'Incident Response']}
-          />
-        </div>
-        <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-          <ServiceCard
-            title="Cloud Infrastructure"
-            description="Scale your operations with robust cloud solutions."
-            icon="☁️"
-            features={['Cloud Migration', 'Infrastructure Setup', 'Monitoring', 'Cost Optimization']}
-          />
-        </div>
-      </div>
-
-      <div className="mt-16 text-center">
-        <h2 className="text-4xl font-bold mb-8 animate-fade-in">Why Choose Us?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-            <Card title="Innovation" description="Pioneering the next generation of technology." />
-          </div>
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <Card title="Expertise" description="Team of industry-leading professionals." />
-          </div>
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <Card title="Reliability" description="Trusted solutions for critical operations." />
-          </div>
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            <Card title="Scalability" description="Solutions designed to grow with you." />
-          </div>
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-            <Card title="Security" description="Robust protection for all your data." />
-          </div>
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-            <Card title="Support" description="24/7 dedicated customer assistance." />
-          </div>
-        </div>
-      </div>
-
-      {/* Stats Section */}
-      <div className="mt-20 bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <div className="text-4xl font-bold text-blue-400 mb-2">500+</div>
-            <div className="text-gray-300">Projects Completed</div>
-          </div>
-          <div>
-            <div className="text-4xl font-bold text-green-400 mb-2">99%</div>
-            <div className="text-gray-300">Client Satisfaction</div>
-          </div>
-          <div>
-            <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>
-            <div className="text-gray-300">Support Available</div>
-          </div>
-          <div>
-            <div className="text-4xl font-bold text-yellow-400 mb-2">5+</div>
-            <div className="text-gray-300">Years Experience</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-  </>
-);
-
-const About = () => (
-  <div className="min-h-screen bg-gray-50 py-16">
-    <div className="container mx-auto px-4">
-      <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">About Us</h1>
-      <div className="max-w-4xl mx-auto">
-        <p className="text-lg text-gray-600 mb-8">
-          Zion Tech Group is a leading technology company dedicated to delivering innovative 
-          solutions that transform businesses and drive growth in the digital age.
-        </p>
-        <div className="grid md:grid-cols-2 gap-8">
-          <Card title="Our Mission" description="To empower businesses with cutting-edge technology solutions that drive innovation, efficiency, and growth." />
-          <Card title="Our Vision" description="To be the global leader in technology solutions, creating a world where every business can leverage technology." />
-        </div>
-      </div>
-    </div>
-  </div>
-);
-=======
-import PerformanceMonitor from './components/PerformanceMonitor';
-import { ThemeProvider } from './context/ThemeContext';
-import { NotificationProvider } from './context/NotificationContext';
-import { initAnalytics } from './utils/analytics';
->>>>>>> 46ebcd4bae20034d704ddf3bff01504bb44c7d4a
-
-function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const handleMenuClick = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  // Initialize analytics
-  React.useEffect(() => {
-    initAnalytics();
-  }, []);
+export default function App() {
+  const services = [
+    {
+      title: "AI Solutions",
+      description: "Cutting-edge artificial intelligence solutions for your business needs. From machine learning to natural language processing.",
+      icon: "🤖",
+      features: ["Machine Learning", "NLP", "Computer Vision", "Predictive Analytics"]
+    },
+    {
+      title: "IT Services",
+      description: "Comprehensive IT services and infrastructure management. Keep your systems running smoothly and securely.",
+      icon: "💻",
+      features: ["System Administration", "Network Security", "Cloud Migration", "24/7 Support"]
+    },
+    {
+      title: "Cloud Solutions",
+      description: "Scalable cloud infrastructure and migration services. Modernize your infrastructure with our cloud expertise.",
+      icon: "☁️",
+      features: ["AWS/Azure/GCP", "DevOps", "Containerization", "Auto-scaling"]
+    },
+    {
+      title: "Cybersecurity",
+      description: "Advanced security solutions to protect your business from evolving threats and ensure compliance.",
+      icon: "🔒",
+      features: ["Threat Detection", "Compliance", "Penetration Testing", "Security Audits"]
+    },
+    {
+      title: "Data Analytics",
+      description: "Transform your data into actionable insights with our advanced analytics and business intelligence solutions.",
+      icon: "📊",
+      features: ["Data Visualization", "Business Intelligence", "Real-time Analytics", "Custom Dashboards"]
+    },
+    {
+      title: "Digital Transformation",
+      description: "Complete digital transformation services to modernize your business processes and improve efficiency.",
+      icon: "🚀",
+      features: ["Process Automation", "Workflow Optimization", "Digital Strategy", "Change Management"]
+    }
+  ];
 
   return (
-<<<<<<< HEAD
-    <HelmetProvider>
-      <ErrorBoundary>
-        <Router>
-          <div className="min-h-screen flex flex-col">
-            <Header onMenuClick={handleMenuClick} />
-            <main className="flex-1">
-              <Suspense fallback={<LoadingSpinner size="lg" text="Loading page..." />}>
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/services" element={<Services />} />
-                  <Route path="/pricing" element={<Pricing />} />
-                  <Route path="/contact" element={<Contact />} />
-                </Routes>
-              </Suspense>
-            </main>
-            <Footer />
-            <ScrollToTop />
-          </div>
-        </Router>
-      </ErrorBoundary>
-    </HelmetProvider>
-=======
-    <ThemeProvider>
-      <NotificationProvider>
-        <ErrorBoundary>
-          <Router>
-            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 dark:from-black dark:via-gray-900 dark:to-blue-900 light:from-gray-50 light:via-blue-50 light:to-purple-50">
-              <Header />
-              <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-              
-              <main className="pt-20">
-                <Suspense fallback={<LoadingSpinner />}>
-                  <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/services" element={<Services />} />
-                    <Route path="/pricing" element={<Pricing />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="*" element={<NotFound />} />
-                  </Routes>
-                </Suspense>
-              </main>
-              
-              <Footer />
-              <PerformanceMonitor />
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      <ParticleBackground />
+      <Header />
+      
+      <main className="relative">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 text-center">
+          <div className="container mx-auto max-w-6xl">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Welcome to Zion Tech
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Your trusted partner for AI and IT solutions. We help businesses transform through cutting-edge technology and innovative solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
+                Get Started
+              </button>
+              <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
+                Learn More
+              </button>
             </div>
-          </Router>
-        </ErrorBoundary>
-      </NotificationProvider>
-    </ThemeProvider>
->>>>>>> 46ebcd4bae20034d704ddf3bff01504bb44c7d4a
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="py-16 px-4 bg-white">
+          <div className="container mx-auto max-w-6xl">
+            <h2 className="text-4xl font-bold text-center mb-12">Our Services</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <ServiceCard
+                  key={index}
+                  title={service.title}
+                  description={service.description}
+                  icon={service.icon}
+                  features={service.features}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <BenefitsSection />
+
+        {/* How It Works Section */}
+        <HowItWorksSection />
+
+        {/* Testimonials Section */}
+        <section className="py-16 px-4 bg-gray-50">
+          <div className="container mx-auto max-w-6xl">
+            <h2 className="text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
+            <TestimonialCarousel />
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <FaqSection />
+
+        {/* Contact Section */}
+        <ContactSection />
+      </main>
+
+      <Footer />
+      <ChatAssistant />
+      <ScrollToTop />
+    </div>
   );
 }
-
-export default App;
