@@ -1,34 +1,34 @@
- const state = readState ();
-if (!state.config.optIn || state.config.paused) {
-  
-}const {
-  proposalId, title, votes 
-}= req.body as {
-  proposalId: string, title: string, votes: {
-  voterId: string, weight: number, choice: string 
-}[] 
-};
-if (!proposalId || !title || !Array.isArray (votes) ) {
-  
-}const merkleRoot = computeMerkleRootFromVotes (votes);
-const version = (state.latestVersionByEntityId[proposalId] || 0) + 1;
-const event = {
-  eventId: uuidv4 ();
-type: "proposal" as const;
-payload: {
-  id: proposalId, proposalId, title, votes 
-};
-version;
-timestamp: Date.now ();
-merkleRoot 
-};
-upsertEvent (state, event);
-writeState (state);
-await axios.post (url, body, {
-  headers, timeout: 5000 
-}) 
-}catch {
-  // ignore 
-}
-}) );
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).end('Method Not Allowed');
+  }
+
+  try {
+    const { proposalId, title, votes, userId } = req.body;
+    
+    if (!proposalId || !title || !votes) {
+      return res.status(400).json({ error: 'Proposal ID, title, and votes required' });
+    }
+
+    // Mock global vote
+    const vote = {
+      id: `vote-${Date.now()}`,
+      proposalId,
+      title,
+      votes,
+      userId: userId || 'anonymous',
+      votedAt: new Date().toISOString(),
+      status: 'recorded'
+    };
+
+    res.status(200).json({
+      success: true,
+      vote
+    });
+  } catch (error) {
+    res.status(500).json({ error: 'Global vote failed' });
+  }
 }

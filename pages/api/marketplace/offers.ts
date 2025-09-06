@@ -1,48 +1,70 @@
- function bad (res: NextApiResponse, message: string, code = 400) {
-  return res.status (code) .json ({
-  ok: false, error: message 
-}) 
-}export default function handler (req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET' && req.method !== 'POST') {
+    res.setHeader('Allow', 'GET, POST');
+    return res.status(405).end('Method Not Allowed');
+  }
+
   try {
-  
-}return bad (res, "Unknown role", 403);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}
-}const offer: Offer = {
-  id: uuidv4 ();
-createdAtIso: new Date () .toISOString ();
-clientId: client.id;
-talentSlug;
-startDateIso;
-scopeSummary;
-paymentTerms: paymentTerms as PaymentTerms;
-agreementUrl;
-saveOffer (offer);
-return res.status (201) .json ({
-  ok: true, offer 
-}) 
-}if (req.method === "PATCH") {
-  // Update offer: accept or request changes id: uuidv4 (), title: `Project with $ {
-  existing.talentSlug 
-}`;
-summary: existing.scopeSummary;
-clientId: existing.clientId;
-talentSlug: existing.talentSlug;
-startDateIso: existing.startDateIso;
-status: "ACTIVE";
-timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [];
-documents: existing.agreementUrl ? [ saveOffer (existing);
-return res.json ({
-  ok: true, offer: existing 
-});
-}if (action === "decline") {
-  if (user.role !== "talent") return bad (res, "Only talent can decline", 403);
-existing.status = "DECLINED";
-saveOffer (existing);
-return res.json ({
-  ok: true, offer: existing 
-});
-}return bad (res, "Unknown action");
-}
-}
+    if (req.method === 'GET') {
+      // Return list of offers
+      const offers = [
+        {
+          id: 'offer-1',
+          title: 'Web Development Service',
+          description: 'Professional web development using modern technologies',
+          price: 5000,
+          currency: 'USD',
+          category: 'development',
+          provider: 'Tech Solutions Inc',
+          rating: 4.8,
+          reviews: 25
+        },
+        {
+          id: 'offer-2',
+          title: 'UI/UX Design Consultation',
+          description: 'Expert UI/UX design consultation and prototyping',
+          price: 2000,
+          currency: 'USD',
+          category: 'design',
+          provider: 'Creative Studio',
+          rating: 4.9,
+          reviews: 18
+        }
+      ];
+
+      res.status(200).json({
+        success: true,
+        offers
+      });
+    } else if (req.method === 'POST') {
+      // Create new offer
+      const { title, description, price, currency, category, provider } = req.body;
+      
+      if (!title || !description || !price || !category) {
+        return res.status(400).json({ error: 'Title, description, price, and category required' });
+      }
+
+      const offer = {
+        id: `offer-${Date.now()}`,
+        title,
+        description,
+        price,
+        currency: currency || 'USD',
+        category,
+        provider: provider || 'Unknown Provider',
+        rating: 0,
+        reviews: 0,
+        createdAt: new Date().toISOString()
+      };
+
+      res.status(201).json({
+        success: true,
+        offer
+      });
+    }
+  } catch (error) {
+    res.status(500).json({ error: 'Request failed' });
+  }
 }
