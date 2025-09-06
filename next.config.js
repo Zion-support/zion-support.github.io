@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
@@ -17,10 +16,6 @@ const nextConfig = {
   },
   experimental: {
     optimizeCss: true,
-=======
-  reactStrictMode: true,
-  experimental: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     optimizePackageImports: ['@radix-ui/react-icons'],
   },
   eslint: {
