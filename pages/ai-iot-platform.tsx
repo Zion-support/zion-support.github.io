@@ -1,54 +1,22 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react',
-=======
-import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import Head from 'next/head';
 
 import {
-<<<<<<< HEAD
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Star
-  Cpu;
-=======
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Star,;
-  Cpu,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-<<<<<<< HEAD
-=======
-export default function AIIoTPlatformPage() {
-  const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/ai-iot-platform');
-  );  if (!service) return null;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu } from 'lucide-react',
 import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 export default function AIIoTPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-iot-platform'))
   if (!service) return null,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   return (
     <Layout>
       <Head>
@@ -93,30 +61,7 @@ export default function AIIoTPlatformPage() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className="bg-violet-50 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">Connect Your World</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            Build smart, connected systems with our AI-powered IoT platform for seamless device management and automation.
-          </p>
-          <div className="flex justify-center gap-4">
-            <a href="/contact" className="bg-violet-600 text-white px-6 py-3 rounded-lg hover: bg-violet-700">
-              Get Started
-            </a>
-            <a href="/about" className="border border-violet-600 text-violet-600 px-6 py-3 rounded-lg hover:bg-violet-50">
-              Learn More
-            </a>
-          </div>
-        </div>
-      </main>
-    </Layout>
-);
-<<<<<<< HEAD
-=======
 
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       </div>
     </Layout>
   )
@@ -125,8 +70,4 @@ export default function AIIoTPlatformPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

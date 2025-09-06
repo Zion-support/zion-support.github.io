@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-import Link from "next/link";
-export const metadata = {title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services";
-  description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.";
-  keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"}
-export default function EnterpriseITPage() {return (;
-=======
-import Link from "next/link",;
-export const metadata = {;
-  title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",;
-  description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.",;
-  keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"},;
-export default function EnterpriseITPage() {;
-  return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     <div className="min-h-screen">;
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
@@ -37,11 +23,7 @@ export default function EnterpriseITPage() {;
                   Modernize Your Enterprise Infrastructure;
                 </h2>;
                 <p className="text-gray-300 text-lg mb-6 leading-relaxed">;
-<<<<<<< HEAD
-                  In today's digital-first world, enterprises need agile, scalable;
-=======
-                  In today's digital-first world, enterprises need agile, scalable,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                   and secure IT infrastructure to compete and thrive. Our comprehensive;
                   solutions help organizations modernize their technology stack while;
                   maintaining operational excellence.;
@@ -100,11 +82,7 @@ export default function EnterpriseITPage() {;
               </div>;
               <h3 className="text-xl font-semibold mb-3">Cloud Migration & Strategy</h3>;
               <p className="text-gray-400 mb-4">;
-<<<<<<< HEAD
-                Seamless migration to cloud platforms with strategic planning;
-=======
-                Seamless migration to cloud platforms with strategic planning,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                 cost optimization, and performance tuning.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
@@ -127,11 +105,7 @@ export default function EnterpriseITPage() {;
               </div>;
               <h3 className="text-xl font-semibold mb-3">DevOps & Automation</h3>;
               <p className="text-gray-400 mb-4">;
-<<<<<<< HEAD
-                Streamline development and operations with automated CI/CD pipelines;
-=======
-                Streamline development and operations with automated CI/CD pipelines,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                 infrastructure as code, and monitoring solutions.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
@@ -153,11 +127,7 @@ export default function EnterpriseITPage() {;
               </div>;
               <h3 className="text-xl font-semibold mb-3">Infrastructure Management</h3>;
               <p className="text-gray-400 mb-4">;
-<<<<<<< HEAD
-                Comprehensive infrastructure management including server provisioning;
-=======
-                Comprehensive infrastructure management including server provisioning,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                 network configuration, and performance optimization.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
@@ -179,11 +149,7 @@ export default function EnterpriseITPage() {;
               </div>;
               <h3 className="text-xl font-semibold mb-3">Data Management</h3>;
               <p className="text-gray-400 mb-4">;
-<<<<<<< HEAD
-                Enterprise data solutions including warehousing, analytics;
-=======
-                Enterprise data solutions including warehousing, analytics,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                 and business intelligence platforms.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
@@ -227,11 +193,7 @@ export default function EnterpriseITPage() {;
               </div>;
               <h3 className="text-xl font-semibold mb-3">Managed Services</h3>;
               <p className="text-gray-400 mb-4">;
-<<<<<<< HEAD
-                24/7 managed IT services including monitoring, maintenance;
-=======
-                24/7 managed IT services including monitoring, maintenance,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                 and support for enterprise infrastructure.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
@@ -316,11 +278,7 @@ export default function EnterpriseITPage() {;
               </div>;
               <h3 className="text-xl font-semibold mb-3">Assessment</h3>;
               <p className="text-gray-400">;
-<<<<<<< HEAD
-                Comprehensive evaluation of current infrastructure;
-=======
-                Comprehensive evaluation of current infrastructure,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                 identifying opportunities and challenges.;
               </p>;
             </div>;

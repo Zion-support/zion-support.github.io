@@ -1,24 +1,7 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {Apple, GithubIcon} from "lucide-react";
-import {cn} from "@/lib/utils";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import React from "react",
-<<<<<<< HEAD
-import { Apple, GithubIcon } from "lucide-react";
-import { cn } from "@/lib/utils";
-=======
-import { Apple, GithubIcon } from "lucide-react",
-import { cn } from "@/lib/utils",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 interface AppStoreButtonsProps {
   className?: string,
   appStoreUrl?: string,
@@ -26,42 +9,7 @@ interface AppStoreButtonsProps {
   onAppStoreClick?: () => void,
   onGooglePlayClick?: () => void
 }
-<<<<<<< HEAD
-export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
-  className;
 
-  appStoreUrl = "#";
-  googlePlayUrl = "#";
-  onAppStoreClick
-  onGooglePlayClick
-}) => {
-  const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (!appStoreUrl |appStoreUrl === "#") {
-      e.preventDefault();
-      console.log("App Store download clicked")
-      onAppStoreClick?.()
-    }
-  }
-  const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (!googlePlayUrl |googlePlayUrl === "#") {
-      e.preventDefault();
-      console.log("Google Play download clicked")
-      onGooglePlayClick?.()
-    }
-  }
-=======
-
-<<<<<<< HEAD
-export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
-  className;
-  appStoreUrl = "#";
-  googlePlayUrl = "#";
-=======
-export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
-  className,
-  appStoreUrl = "#",
-  googlePlayUrl = "#",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onAppStoreClick,
   onGooglePlayClick
 }) => {
@@ -81,7 +29,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
     }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
       <a
@@ -96,20 +43,12 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
           <div className="text-xs">Download on the</div>
           <div className="text-xl font-semibold">App Store</div>
         </div>
-<<<<<<< HEAD
-      </a>
-<<<<<<< HEAD
-      <a
-        href={googlePlayUrl}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
       </Link>
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <a 
         href={googlePlayUrl} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleGooglePlayClick}
         target="_blank"
@@ -132,14 +71,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
       </Link>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
 
-=======
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 },
 import React from "react",;
 import { Apple, GithubIcon } from "lucide-react",;
@@ -215,8 +147,4 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
 };
 
 export default AppStoreButtons;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

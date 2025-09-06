@@ -1,27 +1,7 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-=======
-import React from 'react';
-import Head from 'next/head';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import { 
   Home, 
   Brain, 
@@ -35,12 +15,6 @@ import {
   Globe, 
   ArrowRight ;
 } from 'lucide-react';
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 import {
   Home
@@ -94,10 +68,7 @@ const sitemapData = [
     ]
   }
 ];
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function SitemapPage() {
   return (
     <>
@@ -162,31 +133,9 @@ export default function SitemapPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </>
-<<<<<<< HEAD
-  );
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/automation-improvements-final
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 import {
   Home
   Search
@@ -200,7 +149,7 @@ import {
   ChevronRight
   Globe
   Building;
-=======
+
     </>;
   );
 }
@@ -217,7 +166,7 @@ import {
   ChevronRight,
   Globe,;
   Building,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
@@ -245,17 +194,7 @@ export default function SitemapPage() {
       description: 'Browse services by category and technology area'
     }
     {
-<<<<<<< HEAD
-      href: '/contact'
-      label: '📧 Contact'
-      description: 'Get in touch and start your project'
-    }
-=======
-      href: '/contact',
-      label: '📧 Contact',
-      description: 'Get in touch and start your project',
-    },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   ];
   const serviceCategories = [
     {
@@ -402,13 +341,7 @@ export default function SitemapPage() {
       action: 'https://maps.google.com/?q=Middletown,DE'
     }
   ];
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 import {;
   Home, Search, Rocket, FileText, Users, Mail, Map,;
   ArrowRight, ExternalLink, ChevronRight, Globe, Building;
@@ -486,16 +419,12 @@ export default function SitemapPage(req, res) {
   }
 }
   ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>
         <title>Sitemap | Zion Tech Group</title>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         <meta
           name='description'
           content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category."
@@ -506,54 +435,7 @@ export default function SitemapPage(req, res) {
           content='Complete website sitemap and navigation guide.'
         />
         <link rel='canonical' href='https://ziontechgroup.com/sitemap' />      </Head>
-<<<<<<< HEAD
-      <SmartHeader />
-      {/* Hero Section */}
-      <section className='pt-32 pb-20 px-6'>
-        <div className='max-w-7xl mx-auto text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-=======
-      <SmartHeader />
-      {/* Hero Section */}
-      <section className='pt-32 pb-20 px-6'>
-        <div className='max-w-7xl mx-auto text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-=======
-        <meta name="description" content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category." />
-        <meta property="og:title" content="Sitemap | Zion Tech Group" />
-        <meta property="og:description" content="Complete website sitemap and navigation guide." />
-        <link rel="canonical" href="https://ziontechgroup.com/sitemap" />
-      </Head>
-      <SmartHeader />
-      {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           >
             <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
               Site Map
@@ -582,10 +464,7 @@ export default function SitemapPage(req, res) {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       {/* Main Pages */}
       <section id='main-pages' className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -594,40 +473,7 @@ export default function SitemapPage(req, res) {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className='mb-16'
-<<<<<<< HEAD
-=======
-=======
-      {/* Main Pages */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section id="main-pages" className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="mb-16"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Main Pages
@@ -637,10 +483,7 @@ export default function SitemapPage(req, res) {
               and services
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {mainPages.map((page, index) => (
               <motion.div
                 key={page.href}
@@ -649,40 +492,7 @@ export default function SitemapPage(req, res) {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group'
-<<<<<<< HEAD
-=======
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {mainPages.map((page, index) => (
-              <motion.div
-                key={page.href  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="group"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               >
                 <Link
                   href={page.href}
@@ -698,21 +508,12 @@ export default function SitemapPage(req, res) {
                     {page.description}
                   </p>                </Link>
               </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Service Categories */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -721,48 +522,7 @@ export default function SitemapPage(req, res) {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className='mb-16'
-<<<<<<< HEAD
-=======
-=======
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </div>;
-      </section>;
-      {/* Service Categories */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="mb-16"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Service Categories
@@ -772,10 +532,7 @@ export default function SitemapPage(req, res) {
               by category
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.href}
@@ -784,40 +541,7 @@ export default function SitemapPage(req, res) {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group'
-<<<<<<< HEAD
-=======
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {serviceCategories.map((category, index) => (
-              <motion.div
-                key={category.href  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="group"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               >
                 <Link
                   href={category.href}
@@ -833,21 +557,12 @@ export default function SitemapPage(req, res) {
                     {category.description}
                   </p>                </Link>
               </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Featured Services */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -856,48 +571,7 @@ export default function SitemapPage(req, res) {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className='mb-16'
-<<<<<<< HEAD
-=======
-=======
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </div>;
-      </section>;
-      {/* Featured Services */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="mb-16"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Featured Services
@@ -905,10 +579,7 @@ export default function SitemapPage(req, res) {
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Our most popular and innovative technology solutions
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (
               <motion.div
                 key={service.href}
@@ -917,40 +588,7 @@ export default function SitemapPage(req, res) {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group'
-<<<<<<< HEAD
-=======
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredServices.map((service, index) => (
-              <motion.div
-                key={service.href  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="group"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               >
                 <Link
                   href={service.href}
@@ -964,21 +602,12 @@ export default function SitemapPage(req, res) {
                   </div>
                   <p className='text-white/60 text-xs'>{service.category}</p>                </Link>
               </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Resources & Tools */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -987,48 +616,7 @@ export default function SitemapPage(req, res) {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className='mb-16'
-<<<<<<< HEAD
-=======
-=======
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </div>;
-      </section>;
-      {/* Resources & Tools */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="mb-16"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Resources & Tools
@@ -1036,10 +624,7 @@ export default function SitemapPage(req, res) {
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources, tools, and information to help you succeed
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {resources.map((resource, index) => (
               <motion.div
                 key={resource.href}
@@ -1048,40 +633,7 @@ export default function SitemapPage(req, res) {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group'
-<<<<<<< HEAD
-=======
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {resources.map((resource, index) => (
-              <motion.div
-                key={resource.href  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="group"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               >
                 <Link
                   href={resource.href}
@@ -1097,21 +649,12 @@ export default function SitemapPage(req, res) {
                     {resource.description}
                   </p>                </Link>
               </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* External Resources */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -1120,48 +663,7 @@ export default function SitemapPage(req, res) {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className='mb-16'
-<<<<<<< HEAD
-=======
-=======
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </div>;
-      </section>;
-      {/* External Resources */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="mb-16"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               External Resources
@@ -1169,10 +671,7 @@ export default function SitemapPage(req, res) {
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources and tools hosted on external platforms
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {externalLinks.map((link, index) => (
               <motion.div
                 key={link.href}
@@ -1181,40 +680,7 @@ export default function SitemapPage(req, res) {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group'
-<<<<<<< HEAD
-=======
-=======
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {externalLinks.map((link, index) => (
-              <motion.div
-                key={link.href  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="group"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               >
                 <a
                   href={link.href}
@@ -1232,21 +698,12 @@ export default function SitemapPage(req, res) {
                     {link.description}
                   </p>                </a>
               </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Contact Information */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-4xl mx-auto'>          <motion.div
@@ -1255,48 +712,7 @@ export default function SitemapPage(req, res) {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className='mb-16'
-<<<<<<< HEAD
-=======
-=======
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </div>;
-      </section>;
-      {/* Contact Information */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="mb-16"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Contact Information
@@ -1306,10 +722,7 @@ export default function SitemapPage(req, res) {
               project
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {contactInfo.map((contact, index) => (
               <motion.div
                 key={contact.type}
@@ -1318,40 +731,7 @@ export default function SitemapPage(req, res) {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl'
-<<<<<<< HEAD
-=======
-=======
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {contactInfo.map((contact, index) => (
-              <motion.div
-                key={contact.type  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               >
                 <h3 className='text-lg font-bold text-white mb-3'>
                   {contact.type}
@@ -1370,21 +750,12 @@ export default function SitemapPage(req, res) {
                   {contact.value}
                 </a>
               </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Quick Navigation */}
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
@@ -1392,47 +763,7 @@ export default function SitemapPage(req, res) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-=======
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </div>;
-      </section>;
-      {/* Quick Navigation */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Need Help Finding Something?
@@ -1460,27 +791,11 @@ export default function SitemapPage(req, res) {
       </section>
       <SmartFooter />
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  ),
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
   );
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
-=======
   )
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
 
-=======
-  )
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }animate= {
   {
   opacity: 1, y: 0
@@ -1507,47 +822,8 @@ export default function SitemapPage(req, res) {
   once: true
 }> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>)
   )
-<<<<<<< HEAD
-=======
-  )
-<<<<<<< HEAD
-=======
-          >;
-            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
-              Need Help Finding Something?;
-            </h2>;
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
-              Use our search functionality or contact us directly for assistance;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link;
-                href="/search";
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl";
-              >;
-                Search Site;
-                <Search className="w-5 h-5 ml-2" />;
-              </Link>;
-              <Link;
-                href="/contact";
-                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10";
-              >;
-                Contact Support;
-                <Mail className="w-5 h-5 ml-2" />;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-      <SmartFooter />;
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 }
-=======
+
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

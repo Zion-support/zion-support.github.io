@@ -1,53 +1,13 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {Button} from "./ui/button";
-import {Input} from "./ui/input";
-import {GradientHeading} from "./GradientHeading";
-import {useState} from "react";
-export function QuoteFormSection() {;
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import { Button } from "./ui/button",
 import { Input } from "./ui/input",
-<<<<<<< HEAD
-import { GradientHeading } from "./GradientHeading";
-import { useState } from "react";
-=======
-import { GradientHeading } from "./GradientHeading",
-import { useState } from "react",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 export function QuoteFormSection() {
   const [isSubmitted, setIsSubmitted] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleSubmit = (e: React.FormEvent) => {
-<<<<<<< HEAD
-    e.preventDefault();
-    setIsSubmitting(true);
-    // Simulate form submission
-    setTimeout(() => {
-      (setIsSubmitting(false), setIsSubmitted(true));
-    }, 1000);
-  }
-=======
-    e.preventDefault(),
-    setIsSubmitting(true),
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false),
-      setIsSubmitted(true)
-    }, 1000)
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <section className="py-20 bg-zion-blue">
@@ -175,15 +135,7 @@ export function QuoteFormSection() {
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
                       />
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      <label
-                        htmlFor={`interest-${index}`}
-                        className="ml-2 text-sm text-zion-slate-light"
-                      >
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
 import { Button } from "./ui/button",;
 import { Input } from "./ui/input",;
@@ -288,12 +240,9 @@ export function QuoteFormSection() {;
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
                       />
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                         {item}
                       </label>
                     </div>

@@ -1,14 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useRef, useEffect  } from 'react';
-import { useAnalytics } from '@/context/AnalyticsContext';
-export function useTrackUserBehavior(componentName: string) {
-=======
-import {useRef, useEffect} from 'react';
-import {useAnalytics} from '@/context/AnalyticsContext';
-export function useTrackUserBehavior(componentName: string) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const { trackEvent } = useAnalytics();
 
   const componentRef = useRef<HTMLDivElement>(null);
@@ -49,11 +40,7 @@ export function useTrackUserBehavior(componentName: string) {;
   }, [trackEvent, componentName]);
 
   return componentRef
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
 import { useRef, useEffect } from 'react',;
 import { useAnalytics } from '@/context/AnalyticsContext',;
 export function useTrackUserBehavior(componentName: string) {;
@@ -95,10 +82,7 @@ export function useTrackUserBehavior(componentName: string) {;
     }
   }, [trackEvent, componentName]);
   return componentRef;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

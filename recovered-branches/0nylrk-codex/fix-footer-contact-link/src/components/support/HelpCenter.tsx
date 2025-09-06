@@ -1,55 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { HelpCategoryList } from "./HelpCategoryList";
-import { HelpArticleList } from "./HelpArticleList";
-import { HelpArticleView } from "./HelpArticleView";
-import { HELP_CATEGORIES } from "./help-content";
-import { AppLayout } from "@/layout/AppLayout";
-import { Search } from "lucide-react";
-export default function HelpCenter() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
 
-  const handleCategorySelect = (categoryId: string) => {
-    (setSelectedCategory(categoryId), setSelectedArticle(null));
-  }
-  const handleArticleSelect = (articleId: string) => {
-    setSelectedArticle(articleId);
-  }
-  const handleBackToCategories = () => {
-    setSelectedCategory(null);
-    setSelectedArticle(null);
-  }
-  const handleBackToArticles = () => {
-    setSelectedArticle(null);
-  }
-
-=======
-
-=======
-
-<<<<<<< HEAD
-import React, { useState } from "react";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {HelpCategoryList} from "./HelpCategoryList";
-import {HelpArticleList} from "./HelpArticleList";
-import {HelpArticleView} from "./HelpArticleView";
-import {HELP_CATEGORIES} from "./help-content";
-import {AppLayout} from "@/layout/AppLayout";
-import {Search} from "lucide-react";
-export default function HelpCenter() {;
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
@@ -64,8 +13,7 @@ export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
   const [searchQuery, setSearchQuery] = useState(""),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  
+
   const handleCategorySelect = (categoryId: string) => {
     setSelectedCategory(categoryId),
     setSelectedArticle(null)
@@ -83,8 +31,7 @@ export default function HelpCenter() {
   const handleBackToArticles = () => {
     setSelectedArticle(null)
   },
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -113,17 +60,7 @@ export default function HelpCenter() {
             </TabsList>
             <TabsContent value="articles">
               {!selectedCategory && !selectedArticle && (
-<<<<<<< HEAD
-                <HelpCategoryList
-                  categories={HELP_CATEGORIES}
-=======
-                <HelpCategoryList 
-                  categories={HELP_CATEGORIES} 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import React, { useState } from "react",;
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
@@ -181,19 +118,12 @@ export default function HelpCenter() {;
               {!selectedCategory && !selectedArticle && (;
                 <HelpCategoryList;
                   categories={HELP_CATEGORIES} ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                   onCategorySelect={handleCategorySelect}
                   searchQuery={searchQuery}
                 />
               )}
-<<<<<<< HEAD
-=======
-              
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -203,21 +133,14 @@ export default function HelpCenter() {;
                   >
                     ← All Categories
                   </Button>
-<<<<<<< HEAD
-                  <HelpArticleList
-=======
-                  <HelpArticleList 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
                   />
                 </>
               )}
-<<<<<<< HEAD
-=======
-              
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               {selectedArticle && (
                 <>
                   <Button
@@ -233,13 +156,7 @@ export default function HelpCenter() {;
             </TabsContent>
             <TabsContent value="faq">
               <div className="bg-zion-blue-light/20 rounded-lg p-6">
-<<<<<<< HEAD
-                <h2 className="text-xl font-semibold mb-4">
-                  Frequently Asked Questions
-                </h2>
-=======
-                <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                 <div className="space-y-6">
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
@@ -371,25 +288,13 @@ export default function HelpCenter() {;
         </div>
       </div>
     </AppLayout>
-<<<<<<< HEAD
-  );
-}
-=======
-  )
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 ;
               {selectedArticle && (;
                 <>;
                   <Button;
                     variant="ghost";
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

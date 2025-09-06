@@ -1,32 +1,12 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import Head from 'next/head',
-import MilestoneForm from '../../../components/monetization/MilestoneForm',
-=======
-import {useRouter} from 'next/router';
-=======
-import { useRouter } from 'next/router';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 import Head from 'next/head';
 import MilestoneForm from '../../../components/monetization/MilestoneForm';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import MilestoneCard from '../../../components/monetization/MilestoneCard';
 
 import { Milestone } from '../../../utils/types/milestones';
-<<<<<<< HEAD
-import {
-  createMilestone
-  fetchMilestones
-  updateMilestoneStatus;
-=======
-<<<<<<< HEAD
-import {
-  createMilestone,
-  fetchMilestones,;
-  updateMilestoneStatus,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
   if (typeof window === 'undefined') return 'client';
@@ -59,15 +39,7 @@ export default function ProjectMilestonesPage() {;
   }, [role]);
   useEffect(() => {
     if (!projectId) return;
-=======
-<<<<<<< HEAD
-import { useRouter } from 'next/router';
-import Head from 'next/head';
-import MilestoneForm from '../../../components/monetization/MilestoneForm';
-import MilestoneCard from '../../../components/monetization/MilestoneCard';
-import { Milestone } from '../../../utils/types/milestones';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {;
   if (typeof window === 'undefined') return 'client',;
@@ -100,28 +72,14 @@ export default function ProjectMilestonesPage(req, res) {
   }, [role]),;
   useEffect(() => {;
     if (!projectId) return,;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     let cancelled = false;
     (async () => {;
       setLoading(true);
       setError(null);
       try {
         const data = await fetchMilestones(projectId as string);
-<<<<<<< HEAD
-        if (!cancelled) setMilestones(data.milestones |[]);
-      } catch (e: any) {
-        if (!cancelled) setError(e?.message |'Failed to load milestones');
-      } finally {
-=======
-        if (!cancelled) setMilestones(data.milestones || []);
-      } catch (error) {
-        if (!cancelled) setError(e?.message || 'Failed to load milestones');
-      } finally {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
         if (!cancelled) setLoading(false);
         } catch (error) {
     console.error("Error:", error);
@@ -131,12 +89,7 @@ export default function ProjectMilestonesPage(req, res) {
     })();
     return () => {;
       cancelled = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
-    };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }, [projectId]);
   const handleCreate = async (payload: {
     title: string;
@@ -146,13 +99,7 @@ export default function ProjectMilestonesPage(req, res) {
   }) => {
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
-<<<<<<< HEAD
-    setMilestones(prev => [res.milestone, ...prev]);  }
-=======
-    setMilestones(prev => [res.milestone, ...prev]);  };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -164,64 +111,21 @@ export default function ProjectMilestonesPage(req, res) {
     const res = await createMilestone(projectId as string, payload),
     setMilestones((prev) => [res.milestone, ...prev])
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const handleAction = async (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
   ) => {
     if (!projectId) return
     const map: Record<string, string> = {
-<<<<<<< HEAD
-      in_progress: 'In Progress'
-      submitted: 'Submitted'
-      approved: 'Approved'
-      paid: 'Paid'
-    }
-    const status = map[action];
-    const res = await updateMilestoneStatus(projectId as string, milestoneId, {
-      status
-    });
-    setMilestones(prev =>
-      prev.map(m => (m.id === milestoneId ? res.milestone : m))
-    );  }
 
-=======
-      in_progress: 'In Progress',
-      submitted: 'Submitted',
-      approved: 'Approved',
-      paid: 'Paid'},
-    const status = map[action],
-    const res = await updateMilestoneStatus(projectId as string, milestoneId, { status }),
-    setMilestones((prev) => prev.map((m) => (m.id === milestoneId ? res.milestone : m)))
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div>
       <Head>
         <title>Project Milestones</title>
         <meta name="description" content="Track project deliverables and milestone payments" />
       </Head>
-<<<<<<< HEAD
-      <div className='max-w-5xl mx-auto px-4 py-8'>
-        <div className='mb-6'>
-          <h1 className='text-2xl font-bold'>Milestones</h1>
-          <p className='text-sm text-gray-600'>
-            Project: {projectId as string}
-          </p>
-=======
-      <div className="max-w-5xl mx-auto px-4 py-8">
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold">Milestones</h1>
-          <p className="text-sm text-gray-600">Project: {projectId as string}</p>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         </div>
         {role !== 'talent' && (
           <div className="mb-8 p-4 rounded bg-gray-50 border">
@@ -231,15 +135,7 @@ export default function ProjectMilestonesPage(req, res) {
             </div>
             <MilestoneForm onSubmit={handleCreate} />
           </div>
-<<<<<<< HEAD
-        )}
-        {loading && <div>Loading milestones...</div>}
-        {error && <div className='text-red-600'>{error}</div>}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -256,44 +152,11 @@ export default function ProjectMilestonesPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         {!loading && !error && (
           <div className="space-y-4">
             {milestones.length === 0 && (
-<<<<<<< HEAD
-              <div className='text-gray-600'>
-                No milestones yet.{' '}
-                {role !== 'talent' ? 'Create the first one.' : ''}
-              </div>
-            )}
-            {milestones.map(m => (
-              <MilestoneCard
-                key={m.id}
-                milestone={m}
-                projectId={String(projectId)}
-                role={role}
-                onAction={handleAction}
-              />            ))}
-          </div>
-        )}
-        <div className='mt-12 text-xs text-gray-500'>
-          Integration hooks ready: on Approved &rarr; trigger payout intent; on
-          Paid &rarr; capture via Stripe/PayPal/Escrow.
-        </div>
-      </div>
-    </div>
-);
-<<<<<<< HEAD
-=======
 
-}
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
               <div className="text-gray-600">No milestones yet. {role !== 'talent' ? 'Create the first one.' : ''}</div>
             )  } catch (error) {
     console.error("Error:", error);
@@ -331,8 +194,4 @@ export default function ProjectMilestonesPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

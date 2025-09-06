@@ -1,44 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import type { NextApiRequest, NextApiResponse } from "next";
-import OpenAI from "openai";
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-import OpenAI from "openai";
-export type GenerateServiceDescriptionRequest = {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const prompt = `You are a marketing copy expert. Given the following service inputs, write a polished, compelling, and detailed service description suitable for a website service page. Service Title: ${req.body?.title || 'Service'} Target Audience: ${req.body?.targetAudience || 'General'} Key Features: - ${req.body?.keyFeatures?.join('\n- ') || 'Feature 1'} ${req.body?.additionalNotes ? `Additional Notes: ${req.body.additionalNotes}` : ''} ${req.body?.toneInstruction || ''} Requirements: - 2-3 sentence hook opening that addresses audience needs - 3-5 concise sections with bolded headings (e.g., What You Get, How It Works, Why Choose Us, Deliverables, Timeline) - Use clear, benefit-focused language - End with a short call to action`;
   res.status(200).json({ description: 'Service description generated' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 export type GenerateServiceDescriptionRequest = {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   title: string;
   keyFeatures: string[];
   targetAudience: string;
   additionalNotes?: string;
-<<<<<<< HEAD
-  tone?: "professional" | "friendly" | "persuasive" | "technical";
-<<<<<<< HEAD
-}
-export type GenerateServiceDescriptionResponse = {
-  description: string;
-}
-=======
-};
-export type GenerateServiceDescriptionResponse = {;
-  description: string;
-};
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 export default async function handler(
   req: NextApiRequest
@@ -104,11 +79,7 @@ Requirements:
   } catch (error: any) {
     console.error("OpenAI generation error:", error);
     return res.status(500).json({ error: "Failed to generate description" });
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   tone?: 'professional' | 'friendly' | 'persuasive' | 'technical';
 };
 export type GenerateServiceDescriptionResponse = {
@@ -315,10 +286,6 @@ Requirements:;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 }

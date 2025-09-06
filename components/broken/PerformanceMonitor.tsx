@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
-=======
+
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
-=======
- const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
@@ -23,12 +16,7 @@ if (newMetrics.loadTime > 3000) {
 if (ms < 1000) return `$ {
   Math.round (ms)
 }ms`;
-<<<<<<< HEAD
-}
-=======
 
-};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 //Get device icon const getDeviceIcon = (deviceType: string) => {
   switch (deviceType) {
   case 'mobile': return Smartphone;
@@ -61,14 +49,7 @@ else score += 25
 if (metrics.cls < 0.1) score += 100;
 else if (metrics.cls < 0.25) score += 75;
 else if (metrics.cls < 0.4) score += 50;
-<<<<<<< HEAD
-else score += 25
-}
-=======
-else score += 25 
 
-};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 //Don't render anything in production return (<AnimatePresence> {
   isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {
   `w-4 h-4 $ {
@@ -92,13 +73,6 @@ if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
 }
 export default PerformanceMonitor;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

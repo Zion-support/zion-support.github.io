@@ -1,24 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { useParams, useNavigate  } from 'react-router-dom';
-import { Header  } from '@/components/Header';
-import { Footer  } from '@/components/Footer';
-import { SEO  } from '@/components/SEO';
-import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
-import { Button  } from '@/components/ui/button';
-import { toast } from 'sonner';
-=======
-import {useState, useEffect} from 'react';
-import {useParams, useNavigate} from 'react-router-dom';
-import {Header} from '@/components/Header';
-import {Footer} from '@/components/Footer';
-import {SEO} from '@/components/SEO';
-import {VideoCallRoom} from '@/components/video/VideoCallRoom';
-import {Button} from '@/components/ui/button';
-import {toast} from 'sonner';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.;
@@ -43,7 +24,7 @@ export default function VideoCall() {
       isMuted: false
     }
   ]);
-=======
+
 import { useState, useEffect } from 'react',;
 import { useParams, useNavigate } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -75,12 +56,7 @@ export default function VideoCall() {;
       isMuted: false;
     }
   ]),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleJoinCall = () => {
     setIsJoining(true),
     // Simulate connection delay
@@ -91,64 +67,17 @@ export default function VideoCall() {;
         description: `You have joined meeting room ${roomId}`
       })
     }, 1500)
-<<<<<<< HEAD
-  }
-=======
-  },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleLeaveCall = () => {
     setHasJoined(false),
     toast.info("Call ended", {
       description: "You have left the meeting"
-<<<<<<< HEAD
-    });
-=======
-    }),
-    
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     // Navigate back after a short delay
     setTimeout(() => {
       navigate(-1)
     }, 1500)
-<<<<<<< HEAD
-  }
-  const simulateUserJoining = () => {
-    // This is just for demo purposes - in a real app, this would be handled by the video call service
-    const mockUsers = [
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false }
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true }
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-    ];
-    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
-    if (!participants.find(p => p.id === randomUser.id)) {
-      setParticipants(prev => [...prev, randomUser]);
-      toast(`${randomUser.name} joined the call`)
-    }
-  }
-=======
-  },
-  
-  const simulateUserJoining = () => {
-    // This is just for demo purposes - in a real app, this would be handled by the video call service
-    const mockUsers = [
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-    ];
-    
-    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
-    
-    if (!participants.find(p => p.id === randomUser.id)) {
-      setParticipants(prev => [...prev, randomUser]);
-      toast(`${randomUser.name} joined the call`)
-    }
-  };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   ]),;
   const handleJoinCall = () => {;
     setIsJoining(true),;
@@ -184,11 +113,6 @@ export default function VideoCall() {;
       toast(`${randomUser.name} joined the call`);
     }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <>
@@ -210,13 +134,7 @@ export default function VideoCall() {;
           </div>
         ) : (
           <div className="space-y-4">
-<<<<<<< HEAD
-            <VideoCallRoom
-              roomId={roomId |''}
-=======
-            <VideoCallRoom 
-              roomId={roomId || ''} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               participants={participants}
               onLeave={handleLeaveCall}
             />
@@ -228,24 +146,4 @@ export default function VideoCall() {;
             </div>
           </div>
         )}
-<<<<<<< HEAD
-      </main>
-      <Footer />
-    </>
-  )
-}
-<<<<<<< HEAD
-=======
-      </main>;
-      <Footer />;
-    </>;
-  );
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

@@ -127,27 +127,18 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       console.error(e);
       setError(e?.message |'Phantom connection failed');
     } finally {
-<<<<<<< HEAD
-      setLoading(false);    }      if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
-<<<<<<< HEAD
-      onLoggedIn?.({ address: publicKey, chain: 'sol' })
-=======
-=======
-      setLoading(false);    }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
       onLoggedIn?.({ address: publicKey, chain: 'sol' }),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       onClose()
     } catch (e: any) {
       console.error(e);
       setError(e?.message |'Phantom connection failed')
     } finally {
       setLoading(false)
-=======
+
       setLoading(false);    }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
   }, [onClose, onLoggedIn]);
   if (!isOpen) return null;
@@ -192,16 +183,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function Web3LoginModal(props: Web3LoginModalProps) {
-  if (!isClient) return null;
-=======
 
-export default function Web3LoginModal(props: Web3LoginModalProps) {;
-  if (!isClient) return null;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return <ModalInner {...props} />;        </div>
         {error && (
           <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
@@ -226,17 +208,7 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {
 
   return <ModalInner {...props} />
 }
-=======
 
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;
-<<<<<<< HEAD
-  return <ModalInner {...props} />;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-  return <ModalInner {...props} />
-}
-=======
-  return <ModalInner {...props} />;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

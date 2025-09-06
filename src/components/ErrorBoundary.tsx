@@ -1,13 +1,13 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -54,10 +54,10 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 

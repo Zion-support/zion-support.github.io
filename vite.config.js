@@ -32,14 +32,4 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
   },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './'),
-      '@/components': path.resolve(__dirname, './components'),
-      '@/lib': path.resolve(__dirname, './lib'),
-      '@/utils': path.resolve(__dirname, './utils'),
-      '@/hooks': path.resolve(__dirname, './hooks'),
-      '@/types': path.resolve(__dirname, './types')
-    }
-  }
 })

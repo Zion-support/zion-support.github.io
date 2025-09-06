@@ -6,15 +6,7 @@ export default async function handler(
   res: NextApiResponse
 ) {;
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
-<<<<<<< HEAD
-  const { email } = req.body |{}
-  if (!email |typeof email !== 'string')
-    return res.status(400).send('Invalid email');export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
-  const { email } = req.body || {};
-  if (!email || typeof email !== 'string')
-    return res.status(400).send('Invalid email');export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
   const { email } = req.body |{}
   if (!email |typeof email !== 'string') return res.status(400).send('Invalid email');
@@ -52,13 +44,7 @@ export default async function handler(
     }
     return res.status(200).json({ ok: true, data });
   } catch (e: any) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return res.status(500).send(e?.message |'Unexpected error');
-=======
-    return res.status(500).send(e?.message || 'Unexpected error');
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }      }
       return res.status(500).send(error.message |'Database error')
     }
@@ -66,14 +52,6 @@ export default async function handler(
   } catch (e: any) {
     return res.status(500).send(e?.message |'Unexpected error')
 }
-<<<<<<< HEAD
-}
-=======
-    return res.status(500).send(e?.message || 'Unexpected error');
+
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-  }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

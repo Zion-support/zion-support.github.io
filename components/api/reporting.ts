@@ -21,11 +21,7 @@ interface ReportingData {
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { byTenant: {} }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  const method = (req.method |'GET').toUpperCase()
-=======
-  const method = (req.method || 'GET').toUpperCase(),;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const auth = authenticateRequest(req, method === 'GET');
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const tenantId = auth.tenantId!;
@@ -42,12 +38,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json(entry)
   }
   if (method === 'POST') {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const { funnel, timeToHireDays, costPerHireUsd } = req.body |{}
-=======
-    const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     const updated = updateJsonFile<ReportingData>(
       FILE
       curr => {
@@ -84,10 +75,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 return res.status(405).json({ error: 'Method not allowed' });
 }
-=======
+
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

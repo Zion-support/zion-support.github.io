@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 import OpenAI from "openai";
@@ -60,11 +57,7 @@ export default async function handler(
               .filter(Boolean)
           : [];
       }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       let saved: any = null;
       if (supabase) {
         const { data, error } = await supabase
@@ -94,19 +87,3 @@ export default async function handler(
     }
     return res.status(500).json({ message: "Server error" });
 
-<<<<<<< HEAD
-  }
-}
-=======
-    return res
-      .status(200)
-      .json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id });
-  } catch (e: any) {
-    console.error('quote-request error', e);
-    return res.status(500).json({ message: 'Server error' });
-  }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

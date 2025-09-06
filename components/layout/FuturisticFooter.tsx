@@ -1,22 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Link from 'next/link';
-=======
-import React from 'react';
-import Link from 'next/link';
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Globe,
-  Zap,
-  Bot,
-  Cloud,
-  Shield,;
-  ArrowRight,;
-} from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
 import {
   Mail
@@ -29,21 +11,11 @@ import {
   Shield
   ArrowRight;
 } from 'lucide-react';
-=======
-<<<<<<< HEAD
-export default function FuturisticFooter() {;
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function FuturisticFooter() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-export default function FuturisticFooter() {
-=======
 
-export default function FuturisticFooter() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const currentYear = new Date().getFullYear();
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -175,14 +147,7 @@ export default function FuturisticFooter() {;
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Quick Links */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -209,14 +174,7 @@ export default function FuturisticFooter() {;
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Services */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -243,14 +201,7 @@ export default function FuturisticFooter() {;
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Contact Info */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -354,19 +305,4 @@ export default function FuturisticFooter() {;
       <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
     </footer>
-<<<<<<< HEAD
-);
-}
-<<<<<<< HEAD
-=======
-  );
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
-}
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

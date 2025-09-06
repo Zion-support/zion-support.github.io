@@ -1,43 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-import { useRouter } from 'next/router', // Changed from useNavigate
-import Link from 'next/link';
-import { useAuth  } from '@/hooks/useAuth';
-import { useRouterReady, useRouteChange  } from '@/hooks/useRouterReady';
-import { FilterSidebar  } from '@/components/talent/FilterSidebar';
-import { TalentResults  } from '@/components/talent/TalentResults';
-import { TalentSkeleton  } from '@/components/talent/TalentSkeleton';
-import { ErrorBanner  } from '@/components/talent/ErrorBanner';
-import ErrorBoundary from '@/components/GlobalErrorBoundary', // Import ErrorBoundary
-import { useTalentDirectory  } from '@/hooks/useTalentDirectory';
-import { SORT_OPTIONS  } from '@/data/sortOptions';
-import { X } from 'lucide-react'
-import { Button  } from '@/components/ui/button';
-import Image from 'next/image';
-import { TalentProfile } from '@/types/talent';
-import { Pagination;
-  PaginationContent;
-  PaginationItem;
-  PaginationButton;
-  PaginationNext;
-  PaginationPrevious } from '@/components/ui/pagination';
-export default function TalentDirectory() {
-  const router = null;
-                            setCurrentPage(
-                              Math.min(totalPages, currentPage + 1)
-                            )
-=======
-  const isAdmin = user?.userType === 'admin'
-  const paginatedTalents = filteredTalents
-  const pageKey = `talent-directory-${routeKey}-${router.asPath}`
-  )
-}
-  )
-}
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
+
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useNavigate;
 import Link from 'next/link',;
@@ -331,7 +293,7 @@ export default function TalentDirectory() {;
                           onClick={(e) => {;
                             e.preventDefault(),;
                             setCurrentPage(Math.max(1, currentPage - 1));
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                           }}
                         />
                       </PaginationItem>
@@ -381,23 +343,4 @@ export default function TalentDirectory() {;
               </div>
             </div>
           )}
-<<<<<<< HEAD
-        </div>
-      </div>
-    </div>
-  )
-}
-  )
-}
-=======
-        </div>;
-      </div>;
-    </div>;
-  );
-}
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

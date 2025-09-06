@@ -1,116 +1,25 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {useForm} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import z from "zod";
-import {supabase} from "@/integrations/supabase/client";
-import {useAuth} from "@/hooks/useAuth";
-import {useToast} from "@/hooks/use-toast";
-import {useNavigate} from "react-router-dom";
-import {Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {AspectRatio} from "@/components/ui/aspect-ratio";
-import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
-import {AIListingGenerator} from "@/components/listing/AIListingGenerator";
-import {Sparkles} from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import React from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import z from "zod",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
-import { useToast } from "@/hooks/use-toast";
-import { useNavigate } from "react-router-dom";
-import {
-  Form;
-  FormControl;
-  FormDescription;
-  FormField;
-  FormItem;
-  FormLabel;
-=======
-import { useToast } from "@/hooks/use-toast",
-import { useNavigate } from "react-router-dom",
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   FormMessage} from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-<<<<<<< HEAD
-import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
-import { Sparkles } from "lucide-react";
-=======
-import { AIListingGenerator } from "@/components/listing/AIListingGenerator",
-import { Sparkles } from "lucide-react",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 // Define the form schema with zod
 
 const productSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   description: z.string().min(10, "Description must be at least 10 characters"),
   price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
-<<<<<<< HEAD
-    message: "Price must be a valid number"})
-  category: z.string().min(1, "Please select a category");
-  image: z.instanceof(File).optional()
-  tags: z.string().optional()})
-// Type for our form values
-type ProductFormValues = z.infer<typeof productSchema>;
-export function ProductSubmissionForm() {
-  const { user } = useAuth();
-  const { toast } = useToast();
-  const navigate = useNavigate();
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [imagePreview, setImagePreview] = React.useState(null as string | null);
-  const [activeTab, setActiveTab] = React.useState("manual");
-=======
-    message: "Price must be a valid number"}),
-  category: z.string().min(1, "Please select a category"),
-  image: z.instanceof(File).optional(),
-  tags: z.string().optional()}),
 
-// Type for our form values
-type ProductFormValues = z.infer<typeof productSchema>,
-
-<<<<<<< HEAD
-export function ProductSubmissionForm() {;
-  const { user } = useAuth();
-  const { toast } = useToast();
-  const navigate = useNavigate();
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [imagePreview, setImagePreview] = React.useState(null as string | null);
-  const [activeTab, setActiveTab] = React.useState("manual");
-=======
-export function ProductSubmissionForm() {
-  const { user } = useAuth(),
-  const { toast } = useToast(),
-  const navigate = useNavigate(),
-  const [isSubmitting, setIsSubmitting] = React.useState(false),
-  const [imagePreview, setImagePreview] = React.useState(null as string | null),
-  const [activeTab, setActiveTab] = React.useState("manual"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Initialize the form
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema)
@@ -128,41 +37,7 @@ export function ProductSubmissionForm() {
       const reader = new FileReader(),
       reader.onloadend = () => {
         setImagePreview(reader.result as string)
-<<<<<<< HEAD
-      }
-      reader.readAsDataURL(file)
-    }
-  }
-  // Apply AI-generated content to the form
-  const handleApplyGenerated = (content: any) => {
-    form.setValue("description", content.description);
-    form.setValue("tags", content.tags.join(", "));
-    // Set a default price as the middle of the suggested range
-    const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2);
-    form.setValue("price", averagePrice);
-    // Switch to the manual tab to show applied content
-    setActiveTab("manual")
-  }
-=======
-      },
-      reader.readAsDataURL(file)
-    }
-  },
 
-  // Apply AI-generated content to the form
-  const handleApplyGenerated = (content: any) => {
-    form.setValue("description", content.description),
-    form.setValue("tags", content.tags.join(", ")),
-    
-    // Set a default price as the middle of the suggested range
-    const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2),
-    form.setValue("price", averagePrice),
-    
-    // Switch to the manual tab to show applied content
-    setActiveTab("manual")
-  },
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Handle form submission
   const onSubmit = async (values: ProductFormValues) => {
     if (!user) {
@@ -172,13 +47,7 @@ export function ProductSubmissionForm() {
         variant: "destructive"})
       return
     }
-<<<<<<< HEAD
-    setIsSubmitting(true);
-=======
 
-    setIsSubmitting(true),
-    
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       // Create the product listing
       const productData = {
@@ -196,14 +65,7 @@ export function ProductSubmissionForm() {
         .from('product_listings')
         .insert([productData])
         .select('id')
-<<<<<<< HEAD
-        .single();
-      if (productError) {
-        throw new Error(productError.message)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       }
       // If we have an image, upload it
       if (values.image) {
@@ -227,17 +89,7 @@ export function ProductSubmissionForm() {
           .eq('id', productRecord.id);
         if (updateError) {
           throw new Error(updateError.message)
-<<<<<<< HEAD
-        }
-      }
-=======
-        .single(),
-        
-      if (productError) {
-        throw new Error(productError.message)
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import React from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -366,14 +218,10 @@ export function ProductSubmissionForm() {;
           .eq('id', productRecord.id),;
         if (updateError) {;
           throw new Error(updateError.message);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         }
       }
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       // Show success message
       toast({
         title: "Product Published!"
@@ -388,12 +236,7 @@ export function ProductSubmissionForm() {;
     } finally {
       setIsSubmitting(false)
     }
-<<<<<<< HEAD
-  }
-=======
-  },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
       <TabsList className="grid grid-cols-2 mb-6">
@@ -422,57 +265,7 @@ export function ProductSubmissionForm() {;
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
-<<<<<<< HEAD
-=======
-;
-      // Show success message;
-      toast({;
-        title: "Product Published!",;
-        description: "Your product has been successfully published on Zion."}),;
-      // Redirect to product page;
-      navigate(`/marketplace/listing/${productRecord.id}`);
-    } catch (error) {;
-      toast({;
-        title: "Publication Failed",;
-        description: error instanceof Error ? error.message : "An unknown error occurred",;
-        variant: "destructive"});
-    } finally {;
-      setIsSubmitting(false);
-    }
-  };
-  return (;
-    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
-      <TabsList className="grid grid-cols-2 mb-6">;
-        <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">;
-          Manual Creation;
-        </TabsTrigger>;
-        <TabsTrigger value="ai" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">;
-          <Sparkles className="h-4 w-4 mr-2" />;
-          AI-Powered Creation;
-        </TabsTrigger>;
-      </TabsList>;
-      <TabsContent value="manual">;
-        <Form {...form}>;
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
-            <FormField;
-              control={form.control}
-              name="title";
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel>Product Title</FormLabel>;
-                  <FormControl>;
-                    <Input placeholder="Enter product title" {...field} />;
-                  </FormControl>;
-                  <FormDescription>;
-                    Create a compelling title that describes your product;
-                  </FormDescription>;
-                  <FormMessage />;
-                </FormItem>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               )}
             />
             <FormField
@@ -601,12 +394,7 @@ export function ProductSubmissionForm() {;
         <AIListingGenerator
           onApplyGenerated={handleApplyGenerated}
           initialValues={{
-<<<<<<< HEAD
-            title: form.getValues("title")
 
-=======
-            title: form.getValues("title"),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             category: form.getValues("category")
           }}
         />

@@ -1,21 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { JobData, TalentProfile, MatchResult } from "./types.ts";
-// Get openAI API key from environment variables
-=======
-import { JobData, TalentProfile, MatchResult } from "./types.ts",
 
-=======
-import {JobData, TalentProfile, MatchResult} from "./types.ts";
-=======
-import { JobData, TalentProfile, MatchResult } from "./types.ts",
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Get openAI API key from environment variables
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
 /**
@@ -24,39 +10,20 @@ const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
  * @returns Array of normalized skills
  */
 export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]> {
-<<<<<<< HEAD
-  try {;
-    const skillsString = skills.join(", ");
-=======
-  try {
-<<<<<<< HEAD
-    const skillsString = skills.join(", ");
-=======
-    const skillsString = skills.join(", "),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-    
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
         "Authorization": `Bearer ${openAiApiKey}`
-<<<<<<< HEAD
-      }
-=======
-      },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       body: JSON.stringify({
         model: "gpt-4o-mini",
         messages: [
           {
             role: "system"
             content: "You are a skill normalizer for a tech job platform. Normalize the provided skills to their standard industry naming conventions (e.g., 'react js' to 'React.jsnodejs' to 'Node.js'). Return only a comma-separated list of the normalized skills, nothing else."
-<<<<<<< HEAD
-          }
-=======
-          },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
           {
             role: "user"
             content: skillsString
@@ -64,85 +31,17 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
         ],
         temperature: 0.3
       })
-<<<<<<< HEAD
-    });
-    const data = await response.json();
-    if (!data.choices |!data.choices[0] |!data.choices[0].message) {
-=======
-    }),
 
-    const data = await response.json(),
-    
-    if (!data.choices || !data.choices[0] || !data.choices[0].message) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       throw new Error("Failed to normalize skills with AI")
     }
     // Extract and clean the normalized skills
-<<<<<<< HEAD
-    const normalizedSkillsText = data.choices[0].message.content.trim();
-    const normalizedSkills = normalizedSkillsText.split(",").map((skill: string) => skill.trim()).filter(Boolean)
-=======
-    const normalizedSkillsText = data.choices[0].message.content.trim(),
-    const normalizedSkills = normalizedSkillsText.split(",").map((skill: string) => skill.trim()).filter(Boolean),
-    
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     return normalizedSkills
   } catch (error) {
     console.error("Error in normalizeSkillsWithAI:", error),
     // If AI normalization fails, return the original skills
     return skills
-<<<<<<< HEAD
-=======
-import { JobData, TalentProfile, MatchResult } from "./types.ts",;
-// Get openAI API key from environment variables;
-const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",;
-/**;
- * Normalizes skills using OpenAI;
- * @param skills Array of skill strings to normalize;
- * @returns Array of normalized skills;
- */;
-export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]> {;
-  try {;
-    const skillsString = skills.join(", "),;
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {;
-      method: "POST",;
-      headers: {;
-        "Content-Type": "application/json",;
-        "Authorization": `Bearer ${openAiApiKey}`;
-      },;
-      body: JSON.stringify({;
-        model: "gpt-4o-mini",;
-        messages: [;
-          {;
-            role: "system",;
-            content: "You are a skill normalizer for a tech job platform. Normalize the provided skills to their standard industry naming conventions (e.g., 'react js' to 'React.jsnodejs' to 'Node.js'). Return only a comma-separated list of the normalized skills, nothing else.";
-          },;
-          {;
-            role: "user",;
-            content: skillsString;
-          }
-        ],;
-        temperature: 0.3;
-      });
-    }),;
-    const data = await response.json(),;
-    if (!data.choices || !data.choices[0] || !data.choices[0].message) {;
-      throw new Error("Failed to normalize skills with AI");
-    }
-;
-    // Extract and clean the normalized skills;
-    const normalizedSkillsText = data.choices[0].message.content.trim(),;
-    const normalizedSkills = normalizedSkillsText.split(",").map((skill: string) => skill.trim()).filter(Boolean),;
-    return normalizedSkills;
-  } catch (error) {;
-    console.error("Error in normalizeSkillsWithAI:", error),;
-    // If AI normalization fails, return the original skills;
-    return skills;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 }
 /**
@@ -159,31 +58,17 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
       Description: ${jobDetails.description}
       Category: ${jobDetails.category}
       Required Skills: ${jobDetails.skills.join(", ")}
-<<<<<<< HEAD
-      Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     `;
     // Create talent profiles text for AI evaluation
     const talentProfilesText = talents.map((talent, index) => {
       return `
-=======
-<<<<<<< HEAD
-=======
-      Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     `,;
     // Create talent profiles text for AI evaluation;
     const talentProfilesText = talents.map((talent, index) => {;
       return `;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         Talent ${index + 1} ID: ${talent.id}
         Name: ${talent.full_name}
         Title: ${talent.professional_title}
@@ -193,23 +78,14 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
         Hourly Rate: ${talent.hourly_rate ? "$" + talent.hourly_rate : "Not specified"}
         Availability: ${talent.availability_type |"Not specified"}
       `
-<<<<<<< HEAD
-    }).join("\n\n");
-=======
-    }).join("\n\n"),
-    
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     // Send request to OpenAI for matching
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
         "Authorization": `Bearer ${openAiApiKey}`
-<<<<<<< HEAD
-      }
-=======
-      },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       body: JSON.stringify({
         model: "gpt-4o-mini",
         messages: [
@@ -220,78 +96,23 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
             2. A match score from 0-100
             3. A list of matched skills
             4. A brief reason for the match (2-3 sentences)
-<<<<<<< HEAD
-            Return your response in JSON format only, with no additional text: [
-              {
-                "talentId": "talent-id-1";
-                "score": 85
-                "matchedSkills": ["skill1", "skill2"];
-                "reason": "Brief reason for match"
-              }
-              ...
-            ]`
-          }
-=======
-            
-            Return your response in JSON format only, with no additional text:
-            
-            [
-              {
-                "talentId": "talent-id-1",
-                "score": 85,
-                "matchedSkills": ["skill1", "skill2"],
-                "reason": "Brief reason for match"
-              },
-              ...
-            ]`
-          },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
           {
             role: "user"
             content: `Job Details:\n${jobDetailsText}\n\nTalent Profiles:\n${talentProfilesText}`
           }
-<<<<<<< HEAD
-        ];
-        temperature: 0.4
-        response_format: { type: "json_object" }
-      })
-    });
-    const data = await response.json();
-    if (!data.choices |!data.choices[0] |!data.choices[0].message) {
-=======
-        ],
-        temperature: 0.4,
-        response_format: { type: "json_object" }
-      })
-    }),
 
-    const data = await response.json(),
-    
-    if (!data.choices || !data.choices[0] || !data.choices[0].message) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       throw new Error("Failed to match talents with AI")
     }
     // Parse the AI response
-<<<<<<< HEAD
-    const aiResponse = JSON.parse(data.choices[0].message.content);
-=======
-    const aiResponse = JSON.parse(data.choices[0].message.content),
-    
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     // Check if the response is in the expected format
     if (!Array.isArray(aiResponse)) {
       throw new Error("AI response format is invalid")
     }
     return aiResponse
   } catch (error) {
-<<<<<<< HEAD
-    console.error("Error in findBestMatches:", error);
-    // If AI matching fails, perform a basic skill matching
-    return performBasicSkillMatching(jobDetails, talents)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 }
 /**
@@ -318,14 +139,7 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
       matchedSkills: matchedSkills
 
       reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`
-=======
-<<<<<<< HEAD
-    console.error("Error in findBestMatches:", error),
-    
-    // If AI matching fails, perform a basic skill matching
-    return performBasicSkillMatching(jobDetails, talents)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         Bio Summary: ${talent.bio ? talent.bio.substring(0, 100) + "..." : "No bio"}
         Skills: ${Array.isArray(talent.skills) ? talent.skills.join(", ") : "No skills listed"}
         Experience: ${talent.years_experience} years;
@@ -413,11 +227,7 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
       score: matchScore;
       matchedSkills: matchedSkills;
       reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     }
   })
   .filter(match => match.score > 30) // Only include matches with at least 30% score

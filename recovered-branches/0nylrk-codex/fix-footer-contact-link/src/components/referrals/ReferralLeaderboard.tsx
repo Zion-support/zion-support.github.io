@@ -1,27 +1,11 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
 
-import { Award } from "lucide-react";
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Award } from "lucide-react",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Award} from "lucide-react";
-=======
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Award } from "lucide-react",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 interface LeaderboardEntry {
   rank: number;
   name: string;
@@ -59,21 +43,7 @@ export function ReferralLeaderboard() {
                     entry.rank === 1
                       ? "bg-yellow-200 text-yellow-800"
                       : entry.rank === 2
-<<<<<<< HEAD
-                        ? "bg-slate-200 text-slate-800"
-                        : entry.rank === 3
-                          ? "bg-amber-200 text-amber-800"
-                          : "bg-muted text-muted-foreground"
-=======
-                      ? "bg-slate-200 text-slate-800"
-                      : entry.rank === 3
-                      ? "bg-amber-200 text-amber-800"
-                      : "bg-muted text-muted-foreground"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Award } from "lucide-react",;
 interface LeaderboardEntry {;
@@ -117,11 +87,7 @@ export function ReferralLeaderboard() {;
                       : entry.rank === 3;
                       ? "bg-amber-200 text-amber-800";
                       : "bg-muted text-muted-foreground";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                   }`}
                 >
                   {entry.rank}
@@ -136,11 +102,4 @@ export function ReferralLeaderboard() {;
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-  );
-}
-=======
-  )
-}
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

@@ -1,62 +1,4 @@
-<<<<<<< HEAD
-import { ServiceVariant } from '../types/service-variants';
-export interface RealMarketService {;
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
 
-    website: string;
-  }
-
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-
-  reviews: number;
-const contact = {
-<<<<<<< HEAD
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',}
-export const realMarketServices: RealMarketService[] = [
-=======
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',};
-
-export const realMarketServices: RealMarketService[] = [;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -73,55 +15,7 @@ export const realMarketServices: RealMarketService[] = [
     description:
       'A production-ready gateway that unifies access to OpenAI, Anthropic, Google, and open-source models with usage-based routing, rate limits, prompt/response logging, redaction, and cost controls.'
     features: [
-<<<<<<< HEAD
-      'Unified API for multiple LLM providers'
-      'Spend caps, rate limits, and usage alerts'
-      'PII redaction and secrets filtering'
-      'Prompt templates and versioning'
-      'Latency and cost-aware routing'
-      'Batch and streaming inference'
-      'Audit logs and RBAC'
-      'LangChain/LlamaIndex SDK support'
-      'Export to data warehouse'
-    ]
-    popular: true
-    icon: '🧠'
-    color: 'from-cyan-600 to-blue-700'
-    textColor: 'text-cyan-400'
-    link: 'https://ziontechgroup.com/llm-gateway'
-    marketPosition:
-      'Comparable to OpenRouter (usage-based) and EdenAI; adds enterprise guardrails and governance.'
-    targetAudience: 'Product teams, platform engineering, data/AI teams'
-    trialDays: 14
-    setupTime: '1 day'
-    category: 'AI & Data'
-    realService: true
-    technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic']
-=======
-      'Unified API for multiple LLM providers',
-      'Spend caps, rate limits, and usage alerts',
-      'PII redaction and secrets filtering',
-      'Prompt templates and versioning',
-      'Latency and cost-aware routing',
-      'Batch and streaming inference',
-      'Audit logs and RBAC',
-      'LangChain/LlamaIndex SDK support',
-      'Export to data warehouse',
-    ],
-    popular: true,
-    icon: '🧠',
-    color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/llm-gateway',
-    marketPosition:;
-      'Comparable to OpenRouter (usage-based) and EdenAI; adds enterprise guardrails and governance.',
-    targetAudience: 'Product teams, platform engineering, data/AI teams',
-    trialDays: 14,
-    setupTime: '1 day',
-    category: 'AI & Data',
-    realService: true,
-    technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic'],
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     integrations: [
       'OpenAI, Anthropic, Google AI Studio, Bedrock, Azure OpenAI'
     ]
@@ -494,67 +388,7 @@ export const realMarketServices: RealMarketService[] = [
     description:
       'Ready-to-run vector database setup (Pinecone/Weaviate/Elastic) with embeddings pipelines, schema, and example retrieval for your data.'
     features: [
-<<<<<<< HEAD
-      'Provider selection guide'
-      'Schema and index templates'
-      'ETL/ingestion pipelines'
-      'Embeddings and chunking best practices'
-      'Latency and cost tuning'
-      'Sample RAG app integration'
-    ]
-    popular: false
-    icon: '🧭'
-    color: 'from-sky-600 to-indigo-700'
-    textColor: 'text-sky-400'
-    link: 'https://ziontechgroup.com/vector-search-starter'
-    marketPosition:
-      'Accelerator vs DIY; complements vendor docs with turnkey wiring.'
-    targetAudience: 'Data engineers, ML engineers, startups'
-    trialDays: 7
-    setupTime: '1–2 days'
-    category: 'AI & Data'
-    realService: true
-    technology: ['Pinecone, Weaviate, Elastic, OpenAI']
-    integrations: ['Airbyte, Fivetran, Kafka']
-    useCases: ['RAG prototypes, Semantic search, Personalization']
-    roi: 'Ship POCs 3–5x faster.'
-    competitors: ['Native vendor setup, Consultants']
-    marketSize: '$5B vector DB'
-    growthRate: '40% YoY'
-    variant: 'data-futuristic'
-    contactInfo: contact
-    realImplementation: true
-=======
-      'Provider selection guide',
-      'Schema and index templates',
-      'ETL/ingestion pipelines',
-      'Embeddings and chunking best practices',
-      'Latency and cost tuning',
-      'Sample RAG app integration',
-    ],
-    popular: false,
-    icon: '🧭',
-    color: 'from-sky-600 to-indigo-700',
-    textColor: 'text-sky-400',
-    link: 'https://ziontechgroup.com/vector-search-starter',
-    marketPosition:;
-      'Accelerator vs DIY; complements vendor docs with turnkey wiring.',
-    targetAudience: 'Data engineers, ML engineers, startups',
-    trialDays: 7,
-    setupTime: '1–2 days',
-    category: 'AI & Data',
-    realService: true,
-    technology: ['Pinecone, Weaviate, Elastic, OpenAI'],
-    integrations: ['Airbyte, Fivetran, Kafka'],
-    useCases: ['RAG prototypes, Semantic search, Personalization'],
-    roi: 'Ship POCs 3–5x faster.',
-    competitors: ['Native vendor setup, Consultants'],
-    marketSize: '$5B vector DB',
-    growthRate: '40% YoY',
-    variant: 'data-futuristic',
-    contactInfo: contact,
-    realImplementation: true,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     implementationDetails:
       'Terraform and IaC modules, ETL pipelines, sample notebooks.'
     launchDate: '2024-08-20'
@@ -1459,41 +1293,7 @@ export const realMarketServices: RealMarketService[] = [
     textColor: 'text-emerald-300'
     link: 'https://ziontechgroup.com/services/api-backfill-reconciliation'
     marketPosition:
-<<<<<<< HEAD
-      'Bridges the gap between brittle webhook flows and reliable data pipelines.'
-    targetAudience: 'Data engineers, platform teams, RevOps'
-    trialDays: 14
-    setupTime: '2 days'
-    category: 'Integration'
-    realService: true
-    technology: ['Node.js, Postgres, Redis, Airflow']
-    integrations: ['Salesforce, HubSpot, Stripe, Shopify']
-    useCases: ['Fix data gaps, Ensure CRM/Warehouse parity, Improve trust']
-    roi: 'Save weeks of manual cleanup; maintain accurate reporting and billing.'
-    competitors: ['Fivetran (log-based), custom scripts']
-    marketSize: '$4B data integration'
-    growthRate: '20% YoY'
-    variant: 'integration-futuristic'
-    contactInfo: contact
-    realImplementation: true
-=======
-      'Bridges the gap between brittle webhook flows and reliable data pipelines.',
-    targetAudience: 'Data engineers, platform teams, RevOps',
-    trialDays: 14,
-    setupTime: '2 days',
-    category: 'Integration',
-    realService: true,
-    technology: ['Node.js, Postgres, Redis, Airflow'],
-    integrations: ['Salesforce, HubSpot, Stripe, Shopify'],
-    useCases: ['Fix data gaps, Ensure CRM/Warehouse parity, Improve trust'],;
-    roi: 'Save weeks of manual cleanup; maintain accurate reporting and billing.',
-    competitors: ['Fivetran (log-based), custom scripts'],
-    marketSize: '$4B data integration',
-    growthRate: '20% YoY',
-    variant: 'integration-futuristic',
-    contactInfo: contact,
-    realImplementation: true,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     implementationDetails:
       'Replay-safe pullers, checksum compare, and reconciliation dashboards.'
     launchDate: '2025-08-22'
@@ -2109,61 +1909,7 @@ export const realMarketServices: RealMarketService[] = [
     description:
       'Ingest past proposals, policies, and docs. Draft high-quality RFP responses with citations, track requirements coverage, and export to Word/PDF.'
     features: [
-<<<<<<< HEAD
-      'RAG over proposals & policies'
-      'Section templates and styles'
-      'Evidence citations'
-      'Gap coverage tracking'
-      'Word/PDF export'
-    ]
-    popular: true
-    icon: '📝'
-    color: 'from-violet-600 to-fuchsia-700'
-    textColor: 'text-violet-300'
-    link: 'https://ziontechgroup.com/services/ai-rfp-response-copilot'
-    marketPosition:
-      'Purpose-built for proposal teams; governance and citations built-in.'
-    targetAudience: 'Sales engineering, proposal teams, compliance'
-    trialDays: 14
-    setupTime: '1 day'
-    category: 'AI & Data'
-    realService: true
-    technology: ['Embeddings, Vector DB, OpenAI-compatible']
-    integrations: ['SharePoint, Google Drive, Confluence']
-    useCases: ['Faster RFPs, Better consistency, Higher win rate']
-    roi: 'Cut response time 40–60%; improve win rates'
-    competitors: ['Loopio, RFPIO (assist modules)']
-    marketSize: '$1B RFP tooling'
-    growthRate: '20% YoY'
-    variant: 'ai-futuristic' as any
-=======
-      'RAG over proposals & policies',
-      'Section templates and styles',
-      'Evidence citations',
-      'Gap coverage tracking',
-      'Word/PDF export',
-    ],
-    popular: true,
-    icon: '📝',
-    color: 'from-violet-600 to-fuchsia-700',
-    textColor: 'text-violet-300',
-    link: 'https://ziontechgroup.com/services/ai-rfp-response-copilot',
-    marketPosition:;
-      'Purpose-built for proposal teams; governance and citations built-in.',
-    targetAudience: 'Sales engineering, proposal teams, compliance',
-    trialDays: 14,
-    setupTime: '1 day',
-    category: 'AI & Data',
-    realService: true,
-    technology: ['Embeddings, Vector DB, OpenAI-compatible'],
-    integrations: ['SharePoint, Google Drive, Confluence'],
-    useCases: ['Faster RFPs, Better consistency, Higher win rate'],
-    roi: 'Cut response time 40–60%; improve win rates',
-    competitors: ['Loopio, RFPIO (assist modules)'],
-    marketSize: '$1B RFP tooling',
-    growthRate: '20% YoY',
-    variant: 'ai-futuristic' as any,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     contactInfo: {
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -2533,63 +2279,7 @@ export const realMarketServices: RealMarketService[] = [
     description:
       'Lightweight CRM for local businesses: contacts, notes, tasks, reminders, pipeline stages, and SMS/email nudges.'
     features: [
-<<<<<<< HEAD
-      'Contacts and notes'
-      'Reminders and tasks'
-      'Simple pipeline stages'
-      'Email/SMS nudges'
-      'Import/export and tags'
-      'Mobile‑friendly UI'
-    ]
-    popular: true
-    icon: '📇'
-    color: 'from-amber-600 to-orange-700'
-    textColor: 'text-amber-300'
-    link: 'https://ziontechgroup.com/local-micro-crm'
-    marketPosition:
-      'Tooled for simplicity; avoids enterprise CRM bloat and costs.'
-    targetAudience: 'Local service businesses'
-    trialDays: 14
-    setupTime: 'Same day'
-    category: 'CRM'
-    realService: true
-    technology: ['Next.js', 'SQLite/Postgres']
-    integrations: ['Gmail/Outlook', 'Twilio']
-    useCases: ['Track customers', 'Follow‑ups', 'Close more deals']
-    roi: 'Reduce no‑shows and lost leads; +10–20% revenue lift.'
-    competitors: ['HubSpot Starter', 'Pipedrive Essentials']
-    marketSize: '$20B SMB CRM'
-    growthRate: '10% YoY'
-    variant: 'analytics-futuristic' as any
-=======
-      'Contacts and notes',
-      'Reminders and tasks',
-      'Simple pipeline stages',
-      'Email/SMS nudges',
-      'Import/export and tags',
-      'Mobile‑friendly UI',
-    ],
-    popular: true,
-    icon: '📇',
-    color: 'from-amber-600 to-orange-700',
-    textColor: 'text-amber-300',
-    link: 'https://ziontechgroup.com/local-micro-crm',
-    marketPosition:;
-      'Tooled for simplicity; avoids enterprise CRM bloat and costs.',
-    targetAudience: 'Local service businesses',
-    trialDays: 14,
-    setupTime: 'Same day',
-    category: 'CRM',
-    realService: true,
-    technology: ['Next.js', 'SQLite/Postgres'],
-    integrations: ['Gmail/Outlook', 'Twilio'],
-    useCases: ['Track customers', 'Follow‑ups', 'Close more deals'],
-    roi: 'Reduce no‑shows and lost leads; +10–20% revenue lift.',
-    competitors: ['HubSpot Starter', 'Pipedrive Essentials'],
-    marketSize: '$20B SMB CRM',
-    growthRate: '10% YoY',
-    variant: 'analytics-futuristic' as any,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     contactInfo: {
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -2613,63 +2303,7 @@ export const realMarketServices: RealMarketService[] = [
     description:
       'Create and score subject lines using language models and historical performance data; export to ESPs and run quick A/B tests.'
     features: [
-<<<<<<< HEAD
-      'AI suggestions and variants'
-      'Tone and length tuning'
-      'Performance benchmarks'
-      'ESP export and A/B tests'
-      'Spam words and preview'
-      'Team review workflow'
-    ]
-    popular: false
-    icon: '🧪'
-    color: 'from-cyan-600 to-blue-700'
-    textColor: 'text-cyan-300'
-    link: 'https://ziontechgroup.com/subjectline-optimizer-ai'
-    marketPosition:
-      'Focused assistant vs. general copy tools; fast iteration for marketers.'
-    targetAudience: 'Growth and lifecycle marketers'
-    trialDays: 7
-    setupTime: 'Same day'
-    category: 'AI & Marketing'
-    realService: true
-    technology: ['NLP/LLM', 'ESP APIs']
-    integrations: ['Mailchimp', 'Klaviyo', 'SendGrid']
-    useCases: ['Boost open rates', 'Faster copy iteration']
-    roi: 'Improve opens by 5–15% and reduce time‑to‑send.'
-    competitors: ['Copy.ai', 'Jasper', 'Headline analyzers']
-    marketSize: '$3B marketing AI'
-    growthRate: '24% YoY'
-    variant: 'ai-futuristic' as any
-=======
-      'AI suggestions and variants',
-      'Tone and length tuning',
-      'Performance benchmarks',
-      'ESP export and A/B tests',
-      'Spam words and preview',
-      'Team review workflow',
-    ],
-    popular: false,
-    icon: '🧪',
-    color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-300',
-    link: 'https://ziontechgroup.com/subjectline-optimizer-ai',
-    marketPosition:;
-      'Focused assistant vs. general copy tools; fast iteration for marketers.',
-    targetAudience: 'Growth and lifecycle marketers',
-    trialDays: 7,
-    setupTime: 'Same day',
-    category: 'AI & Marketing',
-    realService: true,
-    technology: ['NLP/LLM', 'ESP APIs'],
-    integrations: ['Mailchimp', 'Klaviyo', 'SendGrid'],
-    useCases: ['Boost open rates', 'Faster copy iteration'],
-    roi: 'Improve opens by 5–15% and reduce time‑to‑send.',
-    competitors: ['Copy.ai', 'Jasper', 'Headline analyzers'],
-    marketSize: '$3B marketing AI',
-    growthRate: '24% YoY',
-    variant: 'ai-futuristic' as any,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     contactInfo: {
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -2794,13 +2428,7 @@ export const realMarketServices: RealMarketService[] = [
     customers: 88;
     rating: 4.6
     reviews: 36
-<<<<<<< HEAD
-  }
-];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface RealMarketService {;
   id: string,;
@@ -4976,10 +4604,7 @@ export const realMarketServices: RealMarketService[] = [;
     customers: 88,;
     rating: 4.6;
     reviews: 36;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

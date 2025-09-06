@@ -1,71 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react',;
-import type { NextPage } from 'next',;
-import type { Review } from '../../types/reviews',;
-const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key'),
 
-const AdminReviewsPage: NextPage = () => {
-  const [pending, setPending] = useState<Review[]>([]),
-  const [all, setAll] = useState<Review[]>([]),
-  const [adminKey, setAdminKey] = useState(''),
-
-  async function refresh() {
-    const res = await fetch('/api/admin/debug/reviews'),
-    const data = await res.json(),
-    if (res.ok) {
-      setAll(data.reviews),
-      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
-    }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import type { Review } from '../../types/reviews';
-<<<<<<< HEAD
 
-const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') |'dev-admin-key')
-const AdminReviewsPage: NextPage = () => {
-  const [pending, setPending] = useState<Review[]>([])
-  const [all, setAll] = useState<Review[]>([])
-  const [adminKey, setAdminKey] = useState('')
-  async function refresh() {
-    const res = await fetch('/api/admin/debug/reviews')
-    const data = await res.json()
-    if (res.ok) {
-      setAll(data.reviews)
-      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
-    }
-  }
-  useEffect(() => { refresh() }, [])
-  async function moderate(action: 'approve' | 'remove', reviewId: string) {
-    const res = await fetch('/api/reviews/moderate', {
-      method: 'POST'
-      headers: {
-        'Content-Type': 'application/jsonx-admin-key': adminKey |'dev-admin-key'}
-      body: JSON.stringify({ action, reviewId })})
-    if (res.ok) refresh()
-  }
-=======
-const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key');
-const AdminReviewsPage: NextPage = () => {;
-  const [pending, setPending] = useState<Review[]>([]);
-  const [all, setAll] = useState<Review[]>([]);
-  const [adminKey, setAdminKey] = useState('');
-  async function refresh() {;
-    const res = await fetch('/api/admin/debug/reviews');
-    const data = await res.json();
-    if (res.ok) {;
-      setAll(data.reviews);
-      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed));
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
     } catch (error) {
@@ -87,7 +24,7 @@ const AdminReviewsPage: NextPage = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <main className="max-w-5xl mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-semibold">Review Moderation</h1>
@@ -125,21 +62,6 @@ const AdminReviewsPage: NextPage = () => {;
       </section>
     </main>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-export default AdminReviewsPage;
 
-=======
 },
-export default AdminReviewsPage,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-},
-<<<<<<< HEAD
 
-export default AdminReviewsPage,;
-=======
-export default AdminReviewsPage,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

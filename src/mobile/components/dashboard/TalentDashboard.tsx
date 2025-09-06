@@ -1,51 +1,15 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-import React from 'react'
-import {
-  Card
-  CardContent
-  CardHeader
-  CardTitle
-  CardDescription
-} from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-  ChevronRight
-  FileText
-  Image
-  Clock
-  Zap
-  BookOpen
-} from 'lucide-react'
-import Link from 'next/link'
-import React from "react"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-<<<<<<< HEAD
-=======
-import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react'
-import Link from "next/link"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react'
 import Link from "next/link";
-=======
+
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react'
 import Link from "next/link",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 export function TalentDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -58,16 +22,7 @@ export function TalentDashboard() {
             </Button>
           </Link>
         </div>
-<<<<<<< HEAD
-        <div className='space-y-3'>
-=======
-        
-        <div className="space-y-3">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between items-start">
@@ -92,14 +47,7 @@ export function TalentDashboard() {
               </div>
             </CardContent>
           </Card>
-<<<<<<< HEAD
-=======
-          
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between items-start">
@@ -118,19 +66,7 @@ export function TalentDashboard() {
                   <span className="text-xs text-muted-foreground mt-1">4 hours ago</span>
                 </div>
               </div>
-<<<<<<< HEAD
-              <div className='flex gap-2 mt-3'>
-                <Button size='sm'>Apply Now</Button>
-                <Button size='sm' variant='outline'>
-                  View Details
-                </Button>              </div>              <div className="flex gap-2 mt-3">
-=======
-              <div className="flex gap-2 mt-3">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                 <Button size="sm">Apply Now</Button>
                 <Button size="sm" variant="outline">View Details</Button>
               </div>
@@ -138,14 +74,7 @@ export function TalentDashboard() {
           </Card>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       <section>
         <h2 className="text-lg font-medium mb-4">Application Tracker</h2>
         <Card>
@@ -168,49 +97,14 @@ export function TalentDashboard() {
                 <div className="text-xs text-muted-foreground">Jobs Viewed</div>
               </div>
             </div>
-<<<<<<< HEAD
-            <Button variant='outline' className='w-full mt-4'>              View All Applications      <section>
-        <h2 className="text-lg font-medium mb-4">Application Tracker</h2>
-        <Card>
-          <CardContent className="p-4">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="text-center p-3 bg-primary/5 rounded-lg">
-                <div className="text-2xl font-bold text-primary">3</div>
-                <div className="text-xs text-muted-foreground">Active Applications</div>
-              </div>
-              <div className="text-center p-3 bg-primary/5 rounded-lg">
-                <div className="text-2xl font-bold text-primary">2</div>
-                <div className="text-xs text-muted-foreground">Interviews Scheduled</div>
-              </div>
-              <div className="text-center p-3 bg-primary/5 rounded-lg">
-                <div className="text-2xl font-bold text-primary">5</div>
-                <div className="text-xs text-muted-foreground">Jobs Saved</div>
-              </div>
-              <div className="text-center p-3 bg-primary/5 rounded-lg">
-                <div className="text-2xl font-bold text-primary">12</div>
-                <div className="text-xs text-muted-foreground">Jobs Viewed</div>
-              </div>
-            </div>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             <Button variant="outline" className="w-full mt-4">
               View All Applications
             </Button>
           </CardContent>
         </Card>
       </section>
-<<<<<<< HEAD
-=======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       <section>
         <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
         <div className="grid grid-cols-2 gap-4">
@@ -238,130 +132,19 @@ export function TalentDashboard() {
             <Clock className="h-5 w-5 mb-1" aria-hidden="true" />
             <span>Availability</span>
           </Button>
-<<<<<<< HEAD
-          <Button
-            variant='outline'
-            className='h-auto py-4 flex flex-col gap-1'
-            aria-label='AI Resume Boost'
-          >
-            <Zap className='h-5 w-5 mb-1' aria-hidden='true' />            <span>AI Resume Boost</span>
-          </Button>
-        </div>
-      </section>      <section>
-        <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
-        <div className="grid grid-cols-2 gap-4">
-          <Button
-            variant="outline"
-            className="h-auto py-4 flex flex-col gap-1"
-            aria-label="Update Resume"
-          >
-            <FileText className="h-5 w-5 mb-1" aria-hidden="true" />
-            <span>Update Resume</span>
-          </Button>
-          <Button
-            variant="outline"
-            className="h-auto py-4 flex flex-col gap-1"
-            aria-label="View Portfolio"
-          >
-            <Image className="h-5 w-5 mb-1" aria-hidden="true" />
-            <span>Portfolio</span>
-          </Button>
-          <Button
-            variant="outline"
-            className="h-auto py-4 flex flex-col gap-1"
-            aria-label="Set Availability"
-          >
-            <Clock className="h-5 w-5 mb-1" aria-hidden="true" />
-            <span>Availability</span>
-          </Button>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           <Button variant="outline" className="h-auto py-4 flex flex-col gap-1" aria-label="AI Resume Boost">
             <Zap className="h-5 w-5 mb-1" aria-hidden="true" />
             <span>AI Resume Boost</span>
           </Button>
         </div>
       </section>
-<<<<<<< HEAD
-      <section>
-        <div className='flex items-center justify-between mb-4'>
-          <h2 className='text-lg font-medium'>Learning Hub</h2>
-          <Button variant='ghost' size='sm' className='h-8'>            View all
-          </Button>
-        </div>
-        <Card>
-      <section>
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-medium">Learning Hub</h2>
-          <Button variant="ghost" size="sm" className="h-8">
-          </Button>
-        </div>
-        <Card>
-          <CardContent className='p-4'>
-            <div className='flex items-center gap-3'>
-              <div
-                className='bg-primary/10 p-3 rounded-full'
-                aria-hidden='true'
-              >
-                <BookOpen className='h-6 w-6 text-primary' />
-              </div>
-              <div>
-                <h3 className='font-medium'>Improve your profile visibility</h3>
-                <p className='text-sm text-muted-foreground'>
-                  5 tips for getting noticed by clients
-                </p>              </div>          <CardContent className="p-4">
-            <div className="flex items-center gap-3">
-              <div className="bg-primary/10 p-3 rounded-full" aria-hidden="true">
-                <BookOpen className="h-6 w-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-medium">Improve your profile visibility</h3>
-                <p className="text-sm text-muted-foreground">5 tips for getting noticed by clients</p>
-=======
-      
-      <section>
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-medium">Learning Hub</h2>
-          <Button variant="ghost" size="sm" className="h-8">
-            View all
-          </Button>
-        </div>
-        <Card>
-          <CardContent className="p-4">
-            <div className="flex items-center gap-3">
-              <div className="bg-primary/10 p-3 rounded-full" aria-hidden="true">
-                <BookOpen className="h-6 w-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-medium">Improve your profile visibility</h3>
-                <p className="text-sm text-muted-foreground">5 tips for getting noticed by clients</p>
-              </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             </div>
           </CardContent>
         </Card>
       </section>
-<<<<<<< HEAD
-    </div>;
-  );
-};
-=======
-    </div>
-  )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import React from "react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -517,8 +300,4 @@ export function TalentDashboard() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

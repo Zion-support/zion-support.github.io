@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface ComprehensiveITService {
-=======
-export interface ComprehensiveITService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string;
   name: string;
   tagline: string;
@@ -867,21 +861,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-      'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'
-    launchDate: '2024-09-15'
-    customers: 180
-    rating: 4.9
-    reviews: 156
-  }
-=======
-      'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
-    launchDate: '2024-09-15',
-    customers: 180,
-    rating: 4.9,
-    reviews: 156,
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -894,14 +874,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     rating: 4.9
 
     reviews: 156
-<<<<<<< HEAD
-  }
-];
-=======
-export interface ComprehensiveITService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string,;
   name: string,;
   tagline: string,;
@@ -1379,10 +1352,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
     customers: 180,;
     rating: 4.9,;
     reviews: 156;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
