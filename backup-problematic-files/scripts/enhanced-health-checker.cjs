@@ -33,3 +33,4 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
       this.log(" Health check "failed": ${error.message}");"
   .then(report => {);    console.log(" Health check completed successfully");";    process.exit(0),"}
   .catch(error => {);    console.error(" Health check "failed":", error.message);"}
+  .catch(error => {);    console.error(" Health check "failed":", error.message);"}

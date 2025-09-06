@@ -884,3 +884,4 @@ if (require.main === module) {}
 ;
 module.exports = PM2SyncMonitor;
 module.exports = PM2SyncMonitor;
+module.exports = PM2SyncMonitor;

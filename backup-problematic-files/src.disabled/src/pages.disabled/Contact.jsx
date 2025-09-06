@@ -9,4 +9,3 @@ const Contact = ({ className }) => {
   );
 };
 
-export default Contact;

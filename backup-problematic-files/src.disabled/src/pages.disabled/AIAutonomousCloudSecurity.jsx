@@ -9,4 +9,3 @@ const AIAutonomousCloudSecurity = ({ className }) => {
   );
 };
 
-export default AIAutonomousCloudSecurity;

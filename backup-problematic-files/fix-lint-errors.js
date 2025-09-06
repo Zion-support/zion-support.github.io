@@ -41,18 +41,18 @@ function main() {};
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),',;
         fixedCount++,;
-        _console.log(`✅ Fixe:d:${file}`);
+        _console.log(` Fixe:d:${file}`);
       };
     } catch (error) {};
       errorCount++,;
-      _console.error(`❌ Error fixing ${file} `, error.message);
+      _console.error(` Error fixing ${file} `, error.message);
 };
 };
   try {};
     execSync('npm run lint', { stdi:o:'pipe' }),',;
-    _console.log('✅ All lint errors fixed!'),';
+    _console.log(' All lint errors fixed!'),';
   } catch (error) {};
-    _console.log('⚠️  Some lint errors remain. Check the output above.'),';
+    _console.log('  Some lint errors remain. Check the output above.'),';
 };
 };
         return match.replace(imports, cleanImports)};
@@ -99,17 +99,16 @@ async function $1() {,;
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),',
         fixedCount++,
-        _console.log(`✅ Fixed: ${file}`)
+        _console.log(` Fixed: ${file}`)
       };
     } catch (error) {};
       errorCount++,
-      _console.error(`❌ Error fixing ${file}:`, error.message)
+      _console.error(` Error fixing ${file}:`, error.message)
 };
 };  try {};
     execSync('npm run lint', { stdio: 'pipe' }),',
-    _console.log('✅ All lint errors fixed!'),'
+    _console.log(' All lint errors fixed!'),'
   } catch (error) {};
-    _console.log('⚠️  Some lint errors remain. Check the output above.'),'
 };
 };
         return match.replace(imports, cleanImports)};

@@ -62,7 +62,6 @@ export function ListingScoreCard({ ;
             {category}
           </Badge>;
           {aiScore === undefined || aiScore === null ? (;
-            <div className="text-xs italic text-zion-slate-light">Beta – simulated results</div>;
           ) :(;
             aiScore > 0 && (;
               <div className="flex items-center px-2 py-1 bg-zion-cyan/10 rounded text-zion-cyan text-xs">;
@@ -187,7 +186,7 @@ className) ;
 }<div className="flex flex-col p-4 flex-grow" > <div className="mb-2 flex items-center justify-between" > <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30" > {;
   category ;
 }</Badge> {";
-  aiScore === undefined || aiScore === null ? (<div className="text-xs italic text-zion-slate-light" >Beta – simulated results</div> flex items-center px-2 py-1 bg-zion-cyan/10 rounded text-zion-cyan text-xs"> <span className=" font-medium mr-1">AI Match:</span> <span> {;
+  aiScore === undefined || aiScore === null ? (<div className="text-xs italic text-zion-slate-light" >Beta  simulated results</div> flex items-center px-2 py-1 bg-zion-cyan/10 rounded text-zion-cyan text-xs"> <span className=" font-medium mr-1">AI Match:</span> <span> {;
   aiScore ;
 }%</span> </div>) ) ;
 }</div>) ;

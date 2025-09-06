@@ -9,4 +9,3 @@ const WebhooksManager = ({ className }) => {
   );
 };
 
-export default WebhooksManager;

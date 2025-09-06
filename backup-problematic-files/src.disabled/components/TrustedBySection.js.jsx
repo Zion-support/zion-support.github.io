@@ -9,4 +9,3 @@ const TrustedBySection.js = ({ className }) => {
   );
 };
 
-export default TrustedBySection.js;

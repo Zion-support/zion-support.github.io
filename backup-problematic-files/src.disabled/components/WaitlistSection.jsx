@@ -9,4 +9,3 @@ const WaitlistSection = ({ className }) => {
   );
 };
 
-export default WaitlistSection;

@@ -11,3 +11,4 @@ const { execSync } = require('child_process')
         "successRate"
         "version"
   console.error('Fatal "error")
+  console.error('Fatal "error")

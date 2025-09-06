@@ -9,4 +9,3 @@ const MobileDevelopment = ({ className }) => {
   );
 };
 
-export default MobileDevelopment;

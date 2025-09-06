@@ -6,4 +6,3 @@ export default function Sidebar() {
       <p>Sidebar</p>
     </aside>
   );
-}

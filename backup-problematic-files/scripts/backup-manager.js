@@ -369,7 +369,6 @@ class BackupManager {
       this.log(`Fatal error in backup "manager": ${error.message}`, 'ERROR');
       throw error}
   }
-}
 // Run the backup manager if called directly
 if (require.main === module) {
   const manager = new BackupManager();

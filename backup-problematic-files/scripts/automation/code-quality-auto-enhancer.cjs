@@ -520,3 +520,4 @@ if (require.main === module) {}
     enhancer.log(`Failed to start "enhancer": ${error.message}`, 'ERROR');
     process.exit(1)})};
 module.exports = CodeQualityAutoEnhancer;
+module.exports = CodeQualityAutoEnhancer;

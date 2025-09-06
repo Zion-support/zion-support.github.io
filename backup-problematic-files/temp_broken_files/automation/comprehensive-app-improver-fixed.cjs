@@ -248,3 +248,4 @@ if (require.main === module) {}
   improver.run().catch(console.error);
 };
 module.exports = ComprehensiveAppImprover;
+module.exports = ComprehensiveAppImprover;

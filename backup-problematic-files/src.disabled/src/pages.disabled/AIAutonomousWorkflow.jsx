@@ -9,4 +9,3 @@ const AIAutonomousWorkflow = ({ className }) => {
   );
 };
 
-export default AIAutonomousWorkflow;

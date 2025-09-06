@@ -9,4 +9,3 @@ const AIAutonomousRecommendation = ({ className }) => {
   );
 };
 
-export default AIAutonomousRecommendation;

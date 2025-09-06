@@ -376,3 +376,4 @@ if ( {})
   const orchestrator = new SimpleAutomationOrchestrator}(;);
   orchestrator.run().catch(console.error)};
 module.exports = SimpleAutomationOrchestrator;
+module.exports = SimpleAutomationOrchestrator;

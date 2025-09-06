@@ -9,4 +9,3 @@ const Logo.js = ({ className }) => {
   );
 };
 
-export default Logo.js;

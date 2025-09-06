@@ -26,6 +26,7 @@ interface PerformanceOptimizedHeroProps {
   // Add props here as needed
 
 
+}
 
 export default function PerformanceOptimizedHero({ }: PerformanceOptimizedHeroProps) {
   return (
@@ -36,9 +37,6 @@ export default function PerformanceOptimizedHero({ }: PerformanceOptimizedHeroPr
   );
 
 }
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
+:src.disabled/components/PerformanceOptimizedHero.jsx
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/PerformanceOptimizedHero.jsx
+}

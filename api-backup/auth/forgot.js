@@ -1,6 +1,4 @@
 
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,22 +22,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from "react";
-=======
 import React from './react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 (" ");
 export default /**
  * ForgotPassword - Function description
  */
 function ForgotPassword() {
   return (
-
 }
-
-=======
-    <div>;
-      <h1 > Forgot Password</h1>;
-      <p > Password reset functionality would go here.</p>;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

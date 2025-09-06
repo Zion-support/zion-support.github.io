@@ -15,3 +15,4 @@ console.log(' Starting Security Validation...')
     "high"
     "medium"
     "low"
+    "low"

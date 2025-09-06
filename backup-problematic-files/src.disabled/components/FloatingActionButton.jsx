@@ -9,4 +9,3 @@ const FloatingActionButton = ({ className }) => {
   );
 };
 
-export default FloatingActionButton;

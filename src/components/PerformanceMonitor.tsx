@@ -1,7 +1,11 @@
 import React from 'react';
 
-const PerformanceMonitor: React.FC = () => {
-  return null; // Placeholder component
+interface PerformanceMonitorProps {
+  children: React.ReactNode;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
+  return <>{children}</>;
 };
 
 export default PerformanceMonitor;

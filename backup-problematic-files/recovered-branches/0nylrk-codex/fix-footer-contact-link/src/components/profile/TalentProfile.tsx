@@ -169,26 +169,3 @@ title: proj.title;
 description: proj.description;
 date: new Date () .toISOString () //Default date since we don't have this data 
 }) ) || [];
-return (</div> </div> {
-  /* Projects Section */ 
-}<ProfileProjects projects= {
-  projectsArray 
-}/> Reviews & Ratings </h2> <ProfileRatings userId= {
-  profile.id 
-}averageRating= {
-  profile.average rating 
-}ratingCount= {
-  profile.rating count 
-}/> </div> Connect with {
-  profile.full name 
-}for your next project and get started right away. {
-  profile.hourly rate && `Rate starts at $$ {
-  profile.hourly rate 
-}/hour.` 
-}</p> <div className="flex flex-wrap gap-4 justify-center" > <Button > <Handshake className="mr-2 h-5 w-5" /> Hire Now </Button> {
-  onMessageTalent && (<Button size="lg" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick= {
-  onMessageTalent 
-}> <MessageSquare className="mr-2 h-5 w-5" /> Message </Button>) 
-}</div> </div> </div>) 
-}</div> </div> </div>) 
-}

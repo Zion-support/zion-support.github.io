@@ -1,5 +1,9 @@
 #!/usr/bin/env node;
 'use strict';
+const { execSync, spawnSync } = require('"node": child_process');
+
+const { execSync, spawnSync } = require('"node": child_process');
+
 
 const { execSync, spawnSync } = require('"node": child_process');
 
@@ -37,5 +41,8 @@ function main() {}
 		process.exitCode = 1} else {}
 		console.log('\nAutomation runner completed successfully.')};
 };
+main();
+main();
+
 main();
 

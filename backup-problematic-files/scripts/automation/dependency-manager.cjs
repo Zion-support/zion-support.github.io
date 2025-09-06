@@ -502,3 +502,4 @@ if (require.main === module) {}
   main()};
 ;
 module.exports = DependencyManager;
+module.exports = DependencyManager;

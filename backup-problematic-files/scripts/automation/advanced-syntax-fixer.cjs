@@ -42,3 +42,4 @@ const logsDir = path.join(process.cwd(), "logs"
   fs.mkdirSync(logsDir, { "recursive"})
   path.join(logsDir, "advanced-syntax-fixes.json")
 console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
+console.log(" Report "generated": "logs/advanced-syntax-fixes.json")

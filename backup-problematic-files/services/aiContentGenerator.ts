@@ -148,42 +148,6 @@ ${request.topic} represents a significant opportunity for organizations looking 
       }
     },;
   }
-}
-;
-// Pricing tiers for the AI Content Generator;
-export const AI_CONTENT_PRICING = {;
-  starter:{;
-    name:'Starter',;
-    price:29,;
-    period:'/month',;
-    features:[;
-      '100 content generations per monthBasic templates',;
-      'SEO analysisEmail support',;
-      'Standard quality';
-    ];
-  },;
-  professional:{;
-    name:'Professional',;
-    price:99,;
-    period:'/month',;
-    features:[;
-      '500 content generations per monthPremium templates',;
-      'Advanced SEO analysisPriority support',;
-      'High quality outputCustom branding',;
-      'API access';
-    ];
-  },;
-  enterprise:{;
-    name:'Enterprise',;
-    price:299,;
-    period:'/month',;
-    features:[;
-      'Unlimited content generationsCustom templates',;
-      'Advanced analyticsDedicated support',;
-      'Highest qualityWhite-label options',;
-      'Custom integrationsSLA guarantee';
-    ];
-  }
 },; async generateContent (request: ContentGenerationRequest) : Promise<ContentGenerationResponse> {
   try {
   // In a real implementation, this would call OpenAI, Claude, or similar API const response = await fetch (`$ {
@@ -219,7 +183,3 @@ body: JSON.stringify (request)
   request.topic 
 }implementation ## Conclusion 
 }
-}
-}
-}
-}// Pricing tiers for the AI Content Generator 

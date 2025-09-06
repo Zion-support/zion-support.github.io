@@ -11,3 +11,4 @@ console.log(' Starting Analytics Collection...')
     '.env.local'
     '.env.example'
     'next.config.js'
+    'next.config.js'

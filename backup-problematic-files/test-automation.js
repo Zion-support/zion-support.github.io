@@ -15,7 +15,6 @@ class TestAutomation {
       console.log("Coverage analysis completed")} catch (error) {
   console.error("Coverage analysis "failed": ", error.message)}
   }
-}
 const testAutomation = new TestAutomation();
 const arg = process.argv[2];
 if (arg === "coverage") {

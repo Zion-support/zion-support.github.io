@@ -1,98 +1,113 @@
 {
-
-
-  "timestamp": "2025-09-06T09:22:21.501Z",
-  "totalDuration": 93290,
-  "successfulTasks": 2,
-
-
+<<<<<<< HEAD
+  "timestamp": "2025-09-06T17:31:43.872Z",
+  "duration": "46s",
+=======
+  "timestamp": "2025-09-06T20:40:15.907Z",
+  "duration": "124s",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  "results": {
+    "syntaxFixes": 0,
+    "buildSuccess": false,
+    "testsPassed": 0,
+    "optimizations": 0,
+    "errors": [
+      {
+        "command": "npm run lint:fix",
+        "description": "ESLint Auto-fix",
+        "error": "spawnSync /bin/sh ETIMEDOUT"
+      },
+      {
+        "command": "npm run format",
+        "description": "Prettier Code Formatting",
+        "error": "spawnSync /bin/sh ETIMEDOUT"
+      },
+      {
+        "command": "npm run type-check",
+        "description": "TypeScript Type Checking",
+        "error": "spawnSync /bin/sh ETIMEDOUT"
+      },
+      {
+        "command": "npm run build",
+        "description": "Application Build",
+        "error": "spawnSync /bin/sh ETIMEDOUT"
+      },
+      {
+        "command": "npm run test:smoke",
+        "description": "Smoke Tests",
+        "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n[napi-postinstall@0.3.3] Trying to install package \"@unrs/resolver-binding-linux-x64-gnu\" using npm\nError: Cannot parse /workspace/backup-problematic-files/temp-exclude/zion-os/package.json as JSON: Expected property name or '}' in JSON at position 2 (line 2 column 1)\n    at Object.worker (/workspace/node_modules/jest-haste-map/build/worker.js:267:13)\n    at execFunction (/workspace/node_modules/jest-worker/build/processChild.js:297:17)\n    at execHelper (/workspace/node_modules/jest-worker/build/processChild.js:285:5)\n    at execMethod (/workspace/node_modules/jest-worker/build/processChild.js:288:5)\n    at process.messageListener (/workspace/node_modules/jest-worker/build/processChild.js:196:7)\n    at process.emit (node:events:518:28)\n    at emit (node:internal/child_process:949:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:91:21)\n"
+      },
+      {
+        "command": "npm test -- --passWithNoTests",
+        "description": "Jest Tests",
+        "error": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nError: Cannot parse /workspace/backup-problematic-files/temp-exclude/zion-os/package.json as JSON: Expected property name or '}' in JSON at position 2 (line 2 column 1)\n    at Object.worker (/workspace/node_modules/jest-haste-map/build/worker.js:267:13)\n    at execFunction (/workspace/node_modules/jest-worker/build/processChild.js:297:17)\n    at execHelper (/workspace/node_modules/jest-worker/build/processChild.js:285:5)\n    at execMethod (/workspace/node_modules/jest-worker/build/processChild.js:288:5)\n    at process.messageListener (/workspace/node_modules/jest-worker/build/processChild.js:196:7)\n    at process.emit (node:events:518:28)\n    at emit (node:internal/child_process:949:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:91:21)\n"
+      }
+    ]
+  },
+  "summary": {
+    "syntaxFixes": 0,
+    "buildSuccess": false,
+    "testsPassed": 0,
+<<<<<<< HEAD
+    "totalErrors": 5
+  "timestamp": "2025-09-06T10:42:27.266Z",
+  "totalDuration": 60241,
+  "successfulTasks": 6,
   "totalTasks": 8,
   "results": {
     "dependencyFix": {
       "success": true,
-
-
-      "duration": 80288,
-
-
+      "duration": 7037,
       "errors": [],
       "warnings": []
     },
     "codeQuality": {
       "success": false,
-
-
-      "duration": 5840,
-      "errors": [
-        "spawnSync /bin/sh ENOBUFS",
-        "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
-      ],
-
+      "duration": 27333,
+      "errors": [],
       "warnings": []
     },
     "securityAudit": {
-      "success": false,
-
-      "duration": 3375,
-      "errors": [
-        "Command failed: npm audit --audit-level moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
-      ],
+      "success": true,
+      "duration": 1719,
+      "errors": [],
       "warnings": []
     },
     "buildOptimization": {
-      "success": false,
-      "duration": 550,
-      "errors": [
-        "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\n> Build error occurred\n[Error: Configuring Next.js via 'next.config.cjs' is not supported. Please replace the file with 'next.config.js', 'next.config.mjs', or 'next.config.ts'.]\n"
-      ],
+      "success": true,
+      "duration": 6250,
+      "errors": [],
       "warnings": []
     },
     "seoOptimization": {
       "success": false,
       "duration": 39,
-<<<<<<< HEAD
-
-
+"errors": [],
+      "success": true,
+      "duration": 46,
       "errors": [],
       "warnings": []
     },
     "accessibilityImprovement": {
       "success": false,
-
-
-      "duration": 585,
-      "errors": [
-        "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
-      ],
+      "duration": 9508,
+      "errors": [],
       "warnings": []
     },
     "performanceOptimization": {
-      "success": false,
-      "duration": 990,
-      "errors": [
-        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\n> Build error occurred\n[Error: Configuring Next.js via 'next.config.cjs' is not supported. Please replace the file with 'next.config.js', 'next.config.mjs', or 'next.config.ts'.]\n"
-      ],
-
-
+      "success": true,
+      "duration": 6736,
+      "errors": [],
       "warnings": []
     },
     "deployment": {
       "success": true,
-
-
-      "duration": 1619,
+      "duration": 1612,
       "errors": [],
       "warnings": []
     }
-  },
-  "recommendations": [
-    "Review and fix code quality issues",
-    "Address security vulnerabilities",
-    "Optimize application performance",
-    "Improve SEO optimization",
-    "Enhance accessibility features"
-  ]
-
+=======
+    "totalErrors": 6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  }
 }
-
-

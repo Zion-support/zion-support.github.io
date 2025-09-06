@@ -9,4 +9,3 @@ const AIConsumerWillingnessToTry = ({ className }) => {
   );
 };
 
-export default AIConsumerWillingnessToTry;

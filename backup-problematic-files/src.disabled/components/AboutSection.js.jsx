@@ -9,4 +9,3 @@ const AboutSection.js = ({ className }) => {
   );
 };
 
-export default AboutSection.js;

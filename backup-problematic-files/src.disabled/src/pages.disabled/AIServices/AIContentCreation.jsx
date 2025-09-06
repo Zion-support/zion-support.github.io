@@ -9,4 +9,3 @@ const AIContentCreation = ({ className }) => {
   );
 };
 
-export default AIContentCreation;

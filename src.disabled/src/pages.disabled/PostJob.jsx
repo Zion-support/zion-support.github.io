@@ -26,8 +26,15 @@ interface PostJobProps {
   // Add props here as needed
 
 
+}
 
-export default function PostJob({ }: PostJobProps) {
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=
+import React from 'react';
+interface PostJobProps {
+  // Add props here as needed
+}
+>export default function PostJob({ }: PostJobProps) {
   return (
     <div>
       <h1>PostJob</h1>
@@ -36,9 +43,29 @@ export default function PostJob({ }: PostJobProps) {
   );
 
 }
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
+:src.disabled/src/pages.disabled/PostJob.jsx
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/src/pages.disabled/PostJob.jsx
+}
+:src.pages.disabled/PostJob.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/PostJob.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/PostJob.jsx
+}
+}
+}
+}
+}
+=
+}
+>

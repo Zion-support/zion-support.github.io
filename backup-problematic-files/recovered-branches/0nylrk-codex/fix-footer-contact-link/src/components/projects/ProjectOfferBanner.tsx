@@ -53,7 +53,7 @@ export function ProjectOfferBanner() {;
                   <Bell className="h-4 w-4 text-primary" />;
                 </div>;
                 <div>;
-                  <h4 className="font-semibold">🎉 New Project Offer!</h4>;
+                  <h4 className="font-semibold"> New Project Offer!</h4>;
                   <p className="text-sm text-muted-foreground">;
                     You've been selected for "{offer.job?.title}". Review and accept to get started.;
                   </p>;

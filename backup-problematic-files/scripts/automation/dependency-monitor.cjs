@@ -145,3 +145,4 @@ class $1 {}
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
 monitor.run().catch(console.error);
+monitor.run().catch(console.error);

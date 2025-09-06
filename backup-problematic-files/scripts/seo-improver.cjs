@@ -31,3 +31,4 @@ Allow: /contact"
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")
+    console.log(" SEO improvement completed!")

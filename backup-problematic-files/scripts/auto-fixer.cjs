@@ -183,3 +183,4 @@ if (require.main === module) {}
       console.error("Auto-fixer "failed": ", error);
       process.exit(1)})};
 module.exports = AutoFixer;
+module.exports = AutoFixer;

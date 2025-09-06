@@ -9,4 +9,3 @@ const CloudDevOpsServices = ({ className }) => {
   );
 };
 
-export default CloudDevOpsServices;

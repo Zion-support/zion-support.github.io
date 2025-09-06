@@ -9,4 +9,3 @@ const UseLazyLoad.js = ({ className }) => {
   );
 };
 
-export default UseLazyLoad.js;

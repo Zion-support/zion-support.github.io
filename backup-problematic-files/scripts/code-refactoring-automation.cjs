@@ -17,3 +17,4 @@ console.log(' Starting Code Refactoring Automation...')
     "nextSteps"
   console.log('� Next "steps")
   console.error(' Code refactoring automation "failed")
+  console.error(' Code refactoring automation "failed")

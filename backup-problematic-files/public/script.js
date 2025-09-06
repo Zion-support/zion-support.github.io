@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {;
     ;
     // Back to top button;
     const backToTopBtn = document.createElement('button'),;
-    backToTopBtn.innerHTML = '↑',;
+    backToTopBtn.innerHTML = '',;
     backToTopBtn.className = 'back-to-top',;
     backToTopBtn.setAttribute('aria-labelBack to top'),;
     document.body.appendChild(backToTopBtn),;

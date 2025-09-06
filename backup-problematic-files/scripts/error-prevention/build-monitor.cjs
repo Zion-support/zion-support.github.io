@@ -18,6 +18,8 @@ class BuildMonitor {}
     this.intervalId = setInterval(() => {}
       this.runBuildCheck()}, this.interval);
     
+    
+    
     console.log('Build Monitor started successfully')};
   async runBuildCheck() {}
     try {}
@@ -38,6 +40,8 @@ class BuildMonitor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
+
+
 
       child.on('close', (code) => {}
         if ( {})
@@ -63,6 +67,8 @@ class BuildMonitor {}
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
+
+
 
       cleanChild.on('close', (code) => {}
         if ( {})
@@ -103,4 +109,5 @@ if ( {})
 });
   
   monitor.start().catch(console.error)};
+module.exports = BuildMonitor;
 module.exports = BuildMonitor;

@@ -9,4 +9,3 @@ const ServicesOverview = ({ className }) => {
   );
 };
 
-export default ServicesOverview;

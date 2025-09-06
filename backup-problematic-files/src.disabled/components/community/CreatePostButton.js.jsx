@@ -9,4 +9,3 @@ const CreatePostButton.js = ({ className }) => {
   );
 };
 
-export default CreatePostButton.js;

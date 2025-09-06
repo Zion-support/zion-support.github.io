@@ -69,7 +69,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
 ;
     // Log to console in development;
     if (process.env.NODE_ENV === 'development') {;
-      console.group('🚨 Error Boundary Caught Error');
+      console.group(' Error Boundary Caught Error');
       logErrorToProduction('Error:', { data:error });
       logErrorToProduction('Error Info:', { data:errorInfo });
       logErrorToProduction('Enhanced Error:', { data:enhancedError });
@@ -433,7 +433,7 @@ import * as Sentry from '@sentry/nextjs' error: Error | null errorInfo: ErrorInf
   const errorId = this.generateErrorId () //Enhanced error logging const enhancedError = {';
   ...error, componentStack: errorInfo.componentStack, errorBoundary: this.props.context || 'GlobalErrorBoundary', timestamp: new Date () .toISOString (), userAgent: typeof window !== 'undefined'? navigator.userAgent : 'SSR', url: typeof window !== 'undefined'? window.location.href : 'SSR',  userId: this.getUserId (), buildInfo: this.getBuildInfo () ';
 }//Log to console in development if (process.env.NODE ENV === 'development') {';
-  console.group ('🚨 Error Boundary Caught Error') logErrorToProduction ('Error:', {;
+  console.group (' Error Boundary Caught Error') logErrorToProduction ('Error:', {;
   data: error ';
 }) logErrorToProduction ('Error Info:', {;
   data: errorInfo ';

@@ -9,3 +9,4 @@ const path = require('path')
         if (!content.includes('<Head>') && !content.includes('<title>')
             "issue"
             "recommendation"
+            "recommendation"

@@ -9,4 +9,3 @@ const ServicesBenefitsShowcase = ({ className }) => {
   );
 };
 
-export default ServicesBenefitsShowcase;

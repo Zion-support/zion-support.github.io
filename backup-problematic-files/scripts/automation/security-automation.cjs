@@ -345,3 +345,4 @@ security.run().catch(error => {})
     process.exit(1)})};
 ;
 module.exports = SecurityAutomation;
+module.exports = SecurityAutomation;

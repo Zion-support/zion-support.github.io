@@ -9,4 +9,3 @@ const FloatingCTA.js = ({ className }) => {
   );
 };
 
-export default FloatingCTA.js;

@@ -9,4 +9,3 @@ const Header.js = ({ className }) => {
   );
 };
 
-export default Header.js;

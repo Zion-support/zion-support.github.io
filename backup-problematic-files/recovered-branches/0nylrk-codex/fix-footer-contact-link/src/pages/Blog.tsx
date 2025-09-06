@@ -157,7 +157,7 @@ const BLOG_POSTS:BlogPost[] = [;
 <p>Forward-thinking organizations are creating robust upskilling programs to develop AI capabilities within their existing workforce. Structured mentorship, educational stipends, and dedicated learning time can transform motivated employees into valuable AI contributors.</p>;
 ;
 <h2>Creating Compelling AI Missions</h2>;
-<p>Top AI talent is increasingly mission-driven, seeking roles where their work creates meaningful impact. Articulating how your AI initiatives address important challenges—whether in sustainability, healthcare, education, or other domains—can be a powerful recruitment tool.</p>;
+<p>Top AI talent is increasingly mission-driven, seeking roles where their work creates meaningful impact. Articulating how your AI initiatives address important challengeswhether in sustainability, healthcare, education, or other domainscan be a powerful recruitment tool.</p>;
 ;
 <h2>Remote-First Talent Strategies</h2>;
 <p>The most successful AI employers have embraced truly global talent strategies, creating distributed teams that leverage expertise regardless of location. This approach requires investing in collaboration tools, asynchronous workflows, and inclusive management practices.</p>;
@@ -286,7 +286,7 @@ export default function Blog() {;
                     <div>;
                       <p className="text-white font-medium">{featuredPosts[0].author.name}</p>;
                       <p className="text-sm text-zion-slate-light">;
-                        {featuredPosts[0].publishedDate} • {featuredPosts[0].readTime}
+                        {featuredPosts[0].publishedDate}  {featuredPosts[0].readTime}
                       </p>;
                     </div>;
                   </div>;
@@ -351,7 +351,7 @@ export default function Blog() {;
                       <span className="text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full">;                        {post.category}
                       </span>;
                       <div className="text-xs text-zion-slate-light">;
-                        {post.publishedDate} • {post.readTime}
+                        {post.publishedDate}  {post.readTime}
                       </div>;
                     </div>;
                     <h3 className="text-xl font-bold text-white mb-3">;
@@ -376,7 +376,7 @@ export default function Blog() {;
                       asChild;
                     >;
                       <Link to={`/blog/${post.slug}`}>;
-                        Read More →;
+                        Read More ;
                       </Link>;
                     </Button>;
                   </CardFooter>;
@@ -435,7 +435,7 @@ Blog - AI & Tech Insights" description="Stay updated with the latest trends in A
   featuredPosts[0].author.name 
 }</p> <p className="text-sm text-zion-slate-light"> {
   featuredPosts[0].publishedDate 
-}• {
+} {
   featuredPosts[0].readTime 
 }</p> </div> </div> <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit" > <Link to= {
   `/blog/$ {
@@ -466,7 +466,7 @@ Blog - AI & Tech Insights" description="Stay updated with the latest trends in A
   post.category 
 }</span> <div className="text-xs text-zion-slate-light"> {
   post.publishedDate 
-}• {
+} {
   post.readTime 
 }</div> </div> <h3 className="text-xl font-bold text-white mb-3"> {
   post.title 
@@ -482,7 +482,7 @@ Blog - AI & Tech Insights" description="Stay updated with the latest trends in A
   `/blog/$ {
   post.slug 
 }` 
-}> Read More → </Link> </Button> </CardFooter> </Card>) ) 
+}> Read More  </Link> </Button> </CardFooter> </Card>) ) 
 }</div>) : (<div className="text-center py-16"> <h3 className="text-xl font-bold text-white mb-2">No articles found</h3> <p className="text-zion-slate-light mb-6" >Try adjusting your search or filter criteria</p> <Button 
 }
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" 

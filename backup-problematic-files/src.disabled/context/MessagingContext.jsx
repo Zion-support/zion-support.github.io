@@ -9,4 +9,3 @@ const MessagingContext = ({ className }) => {
   );
 };
 
-export default MessagingContext;

@@ -9,4 +9,3 @@ const News = ({ className }) => {
   );
 };
 
-export default News;

@@ -9,4 +9,3 @@ const Sonner.js = ({ className }) => {
   );
 };
 
-export default Sonner.js;

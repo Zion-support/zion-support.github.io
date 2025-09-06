@@ -9,4 +9,3 @@ const NotFound.js = ({ className }) => {
   );
 };
 
-export default NotFound.js;

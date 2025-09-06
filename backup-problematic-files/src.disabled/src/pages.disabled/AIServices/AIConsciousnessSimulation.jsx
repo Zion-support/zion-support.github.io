@@ -9,4 +9,3 @@ const AIConsciousnessSimulation = ({ className }) => {
   );
 };
 
-export default AIConsciousnessSimulation;

@@ -9,4 +9,3 @@ const ComprehensivePricing = ({ className }) => {
   );
 };
 
-export default ComprehensivePricing;

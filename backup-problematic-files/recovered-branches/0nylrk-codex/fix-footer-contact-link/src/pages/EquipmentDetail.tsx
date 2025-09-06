@@ -257,7 +257,7 @@ export default function EquipmentDetail() {;
                       <ul className="space-y-2">;
                         {equipment.features.map((feature, index) => (;
                           <li key={index} className="flex items-start gap-2">;
-                            <div className="text-zion-cyan mt-1 flex-shrink-0">•</div>;
+                            <div className="text-zion-cyan mt-1 flex-shrink-0"></div>;
                             <span className="text-zion-slate-light">{feature}</span>;
                           </li>;                        ))}
                       </ul>;

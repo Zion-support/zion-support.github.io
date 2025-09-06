@@ -9,4 +9,3 @@ const SiteFooter = ({ className }) => {
   );
 };
 
-export default SiteFooter;

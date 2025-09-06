@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");const projectRoot = process.cwd();"const reportsDir = path.join(projectRoot, "reports");if (!fs.existsSync(reportsDir)) { fs.mkdirSync(reportsDir, { recursive: true })}const results = {" startedAt: new Date().toISOString()," steps: []};function runStep(name, command) {" const step = { name, command, startedAt: new Date().toISOString() }; try {"" execSync(command, { stdio: "inherit", env: process.env }); step.success = true} catch (error) { step.success = false; step.error = {" message: error.message," status: error.status | null}} finally { step.endedAt = new Date().toISOString(); results.steps.push(step)}}"runStep("eslint-fix", "npm run lint -- --fix");"runStep("comprehensive-error-fixer", "node scripts/automation/comprehensive-error-fixer.cjs");"runStep("type-check", "npm run type-check");"runStep("build", "npm run build");results.endedAt = new Date().toISOString();"const outPath = path.join(reportsDir, "maintenance-summary.json");try { fs.writeFileSync(outPath, JSON.stringify(results, null, 2));" console.log(`\n Maintenance summary written to: ${outPath}`)} catch (err) {"" console.error("Failed to write maintenance summary: ", err.message)}'"`'"`
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/usr/bin/env node;
 /*
  * Maintenance Runner;
@@ -9,48 +5,23 @@
  * Writes a simple JSON summary to reports/maintenance-summary.json;
  */
 <<<<<<< HEAD
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-const projectRoot = process.cwd();
-const reportsDir = path.join(projectRoot, 'reports');
-if (!fs.existsSync(reportsDir)) {
-  fs.mkdirSync(reportsDir, { "recursive": true })}
-const results = {
-  "startedAt": new Date().toISOString(),
-  "steps": []};
-function runStep(name, command) {
-  const step = { name, command, "startedAt": new Date().toISOString() };
-  try {
-    execSync(command, { "stdio": 'inherit', "env": process.env });
-    step.success = true} catch (error) {
-    step.success = false;
-    step.error = {
-      "message": error.message,
-      "status": error.status || null}} finally {
-    step.endedAt = new Date().toISOString();
-    results.steps.push(step)}
-}
-runStep('eslint-fix', 'npm run lint -- --fix');
-runStep('comprehensive-error-fixer', 'node scripts/automation/comprehensive-error-fixer.cjs');
-runStep('type-check', 'npm run type-check');
-runStep('build', 'npm run build');
-results.endedAt = new Date().toISOString();
-const outPath = path.join(reportsDir, 'maintenance-summary.json');
-try {
-  fs.writeFileSync(outPath, JSON.stringify(results, null, 2));
-  } catch (err) {
-  console.error('Failed to write maintenance "summary": ', err.message)}
+<<<<<<< HEAD
+
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 const reportsDir = path.join(projectRoot, 'reports')
     execSync(command, { "stdio"})
 <<<<<<< HEAD
+<<<<<<< HEAD
   console.error('Failed to write maintenance "summary")
 =======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
   console.error('Failed to write maintenance "summary")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

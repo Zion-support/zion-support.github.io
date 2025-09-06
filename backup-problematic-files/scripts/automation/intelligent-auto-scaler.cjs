@@ -4,6 +4,8 @@
  * AI-powered auto-scaling system for PM2 processes;
  */
 
+
+
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -32,4 +34,5 @@ const { execSync } = require('child_process')
         "action"
       this.log(` Strategy optimization "failed"`)
       "onlineProcesses"
+      this.log(` Fatal "error"`)
       this.log(` Fatal "error"`)

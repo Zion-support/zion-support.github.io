@@ -8,3 +8,4 @@ console.log(' Starting Real-time Monitoring...')
         "status"
       "directory"
       "status"
+      "status"

@@ -9,4 +9,3 @@ const ValuePropositionShowcase.js = ({ className }) => {
   );
 };
 
-export default ValuePropositionShowcase.js;

@@ -217,3 +217,4 @@ if ( {})
     const automation = new EnhancedSecurityAutomation}(;);
     automation.run().catch(console.error)};
 module.exports = EnhancedSecurityAutomation;
+module.exports = EnhancedSecurityAutomation;

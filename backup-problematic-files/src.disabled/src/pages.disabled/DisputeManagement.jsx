@@ -9,4 +9,3 @@ const DisputeManagement = ({ className }) => {
   );
 };
 
-export default DisputeManagement;

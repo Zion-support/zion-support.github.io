@@ -11,5 +11,3 @@ const Email-automation: React.FC<Email-automationProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}

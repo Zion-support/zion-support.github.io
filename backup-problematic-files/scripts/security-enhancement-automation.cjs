@@ -40,3 +40,4 @@ console.log('� Starting Security Enhancement Automation...')
     "nextSteps"
   console.log('� Security improvements "applied")
   console.error(' Security enhancement automation "failed")
+  console.error(' Security enhancement automation "failed")

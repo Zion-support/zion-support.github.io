@@ -9,4 +9,3 @@ const ContentQualityAnalyzer = ({ className }) => {
   );
 };
 
-export default ContentQualityAnalyzer;

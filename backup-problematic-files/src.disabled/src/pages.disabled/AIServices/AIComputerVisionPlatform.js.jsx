@@ -9,4 +9,3 @@ const AIComputerVisionPlatform.js = ({ className }) => {
   );
 };
 
-export default AIComputerVisionPlatform.js;

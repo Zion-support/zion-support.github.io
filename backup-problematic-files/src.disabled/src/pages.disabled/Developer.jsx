@@ -9,4 +9,3 @@ const Developer = ({ className }) => {
   );
 };
 
-export default Developer;

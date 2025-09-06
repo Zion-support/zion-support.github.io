@@ -9,4 +9,3 @@ const Sustainability = ({ className }) => {
   );
 };
 
-export default Sustainability;

@@ -126,19 +126,3 @@ clearFilters: () => void
 }: ActiveFiltersProps) {
   //Check if any filters are active const hasActiveFilters = selectedSkills.length > 0 || selectedAvailability.length > 0 || selectedRegions.length > 0 || experienceRange[0] !== 0 || experienceRange[1] !== 15 || priceRange[0] !== 50 || priceRange[1] !== 200;
 if (!hasActiveFilters) return null;
-{
-  selectedSkills.map (skill => (<ClickableBadge key= {
-  skill 
-}</ClickableBadge>) ) 
-}{
-  selectedAvailability.map (status => (<ClickableBadge key= {
-  status 
-}> {
-  status === 'full-time' ? 'Full-time' : status === 'part-time' ? 'Part-time' : 'Project-based' 
-}<X className="h-3 w-3" /> </ClickableBadge>) ) 
-}{
-  selectedRegions.map (region => (<ClickableBadge key= {
-  region 
-}</ClickableBadge>) 
-}<Button 
-}

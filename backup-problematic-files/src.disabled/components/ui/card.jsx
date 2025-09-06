@@ -9,4 +9,3 @@ const Card = ({ className }) => {
   );
 };
 
-export default Card;

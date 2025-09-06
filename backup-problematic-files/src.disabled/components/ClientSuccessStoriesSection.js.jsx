@@ -9,4 +9,3 @@ const ClientSuccessStoriesSection.js = ({ className }) => {
   );
 };
 
-export default ClientSuccessStoriesSection.js;

@@ -9,4 +9,3 @@ const InteractiveTestimonials.js = ({ className }) => {
   );
 };
 
-export default InteractiveTestimonials.js;

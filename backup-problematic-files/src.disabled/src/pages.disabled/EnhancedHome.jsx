@@ -9,4 +9,3 @@ const EnhancedHome = ({ className }) => {
   );
 };
 
-export default EnhancedHome;

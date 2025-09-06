@@ -13,4 +13,3 @@ const Index: React.FC<IndexProps> = ({ className }) => {
     </div>
   );
 }
-}

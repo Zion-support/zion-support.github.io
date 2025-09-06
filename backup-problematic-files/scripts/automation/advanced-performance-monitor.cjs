@@ -689,3 +689,4 @@ if (require.main === module) {}
       process.exit(1)})};
 ;
 module.exports = AdvancedPerformanceMonitor;
+module.exports = AdvancedPerformanceMonitor;

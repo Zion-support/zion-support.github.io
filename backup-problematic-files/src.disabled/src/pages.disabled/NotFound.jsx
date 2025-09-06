@@ -9,4 +9,3 @@ const NotFound = ({ className }) => {
   );
 };
 
-export default NotFound;

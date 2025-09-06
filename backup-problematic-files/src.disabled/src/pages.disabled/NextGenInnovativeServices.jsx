@@ -9,4 +9,3 @@ const NextGenInnovativeServices = ({ className }) => {
   );
 };
 
-export default NextGenInnovativeServices;

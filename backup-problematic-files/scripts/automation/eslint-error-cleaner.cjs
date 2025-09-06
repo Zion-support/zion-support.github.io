@@ -686,3 +686,4 @@ if (require.main === module) {
     process.exit(1)})}
 ;
 module.exports = ESLintErrorCleaner
+module.exports = ESLintErrorCleaner

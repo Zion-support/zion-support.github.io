@@ -9,4 +9,3 @@ const CybersecuritySuite = ({ className }) => {
   );
 };
 
-export default CybersecuritySuite;

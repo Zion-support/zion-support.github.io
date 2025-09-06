@@ -17,6 +17,8 @@ class LinterWatcher {}
     this.intervalId = setInterval(() => {}
       this.runLint()}, this.interval);
     
+    
+    
     console.log('Linter Watcher started successfully')};
   async runLint() {}
     try {}
@@ -34,6 +36,8 @@ class LinterWatcher {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
+
+
 
       child.on('close', (code) => {}
         if ( {})
@@ -56,6 +60,8 @@ class LinterWatcher {}
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
+
+
 
       child.on('close', (code) => {}
         if ( {})
@@ -91,4 +97,5 @@ if ( {})
     process.exit(0)}
 });
   watcher.start().catch(console.error)};
+module.exports = LinterWatcher;
 module.exports = LinterWatcher;

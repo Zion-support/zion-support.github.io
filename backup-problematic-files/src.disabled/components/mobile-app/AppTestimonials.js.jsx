@@ -9,4 +9,3 @@ const AppTestimonials.js = ({ className }) => {
   );
 };
 
-export default AppTestimonials.js;

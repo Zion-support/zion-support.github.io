@@ -9,4 +9,3 @@ const MobileLaunchPage = ({ className }) => {
   );
 };
 
-export default MobileLaunchPage;

@@ -13,3 +13,4 @@ const { execSync } = require('child_process')
       "gitExists"
       console.log('\n⚠  Failed "Operations")
       console.error('Fatal "error")
+      console.error('Fatal "error")

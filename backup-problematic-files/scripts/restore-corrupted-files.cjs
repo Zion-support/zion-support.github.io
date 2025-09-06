@@ -110,3 +110,4 @@ if (require.main === module) {}
   const restorer = new FileRestorer();
   restorer.restoreCorruptedFiles().catch(console.error)};
 module.exports = FileRestorer;
+module.exports = FileRestorer;

@@ -22,7 +22,6 @@ export default function LeadershipPage() {;
 						<p className="text-slate-300">Advisors from cloud, security, data, and venture ecosystems.</p>;
 					</div>;
 				</div>;
-				<div className="mt-10 text-slate-300">Contact:<a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> • <a className="text-cyan-400" href="tel:+13024640950">+1 302 464 0950</a></div>;
 			</div>;
 		</div>;
 	);

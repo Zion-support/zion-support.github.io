@@ -20,3 +20,4 @@ const path = require('path')
       "message"
       console.log('\n FAILED "STEPS")
       this.log(`� CI automation "failed"`)
+      this.log(`� CI automation "failed"`)

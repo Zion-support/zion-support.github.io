@@ -9,4 +9,3 @@ const ExpensiveComponent.js = ({ className }) => {
   );
 };
 
-export default ExpensiveComponent.js;

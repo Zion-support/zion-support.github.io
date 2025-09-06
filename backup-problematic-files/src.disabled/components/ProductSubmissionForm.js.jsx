@@ -9,4 +9,3 @@ const ProductSubmissionForm.js = ({ className }) => {
   );
 };
 
-export default ProductSubmissionForm.js;

@@ -172,3 +172,4 @@ if (require.main === module) {
   optimizer.run().catch(console.error);
 }
 module.exports = SEOOptimizer;
+module.exports = SEOOptimizer;

@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node;
-;const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-;
-console.log('🔧 Starting comprehensive syntax fixes...');
-;
-// Get all TypeScript and JavaScript files;
-function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {;
-  let files = [];
-  const items = fs.readdirSync(dir);
-  ;
-  for (const item of items) {;
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    ;
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
-      files = files.concat(getAllFiles(fullPath, extensions));
-    } else if (extensions.some(ext => item.endsWith(ext))) {;
-      files.push(fullPath);
-    }
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")/ Function to fix common syntax errorsfunction fixSyntaxErrors(content) { / Fix extra commas in JSX attributes: className="." , -> className="."" content = content.replace(/className="[^"]*"\s*,\s*>/g, (match) => {" return match.replace(/,\s*$/, "")}); "" / Fix extra commas in style objects: textAlign: "center", , -> textAlign: "center","" content = content.replace(/(\w+):\s*"[^"]*",\s*,/g, "$1: \"$2\",");"" content = content.replace(/(\w+):\s*"[^"]*",\s*,/g, "$1: "$2","); " / Fix malformed JSX elements: <div><Link -> <div><Link content = content.replace(/<div[^>]*><Link/g, (match) => {" return match.replace(/<div([^>]*)><Link/, "<div$1>\n <Link")}); " / Fix extra commas in JSX closing tags: </Link> , -> </Link>" content = content.replace(/<\/Link>\s*,\s*>/g, "</Link>"); " / Fix extra commas in JSX elements: >, -> >" content = content.replace(/>\s*,\s*</g, "><"); " / Fix extra commas in JSX attributes: required , -> required" content = content.replace(/required\s*,\s*className/g, "required\n className"); " / Fix extra commas in style objects: }, , -> }," content = content.replace(/}\s*,\s*,/g, "},"); " / Fix extra commas in JSX elements: >, -> >" content = content.replace(/>\s*,\s*$/gm, ">"); return content}/ Function to process a filefunction processFile(filePath) { try {" const content = fs.readFileSync(filePath, "utf8";); const fixedContent = fixSyntaxErrors(conten;t;); if ( {" fs.writeFileSync(filePath, fixedContent, "utf8")) { {" fs.writeFileSync(filePath, fixedContent, "utf8")}" console.log(` Fixed: ${filePath}`); return true} return false} catch (error) {` console.error(` Error processing ${filePath}:`, error.message); return false}}/ Main execution"console.log(" Starting comprehensive syntax error fixing.");"const filesToFix = ["components/ContactForm.tsx"," "pages/_app.tsx"," "pages/cloud-devops.tsx"," "pages/cybersecurity.tsx"," "pages/docs.tsx"];let totalFixed = ;0;for (const file of filesToFix) { if (true) { if (processFile(file)) { totalFixed++} }}"console.log("\n Syntax fixing complete: ")) { ) { if (processFile(file)) { totalFixed++} }}"console.log("\n Syntax fixing complete: ")}"`console.log(` - Files fixed: ${totalFixed}`);"console.log(" - Issues encountered: 0");if ( {" console.log("\n All syntax errors have been fixed!")) { {" console.log("\n All syntax errors have been fixed!")}} else {" console.log("\n No syntax errors found!")}'"`'"`
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -83,68 +50,18 @@ for (const file of filesToFix) {
   if () {
     if (processFile(file)) {
       totalFixed++}
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-    return match.replace(/,\s*$/, '')
-  // Fix extra commas in style "objects": textAlign: 'center', , -> "textAlign"
-  content = content.replace(/(\w+):\s*'[^']*',\s*,/g, '$"1"
-  content = content.replace(/(\w+):\s*"[^"]*",\s*,/g, '$"1": "$2"
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-class ComprehensiveSyntaxFixer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.ensureReportsDir();
->>>>>>> origin/main
-  }
-=======
 console.log('🔧 Starting comprehensive syntax fix...');
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
 
-<<<<<<< HEAD
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
-<<<<<<< HEAD
-    return match.replace(/,\s*$/, '')
-  // Fix extra commas in style "objects": textAlign: 'center', , -> "textAlign"
-  content = content.replace(/(\w+):\s*'[^']*',\s*,/g, '$"1"
-  content = content.replace(/(\w+):\s*"[^"]*",\s*,/g, '$"1": "$2"
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-    return match.replace(/,\s*$/, '')
-  // Fix extra commas in style "objects": textAlign: 'center', , -> "textAlign"
-  content = content.replace(/(\w+):\s*'[^']*',\s*,/g, '$"1"
-  content = content.replace(/(\w+):\s*"[^"]*",\s*,/g, '$"1": "$2"
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -403,19 +320,13 @@ for (const fix of fixes) {
 }
 
 console.log(`✅ Fixed ${fixedCount} files`);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 
   async fixMergeConflicts() {
     this.log('🔧 Fixing merge conflicts...');
-=======
     // Remove merge conflict markers
     content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
     content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
     content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     
     // Fix common syntax errors
     content = content.replace(/;\s*;/g, ';');
@@ -461,24 +372,7 @@ console.log(`✅ Fixed ${fixedCount} files`);
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Run the syntax fixer
-const fixer = new ComprehensiveSyntaxFixer();
-fixer.run().catch(console.error);
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
-// Run the syntax fixer
-const fixer = new ComprehensiveSyntaxFixer();
-fixer.run().catch(console.error);
-=======
 console.log(`✅ Fixed ${fixedCount} files`);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
 function processDirectory(dir) {
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
@@ -507,4 +401,3 @@ if (fs.existsSync(srcDir)) {
 } else {
   console.log('❌ src directory not found');
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

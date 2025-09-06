@@ -10,3 +10,4 @@ const util = require("util")
       console.error(`Failed to write to log "file"`)
     await this.log(" Starting syntax error fixing...")
     fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
+    fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"

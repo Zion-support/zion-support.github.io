@@ -9,4 +9,3 @@ const LinkHealthMonitor = ({ className }) => {
   );
 };
 
-export default LinkHealthMonitor;

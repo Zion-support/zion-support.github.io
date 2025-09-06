@@ -17285,8 +17285,15 @@
         "Consider implementing cache invalidation strategy"
       ]
     }
-  ]
-=======
+  }
+}
+  },
+  "summary": {
+    "bundleOptimized": false,
+    "imagesOptimized": true,
+    "codeSplittingImplemented": true,
+    "cachingConfigured": true,
+    "compressionSetup": true
 
   "timestamp": "2025-09-06T01:32:26.433Z",
   "optimizations": [
@@ -17324,5 +17331,22 @@
     ]
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  "timestamp": "2025-09-06T00:06:24.470Z",
+  "metrics": {
+    "bundleSize": 0,
+    "loadTime": 0,
+    "performanceScore": 0
+  },
+  "optimizations": [
+    "Found 5 images for optimization"
+  ],
+  "summary": {
+    "totalOptimizations": 1,
+    "bundleSize": 0,
+    "performanceScore": 0
+  }
+  }
+  }
+
+  }
 }

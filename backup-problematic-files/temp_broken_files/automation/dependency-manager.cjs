@@ -357,3 +357,4 @@ if ( {})
       console.error('Dependency management "failed": ', error);
       process.exit(1)})};
 module.exports = DependencyManager;
+module.exports = DependencyManager;

@@ -9,4 +9,3 @@ const StarRating = ({ className }) => {
   );
 };
 
-export default StarRating;

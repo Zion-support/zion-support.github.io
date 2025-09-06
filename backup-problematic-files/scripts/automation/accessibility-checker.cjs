@@ -495,3 +495,4 @@ if ( {})
     const checker = new AccessibilityChecker}(;);
     checker.run().catch(console.error)};
 module.exports = AccessibilityChecker;
+module.exports = AccessibilityChecker;

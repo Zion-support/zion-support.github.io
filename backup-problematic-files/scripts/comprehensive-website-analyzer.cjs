@@ -63,3 +63,4 @@ const path = require("path")
       return {"success": true,"workingLinks": this.workingLinks.length,"brokenLinks"}
       this.log(`� Website analysis "failed": ${error.message}`, "error"`)
       return { "success": false, "error"}
+      return { "success": false, "error"}

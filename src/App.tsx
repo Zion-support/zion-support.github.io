@@ -1,45 +1,64 @@
-
-import React, { useState, Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import { Footer } from './components/Footer';
-import Sidebar from './components/layout/Sidebar';
-import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Pricing from './pages/Pricing';
-import Contact from './pages/Contact';
-import ErrorBoundary from './components/ErrorBoundary';
-import LoadingSpinner from './components/LoadingSpinner';
-import PerformanceMonitor from './components/PerformanceMonitor';
+import Footer from './components/Footer';
+<<<<<<< HEAD
+=======
+import { ThemeProvider } from './components/ThemeProvider';
+>>>>>>> main
+import ScrollToTop from './components/ScrollToTop';
+import { BackToTopButton } from './components/BackToTopButton';
+// Pages are handled by Next.js in the app directory
 
 function App() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
   return (
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-          <Header />
-          <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-          
-          <main className="pt-20">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/pricing" element={<Pricing />} />
-                <Route path="/contact" element={<Contact />} />
-              </Routes>
-            </Suspense>
-          </main>
-          
-          <Footer />
-          <PerformanceMonitor />
-        </div>
-      </Router>
-    </ErrorBoundary>
+<<<<<<< HEAD
+    <Router>
+      <ScrollToTop />
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/pricing" element={<Pricing />} />
+          </Routes>
+        </main>
+        <Footer />
+        <BackToTop />
+      </div>
+    </Router>
+=======
+    <ThemeProvider>
+      <ErrorBoundary>
+        <Router>
+          <ScrollToTop />
+          <div className="min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-1">
+              <div className="min-h-screen flex items-center justify-center">
+                <div className="text-center">
+                  <h1 className="text-4xl font-bold text-gray-900 mb-4">
+                    Zion Tech Group
+                  </h1>
+                  <p className="text-xl text-gray-600 mb-8">
+                    AI, Micro SaaS, and IT Services
+                  </p>
+                  <p className="text-gray-500">
+                    This is a Vite-based React application. The main pages are handled by Next.js in the app directory.
+                  </p>
+                </div>
+              </div>
+            </main>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        </Router>
+      </ErrorBoundary>
+    </ThemeProvider>
+>>>>>>> main
   );
 }
 

@@ -9,4 +9,3 @@ const ServicePortfolioDashboard.js = ({ className }) => {
   );
 };
 
-export default ServicePortfolioDashboard.js;

@@ -9,4 +9,3 @@ const DisputesPage = ({ className }) => {
   );
 };
 
-export default DisputesPage;

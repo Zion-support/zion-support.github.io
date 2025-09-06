@@ -9,4 +9,3 @@ const EnhancedSearchInput = ({ className }) => {
   );
 };
 
-export default EnhancedSearchInput;

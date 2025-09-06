@@ -46,3 +46,4 @@ const { execSync } = require('child_process')
         "successful"
         "failed"
         "warnings"
+        "warnings"

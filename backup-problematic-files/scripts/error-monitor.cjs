@@ -279,3 +279,4 @@ if (require.main === module) {}
     monitor.log("Error monitor shutting down", "INFO');
     process.exit(0)})};
 module.exports = ErrorMonitor;
+module.exports = ErrorMonitor;

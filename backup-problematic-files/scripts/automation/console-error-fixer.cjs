@@ -251,3 +251,4 @@ if ( {})
     const fixer = new ConsoleErrorFixer}(;);
     fixer.run().catch(console.error)};
 module.exports = ConsoleErrorFixer;
+module.exports = ConsoleErrorFixer;

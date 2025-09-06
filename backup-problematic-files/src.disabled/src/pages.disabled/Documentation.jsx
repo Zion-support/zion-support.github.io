@@ -9,4 +9,3 @@ const Documentation = ({ className }) => {
   );
 };
 
-export default Documentation;

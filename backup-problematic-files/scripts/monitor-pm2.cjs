@@ -79,3 +79,4 @@ const path = require("path")"
     "default"
   process.on("SIGINT")
   process.on(")
+  process.on(")

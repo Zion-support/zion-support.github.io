@@ -9,4 +9,3 @@ const BusinessSolutionsPage = ({ className }) => {
   );
 };
 
-export default BusinessSolutionsPage;

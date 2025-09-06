@@ -48,6 +48,8 @@ function processFile(filePath) {
     return 0}
 }
 
+
+
 function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   let results = [];
   const list = fs.readdirSync(dir);

@@ -53,3 +53,4 @@ const { execSync } = require('child_process')
         "status"
         "successful"
         "failed"
+        "failed"

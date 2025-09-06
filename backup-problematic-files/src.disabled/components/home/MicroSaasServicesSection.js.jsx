@@ -9,4 +9,3 @@ const MicroSaasServicesSection.js = ({ className }) => {
   );
 };
 
-export default MicroSaasServicesSection.js;

@@ -9,4 +9,3 @@ const AIAutonomousMicroserviceSecurity = ({ className }) => {
   );
 };
 
-export default AIAutonomousMicroserviceSecurity;

@@ -9,4 +9,3 @@ const EnhancedComprehensiveServicesShowcase.js = ({ className }) => {
   );
 };
 
-export default EnhancedComprehensiveServicesShowcase.js;

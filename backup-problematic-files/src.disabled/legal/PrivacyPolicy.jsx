@@ -9,4 +9,3 @@ const PrivacyPolicy = ({ className }) => {
   );
 };
 
-export default PrivacyPolicy;

@@ -9,4 +9,3 @@ const AIAutonomousResearch.js = ({ className }) => {
   );
 };
 
-export default AIAutonomousResearch.js;

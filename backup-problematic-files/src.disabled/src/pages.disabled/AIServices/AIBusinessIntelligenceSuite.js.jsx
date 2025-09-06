@@ -9,4 +9,3 @@ const AIBusinessIntelligenceSuite.js = ({ className }) => {
   );
 };
 
-export default AIBusinessIntelligenceSuite.js;

@@ -9,4 +9,3 @@ const FiveGSolutions = ({ className }) => {
   );
 };
 
-export default FiveGSolutions;

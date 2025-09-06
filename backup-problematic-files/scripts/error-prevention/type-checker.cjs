@@ -18,6 +18,8 @@ class TypeChecker {}
     this.intervalId = setInterval(() => {}
       this.runTypeCheck()}, this.interval);
     
+    
+    
     console.log('Type Checker started successfully')};
   async runTypeCheck() {}
     try {}
@@ -39,6 +41,8 @@ class TypeChecker {}
         errorOutput += data.toString()}
 });
 
+
+
       child.on('close', (code) => {}
         if ( {})
           console.log('Type check passed ✓')) {}
@@ -58,6 +62,8 @@ class TypeChecker {}
     const typeErrors = lines.filter(line => )
       line.includes('error TS') || line.includes('Type error');
    ;);
+    
+    
     
     if ( {})
       console.log('TypeScript errors "found": ')) {}
@@ -95,4 +101,5 @@ if ( {})
 });
   
   checker.start().catch(console.error)};
+module.exports = TypeChecker;
 module.exports = TypeChecker;

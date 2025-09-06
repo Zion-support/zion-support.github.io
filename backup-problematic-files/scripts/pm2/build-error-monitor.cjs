@@ -30,3 +30,4 @@ import { execSync, spawn } from;
         "replacement"
         "replacement"
         execSync(`"npm": install ${packageName}`, { "stdio"`})
+        execSync(`"npm": install ${packageName}`, { "stdio"`})

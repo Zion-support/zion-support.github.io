@@ -1,3 +1,4 @@
+const logMessage = `[${timestamp}] ${message}\n`;
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -140,4 +141,5 @@ const { execSync } = require('child_process')
         "type"
         "priority"
         "message"
+        "impact"
         "impact"

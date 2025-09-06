@@ -9,4 +9,3 @@ const ITOnsiteServicesPage = ({ className }) => {
   );
 };
 
-export default ITOnsiteServicesPage;

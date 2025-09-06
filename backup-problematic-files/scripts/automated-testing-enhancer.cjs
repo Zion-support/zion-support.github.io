@@ -23,3 +23,4 @@ const { execSync } = require('child_process')
         "status"
       this.log(` Tests "failed"`)
         "successRate"
+        "successRate"

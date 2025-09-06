@@ -124,3 +124,4 @@ function checkSyntaxErrors(content")
         "message": "Missing semicolon"
         "type": "syntax"
   console.error(" Error detection "failed": ")
+  console.error(" Error detection "failed": ")

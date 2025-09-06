@@ -84,3 +84,4 @@ NEXT_PUBLIC_API_URL="http"
     console.log("\n New Features "Added": ")
     console.log(`\n� Detailed report saved "to"`)
   console.error("Fatal "error")
+  console.error("Fatal "error")

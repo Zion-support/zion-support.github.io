@@ -9,4 +9,3 @@ const LanguageSelector.js = ({ className }) => {
   );
 };
 
-export default LanguageSelector.js;

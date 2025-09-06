@@ -47,3 +47,4 @@ import { execSync, spawn } from;
     if (line.includes('console.')
     if (message.includes('single quotes')
       lines[lineIndex] = line.replace(/"/g, ")
+      lines[lineIndex] = line.replace(/"/g, ")

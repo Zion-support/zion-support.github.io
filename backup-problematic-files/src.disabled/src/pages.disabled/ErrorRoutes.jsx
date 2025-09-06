@@ -9,4 +9,3 @@ const ErrorRoutes = ({ className }) => {
   );
 };
 
-export default ErrorRoutes;

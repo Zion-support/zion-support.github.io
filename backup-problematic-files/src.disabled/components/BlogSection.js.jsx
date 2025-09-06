@@ -9,4 +9,3 @@ const BlogSection.js = ({ className }) => {
   );
 };
 
-export default BlogSection.js;

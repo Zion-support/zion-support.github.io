@@ -9,4 +9,3 @@ const Marketplace.js = ({ className }) => {
   );
 };
 
-export default Marketplace.js;

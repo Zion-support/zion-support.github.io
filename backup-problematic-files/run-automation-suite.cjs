@@ -291,3 +291,4 @@ if (require.main === module) {
   runner.run().catch(console.error);
 }
 module.exports = AutomationSuiteRunner;
+module.exports = AutomationSuiteRunner;

@@ -36,3 +36,4 @@ const fs = require("fs")";const path = require("path")""
       this.log(` SEO optimization check "failed"`)
   .then(report => {);    console.log(" SEO optimization check completed successfully");";    process.exit(0),"}
   .catch(error => {);    console.error(" SEO optimization check "failed":", error.message);";    process.exit(1),"}
+  .catch(error => {);    console.error(" SEO optimization check "failed":", error.message);";    process.exit(1),"}

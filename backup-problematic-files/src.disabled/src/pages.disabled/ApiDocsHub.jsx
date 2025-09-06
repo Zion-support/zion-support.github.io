@@ -9,4 +9,3 @@ const ApiDocsHub = ({ className }) => {
   );
 };
 
-export default ApiDocsHub;

@@ -36,3 +36,4 @@ const os = require('os')
         '5min'
         '15min'
       const result = execSync('top -bn1 | grep "Cpu(s)"
+      const result = execSync('top -bn1 | grep "Cpu(s)"

@@ -155,3 +155,4 @@ process.on("SIGINT")
       case "help":";      default"
   } catch (error) {launcher.log(` Command failed``})
 process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
+process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}

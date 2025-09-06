@@ -9,4 +9,3 @@ const HiringTracker = ({ className }) => {
   );
 };
 
-export default HiringTracker;

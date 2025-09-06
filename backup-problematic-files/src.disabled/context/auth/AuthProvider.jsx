@@ -9,4 +9,3 @@ const AuthProvider = ({ className }) => {
   );
 };
 
-export default AuthProvider;

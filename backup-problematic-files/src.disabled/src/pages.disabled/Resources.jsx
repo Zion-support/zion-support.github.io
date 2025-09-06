@@ -9,4 +9,3 @@ const Resources = ({ className }) => {
   );
 };
 
-export default Resources;

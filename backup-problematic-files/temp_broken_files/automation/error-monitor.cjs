@@ -169,3 +169,4 @@ if (require.main === module) {}
 });
 };
 module.exports = ErrorMonitor;
+module.exports = ErrorMonitor;

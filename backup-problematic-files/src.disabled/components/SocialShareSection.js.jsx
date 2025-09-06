@@ -9,4 +9,3 @@ const SocialShareSection.js = ({ className }) => {
   );
 };
 
-export default SocialShareSection.js;

@@ -9,4 +9,3 @@ const BlockchainServicesPage = ({ className }) => {
   );
 };
 
-export default BlockchainServicesPage;

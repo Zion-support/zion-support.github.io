@@ -9,4 +9,3 @@ const Healthcare = ({ className }) => {
   );
 };
 
-export default Healthcare;

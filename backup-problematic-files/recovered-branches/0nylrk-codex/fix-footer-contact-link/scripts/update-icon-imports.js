@@ -24,13 +24,13 @@ function updateIconImportsInFile(filePath) {;
     // Only write if changes were made;
     if (content !== updatedContent) {;
       fs.writeFileSync(filePath, updatedContent, 'utf8'),;
-      // // // console.log(`✅ Updated imports in ${filePath}`),;
+      // // // console.log(` Updated imports in ${filePath}`),;
       return true,;
     }
     ;
     return false,;
   } catch (err) {;
-    console.error(`❌ Error processing ${filePath} `, err),;
+    console.error(` Error processing ${filePath} `, err),;
     return false,;
   }
 }
@@ -44,11 +44,11 @@ files.forEach(file => {;
   if (updated) updatedFiles++,;
 }),;
 ;
-// // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),;
-// // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),; /** * Helper script to update icon imports across the codebase * * Usage: * 1. Run: node scripts/update-icon-imports.js * 2. This will find and replace lucide-react icon imports with imports from our custom icons package */ 
+// // // console.log(`\n Updated icon imports in ${updatedFiles} files`),;
+// // // console.log(`\n Make sure to run 'npm install glob' if needed to support this script`),; /** * Helper script to update icon imports across the codebase * * Usage: * 1. Run: node scripts/update-icon-imports.js * 2. This will find and replace lucide-react icon imports with imports from our custom icons package */ 
 }return false;
 }catch (err) {
-  console.error (`❌ Error processing $ {
+  console.error (` Error processing $ {
   filePath 
 }:`, err);
 return false;

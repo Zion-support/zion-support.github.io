@@ -9,4 +9,3 @@ const EnhancedErrorBoundary = ({ className }) => {
   );
 };
 
-export default EnhancedErrorBoundary;

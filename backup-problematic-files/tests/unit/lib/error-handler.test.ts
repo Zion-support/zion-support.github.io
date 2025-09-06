@@ -4,4 +4,3 @@ export const Error-handler.test = () => {
   return null;
 };
 
-export default Error-handler.test;

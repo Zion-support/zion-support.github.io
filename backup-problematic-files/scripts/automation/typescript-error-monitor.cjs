@@ -645,3 +645,4 @@ if (require.main === module) {
     process.exit(1)})}
 ;
 module.exports = TypeScriptErrorMonitor
+module.exports = TypeScriptErrorMonitor

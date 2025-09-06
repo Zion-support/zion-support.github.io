@@ -9,4 +9,3 @@ const ContentQualityEnhancer.js = ({ className }) => {
   );
 };
 
-export default ContentQualityEnhancer.js;

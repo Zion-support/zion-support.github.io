@@ -9,4 +9,3 @@ const Dashboard = ({ className }) => {
   );
 };
 
-export default Dashboard;

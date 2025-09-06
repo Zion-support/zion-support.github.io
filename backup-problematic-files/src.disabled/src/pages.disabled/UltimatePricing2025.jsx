@@ -9,4 +9,3 @@ const UltimatePricing2025 = ({ className }) => {
   );
 };
 
-export default UltimatePricing2025;

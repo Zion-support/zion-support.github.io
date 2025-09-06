@@ -9,4 +9,3 @@ const MobileAppPage = ({ className }) => {
   );
 };
 
-export default MobileAppPage;

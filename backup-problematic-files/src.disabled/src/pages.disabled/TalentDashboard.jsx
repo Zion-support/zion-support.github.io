@@ -9,4 +9,3 @@ const TalentDashboard = ({ className }) => {
   );
 };
 
-export default TalentDashboard;

@@ -19,3 +19,4 @@ const path = require("path")
       "pages/pricing-guide.tsx"
       "pages/pricing.tsx"
       "
+      "

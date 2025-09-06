@@ -9,4 +9,3 @@ const IndustrySolutions = ({ className }) => {
   );
 };
 
-export default IndustrySolutions;

@@ -9,4 +9,3 @@ const ChatInput = ({ className }) => {
   );
 };
 
-export default ChatInput;

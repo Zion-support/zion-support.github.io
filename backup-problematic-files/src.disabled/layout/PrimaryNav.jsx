@@ -9,4 +9,3 @@ const PrimaryNav = ({ className }) => {
   );
 };
 
-export default PrimaryNav;

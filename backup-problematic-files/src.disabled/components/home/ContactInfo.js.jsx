@@ -9,4 +9,3 @@ const ContactInfo.js = ({ className }) => {
   );
 };
 
-export default ContactInfo.js;

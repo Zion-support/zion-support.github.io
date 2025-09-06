@@ -9,4 +9,3 @@ const ContactSection.js = ({ className }) => {
   );
 };
 
-export default ContactSection.js;

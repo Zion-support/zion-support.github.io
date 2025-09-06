@@ -190,3 +190,4 @@ if (require.main === module) {}
     monitor.log(`Failed to start "monitoring": ${error.message}`, 'ERROR');
     process.exit(1)})};
 module.exports = ErrorDetectionMonitor;
+module.exports = ErrorDetectionMonitor;

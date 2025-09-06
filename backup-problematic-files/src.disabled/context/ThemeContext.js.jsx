@@ -9,4 +9,3 @@ const ThemeContext.js = ({ className }) => {
   );
 };
 
-export default ThemeContext.js;

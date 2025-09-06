@@ -10,3 +10,4 @@ const path = require("path")";console.log("� Error Prevention & Automation Sys
         "encoding"
         "stdio"
       this.log(` ${description} "failed"`)
+      this.log(` ${description} "failed"`)

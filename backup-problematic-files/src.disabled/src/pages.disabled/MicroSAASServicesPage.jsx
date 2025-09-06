@@ -9,4 +9,3 @@ const MicroSAASServicesPage = ({ className }) => {
   );
 };
 
-export default MicroSAASServicesPage;

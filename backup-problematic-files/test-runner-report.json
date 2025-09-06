@@ -4,7 +4,6 @@
     {
       "type": "unit",
       "status": "failed",
-      "details": "Command failed: npm test -- --passWithNoTests --coverage\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n/workspace/jest.config.cjs:1\n
     }
   ],
   "coverage": {},

@@ -9,4 +9,3 @@ const Header = ({ className }) => {
   );
 };
 
-export default Header;

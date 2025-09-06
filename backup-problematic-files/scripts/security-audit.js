@@ -4,4 +4,3 @@ export const Security-audit = () => {
   return null;
 };
 
-export default Security-audit;

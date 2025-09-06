@@ -32,3 +32,4 @@ const { execSync } = require('child_process')
         "action"
         "impact"
   console.error('Fatal "error")
+  console.error('Fatal "error")

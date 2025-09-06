@@ -9,4 +9,3 @@ const ManufacturingSolutions = ({ className }) => {
   );
 };
 
-export default ManufacturingSolutions;

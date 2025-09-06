@@ -54,7 +54,7 @@ serve(async (req) => {;
         messages:[;
           {;
             role:'system',;
-            content:`You are an expert HR assistant. Based on the user's bio and experience, write a professional and engaging 100–150 word summary for their profile. Then extract up to 8 clear skill tags, categorized by type for better filtering.`;
+            content:`You are an expert HR assistant. Based on the user's bio and experience, write a professional and engaging 100150 word summary for their profile. Then extract up to 8 clear skill tags, categorized by type for better filtering.`;
           },;
           {;
             role:'user',;
@@ -179,7 +179,6 @@ serve(_async (req) => {_// Handle CORS preflight requests
         'Content-Type': 'application/json'},
       body: JSON.stringify({_model: 'gpt-4o-mini', _messages: [
           {
-            role: 'system', _content: `You are an expert HR assistant. Based on the user's bio and experience, _write a professional and engaging 100–150 word summary for their profile. Then extract up to 8 clear skill tags, _categorized by type for better filtering.`},
           {_role: 'user', _content: `Create a professional profile summary and categorize skills based on this information:
             Name: ${talentData.name}
             Title: ${talentData.title}

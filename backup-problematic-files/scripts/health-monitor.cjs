@@ -19,3 +19,4 @@ class HealthMonitor {
   }
 }
 new HealthMonitor().runChecks();
+new HealthMonitor().runChecks();

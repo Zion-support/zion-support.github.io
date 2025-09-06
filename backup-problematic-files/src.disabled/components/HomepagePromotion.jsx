@@ -9,4 +9,3 @@ const HomepagePromotion = ({ className }) => {
   );
 };
 
-export default HomepagePromotion;

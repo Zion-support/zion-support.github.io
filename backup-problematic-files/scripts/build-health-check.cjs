@@ -210,3 +210,4 @@ if (require.main === module) {;}
     checker.log("Build health checker shutting down", "INFO');
     process.exit(0),}),};
 module.exports = BuildHealthCheck;
+module.exports = BuildHealthCheck;

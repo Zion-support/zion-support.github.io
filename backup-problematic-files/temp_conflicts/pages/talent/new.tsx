@@ -160,9 +160,6 @@ export default function NewTalentPage() {;
         </div>;
 ;
         <div className="flex items-center gap-3">;
-          <button type="submit" disabled={loading} className="inline-flex items-center px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 via-violet-500 to-cyan-500 text-white shadow hover:opacity-90 disabled:opacity-60">{loading ? 'Generating…' :'Generate Summary & Skills'}</button>;
-          {generated && (;
-            <button type="button" onClick={onSave} disabled={saving} className="inline-flex items-center px-4 py-2 rounded-lg border border-violet-300 text-violet-700 hover:bg-violet-50 dark:hover:bg-violet-950/20 disabled:opacity-60">{saving ? 'Saving…' :'Save Profile'}</button>;
           )}
           {error && <div className="text-sm text-rose-600">{error}</div>}
         </div>;
@@ -177,7 +174,6 @@ export default function NewTalentPage() {;
               <span key={s} className="text-xs px-2 py-1 rounded-full border bg-cyan-50 text-cyan-700 border-cyan-200 dark:bg-cyan-950/30 dark:text-cyan-300 dark:border-cyan-900">{s}</span>;
             ))}
           </div>;
-          <div className="mt-3 text-sm text-gray-600">Suggested Title:<span className="font-medium">{generated.title}</span> {generated.category ? `• ${generated.category}` :''}</div>;
         </div>;
       )}
     </div>;

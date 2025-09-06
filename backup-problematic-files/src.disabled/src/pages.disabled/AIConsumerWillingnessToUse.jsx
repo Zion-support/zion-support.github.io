@@ -9,4 +9,3 @@ const AIConsumerWillingnessToUse = ({ className }) => {
   );
 };
 
-export default AIConsumerWillingnessToUse;

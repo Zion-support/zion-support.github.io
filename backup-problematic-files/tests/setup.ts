@@ -22,9 +22,6 @@ afterEach(() => {;
 });
 ;
 // -----------------------------------------------------------------------------;
-// Jest-compatibility shim ------------------------------------------------------;
-// -----------------------------------------------------------------------------;
-// A lot of legacy test files still call `jest.fn()`, `jest.mock()` etc.  Rather;
 // than refactor them all at once we map those calls to Vitest's equivalent;
 // (`vi`).  The shim only runs in the test environment and has no effect on;
 // production bundles.;
@@ -45,7 +42,7 @@ afterEach(() => {;
   resetAllMocks:vi.resetAllMocks.bind(vi),;
   restoreAllMocks:vi.restoreAllMocks.bind(vi),;
   clearAllMocks:vi.clearAllMocks.bind(vi),;
-  // Snapshot placeholder (no-op) – Vitest has its own snapshot system.;
+  // Snapshot placeholder (no-op)  Vitest has its own snapshot system.;
   // We expose it so imports compile even if we don't use it.;
    ;
   SnapshotSerializer:() => {}};
@@ -56,4 +53,3 @@ export default function Setup({ }: SetupProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

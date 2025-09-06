@@ -9,4 +9,3 @@ const Interviews = ({ className }) => {
   );
 };
 
-export default Interviews;

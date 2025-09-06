@@ -1,57 +1,19 @@
-#!/usr/bin/env node
+const { execSync } = require('child_process');
 const fs = require('fs');
-const path = require('path');
 
-class PerformanceMonitor {
-  constructor() {
-    this.metrics = {
-      bundleSize: 0,
-      loadTime: 0,
-      memoryUsage: 0,
-      timestamp: new Date().toISOString()
-    };
-  }
+console.log('🔍 Running performance analysis...');
 
-  async measureBundleSize() {
-    try {
-      const buildDir = path.join(process.cwd(), '.next');
-      if (fs.existsSync(buildDir)) {
-        const stats = fs.statSync(buildDir);
-        this.metrics.bundleSize = stats.size;
-      }
-    } catch(error) {
-      console.error('Error measuring bundle size:', error);
-    }
-  }
-
-  async measureMemoryUsage() {
-    const usage = process.memoryUsage();
-    this.metrics.memoryUsage = usage.heapUsed / 1024 / 1024; // MB
-  }
-
-  generateReport() {
-    const report = {
-      timestamp: this.metrics.timestamp,
-      bundleSize: this.metrics.bundleSize,
-      memoryUsage: this.metrics.memoryUsage,
-      recommendations: []
-    };
-    
-    if (this.metrics.bundleSize > 1000000) {
-      report.recommendations.push('Consider code splitting to reduce bundle size');
-    }
-    if (this.metrics.memoryUsage > 100) {
-      report.recommendations.push('Consider optimizing memory usage');
-    }
-    
-    return report;
-  }
+try {
+  // Bundle analysis
+  console.log('📊 Analyzing bundle size...');
+  execSync('npm run build', { stdio: 'inherit' });
+  
+  // Check build output
+  const buildStats = fs.statSync('dist');
+  console.log('✅ Build completed successfully');
+  console.log('📁 Build directory size:', buildStats.size, 'bytes');
+  
+} catch (error) {
+  console.error('❌ Performance analysis failed:', error.message);
+  process.exit(1);
 }
-
-const monitor = new PerformanceMonitor();
-monitor.measureBundleSize();
-monitor.measureMemoryUsage();
-const report = monitor.generateReport();
-const reportPath = path.join(process.cwd(), 'performance-report.json');
-fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-console.log('Performance report generated:', reportPath);

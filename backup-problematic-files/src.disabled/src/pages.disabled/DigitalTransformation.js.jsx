@@ -9,4 +9,3 @@ const DigitalTransformation.js = ({ className }) => {
   );
 };
 
-export default DigitalTransformation.js;

@@ -1,125 +1,126 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Pricing: React.FC = () => {
   const plans = [
     {
-      name: 'Basic',
-      price: '$99',
-      period: '/month',
+      name: 'Micro SaaS MVP',
+      price: '$8k - $20k',
+      period: '2-4 weeks',
+      description: 'Perfect for validating your micro SaaS idea',
       features: [
-        'Basic AI consultation',
+        'Core features only',
+        'Basic Stripe integration',
+        'Simple analytics',
         'Email support',
-        '5GB cloud storage',
-        'Basic analytics'
+        '2 weeks maintenance'
       ],
       popular: false
     },
     {
-      name: 'Pro',
-      price: '$199',
-      period: '/month',
+      name: 'AI Discovery',
+      price: '$5k - $12k',
+      period: '2-3 weeks',
+      description: 'Explore AI possibilities for your business',
       features: [
-        'All Basic features',
-        'Priority support',
-        '50GB cloud storage',
-        'Advanced analytics',
-        'Custom integrations'
+        'Use case design',
+        'Technology selection',
+        'Implementation roadmap',
+        'Proof of concept',
+        'Consultation included'
       ],
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$499',
-      period: '/month',
+      name: 'IT Infrastructure',
+      price: '$10k - $30k',
+      period: '4-8 weeks',
+      description: 'Complete IT infrastructure setup',
       features: [
-        'All Pro features',
-        '24/7 dedicated support',
-        'Unlimited storage',
-        'Custom AI models',
-        'On-premise deployment',
-        'SLA guarantee'
+        'Cloud migration',
+        'DevOps setup',
+        'Security hardening',
+        'Monitoring & alerting',
+        '3 months support'
       ],
       popular: false
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Simple <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Pricing</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the perfect plan for your business needs. All plans include our core features with no hidden fees.
-            </p>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">Pricing Plans</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Choose the perfect plan for your business needs. All plans include our commitment to quality and support.
+          </p>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {plans.map((plan, index) => (
-              <div
-                key={plan.name}
-                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 ${
-                  plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
-                  </div>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {plans.map((plan, index) => (
+            <PricingCard key={index} {...plan} />
+          ))}
+        </div>
 
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <svg className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <button
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-black hover:from-cyan-500 hover:to-blue-600'
-                      : 'bg-gray-700 text-white hover:bg-gray-600'
-                  }`}
-                >
-                  Get Started
-                </button>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-16">
-            <h2 className="text-2xl font-bold text-white mb-4">Need a custom solution?</h2>
-            <p className="text-gray-300 mb-6">
-              Contact us to discuss your specific requirements and get a tailored quote.
-            </p>
-            <a
-              href="/contact"
-              className="inline-block bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-8 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300"
-            >
-              Contact Sales
-            </a>
-          </div>
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-white mb-4">Need a custom solution?</h2>
+          <p className="text-gray-300 mb-6">
+            Contact us to discuss your specific requirements and get a tailored quote.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Contact Sales
+          </Link>
         </div>
       </div>
     </div>
   );
 };
+
+function PricingCard({ name, price, period, description, features, popular }: {
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+}) {
+  return (
+    <div className={`bg-white/10 backdrop-blur-sm p-8 rounded-2xl border transition-all duration-300 hover:bg-white/20 ${
+      popular ? 'border-blue-500 ring-2 ring-blue-100' : 'border-white/20'
+    }`}>
+      {popular && (
+        <div className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold inline-block mb-4">
+          Most Popular
+        </div>
+      )}
+      <h3 className="text-2xl font-bold text-white mb-2">{name}</h3>
+      <div className="text-3xl font-bold text-white mb-2">{price}</div>
+      <div className="text-gray-300 mb-4">{period}</div>
+      <p className="text-gray-300 mb-6">{description}</p>
+      <ul className="space-y-3 mb-8">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center text-gray-300">
+            <span className="text-green-400 mr-2">✓</span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+      <Link
+        to="/contact"
+        className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
+          popular
+            ? 'bg-blue-600 text-white hover:bg-blue-700'
+            : 'bg-white/20 text-white hover:bg-white/30'
+        }`}
+      >
+        Get Started
+      </Link>
+    </div>
+  );
+}
 
 export default Pricing;

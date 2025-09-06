@@ -10,3 +10,4 @@ const largeFiles = ['pages/ai-services.tsx']
   const lines = content.split('\n')
     const backupPath = filePath + '.backup;'
 console.log(' File size optimization completed')
+console.log(' File size optimization completed')

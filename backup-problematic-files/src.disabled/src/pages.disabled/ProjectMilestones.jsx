@@ -9,4 +9,3 @@ const ProjectMilestones = ({ className }) => {
   );
 };
 
-export default ProjectMilestones;

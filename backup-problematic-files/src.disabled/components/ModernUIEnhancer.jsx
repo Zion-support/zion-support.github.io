@@ -9,4 +9,3 @@ const ModernUIEnhancer = ({ className }) => {
   );
 };
 
-export default ModernUIEnhancer;

@@ -9,4 +9,3 @@ const TestimonialCarousel.js = ({ className }) => {
   );
 };
 
-export default TestimonialCarousel.js;

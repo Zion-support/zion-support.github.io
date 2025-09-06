@@ -9,4 +9,3 @@ const AIBlockchainGovernance.js = ({ className }) => {
   );
 };
 
-export default AIBlockchainGovernance.js;

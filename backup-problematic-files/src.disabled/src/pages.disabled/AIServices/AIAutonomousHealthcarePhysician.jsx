@@ -9,4 +9,3 @@ const AIAutonomousHealthcarePhysician = ({ className }) => {
   );
 };
 
-export default AIAutonomousHealthcarePhysician;

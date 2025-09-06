@@ -140,3 +140,4 @@ class ErrorReportGenerator {}
 ;
 const generator = new ErrorReportGenerator();
 generator.run().catch(console.error);
+generator.run().catch(console.error);

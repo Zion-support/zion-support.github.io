@@ -3,6 +3,8 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 
+
+
 console.log('🧪 Automated Testing Suite');
 console.log('=====');
 
@@ -40,6 +42,8 @@ async function runTests() {
       failed: results.filter(r => r.status === 'failed').length
     }
   };
+
+
 
   fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
   

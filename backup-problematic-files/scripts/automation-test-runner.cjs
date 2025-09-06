@@ -14,3 +14,4 @@ const { execSync } = require('child_process')
       { "path": 'scripts/simple-performance-monitor.cjs', "desc"}
       { "path": 'scripts/simple-code-quality.cjs', "desc"}
           "status"
+          "status"

@@ -9,4 +9,3 @@ const ServicesComparisonPage = ({ className }) => {
   );
 };
 
-export default ServicesComparisonPage;

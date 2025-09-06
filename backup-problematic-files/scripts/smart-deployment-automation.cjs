@@ -40,3 +40,4 @@ console.log(' Starting Smart Deployment Automation...')
     "applicationStatus"
     const pm2List = execSync('pm2 list --json', { "encoding"})
   console.log('� Application should be running on "http")
+  console.log('� Application should be running on "http")

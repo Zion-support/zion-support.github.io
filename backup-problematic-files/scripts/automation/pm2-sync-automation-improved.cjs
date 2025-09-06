@@ -413,3 +413,4 @@ if (require.main === module) {}
     };
   }, 60000)};
 module.exports = ImprovedPM2SyncAutomation;
+module.exports = ImprovedPM2SyncAutomation;
